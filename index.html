@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegislationPatch — U.S. Federal Bills, Plain English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-patch">Legislation</span><span class="logo-notes">Patch</span>
+      </div>
+      <p class="tagline">U.S. federal bills — explained like patch notes</p>
+    </div>
+  </header>
+
+  <!-- CONTROLS -->
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <div class="filter-row" id="filters">
+        <button class="filter-btn active" data-stage="all">All stages</button>
+        <button class="filter-btn" data-stage="introduced">Introduced</button>
+        <button class="filter-btn" data-stage="committee">Committee</button>
+        <button class="filter-btn" data-stage="house">House</button>
+        <button class="filter-btn" data-stage="senate">Senate</button>
+        <button class="filter-btn" data-stage="signed">Signed</button>
+      </div>
+      <button class="refresh-btn" id="refreshBtn" onclick="loadBills()">
+        <span id="refreshIcon">↻</span> Refresh
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div class="section-label" id="sectionLabel">Recent bills</div>
+
+    <!-- API KEY SETUP BANNER (shown if keys not configured) -->
+    <div class="setup-banner" id="setupBanner">
+      <div class="setup-inner">
+        <div class="setup-icon">⚙</div>
+        <div class="setup-text">
+          <strong>Setup required</strong>
+          <p>Add your Congress.gov API key and Anthropic API key to <code>config.js</code> to load live bills and AI analysis. See <code>README.md</code> for instructions.</p>
+        </div>
+        <button class="setup-dismiss" onclick="dismissBanner()">Got it</button>
+      </div>
+    </div>
+
+    <!-- LOADING STATE -->
+    <div class="loading-state" id="loadingState" style="display:none">
+      <div class="loading-spinner"></div>
+      <p>Fetching latest legislation...</p>
+    </div>
+
+    <!-- ERROR STATE -->
+    <div class="error-state" id="errorState" style="display:none">
+      <p id="errorMsg">Something went wrong fetching bills.</p>
+      <button onclick="loadBills()">Try again</button>
+    </div>
+
+    <!-- BILL LIST -->
+    <div class="bill-list" id="billList"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Data from <a href="https://api.congress.gov" target="_blank">Congress.gov API</a> · AI analysis by <a href="https://anthropic.com" target="_blank">Anthropic Claude</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
