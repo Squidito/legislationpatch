@@ -7,6 +7,7 @@ let openCards     = new Map(); // id -> 'minor' | 'full'
 let openDetails   = {};
 let aiOutputs     = {};
 let activeFilter  = 'all';
+let favoritesView = false;
 
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
@@ -101,6 +102,7 @@ async function loadBills() {
   try {
     allBills = await fetchRecentBills();
     renderAll();
+    renderRepStrip(); // rebuild strip now that bill sponsors/quotes are available
   } catch (e) {
     console.error(e);
     showError(true, e.message);
@@ -384,9 +386,18 @@ function toggleRepTracked(id) {
     });
   }
   saveTrackedSettings();
-  renderRepStrip();
+  refreshRepStripClasses(); // update tracked highlights without rebuilding the pool
   renderRepGrid();
   renderAll();
+}
+
+// Update tracked styling on existing strip cards without rebuilding the pool
+function refreshRepStripClasses() {
+  const strip = document.getElementById('repStrip');
+  if (!strip) return;
+  strip.querySelectorAll('.rep-card[data-id]').forEach(card => {
+    card.classList.toggle('tracked', trackedReps.some(r => r.id === card.dataset.id));
+  });
 }
 
 // ---- Manual rep add ----
@@ -548,6 +559,8 @@ function renderUnderreportedSection(bill) {
 // ---- Render ----
 
 function renderAll() {
+  if (favoritesView) { renderFavoritesView(); return; }
+
   const list     = document.getElementById('billList');
   const filtered = activeFilter === 'all'
     ? allBills
@@ -563,6 +576,116 @@ function renderAll() {
   list.innerHTML =
     renderShockQuotesSection() +
     filtered.map((b, i) => renderBill(b, i + 1)).join('');
+}
+
+// ---- Favorites view ----
+
+function toggleFavoritesView() {
+  favoritesView = !favoritesView;
+  const btn        = document.getElementById('favBtn');
+  const controls   = document.querySelector('.controls-bar');
+  const dropdown   = document.getElementById('repDropdown');
+  const label      = document.getElementById('sectionLabel');
+
+  if (favoritesView) {
+    btn.classList.add('active');
+    controls.style.display  = 'none';
+    dropdown.style.display  = 'none';
+    label.textContent       = 'Saved';
+    renderFavoritesView();
+  } else {
+    btn.classList.remove('active');
+    controls.style.display  = '';
+    dropdown.style.display  = '';
+    label.textContent       = 'Recent bills';
+    renderAll();
+  }
+}
+
+function renderFavoritesView() {
+  const list         = document.getElementById('billList');
+  const starredBills = allBills.filter(b => watchedBills.has(b.id));
+
+  let html = renderTrackedRepsSection();
+
+  html += `<div class="fav-section-header">
+    <span class="fav-section-title">Starred bills</span>
+    <span class="fav-section-count">${starredBills.length}</span>
+  </div>`;
+
+  if (starredBills.length) {
+    html += starredBills.map((b, i) => renderBill(b, i + 1)).join('');
+  } else {
+    html += `<div class="fav-empty">
+      <div class="fav-empty-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <div class="fav-empty-title">No starred bills yet</div>
+      <div class="fav-empty-sub">Tap the star on any bill in the main feed to save it here.</div>
+    </div>`;
+  }
+
+  list.innerHTML = html;
+}
+
+function renderTrackedRepsSection() {
+  const sectionHeader = `<div class="fav-section-header">
+    <span class="fav-section-title">Tracked reps</span>
+    <span class="fav-section-count">${trackedReps.length}</span>
+  </div>`;
+
+  if (!trackedReps.length) {
+    return sectionHeader + `<div class="fav-empty" style="margin-bottom:1.5rem">
+      <div class="fav-empty-title">No tracked reps</div>
+      <div class="fav-empty-sub">Click a portrait in the rep strip to follow a representative.</div>
+    </div>`;
+  }
+
+  const cards = trackedReps.map(rep => {
+    const color = partyColor(rep.party);
+    const imgSrc = portraitUrl(rep.id);
+    const bills = allBills.filter(b => {
+      const sponsors = Array.isArray(b.sponsors) ? b.sponsors
+        : Array.isArray(b.raw?.sponsors) ? b.raw.sponsors : [];
+      return sponsors.some(s => (s.bioguideId || s.id) === rep.id)
+        || (b.featured_quotes || []).some(q => q.bioguideId === rep.id);
+    });
+
+    const pills = bills.slice(0, 3).map(b => {
+      const shortId = b.id.split('-').slice(1).join(' ');
+      return `<span class="rep-bill-pill" title="${escHtml(b.title)}">${escHtml(shortId)}</span>`;
+    }).join('');
+    const more  = bills.length > 3 ? `<span class="rep-bill-more">+${bills.length - 3} more</span>` : '';
+    const none  = !bills.length   ? `<span class="rep-bill-more">No bills in current feed</span>` : '';
+
+    const quote = allBills.flatMap(b =>
+      (b.featured_quotes || []).filter(q => q.bioguideId === rep.id)
+    ).find(Boolean);
+
+    return `<div class="tracked-rep-card" style="--party-color:${color}">
+      <div class="tracked-rep-portrait-wrap">
+        <img class="tracked-rep-portrait" src="${imgSrc}"
+             onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(rep.name)}"
+             style="border-color:${color}" />
+        <span class="rep-badge" style="background:${color}">${escHtml(rep.state || '')}</span>
+      </div>
+      <div class="tracked-rep-info">
+        <div class="tracked-rep-name">${escHtml(rep.name)}</div>
+        <div class="tracked-rep-meta">${escHtml(partyInitial(rep.party))} · ${bills.length} bill${bills.length !== 1 ? 's' : ''} in feed</div>
+        <div class="tracked-rep-bills">${pills}${more}${none}</div>
+        ${quote ? `<div class="tracked-rep-quote">"${escHtml(quote.text)}"</div>` : ''}
+      </div>
+      <button class="tracked-rep-untrack" onclick="toggleRepTracked('${escHtml(rep.id)}')" title="Untrack">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>`;
+  }).join('');
+
+  return sectionHeader + `<div class="tracked-reps-list">${cards}</div>`;
 }
 
 function renderStatsBar(bills) {
