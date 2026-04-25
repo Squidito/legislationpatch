@@ -2,11 +2,35 @@
 //  api.js — Congress.gov + Anthropic API calls
 // =============================================
 
+// ---- Bill cache (pre-analyzed bills stored in data/cache.json) ----
+
+let _billCache = null;
+
+async function loadBillCache() {
+  if (_billCache) return _billCache;
+  try {
+    const res = await fetch('data/cache.json');
+    if (!res.ok) return {};
+    const data = await res.json();
+    _billCache = {};
+    (data.bills || []).forEach(b => { _billCache[b.id] = b; });
+    return _billCache;
+  } catch (e) {
+    return {};
+  }
+}
+
 // ---- Congress.gov ----
 
 async function fetchRecentBills() {
   const key = CONFIG.CONGRESS_API_KEY;
-  if (!key) return getDemoBills();
+  const cache = await loadBillCache();
+
+  if (!key) {
+    // Return cached bills if available, otherwise demo
+    const cached = Object.values(cache);
+    return cached.length ? cached : getDemoBills();
+  }
 
   const session = CONFIG.CONGRESS_SESSION || 119;
   const limit   = CONFIG.BILLS_PER_PAGE   || 20;
@@ -18,10 +42,38 @@ async function fetchRecentBills() {
   if (!res.ok) throw new Error(`Congress API error: ${res.status}`);
   const data = await res.json();
 
+  // Filter to bills that have passed at least one stage (not just introduced/referred)
+  const skipActions = ['introduced in','read twice and referred','referred to the committee','referred to committee','held at the desk'];
+  const activeBills = data.bills.filter(b => {
+    const action = (b.latestAction?.text || '').toLowerCase();
+    return !skipActions.some(w => action.includes(w));
+  });
+
   // Fetch details for each bill in parallel (limited to 8 to avoid rate limits)
-  const bills = data.bills.slice(0, 8);
+  const bills = activeBills.slice(0, 8);
   const detailed = await Promise.all(bills.map(b => fetchBillDetail(b, key)));
-  return detailed.filter(Boolean);
+  const live = detailed.filter(Boolean);
+
+  // Merge with cache: cached bills take precedence for analysis fields,
+  // but live data updates stage/date/actions
+  live.forEach(bill => {
+    if (cache[bill.id]) {
+      const cached = cache[bill.id];
+      bill.sections      = cached.sections      || bill.sections;
+      bill.underreported = cached.underreported || bill.underreported;
+      bill.criticisms    = cached.criticisms    || bill.criticisms;
+      bill.gaps          = cached.gaps          || bill.gaps;
+      bill.analyzed      = cached.analyzed      || bill.analyzed;
+      if (cached.likelihoodLabel) bill.likelihoodLabel = cached.likelihoodLabel;
+      if (cached.likelihoodReason) bill.likelihoodReason = cached.likelihoodReason;
+    }
+  });
+
+  // Prepend any cached bills not in the live fetch (e.g. bills that moved off the recent list)
+  const liveIds = new Set(live.map(b => b.id));
+  const cachedOnly = Object.values(cache).filter(b => !liveIds.has(b.id));
+
+  return [...cachedOnly, ...live];
 }
 
 async function fetchBillDetail(billSummary, key) {
@@ -60,10 +112,13 @@ async function fetchBillDetail(billSummary, key) {
       likelihood:   estimateLikelihood(stage.key, bill, actions?.actions || []),
       summaryText:  cleanHtml(summaryText),
       sections:     [],   // filled in by AI analysis
+      underreported: [],
       criticisms:   [],
       gaps:         [],
       analyzed:     false,
       raw:          bill,
+      actions:      actions?.actions || [],
+      sponsors:     bill.sponsors || [],
     };
   } catch (e) {
     console.warn('Failed to fetch bill detail:', e);
@@ -162,7 +217,19 @@ You MUST respond with valid JSON only. No markdown, no extra text.`,
 
   // Strip any accidental markdown fences
   const clean = text.replace(/```json|```/g, '').trim();
-  return JSON.parse(clean);
+  const parsed = JSON.parse(clean);
+  return sanitizeAnalysisResult(parsed);
+}
+
+function sanitizeAnalysisResult(result) {
+  return {
+    sections: Array.isArray(result.sections) ? result.sections : [],
+    underreported: Array.isArray(result.underreported) ? result.underreported : [],
+    criticisms: Array.isArray(result.criticisms) ? result.criticisms : [],
+    gaps: Array.isArray(result.gaps) ? result.gaps : [],
+    likelihoodLabel: typeof result.likelihoodLabel === 'string' ? result.likelihoodLabel : undefined,
+    likelihoodReason: typeof result.likelihoodReason === 'string' ? result.likelihoodReason : undefined,
+  };
 }
 
 function buildAnalysisPrompt(bill) {
@@ -191,6 +258,13 @@ function buildAnalysisPrompt(bill) {
       "why": "Plain-English explanation of their specific objection."
     }
   ],
+  "underreported": [
+    {
+      "section": "Section name or number",
+      "summary": "Plain English explanation of what it does",
+      "why_unreported": "One sentence on why this is likely flying under the radar"
+    }
+  ],
   "gaps": [
     "One sentence describing something important that this bill does NOT address but probably should."
   ],
@@ -204,10 +278,18 @@ Sponsor: ${bill.sponsor}
 Current stage: ${bill.stageLabel}
 Summary: ${bill.summaryText ? bill.summaryText.slice(0, 2000) : 'No summary available — use your knowledge of this bill if it is well-known, otherwise provide general analysis based on the title and sponsor.'}
 
+Underreported guidance:
+- Find provisions with significant impact not covered in mainstream reporting.
+- Surface riders or attachments unrelated to the bill's stated purpose.
+- Highlight technical language that obscures real-world effect.
+- Flag anything affecting specific industries, groups, or regulations in non-obvious ways.
+- Return 2-4 underreported items maximum, prioritizing the most significant.
+
 Rules:
 - sections: 1-4 categories, 1-3 items each. Keep "main" to one sentence. 
 - criticisms: 2-4 items from real or plausible stakeholders.
 - gaps: 3-5 items, one sentence each.
+- underreported: 2-4 items maximum, focused on provisions likely missed by mainstream reporting, unrelated riders, or technical language that hides major effects.
 - comments: 0-3 per item. Only include if realistic for this bill. party must be "d", "r", or "n".
 - All text must be in plain English suitable for a general audience.
 - Return ONLY the JSON object. No explanation, no markdown.`;

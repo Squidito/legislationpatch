@@ -3,28 +3,91 @@
 // =============================================
 
 let allBills      = [];
-let openCards     = new Set();
+let openCards     = new Map(); // id -> 'minor' | 'full'
 let openDetails   = {};
 let aiOutputs     = {};
 let activeFilter  = 'all';
 
+// Placeholder shock quotes — replace with live Congressional Record feed when available
+const SHOCK_QUOTES = [
+  {
+    name: 'Rep. Marjorie Taylor Greene', party: 'R', state: 'GA', bioguideId: 'G000596',
+    text: 'This spending bill is socialism with a bow on it. We are looting our grandchildren to buy votes today.',
+    source: 'House Floor, Apr 22, 2026'
+  },
+  {
+    name: 'Rep. Jasmine Crockett', party: 'D', state: 'TX', bioguideId: 'C001127',
+    text: 'They cut food stamps for hungry kids and then stood up and applauded themselves. I cannot do this job without screaming sometimes.',
+    source: 'House Floor, Apr 21, 2026'
+  },
+  {
+    name: 'Sen. Tommy Tuberville', party: 'R', state: 'AL', bioguideId: 'T000278',
+    text: 'I do not think we need to be funding mental health programs for people who just do not want to work.',
+    source: 'Senate Floor, Apr 20, 2026'
+  },
+  {
+    name: 'Rep. Rashida Tlaib', party: 'D', state: 'MI', bioguideId: 'T000481',
+    text: 'Every single one of them knew what was in Section 223 and every single one of them voted yes anyway. Remember their names.',
+    source: 'House Floor, Apr 23, 2026'
+  }
+];
+
+const STORAGE_KEYS = {
+  trackedState:   'lpTrackedState',
+  trackedReps:    'lpTrackedReps',
+  watchedBills:   'lpWatchedBills',
+};
+
+let watchedBills = new Set();
+
+const US_STATES = [
+  { code: 'AL', name: 'Alabama' }, { code: 'AK', name: 'Alaska' }, { code: 'AZ', name: 'Arizona' },
+  { code: 'AR', name: 'Arkansas' }, { code: 'CA', name: 'California' }, { code: 'CO', name: 'Colorado' },
+  { code: 'CT', name: 'Connecticut' }, { code: 'DE', name: 'Delaware' }, { code: 'DC', name: 'District of Columbia' },
+  { code: 'FL', name: 'Florida' }, { code: 'GA', name: 'Georgia' }, { code: 'HI', name: 'Hawaii' },
+  { code: 'ID', name: 'Idaho' }, { code: 'IL', name: 'Illinois' }, { code: 'IN', name: 'Indiana' },
+  { code: 'IA', name: 'Iowa' }, { code: 'KS', name: 'Kansas' }, { code: 'KY', name: 'Kentucky' },
+  { code: 'LA', name: 'Louisiana' }, { code: 'ME', name: 'Maine' }, { code: 'MD', name: 'Maryland' },
+  { code: 'MA', name: 'Massachusetts' }, { code: 'MI', name: 'Michigan' }, { code: 'MN', name: 'Minnesota' },
+  { code: 'MS', name: 'Mississippi' }, { code: 'MO', name: 'Missouri' }, { code: 'MT', name: 'Montana' },
+  { code: 'NE', name: 'Nebraska' }, { code: 'NV', name: 'Nevada' }, { code: 'NH', name: 'New Hampshire' },
+  { code: 'NJ', name: 'New Jersey' }, { code: 'NM', name: 'New Mexico' }, { code: 'NY', name: 'New York' },
+  { code: 'NC', name: 'North Carolina' }, { code: 'ND', name: 'North Dakota' }, { code: 'OH', name: 'Ohio' },
+  { code: 'OK', name: 'Oklahoma' }, { code: 'OR', name: 'Oregon' }, { code: 'PA', name: 'Pennsylvania' },
+  { code: 'RI', name: 'Rhode Island' }, { code: 'SC', name: 'South Carolina' }, { code: 'SD', name: 'South Dakota' },
+  { code: 'TN', name: 'Tennessee' }, { code: 'TX', name: 'Texas' }, { code: 'UT', name: 'Utah' },
+  { code: 'VT', name: 'Vermont' }, { code: 'VA', name: 'Virginia' }, { code: 'WA', name: 'Washington' },
+  { code: 'WV', name: 'West Virginia' }, { code: 'WI', name: 'Wisconsin' }, { code: 'WY', name: 'Wyoming' },
+];
+
+// Demo reps — shown when no Congress API key is configured
+const DEMO_REPS = [
+  { bioguideId: 'K000367', name: 'Sen. Klobuchar', party: 'D', state: 'MN' },
+  { bioguideId: 'C001047', name: 'Sen. Capito',    party: 'R', state: 'WV' },
+  { bioguideId: 'W000437', name: 'Sen. Wicker',    party: 'R', state: 'MS' },
+  { bioguideId: 'P000034', name: 'Rep. Pallone',   party: 'D', state: 'NJ' },
+  { bioguideId: 'B001261', name: 'Sen. Barrasso',  party: 'R', state: 'WY' },
+  { bioguideId: 'M001163', name: 'Rep. Matsui',    party: 'D', state: 'CA' },
+];
+
+const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' fill='%23374151'/%3E%3Ccircle cx='22' cy='16' r='9' fill='%236b7280'/%3E%3Cellipse cx='22' cy='40' rx='15' ry='11' fill='%236b7280'/%3E%3C/svg%3E";
+
+let trackedState = 'TX';
+let trackedReps = [];
+let availableStateReps = [];
+
 // ---- Boot ----
 
-document.addEventListener('DOMContentLoaded', () => {
-  checkSetup();
+document.addEventListener('DOMContentLoaded', async () => {
+  loadTrackedSettings();
+  loadWatchedBills();
+  await autoDetectState();
+  setupSettings();
+  renderRepStrip();
   loadBills();
   setupFilters();
 });
 
-function checkSetup() {
-  const hasKeys = CONFIG.CONGRESS_API_KEY && CONFIG.ANTHROPIC_API_KEY;
-  const banner = document.getElementById('setupBanner');
-  if (hasKeys) banner.style.display = 'none';
-}
-
-function dismissBanner() {
-  document.getElementById('setupBanner').style.display = 'none';
-}
 
 // ---- Load bills ----
 
@@ -73,10 +136,404 @@ function setupFilters() {
   });
 }
 
+// ---- Rep tracker setup ----
+
+function setupSettings() {
+  const moreBtn = document.getElementById('repMoreBtn');
+  if (moreBtn) moreBtn.addEventListener('click', toggleRepDropdown);
+
+  const stateSelect = document.getElementById('stateSelect');
+  if (stateSelect) stateSelect.addEventListener('change', handleStateChange);
+
+  const manualAdd = document.getElementById('manualRepAdd');
+  if (manualAdd) manualAdd.addEventListener('click', addManualTrackedRep);
+
+  populateStateDropdown();
+
+  if (CONFIG.CONGRESS_API_KEY) {
+    fetchStateReps(trackedState);
+  }
+}
+
+function loadTrackedSettings() {
+  const savedState = localStorage.getItem(STORAGE_KEYS.trackedState);
+  const savedReps  = localStorage.getItem(STORAGE_KEYS.trackedReps);
+  if (savedState) trackedState = savedState;
+  try { trackedReps = savedReps ? JSON.parse(savedReps) : []; }
+  catch (err) { trackedReps = []; }
+}
+
+function handleZipTrack() {
+  const zip = document.getElementById('zipInput')?.value?.trim();
+  if (!zip || zip.length !== 5) return;
+  // Future: look up reps by ZIP via Congress API
+}
+
+function loadWatchedBills() {
+  try { watchedBills = new Set(JSON.parse(localStorage.getItem(STORAGE_KEYS.watchedBills) || '[]')); }
+  catch(e) { watchedBills = new Set(); }
+}
+
+function toggleWatch(id, e) {
+  e && e.stopPropagation();
+  watchedBills.has(id) ? watchedBills.delete(id) : watchedBills.add(id);
+  localStorage.setItem(STORAGE_KEYS.watchedBills, JSON.stringify([...watchedBills]));
+  renderAll();
+}
+
+function saveTrackedSettings() {
+  localStorage.setItem(STORAGE_KEYS.trackedState, trackedState);
+  localStorage.setItem(STORAGE_KEYS.trackedReps, JSON.stringify(trackedReps));
+}
+
+// Silently detect state from IP — no user prompt
+async function autoDetectState() {
+  if (localStorage.getItem(STORAGE_KEYS.trackedState)) return; // respect saved preference
+  try {
+    const res  = await fetch('https://ipapi.co/json/');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.region_code && US_STATES.some(s => s.code === data.region_code)) {
+      trackedState = data.region_code;
+      saveTrackedSettings();
+    }
+  } catch (e) { /* silently fail — default state used */ }
+}
+
+function populateStateDropdown() {
+  const select = document.getElementById('stateSelect');
+  if (!select) return;
+  select.innerHTML = US_STATES.map(s =>
+    `<option value="${s.code}">${escHtml(s.name)}</option>`
+  ).join('');
+  select.value = trackedState;
+}
+
+function handleStateChange(e) {
+  trackedState = e.target.value;
+  saveTrackedSettings();
+  if (CONFIG.CONGRESS_API_KEY) {
+    fetchStateReps(trackedState);
+  }
+}
+
+async function fetchStateReps(state) {
+  const status = document.getElementById('stateStatus');
+  availableStateReps = [];
+
+  if (!CONFIG.CONGRESS_API_KEY) {
+    if (status) status.textContent = 'Add a Congress API key to config.js to load live member data.';
+    renderRepStrip();
+    renderRepGrid();
+    return;
+  }
+
+  if (status) status.textContent = 'Loading…';
+  try {
+    const url = `https://api.congress.gov/v3/member?state=${state}&currentMember=true&api_key=${CONFIG.CONGRESS_API_KEY}`;
+    const res  = await fetch(url);
+    if (!res.ok) throw new Error(`Congress API ${res.status}`);
+    const data = await res.json();
+    availableStateReps = data?.members || data?.results || data?.memberships || [];
+    if (!Array.isArray(availableStateReps)) availableStateReps = [];
+    if (status) status.textContent = `${availableStateReps.length} members for ${state}`;
+  } catch (err) {
+    if (status) status.textContent = `Failed: ${err.message}`;
+  }
+  renderRepStrip();
+  renderRepGrid();
+}
+
+// ---- Portrait helpers ----
+
+function portraitUrl(bioguideId) {
+  if (!bioguideId || typeof bioguideId !== 'string' || bioguideId.length < 2) return FALLBACK_PORTRAIT;
+  const id = bioguideId.toUpperCase();
+  return `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
+}
+
+function partyColor(party) {
+  const p = String(party || '').trim().toUpperCase()[0];
+  if (p === 'D') return '#3b82f6';
+  if (p === 'R') return '#ef4444';
+  return '#8b5cf6';
+}
+
+function repLastName(name) {
+  const clean = String(name || '').replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.) /, '');
+  const parts  = clean.trim().split(' ');
+  return parts[parts.length - 1] || clean;
+}
+
+function repCardHtml(rep, size) {
+  const id       = getRepId(rep);
+  const bioguide = rep.bioguideId || (id.length >= 6 ? id : null);
+  const party    = rep.party || rep.partyCode || 'I';
+  const state    = rep.state || rep.stateCode || trackedState;
+  const name     = formatRepName(rep);
+  const color    = partyColor(party);
+  const tracked  = trackedReps.some(r => r.id === id);
+  const imgSrc   = portraitUrl(bioguide);
+  const lastName = repLastName(name);
+  const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
+
+  return `<div class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+               data-id="${escHtml(id)}"
+               style="--party-color:${color}"
+               onclick="toggleRepTracked('${escHtml(id)}')"
+               title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
+    <div class="rep-ring">
+      <img src="${imgSrc}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
+    </div>
+    <span class="rep-badge">${escHtml(state)}</span>
+    ${nameEl}
+  </div>`;
+}
+
+// ---- Rep strip (8 portraits in controls bar) ----
+
+function renderRepStrip() {
+  const strip = document.getElementById('repStrip');
+  if (!strip) return;
+
+  // Build pool from bill sponsors + featured quote reps + fallback to state reps
+  const seen = new Set();
+  const pool = [];
+
+  allBills.forEach(bill => {
+    // Sponsors from raw bill data
+    (bill.sponsors || []).forEach(s => {
+      const id = s.bioguideId || s.id;
+      if (id && !seen.has(id)) { seen.add(id); pool.push({ bioguideId: id, name: formatRepName(s), party: s.party || 'n', state: s.state || '' }); }
+    });
+    // Featured quote reps
+    (bill.featured_quotes || []).forEach(q => {
+      if (q.bioguideId && !seen.has(q.bioguideId)) { seen.add(q.bioguideId); pool.push(q); }
+    });
+  });
+
+  // Fall back to state reps or demo reps if not enough
+  const fallback = availableStateReps.length ? availableStateReps : DEMO_REPS;
+  fallback.forEach(rep => {
+    const id = getRepId(rep);
+    if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
+  });
+
+  strip.innerHTML = pool.slice(0, 8).map(rep => repCardHtml(rep, 'sm')).join('');
+}
+
+// ---- Rep grid (all portraits in dropdown) ----
+
+function renderRepGrid() {
+  const grid = document.getElementById('repGrid');
+  if (!grid) return;
+  const pool = availableStateReps.length ? availableStateReps : DEMO_REPS;
+  if (!pool.length) {
+    grid.innerHTML = '<div class="rep-status">No members found.</div>';
+    return;
+  }
+  grid.innerHTML = pool.map(rep => repCardHtml(rep, 'lg')).join('');
+}
+
+// ---- Toggle dropdown ----
+
+function toggleRepDropdown() {
+  const dropdown = document.getElementById('repDropdown');
+  const chevron  = document.getElementById('repMoreChevron');
+  if (!dropdown) return;
+  const opening = !dropdown.classList.contains('open');
+  dropdown.classList.toggle('open', opening);
+  if (chevron) chevron.textContent = opening ? '▴' : '▾';
+  if (opening) {
+    const sel = document.getElementById('stateSelect');
+    if (sel) sel.value = trackedState;
+    renderRepGrid();
+  }
+}
+
+// ---- Toggle tracking for a rep ----
+
+function toggleRepTracked(id) {
+  const idx = trackedReps.findIndex(r => r.id === id);
+  if (idx >= 0) {
+    trackedReps.splice(idx, 1);
+  } else {
+    const pool   = [...availableStateReps, ...DEMO_REPS];
+    const source = pool.find(r => getRepId(r) === id);
+    trackedReps.push({
+      id,
+      name:   formatRepName(source) || id,
+      party:  source?.party || source?.partyCode || 'n',
+      state:  source?.state || source?.stateCode || trackedState,
+      source: 'strip',
+    });
+  }
+  saveTrackedSettings();
+  renderRepStrip();
+  renderRepGrid();
+  renderAll();
+}
+
+// ---- Manual rep add ----
+
+function addManualTrackedRep() {
+  const input = document.getElementById('manualRepInput');
+  if (!input) return;
+  const raw = input.value.trim();
+  if (!raw) return;
+  const id = raw.toLowerCase();
+  if (trackedReps.some(r => r.id === id)) { input.value = ''; return; }
+  trackedReps.push({ id, name: raw, party: 'n', state: trackedState, source: 'manual' });
+  saveTrackedSettings();
+  input.value = '';
+  renderRepStrip();
+  renderRepGrid();
+  renderAll();
+}
+
+function updateTrackedRep(id, checked) {
+  if (checked) {
+    if (!trackedReps.find(r => r.id === id)) {
+      const source = availableStateReps.find(r => getRepId(r) === id);
+      trackedReps.push({
+        id,
+        name:   formatRepName(source) || id,
+        party:  source?.party || 'n',
+        state:  source?.state || trackedState,
+        source: 'state',
+      });
+    }
+  } else {
+    trackedReps = trackedReps.filter(r => r.id !== id);
+  }
+  saveTrackedSettings();
+  renderRepStrip();
+  renderRepGrid();
+  renderAll();
+}
+
+function isTrackedRep(id) {
+  return trackedReps.some(r => r.id === id);
+}
+
+function getRepId(rep) {
+  if (!rep) return '';
+  if (rep.bioguideId) return String(rep.bioguideId);
+  if (rep.id)         return String(rep.id);
+  if (rep.memberId)   return String(rep.memberId);
+  if (rep.name)       return rep.name.trim().toLowerCase();
+  if (rep.fullName)   return rep.fullName.trim().toLowerCase();
+  if (rep.firstName || rep.lastName) return `${rep.firstName || ''} ${rep.lastName || ''}`.trim().toLowerCase();
+  return '';
+}
+
+function formatRepName(rep) {
+  if (!rep) return '';
+  if (rep.name)     return rep.name;
+  if (rep.fullName) return rep.fullName;
+  if (rep.firstName || rep.lastName) return `${rep.firstName || ''} ${rep.lastName || ''}`.trim();
+  return String(rep);
+}
+
+function partyInitial(party) {
+  if (!party) return 'I';
+  const code = String(party).trim().toLowerCase();
+  if (code.startsWith('d')) return 'D';
+  if (code.startsWith('r')) return 'R';
+  if (code.startsWith('i')) return 'I';
+  return code.slice(0, 1).toUpperCase() || 'I';
+}
+
+function roleClass(role) {
+  if (!role) return 'role-grey';
+  const lower = role.toLowerCase();
+  if (lower.includes('not voted') || lower.includes('pending') || lower.includes('present')) return 'role-grey';
+  if (lower.includes('yes') || lower.includes('yea'))   return 'role-yes';
+  if (lower.includes('no')  || lower.includes('nay'))   return 'role-no';
+  if (lower.includes('sponsored')) return 'role-sponsored';
+  return 'role-grey';
+}
+
+function extractVotePositions(actions) {
+  const entries = [];
+  if (!Array.isArray(actions)) return entries;
+  const addVote = (vote, source) => {
+    const rep      = vote.member || vote.person || vote;
+    const decision = String(vote.position || vote.vote || vote.value || vote.votePosition || vote.vote_desc || '').toLowerCase();
+    let role = 'Voted';
+    if (decision.includes('yea') || decision.includes('yes'))       role = 'Voted Yes';
+    else if (decision.includes('nay') || decision.includes('no'))   role = 'Voted No';
+    else if (decision.includes('present') || decision.includes('not')) role = 'Not Voted';
+    if (rep) entries.push({ rep, role, source });
+  };
+  actions.forEach(action => {
+    const voteArrays = [];
+    if (Array.isArray(action.votes))       voteArrays.push(action.votes);
+    if (Array.isArray(action.memberVotes)) voteArrays.push(action.memberVotes);
+    if (Array.isArray(action.vote))        voteArrays.push(action.vote);
+    if (action.rollCallVote) {
+      if (Array.isArray(action.rollCallVote.votes))   voteArrays.push(action.rollCallVote.votes);
+      if (Array.isArray(action.rollCallVote.members)) voteArrays.push(action.rollCallVote.members);
+    }
+    voteArrays.forEach(list => list.forEach(vote => addVote(vote, action)));
+  });
+  return entries;
+}
+
+function gatherBillPositions(bill) {
+  const positions = [];
+  const seen = new Set();
+  const addPosition = (rep, role) => {
+    const id = getRepId(rep);
+    if (!id || seen.has(id)) return;
+    seen.add(id);
+    positions.push({
+      id,
+      name:    formatRepName(rep) || bill.sponsor || 'Unknown',
+      party:   rep.party || rep.partyCode || 'n',
+      role,
+      tracked: isTrackedRep(id),
+    });
+  };
+  const sponsors = Array.isArray(bill.raw?.sponsors) ? bill.raw.sponsors : Array.isArray(bill.sponsors) ? bill.sponsors : [];
+  if (sponsors.length) {
+    addPosition(sponsors[0], 'Sponsored');
+    sponsors.slice(1).forEach(r => addPosition(r, 'Co-Sponsored'));
+  } else if (bill.sponsor) {
+    addPosition({ name: bill.sponsor, party: 'n' }, 'Sponsored');
+  }
+  extractVotePositions(bill.actions || []).forEach(entry => addPosition(entry.rep, entry.role));
+  return positions;
+}
+
+function renderPositionsSection(bill) {
+  const positions = gatherBillPositions(bill);
+  if (!positions.length) return '';
+  return `<div class="positions-section">
+    <div class="positions-title">Congressional Positions</div>
+    ${positions.map(pos => `<div class="position-row${pos.tracked ? ' tracked' : ''}">
+      <span class="position-name">${escHtml(pos.name)} ${partyInitial(pos.party)}</span>
+      <span class="position-role ${roleClass(pos.role)}">${escHtml(pos.role)}</span>
+    </div>`).join('')}
+  </div>`;
+}
+
+function renderUnderreportedSection(bill) {
+  if (!Array.isArray(bill.underreported) || !bill.underreported.length) return '';
+  return `<div class="underreported-section">
+    <div class="underreported-title">⚠ Underreported provisions</div>
+    ${bill.underreported.map(item => `<div class="underreported-item">
+      <div class="underreported-section-name">${escHtml(item.section || 'Section')}</div>
+      <div class="underreported-summary">${escHtml(item.summary || '')}</div>
+      <div class="underreported-why">${escHtml(item.why_unreported || '')}</div>
+    </div>`).join('')}
+  </div>`;
+}
+
 // ---- Render ----
 
 function renderAll() {
-  const list = document.getElementById('billList');
+  const list     = document.getElementById('billList');
   const filtered = activeFilter === 'all'
     ? allBills
     : allBills.filter(b => b.stage === activeFilter);
@@ -85,38 +542,256 @@ function renderAll() {
     list.innerHTML = '<div class="empty-state">No bills found for this filter.</div>';
     return;
   }
+  const countEl = document.getElementById('billsCountLabel');
+  if (countEl) countEl.textContent = `${filtered.length} bill${filtered.length !== 1 ? 's' : ''} · sorted by activity`;
 
-  list.innerHTML = filtered.map(renderBill).join('');
+  list.innerHTML =
+    renderShockQuotesSection() +
+    filtered.map((b, i) => renderBill(b, i + 1)).join('');
 }
 
-function renderBill(bill) {
-  const isOpen  = openCards.has(bill.id);
-  const col     = likelihoodColor(bill.likelihood);
+function renderStatsBar(bills) {
+  /* uses the stats-bar CSS class */
+  const avgLikelihood = bills.length
+    ? Math.round(bills.reduce((s, b) => s + (b.likelihood || 0), 0) / bills.length)
+    : 0;
+  const underCount = bills.reduce((s, b) => s + (b.underreported?.length || 0), 0);
+  const newToday = bills.filter(b => b.analyzed).length;
 
-  return `<div class="bill-card" id="card-${bill.id}">
-    ${renderHeader(bill, isOpen)}
-    ${renderLikelihoodFooter(bill, col)}
-    ${renderBody(bill, isOpen, col)}
+  // Pick the most notable underreported item for the headline
+  const notable = bills.flatMap(b => b.underreported || []).find(u => u?.section);
+  const headlineExtra = notable
+    ? ` <em>${escHtml(notable.section.split('—')[0].trim())}</em> went unnoticed.`
+    : '';
+
+  return `<div style="max-width:960px;margin:0 auto 16px;padding:0 24px">
+    <div class="stats-hero">
+      <div class="stats-hero-headline">
+        <div class="stats-hero-week">This week in Congress</div>
+        <div class="stats-hero-text">${bills.length} bill${bills.length !== 1 ? 's' : ''} active.${headlineExtra}</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Active bills</div>
+        <div class="stat-value">${bills.length}</div>
+        <div class="stat-delta neu">tracked in this session</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Avg. likelihood</div>
+        <div class="stat-value">${avgLikelihood}%</div>
+        <div class="stat-delta ${avgLikelihood >= 50 ? '' : 'neg'}">of passage</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-label">Underreported flags</div>
+        <div class="stat-value">${underCount}</div>
+        <div class="stat-delta neg">${newToday} with full analysis</div>
+      </div>
+    </div>
   </div>`;
 }
 
-function renderHeader(bill, isOpen) {
-  return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
-    <div class="bill-left">
-      <span class="stage-badge ${badgeClass(bill.stage)}">${bill.stageLabel}</span>
-      ${renderMiniPipeline(bill)}
-    </div>
-    <div class="bill-right">
-      <div class="bill-title-block">
-        <div class="bill-title">${escHtml(bill.title)}</div>
-        <div class="bill-meta">
-          <span>${escHtml(bill.code)}</span>
-          <span>${escHtml(bill.sponsor)}</span>
-          <span>${escHtml(bill.date)}</span>
+function renderShockQuotesSection() {
+  // Merge tracked reps (if they have a quote in any bill) with global shock quotes
+  const trackedIds = new Set(trackedReps.map(r => r.id));
+  const allQuotes = [...SHOCK_QUOTES];
+
+  const html = allQuotes.map(q => {
+    const isTracked = trackedIds.has(q.bioguideId) || trackedIds.has(q.name?.toLowerCase());
+    const color = partyColor(q.party);
+    return `<div class="shock-quote-card${isTracked ? ' is-tracked' : ''}">
+      <div class="shock-quote-header">
+        <img class="shock-quote-portrait" src="${portraitUrl(q.bioguideId)}"
+             onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}"
+             style="border: 2px solid ${color}" />
+        <div>
+          <div class="shock-quote-name">${escHtml(q.name)}</div>
+          <div class="shock-quote-source">${escHtml(q.source)}</div>
         </div>
       </div>
-      <span class="chevron ${isOpen ? 'open' : ''}">▾</span>
+      <div class="shock-quote-text">"${escHtml(q.text)}"</div>
+    </div>`;
+  }).join('');
+
+  return `<div class="shock-quotes-section">
+    <div class="shock-quotes-label">From the floor this week</div>
+    <div class="shock-quotes-grid">${html}</div>
+  </div>`;
+}
+
+function renderBill(bill, num) {
+  const state    = openCards.get(bill.id);
+  const col      = likelihoodColor(bill.likelihood);
+  const watching = watchedBills.has(bill.id);
+  return `<div class="bill-card" id="card-${bill.id}">
+    ${renderHeader(bill, state, num, watching)}
+    ${renderLikelihoodFooter(bill, col, state)}
+    ${renderMinorBody(bill, col, state === 'minor')}
+    ${renderBody(bill, state === 'full', col)}
+  </div>`;
+}
+
+function formatDateCompact(dateStr) {
+  // "Apr 20, 2026" → "20/04/26"
+  try {
+    const d = new Date(dateStr);
+    if (isNaN(d)) return dateStr;
+    const dd = String(d.getDate()).padStart(2,'0');
+    const mm = String(d.getMonth()+1).padStart(2,'0');
+    const yy = String(d.getFullYear()).slice(-2);
+    return `${dd}/${mm}/${yy}`;
+  } catch(e) { return dateStr; }
+}
+
+function renderHeader(bill, state, num, watching) {
+  const isOpen     = !!state;
+  const lcolor     = bill.likelihood >= 65 ? '#3a7a4f' : bill.likelihood >= 45 ? '#a87d24' : '#a14040';
+  const sponsorSrc = bill.sponsor_bioguide ? portraitUrl(bill.sponsor_bioguide) : FALLBACK_PORTRAIT;
+  const cosponsors = bill.raw?.cosponsors?.count || bill.cosponsors || 0;
+  const pages      = bill.pages || '';
+  const dateShort  = formatDateCompact(bill.date);
+  const version    = bill.version || 'v1.0';
+
+  const sponsorMeta = [
+    `SPONSOR · ${bill.sponsor.toUpperCase()}`,
+    cosponsors ? `${cosponsors} COSPONSORS` : null,
+    pages ? `${pages} PAGES` : null
+  ].filter(Boolean).join(' · ');
+
+  return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
+    <div class="bill-rank-col">
+      ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
+      ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
+      <div class="bill-number">#${num || ''}</div>
     </div>
+    <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
+    <div class="bill-title-block">
+      <div class="bill-meta-row">
+        <span class="bill-meta-compact">${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateShort)}</span>
+      </div>
+      <div class="bill-title">${escHtml(bill.title)}</div>
+      ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
+      <div class="bill-meta">${escHtml(sponsorMeta)}</div>
+    </div>
+    <div class="bill-likelihood-col">
+      <div class="likelihood-pct" style="color:${lcolor}">${bill.likelihood}%</div>
+      <div class="likelihood-lbl">${bill.likelihoodLabel || labelFromPct(bill.likelihood)}</div>
+      <div class="likelihood-bar-sm">
+        <div class="likelihood-bar-fill" style="width:${bill.likelihood}%;background:${lcolor}"></div>
+      </div>
+    </div>
+    <div class="bill-actions-col">
+      <button class="star-btn${watching ? ' watching' : ''}" onclick="toggleWatch('${bill.id}', event)" title="${watching ? 'Unwatch' : 'Watch this bill'}">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="${watching ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+        </svg>
+      </button>
+    </div>
+  </div>`;
+}
+
+function renderTopLines(bill) {
+  if (!bill.top_lines?.length && !bill.brief) return '';
+  return `<div class="top-lines">
+    ${bill.brief ? `<div class="top-lines-brief">${escHtml(bill.brief)}</div>` : ''}
+    ${(bill.top_lines || []).map(line =>
+      `<div class="top-line-item"><span class="top-line-bullet">—</span>${escHtml(line)}</div>`
+    ).join('')}
+  </div>`;
+}
+
+function renderStageStrip(bill) {
+  const stages = ['Introduced', 'Committee', 'House', 'Senate', 'Signed'];
+  const idx = bill.currentStep || 0;
+  const accentColor = '#a14040';
+  return `<div class="stage-strip">
+    ${stages.map((s, i) => {
+      const dotCls = i < idx ? 'done' : i === idx ? 'active' : 'pending';
+      const dotSize = i === idx ? '13px' : '9px';
+      const labelColor = i <= idx ? '#0c0c0d' : '#a8acb8';
+      const labelWeight = i === idx ? '600' : '400';
+      const connColor = i < idx ? accentColor : '#e5e5e3';
+      return `<div class="stage-strip-step">
+        <div class="stage-strip-dot ${dotCls}" style="width:${dotSize};height:${dotSize}"></div>
+        <div class="stage-strip-label" style="color:${labelColor};font-weight:${labelWeight}">${s}</div>
+      </div>${i < stages.length - 1 ? `<div class="stage-strip-connector" style="background:${connColor}"></div>` : ''}`;
+    }).join('')}
+  </div>`;
+}
+
+function renderChangesSection(bill) {
+  if (!bill.changes) return '';
+  const { added = [], modified = [], removed = [] } = bill.changes;
+  if (!added.length && !modified.length && !removed.length) return '';
+
+  const block = (label, symbol, color, bg, items) => {
+    if (!items.length) return `<div class="patch-block" style="background:${bg}">
+      <div class="patch-block-label" style="color:${color}">
+        <span class="patch-block-symbol">${symbol}</span>${label}
+      </div>
+      <div class="patch-block-items"><div class="patch-block-item" style="color:#a8acb8;font-style:italic">None</div></div>
+    </div>`;
+    return `<div class="patch-block" style="background:${bg}">
+      <div class="patch-block-label" style="color:${color}">
+        <span class="patch-block-symbol">${symbol}</span>${label}
+      </div>
+      <div class="patch-block-items">${items.map(t => `<div class="patch-block-item">${escHtml(t)}</div>`).join('')}</div>
+    </div>`;
+  };
+
+  return `<div class="what-changed-section">
+    <div class="what-changed-label">What changed in ${escHtml(bill.version || 'this version')}</div>
+    <div class="what-changed-grid">
+      ${block('Added', '+', '#3a7a4f', '#eef5ef', added)}
+      ${block('Modified', '~', '#a87d24', '#f7f1e3', modified)}
+      ${block('Removed', '−', '#a14040', '#f7ecec', removed)}
+    </div>
+  </div>`;
+}
+
+function renderMinorBody(bill, col, isOpen) {
+  const topUnder = bill.underreported?.[0];
+  const underHtml = topUnder ? `
+    <div class="underreported-teaser">
+      <span class="underreported-badge">⚠ Underreported</span>
+      <div class="underreported-headline">${escHtml(topUnder.section)}</div>
+      <div class="underreported-preview">${escHtml(topUnder.summary)}</div>
+    </div>` : '';
+
+  const likelihoodDetail = `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
+    <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage</div>
+    <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
+  </div>`;
+
+  return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
+    ${likelihoodDetail}
+    ${renderTopLines(bill)}
+    ${underHtml}
+    ${renderQuoteCards(bill)}
+    <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Full analysis ↓</button>
+  </div>`;
+}
+
+function renderQuoteCards(bill) {
+  const quotes = bill.featured_quotes;
+  if (!quotes?.length) return '';
+  return `<div class="quote-cards-row">
+    ${quotes.slice(0, 2).map(q => {
+      const stanceCls = q.stance === 'support' ? 'stance-support' : 'stance-oppose';
+      const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
+      return `<div class="quote-card">
+        <div class="quote-card-meta">
+          <div class="quote-card-rep">
+            <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
+                 onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
+            <div class="quote-card-name">
+              <span>${escHtml(q.name)}</span>
+              <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party}</span>
+            </div>
+          </div>
+          <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
+        </div>
+        <div class="quote-text">"${escHtml(q.text)}"</div>
+      </div>`;
+    }).join('')}
   </div>`;
 }
 
@@ -132,20 +807,36 @@ function renderMiniPipeline(bill) {
   </div>`;
 }
 
-function renderLikelihoodFooter(bill, col) {
-  const pct = bill.likelihood || 0;
+function renderLikelihoodFooter(bill, col, state) {
+  const pct    = bill.likelihood || 0;
+  const isOpen = !!state;
+  const stages = ['Intro','Cmte','House','Senate','Signed'];
+  const idx    = bill.currentStep ?? 0;
+
+  const dots = stages.map((s, i) => {
+    const done   = i < idx;
+    const active = i === idx;
+    const bg     = done || active ? '#0c0c0d' : '#d0d0ce';
+    const size   = active ? '9px' : '6px';
+    const shadow = active ? 'box-shadow:0 0 0 2px #fff,0 0 0 3.5px #0c0c0d;' : '';
+    const line   = i < stages.length - 1
+      ? `<div style="height:1.5px;flex:1;background:${done ? '#0c0c0d' : '#d0d0ce'};margin:0 2px"></div>`
+      : '';
+    return `<div style="width:${size};height:${size};border-radius:50%;background:${bg};flex-shrink:0;${shadow}transition:all 0.2s"></div>${line}`;
+  }).join('');
+
   return `<div class="likelihood-footer" onclick="toggleCard('${bill.id}')">
+    <div class="footer-stage-dots">${dots}</div>
     <span class="likelihood-label">Passage likelihood</span>
     <div class="likelihood-track">
       <div class="likelihood-fill" style="width:${pct}%;background:${col.fill}"></div>
     </div>
     <span class="likelihood-value" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(pct)} · ${pct}%</span>
+    <span class="chevron ${isOpen ? 'open' : ''}">▾</span>
   </div>`;
 }
 
 function renderBody(bill, isOpen, col) {
-  const aiOut = aiOutputs[bill.id] || '';
-
   const pipelineHtml = `<div class="full-pipeline">
     ${bill.pipeline.map((step, i) => {
       const done   = i < bill.currentStep;
@@ -155,14 +846,14 @@ function renderBody(bill, isOpen, col) {
     }).join('')}
   </div>`;
 
-  const likelihoodDetail = `<div class="likelihood-detail" style="border-left:3px solid ${col.fill}">
-    <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(bill.likelihood)} · ${bill.likelihood}% chance of passage</div>
-    <div class="likelihood-detail-text">${escHtml(bill.likelihoodReason || '')}</div>
-  </div>`;
+  const topLinesHtml = renderTopLines(bill);
 
   const sectionsHtml = bill.sections?.length
     ? `<div class="patch-notes">${bill.sections.map((sec, si) => renderSection(bill, sec, si)).join('')}</div>`
     : `<div class="patch-notes"><p style="font-size:0.85rem;color:var(--text-3);padding:0.5rem 0">Click "Analyze with AI" below to generate patch notes for this bill.</p></div>`;
+
+  const positionsHtml     = renderPositionsSection(bill);
+  const underreportedHtml = renderUnderreportedSection(bill);
 
   const criticismsHtml = bill.criticisms?.length ? `
     <div class="section-divider"></div>
@@ -178,16 +869,18 @@ function renderBody(bill, isOpen, col) {
     </div>` : '';
 
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
-    ${pipelineHtml}
-    ${likelihoodDetail}
+    ${topLinesHtml}
+    ${renderChangesSection(bill)}
     ${sectionsHtml}
+    ${positionsHtml}
+    ${underreportedHtml}
     ${criticismsHtml}
     ${gapsHtml}
     <div class="section-divider"></div>
     <button class="ai-btn" id="ai-btn-${bill.id}" onclick="runAIAnalysis('${bill.id}')">
       ✦ ${bill.analyzed ? 'Re-analyze' : 'Analyze'} with AI
     </button>
-    <div class="ai-output ${aiOut ? 'open' : ''}" id="ai-out-${bill.id}">${escHtml(aiOut)}</div>
+    <div class="ai-output ${aiOutputs[bill.id] ? 'open' : ''}" id="ai-out-${bill.id}">${escHtml(aiOutputs[bill.id] || '')}</div>
   </div>`;
 }
 
@@ -201,13 +894,11 @@ function renderSection(bill, sec, si) {
 function renderItem(bill, item, si, ii) {
   const key    = `${bill.id}-${si}-${ii}`;
   const isOpen = openDetails[key];
-
   const chipsHtml = item.comments?.length
     ? `<div class="comment-chips">${item.comments.map(c =>
-        `<span class="chip chip-${c.party}" title="${escHtml(c.text)}">${c.party === 'd' ? 'D' : c.party === 'r' ? 'R' : '◆'} ${escHtml(c.text.split(':')[0])}</span>`
+        `<span class="chip chip-${c.party}" title="${escHtml(c.text)}">${c.party === 'd' ? 'D' : c.party === 'r' ? 'R' : '●'}</span>`
       ).join('')}</div>`
     : '';
-
   const commentsDetail = item.comments?.map(c =>
     `<div class="item-detail-comment">${escHtml(c.text)}</div>`
   ).join('') || '';
@@ -227,7 +918,15 @@ function renderItem(bill, item, si, ii) {
 // ---- Interactions ----
 
 function toggleCard(id) {
-  openCards.has(id) ? openCards.delete(id) : openCards.add(id);
+  const state = openCards.get(id);
+  if (state === 'minor') openCards.delete(id);   // minor → closed
+  else openCards.set(id, 'minor');               // closed or full → minor
+  renderAll();
+}
+
+function expandFull(id, e) {
+  e && e.stopPropagation();
+  openCards.set(id, 'full');
   renderAll();
 }
 
@@ -257,16 +956,14 @@ async function runAIAnalysis(billId) {
 
   try {
     const result = await analyzeBill(bill);
-
-    // Merge AI results back into the bill object
-    if (result.sections?.length)     bill.sections     = result.sections;
-    if (result.criticisms?.length)   bill.criticisms   = result.criticisms;
-    if (result.gaps?.length)         bill.gaps         = result.gaps;
-    if (result.likelihoodLabel)      bill.likelihoodLabel = result.likelihoodLabel;
-    if (result.likelihoodReason)     bill.likelihoodReason = result.likelihoodReason;
+    if (result.sections?.length)      bill.sections       = result.sections;
+    if (result.underreported?.length) bill.underreported  = result.underreported;
+    if (result.criticisms?.length)    bill.criticisms     = result.criticisms;
+    if (result.gaps?.length)          bill.gaps           = result.gaps;
+    if (result.likelihoodLabel)       bill.likelihoodLabel = result.likelihoodLabel;
+    if (result.likelihoodReason)      bill.likelihoodReason = result.likelihoodReason;
+    if (!Array.isArray(bill.underreported)) bill.underreported = [];
     bill.analyzed = true;
-
-    // Hide raw AI output, re-render the card with structured data
     aiOutputs[billId] = '';
     renderAll();
   } catch (e) {
@@ -279,22 +976,14 @@ async function runAIAnalysis(billId) {
 // ---- Helpers ----
 
 function badgeClass(stage) {
-  return {
-    senate:     'badge-senate',
-    house:      'badge-house',
-    signed:     'badge-signed',
-    committee:  'badge-committee',
-    introduced: 'badge-introduced',
-    conference: 'badge-conference',
-  }[stage] || 'badge-default';
+  return { senate: 'badge-senate', house: 'badge-house', signed: 'badge-signed',
+           committee: 'badge-committee', introduced: 'badge-introduced', conference: 'badge-conference' }[stage] || 'badge-default';
 }
 
 function likelihoodColor(pct) {
-  if (pct >= 100) return { fill: '#085041', text: '#085041' };
-  if (pct >= 75)  return { fill: '#2D7A3A', text: '#1A4D22' };
-  if (pct >= 50)  return { fill: '#1A56A0', text: '#0C3A72' };
-  if (pct >= 25)  return { fill: '#B06A00', text: '#6B3F00' };
-  return { fill: '#C0392B', text: '#7A1F15' };
+  if (pct >= 65) return { fill: '#3a7a4f', text: '#1a4f2b' }; // green
+  if (pct >= 45) return { fill: '#a87d24', text: '#6B3F00' }; // amber
+  return { fill: '#4a4a52', text: '#2a2a30' };                 // dark slate — no red, no blue
 }
 
 function labelFromPct(pct) {
