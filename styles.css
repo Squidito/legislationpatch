@@ -28,6 +28,14 @@
   --red-text:     #7A1F15;
   --teal-bg:      #E1F4F0;
   --teal-text:    #0D5A4A;
+  --purple:       #6d4fc7;
+  --purple-bg:    #f0ecfb;
+  --purple-text:  #3d2a7a;
+  --purple-border:#d4c8f5;
+  --teal:         #0d9488;
+  --teal-bg:      #f0fdfa;
+  --teal-text:    #0f766e;
+  --teal-border:  #99e6df;
   --radius-sm:    6px;
   --radius-md:    10px;
   --radius-lg:    14px;
@@ -142,7 +150,7 @@ a:hover { text-decoration: underline; }
   padding: 8px 24px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.75rem;
 }
 .controls-right {
@@ -345,9 +353,9 @@ a:hover { text-decoration: underline; }
 }
 .filter-btn:hover { border-color: var(--border-strong); color: var(--text); }
 .filter-btn.active {
-  background: var(--text);
+  background: var(--purple);
   color: #fff;
-  border-color: var(--text);
+  border-color: var(--purple);
 }
 .refresh-btn {
   font-family: var(--font-body);
@@ -622,7 +630,7 @@ a:hover { text-decoration: underline; }
 /* Card header row — Variation G 5-column grid */
 .bill-header {
   display: grid;
-  grid-template-columns: 48px 48px 1fr auto auto;
+  grid-template-columns: 48px 48px 1fr 40px;
   gap: 14px;
   align-items: center;
   padding: 16px 18px;
@@ -760,8 +768,10 @@ a:hover { text-decoration: underline; }
 }
 .likelihood-bar-fill { height: 100%; border-radius: 2px; }
 
-/* Star column — just the star, centered */
-.bill-actions-col {
+/* Star and chevron share identical 40px containers */
+.bill-actions-col,
+.footer-chevron-col {
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,8 +788,7 @@ a:hover { text-decoration: underline; }
   transform: rotate(45deg);
   transition: transform 0.22s ease, opacity 0.15s;
   flex-shrink: 0;
-  margin-left: 5px;
-  margin-bottom: 3px;
+  margin: 1px;
 }
 .chevron.open {
   transform: rotate(225deg);
@@ -821,7 +830,7 @@ a:hover { text-decoration: underline; }
   color: #0c0c0d;
   opacity: 0.28;
   transition: color 0.15s, opacity 0.15s;
-  padding: 4px;
+  padding: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -838,20 +847,26 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.01em;
 }
 
-/* Likelihood footer strip — with mini stage dots */
+/* Likelihood footer — grid matches header columns exactly */
 .likelihood-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 48px 48px 1fr 40px;
+  gap: 14px;
   align-items: center;
-  gap: 10px;
   padding: 7px 18px;
   border-top: 1px solid var(--border);
   cursor: pointer;
 }
 .footer-stage-dots {
+  grid-column: 1 / 3;
   display: flex;
   align-items: center;
-  width: 110px;
-  flex-shrink: 0;
+}
+.footer-likelihood-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
 }
 .likelihood-label {
   font-size: 0.7rem;
@@ -860,8 +875,8 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 .likelihood-track {
-  width: 140px;
-  flex: none;
+  flex: 1;
+  min-width: 0;
   height: 4px;
   border-radius: 2px;
   background: #c8c7c3;
@@ -983,10 +998,12 @@ a:hover { text-decoration: underline; }
 .quote-stance.stance-support {
   background: var(--green-bg);
   color: var(--green-text);
+  border: 1px solid rgba(45,122,58,0.2);
 }
 .quote-stance.stance-oppose {
-  background: #f0eeea;
+  background: var(--surface-2);
   color: #4a4a52;
+  border: 1px solid var(--border);
 }
 .quote-text {
   font-size: 0.82rem;
@@ -1000,7 +1017,7 @@ a:hover { text-decoration: underline; }
 .expand-full-btn {
   display: block;
   width: calc(100% - 2.2rem);
-  margin: 0.75rem 1.1rem 0.85rem;
+  margin: 0.85rem 1.1rem 1rem;
   padding: 0.5rem;
   background: transparent;
   border: 1px solid var(--border);
@@ -1012,9 +1029,16 @@ a:hover { text-decoration: underline; }
   text-align: center;
   transition: background 0.15s, color 0.15s;
 }
+.expand-full-btn {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+  font-weight: 500;
+}
 .expand-full-btn:hover {
-  background: var(--surface-2);
-  color: var(--text);
+  background: var(--purple-text);
+  border-color: var(--purple-text);
+  color: #fff;
 }
 
 /* ---- SHOCK QUOTES SECTION ---- */
@@ -1197,52 +1221,58 @@ a:hover { text-decoration: underline; }
   margin: 0.65rem 18px 0;
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--purple-border);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
 .top-lines-brief {
-  font-size: 0.78rem;
+  font-size: 0.79rem;
   color: var(--text-2);
-  line-height: 1.4;
-  padding: 10px 14px 8px;
+  line-height: 1.45;
+  padding: 10px 14px 9px;
   border-bottom: 1px solid var(--border-inner);
+  font-style: italic;
 }
 .top-line-item {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
-  padding: 10px 14px;
+  padding: 11px 14px;
   border-bottom: 1px solid var(--border-inner);
   display: flex;
   align-items: flex-start;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 .top-line-item:last-child { border-bottom: none; }
 .top-line-bullet {
-  color: var(--text-3);
+  color: var(--purple);
   flex-shrink: 0;
   font-size: 1rem;
   line-height: 1.3;
+  font-weight: 400;
 }
 
 /* Likelihood detail */
 .likelihood-detail {
   margin: 0.85rem 1.1rem 0;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
-  background: var(--surface-2);
+  background: var(--purple-bg);
+  border: 1px solid var(--purple-border);
+  border-left: 3px solid var(--purple);
 }
 .likelihood-detail-title {
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.68rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 3px;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+  color: var(--purple);
 }
 .likelihood-detail-text {
   font-size: 0.82rem;
-  color: var(--text-2);
+  color: var(--purple-text);
   line-height: 1.5;
 }
 
@@ -1499,4 +1529,145 @@ a:hover { text-decoration: underline; }
   .bill-left { width: 120px; padding: 0.85rem 0.6rem; }
   .header-inner { flex-direction: column; gap: 4px; }
   .controls-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- DARK MODE SLIDER TOGGLE ---- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.theme-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.toggle-track {
+  width: 40px;
+  height: 22px;
+  background: var(--border);
+  border-radius: 11px;
+  position: relative;
+  transition: background 0.22s ease;
+  flex-shrink: 0;
+}
+.theme-toggle input:checked + .toggle-track {
+  background: var(--purple);
+}
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: transform 0.22s ease;
+}
+.theme-toggle input:checked + .toggle-track .toggle-thumb {
+  transform: translateX(18px);
+}
+
+/* ---- DARK MODE ---- */
+[data-theme="dark"] {
+  --bg:           #0f0f11;
+  --surface:      #1a1a1f;
+  --surface-2:    #242429;
+  --border:       #2e2e38;
+  --border-inner: #252530;
+  --text:         #f0f0f3;
+  --text-2:       #a8a8b3;
+  --text-3:       #6b6b7a;
+  --shadow:       0 1px 3px rgba(0,0,0,0.4);
+
+  --purple:       #8b6fd4;
+  --purple-bg:    #1e1830;
+  --purple-text:  #c4b0f5;
+  --purple-border:#3d2e6b;
+
+  --teal:         #14b8a6;
+  --teal-bg:      #0d2926;
+  --teal-text:    #5eead4;
+  --teal-border:  #134e4a;
+
+  --green:        #34d399;
+  --green-bg:     #052e16;
+  --green-text:   #6ee7b7;
+
+  --amber:        #fbbf24;
+  --amber-bg:     #1c1000;
+  --amber-border: #78350f;
+  --amber-text:   #fde68a;
+
+  --accent:       #8b6fd4;
+  --red:          #f87171;
+  --red-bg:       #2d0a0a;
+  --red-text:     #fca5a5;
+}
+
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .controls-bar,
+[data-theme="dark"] .bill-card,
+[data-theme="dark"] .stats-hero,
+[data-theme="dark"] .shock-quote-card,
+[data-theme="dark"] .quote-card,
+[data-theme="dark"] .rep-dropdown,
+[data-theme="dark"] .underreported-teaser,
+[data-theme="dark"] .top-lines,
+[data-theme="dark"] .likelihood-detail {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .logo-mark {
+  background: #f0f0f3;
+  color: #0f0f11;
+}
+
+[data-theme="dark"] .track-btn {
+  background: #f0f0f3;
+  color: #0f0f11;
+}
+
+[data-theme="dark"] .filter-btn.active {
+  background: var(--purple);
+  border-color: var(--purple);
+}
+
+[data-theme="dark"] .status-live {
+  background: #7f1d1d;
+  color: #fca5a5;
+}
+
+[data-theme="dark"] .status-demo {
+  background: var(--surface-2);
+  color: var(--text-3);
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .expand-full-btn {
+  background: var(--purple);
+  border-color: var(--purple);
+  color: #fff;
+}
+
+[data-theme="dark"] .likelihood-track,
+[data-theme="dark"] .likelihood-bar-sm {
+  background: #3a3a45;
+}
+
+[data-theme="dark"] .top-lines {
+  border-left-color: var(--purple);
+}
+
+[data-theme="dark"] .top-line-bullet {
+  color: var(--purple);
+}
+
+[data-theme="dark"] .bill-card:hover .bill-header,
+[data-theme="dark"] .bill-card:hover .likelihood-footer {
+  background: var(--surface-2);
 }

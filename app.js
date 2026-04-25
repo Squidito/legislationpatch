@@ -93,8 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function loadBills() {
   const btn = document.getElementById('refreshBtn');
-  btn.classList.add('spinning');
-  btn.disabled = true;
+  if (btn) { btn.classList.add('spinning'); btn.disabled = true; }
 
   showLoading(true);
   showError(false);
@@ -107,8 +106,7 @@ async function loadBills() {
     showError(true, e.message);
   } finally {
     showLoading(false);
-    btn.classList.remove('spinning');
-    btn.disabled = false;
+    if (btn) { btn.classList.remove('spinning'); btn.disabled = false; }
   }
 }
 
@@ -162,6 +160,23 @@ function loadTrackedSettings() {
   try { trackedReps = savedReps ? JSON.parse(savedReps) : []; }
   catch (err) { trackedReps = []; }
 }
+
+function toggleTheme(isDark) {
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+}
+
+// Apply saved theme on load
+(function() {
+  const saved = localStorage.getItem('lpTheme');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.addEventListener('DOMContentLoaded', () => {
+      const cb = document.getElementById('themeToggle');
+      if (cb) cb.checked = true;
+    });
+  }
+})();
 
 function handleZipTrack() {
   const zip = document.getElementById('zipInput')?.value?.trim();
@@ -671,13 +686,6 @@ function renderHeader(bill, state, num, watching) {
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
       <div class="bill-meta">${escHtml(sponsorMeta)}</div>
     </div>
-    <div class="bill-likelihood-col">
-      <div class="likelihood-pct" style="color:${lcolor}">${bill.likelihood}%</div>
-      <div class="likelihood-lbl">${bill.likelihoodLabel || labelFromPct(bill.likelihood)}</div>
-      <div class="likelihood-bar-sm">
-        <div class="likelihood-bar-fill" style="width:${bill.likelihood}%;background:${lcolor}"></div>
-      </div>
-    </div>
     <div class="bill-actions-col">
       <button class="star-btn${watching ? ' watching' : ''}" onclick="toggleWatch('${bill.id}', event)" title="${watching ? 'Unwatch' : 'Watch this bill'}">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="${watching ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
@@ -827,12 +835,14 @@ function renderLikelihoodFooter(bill, col, state) {
 
   return `<div class="likelihood-footer" onclick="toggleCard('${bill.id}')">
     <div class="footer-stage-dots">${dots}</div>
-    <span class="likelihood-label">Passage likelihood</span>
-    <div class="likelihood-track">
-      <div class="likelihood-fill" style="width:${pct}%;background:${col.fill}"></div>
+    <div class="footer-likelihood-inner">
+      <span class="likelihood-label">Passage likelihood</span>
+      <div class="likelihood-track">
+        <div class="likelihood-fill" style="width:${pct}%;background:${col.fill}"></div>
+      </div>
+      <span class="likelihood-value" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(pct)} · ${pct}%</span>
     </div>
-    <span class="likelihood-value" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(pct)} · ${pct}%</span>
-    <span class="chevron ${isOpen ? 'open' : ''}">▾</span>
+    <div class="footer-chevron-col"><span class="chevron ${isOpen ? 'open' : ''}"></span></div>
   </div>`;
 }
 
@@ -981,9 +991,9 @@ function badgeClass(stage) {
 }
 
 function likelihoodColor(pct) {
-  if (pct >= 65) return { fill: '#3a7a4f', text: '#1a4f2b' }; // green
-  if (pct >= 45) return { fill: '#a87d24', text: '#6B3F00' }; // amber
-  return { fill: '#4a4a52', text: '#2a2a30' };                 // dark slate — no red, no blue
+  if (pct >= 65) return { fill: 'var(--green)',  text: 'var(--green-text)' };
+  if (pct >= 45) return { fill: 'var(--purple)', text: 'var(--purple-text)' };
+  return { fill: '#4a4a52', text: '#2a2a30' };
 }
 
 function labelFromPct(pct) {

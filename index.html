@@ -24,6 +24,10 @@
       <div class="header-track">
         <input class="zip-input" placeholder="ZIP for your reps" id="zipInput" />
         <button class="track-btn" onclick="handleZipTrack()">Track</button>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
       </div>
     </div>
   </header>
@@ -38,10 +42,6 @@
         <button class="filter-btn" data-stage="house">House</button>
         <button class="filter-btn" data-stage="senate">Senate</button>
         <button class="filter-btn" data-stage="signed">Signed</button>
-      </div>
-      <div class="controls-right">
-        <span class="bills-count-label" id="billsCountLabel"></span>
-        <button class="refresh-btn" id="refreshBtn" onclick="loadBills()">↻</button>
       </div>
     </div>
     <div class="controls-rep-row">
