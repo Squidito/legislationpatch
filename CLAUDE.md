@@ -4,36 +4,119 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Does
 
-LegislationPatch is a static single-page web app that fetches U.S. federal bills from the Congress.gov API and uses Claude to generate plain-English "patch notes" (styled like video game update notes) — summaries, opposition arguments, and legislative gaps. Users can filter by bill stage and see passage likelihood estimates.
+LegislationPatch is a static single-page web app that fetches U.S. federal bills from the Congress.gov API and generates plain-English "patch notes" styled like video game update notes. Features real bill text analysis, rep tracking, shock quotes from the Congressional Record, and a full visual design system.
 
-**Bill filtering rule:** Only show bills that have passed at least one stage (committee action, floor vote, etc.). Bills that are introduced and immediately dead are excluded. Stage must be beyond "introduced" with no further action.
+**Bill filtering rule:** Only show bills that have passed at least one stage. Bills introduced and immediately dead are excluded — filter at fetch time in `fetchRecentBills()`.
 
 ## Tech Stack
 
-Vanilla JS / HTML / CSS — no framework, no build tools, no backend. Deployed by dragging the folder to Netlify, or opened locally via `index.html`. No npm, no compilation.
+Vanilla JS / HTML / CSS. No framework, no build tools, no backend. Inter Tight font via Google Fonts.
+- **Deployed**: GitHub → auto-deploy via `.github/workflows/deploy.yml` → Netlify
+- **Local dev**: `npx serve . --listen 3131` then open `http://localhost:3131`
+- **Live Preview**: VS Code Live Preview extension auto-refreshes on save
 
 ## File Responsibilities
 
 | File | Role |
 |---|---|
-| `config.js` | API keys + constants (`CONGRESS_API_KEY`, `ANTHROPIC_API_KEY`, `BILLS_PER_PAGE`, `CONGRESS_SESSION`) — gitignored |
-| `api.js` | All network calls (Congress.gov + Anthropic), stage detection, likelihood estimation |
-| `app.js` | All UI state, rendering, event handling |
-| `index.html` | Page structure — loads scripts in order: config → api → app |
-| `styles.css` | All styles via CSS custom properties |
+| `config.js` | API keys + constants — **gitignored, never commit** |
+| `api.js` | Congress.gov fetch, cache loading, bill merging, Anthropic analysis |
+| `app.js` | All UI state, rendering, event handling, dark mode, rep tracking |
+| `index.html` | Page structure — loads config → api → app |
+| `styles.css` | All styles via CSS custom properties; dark mode via `[data-theme="dark"]` |
+| `data/cache.json` | Pre-analyzed bills (LIVE/DEMO). Checked before live fetch. |
+| `.github/workflows/deploy.yml` | Auto-deploys to Netlify on every push to main |
 
-## Non-Obvious Architecture
+## Setup Checklist
 
-- **Full re-renders on every state change** — `renderAll()` regenerates the entire bill list HTML on every toggle, filter, or AI result. No virtual DOM.
-- **Stage detection is heuristic** — `detectStage()` walks action history newest-first and matches keywords (`"signed by president"`, `"passed senate"`, etc.). Not based on a structured field.
-- **Likelihood is a formula, not ML** — base % by stage (introduced=12% → signed=100%) plus flat bonuses for co-sponsor count thresholds.
-- **Claude must return raw JSON** — system prompt says "You MUST respond with valid JSON only. No markdown, no extra text." Response strips ``` fences before `JSON.parse()`.
-- **Demo mode** — `getDemoBills()` returns 3 hard-coded bills (Infrastructure, Drug Pricing, NDAA) when no API keys are set, so the UI is testable without credentials.
-- **API keys in browser** — intentional trade-off for zero-backend simplicity. `config.js` is in `.gitignore`. Never commit it.
+`config.js` is gitignored — recreate it with:
+```js
+const CONFIG = {
+  CONGRESS_API_KEY: 'your-key-here',   // free — api.congress.gov/sign-up
+  ANTHROPIC_API_KEY: 'your-key-here',  // only for live AI analysis button
+  BILLS_PER_PAGE: 20,
+  CONGRESS_SESSION: 119,
+};
+```
+**Without keys:** loads from `data/cache.json`. Fully functional with pre-analyzed bills.
+**With Congress key:** fetches live bills, merges with cache for pre-analyzed matches. Rep tracker works.
+**With both keys:** full live fetch + on-demand AI analysis.
+
+> After any batch processing session, wire in the Congress.gov API key so the cache merge activates on next load.
+
+## Bill Card Architecture
+
+Cards use a **5-column CSS grid**: `48px 48px 1fr 40px`
+- Col 1: rank badge (#1, LIVE/DEMO pill)
+- Col 2: sponsor portrait (42px circle, from `portraitUrl(bill.sponsor_bioguide)`)
+- Col 3: title block (meta row + title + summary + sponsor meta)
+- Col 4: star button (40px container, SVG star)
+
+**Likelihood footer** uses the same grid for column alignment:
+- Cols 1-2 (spanned): mini stage dots
+- Col 3: passage likelihood label + bar + value
+- Col 4 (40px container): CSS chevron
+
+**Two-level card expansion** (managed via `openCards` Map):
+- `undefined` → collapsed (shows header + footer only)
+- `'minor'` → click header → shows likelihood detail + top-lines + underreported teaser + quote cards + "Full analysis" button
+- `'full'` → click "Full analysis ↓" only → full patch notes, what-changed, criticisms, gaps
+
+## Color System
+
+Party colors (D=blue, R=red) used **only** for party indicators. Never for semantic UI states.
+
+| Purpose | Color |
+|---|---|
+| Accent / active states | `--purple: #6d4fc7` |
+| Likelihood: Likely (≥65%) | `--green: #3a7a4f` |
+| Likelihood: Possible (≥45%) | `--purple` (adapts in dark mode) |
+| Likelihood: Unlikely (<45%) | `#4a4a52` slate |
+| Underreported / warning | `--amber: #a87d24` |
+| Support stance | `--green` |
+| Oppose stance | Dark slate `#4a4a52` |
+
+`likelihoodColor()` returns CSS variable strings (`var(--purple)`) so colors adapt automatically in dark mode.
+
+## Dark Mode
+
+Toggle via `[data-theme="dark"]` on `<html>`. Persisted in `localStorage` as `lpTheme`.
+All colors defined as CSS custom properties — dark mode overrides the entire variable set at the bottom of `styles.css`. The slider toggle is a label/checkbox component in the header.
+
+## Cache System (`data/cache.json`)
+
+Pre-analyzed bills loaded before any live fetch. Structure per bill:
+```json
+{
+  "id": "119-HR-6955",
+  "live": true,
+  "demo": false,
+  "top_lines": ["...", "..."],
+  "brief": "One sentence likelihood summary",
+  "changes": { "added": [], "modified": [], "removed": [] },
+  "featured_quotes": [{ "name", "party", "bioguideId", "text", "stance" }],
+  "underreported": [{ "section", "summary", "why_unreported" }],
+  "sections": [...],
+  "criticisms": [...],
+  "gaps": [...]
+}
+```
+`live: true` bills show a pulsing red LIVE badge and sort to position #1. `demo: true` bills show a gray DEMO badge.
+
+## Rep Tracker
+
+- IP geolocation via `ipapi.co/json/` detects state silently on first load
+- Portrait strip shows reps from bill sponsors + featured quotes + state reps
+- State reps fetched from `/v3/member?state={code}&currentMember=true`
+- Portraits from `https://bioguide.congress.gov/bioguide/photo/{FIRST}/{BIOGUIDE}.jpg`
+- Tracked reps + selections stored in `localStorage`
+- "View all" dropdown opens inline below strip
+
+## Shock Quotes Section
+
+`SHOCK_QUOTES` array in `app.js` — placeholder Congressional Record quotes shown above bill list. Replace with live CR API feed when available. Tracked reps highlighted with blue border if they appear.
 
 ## Claude API Schema
-
-`analyzeBill()` expects this exact structure back from Claude:
 
 ```json
 {
@@ -46,43 +129,27 @@ Vanilla JS / HTML / CSS — no framework, no build tools, no backend. Deployed b
 }
 ```
 
-## New features
+## Congress.gov API Endpoints
 
-- Added an **Underreported** AI analysis field and UI section. Claude now returns a top-level `underreported` array of 2-4 items for provisions likely to be missed by mainstream reporting, hidden riders, or highly technical language with outsized impact.
-- Added a **tracked representative** settings panel. Users can select a state, fetch current members from the Congress.gov API, check reps to track, and add reps manually by name or `bioguideId`.
-- Added a **Congressional Positions** section for each bill card. It displays sponsors, co-sponsors, and vote-based positions from fetched bill detail/action data; tracked reps are highlighted.
-
-## Setup Checklist
-
-Before the app shows live bills, `config.js` needs two keys. This file is gitignored — never commit it.
-
-```js
-const CONFIG = {
-  CONGRESS_API_KEY: 'your-key-here',   // free at api.congress.gov/sign-up
-  ANTHROPIC_API_KEY: 'your-key-here',  // only needed for live AI analysis
-  BILLS_PER_PAGE: 20,
-  CONGRESS_SESSION: 119,
-};
-```
-
-**Without keys:** app loads from `data/cache.json` (pre-analyzed bills). Works fully offline.
-**With Congress key only:** fetches live bills, merges with cache for any pre-analyzed matches. Rep portrait tracker also works.
-**With both keys:** full live fetch + on-demand AI analysis via "Analyze with AI" button.
-
-> **Reminder:** After any batch processing session where you add new bills to `data/cache.json`, make sure `config.js` has the Congress.gov API key so the live fetch + cache merge works on next load.
-
-## How to Run
-
-- **Local**: Open `index.html` in a browser. Congress.gov API may fail due to CORS — use Netlify for reliable access.
-- **Netlify**: Drag the folder to the Netlify dashboard. No build step.
-
-## Congress.gov API
-
-Endpoints used (all GET, append `?api_key={CONGRESS_API_KEY}`):
-- `/v3/bill/{session}?sort=updateDate+desc&limit={n}` — recent bills list
+All GET, append `?api_key={CONGRESS_API_KEY}`:
+- `/v3/bill/{session}?sort=updateDate+desc&limit={n}` — recent bills
 - `/v3/bill/{congress}/{type}/{number}` — bill detail
 - `/v3/bill/{congress}/{type}/{number}/actions?limit=10` — action history
 - `/v3/bill/{congress}/{type}/{number}/summaries` — CRS summary
-- `/v3/member?state={stateCode}&currentMember=true` — current members for a state, used by the tracked rep settings panel
+- `/v3/bill/{congress}/{type}/{number}/text` — text format URLs (for full-text processing)
+- `/v3/member?state={code}&currentMember=true` — state members for rep tracker
 
-Parallel fetches capped at 8 to respect rate limits.
+Parallel fetches capped at 8.
+
+## Dev Annotation Overlay
+
+Press `Ctrl+Shift+D` in-browser to activate a drawing canvas overlay (pen, arrow, rectangle, text tools). Defined at the bottom of `index.html` inside a clearly marked DEV ONLY block. **Remove before any public Netlify deploy.**
+
+## Next Session Focus
+
+**Mobile-friendly version** — the layout currently uses fixed pixel widths (48px columns, 960px max-width) that need responsive breakpoints. Priority areas:
+- Bill card 5-column grid → stacked layout on mobile
+- Rep portrait strip → horizontally scrollable
+- Header → collapse ZIP input
+- Shock quotes → single column or carousel
+- Filter pills → horizontally scrollable
