@@ -11,9 +11,9 @@ const MODEL_NAME       = 'local-model';
 const CACHE_FILE       = path.join(__dirname, '../data/cache.json');
 
 // Hard failures always cause immediate rejection (no tolerance).
-// Soft warnings: if this many or more are found, the bill is rejected.
-// These only cover numeric/entity claims — Zone 2 (quotes) has zero tolerance.
-const SOFT_WARNING_THRESHOLD = 2;
+// Soft warnings: even 1 unverified claim rejects the bill.
+// Zone 2 (quotes/attribution) always has zero tolerance regardless.
+const SOFT_WARNING_THRESHOLD = 1;
 
 // Named entities that appear in almost every piece of legislation —
 // no need to verify these against the bill text.
@@ -207,6 +207,31 @@ function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
         if (prog.split(' ').length < 2) continue;
         if (!sourceText.includes(prog.toLowerCase())) {
             softWarnings.push(`Named program/agency "${prog}" not found in bill text or CRS summary`);
+        }
+    }
+
+    // 5. Underreported section name verification
+    // The section name in each underreported item must trace back to something
+    // in the bill text. If the model invented a section that doesn't exist,
+    // the entire underreported finding is fabricated.
+    for (const item of parsed.underreported || []) {
+        const sectionName = (item.section || '').trim();
+        if (!sectionName) continue;
+
+        // Extract the most distinctive words (skip common words)
+        const SKIP_WORDS = new Set(['the', 'of', 'and', 'for', 'a', 'an', 'in', 'to', 'on', 'at', 'by', 'section', '—', '-']);
+        const keyWords = sectionName.toLowerCase().split(/[\s—\-]+/)
+            .filter(w => w.length > 3 && !SKIP_WORDS.has(w));
+
+        if (keyWords.length === 0) continue;
+
+        // All key words from the section name must appear in the bill text
+        const missingWords = keyWords.filter(w => !sourceText.includes(w));
+        if (missingWords.length > 0) {
+            hardFailures.push(
+                `UNDERREPORTED FABRICATION: section "${sectionName}" — ` +
+                `key words [${missingWords.join(', ')}] not found in bill text`
+            );
         }
     }
 
