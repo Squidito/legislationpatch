@@ -80,6 +80,13 @@ a:hover { text-decoration: underline; }
   align-items: center;
   gap: 12px;
 }
+.logo-home-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
 .logo-mark {
   width: 32px;
   height: 32px;

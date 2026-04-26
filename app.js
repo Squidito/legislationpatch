@@ -178,6 +178,11 @@ function toggleTheme(isDark) {
   }
 })();
 
+function goHome() {
+  if (favoritesView) toggleFavoritesView();
+  else window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function handleZipTrack() {
   const zip = document.getElementById('zipInput')?.value?.trim();
   if (!zip || zip.length !== 5) return;

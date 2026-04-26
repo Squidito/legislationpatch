@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- Gemini 3.1 work: Terms of Service -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Terms of Service — LegislationPatch</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body style="padding: 2rem; max-width: 800px; margin: 0 auto;">
-  <a href="index.html" style="color: var(--purple); text-decoration: none; font-weight: 500;">&larr; Back to home</a>
-  <h1 style="margin-top: 2rem;">Terms of Service</h1>
-  <p>Last updated: April 2026</p>
-  
-  <h2>Educational Purpose</h2>
-  <p>LegislationPatch provides plain-English summaries of U.S. federal legislation for educational and informational purposes only. The information provided on this website does not constitute legal or professional advice.</p>
-  
-  <h2>AI-Generated Content</h2>
-  <p>The "Patch Notes" and bill summaries on this site are generated using Artificial Intelligence (Anthropic's Claude). While we strive for accuracy and nonpartisanship, AI models can make mistakes or misinterpret complex legislative text. Always refer to the official bill text on Congress.gov for authoritative information.</p>
-  
-  <h2>No Affiliation</h2>
-  <p>LegislationPatch is an independent project. We are not affiliated with, endorsed by, or sponsored by the United States Government, Congress.gov, or any political party.</p>
-  
-  <h2>Use of Service</h2>
-  <p>You agree to use this site for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the site.</p>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
+        <div class="logo-mark">L</div>
+        <div>
+          <div class="logo-name">LegislationPatch</div>
+          <div class="logo-sub">Bills, read in full and reported plainly</div>
+        </div>
+      </a>
+      <a href="index.html" class="track-btn" style="text-decoration:none">← Back to Bills</a>
+    </div>
+  </header>
+
+  <main class="main" style="max-width:720px">
+    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Terms of Service</h1>
+    <p class="section-label" style="margin-bottom:2rem">Last updated: April 2026</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Educational Purpose</h2>
+    <p>LegislationPatch provides plain-English summaries of U.S. federal legislation for educational and informational purposes only. The information provided on this website does not constitute legal or professional advice.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">AI-Assisted Summaries</h2>
+    <p>The patch notes and bill summaries on this site are generated using AI analysis of official bill text sourced directly from Congress.gov. While we strive for accuracy and nonpartisanship, AI models can make mistakes or misinterpret complex legislative language. Always refer to the official bill text on <a href="https://congress.gov" target="_blank">Congress.gov</a> for authoritative information.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">No Affiliation</h2>
+    <p>LegislationPatch is an independent project. We are not affiliated with, endorsed by, or sponsored by the United States Government, Congress.gov, or any political party.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Use of Service</h2>
+    <p>You agree to use this site for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the site.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+
 </body>
 </html>
