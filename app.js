@@ -1049,7 +1049,7 @@ function badgeClass(stage) {
 function likelihoodColor(pct) {
   if (pct >= 65) return { fill: 'var(--green)',  text: 'var(--green-text)' };
   if (pct >= 45) return { fill: 'var(--purple)', text: 'var(--purple-text)' };
-  return { fill: '#4a4a52', text: '#2a2a30' };
+  return { fill: 'var(--text-3)', text: 'var(--text-2)' };
 }
 
 function labelFromPct(pct) {
