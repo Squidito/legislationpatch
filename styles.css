@@ -1826,6 +1826,15 @@ a:hover { text-decoration: underline; }
   height: 0;
   pointer-events: none;
 }
+.theme-icon {
+  color: var(--text-3);
+  flex-shrink: 0;
+  margin-right: 5px;
+  transition: color 0.22s ease;
+}
+.theme-toggle input:checked ~ .theme-icon {
+  color: var(--purple);
+}
 .toggle-track {
   width: 40px;
   height: 22px;
