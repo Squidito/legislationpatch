@@ -944,18 +944,13 @@ a:hover { text-decoration: underline; }
   line-height: 1.45;
 }
 
-/* Quote cards row — horizontal carousel */
+/* Quote cards row — 2-column grid inside expanded bill cards */
 .quote-cards-row {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.65rem;
   margin: 0.75rem 1.1rem 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
-  mask-image: linear-gradient(to right, black 80%, transparent 100%);
 }
-.quote-cards-row::-webkit-scrollbar { display: none; }
 .quote-card {
   border-radius: var(--radius-md);
   padding: 0.85rem;
@@ -964,8 +959,6 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  min-width: 280px;
-  flex-shrink: 0;
 }
 .quote-card-meta {
   display: flex;
@@ -1073,10 +1066,15 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.5rem;
 }
 .shock-quotes-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.65rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, black 82%, transparent 100%);
+  mask-image: linear-gradient(to right, black 82%, transparent 100%);
 }
+.shock-quotes-grid::-webkit-scrollbar { display: none; }
 .shock-quote-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1086,6 +1084,8 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 0.5rem;
   cursor: default;
+  min-width: 240px;
+  flex-shrink: 0;
 }
 .shock-quote-card.is-tracked {
   border-color: var(--blue);
@@ -1713,7 +1713,7 @@ a:hover { text-decoration: underline; }
   .stat-tile:nth-child(2) { border-right: 1px solid var(--border); }
   .stat-tile:nth-child(3) { border-right: none; border-bottom: 1px solid var(--border); }
   .stat-tile:nth-child(4) { border-bottom: none; }
-  .shock-quotes-grid { grid-template-columns: 1fr 1fr; }
+  .quote-cards-row { grid-template-columns: 1fr; }
 }
 
 /* Phone — full mobile layout */
@@ -1778,7 +1778,6 @@ a:hover { text-decoration: underline; }
 
   /* === SHOCK QUOTES: single column === */
   .shock-quotes-section { padding: 0 12px; margin-bottom: 12px; }
-  .shock-quotes-grid { grid-template-columns: 1fr; }
 
   /* === BILL CARD HEADER: tighter 4-col grid === */
   .bill-header {
@@ -1832,7 +1831,7 @@ a:hover { text-decoration: underline; }
   .positions-section { margin-left: 0.75rem; margin-right: 0.75rem; }
   .ai-btn  { margin-left: 0.75rem; margin-right: 0.75rem; }
   .ai-output { margin-left: 0.75rem; margin-right: 0.75rem; }
-  .quote-cards-row { margin-left: 0.75rem; margin-right: 0.75rem; }
+  .quote-cards-row { gap: 0.5rem; }
 }
 
 /* ---- DARK MODE SLIDER TOGGLE ---- */
