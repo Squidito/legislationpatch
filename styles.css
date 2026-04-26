@@ -366,6 +366,35 @@ a:hover { text-decoration: underline; }
   color: #fff;
   border-color: var(--purple);
 }
+
+/* Sub-filter row — smaller stage pills below main filter */
+.filter-sub-row {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 7px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  background: var(--surface);
+}
+.filter-sub-btn {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-sub-btn:hover { color: var(--text); border-color: var(--text-3); }
+.filter-sub-btn.active {
+  background: var(--text-2);
+  color: var(--bg);
+  border-color: var(--text-2);
+}
 .refresh-btn {
   font-family: var(--font-body);
   font-size: 0.78rem;
@@ -704,6 +733,15 @@ a:hover { text-decoration: underline; }
 .mp-line-done    { background: var(--accent); }
 .mp-line-pending { background: var(--border); }
 
+/* Footer pipeline dots — CSS-class driven so dark mode works */
+.fp-dot { border-radius: 50%; flex-shrink: 0; transition: all 0.2s; }
+.fp-dot-done    { background: var(--text); }
+.fp-dot-active  { background: var(--text); box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--text); }
+.fp-dot-pending { background: var(--border); }
+.fp-line { height: 1.5px; flex: 1; margin: 0 2px; }
+.fp-line-done    { background: var(--text); }
+.fp-line-pending { background: var(--border); }
+
 /* Title block (center column) */
 .bill-right { display: contents; }
 .bill-title-block { min-width: 0; }
@@ -825,6 +863,10 @@ a:hover { text-decoration: underline; }
   background: var(--surface-2);
   color: var(--text-3);
   border: 1px solid var(--border);
+}
+.status-just-passed {
+  background: var(--green);
+  color: #fff;
 }
 @keyframes live-pulse {
   0%, 100% { opacity: 1; }
@@ -1087,7 +1129,7 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 0.5rem;
   cursor: default;
-  min-width: 240px;
+  min-width: 190px;
   flex-shrink: 0;
 }
 .shock-quote-card.is-tracked {
@@ -1128,7 +1170,7 @@ a:hover { text-decoration: underline; }
   color: var(--text-2);
   font-style: italic;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1203,12 +1245,16 @@ a:hover { text-decoration: underline; }
   font-size: 9px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--text-3);
 }
 .stage-strip-connector {
   height: 2px;
   flex: 1;
   margin-top: -22px;
 }
+.stage-strip-connector-done    { background: var(--accent); }
+.stage-strip-connector-pending { background: var(--border); }
+.stage-strip-label-on { color: var(--text) !important; font-weight: 600; }
 
 .full-pipeline {
   padding: 0.7rem 1.1rem;
@@ -1743,6 +1789,15 @@ a:hover { text-decoration: underline; }
   .controls-inner::-webkit-scrollbar { display: none; }
   .filter-row { flex-wrap: nowrap; }
   .filter-btn { flex-shrink: 0; }
+  .filter-sub-row {
+    padding: 0 14px 6px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-sub-row::-webkit-scrollbar { display: none; }
+  .filter-sub-btn { flex-shrink: 0; }
 
   /* === REP STRIP: grid layout — strip fades into View all button === */
   .controls-rep-row {
@@ -1996,6 +2051,21 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .star-btn {
   color: var(--text);
   opacity: 0.5;
+}
+
+[data-theme="dark"] .filter-sub-btn.active {
+  background: var(--text-2);
+  color: var(--bg);
+  border-color: var(--text-2);
+}
+
+[data-theme="dark"] .status-just-passed {
+  background: var(--green);
+  color: #000;
+}
+
+[data-theme="dark"] .fp-dot-active {
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--text);
 }
 
 /* =========================================

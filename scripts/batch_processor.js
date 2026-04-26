@@ -73,14 +73,17 @@ function formatDate(dateStr) {
 function detectStage(latestActionText) {
     const t = (latestActionText || '').toLowerCase();
     if (t.includes('signed by president') || t.includes('became public law') || t.includes('enacted'))
-        return { key: 'signed',      label: 'Signed into Law', step: 4 };
+        return { key: 'signed',      label: 'Signed into Law',    step: 4 };
     if (t.includes('passed senate') || t.includes('senate agreed') || t.includes('received in the senate'))
-        return { key: 'senate',      label: 'Passed Senate',   step: 3 };
-    if (t.includes('passed house') || t.includes('passed the house') || t.includes('house agreed') || t.includes('on passage'))
-        return { key: 'house',       label: 'Passed House',    step: 2 };
+        return { key: 'senate',      label: 'Passed Senate',       step: 3 };
+    if (t.includes('passed house') || t.includes('passed the house') || t.includes('house agreed') || t.includes('on passage') || t.includes('motion to reconsider laid on the table agreed to'))
+        return { key: 'house',       label: 'Passed House',        step: 2 };
+    // Union Calendar / House Calendar = passed committee, awaiting House floor vote
+    if (t.includes('union calendar') || t.includes('house calendar') || t.includes('senate calendar') || t.includes('placed on the calendar') || t.includes('calendar no'))
+        return { key: 'committee',   label: 'On House Calendar',   step: 1 };
     if (t.includes('reported by') || t.includes('ordered to be reported') || t.includes('referred to'))
-        return { key: 'committee',   label: 'In Committee',    step: 1 };
-    return     { key: 'introduced', label: 'Introduced',      step: 0 };
+        return { key: 'committee',   label: 'In Committee',        step: 1 };
+    return     { key: 'introduced', label: 'Introduced',           step: 0 };
 }
 
 function formatBillTypeForRecord(type) {
@@ -104,7 +107,10 @@ function formatBillTypeForRecord(type) {
 // ============================================================
 
 function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
-    const sourceText = (billText + ' ' + crsText).toLowerCase();
+    const sourceText         = (billText + ' ' + crsText).toLowerCase();
+    // Strip commas from source for number lookups — appropriations bills write
+    // amounts as "240,774,000" but the model normalises to "240774000".
+    const sourceTextNoCommas = sourceText.replace(/,/g, '');
     const failures   = []; // all failures are hard — one failure = rejected
 
     // ── ZONE 2: QUOTES, CRITICISMS, COMMENTS ──────────────────────────────
@@ -169,13 +175,14 @@ function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
         changes:       parsed.changes,
     });
 
-    // 1. Dollar amounts
+    // 1. Dollar amounts — check against both the normal source and the comma-stripped
+    // version so that "$240,774,000" (model output) matches "240,774,000" (bill text).
     const dollarMatches = [...new Set(
         factualJson.match(/\$[\d,.]+\s*(?:billion|million|trillion|[BMTKbmtk])\b|\$[\d,.]+/gi) || []
     )];
     for (const amt of dollarMatches) {
         const coreNum = amt.replace(/[$,\s]/g, '').match(/[\d.]+/)?.[0];
-        if (coreNum && !sourceText.includes(coreNum)) {
+        if (coreNum && !sourceText.includes(coreNum) && !sourceTextNoCommas.includes(coreNum)) {
             failures.push(`ZONE 1: dollar amount "${amt}" not in bill text or CRS summary`);
         }
     }
@@ -515,7 +522,16 @@ async function processBill(bill) {
     }
 
     // Step 5 — Build reduce-phase context
-    const combinedNotes  = chunkSummaries.join('\n---\n');
+    // Cap total notes to ~30,000 chars to fit within the 12,288-token context window.
+    // Proportional truncation keeps representation from every chunk.
+    const MAX_REDUCE_NOTES = 30000;
+    const notesPerChunk = Math.floor(MAX_REDUCE_NOTES / Math.max(1, chunkSummaries.length));
+    const combinedNotes = chunkSummaries
+        .map((s, i) => `[Chunk ${i + 1}/${chunkSummaries.length}]\n` + s.slice(0, notesPerChunk))
+        .join('\n---\n');
+    if (chunkSummaries.length > 1) {
+        console.log(`   - Notes capped at ${MAX_REDUCE_NOTES} chars (${notesPerChunk}/chunk × ${chunkSummaries.length} chunks).`);
+    }
     const primarySponsor = meta?.sponsors?.[0];
     const sponsorLine    = primarySponsor
         ? `${primarySponsor.fullName || primarySponsor.name} (${primarySponsor.party}-${primarySponsor.state}), bioguideId: ${primarySponsor.bioguideId || ''}`
@@ -545,6 +561,9 @@ async function processBill(bill) {
 
 ━━━ FINAL REMINDER BEFORE YOU OUTPUT ━━━
 Every dollar amount, percentage, section number, and named program in your JSON must appear verbatim in the Bill Text Notes or CRS Summary above.
+CRITICAL — DOLLAR AMOUNTS: Use the exact figure from the source. Never round or abbreviate.
+If the source says "$240,774,000" you must write "$240,774,000" — NOT "$240.8 million" or "$241 million".
+If the source says "$3,040,000,000" you must write "$3,040,000,000" — NOT "$3.04 billion".
 Every speaker name in quotes, criticisms, and comments must appear verbatim in the Congressional Record excerpts above.
 If a fact is not in the source material provided: omit it. Do not estimate. Do not complete from memory.
 An empty array [] is always correct. An invented fact is never acceptable.`,

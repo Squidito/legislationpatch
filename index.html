@@ -51,7 +51,7 @@
         </div>
       </button>
       <div class="header-track">
-        <input class="zip-input" placeholder="ZIP for your reps" id="zipInput" />
+        <input class="zip-input" placeholder="ZIP for your reps" id="zipInput" onclick="this.select()" />
         <button class="track-btn" onclick="handleZipTrack()">Track</button>
         <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
@@ -72,15 +72,12 @@
   <!-- CONTROLS -->
   <div class="controls-bar">
     <div class="controls-inner">
-      <div class="filter-row" id="filters">
-        <button class="filter-btn active" data-stage="all">All</button>
-        <button class="filter-btn" data-stage="introduced">Introduced</button>
-        <button class="filter-btn" data-stage="committee">Committee</button>
-        <button class="filter-btn" data-stage="house">House</button>
-        <button class="filter-btn" data-stage="senate">Senate</button>
-        <button class="filter-btn" data-stage="signed">Signed</button>
+      <div class="filter-row" id="filtersMain">
+        <button class="filter-btn active" data-main="in_progress">In Progress</button>
+        <button class="filter-btn" data-main="passed">Passed</button>
       </div>
     </div>
+    <div id="filtersSub" class="filter-sub-row"></div>
     <div class="controls-rep-row">
       <div class="rep-strip-label">Active on tracked bills</div>
       <div class="rep-strip" id="repStrip"></div>

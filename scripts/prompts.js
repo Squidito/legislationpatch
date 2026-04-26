@@ -48,11 +48,15 @@ OUTPUT ZONE 3 (INPUT C + reasoning): likelihood, likelihoodLabel, likelihoodReas
 
 ━━━ QUALITY RULES ━━━
 
-RULE 1 — NUMBERS FIRST
+RULE 1 — NUMBERS FIRST, EXACT AND UNROUNDED
 When the bill text contains a dollar amount, percentage, threshold, or deadline, lead with it.
+Use the number exactly as it appears in the source. Do NOT round or abbreviate.
+Write "$240,774,000" not "$240.8 million". Write "$3,040,000,000" not "$3.04 billion".
+The number must be copy-pasted from the source, not calculated or estimated.
 Bad:  "Increases Medicaid funding."
-Good: "$2.3B increase in Medicaid DSH payments over 5 years."
-If no number exists in the source, describe the mechanism instead. Never invent a number.
+Bad:  "Provides $1.2 billion for the IRS" (if the source says "$1,175,482,000")
+Good: "Provides $1,175,482,000 for IRS operations."
+If no number exists in the source, describe the mechanism instead. Never invent or round a number.
 
 RULE 2 — EXACT BILL STRUCTURE
 Label sections after the actual bill titles (Title I, Title II, etc.) if they exist in the text.

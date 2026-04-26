@@ -3,11 +3,12 @@
 // =============================================
 
 let allBills      = [];
-let openCards     = new Map(); // id -> 'minor' | 'full'
-let openDetails   = {};
-let aiOutputs     = {};
-let activeFilter  = 'all';
-let favoritesView = false;
+let openCards        = new Map(); // id -> 'minor' | 'full'
+let openDetails      = {};
+let aiOutputs        = {};
+let activeMainFilter = 'in_progress';
+let activeSubFilter  = '';
+let favoritesView    = false;
 
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
@@ -37,6 +38,7 @@ const STORAGE_KEYS = {
   trackedState:   'lpTrackedState',
   trackedReps:    'lpTrackedReps',
   watchedBills:   'lpWatchedBills',
+  trackedZip:     'lpTrackedZip',
 };
 
 let watchedBills = new Set();
@@ -125,15 +127,54 @@ function showError(on, msg) {
 
 // ---- Filters ----
 
+function isJustPassed(bill) {
+  if (bill.stage !== 'signed') return false;
+  try {
+    const daysDiff = (Date.now() - new Date(bill.date).getTime()) / (1000 * 60 * 60 * 24);
+    return daysDiff <= 30;
+  } catch (e) { return false; }
+}
+
 function setupFilters() {
-  document.getElementById('filters').addEventListener('click', e => {
-    const btn = e.target.closest('.filter-btn');
+  document.getElementById('filtersMain').addEventListener('click', e => {
+    const btn = e.target.closest('[data-main]');
     if (!btn) return;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('[data-main]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    activeFilter = btn.dataset.stage;
+    activeMainFilter = btn.dataset.main;
+    activeSubFilter  = '';
     renderAll();
   });
+
+  document.getElementById('filtersSub').addEventListener('click', e => {
+    const btn = e.target.closest('[data-sub]');
+    if (!btn) return;
+    document.querySelectorAll('[data-sub]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeSubFilter = btn.dataset.sub;
+    renderAll();
+  });
+}
+
+function renderSubFilters() {
+  const subRow = document.getElementById('filtersSub');
+  if (!subRow) return;
+  const defs = activeMainFilter === 'in_progress'
+    ? [
+        { label: 'All',          sub: '' },
+        { label: 'Introduced',   sub: 'introduced' },
+        { label: 'Committee',    sub: 'committee' },
+        { label: 'House',        sub: 'house' },
+        { label: 'Senate',       sub: 'senate' },
+        { label: 'Just Passed',  sub: 'just_passed' },
+      ]
+    : [
+        { label: 'All Passed',   sub: '' },
+        { label: 'Just Passed',  sub: 'just_passed' },
+      ];
+  subRow.innerHTML = defs.map(({ label, sub }) =>
+    `<button class="filter-sub-btn${activeSubFilter === sub ? ' active' : ''}" data-sub="${escHtml(sub)}">${label}</button>`
+  ).join('');
 }
 
 // ---- Rep tracker setup ----
@@ -185,8 +226,8 @@ function goHome() {
 
 function handleZipTrack() {
   const zip = document.getElementById('zipInput')?.value?.trim();
-  if (!zip || zip.length !== 5) return;
-  // Future: look up reps by ZIP via Congress API
+  if (!zip || !/^\d{5}$/.test(zip)) return;
+  localStorage.setItem(STORAGE_KEYS.trackedZip, zip);
 }
 
 function loadWatchedBills() {
@@ -206,9 +247,14 @@ function saveTrackedSettings() {
   localStorage.setItem(STORAGE_KEYS.trackedReps, JSON.stringify(trackedReps));
 }
 
-// Silently detect state from IP — no user prompt
+// Silently detect state and ZIP from IP — no user prompt
 async function autoDetectState() {
-  if (localStorage.getItem(STORAGE_KEYS.trackedState)) return; // respect saved preference
+  const savedZip = localStorage.getItem(STORAGE_KEYS.trackedZip);
+  if (savedZip) {
+    const zipEl = document.getElementById('zipInput');
+    if (zipEl) zipEl.value = savedZip;
+  }
+  if (localStorage.getItem(STORAGE_KEYS.trackedState)) return; // respect saved state preference
   try {
     const res  = await fetch('https://ipapi.co/json/');
     if (!res.ok) return;
@@ -216,6 +262,11 @@ async function autoDetectState() {
     if (data.region_code && US_STATES.some(s => s.code === data.region_code)) {
       trackedState = data.region_code;
       saveTrackedSettings();
+    }
+    if (data.postal && !savedZip) {
+      localStorage.setItem(STORAGE_KEYS.trackedZip, data.postal);
+      const zipEl = document.getElementById('zipInput');
+      if (zipEl) zipEl.value = data.postal;
     }
   } catch (e) { /* silently fail — default state used */ }
 }
@@ -544,14 +595,28 @@ function setupCarousel() {
   const el = document.querySelector('.shock-quotes-grid');
   if (!el || el.children.length === 0) return;
 
-  // Clone all cards and append — enables seamless infinite wrap
-  [...el.children].forEach(card => {
+  // Remove any clones from a prior setup
+  el.querySelectorAll('[aria-hidden="true"]').forEach(n => n.remove());
+
+  const originals = [...el.children];
+  if (!originals.length) return;
+
+  // Prepend clones for left-direction infinite wrap
+  originals.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    el.insertBefore(clone, el.firstChild);
+  });
+  // Append clones for right-direction infinite wrap
+  originals.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     el.appendChild(clone);
   });
 
-  // Pause auto-scroll on hover; resume on leave
+  // Start in the middle third (originals section) so both directions have room
+  el.scrollLeft = el.scrollWidth / 3;
+
   let paused = false;
   el.addEventListener('mouseenter', () => { paused = true; });
   el.addEventListener('mouseleave', () => {
@@ -560,7 +625,6 @@ function setupCarousel() {
     el.classList.remove('dragging');
   });
 
-  // Drag-to-pilot while hovered
   let isDragging = false, startX = 0, startScroll = 0;
   el.addEventListener('mousedown', e => {
     isDragging  = true;
@@ -575,16 +639,21 @@ function setupCarousel() {
     el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
   });
 
-  const SPEED = 0.4; // px per animation frame (~24 px/sec at 60fps)
+  const SPEED = 0.4;
 
   function tick() {
-    if (!paused) {
-      el.scrollLeft += SPEED;
-      // When we reach the clone section, snap back to the start seamlessly
-      if (el.scrollLeft >= el.scrollWidth / 2) {
-        el.scrollLeft -= el.scrollWidth / 2;
-      }
+    if (!paused) el.scrollLeft += SPEED;
+
+    // Bidirectional infinite wrap — snap within the middle third
+    const third = el.scrollWidth / 3;
+    if (el.scrollLeft >= third * 2) {
+      el.scrollLeft -= third;
+      if (isDragging) startScroll -= third;
+    } else if (el.scrollLeft < third) {
+      el.scrollLeft += third;
+      if (isDragging) startScroll += third;
     }
+
     _carouselRaf = requestAnimationFrame(tick);
   }
 
@@ -594,17 +663,29 @@ function setupCarousel() {
 function renderAll() {
   if (favoritesView) { renderFavoritesView(); return; }
 
-  const list     = document.getElementById('billList');
-  const filtered = activeFilter === 'all'
-    ? allBills
-    : allBills.filter(b => b.stage === activeFilter);
+  renderSubFilters();
+
+  const list = document.getElementById('billList');
+  const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
+
+  const filtered = allBills.filter(b => {
+    if (activeMainFilter === 'in_progress') {
+      const jp = isJustPassed(b);
+      if (!IN_PROGRESS.includes(b.stage) && !jp) return false;
+      if (!activeSubFilter) return true;
+      if (activeSubFilter === 'just_passed') return jp;
+      return b.stage === activeSubFilter;
+    } else {
+      if (b.stage !== 'signed') return false;
+      if (activeSubFilter === 'just_passed') return isJustPassed(b);
+      return true;
+    }
+  });
 
   if (!filtered.length) {
     list.innerHTML = '<div class="empty-state">No bills found for this filter.</div>';
     return;
   }
-  const countEl = document.getElementById('billsCountLabel');
-  if (countEl) countEl.textContent = `${filtered.length} bill${filtered.length !== 1 ? 's' : ''} · sorted by activity`;
 
   list.innerHTML =
     renderShockQuotesSection() +
@@ -644,7 +725,7 @@ function renderFavoritesView() {
   let html = renderTrackedRepsSection();
 
   html += `<div class="fav-section-header">
-    <span class="fav-section-title">Starred bills</span>
+    <span class="fav-section-title">Tracked bills</span>
     <span class="fav-section-count">${starredBills.length}</span>
   </div>`;
 
@@ -654,11 +735,11 @@ function renderFavoritesView() {
     html += `<div class="fav-empty">
       <div class="fav-empty-icon">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
-          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
         </svg>
       </div>
-      <div class="fav-empty-title">No starred bills yet</div>
-      <div class="fav-empty-sub">Tap the star on any bill in the main feed to save it here.</div>
+      <div class="fav-empty-title">No tracked bills yet</div>
+      <div class="fav-empty-sub">Tap the star on any bill to track it here.</div>
     </div>`;
   }
 
@@ -833,6 +914,7 @@ function renderHeader(bill, state, num, watching) {
     <div class="bill-rank-col">
       ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
+      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST PASSED</span>` : ''}
       <div class="bill-number">#${num || ''}</div>
     </div>
     <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
@@ -867,18 +949,16 @@ function renderTopLines(bill) {
 function renderStageStrip(bill) {
   const stages = ['Introduced', 'Committee', 'House', 'Senate', 'Signed'];
   const idx = bill.currentStep || 0;
-  const accentColor = '#a14040';
   return `<div class="stage-strip">
     ${stages.map((s, i) => {
-      const dotCls = i < idx ? 'done' : i === idx ? 'active' : 'pending';
+      const dotCls  = i < idx ? 'done' : i === idx ? 'active' : 'pending';
       const dotSize = i === idx ? '13px' : '9px';
-      const labelColor = i <= idx ? '#0c0c0d' : '#a8acb8';
-      const labelWeight = i === idx ? '600' : '400';
-      const connColor = i < idx ? accentColor : '#e5e5e3';
+      const lblCls  = i <= idx ? 'stage-strip-label-on' : '';
+      const conCls  = i < idx ? 'stage-strip-connector-done' : 'stage-strip-connector-pending';
       return `<div class="stage-strip-step">
         <div class="stage-strip-dot ${dotCls}" style="width:${dotSize};height:${dotSize}"></div>
-        <div class="stage-strip-label" style="color:${labelColor};font-weight:${labelWeight}">${s}</div>
-      </div>${i < stages.length - 1 ? `<div class="stage-strip-connector" style="background:${connColor}"></div>` : ''}`;
+        <div class="stage-strip-label ${lblCls}">${s}</div>
+      </div>${i < stages.length - 1 ? `<div class="stage-strip-connector ${conCls}"></div>` : ''}`;
     }).join('')}
   </div>`;
 }
@@ -982,13 +1062,13 @@ function renderLikelihoodFooter(bill, col, state) {
   const dots = stages.map((s, i) => {
     const done   = i < idx;
     const active = i === idx;
-    const bg     = done || active ? '#0c0c0d' : '#d0d0ce';
+    const dotCls = done ? 'fp-dot-done' : active ? 'fp-dot-active' : 'fp-dot-pending';
     const size   = active ? '9px' : '6px';
-    const shadow = active ? 'box-shadow:0 0 0 2px #fff,0 0 0 3.5px #0c0c0d;' : '';
+    const lineCls = done ? 'fp-line-done' : 'fp-line-pending';
     const line   = i < stages.length - 1
-      ? `<div style="height:1.5px;flex:1;background:${done ? '#0c0c0d' : '#d0d0ce'};margin:0 2px"></div>`
+      ? `<div class="fp-line ${lineCls}"></div>`
       : '';
-    return `<div style="width:${size};height:${size};border-radius:50%;background:${bg};flex-shrink:0;${shadow}transition:all 0.2s"></div>${line}`;
+    return `<div class="fp-dot ${dotCls}" style="width:${size};height:${size}"></div>${line}`;
   }).join('');
 
   return `<div class="likelihood-footer" onclick="toggleCard('${bill.id}')">

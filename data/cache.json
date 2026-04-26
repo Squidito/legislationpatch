@@ -1,6 +1,419 @@
 {
-  "generated": "2026-04-26T07:41:23.339Z",
+  "generated": "2026-04-26T19:59:57.584Z",
   "bills": [
+    {
+      "summary": "The DPA Modernization Act of 2026 amends Title I of the Defense Production Act of 1950 to increase funding thresholds, establish a Critical Minerals Resilience Initiative, and create a new Committee structure with specific reporting and database requirements.",
+      "brief": "This bill modernizes the Defense Production Act by increasing financial thresholds for loans and purchases, establishing a Critical Minerals Resilience Initiative, and creating a new Committee structure to oversee supply chain security.",
+      "top_lines": [
+        "Increases DPA loan threshold from $10,000 to $100,000",
+        "Increases DPA purchase threshold from $50,000,000 to $100,000,000",
+        "Establishes a Critical Minerals Resilience Initiative under section 201(b)"
+      ],
+      "likelihood": 15,
+      "likelihoodReason": "The bill has only 4 cosponsors and was placed on the Union Calendar without floor debate. The sponsor is a Republican from Ohio in the House, which currently holds a majority, but the low cosponsor count suggests limited bipartisan support. Specific provisions like the Critical Minerals Resilience Initiative may attract opposition from those concerned about national security implications or budgetary constraints.",
+      "sections": [
+        {
+          "label": "Title I — Priorities and Allocations",
+          "items": [
+            {
+              "main": "Amends Title I of the Defense Production Act of 1950 by changing references from 'he' to 'the President', removing 'or appropriate', restructuring subsections, adding conditions for using powers (national emergency declared by the President; natural disaster declared by the President pursuant to the Robert T. Stafford Disaster Relief and Emergency Assistance Act; public health emergency determined by the Secretary of Health and Human Services pursuant to section 319 of the Public Health Service Act), limiting control of general distribution of any material in the civilian market for a period exceeding 1 year except that the President may extend such 1-year period for up to 180 days upon reporting to Congress, on a non-delegable basis, that the extension is essential to meet national defense requirements.",
+              "detail": "The text amends Title I of the Defense Production Act of 1950 (50 U.S.C. 4501 et seq.) by redesignating titles, striking sections, redesignating sections, inserting text, and adding new sections. It also adds provisions for waivers, reports, simulations, supply chain security plans, and a prohibition on discrimination based on energy source.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Supply Chain Security",
+          "items": [
+            {
+              "main": "Establishes a Critical Minerals Resilience Initiative under section 201(b) and adds a waiver authority to expedite procurement of critical technologies or critical minerals.",
+              "detail": "The text states that the President may waive or revise relevant regulations for expediting procurement, but does not specify what 'relevant regulations' are. The Executive Director of the Defense Production Act Committee may waive the requirement described under subsection (e) for up to 1 year at a time upon notifying the Committee on Financial Services of the House of Representatives and the Committee on Banking, Housing, and Urban Affairs of the Senate in writing that the waiver is in the national security interests of the United States.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — Committee Structure",
+          "items": [
+            {
+              "main": "Establishes a Committee structure with roles for Chairperson and Executive Director, creates a Defense Production Act Dashboard database, requires development of a toolkit and online resources site, mandates meetings at least twice per year, establishes subcommittees (Emerging Technology, General), requires fraud risk management processes.",
+              "detail": "The Committee is composed of the Assistant to the President for National Security Affairs as Chairperson and Director of the Office of Management and Budget as Executive Director. The Executive Director shall maintain a database that compiles and categorizes actions reported under section 206(b)(3), is available to all members of the Committee, allows for real-time updates by the members of the Committee, and is subject to appropriate information security, confidentiality, and classification requirements.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 208",
+          "summary": "Prohibits discrimination based on energy source in the context of financial support pursuant to sections 201, 202, 203, or 204.",
+          "why_unreported": "This provision is buried within the technical amendments and may be overlooked as a significant policy change regarding energy source discrimination."
+        },
+        {
+          "section": "Section 209",
+          "summary": "Limits eligibility for assistance for covered entities.",
+          "why_unreported": "The specific criteria for limiting eligibility are not detailed in the provided text, making it difficult to assess its impact without further information."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Silent on the specific definition of 'covered technology' which is referenced in the Subcommittee on Emerging Technology activities.",
+        "Does not specify what 'relevant regulations' are when discussing the President's authority to waive or revise them for expediting procurement.",
+        "Lacks details on how the Defense Production Act Dashboard database will be funded or maintained beyond the general requirement."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Critical Minerals Resilience Initiative established under section 201(b)",
+          "Waiver authority to expedite procurement of critical technologies or critical minerals",
+          "Additional requirements for use of commercially available software and skilled labor",
+          "Special hiring authority for subject matter experts",
+          "New section 208 prohibiting discrimination based on energy source",
+          "New section 209 limiting eligibility for assistance for covered entities",
+          "Defense Production Act Dashboard database",
+          "Toolkit and Online Resources Site"
+        ],
+        "modified": [
+          "Section 103 threshold changed from $10,000 to $100,000",
+          "Section 205 funding changed from $750,000,000 to $2,000,000,000",
+          "References to 'he' changed to 'the President'",
+          "References to 'President' changed to 'Fund manager of the Defense Production Act Fund' or 'member of the Defense Production Act Committee' in various subsections"
+        ],
+        "removed": [
+          "Section 714",
+          "Section 723",
+          "Subsection (d) of section 316",
+          "Paragraph (5) of section 317(d)"
+        ]
+      },
+      "likelihoodLabel": "Long shot",
+      "id": "119-HR-7688",
+      "title": "DPA Modernization Act of 2026",
+      "official_title": "DPA Modernization Act of 2026",
+      "code": "HR.7688",
+      "date": "Feb 24, 2026",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "On House Calendar",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Davidson, Warren [R-OH-8]",
+      "sponsor_bioguide": "D000626",
+      "sponsors": [
+        {
+          "bioguideId": "D000626",
+          "district": 8,
+          "firstName": "Warren",
+          "fullName": "Rep. Davidson, Warren [R-OH-8]",
+          "isByRequest": "N",
+          "lastName": "Davidson",
+          "party": "R",
+          "state": "OH",
+          "url": "https://api.congress.gov/v3/member/D000626?format=json"
+        }
+      ],
+      "cosponsors": 4,
+      "pages": 19,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
+    {
+      "summary": "This bill directs the President to remove U.S. Armed Forces from hostilities against Iran by March 28, 2026, and clarifies that this action does not authorize new force use or disrupt intelligence sharing.",
+      "brief": "Directs termination of U.S. military hostilities against Iran within 30 days while preserving intelligence operations and defensive capabilities.",
+      "top_lines": [
+        "Terminates use of U.S. Armed Forces in hostilities against Iran by March 28, 2026 (30 days after February 28, 2026).",
+        "Nothing in the resolution may be construed to prevent defense against imminent attack or maintain defensive troop presence.",
+        "Nothing in this concurrent resolution may be construed as authorizing the use of military force."
+      ],
+      "likelihood": 15,
+      "likelihoodReason": "The bill is referred to the House Committee on Foreign Affairs with only 9 cosponsors. The sponsor is a Democrat in a chamber where foreign policy resolutions often face procedural hurdles or require broader consensus for action. Specific provisions regarding intelligence sharing and defensive troop presence may attract opposition from those prioritizing immediate military engagement or national security flexibility.",
+      "sections": [
+        {
+          "label": "Section 2 — Termination of Use of Force",
+          "items": [
+            {
+              "main": "Directs the President to remove the use of United States Armed Forces from hostilities against the Islamic Republic of Iran or any part of its government or military, including potential ground forces in a combat role or used for occupation.",
+              "detail": "The directive must be executed by not later than 30 days after February 28, 2026. This action is taken pursuant to section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Rule of Construction Relating to Intelligence Sharing",
+          "items": [
+            {
+              "main": "Nothing in this resolution may be construed to influence or disrupt any intelligence, counterintelligence, or investigative activities relating to threats in or emanating from Iran or surrounding countries conducted by the United States Government.",
+              "detail": "The resolution does not influence collection, analysis, or sharing of intelligence between the United States and any coalition partner if the President determines such sharing is appropriate and in the national security interests of the United States.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Rule of Construction Relating to Nonauthorization of the Use of Military Force",
+          "items": [
+            {
+              "main": "Nothing in this concurrent resolution may be construed as authorizing the use of military force.",
+              "detail": "This provision is consistent with section 8(a)(1) of the War Powers Resolution (50 U.S.C. 1547(a)(1)).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not specify a mechanism for the President to report on the status of force removal or provide an alternative timeline if hostilities are deemed imminent.",
+        "The resolution does not address the legal status of coalition partners' forces currently engaged in operations alongside U.S. troops."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Directive for removal of U.S. Armed Forces from hostilities against Iran pursuant to War Powers Resolution section 5(c)."
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "likelihoodLabel": "Long shot",
+      "id": "119-HCONRES-75",
+      "title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "official_title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "code": "HCONRES.75",
+      "date": "Mar 3, 2026",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Gottheimer, Josh [D-NJ-5]",
+      "sponsor_bioguide": "G000583",
+      "sponsors": [
+        {
+          "bioguideId": "G000583",
+          "district": 5,
+          "firstName": "Josh",
+          "fullName": "Rep. Gottheimer, Josh [D-NJ-5]",
+          "isByRequest": "N",
+          "lastName": "Gottheimer",
+          "party": "D",
+          "state": "NJ",
+          "url": "https://api.congress.gov/v3/member/G000583?format=json"
+        }
+      ],
+      "cosponsors": 9,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
+    {
+      "summary": "The HEATS Act waives federal drilling permit requirements for geothermal exploration and production on non-federal lands if the U.S. owns less than 50% of the subsurface estate and a state permit is submitted.",
+      "brief": "This bill exempts certain geothermal activities from federal permitting, environmental review, and historic preservation requirements.",
+      "top_lines": [
+        "Waives Federal drilling permit requirement for qualifying geothermal activities on non-Federal surface estate",
+        "Exempts qualifying activities from NEPA section 102(2)(C) and Endangered Species Act section 7",
+        "U.S. ownership interest must be less than 50 percent of the subsurface geothermal estate"
+      ],
+      "likelihood": 15,
+      "likelihoodReason": "The bill has only 2 cosponsors in the House, which is a very low number for passage. The sponsor is a Republican from California (R-CA), and the latest action shows a motion to reconsider was laid on the table without objection, indicating limited debate or support. The provision waives federal permitting requirements, which may attract opposition from environmental groups or representatives concerned about regulatory oversight.",
+      "sections": [
+        {
+          "label": "Title I — Harnessing Energy At Thermal Sources Act",
+          "items": [
+            {
+              "main": "Waives the requirement for a Federal drilling permit for geothermal exploration and production activities conducted on a non-Federal surface estate, provided that (1) the United States holds an ownership interest of less than 50 percent of the subsurface geothermal estate to be accessed by the proposed action; and (2) the operator submits to the Secretary a State permit to conduct geothermal exploration and production activities on the non-Federal surface estate.",
+              "detail": "The bill amends the Geothermal Steam Act of 1970 by adding Section 30. It exempts such activity from NEPA section 102(2)(C) and Endangered Species Act section 7, subject to conditions. The Secretary may conduct onsite reviews and inspections for accountability, measurement, reporting, and royalty payment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 30 of the Geothermal Steam Act of 1970",
+          "summary": "The provision states that royalties due to the United States under this Act from production of electricity using geothermal resources (other than direct use) or byproducts are not affected.",
+          "why_unreported": "Royalty obligations remain intact despite the waiver of drilling permits, which may be overlooked in summaries focusing solely on permitting relief."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not address potential impacts on tribal lands or resources managed in trust for Indian Tribes beyond simply excluding them from the waiver.",
+        "The bill does not specify how state permits are evaluated to ensure they meet environmental standards comparable to federal requirements."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New Section 30 in the Geothermal Steam Act of 1970"
+        ],
+        "modified": [
+          "Geothermal Steam Act of 1970 — adds waiver for Federal drilling permit requirement for certain geothermal activities"
+        ],
+        "removed": [
+          "Requirement for a Federal drilling permit for qualifying geothermal activities on non-Federal surface estate"
+        ]
+      },
+      "likelihoodLabel": "Long shot",
+      "id": "119-HR-5587",
+      "title": "HEATS Act",
+      "official_title": "HEATS Act",
+      "code": "HR.5587",
+      "date": "Sep 25, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Kim, Young [R-CA-40]",
+      "sponsor_bioguide": "K000397",
+      "sponsors": [
+        {
+          "bioguideId": "K000397",
+          "district": 40,
+          "firstName": "Young",
+          "fullName": "Rep. Kim, Young [R-CA-40]",
+          "isByRequest": "N",
+          "lastName": "Kim",
+          "party": "R",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/K000397?format=json"
+        }
+      ],
+      "cosponsors": 2,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
+    {
+      "summary": "This bill appropriates funds for the Department of the Treasury, Internal Revenue Service, and various other federal agencies including the District of Columbia government.",
+      "brief": "Provides funding for IRS taxpayer services, enforcement, and technology support while restricting use of funds for certain activities like abortion benefits and mask mandates.",
+      "top_lines": [
+        "Appropriates $3,036,606,000 for Internal Revenue Service taxpayer services.",
+        "Allocates $240,774,000 for Departmental Offices salaries and expenses.",
+        "Provides $299,600,000 for the Office of National Drug Control Policy's High Intensity Drug Trafficking Areas Program."
+      ],
+      "likelihood": 15,
+      "likelihoodReason": "The bill has zero cosponsors and is placed on the Union Calendar without floor debate. The sponsor is a Republican from Ohio in a chamber where Republicans hold the majority, but the lack of bipartisan support and specific restrictive riders may limit its passage.",
+      "sections": [
+        {
+          "label": "Title I — Departmental Offices",
+          "items": [
+            {
+              "main": "Provides $240,774,000 for salaries and expenses of the Departmental Offices.",
+              "detail": "Includes up to $1,350,000 for official reception and representation, with $1,000,000 available until January 30, 2028 for hosting the G7 Financial Summit. Up to $34,000,000 remains available until September 30, 2028 for audit programs, IT modernization, and international operations.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Internal Revenue Service",
+          "items": [
+            {
+              "main": "Provides $3,036,606,000 for IRS taxpayer services and enforcement activities.",
+              "detail": "Includes requirements of not less than $12,000,000 for Tax Counseling for the Elderly Program and not less than $28,000,000 for low-income taxpayer clinic grants. Up to $250,000,000 remains available until September 30, 2028 for enforcement activities.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — District of Columbia Appropriations",
+          "items": [
+            {
+              "main": "Appropriates funds for the District of Columbia government with restrictions on use.",
+              "detail": "Total operating expenses shall not exceed estimates in the Fiscal Year 2027 Local Budget Act. Funds cannot be used to implement COVID-19 mask or vaccine mandates, D.C. Law 25-305, or provisions of the Consumer Protection Act against oil and gas companies.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 131",
+          "summary": "Requires Secretary of the Treasury to submit a report on the Treasury Forfeiture Fund, including impact of Strategic Bitcoin Reserve and U.S. Digital Asset Stockpile.",
+          "why_unreported": "Buried in technical language regarding reporting timelines rather than highlighted as a major policy shift on digital assets."
+        },
+        {
+          "section": "Section 640",
+          "summary": "Requires Postmaster General to notify Members of Congress before releasing stamps depicting landmarks, events, or individuals from specific districts/states.",
+          "why_unreported": "Technical rider unrelated to the main appropriations purpose but affects postal service operations and commemorative stamp releases."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Silent on funding levels for cybersecurity initiatives beyond the $34,000,000 allocated for Office of Cybersecurity and Critical Infrastructure Protection.",
+        "Does not address privacy protections for taxpayer data despite significant funding for IRS technology modernization.",
+        "Lacks provisions for workforce development or training programs within the IRS despite large allocations for operations.",
+        "No mention of climate change adaptation measures for federal facilities receiving appropriations.",
+        "Silent on oversight mechanisms for the Strategic Bitcoin Reserve and U.S. Digital Asset Stockpile beyond reporting requirements."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Dedicated account for Resident Tuition Support Program in District of Columbia government.",
+          "Treasury Forfeiture Fund report requirement including Strategic Bitcoin Reserve impact."
+        ],
+        "modified": [
+          "Consolidated Appropriations Act, 2021 expenses available for Treasury Office of Inspector General."
+        ],
+        "removed": []
+      },
+      "likelihoodLabel": "Long shot",
+      "id": "119-HR-8495",
+      "title": "Financial Services and General Government Appropriations Act, 2027",
+      "official_title": "Financial Services and General Government Appropriations Act, 2027",
+      "code": "HR.8495",
+      "date": "Apr 23, 2026",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "On House Calendar",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Joyce, David P. [R-OH-14]",
+      "sponsor_bioguide": "J000295",
+      "sponsors": [
+        {
+          "bioguideId": "J000295",
+          "district": 14,
+          "firstName": "David",
+          "fullName": "Rep. Joyce, David P. [R-OH-14]",
+          "isByRequest": "N",
+          "lastName": "Joyce",
+          "middleName": "P.",
+          "party": "R",
+          "state": "OH",
+          "url": "https://api.congress.gov/v3/member/J000295?format=json"
+        }
+      ],
+      "cosponsors": 0,
+      "pages": 98,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
     {
       "id": "119-HR-6955",
       "code": "H.R.6955",
