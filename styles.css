@@ -1071,10 +1071,13 @@ a:hover { text-decoration: underline; }
   gap: 0.65rem;
   overflow-x: auto;
   scrollbar-width: none;
-  -webkit-mask-image: linear-gradient(to right, black 82%, transparent 100%);
-  mask-image: linear-gradient(to right, black 82%, transparent 100%);
+  cursor: grab;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  padding: 4px 2px;
 }
 .shock-quotes-grid::-webkit-scrollbar { display: none; }
+.shock-quotes-grid.dragging { cursor: grabbing; user-select: none; }
 .shock-quote-card {
   background: var(--surface);
   border: 1px solid var(--border);

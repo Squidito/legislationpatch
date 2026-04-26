@@ -536,6 +536,26 @@ function renderUnderreportedSection(bill) {
 
 // ---- Render ----
 
+function applyCarouselDrag(el) {
+  if (!el || el._dragApplied) return;
+  el._dragApplied = true;
+  let isDown = false, startX = 0, scrollLeft = 0;
+  el.addEventListener('mousedown', e => {
+    isDown    = true;
+    startX    = e.pageX - el.offsetLeft;
+    scrollLeft = el.scrollLeft;
+    el.classList.add('dragging');
+    e.preventDefault();
+  });
+  const stop = () => { isDown = false; el.classList.remove('dragging'); };
+  el.addEventListener('mouseup',    stop);
+  el.addEventListener('mouseleave', stop);
+  el.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX) * 1.8;
+  });
+}
+
 function renderAll() {
   if (favoritesView) { renderFavoritesView(); return; }
 
@@ -554,6 +574,8 @@ function renderAll() {
   list.innerHTML =
     renderShockQuotesSection() +
     filtered.map((b, i) => renderBill(b, i + 1)).join('');
+
+  applyCarouselDrag(list.querySelector('.shock-quotes-grid'));
 }
 
 // ---- Favorites view ----
