@@ -10,10 +10,8 @@ const LM_STUDIO_URL    = 'http://localhost:1235/v1/chat/completions';
 const MODEL_NAME       = 'local-model';
 const CACHE_FILE       = path.join(__dirname, '../data/cache.json');
 
-// Hard failures always cause immediate rejection (no tolerance).
-// Soft warnings: even 1 unverified claim rejects the bill.
-// Zone 2 (quotes/attribution) always has zero tolerance regardless.
-const SOFT_WARNING_THRESHOLD = 1;
+// Every verification failure is a hard failure — immediate rejection.
+// There are no soft warnings or thresholds. One unverified claim = rejected.
 
 // Named entities that appear in almost every piece of legislation —
 // no need to verify these against the bill text.
@@ -86,67 +84,51 @@ function formatBillTypeForRecord(type) {
 // ============================================================
 
 function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
-    const sourceText  = (billText + ' ' + crsText).toLowerCase();
-    const hardFailures = [];
-    const softWarnings = [];
+    const sourceText = (billText + ' ' + crsText).toLowerCase();
+    const failures   = []; // all failures are hard — one failure = rejected
 
-    // --- ZONE 2 HARD CHECKS (quotes, criticisms, comments) ---
+    // ── ZONE 2: QUOTES, CRITICISMS, COMMENTS ──────────────────────────────
+    // Source: Congressional Record only. Zero tolerance.
 
-    const hasQuotes      = (parsed.featured_quotes || []).length > 0;
-    const hasCriticisms  = (parsed.criticisms || []).length > 0;
-    const hasComments    = (parsed.sections || []).some(s =>
+    const hasQuotes     = (parsed.featured_quotes || []).length > 0;
+    const hasCriticisms = (parsed.criticisms || []).length > 0;
+    const hasComments   = (parsed.sections || []).some(s =>
         (s.items || []).some(item => (item.comments || []).length > 0)
     );
 
     if (!hasRecord && (hasQuotes || hasCriticisms || hasComments)) {
-        hardFailures.push(
-            'ZONE 2 VIOLATION: model produced quotes/criticisms/comments ' +
-            'but no Congressional Record was available — attributed statements are fabricated'
+        failures.push(
+            'ZONE 2: quotes/criticisms/comments present but no Congressional Record ' +
+            'was available — all attributed statements are fabricated'
         );
     }
 
     if (hasRecord) {
         const recordLower = recordText.toLowerCase();
 
-        // Verify every featured quote speaker appears in the Record
         for (const quote of parsed.featured_quotes || []) {
             const lastName = (quote.name || '').split(' ').pop().toLowerCase();
             if (lastName.length > 2 && !recordLower.includes(lastName)) {
-                hardFailures.push(
-                    `ZONE 2 VIOLATION: speaker "${quote.name}" (featured_quotes) ` +
-                    `not found in Congressional Record excerpts`
-                );
+                failures.push(`ZONE 2: speaker "${quote.name}" not found in Congressional Record`);
             }
         }
 
-        // Verify every criticism source appears in the Record
         for (const criticism of parsed.criticisms || []) {
             const words = (criticism.who || '')
-                .split(' ')
-                .filter(w => w.length > 4 && /^[A-Z]/.test(w));
+                .split(' ').filter(w => w.length > 4 && /^[A-Z]/.test(w));
             if (words.length > 0 && !words.some(w => recordLower.includes(w.toLowerCase()))) {
-                hardFailures.push(
-                    `ZONE 2 VIOLATION: criticism source "${criticism.who}" ` +
-                    `not found in Congressional Record excerpts`
-                );
+                failures.push(`ZONE 2: criticism source "${criticism.who}" not found in Congressional Record`);
             }
         }
 
-        // Verify comment speakers in sections
         for (const section of parsed.sections || []) {
             for (const item of section.items || []) {
                 for (const comment of item.comments || []) {
-                    // Comments have format "Rep. Name (Party-State): text"
-                    // Extract the name portion before the colon
                     const nameMatch = (comment.text || '').match(/^([^:]+):/);
                     if (nameMatch) {
-                        const namePart  = nameMatch[1];
-                        const lastName  = namePart.split(' ').pop().toLowerCase();
+                        const lastName = nameMatch[1].split(' ').pop().toLowerCase();
                         if (lastName.length > 3 && !recordLower.includes(lastName)) {
-                            hardFailures.push(
-                                `ZONE 2 VIOLATION: comment speaker "${namePart}" ` +
-                                `not found in Congressional Record excerpts`
-                            );
+                            failures.push(`ZONE 2: comment speaker "${nameMatch[1]}" not found in Congressional Record`);
                         }
                     }
                 }
@@ -154,17 +136,17 @@ function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
         }
     }
 
-    // --- ZONE 1 SOFT CHECKS (factual fields only) ---
-    // Only check: summary, brief, top_lines, sections, underreported, gaps, changes
+    // ── ZONE 1: FACTUAL FIELDS ─────────────────────────────────────────────
+    // Source: bill text + CRS summary. One unverified claim = rejected.
 
     const factualJson = JSON.stringify({
-        summary:      parsed.summary,
-        brief:        parsed.brief,
-        top_lines:    parsed.top_lines,
-        sections:     parsed.sections,
+        summary:       parsed.summary,
+        brief:         parsed.brief,
+        top_lines:     parsed.top_lines,
+        sections:      parsed.sections,
         underreported: parsed.underreported,
-        gaps:         parsed.gaps,
-        changes:      parsed.changes,
+        gaps:          parsed.gaps,
+        changes:       parsed.changes,
     });
 
     // 1. Dollar amounts
@@ -174,68 +156,52 @@ function verifyOutput(parsed, billText, crsText, recordText, hasRecord) {
     for (const amt of dollarMatches) {
         const coreNum = amt.replace(/[$,\s]/g, '').match(/[\d.]+/)?.[0];
         if (coreNum && !sourceText.includes(coreNum)) {
-            softWarnings.push(`Dollar amount "${amt}" not found in bill text or CRS summary`);
+            failures.push(`ZONE 1: dollar amount "${amt}" not in bill text or CRS summary`);
         }
     }
 
     // 2. Percentages
-    const pctMatches = [...new Set(factualJson.match(/\d+(?:\.\d+)?%/g) || [])];
-    for (const pct of pctMatches) {
-        const num = pct.replace('%', '');
-        if (!sourceText.includes(num)) {
-            softWarnings.push(`Percentage "${pct}" not found in bill text or CRS summary`);
+    for (const pct of [...new Set(factualJson.match(/\d+(?:\.\d+)?%/g) || [])]) {
+        if (!sourceText.includes(pct.replace('%', ''))) {
+            failures.push(`ZONE 1: percentage "${pct}" not in bill text or CRS summary`);
         }
     }
 
-    // 3. Section number references (Section 402, § 3, etc.)
-    const sectionMatches = [...new Set(
-        factualJson.match(/(?:[Ss]ection|§)\s*\d+[A-Za-z]?/g) || []
-    )];
-    for (const sec of sectionMatches) {
+    // 3. Section number references
+    for (const sec of [...new Set(factualJson.match(/(?:[Ss]ection|§)\s*\d+[A-Za-z]?/g) || [])]) {
         const num = sec.replace(/[Ss]ection\s*|§\s*/g, '');
         if (!sourceText.includes(num)) {
-            softWarnings.push(`Section reference "${sec}" not found in bill text or CRS summary`);
+            failures.push(`ZONE 1: section reference "${sec}" not in bill text or CRS summary`);
         }
     }
 
-    // 4. Named programs and agencies
-    // Matches 2-5 capitalized words followed by an institutional noun
+    // 4. Named programs and agencies (2-5 capitalized words + institutional noun)
     const programPattern = /(?:[A-Z][a-z]+\s+){1,4}(?:Act|Fund|Program|Agency|Office|Bureau|Administration|Service|Authority|Board|Commission|Council|Center|Institute|Foundation|Corporation)\b/g;
-    const programMatches = [...new Set(factualJson.match(programPattern) || [])];
-    for (const prog of programMatches) {
+    for (const prog of [...new Set(factualJson.match(programPattern) || [])]) {
         if (ALWAYS_VALID_ENTITIES.some(v => prog.includes(v))) continue;
         if (prog.split(' ').length < 2) continue;
         if (!sourceText.includes(prog.toLowerCase())) {
-            softWarnings.push(`Named program/agency "${prog}" not found in bill text or CRS summary`);
+            failures.push(`ZONE 1: named program/agency "${prog}" not in bill text or CRS summary`);
         }
     }
 
-    // 5. Underreported section name verification
-    // The section name in each underreported item must trace back to something
-    // in the bill text. If the model invented a section that doesn't exist,
-    // the entire underreported finding is fabricated.
+    // 5. Underreported section names — key words must exist in bill text
+    const SKIP_WORDS = new Set(['the','of','and','for','a','an','in','to','on','at','by','section','—','-']);
     for (const item of parsed.underreported || []) {
         const sectionName = (item.section || '').trim();
         if (!sectionName) continue;
-
-        // Extract the most distinctive words (skip common words)
-        const SKIP_WORDS = new Set(['the', 'of', 'and', 'for', 'a', 'an', 'in', 'to', 'on', 'at', 'by', 'section', '—', '-']);
-        const keyWords = sectionName.toLowerCase().split(/[\s—\-]+/)
+        const keyWords    = sectionName.toLowerCase().split(/[\s—\-]+/)
             .filter(w => w.length > 3 && !SKIP_WORDS.has(w));
-
-        if (keyWords.length === 0) continue;
-
-        // All key words from the section name must appear in the bill text
-        const missingWords = keyWords.filter(w => !sourceText.includes(w));
-        if (missingWords.length > 0) {
-            hardFailures.push(
-                `UNDERREPORTED FABRICATION: section "${sectionName}" — ` +
-                `key words [${missingWords.join(', ')}] not found in bill text`
+        const missing     = keyWords.filter(w => !sourceText.includes(w));
+        if (missing.length > 0) {
+            failures.push(
+                `ZONE 1: underreported section "${sectionName}" — ` +
+                `key words [${missing.join(', ')}] not in bill text`
             );
         }
     }
 
-    return { hardFailures, softWarnings };
+    return failures;
 }
 
 // --- CONGRESS API FETCHING ---
@@ -507,7 +473,13 @@ async function processBill(bill) {
     console.log('   - Synthesizing final JSON...');
     const finalJSONString = await callLocalLLM(
         SYSTEM_PROMPT,
-        `${billContext}\n\n${crsSection}\n\n${recordSection}\n\nBILL TEXT NOTES (Zone 1 primary source):\n${combinedNotes}`
+        `${billContext}\n\n${crsSection}\n\n${recordSection}\n\nBILL TEXT NOTES (Zone 1 primary source):\n${combinedNotes}
+
+━━━ FINAL REMINDER BEFORE YOU OUTPUT ━━━
+Every dollar amount, percentage, section number, and named program in your JSON must appear verbatim in the Bill Text Notes or CRS Summary above.
+Every speaker name in quotes, criticisms, and comments must appear verbatim in the Congressional Record excerpts above.
+If a fact is not in the source material provided: omit it. Do not estimate. Do not complete from memory.
+An empty array [] is always correct. An invented fact is never acceptable.`
     );
 
     // Step 7 — Parse LLM output
@@ -530,27 +502,15 @@ async function processBill(bill) {
     parsed.likelihood = Math.min(100, Math.max(0, Math.round(parsed.likelihood || 0)));
 
     // Step 9 — Run full verification gate
-    const { hardFailures, softWarnings } = verifyOutput(
-        parsed, cleanedBillText, crsText, recordText, hasRecord
-    );
+    const failures = verifyOutput(parsed, cleanedBillText, crsText, recordText, hasRecord);
 
-    if (hardFailures.length > 0) {
-        console.log(`   - REJECTED (${hardFailures.length} hard failure(s)):`);
-        hardFailures.forEach(f => console.log(`     ✕ ${f}`));
+    if (failures.length > 0) {
+        console.log(`   - REJECTED — ${failures.length} unverified claim(s):`);
+        failures.forEach(f => console.log(`     ✕ ${f}`));
         return null;
     }
 
-    if (softWarnings.length > 0) {
-        console.log(`   - ${softWarnings.length} soft warning(s):`);
-        softWarnings.forEach(w => console.log(`     ⚠ ${w}`));
-        if (softWarnings.length >= SOFT_WARNING_THRESHOLD) {
-            console.log(`   - REJECTED: ${softWarnings.length} unverified claims exceeds threshold of ${SOFT_WARNING_THRESHOLD}.`);
-            return null;
-        }
-        console.log(`   - Proceeding (below rejection threshold).`);
-    } else {
-        console.log('   - Verification passed: all claims confirmed in source text.');
-    }
+    console.log('   - Verification passed: all claims confirmed in source text.');
 
     // Step 10 — Stamp all required UI fields
     const stage = detectStage(meta?.latestAction?.text || '');
