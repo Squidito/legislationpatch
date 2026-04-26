@@ -883,7 +883,7 @@ function renderQuoteCards(bill) {
   const quotes = bill.featured_quotes;
   if (!quotes?.length) return '';
   return `<div class="quote-cards-row">
-    ${quotes.slice(0, 2).map(q => {
+    ${quotes.map(q => {
       const stanceCls = q.stance === 'support' ? 'stance-support' : 'stance-oppose';
       const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
       return `<div class="quote-card">
