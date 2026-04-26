@@ -376,19 +376,35 @@ function extractBillMentions(text, billType, billNumber) {
 
 function stripThinkingTags(text) {
     if (!text) return text;
-    return text.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+    // Remove properly closed think blocks
+    let result = text.replace(/<think>[\s\S]*?<\/think>/gi, '');
+    // Remove unclosed think blocks — if <think> appears with no closing tag,
+    // everything from that point is reasoning with no answer following it
+    result = result.replace(/<think>[\s\S]*/gi, '');
+    return result.trim();
 }
 
-async function callLocalLLM(systemPrompt, userMessage) {
+// Prepended to every system prompt to prevent Qwen3 entering think mode via API
+const NO_THINK_PREFIX = 'Do not use <think> tags or internal reasoning. Begin your response immediately with the requested content.\n\n';
+
+// prefill: optional string to inject as the start of the assistant response.
+// Forces the model directly into generation mode before think tokens can appear.
+async function callLocalLLM(systemPrompt, userMessage, prefill = '') {
+    const messages = [
+        { role: 'system',    content: NO_THINK_PREFIX + systemPrompt },
+        { role: 'user',      content: userMessage },
+    ];
+    if (prefill) {
+        messages.push({ role: 'assistant', content: prefill });
+    }
+
     const payload = {
         model:       MODEL_NAME,
-        messages:    [
-            { role: 'system', content: systemPrompt },
-            { role: 'user',   content: `/no_think\n\n${userMessage}` }
-        ],
+        messages,
         temperature: 0.1,
         max_tokens:  4096,
-        stream:      false
+        stream:      false,
+        chat_template_kwargs: { enable_thinking: false }
     };
     try {
         const res = await fetch(LM_STUDIO_URL, {
@@ -396,7 +412,10 @@ async function callLocalLLM(systemPrompt, userMessage) {
             body:   JSON.stringify(payload)
         });
         if (!res.ok) throw new Error(`LM Studio Error: ${res.status}`);
-        return stripThinkingTags((await res.json()).choices[0].message.content);
+        const content = (await res.json()).choices[0].message.content;
+        const stripped = stripThinkingTags(content);
+        // Re-attach prefill since the API returns only the continuation
+        return prefill ? prefill + stripped : stripped;
     } catch (e) {
         console.error('Failed to contact LM Studio on port 1235. Is it running?', e);
         return null;
@@ -443,7 +462,16 @@ async function processBill(bill) {
             'You are a legal text extraction assistant. Extract only what is explicitly stated in the text. Do not add outside knowledge.',
             `${CHUNK_MAP_PROMPT}\n\nBILL TEXT CHUNK:\n${chunks[i]}`
         );
-        if (summary) chunkSummaries.push(summary);
+        if (summary) {
+            console.log(`   - Chunk ${i + 1} extracted ${summary.length} chars of notes.`);
+            chunkSummaries.push(summary);
+        } else {
+            console.log(`   - Chunk ${i + 1} returned no content from model.`);
+        }
+    }
+    if (!chunkSummaries.length) {
+        console.log('   - No chunk notes produced — bill may be too short or procedural to analyze.');
+        return null;
     }
 
     // Step 5 — Build reduce-phase context
@@ -479,7 +507,8 @@ async function processBill(bill) {
 Every dollar amount, percentage, section number, and named program in your JSON must appear verbatim in the Bill Text Notes or CRS Summary above.
 Every speaker name in quotes, criticisms, and comments must appear verbatim in the Congressional Record excerpts above.
 If a fact is not in the source material provided: omit it. Do not estimate. Do not complete from memory.
-An empty array [] is always correct. An invented fact is never acceptable.`
+An empty array [] is always correct. An invented fact is never acceptable.`,
+        '{' // prefill forces model directly into JSON output
     );
 
     // Step 7 — Parse LLM output
