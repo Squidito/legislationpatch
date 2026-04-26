@@ -1531,6 +1531,16 @@ a:hover { text-decoration: underline; }
   border-color: var(--purple);
   background: var(--purple-bg);
 }
+.fav-btn.active svg polygon { fill: currentColor; }
+
+.rep-star-btn {
+  opacity: 0.35;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.rep-star-btn:hover    { opacity: 0.7;  color: var(--amber); }
+.rep-star-btn.watching { opacity: 1;    color: var(--amber); }
+.rep-star-btn.watching svg polygon { fill: currentColor; }
 
 /* ---- FAVORITES VIEW ---- */
 .fav-section-header {
