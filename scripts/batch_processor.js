@@ -231,6 +231,21 @@ const DOA_ACTIONS = [
     'referred to committee', 'held at the desk', 'referred to the subcommittee'
 ];
 
+// Bill title patterns that indicate zero analytical value.
+// Technical corrections only fix citations/wording — no policy content to extract.
+// The others are procedural, commemorative, or pure formality.
+const SKIP_TITLE_PATTERNS = [
+    'technical correction',
+    'clerical amendment',
+    'to designate the facility',        // post office / building naming
+    'to name the ',                     // facility naming
+    'expressing the sense of congress', // sense resolutions — no legal weight
+    'expressing the sense of the',
+    'recognizing the',                  // commemorative recognitions
+    'honoring the',
+    'commending the',
+];
+
 async function fetchRecentBills(limit = 10) {
     console.log(`[1] Fetching ${limit} recent bills from Congress.gov (session ${CONGRESS_SESSION})...`);
     const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}?sort=updateDate+desc&limit=${limit}&format=json&api_key=${CONGRESS_API_KEY}`;
@@ -241,9 +256,13 @@ async function fetchRecentBills(limit = 10) {
         const data = await res.json();
         const active = (data.bills || []).filter(b => {
             const action = (b.latestAction?.text || '').toLowerCase();
-            return !DOA_ACTIONS.some(pattern => action.includes(pattern));
+            const title  = (b.title || '').toLowerCase();
+            if (DOA_ACTIONS.some(p => action.includes(p))) return false;
+            if (SKIP_TITLE_PATTERNS.some(p => title.includes(p))) return false;
+            return true;
         });
-        console.log(`   - ${data.bills?.length || 0} fetched, ${active.length} passed DOA filter.`);
+        const skipped = (data.bills?.length || 0) - active.length;
+        console.log(`   - ${data.bills?.length || 0} fetched, ${skipped} skipped (DOA or excluded type), ${active.length} eligible.`);
         return active;
     } catch (e) {
         console.error('Failed to fetch bills:', e);
