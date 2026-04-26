@@ -1,6 +1,154 @@
 {
-  "generated": "2026-04-26T19:59:57.584Z",
+  "generated": "2026-04-26T23:24:20.114Z",
   "bills": [
+    {
+      "summary": "This act reduces taxes, increases spending for various federal programs, and addresses agencies throughout the federal government as a reconciliation bill.",
+      "brief": "The bill provides tax cuts, modifies federal spending on agriculture, energy, and conservation, and adjusts immigration fees.",
+      "top_lines": [
+        "Increases LIP payment rate to 100% for losses due to predation (from 75%).",
+        "Reduces cap on earnings transferred from Federal Reserve Board to CFPB from 12% to 6.5%. ",
+        "Modifies Gulf of Mexico Energy Security Act of 2006 to raise cap on distribution of OCS revenues to oil and gas producing Gulf states from $500 million to $650 million per year for FY2025-FY34."
+      ],
+      "likelihood": 99,
+      "likelihoodReason": "The bill has already become Public Law No: 119-21, indicating it was enacted. The sponsor is a Republican from Texas with zero cosponsors, but the reconciliation process and the fact that it became law suggest broad support or procedural necessity.",
+      "sections": [
+        {
+          "label": "Title I — COMMITTEE ON AGRICULTURE, NUTRITION, AND FORESTRY",
+          "items": [
+            {
+              "main": "Increases the payment rate under the Livestock Indemnity Program (LIP) to 100% for losses due to predation.",
+              "detail": "Modifies the LIP payment rate for predation losses from 75% to 100%. The text cuts off mid-sentence regarding 'attacks by animals reintroduced'.",
+              "comments": []
+            },
+            {
+              "main": "Reduces the cap on the percentage of combined earnings transferred from the Board of Governors of the Federal Reserve to the Consumer Financial Protection Bureau (CFPB).",
+              "detail": "Changes the cap on earnings transferred from the Board of Governors of the Federal Reserve to the CFPB from 12% to 6.5%. The text cuts off before completing the provision.",
+              "comments": []
+            },
+            {
+              "main": "Reduces restrictions on onshore development of oil and gas on federal lands by decreasing minimum royalty rates, reinstating noncompetitive leasing, directing Interior to resume quarterly lease sales in specified states, and approving applications allowing commingling of production from two or more sources before royalty payment measurement.",
+              "detail": "Modifies existing restrictions on federal land oil and gas development. No new programs created; existing leasing practices modified (noncompetitive leasing reinstated).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — TAX POLICY AND REVENUE",
+          "items": [
+            {
+              "main": "Increases the percentage rate to 50% (from 25%) at which the alternative minimum tax exemption amount is phased out for individuals whose taxable income exceeds such threshold amount.",
+              "detail": "The alternative minimum taxable income threshold amounts are $626,350 or $1,252,700 for joint filers for 2025, as adjusted annually for inflation beginning in 2026. Applies to individuals filing joint returns or married individuals filing separately.",
+              "comments": []
+            },
+            {
+              "main": "Makes permanent the limit on the itemized tax deduction for home mortgage interest enacted in 2017 by the Tax Cuts and Jobs Act.",
+              "detail": "Allows certain mortgage insurance premiums to be included in the itemized tax deduction for home mortgage interest. The limit is $750,000; $375,000 for married individuals filing separately.",
+              "comments": []
+            },
+            {
+              "main": "Makes permanent and increases the tax deduction for charitable contributions made by individuals who do not itemize their federal income tax deductions.",
+              "detail": "Increases the deduction amount to $1,000 for single filers (from $300) and $2,000 for joint filers (from $600 for joint filers). Makes it permanent.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — IMMIGRATION AND CUSTOMS",
+          "items": [
+            {
+              "main": "Establishes a fee of at least $100 for applications for asylum.",
+              "detail": "Applies to applicants for asylum. Provides exceptions on a case-by-case basis for the fee established in Sec. 100004 (e.g., life-threatening medical emergency).",
+              "comments": []
+            },
+            {
+              "main": "Establishes a fee of at least $550 for asylees, parolees, or individuals granted temporary protected status who are applying for initial employment authorization.",
+              "detail": "Applies to asylees, parolees, or individuals granted temporary protected status applying for initial employment authorization. Provides exceptions on a case-by-case basis for the fee established in Sec. 100004 (e.g., life-threatening medical emergency).",
+              "comments": []
+            },
+            {
+              "main": "Eliminates the exemption from certain duties, fees, and processes for imports of up to $800 (commonly referred to as the de minimis exemption), effective July 1, 2027.",
+              "detail": "Establishes a civil penalty for using such exemption in a manner that violates U.S. customs laws. Penalty: up to $5,000 for the first violation and up to $10,000 for subsequent violations.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 50304",
+          "summary": "Rescinds certain funding for Interior to carry out projects concerning conservation, protection, and resiliency of lands and resources administered by NPS and BLM.",
+          "why_unreported": "Buried in technical language regarding specific funding rescissions rather than a headline provision."
+        },
+        {
+          "section": "Section 70531",
+          "summary": "Eliminates the exemption from certain duties, fees, and processes for imports of up to $800 (commonly referred to as the de minimis exemption), effective July 1, 2027.",
+          "why_unreported": "Technical change to customs laws that contradicts the headline 'tax cuts' narrative."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Silent on the specific definition of 'predation' beyond 'attacks by animals reintroduced' which is cut off in the source text.",
+        "Does not specify which states are included for quarterly lease sales in Sec. 50101."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New fee of at least $100 for applications for asylum.",
+          "New fee of at least $550 for asylees, parolees, or individuals granted temporary protected status who are applying for initial employment authorization.",
+          "New fee of at least $250 for individuals issued a nonimmigrant visa."
+        ],
+        "modified": [
+          "LIP payment rate for predation losses: 75% → 100%",
+          "Cap on earnings transferred from Board of Governors of the Federal Reserve to CFPB: 12% → 6.5%",
+          "Gulf of Mexico Energy Security Act of 2006 cap on distribution of OCS revenues to oil and gas producing Gulf states: $500 million → $650 million per year for FY2025-FY34",
+          "Alternative minimum tax exemption phase-out rate: 25% → 50%",
+          "Charitable contribution deduction for non-itemizers (single filers): $300 → $1,000",
+          "Charitable contribution deduction for non-itemizers (joint filers): $600 → $2,000"
+        ],
+        "removed": [
+          "Exemption from certain duties, fees, and processes for imports of up to $800 (de minimis exemption) effective July 1, 2027.",
+          "Funding for Interior to carry out projects concerning conservation, protection, and resiliency of lands and resources administered by NPS and BLM."
+        ]
+      },
+      "likelihoodLabel": "Likely",
+      "id": "119-HR-1",
+      "title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+      "official_title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+      "code": "HR.1",
+      "date": "May 19, 2025",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Arrington, Jodey C. [R-TX-19]",
+      "sponsor_bioguide": "A000375",
+      "sponsors": [
+        {
+          "bioguideId": "A000375",
+          "district": 19,
+          "firstName": "Jodey",
+          "fullName": "Rep. Arrington, Jodey C. [R-TX-19]",
+          "isByRequest": "N",
+          "lastName": "Arrington",
+          "middleName": "C.",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/A000375?format=json"
+        }
+      ],
+      "cosponsors": 0,
+      "pages": 365,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
     {
       "summary": "The DPA Modernization Act of 2026 amends Title I of the Defense Production Act of 1950 to increase funding thresholds, establish a Critical Minerals Resilience Initiative, and create a new Committee structure with specific reporting and database requirements.",
       "brief": "This bill modernizes the Defense Production Act by increasing financial thresholds for loans and purchases, establishing a Critical Minerals Resilience Initiative, and creating a new Committee structure to oversee supply chain security.",
@@ -656,87 +804,6 @@
         "removed": []
       },
       "summary": "Small-business tax relief, community bank capital rules, and local Main Street infrastructure grants.",
-      "live": true,
-      "demo": false
-    },
-    {
-      "summary": "This bill requires the Defense Production Act Committee to conduct a discussion-based simulation at least once every 5 years to determine resources needed and best use of authorities under Title I and this title.",
-      "brief": "Requires the Defense Production Act Committee to conduct a table-top exercise at least once every 5 years.",
-      "top_lines": [
-        "At least once every 5 years",
-        "Amends Title III of the Defense Production Act of 1950 by adding Section 306",
-        "Corrects the first undesignated section of the Defense Production Act of 1950"
-      ],
-      "likelihood": 25,
-      "likelihoodReason": "The bill has zero cosponsors and was referred to the House Committee on Financial Services. The sponsor is a Democrat in a chamber where Democrats hold the majority, but the lack of bipartisan support and committee referral suggests limited momentum.",
-      "sections": [
-        {
-          "label": "Title III — Defense Production Act of 1950",
-          "items": [
-            {
-              "main": "Requires the Defense Production Act Committee to conduct a discussion-based simulation at least once every 5 years to determine resources needed and best use of authorities under Title I and this title.",
-              "detail": "This provision adds Section 306 to Title III of the Defense Production Act of 1950. The simulation is intended to assess resource needs and optimal use of authorities under Title I and the new title.",
-              "comments": []
-            },
-            {
-              "main": "Corrects the first undesignated section of the Defense Production Act of 1950 by striking 'cited as ``the Defense'' and inserting 'cited as the ``Defense''.",
-              "detail": "This correction applies to the citation text in the first undesignated section of the Defense Production Act of 1950. The change is effective on the date of enactment.",
-              "comments": []
-            }
-          ]
-        }
-      ],
-      "underreported": [],
-      "criticisms": [],
-      "gaps": [
-        "The bill does not specify how the simulation results will be reported or used for policy decisions.",
-        "The bill does not define what constitutes a 'discussion-based simulation' in detail."
-      ],
-      "featured_quotes": [],
-      "changes": {
-        "added": [
-          "Section 306 to Title III of the Defense Production Act of 1950"
-        ],
-        "modified": [
-          "First undesignated section of the Defense Production Act of 1950: 'cited as ``the Defense'' → 'cited as the ``Defense''"
-        ],
-        "removed": []
-      },
-      "likelihoodLabel": "Unlikely",
-      "id": "119-HR-8071",
-      "title": "Strengthening and Improving Mobilization Act of 2026",
-      "official_title": "Strengthening and Improving Mobilization Act of 2026",
-      "code": "HR.8071",
-      "date": "Mar 24, 2026",
-      "version": "v1.0",
-      "stage": "committee",
-      "stageLabel": "In Committee",
-      "currentStep": 1,
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "Passed House",
-        "Passed Senate",
-        "Signed"
-      ],
-      "sponsor": "Rep. Green, Al [D-TX-9]",
-      "sponsor_bioguide": "G000553",
-      "sponsors": [
-        {
-          "bioguideId": "G000553",
-          "district": 9,
-          "firstName": "Al",
-          "fullName": "Rep. Green, Al [D-TX-9]",
-          "isByRequest": "N",
-          "lastName": "Green",
-          "party": "D",
-          "state": "TX",
-          "url": "https://api.congress.gov/v3/member/G000553?format=json"
-        }
-      ],
-      "cosponsors": 0,
-      "pages": 1,
-      "analyzed": true,
       "live": true,
       "demo": false
     },

@@ -493,21 +493,38 @@ async function processBill(bill) {
         ? 'found — quotes/criticisms will be sourced from it'
         : 'not found — quotes/criticisms/comments will be empty'}`);
 
-    // Step 3 — Clean and chunk bill text
+    // Step 3 — Choose text source + chunk
+    // Mega-bill strategy: if raw bill text > 100K chars AND a substantial CRS summary
+    // is available, use the CRS as Zone 1 source. The CRS is professionally distilled,
+    // already section-structured, and ~5× shorter — dramatically fewer chunks.
+    // Verification still works because facts from CRS are checked against (billText + CRS).
+    const MEGA_BILL_THRESHOLD = 100000; // chars
     rawText = cleanHTML(rawText);
     const cleanedBillText = rawText;
-    const estimatedPages  = Math.max(1, Math.round(rawText.length / 2500));
-    console.log(`   - ${rawText.length} chars (~${estimatedPages} pages), ${chunkText(rawText).length} chunk(s).`);
+    const cleanedCRS      = crsText ? crsText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() : '';
 
-    // Step 4 — Map phase: extract facts from each bill text chunk
-    const chunks        = chunkText(rawText);
+    let textToChunk, sourceLabel;
+    if (rawText.length > MEGA_BILL_THRESHOLD && cleanedCRS.length > 10000) {
+        textToChunk = cleanedCRS;
+        sourceLabel = 'CRS summary';
+        console.log(`   - Mega-bill (${rawText.length} chars). Using CRS (${cleanedCRS.length} chars) as Zone 1 source.`);
+    } else {
+        textToChunk = rawText;
+        sourceLabel = 'bill text';
+    }
+
+    const estimatedPages = Math.max(1, Math.round(rawText.length / 2500));
+    const chunks = chunkText(textToChunk);
+    console.log(`   - Raw bill: ${rawText.length} chars (~${estimatedPages} pages). Chunking ${sourceLabel}: ${chunks.length} chunk(s).`);
+
+    // Step 4 — Map phase: extract facts from each chunk
     const chunkSummaries = [];
     for (let i = 0; i < chunks.length; i++) {
         console.log(`   - Chunk ${i + 1}/${chunks.length}...`);
         const summary = await callLocalLLM(
             'You are a legal text extraction assistant. Extract only what is explicitly stated in the text. Do not add outside knowledge.',
-            `${CHUNK_MAP_PROMPT}\n\nBILL TEXT CHUNK:\n${chunks[i]}`,
-            '- ' // prefill forces model past thinking mode into bullet list output
+            `${CHUNK_MAP_PROMPT}\n\nSOURCE (${sourceLabel}):\n${chunks[i]}`,
+            '- '
         );
         if (summary) {
             console.log(`   - Chunk ${i + 1} extracted ${summary.length} chars of notes.`);
@@ -522,15 +539,51 @@ async function processBill(bill) {
     }
 
     // Step 5 — Build reduce-phase context
-    // Cap total notes to ~30,000 chars to fit within the 12,288-token context window.
-    // Proportional truncation keeps representation from every chunk.
-    const MAX_REDUCE_NOTES = 30000;
-    const notesPerChunk = Math.floor(MAX_REDUCE_NOTES / Math.max(1, chunkSummaries.length));
-    const combinedNotes = chunkSummaries
-        .map((s, i) => `[Chunk ${i + 1}/${chunkSummaries.length}]\n` + s.slice(0, notesPerChunk))
-        .join('\n---\n');
-    if (chunkSummaries.length > 1) {
-        console.log(`   - Notes capped at ${MAX_REDUCE_NOTES} chars (${notesPerChunk}/chunk × ${chunkSummaries.length} chunks).`);
+    // For small bills (≤8 chunks): direct proportional truncation.
+    // For large bills (>8 chunks): hierarchical two-pass reduce — groups of chunks are
+    // mid-reduced to key facts first, then the key facts are synthesized into final JSON.
+    // This keeps the final reduce input well within the 12,288-token context window.
+    const MAX_REDUCE_NOTES    = 20000;
+    const DIRECT_CHUNK_LIMIT  = 14; // ≤14 chunks → direct proportional truncation
+    const MID_REDUCE_GROUP    = 15; // chunks per mid-reduce group (for 15+ chunk bills)
+
+    let combinedNotes;
+
+    if (chunkSummaries.length <= DIRECT_CHUNK_LIMIT) {
+        const notesPerChunk = Math.floor(MAX_REDUCE_NOTES / Math.max(1, chunkSummaries.length));
+        combinedNotes = chunkSummaries
+            .map((s, i) => `[Chunk ${i + 1}/${chunkSummaries.length}]\n` + s.slice(0, notesPerChunk))
+            .join('\n---\n');
+        if (chunkSummaries.length > 1) {
+            console.log(`   - Notes: ${combinedNotes.length} chars (${notesPerChunk}/chunk × ${chunkSummaries.length} chunks).`);
+        }
+    } else {
+        // Two-pass hierarchical reduce
+        const groups = [];
+        for (let i = 0; i < chunkSummaries.length; i += MID_REDUCE_GROUP) {
+            groups.push(chunkSummaries.slice(i, i + MID_REDUCE_GROUP));
+        }
+        console.log(`   - Large bill: hierarchical reduce — ${chunkSummaries.length} chunks → ${groups.length} groups of ≤${MID_REDUCE_GROUP}.`);
+
+        const groupSummaries = [];
+        for (let g = 0; g < groups.length; g++) {
+            console.log(`   - Mid-reduce group ${g + 1}/${groups.length}...`);
+            const groupNotes = groups[g]
+                .map((s, i) => `[Chunk ${g * MID_REDUCE_GROUP + i + 1}]\n` + s.slice(0, 2000))
+                .join('\n---\n');
+            const keyfacts = await callLocalLLM(
+                'You extract the most important legislative provisions from bill notes. Include exact numbers. Return bullet points only.',
+                `Extract the 4-6 most important provisions from these bill notes (group ${g + 1}/${groups.length}):\n\n${groupNotes}`,
+                '- '
+            );
+            if (keyfacts) {
+                const start = g * MID_REDUCE_GROUP + 1;
+                const end   = Math.min((g + 1) * MID_REDUCE_GROUP, chunkSummaries.length);
+                groupSummaries.push(`[Chunks ${start}–${end}]\n${keyfacts}`);
+            }
+        }
+        combinedNotes = groupSummaries.join('\n---\n').slice(0, MAX_REDUCE_NOTES);
+        console.log(`   - Hierarchical reduce complete: ${groupSummaries.length} group summaries, ${combinedNotes.length} chars total.`);
     }
     const primarySponsor = meta?.sponsors?.[0];
     const sponsorLine    = primarySponsor
@@ -545,8 +598,12 @@ async function processBill(bill) {
 - Latest action: ${meta?.latestAction?.text || 'Unknown'}
 - Introduced: ${meta?.introducedDate || 'unknown'}`;
 
-    const crsSection = crsText
-        ? `CRS OFFICIAL SUMMARY (additional Zone 1 source — use alongside bill text notes):\n${crsText.slice(0, 3000)}`
+    // For mega-bills the CRS was the primary chunk source, so the notes already
+    // contain all the CRS content — we only need a short header here to orient the
+    // model, not a full preview (saves ~1000 tokens for the output).
+    const CRS_PREVIEW_LEN = sourceLabel === 'CRS summary' ? 1000 : 3000;
+    const crsSection = cleanedCRS
+        ? `CRS OFFICIAL SUMMARY (Zone 1 source — verified against this):\n${cleanedCRS.slice(0, CRS_PREVIEW_LEN)}`
         : 'CRS SUMMARY: Not available.';
 
     const recordSection = hasRecord
@@ -557,7 +614,7 @@ async function processBill(bill) {
     console.log('   - Synthesizing final JSON...');
     const finalJSONString = await callLocalLLM(
         SYSTEM_PROMPT,
-        `${billContext}\n\n${crsSection}\n\n${recordSection}\n\nBILL TEXT NOTES (Zone 1 primary source):\n${combinedNotes}
+        `${billContext}\n\n${crsSection}\n\n${recordSection}\n\nSOURCE NOTES — ${sourceLabel} (Zone 1 primary):\n${combinedNotes}
 
 ━━━ FINAL REMINDER BEFORE YOU OUTPUT ━━━
 Every dollar amount, percentage, section number, and named program in your JSON must appear verbatim in the Bill Text Notes or CRS Summary above.
