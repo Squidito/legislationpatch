@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Representative Profile — LegislationPatch</title>
+  <meta name="description" content="View representative voting records and AI extracted comments on federal legislation." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+          <div class="logo-mark">L</div>
+          <div>
+            <div class="logo-name">LegislationPatch</div>
+            <div class="logo-sub">Bills, read in full and reported plainly</div>
+          </div>
+        </a>
+      </div>
+      <div class="header-track">
+        <a href="index.html" class="track-btn" style="text-decoration:none;">&larr; Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="repMain">
+    <!-- LOADING STATE -->
+    <div class="loading-state" id="loadingState">
+      <div class="loading-spinner"></div>
+      <p>Loading profile...</p>
+    </div>
+
+    <!-- ERROR STATE -->
+    <div class="error-state" id="errorState" style="display:none">
+      <p id="errorMsg">Representative not found.</p>
+      <button onclick="window.location.href='index.html'">Return Home</button>
+    </div>
+
+    <!-- REP PROFILE (Injected via JS) -->
+    <div id="repProfile" style="display:none;">
+      <div class="rep-hero">
+        <img id="repPortrait" class="rep-hero-img" src="" alt="Portrait" />
+        <div class="rep-hero-info">
+          <div class="rep-hero-meta" id="repMeta"></div>
+          <h1 class="rep-hero-name" id="repName"></h1>
+          <p class="rep-hero-bio" id="repBio"></p>
+        </div>
+      </div>
+      
+      <div class="section-label" style="margin-top: 2rem;">Controversial & Recent Comments</div>
+      <div class="rep-comments-list" id="repComments">
+        <!-- Comments injected here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Data from <a href="https://api.congress.gov" target="_blank">Congress.gov API</a> · AI analysis by <a href="https://anthropic.com" target="_blank">Anthropic Claude</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script src="rep.js"></script>
+</body>
+</html>

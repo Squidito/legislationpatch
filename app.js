@@ -149,10 +149,8 @@ function setupSettings() {
   if (manualAdd) manualAdd.addEventListener('click', addManualTrackedRep);
 
   populateStateDropdown();
-
-  if (CONFIG.CONGRESS_API_KEY) {
-    fetchStateReps(trackedState);
-  }
+  
+  // Gemini 3.1 work: Removed live fetchStateReps call here.
 }
 
 function loadTrackedSettings() {
@@ -229,37 +227,13 @@ function populateStateDropdown() {
 function handleStateChange(e) {
   trackedState = e.target.value;
   saveTrackedSettings();
-  if (CONFIG.CONGRESS_API_KEY) {
-    fetchStateReps(trackedState);
-  }
-}
-
-async function fetchStateReps(state) {
-  const status = document.getElementById('stateStatus');
-  availableStateReps = [];
-
-  if (!CONFIG.CONGRESS_API_KEY) {
-    if (status) status.textContent = 'Add a Congress API key to config.js to load live member data.';
-    renderRepStrip();
-    renderRepGrid();
-    return;
-  }
-
-  if (status) status.textContent = 'Loading…';
-  try {
-    const url = `https://api.congress.gov/v3/member?state=${state}&currentMember=true&api_key=${CONFIG.CONGRESS_API_KEY}`;
-    const res  = await fetch(url);
-    if (!res.ok) throw new Error(`Congress API ${res.status}`);
-    const data = await res.json();
-    availableStateReps = data?.members || data?.results || data?.memberships || [];
-    if (!Array.isArray(availableStateReps)) availableStateReps = [];
-    if (status) status.textContent = `${availableStateReps.length} members for ${state}`;
-  } catch (err) {
-    if (status) status.textContent = `Failed: ${err.message}`;
-  }
+  
+  // Gemini 3.1 work: State reps are now handled statically.
   renderRepStrip();
   renderRepGrid();
 }
+
+// Gemini 3.1 work: Removed fetchStateReps live API function.
 
 // ---- Portrait helpers ----
 
@@ -294,17 +268,16 @@ function repCardHtml(rep, size) {
   const lastName = repLastName(name);
   const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
 
-  return `<div class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+  return `<a href="rep.html?id=${escHtml(bioguide || id)}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
                data-id="${escHtml(id)}"
-               style="--party-color:${color}"
-               onclick="toggleRepTracked('${escHtml(id)}')"
+               style="--party-color:${color}; text-decoration: none;"
                title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
     <div class="rep-ring">
       <img src="${imgSrc}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
     </div>
     <span class="rep-badge">${escHtml(state)}</span>
     ${nameEl}
-  </div>`;
+  </a>`;
 }
 
 // ---- Rep strip (8 portraits in controls bar) ----
@@ -910,14 +883,14 @@ function renderQuoteCards(bill) {
       const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
       return `<div class="quote-card">
         <div class="quote-card-meta">
-          <div class="quote-card-rep">
+          <a href="rep.html?id=${q.bioguideId}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
             <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
                  onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
             <div class="quote-card-name">
-              <span>${escHtml(q.name)}</span>
+              <span onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${escHtml(q.name)}</span>
               <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party}</span>
             </div>
-          </div>
+          </a>
           <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
         </div>
         <div class="quote-text">"${escHtml(q.text)}"</div>
@@ -1009,11 +982,6 @@ function renderBody(bill, isOpen, col) {
     ${underreportedHtml}
     ${criticismsHtml}
     ${gapsHtml}
-    <div class="section-divider"></div>
-    <button class="ai-btn" id="ai-btn-${bill.id}" onclick="runAIAnalysis('${bill.id}')">
-      ✦ ${bill.analyzed ? 'Re-analyze' : 'Analyze'} with AI
-    </button>
-    <div class="ai-output ${aiOutputs[bill.id] ? 'open' : ''}" id="ai-out-${bill.id}">${escHtml(aiOutputs[bill.id] || '')}</div>
   </div>`;
 }
 
@@ -1069,42 +1037,7 @@ function toggleDetail(key) {
 }
 
 // ---- AI Analysis ----
-
-async function runAIAnalysis(billId) {
-  const bill = allBills.find(b => b.id === billId);
-  if (!bill) return;
-
-  if (!CONFIG.ANTHROPIC_API_KEY) {
-    alert('Add your Anthropic API key to config.js to use AI analysis.');
-    return;
-  }
-
-  const btn = document.getElementById(`ai-btn-${billId}`);
-  const out = document.getElementById(`ai-out-${billId}`);
-
-  btn.disabled = true;
-  btn.innerHTML = '✦ Analyzing<span class="dot-anim">...</span>';
-  out.classList.add('open');
-  out.textContent = 'Reading legislation and generating patch notes...';
-
-  try {
-    const result = await analyzeBill(bill);
-    if (result.sections?.length)      bill.sections       = result.sections;
-    if (result.underreported?.length) bill.underreported  = result.underreported;
-    if (result.criticisms?.length)    bill.criticisms     = result.criticisms;
-    if (result.gaps?.length)          bill.gaps           = result.gaps;
-    if (result.likelihoodLabel)       bill.likelihoodLabel = result.likelihoodLabel;
-    if (result.likelihoodReason)      bill.likelihoodReason = result.likelihoodReason;
-    if (!Array.isArray(bill.underreported)) bill.underreported = [];
-    bill.analyzed = true;
-    aiOutputs[billId] = '';
-    renderAll();
-  } catch (e) {
-    out.textContent = `Analysis failed: ${e.message}`;
-    btn.disabled = false;
-    btn.innerHTML = '✦ Retry analysis';
-  }
-}
+// Gemini 3.1 work: Removed client-side AI Analysis execution. All analysis is now provided statically via cache.json.
 
 // ---- Helpers ----
 
