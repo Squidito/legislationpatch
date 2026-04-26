@@ -86,9 +86,8 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
     "Key takeaway — include exact figure from bill text if one exists",
     "Key takeaway — include exact figure from bill text if one exists"
   ],
-  "likelihood": 0,
-  "likelihoodLabel": "exactly one of: Enacted / Likely / Possible / Unlikely / Long shot",
-  "likelihoodReason": "2-3 sentences using bill metadata: chamber majority, sponsor party, cosponsor count, specific provisions that will attract opposition.",
+  "likelihood": 15,
+  "likelihoodReason": "2-3 sentences using bill metadata: chamber majority, sponsor party, cosponsor count, latest action, and which specific provisions will attract opposition or support. The number must reflect this reasoning — a bill with zero cosponsors in committee is 5-20, broad bipartisan support is 65-85. Never output 0.",
   "sections": [
     {
       "label": "Title I — [Actual Title from Bill Text]",

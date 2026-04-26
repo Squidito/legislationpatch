@@ -26,6 +26,26 @@ const ALWAYS_VALID_ENTITIES = [
 // --- UTILITIES ---
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// Extracts the first well-balanced JSON object from a string.
+// Handles cases where the model outputs the JSON multiple times or appends extra text.
+function extractFirstJSON(text) {
+    if (!text) return null;
+    let depth = 0;
+    let start = -1;
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] === '{') {
+            if (depth === 0) start = i;
+            depth++;
+        } else if (text[i] === '}') {
+            depth--;
+            if (depth === 0 && start !== -1) {
+                return text.slice(start, i + 1);
+            }
+        }
+    }
+    return null;
+}
+
 function cleanHTML(html) {
     return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 }
@@ -460,7 +480,8 @@ async function processBill(bill) {
         console.log(`   - Chunk ${i + 1}/${chunks.length}...`);
         const summary = await callLocalLLM(
             'You are a legal text extraction assistant. Extract only what is explicitly stated in the text. Do not add outside knowledge.',
-            `${CHUNK_MAP_PROMPT}\n\nBILL TEXT CHUNK:\n${chunks[i]}`
+            `${CHUNK_MAP_PROMPT}\n\nBILL TEXT CHUNK:\n${chunks[i]}`,
+            '- ' // prefill forces model past thinking mode into bullet list output
         );
         if (summary) {
             console.log(`   - Chunk ${i + 1} extracted ${summary.length} chars of notes.`);
@@ -515,20 +536,30 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     let parsed;
     try {
         console.log(`   - LLM snippet: ${finalJSONString ? finalJSONString.substring(0, 120) : 'NULL'}`);
-        const jsonMatch = finalJSONString?.match(/\{[\s\S]*\}/);
-        if (!jsonMatch) throw new Error('No JSON object found in LLM response.');
-        parsed = JSON.parse(jsonMatch[0]);
+        const jsonStr = extractFirstJSON(finalJSONString);
+        if (!jsonStr) throw new Error('No JSON object found in LLM response.');
+        parsed = JSON.parse(jsonStr);
     } catch (e) {
         console.error('   - Failed to parse LLM JSON:', e.message);
         console.error('   - Full response:\n', finalJSONString);
         return null;
     }
 
-    // Step 8 — Normalize likelihood scale (0-1 → 0-100)
-    if (typeof parsed.likelihood === 'number' && parsed.likelihood <= 1) {
-        parsed.likelihood = Math.round(parsed.likelihood * 100);
-    }
-    parsed.likelihood = Math.min(100, Math.max(0, Math.round(parsed.likelihood || 0)));
+    // Step 8 — Normalize likelihood and derive label from number
+    // Model sometimes outputs 0-1 scale, sometimes 0-100, sometimes 0 as "unknown"
+    let pct = parsed.likelihood;
+    if (typeof pct === 'number' && pct > 0 && pct <= 1) pct = Math.round(pct * 100);
+    pct = Math.min(99, Math.max(1, Math.round(pct || 0)));
+    // If model output 0 (no assessment), floor to 1 so it renders as Long shot
+    if (pct === 0) pct = 1;
+    parsed.likelihood = pct;
+
+    // Derive label from number — eliminates model inconsistency between the two fields
+    parsed.likelihoodLabel = pct >= 100 ? 'Enacted'
+        : pct >= 75 ? 'Likely'
+        : pct >= 50 ? 'Possible'
+        : pct >= 25 ? 'Unlikely'
+        : 'Long shot';
 
     // Step 9 — Run full verification gate
     const failures = verifyOutput(parsed, cleanedBillText, crsText, recordText, hasRecord);
