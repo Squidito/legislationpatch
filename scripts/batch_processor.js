@@ -549,11 +549,7 @@ An empty array [] is always correct. An invented fact is never acceptable.`
 
 // --- MAIN ---
 
-async function runBatch() {
-    console.log('=== LEGISLATION PATCH BATCH PROCESSOR ===');
-
-    if (!CONGRESS_API_KEY) { console.error('ERROR: Missing CONGRESS_API_KEY in .env'); return; }
-
+function loadCache() {
     let cacheData = { generated: new Date().toISOString(), bills: [] };
     if (fs.existsSync(CACHE_FILE)) {
         const raw = fs.readFileSync(CACHE_FILE, 'utf8');
@@ -562,7 +558,69 @@ async function runBatch() {
             if (!cacheData.bills) cacheData.bills = [];
         }
     }
+    return cacheData;
+}
 
+function saveCache(cacheData) {
+    cacheData.generated = new Date().toISOString();
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(cacheData, null, 2));
+}
+
+// Targeted single-bill test mode.
+// Usage: node scripts/batch_processor.js --bill 119-HR-8071
+async function runSingleBill(targetId) {
+    console.log(`=== TARGETED TEST: ${targetId} ===`);
+
+    const parts = targetId.split('-');
+    if (parts.length !== 3) {
+        console.error('Invalid format. Use: --bill 119-HR-8071');
+        return;
+    }
+
+    const [congressStr, type, number] = parts;
+    const congress = parseInt(congressStr, 10);
+
+    // Fetch metadata first to get the title and latestAction
+    console.log('\n[1] Fetching bill metadata to construct bill object...');
+    const meta = await fetchBillMetadata({ congress, type, number });
+    if (!meta) {
+        console.error('Could not fetch metadata for this bill. Check the ID and API key.');
+        return;
+    }
+
+    const bill = {
+        congress,
+        type,
+        number,
+        title:        meta.title || `${type} ${number}`,
+        latestAction: meta.latestAction,
+        updateDate:   meta.updateDate,
+    };
+
+    // Remove from cache if present so we reprocess cleanly
+    const cacheData = loadCache();
+    const wasCached  = cacheData.bills.some(b => b.id === targetId);
+    if (wasCached) {
+        cacheData.bills = cacheData.bills.filter(b => b.id !== targetId);
+        console.log(`   - Removed existing ${targetId} from cache to allow fresh reprocessing.`);
+    }
+
+    const processedData = await processBill(bill);
+    if (processedData) {
+        cacheData.bills.unshift(processedData);
+        saveCache(cacheData);
+        console.log(`\n=== SUCCESS: ${targetId} saved to cache.json ===`);
+    } else {
+        console.log(`\n=== REJECTED: ${targetId} did not pass verification ===`);
+    }
+}
+
+async function runBatch() {
+    console.log('=== LEGISLATION PATCH BATCH PROCESSOR ===');
+
+    if (!CONGRESS_API_KEY) { console.error('ERROR: Missing CONGRESS_API_KEY in .env'); return; }
+
+    const cacheData      = loadCache();
     const existingIds    = new Set(cacheData.bills.map(b => b.id));
     const billsToProcess = await fetchRecentBills(10);
     let processedCount   = 0;
@@ -579,8 +637,7 @@ async function runBatch() {
         const processedData = await processBill(bill);
         if (processedData) {
             cacheData.bills.unshift(processedData);
-            cacheData.generated = new Date().toISOString();
-            fs.writeFileSync(CACHE_FILE, JSON.stringify(cacheData, null, 2));
+            saveCache(cacheData);
             console.log(`   - Saved ${billId} to cache.json.`);
             processedCount++;
         }
@@ -589,4 +646,10 @@ async function runBatch() {
     console.log(`\n=== BATCH COMPLETE — ${processedCount} new bill(s) processed ===`);
 }
 
-runBatch();
+// Entry point — supports targeted test mode via --bill flag
+const billFlagIdx = process.argv.indexOf('--bill');
+if (billFlagIdx !== -1 && process.argv[billFlagIdx + 1]) {
+    runSingleBill(process.argv[billFlagIdx + 1]);
+} else {
+    runBatch();
+}
