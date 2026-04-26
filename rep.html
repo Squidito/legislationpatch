@@ -45,8 +45,9 @@
 
     <!-- ERROR STATE -->
     <div class="error-state" id="errorState" style="display:none">
-      <p id="errorMsg">Representative not found.</p>
-      <button onclick="window.location.href='index.html'">Return Home</button>
+      <p id="errorMsg">Profile not yet available for this representative.</p>
+      <p style="font-size:0.82rem;margin-top:0.4rem">We're adding profiles continuously — check back after the next data update.</p>
+      <button onclick="window.location.href='index.html'" style="margin-top:0.75rem">← Back to Bills</button>
     </div>
 
     <!-- REP PROFILE (Injected via JS) -->
@@ -69,7 +70,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>Data from <a href="https://api.congress.gov" target="_blank">Congress.gov API</a> · AI analysis by <a href="https://anthropic.com" target="_blank">Anthropic Claude</a></p>
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
     <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
     <p class="footer-links">
       <a href="privacy.html">Privacy Policy</a> · 

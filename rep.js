@@ -11,10 +11,9 @@ async function init() {
   const errorState = document.getElementById('errorState');
   const profileEl = document.getElementById('repProfile');
 
-  // Load theme preference
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+  // Load theme preference — same key as main site (lpTheme)
+  const savedTheme = localStorage.getItem('lpTheme');
+  const isDark = savedTheme === 'dark';
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) themeToggle.checked = isDark;
