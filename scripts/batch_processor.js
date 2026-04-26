@@ -117,14 +117,24 @@ async function fetchBillMetadata(bill) {
 }
 
 // --- LOCAL LLM PROCESSING (LM STUDIO) ---
+
+// Qwen3 outputs <think>...</think> reasoning blocks before its actual response.
+// Strip them so we only parse the real content.
+function stripThinkingTags(text) {
+    if (!text) return text;
+    return text.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+}
+
 async function callLocalLLM(systemPrompt, userMessage) {
     const payload = {
         model: MODEL_NAME,
         messages: [
             { role: 'system', content: systemPrompt },
-            { role: 'user',   content: userMessage  }
+            // /no_think disables Qwen3 thinking mode at the token level
+            { role: 'user',   content: `/no_think\n\n${userMessage}` }
         ],
         temperature: 0.1,
+        max_tokens: 4096,
         stream: false
     };
     try {
@@ -135,7 +145,7 @@ async function callLocalLLM(systemPrompt, userMessage) {
         });
         if (!res.ok) throw new Error(`LM Studio Error: ${res.status}`);
         const data = await res.json();
-        return data.choices[0].message.content;
+        return stripThinkingTags(data.choices[0].message.content);
     } catch (e) {
         console.error('Failed to contact LM Studio on port 1235. Is it running?', e);
         return null;
@@ -218,7 +228,12 @@ BILL CONTEXT (use this to write accurate quotes, likelihood, and stakeholder ana
         return null;
     }
 
-    // 7. Derive stage from latestAction
+    // 7. Normalize likelihood — model sometimes returns 0-1 instead of 0-100
+    if (typeof parsed.likelihood === 'number' && parsed.likelihood <= 1) {
+        parsed.likelihood = Math.round(parsed.likelihood * 100);
+    }
+    parsed.likelihood = Math.min(100, Math.max(0, Math.round(parsed.likelihood || 0)));
+
     const stage = detectStage(meta?.latestAction?.text || '');
 
     // 8. Build the sponsor object

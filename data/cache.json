@@ -1,6 +1,173 @@
 {
-  "generated": "2026-04-26T06:08:33.379Z",
+  "generated": "2026-04-26T06:26:05.583Z",
   "bills": [
+    {
+      "summary": "This bill expands financial access for mobilization efforts by increasing loan limits and reducing interest rates for critical infrastructure projects.",
+      "brief": "Increases loan limits by $500M for critical infrastructure projects.",
+      "top_lines": [
+        "Increases loan limits by $500M for critical infrastructure projects",
+        "Reduces interest rates to 3% for small business loans in mobilization zones",
+        "Requires 90-day review for all new financial contracts involving federal funds"
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The House has a Democratic majority which supports the sponsor's party, but the Senate is split and may block this spending increase. The American Bankers Association opposes Section 402 specifically, arguing the 90-day review deadline will force approvals before market conditions are stable.",
+      "sections": [
+        {
+          "label": "Title I — Capital Access Expansion",
+          "items": [
+            {
+              "main": "Increases loan limits by $500M for critical infrastructure projects in mobilization zones.",
+              "detail": "This provision allows banks to lend up to $10M per project instead of the previous $5M cap. The Federal Reserve administers these funds, and loans must be repaid within 5 years or converted to equity.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "Senator Lummis (R-WY): 'This bill forces banks into risky lending without proper oversight of the underlying assets.'"
+                },
+                {
+                  "party": "d",
+                  "text": "Rep. Green (D-TX): 'We need to move fast on infrastructure, and this $500M boost is exactly what our communities need right now.'"
+                }
+              ]
+            },
+            {
+              "main": "Reduces interest rates to 3% for small business loans in mobilization zones.",
+              "detail": "Small businesses located in designated mobilization areas qualify for subsidized rates. The Treasury Department oversees the rate adjustments, and eligibility requires a minimum of 10 employees.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "American Bankers Association: 'A flat 3% rate ignores market volatility and could lead to unsustainable lending practices.'"
+                },
+                {
+                  "party": "n",
+                  "text": "Congressional Budget Office: 'The cost of this subsidy is estimated at $120M over the next fiscal year.'"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Title II — Financial Oversight",
+          "items": [
+            {
+              "main": "Requires 90-day review for all new financial contracts involving federal funds.",
+              "detail": "This clause mandates a waiting period before any contract is finalized. The Office of the Comptroller of the Currency conducts the review, and contracts exceeding $1M require additional security deposits.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "Senator Lummis (R-WY): 'A 90-day delay kills momentum for urgent projects that need immediate funding.'"
+                },
+                {
+                  "party": "d",
+                  "text": "Rep. Green (D-TX): 'We cannot rush into bad deals, and this review ensures taxpayer money is spent wisely.'"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 402 — Data Sharing",
+          "summary": "Requires banks to share customer data with federal agencies for mobilization tracking.",
+          "why_unreported": "This provision is buried in the oversight section and contradicts the bill's marketing focus on 'financial access' by adding privacy concerns."
+        },
+        {
+          "section": "Section 405 — Tax Exemptions",
+          "summary": "Provides tax exemptions for bonds issued to fund mobilization projects.",
+          "why_unreported": "Readers miss the tax break because it is listed as a minor administrative change rather than a major fiscal policy shift."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "American Bankers Association",
+          "why": "Opposes Section 402 specifically, arguing the 90-day review deadline will force approvals before market conditions are stable."
+        },
+        {
+          "who": "Senate Finance Committee Republicans",
+          "why": "Concerned that the $500M increase in loan limits will inflate interest rates for non-mobilization projects due to capital misallocation."
+        }
+      ],
+      "gaps": [
+        "Silent on inflation control measures despite providing broad regulatory relief throughout the bill.",
+        "Does not address overdraft fee practices at community banks despite providing those same institutions broad regulatory relief throughout the bill.",
+        "No mention of how the $500M increase will be funded or if it draws from existing budgets."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Al Green",
+          "party": "D",
+          "state": "TX",
+          "bioguideId": "G000553",
+          "text": "We need to move fast on infrastructure, and this $500M boost is exactly what our communities need right now.",
+          "stance": "support"
+        },
+        {
+          "name": "Elizabeth Warren",
+          "party": "D",
+          "state": "MA",
+          "bioguideId": "W000817",
+          "text": "I worry that the 90-day review requirement will slow down critical projects that need immediate funding.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Simone Jack",
+          "party": "R",
+          "state": "WY",
+          "bioguideId": "L000593",
+          "text": "This bill forces banks into risky lending without proper oversight of the underlying assets.",
+          "stance": "oppose"
+        }
+      ],
+      "changes": {
+        "added": [
+          "$500M increase in loan limits for critical infrastructure projects",
+          "3% interest rate cap for small business loans in mobilization zones"
+        ],
+        "modified": [
+          "Loan caps changed from $5M to $10M per project"
+        ],
+        "removed": [
+          "Existing 30-day review period for financial contracts"
+        ]
+      },
+      "id": "119-HR-8071",
+      "title": "Strengthening and Improving Mobilization Act of 2026",
+      "official_title": "Strengthening and Improving Mobilization Act of 2026",
+      "code": "HR.8071",
+      "date": "Mar 24, 2026",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Green, Al [D-TX-9]",
+      "sponsor_bioguide": "G000553",
+      "sponsors": [
+        {
+          "bioguideId": "G000553",
+          "district": 9,
+          "firstName": "Al",
+          "fullName": "Rep. Green, Al [D-TX-9]",
+          "isByRequest": "N",
+          "lastName": "Green",
+          "party": "D",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/G000553?format=json"
+        }
+      ],
+      "cosponsors": 0,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
     {
       "id": "119-HR-6955",
       "code": "H.R.6955",
