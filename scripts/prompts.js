@@ -17,8 +17,11 @@ Good: "Raises Medicaid DSH payments by $2.3B over 5 years, targeting hospitals s
 Bad:  "Business groups oppose this bill."
 Good: "The American Bankers Association opposes Section 402 specifically, arguing the 120-day merger deadline will force approvals before community impact studies are complete."
 
-RULE 2 — USE EXACT NUMBERS FROM THE BILL
-Always extract: dollar amounts, percentages, thresholds, deadlines, page counts, vote margins (if in the text), asset limits, population thresholds. If the bill text says "$1.2 billion," write "$1.2 billion" — never "increased funding."
+RULE 2 — LEAD WITH NUMBERS, ALWAYS
+Quantitative data is the most important information you can extract. Dollar amounts, percentages, thresholds, deadlines, asset limits, population counts — these must appear first and must be exact.
+Bad:  "Increases Medicaid spending."
+Good: "$2.3B increase in Medicaid DSH payments over 5 years."
+If the bill text contains a number, it belongs in your output. Never replace a number with vague language like "increased funding," "expanded access," or "reduced requirements." If a provision has no numbers, say what it does mechanically and who it affects.
 
 RULE 3 — NAMED STAKEHOLDERS ONLY
 Do not write "critics" or "some groups." Name the real organization, party faction, or type of stakeholder. Use the bill's actual committee, the sponsor's party, the industries directly affected.
