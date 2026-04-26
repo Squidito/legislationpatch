@@ -52,6 +52,12 @@ function detectStage(latestActionText) {
 }
 
 // --- CONGRESS API FETCHING ---
+// Actions that indicate a bill is dead on arrival — introduced and immediately stalled
+const DOA_ACTIONS = [
+    'introduced in', 'read twice and referred', 'referred to the committee',
+    'referred to committee', 'held at the desk', 'referred to the subcommittee'
+];
+
 async function fetchRecentBills(limit = 10) {
     console.log(`[1] Fetching ${limit} recent bills from Congress.gov (session ${CONGRESS_SESSION})...`);
     const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}?sort=updateDate+desc&limit=${limit}&format=json&api_key=${CONGRESS_API_KEY}`;
@@ -60,7 +66,15 @@ async function fetchRecentBills(limit = 10) {
         const res = await fetch(url);
         if (!res.ok) throw new Error(`Congress API Error: ${res.status}`);
         const data = await res.json();
-        return data.bills || [];
+
+        // Filter out bills that are introduced and immediately dead (no real progress)
+        const active = (data.bills || []).filter(b => {
+            const action = (b.latestAction?.text || '').toLowerCase();
+            return !DOA_ACTIONS.some(pattern => action.includes(pattern));
+        });
+
+        console.log(`   - ${data.bills?.length || 0} fetched, ${active.length} have passed at least one stage.`);
+        return active;
     } catch (e) {
         console.error('Failed to fetch bills:', e);
         return [];
@@ -166,10 +180,29 @@ async function processBill(bill) {
 
     // 5. Reduce phase — synthesize final JSON from chunk notes
     console.log('   - Synthesizing final JSON...');
-    const combinedNotes  = chunkSummaries.join('\n---\n');
+    const combinedNotes = chunkSummaries.join('\n---\n');
+
+    // Pass real bill context so the model can write accurate quotes, likelihood, and named stakeholders
+    const primarySponsorInfo = meta?.sponsors?.[0];
+    const sponsorLine   = primarySponsorInfo
+        ? `${primarySponsorInfo.fullName || primarySponsorInfo.name} (${primarySponsorInfo.party}-${primarySponsorInfo.state}), bioguideId: ${primarySponsorInfo.bioguideId || 'unknown'}`
+        : 'Unknown';
+    const latestAction  = meta?.latestAction?.text || 'Unknown';
+    const cosponsorCount = meta?.cosponsors?.count || 0;
+
+    const billContext = `
+BILL CONTEXT (use this to write accurate quotes, likelihood, and stakeholder analysis):
+- Official title: ${bill.title}
+- Bill number: ${bill.type} ${bill.number}, Congress: ${bill.congress}
+- Primary sponsor: ${sponsorLine}
+- Cosponsor count: ${cosponsorCount}
+- Latest action: ${latestAction}
+- Introduced: ${meta?.introducedDate || 'unknown'}
+`;
+
     const finalJSONString = await callLocalLLM(
         SYSTEM_PROMPT,
-        `Synthesize these chunk notes into the strict JSON schema requested.\n\nNOTES:\n${combinedNotes}`
+        `${billContext}\nSynthesize these chunk notes into the strict JSON schema. Use the bill context above to write realistic named quotes and accurate likelihood analysis.\n\nNOTES:\n${combinedNotes}`
     );
 
     // 6. Parse and validate LLM output
