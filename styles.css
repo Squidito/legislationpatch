@@ -1669,7 +1669,7 @@ a:hover { text-decoration: underline; }
 .site-footer a { color: var(--text-2); }
 .footer-note { margin-top: 4px; font-size: 0.72rem; }
 .footer-only {
-  color: var(--amber);
+  color: #E8855A;
   font-weight: 700;
   font-style: italic;
 }
