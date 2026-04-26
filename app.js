@@ -536,24 +536,59 @@ function renderUnderreportedSection(bill) {
 
 // ---- Render ----
 
-function applyCarouselDrag(el) {
-  if (!el || el._dragApplied) return;
-  el._dragApplied = true;
-  let isDown = false, startX = 0, scrollLeft = 0;
+let _carouselRaf = null;
+
+function setupCarousel() {
+  if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
+
+  const el = document.querySelector('.shock-quotes-grid');
+  if (!el || el.children.length === 0) return;
+
+  // Clone all cards and append — enables seamless infinite wrap
+  [...el.children].forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    el.appendChild(clone);
+  });
+
+  // Pause auto-scroll on hover; resume on leave
+  let paused = false;
+  el.addEventListener('mouseenter', () => { paused = true; });
+  el.addEventListener('mouseleave', () => {
+    paused = false;
+    isDragging = false;
+    el.classList.remove('dragging');
+  });
+
+  // Drag-to-pilot while hovered
+  let isDragging = false, startX = 0, startScroll = 0;
   el.addEventListener('mousedown', e => {
-    isDown    = true;
-    startX    = e.pageX - el.offsetLeft;
-    scrollLeft = el.scrollLeft;
+    isDragging  = true;
+    startX      = e.pageX;
+    startScroll = el.scrollLeft;
     el.classList.add('dragging');
     e.preventDefault();
   });
-  const stop = () => { isDown = false; el.classList.remove('dragging'); };
-  el.addEventListener('mouseup',    stop);
-  el.addEventListener('mouseleave', stop);
+  el.addEventListener('mouseup',   () => { isDragging = false; el.classList.remove('dragging'); });
   el.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX) * 1.8;
+    if (!isDragging) return;
+    el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
   });
+
+  const SPEED = 0.4; // px per animation frame (~24 px/sec at 60fps)
+
+  function tick() {
+    if (!paused) {
+      el.scrollLeft += SPEED;
+      // When we reach the clone section, snap back to the start seamlessly
+      if (el.scrollLeft >= el.scrollWidth / 2) {
+        el.scrollLeft -= el.scrollWidth / 2;
+      }
+    }
+    _carouselRaf = requestAnimationFrame(tick);
+  }
+
+  _carouselRaf = requestAnimationFrame(tick);
 }
 
 function renderAll() {
@@ -575,7 +610,7 @@ function renderAll() {
     renderShockQuotesSection() +
     filtered.map((b, i) => renderBill(b, i + 1)).join('');
 
-  applyCarouselDrag(list.querySelector('.shock-quotes-grid'));
+  setupCarousel();
 }
 
 // ---- Favorites view ----
