@@ -1,0 +1,24 @@
+{
+  "name": "legislationpatch",
+  "version": "1.0.0",
+  "description": "U.S. federal legislation explained in plain English — patch notes style.",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Squidito/legislationpatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Squidito/legislationpatch/issues"
+  },
+  "homepage": "https://github.com/Squidito/legislationpatch#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

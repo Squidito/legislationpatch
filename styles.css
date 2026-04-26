@@ -40,8 +40,8 @@
   --radius-md:    10px;
   --radius-lg:    14px;
   --shadow:       0 1px 2px rgba(0,0,0,0.05);
-  --font-display: 'Inter Tight', 'DM Serif Display', system-ui, sans-serif;
-  --font-body:    'Inter Tight', 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono:    'DM Mono', ui-monospace, monospace;
 }
 
@@ -79,6 +79,13 @@ a:hover { text-decoration: underline; }
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.logo-home-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
 }
 .logo-mark {
   width: 32px;
@@ -937,7 +944,7 @@ a:hover { text-decoration: underline; }
   line-height: 1.45;
 }
 
-/* Quote cards row */
+/* Quote cards row — 2-column grid inside expanded bill cards */
 .quote-cards-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1059,10 +1066,18 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.5rem;
 }
 .shock-quotes-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.65rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  padding: 4px 2px;
 }
+.shock-quotes-grid::-webkit-scrollbar { display: none; }
+.shock-quotes-grid.dragging { cursor: grabbing; user-select: none; }
 .shock-quote-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1072,6 +1087,8 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 0.5rem;
   cursor: default;
+  min-width: 240px;
+  flex-shrink: 0;
 }
 .shock-quote-card.is-tracked {
   border-color: var(--blue);
@@ -1531,6 +1548,16 @@ a:hover { text-decoration: underline; }
   border-color: var(--purple);
   background: var(--purple-bg);
 }
+.fav-btn.active svg polygon { fill: currentColor; }
+
+.rep-star-btn {
+  opacity: 0.35;
+  padding: 4px;
+  flex-shrink: 0;
+}
+.rep-star-btn:hover    { opacity: 0.7;  color: var(--amber); }
+.rep-star-btn.watching { opacity: 1;    color: var(--amber); }
+.rep-star-btn.watching svg polygon { fill: currentColor; }
 
 /* ---- FAVORITES VIEW ---- */
 .fav-section-header {
@@ -1668,6 +1695,11 @@ a:hover { text-decoration: underline; }
 }
 .site-footer a { color: var(--text-2); }
 .footer-note { margin-top: 4px; font-size: 0.72rem; }
+.footer-only {
+  color: #E8855A;
+  font-weight: 700;
+  font-style: italic;
+}
 
 /* ---- RESPONSIVE ---- */
 
@@ -1684,8 +1716,7 @@ a:hover { text-decoration: underline; }
   .stat-tile:nth-child(2) { border-right: 1px solid var(--border); }
   .stat-tile:nth-child(3) { border-right: none; border-bottom: 1px solid var(--border); }
   .stat-tile:nth-child(4) { border-bottom: none; }
-  .shock-quotes-grid { grid-template-columns: 1fr 1fr; }
-  .quote-cards-row   { grid-template-columns: 1fr; }
+  .quote-cards-row { grid-template-columns: 1fr; }
 }
 
 /* Phone — full mobile layout */
@@ -1750,7 +1781,6 @@ a:hover { text-decoration: underline; }
 
   /* === SHOCK QUOTES: single column === */
   .shock-quotes-section { padding: 0 12px; margin-bottom: 12px; }
-  .shock-quotes-grid { grid-template-columns: 1fr; }
 
   /* === BILL CARD HEADER: tighter 4-col grid === */
   .bill-header {
@@ -1820,6 +1850,15 @@ a:hover { text-decoration: underline; }
   width: 0;
   height: 0;
   pointer-events: none;
+}
+.theme-icon {
+  color: var(--text-3);
+  flex-shrink: 0;
+  margin-right: 5px;
+  transition: color 0.22s ease;
+}
+.theme-toggle input:checked ~ .theme-icon {
+  color: var(--purple);
 }
 .toggle-track {
   width: 40px;
@@ -1957,4 +1996,130 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .star-btn {
   color: var(--text);
   opacity: 0.5;
+}
+
+/* =========================================
+   Gemini 3.1 work: Design Compliance (HIG & Safe Area)
+   ========================================= */
+
+/* Ensure minimum 44x44 tap targets for interactive elements on mobile */
+@media (max-width: 640px) {
+  button, 
+  .filter-btn, 
+  .track-btn, 
+  .rep-add-btn, 
+  .rep-more-btn, 
+  .fav-btn, 
+  .star-btn, 
+  .ai-btn, 
+  .expand-full-btn,
+  .close-settings {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Safe area insets for notched devices */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+.site-header {
+  padding-top: calc(14px + env(safe-area-inset-top));
+}
+
+.controls-bar {
+  top: env(safe-area-inset-top);
+}
+
+.site-footer {
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+/* =========================================
+   Gemini 3.1 work: Representative Profiles
+   ========================================= */
+
+.rep-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.rep-hero-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid var(--border);
+  background: #374151;
+  flex-shrink: 0;
+}
+
+.rep-hero-info {
+  flex: 1;
+}
+
+.rep-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.rep-hero-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.rep-hero-bio {
+  font-size: 0.95rem;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.rep-comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rep-comment-card {
+  width: 100%;
+  background: var(--surface);
+}
+
+.rep-bill-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  flex: 1;
+  margin-right: 12px;
+}
+
+.rep-bill-link:hover {
+  text-decoration: underline;
+  color: var(--purple);
+}
+
+@media (max-width: 640px) {
+  .rep-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+  .rep-hero-meta {
+    justify-content: center;
+  }
 }

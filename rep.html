@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Representative Profile — LegislationPatch</title>
+  <meta name="description" content="View representative voting records and AI extracted comments on federal legislation." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+          <div class="logo-mark">L</div>
+          <div>
+            <div class="logo-name">LegislationPatch</div>
+            <div class="logo-sub">Bills, read in full and reported plainly</div>
+          </div>
+        </a>
+      </div>
+      <div class="header-track">
+        <a href="index.html" class="track-btn" style="text-decoration:none;">&larr; Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="repMain">
+    <!-- LOADING STATE -->
+    <div class="loading-state" id="loadingState">
+      <div class="loading-spinner"></div>
+      <p>Loading profile...</p>
+    </div>
+
+    <!-- ERROR STATE -->
+    <div class="error-state" id="errorState" style="display:none">
+      <p id="errorMsg">Profile not yet available for this representative.</p>
+      <p style="font-size:0.82rem;margin-top:0.4rem">We're adding profiles continuously — check back after the next data update.</p>
+      <button onclick="window.location.href='index.html'" style="margin-top:0.75rem">← Back to Bills</button>
+    </div>
+
+    <!-- REP PROFILE (Injected via JS) -->
+    <div id="repProfile" style="display:none;">
+      <div class="rep-hero">
+        <img id="repPortrait" class="rep-hero-img" src="" alt="Portrait" />
+        <div class="rep-hero-info">
+          <div class="rep-hero-meta" id="repMeta"></div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <h1 class="rep-hero-name" id="repName"></h1>
+            <button class="star-btn rep-star-btn" id="repStarBtn" onclick="toggleRepStar()" title="Track this representative">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+              </svg>
+            </button>
+          </div>
+          <p class="rep-hero-bio" id="repBio"></p>
+        </div>
+      </div>
+      
+      <div class="section-label" style="margin-top: 2rem;">Controversial & Recent Comments</div>
+      <div class="rep-comments-list" id="repComments">
+        <!-- Comments injected here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script src="rep.js"></script>
+</body>
+</html>

@@ -2,35 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Gemini 3.1 work: Added comprehensive SEO metadata, canonical link, and Open Graph tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>LegislationPatch — U.S. Federal Bills, Plain English</title>
+  <meta name="description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
+  <link rel="canonical" href="https://legislationpatch.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legislationpatch.com/" />
+  <meta property="og:title" content="LegislationPatch — U.S. Federal Bills, Plain English" />
+  <meta property="og:description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://legislationpatch.com/" />
+  <meta property="twitter:title" content="LegislationPatch — U.S. Federal Bills, Plain English" />
+  <meta property="twitter:description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
+  <meta property="twitter:image" content="https://legislationpatch.com/og-image.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LegislationPatch",
+    "url": "https://legislationpatch.com/",
+    "description": "U.S. federal legislation explained in plain English, patch notes style."
+  }
+  </script>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="logo-block">
+      <button class="logo-block logo-home-btn" onclick="goHome()" aria-label="Return to home">
         <div class="logo-mark">L</div>
         <div>
           <div class="logo-name">LegislationPatch</div>
           <div class="logo-sub">Bills, read in full and reported plainly</div>
         </div>
-      </div>
+      </button>
       <div class="header-track">
         <input class="zip-input" placeholder="ZIP for your reps" id="zipInput" />
         <button class="track-btn" onclick="handleZipTrack()">Track</button>
         <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
           </svg>
         </button>
         <label class="theme-toggle" title="Toggle dark mode">
           <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
           <span class="toggle-track"><span class="toggle-thumb"></span></span>
         </label>
       </div>
@@ -93,8 +125,13 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>Data from <a href="https://api.congress.gov" target="_blank">Congress.gov API</a> · AI analysis by <a href="https://anthropic.com" target="_blank">Anthropic Claude</a></p>
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
     <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <!-- Gemini 3.1 work: Added compliance links -->
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="terms.html">Terms of Service</a>
+    </p>
   </footer>
 
   <script src="config.js"></script>
@@ -329,7 +366,7 @@
         const text = prompt('Annotation text:');
         if (text) {
           applyStyle();
-          ctx.font = `bold ${lineWidth * 4 + 10}px DM Sans, sans-serif`;
+          ctx.font = `bold ${lineWidth * 4 + 10}px Plus Jakarta Sans, sans-serif`;
           ctx.fillText(text, p.x, p.y);
         }
       }

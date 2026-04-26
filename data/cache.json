@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-25",
+  "generated": "2026-04-26T07:41:23.339Z",
   "bills": [
     {
       "id": "119-HR-6955",
@@ -243,6 +243,87 @@
         "removed": []
       },
       "summary": "Small-business tax relief, community bank capital rules, and local Main Street infrastructure grants.",
+      "live": true,
+      "demo": false
+    },
+    {
+      "summary": "This bill requires the Defense Production Act Committee to conduct a discussion-based simulation at least once every 5 years to determine resources needed and best use of authorities under Title I and this title.",
+      "brief": "Requires the Defense Production Act Committee to conduct a table-top exercise at least once every 5 years.",
+      "top_lines": [
+        "At least once every 5 years",
+        "Amends Title III of the Defense Production Act of 1950 by adding Section 306",
+        "Corrects the first undesignated section of the Defense Production Act of 1950"
+      ],
+      "likelihood": 25,
+      "likelihoodReason": "The bill has zero cosponsors and was referred to the House Committee on Financial Services. The sponsor is a Democrat in a chamber where Democrats hold the majority, but the lack of bipartisan support and committee referral suggests limited momentum.",
+      "sections": [
+        {
+          "label": "Title III — Defense Production Act of 1950",
+          "items": [
+            {
+              "main": "Requires the Defense Production Act Committee to conduct a discussion-based simulation at least once every 5 years to determine resources needed and best use of authorities under Title I and this title.",
+              "detail": "This provision adds Section 306 to Title III of the Defense Production Act of 1950. The simulation is intended to assess resource needs and optimal use of authorities under Title I and the new title.",
+              "comments": []
+            },
+            {
+              "main": "Corrects the first undesignated section of the Defense Production Act of 1950 by striking 'cited as ``the Defense'' and inserting 'cited as the ``Defense''.",
+              "detail": "This correction applies to the citation text in the first undesignated section of the Defense Production Act of 1950. The change is effective on the date of enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not specify how the simulation results will be reported or used for policy decisions.",
+        "The bill does not define what constitutes a 'discussion-based simulation' in detail."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Section 306 to Title III of the Defense Production Act of 1950"
+        ],
+        "modified": [
+          "First undesignated section of the Defense Production Act of 1950: 'cited as ``the Defense'' → 'cited as the ``Defense''"
+        ],
+        "removed": []
+      },
+      "likelihoodLabel": "Unlikely",
+      "id": "119-HR-8071",
+      "title": "Strengthening and Improving Mobilization Act of 2026",
+      "official_title": "Strengthening and Improving Mobilization Act of 2026",
+      "code": "HR.8071",
+      "date": "Mar 24, 2026",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Green, Al [D-TX-9]",
+      "sponsor_bioguide": "G000553",
+      "sponsors": [
+        {
+          "bioguideId": "G000553",
+          "district": 9,
+          "firstName": "Al",
+          "fullName": "Rep. Green, Al [D-TX-9]",
+          "isByRequest": "N",
+          "lastName": "Green",
+          "party": "D",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/G000553?format=json"
+        }
+      ],
+      "cosponsors": 0,
+      "pages": 1,
+      "analyzed": true,
       "live": true,
       "demo": false
     },
