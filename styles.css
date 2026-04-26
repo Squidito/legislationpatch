@@ -40,8 +40,8 @@
   --radius-md:    10px;
   --radius-lg:    14px;
   --shadow:       0 1px 2px rgba(0,0,0,0.05);
-  --font-display: 'Inter Tight', 'DM Serif Display', system-ui, sans-serif;
-  --font-body:    'Inter Tight', 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono:    'DM Mono', ui-monospace, monospace;
 }
 
