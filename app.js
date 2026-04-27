@@ -7,30 +7,30 @@ let openCards        = new Map(); // id -> 'minor' | 'full'
 let openDetails      = {};
 let aiOutputs        = {};
 let activeMainFilter = 'in_progress';
-let activeSubFilter  = '';
 let favoritesView    = false;
+let selectedRepIds   = new Set();
 
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
   {
     name: 'Rep. Marjorie Taylor Greene', party: 'R', state: 'GA', bioguideId: 'G000596',
     text: 'This spending bill is socialism with a bow on it. We are looting our grandchildren to buy votes today.',
-    source: 'House Floor, Apr 22, 2026'
+    source: 'House Floor, Apr 22, 2026', billId: '119-HR-1'
   },
   {
     name: 'Rep. Jasmine Crockett', party: 'D', state: 'TX', bioguideId: 'C001127',
     text: 'They cut food stamps for hungry kids and then stood up and applauded themselves. I cannot do this job without screaming sometimes.',
-    source: 'House Floor, Apr 21, 2026'
+    source: 'House Floor, Apr 21, 2026', billId: '119-HR-1'
   },
   {
     name: 'Sen. Tommy Tuberville', party: 'R', state: 'AL', bioguideId: 'T000278',
     text: 'I do not think we need to be funding mental health programs for people who just do not want to work.',
-    source: 'Senate Floor, Apr 20, 2026'
+    source: 'Senate Floor, Apr 20, 2026', billId: '119-HR-1'
   },
   {
     name: 'Rep. Rashida Tlaib', party: 'D', state: 'MI', bioguideId: 'T000481',
     text: 'Every single one of them knew what was in Section 223 and every single one of them voted yes anyway. Remember their names.',
-    source: 'House Floor, Apr 23, 2026'
+    source: 'House Floor, Apr 23, 2026', billId: '119-HR-1'
   }
 ];
 
@@ -142,40 +142,10 @@ function setupFilters() {
     document.querySelectorAll('[data-main]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeMainFilter = btn.dataset.main;
-    activeSubFilter  = '';
-    renderAll();
-  });
-
-  document.getElementById('filtersSub').addEventListener('click', e => {
-    const btn = e.target.closest('[data-sub]');
-    if (!btn) return;
-    document.querySelectorAll('[data-sub]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeSubFilter = btn.dataset.sub;
     renderAll();
   });
 }
 
-function renderSubFilters() {
-  const subRow = document.getElementById('filtersSub');
-  if (!subRow) return;
-  const defs = activeMainFilter === 'in_progress'
-    ? [
-        { label: 'All',          sub: '' },
-        { label: 'Introduced',   sub: 'introduced' },
-        { label: 'Committee',    sub: 'committee' },
-        { label: 'House',        sub: 'house' },
-        { label: 'Senate',       sub: 'senate' },
-        { label: 'Just Passed',  sub: 'just_passed' },
-      ]
-    : [
-        { label: 'All Passed',   sub: '' },
-        { label: 'Just Passed',  sub: 'just_passed' },
-      ];
-  subRow.innerHTML = defs.map(({ label, sub }) =>
-    `<button class="filter-sub-btn${activeSubFilter === sub ? ' active' : ''}" data-sub="${escHtml(sub)}">${label}</button>`
-  ).join('');
-}
 
 // ---- Rep tracker setup ----
 
@@ -189,8 +159,22 @@ function setupSettings() {
   const manualAdd = document.getElementById('manualRepAdd');
   if (manualAdd) manualAdd.addEventListener('click', addManualTrackedRep);
 
+  const strip = document.getElementById('repStrip');
+  if (strip) {
+    strip.addEventListener('click', e => {
+      const card = e.target.closest('[data-rep-id]');
+      if (!card) return;
+      const id = card.dataset.repId;
+      if (selectedRepIds.has(id)) selectedRepIds.delete(id);
+      else selectedRepIds.add(id);
+      renderRepStrip();
+      const existingCarousel = document.querySelector('.shock-quotes-grid');
+      if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
+      renderAll();
+    });
+  }
+
   populateStateDropdown();
-  
   // Gemini 3.1 work: Removed live fetchStateReps call here.
 }
 
@@ -224,12 +208,6 @@ function goHome() {
   else window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function handleZipTrack() {
-  const zip = document.getElementById('zipInput')?.value?.trim();
-  if (!zip || !/^\d{5}$/.test(zip)) return;
-  localStorage.setItem(STORAGE_KEYS.trackedZip, zip);
-}
-
 function loadWatchedBills() {
   try { watchedBills = new Set(JSON.parse(localStorage.getItem(STORAGE_KEYS.watchedBills) || '[]')); }
   catch(e) { watchedBills = new Set(); }
@@ -251,8 +229,8 @@ function saveTrackedSettings() {
 async function autoDetectState() {
   const savedZip = localStorage.getItem(STORAGE_KEYS.trackedZip);
   if (savedZip) {
-    const zipEl = document.getElementById('zipInput');
-    if (zipEl) zipEl.value = savedZip;
+    const zipEl = document.getElementById('zipDisplay');
+    if (zipEl) zipEl.textContent = '~' + savedZip;
   }
   if (localStorage.getItem(STORAGE_KEYS.trackedState)) return; // respect saved state preference
   try {
@@ -265,8 +243,8 @@ async function autoDetectState() {
     }
     if (data.postal && !savedZip) {
       localStorage.setItem(STORAGE_KEYS.trackedZip, data.postal);
-      const zipEl = document.getElementById('zipInput');
-      if (zipEl) zipEl.value = data.postal;
+      const zipEl = document.getElementById('zipDisplay');
+      if (zipEl) zipEl.textContent = '~' + data.postal;
     }
   } catch (e) { /* silently fail — default state used */ }
 }
@@ -342,30 +320,41 @@ function renderRepStrip() {
   const strip = document.getElementById('repStrip');
   if (!strip) return;
 
-  // Build pool from bill sponsors + featured quote reps + fallback to state reps
   const seen = new Set();
   const pool = [];
 
   allBills.forEach(bill => {
-    // Sponsors from raw bill data
     (bill.sponsors || []).forEach(s => {
       const id = s.bioguideId || s.id;
       if (id && !seen.has(id)) { seen.add(id); pool.push({ bioguideId: id, name: formatRepName(s), party: s.party || 'n', state: s.state || '' }); }
     });
-    // Featured quote reps
     (bill.featured_quotes || []).forEach(q => {
       if (q.bioguideId && !seen.has(q.bioguideId)) { seen.add(q.bioguideId); pool.push(q); }
     });
   });
 
-  // Fall back to state reps or demo reps if not enough
   const fallback = availableStateReps.length ? availableStateReps : DEMO_REPS;
   fallback.forEach(rep => {
     const id = getRepId(rep);
     if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
   });
 
-  strip.innerHTML = pool.slice(0, 8).map(rep => repCardHtml(rep, 'sm')).join('');
+  strip.innerHTML = pool.slice(0, 8).map(rep => {
+    const id      = getRepId(rep);
+    const bg      = rep.bioguideId || (id.length >= 6 ? id : null);
+    const color   = partyColor(rep.party || 'I');
+    const name    = formatRepName(rep);
+    const active  = selectedRepIds.has(id);
+    return `<button class="rep-card rep-card-sm${active ? ' rep-selected' : ''}"
+                    data-rep-id="${escHtml(id)}"
+                    style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
+                    title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
+      <div class="rep-ring">
+        <img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
+      </div>
+      <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
+    </button>`;
+  }).join('');
 }
 
 // ---- Rep grid (all portraits in dropdown) ----
@@ -587,7 +576,8 @@ function renderUnderreportedSection(bill) {
 
 // ---- Render ----
 
-let _carouselRaf = null;
+let _carouselRaf    = null;
+let _carouselScroll = null;
 
 function setupCarousel() {
   if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
@@ -614,8 +604,9 @@ function setupCarousel() {
     el.appendChild(clone);
   });
 
-  // Start in the middle third (originals section) so both directions have room
-  el.scrollLeft = el.scrollWidth / 3;
+  // Resume saved position, or start in the middle third on first load
+  el.scrollLeft = (_carouselScroll !== null) ? _carouselScroll : el.scrollWidth / 3;
+  _carouselScroll = null;
 
   let paused = false;
   el.addEventListener('mouseenter', () => { paused = true; });
@@ -671,22 +662,16 @@ function setupCarousel() {
 function renderAll() {
   if (favoritesView) { renderFavoritesView(); return; }
 
-  renderSubFilters();
-
   const list = document.getElementById('billList');
   const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
 
   const filtered = allBills.filter(b => {
     if (activeMainFilter === 'in_progress') {
-      const jp = isJustPassed(b);
-      if (!IN_PROGRESS.includes(b.stage) && !jp) return false;
-      if (!activeSubFilter) return true;
-      if (activeSubFilter === 'just_passed') return jp;
-      return b.stage === activeSubFilter;
+      return IN_PROGRESS.includes(b.stage) || isJustPassed(b);
+    } else if (activeMainFilter === 'dead') {
+      return b.stage === 'dead';
     } else {
-      if (b.stage !== 'signed') return false;
-      if (activeSubFilter === 'just_passed') return isJustPassed(b);
-      return true;
+      return b.stage === 'signed';
     }
   });
 
@@ -694,6 +679,9 @@ function renderAll() {
     list.innerHTML = '<div class="empty-state">No bills found for this filter.</div>';
     return;
   }
+
+  const existingCarousel = document.querySelector('.shock-quotes-grid');
+  if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
 
   list.innerHTML =
     renderShockQuotesSection() +
@@ -851,25 +839,103 @@ function renderStatsBar(bills) {
   </div>`;
 }
 
-function renderShockQuotesSection() {
-  // Merge tracked reps (if they have a quote in any bill) with global shock quotes
-  const trackedIds = new Set(trackedReps.map(r => r.id));
-  const allQuotes = [...SHOCK_QUOTES];
+function computeShockScore(q) {
+  let score = 0;
+  const text = (q.text || '').toLowerCase();
+  if (q.stance === 'oppose') score += 3;
+  score += (q.text.match(/!/g) || []).length * 2;
+  ['never','cannot','wrong','fail','destroy','steal','corrupt','socialism','looting',
+   'screaming','disgusting','dangerous','unconstitutional','betrayed','shameful',
+   'criminal','fraud','disaster','outrage'].forEach(w => { if (text.includes(w)) score += 1; });
+  score += Math.min(4, Math.floor((q.text || '').length / 80));
+  return score;
+}
 
-  const html = allQuotes.map(q => {
-    const isTracked = trackedIds.has(q.bioguideId) || trackedIds.has(q.name?.toLowerCase());
+function buildQuotePool() {
+  const seen = new Set();
+  const quotes = [];
+
+  allBills.forEach(bill => {
+    (bill.featured_quotes || []).forEach(q => {
+      const key = (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
+      if (seen.has(key)) return;
+      seen.add(key);
+      quotes.push({
+        name: q.name, party: q.party, state: q.state,
+        bioguideId: q.bioguideId, text: q.text, stance: q.stance,
+        source: bill.date ? 'Floor, ' + formatDateCompact(bill.date) : '',
+        billId: bill.id, billTitle: bill.title,
+        shockScore: computeShockScore(q)
+      });
+    });
+  });
+
+  SHOCK_QUOTES.forEach(q => {
+    const key = (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
+    if (seen.has(key)) return;
+    seen.add(key);
+    const bill = q.billId ? allBills.find(b => b.id === q.billId) : null;
+    quotes.push({ ...q, billTitle: bill?.title || null, shockScore: computeShockScore(q) });
+  });
+
+  return quotes;
+}
+
+function renderShockQuotesSection() {
+  const quoteKey = q => (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
+  const pool = buildQuotePool();
+  if (!pool.length) return '';
+
+  // Featured: top 2 by shock score
+  const featured = [...pool].sort((a, b) => b.shockScore - a.shockScore).slice(0, 2);
+  const used = new Set(featured.map(quoteKey));
+
+  // Selected: user-toggled reps in portrait strip
+  const selected = pool.filter(q => selectedRepIds.has(q.bioguideId) && !used.has(quoteKey(q)));
+  selected.forEach(q => used.add(quoteKey(q)));
+
+  // Tracked: auto-detected reps
+  const trackedIdSet = new Set(trackedReps.map(r => r.id));
+  const tracked = pool.filter(q =>
+    (trackedIdSet.has(q.bioguideId) || trackedIdSet.has(q.name?.toLowerCase())) &&
+    !used.has(quoteKey(q))
+  );
+  tracked.forEach(q => used.add(quoteKey(q)));
+
+  // Rest: fill to minimum 5
+  const rest = pool.filter(q => !used.has(quoteKey(q)));
+  const ordered = [...featured, ...selected, ...tracked, ...rest];
+  const display = ordered.slice(0, Math.max(5, featured.length + selected.length));
+
+  const html = display.map((q, i) => {
+    const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    return `<div class="shock-quote-card${isTracked ? ' is-tracked' : ''}">
-      <div class="shock-quote-header">
-        <img class="shock-quote-portrait" src="${portraitUrl(q.bioguideId)}"
-             onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}"
-             style="border: 2px solid ${color}" />
-        <div>
-          <div class="shock-quote-name">${escHtml(q.name)}</div>
-          <div class="shock-quote-source">${escHtml(compactSource(q.source))}</div>
-        </div>
-      </div>
-      <div class="shock-quote-text">"${escHtml(q.text)}"</div>
+    const repHref = q.bioguideId ? `rep.html?id=${escHtml(q.bioguideId)}` : null;
+    const billHref = q.billId ? `#card-${escHtml(q.billId)}` : null;
+
+    const portraitInner = `
+      <img class="shock-quote-portrait" src="${portraitUrl(q.bioguideId)}"
+           onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}"
+           style="border: 2px solid ${color}" />
+      <div class="shock-quote-rep-text">
+        <div class="shock-quote-name">${escHtml(q.name)}</div>
+        <div class="shock-quote-source">${escHtml(q.source || '')}</div>
+      </div>`;
+
+    const headerArea = repHref
+      ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
+      : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
+
+    const quoteBody = billHref
+      ? `<a href="${billHref}" class="shock-quote-text-link">
+          <div class="shock-quote-text">"${escHtml(q.text)}"</div>
+          ${q.billTitle ? `<div class="shock-quote-bill">${escHtml(q.billTitle)}</div>` : ''}
+        </a>`
+      : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
+
+    return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
+      <div class="shock-quote-header">${headerArea}</div>
+      ${quoteBody}
     </div>`;
   }).join('');
 

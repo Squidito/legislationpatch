@@ -118,30 +118,25 @@ a:hover { text-decoration: underline; }
   gap: 8px;
   align-items: center;
 }
-.zip-input {
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+.zip-display {
   font-family: var(--font-mono);
-  font-size: 13px;
-  width: 150px;
-  background: var(--surface);
-  color: var(--text);
-  outline: none;
+  font-size: 12px;
+  color: var(--text-3);
 }
-.zip-input:focus { border-color: var(--text-3); }
-.track-btn {
-  padding: 8px 14px;
-  background: var(--text);
-  color: var(--bg);
-  border: none;
-  border-radius: 8px;
+.zip-display:empty { display: none; }
+.back-btn {
   font-size: 13px;
   font-weight: 500;
+  color: var(--text-2);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
   cursor: pointer;
   font-family: var(--font-body);
+  text-decoration: none;
 }
-.track-btn:hover { opacity: 0.85; }
+.back-btn:hover { color: var(--text); border-color: var(--text-3); }
 
 /* ---- CONTROLS ---- */
 .controls-bar {
@@ -248,6 +243,11 @@ a:hover { text-decoration: underline; }
 .rep-card.tracked .rep-ring {
   outline: 2.5px solid var(--party-color, #6b7280);
   outline-offset: 2px;
+}
+.rep-card.rep-selected .rep-ring {
+  outline: 2.5px solid var(--purple);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(109, 79, 199, 0.18);
 }
 .rep-badge {
   display: block;
@@ -367,8 +367,9 @@ a:hover { text-decoration: underline; }
   border-color: var(--purple);
 }
 
-/* Sub-filter row — smaller stage pills below main filter */
+/* Sub-filter row — removed */
 .filter-sub-row {
+  display: none;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 24px 7px;
@@ -1136,11 +1137,51 @@ a:hover { text-decoration: underline; }
   border-color: var(--blue);
   box-shadow: 0 0 0 1px var(--blue);
 }
+.shock-quote-card.is-featured {
+  border-color: var(--purple);
+}
+.shock-quote-card.is-featured::before {
+  content: 'TOP QUOTE';
+  display: block;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--purple);
+  font-family: var(--font-mono);
+  margin-bottom: 0.15rem;
+}
 .shock-quote-header {
   display: flex;
   align-items: center;
   gap: 0.45rem;
 }
+.shock-quote-rep-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 1;
+  min-width: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.shock-quote-rep-link:hover .shock-quote-name { text-decoration: underline; }
+.shock-quote-rep-text { min-width: 0; }
+.shock-quote-text-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.shock-quote-text-link:hover .shock-quote-text { color: var(--text); }
+.shock-quote-bill {
+  font-size: 0.6rem;
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  margin-top: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.shock-quote-text-link:hover .shock-quote-bill { color: var(--purple); }
 .shock-quote-portrait {
   width: 28px;
   height: 28px;
@@ -1784,14 +1825,8 @@ a:hover { text-decoration: underline; }
 @media (max-width: 640px) {
 
   /* === HEADER === */
-  .header-inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    padding: 0 14px;
-  }
+  .header-inner { padding: 0 14px; }
   .header-track { gap: 8px; }
-  .zip-input { flex: 1; width: auto; min-width: 0; }
 
   /* === CONTROLS: filter pills scroll horizontally, no wrap === */
   .controls-inner {
@@ -2012,10 +2047,6 @@ a:hover { text-decoration: underline; }
   color: #0f0f11;
 }
 
-[data-theme="dark"] .track-btn {
-  background: #f0f0f3;
-  color: #0f0f11;
-}
 
 [data-theme="dark"] .filter-btn.active {
   background: var(--purple);
@@ -2090,8 +2121,7 @@ a:hover { text-decoration: underline; }
 /* Ensure minimum 44x44 tap targets for interactive elements on mobile */
 @media (max-width: 640px) {
   button, 
-  .filter-btn, 
-  .track-btn, 
+  .filter-btn,
   .rep-add-btn, 
   .rep-more-btn, 
   .fav-btn, 

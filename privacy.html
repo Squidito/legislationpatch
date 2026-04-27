@@ -20,9 +20,39 @@
           <div class="logo-sub">Bills, read in full and reported plainly</div>
         </div>
       </a>
-      <a href="index.html" class="track-btn" style="text-decoration:none">← Back to Bills</a>
+      <div class="header-track">
+        <a href="index.html" class="back-btn">← Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
     </div>
   </header>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('lpTheme');
+      var tog = null;
+      function apply(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        if (tog) tog.checked = dark;
+      }
+      apply(saved === 'dark');
+      document.addEventListener('DOMContentLoaded', function() {
+        tog = document.getElementById('themeToggle');
+        if (tog) {
+          tog.checked = saved === 'dark';
+          tog.addEventListener('change', function() {
+            localStorage.setItem('lpTheme', this.checked ? 'dark' : 'light');
+            apply(this.checked);
+          });
+        }
+      });
+    })();
+  </script>
 
   <main class="main" style="max-width:720px">
     <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Privacy Policy</h1>

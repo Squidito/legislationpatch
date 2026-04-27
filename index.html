@@ -51,8 +51,7 @@
         </div>
       </button>
       <div class="header-track">
-        <input class="zip-input" placeholder="ZIP for your reps" id="zipInput" onclick="this.select()" />
-        <button class="track-btn" onclick="handleZipTrack()">Track</button>
+        <span class="zip-display" id="zipDisplay"></span>
         <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
@@ -75,10 +74,10 @@
       <div class="filter-row" id="filtersMain">
         <button class="filter-btn active" data-main="in_progress">In Progress</button>
         <button class="filter-btn" data-main="passed">Passed</button>
+        <button class="filter-btn" data-main="dead">Dead</button>
       </div>
     </div>
-    <div id="filtersSub" class="filter-sub-row"></div>
-    <div class="controls-rep-row">
+<div class="controls-rep-row">
       <div class="rep-strip-label">Active on tracked bills</div>
       <div class="rep-strip" id="repStrip"></div>
       <button class="rep-more-btn" id="repMoreBtn">View all <span id="repMoreChevron">▾</span></button>
