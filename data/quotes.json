@@ -1,36 +1,160 @@
 {
-  "generated": "2026-04-27T06:23:14.361Z",
-  "processedDates": [
-    "2026-03-28",
-    "2026-03-29",
-    "2026-03-30",
-    "2026-03-31",
-    "2026-04-01",
-    "2026-04-02",
-    "2026-04-03",
-    "2026-04-04",
-    "2026-04-05",
-    "2026-04-06",
-    "2026-04-07",
-    "2026-04-08",
-    "2026-04-09",
-    "2026-04-10",
-    "2026-04-11",
-    "2026-04-12",
-    "2026-04-13",
-    "2026-04-14",
-    "2026-04-15",
-    "2026-04-16",
-    "2026-04-17",
-    "2026-04-18",
-    "2026-04-19",
-    "2026-04-20",
-    "2026-04-21",
-    "2026-04-22",
-    "2026-04-23",
-    "2026-04-24",
-    "2026-04-25",
-    "2026-04-26"
-  ],
-  "quotes": []
+  "generated": "2026-04-27T07:00:00.000Z",
+  "processedDates": ["2026-04-15", "2026-04-16"],
+  "quotes": [
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "text": "Every metric indicates that Donald Trump's handling of Operation Epic Fury has been an epic failure.",
+      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": "119-HCONRES-40", "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "text": "Trump's One Big Beautiful Bill has been a dud for working families, but millionaires got a $300,000 tax cut.",
+      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": "119-HR-1", "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "text": "Donald Trump's war in Iran alone has wiped out any tax refund Americans will see this year.",
+      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "text": "The more you screw around with the Fed, the higher rates will be, and you want lower rates.",
+      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Pramila Jayapal",
+      "party": "D", "state": "WA", "bioguideId": "J001196",
+      "text": "The war has cost taxpayers $50 billion already, and the Pentagon will request $200 billion more.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HCONRES-40", "billTitle": null
+    },
+    {
+      "name": "Rep. Melanie Stansbury",
+      "party": "D", "state": "NM", "bioguideId": "S001218",
+      "text": "This is not permitting reform. This is gutting our right to breathe clean air.",
+      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": "119-HR-6387", "billTitle": null
+    },
+    {
+      "name": "Rep. Melanie Stansbury",
+      "party": "D", "state": "NM", "bioguideId": "S001218",
+      "text": "This administration is testing us. They are testing the truth, testing the law, but most importantly, they are testing our resolve in the Epstein case. You are breaking the law, and I hope you are getting ready to face contempt.",
+      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Tim Kennedy",
+      "party": "D", "state": "NY", "bioguideId": null,
+      "text": "It is blasphemous, deranged, and a total desecration of Christ's message.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Tim Kennedy",
+      "party": "D", "state": "NY", "bioguideId": null,
+      "text": "The Vice President and Cabinet must begin the process of invoking the 25th Amendment to remove the President from office.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Gregory Meeks",
+      "party": "D", "state": "NY", "bioguideId": "M001137",
+      "text": "One person does not have the power to take this Nation to war alone.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HCONRES-40", "billTitle": null
+    },
+    {
+      "name": "Rep. Keith Self",
+      "party": "R", "state": "TX", "bioguideId": "S001211",
+      "text": "We have neutered Iran, which has been at war with us for 47 years.",
+      "source": "House Floor, Apr 16, 2026", "stance": "support",
+      "billId": "119-HCONRES-40", "billTitle": null
+    },
+    {
+      "name": "Rep. Alexandria Ocasio-Cortez",
+      "party": "D", "state": "NY", "bioguideId": "O000172",
+      "text": "They provided no rationale to the American people.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HCONRES-40", "billTitle": null
+    },
+    {
+      "name": "Rep. Chip Roy",
+      "party": "R", "state": "TX", "bioguideId": "R000614",
+      "text": "91 percent of all Haiti TPS holders entered the country illegally.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HR-1689", "billTitle": null
+    },
+    {
+      "name": "Rep. Pressley",
+      "party": "D", "state": "MA", "bioguideId": "P000617",
+      "text": "Haitian TPS holders are not the problem. They enhance our communities.",
+      "source": "House Floor, Apr 16, 2026", "stance": "support",
+      "billId": "119-HR-1689", "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D", "state": "OR", "bioguideId": "W000779",
+      "text": "Any Senator who votes to reauthorize this law without real reform will be directly responsible when the Trump team abuses their spying powers.",
+      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HR-8322", "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D", "state": "OR", "bioguideId": "W000779",
+      "text": "The number of so-called 'sensitive' warrantless searches more than tripled during the first year of the Trump administration.",
+      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HR-8322", "billTitle": null
+    },
+    {
+      "name": "Sen. Dick Durbin",
+      "party": "D", "state": "IL", "bioguideId": "D000563",
+      "text": "It is an agency that we have seen in real time terrorizing communities like Chicago and Minneapolis across this country with increasingly violent and militarized enforcement operations.",
+      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Raul Grijalva",
+      "party": "D", "state": "AZ", "bioguideId": "G000551",
+      "text": "blatant sacrifice of human health for corporate profits.",
+      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": "119-HR-6398", "billTitle": null
+    },
+    {
+      "name": "Rep. Seth Magaziner",
+      "party": "D", "state": "RI", "bioguideId": "M001211",
+      "text": "Instead of voting to end the war, end the tariffs, and lower healthcare costs, what are we doing?",
+      "source": "House Floor, Apr 15, 2026", "stance": "neutral",
+      "billId": null, "billTitle": null
+    },
+    {
+      "name": "Rep. Paul Tonko",
+      "party": "D", "state": "NY", "bioguideId": "T000469",
+      "text": "Pretending that pollution doesn't exist simply cannot be the answer.",
+      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
+      "billId": "119-HR-6409", "billTitle": null
+    },
+    {
+      "name": "Rep. Jim Jordan",
+      "party": "R", "state": "OH", "bioguideId": "J000289",
+      "text": "Make temporary permanent — that is their plan.",
+      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HR-1689", "billTitle": null
+    },
+    {
+      "name": "Sen. Amy Klobuchar",
+      "party": "D", "state": "MN", "bioguideId": "K000367",
+      "text": "It is time to lead with diplomacy and negotiate an end to the war in Iran.",
+      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
+      "billId": "119-HCONRES-40", "billTitle": null
+    }
+  ]
 }
