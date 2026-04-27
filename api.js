@@ -4,6 +4,14 @@
 
 // ---- Static Data Loading ----
 
+async function fetchRepsIndex() {
+  try {
+    const res = await fetch('data/reps-index.json');
+    if (!res.ok) return {};
+    return await res.json();
+  } catch (e) { return {}; }
+}
+
 async function fetchStandaloneQuotes() {
   try {
     const res = await fetch('data/quotes.json');

@@ -180,6 +180,30 @@ async function run() {
   }
 
   console.log(`\nDone. ${written} profiles written, ${skipped} skipped. Total in data/reps/: ${fs.readdirSync(repsDir).length}`);
+  rebuildIndex();
+}
+
+function rebuildIndex() {
+  const index = {};
+  fs.readdirSync(repsDir).forEach(f => {
+    if (!f.endsWith('.json')) return;
+    try {
+      const r = JSON.parse(fs.readFileSync(path.join(repsDir, f), 'utf8'));
+      if (!r.state || !r.bioguideId || !r.name) return;
+      if (!index[r.state]) index[r.state] = [];
+      index[r.state].push({ bioguideId: r.bioguideId, name: r.name, party: r.party || 'I', state: r.state, role: r.role || 'Member of Congress', district: r.district || null });
+    } catch (e) {}
+  });
+  Object.keys(index).forEach(st => {
+    index[st].sort((a, b) => {
+      if (a.role === 'Senator' && b.role !== 'Senator') return -1;
+      if (b.role === 'Senator' && a.role !== 'Senator') return 1;
+      return a.name.split(' ').pop().localeCompare(b.name.split(' ').pop());
+    });
+  });
+  const indexPath = path.join(__dirname, '../data/reps-index.json');
+  fs.writeFileSync(indexPath, JSON.stringify(index));
+  console.log(`Rebuilt reps-index.json — ${Object.values(index).flat().length} reps across ${Object.keys(index).length} states`);
 }
 
 run();

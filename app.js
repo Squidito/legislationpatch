@@ -10,6 +10,7 @@ let activeMainFilter  = 'in_progress';
 let favoritesView     = false;
 let selectedRepIds    = new Set();
 let standaloneQuotes  = [];
+let repsIndex         = {};
 
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
@@ -77,8 +78,7 @@ const DEMO_REPS = [
 const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' fill='%23374151'/%3E%3Ccircle cx='22' cy='16' r='9' fill='%236b7280'/%3E%3Cellipse cx='22' cy='40' rx='15' ry='11' fill='%236b7280'/%3E%3C/svg%3E";
 
 let trackedState = 'TX';
-let trackedReps = [];
-let availableStateReps = [];
+let trackedReps  = [];
 
 // ---- Boot ----
 
@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadWatchedBills();
   await autoDetectState();
   fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
+  fetchRepsIndex().then(idx => { repsIndex = idx; populateStateDropdown(); });
   setupSettings();
   renderRepStrip();
   loadBills();
@@ -335,7 +336,7 @@ function renderRepStrip() {
     });
   });
 
-  const fallback = availableStateReps.length ? availableStateReps : DEMO_REPS;
+  const fallback = repsIndex[trackedState]?.length ? repsIndex[trackedState] : DEMO_REPS;
   fallback.forEach(rep => {
     const id = getRepId(rep);
     if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
@@ -364,9 +365,9 @@ function renderRepStrip() {
 function renderRepGrid() {
   const grid = document.getElementById('repGrid');
   if (!grid) return;
-  const pool = availableStateReps.length ? availableStateReps : DEMO_REPS;
+  const pool = repsIndex[trackedState] || DEMO_REPS;
   if (!pool.length) {
-    grid.innerHTML = '<div class="rep-status">No members found.</div>';
+    grid.innerHTML = '<div class="rep-status">No members found for this state.</div>';
     return;
   }
   grid.innerHTML = pool.map(rep => repCardHtml(rep, 'lg')).join('');
@@ -395,7 +396,7 @@ function toggleRepTracked(id) {
   if (idx >= 0) {
     trackedReps.splice(idx, 1);
   } else {
-    const pool   = [...availableStateReps, ...DEMO_REPS];
+    const pool   = [...(repsIndex[trackedState] || []), ...DEMO_REPS];
     const source = pool.find(r => getRepId(r) === id);
     trackedReps.push({
       id,
@@ -440,7 +441,7 @@ function addManualTrackedRep() {
 function updateTrackedRep(id, checked) {
   if (checked) {
     if (!trackedReps.find(r => r.id === id)) {
-      const source = availableStateReps.find(r => getRepId(r) === id);
+      const source = (repsIndex[trackedState] || []).find(r => getRepId(r) === id);
       trackedReps.push({
         id,
         name:   formatRepName(source) || id,
