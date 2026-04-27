@@ -3,8 +3,7 @@
   "name": "Sen. Tammy Duckworth",
   "party": "D",
   "state": "IL",
-  "portraitUrl": "https://www.congress.gov/img/member/d000622_200.jpg",
-  "bio": "Sen. Tammy Duckworth is a member of the United States Congress representing IL.",
+  "bio": "Sen. Tammy Duckworth is a Senator representing IL.",
   "comments": [
     {
       "billId": "119-HR-8469",
@@ -14,5 +13,6 @@
       "date": "Apr 23, 2026"
     }
   ],
-  "role": "Member of Congress"
+  "role": "Senator",
+  "district": null
 }

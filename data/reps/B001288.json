@@ -3,8 +3,7 @@
   "name": "Sen. Cory Booker",
   "party": "D",
   "state": "NJ",
-  "portraitUrl": "https://www.congress.gov/img/member/b001288_200.jpg",
-  "bio": "Sen. Cory Booker is a member of the United States Congress representing NJ.",
+  "bio": "Sen. Cory Booker is a Senator representing NJ.",
   "comments": [
     {
       "billId": "119-HR-7567",
@@ -14,5 +13,6 @@
       "date": "Apr 21, 2026"
     }
   ],
-  "role": "Member of Congress"
+  "role": "Senator",
+  "district": null
 }

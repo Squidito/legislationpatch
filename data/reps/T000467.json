@@ -3,8 +3,7 @@
   "name": "Rep. Glenn Thompson",
   "party": "R",
   "state": "PA",
-  "portraitUrl": "https://www.congress.gov/img/member/t000467_200.jpg",
-  "bio": "Rep. Glenn Thompson is a member of the United States Congress representing PA.",
+  "bio": "Rep. Glenn Thompson is a Representative representing PA for District 15.",
   "comments": [
     {
       "billId": "119-HR-7567",
@@ -14,5 +13,6 @@
       "date": "Apr 21, 2026"
     }
   ],
-  "role": "Member of Congress"
+  "role": "Representative",
+  "district": 15
 }

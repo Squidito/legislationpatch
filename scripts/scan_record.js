@@ -1,5 +1,11 @@
 // scan_record.js — Scan Congressional Record for the last N days, extract notable quotes.
-// Usage: node scripts/scan_record.js [--days=30] [--reset]
+//
+// Usage:
+//   node scripts/scan_record.js [--days=30] [--reset]
+//
+// Requires in .env:
+//   CONGRESS_API_KEY=...    (Congress.gov — you already have this)
+//   GOVINFO_API_KEY=...     (GovInfo.gov — free key at https://api.data.gov/signup/)
 //
 // Outputs: data/quotes.json
 // Skips dates already processed unless --reset is passed.
@@ -10,19 +16,27 @@ const path = require('path');
 
 // ---- Config ----
 let CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
+let GOVINFO_API_KEY  = process.env.GOVINFO_API_KEY  || '';
 try {
   const cfg = fs.readFileSync(path.join(__dirname, '../config.js'), 'utf8');
-  const m   = cfg.match(/CONGRESS_API_KEY:\s*['"]([^'"]+)['"]/);
-  if (m?.[1]) CONGRESS_API_KEY = m[1];
+  const mk  = cfg.match(/CONGRESS_API_KEY.*?['"]([A-Za-z0-9]+)['"]/);
+  const mg  = cfg.match(/GOVINFO_API_KEY.*?['"]([A-Za-z0-9]+)['"]/);
+  if (mk?.[1]) CONGRESS_API_KEY = mk[1];
+  if (mg?.[1]) GOVINFO_API_KEY  = mg[1];
 } catch (e) {}
+
+if (!CONGRESS_API_KEY) { console.error('CONGRESS_API_KEY not set.'); process.exit(1); }
+if (!GOVINFO_API_KEY)  {
+  console.error('GOVINFO_API_KEY not set.');
+  console.error('Get a free key at: https://api.data.gov/signup/');
+  console.error('Then add GOVINFO_API_KEY=your_key to your .env file.');
+  process.exit(1);
+}
 
 const LM_STUDIO_URL = 'http://localhost:1235/v1/chat/completions';
 const QUOTES_FILE   = path.join(__dirname, '../data/quotes.json');
 const DAYS          = parseInt(process.argv.find(a => a.startsWith('--days='))?.split('=')[1] || '30', 10);
 const RESET         = process.argv.includes('--reset');
-const MAX_WORDS     = 7000; // truncate CR sections before sending to LLM
-
-if (!CONGRESS_API_KEY) { console.error('CONGRESS_API_KEY not set.'); process.exit(1); }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -35,104 +49,119 @@ const processedDates = new Set(quotesData.processedDates || []);
 
 // ---- Member name → bioguideId cache ----
 const bioguideCache = {};
-
 async function resolveBioguideId(name) {
   if (!name) return null;
-  const lastName = name.replace(/^(Sen\.|Rep\.|Mr\.|Ms\.|Mrs\.|Dr\.) /, '').trim().split(' ').pop();
-  if (bioguideCache[lastName] !== undefined) return bioguideCache[lastName] || null;
-
+  const lastName = name.replace(/^(Sen\.|Rep\.|Mr\.|Ms\.|Mrs\.|Dr\.) /, '').trim().split(/\s+/).pop();
+  if (!lastName || lastName.length < 3) return null;
+  if (lastName in bioguideCache) return bioguideCache[lastName];
   try {
-    await sleep(400);
+    await sleep(600);
     const url = `https://api.congress.gov/v3/member?name=${encodeURIComponent(lastName)}&currentMember=true&limit=5&api_key=${CONGRESS_API_KEY}`;
     const res  = await fetch(url);
     if (!res.ok) { bioguideCache[lastName] = null; return null; }
-    const data    = await res.json();
+    const data = await res.json();
     const members = data.members || [];
-    if (members.length === 1) {
-      bioguideCache[lastName] = members[0].bioguideId;
-      return members[0].bioguideId;
-    }
-    // Try to narrow by party/state if available
     bioguideCache[lastName] = members[0]?.bioguideId || null;
     return bioguideCache[lastName];
   } catch (e) { bioguideCache[lastName] = null; return null; }
 }
 
-// ---- Fetch CR index for a given date ----
-async function fetchCRSections(date) {
-  const y = date.getFullYear();
-  const m = date.getMonth() + 1;
-  const d = date.getDate();
-  const url = `https://api.congress.gov/v3/congressional-record?y=${y}&m=${m}&d=${d}&format=json&api_key=${CONGRESS_API_KEY}`;
-
+// ---- Check if CR exists for a date via Congress.gov ----
+async function getCRPackageId(date) {
+  const y = date.getFullYear(), m = date.getMonth() + 1, d = date.getDate();
   try {
     await sleep(1000);
-    const res  = await fetch(url);
-    if (!res.ok) return [];
+    const res  = await fetch(`https://api.congress.gov/v3/congressional-record?y=${y}&m=${m}&d=${d}&format=json&api_key=${CONGRESS_API_KEY}`);
+    if (!res.ok) return null;
     const data = await res.json();
-
-    const issues   = data.Results?.Issues || data.dailyCongressionalRecord || [];
-    if (!issues.length) return [];
-
-    const sections = [];
-    for (const issue of issues) {
-      for (const chamber of ['House', 'Senate']) {
-        let sectionUrl = null;
-        const items = issue.links?.items || issue.sections || [];
-        for (const item of items) {
-          if ((item.name || item.label || '').includes(chamber)) {
-            sectionUrl = item.url || item.htmlUrl; break;
-          }
-        }
-        if (!sectionUrl) {
-          const links = issue.links || {};
-          for (const key of Object.keys(links)) {
-            if (key.includes(chamber) && links[key]?.HTML) {
-              sectionUrl = links[key].HTML; break;
-            }
-          }
-        }
-        if (sectionUrl) sections.push({ chamber, url: sectionUrl });
-      }
-    }
-    return sections;
-  } catch (e) { return []; }
+    const issues = data.Results?.Issues || [];
+    if (!issues.length) return null;
+    // Return the publish date in YYYY-MM-DD format for GovInfo package ID
+    const pub = issues[0].PublishDate || `${y}-${String(m).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    return `CREC-${pub}`;
+  } catch (e) { return null; }
 }
 
-// ---- Fetch and clean a CR section ----
-async function fetchSectionText(url) {
+// ---- Fetch list of substantive granules from GovInfo ----
+// Skips procedural items (tributes, prayers, quorum calls, etc.)
+const SKIP_TITLES = [
+  'PRAYER', 'PLEDGE', 'THE JOURNAL', 'RECESS', 'QUORUM', 'ANNOUNCEMENT',
+  'RECOGNIZING', 'CELEBRATING', 'HONORING', 'TRIBUTE', 'MEMORIAL',
+  'ADDITIONAL COSPONSORS', 'INTRODUCTION OF BILLS', 'MESSAGE FROM',
+  'MEASURES PLACED', 'MEASURES READ', 'REPORTS OF COMMITTEES',
+  'EXECUTIVE AND OTHER', 'SUBMISSION OF', 'TEXT OF SENATE AMENDMENT',
+  'TEXT OF HOUSE AMENDMENT', 'DESIGNATION OF THE SPEAKER',
+];
+
+async function getSubstantiveGranules(packageId, chamber) {
+  const granules = [];
+  let offset = 0;
+  const granuleClass = chamber.toUpperCase();
+
+  while (offset < 500) {
+    try {
+      await sleep(1500);
+      const res  = await fetch(`https://api.govinfo.gov/packages/${packageId}/granules?api_key=${GOVINFO_API_KEY}&pageSize=100&offset=${offset}`);
+      if (res.status === 429) { console.log('    Rate limited — waiting 30s...'); await sleep(30000); continue; }
+      if (!res.ok) break;
+      const data = await res.json();
+      const items = data.granules || [];
+      if (!items.length) break;
+
+      for (const g of items) {
+        if (g.granuleClass !== granuleClass) continue;
+        const title = (g.title || '').toUpperCase();
+        if (SKIP_TITLES.some(s => title.startsWith(s))) continue;
+        if (title.length < 10) continue;
+        granules.push(g);
+      }
+
+      if (items.length < 100) break;
+      offset += 100;
+    } catch (e) { break; }
+  }
+
+  return granules;
+}
+
+// ---- Fetch text of a granule ----
+async function fetchGranuleText(packageId, granuleId) {
   try {
-    await sleep(1000);
+    await sleep(2000);
+    const url = `https://api.govinfo.gov/packages/${packageId}/granules/${granuleId}/htm?api_key=${GOVINFO_API_KEY}`;
     const res  = await fetch(url);
+    if (res.status === 429) { await sleep(30000); return ''; }
     if (!res.ok) return '';
     const html = await res.text();
-    const text = html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-    // Truncate to MAX_WORDS
-    return text.split(' ').slice(0, MAX_WORDS).join(' ');
+    return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   } catch (e) { return ''; }
 }
 
 // ---- LLM quote extraction ----
 async function extractQuotesWithLLM(text, chamber, dateStr) {
-  const prompt = `You are reading a ${chamber} section of the Congressional Record from ${dateStr}.
+  if (!text || text.length < 100) return [];
 
-Extract up to 5 of the most notable, surprising, or controversial direct floor quotes from named speakers. Skip procedural statements, quorum calls, unanimous consent requests, and routine motions. Focus on substantive opinions, criticism, or striking statements about legislation.
+  const truncated = text.split(' ').slice(0, 6000).join(' ');
+  const prompt = `You are reading a ${chamber} section of the Congressional Record dated ${dateStr}.
+
+Extract up to 5 of the most notable, surprising, or controversial direct floor quotes from named speakers. Skip procedural statements, quorum calls, unanimous consent requests, and routine motions. Focus on substantive opinions or criticism about legislation.
 
 For each quote return:
 - name: Full name with title (e.g. "Rep. Nancy Pelosi" or "Sen. Chuck Schumer")
 - party: "D", "R", or "I"
-- state: Two-letter state code
+- state: Two-letter state code (if not clear, use best guess)
 - text: The verbatim quote, 1-3 sentences max — the most striking part only
-- billId: Bill number if explicitly mentioned (format: "119-HR-1234" or "119-S-567"), or null
+- billId: If a bill number is explicitly mentioned, format as "119-HR-1234" or "119-S-567", otherwise null
 - stance: "support", "oppose", or "neutral"
 
 Return ONLY valid JSON: {"quotes": [...]}
 If no notable quotes found, return {"quotes": []}
 
 Congressional Record text:
-${text.slice(0, 25000)}`;
+${truncated}`;
 
   try {
+    await sleep(1000);
     const res  = await fetch(LM_STUDIO_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -145,34 +174,28 @@ ${text.slice(0, 25000)}`;
         enable_thinking: false
       })
     });
-    if (!res.ok) { console.log(`    LLM error: ${res.status}`); return []; }
+    if (!res.ok) return [];
     const data    = await res.json();
     const content = data.choices?.[0]?.message?.content || '';
     const jsonStr = content.match(/\{[\s\S]*\}/)?.[0];
     if (!jsonStr) return [];
-    const parsed  = JSON.parse(jsonStr);
-    return parsed.quotes || [];
-  } catch (e) { console.log(`    LLM parse error: ${e.message}`); return []; }
+    return JSON.parse(jsonStr).quotes || [];
+  } catch (e) { return []; }
 }
 
-// ---- Normalise a raw LLM quote into our schema ----
 function normaliseQuote(q, chamber, dateStr) {
-  const monthNames = { Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',
-                       Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12' };
-  // dateStr is YYYY-MM-DD
   const [y, mo, d] = dateStr.split('-');
-  const mon = Object.keys(monthNames).find(k => monthNames[k] === mo) || mo;
-  const source = `${chamber} Floor, ${mon} ${parseInt(d)}, ${y}`;
+  const monthName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(mo)-1];
   return {
-    name:       q.name   || '',
-    party:      (q.party || 'I').toUpperCase().slice(0, 1),
-    state:      (q.state || '').toUpperCase().slice(0, 2),
+    name:      q.name  || '',
+    party:     (q.party || 'I').toUpperCase().slice(0, 1),
+    state:     (q.state || '').toUpperCase().slice(0, 2),
     bioguideId: null,
-    text:       q.text   || '',
-    source,
-    stance:     q.stance || 'neutral',
-    billId:     q.billId || null,
-    billTitle:  null
+    text:      q.text  || '',
+    source:    `${chamber} Floor, ${monthName} ${parseInt(d)}, ${y}`,
+    stance:    q.stance || 'neutral',
+    billId:    q.billId || null,
+    billTitle: null,
   };
 }
 
@@ -185,7 +208,7 @@ async function run() {
     dates.push(d);
   }
 
-  console.log(`Scanning Congressional Record — last ${DAYS} days (${dates.length} dates)`);
+  console.log(`Scanning Congressional Record — last ${DAYS} days`);
   console.log(`Already processed: ${processedDates.size} dates\n`);
 
   let added = 0;
@@ -193,26 +216,36 @@ async function run() {
   for (const date of dates) {
     const ds = `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
 
-    if (processedDates.has(ds)) {
-      process.stdout.write(`[skip] ${ds}\r`);
-      continue;
-    }
+    if (processedDates.has(ds)) { process.stdout.write(`[skip] ${ds}\r`); continue; }
 
-    console.log(`[${ds}] Fetching CR index...`);
-    const sections = await fetchCRSections(date);
+    console.log(`[${ds}] Checking Congress.gov CR index...`);
+    const packageId = await getCRPackageId(date);
 
-    if (!sections.length) {
-      console.log(`  No CR found (Congress likely not in session)`);
-      processedDates.add(ds);
+    if (!packageId) {
+      console.log(`  No CR (recess or no session)`);
     } else {
-      for (const { chamber, url } of sections) {
-        console.log(`  Fetching ${chamber} section...`);
-        const text = await fetchSectionText(url);
-        if (!text) { console.log(`  Empty section, skipping`); continue; }
+      console.log(`  Package: ${packageId}`);
 
-        console.log(`  Extracting quotes (${text.split(' ').length} words)...`);
-        const raw = await extractQuotesWithLLM(text, chamber, ds);
-        console.log(`  Found ${raw.length} quote(s)`);
+      for (const chamber of ['House', 'Senate']) {
+        console.log(`  [${chamber}] Fetching substantive granules...`);
+        const granules = await getSubstantiveGranules(packageId, chamber);
+        console.log(`  [${chamber}] Found ${granules.length} substantive granule(s)`);
+
+        if (!granules.length) continue;
+
+        // Fetch text from up to 8 granules per chamber, concatenate for LLM
+        const texts = [];
+        for (const g of granules.slice(0, 8)) {
+          const t = await fetchGranuleText(packageId, g.granuleId);
+          if (t.length > 50) texts.push(`--- ${g.title} ---\n${t}`);
+        }
+
+        if (!texts.length) { console.log(`  [${chamber}] No text retrieved`); continue; }
+
+        const combined = texts.join('\n\n');
+        console.log(`  [${chamber}] Extracting quotes from ~${combined.split(' ').length} words...`);
+        const raw = await extractQuotesWithLLM(combined, chamber, ds);
+        console.log(`  [${chamber}] Found ${raw.length} quote(s)`);
 
         for (const q of raw) {
           if (!q.text || q.text.length < 20) continue;
@@ -222,18 +255,18 @@ async function run() {
           added++;
         }
       }
-      processedDates.add(ds);
     }
 
-    // Save progress after every date
+    processedDates.add(ds);
     quotesData.processedDates = [...processedDates].sort();
     quotesData.generated      = new Date().toISOString();
     fs.writeFileSync(QUOTES_FILE, JSON.stringify(quotesData, null, 2));
+    console.log(`  Saved. Running total: ${quotesData.quotes.length} quote(s)\n`);
     await sleep(500);
   }
 
   console.log(`\nDone. Added ${added} new quote(s). Total in quotes.json: ${quotesData.quotes.length}`);
-  if (added > 0) console.log('Run `node scripts/generate_reps.js` to rebuild rep profiles with new quotes.');
+  if (added > 0) console.log('Run `node scripts/generate_reps.js` to rebuild rep profiles.');
 }
 
 run();

@@ -3,8 +3,7 @@
   "name": "Sen. Elizabeth Warren",
   "party": "D",
   "state": "MA",
-  "portraitUrl": "https://www.congress.gov/img/member/w000817_200.jpg",
-  "bio": "Sen. Elizabeth Warren is a member of the United States Congress representing MA.",
+  "bio": "Sen. Elizabeth Warren is a Senator representing MA.",
   "comments": [
     {
       "billId": "119-HR-6955",
@@ -14,5 +13,6 @@
       "date": "Apr 20, 2026"
     }
   ],
-  "role": "Member of Congress"
+  "role": "Senator",
+  "district": null
 }
