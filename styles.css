@@ -1139,16 +1139,13 @@ a:hover { text-decoration: underline; }
 }
 .shock-quote-card.is-featured {
   border-color: var(--amber);
-  position: relative;
 }
 .featured-bolt {
-  position: absolute;
-  top: 7px;
-  right: 8px;
   color: var(--amber);
-  opacity: 0.85;
-  pointer-events: none;
   flex-shrink: 0;
+  margin-left: auto;
+  align-self: center;
+  opacity: 0.9;
 }
 [data-theme="dark"] .featured-bolt {
   color: #f59e0b;
