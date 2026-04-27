@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bill Not Yet Analyzed — LegislationPatch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
+        <div class="logo-mark">L</div>
+        <div>
+          <div class="logo-name">LegislationPatch</div>
+          <div class="logo-sub">Bills, read in full and reported plainly</div>
+        </div>
+      </a>
+      <div class="header-track">
+        <a href="index.html" class="back-btn">← Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" style="max-width:560px; padding-top: 3rem;">
+    <div class="section-label" id="billCode" style="margin-bottom: 0.5rem;"></div>
+    <h1 style="font-size:1.4rem; font-weight:700; margin-bottom:0.75rem; line-height:1.2;">
+      This bill hasn't been analyzed yet
+    </h1>
+    <p style="color: var(--text-2); font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem;">
+      A floor speech referenced this bill, but we haven't processed it through our analysis pipeline yet.
+      Check back after the next data update — bills that reach a floor vote are prioritized.
+    </p>
+    <a href="index.html" class="back-btn" style="display:inline-block;">← View all bills</a>
+  </main>
+
+  <script>
+    (function() {
+      var saved = localStorage.getItem('lpTheme');
+      function apply(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        var tog = document.getElementById('themeToggle');
+        if (tog) tog.checked = dark;
+      }
+      apply(saved === 'dark');
+      document.addEventListener('DOMContentLoaded', function() {
+        var tog = document.getElementById('themeToggle');
+        if (tog) {
+          tog.checked = saved === 'dark';
+          tog.addEventListener('change', function() {
+            localStorage.setItem('lpTheme', this.checked ? 'dark' : 'light');
+            apply(this.checked);
+          });
+        }
+        // Show bill ID from URL param
+        var id = new URLSearchParams(window.location.search).get('id');
+        if (id) document.getElementById('billCode').textContent = id;
+      });
+    })();
+  </script>
+</body>
+</html>

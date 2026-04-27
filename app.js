@@ -6,9 +6,10 @@ let allBills      = [];
 let openCards        = new Map(); // id -> 'minor' | 'full'
 let openDetails      = {};
 let aiOutputs        = {};
-let activeMainFilter = 'in_progress';
-let favoritesView    = false;
-let selectedRepIds   = new Set();
+let activeMainFilter  = 'in_progress';
+let favoritesView     = false;
+let selectedRepIds    = new Set();
+let standaloneQuotes  = [];
 
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadTrackedSettings();
   loadWatchedBills();
   await autoDetectState();
+  fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
   setupSettings();
   renderRepStrip();
   loadBills();
@@ -878,6 +880,14 @@ function buildQuotePool() {
     quotes.push({ ...q, billTitle: bill?.title || null, shockScore: computeShockScore(q) });
   });
 
+  standaloneQuotes.forEach(q => {
+    const key = (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
+    if (seen.has(key)) return;
+    seen.add(key);
+    const bill = q.billId ? allBills.find(b => b.id === q.billId) : null;
+    quotes.push({ ...q, billTitle: q.billTitle || bill?.title || null, shockScore: computeShockScore(q) });
+  });
+
   return quotes;
 }
 
@@ -910,8 +920,11 @@ function renderShockQuotesSection() {
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    const repHref = q.bioguideId ? `rep.html?id=${escHtml(q.bioguideId)}` : null;
-    const billHref = q.billId ? `#card-${escHtml(q.billId)}` : null;
+    const repHref  = q.bioguideId ? `rep.html?id=${escHtml(q.bioguideId)}` : null;
+    const billInCache = q.billId && allBills.some(b => b.id === q.billId);
+    const billHref = q.billId
+      ? (billInCache ? `#card-${escHtml(q.billId)}` : `bill-pending.html?id=${escHtml(q.billId)}`)
+      : null;
 
     const portraitInner = `
       <img class="shock-quote-portrait" src="${portraitUrl(q.bioguideId)}"

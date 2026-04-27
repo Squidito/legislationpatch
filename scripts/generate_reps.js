@@ -1,110 +1,111 @@
-const fs = require('fs');
+require('dotenv').config();
+const fs   = require('fs');
 const path = require('path');
 
 let CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
 try {
-  const configContent = fs.readFileSync(path.join(__dirname, '../config.js'), 'utf8');
-  const match = configContent.match(/CONGRESS_API_KEY:\s*['"]([^'"]+)['"]/);
-  if (match && match[1]) CONGRESS_API_KEY = match[1];
-} catch (e) {
-  // Ignore
-}
+  const cfg = fs.readFileSync(path.join(__dirname, '../config.js'), 'utf8');
+  const m   = cfg.match(/CONGRESS_API_KEY:\s*['"]([^'"]+)['"]/);
+  if (m?.[1]) CONGRESS_API_KEY = m[1];
+} catch (e) {}
 
-const cachePath = path.join(__dirname, '../data/cache.json');
-const repsDir = path.join(__dirname, '../data/reps');
+const cachePath  = path.join(__dirname, '../data/cache.json');
+const quotesPath = path.join(__dirname, '../data/quotes.json');
+const repsDir    = path.join(__dirname, '../data/reps');
 
-if (!fs.existsSync(repsDir)) {
-  fs.mkdirSync(repsDir, { recursive: true });
-}
+if (!fs.existsSync(repsDir)) fs.mkdirSync(repsDir, { recursive: true });
+
+// Reps that always get a profile even if not in featured_quotes (e.g. SHOCK_QUOTES)
+const SEED_BIOGUIDES = [
+  'G000596', // Rep. Marjorie Taylor Greene
+  'C001127', // Rep. Jasmine Crockett
+  'T000278', // Sen. Tommy Tuberville
+  'T000481', // Rep. Rashida Tlaib
+];
 
 let data;
-try {
-  data = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
-} catch (e) {
-  console.error("Failed to read data/cache.json", e);
-  process.exit(1);
-}
+try { data = JSON.parse(fs.readFileSync(cachePath, 'utf8')); }
+catch (e) { console.error('Failed to read cache.json', e); process.exit(1); }
 
-const bills = Object.values(data.bills || {});
-const reps = {};
+const bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+const reps  = {};
 
+// Build from cache.json featured_quotes
 bills.forEach(bill => {
-  if (bill.featured_quotes) {
-    bill.featured_quotes.forEach(quote => {
-      const id = quote.bioguideId;
-      if (!id) return;
-      if (!reps[id]) {
-        reps[id] = {
-          bioguideId: id,
-          name: quote.name,
-          party: quote.party,
-          state: quote.state,
-          portraitUrl: `https://www.congress.gov/img/member/${id.toLowerCase()}_200.jpg`,
-          bio: "",
-          comments: []
-        };
-      }
-      reps[id].comments.push({
-        billId: bill.id,
-        billTitle: bill.title,
-        stance: quote.stance,
-        text: quote.text,
-        date: bill.date || new Date().toISOString().split('T')[0]
-      });
+  (bill.featured_quotes || []).forEach(q => {
+    const id = q.bioguideId;
+    if (!id) return;
+    if (!reps[id]) reps[id] = { bioguideId: id, name: q.name, party: q.party, state: q.state, bio: '', comments: [] };
+    reps[id].comments.push({
+      billId: bill.id, billTitle: bill.title,
+      stance: q.stance, text: q.text,
+      date: bill.date || ''
+    });
+  });
+});
+
+// Build from data/quotes.json (standalone CR quotes)
+let standaloneQuotes = [];
+try { standaloneQuotes = JSON.parse(fs.readFileSync(quotesPath, 'utf8')).quotes || []; } catch (e) {}
+standaloneQuotes.forEach(q => {
+  const id = q.bioguideId;
+  if (!id) return;
+  if (!reps[id]) reps[id] = { bioguideId: id, name: q.name, party: q.party, state: q.state, bio: '', comments: [] };
+  if (q.text && !reps[id].comments.some(c => c.text === q.text)) {
+    reps[id].comments.push({
+      billId: q.billId || null, billTitle: q.billTitle || null,
+      stance: q.stance || null, text: q.text,
+      date: (q.source || '').replace(/^(House|Senate) Floor,?\s*/i, '')
     });
   }
 });
 
+// Ensure seed reps exist even with no quotes
+SEED_BIOGUIDES.forEach(id => {
+  if (!reps[id]) reps[id] = { bioguideId: id, name: '', party: '', state: '', bio: '', comments: [] };
+});
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 async function fetchBio(rep) {
   if (!CONGRESS_API_KEY) {
-    rep.bio = `${rep.name} is a member of the United States Congress representing ${rep.state}.`;
-    rep.role = "Member of Congress";
+    if (!rep.bio) rep.bio = `${rep.name || 'This member'} is a member of the United States Congress.`;
+    rep.role = rep.role || 'Member of Congress';
     return;
   }
   try {
-    const url = `https://api.congress.gov/v3/member/${rep.bioguideId}?api_key=${CONGRESS_API_KEY}`;
-    const res = await fetch(url);
-    if (res.ok) {
-      const data = await res.json();
-      const member = data.member;
-      if (member) {
-         let type = "Representative";
-         let district = null;
-         if (member.terms && member.terms.length > 0) {
-           const latestTerm = member.terms[member.terms.length - 1];
-           type = latestTerm.memberType === 'Senator' ? 'Senator' : 'Representative';
-           if (latestTerm.district) district = latestTerm.district;
-         }
-         rep.role = type;
-         rep.district = district;
-         
-         const districtText = district ? ` for District ${district}` : '';
-         rep.bio = `${rep.name} is a ${type} representing ${rep.state}${districtText}.`;
-      }
-    } else {
-      rep.bio = `${rep.name} is a member of the United States Congress representing ${rep.state}.`;
-      rep.role = "Member of Congress";
-    }
+    await sleep(500);
+    const res = await fetch(`https://api.congress.gov/v3/member/${rep.bioguideId}?api_key=${CONGRESS_API_KEY}`);
+    if (!res.ok) throw new Error(res.status);
+    const d      = await res.json();
+    const member = d.member;
+    if (!member) throw new Error('no member');
+    const terms  = member.terms || [];
+    const latest = terms[terms.length - 1] || {};
+    const type   = latest.memberType === 'Senator' ? 'Senator' : 'Representative';
+    rep.role     = type;
+    rep.district = latest.district || null;
+    rep.name     = rep.name || member.directOrderName || member.invertedOrderName || rep.name;
+    rep.party    = rep.party || (member.partyHistory?.[0]?.partyAbbreviation) || rep.party;
+    rep.state    = rep.state || latest.stateCode || rep.state;
+    const districtText = rep.district ? ` for District ${rep.district}` : '';
+    rep.bio = `${rep.name} is a ${type} representing ${rep.state}${districtText}.`;
   } catch (e) {
-    rep.bio = `${rep.name} is a member of the United States Congress representing ${rep.state}.`;
-    rep.role = "Member of Congress";
+    rep.bio  = rep.bio  || `${rep.name || 'This member'} is a member of the United States Congress.`;
+    rep.role = rep.role || 'Member of Congress';
   }
 }
 
 async function run() {
-  const repValues = Object.values(reps);
-  if (repValues.length === 0) {
-    console.log("No featured quotes with bioguideIds found in cache.json.");
-    return;
-  }
-  
-  for (const rep of repValues) {
-    console.log(`Fetching info for ${rep.name} (${rep.bioguideId})...`);
+  const repList = Object.values(reps);
+  if (!repList.length) { console.log('No reps found.'); return; }
+  console.log(`Generating profiles for ${repList.length} rep(s)...`);
+  for (const rep of repList) {
+    console.log(`  ${rep.bioguideId} — ${rep.name || '(unknown name)'}`);
     await fetchBio(rep);
     fs.writeFileSync(path.join(repsDir, `${rep.bioguideId}.json`), JSON.stringify(rep, null, 2));
-    console.log(`Generated data/reps/${rep.bioguideId}.json`);
   }
-  console.log('Done generating reps!');
+  console.log(`Done. ${repList.length} rep files written to data/reps/`);
 }
 
 run();

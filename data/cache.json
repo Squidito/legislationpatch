@@ -1,6 +1,141 @@
 {
-  "generated": "2026-04-26T23:24:20.114Z",
+  "generated": "2026-04-27T02:57:28.690Z",
   "bills": [
+    {
+      "summary": "This bill provides appropriations to several federal departments and agencies for the remainder of FY2026, including a continuing resolution for DHS through February 13, 2026, and extends various expiring programs and authorities.",
+      "brief": "The bill provides appropriations to several federal departments and agencies for the remainder of FY2026 and continues DHS funding through February 13, 2026.",
+      "top_lines": [
+        {
+          "headline": "Provides $174,000 to Jill Marie LaMalfa as a payment to the widow of Douglas L. LaMalfa",
+          "subs": [
+            "Direct appropriation for a specific individual."
+          ]
+        },
+        {
+          "headline": "Allocates $3.0B for Army equipment and training devices until September 30, 2028",
+          "subs": [
+            "$4.6B for Army procurement of ammunition until September 30, 2028.",
+            "$9.4B for Other Procurement (Army) until September 30, 2028."
+          ]
+        },
+        {
+          "headline": "Provides $17.2B for Navy Aircraft Procurement until September 30, 2028",
+          "subs": [
+            "$27.2B for Shipbuilding and Conversion (Navy) until September 30, 2030.",
+            "$1.3B to the Defense Health Agency for congressionally directed medical research programs."
+          ]
+        }
+      ],
+      "likelihood": 85,
+      "likelihoodReason": "The bill has become Public Law No: 119-75, indicating it has passed both chambers and been signed into law. The sponsor is Rep. Cole [R-OK], a Republican from the majority party in the House of Representatives during the 119th Congress. With zero cosponsors, the likelihood score reflects the bill's status as enacted legislation rather than pending action.",
+      "sections": [
+        {
+          "label": "Title I — Payment to Widows and Heirs of Deceased Members of Congress",
+          "items": [
+            {
+              "main": "Provides $174,000 for payment to Jill Marie LaMalfa, widow of Douglas L. LaMalfa.",
+              "detail": "This is a direct appropriation for a specific individual with no modification to existing law or program.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Department of Defense Appropriations",
+          "items": [
+            {
+              "main": "Allocates $3.0B for Army equipment and training devices until September 30, 2028.",
+              "detail": "Includes $4.6B for procurement of ammunition and $9.4B for other procurement. Navy Aircraft Procurement receives $17.2B until September 30, 2028.",
+              "comments": []
+            },
+            {
+              "main": "Provides $1.3B to the Defense Health Agency for congressionally directed medical research programs.",
+              "detail": "Includes $15M for HIV prevention educational activities in African nations and $213M for chemical agents and munitions destruction.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — Department of Labor Appropriations",
+          "items": [
+            {
+              "main": "Authorizes Secretary of Labor to employ law enforcement officers or special agents for protection of the Secretary, Deputy Secretary, senior officers, and immediate family members at public events if a unique and articulable threat of physical harm exists.",
+              "detail": "Grants officers authority to carry firearms, make warrantless arrests for offenses against the U.S. committed in their presence, perform protective intelligence work, coordinate with local law enforcement, and initiate criminal investigations into threats to the Secretary's security.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section regarding Defense Innovation Acceleration (PE 0603838D8Z) or Rapid Prototyping Program (PE 0604331D8Z)",
+          "summary": "Restricts obligation of new start demonstration projects with a value of more than $5M to 15 days after a report is provided in writing to the congressional defense committees.",
+          "why_unreported": "Buried in technical language regarding specific program codes and waiver authority."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Silent on the specific allocation amounts for the Department of Homeland Security continuing resolution beyond the general statement that it funds most DHS programs and activities at the FY2025 levels.",
+        "Does not specify the exact dollar amount for the National Flood Insurance Program extension or the Forest Service's participation in the Agriculture Conservation Experienced Services Program.",
+        "Silent on the specific amounts allocated to the Transportation Security Administration’s Reimbursable Screening Services Program or the Motor Carrier Safety Advisory Committee.",
+        "Does not detail the specific authorities and programs related to cybersecurity that are extended.",
+        "Silent on the specific amount for the technology modernization fund and board extension.",
+        "Does not specify the exact funding level for the U.S. Parole Commission extension.",
+        "Silent on the specific amount for the special assessment on nonindigent persons or entities convicted of certain offenses involving sexual abuse or human trafficking.",
+        "Does not detail the specific immigration-related programs and authorities that are extended.",
+        "Silent on the specific authority for the U.S. Sentencing Commission to promulgate certain guidelines or amendments related to the use of unmanned aircraft.",
+        "Does not specify the exact amount for certain bankruptcy fees extension.",
+        "Silent on the specific trade preferences for Haiti and countries in sub-Saharan Africa that are extended.",
+        "Does not detail the specific health care authorities and programs that are extended."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Payment of $174,000 to Jill Marie LaMalfa",
+          "Authority for Secretary of Labor to employ law enforcement officers or special agents for protection at public events"
+        ],
+        "modified": [
+          "Restricts obligation of new start Defense Innovation Acceleration (PE 0603838D8Z) or Rapid Prototyping Program (PE 0604331D8Z) demonstration projects with a value of more than $5M to 15 days after a report is provided in writing to the congressional defense committees."
+        ],
+        "removed": []
+      },
+      "likelihoodLabel": "Likely",
+      "id": "119-HR-7148",
+      "title": "Consolidated Appropriations Act, 2026",
+      "official_title": "Consolidated Appropriations Act, 2026",
+      "code": "HR.7148",
+      "date": "Jan 19, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Cole, Tom [R-OK-4]",
+      "sponsor_bioguide": "C001053",
+      "sponsors": [
+        {
+          "bioguideId": "C001053",
+          "district": 4,
+          "firstName": "Tom",
+          "fullName": "Rep. Cole, Tom [R-OK-4]",
+          "isByRequest": "N",
+          "lastName": "Cole",
+          "party": "R",
+          "state": "OK",
+          "url": "https://api.congress.gov/v3/member/C001053?format=json"
+        }
+      ],
+      "cosponsors": 0,
+      "pages": 701,
+      "analyzed": true,
+      "live": false,
+      "demo": false
+    },
     {
       "summary": "This act reduces taxes, increases spending for various federal programs, and addresses agencies throughout the federal government as a reconciliation bill.",
       "brief": "The bill provides tax cuts, modifies federal spending on agriculture, energy, and conservation, and adjusts immigration fees.",
