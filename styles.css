@@ -1148,8 +1148,12 @@ a:hover { text-decoration: underline; }
   opacity: 0.9;
 }
 [data-theme="dark"] .featured-bolt {
-  color: #f59e0b;
+  color: #fbbf24;
   opacity: 1;
+}
+[data-theme="dark"] .shock-quote-card.is-featured {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 1px #fbbf2440;
 }
 .shock-quote-header {
   display: flex;
@@ -2034,7 +2038,7 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .controls-bar,
 [data-theme="dark"] .bill-card,
 [data-theme="dark"] .stats-hero,
-[data-theme="dark"] .shock-quote-card,
+[data-theme="dark"] .shock-quote-card:not(.is-featured),
 [data-theme="dark"] .quote-card,
 [data-theme="dark"] .rep-dropdown,
 [data-theme="dark"] .underreported-teaser,

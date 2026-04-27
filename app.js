@@ -951,8 +951,8 @@ function renderShockQuotesSection() {
       : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
 
     const boltIcon = isFeatured
-      ? `<svg class="featured-bolt" width="11" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M13 3L4 14h9l-1 7 9-11h-8z"/>
+      ? `<svg class="featured-bolt" width="10" height="15" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 0L0 9h4l-1 7 7-9H6z" fill="currentColor"/>
         </svg>`
       : '';
 
