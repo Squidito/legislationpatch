@@ -1139,16 +1139,19 @@ a:hover { text-decoration: underline; }
 }
 .shock-quote-card.is-featured {
   border-color: var(--amber);
+  position: relative;
 }
-.shock-quote-card.is-featured::before {
+.shock-quote-card.is-featured::after {
   content: '🔥';
-  display: block;
-  font-size: 0.85rem;
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.8rem;
   line-height: 1;
-  margin-bottom: 0.2rem;
   filter: drop-shadow(0 0 3px rgba(168, 125, 36, 0.5));
+  pointer-events: none;
 }
-[data-theme="dark"] .shock-quote-card.is-featured::before {
+[data-theme="dark"] .shock-quote-card.is-featured::after {
   filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
 }
 .shock-quote-header {
