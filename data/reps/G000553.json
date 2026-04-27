@@ -1,11 +1,11 @@
 {
   "bioguideId": "G000553",
-  "name": "Rep. Al Green",
+  "name": "Al Green",
   "party": "D",
   "state": "TX",
-  "role": "Member of Congress",
+  "role": "Representative",
   "portraitUrl": "https://bioguide.congress.gov/bioguide/photo/G/G000553.jpg",
-  "bio": "Rep. Al Green is a Democrat representing Texas's 9th congressional district. He serves on the House Financial Services Committee.",
+  "bio": "Al Green is a Representative representing TX for District 9.",
   "comments": [
     {
       "billId": "119-HR-8071",
@@ -14,5 +14,6 @@
       "text": "Ensuring the Defense Production Act Committee regularly tests its own readiness is basic accountability.",
       "date": "Mar 24, 2026"
     }
-  ]
+  ],
+  "district": 9
 }
