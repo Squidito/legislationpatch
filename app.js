@@ -897,8 +897,11 @@ function renderShockQuotesSection() {
   const pool = buildQuotePool();
   if (!pool.length) return '';
 
-  // Featured: top 2 by shock score
-  const featured = [...pool].sort((a, b) => b.shockScore - a.shockScore).slice(0, 2);
+  // Featured: top-scoring R + top-scoring D (one of each party)
+  const sorted = [...pool].sort((a, b) => b.shockScore - a.shockScore);
+  const featR = sorted.find(q => (q.party || '').toUpperCase().startsWith('R'));
+  const featD = sorted.find(q => (q.party || '').toUpperCase().startsWith('D'));
+  const featured = [featR, featD].filter(Boolean);
   const used = new Set(featured.map(quoteKey));
 
   // Selected: user-toggled reps in portrait strip

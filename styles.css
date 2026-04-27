@@ -1138,17 +1138,18 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 0 1px var(--blue);
 }
 .shock-quote-card.is-featured {
-  border-color: var(--purple);
+  border-color: var(--amber);
 }
 .shock-quote-card.is-featured::before {
-  content: 'TOP QUOTE';
+  content: '🔥';
   display: block;
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--purple);
-  font-family: var(--font-mono);
-  margin-bottom: 0.15rem;
+  font-size: 0.85rem;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+  filter: drop-shadow(0 0 3px rgba(168, 125, 36, 0.5));
+}
+[data-theme="dark"] .shock-quote-card.is-featured::before {
+  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
 }
 .shock-quote-header {
   display: flex;
