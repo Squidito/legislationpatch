@@ -950,7 +950,14 @@ function renderShockQuotesSection() {
         </a>`
       : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
 
+    const featuredBadge = isFeatured
+      ? `<svg class="featured-bolt" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5.5 0L0 7.5h3.5L2.5 14 9 6H5L5.5 0z" fill="currentColor"/>
+        </svg>`
+      : '';
+
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
+      ${featuredBadge}
       <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
     </div>`;

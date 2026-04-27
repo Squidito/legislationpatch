@@ -1141,18 +1141,18 @@ a:hover { text-decoration: underline; }
   border-color: var(--amber);
   position: relative;
 }
-.shock-quote-card.is-featured::after {
-  content: '🔥';
+.featured-bolt {
   position: absolute;
-  top: 6px;
+  top: 7px;
   right: 8px;
-  font-size: 0.8rem;
-  line-height: 1;
-  filter: drop-shadow(0 0 3px rgba(168, 125, 36, 0.5));
+  color: var(--amber);
+  opacity: 0.85;
   pointer-events: none;
+  flex-shrink: 0;
 }
-[data-theme="dark"] .shock-quote-card.is-featured::after {
-  filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.6));
+[data-theme="dark"] .featured-bolt {
+  color: #f59e0b;
+  opacity: 1;
 }
 .shock-quote-header {
   display: flex;
