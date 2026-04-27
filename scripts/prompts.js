@@ -86,9 +86,19 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
   "summary": "1-2 sentence plain-English summary of what the bill does. 5th-grade reading level. No political process language. Derived from bill text only.",
   "brief": "One sentence — the single most important thing this bill does. From bill text only.",
   "top_lines": [
-    "Key takeaway — include exact figure from bill text if one exists",
-    "Key takeaway — include exact figure from bill text if one exists",
-    "Key takeaway — include exact figure from bill text if one exists"
+    {
+      "headline": "One sentence describing a major theme or finding — include exact $ amount if one exists in the source",
+      "subs": [
+        "Specific provision supporting the headline — include exact figure if available",
+        "Another specific provision (omit if nothing meaningful to add)"
+      ]
+    },
+    {
+      "headline": "Second major theme — different subject area from the first",
+      "subs": [
+        "Supporting specific provision"
+      ]
+    }
   ],
   "likelihood": 15,
   "likelihoodReason": "2-3 sentences using bill metadata: chamber majority, sponsor party, cosponsor count, latest action, and which specific provisions will attract opposition or support. The number must reflect this reasoning — a bill with zero cosponsors in committee is 5-20, broad bipartisan support is 65-85. Never output 0.",
@@ -142,7 +152,8 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
   }
 }
 
-LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes, 3 top lines.
+LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes.
+top_lines: maximum 3 headline objects, maximum 3 subs per headline (9 sub-lines total across all headlines).
 If the source material does not support a full response in any zone, return fewer items — do not fill space with invented content.`;
 
 

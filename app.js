@@ -639,10 +639,18 @@ function setupCarousel() {
     el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
   });
 
-  const SPEED = 0.4;
+  const SPEED = 0.1; // px per frame target — accumulator fires each whole pixel
+  let scrollAccum = 0;
 
   function tick() {
-    if (!paused) el.scrollLeft += SPEED;
+    if (!paused) {
+      scrollAccum += SPEED;
+      if (scrollAccum >= 1) {
+        const px = Math.floor(scrollAccum);
+        el.scrollLeft += px;
+        scrollAccum -= px;
+      }
+    }
 
     // Bidirectional infinite wrap — snap within the middle third
     const third = el.scrollWidth / 3;
@@ -858,7 +866,7 @@ function renderShockQuotesSection() {
              style="border: 2px solid ${color}" />
         <div>
           <div class="shock-quote-name">${escHtml(q.name)}</div>
-          <div class="shock-quote-source">${escHtml(q.source)}</div>
+          <div class="shock-quote-source">${escHtml(compactSource(q.source))}</div>
         </div>
       </div>
       <div class="shock-quote-text">"${escHtml(q.text)}"</div>
@@ -937,12 +945,33 @@ function renderHeader(bill, state, num, watching) {
 }
 
 function renderTopLines(bill) {
-  if (!bill.top_lines?.length && !bill.brief) return '';
+  const items = bill.top_lines || [];
+  if (!items.length && !bill.brief) return '';
+
+  const renderLine = item => {
+    if (typeof item === 'string') {
+      // Legacy flat format
+      return `<div class="top-line-item">
+        <span class="top-line-bullet">—</span>
+        <div class="top-line-content"><div class="top-line-headline">${escHtml(item)}</div></div>
+      </div>`;
+    }
+    // New headline + subs format
+    const subs = (item.subs || []).slice(0, 3).map(s =>
+      `<div class="top-line-sub">${escHtml(s)}</div>`
+    ).join('');
+    return `<div class="top-line-item">
+      <span class="top-line-bullet">—</span>
+      <div class="top-line-content">
+        <div class="top-line-headline">${escHtml(item.headline || '')}</div>
+        ${subs}
+      </div>
+    </div>`;
+  };
+
   return `<div class="top-lines">
     ${bill.brief ? `<div class="top-lines-brief">${escHtml(bill.brief)}</div>` : ''}
-    ${(bill.top_lines || []).map(line =>
-      `<div class="top-line-item"><span class="top-line-bullet">—</span>${escHtml(line)}</div>`
-    ).join('')}
+    ${items.slice(0, 3).map(renderLine).join('')}
   </div>`;
 }
 
@@ -1200,6 +1229,13 @@ function labelFromPct(pct) {
   if (pct >= 50)  return 'Possible';
   if (pct >= 25)  return 'Unlikely';
   return 'Long shot';
+}
+
+function compactSource(source) {
+  const MON = { Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',
+                Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12' };
+  return source.replace(/([A-Z][a-z]{2})\s+(\d{1,2}),\s+(\d{4})/,
+    (_, m, d, y) => `${d.padStart(2,'0')}/${MON[m]}/${y.slice(2)}`);
 }
 
 function escHtml(str) {

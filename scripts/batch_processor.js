@@ -266,10 +266,13 @@ async function fetchRecentBills(limit = 10) {
             const title  = (b.title || '').toLowerCase();
             if (DOA_ACTIONS.some(p => action.includes(p))) return false;
             if (SKIP_TITLE_PATTERNS.some(p => title.includes(p))) return false;
+            // Strict floor-time rule: only bills that have been voted on the floor
+            const stage = detectStage(b.latestAction?.text || '');
+            if (stage.step < 2) return false;
             return true;
         });
         const skipped = (data.bills?.length || 0) - active.length;
-        console.log(`   - ${data.bills?.length || 0} fetched, ${skipped} skipped (DOA or excluded type), ${active.length} eligible.`);
+        console.log(`   - ${data.bills?.length || 0} fetched, ${skipped} skipped (DOA, excluded type, or no floor time), ${active.length} eligible.`);
         return active;
     } catch (e) {
         console.error('Failed to fetch bills:', e);
@@ -284,16 +287,68 @@ async function fetchBillText(bill) {
     try {
         const res  = await fetch(url);
         const data = await res.json();
-        if (!data.textVersions?.length) return '';
+        if (!data.textVersions?.length) return { text: '', isXML: false };
         const version = data.textVersions[data.textVersions.length - 1];
-        const format  = version.formats.find(f => f.type === 'Formatted Text' || f.type === 'Formatted XML');
-        if (!format) return '';
+        // Prefer Formatted XML for structural chunking; fall back to Formatted Text
+        const xmlFormat  = version.formats.find(f => f.type === 'Formatted XML');
+        const textFormat = version.formats.find(f => f.type === 'Formatted Text');
+        const format     = xmlFormat || textFormat;
+        if (!format) return { text: '', isXML: false };
         await sleep(1000);
-        return await (await fetch(format.url)).text();
+        const text = await (await fetch(format.url)).text();
+        return { text, isXML: !!xmlFormat };
     } catch (e) {
         console.error('Failed to fetch bill text:', e);
-        return '';
+        return { text: '', isXML: false };
     }
+}
+
+// --- STRUCTURAL XML CHUNKING ---
+// Chunks USLM Legislative XML by <section> boundaries instead of arbitrary word counts.
+// Semantically whole sections = better LLM extraction, no mid-provision cuts.
+function chunkXMLByStructure(xmlText, targetChars = 12000, maxChars = 22000) {
+    const sections = [];
+
+    // Split at every <section opening tag, keeping the tag with each part
+    const parts = xmlText.split(/(?=<section[\s>])/i);
+
+    for (const part of parts) {
+        if (!part.trim()) continue;
+        // Extract the first <enum> and <header> found (the section's own label)
+        const enumMatch   = part.match(/<enum[^>]*>([\s\S]*?)<\/enum>/i);
+        const headerMatch = part.match(/<header[^>]*>([\s\S]*?)<\/header>/i);
+        const enumText    = (enumMatch?.[1]   || '').replace(/<[^>]+>/g, '').trim();
+        const headerText  = (headerMatch?.[1] || '').replace(/<[^>]+>/g, '').trim();
+        const label       = [enumText, headerText].filter(Boolean).join(' — ');
+        // Strip all XML tags to plain text
+        const plain = part.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+        if (plain.length < 60) continue;
+        sections.push({ label: label || 'Section', text: plain });
+    }
+
+    if (!sections.length) return []; // signal: no structure found, caller should fall back
+
+    // Group small sections up to targetChars; word-split any section over maxChars
+    const chunks = [];
+    let buf = '', bufLabel = '';
+
+    const flush = () => { if (buf) { chunks.push({ label: bufLabel, text: buf }); buf = ''; bufLabel = ''; } };
+
+    for (const sec of sections) {
+        // Section too large on its own — split by words and flush separately
+        if (sec.text.length > maxChars) {
+            flush();
+            chunkText(sec.text).forEach((wc, i) =>
+                chunks.push({ label: `${sec.label} (part ${i + 1})`, text: wc })
+            );
+            continue;
+        }
+        if (buf && buf.length + sec.text.length > targetChars) flush();
+        buf      = buf ? buf + '\n\n--- ' + sec.label + ' ---\n' + sec.text : sec.text;
+        bufLabel = bufLabel || sec.label;
+    }
+    flush();
+    return chunks;
 }
 
 async function fetchBillMetadata(bill) {
@@ -468,6 +523,36 @@ async function callLocalLLM(systemPrompt, userMessage, prefill = '') {
     }
 }
 
+// --- NUMBER HUMANIZER ---
+// Runs AFTER the verification gate has passed — purely cosmetic reformatting.
+// $240,774,000 → $241M  |  $1,175,482,000 → $1.2B  |  $15,750 → unchanged (below 1M)
+
+function humanizeAmount(str) {
+    return String(str).replace(/\$[\d,]+(?:\.\d+)?/g, match => {
+        const num = parseFloat(match.replace(/[$,]/g, ''));
+        if (isNaN(num) || num < 1_000_000) return match;
+        if (num >= 1_000_000_000) {
+            const b = num / 1_000_000_000;
+            return '$' + (b % 1 === 0 ? b.toFixed(0) : b.toFixed(1)) + 'B';
+        }
+        return '$' + Math.round(num / 1_000_000) + 'M';
+    });
+}
+
+function humanizeAmountsDeep(obj) {
+    if (typeof obj === 'string') return humanizeAmount(obj);
+    if (Array.isArray(obj)) return obj.map(humanizeAmountsDeep);
+    if (obj !== null && typeof obj === 'object') {
+        const out = {};
+        for (const [k, v] of Object.entries(obj)) {
+            // Never reformat numeric fields (likelihood, currentStep, etc.)
+            out[k] = typeof v === 'number' ? v : humanizeAmountsDeep(v);
+        }
+        return out;
+    }
+    return obj;
+}
+
 // --- MAIN BILL PROCESSOR ---
 
 async function processBill(bill) {
@@ -476,8 +561,8 @@ async function processBill(bill) {
     console.log(`\n[2] Processing: ${billId} — ${bill.title}`);
 
     // Step 1 — Fetch bill text (required; skip if unavailable)
-    let rawText = await fetchBillText(bill);
-    if (!rawText) { console.log('   - No bill text available. Skipping.'); return null; }
+    const { text: rawTextRaw, isXML } = await fetchBillText(bill);
+    if (!rawTextRaw) { console.log('   - No bill text available. Skipping.'); return null; }
 
     // Step 2 — Fetch metadata, CRS summary, and Congressional Record in parallel
     const [meta, crsText] = await Promise.all([
@@ -493,29 +578,40 @@ async function processBill(bill) {
         ? 'found — quotes/criticisms will be sourced from it'
         : 'not found — quotes/criticisms/comments will be empty'}`);
 
-    // Step 3 — Choose text source + chunk
-    // Mega-bill strategy: if raw bill text > 100K chars AND a substantial CRS summary
-    // is available, use the CRS as Zone 1 source. The CRS is professionally distilled,
-    // already section-structured, and ~5× shorter — dramatically fewer chunks.
-    // Verification still works because facts from CRS are checked against (billText + CRS).
-    const MEGA_BILL_THRESHOLD = 100000; // chars
-    rawText = cleanHTML(rawText);
-    const cleanedBillText = rawText;
+    // Step 3 — Choose chunking strategy (priority order):
+    //   1. XML structural: split at legal <section> boundaries — best quality
+    //   2. CRS-primary: use the CRS summary as source when bill is huge and CRS is rich
+    //   3. Word-count: fallback for any remaining case
+    const cleanedBillText = cleanHTML(rawTextRaw); // strip XML/HTML for verification
     const cleanedCRS      = crsText ? crsText.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() : '';
+    const estimatedPages  = Math.max(1, Math.round(cleanedBillText.length / 2500));
+    const MEGA_BILL_THRESHOLD = 100000;
 
-    let textToChunk, sourceLabel;
-    if (rawText.length > MEGA_BILL_THRESHOLD && cleanedCRS.length > 10000) {
-        textToChunk = cleanedCRS;
-        sourceLabel = 'CRS summary';
-        console.log(`   - Mega-bill (${rawText.length} chars). Using CRS (${cleanedCRS.length} chars) as Zone 1 source.`);
-    } else {
-        textToChunk = rawText;
-        sourceLabel = 'bill text';
+    let chunks, sourceLabel;
+
+    if (isXML) {
+        const xmlChunks = chunkXMLByStructure(rawTextRaw);
+        if (xmlChunks.length > 0) {
+            chunks      = xmlChunks.map(c => c.label ? `[${c.label}]\n${c.text}` : c.text);
+            sourceLabel = 'bill XML (section-structured)';
+            console.log(`   - Raw bill: ${cleanedBillText.length} chars (~${estimatedPages} pages). XML structural chunking: ${xmlChunks.length} section-chunk(s).`);
+        } else {
+            // XML present but no <section> tags found — fall through to word-count
+            console.log('   - XML available but no <section> structure found. Falling back to word-count.');
+        }
     }
 
-    const estimatedPages = Math.max(1, Math.round(rawText.length / 2500));
-    const chunks = chunkText(textToChunk);
-    console.log(`   - Raw bill: ${rawText.length} chars (~${estimatedPages} pages). Chunking ${sourceLabel}: ${chunks.length} chunk(s).`);
+    if (!chunks && cleanedBillText.length > MEGA_BILL_THRESHOLD && cleanedCRS.length > 10000) {
+        chunks      = chunkText(cleanedCRS);
+        sourceLabel = 'CRS summary';
+        console.log(`   - Raw bill: ${cleanedBillText.length} chars (~${estimatedPages} pages). Mega-bill — using CRS (${cleanedCRS.length} chars): ${chunks.length} chunk(s).`);
+    }
+
+    if (!chunks) {
+        chunks      = chunkText(cleanedBillText);
+        sourceLabel = 'bill text';
+        console.log(`   - Raw bill: ${cleanedBillText.length} chars (~${estimatedPages} pages). Word-count chunking: ${chunks.length} chunk(s).`);
+    }
 
     // Step 4 — Map phase: extract facts from each chunk
     const chunkSummaries = [];
@@ -667,6 +763,10 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
 
     console.log('   - Verification passed: all claims confirmed in source text.');
 
+    // Step 9.5 — Humanize dollar amounts (post-verification, cosmetic only)
+    // Verification confirmed all numbers are real; now reformat for display.
+    parsed = humanizeAmountsDeep(parsed);
+
     // Step 10 — Stamp all required UI fields
     const stage = detectStage(meta?.latestAction?.text || '');
 
@@ -741,6 +841,18 @@ async function runSingleBill(targetId) {
     if (!meta) {
         console.error('Could not fetch metadata for this bill. Check the ID and API key.');
         return;
+    }
+
+    // Floor-time check — skip committee/introduced bills unless --force is passed
+    const floorStage = detectStage(meta.latestAction?.text || '');
+    if (floorStage.step < 2) {
+        if (process.argv.includes('--force')) {
+            console.log(`   ⚠ Floor-time override (--force): stage is '${floorStage.key}' — proceeding anyway.`);
+        } else {
+            console.log(`\n✕ Skipped: ${targetId} has not seen floor time (stage: ${floorStage.key}).`);
+            console.log('  Bills must have passed the House or Senate. Use --force to override.');
+            return;
+        }
     }
 
     const bill = {

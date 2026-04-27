@@ -6,15 +6,16 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 LegislationPatch is a static single-page web app that explains U.S. federal bills in plain English, styled like video game patch notes. Bills are analyzed offline via a local batch processor and pushed to the site as static JSON. The site reads only from `data/cache.json` — no live API calls happen in the browser.
 
-**Bill filtering rule:** Only bills with real legislative progress are shown. Bills that are introduced and immediately dead, technical corrections, post office naming bills, sense-of-Congress resolutions, and commemorative recognitions are filtered at fetch time in the batch processor.
+**Floor-time rule (strict):** Only bills that have been voted on the House or Senate floor (passed House, passed Senate, or signed into law) are eligible. Committee-stage and introduced bills are excluded. Use `--force` to override in single-bill mode.
 
 ## Architecture: Batch-First, Static Site
 
 ```
-Local machine (overnight batch run):
+Local machine (batch run):
   scripts/batch_processor.js
-    → Congress.gov API  (bill text, metadata, CRS summary, Congressional Record)
-    → LM Studio / Qwen3 (local LLM — map phase per chunk, reduce phase for JSON)
+    → Congress.gov API  (bill XML/text, metadata, CRS summary, Congressional Record)
+    → LM Studio / Qwen3.5 9B on port 1235 (map phase per chunk, reduce phase for JSON)
+    → Post-verification number humanizer ($240,774,000 → $241M)
     → Verification gate (hard-rejects any unverified factual claim)
     → data/cache.json   ← written here, then git pushed to deploy
 
@@ -30,7 +31,8 @@ Vanilla JS / HTML / CSS. No framework, no build tools, no backend.
 - **Deployed:** GitHub → auto-deploy via `.github/workflows/deploy.yml` → Netlify
 - **Local dev:** `npx serve . --listen 3131` then open `http://localhost:3131`
 - **Batch run:** `node scripts/batch_processor.js` (LM Studio must be on port 1235)
-- **Targeted test:** `node scripts/batch_processor.js --bill 119-HR-8071`
+- **Targeted run:** `node scripts/batch_processor.js --bill 119-HR-5587`
+- **Force non-floor bill:** `node scripts/batch_processor.js --bill 119-HR-XXXX --force`
 
 ## File Responsibilities
 
@@ -48,7 +50,7 @@ Vanilla JS / HTML / CSS. No framework, no build tools, no backend.
 | `data/cache.json` | All bill data — written by batch processor, read by site |
 | `data/reps/*.json` | Individual rep profile JSON files |
 | `.env` | `CONGRESS_API_KEY` + `CONGRESS_SESSION=119` — gitignored |
-| `scripts/batch_processor.js` | Full overnight batch pipeline |
+| `scripts/batch_processor.js` | Full batch pipeline — see pipeline section below |
 | `scripts/prompts.js` | LLM prompts: SYSTEM_PROMPT + CHUNK_MAP_PROMPT |
 | `scripts/generate_reps.js` | Generates/updates `data/reps/` static files |
 | `.github/workflows/deploy.yml` | Auto-deploys to Netlify on push to main |
@@ -60,26 +62,31 @@ node scripts/batch_processor.js
 ```
 
 1. Fetch 10 recent bills from Congress.gov (`/v3/bill/119?sort=updateDate+desc`)
-2. Filter out: DOA actions, technical corrections, naming bills, sense resolutions, commemoratives
+2. Filter out: DOA actions, technical corrections, naming bills, sense resolutions, commemoratives, **and any bill that hasn't passed the House or Senate floor**
 3. For each eligible bill (up to 2 per run):
-   - Fetch full bill text, metadata (sponsors/latestAction/cosponsors), CRS summary
-   - Fetch Congressional Record for the action date (source for quotes/criticisms)
-   - **Map phase:** chunk bill text → LLM extracts facts per chunk (bullet points only, no inference)
-   - **Reduce phase:** LLM synthesizes final JSON from notes + CRS + Record context
-   - **Verification gate:** hard-rejects bill if any claim is unverified (see below)
+   - Fetch bill text (XML preferred, HTML fallback), metadata, CRS summary
+   - Fetch Congressional Record for the action date
+   - **Chunking strategy (priority order):**
+     1. XML structural: split at legal `<section>` boundaries — semantically whole provisions, labeled by title/header
+     2. CRS-primary: use CRS summary as source when bill > 100K chars and CRS > 10K chars
+     3. Word-count: 3000-word chunks with 500-word overlap (fallback)
+   - **Map phase:** each chunk → LLM extracts facts (bullet points only, no inference)
+   - **Reduce phase:** direct truncation for ≤14 chunks; hierarchical two-pass reduce for 15+ chunks (groups of 15 → mid-reduce → final synthesis)
+   - **Verification gate:** hard-rejects bill if any claim is unverified
+   - **Number humanizer:** post-verification pass converts $240,774,000 → $241M, $1.175B etc.
 4. Saves to `data/cache.json` — commit and push to deploy
 
-**LM Studio settings that matter:** port 1235, context 12288, GPU offload 32, CPU threads 6, Flash Attention ON, thinking mode OFF.
+**LM Studio settings that matter:** port 1235, Qwen3.5 9B, context 12288, GPU offload 32, CPU threads 6, Flash Attention ON, `enable_thinking: false`.
 
 **Three-zone source discipline:**
-- Zone 1 (bill text + CRS only): summary, sections, top_lines, underreported, gaps, changes
+- Zone 1 (bill text/XML + CRS only): summary, sections, top_lines, underreported, gaps, changes
 - Zone 2 (Congressional Record only): featured_quotes, criticisms, section comments
 - Zone 3 (reasoning allowed): likelihood, likelihoodLabel, likelihoodReason
 
 **Verification gate — every failure hard-rejects the bill:**
 - Zone 2 with no Congressional Record → rejected
 - Speaker name not found in Record excerpts → rejected
-- Dollar amount not in bill text or CRS → rejected
+- Dollar amount not in bill text or CRS (checked with and without commas) → rejected
 - Percentage not in source → rejected
 - Section number reference not in source → rejected
 - Named program/agency not in source → rejected
@@ -88,43 +95,50 @@ node scripts/batch_processor.js
 ## Bill Card Architecture
 
 Cards use a **4-column CSS grid**: `48px 48px 1fr 40px` (mobile: `36px 40px 1fr 34px`)
-- Col 1: rank badge + LIVE/DEMO pill
+- Col 1: rank badge + LIVE/DEMO/JUST PASSED pill
 - Col 2: sponsor portrait (42px circle)
 - Col 3: title block (meta + title + summary + sponsor meta)
-- Col 4: star button (SVG star polygon — fills amber when watched)
+- Col 4: star button (SVG star polygon — fills amber when tracked)
 
 **Likelihood footer** uses the same grid:
-- Cols 1-2 spanned: mini stage pipeline dots
-- Col 3: passage likelihood bar + value (label derived from number in processor, not model)
-- Col 4: CSS chevron (outline in dark mode uses var(--text))
+- Cols 1-2 spanned: mini stage pipeline dots (CSS-class driven: `fp-dot-done/active/pending` — dark mode safe)
+- Col 3: passage likelihood bar + value
+- Col 4: CSS chevron
 
 **Two-level card expansion** (managed via `openCards` Map):
 - `undefined` → collapsed
-- `'minor'` → likelihood detail + top-lines + underreported teaser + quote carousel + "Full analysis" button
+- `'minor'` → likelihood detail + top-lines (headline+subs format) + underreported teaser + quote cards + "Full analysis" button
 - `'full'` → full patch notes, what-changed, criticisms, gaps
 
 ## Key UI Features
 
-**Favorites view** — star icon in header:
-- Tracked reps: portrait, name, bill activity, featured quote
-- Starred bills: full interactive cards
-- All localStorage, no account: `lpTrackedReps`, `lpWatchedBills`, `lpTheme`, `lpTrackedState`
-- Untracking a rep from favorites view works via × button
+**Filter system:**
+- Primary row: **In Progress** | **Passed**
+- Sub-filter row (rendered dynamically by `renderSubFilters()`):
+  - In Progress: All | Introduced | Committee | House | Senate | Just Passed
+  - Passed: All Passed | Just Passed
+- "Just Passed" = stage `signed` within 30 days of today — appears in BOTH primary tabs
 
-**Rep pages** (`rep.html?id={bioguideId}`):
-- Star button inline with rep name → writes to `lpTrackedReps` (same key as main site)
-- Comments: their quotes from bills, sorted newest first, with SUPPORT/OPPOSE badges
-- Theme reads `lpTheme` key (same as main site — dark mode persists across pages)
-- Missing profile → graceful "not yet available" message, not a hard error
+**Favorites view** — star icon in header (renamed from "Starred" to "Tracked"):
+- Tracked reps: portrait, name, bill activity, featured quote
+- Tracked bills: full interactive cards, star icon in empty state
+- All localStorage, no account: `lpTrackedReps`, `lpWatchedBills`, `lpTheme`, `lpTrackedState`, `lpTrackedZip`
+
+**ZIP auto-detect:**
+- `autoDetectState()` hits `ipapi.co/json/` on first visit, sets both state and ZIP
+- ZIP populates the header input; clicking the input selects all for easy replacement
 
 **Shock quotes carousel** ("From the Floor This Week"):
-- Auto-scrolls at 0.4px/frame, wraps infinitely via card cloning
-- Pauses on hover; grab-to-drag while hovered
-- Dual gradient fade left+right via mask-image
+- Cards: `width: 165px` (2 visible side-by-side on mobile), height grows with quote text
+- Auto-scrolls at 0.1px/frame via accumulator (fires 1px every 10 frames ≈ 6px/sec)
+- Bidirectional infinite wrap: `[clones][originals][clones]`, starts at middle third
+- Pauses on hover; grab-to-drag while hovered; drag adjusts startScroll on wrap snap
+- Source dates formatted as dd/mm/yy via `compactSource()`
+- Names wrap within the fixed card width
 
-**Logo:** Clicking the logo block always returns to home on all pages.
-- `index.html`: calls `goHome()` — closes favorites view or scrolls to top
-- All other pages: `<a href="index.html">`
+**Stage dots (dark mode safe):**
+- Footer pipeline dots: `.fp-dot-done`, `.fp-dot-active`, `.fp-dot-pending` CSS classes using `var(--text)` / `var(--border)`
+- Stage strip labels: `.stage-strip-label-on` for active/done steps
 
 ## Color System
 
@@ -135,12 +149,11 @@ Cards use a **4-column CSS grid**: `48px 48px 1fr 40px` (mobile: `36px 40px 1fr 
 | Likelihood Possible (≥45%) | `--purple` / `--purple-text` |
 | Likelihood Unlikely (<45%) | `--text-3` / `--text-2` (adapts dark mode) |
 | Underreported / warning | `--amber: #a87d24` |
-| Footer "only" emphasis | `#E8855A` (warm orange, slightly brighter than Claude's brand) |
+| Footer "only" emphasis | `#E8855A` (warm orange) |
 
 ## Dark Mode
 
 Toggle via `[data-theme="dark"]` on `<html>`. Key: `lpTheme`.
-Crescent moon SVG left of toggle track — `--text-3` at rest, `--purple` when active.
 
 ## Cache Schema (per bill)
 
@@ -168,7 +181,9 @@ Crescent moon SVG left of toggle track — `--text-3` at rest, `--purple` when a
   "demo": false,
   "summary": "...",
   "brief": "...",
-  "top_lines": ["..."],
+  "top_lines": [
+    { "headline": "Major theme with exact figure", "subs": ["Supporting detail", "Another detail"] }
+  ],
   "sections": [{"label":"...","items":[{"main":"...","detail":"...","comments":[]}]}],
   "underreported": [{"section":"...","summary":"...","why_unreported":"..."}],
   "criticisms": [{"who":"...","why":"..."}],
@@ -178,26 +193,21 @@ Crescent moon SVG left of toggle track — `--text-3` at rest, `--purple` when a
 }
 ```
 
-## Rep Profile Schema (`data/reps/{bioguideId}.json`)
+**top_lines backward compatibility:** the renderer (`renderTopLines`) handles both the new object format `{headline, subs[]}` and the legacy flat string format. Old bills with string arrays continue to render correctly.
 
-```json
-{
-  "bioguideId": "H001072",
-  "name": "Rep. J. French Hill",
-  "party": "R",
-  "state": "AR",
-  "role": "Member of Congress",
-  "portraitUrl": "https://www.congress.gov/img/member/h001072_200.jpg",
-  "bio": "...",
-  "comments": [
-    {"billId":"119-HR-6955","billTitle":"...","stance":"support","text":"...","date":"Apr 20, 2026"}
-  ]
-}
-```
+## Bills Currently in cache.json
+
+| ID | Title | Stage | Badge |
+|---|---|---|---|
+| 119-HR-1 | Reconciliation Act (Public Law 119-21) | Signed | BATCH |
+| 119-HR-5587 | HEATS Act (geothermal permits) | Passed House | BATCH |
+| 119-HR-6955 | Main Street Capital Access Act | House Calendar | LIVE |
+| 119-HR-8469 | Military Construction FY2027 | House Calendar | DEMO |
+| 119-HR-7567 | Farm, Food, and National Security Act | House Calendar | DEMO |
 
 ## Next Session Focus
 
-- Run the batch processor for more real bills (use `--bill` flag to test specific ones)
-- Second-pass LLM verification for underreported sections (deferred — revisit after quality assessment)
+- Process more floor-time bills: HR-7148 (Consolidated Appropriations 2026), HR-8322 (FISA extension), HCONRES-40 (War Powers — passed House), HR-6387 (FIRE Act)
+- Implement XML structural chunking improvement (planned, partially built in batch_processor.js — `chunkXMLByStructure` and updated `fetchBillText` returning `{text, isXML}`)
 - Rep profile generation via `scripts/generate_reps.js` needs testing
-- Favorites view: consider adding a "last seen" or activity indicator on tracked rep cards
+- Congressional Record date lookup improvement (currently uses latestAction date, which misses actual debate dates)
