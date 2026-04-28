@@ -2187,8 +2187,10 @@ body {
 
 .rep-hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  text-align: center;
+  gap: 1rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -2214,6 +2216,7 @@ body {
 .rep-hero-meta {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   margin-bottom: 6px;
 }
@@ -2244,14 +2247,20 @@ body {
   background: var(--surface);
 }
 
+.rep-comment-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 .rep-bill-link {
   color: var(--text);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   flex: 1;
-  margin-right: 12px;
 }
-
 .rep-bill-link:hover {
   text-decoration: underline;
   color: var(--purple);
@@ -2259,11 +2268,6 @@ body {
 
 @media (max-width: 640px) {
   .rep-hero {
-    flex-direction: column;
-    text-align: center;
     padding: 1.25rem;
-  }
-  .rep-hero-meta {
-    justify-content: center;
   }
 }

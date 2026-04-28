@@ -117,12 +117,14 @@ function renderProfile(rep) {
   commentsContainer.innerHTML = rep.comments.map(c => {
     const stanceCls   = c.stance === 'support' ? 'stance-support' : 'stance-oppose';
     const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
+    const billLabel   = c.billTitle || formatBillId(c.billId) || 'Floor Statement';
+    const titleEl     = c.billId
+      ? `<a href="index.html#${c.billId}" class="rep-bill-link">${escHtml(billLabel)}</a>`
+      : `<span class="rep-bill-link" style="cursor:default">${escHtml(billLabel)}</span>`;
     return `
       <div class="quote-card rep-comment-card">
-        <div class="quote-card-meta" style="margin-bottom:8px">
-          <a href="index.html#${c.billId}" class="rep-bill-link" title="View bill details">
-            <strong>${escHtml(c.billTitle)}</strong>
-          </a>
+        <div class="rep-comment-title">
+          ${titleEl}
           <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
         </div>
         <div class="quote-text">"${escHtml(c.text)}"</div>
@@ -133,6 +135,19 @@ function renderProfile(rep) {
 }
 
 // ---- Utilities ----
+
+function formatBillId(billId) {
+  if (!billId) return null;
+  return billId.replace(/^\d+-/, '')
+    .replace(/^HR-/, 'H.R. ')
+    .replace(/^S-/, 'S. ')
+    .replace(/^HCONRES-/, 'H.Con.Res. ')
+    .replace(/^SCONRES-/, 'S.Con.Res. ')
+    .replace(/^HJRES-/, 'H.J.Res. ')
+    .replace(/^SJRES-/, 'S.J.Res. ')
+    .replace(/^HRES-/, 'H.Res. ')
+    .replace(/^SRES-/, 'S.Res. ');
+}
 
 function escHtml(str) {
   if (!str) return '';
