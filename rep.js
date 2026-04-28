@@ -89,7 +89,9 @@ function renderProfile(rep) {
   document.title = `${rep.name} — LegislationPatch`;
 
   const portrait = document.getElementById('repPortrait');
-  portrait.src = rep.portraitUrl || FALLBACK_PORTRAIT;
+  portrait.src = rep.bioguideId
+    ? `https://bioguide.congress.gov/bioguide/photo/${rep.bioguideId[0].toUpperCase()}/${rep.bioguideId}.jpg`
+    : FALLBACK_PORTRAIT;
   portrait.onerror = () => { portrait.src = FALLBACK_PORTRAIT; };
 
   document.getElementById('repName').textContent = rep.name;

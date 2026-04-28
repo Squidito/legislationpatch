@@ -1129,10 +1129,11 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  cursor: default;
+  cursor: grab;
   width: 165px;
   flex-shrink: 0;
 }
+.shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
   border-color: var(--blue);
   box-shadow: 0 0 0 1px var(--blue);
@@ -1172,9 +1173,19 @@ a:hover { text-decoration: underline; }
 .shock-quote-rep-link:hover .shock-quote-name { text-decoration: underline; }
 .shock-quote-rep-text { min-width: 0; }
 .shock-quote-text-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-height: 5.5rem;
   text-decoration: none;
   color: inherit;
+}
+.shock-quote-card > .shock-quote-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 5.5rem;
 }
 .shock-quote-text-link:hover .shock-quote-text { color: var(--text); }
 .shock-quote-bill {
@@ -1216,6 +1227,15 @@ a:hover { text-decoration: underline; }
   font-style: italic;
   overflow-wrap: break-word;
   word-break: break-word;
+  max-height: 5.5rem; /* ~5 lines */
+  overflow: hidden;
+  transition: max-height 0.28s ease;
+}
+.shock-quote-card:hover .shock-quote-text {
+  max-height: 20rem;
+}
+.shock-quote-card:hover .shock-quote-text-link {
+  justify-content: flex-start;
 }
 
 /* ---- WHAT CHANGED (Variation G patch blocks) ---- */
@@ -1438,6 +1458,7 @@ a:hover { text-decoration: underline; }
 }
 .chip-d { background: var(--blue-bg); color: var(--blue-text); border-color: rgba(26,86,160,0.2); }
 .chip-r { background: var(--red-bg);  color: var(--red-text);  border-color: rgba(192,57,43,0.2); }
+.chip-i { background: var(--green-bg); color: var(--green-text); border-color: rgba(58,122,79,0.2); }
 .chip-n { background: var(--surface-2); color: var(--text-2); }
 
 .more-btn {
@@ -2032,6 +2053,9 @@ a:hover { text-decoration: underline; }
   --red:          #f87171;
   --red-bg:       #2d0a0a;
   --red-text:     #fca5a5;
+
+  --blue-bg:      #0a1a2e;
+  --blue-text:    #93c5fd;
 }
 
 [data-theme="dark"] .site-header,

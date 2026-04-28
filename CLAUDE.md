@@ -53,6 +53,7 @@ Vanilla JS / HTML / CSS. No framework, no build tools, no backend.
 | `scripts/batch_processor.js` | Full batch pipeline — see pipeline section below |
 | `scripts/prompts.js` | LLM prompts: SYSTEM_PROMPT + CHUNK_MAP_PROMPT |
 | `scripts/generate_reps.js` | Generates/updates `data/reps/` static files |
+| `scripts/scan_record.js` | Scans Congressional Record for floor quotes via GovInfo API |
 | `.github/workflows/deploy.yml` | Auto-deploys to Netlify on push to main |
 
 ## Batch Processor Pipeline
@@ -129,12 +130,14 @@ Cards use a **4-column CSS grid**: `48px 48px 1fr 40px` (mobile: `36px 40px 1fr 
 - ZIP populates the header input; clicking the input selects all for easy replacement
 
 **Shock quotes carousel** ("From the Floor This Week"):
-- Cards: `width: 165px` (2 visible side-by-side on mobile), height grows with quote text
-- Auto-scrolls at 0.1px/frame via accumulator (fires 1px every 10 frames ≈ 6px/sec)
-- Bidirectional infinite wrap: `[clones][originals][clones]`, starts at middle third
-- Pauses on hover; grab-to-drag while hovered; drag adjusts startScroll on wrap snap
-- Source dates formatted as dd/mm/yy via `compactSource()`
-- Names wrap within the fixed card width
+- Cards: `width: 165px`, uniform height via `align-items: stretch` + `min-height: 5.5rem` on text area
+- Quote text clamped to 5 lines by default (`max-height: 5.5rem`); hover expands smoothly (0.28s ease, up to 20rem); expanded card grows independently
+- Auto-scrolls at 0.1px/frame; bidirectional infinite wrap `[clones][originals][clones]`, starts at middle third
+- Clones marked with `data-clone="true"` (NOT `aria-hidden` — that would accidentally remove the ⚡ bolt SVG which also uses `aria-hidden="true"`)
+- Featured cards (top R + top D by shock score): amber border + ⚡ bolt icon; bolt is in the header after the rep-link
+- Quote text links to bill card if billId present, otherwise falls back to rep page
+- Grab cursor on card empty space; grabbing during drag
+- Pauses on hover; grab-to-drag; drag adjusts startScroll on wrap snap
 
 **Stage dots (dark mode safe):**
 - Footer pipeline dots: `.fp-dot-done`, `.fp-dot-active`, `.fp-dot-pending` CSS classes using `var(--text)` / `var(--border)`
@@ -205,9 +208,37 @@ Toggle via `[data-theme="dark"]` on `<html>`. Key: `lpTheme`.
 | 119-HR-8469 | Military Construction FY2027 | House Calendar | DEMO |
 | 119-HR-7567 | Farm, Food, and National Security Act | House Calendar | DEMO |
 
+## scan_record.js — CR Quote Pipeline
+
+Scans GovInfo Congressional Record packages for floor quotes, runs them through Qwen3.5 9B, saves to `data/quotes.json`.
+
+```
+node scripts/scan_record.js --days=30
+node scripts/scan_record.js --reset   # clears processedDates AND quotes — use carefully
+```
+
+**How it works:**
+1. For each date: checks Congress.gov for CR package ID, then GovInfo for granules
+2. Filters granules by `granuleClass` (`HOUSE` or `SENATE`) — field is `g.granuleClass` not `g.class`
+3. Skips procedural titles (PRAYER, PLEDGE, QUORUM, HONORING, etc.)
+4. Fetches HTML text of first 8 granules per chamber, strips tags, sends to Qwen
+5. Qwen extracts verbatim quotes as JSON; resolved against local reps-index for bioguideId + party
+6. Saves to `data/quotes.json` with `processedDates` tracking
+
+**Qwen settings that matter:** `max_tokens: 10000`, no `enable_thinking` flag (removed — caused empty responses). Qwen uses `reasoning_content` for thinking; actual answer goes in `content`.
+
+**Known limit:** Very large sessions (50k+ words) may return 0 quotes — Qwen's thinking exhausts the token budget before outputting JSON.
+
+**Quality check approach:** Re-fetch the same granules and do a string-contains check against extracted quotes to verify verbatim accuracy.
+
+## Rep Page Notes
+
+- Portrait URL constructed in `rep.js` from `bioguideId` — `portraitUrl` field is NOT present in rep JSON files
+- Party chip classes: `chip-d` (blue), `chip-r` (red), `chip-i` (green), `chip-n` (neutral)
+- Dark mode overrides exist for `--blue-bg`/`--blue-text` and `--red-bg`/`--red-text`
+
 ## Next Session Focus
 
 - Process more floor-time bills: HR-7148 (Consolidated Appropriations 2026), HR-8322 (FISA extension), HCONRES-40 (War Powers — passed House), HR-6387 (FIRE Act)
 - Implement XML structural chunking improvement (planned, partially built in batch_processor.js — `chunkXMLByStructure` and updated `fetchBillText` returning `{text, isXML}`)
-- Rep profile generation via `scripts/generate_reps.js` needs testing
 - Congressional Record date lookup improvement (currently uses latestAction date, which misses actual debate dates)

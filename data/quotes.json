@@ -1,160 +1,510 @@
 {
-  "generated": "2026-04-27T07:00:00.000Z",
-  "processedDates": ["2026-04-15", "2026-04-16"],
+  "generated": "2026-04-27T23:33:59.074Z",
+  "processedDates": [
+    "2026-03-28",
+    "2026-03-29",
+    "2026-03-30",
+    "2026-03-31",
+    "2026-04-01",
+    "2026-04-02",
+    "2026-04-03",
+    "2026-04-04",
+    "2026-04-05",
+    "2026-04-06",
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10",
+    "2026-04-11",
+    "2026-04-12",
+    "2026-04-13",
+    "2026-04-14",
+    "2026-04-15",
+    "2026-04-16",
+    "2026-04-17",
+    "2026-04-18",
+    "2026-04-19",
+    "2026-04-20",
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-24",
+    "2026-04-25",
+    "2026-04-26"
+  ],
   "quotes": [
     {
       "name": "Sen. Chuck Schumer",
-      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
       "text": "Every metric indicates that Donald Trump's handling of Operation Epic Fury has been an epic failure.",
-      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "Senate Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
     },
     {
       "name": "Sen. Chuck Schumer",
-      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
       "text": "Trump's One Big Beautiful Bill has been a dud for working families, but millionaires got a $300,000 tax cut.",
-      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": "119-HR-1", "billTitle": null
+      "source": "Senate Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-1",
+      "billTitle": null
     },
     {
       "name": "Sen. Chuck Schumer",
-      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
       "text": "Donald Trump's war in Iran alone has wiped out any tax refund Americans will see this year.",
-      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "Senate Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Sen. Chuck Schumer",
-      "party": "D", "state": "NY", "bioguideId": "S000148",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
       "text": "The more you screw around with the Fed, the higher rates will be, and you want lower rates.",
-      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "Senate Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Pramila Jayapal",
-      "party": "D", "state": "WA", "bioguideId": "J001196",
+      "party": "D",
+      "state": "WA",
+      "bioguideId": "J000298",
       "text": "The war has cost taxpayers $50 billion already, and the Pentagon will request $200 billion more.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
     },
     {
       "name": "Rep. Melanie Stansbury",
-      "party": "D", "state": "NM", "bioguideId": "S001218",
+      "party": "D",
+      "state": "NM",
+      "bioguideId": "S001218",
       "text": "This is not permitting reform. This is gutting our right to breathe clean air.",
-      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": "119-HR-6387", "billTitle": null
+      "source": "House Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-6387",
+      "billTitle": null
     },
     {
       "name": "Rep. Melanie Stansbury",
-      "party": "D", "state": "NM", "bioguideId": "S001218",
+      "party": "D",
+      "state": "NM",
+      "bioguideId": "S001218",
       "text": "This administration is testing us. They are testing the truth, testing the law, but most importantly, they are testing our resolve in the Epstein case. You are breaking the law, and I hope you are getting ready to face contempt.",
-      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "House Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Tim Kennedy",
-      "party": "D", "state": "NY", "bioguideId": null,
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "K000402",
       "text": "It is blasphemous, deranged, and a total desecration of Christ's message.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Tim Kennedy",
-      "party": "D", "state": "NY", "bioguideId": null,
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "K000402",
       "text": "The Vice President and Cabinet must begin the process of invoking the 25th Amendment to remove the President from office.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Gregory Meeks",
-      "party": "D", "state": "NY", "bioguideId": "M001137",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "M001137",
       "text": "One person does not have the power to take this Nation to war alone.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
     },
     {
       "name": "Rep. Keith Self",
-      "party": "R", "state": "TX", "bioguideId": "S001211",
+      "party": "R",
+      "state": "TX",
+      "bioguideId": "S001224",
       "text": "We have neutered Iran, which has been at war with us for 47 years.",
-      "source": "House Floor, Apr 16, 2026", "stance": "support",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "support",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
     },
     {
       "name": "Rep. Alexandria Ocasio-Cortez",
-      "party": "D", "state": "NY", "bioguideId": "O000172",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "O000172",
       "text": "They provided no rationale to the American people.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
     },
     {
       "name": "Rep. Chip Roy",
-      "party": "R", "state": "TX", "bioguideId": "R000614",
+      "party": "R",
+      "state": "TX",
+      "bioguideId": "R000614",
       "text": "91 percent of all Haiti TPS holders entered the country illegally.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HR-1689", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-1689",
+      "billTitle": null
     },
     {
       "name": "Rep. Pressley",
-      "party": "D", "state": "MA", "bioguideId": "P000617",
+      "party": "D",
+      "state": "MA",
+      "bioguideId": "P000617",
       "text": "Haitian TPS holders are not the problem. They enhance our communities.",
-      "source": "House Floor, Apr 16, 2026", "stance": "support",
-      "billId": "119-HR-1689", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "support",
+      "billId": "119-HR-1689",
+      "billTitle": null
     },
     {
       "name": "Sen. Ron Wyden",
-      "party": "D", "state": "OR", "bioguideId": "W000779",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
       "text": "Any Senator who votes to reauthorize this law without real reform will be directly responsible when the Trump team abuses their spying powers.",
-      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HR-8322", "billTitle": null
+      "source": "Senate Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
     },
     {
       "name": "Sen. Ron Wyden",
-      "party": "D", "state": "OR", "bioguideId": "W000779",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
       "text": "The number of so-called 'sensitive' warrantless searches more than tripled during the first year of the Trump administration.",
-      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HR-8322", "billTitle": null
+      "source": "Senate Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
     },
     {
       "name": "Sen. Dick Durbin",
-      "party": "D", "state": "IL", "bioguideId": "D000563",
+      "party": "D",
+      "state": "IL",
+      "bioguideId": "D000563",
       "text": "It is an agency that we have seen in real time terrorizing communities like Chicago and Minneapolis across this country with increasingly violent and militarized enforcement operations.",
-      "source": "Senate Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": null, "billTitle": null
+      "source": "Senate Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Raul Grijalva",
-      "party": "D", "state": "AZ", "bioguideId": "G000551",
+      "party": "D",
+      "state": "AZ",
+      "bioguideId": "G000551",
       "text": "blatant sacrifice of human health for corporate profits.",
-      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": "119-HR-6398", "billTitle": null
+      "source": "House Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-6398",
+      "billTitle": null
     },
     {
       "name": "Rep. Seth Magaziner",
-      "party": "D", "state": "RI", "bioguideId": "M001211",
+      "party": "D",
+      "state": "RI",
+      "bioguideId": "M001223",
       "text": "Instead of voting to end the war, end the tariffs, and lower healthcare costs, what are we doing?",
-      "source": "House Floor, Apr 15, 2026", "stance": "neutral",
-      "billId": null, "billTitle": null
+      "source": "House Floor, Apr 15, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null
     },
     {
       "name": "Rep. Paul Tonko",
-      "party": "D", "state": "NY", "bioguideId": "T000469",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "T000469",
       "text": "Pretending that pollution doesn't exist simply cannot be the answer.",
-      "source": "House Floor, Apr 15, 2026", "stance": "oppose",
-      "billId": "119-HR-6409", "billTitle": null
+      "source": "House Floor, Apr 15, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-6409",
+      "billTitle": null
     },
     {
       "name": "Rep. Jim Jordan",
-      "party": "R", "state": "OH", "bioguideId": "J000289",
+      "party": "R",
+      "state": "OH",
+      "bioguideId": "J000289",
       "text": "Make temporary permanent — that is their plan.",
-      "source": "House Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HR-1689", "billTitle": null
+      "source": "House Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-1689",
+      "billTitle": null
     },
     {
       "name": "Sen. Amy Klobuchar",
-      "party": "D", "state": "MN", "bioguideId": "K000367",
+      "party": "D",
+      "state": "MN",
+      "bioguideId": "K000367",
       "text": "It is time to lead with diplomacy and negotiate an end to the war in Iran.",
-      "source": "Senate Floor, Apr 16, 2026", "stance": "oppose",
-      "billId": "119-HCONRES-40", "billTitle": null
+      "source": "Senate Floor, Apr 16, 2026",
+      "stance": "oppose",
+      "billId": "119-HCONRES-40",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Donald Trump continues his brazen efforts to force the central bank to serve his personal political interests rather than the best interests of the American economy and the American people.",
+      "source": "Senate Floor, Apr 21, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "The markets hate chaos. Do you hear that, Donald Trump? The markets hate chaos, and you are causing chaos in the markets with your on- again, off-again, hot, medium, cold statements about this war.",
+      "source": "Senate Floor, Apr 21, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Senate Republicans want to pour $75 billion into ICE and Border Patrol without putting any restraints on these rogue Agencies' rampant violence in our streets. That is not what the American people want.",
+      "source": "Senate Floor, Apr 21, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "No new Fed Chair should be confirmed under this body under a cloud of coercion and uncertainty that has been created by Donald Trump.",
+      "source": "Senate Floor, Apr 21, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "During reconciliation, Democrats are going to make sure this majority answers to the American people, and we will put a focus on lowering the costs of healthcare and gas and groceries and housing costs and many other costs that have gone up due to Trump's incompetence.",
+      "source": "Senate Floor, Apr 21, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Joe Courtney",
+      "party": "D",
+      "state": "CT",
+      "bioguideId": "C001069",
+      "text": "There is no question, Mr. Speaker, that Groton, Connecticut, is the Submarine Capital of the World, full stop, period.",
+      "source": "House Floor, Apr 20, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Joe Courtney",
+      "party": "D",
+      "state": "CT",
+      "bioguideId": "C001069",
+      "text": "Once again, the skeptics and naysayers are scoffing at this goal, but as someone who has been directly involved in the adult job training programs and helping equip career and technical schools, as well as regular comprehensive high schools, with apparatus to run metal trades curricula, I have no doubt that Groton will meet its goal.",
+      "source": "House Floor, Apr 20, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Joe Courtney",
+      "party": "D",
+      "state": "CT",
+      "bioguideId": "C001069",
+      "text": "The overall goal is 8,000 new workers in 2026: 3,400 in Rhode Island and 4,600 in Groton. The plan will take the workforce from 26,000 to over 30,000 for the first time since the 1980s.",
+      "source": "House Floor, Apr 20, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Mike Bean",
+      "party": "R",
+      "state": "FL",
+      "bioguideId": "B001314",
+      "text": "Mr. Speaker, sometimes we are all too tired, but Ashton and Casey show us that this is no moment to squeeze the brakes. We must keep moving forward for our veterans and in the fight against cancer.",
+      "source": "House Floor, Apr 20, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Mike Bean",
+      "party": "R",
+      "state": "FL",
+      "bioguideId": "B001314",
+      "text": "As they ride through Florida, Georgia, the Carolinas, and Virginia, they carry a simple message: Screen earlier, detect sooner, and save lives.",
+      "source": "House Floor, Apr 20, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "The Atlantic's reporting only confirmed what Senate Democrats have said from the start: Kash Patel is not simply unqualified, he is a grave risk to the rule of law and to American national security.",
+      "source": "Senate Floor, Apr 20, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Kash Patel's job is to protect the American people and our Constitution, not to party on the job.",
+      "source": "Senate Floor, Apr 20, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "It is Republicans who have chosen to keep FEMA, the Coast Guard, CISA, TSA, and all other DHS Agencies shut down. It is Republicans' own divisions and their own inability to govern that have led to the longest shutdown of an Agency in American history.",
+      "source": "Senate Floor, Apr 20, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Americans cannot afford the cost of Republicans' continued chaos.",
+      "source": "Senate Floor, Apr 20, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Instead, Republicans are preparing to spend precious time bogging the Senate down by partisan bickering.",
+      "source": "Senate Floor, Apr 20, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "Americans understand that every single day there are abuses of the Foreign Intelligence Surveillance Act.",
+      "source": "Senate Floor, Apr 17, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "And the reality is, a growing number of Democrats and Republicans are now saying that a straight extension of the Foreign Intelligence Surveillance Act law is absolutely unacceptable in any way, shape, or form.",
+      "source": "Senate Floor, Apr 17, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "So it is clear it is time for real reforms to protect Americans from warrantless surveillance by a government that they rightly do not trust.",
+      "source": "Senate Floor, Apr 17, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "The reality is that the country believes that security and liberty are not mutually exclusive. We can have both.",
+      "source": "Senate Floor, Apr 17, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Ron Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "We are going to be following that here every single day because Ben Franklin said--you are going to hear me talk about that--anybody who gives up their liberty for security doesn't deserve either.",
+      "source": "Senate Floor, Apr 17, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null
+    },
+    {
+      "name": "Sen. Josh Hawley",
+      "party": "R",
+      "state": "MO",
+      "bioguideId": "H001089",
+      "text": "Mr. President, had there been a recorded vote on Calendar No. 311, H.R. 7147, Department of Homeland Security Appropriations Act, 2026, as amended, I would have voted nay. In addition, had there been a recorded vote on tabling the House message to accompany H.R. 7147, I would have voted nay.",
+      "source": "Senate Floor, Apr 2, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-7147",
+      "billTitle": null
     }
   ]
 }

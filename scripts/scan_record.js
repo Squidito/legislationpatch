@@ -47,23 +47,51 @@ if (!RESET && fs.existsSync(QUOTES_FILE)) {
 }
 const processedDates = new Set(quotesData.processedDates || []);
 
-// ---- Member name → bioguideId cache ----
+// ---- Local rep lookup (reps-index.json) — used first before API ----
+const repsByLastName = {};
+try {
+  const repsIndex = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/reps-index.json'), 'utf8'));
+  for (const stateReps of Object.values(repsIndex)) {
+    for (const rep of stateReps) {
+      const ln = rep.name.split(/\s+/).pop().toLowerCase();
+      if (!repsByLastName[ln]) repsByLastName[ln] = [];
+      repsByLastName[ln].push(rep);
+    }
+  }
+} catch (e) { console.warn('Warning: could not load reps-index.json for local lookup'); }
+
 const bioguideCache = {};
-async function resolveBioguideId(name) {
-  if (!name) return null;
-  const lastName = name.replace(/^(Sen\.|Rep\.|Mr\.|Ms\.|Mrs\.|Dr\.) /, '').trim().split(/\s+/).pop();
-  if (!lastName || lastName.length < 3) return null;
-  if (lastName in bioguideCache) return bioguideCache[lastName];
+async function resolveRepInfo(name) {
+  if (!name) return {};
+  const clean    = name.replace(/^(Sen\.|Rep\.|Mr\.|Ms\.|Mrs\.|Dr\.) /, '').trim();
+  const parts    = clean.split(/\s+/);
+  const lastName = parts.pop().toLowerCase();
+  const firstName = (parts[0] || '').toLowerCase();
+  if (!lastName || lastName.length < 3) return {};
+
+  // Local lookup — prefer this over the API (API returns wrong IDs)
+  const candidates = repsByLastName[lastName] || [];
+  if (candidates.length === 1) {
+    const r = candidates[0];
+    return { bioguideId: r.bioguideId, party: r.party, state: r.state };
+  }
+  if (candidates.length > 1 && firstName) {
+    const match = candidates.find(r => r.name.toLowerCase().split(/\s+/)[0].startsWith(firstName));
+    if (match) return { bioguideId: match.bioguideId, party: match.party, state: match.state };
+  }
+
+  // API fallback for speakers not in our reps library (e.g. former members)
+  if (lastName in bioguideCache) return { bioguideId: bioguideCache[lastName] };
   try {
     await sleep(600);
-    const url = `https://api.congress.gov/v3/member?name=${encodeURIComponent(lastName)}&currentMember=true&limit=5&api_key=${CONGRESS_API_KEY}`;
+    const url = `https://api.congress.gov/v3/member?name=${encodeURIComponent(clean)}&currentMember=true&limit=5&api_key=${CONGRESS_API_KEY}`;
     const res  = await fetch(url);
-    if (!res.ok) { bioguideCache[lastName] = null; return null; }
+    if (!res.ok) { bioguideCache[lastName] = null; return {}; }
     const data = await res.json();
     const members = data.members || [];
     bioguideCache[lastName] = members[0]?.bioguideId || null;
-    return bioguideCache[lastName];
-  } catch (e) { bioguideCache[lastName] = null; return null; }
+    return { bioguideId: bioguideCache[lastName] };
+  } catch (e) { bioguideCache[lastName] = null; return {}; }
 }
 
 // ---- Check if CR exists for a date via Congress.gov ----
@@ -144,13 +172,15 @@ async function extractQuotesWithLLM(text, chamber, dateStr) {
   const truncated = text.split(' ').slice(0, 6000).join(' ');
   const prompt = `You are reading a ${chamber} section of the Congressional Record dated ${dateStr}.
 
+Your ONLY job is to find and copy direct quotes exactly as they appear in the text. Do NOT paraphrase, summarize, or reword anything. Copy the speaker's exact words only.
+
 Extract up to 5 of the most notable, surprising, or controversial direct floor quotes from named speakers. Skip procedural statements, quorum calls, unanimous consent requests, and routine motions. Focus on substantive opinions or criticism about legislation.
 
 For each quote return:
 - name: Full name with title (e.g. "Rep. Nancy Pelosi" or "Sen. Chuck Schumer")
 - party: "D", "R", or "I"
 - state: Two-letter state code (if not clear, use best guess)
-- text: The verbatim quote, 1-3 sentences max — the most striking part only
+- text: COPY the exact verbatim words from the text — 1-3 sentences, the most striking passage only. Do not change a single word.
 - billId: If a bill number is explicitly mentioned, format as "119-HR-1234" or "119-S-567", otherwise null
 - stance: "support", "oppose", or "neutral"
 
@@ -169,14 +199,15 @@ ${truncated}`;
         model: 'local-model',
         messages: [{ role: 'user', content: prompt }],
         temperature: 0.2,
-        max_tokens: 1200,
-        stream: false,
-        enable_thinking: false
+        max_tokens: 10000,
+        stream: false
       })
     });
     if (!res.ok) return [];
     const data    = await res.json();
-    const content = data.choices?.[0]?.message?.content || '';
+    const msg     = data.choices?.[0]?.message || {};
+    // Qwen3 puts thinking in reasoning_content; actual answer goes in content
+    const content = msg.content || msg.reasoning_content || '';
     const jsonStr = content.match(/\{[\s\S]*\}/)?.[0];
     if (!jsonStr) return [];
     return JSON.parse(jsonStr).quotes || [];
@@ -249,8 +280,11 @@ async function run() {
 
         for (const q of raw) {
           if (!q.text || q.text.length < 20) continue;
-          const normed = normaliseQuote(q, chamber, ds);
-          normed.bioguideId = await resolveBioguideId(normed.name);
+          const normed   = normaliseQuote(q, chamber, ds);
+          const repInfo  = await resolveRepInfo(normed.name);
+          normed.bioguideId = repInfo.bioguideId || null;
+          if (repInfo.party) normed.party = repInfo.party;
+          if (repInfo.state) normed.state = repInfo.state;
           quotesData.quotes.push(normed);
           added++;
         }

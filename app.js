@@ -589,7 +589,7 @@ function setupCarousel() {
   if (!el || el.children.length === 0) return;
 
   // Remove any clones from a prior setup
-  el.querySelectorAll('[aria-hidden="true"]').forEach(n => n.remove());
+  el.querySelectorAll('[data-clone="true"]').forEach(n => n.remove());
 
   const originals = [...el.children];
   if (!originals.length) return;
@@ -598,12 +598,14 @@ function setupCarousel() {
   originals.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('data-clone', 'true');
     el.insertBefore(clone, el.firstChild);
   });
   // Append clones for right-direction infinite wrap
   originals.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('data-clone', 'true');
     el.appendChild(clone);
   });
 
@@ -943,8 +945,9 @@ function renderShockQuotesSection() {
       ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
       : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
 
-    const quoteBody = billHref
-      ? `<a href="${billHref}" class="shock-quote-text-link">
+    const quoteLink = billHref || repHref;
+    const quoteBody = quoteLink
+      ? `<a href="${quoteLink}" class="shock-quote-text-link">
           <div class="shock-quote-text">"${escHtml(q.text)}"</div>
           ${q.billTitle ? `<div class="shock-quote-bill">${escHtml(q.billTitle)}</div>` : ''}
         </a>`
