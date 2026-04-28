@@ -87,8 +87,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadWatchedBills();
   await autoDetectState();
   fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
-  fetchRepsIndex().then(idx => { repsIndex = idx; populateStateDropdown(); });
+  fetchRepsIndex().then(idx => { repsIndex = idx; populateStateDropdown(); renderRepStrip(); renderRepGrid(); });
   setupSettings();
+  setupRepStripDrag();
   renderRepStrip();
   loadBills();
   setupFilters();
@@ -230,17 +231,19 @@ function saveTrackedSettings() {
 
 // Silently detect state and ZIP from IP — no user prompt
 async function autoDetectState() {
-  const savedZip = localStorage.getItem(STORAGE_KEYS.trackedZip);
+  const savedZip   = localStorage.getItem(STORAGE_KEYS.trackedZip);
+  const savedState = localStorage.getItem(STORAGE_KEYS.trackedState);
   if (savedZip) {
     const zipEl = document.getElementById('zipDisplay');
     if (zipEl) zipEl.textContent = '~' + savedZip;
   }
-  if (localStorage.getItem(STORAGE_KEYS.trackedState)) return; // respect saved state preference
+  // Only skip IP lookup when both state and ZIP are already stored
+  if (savedState && savedZip) return;
   try {
     const res  = await fetch('https://ipapi.co/json/');
     if (!res.ok) return;
     const data = await res.json();
-    if (data.region_code && US_STATES.some(s => s.code === data.region_code)) {
+    if (!savedState && data.region_code && US_STATES.some(s => s.code === data.region_code)) {
       trackedState = data.region_code;
       saveTrackedSettings();
     }
@@ -326,29 +329,55 @@ function renderRepStrip() {
   const seen = new Set();
   const pool = [];
 
-  allBills.forEach(bill => {
-    (bill.sponsors || []).forEach(s => {
-      const id = s.bioguideId || s.id;
-      if (id && !seen.has(id)) { seen.add(id); pool.push({ bioguideId: id, name: formatRepName(s), party: s.party || 'n', state: s.state || '' }); }
-    });
-    (bill.featured_quotes || []).forEach(q => {
-      if (q.bioguideId && !seen.has(q.bioguideId)) { seen.add(q.bioguideId); pool.push(q); }
-    });
+  // 1. Featured: top-scoring R + top-scoring D — always first
+  const quotePool   = buildQuotePool();
+  const quoteSorted = [...quotePool].sort((a, b) => b.shockScore - a.shockScore);
+  const featR = quoteSorted.find(q => (q.party || '').toUpperCase().startsWith('R'));
+  const featD = quoteSorted.find(q => (q.party || '').toUpperCase().startsWith('D'));
+  [featR, featD].filter(Boolean).forEach(q => {
+    if (q.bioguideId && !seen.has(q.bioguideId)) {
+      seen.add(q.bioguideId);
+      pool.push({ bioguideId: q.bioguideId, name: q.name, party: q.party, state: q.state || '', isFeatured: true });
+    }
   });
 
-  const fallback = repsIndex[trackedState]?.length ? repsIndex[trackedState] : DEMO_REPS;
-  fallback.forEach(rep => {
-    const id = getRepId(rep);
-    if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
-  });
+  const hasLocal = repsIndex[trackedState]?.length > 0;
 
-  strip.innerHTML = pool.slice(0, 8).map(rep => {
-    const id      = getRepId(rep);
-    const bg      = rep.bioguideId || (id.length >= 6 ? id : null);
-    const color   = partyColor(rep.party || 'I');
-    const name    = formatRepName(rep);
-    const active  = selectedRepIds.has(id);
-    return `<button class="rep-card rep-card-sm${active ? ' rep-selected' : ''}"
+  if (hasLocal) {
+    // 2. Tracked reps first
+    trackedReps.forEach(rep => {
+      const id = getRepId(rep);
+      if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
+    });
+
+    // 3. Local state reps fill the rest
+    repsIndex[trackedState].forEach(rep => {
+      const id = getRepId(rep);
+      if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
+    });
+  } else {
+    // Fallback: 8 most recent quote speakers beyond the featured two
+    const featuredIds = new Set([featR?.bioguideId, featD?.bioguideId].filter(Boolean));
+    quotePool
+      .filter(q => q.bioguideId && !featuredIds.has(q.bioguideId))
+      .slice(0, 8)
+      .forEach(q => {
+        if (!seen.has(q.bioguideId)) {
+          seen.add(q.bioguideId);
+          pool.push({ bioguideId: q.bioguideId, name: q.name, party: q.party, state: q.state || '' });
+        }
+      });
+  }
+
+  strip.innerHTML = pool.slice(0, 60).map(rep => {
+    const id         = getRepId(rep);
+    const bg         = rep.bioguideId || (id.length >= 6 ? id : null);
+    const color      = partyColor(rep.party || 'I');
+    const name       = formatRepName(rep);
+    const active     = selectedRepIds.has(id);
+    const isFeatured = !!rep.isFeatured;
+    const lastName   = repLastName(name);
+    return `<button class="rep-card rep-card-sm${active ? ' rep-selected' : ''}${isFeatured ? ' rep-featured' : ''}"
                     data-rep-id="${escHtml(id)}"
                     style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
                     title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
@@ -356,8 +385,42 @@ function renderRepStrip() {
         <img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
       </div>
       <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
+      <div class="rep-name">${escHtml(lastName)}</div>
     </button>`;
   }).join('');
+}
+
+// ---- Rep strip drag-to-scroll ----
+
+function setupRepStripDrag() {
+  const el = document.getElementById('repStrip');
+  if (!el) return;
+
+  let isDragging = false, startX = 0, startScroll = 0;
+
+  el.addEventListener('mousedown', e => {
+    isDragging  = true;
+    startX      = e.pageX;
+    startScroll = el.scrollLeft;
+    el.classList.add('dragging');
+    e.preventDefault();
+  });
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    el.classList.remove('dragging');
+  });
+  el.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    el.scrollLeft = startScroll - (e.pageX - startX);
+  });
+
+  el.addEventListener('touchstart', e => {
+    startX      = e.touches[0].pageX;
+    startScroll = el.scrollLeft;
+  }, { passive: true });
+  el.addEventListener('touchmove', e => {
+    el.scrollLeft = startScroll - (e.touches[0].pageX - startX);
+  }, { passive: true });
 }
 
 // ---- Rep grid (all portraits in dropdown) ----
