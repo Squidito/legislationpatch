@@ -1,13 +1,28 @@
-MIT License
+MIT License — Processing Pipeline and Data Only
 
-Copyright (c) 2026 James (Squidito)
+Copyright (c) 2026 Squidito (https://github.com/Squidito)
+
+This license applies to the following files only:
+  scripts/batch_processor.js
+  scripts/prompts.js
+  scripts/scan_record.js
+  scripts/generate_reps.js
+  data/cache.json
+  data/reps-index.json
+  data/reps/
+
+The frontend (app.js, styles.css, index.html, rep.html, rep.js, and all
+associated UI files) is NOT covered by this license and remains all rights
+reserved.
+
+---
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of the above-listed files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
