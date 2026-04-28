@@ -1,3 +1,4 @@
+// © 2026 Squidito. All rights reserved. Not open source — see LICENSE.
 // =============================================
 //  app.js — UI rendering and interactions
 // =============================================
