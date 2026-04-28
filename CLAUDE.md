@@ -221,9 +221,15 @@ node scripts/scan_record.js --reset   # clears processedDates AND quotes — use
 1. For each date: checks Congress.gov for CR package ID, then GovInfo for granules
 2. Filters granules by `granuleClass` (`HOUSE` or `SENATE`) — field is `g.granuleClass` not `g.class`
 3. Skips procedural titles (PRAYER, PLEDGE, QUORUM, HONORING, etc.)
-4. Fetches HTML text of first 8 granules per chamber, strips tags, sends to Qwen
-5. Qwen extracts verbatim quotes as JSON; resolved against local reps-index for bioguideId + party
-6. Saves to `data/quotes.json` with `processedDates` tracking
+4. Fetches HTML text of first 8 granules per chamber, strips tags, tracks granule titles
+5. Passes to Qwen: full text + granule section titles + bill reference list from cache.json
+6. Qwen extracts verbatim quotes with `billId` (matched against known bills), `granuleTitle` (CR section heading), and `stance`
+7. Resolved against local reps-index for bioguideId + party; `billTitle` auto-filled from cache when billId matches
+8. Saves to `data/quotes.json` with `processedDates` tracking
+
+**Quote schema additions:**
+- `granuleTitle` — the CR section heading (e.g. `"FEDERAL RESERVE"`, `"IRAN"`) — stored for context and future date-based attribution
+- `billTitle` — auto-filled when `billId` matches a bill in cache.json
 
 **Qwen settings that matter:** `max_tokens: 10000`, no `enable_thinking` flag (removed — caused empty responses). Qwen uses `reasoning_content` for thinking; actual answer goes in `content`.
 
@@ -231,11 +237,23 @@ node scripts/scan_record.js --reset   # clears processedDates AND quotes — use
 
 **Quality check approach:** Re-fetch the same granules and do a string-contains check against extracted quotes to verify verbatim accuracy.
 
+## generate_reps.js — Bill Attribution Pipeline
+
+Runs automatically before building rep profiles. For quotes with null `billId`, scores each bill in cache.json by keyword overlap and assigns if score ≥ 6 with ≥ 2 distinct keyword matches.
+
+- Stop words include generic political terms (`national`, `security`, `federal`, etc.) to avoid false matches
+- Bill title keywords weighted 4×, summary 2×, sections 1×
+- With only 5–6 bills in cache.json, attribution is sparse but accurate — grows more useful as bills are added
+- `granuleTitle` and `source` fields are passed through from quotes.json to rep comment profiles
+
 ## Rep Page Notes
 
 - Portrait URL constructed in `rep.js` from `bioguideId` — `portraitUrl` field is NOT present in rep JSON files
 - Party chip classes: `chip-d` (blue), `chip-r` (red), `chip-i` (green), `chip-n` (neutral)
 - Dark mode overrides exist for `--blue-bg`/`--blue-text` and `--red-bg`/`--red-text`
+- Hero layout: column-centered for all screen sizes (portrait above, name + chip centered below)
+- Comment card title: uses `billTitle` → `formatBillId(billId)` → chamber fallback ("Senate Floor" / "House Floor")
+- `formatBillId()` in rep.js converts `119-HR-1234` → `H.R. 1234`, `119-HCONRES-40` → `H.Con.Res. 40`, etc.
 
 ## Next Session Focus
 
