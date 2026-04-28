@@ -2,6 +2,251 @@
   "generated": "2026-04-27T02:57:28.690Z",
   "bills": [
     {
+      "id": "119-HR-6955",
+      "code": "H.R.6955",
+      "title": "Main Street Capital Access Act",
+      "sponsor": "Rep. Hill, J. French (R-AR)",
+      "date": "Apr 20, 2026",
+      "stage": "house",
+      "stageLabel": "House Calendar",
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "House floor",
+        "Senate floor",
+        "Conference",
+        "Signed"
+      ],
+      "currentStep": 2,
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The bill passed committee 26-16 with 33 cosponsors. Its eight titles span genuinely bipartisan community bank relief to politically charged provisions — reputational risk elimination and antitrust exemptions for mergers — that will complicate Senate passage. Community bank capital relief and exam reform have Senate allies, but the Operation Choke Point language and NGFS reporting requirements will provoke Democratic opposition.",
+      "analyzed": true,
+      "sections": [
+        {
+          "label": "Title I — New Bank Formation",
+          "items": [
+            {
+              "main": "Provides a 3-year phase-in of capital requirements for newly chartered banks and lowers the leverage ratio to 7.5% for new rural banks.",
+              "detail": "De novo bank formation has nearly stopped — fewer than 5 new charters per year since 2010 versus 150+ annually before the financial crisis. The phase-in gives new banks runway to build capital without immediate full compliance. The rural bank leverage ratio reduction is specifically calibrated for communities with fewer than 50,000 residents.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R-Financial Services: Regulatory barriers are strangling new bank formation in underserved markets."
+                },
+                {
+                  "party": "d",
+                  "text": "D-Financial Services: Supportive of new charters but concerned lighter capital rules apply during the riskiest early years."
+                }
+              ]
+            },
+            {
+              "main": "Extends the CDFI Bond Guarantee Program through 2028 and raises the minimum bond guarantee floor to $25 million.",
+              "detail": "CDFIs serve low-income and rural markets that conventional banks have exited. The bond guarantee provides long-term capital at lower cost. The $25M minimum may exclude the smallest CDFIs that need it most.",
+              "comments": [
+                {
+                  "party": "d",
+                  "text": "D: CDFI expansion is the most broadly supported provision in the bill across both parties."
+                },
+                {
+                  "party": "n",
+                  "text": "CDFI Coalition: The $25M minimum is too high for the smallest community lenders we represent."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Title II — Regulatory Threshold Adjustments",
+          "items": [
+            {
+              "main": "Raises dozens of Dodd-Frank asset thresholds to reflect GDP growth since 2010, with automatic future adjustments every 5 years tied to GDP.",
+              "detail": "The Community Bank Leverage Ratio threshold rises from $10B to $15B. Enhanced prudential standards threshold rises from $250B to $370B. Small Bank Holding Company threshold rises to $6B. Every threshold in the bill auto-adjusts to future GDP growth — structurally removing Congress from future threshold decisions.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Dollar amounts set in 2010 represent much stricter standards in real terms today; this corrects inflation drift."
+                },
+                {
+                  "party": "d",
+                  "text": "D: These thresholds exist because of 2008. Inflation adjustment is a pretext for deregulation."
+                }
+              ]
+            },
+            {
+              "main": "Raises the Home Mortgage Disclosure Act small-institution exemption from $30 million to $160 million in assets.",
+              "detail": "Banks under $160M will no longer report mortgage data broken down by race, income, and geography — the primary dataset used to identify lending discrimination. The change exempts the vast majority of community banks from fair lending data collection.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Small banks face crushing compliance costs for data collection with minimal regulatory value."
+                },
+                {
+                  "party": "d",
+                  "text": "D-Fair Housing: Eliminating HMDA data for community banks removes visibility into redlining at the local level where it most commonly occurs."
+                }
+              ]
+            },
+            {
+              "main": "Raises Community Reinvestment Act small-bank threshold from $250 million to $800 million, exempting far more banks from full CRA exams.",
+              "detail": "CRA requires banks to reinvest in communities where they take deposits, particularly low-income neighborhoods. Banks under $800M now qualify for a streamlined exam. At $800M, this captures the vast majority of U.S. community banks.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: CRA compliance is a massive burden for small banks already deeply invested in their local communities."
+                },
+                {
+                  "party": "n",
+                  "text": "National Community Reinvestment Coalition: The threshold increase will reduce accountability for banks serving low-income neighborhoods."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Title III — Bank Supervision Reform",
+          "items": [
+            {
+              "main": "Creates an Office of Independent Examination Review — a new presidential-appointee body that can overrule bank examiner decisions using de novo (fresh) review.",
+              "detail": "Banks disputing CAMELS ratings or any material supervisory determination can appeal to this Office, which reviews without deferring to examiners and can hold formal hearings with testimony under oath. Its decisions bind the regulatory agency. Banks may also elect to take enforcement actions to federal district court instead of administrative proceedings.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Examiners have operated with unchecked subjective judgment for decades; independent review creates necessary accountability."
+                },
+                {
+                  "party": "d",
+                  "text": "D: This politicizes bank supervision by inserting presidential appointees into technical regulatory determinations."
+                }
+              ]
+            },
+            {
+              "main": "Bans all federal banking agencies from ever considering reputational risk in supervision, explicitly referencing Operation Choke Point.",
+              "detail": "The prohibition is absolute: no guidance, exam criteria, or enforcement action may reference reputational risk — the mechanism regulators used to pressure banks to exit clients in firearms, payday lending, and similar legal industries. The explicit Operation Choke Point reference signals this is a politically motivated provision targeting perceived weaponization of banking supervision.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Operation Choke Point was unlawful weaponization of banking regulation against legal businesses."
+                },
+                {
+                  "party": "d",
+                  "text": "D: Reputational risk is a legitimate safety and soundness concern; banks serving fraudulent businesses face real losses."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Title VI — Merger Rules",
+          "items": [
+            {
+              "main": "Exempts all bank mergers resulting in institutions under $10 billion in assets from antitrust competition review.",
+              "detail": "Current law requires all bank mergers to be evaluated for anticompetitive effects. Section 601 eliminates this review for mergers resulting in banks under $10B. Since the vast majority of U.S. banks fall below this threshold, this effectively removes antitrust oversight from most bank merger activity.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Community bank mergers do not create systemic competition concerns; regulators spend resources on the wrong problems."
+                },
+                {
+                  "party": "d",
+                  "text": "D: Banking deserts have grown as local banks consolidate. Competition review exists precisely to catch local monopolies."
+                }
+              ]
+            },
+            {
+              "main": "Imposes a 120-day hard deadline on all merger approvals; applications are deemed approved automatically if regulators miss the deadline.",
+              "detail": "Deemed-approved provisions transfer power from regulators to applicants. If an agency cannot complete its review — due to complexity, resource constraints, or significant public comment volume — the merger proceeds automatically. Particularly significant for mergers that attract community opposition.",
+              "comments": [
+                {
+                  "party": "r",
+                  "text": "R: Regulators use delay as de facto denial; hard deadlines create accountability."
+                },
+                {
+                  "party": "d",
+                  "text": "D: Community groups and regulators need adequate time; automatic approvals bypass public input entirely."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 404 — Mandatory Reporting on NGFS Interactions",
+          "summary": "Forces the Federal Reserve, OCC, and FDIC to publicly report annually on every interaction with the Network of Central Banks and Supervisors for Greening the Financial System (NGFS) — a global climate risk supervisory body. The NGFS is explicitly named in the bill.",
+          "why_unreported": "Framed as a transparency measure, this is a direct mechanism to chill the Fed's participation in climate-related financial risk supervision without formally prohibiting it. By requiring public disclosure of every NGFS interaction, the bill creates political exposure for climate-focused supervisory work. Coverage has focused entirely on capital and exam provisions; this climate surveillance mechanism has received almost no attention."
+        },
+        {
+          "section": "Section 601 — Antitrust Exemption Creates Automatic Merger Approval Risk",
+          "summary": "The 120-day deemed-approved provision combined with the antitrust exemption means a community bank merger can close with no competition review and no public input if regulators are overwhelmed or slow — a scenario made more likely in a banking crisis when merger volume spikes.",
+          "why_unreported": "The deemed-approved mechanism appears in a section headlined as 'clarity and predictability.' The risk that mergers auto-approve during periods of banking stress — exactly when review is most needed — has not featured in any coverage of the bill."
+        },
+        {
+          "section": "Section 701 — FDIC Can Pay More to Avoid GSIB Acquisitions of Failed Banks",
+          "summary": "Allows the FDIC to pay more from the Deposit Insurance Fund specifically to prevent a failing bank from being acquired by a global systemically important bank, even when the GSIB offers the cheapest resolution. A rare anti-concentration provision inside a predominantly deregulatory bill.",
+          "why_unreported": "This provision directly addresses the 2023 SVB/First Republic controversy where JPMorgan expanded through FDIC-assisted acquisitions. It has bipartisan support but has been entirely absent from coverage because it contradicts the bill's overall deregulatory frame and requires understanding the GSIB framework."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "House Democrats",
+          "why": "HMDA threshold rollback removes fair lending data for most community banks; reputational risk prohibition will give banks cover to deny services to cannabis businesses in legal states; antitrust exemption for sub-$10B mergers will accelerate rural banking consolidation."
+        },
+        {
+          "who": "Consumer advocates",
+          "why": "Reduced examination frequency combined with HMDA data rollback removes the two primary tools used to identify predatory lending at small institutions — the least visible and most likely sites of consumer harm."
+        },
+        {
+          "who": "Progressive Democrats",
+          "why": "The NGFS reporting requirement is an attempt to expose and suppress climate risk supervision within the Fed without directly prohibiting it — a backdoor attack on financial climate policy disguised as transparency."
+        }
+      ],
+      "gaps": [
+        "No provision addressing rent-a-bank schemes where fintechs partner with small state-chartered banks to issue loans above state usury caps — a significant consumer harm growing rapidly and directly related to the fintech partnerships studied in Title VIII.",
+        "Silent on overdraft fee practices at community banks and credit unions despite providing those same institutions with broad regulatory relief throughout the bill.",
+        "Title VIII studies on bank-fintech partnerships produce reports but no regulatory framework — a missed opportunity given that unregulated fintech partnerships are generating the next generation of consumer harms.",
+        "No provision addressing the banking access gap for legal cannabis businesses in states where it is permitted — ironic given that the reputational risk prohibition was specifically intended to help those businesses."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Sen. Elizabeth Warren",
+          "party": "D",
+          "state": "MA",
+          "bioguideId": "W000817",
+          "text": "We are calling a fifty-billion-dollar bank a community bank. That is laundering language.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Rep. J. French Hill",
+          "party": "R",
+          "state": "AR",
+          "bioguideId": "H001072",
+          "text": "Regional lenders are choking under rules written for trillion-dollar institutions.",
+          "stance": "support"
+        }
+      ],
+      "sponsor_bioguide": "H001072",
+      "brief": "Bipartisan community bank relief is viable in the Senate but the reputational risk ban and antitrust exemption will drive Democratic opposition.",
+      "top_lines": [
+        "Exempts bank mergers resulting in institutions under $10B from antitrust competition review",
+        "Permanently bans federal regulators from considering reputational risk in bank supervision",
+        "Raises 47 regulatory thresholds across 14 federal statutes to reduce community bank compliance burden"
+      ],
+      "changes": {
+        "added": [
+          "Permanent Section 199A deduction for pass-through businesses under $5M revenue",
+          "$500M Main Street Façade Grant program"
+        ],
+        "modified": [
+          "Community bank Tier 1 capital threshold raised to $50B (was $10B)"
+        ],
+        "removed": []
+      },
+      "summary": "Small-business tax relief, community bank capital rules, and local Main Street infrastructure grants.",
+      "live": true,
+      "demo": false
+    },
+    {
       "summary": "This bill provides appropriations to several federal departments and agencies for the remainder of FY2026, including a continuing resolution for DHS through February 13, 2026, and extends various expiring programs and authorities.",
       "brief": "The bill provides appropriations to several federal departments and agencies for the remainder of FY2026 and continues DHS funding through February 13, 2026.",
       "top_lines": [
@@ -366,251 +611,6 @@
       "pages": 2,
       "analyzed": true,
       "live": false,
-      "demo": false
-    },
-    {
-      "id": "119-HR-6955",
-      "code": "H.R.6955",
-      "title": "Main Street Capital Access Act",
-      "sponsor": "Rep. Hill, J. French (R-AR)",
-      "date": "Apr 20, 2026",
-      "stage": "house",
-      "stageLabel": "House Calendar",
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "House floor",
-        "Senate floor",
-        "Conference",
-        "Signed"
-      ],
-      "currentStep": 2,
-      "likelihood": 55,
-      "likelihoodLabel": "Possible",
-      "likelihoodReason": "The bill passed committee 26-16 with 33 cosponsors. Its eight titles span genuinely bipartisan community bank relief to politically charged provisions — reputational risk elimination and antitrust exemptions for mergers — that will complicate Senate passage. Community bank capital relief and exam reform have Senate allies, but the Operation Choke Point language and NGFS reporting requirements will provoke Democratic opposition.",
-      "analyzed": true,
-      "sections": [
-        {
-          "label": "Title I — New Bank Formation",
-          "items": [
-            {
-              "main": "Provides a 3-year phase-in of capital requirements for newly chartered banks and lowers the leverage ratio to 7.5% for new rural banks.",
-              "detail": "De novo bank formation has nearly stopped — fewer than 5 new charters per year since 2010 versus 150+ annually before the financial crisis. The phase-in gives new banks runway to build capital without immediate full compliance. The rural bank leverage ratio reduction is specifically calibrated for communities with fewer than 50,000 residents.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-Financial Services: Regulatory barriers are strangling new bank formation in underserved markets."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Financial Services: Supportive of new charters but concerned lighter capital rules apply during the riskiest early years."
-                }
-              ]
-            },
-            {
-              "main": "Extends the CDFI Bond Guarantee Program through 2028 and raises the minimum bond guarantee floor to $25 million.",
-              "detail": "CDFIs serve low-income and rural markets that conventional banks have exited. The bond guarantee provides long-term capital at lower cost. The $25M minimum may exclude the smallest CDFIs that need it most.",
-              "comments": [
-                {
-                  "party": "d",
-                  "text": "D: CDFI expansion is the most broadly supported provision in the bill across both parties."
-                },
-                {
-                  "party": "n",
-                  "text": "CDFI Coalition: The $25M minimum is too high for the smallest community lenders we represent."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Title II — Regulatory Threshold Adjustments",
-          "items": [
-            {
-              "main": "Raises dozens of Dodd-Frank asset thresholds to reflect GDP growth since 2010, with automatic future adjustments every 5 years tied to GDP.",
-              "detail": "The Community Bank Leverage Ratio threshold rises from $10B to $15B. Enhanced prudential standards threshold rises from $250B to $370B. Small Bank Holding Company threshold rises to $6B. Every threshold in the bill auto-adjusts to future GDP growth — structurally removing Congress from future threshold decisions.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Dollar amounts set in 2010 represent much stricter standards in real terms today; this corrects inflation drift."
-                },
-                {
-                  "party": "d",
-                  "text": "D: These thresholds exist because of 2008. Inflation adjustment is a pretext for deregulation."
-                }
-              ]
-            },
-            {
-              "main": "Raises the Home Mortgage Disclosure Act small-institution exemption from $30 million to $160 million in assets.",
-              "detail": "Banks under $160M will no longer report mortgage data broken down by race, income, and geography — the primary dataset used to identify lending discrimination. The change exempts the vast majority of community banks from fair lending data collection.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Small banks face crushing compliance costs for data collection with minimal regulatory value."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Fair Housing: Eliminating HMDA data for community banks removes visibility into redlining at the local level where it most commonly occurs."
-                }
-              ]
-            },
-            {
-              "main": "Raises Community Reinvestment Act small-bank threshold from $250 million to $800 million, exempting far more banks from full CRA exams.",
-              "detail": "CRA requires banks to reinvest in communities where they take deposits, particularly low-income neighborhoods. Banks under $800M now qualify for a streamlined exam. At $800M, this captures the vast majority of U.S. community banks.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: CRA compliance is a massive burden for small banks already deeply invested in their local communities."
-                },
-                {
-                  "party": "n",
-                  "text": "National Community Reinvestment Coalition: The threshold increase will reduce accountability for banks serving low-income neighborhoods."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Title III — Bank Supervision Reform",
-          "items": [
-            {
-              "main": "Creates an Office of Independent Examination Review — a new presidential-appointee body that can overrule bank examiner decisions using de novo (fresh) review.",
-              "detail": "Banks disputing CAMELS ratings or any material supervisory determination can appeal to this Office, which reviews without deferring to examiners and can hold formal hearings with testimony under oath. Its decisions bind the regulatory agency. Banks may also elect to take enforcement actions to federal district court instead of administrative proceedings.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Examiners have operated with unchecked subjective judgment for decades; independent review creates necessary accountability."
-                },
-                {
-                  "party": "d",
-                  "text": "D: This politicizes bank supervision by inserting presidential appointees into technical regulatory determinations."
-                }
-              ]
-            },
-            {
-              "main": "Bans all federal banking agencies from ever considering reputational risk in supervision, explicitly referencing Operation Choke Point.",
-              "detail": "The prohibition is absolute: no guidance, exam criteria, or enforcement action may reference reputational risk — the mechanism regulators used to pressure banks to exit clients in firearms, payday lending, and similar legal industries. The explicit Operation Choke Point reference signals this is a politically motivated provision targeting perceived weaponization of banking supervision.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Operation Choke Point was unlawful weaponization of banking regulation against legal businesses."
-                },
-                {
-                  "party": "d",
-                  "text": "D: Reputational risk is a legitimate safety and soundness concern; banks serving fraudulent businesses face real losses."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Title VI — Merger Rules",
-          "items": [
-            {
-              "main": "Exempts all bank mergers resulting in institutions under $10 billion in assets from antitrust competition review.",
-              "detail": "Current law requires all bank mergers to be evaluated for anticompetitive effects. Section 601 eliminates this review for mergers resulting in banks under $10B. Since the vast majority of U.S. banks fall below this threshold, this effectively removes antitrust oversight from most bank merger activity.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Community bank mergers do not create systemic competition concerns; regulators spend resources on the wrong problems."
-                },
-                {
-                  "party": "d",
-                  "text": "D: Banking deserts have grown as local banks consolidate. Competition review exists precisely to catch local monopolies."
-                }
-              ]
-            },
-            {
-              "main": "Imposes a 120-day hard deadline on all merger approvals; applications are deemed approved automatically if regulators miss the deadline.",
-              "detail": "Deemed-approved provisions transfer power from regulators to applicants. If an agency cannot complete its review — due to complexity, resource constraints, or significant public comment volume — the merger proceeds automatically. Particularly significant for mergers that attract community opposition.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R: Regulators use delay as de facto denial; hard deadlines create accountability."
-                },
-                {
-                  "party": "d",
-                  "text": "D: Community groups and regulators need adequate time; automatic approvals bypass public input entirely."
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section 404 — Mandatory Reporting on NGFS Interactions",
-          "summary": "Forces the Federal Reserve, OCC, and FDIC to publicly report annually on every interaction with the Network of Central Banks and Supervisors for Greening the Financial System (NGFS) — a global climate risk supervisory body. The NGFS is explicitly named in the bill.",
-          "why_unreported": "Framed as a transparency measure, this is a direct mechanism to chill the Fed's participation in climate-related financial risk supervision without formally prohibiting it. By requiring public disclosure of every NGFS interaction, the bill creates political exposure for climate-focused supervisory work. Coverage has focused entirely on capital and exam provisions; this climate surveillance mechanism has received almost no attention."
-        },
-        {
-          "section": "Section 601 — Antitrust Exemption Creates Automatic Merger Approval Risk",
-          "summary": "The 120-day deemed-approved provision combined with the antitrust exemption means a community bank merger can close with no competition review and no public input if regulators are overwhelmed or slow — a scenario made more likely in a banking crisis when merger volume spikes.",
-          "why_unreported": "The deemed-approved mechanism appears in a section headlined as 'clarity and predictability.' The risk that mergers auto-approve during periods of banking stress — exactly when review is most needed — has not featured in any coverage of the bill."
-        },
-        {
-          "section": "Section 701 — FDIC Can Pay More to Avoid GSIB Acquisitions of Failed Banks",
-          "summary": "Allows the FDIC to pay more from the Deposit Insurance Fund specifically to prevent a failing bank from being acquired by a global systemically important bank, even when the GSIB offers the cheapest resolution. A rare anti-concentration provision inside a predominantly deregulatory bill.",
-          "why_unreported": "This provision directly addresses the 2023 SVB/First Republic controversy where JPMorgan expanded through FDIC-assisted acquisitions. It has bipartisan support but has been entirely absent from coverage because it contradicts the bill's overall deregulatory frame and requires understanding the GSIB framework."
-        }
-      ],
-      "criticisms": [
-        {
-          "who": "House Democrats",
-          "why": "HMDA threshold rollback removes fair lending data for most community banks; reputational risk prohibition will give banks cover to deny services to cannabis businesses in legal states; antitrust exemption for sub-$10B mergers will accelerate rural banking consolidation."
-        },
-        {
-          "who": "Consumer advocates",
-          "why": "Reduced examination frequency combined with HMDA data rollback removes the two primary tools used to identify predatory lending at small institutions — the least visible and most likely sites of consumer harm."
-        },
-        {
-          "who": "Progressive Democrats",
-          "why": "The NGFS reporting requirement is an attempt to expose and suppress climate risk supervision within the Fed without directly prohibiting it — a backdoor attack on financial climate policy disguised as transparency."
-        }
-      ],
-      "gaps": [
-        "No provision addressing rent-a-bank schemes where fintechs partner with small state-chartered banks to issue loans above state usury caps — a significant consumer harm growing rapidly and directly related to the fintech partnerships studied in Title VIII.",
-        "Silent on overdraft fee practices at community banks and credit unions despite providing those same institutions with broad regulatory relief throughout the bill.",
-        "Title VIII studies on bank-fintech partnerships produce reports but no regulatory framework — a missed opportunity given that unregulated fintech partnerships are generating the next generation of consumer harms.",
-        "No provision addressing the banking access gap for legal cannabis businesses in states where it is permitted — ironic given that the reputational risk prohibition was specifically intended to help those businesses."
-      ],
-      "featured_quotes": [
-        {
-          "name": "Sen. Elizabeth Warren",
-          "party": "D",
-          "state": "MA",
-          "bioguideId": "W000817",
-          "text": "We are calling a fifty-billion-dollar bank a community bank. That is laundering language.",
-          "stance": "oppose"
-        },
-        {
-          "name": "Rep. J. French Hill",
-          "party": "R",
-          "state": "AR",
-          "bioguideId": "H001072",
-          "text": "Regional lenders are choking under rules written for trillion-dollar institutions.",
-          "stance": "support"
-        }
-      ],
-      "sponsor_bioguide": "H001072",
-      "brief": "Bipartisan community bank relief is viable in the Senate but the reputational risk ban and antitrust exemption will drive Democratic opposition.",
-      "top_lines": [
-        "Exempts bank mergers resulting in institutions under $10B from antitrust competition review",
-        "Permanently bans federal regulators from considering reputational risk in bank supervision",
-        "Raises 47 regulatory thresholds across 14 federal statutes to reduce community bank compliance burden"
-      ],
-      "changes": {
-        "added": [
-          "Permanent Section 199A deduction for pass-through businesses under $5M revenue",
-          "$500M Main Street Façade Grant program"
-        ],
-        "modified": [
-          "Community bank Tier 1 capital threshold raised to $50B (was $10B)"
-        ],
-        "removed": []
-      },
-      "summary": "Small-business tax relief, community bank capital rules, and local Main Street infrastructure grants.",
-      "live": true,
       "demo": false
     },
     {
