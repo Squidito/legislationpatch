@@ -117,7 +117,8 @@ function renderProfile(rep) {
   commentsContainer.innerHTML = rep.comments.map(c => {
     const stanceCls   = c.stance === 'support' ? 'stance-support' : 'stance-oppose';
     const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
-    const billLabel   = c.billTitle || formatBillId(c.billId) || 'Floor Statement';
+    const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
+    const billLabel   = c.billTitle || formatBillId(c.billId) || chamberFallback;
     const titleEl     = c.billId
       ? `<a href="index.html#${c.billId}" class="rep-bill-link">${escHtml(billLabel)}</a>`
       : `<span class="rep-bill-link" style="cursor:default">${escHtml(billLabel)}</span>`;

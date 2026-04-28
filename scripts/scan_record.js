@@ -40,6 +40,14 @@ const RESET         = process.argv.includes('--reset');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// ---- Load bill reference from cache.json for in-context Qwen matching ----
+const BILL_REFERENCE = [];
+try {
+  const raw   = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/cache.json'), 'utf8'));
+  const bills = Array.isArray(raw.bills) ? raw.bills : Object.values(raw.bills || {});
+  bills.forEach(b => { if (b.id && b.title) BILL_REFERENCE.push({ id: b.id, title: b.title }); });
+} catch (e) {}
+
 // ---- Load / init output file ----
 let quotesData = { generated: null, processedDates: [], quotes: [] };
 if (!RESET && fs.existsSync(QUOTES_FILE)) {
@@ -166,11 +174,20 @@ async function fetchGranuleText(packageId, granuleId) {
 }
 
 // ---- LLM quote extraction ----
-async function extractQuotesWithLLM(text, chamber, dateStr) {
+async function extractQuotesWithLLM(text, chamber, dateStr, granuleTitles = [], billRef = []) {
   if (!text || text.length < 100) return [];
 
   const truncated = text.split(' ').slice(0, 6000).join(' ');
-  const prompt = `You are reading a ${chamber} section of the Congressional Record dated ${dateStr}.
+
+  const sectionsLine = granuleTitles.length
+    ? `\nThe text covers these CR sections: ${granuleTitles.join(' | ')}`
+    : '';
+
+  const billLine = billRef.length
+    ? `\nKnown bills currently tracked (use exact ID if the speaker is referencing one):\n${billRef.map(b => `  ${b.id} — ${b.title}`).join('\n')}`
+    : '';
+
+  const prompt = `You are reading a ${chamber} section of the Congressional Record dated ${dateStr}.${sectionsLine}${billLine}
 
 Your ONLY job is to find and copy direct quotes exactly as they appear in the text. Do NOT paraphrase, summarize, or reword anything. Copy the speaker's exact words only.
 
@@ -181,7 +198,8 @@ For each quote return:
 - party: "D", "R", or "I"
 - state: Two-letter state code (if not clear, use best guess)
 - text: COPY the exact verbatim words from the text — 1-3 sentences, the most striking passage only. Do not change a single word.
-- billId: If a bill number is explicitly mentioned, format as "119-HR-1234" or "119-S-567", otherwise null
+- billId: If the speaker references a known tracked bill above, use its exact ID. If they cite any other bill number explicitly, format as "119-HR-1234" or "119-S-567". Otherwise null.
+- granuleTitle: The CR section heading this quote came from (e.g. "FEDERAL RESERVE" or "IRAN"). Use the --- headings in the text.
 - stance: "support", "oppose", or "neutral"
 
 Return ONLY valid JSON: {"quotes": [...]}
@@ -217,16 +235,19 @@ ${truncated}`;
 function normaliseQuote(q, chamber, dateStr) {
   const [y, mo, d] = dateStr.split('-');
   const monthName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][parseInt(mo)-1];
+  const billId    = q.billId || null;
+  const knownBill = billId ? BILL_REFERENCE.find(b => b.id === billId) : null;
   return {
-    name:      q.name  || '',
-    party:     (q.party || 'I').toUpperCase().slice(0, 1),
-    state:     (q.state || '').toUpperCase().slice(0, 2),
-    bioguideId: null,
-    text:      q.text  || '',
-    source:    `${chamber} Floor, ${monthName} ${parseInt(d)}, ${y}`,
-    stance:    q.stance || 'neutral',
-    billId:    q.billId || null,
-    billTitle: null,
+    name:         q.name  || '',
+    party:        (q.party || 'I').toUpperCase().slice(0, 1),
+    state:        (q.state || '').toUpperCase().slice(0, 2),
+    bioguideId:   null,
+    text:         q.text  || '',
+    source:       `${chamber} Floor, ${monthName} ${parseInt(d)}, ${y}`,
+    stance:       q.stance || 'neutral',
+    billId,
+    billTitle:    knownBill?.title || null,
+    granuleTitle: q.granuleTitle || null,
   };
 }
 
@@ -266,16 +287,20 @@ async function run() {
 
         // Fetch text from up to 8 granules per chamber, concatenate for LLM
         const texts = [];
+        const granuleTitles = [];
         for (const g of granules.slice(0, 8)) {
           const t = await fetchGranuleText(packageId, g.granuleId);
-          if (t.length > 50) texts.push(`--- ${g.title} ---\n${t}`);
+          if (t.length > 50) {
+            texts.push(`--- ${g.title} ---\n${t}`);
+            granuleTitles.push(g.title);
+          }
         }
 
         if (!texts.length) { console.log(`  [${chamber}] No text retrieved`); continue; }
 
         const combined = texts.join('\n\n');
         console.log(`  [${chamber}] Extracting quotes from ~${combined.split(' ').length} words...`);
-        const raw = await extractQuotesWithLLM(combined, chamber, ds);
+        const raw = await extractQuotesWithLLM(combined, chamber, ds, granuleTitles, BILL_REFERENCE);
         console.log(`  [${chamber}] Found ${raw.length} quote(s)`);
 
         for (const q of raw) {
