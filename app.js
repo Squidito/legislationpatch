@@ -631,11 +631,11 @@ function renderPositionsSection(bill) {
 function renderUnderreportedSection(bill) {
   if (!Array.isArray(bill.underreported) || !bill.underreported.length) return '';
   return `<div class="underreported-section">
-    <div class="underreported-title">⚠ Underreported provisions</div>
+    <div class="underreported-title">⚠ Underreported provisions <span class="analysis-tag">analyst judgment</span></div>
     ${bill.underreported.map(item => `<div class="underreported-item">
       <div class="underreported-section-name">${escHtml(item.section || 'Section')}</div>
-      <div class="underreported-summary">${escHtml(item.summary || '')}</div>
-      <div class="underreported-why">${escHtml(item.why_unreported || '')}</div>
+      <div class="underreported-summary">${billRefHtml(item.summary, bill.id)}</div>
+      <div class="underreported-why">${billRefHtml(item.why_unreported, bill.id)}</div>
     </div>`).join('')}
   </div>`;
 }
@@ -1108,12 +1108,12 @@ function renderTopLines(bill) {
       // Legacy flat format
       return `<div class="top-line-item">
         <span class="top-line-bullet">—</span>
-        <div class="top-line-content"><div class="top-line-headline">${escHtml(item)}</div></div>
+        <div class="top-line-content"><div class="top-line-headline">${billRefHtml(item, bill.id)}</div></div>
       </div>`;
     }
     // New headline + subs format
     const subs = (item.subs || []).slice(0, 3).map(s =>
-      `<div class="top-line-sub">${escHtml(s)}</div>`
+      `<div class="top-line-sub">${billRefHtml(s, bill.id)}</div>`
     ).join('');
     return `<div class="top-line-item">
       <span class="top-line-bullet">—</span>
@@ -1125,7 +1125,7 @@ function renderTopLines(bill) {
   };
 
   return `<div class="top-lines">
-    ${bill.brief ? `<div class="top-lines-brief">${escHtml(bill.brief)}</div>` : ''}
+    ${bill.brief ? `<div class="top-lines-brief">${billRefHtml(bill.brief, bill.id)}</div>` : ''}
     ${items.slice(0, 3).map(renderLine).join('')}
   </div>`;
 }
@@ -1163,7 +1163,7 @@ function renderChangesSection(bill) {
       <div class="patch-block-label" style="color:${color}">
         <span class="patch-block-symbol">${symbol}</span>${label}
       </div>
-      <div class="patch-block-items">${items.map(t => `<div class="patch-block-item">${escHtml(t)}</div>`).join('')}</div>
+      <div class="patch-block-items">${items.map(t => `<div class="patch-block-item">${billRefHtml(t, bill.id)}</div>`).join('')}</div>
     </div>`;
   };
 
@@ -1183,11 +1183,11 @@ function renderMinorBody(bill, col, isOpen) {
     <div class="underreported-teaser">
       <span class="underreported-badge">⚠ Underreported</span>
       <div class="underreported-headline">${escHtml(topUnder.section)}</div>
-      <div class="underreported-preview">${escHtml(topUnder.summary)}</div>
+      <div class="underreported-preview">${billRefHtml(topUnder.summary, bill.id)}</div>
     </div>` : '';
 
   const likelihoodDetail = `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
-    <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage</div>
+    <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
     <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
   </div>`;
 
@@ -1291,13 +1291,13 @@ function renderBody(bill, isOpen, col) {
     <div class="section-divider"></div>
     <div class="criticism-section">
       <div class="criticism-title">⚑ Opposed — who and why</div>
-      ${bill.criticisms.map(c => `<div class="criticism-item"><span class="criticism-who">${escHtml(c.who)}:</span> ${escHtml(c.why)}</div>`).join('')}
+      ${bill.criticisms.map(c => `<div class="criticism-item"><span class="criticism-who">${escHtml(c.who)}:</span> ${billRefHtml(c.why, bill.id)}</div>`).join('')}
     </div>` : '';
 
   const gapsHtml = bill.gaps?.length ? `
     <div class="gaps-section">
-      <div class="gaps-title">◈ Not addressed in this bill</div>
-      ${bill.gaps.map(g => `<div class="gaps-item">${escHtml(g)}</div>`).join('')}
+      <div class="gaps-title">◈ Not addressed in this bill <span class="analysis-tag">analyst judgment</span></div>
+      ${bill.gaps.map(g => `<div class="gaps-item">${billRefHtml(g, bill.id)}</div>`).join('')}
     </div>` : '';
 
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
@@ -1327,16 +1327,16 @@ function renderItem(bill, item, si, ii) {
       ).join('')}</div>`
     : '';
   const commentsDetail = item.comments?.map(c =>
-    `<div class="item-detail-comment">${escHtml(c.text)}</div>`
+    `<div class="item-detail-comment">${billRefHtml(c.text, bill.id)}</div>`
   ).join('') || '';
 
   return `<div class="patch-item">
-    <div class="patch-item-main">${escHtml(item.main)}</div>
+    <div class="patch-item-main">${billRefHtml(item.main, bill.id)}</div>
     ${chipsHtml}
     ${item.detail ? `
       <button class="more-btn" onclick="toggleDetail('${key}')">${isOpen ? '▲ hide details' : '▼ more info'}</button>
       <div class="item-detail ${isOpen ? 'open' : ''}" id="detail-${key}">
-        <div>${escHtml(item.detail)}</div>
+        <div>${billRefHtml(item.detail, bill.id)}</div>
         ${commentsDetail}
       </div>` : ''}
   </div>`;
@@ -1400,4 +1400,59 @@ function escHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+// Renders prose text replacing bill code references (H.R. 1234, S. 40, etc.) with
+// linked titles when the bill is in allBills, or a plain span when self-referential.
+function billRefHtml(text, currentBillId) {
+  if (!text) return '';
+  const BILL_RE = /(H\.R\.|H\.Con\.Res\.|H\.J\.Res\.|H\.Res\.|S\.Con\.Res\.|S\.J\.Res\.|S\.Res\.|S\.)\s*(\d+)/g;
+  const typeMap = {
+    'H.R.': 'HR', 'S.': 'S',
+    'H.Con.Res.': 'HCONRES', 'S.Con.Res.': 'SCONRES',
+    'H.J.Res.': 'HJRES',    'S.J.Res.': 'SJRES',
+    'H.Res.': 'HRES',       'S.Res.': 'SRES',
+  };
+  let result = '', lastIndex = 0, match;
+  BILL_RE.lastIndex = 0;
+  while ((match = BILL_RE.exec(text)) !== null) {
+    result += escHtml(text.slice(lastIndex, match.index));
+    const type   = typeMap[match[1]] || 'HR';
+    const billId = `119-${type}-${match[2]}`;
+    const bill   = allBills.find(b => b.id === billId);
+    if (bill) {
+      if (bill.id === currentBillId) {
+        result += `<span class="bill-self-ref">${escHtml(bill.title)}</span>`;
+      } else {
+        result += `<a class="bill-ref-link" href="#card-${escHtml(billId)}" onclick="scrollToBill('${escHtml(billId)}');return false;">${escHtml(bill.title)}</a>`;
+      }
+    } else {
+      result += escHtml(match[0]);
+    }
+    lastIndex = BILL_RE.lastIndex;
+  }
+  return result + escHtml(text.slice(lastIndex));
+}
+
+function scrollToBill(id) {
+  const bill = allBills.find(b => b.id === id);
+  if (!bill) return;
+  if (favoritesView) toggleFavoritesView();
+  const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
+  const needed = IN_PROGRESS.includes(bill.stage) || isJustPassed(bill) ? 'in_progress'
+               : bill.stage === 'signed' ? 'passed' : 'dead';
+  if (activeMainFilter !== needed) {
+    activeMainFilter = needed;
+    document.querySelectorAll('.filter-btn[data-main]').forEach(btn =>
+      btn.classList.toggle('active', btn.dataset.main === needed)
+    );
+    renderAll();
+  }
+  requestAnimationFrame(() => {
+    const card = document.getElementById(`card-${id}`);
+    if (!card) return;
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    card.classList.add('bill-ref-flash');
+    setTimeout(() => card.classList.remove('bill-ref-flash'), 1200);
+  });
 }

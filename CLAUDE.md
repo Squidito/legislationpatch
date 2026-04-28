@@ -34,11 +34,21 @@ Vanilla JS / HTML / CSS. No framework, no build tools, no backend.
 - **Targeted run:** `node scripts/batch_processor.js --bill 119-HR-5587`
 - **Force non-floor bill:** `node scripts/batch_processor.js --bill 119-HR-XXXX --force`
 
+## API Keys and Secrets
+
+**Never put real API keys in `config.js`** — it is tracked by git. Keys go in `.env` only (gitignored).
+
+Copy `.env.example` to `.env` and fill in your keys:
+- `CONGRESS_API_KEY` — free at https://api.congress.gov/sign-up/
+- `GOVINFO_API_KEY` — free at https://api.data.gov/signup/
+
+`scripts/generate_reps.js` and `scripts/scan_record.js` fall back to reading from `config.js` if `.env` is missing — but `config.js` only contains empty placeholders, so always use `.env`.
+
 ## File Responsibilities
 
 | File | Role |
 |---|---|
-| `config.js` | API keys + constants — **gitignored, never commit** |
+| `config.js` | Empty API key placeholders — **tracked by git, never add real keys here** |
 | `api.js` | Reads `data/cache.json` — no live fetching on the site |
 | `app.js` | All UI: rendering, state, dark mode, rep tracking, favorites, carousel |
 | `index.html` | Page structure — loads config → api → app |
@@ -49,7 +59,7 @@ Vanilla JS / HTML / CSS. No framework, no build tools, no backend.
 | `terms.html` | Terms of service (full site header, matching footer) |
 | `data/cache.json` | All bill data — written by batch processor, read by site |
 | `data/reps/*.json` | Individual rep profile JSON files |
-| `.env` | `CONGRESS_API_KEY` + `CONGRESS_SESSION=119` — gitignored |
+| `.env` | `CONGRESS_API_KEY` + `GOVINFO_API_KEY` + `CONGRESS_SESSION=119` — **gitignored** |
 | `scripts/batch_processor.js` | Full batch pipeline — see pipeline section below |
 | `scripts/prompts.js` | LLM prompts: SYSTEM_PROMPT + CHUNK_MAP_PROMPT |
 | `scripts/generate_reps.js` | Generates/updates `data/reps/` static files |
@@ -79,10 +89,13 @@ node scripts/batch_processor.js
 
 **LM Studio settings that matter:** port 1235, Qwen3.5 9B, context 12288, GPU offload 32, CPU threads 6, Flash Attention ON, `enable_thinking: false`.
 
-**Three-zone source discipline:**
-- Zone 1 (bill text/XML + CRS only): summary, sections, top_lines, underreported, gaps, changes
-- Zone 2 (Congressional Record only): featured_quotes, criticisms, section comments
-- Zone 3 (reasoning allowed): likelihood, likelihoodLabel, likelihoodReason
+## Three-Zone Source Discipline
+
+| Zone | Source | Fields | Notes |
+|---|---|---|---|
+| 1 | Bill text + CRS only | `summary`, `brief`, `top_lines`, `sections`, `underreported`, `gaps`, `changes` | Verified by gate |
+| 2 | Congressional Record only | `featured_quotes`, `criticisms`, `comments` | Empty arrays if no Record |
+| 3 | Reasoning allowed | `likelihood`, `likelihoodLabel`, `likelihoodReason` | Editorial — labeled in UI |
 
 **Verification gate — every failure hard-rejects the bill:**
 - Zone 2 with no Congressional Record → rejected
@@ -92,6 +105,51 @@ node scripts/batch_processor.js
 - Section number reference not in source → rejected
 - Named program/agency not in source → rejected
 - Underreported section keywords not in bill text → rejected
+
+## Prompt Rules (scripts/prompts.js)
+
+Rules enforced in `SYSTEM_PROMPT`:
+- **Rule 1** — Numbers first, exact and unrounded (`$240,774,000` not `$240.8M`)
+- **Rule 2** — Label sections after actual bill titles
+- **Rule 3** — Underreported = mechanically distinct from the headline; no "buried/quietly/hidden" language
+- **Rule 4** — Gaps must be anchored to the bill's own stated purpose, not external policy preference
+- **Rule 5** — Changes must be precise (old → new values)
+- **Rule 6** — Likelihood must cite chamber majority, sponsor party, cosponsor count
+- **Rule 7** — No editorial adjectives in Zone 1/2 ("quietly," "buried," "sweeping," "significant," etc.)
+
+**Analyst judgment fields** (marked with `analyst judgment` tag in UI): `underreported`, `gaps`, `likelihoodReason`. These involve interpretation beyond source extraction.
+
+## top_lines Format
+
+`top_lines` uses `{headline, subs[]}` objects — NOT flat strings:
+- `headline` — short topic label (3–6 words), e.g. `"Defense Spending"`, `"Tax Rate Changes"`. No dollar amounts.
+- `subs` — 1–3 specific provisions under that topic, leading with exact figures when available.
+
+**Backward compatibility:** `renderTopLines` handles legacy flat string format. Old bills render correctly.
+
+## Bill Reference Linking
+
+`billRefHtml(text, currentBillId)` in `app.js` scans prose fields for bill code patterns (`H.R. 1234`, `S. 40`, `H.Con.Res. 40`, etc.) and:
+- Replaces with a linked title if the bill is in `allBills`
+- Renders as italic span if it's a self-reference
+- Leaves the code unchanged if not found in cache
+
+`scrollToBill(id)` handles click: switches filter tab if needed, smooth-scrolls, and briefly flashes the card purple.
+
+Applied to: `top_lines` subs, `brief`, `underreported`, `criticisms`, `gaps`, `changes` blocks, patch item `main`/`detail`, and comment text.
+
+## Rep Strip
+
+The horizontal portrait carousel in the controls bar. Ordering: **Featured → Tracked → Local state reps**.
+
+- **Featured** (positions 1–2): top-scoring R + top-scoring D from quote pool by `shockScore`; amber outline ring (`rep-featured` class)
+- **Tracked**: manually tracked reps from localStorage
+- **Local**: all reps from `repsIndex[trackedState]`
+- **Fallback** (no local index): 8 most recent quote speakers beyond the featured two
+- Drag-to-scroll: mouse + touch, handled by `setupRepStripDrag()` (wired once at boot)
+- Last names shown under portraits (same style as dropdown)
+
+**ZIP auto-detect:** `autoDetectState()` hits `ipapi.co/json/` when state is saved but ZIP is missing. Only skips the IP call when both state AND ZIP are already stored.
 
 ## Bill Card Architecture
 
@@ -120,27 +178,20 @@ Cards use a **4-column CSS grid**: `48px 48px 1fr 40px` (mobile: `36px 40px 1fr 
   - Passed: All Passed | Just Passed
 - "Just Passed" = stage `signed` within 30 days of today — appears in BOTH primary tabs
 
-**Favorites view** — star icon in header (renamed from "Starred" to "Tracked"):
+**Favorites view** — star icon in header:
 - Tracked reps: portrait, name, bill activity, featured quote
 - Tracked bills: full interactive cards, star icon in empty state
 - All localStorage, no account: `lpTrackedReps`, `lpWatchedBills`, `lpTheme`, `lpTrackedState`, `lpTrackedZip`
 
-**ZIP auto-detect:**
-- `autoDetectState()` hits `ipapi.co/json/` on first visit, sets both state and ZIP
-- ZIP populates the header input; clicking the input selects all for easy replacement
-
 **Shock quotes carousel** ("From the Floor This Week"):
 - Cards: `width: 165px`, uniform height via `align-items: stretch` + `min-height: 5.5rem` on text area
-- Quote text clamped to 5 lines by default (`max-height: 5.5rem`); hover expands smoothly (0.28s ease, up to 20rem); expanded card grows independently
+- Quote text clamped to 5 lines by default; hover expands smoothly (0.28s ease, up to 20rem)
 - Auto-scrolls at 0.1px/frame; bidirectional infinite wrap `[clones][originals][clones]`, starts at middle third
-- Clones marked with `data-clone="true"` (NOT `aria-hidden` — that would accidentally remove the ⚡ bolt SVG which also uses `aria-hidden="true"`)
-- Featured cards (top R + top D by shock score): amber border + ⚡ bolt icon; bolt is in the header after the rep-link
-- Quote text links to bill card if billId present, otherwise falls back to rep page
-- Grab cursor on card empty space; grabbing during drag
-- Pauses on hover; grab-to-drag; drag adjusts startScroll on wrap snap
+- Featured cards (top R + top D by shock score): amber border + ⚡ bolt icon
+- Grab cursor on card empty space; pauses on hover; grab-to-drag
 
 **Stage dots (dark mode safe):**
-- Footer pipeline dots: `.fp-dot-done`, `.fp-dot-active`, `.fp-dot-pending` CSS classes using `var(--text)` / `var(--border)`
+- Footer pipeline dots: `.fp-dot-done`, `.fp-dot-active`, `.fp-dot-pending` CSS classes
 - Stage strip labels: `.stage-strip-label-on` for active/done steps
 
 ## Color System
@@ -152,6 +203,7 @@ Cards use a **4-column CSS grid**: `48px 48px 1fr 40px` (mobile: `36px 40px 1fr 
 | Likelihood Possible (≥45%) | `--purple` / `--purple-text` |
 | Likelihood Unlikely (<45%) | `--text-3` / `--text-2` (adapts dark mode) |
 | Underreported / warning | `--amber: #a87d24` |
+| Featured rep ring / shock quote card | `--amber` border + glow |
 | Footer "only" emphasis | `#E8855A` (warm orange) |
 
 ## Dark Mode
@@ -163,21 +215,20 @@ Toggle via `[data-theme="dark"]` on `<html>`. Key: `lpTheme`.
 ```json
 {
   "id": "119-HR-6955",
-  "title": "...",
+  "title": "Main Street Capital Access Act",
   "code": "HR.6955",
   "stage": "house",
-  "stageLabel": "Passed House",
+  "stageLabel": "House Calendar",
   "date": "Apr 20, 2026",
   "sponsor": "Rep. Hill, J. French (R-AR)",
   "sponsor_bioguide": "H001072",
-  "sponsors": [...],
   "cosponsors": 33,
   "pages": 47,
   "version": "v1.0",
   "pipeline": ["Introduced","Committee","Passed House","Passed Senate","Signed"],
   "currentStep": 2,
-  "likelihood": 55,
-  "likelihoodLabel": "Possible",
+  "likelihood": 38,
+  "likelihoodLabel": "Unlikely",
   "likelihoodReason": "...",
   "analyzed": true,
   "live": true,
@@ -185,9 +236,9 @@ Toggle via `[data-theme="dark"]` on `<html>`. Key: `lpTheme`.
   "summary": "...",
   "brief": "...",
   "top_lines": [
-    { "headline": "Major theme with exact figure", "subs": ["Supporting detail", "Another detail"] }
+    { "headline": "Short Topic Label", "subs": ["Specific provision with figure", "Another provision"] }
   ],
-  "sections": [{"label":"...","items":[{"main":"...","detail":"...","comments":[]}]}],
+  "sections": [{"label":"Title I — ...","items":[{"main":"...","detail":"...","comments":[]}]}],
   "underreported": [{"section":"...","summary":"...","why_unreported":"..."}],
   "criticisms": [{"who":"...","why":"..."}],
   "gaps": ["..."],
@@ -196,15 +247,14 @@ Toggle via `[data-theme="dark"]` on `<html>`. Key: `lpTheme`.
 }
 ```
 
-**top_lines backward compatibility:** the renderer (`renderTopLines`) handles both the new object format `{headline, subs[]}` and the legacy flat string format. Old bills with string arrays continue to render correctly.
-
 ## Bills Currently in cache.json
 
 | ID | Title | Stage | Badge |
 |---|---|---|---|
-| 119-HR-1 | Reconciliation Act (Public Law 119-21) | Signed | BATCH |
-| 119-HR-5587 | HEATS Act (geothermal permits) | Passed House | BATCH |
 | 119-HR-6955 | Main Street Capital Access Act | House Calendar | LIVE |
+| 119-HR-7148 | Consolidated Appropriations Act 2026 | Signed | BATCH |
+| 119-HR-1 | Reconciliation Act (Public Law 119-21) | Signed | BATCH |
+| 119-HR-5587 | HEATS Act (geothermal permits) | Passed House | DEMO |
 | 119-HR-8469 | Military Construction FY2027 | House Calendar | DEMO |
 | 119-HR-7567 | Farm, Food, and National Security Act | House Calendar | DEMO |
 
@@ -219,44 +269,26 @@ node scripts/scan_record.js --reset   # clears processedDates AND quotes — use
 
 **How it works:**
 1. For each date: checks Congress.gov for CR package ID, then GovInfo for granules
-2. Filters granules by `granuleClass` (`HOUSE` or `SENATE`) — field is `g.granuleClass` not `g.class`
+2. Filters granules by `granuleClass` (`HOUSE` or `SENATE`)
 3. Skips procedural titles (PRAYER, PLEDGE, QUORUM, HONORING, etc.)
 4. Fetches HTML text of first 8 granules per chamber, strips tags, tracks granule titles
 5. Passes to Qwen: full text + granule section titles + bill reference list from cache.json
-6. Qwen extracts verbatim quotes with `billId` (matched against known bills), `granuleTitle` (CR section heading), and `stance`
-7. Resolved against local reps-index for bioguideId + party; `billTitle` auto-filled from cache when billId matches
+6. Qwen extracts verbatim quotes with `billId`, `granuleTitle`, and `stance`
+7. Resolved against local reps-index for bioguideId + party; `billTitle` auto-filled from cache
 8. Saves to `data/quotes.json` with `processedDates` tracking
 
-**Quote schema additions:**
-- `granuleTitle` — the CR section heading (e.g. `"FEDERAL RESERVE"`, `"IRAN"`) — stored for context and future date-based attribution
-- `billTitle` — auto-filled when `billId` matches a bill in cache.json
-
-**Qwen settings that matter:** `max_tokens: 10000`, no `enable_thinking` flag (removed — caused empty responses). Qwen uses `reasoning_content` for thinking; actual answer goes in `content`.
-
-**Known limit:** Very large sessions (50k+ words) may return 0 quotes — Qwen's thinking exhausts the token budget before outputting JSON.
-
-**Quality check approach:** Re-fetch the same granules and do a string-contains check against extracted quotes to verify verbatim accuracy.
+**Qwen settings that matter:** `max_tokens: 10000`, no `enable_thinking` flag. Known limit: very large sessions (50k+ words) may return 0 quotes.
 
 ## generate_reps.js — Bill Attribution Pipeline
 
-Runs automatically before building rep profiles. For quotes with null `billId`, scores each bill in cache.json by keyword overlap and assigns if score ≥ 6 with ≥ 2 distinct keyword matches.
+For quotes with null `billId`, scores each bill in cache.json by keyword overlap and assigns if score ≥ 6 with ≥ 2 distinct keyword matches.
 
-- Stop words include generic political terms (`national`, `security`, `federal`, etc.) to avoid false matches
 - Bill title keywords weighted 4×, summary 2×, sections 1×
-- With only 5–6 bills in cache.json, attribution is sparse but accurate — grows more useful as bills are added
-- `granuleTitle` and `source` fields are passed through from quotes.json to rep comment profiles
+- `granuleTitle` and `source` fields passed through from quotes.json to rep comment profiles
 
 ## Rep Page Notes
 
 - Portrait URL constructed in `rep.js` from `bioguideId` — `portraitUrl` field is NOT present in rep JSON files
 - Party chip classes: `chip-d` (blue), `chip-r` (red), `chip-i` (green), `chip-n` (neutral)
-- Dark mode overrides exist for `--blue-bg`/`--blue-text` and `--red-bg`/`--red-text`
-- Hero layout: column-centered for all screen sizes (portrait above, name + chip centered below)
-- Comment card title: uses `billTitle` → `formatBillId(billId)` → chamber fallback ("Senate Floor" / "House Floor")
-- `formatBillId()` in rep.js converts `119-HR-1234` → `H.R. 1234`, `119-HCONRES-40` → `H.Con.Res. 40`, etc.
-
-## Next Session Focus
-
-- Process more floor-time bills: HR-7148 (Consolidated Appropriations 2026), HR-8322 (FISA extension), HCONRES-40 (War Powers — passed House), HR-6387 (FIRE Act)
-- Implement XML structural chunking improvement (planned, partially built in batch_processor.js — `chunkXMLByStructure` and updated `fetchBillText` returning `{text, isXML}`)
-- Congressional Record date lookup improvement (currently uses latestAction date, which misses actual debate dates)
+- Comment card title: uses `billTitle` → `formatBillId(billId)` → chamber fallback
+- `formatBillId()` converts `119-HR-1234` → `H.R. 1234`, `119-HCONRES-40` → `H.Con.Res. 40`, etc.
