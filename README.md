@@ -1,6 +1,6 @@
 # LegislationPatch
 
-**Patch notes for Congress. Sourced from bill text, no editorial spin.**
+**Patch notes for Congress. Sourced directly from bill text, no editorial spin.**
 
 LegislationPatch takes U.S. federal legislation and turns it into structured, plain-English patch notes — the kind of format you'd expect from a software release, not a news article. Every fact is extracted directly from the bill text or Congressional Record. No pundit framing, no takes, no invented figures.
 
