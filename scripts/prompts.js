@@ -62,13 +62,17 @@ RULE 2 — EXACT BILL STRUCTURE
 Label sections after the actual bill titles (Title I, Title II, etc.) if they exist in the text.
 Each item must describe a real provision — what it does, who administers it, who is affected.
 
-RULE 3 — UNDERREPORTED MEANS GENUINELY HIDDEN
-Find provisions where technical language conceals real-world effect, or riders unrelated to the bill's headline. Do not mark the main provision as underreported.
+RULE 3 — UNDERREPORTED MEANS MECHANICALLY DISTINCT FROM THE HEADLINE
+Find provisions whose real-world mechanical effect is not apparent from the section title or the bill's headline purpose — riders unrelated to the main subject, or provisions whose plain-language effect differs from their stated label.
+Do not mark the main provision as underreported.
+Do not use words like "quietly," "buried," "hidden," "concealed," or "slipped in." If it is in the bill text, it is on the record. Describe what the provision does mechanically, not how prominent or obscure it appears.
 
-RULE 4 — GAPS MUST BE SPECIFIC
-A gap is something the bill's own subject matter demands but skips.
-Bad:  "Does not address climate change."
-Good: "Silent on overdraft practices at the same community banks receiving regulatory relief throughout the bill."
+RULE 4 — GAPS MUST BE ANCHORED TO THE BILL'S OWN STATED PURPOSE
+A gap is something the bill's own title, stated purpose, or subject matter directly implies but the bill text does not address. It must be grounded in the bill's own framing — not in external policy preferences or what an observer thinks the bill should contain.
+Bad:  "Does not address climate change." (external preference, not implied by bill's purpose)
+Bad:  "Silent on overdraft practices." (editorial judgment about what banking bills should cover)
+Good: "Title I is captioned 'Local Community Access' but the rural area definition excludes U.S. territories, which are not addressed anywhere in the bill."
+Good: "The bill mandates a CBLR review but specifies no consumer impact assessment as part of that review, despite Section 201 requiring agencies to consider aggregate effects on customers."
 
 RULE 5 — CHANGES MUST BE PRECISE
 added = new programs or rights created by this bill
@@ -77,6 +81,15 @@ removed = existing requirements eliminated
 
 RULE 6 — LIKELIHOOD MUST BE ARGUED
 Cite: current chamber majority, sponsor party, cosponsor count, which specific provisions will attract opposition and from whom.
+
+RULE 7 — NO EDITORIAL ADJECTIVES OR FRAMING IN ZONE 1 OR ZONE 2
+Do not use words that characterize intent, significance, prominence, or political valence.
+Prohibited in any Zone 1 or Zone 2 field: "quietly," "buried," "hidden," "sweeping," "significant," "notable," "troubling," "controversial," "merely," "only just," "surprisingly," "cleverly," "conveniently," "ostensibly," "framed as."
+These are editorial judgments, not source facts. If a provision is in the bill text, it is on the record — describe its mechanical effect, not its perceived prominence or intent.
+Bad:  "Quietly strips the audit trigger on $1,200,000,000 in unobligated funds."
+Bad:  "Buried in Title II, this provision lowers the capital floor."
+Good: "Section 223 removes the GAO audit trigger threshold for unobligated DoD funds exceeding $1,200,000,000."
+Good: "Section 203(b)(1) reduces the qualifying capital ratio lower bound from 8 percent to 6 percent."
 
 ━━━ OUTPUT FORMAT ━━━
 
@@ -87,16 +100,23 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
   "brief": "One sentence — the single most important thing this bill does. From bill text only.",
   "top_lines": [
     {
-      "headline": "One sentence describing a major theme or finding — include exact $ amount if one exists in the source",
+      "headline": "Short topic label — 3 to 6 words naming the subject area, not a specific provision. Think patch note category headers: 'Defense Spending', 'Tax Rate Changes', 'Bank Regulatory Relief'. No dollar amounts in the headline.",
       "subs": [
-        "Specific provision supporting the headline — include exact figure if available",
-        "Another specific provision (omit if nothing meaningful to add)"
+        "One specific provision under this topic — lead with exact figure if the source has one",
+        "Another specific provision under this topic — omit if nothing meaningful to add",
+        "Third specific provision under this topic — omit if nothing meaningful to add"
       ]
     },
     {
-      "headline": "Second major theme — different subject area from the first",
+      "headline": "Second topic — different subject area from the first",
       "subs": [
-        "Supporting specific provision"
+        "Specific provision under this topic"
+      ]
+    },
+    {
+      "headline": "Third topic — omit entire object if fewer than 3 meaningful topics exist",
+      "subs": [
+        "Specific provision under this topic"
       ]
     }
   ],
@@ -122,8 +142,8 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
   "underreported": [
     {
       "section": "Section name or number from the bill text",
-      "summary": "What this provision actually does — from bill text only.",
-      "why_unreported": "Why this is likely missed: buried in technical language, unrelated rider, contradicts the bill title, etc."
+      "summary": "What this provision does mechanically — from bill text only. No editorial adjectives.",
+      "why_unreported": "Why the mechanical effect differs from the section label or bill headline — e.g. 'Section is labeled X but the operative text does Y' or 'Provision applies to Z which is not mentioned in the bill title.' No words like buried, quietly, hidden, or slipped in."
     }
   ],
   "criticisms": [
@@ -133,7 +153,7 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
     }
   ],
   "gaps": [
-    "One sentence: something the bill's subject matter demands but the bill skips. Specific to this bill."
+    "One sentence: something the bill's own title, stated purpose, or subject matter directly implies but the bill text does not address. Must be grounded in the bill's own framing — not external policy preference. Format: 'The bill [does X] but does not [address Y implied by X].'"
   ],
   "featured_quotes": [
     {
@@ -153,7 +173,7 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
 }
 
 LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes.
-top_lines: maximum 3 headline objects, maximum 3 subs per headline (9 sub-lines total across all headlines).
+top_lines: 1-3 topic objects. Each headline is a short topic label (3-6 words), NOT a specific provision. Subs are the specific provisions/figures under that topic — 1-3 subs per headline, omit subs that add nothing. A headline with zero meaningful subs should be omitted entirely.
 If the source material does not support a full response in any zone, return fewer items — do not fill space with invented content.`;
 
 
