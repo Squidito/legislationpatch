@@ -181,7 +181,7 @@ function setupSettings() {
   }
 
   populateStateDropdown();
-  // Gemini 3.1 work: Removed live fetchStateReps call here.
+
 }
 
 function loadTrackedSettings() {
@@ -270,12 +270,11 @@ function handleStateChange(e) {
   trackedState = e.target.value;
   saveTrackedSettings();
   
-  // Gemini 3.1 work: State reps are now handled statically.
+
   renderRepStrip();
   renderRepGrid();
 }
 
-// Gemini 3.1 work: Removed fetchStateReps live API function.
 
 // ---- Portrait helpers ----
 
@@ -1371,7 +1370,6 @@ function toggleDetail(key) {
 }
 
 // ---- AI Analysis ----
-// Gemini 3.1 work: Removed client-side AI Analysis execution. All analysis is now provided statically via cache.json.
 
 // ---- Helpers ----
 

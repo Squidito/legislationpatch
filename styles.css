@@ -2217,7 +2217,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* =========================================
-   Gemini 3.1 work: Design Compliance (HIG & Safe Area)
+   Mobile: Tap Targets & Safe Area
    ========================================= */
 
 /* Ensure minimum 44x44 tap targets for interactive elements on mobile */
@@ -2255,7 +2255,7 @@ body {
 }
 
 /* =========================================
-   Gemini 3.1 work: Representative Profiles
+   Representative Profiles
    ========================================= */
 
 .rep-hero {
