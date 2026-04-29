@@ -1,6 +1,692 @@
 {
-  "generated": "2026-04-29T07:38:53.425Z",
+  "generated": "2026-04-29T07:47:02.274Z",
   "bills": [
+    {
+      "id": "119-HR-5366",
+      "title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "official_title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "code": "HR.5366",
+      "date": "Sep 15, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steube, W. Gregory (R-FL)",
+      "sponsor_bioguide": "S001214",
+      "cosponsors": 14,
+      "pages": 3,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Federal tax law normally requires casualty losses to exceed 10% of your income before you can deduct them — but Congress has repeatedly carved out exceptions for federally declared disaster areas, letting affected taxpayers deduct unreimbursed losses above $500 per incident even without itemizing. This bill extends those disaster-specific deduction rules to cover disasters with incident periods beginning before January 1, 2027 (up from the prior cutoff of July 4, 2025), and extends the exclusion of wildfire relief payments from taxable income to fires declared a federal disaster before 2027.",
+      "brief": "Extends the federal tax deduction for disaster property losses and the wildfire relief payment exclusion to disasters occurring before January 1, 2027.",
+      "top_lines": [
+        {
+          "headline": "Disaster Loss Deductions",
+          "subs": [
+            "Extended to disasters with incident periods beginning before January 1, 2027 — up from July 4, 2025",
+            "Deductible without itemizing; exempt from the alternative minimum tax"
+          ]
+        },
+        {
+          "headline": "Wildfire Relief Payments",
+          "subs": [
+            "Relief payments for fires declared a federal disaster after 2014 and before 2027 excluded from gross income",
+            "Currently capped at fires declared before 2026 and payments received before 2026"
+          ]
+        }
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Disaster tax relief has consistent bipartisan support and 14 cosponsors. Extension bills of this type routinely pass the Senate, often attached to larger tax packages. The geographic scope — covering presidentially declared disasters nationwide — limits targeted opposition.",
+      "sections": [
+        {
+          "label": "Section 2 — Disaster Casualty Loss Deduction",
+          "items": [
+            {
+              "main": "Adds Section 165(h)(6) to the Internal Revenue Code of 1986, creating a special deduction category for qualified net disaster losses that bypasses the 10% adjusted gross income limitation.",
+              "detail": "A qualified net disaster loss is the excess of qualified disaster-related personal casualty losses over personal casualty gains. A qualified disaster area covers any area with a presidential major disaster declaration under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act where the incident period begins after July 4, 2025, and before January 1, 2027. Disaster losses may be deducted as part of the standard deduction under new Section 63(c)(1)(C) and are exempt from the alternative minimum tax under Section 56(b)(1)(D).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Wildfire Relief Payment Exclusion",
+          "items": [
+            {
+              "main": "Creates new Section 139M of the Internal Revenue Code, excluding qualified wildfire relief payments from gross income.",
+              "detail": "The exclusion applies to payments for forest or range fires declared a federal disaster after 2014 and before 2027, regardless of when such payments are received. Under prior law, the exclusion applied only to qualifying payments received after 2019 and before 2026.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — Alternative Minimum Tax Exception",
+          "summary": "The bill explicitly exempts the disaster loss deduction from the alternative minimum tax by amending Section 56(b)(1)(D) of the Internal Revenue Code.",
+          "why_unreported": "The bill's headline is extension of the disaster deduction window. The AMT exception means taxpayers who would otherwise owe AMT — typically higher earners — retain the full value of the deduction, a consequence not apparent from the disaster relief framing."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill covers disasters with incident periods beginning before January 1, 2027, but does not address losses sustained within a qualified disaster area where the damage is discovered or claims are settled after January 1, 2027.",
+        "The wildfire relief exclusion applies only to fires paired with a federal disaster declaration and does not address relief payments from state programs for fires that did not receive a federal declaration."
+      ],
+      "changes": {
+        "added": [
+          "Section 165(h)(6) of the Internal Revenue Code — qualified net disaster loss deduction bypassing the 10% AGI limitation",
+          "Section 63(c)(1)(C) — disaster loss deduction available as part of the standard deduction",
+          "Section 139M — exclusion from gross income for qualified wildfire relief payments for fires declared a federal disaster after 2014 and before 2027"
+        ],
+        "modified": [
+          "Section 56(b)(1)(D) of the Internal Revenue Code — disaster loss deduction exempted from the alternative minimum tax",
+          "Definition of qualified disaster area extended to incident periods beginning after July 4, 2025, and before January 1, 2027"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-227",
+      "title": "Clergy Act",
+      "official_title": "Clergy Act",
+      "code": "HR.227",
+      "date": "Jan 7, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Fong, Vince (R-CA)",
+      "sponsor_bioguide": "F000480",
+      "cosponsors": 21,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Ordained ministers and Christian Science practitioners can apply to permanently opt out of Social Security and Medicare taxes on their ministerial earnings — but that exemption is currently irrevocable. This bill creates a one-time window for those who previously opted out to reverse that decision and re-enter the Social Security system, with coverage beginning for taxable years starting after December 31, 2027. Once revoked, they cannot opt out again.",
+      "brief": "Creates a one-time window for clergy who opted out of Social Security to reverse that decision and begin accruing retirement benefits.",
+      "top_lines": [
+        {
+          "headline": "One-Time Re-entry Window",
+          "subs": [
+            "Clergy may revoke their Social Security exemption by filing through the deadline for their second taxable year beginning after December 31, 2027",
+            "Coverage begins for taxable years starting after December 31, 2027 — cannot opt out again after revoking"
+          ]
+        },
+        {
+          "headline": "IRS Outreach Required",
+          "subs": [
+            "Commissioner of Internal Revenue must submit a plan to inform eligible clergy of their eligibility within 90 days of enactment"
+          ]
+        }
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The bill has 21 cosponsors and bipartisan backing — sponsors include Fong (R-CA), Thompson (D-CA), and Kelly (R-PA). Providing clergy a window to undo a permanent decision is unlikely to draw opposition. The narrow scope and sympathetic affected population make Senate passage plausible, though floor scheduling is uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — Revocation of Social Security Exemption",
+          "items": [
+            {
+              "main": "Notwithstanding Section 1402(e)(4) of the Internal Revenue Code (which makes the Social Security exemption irrevocable), clergy whose exemption is in effect for the taxable year of enactment may revoke it by filing an application with the IRS.",
+              "detail": "The application must be filed no later than the due date for the second taxable year beginning after December 31, 2027. Revocation takes effect for the first or second taxable year beginning after December 31, 2027, as specified by the applicant, and covers both chapter 2 of the IRC (self-employment tax) and title II of the Social Security Act (42 U.S.C. 401 et seq.). If the application is filed retroactively for a year already in effect, the applicant must pay in full all self-employment taxes that would have been owed for that year. After revoking, the applicant may not again file for an exemption under Section 1402(e)(1).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — IRS Outreach Plan",
+          "items": [
+            {
+              "main": "The Commissioner of Internal Revenue, in consultation with the Commissioner of Social Security, must develop and submit a plan to inform eligible clergy of their revocation eligibility within 90 days of enactment.",
+              "detail": "The plan must be submitted to the Ways and Means Committee of the House and the Finance Committee of the Senate. No minimum outreach activities, funding level, or success metrics are specified in the bill.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a) — Retroactive Year Catch-Up Payment",
+          "summary": "If a clergy member files a revocation application after the due date for a taxable year and elects to have it take effect for that year, they must immediately pay all self-employment taxes that would have been owed for the entire year.",
+          "why_unreported": "The bill's headline is a window to opt back in. The catch-up payment requirement means that choosing early retroactive coverage triggers a lump-sum tax obligation for the full year of retroactive coverage — a condition not apparent from the bill's title or the primary revocation provision."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill allows revocation effective for taxable years beginning after December 31, 2027 but does not address Social Security credits for prior years during which the exemption was in effect — those years generate no credits regardless of revocation.",
+        "The 90-day outreach plan requirement specifies no minimum outreach activities, distribution channels, or funding, leaving the scope of IRS notification entirely to agency discretion."
+      ],
+      "changes": {
+        "added": [
+          "One-time window for clergy and Christian Science practitioners to revoke their irrevocable Social Security exemption under Section 1402(e)(1) of the Internal Revenue Code, effective for taxable years beginning after December 31, 2027",
+          "Requirement for the Commissioner of Internal Revenue to submit an outreach plan to inform eligible clergy within 90 days of enactment"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-7971",
+      "title": "Taxpayer Experience Improvement Act",
+      "official_title": "Taxpayer Experience Improvement Act",
+      "code": "HR.7971",
+      "date": "Mar 18, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Schweikert, David (R-AZ)",
+      "sponsor_bioguide": "S001183",
+      "cosponsors": 1,
+      "pages": 5,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "This bill requires the IRS to publish real-time data on its public website about phone wait times, call volumes, and processing backlogs for every public phone line it operates, and to make that data available through a public API so third-party apps can display it. It also requires the IRS to give taxpayers online or mobile access to their own tax returns, notices, and refund status including an estimated delivery date.",
+      "brief": "Requires the IRS to publish live phone wait times and backlog data, and give taxpayers digital access to their own returns and refund status.",
+      "top_lines": [
+        {
+          "headline": "Real-Time IRS Dashboard",
+          "subs": [
+            "IRS must publish live caller counts, wait times, and callback availability per phone line on its public website",
+            "Public API required so any person or app can access the live call data"
+          ]
+        },
+        {
+          "headline": "Digital Tax Record Access",
+          "subs": [
+            "Taxpayers can view all returns, notices, and IRS letters via website or mobile app",
+            "IRS must provide estimated refund receipt date"
+          ]
+        },
+        {
+          "headline": "Monthly Accountability Metrics",
+          "subs": [
+            "IRS must publish monthly averages for call length, hold time, disconnection rate, and percent of callers who got help",
+            "Sense of Congress: callback offered within 5 minutes on any unanswered call by 2028"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Only 1 cosponsor despite bipartisan sponsorship (Schweikert R-AZ and Beyer D-VA). IRS modernization bills often pass the House but stall in the Senate amid disagreements over IRS funding and IT capacity. The real-time dashboard and public API requirements may face resistance from the Treasury Department over implementation feasibility.",
+      "sections": [
+        {
+          "label": "Section 2 — Public Wait Time Dashboard",
+          "items": [
+            {
+              "main": "Requires the IRS to publish in real time on its public website call volume, wait time, and callback availability for each applicable phone number extension.",
+              "detail": "For each phone line, the IRS must display the number of callers connected to representatives, connected to automated systems, and waiting; the longest current wait time; and whether callback service is available. A public API must be provided for automated access to the data. The IRS must also detect and screen automated calls, and publish processing delay information weekly when significant backlogs occur.",
+              "comments": []
+            },
+            {
+              "main": "Requires monthly summary statistics for each phone line, including caller satisfaction data.",
+              "detail": "Monthly metrics must include average and median call lengths and hold times; the percent of calls disconnected or directed to automation; the number of callers transferred; and the number and percent of callers who indicated they received the help they were seeking. The last metric requires the IRS to actively collect caller satisfaction data before calls end.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Sections 3–5 — Digital Access, Callbacks, and Online Accounts",
+          "items": [
+            {
+              "main": "Requires the IRS to make available to taxpayers — via website or mobile application — their tax returns, documents, all notices and letters sent by or to the IRS, refund status, and an estimated refund receipt date.",
+              "detail": "The bill also expresses the sense of Congress that by 2028 the IRS should offer a callback to any caller not answered within five minutes, and requires expansion of online taxpayer account access.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — Caller Satisfaction Metric",
+          "summary": "The monthly statistics requirement includes the number and percent of callers who indicated they received the answers or service they were seeking — a customer satisfaction data point embedded in a call-volume reporting requirement.",
+          "why_unreported": "Collecting this metric requires the IRS to actively ask callers before they hang up whether their issue was resolved, effectively mandating a caller survey process. This is a new operational requirement distinct from passively logging call volume and wait times, not apparent from the bill's IRS dashboard framing."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires real-time call data but does not specify a minimum uptime requirement for the dashboard or what disclosures are required if the live data is unavailable.",
+        "The digital access requirement does not specify an implementation timeline for the mobile application option, nor minimum device or accessibility standards for the application."
+      ],
+      "changes": {
+        "added": [
+          "Requirement for real-time IRS public dashboard with per-phone-line call volume, wait times, and callback availability, plus public API access",
+          "Monthly IRS reporting requirement including caller satisfaction metrics, disconnection rates, and hold times per phone extension",
+          "Requirement for IRS to provide taxpayers with online or mobile access to returns, notices, refund status, and estimated refund date",
+          "Requirement for IRS to use technology to detect and screen automated calls"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6495",
+      "title": "Taxpayer Notification and Privacy Act",
+      "official_title": "Taxpayer Notification and Privacy Act",
+      "code": "HR.6495",
+      "date": "Dec 5, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steube, W. Gregory (R-FL)",
+      "sponsor_bioguide": "S001214",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When the IRS wants information about you from a third party like your employer or bank, current law requires it to notify you in advance — but not what specific information it's seeking. This bill requires the IRS to identify each specific item of information it intends to collect from the third party, and give you at least 45 days to provide it yourself, whenever the IRS hasn't already asked you for it and you could reasonably provide it. Two exceptions apply: the rule doesn't cover tax collection proceedings, and the Secretary can waive it when third-party contact is deemed necessary.",
+      "brief": "Requires the IRS to tell taxpayers exactly what information it plans to collect from third parties and give them 45 days to provide it first.",
+      "top_lines": [
+        {
+          "headline": "Specific Notice Required",
+          "subs": [
+            "IRS must identify each item sought from a third party when the taxpayer hasn't been asked before and could provide it",
+            "Taxpayers get at least 45 days to respond — more if they request it with reasonable cause"
+          ]
+        },
+        {
+          "headline": "Exceptions",
+          "subs": [
+            "Specificity requirement waived for tax collection proceedings or when Secretary determines third-party contact is necessary regardless"
+          ]
+        }
+      ],
+      "likelihood": 35,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Only 1 cosponsor and a narrow taxpayer privacy focus. The IRS exemption allowing the Secretary to waive specificity requirements whenever deemed necessary limits the bill's practical effect, which may reduce the urgency Senate sponsors attach to it. IRS procedural reform bills without broad coalition backing rarely advance quickly in the Senate.",
+      "sections": [
+        {
+          "label": "Section 2 — Specificity of Third-Party Contact Notices",
+          "items": [
+            {
+              "main": "Amends Section 7602(c)(1) of the Internal Revenue Code of 1986 to require the IRS to identify each specific item of information it intends to seek from a third party when that information has not been previously requested from the taxpayer and could reasonably be provided by the taxpayer.",
+              "detail": "The advance notice must provide the taxpayer with a period of not less than 45 days — or more if the taxpayer requests additional time and shows reasonable cause — to respond, including by providing the information themselves, before the IRS contacts the third party. The exception in Section 7602(c)(3)(B) provides that the specificity and waiting period requirements do not apply if the information is sought for collection of a tax liability, or if the Secretary determines the third-party information is necessary regardless of whether the taxpayer could provide it. Effective date: 12 months after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 7602(c)(3)(B) — Secretary's Necessity Exception",
+          "summary": "The bill's specificity and 45-day notice requirements do not apply whenever the Secretary determines that the third-party information is necessary, without any standard for what constitutes necessity or any procedural check on that determination.",
+          "why_unreported": "The bill is framed as expanding taxpayer notification rights. The necessity exception allows the IRS to bypass both the itemized notice and the 45-day waiting period entirely based on the Secretary's own judgment, with no defined standard, independent review, or notification to the taxpayer that the exception has been invoked."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires the IRS to give the taxpayer 45 days to respond but does not specify whether the IRS is barred from contacting the third party if the taxpayer provides the requested information within the window.",
+        "The bill does not address the taxpayer's right to receive notice that the Secretary has invoked the necessity exception, leaving taxpayers without information about why the standard procedure was not followed."
+      ],
+      "changes": {
+        "added": [
+          "Section 7602(c)(1)(B) of the Internal Revenue Code — requirement for IRS to identify each specific item of information sought from a third party when not previously requested from the taxpayer",
+          "Section 7602(c)(1)(C) amendment — 45-day minimum response period before third-party contact, with extensions available on reasonable cause"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6431",
+      "title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "official_title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "code": "HR.6431",
+      "date": "Dec 4, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Carey, Mike (R-OH)",
+      "sponsor_bioguide": "C001126",
+      "cosponsors": 6,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Self-Employment Assistance programs let unemployed workers collect their unemployment benefits as a lump-sum allowance while they start a business, instead of conducting a traditional job search. This bill doubles the cap on program participation from 5% to 10% of unemployment recipients per state, removes the requirement that participants be on track to exhaust their benefits, adds a weekly self-certification requirement, and creates an alternative qualification pathway through a state-approved business plan rather than requiring formal entrepreneurial training.",
+      "brief": "Doubles state SEA program participation to 10%, drops the exhaustion-of-benefits eligibility requirement, and adds a business-plan qualification pathway.",
+      "top_lines": [
+        {
+          "headline": "Expanded Access",
+          "subs": [
+            "Removes the requirement that participants be likely to exhaust unemployment benefits — opens programs to more applicants",
+            "Business plan + market feasibility study now qualifies as an alternative to formal entrepreneurial training"
+          ]
+        },
+        {
+          "headline": "Larger Programs, Weekly Accountability",
+          "subs": [
+            "State participation cap raised from 5% to 10% of unemployment benefit recipients",
+            "Participants must certify their self-employment activities on at least a weekly basis"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Bipartisan sponsorship (Carey R-OH and Landsman D-OH among others) and 6 cosponsors. Small business and entrepreneurship provisions attract broad support, but the 2-year implementation delay and required Labor Department rulemaking introduce uncertainty. Senate floor time for unemployment program reforms is limited.",
+      "sections": [
+        {
+          "label": "Section 2 — Modified SEA Program Requirements",
+          "items": [
+            {
+              "main": "Amends Section 3306(t) of the Internal Revenue Code to remove the requirement that SEA participants be identified as likely to exhaust regular unemployment compensation benefits, expanding the eligible population.",
+              "detail": "Subparagraph (B) of Section 3306(t)(3), which required participants to be identified as likely to exhaust benefits, is stricken. Eligible self-employment activities may now qualify through either (i) the existing path of entrepreneurial training, business counseling, and technical assistance approved by the state, or (ii) a new path through a business plan and market feasibility study submitted by the individual and approved by the state or a designated agency. Participants must certify their activities at least weekly to a state-designated agency.",
+              "comments": []
+            },
+            {
+              "main": "Raises the state SEA program participation cap from 5% to 10% of individuals receiving regular unemployment compensation.",
+              "detail": "The change to Section 3306(t)(4) doubles the maximum share of unemployment benefit recipients a state may enroll in its SEA program. Changes take effect 2 years after enactment; states may amend their laws before then. The Secretary of Labor must adopt implementing regulations through public notice and comment, subject to OMB approval.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(e) — Two-Year Implementation Delay",
+          "summary": "The bill's changes do not take effect until 2 years after enactment, and states must amend their own laws within that window to be compliant.",
+          "why_unreported": "The bill's operative changes — expanded eligibility, the business-plan pathway, and the higher participation cap — are the headline. The 2-year gap before any of those changes can be used, combined with the requirement for state-level legislative action, means the bill's benefits may not materialize in states that fail to update their laws in time."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill doubles participation caps and expands eligibility but does not address the funding source for increased SEA allowances, which are paid from state unemployment trust funds that vary significantly in reserves across states.",
+        "The bill adds a weekly certification requirement but does not specify consequences for participants who miss certifications or the process for removing a non-compliant participant."
+      ],
+      "changes": {
+        "added": [
+          "Business plan and market feasibility study as an alternative qualifying pathway for SEA program activities under Section 3306(t)(3)",
+          "Weekly self-certification requirement for SEA program participants"
+        ],
+        "modified": [
+          "Section 3306(t)(3) of the Internal Revenue Code — eliminated the requirement that participants be identified as likely to exhaust regular unemployment compensation benefits",
+          "Section 3306(t)(4) — state SEA program participation cap raised from 5% to 10% of unemployment benefit recipients"
+        ],
+        "removed": [
+          "Section 3306(t)(3)(B) — requirement that SEA participants be likely to exhaust unemployment benefits"
+        ]
+      }
+    },
+    {
+      "id": "119-HR-5334",
+      "title": "Supporting Early-childhood Educators' Deductions Act of 2025",
+      "official_title": "Supporting Early-childhood Educators' Deductions Act of 2025",
+      "code": "HR.5334",
+      "date": "Sep 11, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Panetta, Jimmy (D-CA)",
+      "sponsor_bioguide": "P000613",
+      "cosponsors": 23,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "K-12 teachers can deduct up to $300 per year in unreimbursed classroom expenses directly from their gross income without itemizing — but pre-K and early childhood educators are currently excluded. This bill extends that deduction to teachers and staff at schools providing early childhood education. It applies retroactively starting with tax year 2025.",
+      "brief": "Extends the $300 above-the-line educator expense deduction to early childhood and pre-K educators, retroactive to tax year 2025.",
+      "top_lines": [
+        {
+          "headline": "Expanded Educator Deduction",
+          "subs": [
+            "Early childhood educators added to the up-to-$300 above-the-line deduction for unreimbursed classroom expenses",
+            "Retroactive to expenses incurred in taxable years beginning after December 31, 2024"
+          ]
+        },
+        {
+          "headline": "Who Qualifies",
+          "subs": [
+            "Teachers, instructors, counselors, principals, and aides in schools providing early childhood (pre-kindergarten) education",
+            "23 bipartisan cosponsors; eligibility criteria otherwise unchanged from existing K-12 provision"
+          ]
+        }
+      ],
+      "likelihood": 65,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Strong bipartisan support with 23 cosponsors. Expanding educator tax benefits is a consistently popular, low-controversy issue in both chambers. The retroactive application to tax year 2025 creates urgency for Senate passage. The narrow, targeted nature of the change limits points of opposition.",
+      "sections": [
+        {
+          "label": "Section 2 — Educator Expense Deduction for Early Childhood Educators",
+          "items": [
+            {
+              "main": "Amends Section 62 of the Internal Revenue Code of 1986 to add early childhood educators to the above-the-line deduction for eligible educator expenses.",
+              "detail": "Section 62(d)(1)(A) is amended to insert \"early childhood educator\" before \"kindergarten through grade 12 teacher,\" and Section 62(d)(1)(B) is amended to include \"early childhood education\" and \"pre-kindergarten\" alongside elementary and secondary education. The heading of Section 62(a)(2)(D) is updated to reflect the expanded scope. The deduction limit — up to $300 in 2025, adjusted annually — and all other existing eligibility conditions are unchanged. Effective for expenses incurred in taxable years beginning after December 31, 2024.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — \"Early Childhood Educator\" Undefined",
+          "summary": "The bill inserts \"early childhood educator\" into the eligibility definition without providing a statutory definition of who qualifies as an early childhood educator or what constitutes a school providing early childhood education.",
+          "why_unreported": "The bill's purpose is to close the gap between K-12 and pre-K eligibility. The undefined terms leave it to the IRS to determine whether providers such as home daycares, private preschools, federally-funded Head Start centers, or school-district pre-K classrooms qualify — a scope determination with significant reach."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill does not define \"early childhood educator\" or specify which types of early childhood education institutions qualify, leaving scope determination to IRS rulemaking.",
+        "The $300 deduction cap — which applies to K-12 teachers and would apply to early childhood educators under this bill — is not adjusted for the early childhood context, where out-of-pocket supply costs may differ from those of K-12 classroom teachers."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 62(d)(1)(A) and (B) of the Internal Revenue Code of 1986 — above-the-line educator expense deduction expanded to include early childhood educators in schools providing pre-kindergarten education"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6956",
+      "title": "BARCODE Efficiency Act",
+      "official_title": "Barcode Automation for Revenue Collection to Organize Disbursement and Enhance Efficiency Act",
+      "code": "HR.6956",
+      "date": "Jan 7, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Schneider, Bradley Scott (D-IL)",
+      "sponsor_bioguide": "S001190",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When taxpayers prepare their returns electronically but print and mail them, the IRS currently re-enters all that data by hand. This bill requires those returns to include a scannable barcode so the IRS can convert them to electronic format automatically. For returns prepared entirely by hand and for paper correspondence, the IRS must use optical character recognition software. The technology requirement can be waived if the IRS finds it slower or less reliable than manual processing — but any waiver must be reported to Congress within 30 days.",
+      "brief": "Mandates barcodes on electronically-prepared paper returns and OCR scanning for handwritten returns and correspondence, with a performance-based waiver.",
+      "top_lines": [
+        {
+          "headline": "Barcode Mandate",
+          "subs": [
+            "Electronically-prepared paper returns must include a scannable barcode — IRS must scan rather than manually re-enter the data",
+            "Applies to individual income tax returns 180 days after enactment"
+          ]
+        },
+        {
+          "headline": "OCR for Everything Else",
+          "subs": [
+            "Hand-prepared returns and all paper IRS correspondence must be transcribed using optical character recognition",
+            "Estate and gift returns: 24 months; all other returns and correspondence: 12 months after enactment"
+          ]
+        },
+        {
+          "headline": "Performance Waiver",
+          "subs": [
+            "IRS may skip the technology if it's slower or less reliable than manual processing — but must report to Congress within 30 days"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Bipartisan sponsorship (Schneider D-IL and Yakym R-IN) and the efficiency framing make opposition difficult to articulate, but only 1 cosponsor. IRS technology mandate bills often face implementation feasibility questions in the Senate, particularly when they include performance-based exceptions that give the agency discretion to delay compliance.",
+      "sections": [
+        {
+          "label": "Section 2 — Scanning and Digitization of Tax Returns and Correspondence",
+          "items": [
+            {
+              "main": "Requires that any federal tax return prepared electronically and filed on paper must include a scannable code, and that the IRS must use barcode scanning technology to convert such returns to electronic format.",
+              "detail": "If the barcode data cannot be accurately converted, the IRS must use optical character recognition or functionally similar technology. For paper returns not prepared electronically and all paper correspondence (except correspondence originally received electronically), the IRS must use OCR technology to transcribe the document. Effective dates: individual income tax returns within 180 days; all other returns and correspondence within 12 months; estate and gift tax returns within 24 months of enactment.",
+              "comments": []
+            },
+            {
+              "main": "The technology requirement is waived if the Secretary determines it is slower or less reliable than manual transcription or any other IRS process — but a waiver report must be submitted to Congress within 30 days.",
+              "detail": "The waiver determination is made entirely by the Secretary without independent oversight or minimum performance benchmarks. The reporting obligation to the Ways and Means Committee and Senate Finance Committee is the sole check on waiver use.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(c) — Self-Assessed Performance Waiver",
+          "summary": "The IRS determines whether its own technology is slower or less reliable than manual processing. If it makes that finding, it may waive the barcode and OCR requirements with no congressional approval required — only a 30-day report.",
+          "why_unreported": "The bill's mandate reads as a firm requirement. The waiver mechanism allows the IRS to indefinitely delay compliance through its own performance assessment, with a notification-only check. No minimum performance threshold, time limit on the waiver, or independent evaluation is specified."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires OCR for paper correspondence but does not address accuracy standards for the OCR process or what happens when digitized data contains errors that affect tax calculations or processing.",
+        "The bill does not specify what recourse taxpayers have if their paper-filed barcode return is misread or if the OCR transcription of their correspondence contains errors that affect their tax account."
+      ],
+      "changes": {
+        "added": [
+          "Requirement for scannable barcodes on electronically-prepared federal tax returns filed in paper format",
+          "Requirement for IRS to use barcode scanning technology to convert electronically-prepared paper returns to electronic format",
+          "Requirement for IRS to use optical character recognition technology for hand-prepared paper returns and paper correspondence",
+          "Performance-based waiver with 30-day congressional reporting requirement"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-8364",
+      "title": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "official_title": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "code": "HR.8364",
+      "date": "Apr 20, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steil, Bryan (R-WI)",
+      "sponsor_bioguide": "S001213",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Capitol Police officers must currently retire at age 57, though the Capitol Police Board can waive that requirement and allow officers to work until age 60. This bill expands the Board's authority to set the mandatory retirement age at any point between 57 and 65, giving it more flexibility to retain experienced officers beyond the current 60-year cap.",
+      "brief": "Raises the Capitol Police Board's maximum retirement age waiver from 60 to 65, letting the Board keep experienced officers working longer.",
+      "top_lines": [
+        {
+          "headline": "Retirement Age Flexibility",
+          "subs": [
+            "Capitol Police Board can now set mandatory retirement at any age between 57 and 65 — up from the current 57–60 range",
+            "Applies to officers under both the Civil Service Retirement System and the Federal Employees' Retirement System"
+          ]
+        }
+      ],
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Bipartisan support (Steil R-WI and Morelle D-NY) on a narrow workforce management bill affecting a single law enforcement agency. Capitol security legislation typically advances with little controversy. The limited scope and lack of broader policy implications make Senate passage plausible if floor time is available.",
+      "sections": [
+        {
+          "label": "Section 1 — Retirement Age Increase",
+          "items": [
+            {
+              "main": "Amends Sections 8335(c) and 8425(c) of title 5, United States Code to expand the Capitol Police Board's authority over mandatory retirement age from a fixed ceiling of 60 to a range of 57 to 65.",
+              "detail": "Both the Civil Service Retirement System (Section 8335(c)) and Federal Employees' Retirement System (Section 8425(c)) provisions are amended by replacing \"becomes 60 years of age\" with \"attains an age determined by the Board that shall be not less than 57 years of age and not more than 65 years of age.\" The minimum mandatory retirement age of 57 is unchanged. The Board retains discretion to set the mandatory retirement age anywhere within the 57–65 range for individual officers or as a general policy.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill grants the Board discretion to set retirement age between 57 and 65 but specifies no criteria the Board must use in making that determination for individual officers or as a department-wide policy."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 8335(c) of title 5, United States Code (CSRS) — Capitol Police mandatory retirement age ceiling raised from 60 to 65, at the Board's discretion",
+          "Section 8425(c) of title 5, United States Code (FERS) — Capitol Police mandatory retirement age ceiling raised from 60 to 65, at the Board's discretion"
+        ],
+        "removed": []
+      }
+    },
     {
       "id": "119-HR-4930",
       "title": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
