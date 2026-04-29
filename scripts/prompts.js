@@ -91,6 +91,13 @@ Bad:  "Buried in Title II, this provision lowers the capital floor."
 Good: "Section 223 removes the GAO audit trigger threshold for unobligated DoD funds exceeding $1,200,000,000."
 Good: "Section 203(b)(1) reduces the qualifying capital ratio lower bound from 8 percent to 6 percent."
 
+RULE 8 — EXTENSION AND REAUTHORIZATION BILLS
+When a bill's primary function is to extend or reauthorize an existing program, authority, or law — rather than create or substantially modify one — the summary and brief must first explain in plain English what the original program does and who it affects in real life. You may use your knowledge of the original program for this context; it is the only zone where background knowledge is permitted. Then state what the bill changes (typically: extends through [date], with or without new conditions).
+Do not write a summary that only states the extension without explaining what is being extended — that tells the reader nothing.
+Bad:  "Extends the authorities of Title VII of FISA through April 30, 2026."
+Good: "Section 702 of FISA allows the NSA to collect communications of foreign targets without a warrant — including conversations with Americans. This bill extends that authority through April 30, 2026 with no new limits attached."
+The original-program description must be accurate and factual. Do not editorialize about the original program. State what it does mechanically, then state what this bill does to it.
+
 ━━━ OUTPUT FORMAT ━━━
 
 Return ONLY a valid JSON object. No markdown fences, no explanation text outside the JSON.
