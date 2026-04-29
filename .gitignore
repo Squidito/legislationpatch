@@ -1,6 +1,9 @@
 # config.js contains API keys — uncomment the line below if you ever add real keys
 # config.js
 
+# Claude Code project instructions — internal only
+CLAUDE.md
+
 # Common files to never commit
 .env
 .env.local
