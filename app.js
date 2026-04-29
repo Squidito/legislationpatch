@@ -382,9 +382,10 @@ function renderRepStrip() {
                     data-rep-id="${escHtml(id)}"
                     style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
                     title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
-      <div class="rep-ring">
-        <img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
-      </div>
+      ${isFeatured
+        ? `<div class="rep-featured-wrap"><div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div></div>`
+        : `<div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>`
+      }
       <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
       <div class="rep-name">${escHtml(lastName)}</div>
     </button>`;

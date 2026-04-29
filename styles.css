@@ -181,9 +181,9 @@ a:hover { text-decoration: underline; }
 .rep-strip {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
   flex: 1;
-  padding: 5px 2px;
+  padding: 5px 8px;
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -259,14 +259,20 @@ a:hover { text-decoration: underline; }
   outline-offset: 3px;
   box-shadow: 0 0 0 5px rgba(109, 79, 199, 0.18);
 }
-.rep-card.rep-featured .rep-ring {
-  outline: 2.5px solid var(--amber);
-  outline-offset: 3px;
-  box-shadow: 0 0 0 5px rgba(168, 125, 36, 0.18);
+.rep-featured-wrap {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2.5px solid var(--amber);
+  padding: 3px;
+  background: var(--bg);
+  display: flex;
+  flex-shrink: 0;
 }
-[data-theme="dark"] .rep-card.rep-featured .rep-ring {
-  outline-color: #fbbf24;
-  box-shadow: 0 0 0 5px rgba(251, 191, 36, 0.15);
+[data-theme="dark"] .rep-featured-wrap {
+  border-color: #fbbf24;
+  background: var(--surface);
 }
 .rep-badge {
   display: block;
@@ -284,6 +290,8 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 .rep-card-sm .rep-ring { width: 44px; height: 44px; }
+.rep-card-sm .rep-featured-wrap .rep-ring,
+.rep-card-lg .rep-featured-wrap .rep-ring { width: 100%; height: 100%; }
 .rep-card-sm .rep-name {
   margin-top: 4px;
   font-size: 10px;
