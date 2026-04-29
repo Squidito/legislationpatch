@@ -1188,11 +1188,15 @@ function renderMinorBody(bill, col, isOpen) {
       <div class="underreported-preview">${billRefHtml(topUnder.summary, bill.id)}</div>
     </div>` : '';
 
-  const likelihoodDetail = bill.stage === 'signed' ? '' :
-    `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
-      <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
-      <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
-    </div>`;
+  const likelihoodDetail = bill.stage === 'signed'
+    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--green)">
+        <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(bill.date || '')}${bill.enactedDate ? ` · Enacted ${escHtml(bill.enactedDate)}` : ''}</div>
+      </div>`
+    : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
+        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
+        <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
+      </div>`;
 
   return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
     ${likelihoodDetail}
