@@ -135,7 +135,8 @@ function showError(on, msg) {
 function isJustPassed(bill) {
   if (bill.stage !== 'signed') return false;
   try {
-    const daysDiff = (Date.now() - new Date(bill.date).getTime()) / (1000 * 60 * 60 * 24);
+    const ref = bill.enactedDate || bill.date;
+    const daysDiff = (Date.now() - new Date(ref).getTime()) / (1000 * 60 * 60 * 24);
     return daysDiff <= 30;
   } catch (e) { return false; }
 }
