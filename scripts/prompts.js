@@ -109,9 +109,9 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
     {
       "headline": "Short topic label — 3 to 6 words naming the subject area, not a specific provision. Think patch note category headers: 'Defense Spending', 'Tax Rate Changes', 'Bank Regulatory Relief'. No dollar amounts in the headline.",
       "subs": [
-        "One specific provision under this topic — lead with exact figure if the source has one",
-        "Another specific provision under this topic — omit if nothing meaningful to add",
-        "Third specific provision under this topic — omit if nothing meaningful to add"
+        "One specific provision — patch-note style, under 12 words. Lead with exact figure if the source has one. No statutory citations (e.g. no '50 U.S.C. 1881'). No restating the headline.",
+        "Second provision under this topic — omit if nothing meaningful to add",
+        "Third provision under this topic — omit if nothing meaningful to add"
       ]
     },
     {
