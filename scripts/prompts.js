@@ -189,7 +189,7 @@ For each significant provision found in this text, note:
 5. WHAT IS CREATED OR ELIMINATED — new programs, agencies, requirements, or rights named in the text
 6. ANYTHING TECHNICALLY OBSCURED — provisions where the plain language conceals a significant real-world effect
 
-Ignore completely: definitions sections, short titles, findings/sense-of-Congress language, effective date boilerplate.
+Ignore completely: definitions sections, short titles, findings/sense-of-Congress language, effective date boilerplate, citation updates, cross-reference substitutions, and amendment-chain cleanups (provisions that swap one legal citation string for another without changing any substantive rule).
 
 Return brief bullet-point notes only. No paragraphs. No editorial comment. No figures not present in this text.`;
 
