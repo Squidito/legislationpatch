@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-29T03:08:38.726Z",
+  "generated": "2026-04-29T03:12:22.605Z",
   "bills": [
     {
       "id": "119-HR-8322",
@@ -7,7 +7,7 @@
       "official_title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
       "code": "HR.8322",
       "date": "Apr 16, 2026",
-      "version": "v1.0",
+      "version": "v1.1",
       "stage": "signed",
       "stageLabel": "Signed into Law",
       "currentStep": 4,
@@ -25,20 +25,21 @@
       "analyzed": true,
       "live": false,
       "demo": false,
-      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the NSA collect communications of foreign targets without a warrant — and when those targets communicate with Americans, those conversations are collected too. The FBI can then search that database for information about U.S. persons without getting a separate warrant. This bill extends that authority through April 30, 2026, with no new limits, oversight requirements, or reform provisions added.",
-      "brief": "Extends warrantless NSA surveillance of foreign targets — including incidental collection of Americans’ communications — through April 30, 2026, with no reforms attached.",
+      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the NSA collect the communications of foreign targets without a warrant — and when those targets contact Americans, those conversations are swept up too. The FBI can then search that database for information about U.S. persons without getting a separate warrant. This bill extends that authority through April 30, 2026 with no new limits, oversight requirements, or reforms added.",
+      "brief": "Extends the NSA's authority to collect foreign targets' communications without a warrant — including Americans' conversations when they contact those targets — through April 30, 2026, with no reforms attached.",
       "top_lines": [
         {
-          "headline": "Surveillance Reauthorization",
+          "headline": "What Section 702 Does",
           "subs": [
-            "Replaces the prior rolling repeal date for Title VII of FISA (50 U.S.C. 1881 et seq.) with a fixed April 30, 2026 deadline",
-            "No new oversight requirements, reform provisions, or privacy protections included in the extension"
+            "Allows the NSA to compel U.S. tech companies to hand over communications of designated foreign targets without a warrant",
+            "When those targets communicate with Americans, those conversations are collected — the FBI can then search that database for U.S. person data without a separate warrant"
           ]
         },
         {
-          "headline": "Rapid Enactment",
+          "headline": "What This Bill Changes",
           "subs": [
-            "Introduced April 16, 2026 and signed into law as Public Law 119-84 on April 18, 2026 — two days from introduction to enactment"
+            "Replaces the prior rolling repeal date for Title VII of FISA (50 U.S.C. 1881 et seq.) with a fixed April 30, 2026 deadline — no new safeguards or reforms included",
+            "Introduced April 16, 2026 and signed into law as Public Law 119-84 two days later on April 18, 2026"
           ]
         }
       ],
@@ -47,16 +48,11 @@
       "likelihoodReason": "Signed into law by the President on April 18, 2026 as Public Law 119-84.",
       "sections": [
         {
-          "label": "Section 1 — Extension of Title VII Repeal Date",
+          "label": "Section 1 — Extension of Title VII Authorities",
           "items": [
             {
-              "main": "Extends the NSA’s authority under Section 702 of FISA — which allows warrantless collection of foreign targets’ communications, including conversations with Americans — through April 30, 2026.",
-              "detail": "Amends Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) to replace a rolling two-year repeal date with a fixed April 30, 2026 deadline. No new privacy protections, minimization requirements, or oversight mechanisms are added. The amendment takes effect on the earlier of the date of enactment or April 19, 2026.",
-              "comments": []
-            },
-            {
-              "main": "Amends Section 404(b) of the FISA Amendments Act of 2008 to update citation references in the transition procedures to cite 50 U.S.C. 1881 et seq. directly.",
-              "detail": "Two subsections of Section 404(b) are amended by removing references to the FISA Amendments Reauthorization Act of 2017 and the Reforming Intelligence and Securing America Act, replacing them with a direct citation to 50 U.S.C. 1881 et seq. The heading of one amended paragraph is updated from a reference to the prior act enactment date to the term repeal date.",
+              "main": "Title VII of FISA (Section 702) authorizes the NSA to surveil foreign targets abroad without a warrant. This bill extends that authority through April 30, 2026 with no new conditions attached.",
+              "detail": "Amends Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) to set a fixed April 30, 2026 repeal date for Title VII, replacing a rolling deadline tied to the enactment of the Reforming Intelligence and Securing America Act. The amendment takes effect on the earlier of the date of enactment or April 19, 2026. No new minimization requirements, no new oversight mechanisms, and no restrictions on FBI queries of the collected data are included.",
               "comments": []
             }
           ]
@@ -66,13 +62,12 @@
       "criticisms": [
         {
           "who": "Sen. Ron Wyden (D-OR)",
-          "why": "Opposed reauthorization without reform, stating that a straight extension of FISA law is absolutely unacceptable and that warrantless searches tripled in the first year of the Trump administration."
+          "why": "Opposed the clean extension, stating that warrantless searches of U.S. persons tripled in the first year of the Trump administration and that a straight reauthorization without reform is absolutely unacceptable."
         }
       ],
       "gaps": [
         "The bill extends Title VII surveillance authorities through April 30, 2026 but sets no reporting requirement on how those authorities are used during the extension period.",
-        "The bill replaces the prior rolling deadline with a fixed date but does not establish any conditions or review process governing further reauthorization after April 30, 2026.",
-        "The bill amends the repeal date and transition procedure citations but does not address the status of any outstanding directives if the April 30, 2026 deadline passes without further action by Congress."
+        "The bill sets a fixed April 30, 2026 expiration date but does not establish any conditions or framework governing further reauthorization after that date."
       ],
       "featured_quotes": [
         {
@@ -95,8 +90,7 @@
       "changes": {
         "added": [],
         "modified": [
-          "Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) — Title VII repeal date changed from two years after enactment of the Reforming Intelligence and Securing America Act to April 30, 2026",
-          "Section 404(b) of the FISA Amendments Act of 2008 — transition procedure citation references updated to 50 U.S.C. 1881 et seq., removing references to the FISA Amendments Reauthorization Act of 2017 and the Reforming Intelligence and Securing America Act"
+          "Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) — Title VII repeal date changed from two years after enactment of the Reforming Intelligence and Securing America Act to April 30, 2026"
         ],
         "removed": []
       }
