@@ -1,6 +1,228 @@
 {
-  "generated": "2026-04-27T02:57:28.690Z",
+  "generated": "2026-04-29T02:54:29.871Z",
   "bills": [
+    {
+      "id": "119-HR-8322",
+      "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "official_title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "code": "HR.8322",
+      "date": "Apr 16, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Scott, Austin (R-GA)",
+      "sponsor_bioguide": "S001189",
+      "cosponsors": 0,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Amends the FISA Amendments Act of 2008 to replace the rolling two-year repeal date for Title VII of the Foreign Intelligence Surveillance Act of 1978 (50 U.S.C. 1881 et seq.) with a fixed deadline of April 30, 2026. The bill was introduced on April 16, signed into law as Public Law 119-84 on April 18, 2026, and contains no new reform provisions or oversight requirements.",
+      "brief": "Extends Title VII of FISA warrantless surveillance authorities through April 30, 2026 with no reforms attached.",
+      "top_lines": [
+        {
+          "headline": "Surveillance Reauthorization",
+          "subs": [
+            "Replaces the prior rolling repeal date for Title VII of FISA (50 U.S.C. 1881 et seq.) with a fixed April 30, 2026 deadline",
+            "No new oversight requirements, reform provisions, or privacy protections included in the extension"
+          ]
+        },
+        {
+          "headline": "Rapid Enactment",
+          "subs": [
+            "Introduced April 16, 2026 and signed into law as Public Law 119-84 on April 18, 2026 — two days from introduction to enactment"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 18, 2026 as Public Law 119-84.",
+      "sections": [
+        {
+          "label": "Section 1 — Extension of Title VII Repeal Date",
+          "items": [
+            {
+              "main": "Amends Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) to set the repeal date of Title VII of the Foreign Intelligence Surveillance Act of 1978 at April 30, 2026.",
+              "detail": "Prior law set the repeal date at two years after enactment of the Reforming Intelligence and Securing America Act. This amendment replaces that rolling deadline with a fixed April 30, 2026 date. The amendment takes effect on the earlier of the date of enactment of this Act or April 19, 2026.",
+              "comments": []
+            },
+            {
+              "main": "Amends Section 404(b) of the FISA Amendments Act of 2008 to update citation references in the transition procedures to cite 50 U.S.C. 1881 et seq. directly.",
+              "detail": "Two subsections of Section 404(b) are amended by removing references to the FISA Amendments Reauthorization Act of 2017 and the Reforming Intelligence and Securing America Act, replacing them with a direct citation to 50 U.S.C. 1881 et seq. The heading of one amended paragraph is updated from a reference to the prior act enactment date to the term repeal date.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 1(b) — Transition Procedure Citation Updates",
+          "summary": "Section 1(b) amends the transition procedures in Section 404(b) of the FISA Amendments Act of 2008 by removing references to specific prior reauthorization acts and substituting a direct citation to 50 U.S.C. 1881 et seq. The heading of one amended paragraph is changed from a date-based label to the term repeal date.",
+          "why_unreported": "Section 1(b) is labeled as extending transition procedures, but its operative text removes amendment-chain citation references rather than changing any substantive rule. The update governs which statutory reference applies to the transition procedures when Title VII expires or is further amended."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "Sen. Ron Wyden (D-OR)",
+          "why": "Opposed reauthorization without reform, stating that a straight extension of FISA law is absolutely unacceptable and that warrantless searches tripled in the first year of the Trump administration."
+        }
+      ],
+      "gaps": [
+        "The bill extends Title VII surveillance authorities through April 30, 2026 but sets no reporting requirement on how those authorities are used during the extension period.",
+        "The bill replaces the prior rolling deadline with a fixed date but does not establish any conditions or review process governing further reauthorization after April 30, 2026.",
+        "The bill amends the repeal date and transition procedure citations but does not address the status of any outstanding directives if the April 30, 2026 deadline passes without further action by Congress."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Sen. Ron Wyden",
+          "party": "D",
+          "state": "OR",
+          "bioguideId": "W000779",
+          "text": "Any Senator who votes to reauthorize this law without real reform will be directly responsible when the Trump team abuses their spying powers.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Sen. Ron Wyden",
+          "party": "D",
+          "state": "OR",
+          "bioguideId": "W000779",
+          "text": "The number of so-called 'sensitive' warrantless searches more than tripled during the first year of the Trump administration.",
+          "stance": "oppose"
+        }
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) — Title VII repeal date changed from two years after enactment of the Reforming Intelligence and Securing America Act to April 30, 2026",
+          "Section 404(b) of the FISA Amendments Act of 2008 — transition procedure citation references updated to 50 U.S.C. 1881 et seq., removing references to the FISA Amendments Reauthorization Act of 2017 and the Reforming Intelligence and Securing America Act"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HCONRES-40",
+      "title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "official_title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "code": "HCONRES.40",
+      "date": "Jun 23, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Meeks, Gregory W. (D-NY)",
+      "sponsor_bioguide": "M001137",
+      "cosponsors": 90,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Directs the President to remove United States Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)). Forces required to defend the United States, an ally, or a partner from imminent attack may remain, provided the President fully complies with the 60-day withdrawal requirement in section 5(b) of the War Powers Resolution. Continued operations against Iran require either a declaration of war or a specific congressional authorization for use of military force.",
+      "brief": "Invokes the War Powers Resolution to direct the President to end U.S. military operations against Iran without a declaration of war or specific congressional authorization.",
+      "top_lines": [
+        {
+          "headline": "War Powers Directive",
+          "subs": [
+            "Directs the President to remove U.S. Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c))",
+            "Carve-out for forces defending the United States, an ally, or a partner from imminent attack, conditioned on the President complying with section 5(b) of the War Powers Resolution (50 U.S.C. 1544(b))"
+          ]
+        },
+        {
+          "headline": "Authorization Threshold",
+          "subs": [
+            "Military operations against Iran may continue only if authorized by a declaration of war or a specific congressional authorization for use of military force against Iran",
+            "90 cosponsors in the House; passed April 16, 2026"
+          ]
+        }
+      ],
+      "likelihood": 20,
+      "likelihoodLabel": "Long shot",
+      "likelihoodReason": "The resolution passed the House with 90 cosponsors indicating bipartisan support. However, the Senate is controlled by Republicans who are unlikely to advance a concurrent resolution challenging a Republican president's conduct of military operations. Concurrent war powers resolutions rarely clear the Senate when the president's party holds the majority.",
+      "sections": [
+        {
+          "label": "Resolving Clause — Withdrawal from Iran Hostilities",
+          "items": [
+            {
+              "main": "Congress directs the President to remove U.S. Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)).",
+              "detail": "The directive exempts forces necessary to defend the United States, an ally, or a partner from imminent attack, provided the President fully complies with section 5(b) of the War Powers Resolution (50 U.S.C. 1544(b)). Section 5(b) generally requires removal of forces within 60 days of their introduction into hostilities unless Congress authorizes continued engagement. Continued operations require explicit authorization through a declaration of war or a specific authorization for use of military force against Iran.",
+              "comments": [
+                {
+                  "party": "d",
+                  "text": "Rep. Gregory Meeks (D-NY): One person does not have the power to take this Nation to war alone."
+                },
+                {
+                  "party": "r",
+                  "text": "Rep. Keith Self (R-TX): We have neutered Iran, which has been at war with us for 47 years."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Imminent Attack Exception",
+          "summary": "The resolution permits forces to remain if needed to defend the United States, an ally, or a partner from imminent attack, conditioned on the President complying with section 5(b) of the War Powers Resolution.",
+          "why_unreported": "The term imminent attack is not defined in the resolution. The resolution does not specify who determines when a threat qualifies as imminent or what evidence is required, leaving that threshold determination entirely to the executive branch."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "Rep. Keith Self (R-TX)",
+          "why": "Opposed the withdrawal directive on grounds that U.S. military operations had achieved a strategic objective against Iran."
+        }
+      ],
+      "gaps": [
+        "The resolution directs withdrawal from hostilities against the Islamic Republic of Iran but does not define what operations constitute hostilities, a term whose scope the resolution does not address.",
+        "The resolution invokes section 5(c) of the War Powers Resolution but does not specify a timeline by which the President must comply after the directive is transmitted.",
+        "The resolution's imminent attack exception covers forces defending an ally or partner of the United States but does not specify which allies or partners qualify or how eligibility for the exception is determined."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Rep. Pramila Jayapal",
+          "party": "D",
+          "state": "WA",
+          "bioguideId": "J000298",
+          "text": "The war has cost taxpayers $50 billion already, and the Pentagon will request $200 billion more.",
+          "stance": "support"
+        },
+        {
+          "name": "Rep. Gregory Meeks",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "M001137",
+          "text": "One person does not have the power to take this Nation to war alone.",
+          "stance": "support"
+        },
+        {
+          "name": "Rep. Keith Self",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "S001224",
+          "text": "We have neutered Iran, which has been at war with us for 47 years.",
+          "stance": "oppose"
+        }
+      ],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      }
+    },
     {
       "id": "119-HR-6955",
       "code": "H.R.6955",
