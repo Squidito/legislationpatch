@@ -1079,7 +1079,7 @@ function renderHeader(bill, state, num, watching) {
     <div class="bill-rank-col">
       ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
-      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST PASSED</span>` : ''}
+      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
       <div class="bill-number">#${num || ''}</div>
     </div>
     <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />

@@ -905,6 +905,9 @@ a:hover { text-decoration: underline; }
 .status-just-passed {
   background: var(--green);
   color: #fff;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.2;
 }
 @keyframes live-pulse {
   0%, 100% { opacity: 1; }
