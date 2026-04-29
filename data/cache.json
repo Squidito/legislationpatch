@@ -1,6 +1,1570 @@
 {
-  "generated": "2026-04-27T02:57:28.690Z",
+  "generated": "2026-04-29T07:54:26.771Z",
   "bills": [
+    {
+      "id": "119-S-1884",
+      "title": "Holocaust Expropriated Art Recovery Act of 2025",
+      "official_title": "Holocaust Expropriated Art Recovery Act of 2025",
+      "code": "S.1884",
+      "date": "May 22, 2025",
+      "enactedDate": "Apr 13, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Cornyn, John (R-TX)",
+      "sponsor_bioguide": "C001056",
+      "cosponsors": 21,
+      "pages": 3,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "For decades, families of Holocaust victims have tried to recover artwork stolen by Nazi Germany, only to have American courts dismiss their cases on procedural grounds — time delays, deference to foreign governments, or doctrines unrelated to who actually owned the art. This law permanently removes those barriers. It prohibits courts from dismissing Holocaust art claims based on the passage of time or other procedural defenses, strips foreign governments of a key immunity argument regardless of the victim's nationality, removes the December 31, 2026 filing deadline entirely, and applies all of those changes retroactively to cases currently in court.",
+      "brief": "Permanently bars courts from dismissing Nazi-looted art claims on procedural grounds, overriding multiple appellate and Supreme Court rulings that had blocked recovery.",
+      "top_lines": [
+        {
+          "headline": "Procedural Defenses Eliminated",
+          "subs": [
+            "Laches, adverse possession, international comity, forum non conveniens, and act of state doctrine may no longer be used to dismiss Holocaust art claims",
+            "Applies retroactively to cases currently pending, including those on appeal"
+          ]
+        },
+        {
+          "headline": "Foreign Sovereign Immunity Overridden",
+          "subs": [
+            "Claims against foreign governments proceed regardless of victim nationality — overrides the 2021 Supreme Court ruling in Federal Republic of Germany v. Philipp",
+            "Nationwide service of process added, allowing courts to reach defendants in any U.S. district"
+          ]
+        },
+        {
+          "headline": "Filing Deadline Removed",
+          "subs": [
+            "December 31, 2026 filing deadline eliminated — claims may be filed at any time",
+            "Six-year discovery period from the date the claimant learns of the artwork's location still applies"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 13, 2026 as Public Law 119-82.",
+      "sections": [
+        {
+          "label": "Section 2 — Prohibited Defenses",
+          "items": [
+            {
+              "main": "Adds new Section 5(f) to the Holocaust Expropriated Art Recovery Act of 2016, barring all time-based defenses and all non-merits discretionary bases for dismissal against otherwise timely Holocaust art claims.",
+              "detail": "Prohibited time-based defenses include laches, adverse possession, acquisitive prescription, and usucapion. Prohibited non-merits defenses include the act of state doctrine, international comity, forum non conveniens, and prudential exhaustion. The bill adds findings naming specific court decisions that frustrated the original Act's intent, including Zuckerman v. Metropolitan Museum of Art (2d Cir. 2019), Cassirer v. Thyssen-Bornemisza Foundation (9th Cir. 2024), and Von Saher v. Norton Simon Museum of Art (9th Cir. 2018).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Foreign State Jurisdiction and Retroactive Application",
+          "items": [
+            {
+              "main": "New Section 5(b) deems Holocaust art claims to constitute actions involving violations of international law for purposes of the Foreign Sovereign Immunities Act (28 U.S.C. 1605(a)(3)), regardless of the nationality or citizenship of the alleged victim.",
+              "detail": "This directly overrides Federal Republic of Germany v. Philipp, 592 U.S. 169 (2021), in which the Supreme Court held that the \"domestic takings\" rule barred FSIA jurisdiction over property seized from a country's own nationals. Nationwide service of process is added for all civil actions under the Act. All amendments apply to claims pending on the date of enactment — including cases pending on appeal or within the appeal filing window — and to cases filed after enactment.",
+              "comments": []
+            },
+            {
+              "main": "Removes the December 31, 2026 deadline for filing claims and replaces it with a perpetual filing window subject to a six-year discovery period.",
+              "detail": "Under prior law, all claims had to be filed by December 31, 2026 regardless of when the claimant discovered the property's location. This deadline is eliminated. Claims must still be filed within six years of the claimant's discovery of the property in question.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Retroactive Application to Pending Appeals",
+          "summary": "The law applies to any civil claim pending in any court on the date of enactment, including claims pending on appeal and claims for which the time to file an appeal has not yet expired.",
+          "why_unreported": "The bill's headline is the permanent removal of procedural barriers to future claims. The retroactive reach to cases already dismissed and currently on appeal means courts that previously dismissed Holocaust art claims on laches or international comity grounds could have those dismissals challenged or reversed under the new law, affecting outcomes in litigation already underway."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The law bars procedural defenses but does not address the evidentiary standard for establishing provenance or Nazi-era confiscation in the underlying merits of a claim.",
+        "The law covers artwork lost \"because, or as a result, of Nazi persecution\" but does not address property transferred through forced sales under economic duress rather than outright confiscation, a category that has faced definitional challenges in prior litigation."
+      ],
+      "changes": {
+        "added": [
+          "Section 5(b) of the HEAR Act — foreign sovereign immunity exception: Holocaust art claims deemed violations of international law under 28 U.S.C. 1605(a)(3) regardless of victim nationality",
+          "Section 5(f) — prohibition on all time-based defenses (laches, adverse possession, acquisitive prescription, usucapion) and non-merits discretionary defenses (act of state doctrine, international comity, forum non conveniens, prudential exhaustion)",
+          "Section 5(g) — nationwide service of process for Holocaust art civil actions",
+          "Section 6 — severability provision"
+        ],
+        "modified": [
+          "HEAR Act of 2016 findings — expanded to name specific court decisions that frustrated the Act's intent and to state that non-merits defenses must be precluded",
+          "HEAR Act Section 3(2) — definition of covered defenses expanded to include \"other non-merits defenses\" alongside statutes of limitation"
+        ],
+        "removed": [
+          "December 31, 2026 filing deadline for Holocaust art recovery claims"
+        ]
+      }
+    },
+    {
+      "id": "119-S-3971",
+      "title": "Small Business Innovation and Economic Security Act",
+      "official_title": "Small Business Innovation and Economic Security Act",
+      "code": "S.3971",
+      "date": "Mar 3, 2026",
+      "enactedDate": "Apr 13, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Ernst, Joni (R-IA)",
+      "sponsor_bioguide": "E000295",
+      "cosponsors": 1,
+      "pages": 15,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "The SBIR and STTR programs are the federal government's primary mechanism for funding early-stage technology research at small businesses — agencies with large R&D budgets must set aside a percentage for competitive grants to startups, covering everything from initial feasibility through full development and commercialization. This law extends those programs through fiscal year 2031 and adds a significant national security layer: agencies must now screen all applicants against eight federal watchlists for foreign adversary connections, can deny grants based on classified intelligence, and must notify rejected applicants of the basis for denial when doing so won't compromise national security.",
+      "brief": "Extends SBIR and STTR small-business research grants through FY2031 and adds mandatory screening against eight federal watchlists for foreign adversary ties.",
+      "top_lines": [
+        {
+          "headline": "Extended Through FY2031",
+          "subs": [
+            "SBIR and STTR programs reauthorized through fiscal year 2031",
+            "New strategic breakthrough allocations added — Phase II awards for critical technology areas requiring matching funds"
+          ]
+        },
+        {
+          "headline": "Eight-Watchlist Security Screen",
+          "subs": [
+            "Applicants checked against UFLPA, OFAC Chinese Military-Industrial Complex, Section 889, Chinese Military Companies, Military End User, Entity, FCC Equipment, and CBP Withhold Release Orders lists",
+            "Classified security risks are also a basis for denial; rejected applicants must be notified of the basis unless doing so would compromise national security"
+          ]
+        },
+        {
+          "headline": "Caps and Commercialization",
+          "subs": [
+            "Maximum number of proposals per small business per fiscal year established for Phase I and Phase II",
+            "Expanded Phase III commercialization training required for agency contracting officers"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 13, 2026 as Public Law 119-83.",
+      "sections": [
+        {
+          "label": "Section 2 — Security Risk Evaluation",
+          "items": [
+            {
+              "main": "Requires federal agencies administering SBIR and STTR programs to evaluate whether applicants present security risks, including through coordination with the intelligence community, law enforcement, and other counterintelligence capabilities.",
+              "detail": "Agencies must deny applications from small businesses with a security risk connecting them to entities or individuals on any of eight federal watchlists: the UFLPA Entity List (DHS), the OFAC Non-SDN Chinese Military-Industrial Complex Companies List (Treasury), the Section 889 Prohibition List (DoD), the Chinese Military Companies List (DoD), the Military End User List (Commerce), the Entity List (Commerce), the FCC Equipment and Services List, or the CBP Withhold Release Orders and Findings List. Classified security risks and agency-determined security risks are also grounds for denial. Upon denying an application on security grounds, the agency must notify the small business of the determination and its basis, to the extent doing so does not compromise national security. Denial on security grounds does not bar the business from applying in a subsequent award cycle.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Sections 3–End — Extension, Caps, and Strategic Allocations",
+          "items": [
+            {
+              "main": "Reauthorizes SBIR and STTR programs through fiscal year 2031 and caps the number of Phase I and Phase II proposals any single small business may submit per fiscal year.",
+              "detail": "The proposal cap prevents a single small business from monopolizing agency review bandwidth. The bill also expands training requirements for agencies' contracting officers regarding Phase III commercialization awards, which involve agencies purchasing or licensing SBIR/STTR-developed technologies without a separate competitive bid requirement.",
+              "comments": []
+            },
+            {
+              "main": "Establishes strategic breakthrough allocations — additional Phase II SBIR and STTR awards for small businesses in critical technology areas that demonstrate effective technology and secure matching funds.",
+              "detail": "The matching fund requirement for strategic breakthrough allocations is intended to attract private co-investment alongside the federal award. Critical technology areas are not defined in the bill; determination is left to the administering agencies.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — Classified Security Risk Denial",
+          "summary": "Agencies may deny SBIR/STTR applications based on a security risk whose primary source is classified, without being required to disclose the basis for denial.",
+          "why_unreported": "The bill's security screening is presented as a watchlist-based transparency mechanism. The classified-source denial pathway allows rejection without any meaningful notification — the agency's only obligation is to tell the applicant a determination was made, not why, leaving the small business with no basis to challenge or cure the disqualification."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires agencies to notify denied applicants of the basis for security-related rejections but provides no appeal or reconsideration process for small businesses that dispute a watchlist-based determination.",
+        "Strategic breakthrough allocations target \"critical technology areas\" but the bill does not define or enumerate those areas, leaving the scope of the new allocation category entirely to agency discretion."
+      ],
+      "changes": {
+        "added": [
+          "Requirement for SBIR and STTR agencies to evaluate security risks of applicants through watchlist screening, intelligence community coordination, and classified risk assessment",
+          "Eight-watchlist disqualification framework for SBIR and STTR applicants with foreign adversary connections",
+          "Notification requirement for security-based denials, to the extent consistent with national security",
+          "Maximum proposal cap per small business per fiscal year for Phase I and Phase II solicitations",
+          "Strategic breakthrough allocations — additional Phase II awards for critical technology areas requiring matching private funds"
+        ],
+        "modified": [
+          "SBIR and STTR program authorization extended through fiscal year 2031",
+          "Phase III commercialization training requirements for agency contracting officers expanded"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-5366",
+      "title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "official_title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "code": "HR.5366",
+      "date": "Sep 15, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steube, W. Gregory (R-FL)",
+      "sponsor_bioguide": "S001214",
+      "cosponsors": 14,
+      "pages": 3,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Federal tax law normally requires casualty losses to exceed 10% of your income before you can deduct them — but Congress has repeatedly carved out exceptions for federally declared disaster areas, letting affected taxpayers deduct unreimbursed losses above $500 per incident even without itemizing. This bill extends those disaster-specific deduction rules to cover disasters with incident periods beginning before January 1, 2027 (up from the prior cutoff of July 4, 2025), and extends the exclusion of wildfire relief payments from taxable income to fires declared a federal disaster before 2027.",
+      "brief": "Extends the federal tax deduction for disaster property losses and the wildfire relief payment exclusion to disasters occurring before January 1, 2027.",
+      "top_lines": [
+        {
+          "headline": "Disaster Loss Deductions",
+          "subs": [
+            "Extended to disasters with incident periods beginning before January 1, 2027 — up from July 4, 2025",
+            "Deductible without itemizing; exempt from the alternative minimum tax"
+          ]
+        },
+        {
+          "headline": "Wildfire Relief Payments",
+          "subs": [
+            "Relief payments for fires declared a federal disaster after 2014 and before 2027 excluded from gross income",
+            "Currently capped at fires declared before 2026 and payments received before 2026"
+          ]
+        }
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Disaster tax relief has consistent bipartisan support and 14 cosponsors. Extension bills of this type routinely pass the Senate, often attached to larger tax packages. The geographic scope — covering presidentially declared disasters nationwide — limits targeted opposition.",
+      "sections": [
+        {
+          "label": "Section 2 — Disaster Casualty Loss Deduction",
+          "items": [
+            {
+              "main": "Adds Section 165(h)(6) to the Internal Revenue Code of 1986, creating a special deduction category for qualified net disaster losses that bypasses the 10% adjusted gross income limitation.",
+              "detail": "A qualified net disaster loss is the excess of qualified disaster-related personal casualty losses over personal casualty gains. A qualified disaster area covers any area with a presidential major disaster declaration under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act where the incident period begins after July 4, 2025, and before January 1, 2027. Disaster losses may be deducted as part of the standard deduction under new Section 63(c)(1)(C) and are exempt from the alternative minimum tax under Section 56(b)(1)(D).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Wildfire Relief Payment Exclusion",
+          "items": [
+            {
+              "main": "Creates new Section 139M of the Internal Revenue Code, excluding qualified wildfire relief payments from gross income.",
+              "detail": "The exclusion applies to payments for forest or range fires declared a federal disaster after 2014 and before 2027, regardless of when such payments are received. Under prior law, the exclusion applied only to qualifying payments received after 2019 and before 2026.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — Alternative Minimum Tax Exception",
+          "summary": "The bill explicitly exempts the disaster loss deduction from the alternative minimum tax by amending Section 56(b)(1)(D) of the Internal Revenue Code.",
+          "why_unreported": "The bill's headline is extension of the disaster deduction window. The AMT exception means taxpayers who would otherwise owe AMT — typically higher earners — retain the full value of the deduction, a consequence not apparent from the disaster relief framing."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill covers disasters with incident periods beginning before January 1, 2027, but does not address losses sustained within a qualified disaster area where the damage is discovered or claims are settled after January 1, 2027.",
+        "The wildfire relief exclusion applies only to fires paired with a federal disaster declaration and does not address relief payments from state programs for fires that did not receive a federal declaration."
+      ],
+      "changes": {
+        "added": [
+          "Section 165(h)(6) of the Internal Revenue Code — qualified net disaster loss deduction bypassing the 10% AGI limitation",
+          "Section 63(c)(1)(C) — disaster loss deduction available as part of the standard deduction",
+          "Section 139M — exclusion from gross income for qualified wildfire relief payments for fires declared a federal disaster after 2014 and before 2027"
+        ],
+        "modified": [
+          "Section 56(b)(1)(D) of the Internal Revenue Code — disaster loss deduction exempted from the alternative minimum tax",
+          "Definition of qualified disaster area extended to incident periods beginning after July 4, 2025, and before January 1, 2027"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-227",
+      "title": "Clergy Act",
+      "official_title": "Clergy Act",
+      "code": "HR.227",
+      "date": "Jan 7, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Fong, Vince (R-CA)",
+      "sponsor_bioguide": "F000480",
+      "cosponsors": 21,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Ordained ministers and Christian Science practitioners can apply to permanently opt out of Social Security and Medicare taxes on their ministerial earnings — but that exemption is currently irrevocable. This bill creates a one-time window for those who previously opted out to reverse that decision and re-enter the Social Security system, with coverage beginning for taxable years starting after December 31, 2027. Once revoked, they cannot opt out again.",
+      "brief": "Creates a one-time window for clergy who opted out of Social Security to reverse that decision and begin accruing retirement benefits.",
+      "top_lines": [
+        {
+          "headline": "One-Time Re-entry Window",
+          "subs": [
+            "Clergy may revoke their Social Security exemption by filing through the deadline for their second taxable year beginning after December 31, 2027",
+            "Coverage begins for taxable years starting after December 31, 2027 — cannot opt out again after revoking"
+          ]
+        },
+        {
+          "headline": "IRS Outreach Required",
+          "subs": [
+            "Commissioner of Internal Revenue must submit a plan to inform eligible clergy of their eligibility within 90 days of enactment"
+          ]
+        }
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The bill has 21 cosponsors and bipartisan backing — sponsors include Fong (R-CA), Thompson (D-CA), and Kelly (R-PA). Providing clergy a window to undo a permanent decision is unlikely to draw opposition. The narrow scope and sympathetic affected population make Senate passage plausible, though floor scheduling is uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — Revocation of Social Security Exemption",
+          "items": [
+            {
+              "main": "Notwithstanding Section 1402(e)(4) of the Internal Revenue Code (which makes the Social Security exemption irrevocable), clergy whose exemption is in effect for the taxable year of enactment may revoke it by filing an application with the IRS.",
+              "detail": "The application must be filed no later than the due date for the second taxable year beginning after December 31, 2027. Revocation takes effect for the first or second taxable year beginning after December 31, 2027, as specified by the applicant, and covers both chapter 2 of the IRC (self-employment tax) and title II of the Social Security Act (42 U.S.C. 401 et seq.). If the application is filed retroactively for a year already in effect, the applicant must pay in full all self-employment taxes that would have been owed for that year. After revoking, the applicant may not again file for an exemption under Section 1402(e)(1).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — IRS Outreach Plan",
+          "items": [
+            {
+              "main": "The Commissioner of Internal Revenue, in consultation with the Commissioner of Social Security, must develop and submit a plan to inform eligible clergy of their revocation eligibility within 90 days of enactment.",
+              "detail": "The plan must be submitted to the Ways and Means Committee of the House and the Finance Committee of the Senate. No minimum outreach activities, funding level, or success metrics are specified in the bill.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a) — Retroactive Year Catch-Up Payment",
+          "summary": "If a clergy member files a revocation application after the due date for a taxable year and elects to have it take effect for that year, they must immediately pay all self-employment taxes that would have been owed for the entire year.",
+          "why_unreported": "The bill's headline is a window to opt back in. The catch-up payment requirement means that choosing early retroactive coverage triggers a lump-sum tax obligation for the full year of retroactive coverage — a condition not apparent from the bill's title or the primary revocation provision."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill allows revocation effective for taxable years beginning after December 31, 2027 but does not address Social Security credits for prior years during which the exemption was in effect — those years generate no credits regardless of revocation.",
+        "The 90-day outreach plan requirement specifies no minimum outreach activities, distribution channels, or funding, leaving the scope of IRS notification entirely to agency discretion."
+      ],
+      "changes": {
+        "added": [
+          "One-time window for clergy and Christian Science practitioners to revoke their irrevocable Social Security exemption under Section 1402(e)(1) of the Internal Revenue Code, effective for taxable years beginning after December 31, 2027",
+          "Requirement for the Commissioner of Internal Revenue to submit an outreach plan to inform eligible clergy within 90 days of enactment"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-7971",
+      "title": "Taxpayer Experience Improvement Act",
+      "official_title": "Taxpayer Experience Improvement Act",
+      "code": "HR.7971",
+      "date": "Mar 18, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Schweikert, David (R-AZ)",
+      "sponsor_bioguide": "S001183",
+      "cosponsors": 1,
+      "pages": 5,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "This bill requires the IRS to publish real-time data on its public website about phone wait times, call volumes, and processing backlogs for every public phone line it operates, and to make that data available through a public API so third-party apps can display it. It also requires the IRS to give taxpayers online or mobile access to their own tax returns, notices, and refund status including an estimated delivery date.",
+      "brief": "Requires the IRS to publish live phone wait times and backlog data, and give taxpayers digital access to their own returns and refund status.",
+      "top_lines": [
+        {
+          "headline": "Real-Time IRS Dashboard",
+          "subs": [
+            "IRS must publish live caller counts, wait times, and callback availability per phone line on its public website",
+            "Public API required so any person or app can access the live call data"
+          ]
+        },
+        {
+          "headline": "Digital Tax Record Access",
+          "subs": [
+            "Taxpayers can view all returns, notices, and IRS letters via website or mobile app",
+            "IRS must provide estimated refund receipt date"
+          ]
+        },
+        {
+          "headline": "Monthly Accountability Metrics",
+          "subs": [
+            "IRS must publish monthly averages for call length, hold time, disconnection rate, and percent of callers who got help",
+            "Sense of Congress: callback offered within 5 minutes on any unanswered call by 2028"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Only 1 cosponsor despite bipartisan sponsorship (Schweikert R-AZ and Beyer D-VA). IRS modernization bills often pass the House but stall in the Senate amid disagreements over IRS funding and IT capacity. The real-time dashboard and public API requirements may face resistance from the Treasury Department over implementation feasibility.",
+      "sections": [
+        {
+          "label": "Section 2 — Public Wait Time Dashboard",
+          "items": [
+            {
+              "main": "Requires the IRS to publish in real time on its public website call volume, wait time, and callback availability for each applicable phone number extension.",
+              "detail": "For each phone line, the IRS must display the number of callers connected to representatives, connected to automated systems, and waiting; the longest current wait time; and whether callback service is available. A public API must be provided for automated access to the data. The IRS must also detect and screen automated calls, and publish processing delay information weekly when significant backlogs occur.",
+              "comments": []
+            },
+            {
+              "main": "Requires monthly summary statistics for each phone line, including caller satisfaction data.",
+              "detail": "Monthly metrics must include average and median call lengths and hold times; the percent of calls disconnected or directed to automation; the number of callers transferred; and the number and percent of callers who indicated they received the help they were seeking. The last metric requires the IRS to actively collect caller satisfaction data before calls end.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Sections 3–5 — Digital Access, Callbacks, and Online Accounts",
+          "items": [
+            {
+              "main": "Requires the IRS to make available to taxpayers — via website or mobile application — their tax returns, documents, all notices and letters sent by or to the IRS, refund status, and an estimated refund receipt date.",
+              "detail": "The bill also expresses the sense of Congress that by 2028 the IRS should offer a callback to any caller not answered within five minutes, and requires expansion of online taxpayer account access.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — Caller Satisfaction Metric",
+          "summary": "The monthly statistics requirement includes the number and percent of callers who indicated they received the answers or service they were seeking — a customer satisfaction data point embedded in a call-volume reporting requirement.",
+          "why_unreported": "Collecting this metric requires the IRS to actively ask callers before they hang up whether their issue was resolved, effectively mandating a caller survey process. This is a new operational requirement distinct from passively logging call volume and wait times, not apparent from the bill's IRS dashboard framing."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires real-time call data but does not specify a minimum uptime requirement for the dashboard or what disclosures are required if the live data is unavailable.",
+        "The digital access requirement does not specify an implementation timeline for the mobile application option, nor minimum device or accessibility standards for the application."
+      ],
+      "changes": {
+        "added": [
+          "Requirement for real-time IRS public dashboard with per-phone-line call volume, wait times, and callback availability, plus public API access",
+          "Monthly IRS reporting requirement including caller satisfaction metrics, disconnection rates, and hold times per phone extension",
+          "Requirement for IRS to provide taxpayers with online or mobile access to returns, notices, refund status, and estimated refund date",
+          "Requirement for IRS to use technology to detect and screen automated calls"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6495",
+      "title": "Taxpayer Notification and Privacy Act",
+      "official_title": "Taxpayer Notification and Privacy Act",
+      "code": "HR.6495",
+      "date": "Dec 5, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steube, W. Gregory (R-FL)",
+      "sponsor_bioguide": "S001214",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When the IRS wants information about you from a third party like your employer or bank, current law requires it to notify you in advance — but not what specific information it's seeking. This bill requires the IRS to identify each specific item of information it intends to collect from the third party, and give you at least 45 days to provide it yourself, whenever the IRS hasn't already asked you for it and you could reasonably provide it. Two exceptions apply: the rule doesn't cover tax collection proceedings, and the Secretary can waive it when third-party contact is deemed necessary.",
+      "brief": "Requires the IRS to tell taxpayers exactly what information it plans to collect from third parties and give them 45 days to provide it first.",
+      "top_lines": [
+        {
+          "headline": "Specific Notice Required",
+          "subs": [
+            "IRS must identify each item sought from a third party when the taxpayer hasn't been asked before and could provide it",
+            "Taxpayers get at least 45 days to respond — more if they request it with reasonable cause"
+          ]
+        },
+        {
+          "headline": "Exceptions",
+          "subs": [
+            "Specificity requirement waived for tax collection proceedings or when Secretary determines third-party contact is necessary regardless"
+          ]
+        }
+      ],
+      "likelihood": 35,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Only 1 cosponsor and a narrow taxpayer privacy focus. The IRS exemption allowing the Secretary to waive specificity requirements whenever deemed necessary limits the bill's practical effect, which may reduce the urgency Senate sponsors attach to it. IRS procedural reform bills without broad coalition backing rarely advance quickly in the Senate.",
+      "sections": [
+        {
+          "label": "Section 2 — Specificity of Third-Party Contact Notices",
+          "items": [
+            {
+              "main": "Amends Section 7602(c)(1) of the Internal Revenue Code of 1986 to require the IRS to identify each specific item of information it intends to seek from a third party when that information has not been previously requested from the taxpayer and could reasonably be provided by the taxpayer.",
+              "detail": "The advance notice must provide the taxpayer with a period of not less than 45 days — or more if the taxpayer requests additional time and shows reasonable cause — to respond, including by providing the information themselves, before the IRS contacts the third party. The exception in Section 7602(c)(3)(B) provides that the specificity and waiting period requirements do not apply if the information is sought for collection of a tax liability, or if the Secretary determines the third-party information is necessary regardless of whether the taxpayer could provide it. Effective date: 12 months after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 7602(c)(3)(B) — Secretary's Necessity Exception",
+          "summary": "The bill's specificity and 45-day notice requirements do not apply whenever the Secretary determines that the third-party information is necessary, without any standard for what constitutes necessity or any procedural check on that determination.",
+          "why_unreported": "The bill is framed as expanding taxpayer notification rights. The necessity exception allows the IRS to bypass both the itemized notice and the 45-day waiting period entirely based on the Secretary's own judgment, with no defined standard, independent review, or notification to the taxpayer that the exception has been invoked."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires the IRS to give the taxpayer 45 days to respond but does not specify whether the IRS is barred from contacting the third party if the taxpayer provides the requested information within the window.",
+        "The bill does not address the taxpayer's right to receive notice that the Secretary has invoked the necessity exception, leaving taxpayers without information about why the standard procedure was not followed."
+      ],
+      "changes": {
+        "added": [
+          "Section 7602(c)(1)(B) of the Internal Revenue Code — requirement for IRS to identify each specific item of information sought from a third party when not previously requested from the taxpayer",
+          "Section 7602(c)(1)(C) amendment — 45-day minimum response period before third-party contact, with extensions available on reasonable cause"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6431",
+      "title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "official_title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "code": "HR.6431",
+      "date": "Dec 4, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Carey, Mike (R-OH)",
+      "sponsor_bioguide": "C001126",
+      "cosponsors": 6,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Self-Employment Assistance programs let unemployed workers collect their unemployment benefits as a lump-sum allowance while they start a business, instead of conducting a traditional job search. This bill doubles the cap on program participation from 5% to 10% of unemployment recipients per state, removes the requirement that participants be on track to exhaust their benefits, adds a weekly self-certification requirement, and creates an alternative qualification pathway through a state-approved business plan rather than requiring formal entrepreneurial training.",
+      "brief": "Doubles state SEA program participation to 10%, drops the exhaustion-of-benefits eligibility requirement, and adds a business-plan qualification pathway.",
+      "top_lines": [
+        {
+          "headline": "Expanded Access",
+          "subs": [
+            "Removes the requirement that participants be likely to exhaust unemployment benefits — opens programs to more applicants",
+            "Business plan + market feasibility study now qualifies as an alternative to formal entrepreneurial training"
+          ]
+        },
+        {
+          "headline": "Larger Programs, Weekly Accountability",
+          "subs": [
+            "State participation cap raised from 5% to 10% of unemployment benefit recipients",
+            "Participants must certify their self-employment activities on at least a weekly basis"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Bipartisan sponsorship (Carey R-OH and Landsman D-OH among others) and 6 cosponsors. Small business and entrepreneurship provisions attract broad support, but the 2-year implementation delay and required Labor Department rulemaking introduce uncertainty. Senate floor time for unemployment program reforms is limited.",
+      "sections": [
+        {
+          "label": "Section 2 — Modified SEA Program Requirements",
+          "items": [
+            {
+              "main": "Amends Section 3306(t) of the Internal Revenue Code to remove the requirement that SEA participants be identified as likely to exhaust regular unemployment compensation benefits, expanding the eligible population.",
+              "detail": "Subparagraph (B) of Section 3306(t)(3), which required participants to be identified as likely to exhaust benefits, is stricken. Eligible self-employment activities may now qualify through either (i) the existing path of entrepreneurial training, business counseling, and technical assistance approved by the state, or (ii) a new path through a business plan and market feasibility study submitted by the individual and approved by the state or a designated agency. Participants must certify their activities at least weekly to a state-designated agency.",
+              "comments": []
+            },
+            {
+              "main": "Raises the state SEA program participation cap from 5% to 10% of individuals receiving regular unemployment compensation.",
+              "detail": "The change to Section 3306(t)(4) doubles the maximum share of unemployment benefit recipients a state may enroll in its SEA program. Changes take effect 2 years after enactment; states may amend their laws before then. The Secretary of Labor must adopt implementing regulations through public notice and comment, subject to OMB approval.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(e) — Two-Year Implementation Delay",
+          "summary": "The bill's changes do not take effect until 2 years after enactment, and states must amend their own laws within that window to be compliant.",
+          "why_unreported": "The bill's operative changes — expanded eligibility, the business-plan pathway, and the higher participation cap — are the headline. The 2-year gap before any of those changes can be used, combined with the requirement for state-level legislative action, means the bill's benefits may not materialize in states that fail to update their laws in time."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill doubles participation caps and expands eligibility but does not address the funding source for increased SEA allowances, which are paid from state unemployment trust funds that vary significantly in reserves across states.",
+        "The bill adds a weekly certification requirement but does not specify consequences for participants who miss certifications or the process for removing a non-compliant participant."
+      ],
+      "changes": {
+        "added": [
+          "Business plan and market feasibility study as an alternative qualifying pathway for SEA program activities under Section 3306(t)(3)",
+          "Weekly self-certification requirement for SEA program participants"
+        ],
+        "modified": [
+          "Section 3306(t)(3) of the Internal Revenue Code — eliminated the requirement that participants be identified as likely to exhaust regular unemployment compensation benefits",
+          "Section 3306(t)(4) — state SEA program participation cap raised from 5% to 10% of unemployment benefit recipients"
+        ],
+        "removed": [
+          "Section 3306(t)(3)(B) — requirement that SEA participants be likely to exhaust unemployment benefits"
+        ]
+      }
+    },
+    {
+      "id": "119-HR-5334",
+      "title": "Supporting Early-childhood Educators' Deductions Act of 2025",
+      "official_title": "Supporting Early-childhood Educators' Deductions Act of 2025",
+      "code": "HR.5334",
+      "date": "Sep 11, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Panetta, Jimmy (D-CA)",
+      "sponsor_bioguide": "P000613",
+      "cosponsors": 23,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "K-12 teachers can deduct up to $300 per year in unreimbursed classroom expenses directly from their gross income without itemizing — but pre-K and early childhood educators are currently excluded. This bill extends that deduction to teachers and staff at schools providing early childhood education. It applies retroactively starting with tax year 2025.",
+      "brief": "Extends the $300 above-the-line educator expense deduction to early childhood and pre-K educators, retroactive to tax year 2025.",
+      "top_lines": [
+        {
+          "headline": "Expanded Educator Deduction",
+          "subs": [
+            "Early childhood educators added to the up-to-$300 above-the-line deduction for unreimbursed classroom expenses",
+            "Retroactive to expenses incurred in taxable years beginning after December 31, 2024"
+          ]
+        },
+        {
+          "headline": "Who Qualifies",
+          "subs": [
+            "Teachers, instructors, counselors, principals, and aides in schools providing early childhood (pre-kindergarten) education",
+            "23 bipartisan cosponsors; eligibility criteria otherwise unchanged from existing K-12 provision"
+          ]
+        }
+      ],
+      "likelihood": 65,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Strong bipartisan support with 23 cosponsors. Expanding educator tax benefits is a consistently popular, low-controversy issue in both chambers. The retroactive application to tax year 2025 creates urgency for Senate passage. The narrow, targeted nature of the change limits points of opposition.",
+      "sections": [
+        {
+          "label": "Section 2 — Educator Expense Deduction for Early Childhood Educators",
+          "items": [
+            {
+              "main": "Amends Section 62 of the Internal Revenue Code of 1986 to add early childhood educators to the above-the-line deduction for eligible educator expenses.",
+              "detail": "Section 62(d)(1)(A) is amended to insert \"early childhood educator\" before \"kindergarten through grade 12 teacher,\" and Section 62(d)(1)(B) is amended to include \"early childhood education\" and \"pre-kindergarten\" alongside elementary and secondary education. The heading of Section 62(a)(2)(D) is updated to reflect the expanded scope. The deduction limit — up to $300 in 2025, adjusted annually — and all other existing eligibility conditions are unchanged. Effective for expenses incurred in taxable years beginning after December 31, 2024.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2 — \"Early Childhood Educator\" Undefined",
+          "summary": "The bill inserts \"early childhood educator\" into the eligibility definition without providing a statutory definition of who qualifies as an early childhood educator or what constitutes a school providing early childhood education.",
+          "why_unreported": "The bill's purpose is to close the gap between K-12 and pre-K eligibility. The undefined terms leave it to the IRS to determine whether providers such as home daycares, private preschools, federally-funded Head Start centers, or school-district pre-K classrooms qualify — a scope determination with significant reach."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill does not define \"early childhood educator\" or specify which types of early childhood education institutions qualify, leaving scope determination to IRS rulemaking.",
+        "The $300 deduction cap — which applies to K-12 teachers and would apply to early childhood educators under this bill — is not adjusted for the early childhood context, where out-of-pocket supply costs may differ from those of K-12 classroom teachers."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 62(d)(1)(A) and (B) of the Internal Revenue Code of 1986 — above-the-line educator expense deduction expanded to include early childhood educators in schools providing pre-kindergarten education"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-6956",
+      "title": "BARCODE Efficiency Act",
+      "official_title": "Barcode Automation for Revenue Collection to Organize Disbursement and Enhance Efficiency Act",
+      "code": "HR.6956",
+      "date": "Jan 7, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Schneider, Bradley Scott (D-IL)",
+      "sponsor_bioguide": "S001190",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When taxpayers prepare their returns electronically but print and mail them, the IRS currently re-enters all that data by hand. This bill requires those returns to include a scannable barcode so the IRS can convert them to electronic format automatically. For returns prepared entirely by hand and for paper correspondence, the IRS must use optical character recognition software. The technology requirement can be waived if the IRS finds it slower or less reliable than manual processing — but any waiver must be reported to Congress within 30 days.",
+      "brief": "Mandates barcodes on electronically-prepared paper returns and OCR scanning for handwritten returns and correspondence, with a performance-based waiver.",
+      "top_lines": [
+        {
+          "headline": "Barcode Mandate",
+          "subs": [
+            "Electronically-prepared paper returns must include a scannable barcode — IRS must scan rather than manually re-enter the data",
+            "Applies to individual income tax returns 180 days after enactment"
+          ]
+        },
+        {
+          "headline": "OCR for Everything Else",
+          "subs": [
+            "Hand-prepared returns and all paper IRS correspondence must be transcribed using optical character recognition",
+            "Estate and gift returns: 24 months; all other returns and correspondence: 12 months after enactment"
+          ]
+        },
+        {
+          "headline": "Performance Waiver",
+          "subs": [
+            "IRS may skip the technology if it's slower or less reliable than manual processing — but must report to Congress within 30 days"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Bipartisan sponsorship (Schneider D-IL and Yakym R-IN) and the efficiency framing make opposition difficult to articulate, but only 1 cosponsor. IRS technology mandate bills often face implementation feasibility questions in the Senate, particularly when they include performance-based exceptions that give the agency discretion to delay compliance.",
+      "sections": [
+        {
+          "label": "Section 2 — Scanning and Digitization of Tax Returns and Correspondence",
+          "items": [
+            {
+              "main": "Requires that any federal tax return prepared electronically and filed on paper must include a scannable code, and that the IRS must use barcode scanning technology to convert such returns to electronic format.",
+              "detail": "If the barcode data cannot be accurately converted, the IRS must use optical character recognition or functionally similar technology. For paper returns not prepared electronically and all paper correspondence (except correspondence originally received electronically), the IRS must use OCR technology to transcribe the document. Effective dates: individual income tax returns within 180 days; all other returns and correspondence within 12 months; estate and gift tax returns within 24 months of enactment.",
+              "comments": []
+            },
+            {
+              "main": "The technology requirement is waived if the Secretary determines it is slower or less reliable than manual transcription or any other IRS process — but a waiver report must be submitted to Congress within 30 days.",
+              "detail": "The waiver determination is made entirely by the Secretary without independent oversight or minimum performance benchmarks. The reporting obligation to the Ways and Means Committee and Senate Finance Committee is the sole check on waiver use.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(c) — Self-Assessed Performance Waiver",
+          "summary": "The IRS determines whether its own technology is slower or less reliable than manual processing. If it makes that finding, it may waive the barcode and OCR requirements with no congressional approval required — only a 30-day report.",
+          "why_unreported": "The bill's mandate reads as a firm requirement. The waiver mechanism allows the IRS to indefinitely delay compliance through its own performance assessment, with a notification-only check. No minimum performance threshold, time limit on the waiver, or independent evaluation is specified."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill requires OCR for paper correspondence but does not address accuracy standards for the OCR process or what happens when digitized data contains errors that affect tax calculations or processing.",
+        "The bill does not specify what recourse taxpayers have if their paper-filed barcode return is misread or if the OCR transcription of their correspondence contains errors that affect their tax account."
+      ],
+      "changes": {
+        "added": [
+          "Requirement for scannable barcodes on electronically-prepared federal tax returns filed in paper format",
+          "Requirement for IRS to use barcode scanning technology to convert electronically-prepared paper returns to electronic format",
+          "Requirement for IRS to use optical character recognition technology for hand-prepared paper returns and paper correspondence",
+          "Performance-based waiver with 30-day congressional reporting requirement"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-8364",
+      "title": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "official_title": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "code": "HR.8364",
+      "date": "Apr 20, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steil, Bryan (R-WI)",
+      "sponsor_bioguide": "S001213",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Capitol Police officers must currently retire at age 57, though the Capitol Police Board can waive that requirement and allow officers to work until age 60. This bill expands the Board's authority to set the mandatory retirement age at any point between 57 and 65, giving it more flexibility to retain experienced officers beyond the current 60-year cap.",
+      "brief": "Raises the Capitol Police Board's maximum retirement age waiver from 60 to 65, letting the Board keep experienced officers working longer.",
+      "top_lines": [
+        {
+          "headline": "Retirement Age Flexibility",
+          "subs": [
+            "Capitol Police Board can now set mandatory retirement at any age between 57 and 65 — up from the current 57–60 range",
+            "Applies to officers under both the Civil Service Retirement System and the Federal Employees' Retirement System"
+          ]
+        }
+      ],
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Bipartisan support (Steil R-WI and Morelle D-NY) on a narrow workforce management bill affecting a single law enforcement agency. Capitol security legislation typically advances with little controversy. The limited scope and lack of broader policy implications make Senate passage plausible if floor time is available.",
+      "sections": [
+        {
+          "label": "Section 1 — Retirement Age Increase",
+          "items": [
+            {
+              "main": "Amends Sections 8335(c) and 8425(c) of title 5, United States Code to expand the Capitol Police Board's authority over mandatory retirement age from a fixed ceiling of 60 to a range of 57 to 65.",
+              "detail": "Both the Civil Service Retirement System (Section 8335(c)) and Federal Employees' Retirement System (Section 8425(c)) provisions are amended by replacing \"becomes 60 years of age\" with \"attains an age determined by the Board that shall be not less than 57 years of age and not more than 65 years of age.\" The minimum mandatory retirement age of 57 is unchanged. The Board retains discretion to set the mandatory retirement age anywhere within the 57–65 range for individual officers or as a general policy.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill grants the Board discretion to set retirement age between 57 and 65 but specifies no criteria the Board must use in making that determination for individual officers or as a department-wide policy."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 8335(c) of title 5, United States Code (CSRS) — Capitol Police mandatory retirement age ceiling raised from 60 to 65, at the Board's discretion",
+          "Section 8425(c) of title 5, United States Code (FERS) — Capitol Police mandatory retirement age ceiling raised from 60 to 65, at the Board's discretion"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-4930",
+      "title": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+      "official_title": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+      "code": "HR.4930",
+      "date": "Aug 8, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Moore, Blake D. (R-UT)",
+      "sponsor_bioguide": "M001213",
+      "cosponsors": 6,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When customs agents suspect imported goods are counterfeit or pirated, they can already ask brand owners to help identify violations — but only certain information can be shared. This bill expands that program to let CBP share nonpublic data generated by online marketplaces, freight forwarders, and shipping operators with brand owners and any other party the Commissioner determines has an interest in the merchandise. It also broadens the physical evidence that can be shared to include packing materials and shipping containers.",
+      "brief": "Expands what counterfeit-goods intelligence CBP can share with brand owners — adding marketplace and freight data, packing materials, and a broader circle of eligible recipients.",
+      "top_lines": [
+        {
+          "headline": "Counterfeit Goods Detection",
+          "subs": [
+            "CBP can now share nonpublic data from online marketplaces, freight forwarders, and express consignment operators with brand owners",
+            "Packing materials and shipping containers added to physical evidence that can be shared"
+          ]
+        },
+        {
+          "headline": "Broader Access",
+          "subs": [
+            "Any party with an interest in the merchandise may receive the shared information — not just trademark or copyright owners",
+            "Sharing threshold raised from \"suspects\" to \"has a reasonable suspicion\" of a violation"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "The bill has bipartisan sponsorship (Moore R-UT and Schneider D-IL) and 6 cosponsors, and anti-counterfeiting measures attract broad support. However, the Senate calendar for narrowly focused trade bills is unpredictable, and the expansion of data-sharing to cover marketplace and freight operator nonpublic information may draw scrutiny over privacy and due process for importers.",
+      "sections": [
+        {
+          "label": "Section 1 — Expansion of CBP Information Sharing",
+          "items": [
+            {
+              "main": "Amends Section 628A(a) of the Tariff Act of 1930 (19 U.S.C. 1628a) to authorize CBP to share nonpublic information generated by online marketplaces, express consignment operators, freight forwarders, and other importation-chain entities with parties requesting assistance in identifying IP violations.",
+              "detail": "CBP may provide a requesting party with nonpublic information about suspected infringing merchandise that was generated by an online marketplace or similar platform, express consignment operator, freight forwarder, or any other entity involved in the sale, importation, or facilitation of the merchandise into the United States, provided that information was provided to, shared with, or obtained by CBP. The scope of shareable physical evidence expands to include packing materials and shipping containers, in addition to the merchandise and its packaging. The threshold for initiating the sharing is raised from \"suspects\" to \"has a reasonable suspicion\" that merchandise is being imported in violation of trademark or copyright law.",
+              "comments": []
+            },
+            {
+              "main": "Expands the class of parties eligible to receive CBP information to any party with an interest in the merchandise, as determined appropriate by the Commissioner.",
+              "detail": "Current law limits the program to trademark or copyright owners requesting assistance to determine whether merchandise violates their rights. The bill adds a new paragraph (5) to Section 628A(b) allowing the Commissioner to extend access to any other party with an interest in the merchandise. No statutory definition of \"interest\" or limit on the Commissioner's discretion to determine eligibility is provided.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 1(2)(C) — Open-Ended Recipient Class",
+          "summary": "The bill extends information sharing to \"any other party with an interest in the merchandise, as determined appropriate by the Commissioner.\" No statutory definition of \"interest\" is provided, and the Commissioner's authority to determine who qualifies is unconstrained by the bill.",
+          "why_unreported": "The bill's headline purpose is expanding anti-counterfeiting tools for brand owners. The open-ended recipient provision in paragraph (5) goes beyond brand owners and trademark holders to any party the Commissioner deems interested — a category that could include competitors of the importer, brokers, or other commercial parties not directly harmed by the alleged violation."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill authorizes sharing of nonpublic information generated by online marketplaces and freight operators but does not specify what categories of nonpublic data are covered or whether any types of data are excluded from the sharing authority.",
+        "The bill does not address the rights of the importer or the source entity (e.g., the online marketplace) to receive notice that their nonpublic information has been shared with a third party."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Section 628A(a)(3) of the Tariff Act of 1930 — CBP authority to share nonpublic information generated by online marketplaces, express consignment operators, freight forwarders, and other importation-chain entities with parties assisting in IP violation determinations",
+          "Section 628A(b)(5) — Commissioner authority to share information with any other party with an interest in the merchandise"
+        ],
+        "modified": [
+          "Section 628A(a) of the Tariff Act of 1930 (19 U.S.C. 1628a) — sharing threshold changed from \"suspects\" to \"has a reasonable suspicion\" of a trademark or copyright violation",
+          "Section 628A(a)(1) — physical evidence shareable with requesting parties expanded to include packing materials and shipping containers"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-7959",
+      "title": "IRS Whistleblower Program Improvement Act",
+      "official_title": "IRS Whistleblower Program Improvement Act",
+      "code": "HR.7959",
+      "date": "Mar 17, 2026",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Kelly, Mike (R-PA)",
+      "sponsor_bioguide": "K000376",
+      "cosponsors": 5,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "The IRS Whistleblower Program pays people who report tax fraud — but when the IRS shortchanges their award, whistleblowers currently face a stacked deck in Tax Court: judges can only overrule the IRS if it acted unreasonably. This bill replaces that with full de novo review where courts examine the evidence fresh. It also lets whistleblowers stay anonymous in court, adds interest to awards when the IRS delays notifying them, requires the IRS to publish the top 10 tax avoidance schemes reported by whistleblowers each year, and extends the attorney fee tax deduction to all whistleblower awards.",
+      "brief": "Strengthens IRS whistleblower protections: de novo court review of awards, Tax Court anonymity, interest on delayed payments, and expanded attorney fee deductions.",
+      "top_lines": [
+        {
+          "headline": "De Novo Court Review",
+          "subs": [
+            "Tax Court must now review IRS whistleblower award decisions from scratch — not just for unreasonableness",
+            "Applies to petitions already pending on the date of enactment"
+          ]
+        },
+        {
+          "headline": "Anonymity and Delays",
+          "subs": [
+            "Whistleblowers may proceed anonymously in Tax Court unless public interest outweighs harm to them",
+            "Interest accrues on awards when IRS misses its preliminary recommendation deadline"
+          ]
+        },
+        {
+          "headline": "Fees and Reporting",
+          "subs": [
+            "Attorney fee deduction extended to discretionary awards — currently limited to mandatory awards only",
+            "IRS annual report must list up to 10 top tax avoidance schemes disclosed by whistleblowers"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "The bill has bipartisan sponsorship (Kelly R-PA and Thompson D-CA) and 5 cosponsors. Whistleblower protections have broad appeal, but the shift to de novo review is a significant reduction in IRS deference that the Treasury Department is likely to resist in the Senate. The combination of five substantive changes creates multiple points of potential objection.",
+      "sections": [
+        {
+          "label": "Section 2 — De Novo Review of Award Determinations",
+          "items": [
+            {
+              "main": "Amends Section 7623(b)(4) of the Internal Revenue Code of 1986 to require the Tax Court to review IRS whistleblower award determinations de novo rather than under the current abuse of discretion standard.",
+              "detail": "Under current law, Tax Court review uses an abuse of discretion standard — the court only overturns the IRS if its determination was unreasonable, giving the agency substantial deference. The amendment requires de novo review based on the administrative record established at the time of the original determination, plus any newly discovered or previously unavailable evidence. The provision heading is changed from \"Appeal\" to \"Review.\" Applies to petitions pending on or filed after enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Whistleblower Anonymity Before the Tax Court",
+          "items": [
+            {
+              "main": "Adds Section 7623(b)(6)(D) allowing whistleblowers to proceed anonymously in all Tax Court proceedings under the whistleblower program.",
+              "detail": "Tax Court proceedings are generally public under sections 7458 and 7461 of the Internal Revenue Code. This section overrides those provisions for whistleblower cases unless the Tax Court finds that a societal interest in disclosing the whistleblower's identity exceeds the potential harm disclosure could cause to the whistleblower. No definition of \"societal interest\" is provided. Applies to petitions pending on or filed after enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Sections 4–6 — Reporting, Interest, and Attorney Fees",
+          "items": [
+            {
+              "main": "Requires the IRS annual whistleblower report to include descriptions of up to 10 top tax avoidance schemes disclosed by whistleblowers during the year.",
+              "detail": "Amends Section 406(c) of the Tax Relief and Health Care Act of 2006 to add the scheme-listing requirement to the existing annual report. Applies to reports for fiscal years ending after enactment.",
+              "comments": []
+            },
+            {
+              "main": "Adds interest on mandatory whistleblower awards when the IRS fails to provide timely preliminary award recommendation notice, and extends the attorney fee tax deduction to discretionary whistleblower awards.",
+              "detail": "Under current law, attorney fees paid in connection with a whistleblower award may be deducted from adjusted gross income only when the award is made through the mandatory program. The bill extends this deduction to fees paid in connection with discretionary awards. Interest accrues at the overpayment rate under the Internal Revenue Code when the IRS fails to meet its preliminary recommendation notice deadline.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3 — \"Societal Interest\" Anonymity Exception",
+          "summary": "Whistleblowers may proceed anonymously unless the Tax Court finds that a \"societal interest\" in disclosure outweighs potential harm to the whistleblower. The bill does not define \"societal interest.\"",
+          "why_unreported": "The anonymity protection is presented as the default rule. The exception that overrides it — a judicial finding of \"societal interest\" — uses a term with no statutory definition, leaving the strength of the protection entirely to Tax Court discretion on a case-by-case basis. The operative limit on the anonymity guarantee is therefore undefined."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill changes Tax Court review to de novo but does not set a deadline for Tax Court proceedings after a whistleblower petition is filed, which has historically been a significant source of delay in award resolution.",
+        "The bill extends the attorney fee deduction to discretionary awards but does not address the treatment of fees in cases where a whistleblower prevails in Tax Court review but the underlying award amount is subsequently reduced."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Section 7623(b)(6)(D) of the Internal Revenue Code — whistleblower anonymity in Tax Court proceedings absent a finding of overriding societal interest",
+          "Section 7623(b)(7) — interest on mandatory whistleblower awards when IRS fails to provide timely preliminary award recommendation notice",
+          "Requirement for IRS annual whistleblower report to include descriptions of up to 10 top tax avoidance schemes disclosed by whistleblowers"
+        ],
+        "modified": [
+          "Section 7623(b)(4) of the Internal Revenue Code — Tax Court review of whistleblower award determinations changed from abuse of discretion to de novo, based on the administrative record plus newly discovered evidence",
+          "Section 104(a)(2) attorney fee deduction extended from mandatory whistleblower awards to include discretionary whistleblower awards"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HJRES-140",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "official_title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "code": "HJRES.140",
+      "date": "Jan 12, 2026",
+      "enactedDate": "Apr 27, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Stauber, Pete (R-MN)",
+      "sponsor_bioguide": "S001212",
+      "cosponsors": 4,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "In 2023, the Bureau of Land Management blocked mineral mining and geothermal drilling on 225,504 acres of National Forest land in Minnesota — including land bordering the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa — for 20 years to protect the watershed. This joint resolution, signed into law under the Congressional Review Act, cancels that protection and reopens the land for mineral and geothermal leasing.",
+      "brief": "Cancels the federal mining ban on 225,504 acres of Minnesota National Forest bordering the Boundary Waters, reopening it for mineral and geothermal leasing.",
+      "top_lines": [
+        {
+          "headline": "Mining Ban Reversed",
+          "subs": [
+            "225,504 acres of Minnesota National Forest reopened for mineral and geothermal leasing",
+            "Nullifies a 2023 BLM order that had barred mining for 20 years"
+          ]
+        },
+        {
+          "headline": "What Was Protected",
+          "subs": [
+            "Land borders the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa",
+            "Cook, Lake, and Saint Louis Counties, MN — Rainy River Watershed included"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 27, 2026.",
+      "sections": [
+        {
+          "label": "Resolving Clause — CRA Disapproval of BLM Order 7917",
+          "items": [
+            {
+              "main": "Congress disapproves Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) under the Congressional Review Act, rendering it without force or effect.",
+              "detail": "Public Land Order 7917 withdrew approximately 225,504 acres of National Forest System lands in Cook, Lake, and Saint Louis Counties, Minnesota from mineral and geothermal leasing for 20 years. The BLM issued the order to protect the Rainy River Watershed, the Boundary Waters Canoe Area Wilderness, the Boundary Waters Canoe Area Wilderness Mining Protection Area, and the 1854 Ceded Territory of the Lake Superior Chippewa from the potential adverse effects of mineral and geothermal exploration and development. Nullification restores those acres to availability for mineral and geothermal leasing.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The joint resolution nullifies Public Land Order 7917 but does not address the Congressional Review Act bar under chapter 8 of title 5, United States Code, which prevents the Bureau of Land Management from issuing a substantially similar rule in the future without explicit congressional authorization.",
+        "The resolution removes the 20-year withdrawal but does not address the status of any tribal consultation obligations associated with the original order regarding the 1854 Ceded Territory of the Lake Superior Chippewa."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": [
+          "Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) — 20-year withdrawal of 225,504 acres in Cook, Lake, and Saint Louis Counties, MN from mineral and geothermal leasing, rendered without force or effect"
+        ]
+      }
+    },
+    {
+      "id": "119-HR-6903",
+      "title": "Ensuring Children Receive Support Act",
+      "official_title": "Ensuring Children Receive Support Act",
+      "code": "HR.6903",
+      "date": "Dec 18, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Van Duyne, Beth (R-TX)",
+      "sponsor_bioguide": "V000134",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When a parent owes more than $2,500 in unpaid child support, federal law already requires the State Department to deny them a new passport — but revoking an existing passport is currently optional. This bill makes revocation mandatory in those same circumstances, requires the government to notify the individual before acting, and gives the State Department explicit statutory authority to issue a short-term return-home passport for individuals abroad who need to come back to the United States.",
+      "brief": "Makes passport revocation mandatory — not optional — for individuals owing more than $2,500 in unpaid child support.",
+      "top_lines": [
+        {
+          "headline": "Mandatory Revocation",
+          "subs": [
+            "Removes State Department's option to merely restrict a passport — revocation required at $2,500+ arrearage",
+            "Individual must be notified of intent to revoke before action is taken"
+          ]
+        },
+        {
+          "headline": "Emergency Exception",
+          "subs": [
+            "Individuals abroad may receive a temporary, limited-duration passport solely for return travel to the United States"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Child support enforcement has broad bipartisan appeal, but the bill carries only 1 cosponsor and passed the House without significant floor debate coverage. The Senate calendar for narrowly supported House bills is uncertain, and mandatory revocation without a specified appeal window may draw procedural objections.",
+      "sections": [
+        {
+          "label": "Section 2 — Passport Revocation for Child Support Arrearage",
+          "items": [
+            {
+              "main": "Amends Section 452(k) of the Social Security Act (42 U.S.C. 652(k)) to make revocation of a previously issued passport mandatory when an individual owes more than $2,500 in child support.",
+              "detail": "Current law gives the State Department discretion to \"revoke, restrict, or limit\" a passport in these circumstances. This bill removes restrict and limit as options, changing the authority to a mandatory revoke. The State Department must notify the individual of the intent to revoke before taking action. The $2,500 arrearage threshold set by the Office of Child Support Enforcement of the Department of Health and Human Services is unchanged.",
+              "comments": []
+            },
+            {
+              "main": "Authorizes the State Department to issue a limited-duration temporary passport solely for return travel to the United States for affected individuals who are abroad in an emergency.",
+              "detail": "Notwithstanding the mandatory revocation requirement, the State Department may issue a temporary passport to an individual with a $2,500+ arrearage who is abroad and needs to return to the United States on an emergency basis. The temporary passport is valid only for the return trip home and is limited in duration.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a) — Notification Requirement",
+          "summary": "The bill adds a requirement that the State Department notify the individual of the intent to revoke their passport before taking action, but specifies no minimum notice period, required content for the notification, or appeal process before revocation takes effect.",
+          "why_unreported": "The bill's operative change is the mandatory revocation requirement. The notification obligation is added as a subordinate clause with no procedural detail, leaving the timing, form, and any pre-revocation remedy entirely to agency implementation."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill makes revocation mandatory but does not specify a minimum notice period between notification and revocation, nor any right to contest the arrearage determination before the passport is revoked.",
+        "The bill does not address the process or timeline for passport restoration after an arrearage is resolved or a payment plan is established."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Requirement for the State Department to notify the individual of intent to revoke before acting",
+          "Statutory authority for the State Department to issue a limited-duration emergency return-home passport for individuals abroad with a $2,500+ arrearage"
+        ],
+        "modified": [
+          "Section 452(k)(2) of the Social Security Act (42 U.S.C. 652(k)) — State Department authority to act on existing passports changed from discretionary (\"may revoke, restrict, or limit\") to mandatory (\"revoke\")"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-2347",
+      "title": "Survivor Justice Tax Prevention Act",
+      "official_title": "Survivor Justice Tax Prevention Act",
+      "code": "HR.2347",
+      "date": "Mar 25, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Smucker, Lloyd (R-PA)",
+      "sponsor_bioguide": "S001199",
+      "cosponsors": 3,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Under current tax law, settlement and judgment damages are only tax-free if they stem from a physical injury — and the IRS has interpreted this to require visible harm like bruising or cuts. This bill creates a separate tax exemption for sexual assault and abuse damages that requires no proof of physical injury and no medical records. If a judgment or settlement states that damages result from sexual acts or contact, the IRS must prove otherwise in court rather than the survivor having to prove it.",
+      "brief": "Creates a tax exemption for sexual assault damages requiring no physical injury proof or medical records, and shifts the burden of proof to the IRS.",
+      "top_lines": [
+        {
+          "headline": "New Tax Exemption",
+          "subs": [
+            "Sexual assault and abuse damages excluded from gross income — no visible injury or medical records required",
+            "Applies to non-punitive damages from judgments and settlements entered after enactment"
+          ]
+        },
+        {
+          "headline": "Burden of Proof Shift",
+          "subs": [
+            "IRS must prove damages are not on account of sexual acts if the judgment or agreement says they are",
+            "Medical records alone cannot be required to deny the exemption"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The bill addresses a sympathetic population with bipartisan appeal — sexual assault survivors facing unexpected tax liability — and passed the House. However, only 3 cosponsors and no Senate companion bill has been identified. Tax exclusions for personal injury damages have historically attracted broad support, making Senate passage plausible but not certain without floor time being scheduled.",
+      "sections": [
+        {
+          "label": "Section 2 — Exclusion from Gross Income",
+          "items": [
+            {
+              "main": "Amends Section 104(a)(2) of the Internal Revenue Code of 1986 to exclude from gross income damages received on account of any sexual act (as defined in 18 U.S.C. 2246(2)) or sexual contact (as defined in 18 U.S.C. 2246(3)), other than punitive damages.",
+              "detail": "Current law limits the exclusion to damages \"on account of personal physical injuries or physical sickness.\" The IRS has interpreted this to require observable bodily harm. The amendment adds sexual acts and sexual contact as an independent basis for the exclusion, removing the physical injury requirement for these claims. The amendment applies to amounts received pursuant to judgments made, and agreements entered into, after the date of enactment.",
+              "comments": []
+            },
+            {
+              "main": "New Section 104(d) establishes that damages are substantiated as on account of sexual act or contact if the judgment or agreement so states, and prohibits denying the exclusion solely for lack of medical records.",
+              "detail": "The IRS bears the burden of proving that damages characterized as on account of sexual act or contact in a judgment or agreement are not so characterized, in any related court proceeding. A judgment is treated as made after enactment if the first payment pursuant to it is received after enactment. An agreement that replaces, supersedes, or revises an agreement entered into before enactment does not qualify as a new post-enactment agreement.",
+              "comments": []
+            },
+            {
+              "main": "Requires the Secretary of the Treasury to conduct a public awareness program about the new exclusion in consultation with the Department of Justice Office on Violence Against Women.",
+              "detail": "The Secretary must work with the Department of Justice Office on Violence Against Women and other relevant federal agencies to promote public awareness of the exclusion from gross income provided by the new Section 104(a)(2)(B). No timeline, funding level, or required outreach methods are specified in the bill.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(c)(3) — Agreement Replacement Rule",
+          "summary": "An agreement that replaces, supersedes, or revises a pre-enactment agreement does not qualify as a new post-enactment agreement, even if the replacement is reached after enactment.",
+          "why_unreported": "The bill's stated purpose is to extend the tax exemption to sexual assault survivors. This provision specifically bars survivors who renegotiate or revise a pre-existing settlement after enactment from accessing the new exemption, a limitation not apparent from the bill's title or the headline exemption provision."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill applies to amounts received under judgments made and agreements entered after enactment but does not address the tax treatment of damages already received under pre-enactment judgments that are still paying out.",
+        "The bill requires a public awareness program but specifies no timeline, appropriated funding, or minimum required outreach activities."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Section 104(a)(2)(B) of the Internal Revenue Code of 1986 — tax exclusion for non-punitive damages on account of sexual acts or sexual contact, with no physical injury or medical records requirement",
+          "Section 104(d) — burden of proof rule placing the obligation on the IRS to disprove the characterization in any judgment or agreement stating damages are on account of sexual acts or contact",
+          "Requirement for the Secretary of the Treasury to conduct a public awareness program in consultation with the Department of Justice Office on Violence Against Women"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-8322",
+      "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "official_title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "code": "HR.8322",
+      "date": "Apr 16, 2026",
+      "version": "v1.1",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Scott, Austin (R-GA)",
+      "sponsor_bioguide": "S001189",
+      "cosponsors": 0,
+      "pages": 2,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the NSA collect the communications of foreign targets without a warrant — and when those targets contact Americans, those conversations are swept up too. The FBI can then search that database for information about U.S. persons without getting a separate warrant. This bill extends that authority through April 30, 2026 with no new limits, oversight requirements, or reforms added.",
+      "brief": "Extends the NSA's authority to collect foreign targets' communications without a warrant — including Americans' conversations when they contact those targets — through April 30, 2026, with no reforms attached.",
+      "top_lines": [
+        {
+          "headline": "What Section 702 Does",
+          "subs": [
+            "Allows the NSA to compel U.S. tech companies to hand over communications of designated foreign targets without a warrant",
+            "When those targets communicate with Americans, those conversations are collected — the FBI can then search that database for U.S. person data without a separate warrant"
+          ]
+        },
+        {
+          "headline": "What This Bill Changes",
+          "subs": [
+            "Extended through April 30, 2026 — no new limits or reforms",
+            "Introduced and signed into law in 48 hours"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 18, 2026 as Public Law 119-84.",
+      "sections": [
+        {
+          "label": "Section 1 — Extension of Title VII Authorities",
+          "items": [
+            {
+              "main": "Title VII of FISA (Section 702) authorizes the NSA to surveil foreign targets abroad without a warrant. This bill extends that authority through April 30, 2026 with no new conditions attached.",
+              "detail": "Amends Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) to set a fixed April 30, 2026 repeal date for Title VII, replacing a rolling deadline tied to the enactment of the Reforming Intelligence and Securing America Act. The amendment takes effect on the earlier of the date of enactment or April 19, 2026. No new minimization requirements, no new oversight mechanisms, and no restrictions on FBI queries of the collected data are included.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [
+        {
+          "who": "Sen. Ron Wyden (D-OR)",
+          "why": "Opposed the clean extension, stating that warrantless searches of U.S. persons tripled in the first year of the Trump administration and that a straight reauthorization without reform is absolutely unacceptable."
+        }
+      ],
+      "gaps": [
+        "The bill extends Title VII surveillance authorities through April 30, 2026 but sets no reporting requirement on how those authorities are used during the extension period.",
+        "The bill sets a fixed April 30, 2026 expiration date but does not establish any conditions or framework governing further reauthorization after that date."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Sen. Ron Wyden",
+          "party": "D",
+          "state": "OR",
+          "bioguideId": "W000779",
+          "text": "Any Senator who votes to reauthorize this law without real reform will be directly responsible when the Trump team abuses their spying powers.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Sen. Ron Wyden",
+          "party": "D",
+          "state": "OR",
+          "bioguideId": "W000779",
+          "text": "The number of so-called 'sensitive' warrantless searches more than tripled during the first year of the Trump administration.",
+          "stance": "oppose"
+        }
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) — Title VII repeal date changed from two years after enactment of the Reforming Intelligence and Securing America Act to April 30, 2026"
+        ],
+        "removed": []
+      },
+      "enactedDate": "Apr 18, 2026"
+    },
+    {
+      "id": "119-HCONRES-40",
+      "title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "official_title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "code": "HCONRES.40",
+      "date": "Jun 23, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Meeks, Gregory W. (D-NY)",
+      "sponsor_bioguide": "M001137",
+      "cosponsors": 90,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Directs the President to remove United States Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)). Forces required to defend the United States, an ally, or a partner from imminent attack may remain, provided the President fully complies with the 60-day withdrawal requirement in section 5(b) of the War Powers Resolution. Continued operations against Iran require either a declaration of war or a specific congressional authorization for use of military force.",
+      "brief": "Invokes the War Powers Resolution to direct the President to end U.S. military operations against Iran without a declaration of war or specific congressional authorization.",
+      "top_lines": [
+        {
+          "headline": "War Powers Directive",
+          "subs": [
+            "Directs the President to remove U.S. Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c))",
+            "Carve-out for forces defending the United States, an ally, or a partner from imminent attack, conditioned on the President complying with section 5(b) of the War Powers Resolution (50 U.S.C. 1544(b))"
+          ]
+        },
+        {
+          "headline": "Authorization Threshold",
+          "subs": [
+            "Military operations against Iran may continue only if authorized by a declaration of war or a specific congressional authorization for use of military force against Iran",
+            "90 cosponsors in the House; passed April 16, 2026"
+          ]
+        }
+      ],
+      "likelihood": 20,
+      "likelihoodLabel": "Long shot",
+      "likelihoodReason": "The resolution passed the House with 90 cosponsors indicating bipartisan support. However, the Senate is controlled by Republicans who are unlikely to advance a concurrent resolution challenging a Republican president's conduct of military operations. Concurrent war powers resolutions rarely clear the Senate when the president's party holds the majority.",
+      "sections": [
+        {
+          "label": "Resolving Clause — Withdrawal from Iran Hostilities",
+          "items": [
+            {
+              "main": "Congress directs the President to remove U.S. Armed Forces from hostilities against the Islamic Republic of Iran under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)).",
+              "detail": "The directive exempts forces necessary to defend the United States, an ally, or a partner from imminent attack, provided the President fully complies with section 5(b) of the War Powers Resolution (50 U.S.C. 1544(b)). Section 5(b) generally requires removal of forces within 60 days of their introduction into hostilities unless Congress authorizes continued engagement. Continued operations require explicit authorization through a declaration of war or a specific authorization for use of military force against Iran.",
+              "comments": [
+                {
+                  "party": "d",
+                  "text": "Rep. Gregory Meeks (D-NY): One person does not have the power to take this Nation to war alone."
+                },
+                {
+                  "party": "r",
+                  "text": "Rep. Keith Self (R-TX): We have neutered Iran, which has been at war with us for 47 years."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Imminent Attack Exception",
+          "summary": "The resolution permits forces to remain if needed to defend the United States, an ally, or a partner from imminent attack, conditioned on the President complying with section 5(b) of the War Powers Resolution.",
+          "why_unreported": "The term imminent attack is not defined in the resolution. The resolution does not specify who determines when a threat qualifies as imminent or what evidence is required, leaving that threshold determination entirely to the executive branch."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "Rep. Keith Self (R-TX)",
+          "why": "Opposed the withdrawal directive on grounds that U.S. military operations had achieved a strategic objective against Iran."
+        }
+      ],
+      "gaps": [
+        "The resolution directs withdrawal from hostilities against the Islamic Republic of Iran but does not define what operations constitute hostilities, a term whose scope the resolution does not address.",
+        "The resolution invokes section 5(c) of the War Powers Resolution but does not specify a timeline by which the President must comply after the directive is transmitted.",
+        "The resolution's imminent attack exception covers forces defending an ally or partner of the United States but does not specify which allies or partners qualify or how eligibility for the exception is determined."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Rep. Pramila Jayapal",
+          "party": "D",
+          "state": "WA",
+          "bioguideId": "J000298",
+          "text": "The war has cost taxpayers $50 billion already, and the Pentagon will request $200 billion more.",
+          "stance": "support"
+        },
+        {
+          "name": "Rep. Gregory Meeks",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "M001137",
+          "text": "One person does not have the power to take this Nation to war alone.",
+          "stance": "support"
+        },
+        {
+          "name": "Rep. Keith Self",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "S001224",
+          "text": "We have neutered Iran, which has been at war with us for 47 years.",
+          "stance": "oppose"
+        }
+      ],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      }
+    },
     {
       "id": "119-HR-6955",
       "code": "H.R.6955",
@@ -155,721 +1719,8 @@
         ]
       },
       "summary": "The Main Street Capital Access Act is a comprehensive banking deregulation bill that raises dozens of regulatory thresholds across 14 federal statutes to match GDP growth, eases capital requirements for new community banks, reforms the CDFI Bond Guarantee Program, and requires federal examiners to tailor supervision to each institution's actual risk profile.",
-      "live": true,
-      "demo": false
-    },
-    {
-      "summary": "This bill provides appropriations to several federal departments and agencies for the remainder of FY2026, including a continuing resolution for DHS through February 13, 2026, and extends various expiring programs and authorities.",
-      "brief": "The bill provides appropriations to several federal departments and agencies for the remainder of FY2026 and continues DHS funding through February 13, 2026.",
-      "top_lines": [
-        {
-          "headline": "Provides $174,000 to Jill Marie LaMalfa as a payment to the widow of Douglas L. LaMalfa",
-          "subs": [
-            "Direct appropriation for a specific individual."
-          ]
-        },
-        {
-          "headline": "Allocates $3.0B for Army equipment and training devices until September 30, 2028",
-          "subs": [
-            "$4.6B for Army procurement of ammunition until September 30, 2028.",
-            "$9.4B for Other Procurement (Army) until September 30, 2028."
-          ]
-        },
-        {
-          "headline": "Provides $17.2B for Navy Aircraft Procurement until September 30, 2028",
-          "subs": [
-            "$27.2B for Shipbuilding and Conversion (Navy) until September 30, 2030.",
-            "$1.3B to the Defense Health Agency for congressionally directed medical research programs."
-          ]
-        }
-      ],
-      "likelihood": 85,
-      "likelihoodReason": "The bill has become Public Law No: 119-75, indicating it has passed both chambers and been signed into law. The sponsor is Rep. Cole [R-OK], a Republican from the majority party in the House of Representatives during the 119th Congress. With zero cosponsors, the likelihood score reflects the bill's status as enacted legislation rather than pending action.",
-      "sections": [
-        {
-          "label": "Title I — Payment to Widows and Heirs of Deceased Members of Congress",
-          "items": [
-            {
-              "main": "Provides $174,000 for payment to Jill Marie LaMalfa, widow of Douglas L. LaMalfa.",
-              "detail": "This is a direct appropriation for a specific individual with no modification to existing law or program.",
-              "comments": []
-            }
-          ]
-        },
-        {
-          "label": "Title II — Department of Defense Appropriations",
-          "items": [
-            {
-              "main": "Allocates $3.0B for Army equipment and training devices until September 30, 2028.",
-              "detail": "Includes $4.6B for procurement of ammunition and $9.4B for other procurement. Navy Aircraft Procurement receives $17.2B until September 30, 2028.",
-              "comments": []
-            },
-            {
-              "main": "Provides $1.3B to the Defense Health Agency for congressionally directed medical research programs.",
-              "detail": "Includes $15M for HIV prevention educational activities in African nations and $213M for chemical agents and munitions destruction.",
-              "comments": []
-            }
-          ]
-        },
-        {
-          "label": "Title III — Department of Labor Appropriations",
-          "items": [
-            {
-              "main": "Authorizes Secretary of Labor to employ law enforcement officers or special agents for protection of the Secretary, Deputy Secretary, senior officers, and immediate family members at public events if a unique and articulable threat of physical harm exists.",
-              "detail": "Grants officers authority to carry firearms, make warrantless arrests for offenses against the U.S. committed in their presence, perform protective intelligence work, coordinate with local law enforcement, and initiate criminal investigations into threats to the Secretary's security.",
-              "comments": []
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section regarding Defense Innovation Acceleration (PE 0603838D8Z) or Rapid Prototyping Program (PE 0604331D8Z)",
-          "summary": "Restricts obligation of new start demonstration projects with a value of more than $5M to 15 days after a report is provided in writing to the congressional defense committees.",
-          "why_unreported": "Buried in technical language regarding specific program codes and waiver authority."
-        }
-      ],
-      "criticisms": [],
-      "gaps": [
-        "Silent on the specific allocation amounts for the Department of Homeland Security continuing resolution beyond the general statement that it funds most DHS programs and activities at the FY2025 levels.",
-        "Does not specify the exact dollar amount for the National Flood Insurance Program extension or the Forest Service's participation in the Agriculture Conservation Experienced Services Program.",
-        "Silent on the specific amounts allocated to the Transportation Security Administration’s Reimbursable Screening Services Program or the Motor Carrier Safety Advisory Committee.",
-        "Does not detail the specific authorities and programs related to cybersecurity that are extended.",
-        "Silent on the specific amount for the technology modernization fund and board extension.",
-        "Does not specify the exact funding level for the U.S. Parole Commission extension.",
-        "Silent on the specific amount for the special assessment on nonindigent persons or entities convicted of certain offenses involving sexual abuse or human trafficking.",
-        "Does not detail the specific immigration-related programs and authorities that are extended.",
-        "Silent on the specific authority for the U.S. Sentencing Commission to promulgate certain guidelines or amendments related to the use of unmanned aircraft.",
-        "Does not specify the exact amount for certain bankruptcy fees extension.",
-        "Silent on the specific trade preferences for Haiti and countries in sub-Saharan Africa that are extended.",
-        "Does not detail the specific health care authorities and programs that are extended."
-      ],
-      "featured_quotes": [],
-      "changes": {
-        "added": [
-          "Payment of $174,000 to Jill Marie LaMalfa",
-          "Authority for Secretary of Labor to employ law enforcement officers or special agents for protection at public events"
-        ],
-        "modified": [
-          "Restricts obligation of new start Defense Innovation Acceleration (PE 0603838D8Z) or Rapid Prototyping Program (PE 0604331D8Z) demonstration projects with a value of more than $5M to 15 days after a report is provided in writing to the congressional defense committees."
-        ],
-        "removed": []
-      },
-      "likelihoodLabel": "Likely",
-      "id": "119-HR-7148",
-      "title": "Consolidated Appropriations Act, 2026",
-      "official_title": "Consolidated Appropriations Act, 2026",
-      "code": "HR.7148",
-      "date": "Jan 19, 2026",
-      "version": "v1.0",
-      "stage": "signed",
-      "stageLabel": "Signed into Law",
-      "currentStep": 4,
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "Passed House",
-        "Passed Senate",
-        "Signed"
-      ],
-      "sponsor": "Rep. Cole, Tom [R-OK-4]",
-      "sponsor_bioguide": "C001053",
-      "sponsors": [
-        {
-          "bioguideId": "C001053",
-          "district": 4,
-          "firstName": "Tom",
-          "fullName": "Rep. Cole, Tom [R-OK-4]",
-          "isByRequest": "N",
-          "lastName": "Cole",
-          "party": "R",
-          "state": "OK",
-          "url": "https://api.congress.gov/v3/member/C001053?format=json"
-        }
-      ],
-      "cosponsors": 0,
-      "pages": 701,
-      "analyzed": true,
       "live": false,
       "demo": false
-    },
-    {
-      "summary": "This act reduces taxes, increases spending for various federal programs, and addresses agencies throughout the federal government as a reconciliation bill.",
-      "brief": "The bill provides tax cuts, modifies federal spending on agriculture, energy, and conservation, and adjusts immigration fees.",
-      "top_lines": [
-        "Increases LIP payment rate to 100% for losses due to predation (from 75%).",
-        "Reduces cap on earnings transferred from Federal Reserve Board to CFPB from 12% to 6.5%. ",
-        "Modifies Gulf of Mexico Energy Security Act of 2006 to raise cap on distribution of OCS revenues to oil and gas producing Gulf states from $500 million to $650 million per year for FY2025-FY34."
-      ],
-      "likelihood": 99,
-      "likelihoodReason": "The bill has already become Public Law No: 119-21, indicating it was enacted. The sponsor is a Republican from Texas with zero cosponsors, but the reconciliation process and the fact that it became law suggest broad support or procedural necessity.",
-      "sections": [
-        {
-          "label": "Title I — COMMITTEE ON AGRICULTURE, NUTRITION, AND FORESTRY",
-          "items": [
-            {
-              "main": "Increases the payment rate under the Livestock Indemnity Program (LIP) to 100% for losses due to predation.",
-              "detail": "Modifies the LIP payment rate for predation losses from 75% to 100%. The text cuts off mid-sentence regarding 'attacks by animals reintroduced'.",
-              "comments": []
-            },
-            {
-              "main": "Reduces the cap on the percentage of combined earnings transferred from the Board of Governors of the Federal Reserve to the Consumer Financial Protection Bureau (CFPB).",
-              "detail": "Changes the cap on earnings transferred from the Board of Governors of the Federal Reserve to the CFPB from 12% to 6.5%. The text cuts off before completing the provision.",
-              "comments": []
-            },
-            {
-              "main": "Reduces restrictions on onshore development of oil and gas on federal lands by decreasing minimum royalty rates, reinstating noncompetitive leasing, directing Interior to resume quarterly lease sales in specified states, and approving applications allowing commingling of production from two or more sources before royalty payment measurement.",
-              "detail": "Modifies existing restrictions on federal land oil and gas development. No new programs created; existing leasing practices modified (noncompetitive leasing reinstated).",
-              "comments": []
-            }
-          ]
-        },
-        {
-          "label": "Title II — TAX POLICY AND REVENUE",
-          "items": [
-            {
-              "main": "Increases the percentage rate to 50% (from 25%) at which the alternative minimum tax exemption amount is phased out for individuals whose taxable income exceeds such threshold amount.",
-              "detail": "The alternative minimum taxable income threshold amounts are $626,350 or $1,252,700 for joint filers for 2025, as adjusted annually for inflation beginning in 2026. Applies to individuals filing joint returns or married individuals filing separately.",
-              "comments": []
-            },
-            {
-              "main": "Makes permanent the limit on the itemized tax deduction for home mortgage interest enacted in 2017 by the Tax Cuts and Jobs Act.",
-              "detail": "Allows certain mortgage insurance premiums to be included in the itemized tax deduction for home mortgage interest. The limit is $750,000; $375,000 for married individuals filing separately.",
-              "comments": []
-            },
-            {
-              "main": "Makes permanent and increases the tax deduction for charitable contributions made by individuals who do not itemize their federal income tax deductions.",
-              "detail": "Increases the deduction amount to $1,000 for single filers (from $300) and $2,000 for joint filers (from $600 for joint filers). Makes it permanent.",
-              "comments": []
-            }
-          ]
-        },
-        {
-          "label": "Title III — IMMIGRATION AND CUSTOMS",
-          "items": [
-            {
-              "main": "Establishes a fee of at least $100 for applications for asylum.",
-              "detail": "Applies to applicants for asylum. Provides exceptions on a case-by-case basis for the fee established in Sec. 100004 (e.g., life-threatening medical emergency).",
-              "comments": []
-            },
-            {
-              "main": "Establishes a fee of at least $550 for asylees, parolees, or individuals granted temporary protected status who are applying for initial employment authorization.",
-              "detail": "Applies to asylees, parolees, or individuals granted temporary protected status applying for initial employment authorization. Provides exceptions on a case-by-case basis for the fee established in Sec. 100004 (e.g., life-threatening medical emergency).",
-              "comments": []
-            },
-            {
-              "main": "Eliminates the exemption from certain duties, fees, and processes for imports of up to $800 (commonly referred to as the de minimis exemption), effective July 1, 2027.",
-              "detail": "Establishes a civil penalty for using such exemption in a manner that violates U.S. customs laws. Penalty: up to $5,000 for the first violation and up to $10,000 for subsequent violations.",
-              "comments": []
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section 50304",
-          "summary": "Rescinds certain funding for Interior to carry out projects concerning conservation, protection, and resiliency of lands and resources administered by NPS and BLM.",
-          "why_unreported": "Buried in technical language regarding specific funding rescissions rather than a headline provision."
-        },
-        {
-          "section": "Section 70531",
-          "summary": "Eliminates the exemption from certain duties, fees, and processes for imports of up to $800 (commonly referred to as the de minimis exemption), effective July 1, 2027.",
-          "why_unreported": "Technical change to customs laws that contradicts the headline 'tax cuts' narrative."
-        }
-      ],
-      "criticisms": [],
-      "gaps": [
-        "Silent on the specific definition of 'predation' beyond 'attacks by animals reintroduced' which is cut off in the source text.",
-        "Does not specify which states are included for quarterly lease sales in Sec. 50101."
-      ],
-      "featured_quotes": [],
-      "changes": {
-        "added": [
-          "New fee of at least $100 for applications for asylum.",
-          "New fee of at least $550 for asylees, parolees, or individuals granted temporary protected status who are applying for initial employment authorization.",
-          "New fee of at least $250 for individuals issued a nonimmigrant visa."
-        ],
-        "modified": [
-          "LIP payment rate for predation losses: 75% → 100%",
-          "Cap on earnings transferred from Board of Governors of the Federal Reserve to CFPB: 12% → 6.5%",
-          "Gulf of Mexico Energy Security Act of 2006 cap on distribution of OCS revenues to oil and gas producing Gulf states: $500 million → $650 million per year for FY2025-FY34",
-          "Alternative minimum tax exemption phase-out rate: 25% → 50%",
-          "Charitable contribution deduction for non-itemizers (single filers): $300 → $1,000",
-          "Charitable contribution deduction for non-itemizers (joint filers): $600 → $2,000"
-        ],
-        "removed": [
-          "Exemption from certain duties, fees, and processes for imports of up to $800 (de minimis exemption) effective July 1, 2027.",
-          "Funding for Interior to carry out projects concerning conservation, protection, and resiliency of lands and resources administered by NPS and BLM."
-        ]
-      },
-      "likelihoodLabel": "Likely",
-      "id": "119-HR-1",
-      "title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
-      "official_title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
-      "code": "HR.1",
-      "date": "May 19, 2025",
-      "version": "v1.0",
-      "stage": "signed",
-      "stageLabel": "Signed into Law",
-      "currentStep": 4,
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "Passed House",
-        "Passed Senate",
-        "Signed"
-      ],
-      "sponsor": "Rep. Arrington, Jodey C. [R-TX-19]",
-      "sponsor_bioguide": "A000375",
-      "sponsors": [
-        {
-          "bioguideId": "A000375",
-          "district": 19,
-          "firstName": "Jodey",
-          "fullName": "Rep. Arrington, Jodey C. [R-TX-19]",
-          "isByRequest": "N",
-          "lastName": "Arrington",
-          "middleName": "C.",
-          "party": "R",
-          "state": "TX",
-          "url": "https://api.congress.gov/v3/member/A000375?format=json"
-        }
-      ],
-      "cosponsors": 0,
-      "pages": 365,
-      "analyzed": true,
-      "live": false,
-      "demo": false
-    },
-    {
-      "summary": "The HEATS Act waives federal drilling permit requirements for geothermal exploration and production on non-federal lands if the U.S. owns less than 50% of the subsurface estate and a state permit is submitted.",
-      "brief": "This bill exempts certain geothermal activities from federal permitting, environmental review, and historic preservation requirements.",
-      "top_lines": [
-        "Waives Federal drilling permit requirement for qualifying geothermal activities on non-Federal surface estate",
-        "Exempts qualifying activities from NEPA section 102(2)(C) and Endangered Species Act section 7",
-        "U.S. ownership interest must be less than 50 percent of the subsurface geothermal estate"
-      ],
-      "likelihood": 15,
-      "likelihoodReason": "The bill has only 2 cosponsors in the House, which is a very low number for passage. The sponsor is a Republican from California (R-CA), and the latest action shows a motion to reconsider was laid on the table without objection, indicating limited debate or support. The provision waives federal permitting requirements, which may attract opposition from environmental groups or representatives concerned about regulatory oversight.",
-      "sections": [
-        {
-          "label": "Title I — Harnessing Energy At Thermal Sources Act",
-          "items": [
-            {
-              "main": "Waives the requirement for a Federal drilling permit for geothermal exploration and production activities conducted on a non-Federal surface estate, provided that (1) the United States holds an ownership interest of less than 50 percent of the subsurface geothermal estate to be accessed by the proposed action; and (2) the operator submits to the Secretary a State permit to conduct geothermal exploration and production activities on the non-Federal surface estate.",
-              "detail": "The bill amends the Geothermal Steam Act of 1970 by adding Section 30. It exempts such activity from NEPA section 102(2)(C) and Endangered Species Act section 7, subject to conditions. The Secretary may conduct onsite reviews and inspections for accountability, measurement, reporting, and royalty payment.",
-              "comments": []
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section 30 of the Geothermal Steam Act of 1970",
-          "summary": "The provision states that royalties due to the United States under this Act from production of electricity using geothermal resources (other than direct use) or byproducts are not affected.",
-          "why_unreported": "Royalty obligations remain intact despite the waiver of drilling permits, which may be overlooked in summaries focusing solely on permitting relief."
-        }
-      ],
-      "criticisms": [],
-      "gaps": [
-        "The bill does not address potential impacts on tribal lands or resources managed in trust for Indian Tribes beyond simply excluding them from the waiver.",
-        "The bill does not specify how state permits are evaluated to ensure they meet environmental standards comparable to federal requirements."
-      ],
-      "featured_quotes": [],
-      "changes": {
-        "added": [
-          "New Section 30 in the Geothermal Steam Act of 1970"
-        ],
-        "modified": [
-          "Geothermal Steam Act of 1970 — adds waiver for Federal drilling permit requirement for certain geothermal activities"
-        ],
-        "removed": [
-          "Requirement for a Federal drilling permit for qualifying geothermal activities on non-Federal surface estate"
-        ]
-      },
-      "likelihoodLabel": "Long shot",
-      "id": "119-HR-5587",
-      "title": "HEATS Act",
-      "official_title": "HEATS Act",
-      "code": "HR.5587",
-      "date": "Sep 25, 2025",
-      "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "Passed House",
-        "Passed Senate",
-        "Signed"
-      ],
-      "sponsor": "Rep. Kim, Young [R-CA-40]",
-      "sponsor_bioguide": "K000397",
-      "sponsors": [
-        {
-          "bioguideId": "K000397",
-          "district": 40,
-          "firstName": "Young",
-          "fullName": "Rep. Kim, Young [R-CA-40]",
-          "isByRequest": "N",
-          "lastName": "Kim",
-          "party": "R",
-          "state": "CA",
-          "url": "https://api.congress.gov/v3/member/K000397?format=json"
-        }
-      ],
-      "cosponsors": 2,
-      "pages": 2,
-      "analyzed": true,
-      "live": false,
-      "demo": true
-    },
-    {
-      "id": "119-HR-8469",
-      "code": "H.R.8469",
-      "title": "Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, FY2027",
-      "sponsor": "Rep. Carter, John R. (R-TX)",
-      "date": "Apr 23, 2026",
-      "stage": "house",
-      "stageLabel": "House Calendar",
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "House floor",
-        "Senate floor",
-        "Conference",
-        "Signed"
-      ],
-      "currentStep": 2,
-      "likelihood": 78,
-      "likelihoodLabel": "Likely",
-      "likelihoodReason": "Military construction and VA appropriations bills are among the least controversial annual spending bills and typically pass with bipartisan support. The House Appropriations Committee reported it, placing it on the Union Calendar. A continuing resolution fight or broader budget standoff remains the primary risk to passage this fiscal year.",
-      "analyzed": true,
-      "sections": [
-        {
-          "label": "Military Construction",
-          "items": [
-            {
-              "main": "Funds construction and renovation of military bases, barracks, and training facilities across all service branches.",
-              "detail": "Covers family housing, medical facilities, and critical infrastructure upgrades at installations worldwide. Includes funding for installations in the Indo-Pacific region as part of the ongoing strategic rebalance toward countering China.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-Leadership: Essential for military readiness and force projection."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Armed Services: Supports the funding levels but wants more focus on domestic base communities."
-                }
-              ]
-            },
-            {
-              "main": "Allocates funds for PFAS contamination cleanup at military installations.",
-              "detail": "Addresses firefighting foam (AFFF) contamination that has polluted groundwater near dozens of bases. The cleanup mandate has bipartisan backing but the funding level is disputed — environmental groups argue it is insufficient.",
-              "comments": [
-                {
-                  "party": "d",
-                  "text": "D-Environment: The allocation falls well short of EPA estimates for full remediation."
-                },
-                {
-                  "party": "n",
-                  "text": "Veterans advocates: Cleanup directly tied to service-member health claims."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Veterans Health Administration",
-          "items": [
-            {
-              "main": "Funds VA hospitals, clinics, and mental health programs serving over 9 million enrolled veterans.",
-              "detail": "Covers staffing, medical equipment, telehealth expansion, and the MISSION Act community care program which allows veterans to seek care outside the VA system. Community care has grown rapidly and now consumes a significant share of the VHA budget.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-VA Committee: Supports expansion of community care as a market-based solution."
-                },
-                {
-                  "party": "d",
-                  "text": "D-VA Committee: Concerned that community care funding draws resources from VA facility investment."
-                }
-              ]
-            },
-            {
-              "main": "Maintains funding for the PACT Act toxic exposure claims backlog processing.",
-              "detail": "The PACT Act (2022) expanded eligibility for veterans exposed to burn pits, Agent Orange, and radiation. The VA faces a claims backlog running into the hundreds of thousands. This bill continues emergency processing staffing, though veterans groups say the pace remains too slow.",
-              "comments": [
-                {
-                  "party": "n",
-                  "text": "Veterans of Foreign Wars: Processing times have improved but remain unacceptable for dying veterans."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Veterans Benefits Administration",
-          "items": [
-            {
-              "main": "Funds disability compensation, pension, education (GI Bill), and vocational rehabilitation benefits.",
-              "detail": "The largest single line item in the bill. Disability compensation alone accounts for the majority of VBA spending. Post-PACT Act, benefit outlays have increased significantly and the appropriation reflects continued growth in the eligible veteran population.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-Budget: Growth in mandatory-like spending within discretionary appropriations is structurally difficult."
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section 223 — Community Care Network Contracts",
-          "summary": "Expands third-party administrator authority to deny VA community care referrals, effectively giving private contractors power to gatekeep which veterans can seek outside care.",
-          "why_unreported": "Buried in administrative contract language; framed as 'cost management' but functionally restricts a benefit veterans assumed was guaranteed by the MISSION Act."
-        },
-        {
-          "section": "Section 412 — Relocation of Arlington Annex Operations",
-          "summary": "Quietly relocates several American Battle Monuments Commission administrative functions, reducing the civilian workforce at a historic site with no public debate.",
-          "why_unreported": "Grouped under 'related agencies' which receive almost no media coverage in appropriations reporting."
-        }
-      ],
-      "criticisms": [
-        {
-          "who": "House Democrats",
-          "why": "Mental health staffing ratios at VA facilities are inadequate; the bill does not meet the 1:1500 psychiatrist-to-veteran ratio recommended by the VA's own inspector general."
-        },
-        {
-          "who": "Fiscal conservatives (both parties)",
-          "why": "Total VA discretionary spending has grown 75% since 2019; some members argue structural reform is needed before further increases."
-        }
-      ],
-      "gaps": [
-        "No provision addressing the ~300,000 veteran homelessness cases despite VA housing programs being funded separately through HUD.",
-        "Silent on VA electronic health record modernization project, which has been repeatedly delayed and over-budget.",
-        "No accountability mechanism for community care contractors who deny referrals."
-      ],
-      "featured_quotes": [
-        {
-          "name": "Sen. Tammy Duckworth",
-          "party": "D",
-          "state": "IL",
-          "bioguideId": "D000622",
-          "text": "The mental health clinic funding is the largest single VA expansion since the PACT Act.",
-          "stance": "support"
-        },
-        {
-          "name": "Rep. Chip Roy",
-          "party": "R",
-          "state": "TX",
-          "bioguideId": "R000614",
-          "text": "We are still spending more on consultants than on actual concrete. I will vote no.",
-          "stance": "oppose"
-        }
-      ],
-      "sponsor_bioguide": "C001051",
-      "brief": "Must-pass appropriations bill with broad bipartisan support — the primary risk is a wider budget standoff, not the bill itself.",
-      "top_lines": [
-        "Funds $4.2B in new VA hospital construction and 287 military base projects nationwide",
-        "Adds $890M for veteran mental health clinics in 12 underserved counties",
-        "Section 223 quietly strips the standing GAO audit trigger on $1.2B in unobligated DoD funds"
-      ],
-      "changes": {
-        "added": [
-          "$890M for new VA mental health clinics in 12 underserved counties",
-          "Permanent housing allowance increase for E-1 through E-4 enlisted families"
-        ],
-        "modified": [
-          "Cemetery expansion funding redirected from East Coast to Mountain West",
-          "Reduced MilCon overhead admin from 4.2% to 3.1%"
-        ],
-        "removed": [
-          "Strikes prior FY language earmarking $40M for ceremonial facilities"
-        ]
-      },
-      "summary": "Funds military base construction, VA hospital expansion, and family housing. Adds $2.1B over FY2026 baseline.",
-      "live": false,
-      "demo": true
-    },
-    {
-      "id": "119-HR-7567",
-      "code": "H.R.7567",
-      "title": "Farm, Food, and National Security Act of 2026",
-      "sponsor": "Rep. Thompson, Glenn (R-PA)",
-      "date": "Apr 21, 2026",
-      "stage": "house",
-      "stageLabel": "House Calendar",
-      "pipeline": [
-        "Introduced",
-        "Committee",
-        "House floor",
-        "Senate floor",
-        "Conference",
-        "Signed"
-      ],
-      "currentStep": 2,
-      "likelihood": 42,
-      "likelihoodLabel": "Possible",
-      "likelihoodReason": "Farm bills historically pass but this one is unusually contentious. The Agriculture Committee voted 34-17 to report it — a wider party-line margin than typical farm bills. Democratic opposition to SNAP modifications and conservative pressure to cut more deeply both make floor passage and Senate negotiation difficult. A short-term extension remains likely if the bill stalls.",
-      "analyzed": true,
-      "sections": [
-        {
-          "label": "Commodity Support",
-          "items": [
-            {
-              "main": "Updates reference prices for corn, wheat, soybeans, cotton, and other covered commodities triggering government support payments.",
-              "detail": "The Agriculture Risk Coverage (ARC) and Price Loss Coverage (PLC) programs pay farmers when market prices fall below statutory reference levels. This bill raises those reference prices for the first time since 2014, effectively guaranteeing higher government payments regardless of market conditions.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-Agriculture: Reference prices haven't kept up with input cost inflation; farmers need certainty."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Agriculture: Raises support for large commodity operations while rural communities see no benefit."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Nutrition Assistance (SNAP)",
-          "items": [
-            {
-              "main": "Modifies Supplemental Nutrition Assistance Program work requirements, expanding mandatory employment and training participation.",
-              "detail": "Raises the age threshold for able-bodied adults without dependents subject to work requirements from 49 to 54. Also limits state waiver authority that previously exempted high-unemployment areas. Congressional Budget Office estimates this reduces SNAP enrollment by approximately 2-3 million participants over 10 years.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-Leadership: Encourages workforce participation and targets benefits to those who cannot work."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Nutrition: Cuts food assistance to elderly and rural Americans who face genuine barriers to employment."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Foreign Investment Restrictions",
-          "items": [
-            {
-              "main": "Restricts purchase of U.S. agricultural land by entities linked to China, Russia, Iran, and North Korea.",
-              "detail": "Requires divestiture of existing holdings above a threshold acreage within five years. Creates a new USDA registry of foreign-owned farmland with mandatory annual reporting. Critics note that enforcement mechanisms are vague and penalties are modest.",
-              "comments": [
-                {
-                  "party": "r",
-                  "text": "R-National Security: Foreign adversary ownership near military installations is a direct security threat."
-                },
-                {
-                  "party": "d",
-                  "text": "D-Agriculture: Support the concept but the enforcement structure lacks teeth."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Conservation Programs",
-          "items": [
-            {
-              "main": "Reauthorizes Conservation Reserve Program (CRP) with a slightly increased acreage cap, and modifies Environmental Quality Incentives Program (EQIP) payment limits.",
-              "detail": "CRP pays farmers to take environmentally sensitive land out of production. The new cap allows enrollment of up to 27 million acres, up from 25 million. However, climate-focused conservation funding enacted in the Inflation Reduction Act is redirected into baseline programs, effectively reducing climate-specific spending.",
-              "comments": [
-                {
-                  "party": "d",
-                  "text": "D-Environment: Hollows out the IRA's climate conservation investments without saying so explicitly."
-                },
-                {
-                  "party": "r",
-                  "text": "R-Agriculture: Returns conservation funding to farmers rather than climate ideology."
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "underreported": [
-        {
-          "section": "Section 1401 — IRA Conservation Funding Redirection",
-          "summary": "Quietly redirects approximately $18 billion in Inflation Reduction Act climate conservation funding into general EQIP and RCPP accounts, stripping the climate-specific use requirements without explicitly repealing the IRA provision.",
-          "why_unreported": "Reported as a 'consolidation' of conservation programs; the IRA climate funding redirection has received almost no coverage outside of agricultural trade press despite being one of the largest effective climate policy reversals in the bill."
-        },
-        {
-          "section": "Section 3204 — Bioengineered Food Disclosure Rollback",
-          "summary": "Narrows the definition of 'bioengineered food' subject to USDA disclosure requirements, exempting highly refined products where engineered DNA is no longer detectable — effectively gutting GMO labeling for most processed foods.",
-          "why_unreported": "Framed as 'technical alignment' with existing USDA standards; the practical effect is that most grocery store products that currently carry bioengineered disclosures would no longer be required to."
-        },
-        {
-          "section": "Section 7115 — Rural Hospital Eligibility Modification",
-          "summary": "Changes eligibility criteria for USDA rural development hospital grants in a way that excludes recently reclassified rural communities that gained suburban designation in the 2020 census.",
-          "why_unreported": "Buried in the rural development title; affects dozens of small hospital systems that gained population but remain economically rural in character."
-        }
-      ],
-      "criticisms": [
-        {
-          "who": "House Democrats",
-          "why": "SNAP modifications effectively cut food assistance to 2-3 million low-income Americans, targeting a program that is 80% of the farm bill's total cost but benefits the most vulnerable."
-        },
-        {
-          "who": "Environmental groups",
-          "why": "IRA conservation climate funding is redirected without debate, representing one of the largest rollbacks of climate investment since the IRA's passage."
-        },
-        {
-          "who": "Fiscal hawks (R)",
-          "why": "Commodity reference price increases lock in higher subsidy payments regardless of market conditions, removing market discipline from agriculture policy."
-        }
-      ],
-      "gaps": [
-        "No provision addressing consolidation in the meatpacking industry, where four companies control over 80% of beef processing.",
-        "Silent on crop insurance subsidies for mega-farms — the top 10% of recipients receive over 50% of payments but payment limits are unchanged.",
-        "No mechanism to address the mental health crisis in farm communities despite record farm debt and suicide rates."
-      ],
-      "featured_quotes": [
-        {
-          "name": "Sen. Cory Booker",
-          "party": "D",
-          "state": "NJ",
-          "bioguideId": "B001288",
-          "text": "We are using a farm bill to override state environmental law. That is not what this committee was built for.",
-          "stance": "oppose"
-        },
-        {
-          "name": "Rep. Glenn Thompson",
-          "party": "R",
-          "state": "PA",
-          "bioguideId": "T000467",
-          "text": "American farmers cannot operate under fifty different rulebooks. This is a unity bill.",
-          "stance": "support"
-        }
-      ],
-      "sponsor_bioguide": "T000467",
-      "brief": "Contentious SNAP modifications and IRA funding redirection make Senate passage uncertain despite the inevitable farm bill tradition.",
-      "top_lines": [
-        "Reauthorizes $770B in farm and nutrition programs through FY2031",
-        "Expands SNAP work requirements — CBO estimates 2-3 million lose eligibility",
-        "Redirects $18B in Inflation Reduction Act climate conservation funding to general agricultural programs"
-      ],
-      "changes": {
-        "added": [
-          "$8B rural broadband expansion through USDA ReConnect",
-          "New beginning-farmer loan tier (under 35, first-generation)"
-        ],
-        "modified": [
-          "SNAP work requirement expanded to ages 18–64 (was 18–54)",
-          "Crop insurance subsidy floor raised from 62% to 70%"
-        ],
-        "removed": [
-          "Drops Conservation Reserve Program acreage cap increase"
-        ]
-      },
-      "summary": "Reauthorizes USDA programs through 2030. Restructures SNAP work requirements, expands crop insurance, adds rural broadband.",
-      "live": false,
-      "demo": true
     }
   ]
 }

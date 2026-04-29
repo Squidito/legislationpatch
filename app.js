@@ -135,7 +135,8 @@ function showError(on, msg) {
 function isJustPassed(bill) {
   if (bill.stage !== 'signed') return false;
   try {
-    const daysDiff = (Date.now() - new Date(bill.date).getTime()) / (1000 * 60 * 60 * 24);
+    const ref = bill.enactedDate || bill.date;
+    const daysDiff = (Date.now() - new Date(ref).getTime()) / (1000 * 60 * 60 * 24);
     return daysDiff <= 30;
   } catch (e) { return false; }
 }
@@ -180,7 +181,7 @@ function setupSettings() {
   }
 
   populateStateDropdown();
-  // Gemini 3.1 work: Removed live fetchStateReps call here.
+
 }
 
 function loadTrackedSettings() {
@@ -269,12 +270,11 @@ function handleStateChange(e) {
   trackedState = e.target.value;
   saveTrackedSettings();
   
-  // Gemini 3.1 work: State reps are now handled statically.
+
   renderRepStrip();
   renderRepGrid();
 }
 
-// Gemini 3.1 work: Removed fetchStateReps live API function.
 
 // ---- Portrait helpers ----
 
@@ -382,9 +382,10 @@ function renderRepStrip() {
                     data-rep-id="${escHtml(id)}"
                     style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
                     title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
-      <div class="rep-ring">
-        <img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" />
-      </div>
+      ${isFeatured
+        ? `<div class="rep-featured-wrap"><div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div></div>`
+        : `<div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>`
+      }
       <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
       <div class="rep-name">${escHtml(lastName)}</div>
     </button>`;
@@ -1078,7 +1079,7 @@ function renderHeader(bill, state, num, watching) {
     <div class="bill-rank-col">
       ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
-      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST PASSED</span>` : ''}
+      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
       <div class="bill-number">#${num || ''}</div>
     </div>
     <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
@@ -1187,10 +1188,15 @@ function renderMinorBody(bill, col, isOpen) {
       <div class="underreported-preview">${billRefHtml(topUnder.summary, bill.id)}</div>
     </div>` : '';
 
-  const likelihoodDetail = `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
-    <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
-    <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
-  </div>`;
+  const likelihoodDetail = bill.stage === 'signed'
+    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--green)">
+        <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(bill.date || '')}${bill.enactedDate ? ` · Enacted ${escHtml(bill.enactedDate)}` : ''}</div>
+      </div>`
+    : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
+        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
+        <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
+      </div>`;
 
   return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
     ${likelihoodDetail}
@@ -1364,7 +1370,6 @@ function toggleDetail(key) {
 }
 
 // ---- AI Analysis ----
-// Gemini 3.1 work: Removed client-side AI Analysis execution. All analysis is now provided statically via cache.json.
 
 // ---- Helpers ----
 

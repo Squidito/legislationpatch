@@ -251,7 +251,37 @@ const SKIP_TITLE_PATTERNS = [
     'recognizing the',                  // commemorative recognitions
     'honoring the',
     'commending the',
+    'electing members to',              // committee assignment resolutions — procedural only
+    'electing a member to',
+    'expressing the profound sorrow',   // memorial resolutions
+    'on the death of',
 ];
+
+// Fetch recently enacted public laws — catches signed bills that fall outside
+// the updateDate-sorted general query (e.g. Senate bills signed but not recently updated).
+async function fetchRecentLaws(limit = 20) {
+    console.log(`[1a] Checking /law endpoint for recently enacted laws...`);
+    const url = `https://api.congress.gov/v3/law/${CONGRESS_SESSION}?limit=${limit}&format=json&api_key=${CONGRESS_API_KEY}`;
+    await sleep(2000);
+    try {
+        const res = await fetch(url);
+        if (!res.ok) { console.log('   - Law endpoint unavailable, skipping.'); return []; }
+        const data = await res.json();
+        const cutoff = new Date(Date.now() - 35 * 24 * 60 * 60 * 1000); // 35-day window
+        const laws = (data.bills || []).filter(b => {
+            const actionDate = new Date(b.latestAction?.actionDate || 0);
+            if (actionDate < cutoff) return false;
+            const title = (b.title || '').toLowerCase();
+            if (SKIP_TITLE_PATTERNS.some(p => title.includes(p))) return false;
+            return true;
+        });
+        console.log(`   - ${laws.length} recently enacted law(s) found in 35-day window.`);
+        return laws;
+    } catch (e) {
+        console.error('   - Failed to fetch law endpoint:', e.message);
+        return [];
+    }
+}
 
 async function fetchRecentBills(limit = 10) {
     console.log(`[1] Fetching ${limit} recent bills from Congress.gov (session ${CONGRESS_SESSION})...`);
@@ -775,6 +805,7 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     parsed.official_title   = bill.title;
     parsed.code             = `${type}.${number}`;
     parsed.date             = formatDate(meta?.introducedDate || bill.updateDate);
+    parsed.enactedDate      = stage.key === 'signed' ? formatDate(meta?.latestAction?.actionDate || '') : '';
     parsed.version          = 'v1.0';
     parsed.stage            = stage.key;
     parsed.stageLabel       = stage.label;
@@ -887,10 +918,20 @@ async function runBatch() {
 
     if (!CONGRESS_API_KEY) { console.error('ERROR: Missing CONGRESS_API_KEY in .env'); return; }
 
-    const cacheData      = loadCache();
-    const existingIds    = new Set(cacheData.bills.map(b => b.id));
-    const billsToProcess = await fetchRecentBills(10);
-    let processedCount   = 0;
+    const cacheData   = loadCache();
+    const existingIds = new Set(cacheData.bills.map(b => b.id));
+
+    // Merge law endpoint (catches signed Senate bills missed by updateDate sort)
+    // with the general recent-bills query. Deduplicate by bill ID.
+    const [recentLaws, recentBills] = await Promise.all([fetchRecentLaws(20), fetchRecentBills(10)]);
+    const seen = new Set();
+    const billsToProcess = [...recentLaws, ...recentBills].filter(b => {
+        const id = `${b.congress}-${b.type}-${b.number}`;
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+    });
+    let processedCount = 0;
 
     for (const bill of billsToProcess) {
         if (processedCount >= 2) break;

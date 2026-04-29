@@ -91,6 +91,13 @@ Bad:  "Buried in Title II, this provision lowers the capital floor."
 Good: "Section 223 removes the GAO audit trigger threshold for unobligated DoD funds exceeding $1,200,000,000."
 Good: "Section 203(b)(1) reduces the qualifying capital ratio lower bound from 8 percent to 6 percent."
 
+RULE 8 — EXTENSION AND REAUTHORIZATION BILLS
+When a bill's primary function is to extend or reauthorize an existing program, authority, or law — rather than create or substantially modify one — the summary and brief must first explain in plain English what the original program does and who it affects in real life. You may use your knowledge of the original program for this context; it is the only zone where background knowledge is permitted. Then state what the bill changes (typically: extends through [date], with or without new conditions).
+Do not write a summary that only states the extension without explaining what is being extended — that tells the reader nothing.
+Bad:  "Extends the authorities of Title VII of FISA through April 30, 2026."
+Good: "Section 702 of FISA allows the NSA to collect communications of foreign targets without a warrant — including conversations with Americans. This bill extends that authority through April 30, 2026 with no new limits attached."
+The original-program description must be accurate and factual. Do not editorialize about the original program. State what it does mechanically, then state what this bill does to it.
+
 ━━━ OUTPUT FORMAT ━━━
 
 Return ONLY a valid JSON object. No markdown fences, no explanation text outside the JSON.
@@ -102,9 +109,9 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
     {
       "headline": "Short topic label — 3 to 6 words naming the subject area, not a specific provision. Think patch note category headers: 'Defense Spending', 'Tax Rate Changes', 'Bank Regulatory Relief'. No dollar amounts in the headline.",
       "subs": [
-        "One specific provision under this topic — lead with exact figure if the source has one",
-        "Another specific provision under this topic — omit if nothing meaningful to add",
-        "Third specific provision under this topic — omit if nothing meaningful to add"
+        "One specific provision — patch-note style, under 12 words. Lead with exact figure if the source has one. No statutory citations (e.g. no '50 U.S.C. 1881'). No restating the headline.",
+        "Second provision under this topic — omit if nothing meaningful to add",
+        "Third provision under this topic — omit if nothing meaningful to add"
       ]
     },
     {
@@ -189,7 +196,7 @@ For each significant provision found in this text, note:
 5. WHAT IS CREATED OR ELIMINATED — new programs, agencies, requirements, or rights named in the text
 6. ANYTHING TECHNICALLY OBSCURED — provisions where the plain language conceals a significant real-world effect
 
-Ignore completely: definitions sections, short titles, findings/sense-of-Congress language, effective date boilerplate.
+Ignore completely: definitions sections, short titles, findings/sense-of-Congress language, effective date boilerplate, citation updates, cross-reference substitutions, and amendment-chain cleanups (provisions that swap one legal citation string for another without changing any substantive rule).
 
 Return brief bullet-point notes only. No paragraphs. No editorial comment. No figures not present in this text.`;
 
