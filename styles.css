@@ -1276,10 +1276,10 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
   transition: max-height 0.28s ease;
 }
-.shock-quote-card:hover .shock-quote-text {
+.shock-quotes-grid:has(.shock-quote-card:hover) .shock-quote-text {
   max-height: 20rem;
 }
-.shock-quote-card:hover .shock-quote-text-link {
+.shock-quotes-grid:has(.shock-quote-card:hover) .shock-quote-text-link {
   justify-content: flex-start;
 }
 
