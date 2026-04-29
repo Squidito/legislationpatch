@@ -1,6 +1,254 @@
 {
-  "generated": "2026-04-29T03:19:37.784Z",
+  "generated": "2026-04-29T03:35:10.182Z",
   "bills": [
+    {
+      "id": "119-HJRES-140",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "official_title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "code": "HJRES.140",
+      "date": "Jan 12, 2026",
+      "enactedDate": "Apr 27, 2026",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Stauber, Pete (R-MN)",
+      "sponsor_bioguide": "S001212",
+      "cosponsors": 4,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "In 2023, the Bureau of Land Management blocked mineral mining and geothermal drilling on 225,504 acres of National Forest land in Minnesota — including land bordering the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa — for 20 years to protect the watershed. This joint resolution, signed into law under the Congressional Review Act, cancels that protection and reopens the land for mineral and geothermal leasing.",
+      "brief": "Cancels the federal mining ban on 225,504 acres of Minnesota National Forest bordering the Boundary Waters, reopening it for mineral and geothermal leasing.",
+      "top_lines": [
+        {
+          "headline": "Mining Ban Reversed",
+          "subs": [
+            "225,504 acres of Minnesota National Forest reopened for mineral and geothermal leasing",
+            "Nullifies a 2023 BLM order that had barred mining for 20 years"
+          ]
+        },
+        {
+          "headline": "What Was Protected",
+          "subs": [
+            "Land borders the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa",
+            "Cook, Lake, and Saint Louis Counties, MN — Rainy River Watershed included"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law by the President on April 27, 2026.",
+      "sections": [
+        {
+          "label": "Resolving Clause — CRA Disapproval of BLM Order 7917",
+          "items": [
+            {
+              "main": "Congress disapproves Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) under the Congressional Review Act, rendering it without force or effect.",
+              "detail": "Public Land Order 7917 withdrew approximately 225,504 acres of National Forest System lands in Cook, Lake, and Saint Louis Counties, Minnesota from mineral and geothermal leasing for 20 years. The BLM issued the order to protect the Rainy River Watershed, the Boundary Waters Canoe Area Wilderness, the Boundary Waters Canoe Area Wilderness Mining Protection Area, and the 1854 Ceded Territory of the Lake Superior Chippewa from the potential adverse effects of mineral and geothermal exploration and development. Nullification restores those acres to availability for mineral and geothermal leasing.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The joint resolution nullifies Public Land Order 7917 but does not address the Congressional Review Act bar under chapter 8 of title 5, United States Code, which prevents the Bureau of Land Management from issuing a substantially similar rule in the future without explicit congressional authorization.",
+        "The resolution removes the 20-year withdrawal but does not address the status of any tribal consultation obligations associated with the original order regarding the 1854 Ceded Territory of the Lake Superior Chippewa."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": [
+          "Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) — 20-year withdrawal of 225,504 acres in Cook, Lake, and Saint Louis Counties, MN from mineral and geothermal leasing, rendered without force or effect"
+        ]
+      }
+    },
+    {
+      "id": "119-HR-6903",
+      "title": "Ensuring Children Receive Support Act",
+      "official_title": "Ensuring Children Receive Support Act",
+      "code": "HR.6903",
+      "date": "Dec 18, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Van Duyne, Beth (R-TX)",
+      "sponsor_bioguide": "V000134",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "When a parent owes more than $2,500 in unpaid child support, federal law already requires the State Department to deny them a new passport — but revoking an existing passport is currently optional. This bill makes revocation mandatory in those same circumstances, requires the government to notify the individual before acting, and gives the State Department explicit statutory authority to issue a short-term return-home passport for individuals abroad who need to come back to the United States.",
+      "brief": "Makes passport revocation mandatory — not optional — for individuals owing more than $2,500 in unpaid child support.",
+      "top_lines": [
+        {
+          "headline": "Mandatory Revocation",
+          "subs": [
+            "Removes State Department's option to merely restrict a passport — revocation required at $2,500+ arrearage",
+            "Individual must be notified of intent to revoke before action is taken"
+          ]
+        },
+        {
+          "headline": "Emergency Exception",
+          "subs": [
+            "Individuals abroad may receive a temporary, limited-duration passport solely for return travel to the United States"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Child support enforcement has broad bipartisan appeal, but the bill carries only 1 cosponsor and passed the House without significant floor debate coverage. The Senate calendar for narrowly supported House bills is uncertain, and mandatory revocation without a specified appeal window may draw procedural objections.",
+      "sections": [
+        {
+          "label": "Section 2 — Passport Revocation for Child Support Arrearage",
+          "items": [
+            {
+              "main": "Amends Section 452(k) of the Social Security Act (42 U.S.C. 652(k)) to make revocation of a previously issued passport mandatory when an individual owes more than $2,500 in child support.",
+              "detail": "Current law gives the State Department discretion to \"revoke, restrict, or limit\" a passport in these circumstances. This bill removes restrict and limit as options, changing the authority to a mandatory revoke. The State Department must notify the individual of the intent to revoke before taking action. The $2,500 arrearage threshold set by the Office of Child Support Enforcement of the Department of Health and Human Services is unchanged.",
+              "comments": []
+            },
+            {
+              "main": "Authorizes the State Department to issue a limited-duration temporary passport solely for return travel to the United States for affected individuals who are abroad in an emergency.",
+              "detail": "Notwithstanding the mandatory revocation requirement, the State Department may issue a temporary passport to an individual with a $2,500+ arrearage who is abroad and needs to return to the United States on an emergency basis. The temporary passport is valid only for the return trip home and is limited in duration.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a) — Notification Requirement",
+          "summary": "The bill adds a requirement that the State Department notify the individual of the intent to revoke their passport before taking action, but specifies no minimum notice period, required content for the notification, or appeal process before revocation takes effect.",
+          "why_unreported": "The bill's operative change is the mandatory revocation requirement. The notification obligation is added as a subordinate clause with no procedural detail, leaving the timing, form, and any pre-revocation remedy entirely to agency implementation."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill makes revocation mandatory but does not specify a minimum notice period between notification and revocation, nor any right to contest the arrearage determination before the passport is revoked.",
+        "The bill does not address the process or timeline for passport restoration after an arrearage is resolved or a payment plan is established."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Requirement for the State Department to notify the individual of intent to revoke before acting",
+          "Statutory authority for the State Department to issue a limited-duration emergency return-home passport for individuals abroad with a $2,500+ arrearage"
+        ],
+        "modified": [
+          "Section 452(k)(2) of the Social Security Act (42 U.S.C. 652(k)) — State Department authority to act on existing passports changed from discretionary (\"may revoke, restrict, or limit\") to mandatory (\"revoke\")"
+        ],
+        "removed": []
+      }
+    },
+    {
+      "id": "119-HR-2347",
+      "title": "Survivor Justice Tax Prevention Act",
+      "official_title": "Survivor Justice Tax Prevention Act",
+      "code": "HR.2347",
+      "date": "Mar 25, 2025",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Smucker, Lloyd (R-PA)",
+      "sponsor_bioguide": "S001199",
+      "cosponsors": 3,
+      "pages": 1,
+      "analyzed": true,
+      "live": false,
+      "demo": false,
+      "summary": "Under current tax law, settlement and judgment damages are only tax-free if they stem from a physical injury — and the IRS has interpreted this to require visible harm like bruising or cuts. This bill creates a separate tax exemption for sexual assault and abuse damages that requires no proof of physical injury and no medical records. If a judgment or settlement states that damages result from sexual acts or contact, the IRS must prove otherwise in court rather than the survivor having to prove it.",
+      "brief": "Creates a tax exemption for sexual assault damages requiring no physical injury proof or medical records, and shifts the burden of proof to the IRS.",
+      "top_lines": [
+        {
+          "headline": "New Tax Exemption",
+          "subs": [
+            "Sexual assault and abuse damages excluded from gross income — no visible injury or medical records required",
+            "Applies to non-punitive damages from judgments and settlements entered after enactment"
+          ]
+        },
+        {
+          "headline": "Burden of Proof Shift",
+          "subs": [
+            "IRS must prove damages are not on account of sexual acts if the judgment or agreement says they are",
+            "Medical records alone cannot be required to deny the exemption"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "The bill addresses a sympathetic population with bipartisan appeal — sexual assault survivors facing unexpected tax liability — and passed the House. However, only 3 cosponsors and no Senate companion bill has been identified. Tax exclusions for personal injury damages have historically attracted broad support, making Senate passage plausible but not certain without floor time being scheduled.",
+      "sections": [
+        {
+          "label": "Section 2 — Exclusion from Gross Income",
+          "items": [
+            {
+              "main": "Amends Section 104(a)(2) of the Internal Revenue Code of 1986 to exclude from gross income damages received on account of any sexual act (as defined in 18 U.S.C. 2246(2)) or sexual contact (as defined in 18 U.S.C. 2246(3)), other than punitive damages.",
+              "detail": "Current law limits the exclusion to damages \"on account of personal physical injuries or physical sickness.\" The IRS has interpreted this to require observable bodily harm. The amendment adds sexual acts and sexual contact as an independent basis for the exclusion, removing the physical injury requirement for these claims. The amendment applies to amounts received pursuant to judgments made, and agreements entered into, after the date of enactment.",
+              "comments": []
+            },
+            {
+              "main": "New Section 104(d) establishes that damages are substantiated as on account of sexual act or contact if the judgment or agreement so states, and prohibits denying the exclusion solely for lack of medical records.",
+              "detail": "The IRS bears the burden of proving that damages characterized as on account of sexual act or contact in a judgment or agreement are not so characterized, in any related court proceeding. A judgment is treated as made after enactment if the first payment pursuant to it is received after enactment. An agreement that replaces, supersedes, or revises an agreement entered into before enactment does not qualify as a new post-enactment agreement.",
+              "comments": []
+            },
+            {
+              "main": "Requires the Secretary of the Treasury to conduct a public awareness program about the new exclusion in consultation with the Department of Justice Office on Violence Against Women.",
+              "detail": "The Secretary must work with the Department of Justice Office on Violence Against Women and other relevant federal agencies to promote public awareness of the exclusion from gross income provided by the new Section 104(a)(2)(B). No timeline, funding level, or required outreach methods are specified in the bill.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(c)(3) — Agreement Replacement Rule",
+          "summary": "An agreement that replaces, supersedes, or revises a pre-enactment agreement does not qualify as a new post-enactment agreement, even if the replacement is reached after enactment.",
+          "why_unreported": "The bill's stated purpose is to extend the tax exemption to sexual assault survivors. This provision specifically bars survivors who renegotiate or revise a pre-existing settlement after enactment from accessing the new exemption, a limitation not apparent from the bill's title or the headline exemption provision."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill applies to amounts received under judgments made and agreements entered after enactment but does not address the tax treatment of damages already received under pre-enactment judgments that are still paying out.",
+        "The bill requires a public awareness program but specifies no timeline, appropriated funding, or minimum required outreach activities."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Section 104(a)(2)(B) of the Internal Revenue Code of 1986 — tax exclusion for non-punitive damages on account of sexual acts or sexual contact, with no physical injury or medical records requirement",
+          "Section 104(d) — burden of proof rule placing the obligation on the IRS to disprove the characterization in any judgment or agreement stating damages are on account of sexual acts or contact",
+          "Requirement for the Secretary of the Treasury to conduct a public awareness program in consultation with the Department of Justice Office on Violence Against Women"
+        ],
+        "modified": [],
+        "removed": []
+      }
+    },
     {
       "id": "119-HR-8322",
       "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",

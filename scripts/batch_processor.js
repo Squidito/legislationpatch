@@ -251,6 +251,10 @@ const SKIP_TITLE_PATTERNS = [
     'recognizing the',                  // commemorative recognitions
     'honoring the',
     'commending the',
+    'electing members to',              // committee assignment resolutions — procedural only
+    'electing a member to',
+    'expressing the profound sorrow',   // memorial resolutions
+    'on the death of',
 ];
 
 async function fetchRecentBills(limit = 10) {
