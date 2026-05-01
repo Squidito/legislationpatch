@@ -18,6 +18,7 @@ async function init() {
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) themeToggle.checked = isDark;
+  updateLogoForTheme(isDark);
 
   if (!repId) {
     loadingState.style.display = 'none';
@@ -159,7 +160,13 @@ function escHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
+function updateLogoForTheme(isDark) {
+  const logo = document.querySelector('.logo-img');
+  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
+}
+
 function toggleTheme(isDark) {
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+  updateLogoForTheme(isDark);
 }
