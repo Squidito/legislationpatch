@@ -65,7 +65,7 @@ a:hover { text-decoration: underline; }
 .site-header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 14px 0;
+  padding: 6px 0 0;
 }
 .header-inner {
   max-width: 960px;
@@ -79,14 +79,96 @@ a:hover { text-decoration: underline; }
 .logo-block {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 .logo-home-btn {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  text-align: left;
+}
+.logo-img {
+  height: 120px;
+  width: auto;
+  display: block;
+  margin-bottom: -22px;
+}
+.header-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  margin-bottom: -12px;
+}
+.header-cta__label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.header-cta__badges {
+  display: flex;
+  gap: 8px;
+}
+.app-store-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: 10px;
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+.app-store-badge:hover { opacity: 0.82; }
+.app-store-badge__icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--bg);
+  flex-shrink: 0;
+}
+.app-store-badge__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.app-store-badge__line1 {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  opacity: 0.75;
+  line-height: 1;
+}
+.app-store-badge__line2 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.trust-bar {
+  background: #FEF0E6;
+  color: #E8720C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 24px;
+  border-bottom: 1px solid #F9D9BF;
+}
+.trust-bar-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+[data-theme="dark"] .trust-bar {
+  background: var(--surface-2);
+  color: #fb923c;
+  border-bottom-color: var(--border);
 }
 .logo-mark {
   width: 32px;
@@ -118,6 +200,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-left: auto;
 }
 .zip-display {
   font-family: var(--font-mono);
@@ -153,7 +236,7 @@ a:hover { text-decoration: underline; }
   padding: 8px 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.75rem;
 }
 .controls-right {
@@ -1932,6 +2015,9 @@ a:hover { text-decoration: underline; }
   /* === HEADER === */
   .header-inner { padding: 0 14px; }
   .header-track { gap: 8px; }
+  .header-cta__label { display: none; }
+  .app-store-badge__text { display: none; }
+  .app-store-badge { padding: 8px 10px; gap: 0; }
 
   /* === CONTROLS: filter pills scroll horizontally, no wrap === */
   .controls-inner {
@@ -2243,7 +2329,7 @@ body {
 }
 
 .site-header {
-  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-top: calc(6px + env(safe-area-inset-top));
 }
 
 .controls-bar {

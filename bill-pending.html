@@ -14,11 +14,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-block" style="text-decoration:none">
-        <div class="logo-mark">L</div>
-        <div>
-          <div class="logo-name">LegislationPatch</div>
-          <div class="logo-sub">Bills, read in full and reported plainly</div>
-        </div>
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
       </a>
       <div class="header-track">
         <a href="index.html" class="back-btn">← Back to Bills</a>
@@ -50,6 +46,7 @@
       var saved = localStorage.getItem('lpTheme');
       function apply(dark) {
         document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        var logo = document.querySelector('.logo-img'); if (logo) logo.src = dark ? 'logo-dark.svg' : 'logo.svg';
         var tog = document.getElementById('themeToggle');
         if (tog) tog.checked = dark;
       }

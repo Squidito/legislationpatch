@@ -192,9 +192,15 @@ function loadTrackedSettings() {
   catch (err) { trackedReps = []; }
 }
 
+function updateLogoForTheme(isDark) {
+  const logo = document.querySelector('.logo-img');
+  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
+}
+
 function toggleTheme(isDark) {
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+  updateLogoForTheme(isDark);
 }
 
 // Apply saved theme on load
@@ -205,6 +211,7 @@ function toggleTheme(isDark) {
     document.addEventListener('DOMContentLoaded', () => {
       const cb = document.getElementById('themeToggle');
       if (cb) cb.checked = true;
+      updateLogoForTheme(true);
     });
   }
 })();
