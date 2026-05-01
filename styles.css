@@ -65,7 +65,7 @@ a:hover { text-decoration: underline; }
 .site-header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 14px 0;
+  padding: 6px 0 0;
 }
 .header-inner {
   max-width: 960px;
@@ -79,14 +79,34 @@ a:hover { text-decoration: underline; }
 .logo-block {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 .logo-home-btn {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  text-align: left;
+}
+.logo-img {
+  height: 120px;
+  width: auto;
+  display: block;
+  margin-bottom: -12px;
+}
+.trust-bar {
+  background: #FEF0E6;
+  color: #E8720C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 24px;
+  border-bottom: 1px solid #F9D9BF;
+}
+.trust-bar-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 .logo-mark {
   width: 32px;
@@ -118,6 +138,7 @@ a:hover { text-decoration: underline; }
   display: flex;
   gap: 8px;
   align-items: center;
+  margin-left: auto;
 }
 .zip-display {
   font-family: var(--font-mono);
@@ -153,7 +174,7 @@ a:hover { text-decoration: underline; }
   padding: 8px 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 0.75rem;
 }
 .controls-right {
@@ -2243,7 +2264,7 @@ body {
 }
 
 .site-header {
-  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-top: calc(6px + env(safe-area-inset-top));
 }
 
 .controls-bar {

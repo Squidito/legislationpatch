@@ -43,12 +43,30 @@
   <header class="site-header">
     <div class="header-inner">
       <button class="logo-block logo-home-btn" onclick="goHome()" aria-label="Return to home">
-        <div class="logo-mark">L</div>
-        <div>
-          <div class="logo-name">LegislationPatch</div>
-          <div class="logo-sub">Bills, read in full and reported plainly</div>
-        </div>
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
       </button>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <div class="filter-row" id="filtersMain">
+        <button class="filter-btn active" data-main="in_progress">In Progress</button>
+        <button class="filter-btn" data-main="passed">Passed</button>
+        <button class="filter-btn" data-main="dead">Dead</button>
+      </div>
       <div class="header-track">
         <span class="zip-display" id="zipDisplay" title="Your ZIP code — used to find your local representatives"></span>
         <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
@@ -63,17 +81,6 @@
           </svg>
           <span class="toggle-track"><span class="toggle-thumb"></span></span>
         </label>
-      </div>
-    </div>
-  </header>
-
-  <!-- CONTROLS -->
-  <div class="controls-bar">
-    <div class="controls-inner">
-      <div class="filter-row" id="filtersMain">
-        <button class="filter-btn active" data-main="in_progress">In Progress</button>
-        <button class="filter-btn" data-main="passed">Passed</button>
-        <button class="filter-btn" data-main="dead">Dead</button>
       </div>
     </div>
 <div class="controls-rep-row">
