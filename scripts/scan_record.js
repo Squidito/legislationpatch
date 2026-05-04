@@ -177,7 +177,7 @@ async function fetchGranuleText(packageId, granuleId) {
 async function extractQuotesWithLLM(text, chamber, dateStr, granuleTitles = [], billRef = []) {
   if (!text || text.length < 100) return [];
 
-  const truncated = text.split(' ').slice(0, 6000).join(' ');
+  const truncated = text.split(' ').slice(0, 10000).join(' ');
 
   const sectionsLine = granuleTitles.length
     ? `\nThe text covers these CR sections: ${granuleTitles.join(' | ')}`
@@ -191,7 +191,13 @@ async function extractQuotesWithLLM(text, chamber, dateStr, granuleTitles = [], 
 
 Your ONLY job is to find and copy direct quotes exactly as they appear in the text. Do NOT paraphrase, summarize, or reword anything. Copy the speaker's exact words only.
 
-Extract up to 5 of the most notable, surprising, or controversial direct floor quotes from named speakers. Skip procedural statements, quorum calls, unanimous consent requests, and routine motions. Focus on substantive opinions or criticism about legislation.
+Extract up to 5 of the most notable, surprising, or controversial direct floor quotes from named speakers.
+
+SKIP: procedural statements, quorum calls, unanimous consent requests, routine motions, tributes to constituents, commemorations, prayers, ceremonial speeches, and floor statements about non-legislative events (e.g. charity bike rides, local achievements).
+
+PREFER: quotes that directly reference specific legislation, policy decisions, or named government actions. Only include general political statements (no bill cited) if they are exceptionally striking or newsworthy.
+
+SPEAKER LIMIT: Include no more than 2 quotes from any single speaker across all quotes returned.
 
 For each quote return:
 - name: Full name with title (e.g. "Rep. Nancy Pelosi" or "Sen. Chuck Schumer")
@@ -199,7 +205,7 @@ For each quote return:
 - state: Two-letter state code (if not clear, use best guess)
 - text: COPY the exact verbatim words from the text — 1-3 sentences, the most striking passage only. Do not change a single word.
 - billId: If the speaker references a known tracked bill above, use its exact ID. If they cite any other bill number explicitly, format as "119-HR-1234" or "119-S-567". Otherwise null.
-- granuleTitle: The CR section heading this quote came from (e.g. "FEDERAL RESERVE" or "IRAN"). Use the --- headings in the text.
+- granuleTitle: The CR section heading this quote came from. Use the exact --- heading text in the source (e.g. "FEDERAL RESERVE INDEPENDENCE ACT" or "IRAN WAR POWERS"). This field is required — do not omit it.
 - stance: "support", "oppose", or "neutral"
 
 Return ONLY valid JSON: {"quotes": [...]}
