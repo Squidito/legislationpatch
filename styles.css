@@ -225,6 +225,27 @@ a:hover { text-decoration: underline; }
 }
 .back-btn:hover { color: var(--text); border-color: var(--text-3); }
 
+.rep-back-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.rep-back-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-3);
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0 0.2rem;
+}
+.rep-back-dismiss:hover { color: var(--text); }
+
 /* ---- CONTROLS ---- */
 .controls-bar {
   background: var(--surface);
@@ -1254,17 +1275,18 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .shock-quotes-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 0.65rem;
-  overflow-x: auto;
-  scrollbar-width: none;
+  overflow: hidden;
   cursor: grab;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   padding: 4px 2px;
 }
-.shock-quotes-grid::-webkit-scrollbar { display: none; }
+.shock-quotes-track {
+  display: flex;
+  flex-direction: row;
+  gap: 0.65rem;
+  will-change: transform;
+}
 .shock-quotes-grid.dragging { cursor: grabbing; user-select: none; }
 .shock-quote-card {
   background: var(--surface);
@@ -2126,7 +2148,10 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   .app-store-badge { padding: 8px 10px; gap: 0; }
   .logo-img { height: 72px; margin-bottom: -14px; }
 
-  /* === CONTROLS: filter pills scroll horizontally, no wrap === */
+  /* === CONTROLS === */
+  .zip-display { display: none; }
+
+  /* filter pills scroll horizontally, no wrap */
   .controls-inner {
     padding: 8px 14px;
     overflow-x: auto;

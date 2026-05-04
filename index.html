@@ -144,6 +144,12 @@
       <button onclick="loadBills()">Try again</button>
     </div>
 
+    <!-- REP BACK BANNER — shown when navigating from a rep's comment to a bill -->
+    <div id="repBackBanner" class="rep-back-banner" style="display:none">
+      <a id="repBackLink" href="#" class="back-btn"></a>
+      <button class="rep-back-dismiss" onclick="document.getElementById('repBackBanner').style.display='none'" aria-label="Dismiss">&times;</button>
+    </div>
+
     <!-- BILL LIST -->
     <div class="bill-list" id="billList"></div>
   </main>

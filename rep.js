@@ -20,6 +20,19 @@ async function init() {
   if (themeToggle) themeToggle.checked = isDark;
   updateLogoForTheme(isDark);
 
+  // Contextual back button — show bill name if we came from a bill's quote card
+  const backBtn = document.getElementById('backBtn');
+  if (backBtn) {
+    const ref = urlParams.get('ref') || '';
+    const billTitleParam = urlParams.get('billTitle') || '';
+    if (ref.startsWith('bill-')) {
+      const billId = ref.slice(5);
+      const label = billTitleParam || formatBillId(billId) || 'Bill';
+      backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
+      backBtn.textContent = `← ${label}`;
+    }
+  }
+
   if (!repId) {
     loadingState.style.display = 'none';
     errorState.style.display   = 'block';
@@ -119,8 +132,11 @@ function renderProfile(rep) {
     const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
     const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
     const billLabel   = c.billTitle || formatBillId(c.billId) || chamberFallback;
-    const titleEl     = c.billId
-      ? `<a href="index.html#${c.billId}" class="rep-bill-link">${escHtml(billLabel)}</a>`
+    const billUrl     = c.billId
+      ? `index.html?fromRep=${encodeURIComponent(rep.bioguideId)}&repName=${encodeURIComponent(rep.name)}&scrollTo=${encodeURIComponent(c.billId)}`
+      : null;
+    const titleEl     = billUrl
+      ? `<a href="${billUrl}" class="rep-bill-link">${escHtml(billLabel)}</a>`
       : `<span class="rep-bill-link" style="cursor:default">${escHtml(billLabel)}</span>`;
     return `
       <div class="quote-card rep-comment-card">
