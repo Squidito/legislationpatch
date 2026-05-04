@@ -16,13 +16,56 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="logo-block">
-        <a href="index.html" style="text-decoration: none;">
-          <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
-        </a>
+      <a href="index.html" class="logo-block" style="text-decoration: none;" aria-label="Return to home">
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
+      </a>
+      <div class="header-cta">
+        <span class="header-cta__label">Take it with you</span>
+        <div class="header-cta__badges">
+          <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+            <svg class="app-store-badge__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span class="app-store-badge__text">
+              <span class="app-store-badge__line1">Download on the</span>
+              <span class="app-store-badge__line2">App Store</span>
+            </span>
+          </a>
+          <a href="#" class="app-store-badge" aria-label="Get it on Google Play">
+            <svg class="app-store-badge__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            <span class="app-store-badge__text">
+              <span class="app-store-badge__line1">Get it on</span>
+              <span class="app-store-badge__line2">Google Play</span>
+            </span>
+          </a>
+        </div>
       </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <!-- REP CONTROLS — back button + theme toggle -->
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <a id="backBtn" href="index.html" class="back-btn">&larr; Bills</a>
       <div class="header-track">
-        <a href="index.html" class="back-btn">&larr; Back to Bills</a>
+        <a href="index.html?fav=1" class="fav-btn" title="Favorites & tracked reps">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+          </svg>
+        </a>
         <label class="theme-toggle" title="Toggle dark mode">
           <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
           <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -32,7 +75,7 @@
         </label>
       </div>
     </div>
-  </header>
+  </div>
 
   <!-- MAIN CONTENT -->
   <main class="main" id="repMain">

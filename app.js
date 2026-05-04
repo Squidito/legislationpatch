@@ -111,6 +111,23 @@ async function loadBills() {
     allBills = await fetchRecentBills();
     renderAll();
     renderRepStrip(); // rebuild strip now that bill sponsors/quotes are available
+
+    // Handle incoming nav context (from rep page → bill, or fav shortcut)
+    const urlP     = new URLSearchParams(location.search);
+    const scrollTo = urlP.get('scrollTo');
+    const fromRep  = urlP.get('fromRep');
+    const repName  = urlP.get('repName');
+    if (urlP.get('fav') === '1' && !favoritesView) toggleFavoritesView();
+    if (scrollTo) scrollToBill(scrollTo);
+    if (fromRep && repName) {
+      const banner = document.getElementById('repBackBanner');
+      const link   = document.getElementById('repBackLink');
+      if (banner && link) {
+        link.href        = `rep?id=${encodeURIComponent(fromRep)}&ref=bills`;
+        link.textContent = `← ${repName}`;
+        banner.style.display = 'flex';
+      }
+    }
   } catch (e) {
     console.error(e);
     showError(true, e.message);
@@ -176,8 +193,8 @@ function setupSettings() {
       if (selectedRepIds.has(id)) selectedRepIds.delete(id);
       else selectedRepIds.add(id);
       // Also persist as a tracked rep so it appears in Favorites
-      const existingCarousel = document.querySelector('.shock-quotes-grid');
-      if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
+      const existingTrack = document.querySelector('.shock-quotes-track');
+      if (existingTrack) _carouselScroll = Math.abs(new DOMMatrix(getComputedStyle(existingTrack).transform).m41);
       toggleRepTracked(id, {
         name:  card.dataset.repName,
         party: card.dataset.repParty,
@@ -327,7 +344,7 @@ function repCardHtml(rep, size) {
   const lastName = repLastName(name);
   const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
 
-  return `<a href="rep?id=${escHtml(bioguide || id)}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+  return `<a href="rep?id=${escHtml(bioguide || id)}&ref=bills" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
                data-id="${escHtml(id)}"
                style="--party-color:${color}; text-decoration: none;"
                title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
@@ -667,84 +684,98 @@ function renderUnderreportedSection(bill) {
 
 let _carouselRaf      = null;
 let _carouselScroll   = null;
+let _carouselAbort    = null;
 let _repRowObserver   = null;
 
 function setupCarousel() {
   if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
+  if (_carouselAbort) { _carouselAbort.abort(); _carouselAbort = null; }
 
-  const el = document.querySelector('.shock-quotes-grid');
-  if (!el || el.children.length === 0) return;
+  const grid  = document.querySelector('.shock-quotes-grid');
+  const track = document.querySelector('.shock-quotes-track');
+  if (!grid || !track || track.children.length === 0) return;
 
-  // Remove any clones from a prior setup
-  el.querySelectorAll('[data-clone="true"]').forEach(n => n.remove());
+  _carouselAbort = new AbortController();
+  const sig = { signal: _carouselAbort.signal };
 
-  const originals = [...el.children];
+  // Remove clones from any prior setup
+  track.querySelectorAll('[data-clone="true"]').forEach(n => n.remove());
+
+  const originals = [...track.children];
   if (!originals.length) return;
 
-  // Prepend clones for left-direction infinite wrap
+  // Append one set of clones — seamless left-scroll infinite wrap
   originals.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     clone.setAttribute('data-clone', 'true');
-    el.insertBefore(clone, el.firstChild);
-  });
-  // Append clones for right-direction infinite wrap
-  originals.forEach(card => {
-    const clone = card.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    clone.setAttribute('data-clone', 'true');
-    el.appendChild(clone);
+    track.appendChild(clone);
   });
 
-  // Resume saved position, or start in the middle third on first load
-  el.scrollLeft = (_carouselScroll !== null) ? _carouselScroll : el.scrollWidth / 3;
+  // Half the track width = one full set of originals
+  const setWidth = track.scrollWidth / 2;
+
+  // Restore saved offset or start from 0
+  let offset = (_carouselScroll !== null && _carouselScroll < setWidth) ? _carouselScroll : 0;
   _carouselScroll = null;
+  track.style.transform = `translateX(-${offset}px)`;
 
-  let paused = false;
-  el.addEventListener('mouseenter', () => { paused = true; });
-  el.addEventListener('mouseleave', () => {
+  let paused     = false;
+  let isTouching = false;
+  let resumeTimer = null;
+  let isDragging  = false, startX = 0, startOffset = 0;
+
+  const SPEED = 0.125; // px per frame — smooth subpixel motion
+
+  grid.addEventListener('mouseenter', () => { if (!isDragging) paused = true; }, sig);
+  grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
-    el.classList.remove('dragging');
-  });
+    grid.classList.remove('dragging');
+  }, sig);
 
-  let isDragging = false, startX = 0, startScroll = 0;
-  el.addEventListener('mousedown', e => {
+  grid.addEventListener('touchstart', () => {
+    isTouching = true;
+    paused = true;
+    if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+  }, { passive: true, ...sig });
+  grid.addEventListener('touchend', () => {
+    isTouching = false;
+    resumeTimer = setTimeout(() => { if (!isTouching) { paused = false; resumeTimer = null; } }, 800);
+  }, { passive: true, ...sig });
+  grid.addEventListener('touchcancel', () => {
+    isTouching = false;
+    if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+    paused = false;
+  }, { passive: true, ...sig });
+
+  grid.addEventListener('mousedown', e => {
     isDragging  = true;
     startX      = e.pageX;
-    startScroll = el.scrollLeft;
-    el.classList.add('dragging');
+    startOffset = offset;
+    grid.classList.add('dragging');
+    paused = true;
     e.preventDefault();
-  });
-  el.addEventListener('mouseup',   () => { isDragging = false; el.classList.remove('dragging'); });
-  el.addEventListener('mousemove', e => {
+  }, sig);
+  window.addEventListener('mouseup', () => {
     if (!isDragging) return;
-    el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
-  });
-
-  const SPEED = 0.1; // px per frame target — accumulator fires each whole pixel
-  let scrollAccum = 0;
+    isDragging = false;
+    grid.classList.remove('dragging');
+    paused = false;
+  }, sig);
+  grid.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    offset = startOffset + (startX - e.pageX) * 1.8;
+    offset = ((offset % setWidth) + setWidth) % setWidth;
+    track.style.transform = `translateX(-${offset}px)`;
+  }, sig);
 
   function tick() {
     if (!paused) {
-      scrollAccum += SPEED;
-      if (scrollAccum >= 1) {
-        const px = Math.floor(scrollAccum);
-        el.scrollLeft += px;
-        scrollAccum -= px;
-      }
+      offset += SPEED;
+      if (offset >= setWidth) offset -= setWidth;
+      track.style.transform = `translateX(-${offset}px)`;
     }
-
-    // Bidirectional infinite wrap — snap within the middle third
-    const third = el.scrollWidth / 3;
-    if (el.scrollLeft >= third * 2) {
-      el.scrollLeft -= third;
-      if (isDragging) startScroll -= third;
-    } else if (el.scrollLeft < third) {
-      el.scrollLeft += third;
-      if (isDragging) startScroll += third;
-    }
-
     _carouselRaf = requestAnimationFrame(tick);
   }
 
@@ -772,8 +803,8 @@ function renderAll() {
     return;
   }
 
-  const existingCarousel = document.querySelector('.shock-quotes-grid');
-  if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
+  const existingTrack = document.querySelector('.shock-quotes-track');
+  if (existingTrack) _carouselScroll = Math.abs(new DOMMatrix(getComputedStyle(existingTrack).transform).m41);
 
   list.innerHTML =
     renderShockQuotesSection() +
@@ -910,7 +941,7 @@ function removeSavedQuote(key) {
 function renderSavedFloorQuote(q) {
   const key     = quoteKeyApp(q);
   const portrait = q.bioguideId ? portraitUrl(q.bioguideId) : FALLBACK_PORTRAIT;
-  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}` : null;
+  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}&ref=bills` : null;
   const accent   = q.stance === 'oppose' ? 'accent-oppose'
                  : q.stance === 'support' ? 'accent-support' : 'accent-neutral';
   return `<div class="fav-quote-card ${accent}">
@@ -961,7 +992,7 @@ function renderRepsSection() {
   const cards = trackedReps.map(rep => {
     const color   = partyColor(rep.party);
     const imgSrc  = portraitUrl(rep.id);
-    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}` : null;
+    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}&ref=bills` : null;
 
     // Combine bill featured quotes + standalone floor quotes, newest first
     const billQuotes  = allBills.flatMap(b =>
@@ -1139,7 +1170,8 @@ function renderShockQuotesSection() {
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}` : null;
+    const repRef   = q.billId ? `&ref=bill-${escHtml(q.billId)}&billTitle=${encodeURIComponent(q.billTitle||'')}` : '&ref=bills';
+    const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}${repRef}` : null;
     const billInCache = q.billId && allBills.some(b => b.id === q.billId);
     const billHref = q.billId
       ? (billInCache ? `#card-${escHtml(q.billId)}` : `bill-pending.html?id=${escHtml(q.billId)}`)
@@ -1183,7 +1215,7 @@ function renderShockQuotesSection() {
       <span class="shock-quotes-label">From the floor this week</span>
       <a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>
     </div>
-    <div class="shock-quotes-grid">${html}</div>
+    <div class="shock-quotes-grid"><div class="shock-quotes-track">${html}</div></div>
   </div>`;
 }
 
@@ -1368,7 +1400,7 @@ function renderQuoteCards(bill) {
       const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
       return `<div class="quote-card">
         <div class="quote-card-meta">
-          <a href="rep?id=${q.bioguideId}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
+          <a href="rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
             <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
                  onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
             <div class="quote-card-name">
