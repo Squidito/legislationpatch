@@ -193,8 +193,8 @@ function setupSettings() {
       if (selectedRepIds.has(id)) selectedRepIds.delete(id);
       else selectedRepIds.add(id);
       // Also persist as a tracked rep so it appears in Favorites
-      const existingTrack = document.querySelector('.shock-quotes-track');
-      if (existingTrack) _carouselScroll = Math.abs(new DOMMatrix(getComputedStyle(existingTrack).transform).m41);
+      const existingCarousel = document.querySelector('.shock-quotes-grid');
+      if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
       toggleRepTracked(id, {
         name:  card.dataset.repName,
         party: card.dataset.repParty,
@@ -684,98 +684,84 @@ function renderUnderreportedSection(bill) {
 
 let _carouselRaf      = null;
 let _carouselScroll   = null;
-let _carouselAbort    = null;
 let _repRowObserver   = null;
 
 function setupCarousel() {
   if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
-  if (_carouselAbort) { _carouselAbort.abort(); _carouselAbort = null; }
 
-  const grid  = document.querySelector('.shock-quotes-grid');
-  const track = document.querySelector('.shock-quotes-track');
-  if (!grid || !track || track.children.length === 0) return;
+  const el = document.querySelector('.shock-quotes-grid');
+  if (!el || el.children.length === 0) return;
 
-  _carouselAbort = new AbortController();
-  const sig = { signal: _carouselAbort.signal };
+  // Remove any clones from a prior setup
+  el.querySelectorAll('[data-clone="true"]').forEach(n => n.remove());
 
-  // Remove clones from any prior setup
-  track.querySelectorAll('[data-clone="true"]').forEach(n => n.remove());
-
-  const originals = [...track.children];
+  const originals = [...el.children];
   if (!originals.length) return;
 
-  // Append one set of clones — seamless left-scroll infinite wrap
+  // Prepend clones for left-direction infinite wrap
   originals.forEach(card => {
     const clone = card.cloneNode(true);
     clone.setAttribute('aria-hidden', 'true');
     clone.setAttribute('data-clone', 'true');
-    track.appendChild(clone);
+    el.insertBefore(clone, el.firstChild);
+  });
+  // Append clones for right-direction infinite wrap
+  originals.forEach(card => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.setAttribute('data-clone', 'true');
+    el.appendChild(clone);
   });
 
-  // Half the track width = one full set of originals
-  const setWidth = track.scrollWidth / 2;
-
-  // Restore saved offset or start from 0
-  let offset = (_carouselScroll !== null && _carouselScroll < setWidth) ? _carouselScroll : 0;
+  // Resume saved position, or start in the middle third on first load
+  el.scrollLeft = (_carouselScroll !== null) ? _carouselScroll : el.scrollWidth / 3;
   _carouselScroll = null;
-  track.style.transform = `translateX(-${offset}px)`;
 
-  let paused     = false;
-  let isTouching = false;
-  let resumeTimer = null;
-  let isDragging  = false, startX = 0, startOffset = 0;
-
-  const SPEED = 0.125; // px per frame — smooth subpixel motion
-
-  grid.addEventListener('mouseenter', () => { if (!isDragging) paused = true; }, sig);
-  grid.addEventListener('mouseleave', () => {
+  let paused = false;
+  el.addEventListener('mouseenter', () => { paused = true; });
+  el.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
-    grid.classList.remove('dragging');
-  }, sig);
+    el.classList.remove('dragging');
+  });
 
-  grid.addEventListener('touchstart', () => {
-    isTouching = true;
-    paused = true;
-    if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-  }, { passive: true, ...sig });
-  grid.addEventListener('touchend', () => {
-    isTouching = false;
-    resumeTimer = setTimeout(() => { if (!isTouching) { paused = false; resumeTimer = null; } }, 800);
-  }, { passive: true, ...sig });
-  grid.addEventListener('touchcancel', () => {
-    isTouching = false;
-    if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
-    paused = false;
-  }, { passive: true, ...sig });
-
-  grid.addEventListener('mousedown', e => {
+  let isDragging = false, startX = 0, startScroll = 0;
+  el.addEventListener('mousedown', e => {
     isDragging  = true;
     startX      = e.pageX;
-    startOffset = offset;
-    grid.classList.add('dragging');
-    paused = true;
+    startScroll = el.scrollLeft;
+    el.classList.add('dragging');
     e.preventDefault();
-  }, sig);
-  window.addEventListener('mouseup', () => {
+  });
+  el.addEventListener('mouseup',   () => { isDragging = false; el.classList.remove('dragging'); });
+  el.addEventListener('mousemove', e => {
     if (!isDragging) return;
-    isDragging = false;
-    grid.classList.remove('dragging');
-    paused = false;
-  }, sig);
-  grid.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    offset = startOffset + (startX - e.pageX) * 1.8;
-    offset = ((offset % setWidth) + setWidth) % setWidth;
-    track.style.transform = `translateX(-${offset}px)`;
-  }, sig);
+    el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
+  });
+
+  const SPEED = 0.1; // px per frame target — accumulator fires each whole pixel
+  let scrollAccum = 0;
 
   function tick() {
     if (!paused) {
-      offset += SPEED;
-      if (offset >= setWidth) offset -= setWidth;
-      track.style.transform = `translateX(-${offset}px)`;
+      scrollAccum += SPEED;
+      if (scrollAccum >= 1) {
+        const px = Math.floor(scrollAccum);
+        el.scrollLeft += px;
+        scrollAccum -= px;
+      }
     }
+
+    // Bidirectional infinite wrap — snap within the middle third
+    const third = el.scrollWidth / 3;
+    if (el.scrollLeft >= third * 2) {
+      el.scrollLeft -= third;
+      if (isDragging) startScroll -= third;
+    } else if (el.scrollLeft < third) {
+      el.scrollLeft += third;
+      if (isDragging) startScroll += third;
+    }
+
     _carouselRaf = requestAnimationFrame(tick);
   }
 
@@ -804,7 +790,7 @@ function renderAll() {
   }
 
   const existingTrack = document.querySelector('.shock-quotes-track');
-  if (existingTrack) _carouselScroll = Math.abs(new DOMMatrix(getComputedStyle(existingTrack).transform).m41);
+  if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = Math.abs(m.m41); }
 
   list.innerHTML =
     renderShockQuotesSection() +
@@ -1215,7 +1201,7 @@ function renderShockQuotesSection() {
       <span class="shock-quotes-label">From the floor this week</span>
       <a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>
     </div>
-    <div class="shock-quotes-grid"><div class="shock-quotes-track">${html}</div></div>
+    <div class="shock-quotes-grid">${html}</div>
   </div>`;
 }
 
