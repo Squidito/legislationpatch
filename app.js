@@ -8,7 +8,8 @@ let openCards        = new Map(); // id -> 'minor' | 'full'
 let openDetails      = {};
 let aiOutputs        = {};
 let activeMainFilter  = 'in_progress';
-let favoritesView     = false;
+let favoritesView          = false;
+const collapsedFavSections = new Set();
 let selectedRepIds    = new Set();
 let standaloneQuotes  = [];
 let repsIndex         = {};
@@ -171,12 +172,18 @@ function setupSettings() {
       const card = e.target.closest('[data-rep-id]');
       if (!card) return;
       const id = card.dataset.repId;
+      // Toggle session-level carousel priority
       if (selectedRepIds.has(id)) selectedRepIds.delete(id);
       else selectedRepIds.add(id);
-      renderRepStrip();
+      // Also persist as a tracked rep so it appears in Favorites
       const existingCarousel = document.querySelector('.shock-quotes-grid');
       if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
-      renderAll();
+      toggleRepTracked(id, {
+        name:  card.dataset.repName,
+        party: card.dataset.repParty,
+        state: card.dataset.repState,
+      });
+      renderRepStrip(); // re-render strip to reflect selectedRepIds visual state
     });
   }
 
@@ -285,10 +292,14 @@ function handleStateChange(e) {
 
 // ---- Portrait helpers ----
 
+const PHOTO_OVERRIDES = {
+  'C001115': 'https://clerk.house.gov/images/members/C001115.jpg',
+};
+
 function portraitUrl(bioguideId) {
   if (!bioguideId || typeof bioguideId !== 'string' || bioguideId.length < 2) return FALLBACK_PORTRAIT;
   const id = bioguideId.toUpperCase();
-  return `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
+  return PHOTO_OVERRIDES[id] || `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
 }
 
 function partyColor(party) {
@@ -316,7 +327,7 @@ function repCardHtml(rep, size) {
   const lastName = repLastName(name);
   const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
 
-  return `<a href="rep.html?id=${escHtml(bioguide || id)}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+  return `<a href="rep?id=${escHtml(bioguide || id)}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
                data-id="${escHtml(id)}"
                style="--party-color:${color}; text-decoration: none;"
                title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
@@ -387,6 +398,9 @@ function renderRepStrip() {
     const lastName   = repLastName(name);
     return `<button class="rep-card rep-card-sm${active ? ' rep-selected' : ''}${isFeatured ? ' rep-featured' : ''}"
                     data-rep-id="${escHtml(id)}"
+                    data-rep-name="${escHtml(name)}"
+                    data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
+                    data-rep-state="${escHtml(rep.state || rep.stateCode || '')}"
                     style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
                     title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
       ${isFeatured
@@ -463,7 +477,7 @@ function toggleRepDropdown() {
 
 // ---- Toggle tracking for a rep ----
 
-function toggleRepTracked(id) {
+function toggleRepTracked(id, fallback = {}) {
   const idx = trackedReps.findIndex(r => r.id === id);
   if (idx >= 0) {
     trackedReps.splice(idx, 1);
@@ -472,9 +486,9 @@ function toggleRepTracked(id) {
     const source = pool.find(r => getRepId(r) === id);
     trackedReps.push({
       id,
-      name:   formatRepName(source) || id,
-      party:  source?.party || source?.partyCode || 'n',
-      state:  source?.state || source?.stateCode || trackedState,
+      name:   formatRepName(source) || fallback.name || id,
+      party:  source?.party || source?.partyCode || fallback.party || 'n',
+      state:  source?.state || source?.stateCode || fallback.state || trackedState,
       source: 'strip',
     });
   }
@@ -651,8 +665,9 @@ function renderUnderreportedSection(bill) {
 
 // ---- Render ----
 
-let _carouselRaf    = null;
-let _carouselScroll = null;
+let _carouselRaf      = null;
+let _carouselScroll   = null;
+let _repRowObserver   = null;
 
 function setupCarousel() {
   if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
@@ -765,6 +780,48 @@ function renderAll() {
     filtered.map((b, i) => renderBill(b, i + 1)).join('');
 
   setupCarousel();
+  setupRepRowObserver();
+}
+
+function setupRepRowObserver() {
+  if (_repRowObserver) _repRowObserver.disconnect();
+
+  const repRow      = document.querySelector('.controls-rep-row');
+  const controlsBar = document.querySelector('.controls-bar');
+  if (!repRow) return;
+
+  // Read height once at setup while rep row is fully visible — never re-read during scroll
+  const barHeight = controlsBar ? controlsBar.offsetHeight : 110;
+  const HIDE_AT   = barHeight + 80;
+  const SHOW_AT   = HIDE_AT + 50; // hysteresis gap prevents oscillation near threshold
+
+  let raf    = null;
+  let hidden = false;
+
+  const onScroll = () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = null;
+      const firstBill = document.querySelector('.bill-list .bill-card');
+      if (!firstBill) {
+        if (hidden) { hidden = false; repRow.classList.remove('rep-row-hidden'); }
+        return;
+      }
+      const billTop = firstBill.getBoundingClientRect().top;
+      if (!hidden && billTop < HIDE_AT) {
+        hidden = true;
+        repRow.classList.add('rep-row-hidden');
+      } else if (hidden && billTop > SHOW_AT) {
+        hidden = false;
+        repRow.classList.remove('rep-row-hidden');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  _repRowObserver = { disconnect() { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); } };
 }
 
 // ---- Favorites view ----
@@ -792,79 +849,163 @@ function toggleFavoritesView() {
 }
 
 function renderFavoritesView() {
-  const list         = document.getElementById('billList');
-  const starredBills = allBills.filter(b => watchedBills.has(b.id));
-
-  let html = renderTrackedRepsSection();
-
-  html += `<div class="fav-section-header">
-    <span class="fav-section-title">Tracked bills</span>
-    <span class="fav-section-count">${starredBills.length}</span>
-  </div>`;
-
-  if (starredBills.length) {
-    html += starredBills.map((b, i) => renderBill(b, i + 1)).join('');
-  } else {
-    html += `<div class="fav-empty">
-      <div class="fav-empty-icon">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
-          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
-        </svg>
-      </div>
-      <div class="fav-empty-title">No tracked bills yet</div>
-      <div class="fav-empty-sub">Tap the star on any bill to track it here.</div>
-    </div>`;
-  }
-
-  list.innerHTML = html;
+  const list = document.getElementById('billList');
+  list.innerHTML = renderRepsSection() + renderBillsSection() + renderQuotesSection();
 }
 
-function renderTrackedRepsSection() {
-  const sectionHeader = `<div class="fav-section-header">
-    <span class="fav-section-title">Tracked reps</span>
-    <span class="fav-section-count">${trackedReps.length}</span>
+function favSectionHeader(id, title, count) {
+  const isCollapsed = collapsedFavSections.has(id);
+  return `<div class="fav-section-header" onclick="toggleFavSection('${id}')">
+    <span class="fav-section-title">${title}</span>
+    <span class="fav-section-count">${count}</span>
+    <span class="chevron${isCollapsed ? '' : ' open'} fav-chevron"></span>
   </div>`;
+}
+
+function toggleFavSection(id) {
+  if (collapsedFavSections.has(id)) collapsedFavSections.delete(id);
+  else collapsedFavSections.add(id);
+  const body = document.getElementById(`fav-body-${id}`);
+  const chev = body?.previousElementSibling?.querySelector('.chevron');
+  const collapsed = collapsedFavSections.has(id);
+  if (body) body.classList.toggle('open', !collapsed);
+  if (chev) chev.classList.toggle('open', !collapsed);
+}
+
+function renderBillsSection() {
+  const starredBills = allBills.filter(b => watchedBills.has(b.id));
+  const isCollapsed  = collapsedFavSections.has('bills');
+  const header       = favSectionHeader('bills', 'Tracked bills', starredBills.length);
+  const body         = starredBills.length
+    ? starredBills.map((b, i) => renderBill(b, i + 1)).join('')
+    : `<div class="fav-empty">
+        <div class="fav-empty-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+          </svg>
+        </div>
+        <div class="fav-empty-title">No tracked bills yet</div>
+        <div class="fav-empty-sub">Tap the star on any bill to track it here.</div>
+      </div>`;
+  return header + `<div class="fav-section-body${isCollapsed ? '' : ' open'}" id="fav-body-bills">${body}</div>`;
+}
+
+function parseFavDate(source) {
+  if (!source) return 0;
+  const m = source.match(/(\w+ \d+, \d+)$/);
+  return m ? (new Date(m[1]).getTime() || 0) : 0;
+}
+
+function quoteKeyApp(q) {
+  return q.name + '|' + q.source + '|' + (q.text || '').slice(0, 40);
+}
+
+function removeSavedQuote(key) {
+  const favs = new Set(JSON.parse(localStorage.getItem('lpFloorFavs') || '[]'));
+  favs.delete(key);
+  localStorage.setItem('lpFloorFavs', JSON.stringify([...favs]));
+  renderFavoritesView();
+}
+
+function renderSavedFloorQuote(q) {
+  const key     = quoteKeyApp(q);
+  const portrait = q.bioguideId ? portraitUrl(q.bioguideId) : FALLBACK_PORTRAIT;
+  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}` : null;
+  const accent   = q.stance === 'oppose' ? 'accent-oppose'
+                 : q.stance === 'support' ? 'accent-support' : 'accent-neutral';
+  return `<div class="fav-quote-card ${accent}">
+    <p class="fav-quote-text">&ldquo;${escHtml(q.text)}&rdquo;</p>
+    <div class="fav-quote-attr">
+      <img class="fav-quote-portrait" src="${escHtml(portrait)}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="" />
+      ${repHref
+        ? `<a href="${repHref}" class="fav-quote-speaker">${escHtml(q.name)}</a>`
+        : `<span class="fav-quote-speaker">${escHtml(q.name)}</span>`}
+      <span class="fav-quote-source">${escHtml(q.source)}</span>
+      <button class="tracked-rep-untrack" data-key="${escHtml(key)}"
+              onclick="removeSavedQuote(this.dataset.key)" title="Remove">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>`;
+}
+
+function renderQuotesSection() {
+  const favKeys     = new Set(JSON.parse(localStorage.getItem('lpFloorFavs') || '[]'));
+  const saved       = standaloneQuotes.filter(q => !q.billId && favKeys.has(quoteKeyApp(q)));
+  const isCollapsed = collapsedFavSections.has('quotes');
+  const header      = favSectionHeader('quotes', 'Floor statements', saved.length);
+  const body        = saved.length
+    ? saved.map(renderSavedFloorQuote).join('')
+    : `<div class="fav-empty">
+        <div class="fav-empty-title">No saved floor statements</div>
+        <div class="fav-empty-sub">Tap ★ on any quote on the <a href="floor.html" style="color:var(--purple)">Floor Activity</a> page to save it here.</div>
+      </div>`;
+  return header + `<div class="fav-section-body${isCollapsed ? '' : ' open'}" id="fav-body-quotes">${body}</div>`;
+}
+
+function renderRepsSection() {
+  const isCollapsed   = collapsedFavSections.has('reps');
+  const sectionHeader = favSectionHeader('reps', 'Tracked reps', trackedReps.length);
 
   if (!trackedReps.length) {
-    return sectionHeader + `<div class="fav-empty" style="margin-bottom:1.5rem">
-      <div class="fav-empty-title">No tracked reps</div>
-      <div class="fav-empty-sub">Click a portrait in the rep strip to follow a representative.</div>
+    return sectionHeader + `<div class="fav-section-body${isCollapsed ? '' : ' open'}" id="fav-body-reps">
+      <div class="fav-empty">
+        <div class="fav-empty-title">No tracked reps</div>
+        <div class="fav-empty-sub">Click a portrait in the rep strip to follow a representative.</div>
+      </div>
     </div>`;
   }
 
   const cards = trackedReps.map(rep => {
-    const color = partyColor(rep.party);
-    const imgSrc = portraitUrl(rep.id);
-    const bills = allBills.filter(b => {
-      const sponsors = Array.isArray(b.sponsors) ? b.sponsors
-        : Array.isArray(b.raw?.sponsors) ? b.raw.sponsors : [];
-      return sponsors.some(s => (s.bioguideId || s.id) === rep.id)
-        || (b.featured_quotes || []).some(q => q.bioguideId === rep.id);
-    });
+    const color   = partyColor(rep.party);
+    const imgSrc  = portraitUrl(rep.id);
+    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}` : null;
 
-    const pills = bills.slice(0, 3).map(b => {
-      const shortId = b.id.split('-').slice(1).join(' ');
-      return `<span class="rep-bill-pill" title="${escHtml(b.title)}">${escHtml(shortId)}</span>`;
-    }).join('');
-    const more  = bills.length > 3 ? `<span class="rep-bill-more">+${bills.length - 3} more</span>` : '';
-    const none  = !bills.length   ? `<span class="rep-bill-more">No bills in current feed</span>` : '';
+    // Combine bill featured quotes + standalone floor quotes, newest first
+    const billQuotes  = allBills.flatMap(b =>
+      (b.featured_quotes || [])
+        .filter(q => q.bioguideId === rep.id)
+        .map(q => ({ ...q, context: b.title || b.id }))
+    );
+    const floorQuotes = standaloneQuotes
+      .filter(q => q.bioguideId === rep.id)
+      .map(q => ({ ...q, context: q.source }));
 
-    const quote = allBills.flatMap(b =>
-      (b.featured_quotes || []).filter(q => q.bioguideId === rep.id)
-    ).find(Boolean);
+    const topTwo = [...billQuotes, ...floorQuotes]
+      .sort((a, b) => parseFavDate(b.source) - parseFavDate(a.source))
+      .slice(0, 2);
+
+    const quotesHtml = topTwo.length
+      ? topTwo.map(q => {
+          const accent = q.stance === 'oppose'  ? 'accent-oppose'
+                       : q.stance === 'support' ? 'accent-support'
+                       : 'accent-neutral';
+          return `<div class="tracked-rep-quote-entry ${accent}">
+            <p class="tracked-rep-quote-text">&ldquo;${escHtml(q.text)}&rdquo;</p>
+            <span class="tracked-rep-quote-ctx">${escHtml(q.context || '')}</span>
+          </div>`;
+        }).join('')
+      : `<div class="tracked-rep-quote-entry accent-neutral">
+           <p class="tracked-rep-quote-text fav-empty-sub">No recent quotes in feed.</p>
+         </div>`;
 
     return `<div class="tracked-rep-card" style="--party-color:${color}">
       <div class="tracked-rep-portrait-wrap">
-        <img class="tracked-rep-portrait" src="${imgSrc}"
-             onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(rep.name)}"
-             style="border-color:${color}" />
+        <a href="${repHref || '#'}">
+          <img class="tracked-rep-portrait" src="${imgSrc}"
+               onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(rep.name)}"
+               style="border-color:${color}" />
+        </a>
         <span class="rep-badge" style="background:${color}">${escHtml(rep.state || '')}</span>
       </div>
       <div class="tracked-rep-info">
-        <div class="tracked-rep-name">${escHtml(rep.name)}</div>
-        <div class="tracked-rep-meta">${escHtml(partyInitial(rep.party))} · ${bills.length} bill${bills.length !== 1 ? 's' : ''} in feed</div>
-        <div class="tracked-rep-bills">${pills}${more}${none}</div>
-        ${quote ? `<div class="tracked-rep-quote">"${escHtml(quote.text)}"</div>` : ''}
+        <div class="tracked-rep-name">
+          <a href="${repHref || '#'}" style="color:inherit;text-decoration:none">${escHtml(rep.name)}</a>
+        </div>
+        <div class="tracked-rep-meta">${escHtml(partyInitial(rep.party))}</div>
+        ${quotesHtml}
       </div>
       <button class="tracked-rep-untrack" onclick="toggleRepTracked('${escHtml(rep.id)}')" title="Untrack">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -874,7 +1015,7 @@ function renderTrackedRepsSection() {
     </div>`;
   }).join('');
 
-  return sectionHeader + `<div class="tracked-reps-list">${cards}</div>`;
+  return sectionHeader + `<div class="fav-section-body${collapsedFavSections.has('reps') ? '' : ' open'}" id="fav-body-reps"><div class="tracked-reps-list">${cards}</div></div>`;
 }
 
 function renderStatsBar(bills) {
@@ -998,7 +1139,7 @@ function renderShockQuotesSection() {
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    const repHref  = q.bioguideId ? `rep.html?id=${escHtml(q.bioguideId)}` : null;
+    const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}` : null;
     const billInCache = q.billId && allBills.some(b => b.id === q.billId);
     const billHref = q.billId
       ? (billInCache ? `#card-${escHtml(q.billId)}` : `bill-pending.html?id=${escHtml(q.billId)}`)
@@ -1038,7 +1179,10 @@ function renderShockQuotesSection() {
   }).join('');
 
   return `<div class="shock-quotes-section">
-    <div class="shock-quotes-label">From the floor this week</div>
+    <div class="shock-quotes-label-row">
+      <span class="shock-quotes-label">From the floor this week</span>
+      <a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>
+    </div>
     <div class="shock-quotes-grid">${html}</div>
   </div>`;
 }
@@ -1161,15 +1305,15 @@ function renderChangesSection(bill) {
   const { added = [], modified = [], removed = [] } = bill.changes;
   if (!added.length && !modified.length && !removed.length) return '';
 
-  const block = (label, symbol, color, bg, items) => {
-    if (!items.length) return `<div class="patch-block" style="background:${bg}">
-      <div class="patch-block-label" style="color:${color}">
+  const block = (label, symbol, cls, items) => {
+    if (!items.length) return `<div class="patch-block ${cls}">
+      <div class="patch-block-label">
         <span class="patch-block-symbol">${symbol}</span>${label}
       </div>
-      <div class="patch-block-items"><div class="patch-block-item" style="color:#a8acb8;font-style:italic">None</div></div>
+      <div class="patch-block-items"><div class="patch-block-item patch-block-item--none">None</div></div>
     </div>`;
-    return `<div class="patch-block" style="background:${bg}">
-      <div class="patch-block-label" style="color:${color}">
+    return `<div class="patch-block ${cls}">
+      <div class="patch-block-label">
         <span class="patch-block-symbol">${symbol}</span>${label}
       </div>
       <div class="patch-block-items">${items.map(t => `<div class="patch-block-item">${billRefHtml(t, bill.id)}</div>`).join('')}</div>
@@ -1179,9 +1323,9 @@ function renderChangesSection(bill) {
   return `<div class="what-changed-section">
     <div class="what-changed-label">What changed in ${escHtml(bill.version || 'this version')}</div>
     <div class="what-changed-grid">
-      ${block('Added', '+', '#3a7a4f', '#eef5ef', added)}
-      ${block('Modified', '~', '#a87d24', '#f7f1e3', modified)}
-      ${block('Removed', '−', '#a14040', '#f7ecec', removed)}
+      ${block('Added', '+', 'patch-block--added', added)}
+      ${block('Modified', '~', 'patch-block--modified', modified)}
+      ${block('Removed', '−', 'patch-block--removed', removed)}
     </div>
   </div>`;
 }
@@ -1208,6 +1352,7 @@ function renderMinorBody(bill, col, isOpen) {
   return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
     ${likelihoodDetail}
     ${renderTopLines(bill)}
+    ${renderChangesSection(bill)}
     ${underHtml}
     ${renderQuoteCards(bill)}
     <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Full analysis ↓</button>
@@ -1223,7 +1368,7 @@ function renderQuoteCards(bill) {
       const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
       return `<div class="quote-card">
         <div class="quote-card-meta">
-          <a href="rep.html?id=${q.bioguideId}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
+          <a href="rep?id=${q.bioguideId}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
             <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
                  onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
             <div class="quote-card-name">
