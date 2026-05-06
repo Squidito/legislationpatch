@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Floor Activity — LegislationPatch</title>
+  <meta name="description" content="Direct quotes from the House and Senate floor, organized by bill and topic." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <script>
+    (function () {
+      const t = localStorage.getItem('lpTheme');
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <a href="index.html" style="text-decoration:none;">
+          <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
+        </a>
+      </div>
+      <div class="header-track">
+        <a href="index.html" class="back-btn">&larr; Back to Bills</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <div class="filter-row">
+        <button class="filter-btn active" data-chamber="all">All</button>
+        <button class="filter-btn" data-chamber="house">House</button>
+        <button class="filter-btn" data-chamber="senate">Senate</button>
+      </div>
+      <div class="header-track">
+        <span class="zip-display" id="zipDisplay" title="Your ZIP code"></span>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="section-label">Floor activity</div>
+
+    <div class="loading-state" id="loadingState">
+      <div class="loading-spinner"></div>
+      <p>Loading floor activity&hellip;</p>
+    </div>
+
+    <div id="floorContent"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script src="floor.js"></script>
+</body>
+</html>
