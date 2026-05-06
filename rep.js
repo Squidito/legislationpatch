@@ -145,7 +145,7 @@ function renderProfile(rep) {
           <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
         </div>
         <div class="quote-text">"${escHtml(c.text)}"</div>
-        <div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">${c.date}</div>
+        <div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">${formatDate(c.date)}</div>
       </div>
     `;
   }).join('');

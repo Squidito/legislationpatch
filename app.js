@@ -1253,16 +1253,16 @@ function renderBill(bill, num) {
 }
 
 function formatDateCompact(dateStr) {
-  // "Apr 20, 2026" → "20/04/26"
   try {
     const d = new Date(dateStr);
     if (isNaN(d)) return dateStr;
     const dd = String(d.getDate()).padStart(2,'0');
     const mm = String(d.getMonth()+1).padStart(2,'0');
     const yy = String(d.getFullYear()).slice(-2);
-    return `${dd}/${mm}/${yy}`;
+    return `${mm}/${dd}/${yy}`;
   } catch(e) { return dateStr; }
 }
+
 
 function renderHeader(bill, state, num, watching) {
   const isOpen     = !!state;
@@ -1395,7 +1395,7 @@ function renderMinorBody(bill, col, isOpen) {
   const likelihoodDetail = bill.stage === 'signed'
     ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--green)">
         <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
-        <div class="likelihood-detail-text">Introduced ${escHtml(bill.date || '')}${bill.enactedDate ? ` · Enacted ${escHtml(bill.enactedDate)}` : ''}</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` · Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
       </div>`
     : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
         <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>

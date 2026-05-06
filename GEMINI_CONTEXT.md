@@ -180,7 +180,7 @@ Do not change this architecture. It is intentional and non-negotiable — the pr
 ## Design Language
 
 - **Font:** Plus Jakarta Sans — warm geometric, Discord/Duolingo-adjacent feel
-- **Mono:** DM Mono — all metadata, codes, percentages, section labels
+- **Mono:** IBM Plex Mono (wght 500;600;700) — all metadata, codes, percentages, section labels
 - **Color accent:** `--purple: #6d4fc7` (active states, tracking, favorites)
 - **Warning/amber:** `--amber` for underreported, star buttons when active
 - **Footer emphasis:** `#E8855A` — warm orange for the word "only" in the data source line
