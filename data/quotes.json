@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-27T23:33:59.074Z",
+  "generated": "2026-05-06T20:19:00.928Z",
   "processedDates": [
     "2026-03-28",
     "2026-03-29",
@@ -30,7 +30,12 @@
     "2026-04-23",
     "2026-04-24",
     "2026-04-25",
-    "2026-04-26"
+    "2026-04-26",
+    "2026-04-27",
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30",
+    "2026-05-04"
   ],
   "quotes": [
     {
@@ -450,6 +455,102 @@
       "stance": "oppose",
       "billId": "119-HR-7147",
       "billTitle": null
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "The idea that Democrats are somehow to blame for this Republican shutdown of DHS is just ridiculous, and Thune and his Republican leadership ought to act like adults and help us solve this problem during serious times like these, instead of pointing fingers in another direction.",
+      "source": "Senate Floor, Apr 27, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "U.S. SECRET SERVICE"
+    },
+    {
+      "name": "Sen. John Thune",
+      "party": "R",
+      "state": "SD",
+      "bioguideId": "T000250",
+      "text": "It is difficult to believe that this is the third time--the third time--President Trump has faced an assassination attempt. And, as we know, the shooter's ambitions in this instance extended even further, to other administration officials and the Vice President.",
+      "source": "Senate Floor, Apr 27, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' ASSOCIATION DINNER SHOOTING"
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Donald Trump has decided to focus on a taxpayer-funded, gold-plated ballroom instead of focusing on these important national security issues: the war in Iran--dangerous for the United States; the fact that we haven't funded Homeland Security--dangerous for the United States. Trump's values are perverse--just perverse.",
+      "source": "Senate Floor, Apr 28, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "TRUMP ADMINISTRATION"
+    },
+    {
+      "name": "Rep. Rashida Tlaib",
+      "party": "D",
+      "state": "MI",
+      "bioguideId": "T000481",
+      "text": "FISA section 702 is a dangerous mass surveillance tool that is already being used by our Federal Government to conduct thousands of warrantless searches on the private communications of U.S. citizens without any due process, probable cause, or review from a judge. No President--not any of them--should have the power to spy on our private communication or information, especially not the current occupant of the White House.",
+      "source": "House Floor, Apr 29, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-8322",
+      "billTitle": null,
+      "granuleTitle": "OUR GOVERNMENT IS SPYING ON US"
+    },
+    {
+      "name": "Rep. Seth Magaziner",
+      "party": "D",
+      "state": "RI",
+      "bioguideId": "M001223",
+      "text": "Last year, 88 of the most profitable companies in America paid zero in Federal income taxes. The wealthy and well-connected get tax breaks, and average people get stuck with the bill. Until we have real ethics reform in Washington, the wealthy and well-connected are going to continue to get tax breaks while working people get screwed.",
+      "source": "House Floor, Apr 29, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "POWERFUL CORPORATIONS MUST PAY THEIR FAIR SHARE OF TAXES"
+    },
+    {
+      "name": "Sen. Marsha Blackburn",
+      "party": "R",
+      "state": "TN",
+      "bioguideId": "B001243",
+      "text": "This is unhinged rhetoric. It is completely in line with the lies that the Democrats have repeated on just about a daily basis every day regarding President Trump. This reckless rhetoric places a target on our President, and this is the type of rhetoric that has no place in civil public life.",
+      "source": "Senate Floor, Apr 29, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' DINNER SHOOTING"
+    },
+    {
+      "name": "Rep. Chuck Edwards",
+      "party": "R",
+      "state": "NC",
+      "bioguideId": "E000246",
+      "text": "Because some Members of Congress have chosen to protect their political interests over serving the folks of America, including those in western North Carolina, the Disaster Recovery Fund is about to run out of money, putting our recovery in serious jeopardy.",
+      "source": "House Floor, Apr 30, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "FUNDING DISASTER RELIEF"
+    },
+    {
+      "name": "Sen. John Thune",
+      "party": "R",
+      "state": "SD",
+      "bioguideId": "T000250",
+      "text": "The Democrat leader said that Border Patrol and ICE are two Agencies that 'nobody respects in this country.' Democrats apparently think it is reasonable to have nobody patrolling the southern border. They think it is reasonable to let criminal illegal immigrants continue living freely in our country.",
+      "source": "Senate Floor, Apr 30, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null,
+      "granuleTitle": "DEPARTMENT OF HOMELAND SECURITY"
     }
   ]
 }

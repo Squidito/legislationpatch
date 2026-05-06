@@ -800,15 +800,21 @@ function renderAll() {
   const list = document.getElementById('billList');
   const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
 
-  const filtered = allBills.filter(b => {
-    if (activeMainFilter === 'in_progress') {
-      return IN_PROGRESS.includes(b.stage) || isJustPassed(b);
-    } else if (activeMainFilter === 'dead') {
-      return b.stage === 'dead';
-    } else {
-      return b.stage === 'signed';
-    }
-  });
+  const filtered = allBills
+    .filter(b => {
+      if (activeMainFilter === 'in_progress') {
+        return IN_PROGRESS.includes(b.stage) || isJustPassed(b);
+      } else if (activeMainFilter === 'dead') {
+        return b.stage === 'dead';
+      } else {
+        return b.stage === 'signed';
+      }
+    })
+    .sort((a, b) => {
+      const da = new Date(a.stageDate || a.enactedDate || a.date || 0);
+      const db = new Date(b.stageDate || b.enactedDate || b.date || 0);
+      return db - da;
+    });
 
   if (!filtered.length) {
     list.innerHTML = '<div class="empty-state">No bills found for this filter.</div>';
@@ -1270,8 +1276,12 @@ function renderHeader(bill, state, num, watching) {
   const sponsorSrc = bill.sponsor_bioguide ? portraitUrl(bill.sponsor_bioguide) : FALLBACK_PORTRAIT;
   const cosponsors = bill.raw?.cosponsors?.count || bill.cosponsors || 0;
   const pages      = bill.pages || '';
-  const dateShort  = formatDateCompact(bill.date);
-  const version    = bill.version || 'v1.0';
+  const version      = bill.version || 'v1.0';
+  const introDate    = formatDateCompact(bill.date);
+  const stageDateStr = formatDateCompact(bill.stageDate || bill.enactedDate || '');
+  const dateDisplay  = stageDateStr && stageDateStr !== introDate
+    ? `${introDate} → ${stageDateStr}`
+    : introDate;
 
   const sponsorMeta = [
     `SPONSOR · ${bill.sponsor.toUpperCase()}`,
@@ -1289,7 +1299,7 @@ function renderHeader(bill, state, num, watching) {
     <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
     <div class="bill-title-block">
       <div class="bill-meta-row">
-        <span class="bill-meta-compact">${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateShort)}</span>
+        <span class="bill-meta-compact">${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateDisplay)}</span>
       </div>
       <div class="bill-title">${escHtml(bill.title)}</div>
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}

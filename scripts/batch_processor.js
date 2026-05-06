@@ -805,6 +805,7 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     parsed.official_title   = bill.title;
     parsed.code             = `${type}.${number}`;
     parsed.date             = formatDate(meta?.introducedDate || bill.updateDate);
+    parsed.stageDate        = formatDate(meta?.latestAction?.actionDate || '');
     parsed.enactedDate      = stage.key === 'signed' ? formatDate(meta?.latestAction?.actionDate || '') : '';
     parsed.version          = 'v1.0';
     parsed.stage            = stage.key;
