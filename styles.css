@@ -1275,17 +1275,18 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .shock-quotes-grid {
-  display: flex;
-  flex-direction: row;
-  gap: 0.65rem;
-  overflow-x: auto;
-  scrollbar-width: none;
+  overflow: hidden;
   cursor: grab;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   padding: 4px 2px;
 }
-.shock-quotes-grid::-webkit-scrollbar { display: none; }
+.shock-quotes-track {
+  display: flex;
+  flex-direction: row;
+  gap: 0.65rem;
+  will-change: transform;
+}
 .shock-quotes-grid.dragging { cursor: grabbing; user-select: none; }
 .shock-quote-card {
   background: var(--surface);

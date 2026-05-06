@@ -193,8 +193,8 @@ function setupSettings() {
       if (selectedRepIds.has(id)) selectedRepIds.delete(id);
       else selectedRepIds.add(id);
       // Also persist as a tracked rep so it appears in Favorites
-      const existingCarousel = document.querySelector('.shock-quotes-grid');
-      if (existingCarousel) _carouselScroll = existingCarousel.scrollLeft;
+      const existingTrack = document.querySelector('.shock-quotes-track');
+      if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = m.m41; }
       toggleRepTracked(id, {
         name:  card.dataset.repName,
         party: card.dataset.repParty,
@@ -684,12 +684,18 @@ function renderUnderreportedSection(bill) {
 
 let _carouselRaf      = null;
 let _carouselScroll   = null;
+let _carouselEpoch    = 0;
 let _repRowObserver   = null;
 
 function setupCarousel() {
+  // Bump epoch — any tick or retry from a previous call will see a stale epoch and stop.
+  _carouselEpoch++;
+  const myEpoch = _carouselEpoch;
+
   if (_carouselRaf) { cancelAnimationFrame(_carouselRaf); _carouselRaf = null; }
 
-  const el = document.querySelector('.shock-quotes-grid');
+  const grid = document.querySelector('.shock-quotes-grid');
+  const el   = grid?.querySelector('.shock-quotes-track');
   if (!el || el.children.length === 0) return;
 
   // Remove any clones from a prior setup
@@ -713,55 +719,75 @@ function setupCarousel() {
     el.appendChild(clone);
   });
 
-  // Resume saved position, or start in the middle third on first load
-  el.scrollLeft = (_carouselScroll !== null) ? _carouselScroll : el.scrollWidth / 3;
+  // setWidth = width of one set of cards; track holds 3 sets (prepend | originals | append).
+  // getBoundingClientRect returns 0 when the parent has display:none (e.g. during initial
+  // page load while the loading spinner is shown). Detect that and defer until visible.
+  const setWidth = el.children[originals.length].getBoundingClientRect().left
+                 - el.children[0].getBoundingClientRect().left;
+
+  if (setWidth === 0) {
+    // Parent is hidden — retry next frame. Epoch check ensures a superseded retry is a no-op.
+    _carouselRaf = requestAnimationFrame(() => {
+      if (myEpoch !== _carouselEpoch) return;
+      setupCarousel();
+    });
+    return;
+  }
+
+  // Resume saved position (negative translateX), or start at the originals (middle set)
+  let currentX = (_carouselScroll !== null) ? _carouselScroll : -setWidth;
   _carouselScroll = null;
 
+  el.style.transform = `translateX(${currentX}px)`;
+
   let paused = false;
-  el.addEventListener('mouseenter', () => { paused = true; });
-  el.addEventListener('mouseleave', () => {
+  grid.addEventListener('mouseenter', () => { paused = true; });
+  grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
-    el.classList.remove('dragging');
+    grid.classList.remove('dragging');
   });
 
-  let isDragging = false, startX = 0, startScroll = 0;
-  el.addEventListener('mousedown', e => {
-    isDragging  = true;
-    startX      = e.pageX;
-    startScroll = el.scrollLeft;
-    el.classList.add('dragging');
+  let isDragging = false, startX = 0, startCurrentX = 0;
+  grid.addEventListener('mousedown', e => {
+    isDragging    = true;
+    startX        = e.pageX;
+    startCurrentX = currentX;
+    grid.classList.add('dragging');
     e.preventDefault();
   });
-  el.addEventListener('mouseup',   () => { isDragging = false; el.classList.remove('dragging'); });
-  el.addEventListener('mousemove', e => {
+  grid.addEventListener('mouseup', () => { isDragging = false; grid.classList.remove('dragging'); });
+  grid.addEventListener('mousemove', e => {
     if (!isDragging) return;
-    el.scrollLeft = startScroll - (e.pageX - startX) * 1.8;
+    currentX = startCurrentX + (e.pageX - startX) * 1.8;
   });
 
-  const SPEED = 0.1; // px per frame target — accumulator fires each whole pixel
-  let scrollAccum = 0;
+  grid.addEventListener('touchstart', e => {
+    startX        = e.touches[0].pageX;
+    startCurrentX = currentX;
+  }, { passive: true });
+  grid.addEventListener('touchmove', e => {
+    currentX = startCurrentX + (e.touches[0].pageX - startX);
+  }, { passive: true });
+
+  const SPEED = 0.125; // subpixel float — no accumulator needed with transform
 
   function tick() {
-    if (!paused) {
-      scrollAccum += SPEED;
-      if (scrollAccum >= 1) {
-        const px = Math.floor(scrollAccum);
-        el.scrollLeft += px;
-        scrollAccum -= px;
-      }
+    // Stop if a newer setupCarousel call has superseded this one.
+    if (myEpoch !== _carouselEpoch) return;
+
+    if (!paused) currentX -= SPEED;
+
+    // Bidirectional infinite wrap within the middle third
+    if (currentX <= -(setWidth * 2)) {
+      currentX      += setWidth;
+      startCurrentX += setWidth;
+    } else if (currentX >= 0) {
+      currentX      -= setWidth;
+      startCurrentX -= setWidth;
     }
 
-    // Bidirectional infinite wrap — snap within the middle third
-    const third = el.scrollWidth / 3;
-    if (el.scrollLeft >= third * 2) {
-      el.scrollLeft -= third;
-      if (isDragging) startScroll -= third;
-    } else if (el.scrollLeft < third) {
-      el.scrollLeft += third;
-      if (isDragging) startScroll += third;
-    }
-
+    el.style.transform = `translateX(${currentX}px)`;
     _carouselRaf = requestAnimationFrame(tick);
   }
 
@@ -790,7 +816,7 @@ function renderAll() {
   }
 
   const existingTrack = document.querySelector('.shock-quotes-track');
-  if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = Math.abs(m.m41); }
+  if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = m.m41; }
 
   list.innerHTML =
     renderShockQuotesSection() +
@@ -1125,7 +1151,7 @@ function buildQuotePool() {
 }
 
 function renderShockQuotesSection() {
-  const quoteKey = q => (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
+  const repKey = q => q.bioguideId || (q.name || '').toLowerCase();
   const pool = buildQuotePool();
   if (!pool.length) return '';
 
@@ -1134,24 +1160,33 @@ function renderShockQuotesSection() {
   const featR = sorted.find(q => (q.party || '').toUpperCase().startsWith('R'));
   const featD = sorted.find(q => (q.party || '').toUpperCase().startsWith('D'));
   const featured = [featR, featD].filter(Boolean);
-  const used = new Set(featured.map(quoteKey));
+  // Dedup by speaker — each rep appears at most once in the carousel
+  const usedReps = new Set(featured.map(repKey));
 
-  // Selected: user-toggled reps in portrait strip
-  const selected = pool.filter(q => selectedRepIds.has(q.bioguideId) && !used.has(quoteKey(q)));
-  selected.forEach(q => used.add(quoteKey(q)));
+  // Selected: user-toggled reps in portrait strip — pick their top-shock quote
+  const selected = [];
+  sorted.forEach(q => {
+    if (selectedRepIds.has(q.bioguideId) && !usedReps.has(repKey(q))) {
+      selected.push(q); usedReps.add(repKey(q));
+    }
+  });
 
-  // Tracked: auto-detected reps
+  // Tracked: auto-detected reps — top-shock quote per rep
   const trackedIdSet = new Set(trackedReps.map(r => r.id));
-  const tracked = pool.filter(q =>
-    (trackedIdSet.has(q.bioguideId) || trackedIdSet.has(q.name?.toLowerCase())) &&
-    !used.has(quoteKey(q))
-  );
-  tracked.forEach(q => used.add(quoteKey(q)));
+  const tracked = [];
+  sorted.forEach(q => {
+    if ((trackedIdSet.has(q.bioguideId) || trackedIdSet.has(q.name?.toLowerCase())) && !usedReps.has(repKey(q))) {
+      tracked.push(q); usedReps.add(repKey(q));
+    }
+  });
 
-  // Rest: fill to minimum 5
-  const rest = pool.filter(q => !used.has(quoteKey(q)));
+  // Rest: fill, one (top-shock) quote per remaining rep
+  const rest = [];
+  sorted.forEach(q => {
+    if (!usedReps.has(repKey(q))) { rest.push(q); usedReps.add(repKey(q)); }
+  });
   const ordered = [...featured, ...selected, ...tracked, ...rest];
-  const display = ordered.slice(0, Math.max(5, featured.length + selected.length));
+  const display = ordered.slice(0, Math.max(8, featured.length + selected.length));
 
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
@@ -1201,7 +1236,7 @@ function renderShockQuotesSection() {
       <span class="shock-quotes-label">From the floor this week</span>
       <a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>
     </div>
-    <div class="shock-quotes-grid">${html}</div>
+    <div class="shock-quotes-grid"><div class="shock-quotes-track">${html}</div></div>
   </div>`;
 }
 
