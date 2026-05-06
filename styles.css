@@ -920,8 +920,9 @@ a:hover { text-decoration: underline; }
   color: var(--text-3);
 }
 .bill-title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  font-family: var(--font-mono);
   letter-spacing: -0.015em;
   line-height: 1.25;
   color: var(--text);
@@ -1187,8 +1188,9 @@ a:hover { text-decoration: underline; }
   min-width: 0;
 }
 .quote-card-name > span:first-child {
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   font-weight: 600;
+  font-family: var(--font-mono);
   color: var(--text);
   white-space: nowrap;
   overflow: hidden;
@@ -1214,7 +1216,7 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
 }
 .quote-text {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   line-height: 1.5;
   color: var(--text);
   font-style: italic;
@@ -1385,6 +1387,7 @@ a:hover { text-decoration: underline; }
 .shock-quote-name {
   font-size: 0.7rem;
   font-weight: 600;
+  font-family: var(--font-mono);
   color: var(--text);
   line-height: 1.25;
   word-break: break-word;
@@ -1396,7 +1399,7 @@ a:hover { text-decoration: underline; }
   margin-top: 4px;
 }
 .shock-quote-text {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.45;
   color: var(--text-2);
   font-style: italic;
@@ -2215,7 +2218,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   .bill-rank-col { gap: 3px; }
   .status-badge { font-size: 8px; padding: 2px 5px; }
   .sponsor-portrait { width: 36px; height: 36px; }
-  .bill-title { font-size: 14px; }
+  .bill-title { font-size: 15px; }
   .bill-summary {
     font-size: 12px;
     display: -webkit-box;

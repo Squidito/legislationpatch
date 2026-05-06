@@ -43,6 +43,9 @@ function detectStage(bill, actions) {
   for (const action of sorted) {
     const text = (action.text || '').toLowerCase();
     const type = (action.type || '').toLowerCase();
+    if (text.includes('vetoed by president') || text.includes('pocket veto') ||
+        (text.includes('returned to') && text.includes('with objections')))
+      return { key: 'vetoed', label: 'Vetoed' };
     if (text.includes('signed by president') || text.includes('became public law'))
       return { key: 'signed', label: 'Signed into law' };
     if (text.includes('passed senate') || text.includes('senate passed'))
@@ -61,7 +64,7 @@ function detectStage(bill, actions) {
 
 function buildPipeline(bill, actions) {
   const steps = ['Introduced', 'Committee', 'House floor', 'Senate floor', 'Conference', 'Signed'];
-  const stageOrder = { introduced: 0, committee: 1, house: 2, senate: 3, conference: 4, signed: 5 };
+  const stageOrder = { introduced: 0, committee: 1, house: 2, senate: 3, conference: 4, signed: 5, vetoed: 5 };
   const stage = detectStage(bill, actions);
   const currentIndex = stageOrder[stage.key] ?? 0;
   return { steps, currentIndex };
@@ -69,7 +72,7 @@ function buildPipeline(bill, actions) {
 
 function estimateLikelihood(stageKey, bill, actions) {
   // Simple heuristic — in production you'd use vote counts, co-sponsor counts, etc.
-  const base = { introduced: 12, committee: 28, house: 52, senate: 68, conference: 82, signed: 100 };
+  const base = { introduced: 12, committee: 28, house: 52, senate: 68, conference: 82, signed: 100, vetoed: 0 };
   let pct = base[stageKey] || 10;
   // More co-sponsors = slightly higher likelihood
   const cosponsors = bill.cosponsors?.count || 0;

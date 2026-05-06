@@ -72,6 +72,9 @@ function formatDate(dateStr) {
 
 function detectStage(latestActionText) {
     const t = (latestActionText || '').toLowerCase();
+    if (t.includes('vetoed by president') || t.includes('pocket veto') ||
+        (t.includes('returned to') && t.includes('with objections')))
+        return { key: 'vetoed',      label: 'Vetoed',              step: 4 };
     if (t.includes('signed by president') || t.includes('became public law') || t.includes('enacted'))
         return { key: 'signed',      label: 'Signed into Law',    step: 4 };
     if (t.includes('passed senate') || t.includes('senate agreed') || t.includes('received in the senate'))

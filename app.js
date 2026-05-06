@@ -805,7 +805,7 @@ function renderAll() {
       if (activeMainFilter === 'in_progress') {
         return IN_PROGRESS.includes(b.stage) || isJustPassed(b);
       } else if (activeMainFilter === 'dead') {
-        return b.stage === 'dead';
+        return b.stage === 'dead' || b.stage === 'vetoed';
       } else {
         return b.stage === 'signed';
       }
@@ -1406,6 +1406,11 @@ function renderMinorBody(bill, col, isOpen) {
     ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--green)">
         <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
         <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` · Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
+      </div>`
+    : bill.stage === 'vetoed'
+    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--red)">
+        <div class="likelihood-detail-title" style="color:var(--red)">Vetoed by President</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
       </div>`
     : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
         <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
