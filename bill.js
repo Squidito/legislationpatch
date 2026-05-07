@@ -7,10 +7,17 @@ function renderAll() {
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
   if (!bill) return;
   document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
+  const isFullOpen = openCards.get(window.BILL_PAGE_ID) === 'full';
+  const btn = document.getElementById('analysisToggle');
+  if (btn) btn.textContent = isFullOpen ? '▲ Collapse analysis' : '▼ Show analysis';
 }
 
-// Prevent the bill card from being collapsed on this page
-function toggleCard() { /* no-op on bill page */ }
+// On the bill page, toggle between full ↔ minor (never close entirely)
+function toggleCard(id) {
+  const state = openCards.get(id);
+  openCards.set(id, state === 'full' ? 'minor' : 'full');
+  renderAll();
+}
 
 // ---- Init ----
 
@@ -68,18 +75,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
   loading.style.display = 'none';
 
-  // Analysis collapse toggle
-  const toggleRow  = document.getElementById('analysis-toggle-row');
-  const cardMount  = document.getElementById('bill-card-mount');
-  let analysisOpen = true;
+  // Analysis collapse toggle — mirrors clicking the card header
+  const toggleRow = document.getElementById('analysis-toggle-row');
   toggleRow.innerHTML = '<button class="analysis-toggle-btn" id="analysisToggle">▲ Collapse analysis</button>';
-  document.getElementById('analysisToggle').addEventListener('click', () => {
-    analysisOpen = !analysisOpen;
-    cardMount.style.display = analysisOpen ? '' : 'none';
-    document.getElementById('analysisToggle').textContent = analysisOpen
-      ? '▲ Collapse analysis'
-      : '▼ Show analysis';
-  });
+  document.getElementById('analysisToggle').addEventListener('click', () => toggleCard(billId));
 
   // Sync theme toggle state
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
