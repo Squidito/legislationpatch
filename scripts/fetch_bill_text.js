@@ -12,13 +12,58 @@ require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 
-const { fetchBillText, cleanHTML } = require('./batch_processor');
+const { fetchBillText } = require('./batch_processor');
 
-const CACHE_FILE   = path.join(__dirname, '../data/cache.json');
+const CACHE_FILE    = path.join(__dirname, '../data/cache.json');
 const BILL_TEXT_DIR = path.join(__dirname, '../data/bill-text');
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 if (!fs.existsSync(BILL_TEXT_DIR)) fs.mkdirSync(BILL_TEXT_DIR, { recursive: true });
+
+// Structure-preserving bill text cleaner.
+// For XML (USLM): converts structural element boundaries to newlines.
+// For HTML (Formatted Text): converts <br>/<p> to newlines.
+// Both: decodes entities, strips GPO annotations, fixes archaic quotes.
+function cleanBillSource(raw, isXML) {
+    let text = raw;
+
+    if (isXML) {
+        text = text
+            // Each structural element starts on its own line
+            .replace(/<\/?(section|subsection|paragraph|subparagraph|clause|item|quoted-block|continuation-text)[^>]*>/gi, '\n')
+            // Enum labels: strip tags, keep content inline
+            .replace(/<enum[^>]*>([\s\S]*?)<\/enum>/gi, (_, e) => e.trim() + ' ')
+            // Strip all remaining XML tags
+            .replace(/<[^>]+>/g, ' ');
+    } else {
+        text = text
+            .replace(/<br\s*\/?>\s*/gi, '\n')
+            .replace(/<\/p>\s*/gi, '\n\n')
+            .replace(/<pre[^>]*>|<\/pre>/gi, '')
+            .replace(/<[^>]+>/g, ' ');
+    }
+
+    return text
+        // Decode HTML entities
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+        // Remove GPO typesetting annotations
+        .replace(/<<[^>]*>>/g, '')
+        // Fix archaic typewriter quotes
+        .replace(/``/g, '“')
+        .replace(/''/g, '”')
+        // Normalise double-hyphen em dash
+        .replace(/ -- /g, ' — ')
+        // Normalise horizontal whitespace per line (preserve newlines)
+        .replace(/[ \t]{2,}/g, ' ')
+        .replace(/[ \t]+$/gm, '')
+        // Collapse 3+ blank lines to 2
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+}
 
 function parseBillId(id) {
     const parts = id.split('-');
@@ -35,10 +80,11 @@ async function processBill(bill) {
         return false;
     }
 
-    const clean = cleanHTML(raw);
+    const clean   = cleanBillSource(raw, isXML);
     const outPath = path.join(BILL_TEXT_DIR, `${bill.id}.txt`);
     fs.writeFileSync(outPath, clean);
-    console.log(`  ✓ Saved ${clean.length.toLocaleString()} chars → data/bill-text/${bill.id}.txt`);
+    const lines = clean.split('\n').filter(l => l.trim()).length;
+    console.log(`  ✓ ${lines} lines, ${clean.length.toLocaleString()} chars → data/bill-text/${bill.id}.txt`);
     return true;
 }
 

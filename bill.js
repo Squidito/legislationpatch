@@ -114,23 +114,63 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ---- Bill text rendering ----
 
 function cleanBillText(text) {
+  // Safety pass — files are pre-cleaned at save time; this catches any residue
   return text
-    // Decode any leftover HTML entities from the source
-    .replace(/&amp;/g,  '&')
-    .replace(/&lt;/g,   '<')
-    .replace(/&gt;/g,   '>')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
-    // Remove GPO typesetting annotations — not part of the statute text
-    .replace(/<<[^>]*>>/g, '')
-    // Fix typewriter-era quotation marks used in GPO publications
-    .replace(/``/g, '“')   // opening double quote
-    .replace(/''/g, '”')   // closing double quote
-    // Normalize spaced double-hyphens to em dash
-    .replace(/ -- /g, ' — ')
-    // Trim trailing whitespace per line and collapse 3+ blank lines to 2
-    .replace(/[ \t]+$/gm, '')
-    .replace(/\n{3,}/g, '\n\n');
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+    .replace(/<<[^>]*>>/g, '').replace(/``/g, '”').replace(/''/g, '”')
+    .replace(/ -- /g, ' — ').replace(/\n{3,}/g, '\n\n');
+}
+
+// Classify and render a single line of bill text
+function renderBtLine(line) {
+  const t = line.trim();
+  if (!t) return '<div class=”bt-blank”></div>';
+
+  // [[Page N]] markers
+  if (/^\[\[Page\b/.test(t))
+    return `<div class=”bt-page-marker”>${escHtml(t)}</div>`;
+
+  // [Citation block]
+  if (/^\[.+\]$/.test(t))
+    return `<div class=”bt-citation”>${escHtml(t)}</div>`;
+
+  // TITLE / SUBTITLE / PART
+  if (/^(TITLE\s+[IVXLC]+|SUBTITLE\s+[A-Z]|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t))
+    return `<div class=”bt-title”>${escHtml(t)}</div>`;
+
+  // Section headers: “1. Name” or “SECTION 1.” or “SEC. 2.”
+  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/i.test(t) || /^\d+\.\s+[A-Z]/.test(t))
+    return `<div class=”bt-section”>${escHtml(t)}</div>`;
+
+  // Enacting / resolving clause
+  if (/^be it (enacted|resolved)\b/i.test(t))
+    return `<div class=”bt-enacting”>${escHtml(t)}</div>`;
+
+  // Subsection (a) (b) — level 1
+  const subM = t.match(/^(\([a-z]+\)) ([\s\S]+)/i);
+  if (subM && !/^\([ivxlc]{2,}\)/i.test(t))
+    return `<div class=”bt-item bt-l1”><span class=”bt-lbl”>${escHtml(subM[1])}</span>${escHtml(subM[2])}</div>`;
+
+  // Paragraph (1) (2) — level 2
+  const parM = t.match(/^(\(\d+\)) ([\s\S]+)/);
+  if (parM)
+    return `<div class=”bt-item bt-l2”><span class=”bt-lbl”>${escHtml(parM[1])}</span>${escHtml(parM[2])}</div>`;
+
+  // Subparagraph (A) (B) — level 3
+  const subpM = t.match(/^(\([A-Z]\)) ([\s\S]+)/);
+  if (subpM)
+    return `<div class=”bt-item bt-l3”><span class=”bt-lbl”>${escHtml(subpM[1])}</span>${escHtml(subpM[2])}</div>`;
+
+  // Clause (i) (ii) (iii) — level 4
+  const clM = t.match(/^(\([ivxlc]+\)) ([\s\S]+)/i);
+  if (clM)
+    return `<div class=”bt-item bt-l4”><span class=”bt-lbl”>${escHtml(clM[1])}</span>${escHtml(clM[2])}</div>`;
+
+  // Regular text — preserve indentation level from leading whitespace
+  const spaces = line.match(/^(\s*)/)[1].length;
+  const iCls   = spaces >= 8 ? ' bt-l4' : spaces >= 6 ? ' bt-l3' : spaces >= 4 ? ' bt-l2' : spaces >= 2 ? ' bt-l1' : '';
+  return `<div class=”bt-text${iCls}”>${escHtml(t)}</div>`;
 }
 
 function renderBillText(rawText, bill) {
@@ -138,21 +178,30 @@ function renderBillText(rawText, bill) {
 
   const text  = cleanBillText(rawText);
   const lines = text.split('\n');
-  const htmlLines = lines.map(line => {
-    const esc  = escHtml(line);
-    const trim = line.trim();
-    if (/^TITLE\s+[IVXLC]+/i.test(trim))                        return `<span class="bt-title">${esc}</span>`;
-    if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/i.test(trim))        return `<span class="bt-section">${esc}</span>`;
-    if (/^(SUBTITLE|PART|CHAPTER)\s+[IVXLCA-Z]+/i.test(trim))   return `<span class="bt-section">${esc}</span>`;
-    return esc;
-  });
 
-  return `<div class="bill-text-container">
-    <div class="bill-text-header">
-      <span class="bill-text-label">Full Bill Text</span>
-      <span class="bill-text-source">${escHtml(bill.code || '')} &middot; Congress.gov</span>
+  // Separate preamble (everything before “Be it enacted” or first section)
+  let splitAt = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^be it (enacted|resolved)\b/i.test(t)) { splitAt = i; break; }
+    if (/^(SECTION|SEC\.)\s+\d/i.test(t) || /^\d+\.\s+[A-Z]/.test(t)) { splitAt = i; break; }
+  }
+
+  const preambleLines = splitAt > 0 ? lines.slice(0, splitAt) : [];
+  const statuteLines  = splitAt >= 0 ? lines.slice(splitAt) : lines;
+
+  const preambleHtml = preambleLines.some(l => l.trim())
+    ? `<div class=”bt-preamble”>${escHtml(preambleLines.join('\n'))}</div>` : '';
+
+  return `<div class=”bill-text-container”>
+    <div class=”bill-text-header”>
+      <span class=”bill-text-label”>Full Bill Text</span>
+      <span class=”bill-text-source”>${escHtml(bill.code || '')} &middot; Congress.gov</span>
     </div>
-    <pre class="bill-text-body">${htmlLines.join('\n')}</pre>
+    <div class=”bill-text-body”>
+      ${preambleHtml}
+      ${statuteLines.map(renderBtLine).join('')}
+    </div>
   </div>`;
 }
 

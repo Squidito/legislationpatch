@@ -1918,17 +1918,72 @@ a:hover { text-decoration: underline; }
   color: var(--text-3);
 }
 .bill-text-body {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.85;
+  color: var(--text);
+  padding: 0 22px 22px;
+}
+/* Preamble block — citation metadata before the statute */
+.bt-preamble {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  line-height: 1.8;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--text-3);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 22px;
+  margin: 0 -22px 18px;
   white-space: pre-wrap;
   word-break: break-word;
-  color: var(--text-2);
-  margin: 0;
-  padding: 18px 20px;
 }
-.bt-section { font-weight: 600; color: var(--text); }
-.bt-title    { font-weight: 700; color: var(--purple); }
+/* Section and title headers */
+.bt-title {
+  font-family: var(--font-mono);
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin: 2em 0 0.3em;
+  padding-top: 1.1em;
+  border-top: 1px solid var(--border);
+}
+.bt-section {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 1.75em 0 0.3em;
+  padding-top: 0.85em;
+  border-top: 1px solid var(--border);
+}
+/* Enacting clause */
+.bt-enacting {
+  font-style: italic;
+  color: var(--text-2);
+  font-size: 0.85rem;
+  margin: 0.5em 0 1.25em;
+}
+/* Subsection / paragraph items */
+.bt-item, .bt-text {
+  margin-bottom: 0.3em;
+  word-break: break-word;
+}
+.bt-lbl {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: var(--text-2);
+  margin-right: 0.35em;
+}
+/* Indent levels */
+.bt-l1 { margin-left: 1.4rem; }
+.bt-l2 { margin-left: 2.8rem; }
+.bt-l3 { margin-left: 4.2rem; }
+.bt-l4 { margin-left: 5.6rem; }
+/* Utility */
+.bt-blank        { height: 0.45em; }
+.bt-page-marker  { font-family: var(--font-mono); font-size: 0.63rem; color: var(--text-3); text-align: center; margin: 0.6em 0; opacity: 0.55; }
+.bt-citation     { font-family: var(--font-mono); font-size: 0.67rem; color: var(--text-3); margin-bottom: 0.1em; }
 
 /* AI analysis */
 .ai-btn {
