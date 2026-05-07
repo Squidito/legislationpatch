@@ -196,6 +196,10 @@ function renderBtLine(line) {
   const clM = t.match(/^(\([ivxlc]+\))\s+([\s\S]+)/i);
   if (clM) return lbl(clM, 'bt-l4');
 
+  // Add breathing room before “Approved” date and legislative history lines
+  if (/^Approved\s+\w/i.test(t) || /^LEGISLATIVE HISTORY/i.test(t))
+    return '<div style=”height:1.4rem”></div>' + `<div class=”bt-text”>${escHtml(t)}</div>`;
+
   return `<div class=”bt-text”>${escHtml(t)}</div>`;
 }
 
