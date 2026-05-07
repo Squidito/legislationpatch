@@ -1938,7 +1938,7 @@ a:hover { text-decoration: underline; }
   margin: 0 -28px 22px;
   word-break: break-word;
 }
-.bt-epilogue { border-top: 1px solid var(--border); border-bottom: none; margin-top: 24px; margin-bottom: 0; }
+.bt-epilogue { border-top: 1px solid var(--border); border-bottom: none; margin-top: 28px; padding-top: 14px; margin-bottom: 0; }
 /* Section and title headers — centered for document-style clarity */
 .bt-title {
   font-family: var(--font-mono);
