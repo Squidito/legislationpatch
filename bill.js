@@ -132,7 +132,9 @@ function joinContinuations(lines) {
     /^be it (enacted|resolved)\b/i.test(t) ||
     /^(SECTION|SEC\.)\s+\d/i.test(t) ||
     /^\d+\.\s+[A-Z]/.test(t) ||
-    /^(TITLE\s+[IVXLC]+|SUBTITLE|PART|CHAPTER)\s+[IVXA-Z]/i.test(t) ||
+    // No /i flag — TITLE/SUBTITLE headers are ALL CAPS; avoids matching
+    // inline references like "title VII of the Foreign Intelligence..."
+    /^(TITLE\s+[IVXLC]+|SUBTITLE\s+|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t) ||
     /^\([a-zA-Z0-9ivxlc]+\)/i.test(t) ||
     /^-{5,}/.test(t);
 
@@ -178,9 +180,10 @@ function renderBtLine(line) {
   const lbl = (m, cls) =>
     `<div class=”bt-item ${cls}”><span class=”bt-lbl”>${escHtml(m[1])}</span> ${escHtml(m[2].trim())}</div>`;
 
-  // Subsection (a) (b) — level 1
+  // Subsection (a) (b) — level 1; prepend a spacer for visual separation
   const subM = t.match(/^(\([a-z]+\))\s+([\s\S]+)/i);
-  if (subM && !/^\([ivxlc]{2,}\)/i.test(t)) return lbl(subM, 'bt-l1');
+  if (subM && !/^\([ivxlc]{2,}\)/i.test(t))
+    return '<div class="bt-break"></div>' + lbl(subM, 'bt-l1');
 
   // Paragraph (1) (2) — level 2
   const parM = t.match(/^(\(\d+\))\s+([\s\S]+)/);

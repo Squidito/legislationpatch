@@ -1936,14 +1936,16 @@ a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   padding: 14px 28px;
   margin: 0 -28px 22px;
+  white-space: pre-wrap;
   word-break: break-word;
 }
-/* Section and title headers */
+/* Section and title headers — centered for document-style clarity */
 .bt-title {
   font-family: var(--font-mono);
   font-size: 0.83rem;
   font-weight: 700;
   color: var(--purple);
+  text-align: center;
   margin: 2.25em 0 0.5em;
   padding-top: 1.25em;
   border-top: 1px solid var(--border);
@@ -1953,6 +1955,7 @@ a:hover { text-decoration: underline; }
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--text);
+  text-align: center;
   margin: 2em 0 0.6em;
   padding-top: 1em;
   border-top: 1px solid var(--border);
@@ -1985,10 +1988,10 @@ a:hover { text-decoration: underline; }
 .bt-l2 { margin-left: 3rem; }
 .bt-l3 { margin-left: 4.5rem; }
 .bt-l4 { margin-left: 6rem; }
-/* Extra breathing room before each subsection (a)(b)(c) */
-.bt-item.bt-l1 { margin-top: 1.1em; }
+/* Explicit spacer injected before each (a)(b)(c) subsection */
+.bt-break { height: 1rem; }
 /* Slight separation between numbered paragraphs (1)(2) */
-.bt-item.bt-l2 { margin-top: 0.5em; }
+.bt-item.bt-l2 { margin-top: 0.45em; }
 /* Utility */
 .bt-blank        { height: 0.6em; }
 .bt-page-marker  { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-3); text-align: center; margin: 1em 0; opacity: 0.5; }
