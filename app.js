@@ -1535,7 +1535,7 @@ function renderBody(bill, isOpen, col) {
     </div>` : '';
 
   const viewBillLink = window.BILL_PAGE_ID ? '' :
-    `<div class="view-bill-link-row"><a href="bill.html?id=${escHtml(bill.id)}&ref=bills">View full bill page →</a></div>`;
+    `<div class="view-bill-link-row"><a href="bill.html?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`;
 
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
     ${topLinesHtml}
