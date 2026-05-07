@@ -7,16 +7,16 @@ function renderAll() {
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
   if (!bill) return;
   document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
-  const isFullOpen = openCards.get(window.BILL_PAGE_ID) === 'full';
-  const btn = document.getElementById('analysisToggle');
-  if (btn) btn.textContent = isFullOpen ? '▲ Collapse analysis' : '▼ Show analysis';
 }
 
-// On the bill page, toggle between full ↔ minor (never close entirely)
+// On the bill page, toggle between full expansion and fully hidden (no minor state)
 function toggleCard(id) {
-  const state = openCards.get(id);
-  openCards.set(id, state === 'full' ? 'minor' : 'full');
-  renderAll();
+  const mount = document.getElementById('bill-card-mount');
+  if (!mount) return;
+  const hiding = mount.style.display !== 'none';
+  mount.style.display = hiding ? 'none' : '';
+  const btn = document.getElementById('analysisToggle');
+  if (btn) btn.textContent = hiding ? '▼ Show analysis' : '▲ Collapse analysis';
 }
 
 // ---- Init ----

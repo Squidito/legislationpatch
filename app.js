@@ -1537,7 +1537,23 @@ function renderBody(bill, isOpen, col) {
   const viewBillLink = window.BILL_PAGE_ID ? '' :
     `<div class="view-bill-link-row"><a href="bill?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`;
 
+  const stageDetailHtml = bill.stage === 'signed'
+    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid var(--green)">
+        <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` · Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
+      </div>`
+    : bill.stage === 'vetoed'
+    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid var(--red)">
+        <div class="likelihood-detail-title" style="color:var(--red)">Vetoed by President</div>
+        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
+      </div>`
+    : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid ${col.fill}">
+        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
+        <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
+      </div>`;
+
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
+    ${stageDetailHtml}
     ${topLinesHtml}
     ${renderChangesSection(bill)}
     ${renderQuoteCards(bill)}
