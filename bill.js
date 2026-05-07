@@ -114,12 +114,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ---- Bill text rendering ----
 
 function cleanBillText(text) {
-  // Safety pass — files are pre-cleaned at save time; this catches any residue
   return text
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
     .replace(/<<[^>]*>>/g, '').replace(/``/g, '”').replace(/''/g, '”')
-    .replace(/ -- /g, ' — ').replace(/\n{3,}/g, '\n\n');
+    .replace(/ -- /g, ' — ').replace(/<all>/gi, '').replace(/\n{3,}/g, '\n\n');
 }
 
 // Join continuation lines — source files wrap long lines at ~72 chars.
@@ -215,19 +214,38 @@ function renderBillText(rawText, bill) {
   }
 
   const preambleLines = splitAt > 0 ? lines.slice(0, splitAt).filter(l => l.trim()) : [];
-  const statuteLines  = splitAt >= 0 ? lines.slice(splitAt) : lines;
+  let   statuteLines  = splitAt >= 0 ? lines.slice(splitAt) : lines;
 
-  const preambleHtml = preambleLines.length
-    ? `<div class=”bt-preamble”>${preambleLines.map(l => escHtml(l)).join('\n')}</div>` : '';
+  // Detect epilogue: “Approved [Month]” or “LEGISLATIVE HISTORY” marks the end
+  // of the statute proper. Separate it into a footer block like the preamble.
+  let epilogueStart = -1;
+  for (let i = 0; i < statuteLines.length; i++) {
+    const t = statuteLines[i].trim();
+    if (/^Approved\s+(January|February|March|April|May|June|July|August|September|October|November|December)/i.test(t) ||
+        /^LEGISLATIVE HISTORY/i.test(t)) {
+      epilogueStart = i;
+      break;
+    }
+  }
+  const epilogueLines = epilogueStart >= 0 ? statuteLines.slice(epilogueStart).filter(l => l.trim()) : [];
+  if (epilogueStart >= 0) statuteLines = statuteLines.slice(0, epilogueStart);
 
+  // Render preamble and epilogue as block-per-line divs — no CSS white-space dependency
+  const renderMeta = (lines, cls) =>
+    lines.length
+      ? `<div class=”${cls}”>${lines.map(l => `<div>${escHtml(l)}</div>`).join('')}</div>`
+      : '';
+
+  // Header uses block divs so stacking works without CSS flex
   return `<div class=”bill-text-container”>
     <div class=”bill-text-header”>
-      <span class=”bill-text-label”>Full Bill Text</span>
-      <span class=”bill-text-source”>${escHtml(bill.code || '')} &middot; Congress.gov</span>
+      <div class=”bill-text-label”>Full Bill Text</div>
+      <div class=”bill-text-source”>${escHtml(bill.code || '')} &middot; Congress.gov</div>
     </div>
     <div class=”bill-text-body”>
-      ${preambleHtml}
+      ${renderMeta(preambleLines, 'bt-preamble')}
       ${statuteLines.map(renderBtLine).join('')}
+      ${renderMeta(epilogueLines, 'bt-epilogue')}
     </div>
   </div>`;
 }
@@ -235,8 +253,8 @@ function renderBillText(rawText, bill) {
 function billTextPlaceholder(bill) {
   return `<div class="bill-text-container">
     <div class="bill-text-header">
-      <span class="bill-text-label">Full Bill Text</span>
-      <span class="bill-text-source">${escHtml(bill.code || '')} &middot; Congress.gov</span>
+      <div class="bill-text-label">Full Bill Text</div>
+      <div class="bill-text-source">${escHtml(bill.code || '')} &middot; Congress.gov</div>
     </div>
     <div style="padding:2rem 1.25rem;color:var(--text-3);font-size:0.85rem">
       Full text will appear here after the bill is reprocessed with the updated pipeline.
