@@ -106,6 +106,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       textMount.innerHTML = billTextPlaceholder(bill);
     }
+    if (window.location.hash) {
+      setTimeout(() => scrollToBillSection(window.location.hash.slice(1)), 150);
+    }
   } catch (e) {
     textMount.innerHTML = billTextPlaceholder(bill);
   }
@@ -117,7 +120,7 @@ function cleanBillText(text) {
   return text
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
-    .replace(/<<[^>]*>>/g, '').replace(/``/g, '”').replace(/''/g, '”')
+    .replace(/<<[^>]*>>/g, '').replace(/``/g, '"').replace(/''/g, '"')
     .replace(/ -- /g, ' — ').replace(/<all>/gi, '').replace(/\n{3,}/g, '\n\n');
 }
 
@@ -153,31 +156,37 @@ function joinContinuations(lines) {
 // Classify and render a single (already-joined) line of bill text
 function renderBtLine(line) {
   const t = line.trim();
-  if (!t) return '<div class=”bt-blank”></div>';
+  if (!t) return '<div class="bt-blank"></div>';
 
   // [[Page N]] markers
   if (/^\[\[Page\b/.test(t))
-    return `<div class=”bt-page-marker”>${escHtml(t)}</div>`;
+    return `<div class="bt-page-marker">${escHtml(t)}</div>`;
 
   // [Citation block]
   if (/^\[.+\]$/.test(t))
-    return `<div class=”bt-citation”>${escHtml(t)}</div>`;
+    return `<div class="bt-citation">${escHtml(t)}</div>`;
 
   // TITLE / SUBTITLE / PART
-  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t))
-    return `<div class=”bt-title”>${escHtml(t)}</div>`;
+  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t)) {
+    const titleM = t.match(/^TITLE\s+([IVXLC]+)/i);
+    const id = titleM ? ` id="bt-title-${titleM[1].toUpperCase()}"` : '';
+    return `<div class="bt-title"${id}>${escHtml(t)}</div>`;
+  }
 
-  // Section headers: “1. Name” or “SECTION 1.” or “SEC. 2.”
-  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/i.test(t) || /^\d+\.\s+[A-Z]/.test(t))
-    return `<div class=”bt-section”>${escHtml(t)}</div>`;
+  // Section headers: "1. Name" or "SECTION 1." or "SEC. 2."
+  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/i.test(t) || /^\d+\.\s+[A-Z]/.test(t)) {
+    const secM = t.match(/^(?:SECTION|SEC\.)\s+(\d+)/i) || t.match(/^(\d+)\./);
+    const id = secM ? ` id="bt-sec-${secM[1]}"` : '';
+    return `<div class="bt-section"${id}>${escHtml(t)}</div>`;
+  }
 
   // Enacting / resolving clause
   if (/^be it (enacted|resolved)\b/i.test(t))
-    return `<div class=”bt-enacting”>${escHtml(t)}</div>`;
+    return `<div class="bt-enacting">${escHtml(t)}</div>`;
 
   // Helper: split label from rest, allow optional whitespace
   const lbl = (m, cls) =>
-    `<div class=”bt-item ${cls}”><span class=”bt-lbl”>${escHtml(m[1])}</span> ${escHtml(m[2].trim())}</div>`;
+    `<div class="bt-item ${cls}"><span class="bt-lbl">${escHtml(m[1])}</span> ${escHtml(m[2].trim())}</div>`;
 
   // Subsection (a) (b) — level 1; prepend a spacer for visual separation
   const subM = t.match(/^(\([a-z]+\))\s+([\s\S]+)/i);
@@ -196,11 +205,11 @@ function renderBtLine(line) {
   const clM = t.match(/^(\([ivxlc]+\))\s+([\s\S]+)/i);
   if (clM) return lbl(clM, 'bt-l4');
 
-  // Add breathing room before “Approved” date and legislative history lines
+  // Add breathing room before "Approved" date and legislative history lines
   if (/^Approved\s+\w/i.test(t) || /^LEGISLATIVE HISTORY/i.test(t))
-    return '<div style=”height:1.4rem”></div>' + `<div class=”bt-text”>${escHtml(t)}</div>`;
+    return '<div style="height:1.4rem"></div>' + `<div class="bt-text">${escHtml(t)}</div>`;
 
-  return `<div class=”bt-text”>${escHtml(t)}</div>`;
+  return `<div class="bt-text">${escHtml(t)}</div>`;
 }
 
 function renderBillText(rawText, bill) {
@@ -209,7 +218,7 @@ function renderBillText(rawText, bill) {
   const text  = cleanBillText(rawText);
   const lines = joinContinuations(text.split('\n'));
 
-  // Separate preamble (everything before “Be it enacted” or first section)
+  // Separate preamble (everything before "Be it enacted" or first section)
   let splitAt = -1;
   for (let i = 0; i < lines.length; i++) {
     const t = lines[i].trim();
@@ -220,7 +229,7 @@ function renderBillText(rawText, bill) {
   const preambleLines = splitAt > 0 ? lines.slice(0, splitAt).filter(l => l.trim()) : [];
   let   statuteLines  = splitAt >= 0 ? lines.slice(splitAt) : lines;
 
-  // Detect epilogue: “Approved [Month]” or “LEGISLATIVE HISTORY” marks the end
+  // Detect epilogue: "Approved [Month]" or "LEGISLATIVE HISTORY" marks the end
   // of the statute proper. Separate it into a footer block like the preamble.
   let epilogueStart = -1;
   for (let i = 0; i < statuteLines.length; i++) {
@@ -237,16 +246,16 @@ function renderBillText(rawText, bill) {
   // Render preamble and epilogue as block-per-line divs — no CSS white-space dependency
   const renderMeta = (lines, cls) =>
     lines.length
-      ? `<div class=”${cls}”>${lines.map(l => `<div>${escHtml(l)}</div>`).join('')}</div>`
+      ? `<div class="${cls}">${lines.map(l => `<div>${escHtml(l)}</div>`).join('')}</div>`
       : '';
 
   // Header uses block divs so stacking works without CSS flex
-  return `<div class=”bill-text-container”>
-    <div class=”bill-text-header”>
-      <div class=”bill-text-label”>Full Bill Text</div>
-      <div class=”bill-text-source”>${escHtml(bill.code || '')} &middot; Congress.gov</div>
+  return `<div class="bill-text-container">
+    <div class="bill-text-header">
+      <div class="bill-text-label">Full Bill Text</div>
+      <div class="bill-text-source">${escHtml(bill.code || '')} &middot; Congress.gov</div>
     </div>
-    <div class=”bill-text-body”>
+    <div class="bill-text-body">
       ${renderMeta(preambleLines, 'bt-preamble')}
       ${statuteLines.map(renderBtLine).join('')}
       ${renderMeta(epilogueLines, 'bt-epilogue')}
@@ -270,6 +279,16 @@ function billTextPlaceholder(bill) {
       </a>
     </div>
   </div>`;
+}
+
+// ---- Bill text section linking ----
+
+function scrollToBillSection(anchorId) {
+  const el = document.getElementById(anchorId);
+  if (!el) return;
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  el.classList.add('bt-section-flash');
+  setTimeout(() => el.classList.remove('bt-section-flash'), 1500);
 }
 
 // ---- Theme (mirrors rep.js) ----

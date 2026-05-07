@@ -1329,13 +1329,17 @@ function renderTopLines(bill) {
       </div>`;
     }
     // New headline + subs format
+    const tlAnchor = window.BILL_PAGE_ID && item.billSection ? `bt-sec-${item.billSection}` : null;
+    const headlineHtml = tlAnchor
+      ? `<a class="top-line-headline-link" href="#${tlAnchor}" onclick="event.preventDefault();scrollToBillSection('${tlAnchor}')">${escHtml(item.headline || '')}</a>`
+      : escHtml(item.headline || '');
     const subs = (item.subs || []).slice(0, 3).map(s =>
       `<div class="top-line-sub">${billRefHtml(s, bill.id)}</div>`
     ).join('');
     return `<div class="top-line-item">
       <span class="top-line-bullet">—</span>
       <div class="top-line-content">
-        <div class="top-line-headline">${escHtml(item.headline || '')}</div>
+        <div class="top-line-headline">${headlineHtml}</div>
         ${subs}
       </div>
     </div>`;
@@ -1566,9 +1570,22 @@ function renderBody(bill, isOpen, col) {
   </div>`;
 }
 
+function patchSectionAnchor(sec) {
+  if (sec.billSection) return `bt-sec-${sec.billSection}`;
+  const secM = sec.label?.match(/^Sections?\s+(\d+)/i);
+  if (secM) return `bt-sec-${secM[1]}`;
+  const titleM = sec.label?.match(/^Title\s+([IVXLC]+)/i);
+  if (titleM) return `bt-title-${titleM[1].toUpperCase()}`;
+  return null;
+}
+
 function renderSection(bill, sec, si) {
+  const anchor = window.BILL_PAGE_ID ? patchSectionAnchor(sec) : null;
+  const titleHtml = anchor
+    ? `<a class="patch-section-title-link" href="#${anchor}" onclick="event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(sec.label)}</a>`
+    : escHtml(sec.label);
   return `<div class="patch-section">
-    <div class="patch-section-title">${escHtml(sec.label)}</div>
+    <div class="patch-section-title">${titleHtml}</div>
     ${sec.items.map((item, ii) => renderItem(bill, item, si, ii)).join('')}
   </div>`;
 }

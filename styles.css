@@ -1559,6 +1559,12 @@ a:hover { text-decoration: underline; }
   100% { background: transparent; }
 }
 .bill-ref-flash { animation: bill-flash 1.2s ease; }
+@keyframes bt-section-flash {
+  0%   { background: transparent; }
+  15%  { background: rgba(109, 79, 199, 0.25); }
+  100% { background: transparent; }
+}
+.bt-section-flash { animation: bt-section-flash 1.5s ease; }
 
 /* Top lines — H1-equivalent bill overview */
 .top-lines {
@@ -1606,6 +1612,20 @@ a:hover { text-decoration: underline; }
   color: var(--text);
   line-height: 1.3;
 }
+.top-line-headline-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.top-line-headline-link::after {
+  content: ' ↓';
+  font-size: 0.7em;
+  font-weight: 400;
+  opacity: 0.3;
+  transition: opacity 0.15s;
+}
+.top-line-headline-link:hover { text-decoration: underline; text-decoration-color: var(--purple); text-underline-offset: 3px; }
+.top-line-headline-link:hover::after { opacity: 0.65; }
 .top-line-sub {
   font-size: 0.8rem;
   font-weight: 400;
@@ -1656,6 +1676,18 @@ a:hover { text-decoration: underline; }
   color: var(--text-3);
   margin-bottom: 7px;
 }
+.patch-section-title-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.patch-section-title-link::after {
+  content: ' ↓';
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+.patch-section-title-link:hover { text-decoration: underline; text-decoration-color: var(--purple); text-underline-offset: 3px; }
+.patch-section-title-link:hover::after { opacity: 0.75; }
 .patch-item {
   margin-bottom: 8px;
   border-left: 2px solid var(--border-strong);
@@ -1960,7 +1992,9 @@ a:hover { text-decoration: underline; }
   padding-top: 1em;
   border-top: 1px solid var(--border);
   word-break: break-word;
+  scroll-margin-top: 60px;
 }
+.bt-title { scroll-margin-top: 60px; }
 /* Enacting clause */
 .bt-enacting {
   font-style: italic;
