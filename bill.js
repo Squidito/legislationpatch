@@ -113,10 +113,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // ---- Bill text rendering ----
 
+function cleanBillText(text) {
+  return text
+    // Decode any leftover HTML entities from the source
+    .replace(/&amp;/g,  '&')
+    .replace(/&lt;/g,   '<')
+    .replace(/&gt;/g,   '>')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+    // Remove GPO typesetting annotations — not part of the statute text
+    .replace(/<<[^>]*>>/g, '')
+    // Fix typewriter-era quotation marks used in GPO publications
+    .replace(/``/g, '“')   // opening double quote
+    .replace(/''/g, '”')   // closing double quote
+    // Normalize spaced double-hyphens to em dash
+    .replace(/ -- /g, ' — ')
+    // Trim trailing whitespace per line and collapse 3+ blank lines to 2
+    .replace(/[ \t]+$/gm, '')
+    .replace(/\n{3,}/g, '\n\n');
+}
+
 function renderBillText(rawText, bill) {
   if (!rawText?.trim()) return billTextPlaceholder(bill);
 
-  const lines = rawText.split('\n');
+  const text  = cleanBillText(rawText);
+  const lines = text.split('\n');
   const htmlLines = lines.map(line => {
     const esc  = escHtml(line);
     const trim = line.trim();

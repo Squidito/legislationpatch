@@ -48,7 +48,15 @@ function extractFirstJSON(text) {
 }
 
 function cleanHTML(html) {
-    return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    return html
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+        .replace(/\s+/g, ' ')
+        .trim();
 }
 
 function chunkText(text, chunkSize = 3000, overlap = 500) {
