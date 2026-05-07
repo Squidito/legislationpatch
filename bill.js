@@ -7,16 +7,27 @@ function renderAll() {
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
   if (!bill) return;
   document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
+  const isFull = openCards.get(window.BILL_PAGE_ID) === 'full';
+  const btn = document.getElementById('analysisToggle');
+  if (btn) btn.textContent = isFull ? '▲ Collapse analysis' : '▼ Show analysis';
 }
 
-// On the bill page, toggle between full expansion and fully hidden (no minor state)
+// On the bill page, toggle between full expansion and closed (header only, no body)
 function toggleCard(id) {
-  const mount = document.getElementById('bill-card-mount');
-  if (!mount) return;
-  const hiding = mount.style.display !== 'none';
-  mount.style.display = hiding ? 'none' : '';
-  const btn = document.getElementById('analysisToggle');
-  if (btn) btn.textContent = hiding ? '▼ Show analysis' : '▲ Collapse analysis';
+  const isFull = openCards.get(id) === 'full';
+  if (isFull) {
+    openCards.delete(id);
+  } else {
+    openCards.set(id, 'full');
+    // Re-open all detail panels when expanding
+    const bill = allBills.find(b => b.id === id);
+    (bill?.sections || []).forEach((sec, si) => {
+      (sec.items || []).forEach((item, ii) => {
+        if (item.detail) openDetails[`${id}-${si}-${ii}`] = true;
+      });
+    });
+  }
+  renderAll();
 }
 
 // ---- Init ----
