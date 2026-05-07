@@ -122,7 +122,34 @@ function cleanBillText(text) {
     .replace(/ -- /g, ' — ').replace(/\n{3,}/g, '\n\n');
 }
 
-// Classify and render a single line of bill text
+// Join continuation lines — source files wrap long lines at ~72 chars.
+// A line is a continuation if it doesn't open a new structural element.
+function joinContinuations(lines) {
+  const isBreak = t =>
+    !t ||
+    /^\[\[Page\b/.test(t) ||
+    /^\[.+\]$/.test(t) ||
+    /^be it (enacted|resolved)\b/i.test(t) ||
+    /^(SECTION|SEC\.)\s+\d/i.test(t) ||
+    /^\d+\.\s+[A-Z]/.test(t) ||
+    /^(TITLE\s+[IVXLC]+|SUBTITLE|PART|CHAPTER)\s+[IVXA-Z]/i.test(t) ||
+    /^\([a-zA-Z0-9ivxlc]+\)/i.test(t) ||
+    /^-{5,}/.test(t);
+
+  const out = [];
+  for (const line of lines) {
+    const t = line.trim();
+    if (!out.length || isBreak(t)) {
+      out.push(t);
+    } else {
+      const prev = out[out.length - 1];
+      out[out.length - 1] = prev ? prev + ' ' + t : t;
+    }
+  }
+  return out;
+}
+
+// Classify and render a single (already-joined) line of bill text
 function renderBtLine(line) {
   const t = line.trim();
   if (!t) return '<div class=”bt-blank”></div>';
@@ -136,7 +163,7 @@ function renderBtLine(line) {
     return `<div class=”bt-citation”>${escHtml(t)}</div>`;
 
   // TITLE / SUBTITLE / PART
-  if (/^(TITLE\s+[IVXLC]+|SUBTITLE\s+[A-Z]|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t))
+  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t))
     return `<div class=”bt-title”>${escHtml(t)}</div>`;
 
   // Section headers: “1. Name” or “SECTION 1.” or “SEC. 2.”
@@ -147,37 +174,34 @@ function renderBtLine(line) {
   if (/^be it (enacted|resolved)\b/i.test(t))
     return `<div class=”bt-enacting”>${escHtml(t)}</div>`;
 
+  // Helper: split label from rest, allow optional whitespace
+  const lbl = (m, cls) =>
+    `<div class=”bt-item ${cls}”><span class=”bt-lbl”>${escHtml(m[1])}</span> ${escHtml(m[2].trim())}</div>`;
+
   // Subsection (a) (b) — level 1
-  const subM = t.match(/^(\([a-z]+\)) ([\s\S]+)/i);
-  if (subM && !/^\([ivxlc]{2,}\)/i.test(t))
-    return `<div class=”bt-item bt-l1”><span class=”bt-lbl”>${escHtml(subM[1])}</span>${escHtml(subM[2])}</div>`;
+  const subM = t.match(/^(\([a-z]+\))\s+([\s\S]+)/i);
+  if (subM && !/^\([ivxlc]{2,}\)/i.test(t)) return lbl(subM, 'bt-l1');
 
   // Paragraph (1) (2) — level 2
-  const parM = t.match(/^(\(\d+\)) ([\s\S]+)/);
-  if (parM)
-    return `<div class=”bt-item bt-l2”><span class=”bt-lbl”>${escHtml(parM[1])}</span>${escHtml(parM[2])}</div>`;
+  const parM = t.match(/^(\(\d+\))\s+([\s\S]+)/);
+  if (parM) return lbl(parM, 'bt-l2');
 
   // Subparagraph (A) (B) — level 3
-  const subpM = t.match(/^(\([A-Z]\)) ([\s\S]+)/);
-  if (subpM)
-    return `<div class=”bt-item bt-l3”><span class=”bt-lbl”>${escHtml(subpM[1])}</span>${escHtml(subpM[2])}</div>`;
+  const subpM = t.match(/^(\([A-Z]\))\s+([\s\S]+)/);
+  if (subpM) return lbl(subpM, 'bt-l3');
 
   // Clause (i) (ii) (iii) — level 4
-  const clM = t.match(/^(\([ivxlc]+\)) ([\s\S]+)/i);
-  if (clM)
-    return `<div class=”bt-item bt-l4”><span class=”bt-lbl”>${escHtml(clM[1])}</span>${escHtml(clM[2])}</div>`;
+  const clM = t.match(/^(\([ivxlc]+\))\s+([\s\S]+)/i);
+  if (clM) return lbl(clM, 'bt-l4');
 
-  // Regular text — preserve indentation level from leading whitespace
-  const spaces = line.match(/^(\s*)/)[1].length;
-  const iCls   = spaces >= 8 ? ' bt-l4' : spaces >= 6 ? ' bt-l3' : spaces >= 4 ? ' bt-l2' : spaces >= 2 ? ' bt-l1' : '';
-  return `<div class=”bt-text${iCls}”>${escHtml(t)}</div>`;
+  return `<div class=”bt-text”>${escHtml(t)}</div>`;
 }
 
 function renderBillText(rawText, bill) {
   if (!rawText?.trim()) return billTextPlaceholder(bill);
 
   const text  = cleanBillText(rawText);
-  const lines = text.split('\n');
+  const lines = joinContinuations(text.split('\n'));
 
   // Separate preamble (everything before “Be it enacted” or first section)
   let splitAt = -1;
@@ -187,11 +211,11 @@ function renderBillText(rawText, bill) {
     if (/^(SECTION|SEC\.)\s+\d/i.test(t) || /^\d+\.\s+[A-Z]/.test(t)) { splitAt = i; break; }
   }
 
-  const preambleLines = splitAt > 0 ? lines.slice(0, splitAt) : [];
+  const preambleLines = splitAt > 0 ? lines.slice(0, splitAt).filter(l => l.trim()) : [];
   const statuteLines  = splitAt >= 0 ? lines.slice(splitAt) : lines;
 
-  const preambleHtml = preambleLines.some(l => l.trim())
-    ? `<div class=”bt-preamble”>${escHtml(preambleLines.join('\n'))}</div>` : '';
+  const preambleHtml = preambleLines.length
+    ? `<div class=”bt-preamble”>${preambleLines.map(l => escHtml(l)).join('\n')}</div>` : '';
 
   return `<div class=”bill-text-container”>
     <div class=”bill-text-header”>
