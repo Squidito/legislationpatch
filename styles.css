@@ -1222,8 +1222,11 @@ a:hover { text-decoration: underline; }
   font-style: italic;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   overflow: hidden;
+}
+.quote-card:hover .quote-text {
+  -webkit-line-clamp: 100;
 }
 
 /* Expand-to-full button */
@@ -1636,7 +1639,14 @@ a:hover { text-decoration: underline; }
 }
 
 /* Patch notes */
-.patch-notes { padding: 0.85rem 1.1rem 0; }
+.patch-notes {
+  margin: 0 1.1rem 0.85rem;
+  padding: 10px 14px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--purple-border);
+  border-radius: var(--radius-md);
+}
 .patch-section { margin-bottom: 1rem; }
 .patch-section-title {
   font-size: 0.68rem;
@@ -1652,7 +1662,9 @@ a:hover { text-decoration: underline; }
   padding-left: 10px;
 }
 .patch-item-main {
-  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  font-size: 0.93rem;
+  font-weight: 500;
   line-height: 1.55;
   color: var(--text);
 }
@@ -1820,13 +1832,21 @@ a:hover { text-decoration: underline; }
 .role-no        { background: rgba(168,125,36,0.12);  color: #6B3F00; }
 .role-sponsored { background: rgba(107,107,112,0.10); color: #3d3d40; }
 .role-grey      { background: rgba(158,156,151,0.12); color: #6b6860; }
+/* Gaps section */
+.gaps-section {
+  margin: 0 1.1rem 0.85rem;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(176,106,0,0.28);
+  background: var(--amber-bg);
+}
 .gaps-title {
   font-size: 0.68rem;
-  font-weight: 500;
-  color: var(--amber);
+  font-weight: 600;
+  color: var(--amber-text);
   text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-bottom: 7px;
+  letter-spacing: 0.08em;
+  margin-bottom: 9px;
 }
 .gaps-item {
   font-size: 0.82rem;
@@ -2251,12 +2271,13 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
     margin-left: 0.75rem;
     margin-right: 0.75rem;
   }
-  .patch-notes { padding: 0.65rem 0.75rem 0; }
+  .patch-notes { margin-left: 0.75rem; margin-right: 0.75rem; }
   .what-changed-section { padding: 0 0.75rem 12px; }
   .what-changed-grid { grid-template-columns: 1fr; }
   .section-divider { margin-left: 0.75rem; margin-right: 0.75rem; }
   .criticism-section,
   .underreported-section,
+  .gaps-section,
   .positions-section { margin-left: 0.75rem; margin-right: 0.75rem; }
   .ai-btn  { margin-left: 0.75rem; margin-right: 0.75rem; }
   .ai-output { margin-left: 0.75rem; margin-right: 0.75rem; }
@@ -2362,6 +2383,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 [data-theme="dark"] .rep-dropdown,
 [data-theme="dark"] .underreported-teaser,
 [data-theme="dark"] .top-lines,
+[data-theme="dark"] .patch-notes,
 [data-theme="dark"] .likelihood-detail {
   border-color: var(--border);
 }

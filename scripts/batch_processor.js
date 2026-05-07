@@ -5,6 +5,7 @@ const { SYSTEM_PROMPT, CHUNK_MAP_PROMPT } = require('./prompts');
 
 // --- CONFIGURATION ---
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
+const GOVINFO_API_KEY  = process.env.GOVINFO_API_KEY  || '';
 const CONGRESS_SESSION = parseInt(process.env.CONGRESS_SESSION || '119', 10);
 const LM_STUDIO_URL    = 'http://localhost:1235/v1/chat/completions';
 const MODEL_NAME       = 'local-model';
@@ -419,64 +420,220 @@ async function fetchCRSSummary(bill) {
     }
 }
 
-async function fetchCongressionalRecord(actionDate, billType, billNumber) {
-    if (!actionDate) return '';
-    const d = new Date(actionDate);
-    if (isNaN(d)) return '';
+async function fetchBillActions(congress, type, number) {
+    const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/actions?format=json&limit=250&api_key=${CONGRESS_API_KEY}`;
+    await sleep(2000);
+    try {
+        const res = await fetch(url);
+        if (!res.ok) return [];
+        return (await res.json()).actions || [];
+    } catch (e) {
+        console.error('Failed to fetch bill actions:', e.message);
+        return [];
+    }
+}
+
+function extractFloorDates(actions, fallbackDate) {
+    const FLOOR_KEYWORDS = [
+        'passed house', 'passed senate', 'passed the house', 'passed the senate',
+        'house agreed', 'senate agreed', 'on passage', 'final passage',
+        'motion to reconsider', 'yeas and nays', 'recorded vote', 'roll call',
+        'received in the senate', 'received in the house',
+        'signed by president', 'became public law',
+    ];
+    const dates = new Set();
+    for (const action of (actions || [])) {
+        const text = (action.text || '').toLowerCase();
+        const date = action.actionDate;
+        if (!date) continue;
+        if (FLOOR_KEYWORDS.some(kw => text.includes(kw))) {
+            dates.add(date);
+            // Add day before — floor debate precedes the vote
+            const d = new Date(`${date}T12:00:00`);
+            d.setDate(d.getDate() - 1);
+            dates.add(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`);
+        }
+    }
+    if (fallbackDate && !dates.has(fallbackDate)) dates.add(fallbackDate);
+    return [...dates].sort((a, b) => b.localeCompare(a)); // newest first
+}
+
+// Parse CR page references embedded in action texts: "(text: CR H1147)" → [{date, page}]
+function parseCRPageRefs(actions) {
+    const seen = new Set();
+    const refs  = [];
+    for (const action of (actions || [])) {
+        const date = action.actionDate;
+        if (!date) continue;
+        for (const m of (action.text || '').matchAll(/\bCR\s+([HS]\d+)/g)) {
+            const key = `${date}-${m[1]}`;
+            if (!seen.has(key)) { seen.add(key); refs.push({ date, page: m[1] }); }
+        }
+    }
+    return refs;
+}
+
+// Directly fetch specific CR granules by page reference — fast path, no granule iteration.
+// Each page ref gets the base granule + sub-granule suffixes (-2 through -6) because
+// the CR splits a single page into multiple sub-granules per bill or speaker.
+// Returns the full cleaned granule text (not just mention windows) because when we
+// have the specific bill granule, the whole thing is relevant.
+async function fetchCRByPageRefs(refs, type, number) {
+    if (!GOVINFO_API_KEY || !refs?.length) return '';
+    const chunks = [];
+    const seen   = new Set();
+    for (const { date, page } of refs) {
+        if (chunks.join('').length > 16000) break;
+        const packageId = `CREC-${date}`;
+        for (const suffix of ['', '-2', '-3', '-4', '-5', '-6']) {
+            const granuleId = `${packageId}-pt1-Pg${page}${suffix}`;
+            if (seen.has(granuleId)) continue;
+            seen.add(granuleId);
+            try {
+                await sleep(400);
+                const r = await fetch(
+                    `https://api.govinfo.gov/packages/${packageId}/granules/${granuleId}/htm?api_key=${GOVINFO_API_KEY}`
+                );
+                if (r.status === 429) { await sleep(30000); continue; }
+                if (!r.ok) continue;
+                const text = cleanHTML(await r.text());
+                // Only include granule if it mentions this bill — but return the full
+                // text, not just ±window excerpts, so all speakers are captured.
+                const hasMention = extractBillMentions(text, type, number).length > 0;
+                if (hasMention) {
+                    console.log(`   - Found bill in ${granuleId} (${text.length} chars)`);
+                    chunks.push(text.slice(0, 8000));
+                }
+            } catch (e) { continue; }
+        }
+    }
+    return chunks.join('\n\n===\n\n').slice(0, 20000);
+}
+
+// Single-date CR fetch via GovInfo granules — returns bill mention excerpts or ''
+// Congress.gov CR API only returns PDF links; GovInfo provides the HTML granule text.
+async function fetchCRForDate(dateStr, billType, billNumber) {
+    if (!dateStr || !GOVINFO_API_KEY) return '';
+    const d = new Date(`${dateStr}T12:00:00`);
+    if (isNaN(d.getTime())) return '';
 
     const year  = d.getFullYear();
     const month = d.getMonth() + 1;
     const day   = d.getDate();
 
-    console.log(`   - Fetching Congressional Record for ${year}-${month}-${day}...`);
-    const url = `https://api.congress.gov/v3/congressional-record?y=${year}&m=${month}&d=${day}&format=json&api_key=${CONGRESS_API_KEY}`;
-    await sleep(2000);
-
+    // Step 1: Get CR package ID from Congress.gov (confirms CR exists for this date)
+    await sleep(1200);
+    let packageId;
     try {
-        const res = await fetch(url);
-        if (!res.ok) { console.log('   - No Congressional Record found for that date.'); return ''; }
-        const data = await res.json();
+        const crRes = await fetch(
+            `https://api.congress.gov/v3/congressional-record?y=${year}&m=${month}&d=${day}&format=json&api_key=${CONGRESS_API_KEY}`
+        );
+        if (!crRes.ok) return '';
+        const crData = await crRes.json();
+        const issues = crData.Results?.Issues || crData.dailyCongressionalRecord || [];
+        if (!issues.length) return '';
+        const pub = issues[0].PublishDate
+            || `${year}-${String(month).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+        packageId = `CREC-${pub}`;
+    } catch (e) { return ''; }
 
-        const issues = data.Results?.Issues || data.dailyCongressionalRecord || [];
-        if (!issues.length) { console.log('   - Congressional Record: no issues returned.'); return ''; }
+    // Step 2: List granules from GovInfo, filter to the correct chamber
+    const isHouse      = ['HR', 'HRES', 'HJRES', 'HCONRES'].includes(billType.toUpperCase());
+    const granuleClass = isHouse ? 'HOUSE' : 'SENATE';
+    const SKIP_TITLES  = [
+        'PRAYER', 'PLEDGE', 'QUORUM', 'RECESS', 'TRIBUTE', 'HONORING', 'RECOGNIZING',
+        'ADDITIONAL COSPONSORS', 'INTRODUCTION OF BILLS', 'MESSAGE FROM',
+        'MEASURES PLACED', 'MEASURES READ', 'REPORTS OF COMMITTEES',
+    ];
 
-        const isHouseBill    = ['HR', 'HRES', 'HJRES', 'HCONRES'].includes(billType.toUpperCase());
-        const chamberKeyword = isHouseBill ? 'House' : 'Senate';
-
-        let sectionUrl = null;
-        for (const issue of issues) {
-            // Handle multiple possible response shapes from the API
-            const items = issue.links?.items || issue.sections || [];
-            for (const item of items) {
-                if ((item.name || item.label || '').includes(chamberKeyword)) {
-                    sectionUrl = item.url || item.htmlUrl;
-                    break;
-                }
-            }
-            if (!sectionUrl) {
-                const links = issue.links || {};
-                for (const key of Object.keys(links)) {
-                    if (key.includes(chamberKeyword) && links[key]?.HTML) {
-                        sectionUrl = links[key].HTML;
-                        break;
-                    }
-                }
-            }
-            if (sectionUrl) break;
+    // Step 2: Fetch all granule titles from GovInfo (paginated via offsetMark)
+    let granules = [];
+    try {
+        let mark = '*';
+        while (granules.length < 400) {
+            await sleep(800);
+            const grRes = await fetch(
+                `https://api.govinfo.gov/packages/${packageId}/granules?api_key=${GOVINFO_API_KEY}&pageSize=100&offsetMark=${encodeURIComponent(mark)}`
+            );
+            if (grRes.status === 429) { await sleep(30000); break; }
+            if (!grRes.ok) break;
+            const grData = await grRes.json();
+            granules = granules.concat(grData.granules || []);
+            if (!grData.nextPage) break;
+            mark = new URL(grData.nextPage).searchParams.get('offsetMark') || mark;
         }
+    } catch (e) { return ''; }
 
-        if (!sectionUrl) { console.log(`   - Could not find ${chamberKeyword} section in Record.`); return ''; }
+    granules = granules
+        .filter(g => g.granuleClass === granuleClass)
+        .filter(g => !SKIP_TITLES.some(s => (g.title || '').toUpperCase().startsWith(s)));
 
-        await sleep(1500);
-        const textRes = await fetch(sectionUrl);
-        if (!textRes.ok) return '';
-        const fullText = cleanHTML(await textRes.text());
-        return extractBillMentions(fullText, billType, billNumber);
+    if (!granules.length) return '';
 
-    } catch (e) {
-        console.error('   - Failed to fetch Congressional Record:', e.message);
-        return '';
+    // Prioritise granules whose title mentions the bill number — fetch those first
+    const formattedType = formatBillTypeForRecord(billType);
+    const titlePatterns = [
+        `${formattedType} ${billNumber}`.toUpperCase(),
+        `${billType} ${billNumber}`.toUpperCase(),
+        ` ${billNumber} `, ` ${billNumber},`, ` ${billNumber}.`,
+    ];
+    const priority  = granules.filter(g => titlePatterns.some(p => (g.title || '').toUpperCase().includes(p)));
+    const remainder = granules.filter(g => !priority.includes(g)).slice(0, 20);
+    const toFetch   = [...priority, ...remainder].slice(0, 30);
+
+    // Step 3: Fetch each granule's HTML text and search for bill mentions
+    const found = [];
+    for (const g of toFetch) {
+        if (found.join('').length > 8000) break;
+        try {
+            await sleep(600);
+            const textRes = await fetch(
+                `https://api.govinfo.gov/packages/${packageId}/granules/${g.granuleId}/htm?api_key=${GOVINFO_API_KEY}`
+            );
+            if (textRes.status === 429) { await sleep(30000); continue; }
+            if (!textRes.ok) continue;
+            const text     = cleanHTML(await textRes.text());
+            const mentions = extractBillMentions(text, billType, billNumber);
+            if (mentions) found.push(mentions);
+        } catch (e) { continue; }
     }
+
+    return found.join('\n\n---\n\n').slice(0, 10000);
+}
+
+// Primary CR fetch — tries page refs first (fast), falls back to date scanning (thorough)
+async function fetchCongressionalRecord(type, number, dates, actions = []) {
+    // Fast path: derive exact granule IDs from CR page references in action texts
+    if (actions.length && GOVINFO_API_KEY) {
+        const refs = parseCRPageRefs(actions);
+        if (refs.length) {
+            console.log(`   - Trying ${refs.length} direct CR page reference(s)...`);
+            const result = await fetchCRByPageRefs(refs, type, number);
+            if (result) return result;
+            console.log('   - Page refs yielded no mentions; falling back to date scan.');
+        }
+    }
+
+    if (!dates?.length) return '';
+    console.log(`   - Searching Congressional Record across ${dates.length} date(s)...`);
+    let accumulated = '';
+    let datesChecked = 0;
+
+    for (const dateStr of dates) {
+        if (datesChecked >= 12 || accumulated.length >= 12000) break;
+        process.stdout.write(`   - Checking CR ${dateStr}... `);
+        const mentions = await fetchCRForDate(dateStr, type, number);
+        datesChecked++;
+        if (mentions) {
+            console.log(`found (${mentions.length} chars)`);
+            accumulated += (accumulated ? '\n\n===\n\n' : '') + mentions;
+        } else {
+            console.log('not found');
+        }
+    }
+
+    if (!accumulated) console.log('   - Bill not mentioned in Congressional Record for any checked date.');
+    return accumulated.slice(0, 12000);
 }
 
 function extractBillMentions(text, billType, billNumber) {
@@ -597,14 +754,15 @@ async function processBill(bill) {
     const { text: rawTextRaw, isXML } = await fetchBillText(bill);
     if (!rawTextRaw) { console.log('   - No bill text available. Skipping.'); return null; }
 
-    // Step 2 — Fetch metadata, CRS summary, and Congressional Record in parallel
-    const [meta, crsText] = await Promise.all([
+    // Step 2 — Fetch metadata, CRS summary, and bill actions in parallel
+    const [meta, crsText, actions] = await Promise.all([
         fetchBillMetadata(bill),
         fetchCRSSummary(bill),
+        fetchBillActions(congress, type, number),
     ]);
 
-    const actionDate = meta?.latestAction?.actionDate || meta?.updateDate || '';
-    const recordText = await fetchCongressionalRecord(actionDate, type, number);
+    const floorDates = extractFloorDates(actions, meta?.latestAction?.actionDate || meta?.updateDate || '');
+    const recordText = await fetchCongressionalRecord(type, number, floorDates, actions);
     const hasRecord  = recordText.length > 0;
 
     console.log(`   - Congressional Record: ${hasRecord
@@ -959,9 +1117,23 @@ async function runBatch() {
 }
 
 // Entry point — supports targeted test mode via --bill flag
-const billFlagIdx = process.argv.indexOf('--bill');
-if (billFlagIdx !== -1 && process.argv[billFlagIdx + 1]) {
-    runSingleBill(process.argv[billFlagIdx + 1]);
-} else {
-    runBatch();
+if (require.main === module) {
+    const billFlagIdx = process.argv.indexOf('--bill');
+    if (billFlagIdx !== -1 && process.argv[billFlagIdx + 1]) {
+        runSingleBill(process.argv[billFlagIdx + 1]);
+    } else {
+        runBatch();
+    }
 }
+
+module.exports = {
+    fetchBillActions,
+    extractFloorDates,
+    parseCRPageRefs,
+    fetchCRByPageRefs,
+    fetchCRForDate,
+    fetchCongressionalRecord,
+    extractBillMentions,
+    cleanHTML,
+    formatBillTypeForRecord,
+};

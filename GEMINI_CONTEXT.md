@@ -28,7 +28,8 @@ The browser reads only `data/cache.json`. Do not add live API calls to `api.js` 
 ### What Works and Is Deployed
 
 - Full desktop and mobile responsive layout
-- Bill cards with two-level expansion (minor → full)
+- Bill cards with two-level expansion (minor → full); clicking header from any open state collapses fully
+- Bill code (e.g. "HR 2319") displayed in metadata line alongside stage/version/date
 - **Filter system:** In Progress / Passed primary tabs + sub-filter row (All, Introduced, Committee, House, Senate, Just Passed). "Just Passed" = signed within 30 days, appears under both tabs.
 - Favorites/tracked view (star icon in header) — localStorage only, no accounts. Renamed from "starred" to "tracked".
 - Rep detail pages (`rep.html`) with star tracking
@@ -38,6 +39,9 @@ The browser reads only `data/cache.json`. Do not add live API calls to `api.js` 
 - Stage pipeline dots use CSS custom properties (dark mode safe — `fp-dot-done/active/pending` classes)
 - `top_lines` in bill cards now support `{headline, subs[]}` object format for grouped summaries (backward compatible with legacy string array format)
 - "Just Passed" badge on bills signed within 30 days
+- **Quote cards** in bill expansions: shown in minor view and full view (after "What Changed"). Rep portrait links to rep page. Quotes clamp at 5 lines with `...`, expand on hover. Neutral stance shows no badge.
+- **Gaps section** (`Not Addressed In This Bill`) has amber card container matching underreported style
+- **Patch notes section** has surface card container with purple left border, matching top-lines style
 
 ### Batch Processor — Key Behaviors
 
@@ -84,10 +88,11 @@ privacy.html        Privacy policy
 terms.html          Terms of service
 data/cache.json     The bill database — written by batch processor
 data/reps/          Rep profile JSON files — one per bioguideId
-scripts/batch_processor.js   The batch pipeline (see CLAUDE.md for full detail)
+scripts/batch_processor.js   The batch pipeline + CR fetching (exports module.exports for reuse)
+scripts/fetch_bill_cr.js     Retroactive CR quote fetcher (no LLM; uses batch_processor exports)
 scripts/prompts.js           LLM prompts for map and reduce phases
 scripts/generate_reps.js     Generates rep JSON files (not yet fully tested)
-.env                CONGRESS_API_KEY + CONGRESS_SESSION=119 (gitignored)
+.env                CONGRESS_API_KEY + GOVINFO_API_KEY + CONGRESS_SESSION=119 (gitignored)
 ```
 
 ---
@@ -193,8 +198,14 @@ Do not change this architecture. It is intentional and non-negotiable — the pr
 - `gemini-3.1-seo-and-compliance` — April 2026 Gemini session, merged to main
 - All subsequent work by Claude Code on `main` directly
 
-**Claude sessions (April 2026):**
+**Claude sessions (April–May 2026):**
 - Built batch processor, verification gate, three-zone source discipline
 - UI: filter redesign (In Progress/Passed), carousel bidirectional wrap, ZIP auto-detect, tracked bills rename, dark mode stage dots, Just Passed badge, top_lines headline+subs format
 - Batch processor: XML structural chunking, CRS-primary mega-bill strategy, hierarchical reduce, floor-time filter, number humanizer, detectStage improvements
 - Processed and verified: HR-1 (reconciliation law), HR-5587 (HEATS Act)
+- Font swap DM Mono → IBM Plex Mono across all pages; date format standardised to mm/dd/yy
+- Veto detection in detectStage (both api.js and batch_processor.js)
+- Rule 8 strengthened: extension/reauth bills must explain original program in summary AND top_lines
+- CR quote pipeline rebuilt: GovInfo granule fetching (offsetMark=* pagination), direct page-ref fast path, pattern-based speaker extraction, filler opener stripping — no LLM required
+- `scripts/fetch_bill_cr.js` added for retroactive quote backfill
+- UI: bill code in metadata line, full-expansion collapse on header click, quote cards in full expansion after "What Changed", gaps section container, patch notes container, patch-item-main font/size tuning, quote hover expansion

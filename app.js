@@ -1299,7 +1299,7 @@ function renderHeader(bill, state, num, watching) {
     <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
     <div class="bill-title-block">
       <div class="bill-meta-row">
-        <span class="bill-meta-compact">${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateDisplay)}</span>
+        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateDisplay)}</span>
       </div>
       <div class="bill-title">${escHtml(bill.title)}</div>
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
@@ -1432,19 +1432,25 @@ function renderQuoteCards(bill) {
   if (!quotes?.length) return '';
   return `<div class="quote-cards-row">
     ${quotes.slice(0, 2).map(q => {
-      const stanceCls = q.stance === 'support' ? 'stance-support' : 'stance-oppose';
-      const stanceLabel = q.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
-      return `<div class="quote-card">
-        <div class="quote-card-meta">
-          <a href="rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}" class="quote-card-rep" style="text-decoration: none; color: inherit;">
+      const stanceCls   = q.stance === 'support' ? 'stance-support' : q.stance === 'oppose' ? 'stance-oppose' : '';
+      const stanceLabel = q.stance === 'support' ? 'SUPPORT' : q.stance === 'oppose' ? 'OPPOSE' : '';
+      const repHref     = q.bioguideId
+        ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}`
+        : null;
+      const repInner = `
             <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
                  onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
             <div class="quote-card-name">
-              <span onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${escHtml(q.name)}</span>
-              <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party}</span>
-            </div>
-          </a>
-          <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
+              <span>${escHtml(q.name)}</span>
+              <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party || ''}</span>
+            </div>`;
+      const repBlock = repHref
+        ? `<a href="${repHref}" class="quote-card-rep" style="text-decoration:none;color:inherit;cursor:pointer">${repInner}</a>`
+        : `<div class="quote-card-rep">${repInner}</div>`;
+      return `<div class="quote-card">
+        <div class="quote-card-meta">
+          ${repBlock}
+          ${stanceLabel ? `<span class="quote-stance ${stanceCls}">${stanceLabel}</span>` : ''}
         </div>
         <div class="quote-text">"${escHtml(q.text)}"</div>
       </div>`;
@@ -1530,6 +1536,7 @@ function renderBody(bill, isOpen, col) {
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
     ${topLinesHtml}
     ${renderChangesSection(bill)}
+    ${renderQuoteCards(bill)}
     ${sectionsHtml}
     ${positionsHtml}
     ${underreportedHtml}
@@ -1573,8 +1580,8 @@ function renderItem(bill, item, si, ii) {
 
 function toggleCard(id) {
   const state = openCards.get(id);
-  if (state === 'minor') openCards.delete(id);   // minor → closed
-  else openCards.set(id, 'minor');               // closed or full → minor
+  if (state) openCards.delete(id);      // minor or full → closed
+  else openCards.set(id, 'minor');      // closed → minor
   renderAll();
 }
 
