@@ -68,6 +68,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
   loading.style.display = 'none';
 
+  // Analysis collapse toggle
+  const toggleRow  = document.getElementById('analysis-toggle-row');
+  const cardMount  = document.getElementById('bill-card-mount');
+  let analysisOpen = true;
+  toggleRow.innerHTML = '<button class="analysis-toggle-btn" id="analysisToggle">▲ Collapse analysis</button>';
+  document.getElementById('analysisToggle').addEventListener('click', () => {
+    analysisOpen = !analysisOpen;
+    cardMount.style.display = analysisOpen ? '' : 'none';
+    document.getElementById('analysisToggle').textContent = analysisOpen
+      ? '▲ Collapse analysis'
+      : '▼ Show analysis';
+  });
+
   // Sync theme toggle state
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const toggle = document.getElementById('themeToggle');

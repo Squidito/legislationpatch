@@ -1872,6 +1872,20 @@ a:hover { text-decoration: underline; }
 }
 .view-bill-link-row a:hover { text-decoration: underline; }
 
+/* Analysis toggle (bill.html) */
+#analysis-toggle-row { text-align: center; margin: 0.5rem 0; }
+.analysis-toggle-btn {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 0.75rem;
+  letter-spacing: 0.02em;
+}
+.analysis-toggle-btn:hover { color: var(--purple); }
+
 /* Bill text viewer (bill.html) */
 .bill-text-container {
   margin: 1rem 0 2.5rem;
