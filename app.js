@@ -85,6 +85,7 @@ let trackedReps  = [];
 // ---- Boot ----
 
 document.addEventListener('DOMContentLoaded', async () => {
+  if (!document.getElementById('billList')) return; // not the main page
   loadTrackedSettings();
   loadWatchedBills();
   await autoDetectState();
@@ -1533,15 +1534,19 @@ function renderBody(bill, isOpen, col) {
       ${bill.gaps.map(g => `<div class="gaps-item">${billRefHtml(g, bill.id)}</div>`).join('')}
     </div>` : '';
 
+  const viewBillLink = window.BILL_PAGE_ID ? '' :
+    `<div class="view-bill-link-row"><a href="bill.html?id=${escHtml(bill.id)}&ref=bills">View full bill page →</a></div>`;
+
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
     ${topLinesHtml}
     ${renderChangesSection(bill)}
     ${renderQuoteCards(bill)}
     ${sectionsHtml}
-    ${positionsHtml}
     ${underreportedHtml}
     ${criticismsHtml}
     ${gapsHtml}
+    ${positionsHtml}
+    ${viewBillLink}
   </div>`;
 }
 
@@ -1588,6 +1593,13 @@ function toggleCard(id) {
 function expandFull(id, e) {
   e && e.stopPropagation();
   openCards.set(id, 'full');
+  // Auto-open all detail panels when entering full expansion
+  const bill = allBills.find(b => b.id === id);
+  (bill?.sections || []).forEach((sec, si) => {
+    (sec.items || []).forEach((item, ii) => {
+      if (item.detail) openDetails[`${id}-${si}-${ii}`] = true;
+    });
+  });
   renderAll();
 }
 
@@ -1668,6 +1680,10 @@ function billRefHtml(text, currentBillId) {
 }
 
 function scrollToBill(id) {
+  if (!document.getElementById('billList')) {
+    window.location.href = `index.html?scrollTo=${encodeURIComponent(id)}`;
+    return;
+  }
   const bill = allBills.find(b => b.id === id);
   if (!bill) return;
   if (favoritesView) toggleFavoritesView();

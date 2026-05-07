@@ -991,6 +991,16 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     parsed.top_lines       = Array.isArray(parsed.top_lines)       ? parsed.top_lines       : [];
     parsed.changes         = parsed.changes || { added: [], modified: [], removed: [] };
 
+    // Save full bill text for bill detail page
+    try {
+        const btDir = path.join(__dirname, '../data/bill-text');
+        if (!fs.existsSync(btDir)) fs.mkdirSync(btDir, { recursive: true });
+        fs.writeFileSync(path.join(btDir, `${billId}.txt`), cleanedBillText);
+        console.log(`   - Bill text saved: data/bill-text/${billId}.txt`);
+    } catch (e) {
+        console.warn('   - Warning: could not save bill text:', e.message);
+    }
+
     console.log(`   - Done: ${billId} | stage: ${stage.key} | likelihood: ${parsed.likelihood}%`);
     return parsed;
 }
