@@ -1143,6 +1143,7 @@ module.exports = {
     fetchCRByPageRefs,
     fetchCRForDate,
     fetchCongressionalRecord,
+    fetchBillText,
     extractBillMentions,
     cleanHTML,
     formatBillTypeForRecord,
