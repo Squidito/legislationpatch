@@ -30,6 +30,24 @@ function toggleCard(id) {
   renderAll();
 }
 
+// ---- Meta tag updater ----
+
+function setPageMeta(title, description, url) {
+  document.title = title;
+  function setAttr(sel, attr, val) {
+    var el = document.querySelector(sel);
+    if (el) el.setAttribute(attr, val);
+  }
+  setAttr('meta[name="description"]', 'content', description);
+  setAttr('meta[property="og:title"]', 'content', title);
+  setAttr('meta[property="og:description"]', 'content', description);
+  setAttr('meta[property="og:url"]', 'content', url);
+  setAttr('meta[name="twitter:title"]', 'content', title);
+  setAttr('meta[name="twitter:description"]', 'content', description);
+  var canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = url;
+}
+
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -60,7 +78,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  document.title = `${bill.title} — LegislationPatch`;
+  setPageMeta(
+    bill.title + ' — LegislationPatch',
+    (bill.brief || bill.summary || '').slice(0, 160),
+    'https://legislationpatch.com/bill.html?id=' + encodeURIComponent(billId)
+  );
+  injectBillSchema(bill, billId);
 
   // Update back button
   const backBtn = document.getElementById('backBtn');
@@ -88,7 +111,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Analysis collapse toggle — mirrors clicking the card header
   const toggleRow = document.getElementById('analysis-toggle-row');
-  toggleRow.innerHTML = '<button class="analysis-toggle-btn" id="analysisToggle">▲ Collapse analysis</button>';
+  toggleRow.innerHTML = '<button class="analysis-toggle-btn" id="analysisToggle">▲ Collapse analysis</button>'
+    + '<button class="share-btn" id="shareBtn" onclick="copyBillLink()" title="Copy link to this bill">' + SHARE_LINK_SVG + ' Copy link</button>';
   document.getElementById('analysisToggle').addEventListener('click', () => toggleCard(billId));
 
   // Sync theme toggle state
@@ -113,6 +137,41 @@ document.addEventListener('DOMContentLoaded', async () => {
     textMount.innerHTML = billTextPlaceholder(bill);
   }
 });
+
+// ---- JSON-LD schema injector ----
+
+function injectBillSchema(bill, billId) {
+  var el = document.getElementById('bill-schema');
+  if (!el) return;
+  var url = 'https://legislationpatch.com/bill.html?id=' + encodeURIComponent(billId);
+  var about = {
+    '@type': 'LegislativeAction',
+    'name': bill.title,
+    'identifier': bill.code || billId
+  };
+  if (bill.date) about.legislationDate = bill.date;
+  if (bill.sponsor) about.sponsor = {'@type': 'Person', 'name': bill.sponsor};
+  el.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        'headline': bill.title,
+        'description': (bill.brief || bill.summary || '').slice(0, 200),
+        'url': url,
+        'publisher': {'@type': 'Organization', 'name': 'LegislationPatch', 'url': 'https://legislationpatch.com'},
+        'about': about
+      },
+      {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://legislationpatch.com/'},
+          {'@type': 'ListItem', 'position': 2, 'name': bill.title, 'item': url}
+        ]
+      }
+    ]
+  });
+}
 
 // ---- Bill text rendering ----
 
@@ -289,6 +348,30 @@ function scrollToBillSection(anchorId) {
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   el.classList.add('bt-section-flash');
   setTimeout(() => el.classList.remove('bt-section-flash'), 1500);
+}
+
+// ---- Share / copy link ----
+
+var SHARE_LINK_SVG = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+
+function copyBillLink() {
+  var url = window.location.href;
+  var btn = document.getElementById('shareBtn');
+  if (btn) { btn.classList.add('share-btn--copied'); btn.textContent = 'Copied!'; }
+  function reset() {
+    if (btn) { btn.innerHTML = SHARE_LINK_SVG + ' Copy link'; btn.classList.remove('share-btn--copied'); }
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(function() { setTimeout(reset, 2000); })
+      .catch(function() { setTimeout(reset, 2000); });
+  } else {
+    try {
+      var inp = document.createElement('input');
+      inp.value = url; inp.style.position = 'absolute'; inp.style.left = '-9999px';
+      document.body.appendChild(inp); inp.select(); document.execCommand('copy'); document.body.removeChild(inp);
+    } catch (_) {}
+    setTimeout(reset, 2000);
+  }
 }
 
 // ---- Theme (mirrors rep.js) ----

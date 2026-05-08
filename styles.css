@@ -1431,9 +1431,12 @@ a:hover { text-decoration: underline; }
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+  max-height: 6.6rem;
+  transition: max-height 0.25s ease-out;
 }
 .quote-card:hover .quote-text {
   -webkit-line-clamp: 100;
+  max-height: 20rem;
 }
 
 /* Expand-to-full button */
@@ -1512,7 +1515,7 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   gap: 0.5rem;
   cursor: grab;
-  width: 165px;
+  width: 248px;
   flex-shrink: 0;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
@@ -1619,9 +1622,12 @@ a:hover { text-decoration: underline; }
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+  max-height: 5.8rem;
+  transition: max-height 0.25s ease-out;
 }
-.shock-quotes-grid:has(.shock-quote-card:hover) .shock-quote-text {
+.shock-quotes-grid:hover .shock-quote-text {
   -webkit-line-clamp: 100;
+  max-height: 20rem;
 }
 
 /* ---- WHAT CHANGED (Variation G patch blocks) ---- */
@@ -2124,6 +2130,68 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.02em;
 }
 .analysis-toggle-btn:hover { color: var(--purple); }
+.share-btn {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-3);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 12px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.share-btn:hover { color: var(--purple); border-color: var(--purple); }
+.share-btn--copied { color: var(--green) !important; border-color: var(--green) !important; }
+
+/* Text fragment share tooltip (share-highlight.js) */
+.share-hl-tip {
+  position: fixed;
+  display: none;
+  align-items: center;
+  gap: 5px;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 11px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  user-select: none;
+  pointer-events: auto;
+}
+.share-hl-tip:not(.share-hl-tip--below)::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--text);
+}
+.share-hl-tip--below::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-bottom-color: var(--text);
+}
+.share-hl-tip--copied { background: var(--green); color: #fff; }
+.share-hl-tip--copied::after { border-top-color: var(--green); }
+.share-hl-tip--below.share-hl-tip--copied::after { border-bottom-color: var(--green); border-top-color: transparent; }
+.share-hl-tip:hover { opacity: 0.88; }
 
 /* Bill text viewer (bill.html) */
 .bill-text-container {

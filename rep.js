@@ -117,7 +117,16 @@ const STATE_FULL = {
 };
 
 function renderProfile(rep) {
-  document.title = escHtml(rep.name) + ' — LegislationPatch';
+  var repRole = rep.role === 'Senator' ? 'Senator' : 'Representative';
+  var repParty = PARTY_FULL[(rep.party || 'I').toUpperCase()[0]] || rep.party || '';
+  var repState = STATE_FULL[rep.state] || rep.state || '';
+  var repDesc = repRole + ' ' + (rep.name || '') + ' (' + repParty + ', ' + repState + '). Voting record and floor statements on LegislationPatch.';
+  setPageMeta(
+    (rep.name || 'Representative') + ' — LegislationPatch',
+    repDesc.slice(0, 160),
+    'https://legislationpatch.com/rep.html?id=' + encodeURIComponent(rep.bioguideId || '')
+  );
+  injectRepSchema(rep);
 
   // Portrait
   const portrait = document.getElementById('repPortrait');
@@ -249,6 +258,56 @@ function renderProfile(rep) {
   }
 
   renderVotingHistory(rep);
+}
+
+// ---- JSON-LD schema injector ----
+
+function injectRepSchema(rep) {
+  var el = document.getElementById('rep-schema');
+  if (!el) return;
+  var url = 'https://legislationpatch.com/rep.html?id=' + encodeURIComponent(rep.bioguideId || '');
+  var chamber = rep.role === 'Senator' ? 'United States Senate' : 'United States House of Representatives';
+  el.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        'name': rep.name,
+        'jobTitle': rep.role || 'Member of Congress',
+        'memberOf': {
+          '@type': 'GovernmentOrganization',
+          'name': chamber,
+          'parentOrganization': {'@type': 'GovernmentOrganization', 'name': 'United States Congress'}
+        },
+        'url': url
+      },
+      {
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://legislationpatch.com/'},
+          {'@type': 'ListItem', 'position': 2, 'name': rep.name, 'item': url}
+        ]
+      }
+    ]
+  });
+}
+
+// ---- Meta tag updater ----
+
+function setPageMeta(title, description, url) {
+  document.title = title;
+  function setAttr(sel, attr, val) {
+    var el = document.querySelector(sel);
+    if (el) el.setAttribute(attr, val);
+  }
+  setAttr('meta[name="description"]', 'content', description);
+  setAttr('meta[property="og:title"]', 'content', title);
+  setAttr('meta[property="og:description"]', 'content', description);
+  setAttr('meta[property="og:url"]', 'content', url);
+  setAttr('meta[name="twitter:title"]', 'content', title);
+  setAttr('meta[name="twitter:description"]', 'content', description);
+  var canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = url;
 }
 
 // ---- Utilities ----

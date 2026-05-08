@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Representative Profile — LegislationPatch</title>
   <meta name="description" content="View representative voting records and AI extracted comments on federal legislation." />
-  
+  <link rel="canonical" href="https://legislationpatch.com/rep.html" />
+
+  <!-- Open Graph / Social — values updated dynamically by rep.js once rep data loads -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://legislationpatch.com/rep.html" />
+  <meta property="og:title" content="Representative Profile — LegislationPatch" />
+  <meta property="og:description" content="View voting records and floor statements for any member of Congress — LegislationPatch" />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Representative Profile — LegislationPatch" />
+  <meta name="twitter:description" content="View voting records and floor statements for any member of Congress — LegislationPatch" />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.svg" />
+
+  <!-- Structured data — populated by rep.js once rep data loads -->
+  <script type="application/ld+json" id="rep-schema"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -146,5 +161,6 @@
   </footer>
 
   <script src="rep.js"></script>
+  <script src="share-highlight.js"></script>
 </body>
 </html>
