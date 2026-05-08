@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   loadWatchedBills();
   await autoDetectState();
   fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
-  fetchRepsIndex().then(idx => { repsIndex = idx; populateStateDropdown(); renderRepStrip(); renderRepGrid(); });
+  fetchRepsIndex().then(idx => { repsIndex = idx; renderRepStrip(); });
   setupSettings();
   setupRepStripDrag();
   renderRepStrip();
@@ -175,29 +175,6 @@ function setupFilters() {
 // ---- Rep tracker setup ----
 
 function setupSettings() {
-  const moreBtn = document.getElementById('repMoreBtn');
-  if (moreBtn) moreBtn.addEventListener('click', toggleRepDropdown);
-
-  const stateSelect = document.getElementById('stateSelect');
-  if (stateSelect) stateSelect.addEventListener('change', handleStateChange);
-
-  const manualAdd = document.getElementById('manualRepAdd');
-  if (manualAdd) manualAdd.addEventListener('click', addManualTrackedRep);
-
-  const closeBtn = document.getElementById('repDropdownClose');
-  if (closeBtn) closeBtn.addEventListener('click', toggleRepDropdown);
-
-  const grid = document.getElementById('repGrid');
-  if (grid) {
-    grid.addEventListener('click', e => {
-      const btn = e.target.closest('.rep-track-btn');
-      if (!btn) return;
-      const id = btn.dataset.repId;
-      if (!id) return;
-      toggleRepTracked(id, { name: btn.dataset.repName, party: btn.dataset.repParty, state: btn.dataset.repState });
-    });
-  }
-
   const strip = document.getElementById('repStrip');
   if (strip) {
     strip.addEventListener('click', e => {
@@ -218,8 +195,6 @@ function setupSettings() {
       renderRepStrip();
     });
   }
-
-  populateStateDropdown();
 
 }
 
@@ -303,25 +278,6 @@ async function autoDetectState() {
   } catch (e) { /* silently fail — default state used */ }
 }
 
-function populateStateDropdown() {
-  const select = document.getElementById('stateSelect');
-  if (!select) return;
-  select.innerHTML = US_STATES.map(s =>
-    `<option value="${s.code}">${escHtml(s.name)}</option>`
-  ).join('');
-  select.value = trackedState;
-}
-
-function handleStateChange(e) {
-  trackedState = e.target.value;
-  saveTrackedSettings();
-  
-
-  renderRepStrip();
-  renderRepGrid();
-}
-
-
 // ---- Portrait helpers ----
 
 const PHOTO_OVERRIDES = {
@@ -369,24 +325,6 @@ function repCardHtml(rep, size) {
     <span class="rep-badge">${escHtml(state)}</span>
     ${nameEl}
   </a>`;
-}
-
-function repGridCardHtml(rep) {
-  const id       = getRepId(rep);
-  const party    = rep.party || rep.partyCode || 'I';
-  const state    = rep.state || rep.stateCode || trackedState;
-  const name     = formatRepName(rep);
-  const lastName = repLastName(name);
-  const tracked  = trackedReps.some(r => r.id === id);
-  return `<div class="rep-grid-card${tracked ? ' tracked' : ''}" data-id="${escHtml(id)}">
-    ${repCardHtml(rep, 'lg')}
-    <button class="rep-track-btn${tracked ? ' tracked' : ''}"
-            data-rep-id="${escHtml(id)}"
-            data-rep-name="${escHtml(name)}"
-            data-rep-party="${escHtml(party)}"
-            data-rep-state="${escHtml(state)}"
-            title="${tracked ? 'Untrack' : 'Track'} ${escHtml(lastName)}">${tracked ? '&#9733;' : '&#9734;'}</button>
-  </div>`;
 }
 
 // ---- Rep strip (8 portraits in controls bar) ----
@@ -498,65 +436,6 @@ function setupRepStripDrag() {
   }, { passive: true });
 }
 
-// ---- Rep grid (all portraits in dropdown) ----
-
-function renderRepGrid() {
-  const grid = document.getElementById('repGrid');
-  if (!grid) return;
-  const pool = repsIndex[trackedState] || DEMO_REPS;
-  if (!pool.length) {
-    grid.innerHTML = '<div class="rep-status">No members found for this state.</div>';
-    return;
-  }
-
-  const byLastName = (a, b) => repLastName(formatRepName(a)).localeCompare(repLastName(formatRepName(b)));
-  const senators   = pool.filter(r => r.role === 'Senator').sort(byLastName);
-  const house      = pool.filter(r => r.role !== 'Senator').sort(byLastName);
-
-  function chamberHtml(label, members) {
-    if (!members.length) return '';
-    return `<div class="rep-chamber-row">
-      <div class="rep-chamber-label">${escHtml(label)}</div>
-      <div class="rep-strip rep-strip-dropdown" data-chamber="${escHtml(label)}">${members.map(repGridCardHtml).join('')}</div>
-    </div>`;
-  }
-
-  grid.innerHTML = chamberHtml('Senate', senators) + chamberHtml('House', house);
-  grid.querySelectorAll('.rep-strip-dropdown').forEach(setupDropdownStripDrag);
-}
-
-function setupDropdownStripDrag(el) {
-  let isDragging = false, startX = 0, startScroll = 0;
-  el.addEventListener('mousedown', e => {
-    isDragging  = true;
-    startX      = e.pageX;
-    startScroll = el.scrollLeft;
-    el.classList.add('dragging');
-    e.preventDefault();
-  });
-  window.addEventListener('mouseup', () => { isDragging = false; el.classList.remove('dragging'); });
-  el.addEventListener('mousemove', e => {
-    if (!isDragging) return;
-    el.scrollLeft = startScroll - (e.pageX - startX);
-  });
-}
-
-// ---- Toggle dropdown ----
-
-function toggleRepDropdown() {
-  const dropdown = document.getElementById('repDropdown');
-  const chevron  = document.getElementById('repMoreChevron');
-  if (!dropdown) return;
-  const opening = !dropdown.classList.contains('open');
-  dropdown.classList.toggle('open', opening);
-  if (chevron) chevron.textContent = opening ? '▴' : '▾';
-  if (opening) {
-    const sel = document.getElementById('stateSelect');
-    if (sel) sel.value = trackedState;
-    renderRepGrid();
-  }
-}
-
 // ---- Toggle tracking for a rep ----
 
 function toggleRepTracked(id, fallback = {}) {
@@ -576,7 +455,6 @@ function toggleRepTracked(id, fallback = {}) {
   }
   saveTrackedSettings();
   refreshRepStripClasses(); // update tracked highlights without rebuilding the pool
-  renderRepGrid();
   renderAll();
 }
 
@@ -589,22 +467,6 @@ function refreshRepStripClasses() {
   });
 }
 
-// ---- Manual rep add ----
-
-function addManualTrackedRep() {
-  const input = document.getElementById('manualRepInput');
-  if (!input) return;
-  const raw = input.value.trim();
-  if (!raw) return;
-  const id = raw.toLowerCase();
-  if (trackedReps.some(r => r.id === id)) { input.value = ''; return; }
-  trackedReps.push({ id, name: raw, party: 'n', state: trackedState, source: 'manual' });
-  saveTrackedSettings();
-  input.value = '';
-  renderRepStrip();
-  renderRepGrid();
-  renderAll();
-}
 
 function updateTrackedRep(id, checked) {
   if (checked) {
@@ -623,7 +485,6 @@ function updateTrackedRep(id, checked) {
   }
   saveTrackedSettings();
   renderRepStrip();
-  renderRepGrid();
   renderAll();
 }
 
@@ -908,6 +769,7 @@ function renderAll() {
 
   list.innerHTML =
     renderShockQuotesSection() +
+    '<div class="section-label">Recent bills</div>' +
     filtered.map((b, i) => renderBill(b, i + 1)).join('');
 
   setupCarousel();
@@ -959,29 +821,23 @@ function setupRepRowObserver() {
 
 function toggleFavoritesView() {
   favoritesView = !favoritesView;
-  const btn        = document.getElementById('favBtn');
-  const controls   = document.querySelector('.controls-bar');
-  const dropdown   = document.getElementById('repDropdown');
-  const label      = document.getElementById('sectionLabel');
+  const btn      = document.getElementById('favBtn');
+  const controls = document.querySelector('.controls-bar');
 
   if (favoritesView) {
     btn.classList.add('active');
-    controls.style.display  = 'none';
-    dropdown.style.display  = 'none';
-    label.textContent       = 'Saved';
+    controls.style.display = 'none';
     renderFavoritesView();
   } else {
     btn.classList.remove('active');
-    controls.style.display  = '';
-    dropdown.style.display  = '';
-    label.textContent       = 'Recent bills';
+    controls.style.display = '';
     renderAll();
   }
 }
 
 function renderFavoritesView() {
   const list = document.getElementById('billList');
-  list.innerHTML = renderRepsSection() + renderBillsSection() + renderQuotesSection();
+  list.innerHTML = '<div class="section-label">Saved</div>' + renderRepsSection() + renderBillsSection() + renderQuotesSection();
 }
 
 function favSectionHeader(id, title, count) {

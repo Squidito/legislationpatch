@@ -8,5 +8,14 @@
   "bio": "Markwayne Mullin is an American politician and businessman who has served since 2026 as the ninth United States secretary of homeland security. A member of the Republican Party, Mullin served from 2023 to 2026 as the junior United States senator from Oklahoma and from 2013 to 2023 as the U.S. representative for Oklahoma's second congressional district.",
   "comments": [],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Markwayne_Mullin"
+  "bioUrl": "https://en.wikipedia.org/wiki/Markwayne_Mullin",
+  "voteHistory": [
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "chamber": "Senate",
+      "date": "2026-01-30",
+      "vote": "Yea"
+    }
+  ]
 }

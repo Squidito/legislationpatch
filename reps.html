@@ -60,6 +60,7 @@
   <div class="controls-bar">
     <div class="controls-inner">
       <a href="index.html" class="back-btn">&larr; Bills</a>
+      <select id="stateJump" class="reps-state-jump"><option value="">Jump to state&hellip;</option></select>
       <div class="header-track">
         <a href="/?fav=1" class="fav-btn" title="Favorites &amp; tracked reps">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
@@ -77,10 +78,17 @@
     </div>
   </div>
 
+  <!-- PAGE HERO -->
+  <div class="reps-hero">
+    <div class="reps-hero-inner">
+      <div class="reps-hero-eyebrow">119th Congress</div>
+      <h1 class="reps-hero-title">Members of Congress</h1>
+      <p class="reps-hero-desc">All members of the House and Senate, organized by state. Track representatives and explore their voting records.</p>
+    </div>
+  </div>
+
   <!-- MAIN CONTENT -->
   <main class="main">
-    <div class="section-label">Members of Congress</div>
-
     <div class="loading-state" id="loadingState">
       <div class="loading-spinner"></div>
       <p>Loading representatives&hellip;</p>
