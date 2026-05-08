@@ -3,7 +3,7 @@
   "name": "Ron Wyden",
   "party": "D",
   "state": "OR",
-  "bio": "Ron Wyden is a Senator representing OR.",
+  "bio": "Ronald Lee Wyden is an American attorney and politician serving as the senior United States senator from Oregon, a seat he has held since 1996. A member of the Democratic Party, he served in the United States House of Representatives from 1981 until 1996. Upon the death of Representative Don Young in 2022, Wyden became the dean of the West Coast's Congressional delegation. He is the dean of Oregon's congressional delegation and serves as the ranking member of the Senate Finance Committee. Known for his libertarian-leaning stances within the Democratic Party, Wyden has been a prominent advocate for privacy rights, internet freedom, and limiting government surveillance, positioning him as a defender of civil liberties.",
   "comments": [
     {
       "billId": "119-HR-8322",
@@ -56,5 +56,16 @@
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Ron_Wyden",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

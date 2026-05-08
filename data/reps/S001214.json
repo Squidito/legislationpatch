@@ -5,7 +5,7 @@
   "state": "FL",
   "role": "Representative",
   "district": 17,
-  "bio": "W. Gregory Steube is a Representative representing FL for District 17.",
+  "bio": "This is a list of individuals serving in the United States House of Representatives. The membership of the House comprises 435 seats for representatives from the 50 states, apportioned by population, as well as six seats for non-voting delegates from U.S. territories and the District of Columbia. As of April 22, 2026, there are 430 representatives and 5 vacancies.",
   "comments": [],
   "voteHistory": [
     {
@@ -64,5 +64,7 @@
       "date": "2026-01-21",
       "vote": "Yea"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/List_of_current_United_States_representatives"
 }

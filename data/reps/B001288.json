@@ -3,7 +3,7 @@
   "name": "Cory A. Booker",
   "party": "D",
   "state": "NJ",
-  "bio": "Cory A. Booker is a Senator representing NJ.",
+  "bio": "Cory Anthony Booker is an American politician and lawyer serving as a United States senator from New Jersey, a seat he has held since 2013. A member of the Democratic Party, Booker is the first African-American U.S. senator from New Jersey. He was the 38th mayor of Newark from 2006 to 2013, and served on the Municipal Council of Newark for the Central Ward from 1998 to 2002.",
   "comments": [
     {
       "billId": "119-HR-7567",
@@ -14,5 +14,16 @@
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Cory_Booker",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

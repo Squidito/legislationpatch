@@ -5,7 +5,7 @@
   "state": "RI",
   "role": "Representative",
   "district": 2,
-  "bio": "Seth Magaziner is a Representative representing RI for District 2.",
+  "bio": "Seth Michael Magaziner is an American investment professional and politician serving as the U.S. representative for Rhode Island's 2nd congressional district since 2023. A member of the Democratic Party, he previously served as the 31st general treasurer of Rhode Island from 2015 until 2023. Magaziner won the November 2022 election to succeed retiring representative James Langevin.",
   "comments": [
     {
       "billId": null,
@@ -13,6 +13,15 @@
       "stance": "neutral",
       "text": "Instead of voting to end the war, end the tariffs, and lower healthcare costs, what are we doing?",
       "date": "Apr 15, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "Last year, 88 of the most profitable companies in America paid zero in Federal income taxes. The wealthy and well-connected get tax breaks, and average people get stuck with the bill. Until we have real ethics reform in Washington, the wealthy and well-connected are going to continue to get tax breaks while working people get screwed.",
+      "source": "House Floor, Apr 29, 2026",
+      "granuleTitle": "POWERFUL CORPORATIONS MUST PAY THEIR FAIR SHARE OF TAXES",
+      "date": "Apr 29, 2026"
     }
   ],
   "voteHistory": [
@@ -72,5 +81,7 @@
       "date": "2026-01-21",
       "vote": "Nay"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Seth_Magaziner"
 }

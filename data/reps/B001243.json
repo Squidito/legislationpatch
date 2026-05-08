@@ -5,6 +5,27 @@
   "state": "TN",
   "role": "Senator",
   "district": null,
-  "bio": "Marsha Blackburn is a Senator representing TN.",
-  "comments": []
+  "bio": "Mary Marsha Blackburn is an American politician and businesswoman serving as the senior United States senator from Tennessee. Blackburn was first elected to the Senate in 2018. A member of the Republican Party, Blackburn was a state senator from 1999 to 2003 and represented Tennessee's 7th congressional district in the United States House of Representatives from 2003 to 2019, during which time the National Journal rated her among the House's most conservative members.",
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "This is unhinged rhetoric. It is completely in line with the lies that the Democrats have repeated on just about a daily basis every day regarding President Trump. This reckless rhetoric places a target on our President, and this is the type of rhetoric that has no place in civil public life.",
+      "source": "Senate Floor, Apr 29, 2026",
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' DINNER SHOOTING",
+      "date": "Apr 29, 2026"
+    }
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Marsha_Blackburn",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

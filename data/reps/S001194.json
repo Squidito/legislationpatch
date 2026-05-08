@@ -5,6 +5,17 @@
   "state": "HI",
   "role": "Senator",
   "district": null,
-  "bio": "Brian Schatz is a Senator representing HI.",
-  "comments": []
+  "bio": "Brian Emanuel Schatz is an American politician serving since 2012 as the senior United States senator from Hawaii. A progressive Democrat, Schatz served in the Hawaii House of Representatives from 1998 to 2006, representing the 25th legislative district; as the chairman of the Democratic Party of Hawaii from 2008 to 2010; and as the 12th lieutenant governor of Hawaii from 2010 to 2012.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Brian_Schatz",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

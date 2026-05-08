@@ -5,6 +5,17 @@
   "state": "TX",
   "role": "Senator",
   "district": null,
-  "bio": "Ted Cruz is a Senator representing TX.",
-  "comments": []
+  "bio": "Rafael Edward Cruz is an American politician and attorney serving as the junior United States senator from Texas since 2013. A member of the Republican Party, Cruz was the solicitor general of Texas from 2003 to 2008. Since 2025, Cruz has chaired the Senate Commerce Committee.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Ted_Cruz",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

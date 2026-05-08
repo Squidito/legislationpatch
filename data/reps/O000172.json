@@ -3,7 +3,7 @@
   "name": "Alexandria Ocasio-Cortez",
   "party": "D",
   "state": "NY",
-  "bio": "Alexandria Ocasio-Cortez is a Representative representing NY for District 14.",
+  "bio": "Alexandria Ocasio-Cortez, also known as AOC, is an American politician and activist who has served since 2019 as the U.S. representative for New York's 14th congressional district. She is a member of the Democratic Party.",
   "comments": [
     {
       "billId": "119-HCONRES-40",
@@ -72,5 +72,7 @@
       "date": "2026-01-21",
       "vote": "Nay"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Alexandria_Ocasio-Cortez"
 }

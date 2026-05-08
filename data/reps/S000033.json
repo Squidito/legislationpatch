@@ -5,6 +5,17 @@
   "state": "VT",
   "role": "Senator",
   "district": null,
-  "bio": "Bernard Sanders is a Senator representing VT.",
-  "comments": []
+  "bio": "Bernard Sanders is an American politician and activist serving as the senior United States senator from Vermont, a seat he has held since 2007. He is the longest-serving independent in U.S. congressional history, but maintains a close relationship with the Democratic Party, having caucused with House and Senate Democrats for most of his congressional career and sought the party's presidential nomination in 2016 and 2020. Ideologically a democratic socialist, Sanders is regarded as one of the main leaders of the modern American progressive movement.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Bernie_Sanders",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

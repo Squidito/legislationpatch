@@ -61,7 +61,7 @@
     <div class="controls-inner">
       <a id="backBtn" href="index.html" class="back-btn">&larr; Bills</a>
       <div class="header-track">
-        <a href="index.html?fav=1" class="fav-btn" title="Favorites & tracked reps">
+        <a href="/?fav=1" class="fav-btn" title="Favorites & tracked reps">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
           </svg>
@@ -94,31 +94,44 @@
 
     <!-- REP PROFILE (Injected via JS) -->
     <div id="repProfile" style="display:none;">
-      <div class="rep-hero">
-        <img id="repPortrait" class="rep-hero-img" src="" alt="Portrait" />
-        <div class="rep-hero-info">
-          <div class="rep-hero-meta" id="repMeta"></div>
-          <div style="display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
-            <h1 class="rep-hero-name" id="repName"></h1>
+
+      <!-- Profile card -->
+      <div class="rep-profile-card" id="repProfileCard">
+        <div class="rep-portrait-wrap">
+          <img id="repPortrait" class="rep-portrait-xl" src="" alt="Portrait" />
+        </div>
+        <div class="rep-card-info">
+          <div class="rep-card-eyebrow" id="repEyebrow"></div>
+          <h1 class="rep-card-name" id="repName"></h1>
+          <div class="rep-card-actions">
+            <span id="repPartyChip"></span>
             <button class="star-btn rep-star-btn" id="repStarBtn" onclick="toggleRepStar()" title="Track this representative">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
                 <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
               </svg>
             </button>
           </div>
-          <p class="rep-hero-bio" id="repBio"></p>
         </div>
-      </div>
-      
-      <div class="section-label" style="margin-top: 2rem;">Controversial & Recent Comments</div>
-      <div class="rep-comments-list" id="repComments">
-        <!-- Comments injected here -->
+        <div class="rep-card-stat-panel" id="repStatGrid"></div>
       </div>
 
-      <div class="section-label" style="margin-top: 2rem;" id="repVoteHistoryLabel">Voting Record</div>
-      <div class="rep-vote-history" id="repVoteHistory">
-        <!-- Vote history injected here -->
+      <!-- Vote breakdown -->
+      <div class="rep-vote-profile" id="repVoteProfile" style="display:none;"></div>
+
+      <!-- Bio -->
+      <div class="rep-bio-block" id="repBioBlock" style="display:none;">
+        <div class="rep-bio-label">Biography</div>
+        <p class="rep-bio-text" id="repBio"></p>
       </div>
+
+      <!-- Floor Statements -->
+      <div class="section-label rep-floor-label" style="margin-top:1.5rem;">Floor Statements</div>
+      <div class="rep-comments-list" id="repComments"></div>
+
+      <!-- Voting Record -->
+      <div class="section-label rep-vote-history-label" style="margin-top:1.5rem;" id="repVoteHistoryLabel">Voting Record</div>
+      <div class="rep-vote-history" id="repVoteHistory"></div>
+
     </div>
   </main>
 

@@ -99,36 +99,128 @@ function updateStarBtn(tracked) {
 
 // ---- Profile rendering ----
 
-function renderProfile(rep) {
-  document.title = `${rep.name} — LegislationPatch`;
+const PARTY_FULL = { D: 'Democrat', R: 'Republican', I: 'Independent' };
+const STATE_FULL = {
+  AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',
+  CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',
+  IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',
+  ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',
+  MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',
+  NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',
+  ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',
+  RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',
+  UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',
+  WI:'Wisconsin',WY:'Wyoming',DC:'D.C.',PR:'Puerto Rico',GU:'Guam',VI:'Virgin Islands',
+};
 
+function renderProfile(rep) {
+  document.title = escHtml(rep.name) + ' — LegislationPatch';
+
+  // Portrait
   const portrait = document.getElementById('repPortrait');
   portrait.src = rep.photo
-    || (rep.bioguideId ? `https://bioguide.congress.gov/bioguide/photo/${rep.bioguideId[0].toUpperCase()}/${rep.bioguideId}.jpg` : FALLBACK_PORTRAIT);
+    || (rep.bioguideId
+      ? 'https://bioguide.congress.gov/bioguide/photo/' + rep.bioguideId[0].toUpperCase() + '/' + rep.bioguideId + '.jpg'
+      : FALLBACK_PORTRAIT);
   portrait.onerror = () => { portrait.src = FALLBACK_PORTRAIT; };
 
+  // Profile card — party accent class
+  const partyKey  = (rep.party || 'I').toUpperCase()[0];
+  const partyLow  = partyKey === 'D' ? 'd' : partyKey === 'R' ? 'r' : 'i';
+  const card      = document.getElementById('repProfileCard');
+  if (card) card.classList.add('party-' + partyLow);
+
+  // Eyebrow: role · state
+  const chamber    = rep.role === 'Senator' ? 'Senate' : 'House';
+  const districtTx = rep.district ? ' · District ' + rep.district : '';
+  const eyebrow    = document.getElementById('repEyebrow');
+  if (eyebrow) eyebrow.textContent = rep.role + ' · ' + (STATE_FULL[rep.state] || rep.state) + districtTx;
+
+  // Name
   document.getElementById('repName').textContent = rep.name;
 
-  const partyLetter = (rep.party || 'N').charAt(0).toUpperCase();
-  document.getElementById('repMeta').innerHTML = `
-    <span class="chip chip-${partyLetter.toLowerCase()}">${rep.party}</span>
-    <span style="color:var(--text-3);font-size:0.85rem;font-family:var(--font-mono)">
-      ${rep.role} · ${rep.state}${rep.district ? `-${rep.district}` : ''}
-    </span>
-  `;
+  // Party chip
+  const chipEl = document.getElementById('repPartyChip');
+  if (chipEl) chipEl.innerHTML = '<span class="chip chip-' + partyLow + '">' + escHtml(rep.party || 'I') + '</span>';
 
-  document.getElementById('repBio').textContent = rep.bio || '';
+  // Stat grid
+  var stats = [
+    { label: 'Chamber', value: chamber },
+    { label: 'Party',   value: escHtml(PARTY_FULL[partyKey] || rep.party || 'Independent') },
+    { label: 'State',   value: escHtml(STATE_FULL[rep.state] || rep.state || '—') },
+  ];
+  if (rep.district) stats.push({ label: 'District', value: rep.district + (rep.district === 1 ? 'st' : rep.district === 2 ? 'nd' : rep.district === 3 ? 'rd' : 'th') });
 
+  const gridEl = document.getElementById('repStatGrid');
+  if (gridEl) {
+    gridEl.innerHTML = stats.map(function(s) {
+      return '<div class="rep-stat-cell">'
+        + '<span class="rep-stat-label">' + escHtml(s.label) + '</span>'
+        + '<span class="rep-stat-value">' + s.value + '</span>'
+        + '</div>';
+    }).join('');
+  }
+
+  // Vote breakdown (from voteHistory)
+  const history   = Array.isArray(rep.voteHistory) ? rep.voteHistory : [];
+  const votePanel = document.getElementById('repVoteProfile');
+  if (votePanel && history.length > 0) {
+    var yeas = 0, nays = 0, nvs = 0;
+    history.forEach(function(v) {
+      var lv = (v.vote || '').toLowerCase();
+      if (lv === 'yea' || lv === 'yes' || lv === 'aye')           yeas++;
+      else if (lv === 'nay' || lv === 'no')                       nays++;
+      else                                                         nvs++;
+    });
+    var total = history.length;
+    var yeaPct = Math.round(yeas / total * 100);
+    var nayPct = Math.round(nays / total * 100);
+    var nvPct  = 100 - yeaPct - nayPct;
+    votePanel.innerHTML = '<div class="rep-vote-profile-label">On the Record <span class="rep-vote-profile-count">' + total + ' tracked vote' + (total !== 1 ? 's' : '') + '</span></div>'
+      + '<div class="rep-vote-bar-row">'
+      + (yeas > 0 ? '<div class="rep-vote-bar-seg seg-yea" style="width:' + yeaPct + '%" title="Yea: ' + yeas + '"></div>' : '')
+      + (nays > 0 ? '<div class="rep-vote-bar-seg seg-nay" style="width:' + nayPct + '%" title="Nay: ' + nays + '"></div>' : '')
+      + (nvs  > 0 ? '<div class="rep-vote-bar-seg seg-nv"  style="width:' + nvPct  + '%" title="Not Voting: ' + nvs + '"></div>' : '')
+      + '</div>'
+      + '<div class="rep-vote-bar-legend">'
+      + (yeas > 0 ? '<span class="legend-yea">Yea ' + yeas + '</span>' : '')
+      + (nays > 0 ? '<span class="legend-nay">Nay ' + nays + '</span>' : '')
+      + (nvs  > 0 ? '<span class="legend-nv">Not Voting ' + nvs + '</span>' : '')
+      + '</div>';
+    votePanel.style.display = 'block';
+  }
+
+  // Bio
+  const bioBlock = document.getElementById('repBioBlock');
+  const bioEl    = document.getElementById('repBio');
+  if (bioEl && rep.bio && rep.bio.length > 120) {
+    bioEl.textContent = rep.bio;
+    if (rep.bioUrl) {
+      var attrib = document.createElement('a');
+      attrib.href        = rep.bioUrl;
+      attrib.target      = '_blank';
+      attrib.rel         = 'noopener noreferrer';
+      attrib.className   = 'rep-bio-source';
+      attrib.textContent = 'Wikipedia';
+      bioEl.parentNode.appendChild(attrib);
+    }
+    if (bioBlock) bioBlock.style.display = 'block';
+  }
+
+  // Comments
   const commentsContainer = document.getElementById('repComments');
   if (!rep.comments || rep.comments.length === 0) {
-    commentsContainer.innerHTML = `<div class="empty-state">No recorded comments on recent legislation.</div>`;
+    commentsContainer.innerHTML = '<div class="empty-state">No recorded floor statements.</div>';
     renderVotingHistory(rep);
     return;
   }
 
+  const FLOOR_DEFAULT = 3;
+  const FLOOR_STEP    = 10;
+
   rep.comments.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  commentsContainer.innerHTML = rep.comments.map(c => {
+  commentsContainer.innerHTML = rep.comments.map((c, idx) => {
     const stanceCls   = c.stance === 'support' ? 'stance-support' : 'stance-oppose';
     const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
     const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
@@ -139,17 +231,19 @@ function renderProfile(rep) {
     const titleEl     = billUrl
       ? `<a href="${billUrl}" class="rep-bill-link">${escHtml(billLabel)}</a>`
       : `<span class="rep-bill-link" style="cursor:default">${escHtml(billLabel)}</span>`;
-    return `
-      <div class="quote-card rep-comment-card">
-        <div class="rep-comment-title">
-          ${titleEl}
-          <span class="quote-stance ${stanceCls}">${stanceLabel}</span>
-        </div>
-        <div class="quote-text">"${escHtml(c.text)}"</div>
-        <div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">${formatDate(c.date)}</div>
-      </div>
-    `;
+    const hidden = idx >= FLOOR_DEFAULT ? ' style="display:none"' : '';
+    return '<div class="rep-show-item" data-idx="' + idx + '"' + hidden + '>'
+      + '<div class="quote-card rep-comment-card">'
+      + '<div class="rep-comment-title">' + titleEl + (c.stance ? '<span class="quote-stance ' + stanceCls + '">' + stanceLabel + '</span>' : '') + '</div>'
+      + '<div class="quote-text">&ldquo;' + escHtml(c.text) + '&rdquo;</div>'
+      + '<div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">' + formatDate(c.date) + '</div>'
+      + '</div>'
+      + '</div>';
   }).join('');
+
+  if (rep.comments.length > FLOOR_DEFAULT) {
+    renderShowMoreBtn(commentsContainer, FLOOR_DEFAULT, rep.comments.length, FLOOR_STEP);
+  }
 
   renderVotingHistory(rep);
 }
@@ -202,9 +296,9 @@ function toggleTheme(isDark) {
 }
 
 function renderVotingHistory(rep) {
-  var container   = document.getElementById('repVoteHistory');
-  var labelEl     = document.getElementById('repVoteHistoryLabel');
-  var history     = Array.isArray(rep.voteHistory) ? rep.voteHistory : [];
+  var container = document.getElementById('repVoteHistory');
+  var labelEl   = document.getElementById('repVoteHistoryLabel');
+  var history   = Array.isArray(rep.voteHistory) ? rep.voteHistory : [];
 
   if (history.length === 0) {
     if (labelEl) labelEl.style.display = 'none';
@@ -212,8 +306,12 @@ function renderVotingHistory(rep) {
     return;
   }
 
+  var VOTE_DEFAULT = 8;
+  var VOTE_STEP    = 15;
+
   var html = '';
-  for (var v of history) {
+  for (var i = 0; i < history.length; i++) {
+    var v         = history[i];
     var billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId);
     var billIdFmt = escHtml(formatBillId(v.billId) || '');
     var billUrl   = 'index.html?scrollTo=' + encodeURIComponent(v.billId);
@@ -222,15 +320,75 @@ function renderVotingHistory(rep) {
                     : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'
                     : rawVote.includes('not')                            ? 'Not Voting'
                     : (v.vote || '');
-    var badgeCls = voteDisplay === 'Yea' ? 'rv-yea' : voteDisplay === 'Nay' ? 'rv-nay' : 'rv-nv';
-    html += '<div class="rep-vote-row">'
+    var badgeCls  = voteDisplay === 'Yea' ? 'rv-yea' : voteDisplay === 'Nay' ? 'rv-nay' : 'rv-nv';
+    var hidden    = i >= VOTE_DEFAULT ? ' style="display:none"' : '';
+    html += '<div class="rep-show-item" data-idx="' + i + '"' + hidden + '>'
+      + '<div class="rep-vote-row">'
       + '<div class="rep-vote-bill">'
       + '<a href="' + billUrl + '" class="rep-vote-bill-link">' + billLabel + '</a>'
       + (billIdFmt ? '<span class="rep-vote-bill-id">' + billIdFmt + '</span>' : '')
       + '</div>'
       + '<span class="rep-vote-badge ' + badgeCls + '">' + escHtml(voteDisplay) + '</span>'
       + '<span class="rep-vote-date">' + formatDate(v.date || '') + '</span>'
+      + '</div>'
       + '</div>';
   }
-  if (container) container.innerHTML = html;
+  if (container) {
+    container.innerHTML = html;
+    if (history.length > VOTE_DEFAULT) {
+      renderShowMoreBtn(container, VOTE_DEFAULT, history.length, VOTE_STEP);
+    }
+  }
+}
+
+// ---- Show more / collapse helper ----
+
+function renderShowMoreBtn(container, defaultCount, total, step) {
+  var remaining = total - defaultCount;
+  var btn = document.createElement('button');
+  btn.className = 'rep-show-more-btn';
+  btn.setAttribute('data-shown', String(defaultCount));
+  btn.setAttribute('data-default', String(defaultCount));
+  btn.setAttribute('data-total', String(total));
+  btn.setAttribute('data-step', String(step));
+  btn.setAttribute('data-mode', 'expand');
+  btn.textContent = 'Show ' + Math.min(step, remaining) + ' more  (' + remaining + ' remaining)';
+  btn.onclick = function() { showMoreRep(container, btn); };
+  container.appendChild(btn);
+}
+
+function showMoreRep(container, btn) {
+  var shown   = parseInt(btn.getAttribute('data-shown'));
+  var total   = parseInt(btn.getAttribute('data-total'));
+  var def     = parseInt(btn.getAttribute('data-default'));
+  var step    = parseInt(btn.getAttribute('data-step'));
+  var mode    = btn.getAttribute('data-mode');
+
+  if (mode === 'collapse') {
+    // Collapse back to default
+    container.querySelectorAll('.rep-show-item').forEach(function(el) {
+      var idx = parseInt(el.getAttribute('data-idx'));
+      el.style.display = idx >= def ? 'none' : '';
+    });
+    btn.setAttribute('data-shown', String(def));
+    btn.setAttribute('data-mode', 'expand');
+    var rem = total - def;
+    btn.textContent = 'Show ' + Math.min(step, rem) + ' more  (' + rem + ' remaining)';
+    container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  } else {
+    // Show next batch
+    var newShown = Math.min(shown + step, total);
+    container.querySelectorAll('.rep-show-item').forEach(function(el) {
+      var idx = parseInt(el.getAttribute('data-idx'));
+      if (idx >= shown && idx < newShown) el.style.display = '';
+    });
+    btn.setAttribute('data-shown', String(newShown));
+    if (newShown >= total) {
+      btn.setAttribute('data-mode', 'collapse');
+      btn.textContent = 'Show less';
+    } else {
+      var rem = total - newShown;
+      btn.textContent = 'Show ' + Math.min(step, rem) + ' more  (' + rem + ' remaining)';
+    }
+  }
 }

@@ -5,6 +5,17 @@
   "state": "UT",
   "role": "Senator",
   "district": null,
-  "bio": "Mike Lee is a Senator representing UT.",
-  "comments": []
+  "bio": "Michael Shumway Lee is an American lawyer and politician serving as the senior United States senator from Utah, a seat he has held since 2011. A member of the Republican Party, Lee has been Utah's senior senator since 2019 and the dean of Utah's congressional delegation since 2021.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Mike_Lee",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

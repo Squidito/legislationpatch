@@ -5,6 +5,17 @@
   "state": "ID",
   "role": "Senator",
   "district": null,
-  "bio": "James E. Risch is a Senator representing ID.",
-  "comments": []
+  "bio": "James Elroy Risch is an American lawyer and politician who has served as the junior United States senator from Idaho since 2009. A member of the Republican Party, he served as lieutenant governor of Idaho under governors Dirk Kempthorne and Butch Otter, and briefly as governor between their terms.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Jim_Risch",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

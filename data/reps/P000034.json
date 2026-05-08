@@ -5,8 +5,16 @@
   "state": "NJ",
   "role": "Representative",
   "district": 6,
-  "bio": "Frank Pallone, Jr. is a Representative representing NJ for District 6.",
-  "comments": [],
+  "bio": "Frank Joseph Pallone Jr. is an American lawyer and politician serving as the U.S. representative for New Jersey's 6th congressional district since 1988. He is a member of the Democratic Party. The district, numbered as the 3rd district from 1988 to 1993, is in the north-central part of the state and includes New Brunswick, Woodbridge Township, Perth Amboy, Sayreville, Edison, Piscataway and Asbury Park. Pallone is the ranking member of the House Energy and Commerce Committee.",
+  "comments": [
+    {
+      "billId": "119-HR-2319",
+      "billTitle": "Women and Lung Cancer Research and Preventive Services Act of 2025",
+      "stance": "support",
+      "text": "Every 9 minutes, a woman loses her life to lung cancer. In the time it will take the House to consider this bill, more mothers, daughters, sisters, and friends will be lost. This legislation is a meaningful step in addressing the disproportionate impact of lung cancer on women. Lung cancer is the leading cause of cancer death among men and women in the United States. It kills more people each year than breast cancer, ovarian cancer, and uterine cancer combined.",
+      "date": "Mar 24, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",
@@ -64,5 +72,7 @@
       "date": "2026-01-21",
       "vote": "Nay"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Frank_Pallone"
 }

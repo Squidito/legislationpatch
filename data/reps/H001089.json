@@ -5,7 +5,7 @@
   "state": "MO",
   "role": "Senator",
   "district": null,
-  "bio": "Josh Hawley is a Senator representing MO.",
+  "bio": "Joshua David Hawley is an American politician and attorney serving as the senior United States senator from Missouri, a seat he has held since 2019. A member of the Republican Party, Hawley served as the 42nd attorney general of Missouri from 2017 to 2019, before defeating two-term incumbent Democratic senator Claire McCaskill in the 2018 election. He was reelected in 2024.",
   "comments": [
     {
       "billId": "119-HR-7147",
@@ -13,6 +13,17 @@
       "stance": "oppose",
       "text": "Mr. President, had there been a recorded vote on Calendar No. 311, H.R. 7147, Department of Homeland Security Appropriations Act, 2026, as amended, I would have voted nay. In addition, had there been a recorded vote on tabling the House message to accompany H.R. 7147, I would have voted nay.",
       "date": "Apr 2, 2026"
+    }
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Josh_Hawley",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Not Voting"
     }
   ]
 }

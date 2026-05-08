@@ -5,8 +5,16 @@
   "state": "PA",
   "role": "Representative",
   "district": 1,
-  "bio": "Brian K. Fitzpatrick is a Representative representing PA for District 1.",
-  "comments": [],
+  "bio": "Brian Kevin Fitzpatrick is an American politician, attorney, and former FBI agent serving in the U.S. House of Representatives since 2017. His district, which was numbered the 8th district during his first term and the 1st district since 2019, includes all of Bucks County, a mostly suburban county north of Philadelphia, as well as a sliver of Montgomery County.",
+  "comments": [
+    {
+      "billId": "119-HR-2319",
+      "billTitle": "Women and Lung Cancer Research and Preventive Services Act of 2025",
+      "stance": "support",
+      "text": "Lung cancer is the leading cancer death among women, and it disproportionately impacts women who have never even smoked.",
+      "date": "Mar 24, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",
@@ -64,5 +72,7 @@
       "date": "2026-01-21",
       "vote": "Yea"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Brian_Fitzpatrick_(American_politician)"
 }

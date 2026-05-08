@@ -5,6 +5,17 @@
   "state": "MA",
   "role": "Senator",
   "district": null,
-  "bio": "Edward J. Markey is a Senator representing MA.",
-  "comments": []
+  "bio": "Edward John Markey is an American politician serving as the junior United States senator from the state of Massachusetts, a seat he has held since 2013. A member of the Democratic Party, he served 20 terms as the U.S. representative for Massachusetts's 7th congressional district from 1976 to 2013. Before that, he was a member of the Massachusetts House of Representatives from 1973 to 1976. He has been the dean of the Massachusetts's congressional delegation since 2009.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Ed_Markey",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

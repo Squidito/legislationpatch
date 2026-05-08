@@ -5,6 +5,17 @@
   "state": "WA",
   "role": "Senator",
   "district": null,
-  "bio": "Patty Murray is a Senator representing WA.",
-  "comments": []
+  "bio": "Patricia Lynn Murray is an American politician serving as the senior United States senator from Washington, a seat she has held since 1993. From 2023 to 2025, she held the position of president pro tempore of the Senate. Prior to serving in the U.S. Senate, she served in the Washington State Senate from 1989 to 1993. She is a member of the Democratic Party.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Patty_Murray",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

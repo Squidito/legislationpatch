@@ -5,8 +5,18 @@
   "state": "NC",
   "role": "Representative",
   "district": 11,
-  "bio": "Chuck Edwards is a Representative representing NC for District 11.",
-  "comments": [],
+  "bio": "Charles Marion Edwards is an American politician serving as the U.S. representative for North Carolina's 11th congressional district since 2023. A member of the Republican Party, he represented the 48th district in the North Carolina Senate from 2016 to 2023.",
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "Because some Members of Congress have chosen to protect their political interests over serving the folks of America, including those in western North Carolina, the Disaster Recovery Fund is about to run out of money, putting our recovery in serious jeopardy.",
+      "source": "House Floor, Apr 30, 2026",
+      "granuleTitle": "FUNDING DISASTER RELIEF",
+      "date": "Apr 30, 2026"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",
@@ -64,5 +74,7 @@
       "date": "2026-01-21",
       "vote": "Yea"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Chuck_Edwards"
 }

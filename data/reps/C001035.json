@@ -5,6 +5,17 @@
   "state": "ME",
   "role": "Senator",
   "district": null,
-  "bio": "Susan M. Collins is a Senator representing ME.",
-  "comments": []
+  "bio": "Susan Margaret Collins is an American politician serving as the senior United States senator for Maine since 1997. A member of the Republican Party, she is Maine's longest-serving member of Congress and the longest-serving Republican woman in the Senate. Collins has chaired the Senate Appropriations Committee since 2025.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Susan_Collins",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

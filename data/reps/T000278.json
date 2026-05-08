@@ -3,8 +3,19 @@
   "name": "Tommy Tuberville",
   "party": "R",
   "state": "AL",
-  "bio": "Tommy Tuberville is a Senator representing AL.",
+  "bio": "Thomas Hawley Tuberville is an American politician, and retired college football coach and sports broadcaster who is the senior United States senator from Alabama, a seat he has held since 2021. He is a member of the Republican Party. Before entering politics, Tuberville was the head football coach at Auburn University from 1999 to 2008. He was also the head football coach at the University of Mississippi from 1995 to 1998, Texas Tech University from 2010 to 2012, and the University of Cincinnati from 2013 to 2016.",
   "comments": [],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Tommy_Tuberville",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

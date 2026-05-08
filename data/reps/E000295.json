@@ -5,6 +5,17 @@
   "state": "IA",
   "role": "Senator",
   "district": null,
-  "bio": "Joni Ernst is a Senator representing IA.",
-  "comments": []
+  "bio": "Joni Kay Ernst is an American politician and retired military officer serving since 2015 as the junior United States senator from Iowa. She is a member of the Republican Party.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Joni_Ernst",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "name": "Elizabeth Warren",
   "party": "D",
   "state": "MA",
-  "bio": "Elizabeth Warren is a Senator representing MA.",
+  "bio": "Elizabeth Ann Warren is an American politician and former law professor who is the senior United States senator from the state of Massachusetts, serving since 2013. A member of the Democratic Party and regarded as a progressive, Warren has focused on consumer protection, equitable economic opportunity, and the social safety net while in the Senate. Warren was a candidate in the 2020 Democratic Party presidential primaries, ultimately finishing third after Joe Biden and Bernie Sanders.",
   "comments": [
     {
       "billId": "119-HR-6955",
@@ -14,5 +14,16 @@
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Elizabeth_Warren",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

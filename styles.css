@@ -2706,56 +2706,236 @@ body {
    Representative Profiles
    ========================================= */
 
-.rep-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
+/* ---- Rep profile card ---- */
+.rep-profile-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6px;
 }
 
-.rep-hero-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+/* Party-colored gradient wash across the card */
+.rep-profile-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.rep-profile-card.party-d::after { background: linear-gradient(120deg, rgba(26,86,160,0.06) 0%, transparent 55%); }
+.rep-profile-card.party-r::after { background: linear-gradient(120deg, rgba(161,64,64,0.07) 0%, transparent 55%); }
+.rep-profile-card.party-i::after { background: linear-gradient(120deg, rgba(107,107,112,0.05) 0%, transparent 55%); }
+
+/* Thick party accent left edge */
+.rep-profile-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+}
+.rep-profile-card.party-d::before { background: linear-gradient(to bottom, #3b82f6, #1A56A0); }
+.rep-profile-card.party-r::before { background: linear-gradient(to bottom, #ef4444, #a14040); }
+.rep-profile-card.party-i::before { background: var(--text-3); }
+
+.rep-portrait-wrap { flex-shrink: 0; position: relative; z-index: 1; }
+.rep-portrait-xl {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-md);
   object-fit: cover;
   object-position: center 15%;
-  border: 3px solid var(--border);
   background: #374151;
-  flex-shrink: 0;
+  display: block;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.rep-profile-card.party-d .rep-portrait-xl {
+  border-color: rgba(26,86,160,0.5);
+  box-shadow: 0 0 0 3px rgba(26,86,160,0.12), 0 2px 8px rgba(0,0,0,0.15);
+}
+.rep-profile-card.party-r .rep-portrait-xl {
+  border-color: rgba(161,64,64,0.5);
+  box-shadow: 0 0 0 3px rgba(161,64,64,0.12), 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.rep-hero-info {
-  flex: 1;
+.rep-card-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 1;
 }
+.rep-card-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.rep-profile-card.party-d .rep-card-eyebrow { color: var(--blue); }
+.rep-profile-card.party-r .rep-card-eyebrow { color: var(--red); }
+.rep-profile-card.party-i .rep-card-eyebrow { color: var(--text-3); }
 
-.rep-hero-meta {
+.rep-card-name {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--text);
+}
+.rep-card-actions {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  margin-bottom: 6px;
+  margin-top: 2px;
 }
 
-.rep-hero-name {
-  font-size: 1.5rem;
+/* ---- Stat panel — inside the profile card, right column ---- */
+.rep-card-stat-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  align-self: center;
+  min-width: 190px;
+  position: relative;
+  z-index: 1;
+}
+.rep-profile-card.party-d .rep-card-stat-panel { background: rgba(26,86,160,0.18); }
+.rep-profile-card.party-r .rep-card-stat-panel { background: rgba(161,64,64,0.18); }
+.rep-profile-card.party-i .rep-card-stat-panel { background: var(--border); }
+
+.rep-stat-cell {
+  background: var(--surface);
+  padding: 9px 13px 10px;
+}
+.rep-stat-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+.rep-profile-card.party-d .rep-stat-label { color: var(--blue); opacity: 0.75; }
+.rep-profile-card.party-r .rep-stat-label { color: var(--red);  opacity: 0.75; }
+.rep-stat-value {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
   color: var(--text);
-  line-height: 1.1;
-  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
-.rep-hero-bio {
-  font-size: 0.95rem;
-  color: var(--text-2);
-  line-height: 1.5;
+/* ---- Vote breakdown bar ---- */
+.rep-vote-profile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 6px;
 }
+.rep-vote-profile-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rep-vote-profile-count {
+  font-weight: 500;
+  color: var(--text-3);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.rep-vote-bar-row {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--surface-2);
+  margin-bottom: 6px;
+  gap: 2px;
+}
+.rep-vote-bar-seg {
+  height: 100%;
+  border-radius: 2px;
+  min-width: 4px;
+  transition: width 0.3s ease;
+}
+.seg-yea { background: var(--green); }
+.seg-nay { background: var(--red); }
+.seg-nv  { background: var(--border); }
+.rep-vote-bar-legend {
+  display: flex;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-3);
+}
+.legend-yea { color: var(--green-text); }
+.legend-nay { color: var(--red-text); }
+.legend-nv  { color: var(--text-3); }
+
+/* ---- Bio block ---- */
+.rep-bio-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  margin-bottom: 6px;
+}
+.rep-bio-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 7px;
+}
+.rep-floor-label {
+  color: #c75c0e;
+}
+[data-theme="dark"] .rep-floor-label {
+  color: #fb923c;
+}
+.rep-vote-history-label {
+  color: var(--purple);
+}
+.rep-bio-text {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.rep-bio-source {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-3);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.rep-bio-source::before { content: 'Source: '; }
+.rep-bio-source:hover { color: var(--purple); text-decoration: underline; }
 
 .rep-comments-list {
   display: flex;
@@ -2788,9 +2968,10 @@ body {
 }
 
 @media (max-width: 640px) {
-  .rep-hero {
-    padding: 1.25rem;
-  }
+  .rep-profile-card       { grid-template-columns: auto 1fr; padding: 1rem 1rem 1rem 1.25rem; }
+  .rep-card-stat-panel    { grid-column: 1 / -1; grid-template-columns: repeat(4, 1fr); min-width: 0; }
+  .rep-portrait-xl        { width: 60px; height: 60px; }
+  .rep-card-name          { font-size: 1.1rem; }
 }
 
 /* =====================================================================
@@ -3238,6 +3419,44 @@ body {
 }
 .vote-expand-btn:hover { background: var(--surface); color: var(--text); }
 
+/* Pass bar */
+.vote-pass-bar-wrap {
+  position: relative;
+  margin: 6px 0 2px;
+}
+.vote-pass-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-inner);
+}
+.vpb-yea { background: var(--green); height: 100%; }
+.vpb-nay { background: var(--red);   height: 100%; flex: 1; }
+.vote-pass-line {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: var(--text);
+  border-radius: 1px;
+  transform: translateX(-50%);
+  cursor: default;
+}
+.vote-pass-line-label {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-3);
+  white-space: nowrap;
+  pointer-events: none;
+}
+[data-theme="dark"] .vote-pass-line { background: var(--text-2); }
+
 /* Expanded vote detail */
 .vote-detail { overflow: hidden; }
 .vote-detail-inner { padding: 10px 0 4px; }
@@ -3365,6 +3584,25 @@ a.vote-member:hover { background: var(--surface-2); }
 .rep-vote-history {
   margin-bottom: 2rem;
 }
+.rep-show-more-btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 0;
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-3);
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.15s, border-color 0.15s;
+}
+.rep-show-more-btn:hover {
+  color: var(--purple);
+  border-color: var(--purple);
+}
 .rep-vote-row {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -3420,6 +3658,46 @@ a.vote-member:hover { background: var(--surface-2); }
 [data-theme="dark"] .party-d { background: rgba(26,86,160,0.25);  color: #93bfff; }
 [data-theme="dark"] .party-r { background: rgba(161,64,64,0.25);  color: #fca5a5; }
 [data-theme="dark"] .party-i { background: rgba(107,107,112,0.2); color: var(--text-2); }
+
+/* ---- Rep profile card — dark mode ---- */
+/* Gradient wash: use lighter colors at lower opacity so card stays readable */
+[data-theme="dark"] .rep-profile-card.party-d::after { background: linear-gradient(120deg, rgba(59,130,246,0.10) 0%, transparent 60%); }
+[data-theme="dark"] .rep-profile-card.party-r::after { background: linear-gradient(120deg, rgba(239,68,68,0.08)  0%, transparent 60%); }
+
+/* Eyebrow: switch to light party colors */
+[data-theme="dark"] .rep-profile-card.party-d .rep-card-eyebrow { color: #93bfff; }
+[data-theme="dark"] .rep-profile-card.party-r .rep-card-eyebrow { color: #fca5a5; }
+[data-theme="dark"] .rep-profile-card.party-i .rep-card-eyebrow { color: var(--text-3); }
+
+/* Portrait ring: lighter border + glow */
+[data-theme="dark"] .rep-profile-card.party-d .rep-portrait-xl {
+  border-color: rgba(147,191,255,0.5);
+  box-shadow: 0 0 0 3px rgba(147,191,255,0.1), 0 2px 10px rgba(0,0,0,0.4);
+}
+[data-theme="dark"] .rep-profile-card.party-r .rep-portrait-xl {
+  border-color: rgba(252,165,165,0.5);
+  box-shadow: 0 0 0 3px rgba(252,165,165,0.1), 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Stat panel: lighter gap tint + cells lift above card */
+[data-theme="dark"] .rep-profile-card.party-d .rep-card-stat-panel { background: rgba(147,191,255,0.15); }
+[data-theme="dark"] .rep-profile-card.party-r .rep-card-stat-panel { background: rgba(252,165,165,0.15); }
+[data-theme="dark"] .rep-stat-cell { background: var(--surface-2); }
+
+/* Stat labels: lighter party colors */
+[data-theme="dark"] .rep-profile-card.party-d .rep-stat-label { color: #93bfff; opacity: 0.7; }
+[data-theme="dark"] .rep-profile-card.party-r .rep-stat-label { color: #fca5a5; opacity: 0.7; }
+
+/* Oppose badge — hardcoded grey is invisible in dark mode */
+[data-theme="dark"] .quote-stance.stance-oppose {
+  background: rgba(161,64,64,0.2);
+  color: #fca5a5;
+  border-color: rgba(161,64,64,0.3);
+}
+
+/* "On the record" label — text-3 is too faint in dark mode */
+[data-theme="dark"] .rep-vote-profile-label,
+[data-theme="dark"] .rep-vote-profile-count { color: var(--text-2); }
 
 /* Mobile */
 @media (max-width: 640px) {

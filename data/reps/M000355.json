@@ -5,6 +5,17 @@
   "state": "KY",
   "role": "Senator",
   "district": null,
-  "bio": "Mitch McConnell is a Senator representing KY.",
-  "comments": []
+  "bio": "Addison Mitchell McConnell III is an American politician and attorney serving as the senior United States senator from Kentucky, a seat he has held since 1985. McConnell is in his seventh Senate term and is the longest-serving senator in Kentucky history. He served from 2007 to 2025 as the leader of the Senate Republican Conference, including two stints as minority leader, and was majority leader from 2015 to 2021, making him the longest-serving Senate party leader in U.S. history.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Mitch_McConnell",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

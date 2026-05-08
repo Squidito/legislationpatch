@@ -5,6 +5,17 @@
   "state": "LA",
   "role": "Senator",
   "district": null,
-  "bio": "Bill Cassidy is a Senator representing LA.",
-  "comments": []
+  "bio": "William Morgan Cassidy is an American politician and physician who is the senior United States senator from Louisiana, a seat he has held since 2015. A member of the Republican Party, he served in the Louisiana State Senate from 2006 to 2009 and in the U.S. House of Representatives from 2009 to 2015. Cassidy has chaired the Senate Health, Education, Labor, & Pensions (HELP) Committee since 2025.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Bill_Cassidy",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

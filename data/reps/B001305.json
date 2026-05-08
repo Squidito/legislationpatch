@@ -5,6 +5,17 @@
   "state": "NC",
   "role": "Senator",
   "district": null,
-  "bio": "Ted Budd is a Senator representing NC.",
-  "comments": []
+  "bio": "Theodore Paul Budd is an American businessman and politician serving since 2023 as the junior United States senator for North Carolina. A member of the Republican Party, he was the U.S. representative for North Carolina's 13th congressional district from 2017 to 2023.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Ted_Budd",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

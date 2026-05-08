@@ -5,6 +5,17 @@
   "state": "AK",
   "role": "Senator",
   "district": null,
-  "bio": "Lisa Murkowski is a Senator representing AK.",
-  "comments": []
+  "bio": "Lisa Ann Murkowski is an American attorney and politician serving as the senior United States senator from the state of Alaska, having held the seat since 2002. She is the first woman to represent Alaska in the U.S. Congress and is the Senate's second-most senior Republican woman. Murkowski became dean of Alaska's congressional delegation upon Representative Don Young's death.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Lisa_Murkowski",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

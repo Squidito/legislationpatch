@@ -5,6 +5,17 @@
   "state": "OR",
   "role": "Senator",
   "district": null,
-  "bio": "Jeff Merkley is a Senator representing OR.",
-  "comments": []
+  "bio": "Jeffrey Alan Merkley is an American politician who is the junior United States senator from Oregon. He was first elected to the Senate in 2008. A member of the Democratic Party, he served from 1999 to 2009 as the representative for the 47th district in the Oregon House of Representatives, which covers central Multnomah County on the eastern side of Portland, Oregon; he was the speaker of the Oregon House of Representatives during the last two years of his tenure.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Jeff_Merkley",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

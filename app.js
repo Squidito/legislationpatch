@@ -1545,6 +1545,30 @@ function renderVoteSection(bill) {
     }
     var expandBtn = v.method ? '' :
       '<button class="vote-expand-btn" data-open="0" onclick="expandVoteDetail(\'' + bill.id + '\',' + i + ',this)">Show votes ▾</button>';
+
+    // Pass bar — only for recorded votes with real tallies
+    var passBar = '';
+    if (!v.method && (v.yeas > 0 || v.nays > 0)) {
+      var total       = v.yeas + v.nays;
+      var yeaPct      = Math.round(v.yeas / total * 1000) / 10;
+      var nayPct      = 100 - yeaPct;
+      // Detect threshold from question text
+      var q           = (v.question || '').toLowerCase();
+      var threshold   = q.includes('cloture') || q.includes('three-fifths') ? 60
+                      : q.includes('two-thirds') || q.includes('veto')      ? 67
+                      : 50;
+      var thresholdLabel = threshold === 60 ? '60% (Cloture)' : threshold === 67 ? '2/3 Majority' : 'Simple Majority';
+      passBar = '<div class="vote-pass-bar-wrap">'
+        + '<div class="vote-pass-bar">'
+        + '<div class="vpb-yea" style="width:' + yeaPct + '%"></div>'
+        + '<div class="vpb-nay" style="width:' + nayPct + '%"></div>'
+        + '</div>'
+        + '<div class="vote-pass-line" style="left:' + threshold + '%" title="' + escHtml(thresholdLabel) + '">'
+        + '<span class="vote-pass-line-label">' + escHtml(thresholdLabel) + '</span>'
+        + '</div>'
+        + '</div>';
+    }
+
     return '<div class="vote-row">'
       + '<div class="vote-row-summary">'
       + '<span class="vote-chamber-badge ' + chamberCls + '">' + escHtml(v.chamber) + '</span>'
@@ -1554,6 +1578,7 @@ function renderVoteSection(bill) {
       + crossPill
       + expandBtn
       + '</div>'
+      + passBar
       + '<div class="vote-detail" id="' + escHtml(detailId) + '" style="display:none"></div>'
       + '</div>';
   }).join('');

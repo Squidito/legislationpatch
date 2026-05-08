@@ -5,6 +5,43 @@
   "state": "SD",
   "role": "Senator",
   "district": null,
-  "bio": "John Thune is a Senator representing SD.",
-  "comments": []
+  "bio": "John Randolph Thune is an American politician serving as the senior United States senator from South Dakota, a seat he has held since 2005. From 1997 to 2003, Thune served as the U.S. representative for South Dakota's at-large congressional district. A member of the Republican Party, Thune has served since 2025 as Senate majority leader and Senate Republican leader.",
+  "comments": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "stance": "neutral",
+      "text": "Mr. J. Res. 140 from the House. The PRESIDING OFFICER. The Senator is correct.",
+      "date": "Jan 11, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "It is difficult to believe that this is the third time--the third time--President Trump has faced an assassination attempt. And, as we know, the shooter's ambitions in this instance extended even further, to other administration officials and the Vice President.",
+      "source": "Senate Floor, Apr 27, 2026",
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' ASSOCIATION DINNER SHOOTING",
+      "date": "Apr 27, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "The Democrat leader said that Border Patrol and ICE are two Agencies that 'nobody respects in this country.' Democrats apparently think it is reasonable to have nobody patrolling the southern border. They think it is reasonable to let criminal illegal immigrants continue living freely in our country.",
+      "source": "Senate Floor, Apr 30, 2026",
+      "granuleTitle": "DEPARTMENT OF HOMELAND SECURITY",
+      "date": "Apr 30, 2026"
+    }
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/John_Thune",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

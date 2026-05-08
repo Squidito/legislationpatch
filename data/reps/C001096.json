@@ -5,6 +5,17 @@
   "state": "ND",
   "role": "Senator",
   "district": null,
-  "bio": "Kevin Cramer is a Senator representing ND.",
-  "comments": []
+  "bio": "Kevin John Cramer is an American politician who has served as the junior United States senator for North Dakota since 2019. A member of the Republican Party, he represented North Dakota's at-large congressional district in the United States House of Representatives from 2013 to 2019.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Kevin_Cramer",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

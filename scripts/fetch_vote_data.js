@@ -3,11 +3,30 @@ const fs   = require('fs');
 const path = require('path');
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
-const CACHE_FILE = path.join(__dirname, '../data/cache.json');
-const VOTES_DIR  = path.join(__dirname, '../data/votes');
-const REPS_DIR   = path.join(__dirname, '../data/reps');
+const CACHE_FILE   = path.join(__dirname, '../data/cache.json');
+const VOTES_DIR    = path.join(__dirname, '../data/votes');
+const REPS_DIR     = path.join(__dirname, '../data/reps');
+const REPS_INDEX   = path.join(__dirname, '../data/reps-index.json');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// Build lastName+state → bioguideId lookup for senators (Senate XML has no bio_id field)
+function buildSenatorLookup() {
+  try {
+    const index = JSON.parse(fs.readFileSync(REPS_INDEX, 'utf8'));
+    const lookup = {};
+    for (const reps of Object.values(index)) {
+      for (const rep of reps) {
+        if (rep.role === 'Senator') {
+          const lastName = rep.name.split(',')[0].split(' ').pop().toLowerCase().replace(/[^a-z]/g, '');
+          lookup[lastName + '-' + rep.state] = rep.bioguideId;
+        }
+      }
+    }
+    return lookup;
+  } catch (_) { return {}; }
+}
+const SENATOR_LOOKUP = buildSenatorLookup();
 
 // ---- Cache I/O ----
 
@@ -100,12 +119,17 @@ function parseSenateXML(xml) {
   const members = [];
   const blocks  = xml.match(/<member>[\s\S]*?<\/member>/gi) || [];
   for (const block of blocks) {
-    const bioguideId = ((block.match(/<bio_id>([\s\S]*?)<\/bio_id>/i)         || [])[1] || '').trim();
-    const lastName   = ((block.match(/<last_name>([\s\S]*?)<\/last_name>/i)   || [])[1] || '').trim();
-    const firstName  = ((block.match(/<first_name>([\s\S]*?)<\/first_name>/i) || [])[1] || '').trim();
-    const party      = ((block.match(/<party>([\s\S]*?)<\/party>/i)           || [])[1] || '').trim();
-    const state      = ((block.match(/<state>([\s\S]*?)<\/state>/i)           || [])[1] || '').trim();
-    const vote       = ((block.match(/<vote_cast>([\s\S]*?)<\/vote_cast>/i)   || [])[1] || '').trim();
+    let bioguideId = ((block.match(/<bio_id>([\s\S]*?)<\/bio_id>/i)           || [])[1] || '').trim();
+    const lastName  = ((block.match(/<last_name>([\s\S]*?)<\/last_name>/i)    || [])[1] || '').trim();
+    const firstName = ((block.match(/<first_name>([\s\S]*?)<\/first_name>/i)  || [])[1] || '').trim();
+    const party     = ((block.match(/<party>([\s\S]*?)<\/party>/i)            || [])[1] || '').trim();
+    const state     = ((block.match(/<state>([\s\S]*?)<\/state>/i)            || [])[1] || '').trim();
+    const vote      = ((block.match(/<vote_cast>([\s\S]*?)<\/vote_cast>/i)    || [])[1] || '').trim();
+    // Senate XML often omits bio_id — fall back to lastName+state lookup
+    if (!bioguideId && lastName && state) {
+      const key = lastName.toLowerCase().replace(/[^a-z]/g, '') + '-' + state;
+      bioguideId = SENATOR_LOOKUP[key] || '';
+    }
     if (vote) {
       members.push({
         bioguideId,

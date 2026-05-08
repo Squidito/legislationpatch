@@ -5,6 +5,17 @@
   "state": "ND",
   "role": "Senator",
   "district": null,
-  "bio": "John Hoeven is a Senator representing ND.",
-  "comments": []
+  "bio": "John Henry Hoeven III is an American politician and banker serving as the senior U.S. senator from North Dakota, a seat he has held since 2011. A member of the Republican Party, Hoeven served as the 31st governor of North Dakota from 2000 to 2010.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/John_Hoeven",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

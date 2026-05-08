@@ -5,6 +5,17 @@
   "state": "NH",
   "role": "Senator",
   "district": null,
-  "bio": "Margaret Wood Hassan is a Senator representing NH.",
-  "comments": []
+  "bio": "Margaret Wood Hassan is an American politician and attorney serving as the junior United States senator for New Hampshire since 2017. A member of the Democratic Party, Hassan was the 81st governor of New Hampshire, from 2013 to 2017.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Maggie_Hassan",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

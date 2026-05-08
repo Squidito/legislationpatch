@@ -3,7 +3,7 @@
   "name": "Richard J. Durbin",
   "party": "D",
   "state": "IL",
-  "bio": "Richard J. Durbin is a Senator representing IL.",
+  "bio": "Richard Joseph Durbin is an American politician and attorney serving as the senior United States senator from the state of Illinois, a seat he has held since 1997. A member of the Democratic Party, Durbin is in his fifth Senate term and has served since 2005 as the Senate Democratic Whip and since 2025 as the Senate minority whip. He is the longest-serving Democratic whip since the position was established in 1913.",
   "comments": [
     {
       "billId": null,
@@ -14,5 +14,16 @@
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Dick_Durbin",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

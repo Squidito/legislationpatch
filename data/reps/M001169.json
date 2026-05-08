@@ -5,6 +5,17 @@
   "state": "CT",
   "role": "Senator",
   "district": null,
-  "bio": "Christopher Murphy is a Senator representing CT.",
-  "comments": []
+  "bio": "Christopher Philip Yorke Murphy is a British politician.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Christopher_Murphy_(British_politician)",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

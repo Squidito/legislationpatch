@@ -5,6 +5,17 @@
   "state": "MS",
   "role": "Senator",
   "district": null,
-  "bio": "Cindy Hyde-Smith is a Senator representing MS.",
-  "comments": []
+  "bio": "Cindy Hyde-Smith is an American politician and lobbyist serving since 2018 as the junior United States senator from Mississippi. A member of the Republican Party, she served from 2012 to 2018 as the Mississippi Commissioner of Agriculture and Commerce and from 2000 to 2012 in the Mississippi State Senate.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Cindy_Hyde-Smith",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

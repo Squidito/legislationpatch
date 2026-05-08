@@ -5,6 +5,17 @@
   "state": "VA",
   "role": "Senator",
   "district": null,
-  "bio": "Tim Kaine is a Senator representing VA.",
-  "comments": []
+  "bio": "Timothy Michael Kaine is an American lawyer and politician serving as the junior United States senator from Virginia since 2013. A member of the Democratic Party, he served as the 70th governor of Virginia from 2006 to 2010, and as the 38th lieutenant governor of Virginia from 2002 to 2006. Kaine was the Democratic nominee for Vice President of the United States in the 2016 election, as presidential nominee Hillary Clinton's running mate.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Tim_Kaine",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

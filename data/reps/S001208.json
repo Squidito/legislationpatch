@@ -5,6 +5,17 @@
   "state": "MI",
   "role": "Senator",
   "district": null,
-  "bio": "Elissa Slotkin is a Senator representing MI.",
-  "comments": []
+  "bio": "Elissa Blair Slotkin is an American politician and former Department of Defense official serving since 2025 as the junior United States senator from Michigan. A member of the Democratic Party, she served in the United States House of Representatives from 2019 to 2025.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Elissa_Slotkin",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

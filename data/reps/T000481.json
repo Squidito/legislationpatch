@@ -3,8 +3,18 @@
   "name": "Rashida Tlaib",
   "party": "D",
   "state": "MI",
-  "bio": "Rashida Tlaib is a Representative representing MI for District 12.",
-  "comments": [],
+  "bio": "Rashida Harbi Tlaib is an American lawyer and politician serving as a U.S. representative from Michigan since 2019, representing the state's 12th congressional district since 2023. A member of the Democratic Party, she is the first Palestinian American woman to serve in Congress and one of the first two Muslim women elected to Congress.",
+  "comments": [
+    {
+      "billId": "119-HR-8322",
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "FISA section 702 is a dangerous mass surveillance tool that is already being used by our Federal Government to conduct thousands of warrantless searches on the private communications of U.S. citizens without any due process, probable cause, or review from a judge. No President--not any of them--should have the power to spy on our private communication or information, especially not the current occupant of the White House.",
+      "source": "House Floor, Apr 29, 2026",
+      "granuleTitle": "OUR GOVERNMENT IS SPYING ON US",
+      "date": "Apr 29, 2026"
+    }
+  ],
   "role": "Representative",
   "district": 12,
   "voteHistory": [
@@ -64,5 +74,7 @@
       "date": "2026-01-21",
       "vote": "Nay"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Rashida_Tlaib"
 }

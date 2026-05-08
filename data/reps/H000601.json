@@ -5,6 +5,17 @@
   "state": "TN",
   "role": "Senator",
   "district": null,
-  "bio": "Bill Hagerty is a Senator representing TN.",
-  "comments": []
+  "bio": "William Francis Hagerty IV is an American politician, businessman, and diplomat serving as the junior United States senator from Tennessee since 2021. A member of the Republican Party, he served as the 30th United States ambassador to Japan from 2017 to 2019 under President Donald Trump.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Bill_Hagerty",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }

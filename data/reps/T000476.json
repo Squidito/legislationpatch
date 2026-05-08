@@ -5,6 +5,17 @@
   "state": "NC",
   "role": "Senator",
   "district": null,
-  "bio": "Thom Tillis is a Senator representing NC.",
-  "comments": []
+  "bio": "Thomas Roland Tillis is an American businessman and politician of the Republican Party who has served since 2015 as a United States senator from North Carolina. He served in the North Carolina House of Representatives from 2007 to 2015, and as the State House speaker from 2011 to 2015. Tillis was elected to the United States Senate in 2014, defeating Democratic incumbent Kay Hagan, and reelected in 2020. He became the state's senior U.S. senator when Richard Burr retired in 2023.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Thom_Tillis",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

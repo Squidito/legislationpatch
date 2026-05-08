@@ -3,7 +3,7 @@
   "name": "Charles E. Schumer",
   "party": "D",
   "state": "NY",
-  "bio": "Charles E. Schumer is a Senator representing NY.",
+  "bio": "Charles Ellis Schumer is an American politician serving since 1999 as a United States senator from New York. A member of the Democratic Party, he has led the Senate Democratic Caucus since 2017 and served as Senate majority leader from 2021 to 2025. He has served two stints as Senate minority leader, from 2017 to 2021 and since 2025. He became New York's senior senator in 2001, upon Daniel Patrick Moynihan's retirement. Elected to a fifth term in 2022, Schumer surpassed Moynihan and Jacob K. Javits as the longest-serving U.S. senator from New York. He is the dean of New York's congressional delegation.",
   "comments": [
     {
       "billId": "119-HCONRES-40",
@@ -102,8 +102,37 @@
       "stance": "oppose",
       "text": "Instead, Republicans are preparing to spend precious time bogging the Senate down by partisan bickering.",
       "date": "Apr 20, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "The idea that Democrats are somehow to blame for this Republican shutdown of DHS is just ridiculous, and Thune and his Republican leadership ought to act like adults and help us solve this problem during serious times like these, instead of pointing fingers in another direction.",
+      "source": "Senate Floor, Apr 27, 2026",
+      "granuleTitle": "U.S. SECRET SERVICE",
+      "date": "Apr 27, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "Donald Trump has decided to focus on a taxpayer-funded, gold-plated ballroom instead of focusing on these important national security issues: the war in Iran--dangerous for the United States; the fact that we haven't funded Homeland Security--dangerous for the United States. Trump's values are perverse--just perverse.",
+      "source": "Senate Floor, Apr 28, 2026",
+      "granuleTitle": "TRUMP ADMINISTRATION",
+      "date": "Apr 28, 2026"
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Chuck_Schumer",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

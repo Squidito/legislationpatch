@@ -172,6 +172,69 @@ async function fetchAllMemberIds() {
   return ids;
 }
 
+// ---- Wikipedia bio fetching ----
+// Uses the REST summary API (no key required, NPOV-enforced intro paragraph).
+// Verifies the result is about a politician before accepting it.
+
+async function fetchWikipediaBio(name, role, stateCode) {
+  const agent = { headers: { 'User-Agent': 'LegislationPatch/1.0 (contact@legislationpatch.com)' } };
+
+  // Try direct title variants
+  const roleWord = role === 'Senator' ? 'Senator' : 'Representative';
+  const titles = [
+    name,
+    name + ' (politician)',
+    name + ' (U.S. ' + roleWord + ')',
+  ];
+
+  for (const title of titles) {
+    await sleep(250);
+    try {
+      const res = await fetch(
+        'https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title),
+        agent
+      );
+      if (!res.ok) continue;
+      const data = await res.json();
+      if (data.type === 'disambiguation' || !data.extract) continue;
+      const lower = data.extract.toLowerCase();
+      const isPolitician = lower.includes('represent') || lower.includes('senator')
+                        || lower.includes('congress') || lower.includes('politician');
+      if (!isPolitician) continue;
+      return { bio: data.extract.split('\n')[0].trim(), url: data.content_urls?.desktop?.page || '' };
+    } catch (_) { continue; }
+  }
+
+  // Fallback: Wikipedia search
+  await sleep(300);
+  try {
+    const q   = encodeURIComponent(name + ' ' + roleWord + ' ' + stateCode);
+    const res = await fetch(
+      'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + q + '&format=json&srlimit=3',
+      agent
+    );
+    if (!res.ok) return null;
+    const results = (await res.json()).query?.search || [];
+    for (const r of results) {
+      await sleep(200);
+      try {
+        const pr = await fetch(
+          'https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(r.title),
+          agent
+        );
+        if (!pr.ok) continue;
+        const pd = await pr.json();
+        if (!pd.extract) continue;
+        const lower = pd.extract.toLowerCase();
+        if (!lower.includes('represent') && !lower.includes('senator') && !lower.includes('congress')) continue;
+        return { bio: pd.extract.split('\n')[0].trim(), url: pd.content_urls?.desktop?.page || '' };
+      } catch (_) { continue; }
+    }
+  } catch (_) {}
+
+  return null;
+}
+
 // ---- Fetch individual member bio ----
 async function fetchMemberDetail(bioguideId) {
   await sleep(550);
@@ -189,6 +252,7 @@ async function fetchMemberDetail(bioguideId) {
     const state  = latest.stateCode || member.state || '';
     const district = latest.district || null;
     const districtText = district ? ` for District ${district}` : '';
+    const wikiBio = await fetchWikipediaBio(name, type, state);
     return {
       bioguideId,
       name,
@@ -196,8 +260,10 @@ async function fetchMemberDetail(bioguideId) {
       state,
       role: type,
       district,
-      bio:  `${name} is a ${type} representing ${state}${districtText}.`,
-      comments: commentsByBioguide[bioguideId] || []
+      bio:       wikiBio ? wikiBio.bio : `${name} is a ${type} representing ${state}${districtText}.`,
+      bioSource: wikiBio ? 'wikipedia' : 'stub',
+      bioUrl:    wikiBio ? wikiBio.url : '',
+      comments:  commentsByBioguide[bioguideId] || []
     };
   } catch (e) { return null; }
 }
@@ -212,7 +278,15 @@ function mergeWithExisting(fresh, filePath) {
     (fresh.comments || []).forEach(c => {
       if (!merged.some(e => e.text === c.text)) merged.push(c);
     });
-    return { ...existing, ...fresh, comments: merged };
+    // Preserve a good bio — never overwrite a Wikipedia bio with the stub fallback
+    const keepExistingBio = existing.bioSource === 'wikipedia' && fresh.bioSource !== 'wikipedia';
+    return {
+      ...existing,
+      ...fresh,
+      bio:       keepExistingBio ? existing.bio : fresh.bio,
+      bioSource: keepExistingBio ? 'wikipedia'  : fresh.bioSource,
+      comments:  merged,
+    };
   } catch (e) { return fresh; }
 }
 

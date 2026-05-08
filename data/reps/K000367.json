@@ -3,7 +3,7 @@
   "name": "Amy Klobuchar",
   "party": "D",
   "state": "MN",
-  "bio": "Amy Klobuchar is a Senator representing MN.",
+  "bio": "Amy Jean Klobuchar is an American politician and lawyer serving as the senior United States senator from Minnesota, a seat she has held since 2007. A member of the Minnesota Democratic–Farmer–Labor Party (DFL), Minnesota's affiliate of the Democratic Party, she previously served as county attorney of Hennepin County, Minnesota. She is running for governor of Minnesota in the 2026 election.",
   "comments": [
     {
       "billId": "119-HCONRES-40",
@@ -14,5 +14,16 @@
     }
   ],
   "role": "Senator",
-  "district": null
+  "district": null,
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Amy_Klobuchar",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

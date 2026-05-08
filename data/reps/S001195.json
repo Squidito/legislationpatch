@@ -5,8 +5,16 @@
   "state": "MO",
   "role": "Representative",
   "district": 8,
-  "bio": "Jason Smith is a Representative representing MO for District 8.",
-  "comments": [],
+  "bio": "Jason Thomas Smith is an American businessman and politician who has been the U.S. representative for Missouri's 8th congressional district since 2013. The district comprises 30 counties, covering just under 20,000 square miles of southeastern and southern Missouri.",
+  "comments": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "stance": "neutral",
+      "text": "Mr. President, I rise to make a point of order, and I ask for 1 minute of comment without objection. [[Page S1780]] The PRESIDING OFFICER. Is there objection? Without objection, it is so ordered.",
+      "date": "Jan 11, 2026"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",
@@ -64,5 +72,7 @@
       "date": "2026-01-21",
       "vote": "Yea"
     }
-  ]
+  ],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Jason_Smith_(American_politician)"
 }

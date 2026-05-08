@@ -5,6 +5,17 @@
   "state": "MS",
   "role": "Senator",
   "district": null,
-  "bio": "Roger F. Wicker is a Senator representing MS.",
-  "comments": []
+  "bio": "Roger Frederick Wicker is an American politician, attorney, and former Air Force officer serving as the senior United States senator from Mississippi, a seat he has held since 2007. A member of the Republican Party, Wicker was a Mississippi State Senator from 1988 to 1995 and the U.S. representative from Mississippi's 1st congressional district from 1995 until 2007.",
+  "comments": [],
+  "bioSource": "wikipedia",
+  "bioUrl": "https://en.wikipedia.org/wiki/Roger_Wicker",
+  "voteHistory": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "Senate",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    }
+  ]
 }
