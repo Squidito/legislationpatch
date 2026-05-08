@@ -6,5 +6,42 @@
   "role": "Representative",
   "district": 14,
   "bio": "Clay Fuller is a Representative representing GA for District 14.",
-  "comments": []
+  "comments": [],
+  "voteHistory": [
+    {
+      "billId": "119-S-4465",
+      "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
+      "chamber": "House",
+      "date": "2026-04-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7959",
+      "billTitle": "IRS Whistleblower Program Improvement Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-227",
+      "billTitle": "Clergy Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6387",
+      "billTitle": "FIRE Act",
+      "chamber": "House",
+      "date": "2026-04-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HCONRES-40",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "chamber": "House",
+      "date": "2026-04-16",
+      "vote": "Nay"
+    }
+  ]
 }

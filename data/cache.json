@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-07T01:03:10.794Z",
+  "generated": "2026-05-08T05:16:16.757Z",
   "bills": [
     {
       "id": "119-S-1884",
@@ -109,7 +109,44 @@
           "December 31, 2026 filing deadline for Holocaust art recovery claims"
         ]
       },
-      "stageDate": "Apr 13, 2026"
+      "stageDate": "Apr 13, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-16",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-03-16",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-03-16",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-12-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-12-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ]
     },
     {
       "id": "119-S-3971",
@@ -218,7 +255,20 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 13, 2026"
+      "stageDate": "Apr 13, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-17",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 345,
+          "nays": 41,
+          "present": 0,
+          "notVoting": 45,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HR-5366",
@@ -312,7 +362,30 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-227",
@@ -401,7 +474,20 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 350,
+          "nays": 5,
+          "present": 0,
+          "notVoting": 74,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HR-7971",
@@ -505,7 +591,30 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-6495",
@@ -584,7 +693,30 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-6431",
@@ -674,7 +806,30 @@
           "Section 3306(t)(3)(B) — requirement that SEA participants be likely to exhaust unemployment benefits"
         ]
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-5334",
@@ -753,7 +908,30 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-6956",
@@ -846,7 +1024,30 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-8364",
@@ -912,7 +1113,30 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-4930",
@@ -1000,7 +1224,30 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-7959",
@@ -1116,7 +1363,20 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 346,
+          "nays": 10,
+          "present": 0,
+          "notVoting": 73,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HJRES-140",
@@ -1215,7 +1475,53 @@
           "Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) — 20-year withdrawal of 225,504 acres in Cook, Lake, and Saint Louis Counties, MN from mineral and geothermal leasing, rendered without force or effect"
         ]
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-04-16",
+          "question": "On the Joint Resolution H.J.Res. 140",
+          "result": "Joint Resolution Passed",
+          "yeas": 50,
+          "nays": 49,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-04-15",
+          "question": "On the Motion to Proceed H.J.Res. 140",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 51,
+          "nays": 49,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-04-15",
+          "question": "On the Motion to Table H.J.Res. 140",
+          "result": "Motion to Table Agreed to",
+          "yeas": 51,
+          "nays": 48,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-21",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 214,
+          "nays": 208,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 2
+        }
+      ]
     },
     {
       "id": "119-HR-6903",
@@ -1301,7 +1607,30 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-2347",
@@ -1392,7 +1721,30 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 27, 2026"
+      "stageDate": "Apr 27, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HR-8322",
@@ -1488,7 +1840,44 @@
         "removed": []
       },
       "enactedDate": "Apr 18, 2026",
-      "stageDate": "Apr 18, 2026"
+      "stageDate": "Apr 18, 2026",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-04-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-04-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     },
     {
       "id": "119-HCONRES-40",
@@ -1605,7 +1994,20 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 15, 2026"
+      "stageDate": "Apr 15, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-16",
+          "question": "On Agreeing to the Resolution",
+          "result": "Failed",
+          "yeas": 213,
+          "nays": 214,
+          "present": 1,
+          "notVoting": 3,
+          "crossoverCount": 2
+        }
+      ]
     },
     {
       "id": "119-HR-6955",
@@ -1839,7 +2241,20 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 30, 2026"
+      "stageDate": "Apr 30, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-30",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 261,
+          "nays": 111,
+          "present": 0,
+          "notVoting": 58,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HR-1346",
@@ -2043,7 +2458,53 @@
         ],
         "removed": []
       },
-      "stageDate": "Feb 3, 2026"
+      "stageDate": "Feb 3, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-02-03",
+          "question": "On Motion to Concur in the Senate Amendments",
+          "result": "Passed",
+          "yeas": 217,
+          "nays": 214,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 42
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-01-30",
+          "question": "On Passage of the Bill H.R. 7148",
+          "result": "Bill Passed",
+          "yeas": 71,
+          "nays": 29,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-01-29",
+          "question": "On Cloture on the Motion to Proceed H.R. 7148",
+          "result": "Cloture on the Motion to Proceed Rejected",
+          "yeas": 45,
+          "nays": 55,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 8
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 341,
+          "nays": 88,
+          "present": 0,
+          "notVoting": 2,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HR-6387",
@@ -2135,7 +2596,31 @@
         ],
         "removed": []
       },
-      "stageDate": "Apr 26, 2026"
+      "stageDate": "Apr 26, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 220,
+          "nays": 198,
+          "present": 0,
+          "notVoting": 12,
+          "crossoverCount": 9
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-22",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 206,
+          "nays": 214,
+          "present": 0,
+          "notVoting": 10,
+          "crossoverCount": 0
+        }
+      ]
     },
     {
       "id": "119-HR-2319",
@@ -2232,7 +2717,30 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "Apr 21, 2026"
+      "stageDate": "Apr 21, 2026",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-21",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-21",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-21",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
     }
   ]
 }

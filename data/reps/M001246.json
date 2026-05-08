@@ -6,5 +6,35 @@
   "role": "Representative",
   "district": 11,
   "bio": "Analilia Mejia is a Representative representing NJ for District 11.",
-  "comments": []
+  "comments": [],
+  "voteHistory": [
+    {
+      "billId": "119-S-4465",
+      "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
+      "chamber": "House",
+      "date": "2026-04-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7959",
+      "billTitle": "IRS Whistleblower Program Improvement Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-227",
+      "billTitle": "Clergy Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6387",
+      "billTitle": "FIRE Act",
+      "chamber": "House",
+      "date": "2026-04-22",
+      "vote": "Nay"
+    }
+  ]
 }

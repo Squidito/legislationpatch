@@ -122,6 +122,7 @@ function renderProfile(rep) {
   const commentsContainer = document.getElementById('repComments');
   if (!rep.comments || rep.comments.length === 0) {
     commentsContainer.innerHTML = `<div class="empty-state">No recorded comments on recent legislation.</div>`;
+    renderVotingHistory(rep);
     return;
   }
 
@@ -149,6 +150,8 @@ function renderProfile(rep) {
       </div>
     `;
   }).join('');
+
+  renderVotingHistory(rep);
 }
 
 // ---- Utilities ----
@@ -196,4 +199,38 @@ function toggleTheme(isDark) {
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
   updateLogoForTheme(isDark);
+}
+
+function renderVotingHistory(rep) {
+  var container   = document.getElementById('repVoteHistory');
+  var labelEl     = document.getElementById('repVoteHistoryLabel');
+  var history     = Array.isArray(rep.voteHistory) ? rep.voteHistory : [];
+
+  if (history.length === 0) {
+    if (labelEl) labelEl.style.display = 'none';
+    if (container) container.style.display = 'none';
+    return;
+  }
+
+  var html = '';
+  for (var v of history) {
+    var billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId);
+    var billIdFmt = escHtml(formatBillId(v.billId) || '');
+    var billUrl   = 'index.html?scrollTo=' + encodeURIComponent(v.billId);
+    var rawVote   = (v.vote || '').toLowerCase();
+    var voteDisplay = rawVote.includes('yea') || rawVote.includes('yes') ? 'Yea'
+                    : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'
+                    : rawVote.includes('not')                            ? 'Not Voting'
+                    : (v.vote || '');
+    var badgeCls = voteDisplay === 'Yea' ? 'rv-yea' : voteDisplay === 'Nay' ? 'rv-nay' : 'rv-nv';
+    html += '<div class="rep-vote-row">'
+      + '<div class="rep-vote-bill">'
+      + '<a href="' + billUrl + '" class="rep-vote-bill-link">' + billLabel + '</a>'
+      + (billIdFmt ? '<span class="rep-vote-bill-id">' + billIdFmt + '</span>' : '')
+      + '</div>'
+      + '<span class="rep-vote-badge ' + badgeCls + '">' + escHtml(voteDisplay) + '</span>'
+      + '<span class="rep-vote-date">' + formatDate(v.date || '') + '</span>'
+      + '</div>';
+  }
+  if (container) container.innerHTML = html;
 }

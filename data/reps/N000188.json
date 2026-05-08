@@ -6,5 +6,63 @@
   "role": "Representative",
   "district": 1,
   "bio": "Donald Norcross is a Representative representing NJ for District 1.",
-  "comments": []
+  "comments": [],
+  "voteHistory": [
+    {
+      "billId": "119-S-4465",
+      "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
+      "chamber": "House",
+      "date": "2026-04-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7959",
+      "billTitle": "IRS Whistleblower Program Improvement Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-227",
+      "billTitle": "Clergy Act",
+      "chamber": "House",
+      "date": "2026-04-27",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6387",
+      "billTitle": "FIRE Act",
+      "chamber": "House",
+      "date": "2026-04-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HCONRES-40",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "chamber": "House",
+      "date": "2026-04-16",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-3971",
+      "billTitle": "Small Business Innovation and Economic Security Act",
+      "chamber": "House",
+      "date": "2026-03-17",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "chamber": "House",
+      "date": "2026-02-03",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "chamber": "House",
+      "date": "2026-01-21",
+      "vote": "Nay"
+    }
+  ]
 }

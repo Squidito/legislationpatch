@@ -659,14 +659,30 @@ function gatherBillPositions(bill) {
 
 function renderPositionsSection(bill) {
   const positions = gatherBillPositions(bill);
-  if (!positions.length) return '';
-  return `<div class="positions-section">
-    <div class="positions-title">Congressional Positions</div>
-    ${positions.map(pos => `<div class="position-row${pos.tracked ? ' tracked' : ''}">
-      <span class="position-name">${escHtml(pos.name)} ${partyInitial(pos.party)}</span>
-      <span class="position-role ${roleClass(pos.role)}">${escHtml(pos.role)}</span>
-    </div>`).join('')}
-  </div>`;
+  const voteRows  = renderVoteSection(bill);
+  if (!positions.length && !voteRows) return '';
+
+  const posHtml = positions.map(pos => {
+    // Only show party initial for known parties; skip when the name already
+    // embeds party+state like "Sen. Cotton, Tom (R-TX)".
+    const pi = partyInitial(pos.party);
+    const hasPartyInName = /\([DRIB][A-Z]?-/.test(pos.name);
+    const partyStr = (!hasPartyInName && (pi === 'D' || pi === 'R' || pi === 'I')) ? ' ' + pi : '';
+    return '<div class="position-row' + (pos.tracked ? ' tracked' : '') + '">'
+      + '<span class="position-name">' + escHtml(pos.name) + partyStr + '</span>'
+      + '<span class="position-role ' + roleClass(pos.role) + '">' + escHtml(pos.role) + '</span>'
+      + '</div>';
+  }).join('');
+
+  const sponsorBlock = posHtml
+    ? '<div class="positions-votes-divider">Sponsor</div>' + posHtml
+    : '';
+
+  return '<div class="positions-section">'
+    + '<div class="positions-title">Congressional Positions</div>'
+    + (voteRows ? voteRows : '')
+    + sponsorBlock
+    + '</div>';
 }
 
 function renderUnderreportedSection(bill) {
@@ -687,6 +703,7 @@ let _carouselRaf      = null;
 let _carouselScroll   = null;
 let _carouselEpoch    = 0;
 let _repRowObserver   = null;
+let _voteDetailCache  = {};
 
 function setupCarousel() {
   // Bump epoch — any tick or retry from a previous call will see a stale epoch and stop.
@@ -1504,6 +1521,125 @@ function renderLikelihoodFooter(bill, col, state) {
     </div>
     <div class="footer-chevron-col"><span class="chevron ${isOpen ? 'open' : ''}"></span></div>
   </div>`;
+}
+
+// ---- Vote Results Section ----
+
+function renderVoteSection(bill) {
+  if (!Array.isArray(bill.votes) || !bill.votes.length) return '';
+  var rows = (bill.votes || []).map(function(v, i) {
+    var detailId   = 'vote-detail-' + bill.id + '-' + i;
+    var chamberCls = v.chamber === 'Senate' ? 'chamber-senate' : 'chamber-house';
+    var resultCls  = (v.result || '').toUpperCase().includes('PASS') ? 'result-passed' : 'result-failed';
+    var crossPill  = v.crossoverCount > 0
+      ? '<span class="vote-crossover-pill">' + v.crossoverCount + ' crossed aisle</span>'
+      : '';
+    var tallyHtml;
+    if (v.method) {
+      tallyHtml = '<span class="tally-method">' + escHtml(v.method) + '</span>';
+    } else {
+      tallyHtml = '<span class="tally-yea">Yea ' + v.yeas + '</span>'
+        + '<span class="tally-sep">·</span>'
+        + '<span class="tally-nay">Nay ' + v.nays + '</span>'
+        + (v.notVoting > 0 ? '<span class="tally-sep">·</span><span class="tally-nv">NV ' + v.notVoting + '</span>' : '');
+    }
+    var expandBtn = v.method ? '' :
+      '<button class="vote-expand-btn" data-open="0" onclick="expandVoteDetail(\'' + bill.id + '\',' + i + ',this)">Show votes ▾</button>';
+    return '<div class="vote-row">'
+      + '<div class="vote-row-summary">'
+      + '<span class="vote-chamber-badge ' + chamberCls + '">' + escHtml(v.chamber) + '</span>'
+      + '<span class="vote-result-badge ' + resultCls + '">' + escHtml(v.result || '') + '</span>'
+      + '<span class="vote-tally">' + tallyHtml + '</span>'
+      + '<span class="vote-date-label">' + escHtml(formatDateCompact(v.date || '')) + '</span>'
+      + crossPill
+      + expandBtn
+      + '</div>'
+      + '<div class="vote-detail" id="' + escHtml(detailId) + '" style="display:none"></div>'
+      + '</div>';
+  }).join('');
+  return rows;
+}
+
+async function expandVoteDetail(billId, voteIdx, btnEl) {
+  var detailEl = document.getElementById('vote-detail-' + billId + '-' + voteIdx);
+  if (!detailEl) return;
+
+  var isOpen = btnEl.getAttribute('data-open') === '1';
+  if (isOpen) {
+    detailEl.style.display = 'none';
+    btnEl.setAttribute('data-open', '0');
+    btnEl.textContent = 'Show votes ▾';
+    return;
+  }
+  detailEl.style.display = 'block';
+  btnEl.setAttribute('data-open', '1');
+  btnEl.textContent = 'Hide votes ▴';
+
+  if (!_voteDetailCache[billId]) {
+    detailEl.innerHTML = '<div class="vote-detail-loading">Loading…</div>';
+    try {
+      var res = await fetch('data/votes/' + billId + '.json');
+      if (!res.ok) throw new Error('not found');
+      _voteDetailCache[billId] = await res.json();
+    } catch (_) {
+      detailEl.innerHTML = '<div class="vote-detail-error">Vote detail unavailable.</div>';
+      return;
+    }
+  }
+
+  var voteFile = _voteDetailCache[billId];
+  var vote = (voteFile.votes || [])[voteIdx];
+  if (!vote) { detailEl.innerHTML = ''; return; }
+
+  var html = '';
+
+  // Crossovers — featured at the top on close votes
+  var crossovers = vote.crossovers || [];
+  if (crossovers.length > 0) {
+    html += '<div class="vote-crossovers-section">';
+    html += '<div class="vote-crossovers-title">Crossed the Aisle (' + crossovers.length + ')</div>';
+    html += '<div class="vote-crossovers-list">';
+    for (var co of crossovers) {
+      var coParty    = (co.party || 'I').toUpperCase()[0];
+      var coBaseName = (co.name || '').replace(/\s*\([A-Z]{2}\)\s*$/, '').trim();
+      var coVoteCls  = co.vote === 'Yea' ? 'vote-yea' : 'vote-nay';
+      var coInner = '<span class="crossover-party party-' + coParty.toLowerCase() + '">' + escHtml(coParty) + '</span>'
+        + '<span class="crossover-name">' + escHtml(coBaseName) + (co.state ? ' (' + escHtml(co.state) + ')' : '') + '</span>'
+        + '<span class="crossover-vote ' + coVoteCls + '">' + escHtml(co.vote || '') + '</span>';
+      html += co.bioguideId
+        ? '<a class="crossover-member" href="rep?id=' + co.bioguideId + '&ref=bills">' + coInner + '</a>'
+        : '<div class="crossover-member">' + coInner + '</div>';
+    }
+    html += '</div></div>';
+  }
+
+  // Member groups: Yea / Nay / Not Voting
+  var groups = [
+    { label: 'Yea',        cls: 'group-yea', test: function(v) { var lv = v.toLowerCase(); return lv === 'yea' || lv === 'aye' || lv === 'yes'; } },
+    { label: 'Nay',        cls: 'group-nay', test: function(v) { var lv = v.toLowerCase(); return lv === 'nay' || lv === 'no'; } },
+    { label: 'Not Voting', cls: 'group-nv',  test: function(v) { var lv = v.toLowerCase(); return lv.includes('not') || lv === 'present'; } },
+  ];
+
+  var members = vote.members || [];
+  for (var g of groups) {
+    var gMembers = members.filter(function(m) { return g.test(m.vote || ''); });
+    if (gMembers.length === 0) continue;
+    html += '<div class="vote-members-group ' + g.cls + '">';
+    html += '<div class="vote-members-header"><span class="vote-group-label">' + g.label + '</span><span class="vote-group-count">' + gMembers.length + '</span></div>';
+    html += '<div class="vote-members-list">';
+    for (var m of gMembers) {
+      var mParty    = (m.party || 'I').toUpperCase()[0];
+      var mBaseName = (m.name || '').replace(/\s*\([A-Z]{2}\)\s*$/, '').trim();
+      var mInner = '<span class="vm-party party-' + mParty.toLowerCase() + '">' + escHtml(mParty) + '</span>'
+        + '<span class="vm-name">' + escHtml(mBaseName) + (m.state ? ' (' + escHtml(m.state) + ')' : '') + '</span>';
+      html += m.bioguideId
+        ? '<a class="vote-member" href="rep?id=' + m.bioguideId + '&ref=bills">' + mInner + '</a>'
+        : '<span class="vote-member">' + mInner + '</span>';
+    }
+    html += '</div></div>';
+  }
+
+  detailEl.innerHTML = '<div class="vote-detail-inner">' + html + '</div>';
 }
 
 function renderBody(bill, isOpen, col) {

@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const { SYSTEM_PROMPT, CHUNK_MAP_PROMPT } = require('./prompts');
+const { processVotesForBill } = require('./fetch_vote_data');
 
 // --- CONFIGURATION ---
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
@@ -1088,6 +1089,12 @@ async function runSingleBill(targetId) {
         cacheData.bills.unshift(processedData);
         saveCache(cacheData);
         console.log(`\n=== SUCCESS: ${targetId} saved to cache.json ===`);
+        try {
+            await processVotesForBill(processedData, cacheData);
+            saveCache(cacheData);
+        } catch (e) {
+            console.warn(`   - Vote fetch skipped (non-fatal): ${e.message}`);
+        }
     } else {
         console.log(`\n=== REJECTED: ${targetId} did not pass verification ===`);
     }
@@ -1128,6 +1135,12 @@ async function runBatch() {
             saveCache(cacheData);
             console.log(`   - Saved ${billId} to cache.json.`);
             processedCount++;
+            try {
+                await processVotesForBill(processedData, cacheData);
+                saveCache(cacheData);
+            } catch (e) {
+                console.warn(`   - Vote fetch skipped (non-fatal): ${e.message}`);
+            }
         }
     }
 
