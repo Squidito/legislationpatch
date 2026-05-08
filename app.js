@@ -184,16 +184,30 @@ function setupSettings() {
   const manualAdd = document.getElementById('manualRepAdd');
   if (manualAdd) manualAdd.addEventListener('click', addManualTrackedRep);
 
+  const closeBtn = document.getElementById('repDropdownClose');
+  if (closeBtn) closeBtn.addEventListener('click', toggleRepDropdown);
+
+  const grid = document.getElementById('repGrid');
+  if (grid) {
+    grid.addEventListener('click', e => {
+      const btn = e.target.closest('.rep-track-btn');
+      if (!btn) return;
+      const id = btn.dataset.repId;
+      if (!id) return;
+      toggleRepTracked(id, { name: btn.dataset.repName, party: btn.dataset.repParty, state: btn.dataset.repState });
+    });
+  }
+
   const strip = document.getElementById('repStrip');
   if (strip) {
     strip.addEventListener('click', e => {
-      const card = e.target.closest('[data-rep-id]');
+      const star = e.target.closest('.rep-strip-star');
+      if (!star) return;
+      const card = star.closest('[data-rep-id]');
       if (!card) return;
       const id = card.dataset.repId;
-      // Toggle session-level carousel priority
       if (selectedRepIds.has(id)) selectedRepIds.delete(id);
       else selectedRepIds.add(id);
-      // Also persist as a tracked rep so it appears in Favorites
       const existingTrack = document.querySelector('.shock-quotes-track');
       if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = m.m41; }
       toggleRepTracked(id, {
@@ -201,7 +215,7 @@ function setupSettings() {
         party: card.dataset.repParty,
         state: card.dataset.repState,
       });
-      renderRepStrip(); // re-render strip to reflect selectedRepIds visual state
+      renderRepStrip();
     });
   }
 
@@ -357,6 +371,24 @@ function repCardHtml(rep, size) {
   </a>`;
 }
 
+function repGridCardHtml(rep) {
+  const id       = getRepId(rep);
+  const party    = rep.party || rep.partyCode || 'I';
+  const state    = rep.state || rep.stateCode || trackedState;
+  const name     = formatRepName(rep);
+  const lastName = repLastName(name);
+  const tracked  = trackedReps.some(r => r.id === id);
+  return `<div class="rep-grid-card${tracked ? ' tracked' : ''}" data-id="${escHtml(id)}">
+    ${repCardHtml(rep, 'lg')}
+    <button class="rep-track-btn${tracked ? ' tracked' : ''}"
+            data-rep-id="${escHtml(id)}"
+            data-rep-name="${escHtml(name)}"
+            data-rep-party="${escHtml(party)}"
+            data-rep-state="${escHtml(state)}"
+            title="${tracked ? 'Untrack' : 'Track'} ${escHtml(lastName)}">${tracked ? '&#9733;' : '&#9734;'}</button>
+  </div>`;
+}
+
 // ---- Rep strip (8 portraits in controls bar) ----
 
 function renderRepStrip() {
@@ -414,20 +446,22 @@ function renderRepStrip() {
     const active     = selectedRepIds.has(id);
     const isFeatured = !!rep.isFeatured;
     const lastName   = repLastName(name);
-    return `<button class="rep-card rep-card-sm${active ? ' rep-selected' : ''}${isFeatured ? ' rep-featured' : ''}"
-                    data-rep-id="${escHtml(id)}"
-                    data-rep-name="${escHtml(name)}"
-                    data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
-                    data-rep-state="${escHtml(rep.state || rep.stateCode || '')}"
-                    style="--party-color:${color}; background:none; border:none; padding:0; cursor:pointer;"
-                    title="${escHtml(name)}${active ? ' — click to deselect' : ' — click to feature quotes'}">
-      ${isFeatured
-        ? `<div class="rep-featured-wrap"><div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div></div>`
-        : `<div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>`
-      }
-      <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
+    const isTracked  = trackedReps.some(r => r.id === id);
+    return `<div class="rep-strip-card${active ? ' rep-selected' : ''}${isFeatured ? ' rep-featured' : ''}${isTracked ? ' tracked' : ''}"
+                 data-rep-id="${escHtml(id)}"
+                 data-rep-name="${escHtml(name)}"
+                 data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
+                 data-rep-state="${escHtml(rep.state || rep.stateCode || '')}">
+      <a href="rep?id=${escHtml(bg || id)}&ref=bills" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
+        ${isFeatured
+          ? `<div class="rep-featured-wrap"><div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div></div>`
+          : `<div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>`
+        }
+        <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
+      </a>
       <div class="rep-name">${escHtml(lastName)}</div>
-    </button>`;
+      <button class="rep-strip-star${isTracked ? ' tracked' : ''}" title="${isTracked ? 'Untrack' : 'Track'} ${escHtml(lastName)}">${isTracked ? '&#9733;' : '&#9734;'}</button>
+    </div>`;
   }).join('');
 }
 
@@ -474,7 +508,37 @@ function renderRepGrid() {
     grid.innerHTML = '<div class="rep-status">No members found for this state.</div>';
     return;
   }
-  grid.innerHTML = pool.map(rep => repCardHtml(rep, 'lg')).join('');
+
+  const byLastName = (a, b) => repLastName(formatRepName(a)).localeCompare(repLastName(formatRepName(b)));
+  const senators   = pool.filter(r => r.role === 'Senator').sort(byLastName);
+  const house      = pool.filter(r => r.role !== 'Senator').sort(byLastName);
+
+  function chamberHtml(label, members) {
+    if (!members.length) return '';
+    return `<div class="rep-chamber-row">
+      <div class="rep-chamber-label">${escHtml(label)}</div>
+      <div class="rep-strip rep-strip-dropdown" data-chamber="${escHtml(label)}">${members.map(repGridCardHtml).join('')}</div>
+    </div>`;
+  }
+
+  grid.innerHTML = chamberHtml('Senate', senators) + chamberHtml('House', house);
+  grid.querySelectorAll('.rep-strip-dropdown').forEach(setupDropdownStripDrag);
+}
+
+function setupDropdownStripDrag(el) {
+  let isDragging = false, startX = 0, startScroll = 0;
+  el.addEventListener('mousedown', e => {
+    isDragging  = true;
+    startX      = e.pageX;
+    startScroll = el.scrollLeft;
+    el.classList.add('dragging');
+    e.preventDefault();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; el.classList.remove('dragging'); });
+  el.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    el.scrollLeft = startScroll - (e.pageX - startX);
+  });
 }
 
 // ---- Toggle dropdown ----

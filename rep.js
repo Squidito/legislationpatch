@@ -30,6 +30,9 @@ async function init() {
       const label = billTitleParam || formatBillId(billId) || 'Bill';
       backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
       backBtn.textContent = `← ${label}`;
+    } else if (ref === 'reps') {
+      backBtn.href = 'reps.html';
+      backBtn.textContent = '← Reps';
     }
   }
 
