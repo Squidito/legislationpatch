@@ -189,6 +189,74 @@ section('CR dates processed');
     }
 }
 
+// ── Check: omnibus bills ───────────────────────────────────────────────────
+
+section('Omnibus bill structure');
+{
+    const omnibusBills = bills.filter(b => b.isOmnibus);
+    if (omnibusBills.length === 0) {
+        pass('No omnibus bills in cache (or none marked isOmnibus)');
+    } else {
+        const DIV_REQUIRED = ['label', 'summary', 'sections'];
+        let allOk = true;
+        for (const bill of omnibusBills) {
+            if (!Array.isArray(bill.divisions) || bill.divisions.length === 0) {
+                fail(`${bill.id}: isOmnibus but no divisions array`);
+                allOk = false;
+                continue;
+            }
+            for (let di = 0; di < bill.divisions.length; di++) {
+                const div = bill.divisions[di];
+                const missing = DIV_REQUIRED.filter(f => {
+                    const v = div[f];
+                    return v === undefined || v === null || v === '' || (Array.isArray(v) && v.length === 0);
+                });
+                if (missing.length) {
+                    fail(`${bill.id} divisions[${di}] (${div.label || '?'}): missing ${missing.join(', ')}`);
+                    allOk = false;
+                }
+                // Each division section should have parseable labels
+                for (const sec of (div.sections || [])) {
+                    if (sec.billSection) continue;
+                    const label = sec.label || '';
+                    const autoOk =
+                        /^Sections?\s+\d/i.test(label) ||
+                        /^Title\s+[IVXLC]/i.test(label) ||
+                        /^resolving/i.test(label);
+                    if (!autoOk && label.length > 0) {
+                        warn(`${bill.id} div ${div.divisionKey}: section label won't auto-link: "${label.slice(0, 55)}"`);
+                    }
+                }
+            }
+            if (allOk) pass(`${bill.id}: ${bill.divisions.length} divisions all have required fields`);
+        }
+    }
+}
+
+// ── Check: raw bills_raw omnibus entries ───────────────────────────────────
+
+section('Omnibus raw data (bills_raw.json)');
+{
+    const omnibusRaw = rawBills.filter(b => b.isOmnibus);
+    if (omnibusRaw.length === 0) {
+        pass('No omnibus entries in bills_raw.json');
+    } else {
+        let allOk = true;
+        for (const b of omnibusRaw) {
+            if (!Array.isArray(b.divisions) || b.divisions.length === 0) {
+                fail(`bills_raw: ${b.billId} is isOmnibus but has no divisions array`);
+                allOk = false;
+            } else {
+                const tooLarge = b.divisions.filter(d => d.charCount > 900000);
+                if (tooLarge.length) {
+                    warn(`${b.billId}: divisions ${tooLarge.map(d => d.divisionKey).join(', ')} exceed 900K chars — may approach context window limit`);
+                }
+            }
+        }
+        if (allOk) pass(`${omnibusRaw.length} omnibus raw bill(s) have divisions arrays`);
+    }
+}
+
 // ── Check: sitemap ─────────────────────────────────────────────────────────
 
 section('Sitemap');

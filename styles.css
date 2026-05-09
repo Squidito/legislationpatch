@@ -2104,6 +2104,77 @@ a:hover { text-decoration: underline; }
 }
 .gaps-item:last-child { margin-bottom: 0; }
 
+/* ── Omnibus division blocks (bill page only) ── */
+.omnibus-divisions {
+  margin: 0 1.1rem 0.85rem;
+}
+.omnibus-divisions-header {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--purple);
+  padding: 0.55rem 0 0.55rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+.division-block {
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--purple-border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+}
+.division-block-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.division-key-badge {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--purple-bg);
+  border: 1px solid var(--purple-border);
+  border-radius: 3px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.division-block-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+.division-summary {
+  font-size: 0.83rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  padding: 0.6rem 0.85rem 0.35rem;
+}
+/* Division inner blocks inherit patch-notes styling but are nested */
+.division-block .patch-notes {
+  margin: 0 0.6rem 0.65rem;
+}
+.division-block .top-lines {
+  margin: 0 0.6rem 0.65rem;
+}
+.division-block .what-changed-section {
+  padding: 0 0.6rem 10px;
+}
+.division-block .underreported-section,
+.division-block .criticism-section,
+.division-block .gaps-section {
+  margin: 0 0.6rem 0.65rem;
+}
+
 /* View full bill link */
 .view-bill-link-row {
   padding: 0.3rem 1.1rem 0.8rem;

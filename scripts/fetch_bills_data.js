@@ -133,6 +133,85 @@ async function fetchSpecificBill(type, number) {
     } catch (e) { console.error('Error:', e.message); return null; }
 }
 
+// Split a cleaned bill display text into per-division chunks.
+// Returns [{ label, divisionKey, text, charCount }] or null if not a multi-division bill.
+// Distinguishes TOC entries (first occurrence per letter) from body starts (second occurrence).
+function splitIntoDivisions(displayText) {
+    const lines = displayText.split('\n');
+    const DIVISION_RE = /^DIVISION\s+([A-Z])\s*--(.*)$/i;
+
+    // Collect all occurrences: { lineIdx, letter, subtitle, rawLine }
+    const matches = [];
+    for (let i = 0; i < lines.length; i++) {
+        const m = lines[i].trim().match(DIVISION_RE);
+        if (m) matches.push({ lineIdx: i, letter: m[1].toUpperCase(), subtitle: m[2].trim() });
+    }
+    if (matches.length < 2) return null;
+
+    // First occurrence per letter = TOC (build label from it).
+    // Second occurrence = body start. Letters with only one occurrence past line 400 = body.
+    const tocLabels = {};
+    const letterOccs = {};
+    for (const m of matches) {
+        if (!letterOccs[m.letter]) letterOccs[m.letter] = [];
+        letterOccs[m.letter].push(m);
+    }
+
+    const bodyStarts = [];
+    for (const [letter, occs] of Object.entries(letterOccs)) {
+        // Build TOC label from first occurrence
+        const subtitle = occs[0].subtitle.replace(/\s+/g, ' ').trim();
+        tocLabels[letter] = subtitle
+            ? `Division ${letter} — ${subtitle}`
+            : `Division ${letter}`;
+
+        if (occs.length >= 2) {
+            bodyStarts.push(occs[1]); // second occurrence = body start
+        } else if (occs[0].lineIdx >= 400) {
+            // Single occurrence past preamble — treat as body
+            bodyStarts.push(occs[0]);
+        }
+        // else: single occurrence in preamble (TOC-only entry, no body) — skip
+    }
+
+    if (bodyStarts.length < 2) return null;
+
+    // Sort by line index; deduplicate same-letter entries within 100 lines
+    bodyStarts.sort((a, b) => a.lineIdx - b.lineIdx);
+    const seenLetterLine = {};
+    const deduped = [];
+    for (const bs of bodyStarts) {
+        const prev = seenLetterLine[bs.letter];
+        if (prev !== undefined && bs.lineIdx - prev < 100) continue;
+        seenLetterLine[bs.letter] = bs.lineIdx;
+        deduped.push(bs);
+    }
+
+    if (deduped.length < 2) return null;
+
+    // Split text at body division positions
+    const divisions = [];
+    for (let i = 0; i < deduped.length; i++) {
+        const startLine = deduped[i].lineIdx;
+        const endLine   = i < deduped.length - 1 ? deduped[i + 1].lineIdx : lines.length;
+        const displayChunk  = lines.slice(startLine, endLine).join('\n').trim();
+        const analysisChunk = displayChunk.replace(/\n/g, ' ').replace(/\s+/g, ' ').trim();
+        divisions.push({
+            label:       tocLabels[deduped[i].letter] || `Division ${deduped[i].letter}`,
+            divisionKey: deduped[i].letter,
+            text:        analysisChunk,
+            charCount:   analysisChunk.length,
+        });
+    }
+
+    const totalChars = divisions.reduce((s, d) => s + d.charCount, 0);
+    if (totalChars < displayText.length * 0.3) {
+        console.log(`  [omnibus] Division text (${totalChars} chars) is only ${Math.round(totalChars / displayText.length * 100)}% of bill — may be a detection issue`);
+    }
+
+    return divisions.length >= 2 ? divisions : null;
+}
+
 // Returns { display, analysis } — display has line structure for bill-text/*.txt,
 // analysis is flat for bills_raw.json. Both are uncapped; callers decide limits.
 async function fetchBillText(congress, type, number) {
@@ -353,6 +432,19 @@ async function processBillEntry(congress, type, number, title) {
         console.log(`  Prior-year text: ${pyChars > 0 ? pyChars + ' chars' : 'none'}`);
     }
 
+    // Detect omnibus and split into divisions if applicable
+    const { appType } = classifyAppropriation(billTitle);
+    const isOmnibus = appType === 'omnibus';
+    let divisions = null;
+    if (isOmnibus && billTextResult.display) {
+        divisions = splitIntoDivisions(billTextResult.display);
+        if (divisions) {
+            console.log(`  Omnibus: ${divisions.length} divisions detected — ${divisions.map(d => `${d.divisionKey}(${Math.round(d.charCount / 1000)}K)`).join(', ')}`);
+        } else {
+            console.log('  Omnibus detected but division split failed — storing as flat text.');
+        }
+    }
+
     // Save structured bill text to data/bill-text/ for the full bill page
     if (!fs.existsSync(BILL_TEXT_DIR)) fs.mkdirSync(BILL_TEXT_DIR, { recursive: true });
     fs.writeFileSync(path.join(BILL_TEXT_DIR, `${billId}.txt`), billTextResult.display);
@@ -369,7 +461,11 @@ async function processBillEntry(congress, type, number, title) {
         sponsor: meta?.sponsors?.[0] || null,
         cosponsors: meta?.cosponsors?.count || 0,
         introducedDate: meta?.introducedDate || '',
-        billText: billTextResult.analysis,
+        isOmnibus: isOmnibus && !!divisions,
+        // For omnibus bills with successful split, billText is empty — use divisions[].text instead.
+        // For all other bills, billText is the full flat analysis text.
+        billText: divisions ? '' : billTextResult.analysis,
+        divisions: divisions || null,
         crsSummary: crs,
         congressionalRecord: cr,
         hasRecord: cr.length > 0,

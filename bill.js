@@ -28,6 +28,14 @@ function toggleCard(id) {
         if (item.detail) openDetails[`${id}-${si}-${ii}`] = true;
       });
     });
+    (bill?.divisions || []).forEach((div, di) => {
+      const synthId = `${id}-d${di}`;
+      (div.sections || []).forEach((sec, si) => {
+        (sec.items || []).forEach((item, ii) => {
+          if (item.detail) openDetails[`${synthId}-${si}-${ii}`] = true;
+        });
+      });
+    });
   }
   renderAll();
 }
@@ -104,6 +112,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   (bill.sections || []).forEach((sec, si) => {
     (sec.items || []).forEach((item, ii) => {
       if (item.detail) openDetails[`${billId}-${si}-${ii}`] = true;
+    });
+  });
+  // Pre-open detail panels inside each division (omnibus bills)
+  (bill.divisions || []).forEach((div, di) => {
+    const synthId = `${billId}-d${di}`;
+    (div.sections || []).forEach((sec, si) => {
+      (sec.items || []).forEach((item, ii) => {
+        if (item.detail) openDetails[`${synthId}-${si}-${ii}`] = true;
+      });
     });
   });
 
