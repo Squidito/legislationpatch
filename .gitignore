@@ -12,3 +12,18 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Articles — private, never publish
+articles/
+
+# Working files — brand/preview assets, not part of the repo
+preview-*.png
+logos\ and\ badges.png
+logo\ old.svg
+logo.png
+logo-sheet.svg
+logo-concepts-row.svg
+logo-app-icons.svg
+logo-favicon-badge.svg
+logo-color-brand.svg
+logo-selected-direction.svg

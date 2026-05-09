@@ -844,7 +844,8 @@ a:hover { text-decoration: underline; }
 }
 .section-label {
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 700;
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-3);
@@ -2622,6 +2623,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 
   /* === CONTROLS === */
   .zip-display { display: none; }
+  .rep-strip-star { padding-bottom: 10px; }
 
   /* filter pills scroll horizontally, no wrap */
   .controls-inner {
@@ -2652,6 +2654,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
     align-items: center;
     gap: 4px 0;
     padding: 8px 14px 10px;
+    max-height: 150px;
   }
   .rep-strip-label {
     grid-column: 1;
@@ -2802,8 +2805,8 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   --border:       #2e2e38;
   --border-inner: #252530;
   --text:         #f0f0f3;
-  --text-2:       #a8a8b3;
-  --text-3:       #6b6b7a;
+  --text-2:       #b5b5c0;
+  --text-3:       #9898a8;
   --shadow:       0 1px 3px rgba(0,0,0,0.4);
 
   --purple:       #8b6fd4;
@@ -2830,6 +2833,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   --red-bg:       #2d0a0a;
   --red-text:     #fca5a5;
 
+  --blue:         #60a5fa;
   --blue-bg:      #0a1a2e;
   --blue-text:    #93c5fd;
 }
@@ -2846,6 +2850,14 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 [data-theme="dark"] .likelihood-detail {
   border-color: var(--border);
 }
+
+[data-theme="dark"] .floor-cat-card--war         { border-left-color: var(--blue);   }
+[data-theme="dark"] .floor-cat-card--immigration { border-left-color: var(--red);    }
+[data-theme="dark"] .floor-cat-card--economy     { border-left-color: var(--amber);  }
+[data-theme="dark"] .floor-cat-card--executive   { border-left-color: var(--purple); }
+[data-theme="dark"] .floor-cat-card--government  { border-left-color: var(--teal);   }
+[data-theme="dark"] .floor-cat-card--civil       { border-left-color: var(--green);  }
+[data-theme="dark"] .floor-cat-card--other       { border-left-color: var(--border); }
 
 [data-theme="dark"] .logo-mark {
   background: #f0f0f3;
@@ -3441,7 +3453,8 @@ body {
 }
 .floor-cat-meta {
   font-family: var(--font-mono);
-  font-size: 0.67rem;
+  font-size: 0.72rem;
+  font-weight: 500;
   color: var(--text-3);
   letter-spacing: 0.02em;
 }
