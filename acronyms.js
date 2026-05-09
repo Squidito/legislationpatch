@@ -52,9 +52,45 @@ const ACRONYMS = {
   DACA:  'Deferred Action for Childhood Arrivals',
   TPS:   'Temporary Protected Status',
   USCIS: 'U.S. Citizenship and Immigration Services',
-  // Benefits
-  SNAP:  'Supplemental Nutrition Assistance Program',
-  CHIP:  "Children's Health Insurance Program",
+  // Benefits / domestic programs
+  SNAP:   'Supplemental Nutrition Assistance Program',
+  CHIP:   "Children's Health Insurance Program",
+  TANF:   'Temporary Assistance for Needy Families',
+  SSI:    'Supplemental Security Income',
+  LIHEAP: 'Low Income Home Energy Assistance Program',
+  NFIP:   'National Flood Insurance Program',
+  WIOA:   'Workforce Innovation and Opportunity Act',
+  IDEA:   'Individuals with Disabilities Education Act',
+  ROTC:   'Reserve Officers\' Training Corps',
+  IRA:    'Inflation Reduction Act',
+  // Health agencies / programs
+  CMS:    'Centers for Medicare & Medicaid Services',
+  SAMHSA: 'Substance Abuse and Mental Health Services Administration',
+  NCI:    'National Cancer Institute',
+  NIAID:  'National Institute of Allergy and Infectious Diseases',
+  NHLBI:  'National Heart, Lung, and Blood Institute',
+  MCED:   'Multi-Cancer Early Detection',
+  PBM:    'Pharmacy Benefit Manager',
+  APM:    'Alternative Payment Model',
+  DSH:    'Disproportionate Share Hospital',
+  DME:    'Durable Medical Equipment',
+  // Foreign assistance / trade
+  USAID:  'U.S. Agency for International Development',
+  PEPFAR: "President's Emergency Plan for AIDS Relief",
+  FMF:    'Foreign Military Financing',
+  UNRWA:  'United Nations Relief and Works Agency',
+  AGOA:   'African Growth and Opportunity Act',
+  ESF:    'Economic Support Fund',
+  SEED:   'Support for East European Democracy Act',
+  INCLE:  'International Narcotics Control and Law Enforcement',
+  // Financial / oversight
+  CFIUS:  'Committee on Foreign Investment in the United States',
+  CFTC:   'Commodity Futures Trading Commission',
+  // Infrastructure / cyber
+  'ARPA-I': 'Advanced Research Projects Agency–Infrastructure',
+  NCPS:   'National Cybersecurity Protection System',
+  // Visa programs
+  'H-2B': 'H-2B Temporary Nonagricultural Worker Program',
 };
 
 // ---- Tooltip element (one shared instance appended to body) ----

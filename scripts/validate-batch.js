@@ -131,26 +131,34 @@ section('Dollar amount formatting');
 {
     const RAW_DOLLAR = /\$\d{1,3}(?:,\d{3}){2,}/;
     let found = 0;
-    for (const bill of bills) {
-        const searchIn = [
-            ['summary', bill.summary],
-            ['brief', bill.brief],
-            ...( bill.top_lines || []).flatMap((tl, i) =>
-                (tl.subs || []).map((s, j) => [`top_lines[${i}].subs[${j}]`, s])
-            ),
-            ...(bill.sections || []).flatMap((sec, i) =>
-                (sec.items || []).flatMap((item, j) => [
-                    [`sections[${i}].items[${j}].main`, item.main],
-                    [`sections[${i}].items[${j}].detail`, item.detail],
-                ])
-            ),
-        ];
-        for (const [loc, text] of searchIn) {
-            if (RAW_DOLLAR.test(text || '')) {
-                fail(`${bill.id} ${loc}: contains raw dollar amount`);
+
+    function walkForDollars(obj, path, billId) {
+        if (typeof obj === 'string') {
+            if (RAW_DOLLAR.test(obj)) {
+                fail(`${billId} ${path}: contains raw dollar amount`);
                 found++;
             }
+        } else if (Array.isArray(obj)) {
+            obj.forEach((v, i) => walkForDollars(v, `${path}[${i}]`, billId));
+        } else if (obj && typeof obj === 'object') {
+            // Skip fields that legitimately hold raw numbers (likelihoodReason cites real statutes, votes hold integers)
+            const SKIP_KEYS = new Set(['votes', 'likelihood', 'currentStep', 'cosponsors', 'pages', 'charCount', 'bioguideId']);
+            for (const [k, v] of Object.entries(obj)) {
+                if (!SKIP_KEYS.has(k)) walkForDollars(v, `${path}.${k}`, billId);
+            }
         }
+    }
+
+    for (const bill of bills) {
+        walkForDollars(bill.summary,      'summary',      bill.id);
+        walkForDollars(bill.brief,        'brief',        bill.id);
+        walkForDollars(bill.top_lines,    'top_lines',    bill.id);
+        walkForDollars(bill.sections,     'sections',     bill.id);
+        walkForDollars(bill.underreported,'underreported',bill.id);
+        walkForDollars(bill.criticisms,   'criticisms',   bill.id);
+        walkForDollars(bill.gaps,         'gaps',         bill.id);
+        walkForDollars(bill.changes,      'changes',      bill.id);
+        walkForDollars(bill.divisions,    'divisions',    bill.id);
     }
     if (found === 0) pass('No raw dollar amounts found');
 }

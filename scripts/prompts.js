@@ -217,6 +217,20 @@ Return brief bullet-point notes only. No paragraphs. No editorial comment. No fi
 
 const OMNIBUS_DIVISION_PROMPT = `You are analyzing ONE DIVISION of a U.S. omnibus appropriations bill.
 
+━━━ PRE-FLIGHT CHECKLIST — apply before outputting JSON ━━━
+
+① SHORTEN ALL DOLLAR AMOUNTS — no raw statutory figures anywhere in output:
+   $11,083,012,000 → $11.08B  |  $584,250,000 → $584.3M  |  $98,000,000 → $98M
+   This applies to every field: summary, brief, top_lines.subs, sections items, underreported, changes, gaps.
+
+② FLAG ACRONYMS — every acronym in your output must exist in the acronyms.js dictionary.
+   Common ones already covered: CMS, PEPFAR, FMF, TANF, NFIP, WIOA, IDEA, PBM, MCED, USAID, CFIUS, UNRWA, AGOA, ESF, SEED.
+   If you use an acronym not in that list, spell it out in full on first use instead.
+
+③ NO RAW SECTION CITATIONS IN SUBS — top_lines.subs must describe the provision, not cite the statute.
+   Bad: "50 U.S.C. § 1881a extended through April 2026"
+   Good: "Section 702 surveillance authority extended through April 2026"
+
 ━━━ YOUR SCOPE ━━━
 
 Analyze only what is explicitly in the division text provided. This is one self-contained spending title — treat it as a complete analysis unit. Do NOT summarize the broader omnibus bill.
@@ -288,6 +302,16 @@ top_lines — no fixed cap. Include one headline group per distinct subject area
 
 
 const OMNIBUS_TOPLEVEL_PROMPT = `You have just analyzed all divisions of an omnibus appropriations bill. Now write the TOP-LEVEL cache.json entry for the full bill.
+
+━━━ PRE-FLIGHT CHECKLIST — apply before outputting JSON ━━━
+
+① SHORTEN ALL DOLLAR AMOUNTS — no raw statutory figures anywhere in output:
+   $11,083,012,000 → $11.08B  |  $584,250,000 → $584.3M  |  $98,000,000 → $98M
+
+② FLAG ACRONYMS — every acronym must exist in acronyms.js or be spelled out.
+   Common ones covered: CMS, PEPFAR, FMF, TANF, NFIP, WIOA, IDEA, PBM, MCED, USAID, CFIUS, UNRWA, AGOA, ESF, SEED.
+
+③ billSection REQUIRED on every top_lines item — point to the most relevant section anchor in the bill text.
 
 The top-level entry summarizes the ENTIRE omnibus — it does NOT repeat the per-division detail.
 

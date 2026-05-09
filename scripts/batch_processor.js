@@ -18,22 +18,31 @@ const _ACRONYM_EXCLUDED = new Set([
 function _collectBillTexts(parsed) {
     const texts = [];
     const add = v => { if (typeof v === 'string' && v.length > 2) texts.push(v); };
-    add(parsed.brief); add(parsed.summary);
-    for (const tl of parsed.top_lines || []) {
-        add(tl.headline);
-        for (const s of tl.subs || []) add(typeof s === 'string' ? s : s.text);
+
+    function collectUnit(unit) {
+        add(unit.brief); add(unit.summary);
+        for (const tl of unit.top_lines || []) {
+            add(tl.headline);
+            for (const s of tl.subs || []) add(typeof s === 'string' ? s : s.text);
+        }
+        for (const sec of unit.sections || []) {
+            add(sec.label);
+            for (const item of sec.items || []) { add(item.main); add(item.detail); add(item.label); add(item.text); }
+        }
+        for (const q of unit.featured_quotes || []) add(q.text);
+        const flat = [...(unit.underreported || []), ...(unit.criticisms || []), ...(unit.gaps || [])];
+        for (const item of flat) {
+            if (typeof item === 'string') add(item);
+            else { add(item.summary); add(item.why_unreported); add(item.why); add(item.text); add(item.description); }
+        }
+        const ch = unit.changes || {};
+        for (const list of [ch.added || [], ch.modified || [], ch.removed || []]) {
+            for (const item of list) add(typeof item === 'string' ? item : (item.description || item.text));
+        }
     }
-    for (const sec of parsed.sections || []) {
-        add(sec.label);
-        for (const item of sec.items || []) { add(item.text); add(item.detail); add(item.label); }
-    }
-    for (const q of parsed.featured_quotes || []) add(q.text);
-    const flat = [...(parsed.underreported || []), ...(parsed.criticisms || []), ...(parsed.gaps || [])];
-    for (const item of flat) add(typeof item === 'string' ? item : (item.text || item.description));
-    const ch = parsed.changes || {};
-    for (const list of [ch.added || [], ch.modified || [], ch.removed || []]) {
-        for (const item of list) add(typeof item === 'string' ? item : (item.description || item.text));
-    }
+
+    collectUnit(parsed);
+    for (const div of parsed.divisions || []) collectUnit(div);
     return texts;
 }
 

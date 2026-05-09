@@ -1189,7 +1189,7 @@ function renderBill(bill, num) {
   const state    = openCards.get(bill.id);
   const col      = likelihoodColor(bill.likelihood);
   const watching = watchedBills.has(bill.id);
-  return `<div class="bill-card" id="card-${bill.id}">
+  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : ''}" id="card-${bill.id}">
     ${renderHeader(bill, state, num, watching)}
     ${renderLikelihoodFooter(bill, col, state)}
     ${renderMinorBody(bill, col, state === 'minor')}
@@ -1230,7 +1230,7 @@ function renderHeader(bill, state, num, watching) {
 
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
-      ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
+      ${bill.isOmnibus ? `<span class="status-badge status-omnibus">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
       ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
       <div class="bill-number">#${num || ''}</div>
@@ -1602,7 +1602,7 @@ function renderBody(bill, isOpen, col) {
 
   const topLinesHtml = renderTopLines(bill);
 
-  const sectionsHtml = bill.sections?.length
+  const sectionsHtml = bill.isOmnibus ? '' : bill.sections?.length
     ? `<div class="patch-notes">${bill.sections.map((sec, si) => renderSection(bill, sec, si)).join('')}</div>`
     : `<div class="patch-notes"><p style="font-size:0.85rem;color:var(--text-3);padding:0.5rem 0">Click "Analyze with AI" below to generate patch notes for this bill.</p></div>`;
 
@@ -1674,11 +1674,7 @@ function renderDivision(bill, div, di) {
     changes:        div.changes        || null,
   };
 
-  const sectionsHtml = synth.sections.length
-    ? `<div class="patch-notes">${synth.sections.map((sec, si) => renderSection(synth, sec, si)).join('')}</div>`
-    : '';
-
-  const underHtml = renderUnderreportedSection(synth);
+  const underHtml    = renderUnderreportedSection(synth);
   const topLinesHtml = renderTopLines(synth);
   const changesHtml  = renderChangesSection(synth);
 
@@ -1702,7 +1698,6 @@ function renderDivision(bill, div, di) {
     ${div.summary ? `<div class="division-summary">${escHtml(div.summary)}</div>` : ''}
     ${topLinesHtml}
     ${changesHtml}
-    ${sectionsHtml}
     ${underHtml}
     ${criticismsHtml}
     ${gapsHtml}

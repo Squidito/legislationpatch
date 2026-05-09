@@ -1238,6 +1238,16 @@ a:hover { text-decoration: underline; }
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.7; }
 }
+.status-omnibus {
+  background: var(--amber);
+  color: #7c3d00;
+  font-size: 0.6rem;
+  letter-spacing: 0.04em;
+}
+.bill-card--omnibus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--amber) 35%, transparent), var(--shadow);
+}
 
 /* ---- STAR BUTTON — SVG star, crisp at any size ---- */
 .star-btn {
@@ -3033,6 +3043,26 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   border-color: var(--border);
 }
 
+[data-theme="dark"] .underreported-section {
+  background: rgba(100,50,0,0.22);
+  border-color: rgba(200,130,0,0.3);
+}
+[data-theme="dark"] .underreported-title {
+  color: #fbbf24;
+}
+[data-theme="dark"] .underreported-item {
+  border-top-color: rgba(200,130,0,0.2);
+}
+[data-theme="dark"] .underreported-section-name {
+  color: #fcd34d;
+}
+[data-theme="dark"] .underreported-summary {
+  color: var(--text);
+}
+[data-theme="dark"] .underreported-why {
+  color: #c9a96e;
+}
+
 [data-theme="dark"] .floor-cat-card--war         { border-left-color: var(--blue);   }
 [data-theme="dark"] .floor-cat-card--immigration { border-left-color: var(--red);    }
 [data-theme="dark"] .floor-cat-card--economy     { border-left-color: var(--amber);  }
@@ -3061,6 +3091,15 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   background: var(--surface-2);
   color: var(--text-3);
   border-color: var(--border);
+}
+
+[data-theme="dark"] .status-omnibus {
+  background: #78350f;
+  color: #fcd34d;
+}
+[data-theme="dark"] .bill-card--omnibus {
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 1px #fbbf2430, var(--shadow);
 }
 
 [data-theme="dark"] .expand-full-btn {
