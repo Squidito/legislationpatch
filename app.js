@@ -1267,7 +1267,9 @@ function renderTopLines(bill) {
       </div>`;
     }
     // New headline + subs format
-    const tlAnchor = window.BILL_PAGE_ID && item.billSection ? `bt-sec-${item.billSection}` : null;
+    const tlAnchor = window.BILL_PAGE_ID && item.billSection
+      ? (item.billSection.startsWith('title-') ? `bt-${item.billSection}` : `bt-sec-${item.billSection}`)
+      : null;
     const headlineHtml = tlAnchor
       ? `<a class="top-line-headline-link" href="#${tlAnchor}" onclick="event.preventDefault();scrollToBillSection('${tlAnchor}')">${escHtml(item.headline || '')}</a>`
       : escHtml(item.headline || '');
@@ -1285,7 +1287,7 @@ function renderTopLines(bill) {
 
   return `<div class="top-lines">
     ${bill.brief ? `<div class="top-lines-brief">${billRefHtml(bill.brief, bill.id)}</div>` : ''}
-    ${items.slice(0, 3).map(renderLine).join('')}
+    ${items.map(renderLine).join('')}
   </div>`;
 }
 

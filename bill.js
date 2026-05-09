@@ -140,6 +140,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   } catch (e) {
     textMount.innerHTML = billTextPlaceholder(bill);
   }
+
+  setupBackToTop();
+  buildBillNav();
 });
 
 // ---- JSON-LD schema injector ----
@@ -229,16 +232,18 @@ function renderBtLine(line) {
   if (/^\[.+\]$/.test(t))
     return `<div class="bt-citation">${escHtml(t)}</div>`;
 
-  // TITLE / SUBTITLE / PART
-  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/i.test(t)) {
-    const titleM = t.match(/^TITLE\s+([IVXLC]+)/i);
-    const id = titleM ? ` id="bt-title-${titleM[1].toUpperCase()}"` : '';
+  // TITLE / SUBTITLE / PART — no /i flag: statute headers are ALL CAPS;
+  // mixed-case "Title I--..." lines are TOC entries and must not get IDs.
+  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t)) {
+    const titleM = t.match(/^TITLE\s+([IVXLC]+)/);
+    const id = titleM ? ` id="bt-title-${titleM[1]}"` : '';
     return `<div class="bt-title"${id}>${escHtml(t)}</div>`;
   }
 
-  // Section headers: "1. Name" or "SECTION 1." or "SEC. 2."
-  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/i.test(t) || /^\d+\.\s+[A-Z]/.test(t)) {
-    const secM = t.match(/^(?:SECTION|SEC\.)\s+(\d+)/i) || t.match(/^(\d+)\./);
+  // Section headers — no /i flag: "SECTION 1." / "SEC. 2." are all-caps in statute text;
+  // mixed-case "Sec. 1." lines inside a Table of Contents must not get IDs.
+  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/.test(t) || /^\d+\.\s+[A-Z]/.test(t)) {
+    const secM = t.match(/^(?:SECTION|SEC\.)\s+(\d+)/) || t.match(/^(\d+)\./);
     const id = secM ? ` id="bt-sec-${secM[1]}"` : '';
     return `<div class="bt-section"${id}>${escHtml(t)}</div>`;
   }
@@ -286,7 +291,7 @@ function renderBillText(rawText, bill) {
   for (let i = 0; i < lines.length; i++) {
     const t = lines[i].trim();
     if (/^be it (enacted|resolved)\b/i.test(t)) { splitAt = i; break; }
-    if (/^(SECTION|SEC\.)\s+\d/i.test(t) || /^\d+\.\s+[A-Z]/.test(t)) { splitAt = i; break; }
+    if (/^(SECTION|SEC\.)\s+\d/.test(t) || /^\d+\.\s+[A-Z]/.test(t)) { splitAt = i; break; }
   }
 
   const preambleLines = splitAt > 0 ? lines.slice(0, splitAt).filter(l => l.trim()) : [];
@@ -342,6 +347,92 @@ function billTextPlaceholder(bill) {
       </a>
     </div>
   </div>`;
+}
+
+// ---- Bill text nav + back-to-top ----
+
+function buildBillNav() {
+  var mount = document.getElementById('bill-text-mount');
+  if (!mount) return;
+  if (document.getElementById('bill-nav-panel')) return;
+
+  var all    = Array.from(mount.querySelectorAll('.bt-section[id], .bt-title[id]'));
+  var titles = all.filter(function(el) { return el.classList.contains('bt-title'); });
+
+  var navItems;
+  if (titles.length >= 2) {
+    var firstTitleIdx = all.indexOf(titles[0]);
+    var preamble = all.slice(0, firstTitleIdx).filter(function(el) {
+      return el.classList.contains('bt-section');
+    });
+    navItems = preamble.concat(titles);
+  } else {
+    navItems = all;
+  }
+  if (navItems.length < 3) return;
+
+  var panel = document.createElement('div');
+  panel.id = 'bill-nav-panel';
+  panel.className = 'bill-nav-panel';
+
+  var listHTML = navItems.map(function(el) {
+    var label = el.textContent.trim();
+    var isTitle = el.classList.contains('bt-title');
+    var displayClass = isTitle ? 'bill-nav-item bill-nav-item--title' : 'bill-nav-item';
+    return '<a class="' + displayClass + '" data-target="' + el.id + '">' + escHtml(label) + '</a>';
+  }).join('');
+
+  panel.innerHTML =
+    '<div class="bill-nav-header">Sections</div>' +
+    '<nav class="bill-nav-list">' + listHTML + '</nav>';
+
+  document.body.appendChild(panel);
+
+  panel.querySelectorAll('.bill-nav-item').forEach(function(a) {
+    a.addEventListener('click', function() {
+      scrollToBillSection(this.dataset.target);
+    });
+  });
+
+  // IntersectionObserver — highlight the topmost visible section
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      panel.querySelectorAll('.bill-nav-item.active').forEach(function(a) {
+        a.classList.remove('active');
+      });
+      var link = panel.querySelector('[data-target="' + entry.target.id + '"]');
+      if (link) {
+        link.classList.add('active');
+        link.scrollIntoView({ block: 'nearest' });
+      }
+    });
+  }, { rootMargin: '-60px 0px -65% 0px', threshold: 0 });
+
+  navItems.forEach(function(el) { observer.observe(el); });
+
+  // Show panel and back-to-top when bill text scrolls above viewport
+  var btn = document.getElementById('bill-back-top');
+  function onScroll() {
+    var top = mount.getBoundingClientRect().top;
+    panel.classList.toggle('bill-nav-visible', top < 50);
+    if (btn) btn.classList.toggle('bill-back-top--visible', top < -200);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
+
+function setupBackToTop() {
+  if (document.getElementById('bill-back-top')) return;
+  var btn = document.createElement('button');
+  btn.id = 'bill-back-top';
+  btn.className = 'bill-back-top';
+  btn.setAttribute('aria-label', 'Return to top');
+  btn.innerHTML = '&#8679;';
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.body.appendChild(btn);
 }
 
 // ---- Bill text section linking ----

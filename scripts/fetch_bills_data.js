@@ -8,15 +8,37 @@ require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 
-const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
-const CONGRESS_SESSION = parseInt(process.env.CONGRESS_SESSION || '119', 10);
-const CACHE_FILE       = path.join(__dirname, '../data/cache.json');
-const OUTPUT_FILE      = path.join(__dirname, '../data/bills_raw.json');
+const CONGRESS_API_KEY    = process.env.CONGRESS_API_KEY;
+const CONGRESS_SESSION    = parseInt(process.env.CONGRESS_SESSION || '119', 10);
+const CACHE_FILE          = path.join(__dirname, '../data/cache.json');
+const OUTPUT_FILE         = path.join(__dirname, '../data/bills_raw.json');
+const PRIOR_YEAR_MAP_FILE = path.join(__dirname, 'prior-year-map.json');
+const BILL_TEXT_DIR       = path.join(__dirname, '../data/bill-text');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// Flat clean — for short analysis text (CRS summaries, CR excerpts)
 function cleanHTML(html) {
     return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// Structure-preserving clean — for bill text saved to data/bill-text/*.txt
+// Converts block-level HTML tags to newlines before stripping all other tags,
+// matching the format expected by renderBillText / renderBtLine in bill.js.
+function cleanBillHTML(html) {
+    return html
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<\/p>/gi, '\n')
+        .replace(/<\/div>/gi, '\n')
+        .replace(/<\/li>/gi, '\n')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+        .replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+        .replace(/[ \t]+/g, ' ')
+        .replace(/\n[ \t]+/g, '\n')
+        .replace(/[ \t]+\n/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
 }
 
 function detectStage(latestActionText) {
@@ -111,20 +133,25 @@ async function fetchSpecificBill(type, number) {
     } catch (e) { console.error('Error:', e.message); return null; }
 }
 
+// Returns { display, analysis } — display has line structure for bill-text/*.txt,
+// analysis is flat for bills_raw.json. Both are uncapped; callers decide limits.
 async function fetchBillText(congress, type, number) {
     const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/text?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(4000);
     try {
         const res  = await fetch(url);
         const data = await res.json();
-        if (!data.textVersions?.length) return '';
+        if (!data.textVersions?.length) return { display: '', analysis: '' };
         const version    = data.textVersions[data.textVersions.length - 1];
         const textFormat = version.formats.find(f => f.type === 'Formatted Text') || version.formats[0];
-        if (!textFormat) return '';
+        if (!textFormat) return { display: '', analysis: '' };
         await sleep(1000);
         const raw = await (await fetch(textFormat.url)).text();
-        return cleanHTML(raw).slice(0, 80000); // cap at 80k chars
-    } catch (e) { console.error('Bill text error:', e.message); return ''; }
+        return {
+            display:  cleanBillHTML(raw),
+            analysis: cleanHTML(raw),
+        };
+    } catch (e) { console.error('Bill text error:', e.message); return { display: '', analysis: '' }; }
 }
 
 async function fetchBillMetadata(congress, type, number) {
@@ -203,22 +230,137 @@ async function fetchCongressionalRecord(actionDate, type, number) {
     } catch (e) { console.error('CR fetch error:', e.message); return ''; }
 }
 
+// ---- Prior-year appropriations matching ----
+
+function loadPriorYearMap() {
+    try { return JSON.parse(fs.readFileSync(PRIOR_YEAR_MAP_FILE, 'utf8')); }
+    catch (e) { return {}; }
+}
+
+// Order matters — check longer/more-specific phrases first.
+const APPROP_AGENCY_KEYWORDS = [
+    'Homeland Security', 'Department of Defense', 'Defense',
+    'Agriculture', 'Commerce, Justice, Science', 'Energy and Water',
+    'Financial Services', 'Interior, Environment', 'Labor, Health',
+    'Military Construction', 'State, Foreign Operations',
+    'Transportation, Housing', 'Veterans Affairs', 'Legislative Branch',
+];
+
+function classifyAppropriation(title) {
+    const t = title.toLowerCase();
+    if (!t.includes('appropriations')) return { appType: null, agency: null };
+    if (t.includes('consolidated') || t.includes('omnibus'))
+        return { appType: 'omnibus', agency: null };
+    for (const kw of APPROP_AGENCY_KEYWORDS) {
+        if (t.includes(kw.toLowerCase()))
+            return { appType: 'single-agency', agency: kw };
+    }
+    if (t.includes('continuing appropriations'))
+        return { appType: 'cr-only', agency: null };
+    return { appType: null, agency: null };
+}
+
+async function searchPriorCongressLaws(priorCongress, agencyKeyword, isOmnibus) {
+    const url = `https://api.congress.gov/v3/law/${priorCongress}?limit=100&format=json&api_key=${CONGRESS_API_KEY}`;
+    await sleep(2000);
+    try {
+        const res = await fetch(url);
+        if (!res.ok) return [];
+        const data = await res.json();
+        return (data.bills || []).filter(b => {
+            const t = (b.title || '').toLowerCase();
+            if (!t.includes('appropriations act')) return false;
+            if (isOmnibus) return t.includes('consolidated') || t.includes('omnibus');
+            return agencyKeyword && t.includes(agencyKeyword.toLowerCase());
+        });
+    } catch (e) { console.error('  [prior-year] Search error:', e.message); return []; }
+}
+
+async function findPriorYearBill(billId, title, currentCongress) {
+    const map = loadPriorYearMap();
+
+    // Layer 1: manual override
+    if (billId in map) {
+        if (map[billId] === null) {
+            console.log('  [prior-year] Skipped (manual map).');
+            return { status: 'skipped', billRef: null };
+        }
+        const parts = map[billId].split('-');
+        const ref = { congress: parseInt(parts[0]), type: parts[1], number: parts.slice(2).join('-'), title: null };
+        console.log(`  [prior-year] Manual override: ${map[billId]}`);
+        return { status: 'manual', billRef: ref };
+    }
+
+    // Layer 2: classify bill type
+    const { appType, agency } = classifyAppropriation(title);
+    if (!appType || appType === 'cr-only') {
+        console.log(`  [prior-year] Skipped (${appType || 'not an appropriations bill'}).`);
+        return { status: 'skipped', billRef: null };
+    }
+
+    // Layer 3: auto-search prior Congress enacted laws
+    const priorCongress = currentCongress - 1;
+    const label = appType === 'omnibus' ? 'omnibus' : `"${agency}"`;
+    console.log(`  [prior-year] Searching ${priorCongress}th Congress for ${label} appropriations...`);
+    const matches = await searchPriorCongressLaws(priorCongress, agency, appType === 'omnibus');
+
+    if (!matches.length) {
+        console.log(`  [prior-year] No match found in ${priorCongress}th Congress.`);
+        return { status: 'not-found', billRef: null };
+    }
+
+    const confidence = matches.length === 1 ? 'auto-high' : 'auto-low';
+    const m = matches[0];
+    const billRef = {
+        congress: m.congress,
+        type: (m.type || m.billType || '').toUpperCase(),
+        number: m.number,
+        title: m.title,
+    };
+    console.log(`  [prior-year] ${confidence}: ${billRef.congress}-${billRef.type}-${billRef.number} — ${billRef.title}`);
+    return { status: confidence, billRef };
+}
+
+// ---- End prior-year matching ----
+
 async function processBillEntry(congress, type, number, title) {
     const billId = `${congress}-${type}-${number}`;
     console.log(`\nProcessing ${billId}: ${title}`);
-    const [text, meta, crs] = await Promise.all([
+    const [billTextResult, meta, crs] = await Promise.all([
         fetchBillText(congress, type, number),
         fetchBillMetadata(congress, type, number),
         fetchCRSSummary(congress, type, number),
     ]);
-    if (!text) { console.log('  No text available — skipping.'); return null; }
+    if (!billTextResult.analysis) { console.log('  No text available — skipping.'); return null; }
     const actionDate = meta?.latestAction?.actionDate || '';
     const cr = await fetchCongressionalRecord(actionDate, type, number);
     const stage = detectStage(meta?.latestAction?.text || '');
-    console.log(`  Text: ${text.length} chars | CRS: ${crs.length} chars | CR: ${cr.length > 0 ? cr.length + ' chars' : 'none'} | Stage: ${stage.label}`);
+    console.log(`  Text: ${billTextResult.analysis.length} chars | CRS: ${crs.length} chars | CR: ${cr.length > 0 ? cr.length + ' chars' : 'none'} | Stage: ${stage.label}`);
+
+    // Prior-year appropriations comparison
+    const billTitle = meta?.title || title;
+    const priorYear = await findPriorYearBill(billId, billTitle, congress);
+    let priorYearBillText = null;
+    if (priorYear.billRef) {
+        console.log('  Fetching prior-year bill text...');
+        const pyResult = await fetchBillText(
+            priorYear.billRef.congress,
+            priorYear.billRef.type,
+            priorYear.billRef.number
+        );
+        priorYearBillText = pyResult.analysis || null;
+        const pyChars = priorYearBillText ? priorYearBillText.length : 0;
+        console.log(`  Prior-year text: ${pyChars > 0 ? pyChars + ' chars' : 'none'}`);
+    }
+
+    // Save structured bill text to data/bill-text/ for the full bill page
+    if (!fs.existsSync(BILL_TEXT_DIR)) fs.mkdirSync(BILL_TEXT_DIR, { recursive: true });
+    fs.writeFileSync(path.join(BILL_TEXT_DIR, `${billId}.txt`), billTextResult.display);
+    console.log(`  Saved bill text → data/bill-text/${billId}.txt`);
+
     return {
         billId,
-        title: meta?.title || title,
+        title: billTitle,
         type, number, congress,
         stage: stage.key,
         stageLabel: stage.label,
@@ -227,10 +369,16 @@ async function processBillEntry(congress, type, number, title) {
         sponsor: meta?.sponsors?.[0] || null,
         cosponsors: meta?.cosponsors?.count || 0,
         introducedDate: meta?.introducedDate || '',
-        billText: text,
+        billText: billTextResult.analysis,
         crsSummary: crs,
         congressionalRecord: cr,
         hasRecord: cr.length > 0,
+        priorYearMatchStatus: priorYear.status,
+        priorYearBillId: priorYear.billRef
+            ? `${priorYear.billRef.congress}-${priorYear.billRef.type}-${priorYear.billRef.number}`
+            : null,
+        priorYearBillTitle: priorYear.billRef?.title || null,
+        priorYearBillText,
     };
 }
 
