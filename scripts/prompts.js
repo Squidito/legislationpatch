@@ -202,7 +202,173 @@ Ignore completely: definitions sections, short titles, findings/sense-of-Congres
 Return brief bullet-point notes only. No paragraphs. No editorial comment. No figures not present in this text.`;
 
 
+// ── Omnibus / multi-division bills ────────────────────────────────────────────
+//
+// For omnibus appropriations bills, analysis is done DIVISION BY DIVISION.
+// Each division is analyzed independently using OMNIBUS_DIVISION_PROMPT.
+// The top-level omnibus entry is then assembled using OMNIBUS_TOPLEVEL_PROMPT.
+//
+// Workflow:
+//   1. bills_raw.json entry has isOmnibus: true and divisions: [{ label, divisionKey, text }]
+//   2. For each division: paste the division text, then paste OMNIBUS_DIVISION_PROMPT
+//      and ask Claude to analyze it. Output is a division JSON block.
+//   3. After all divisions: paste OMNIBUS_TOPLEVEL_PROMPT to write the top-level entry.
+//   4. Assemble the final cache.json entry by merging top-level + divisions array.
+
+const OMNIBUS_DIVISION_PROMPT = `You are analyzing ONE DIVISION of a U.S. omnibus appropriations bill.
+
+━━━ PRE-FLIGHT CHECKLIST — apply before outputting JSON ━━━
+
+① SHORTEN ALL DOLLAR AMOUNTS — no raw statutory figures anywhere in output:
+   $11,083,012,000 → $11.08B  |  $584,250,000 → $584.3M  |  $98,000,000 → $98M
+   This applies to every field: summary, brief, top_lines.subs, sections items, underreported, changes, gaps.
+
+② FLAG ACRONYMS — every acronym in your output must exist in the acronyms.js dictionary.
+   Common ones already covered: CMS, PEPFAR, FMF, TANF, NFIP, WIOA, IDEA, PBM, MCED, USAID, CFIUS, UNRWA, AGOA, ESF, SEED.
+   If you use an acronym not in that list, spell it out in full on first use instead.
+
+③ NO RAW SECTION CITATIONS IN SUBS — top_lines.subs must describe the provision, not cite the statute.
+   Bad: "50 U.S.C. § 1881a extended through April 2026"
+   Good: "Section 702 surveillance authority extended through April 2026"
+
+━━━ YOUR SCOPE ━━━
+
+Analyze only what is explicitly in the division text provided. This is one self-contained spending title — treat it as a complete analysis unit. Do NOT summarize the broader omnibus bill.
+
+Apply the same Zone 1/Zone 2/Zone 3 source rules as the standard prompt:
+— Zone 1 (bill text only): summary, brief, top_lines, sections, underreported, gaps, changes
+— Zone 2 (Congressional Record only): featured_quotes, criticisms, comments
+— Zone 3 (inference allowed): likelihood is OMITTED for divisions (enactment likelihood is set at the top level)
+
+Apply all quality rules from the standard prompt: numbers first, no editorial adjectives, dollar amounts shortened per CLAUDE.md rules, section labels in auto-parseable format where possible.
+
+━━━ DOLLAR AMOUNT SHORTENING ━━━
+
+Per CLAUDE.md rules — always shorten:
+- Billions → round to 2 decimal places → $11.08B
+- Hundreds of millions → round to 1 decimal place → $584.3M
+- Tens of millions and under → nearest whole million → $98M
+
+━━━ OUTPUT FORMAT ━━━
+
+Return ONLY a valid JSON object for this division. No markdown, no wrapper, no explanation.
+
+{
+  "label": "Division X — Full Title (copy from the division header)",
+  "divisionKey": "X",
+  "summary": "1-2 sentence plain-English summary of this division only. 5th-grade reading level.",
+  "brief": "One sentence — the single most important thing this division does.",
+  "top_lines": [
+    {
+      "headline": "Short topic label — 3 to 6 words. Think patch note category headers.",
+      "subs": [
+        "Specific provision — patch-note style, under 12 words. Lead with shortened dollar figure."
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Title I — [Actual Title from Bill Text]",
+      "items": [
+        {
+          "main": "One sentence: what this provision does and who it affects. Shortened dollar figures.",
+          "detail": "2-3 sentences: how it works, key conditions or deadlines. From bill text only.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section name or number from bill text",
+      "summary": "Mechanical effect — from bill text only. No editorial adjectives.",
+      "why_unreported": "Why the effect differs from the section label or headline."
+    }
+  ],
+  "criticisms": [],
+  "gaps": [
+    "One sentence: something implied by this division's stated purpose but not addressed."
+  ],
+  "featured_quotes": [],
+  "changes": {
+    "added":    ["New program or authority created in this division"],
+    "modified": ["Existing law changed — old value → new value when available"],
+    "removed":  ["Existing requirement eliminated"]
+  }
+}
+
+LIMITS: sections — one per Title in the bill text; 1-3 items per section; 0-4 underreported; 3-5 gaps; 0-3 featured_quotes (Congressional Record only — leave [] if no CR excerpts).
+top_lines — no fixed cap. Include one headline group per distinct subject area that has meaningful data to convey. Omit a headline only if it would add nothing beyond what another headline already covers. A large appropriations division may warrant 6-10 headline groups; a short extenders division may warrant 2-3.`;
+
+
+const OMNIBUS_TOPLEVEL_PROMPT = `You have just analyzed all divisions of an omnibus appropriations bill. Now write the TOP-LEVEL cache.json entry for the full bill.
+
+━━━ PRE-FLIGHT CHECKLIST — apply before outputting JSON ━━━
+
+① SHORTEN ALL DOLLAR AMOUNTS — no raw statutory figures anywhere in output:
+   $11,083,012,000 → $11.08B  |  $584,250,000 → $584.3M  |  $98,000,000 → $98M
+
+② FLAG ACRONYMS — every acronym must exist in acronyms.js or be spelled out.
+   Common ones covered: CMS, PEPFAR, FMF, TANF, NFIP, WIOA, IDEA, PBM, MCED, USAID, CFIUS, UNRWA, AGOA, ESF, SEED.
+
+③ billSection REQUIRED on every top_lines item — point to the most relevant section anchor in the bill text.
+
+The top-level entry summarizes the ENTIRE omnibus — it does NOT repeat the per-division detail.
+
+━━━ TOP-LEVEL FIELDS ━━━
+
+These are whole-bill fields, not division-specific:
+- summary: 2-sentence overview of what the full omnibus does (which agencies, fiscal year, major themes)
+- brief: One sentence — the single most important thing about this omnibus
+- top_lines: one headline group per major spending theme spanning the omnibus as a whole (e.g. "Total Discretionary Spending", "Defense Overview", "Entitlement Extensions", "CR-Only Agencies"). No fixed cap — include as many as needed to give a complete picture. Omit a headline only if it would duplicate another.
+- sections: 1 entry per division, each with label (the division label), 1-2 items summarizing the division's top-level purpose and total appropriation. This is the CARD VIEW — keep it concise.
+- changes: whole-bill changes (additions, modifications, removals that span divisions or are top-level)
+- underreported: 0-4 provisions that cut across divisions or are in general provisions
+- gaps: 0-3 whole-bill gaps (agencies or purposes not funded, implied by the bill's own stated scope)
+- featured_quotes: from Congressional Record if provided, otherwise []
+- criticisms: from Congressional Record if provided, otherwise []
+
+━━━ DOLLAR AMOUNT SHORTENING ━━━
+
+Per CLAUDE.md rules — shorten all amounts: $11,083,012,000 → $11.08B, $584,250,000 → $584.3M, etc.
+
+━━━ billSection for top_lines ━━━
+
+Every top_lines item needs a "billSection" field pointing to a section in the bill text. Use section numbers from the bill's general provisions (e.g. "billSection": "3" for SEC. 3). Division-spanning headlines should point to the most relevant general section.
+
+━━━ OUTPUT FORMAT ━━━
+
+Return ONLY a valid JSON object. No markdown, no explanation.
+
+{
+  "summary": "...",
+  "brief": "...",
+  "top_lines": [
+    { "headline": "...", "billSection": "N", "subs": ["...", "..."] }
+  ],
+  "sections": [
+    {
+      "label": "Division A — Department of Defense Appropriations Act, 2026",
+      "items": [
+        {
+          "main": "One sentence: total appropriation and primary mission of this division.",
+          "detail": "2 sentences: key funding areas or notable provisions.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [...],
+  "criticisms": [],
+  "gaps": ["..."],
+  "featured_quotes": [],
+  "changes": { "added": [], "modified": [], "removed": [] }
+}`;
+
+
 module.exports = {
     SYSTEM_PROMPT,
-    CHUNK_MAP_PROMPT
+    CHUNK_MAP_PROMPT,
+    OMNIBUS_DIVISION_PROMPT,
+    OMNIBUS_TOPLEVEL_PROMPT,
 };

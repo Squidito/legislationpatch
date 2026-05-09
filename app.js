@@ -1189,7 +1189,7 @@ function renderBill(bill, num) {
   const state    = openCards.get(bill.id);
   const col      = likelihoodColor(bill.likelihood);
   const watching = watchedBills.has(bill.id);
-  return `<div class="bill-card" id="card-${bill.id}">
+  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : ''}" id="card-${bill.id}">
     ${renderHeader(bill, state, num, watching)}
     ${renderLikelihoodFooter(bill, col, state)}
     ${renderMinorBody(bill, col, state === 'minor')}
@@ -1230,7 +1230,7 @@ function renderHeader(bill, state, num, watching) {
 
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
-      ${bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
+      ${bill.isOmnibus ? `<span class="status-badge status-omnibus">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
       ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
       <div class="bill-number">#${num || ''}</div>
@@ -1267,7 +1267,9 @@ function renderTopLines(bill) {
       </div>`;
     }
     // New headline + subs format
-    const tlAnchor = window.BILL_PAGE_ID && item.billSection ? `bt-sec-${item.billSection}` : null;
+    const tlAnchor = window.BILL_PAGE_ID && item.billSection
+      ? (item.billSection.startsWith('title-') ? `bt-${item.billSection}` : `bt-sec-${item.billSection}`)
+      : null;
     const headlineHtml = tlAnchor
       ? `<a class="top-line-headline-link" href="#${tlAnchor}" onclick="event.preventDefault();scrollToBillSection('${tlAnchor}')">${escHtml(item.headline || '')}</a>`
       : escHtml(item.headline || '');
@@ -1285,7 +1287,7 @@ function renderTopLines(bill) {
 
   return `<div class="top-lines">
     ${bill.brief ? `<div class="top-lines-brief">${billRefHtml(bill.brief, bill.id)}</div>` : ''}
-    ${items.slice(0, 3).map(renderLine).join('')}
+    ${items.map(renderLine).join('')}
   </div>`;
 }
 
@@ -1600,7 +1602,7 @@ function renderBody(bill, isOpen, col) {
 
   const topLinesHtml = renderTopLines(bill);
 
-  const sectionsHtml = bill.sections?.length
+  const sectionsHtml = bill.isOmnibus ? '' : bill.sections?.length
     ? `<div class="patch-notes">${bill.sections.map((sec, si) => renderSection(bill, sec, si)).join('')}</div>`
     : `<div class="patch-notes"><p style="font-size:0.85rem;color:var(--text-3);padding:0.5rem 0">Click "Analyze with AI" below to generate patch notes for this bill.</p></div>`;
 
@@ -1638,17 +1640,76 @@ function renderBody(bill, isOpen, col) {
         <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
       </div>`;
 
+  const divisionsHtml = renderDivisions(bill);
+
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
     ${stageDetailHtml}
     ${topLinesHtml}
     ${renderChangesSection(bill)}
     ${renderQuoteCards(bill)}
     ${sectionsHtml}
+    ${divisionsHtml}
     ${underreportedHtml}
     ${criticismsHtml}
     ${gapsHtml}
     ${positionsHtml}
     ${viewBillLink}
+  </div>`;
+}
+
+// ── Omnibus division rendering (bill page only) ────────────────────────────
+
+// Render one division block. Uses a synthetic bill-like object so existing
+// renderSection / renderItem / renderTopLines functions work without changes.
+function renderDivision(bill, div, di) {
+  const synth = {
+    id:             `${bill.id}-d${di}`,
+    top_lines:      div.top_lines      || [],
+    brief:          div.brief          || '',
+    sections:       div.sections       || [],
+    underreported:  div.underreported  || [],
+    criticisms:     div.criticisms     || [],
+    gaps:           div.gaps           || [],
+    featured_quotes: div.featured_quotes || [],
+    changes:        div.changes        || null,
+  };
+
+  const underHtml    = renderUnderreportedSection(synth);
+  const topLinesHtml = renderTopLines(synth);
+  const changesHtml  = renderChangesSection(synth);
+
+  const criticismsHtml = synth.criticisms.length ? `
+    <div class="criticism-section">
+      <div class="criticism-title">⚑ Opposed — who and why</div>
+      ${synth.criticisms.map(c => `<div class="criticism-item"><span class="criticism-who">${escHtml(c.who)}:</span> ${billRefHtml(c.why, bill.id)}</div>`).join('')}
+    </div>` : '';
+
+  const gapsHtml = synth.gaps.length ? `
+    <div class="gaps-section">
+      <div class="gaps-title">◈ Not addressed in this division <span class="analysis-tag">analyst judgment</span></div>
+      ${synth.gaps.map(g => `<div class="gaps-item">${billRefHtml(g, bill.id)}</div>`).join('')}
+    </div>` : '';
+
+  return `<div class="division-block">
+    <div class="division-block-header">
+      <span class="division-key-badge">DIV ${escHtml(div.divisionKey || String.fromCharCode(65 + di))}</span>
+      <span class="division-block-label">${escHtml(div.label || '')}</span>
+    </div>
+    ${div.summary ? `<div class="division-summary">${escHtml(div.summary)}</div>` : ''}
+    ${topLinesHtml}
+    ${changesHtml}
+    ${underHtml}
+    ${criticismsHtml}
+    ${gapsHtml}
+  </div>`;
+}
+
+// Only rendered on the dedicated bill page (not the index card — card uses sections[]).
+function renderDivisions(bill) {
+  if (!bill.divisions?.length || !window.BILL_PAGE_ID) return '';
+  return `<div class="omnibus-divisions">
+    <div class="omnibus-divisions-header">Division-by-Division Analysis</div>
+    ${bill.divisions.map((div, di) => renderDivision(bill, div, di)).join('')}
   </div>`;
 }
 
