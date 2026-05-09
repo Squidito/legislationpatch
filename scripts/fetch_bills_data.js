@@ -138,7 +138,9 @@ async function fetchSpecificBill(type, number) {
 // Distinguishes TOC entries (first occurrence per letter) from body starts (second occurrence).
 function splitIntoDivisions(displayText) {
     const lines = displayText.split('\n');
-    const DIVISION_RE = /^DIVISION\s+([A-Z])\s*--(.*)$/i;
+    // Handles plain "DIVISION A--TITLE", "DIVISION A --", and GPO-annotated
+    // "DIVISION A <<NOTE: Title.>> --" forms found in different bill versions.
+    const DIVISION_RE = /^DIVISION\s+([A-Z])(?:\s*<<[^>]*>>)?\s*--(.*)$/i;
 
     // Collect all occurrences: { lineIdx, letter, subtitle, rawLine }
     const matches = [];
@@ -480,6 +482,38 @@ async function processBillEntry(congress, type, number, title) {
 
 async function main() {
     if (!CONGRESS_API_KEY) { console.error('CONGRESS_API_KEY not set.'); process.exit(1); }
+
+    // --bill 119-HR-7148  Force-refetch a specific bill regardless of cache status.
+    // Parses congress/type/number from the standard bill ID format.
+    const billArg = process.argv.find(a => a.startsWith('--bill=') || a === '--bill');
+    const billArgValue = billArg?.startsWith('--bill=')
+        ? billArg.split('=')[1]
+        : process.argv[process.argv.indexOf('--bill') + 1];
+
+    if (billArgValue) {
+        const parts = billArgValue.split('-');
+        if (parts.length < 3) { console.error('--bill format: CONGRESS-TYPE-NUMBER (e.g. 119-HR-7148)'); process.exit(1); }
+        const congress = parseInt(parts[0], 10);
+        const type     = parts[1].toUpperCase();
+        const number   = parts.slice(2).join('-');
+        console.log(`\nForce-refetching ${billArgValue} (bypassing cache check)...`);
+        const result = await processBillEntry(congress, type, number, `${type} ${number}`);
+        if (!result) { console.error('Fetch failed.'); process.exit(1); }
+
+        // Merge into existing bills_raw.json — replace existing entry if present, else append
+        let existing = [];
+        try { existing = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8')); } catch (e) {}
+        const idx = existing.findIndex(b => b.billId === result.billId);
+        if (idx >= 0) existing[idx] = result; else existing.push(result);
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(existing, null, 2));
+        console.log(`\nDone. ${result.billId} written to bills_raw.json`);
+        console.log(`  isOmnibus: ${result.isOmnibus}`);
+        if (result.divisions) {
+            result.divisions.forEach(d => console.log(`  Division ${d.divisionKey}: ${Math.round(d.charCount / 1000)}K chars — ${d.label}`));
+        }
+        return;
+    }
+
     const existing = loadExistingIds();
     console.log(`Already in cache: ${existing.size} bills`);
 

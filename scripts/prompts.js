@@ -283,7 +283,8 @@ Return ONLY a valid JSON object for this division. No markdown, no wrapper, no e
   }
 }
 
-LIMITS: 2-5 sections (one per Title if possible), 1-3 items per section, 0-4 underreported, 3-5 gaps, 0-3 featured_quotes (from Congressional Record only — leave empty [] if no CR excerpts provided). top_lines: 1-4 headline objects.`;
+LIMITS: sections — one per Title in the bill text; 1-3 items per section; 0-4 underreported; 3-5 gaps; 0-3 featured_quotes (Congressional Record only — leave [] if no CR excerpts).
+top_lines — no fixed cap. Include one headline group per distinct subject area that has meaningful data to convey. Omit a headline only if it would add nothing beyond what another headline already covers. A large appropriations division may warrant 6-10 headline groups; a short extenders division may warrant 2-3.`;
 
 
 const OMNIBUS_TOPLEVEL_PROMPT = `You have just analyzed all divisions of an omnibus appropriations bill. Now write the TOP-LEVEL cache.json entry for the full bill.
@@ -295,7 +296,7 @@ The top-level entry summarizes the ENTIRE omnibus — it does NOT repeat the per
 These are whole-bill fields, not division-specific:
 - summary: 2-sentence overview of what the full omnibus does (which agencies, fiscal year, major themes)
 - brief: One sentence — the single most important thing about this omnibus
-- top_lines: 3-5 thematic highlights spanning MULTIPLE divisions (e.g. "Total Defense Spending", "Entitlement Extensions", "CR-Only Agencies")
+- top_lines: one headline group per major spending theme spanning the omnibus as a whole (e.g. "Total Discretionary Spending", "Defense Overview", "Entitlement Extensions", "CR-Only Agencies"). No fixed cap — include as many as needed to give a complete picture. Omit a headline only if it would duplicate another.
 - sections: 1 entry per division, each with label (the division label), 1-2 items summarizing the division's top-level purpose and total appropriation. This is the CARD VIEW — keep it concise.
 - changes: whole-bill changes (additions, modifications, removals that span divisions or are top-level)
 - underreported: 0-4 provisions that cut across divisions or are in general provisions
