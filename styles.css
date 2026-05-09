@@ -4046,3 +4046,27 @@ a.vote-member:hover { background: var(--surface-2); }
   .rep-vote-row { grid-template-columns: 1fr auto; }
   .rep-vote-date { display: none; }
 }
+
+/* ---- Acronym tooltips ---- */
+.acronym-tip {
+  border-bottom: 1px dotted var(--text-3);
+  cursor: help;
+}
+
+.acronym-tooltip {
+  position: fixed;
+  background: var(--surface);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s ease;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

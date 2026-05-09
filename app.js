@@ -774,6 +774,7 @@ function renderAll() {
 
   setupCarousel();
   setupRepRowObserver();
+  if (typeof scanAcronyms === 'function') scanAcronyms(list);
 }
 
 function setupRepRowObserver() {

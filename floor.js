@@ -342,6 +342,7 @@ function render() {
   }
 
   el.innerHTML = groups.map(renderCategoryCard).join('');
+  if (typeof scanAcronyms === 'function') scanAcronyms(el);
 }
 
 // ---- Expand individual quote text ----

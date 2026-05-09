@@ -13,6 +13,30 @@
 require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
+const { ACRONYMS } = require('../acronyms');
+
+const _ACRONYM_EXCLUDED = new Set([
+  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN',
+  'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV',
+  'NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN',
+  'TX','UT','VT','VA','WA','WV','WI','WY','DC',
+  'USA','US','TV','AM','PM','AI','IT','HR','GOP',
+  'II','III','IV','VI','VII','VIII','IX','XI','XII',
+]);
+
+function reportQuoteAcronyms(text, speaker) {
+  const known = new Set(Object.keys(ACRONYMS));
+  const found = new Set();
+  const pat = /\b([A-Z]{2,6})\b/g;
+  let m;
+  while ((m = pat.exec(text)) !== null) {
+    if (!known.has(m[1]) && !_ACRONYM_EXCLUDED.has(m[1])) found.add(m[1]);
+  }
+  if (found.size) {
+    console.log(`  [ACRONYMS] Unknown in quote (${speaker}) — add to acronyms.js if needed:`);
+    console.log(`  → ${[...found].sort().join(', ')}`);
+  }
+}
 
 // ---- Config ----
 let CONGRESS_API_KEY = process.env.CONGRESS_API_KEY || '';
@@ -317,6 +341,7 @@ async function run() {
           if (repInfo.party) normed.party = repInfo.party;
           if (repInfo.state) normed.state = repInfo.state;
           quotesData.quotes.push(normed);
+          reportQuoteAcronyms(normed.text, normed.name);
           added++;
         }
       }

@@ -6,10 +6,12 @@ function renderAll() {
   if (!window.BILL_PAGE_ID) return;
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
   if (!bill) return;
-  document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
+  const mount = document.getElementById('bill-card-mount');
+  mount.innerHTML = renderBill(bill, 1);
   const isFull = openCards.get(window.BILL_PAGE_ID) === 'full';
   const btn = document.getElementById('analysisToggle');
   if (btn) btn.textContent = isFull ? '▲ Collapse analysis' : '▼ Show analysis';
+  if (typeof scanAcronyms === 'function') scanAcronyms(mount);
 }
 
 // On the bill page, toggle between full expansion and closed (header only, no body)
@@ -106,7 +108,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Render the bill card
-  document.getElementById('bill-card-mount').innerHTML = renderBill(bill, 1);
+  const cardMount = document.getElementById('bill-card-mount');
+  cardMount.innerHTML = renderBill(bill, 1);
+  if (typeof scanAcronyms === 'function') scanAcronyms(cardMount);
   loading.style.display = 'none';
 
   // Analysis collapse toggle — mirrors clicking the card header

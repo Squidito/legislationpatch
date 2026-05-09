@@ -3,6 +3,55 @@ const fs = require('fs');
 const path = require('path');
 const { SYSTEM_PROMPT, CHUNK_MAP_PROMPT } = require('./prompts');
 const { processVotesForBill } = require('./fetch_vote_data');
+const { ACRONYMS } = require('../acronyms');
+
+// State codes and other all-caps tokens that are not acronyms worth flagging
+const _ACRONYM_EXCLUDED = new Set([
+    'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN',
+    'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV',
+    'NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN',
+    'TX','UT','VT','VA','WA','WV','WI','WY','DC',
+    'USA','US','TV','AM','PM','AI','IT','HR','GOP',
+    'II','III','IV','VI','VII','VIII','IX','XI','XII',
+]);
+
+function _collectBillTexts(parsed) {
+    const texts = [];
+    const add = v => { if (typeof v === 'string' && v.length > 2) texts.push(v); };
+    add(parsed.brief); add(parsed.summary);
+    for (const tl of parsed.top_lines || []) {
+        add(tl.headline);
+        for (const s of tl.subs || []) add(typeof s === 'string' ? s : s.text);
+    }
+    for (const sec of parsed.sections || []) {
+        add(sec.label);
+        for (const item of sec.items || []) { add(item.text); add(item.detail); add(item.label); }
+    }
+    for (const q of parsed.featured_quotes || []) add(q.text);
+    const flat = [...(parsed.underreported || []), ...(parsed.criticisms || []), ...(parsed.gaps || [])];
+    for (const item of flat) add(typeof item === 'string' ? item : (item.text || item.description));
+    const ch = parsed.changes || {};
+    for (const list of [ch.added || [], ch.modified || [], ch.removed || []]) {
+        for (const item of list) add(typeof item === 'string' ? item : (item.description || item.text));
+    }
+    return texts;
+}
+
+function reportNewAcronyms(billId, parsed) {
+    const known = new Set(Object.keys(ACRONYMS));
+    const found = new Set();
+    const pat = /\b([A-Z]{2,6})\b/g;
+    for (const text of _collectBillTexts(parsed)) {
+        let m;
+        while ((m = pat.exec(text)) !== null) {
+            if (!known.has(m[1]) && !_ACRONYM_EXCLUDED.has(m[1])) found.add(m[1]);
+        }
+    }
+    if (found.size) {
+        console.log(`   [ACRONYMS] Unknown in ${billId} — add to acronyms.js if these need tooltips:`);
+        console.log(`   → ${[...found].sort().join(', ')}`);
+    }
+}
 
 // --- CONFIGURATION ---
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
@@ -1011,6 +1060,7 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     }
 
     console.log(`   - Done: ${billId} | stage: ${stage.key} | likelihood: ${parsed.likelihood}%`);
+    reportNewAcronyms(billId, parsed);
     return parsed;
 }
 
