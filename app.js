@@ -7,7 +7,7 @@ let allBills      = [];
 let openCards        = new Map(); // id -> 'minor' | 'full'
 let openDetails      = {};
 let aiOutputs        = {};
-let activeMainFilter  = 'in_progress';
+let activeMainFilter  = 'recent';
 let favoritesView          = false;
 const collapsedFavSections = new Set();
 let selectedRepIds    = new Set();
@@ -145,8 +145,9 @@ function showLoading(on) {
 
 function showError(on, msg) {
   const el = document.getElementById('errorState');
+  if (!el) return;
   el.style.display = on ? 'block' : 'none';
-  if (msg) document.getElementById('errorMsg').textContent = msg;
+  if (msg) { const em = document.getElementById('errorMsg'); if (em) em.textContent = msg; }
 }
 
 // ---- Filters ----
@@ -161,7 +162,8 @@ function isJustPassed(bill) {
 }
 
 function setupFilters() {
-  document.getElementById('filtersMain').addEventListener('click', e => {
+  // Document-level delegation so listener survives filter bar being re-rendered inside renderAll()
+  document.addEventListener('click', e => {
     const btn = e.target.closest('[data-main]');
     if (!btn) return;
     document.querySelectorAll('[data-main]').forEach(b => b.classList.remove('active'));
@@ -627,7 +629,6 @@ function renderUnderreportedSection(bill) {
 let _carouselRaf      = null;
 let _carouselScroll   = null;
 let _carouselEpoch    = 0;
-let _repRowObserver   = null;
 let _voteDetailCache  = {};
 
 function setupCarousel() {
@@ -741,82 +742,50 @@ function renderAll() {
   if (favoritesView) { renderFavoritesView(); return; }
 
   const list = document.getElementById('billList');
-  const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
+  const PIPELINE_STAGES = new Set(['introduced', 'committee', 'house', 'senate']);
 
   const filtered = allBills
     .filter(b => {
-      if (activeMainFilter === 'in_progress') {
-        return IN_PROGRESS.includes(b.stage) || isJustPassed(b);
-      } else if (activeMainFilter === 'dead') {
-        return b.stage === 'dead' || b.stage === 'vetoed';
-      } else {
-        return b.stage === 'signed';
-      }
+      if (activeMainFilter === 'recent')   return true;
+      if (activeMainFilter === 'pipeline') return PIPELINE_STAGES.has(b.stage);
+      if (activeMainFilter === 'dead')     return b.stage === 'dead' || b.stage === 'vetoed';
+      return b.stage === 'signed';
     })
+    .filter(b => window.billMatchesCategories ? window.billMatchesCategories(b) : true)
     .sort((a, b) => {
       const da = new Date(a.stageDate || a.enactedDate || a.date || 0);
       const db = new Date(b.stageDate || b.enactedDate || b.date || 0);
       return db - da;
     });
 
-  if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">No bills found for this filter.</div>';
-    return;
-  }
-
   const existingTrack = document.querySelector('.shock-quotes-track');
   if (existingTrack) { const m = new DOMMatrix(getComputedStyle(existingTrack).transform); _carouselScroll = m.m41; }
 
+  const filterBarHtml = `<div class="bill-filter-bar">
+    <div class="filter-row" id="filtersMain">
+      <button class="filter-btn${activeMainFilter === 'recent' ? ' active' : ''}" data-main="recent">Recently Updated</button>
+      <button class="filter-btn${activeMainFilter === 'pipeline' ? ' active' : ''}" data-main="pipeline">In the Pipeline</button>
+      <button class="filter-btn${activeMainFilter === 'passed' ? ' active' : ''}" data-main="passed">Passed</button>
+      <button class="filter-btn${activeMainFilter === 'dead' ? ' active' : ''}" data-main="dead">Dead</button>
+    </div>
+  </div>`;
+
+  const billsHtml = filtered.length
+    ? filtered.map((b, i) => renderBill(b, i + 1)).join('')
+    : '<div class="empty-state">No bills found for this filter.</div>';
+
+  const sectionLabel = window.BILLS_PAGE ? '' : '<div class="section-label">Recent bills</div>';
+
   list.innerHTML =
-    renderShockQuotesSection() +
-    '<div class="section-label">Recent bills</div>' +
-    filtered.map((b, i) => renderBill(b, i + 1)).join('');
+    (window.BILLS_PAGE ? '' : renderShockQuotesSection()) +
+    filterBarHtml +
+    sectionLabel +
+    billsHtml;
 
   setupCarousel();
-  setupRepRowObserver();
   if (typeof scanAcronyms === 'function') scanAcronyms(list);
 }
 
-function setupRepRowObserver() {
-  if (_repRowObserver) _repRowObserver.disconnect();
-
-  const repRow      = document.querySelector('.controls-rep-row');
-  const controlsBar = document.querySelector('.controls-bar');
-  if (!repRow) return;
-
-  // Read height once at setup while rep row is fully visible — never re-read during scroll
-  const barHeight = controlsBar ? controlsBar.offsetHeight : 110;
-  const HIDE_AT   = barHeight + 80;
-  const SHOW_AT   = HIDE_AT + 50; // hysteresis gap prevents oscillation near threshold
-
-  let raf    = null;
-  let hidden = false;
-
-  const onScroll = () => {
-    if (raf) return;
-    raf = requestAnimationFrame(() => {
-      raf = null;
-      const firstBill = document.querySelector('.bill-list .bill-card');
-      if (!firstBill) {
-        if (hidden) { hidden = false; repRow.classList.remove('rep-row-hidden'); }
-        return;
-      }
-      const billTop = firstBill.getBoundingClientRect().top;
-      if (!hidden && billTop < HIDE_AT) {
-        hidden = true;
-        repRow.classList.add('rep-row-hidden');
-      } else if (hidden && billTop > SHOW_AT) {
-        hidden = false;
-        repRow.classList.remove('rep-row-hidden');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-
-  _repRowObserver = { disconnect() { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); } };
-}
 
 // ---- Favorites view ----
 
@@ -1176,10 +1145,11 @@ function renderShockQuotesSection() {
     </div>`;
   }).join('');
 
+  const seeAll = window.FLOOR_PAGE ? '' : '<a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>';
   return `<div class="shock-quotes-section">
     <div class="shock-quotes-label-row">
-      <span class="shock-quotes-label">From the floor this week</span>
-      <a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>
+      <span class="shock-quotes-label">Recent and controversial quotes from the floor</span>
+      ${seeAll}
     </div>
     <div class="shock-quotes-grid"><div class="shock-quotes-track">${html}</div></div>
   </div>`;
@@ -1471,35 +1441,38 @@ function renderVoteSection(bill) {
 
     // Pass bar — only for recorded votes with real tallies
     var passBar = '';
+    var thresholdLabel = '';
     if (!v.method && (v.yeas > 0 || v.nays > 0)) {
       var total       = v.yeas + v.nays;
       var yeaPct      = Math.round(v.yeas / total * 1000) / 10;
       var nayPct      = 100 - yeaPct;
-      // Detect threshold from question text
       var q           = (v.question || '').toLowerCase();
       var threshold   = q.includes('cloture') || q.includes('three-fifths') ? 60
                       : q.includes('two-thirds') || q.includes('veto')      ? 67
                       : 50;
-      var thresholdLabel = threshold === 60 ? '60% (Cloture)' : threshold === 67 ? '2/3 Majority' : 'Simple Majority';
+      thresholdLabel  = threshold === 60 ? '60% (Cloture)' : threshold === 67 ? '2/3 Majority' : 'Simple Majority';
       passBar = '<div class="vote-pass-bar-wrap">'
         + '<div class="vote-pass-bar">'
         + '<div class="vpb-yea" style="width:' + yeaPct + '%"></div>'
         + '<div class="vpb-nay" style="width:' + nayPct + '%"></div>'
         + '</div>'
-        + '<div class="vote-pass-line" style="left:' + threshold + '%" title="' + escHtml(thresholdLabel) + '">'
-        + '<span class="vote-pass-line-label">' + escHtml(thresholdLabel) + '</span>'
-        + '</div>'
+        + '<div class="vote-pass-line" style="left:' + threshold + '%" title="' + escHtml(thresholdLabel) + '"></div>'
         + '</div>';
     }
 
     return '<div class="vote-row">'
-      + '<div class="vote-row-summary">'
-      + '<span class="vote-chamber-badge ' + chamberCls + '">' + escHtml(v.chamber) + '</span>'
-      + '<span class="vote-result-badge ' + resultCls + '">' + escHtml(v.result || '') + '</span>'
-      + '<span class="vote-tally">' + tallyHtml + '</span>'
-      + '<span class="vote-date-label">' + escHtml(formatDateCompact(v.date || '')) + '</span>'
-      + crossPill
-      + expandBtn
+      + '<div class="vote-row-main">'
+      +   '<div class="vote-row-left">'
+      +     '<span class="vote-chamber-badge ' + chamberCls + '">' + escHtml(v.chamber) + '</span>'
+      +     '<span class="vote-result-badge ' + resultCls + '">' + escHtml(v.result || '') + '</span>'
+      +     '<span class="vote-tally">' + tallyHtml + '</span>'
+      +   '</div>'
+      +   '<div class="vote-row-right">'
+      +     (thresholdLabel ? '<span class="vote-threshold-label">' + escHtml(thresholdLabel) + '</span>' : '')
+      +     '<span class="vote-date-label">' + escHtml(formatDateCompact(v.date || '')) + '</span>'
+      +     crossPill
+      +     expandBtn
+      +   '</div>'
       + '</div>'
       + passBar
       + '<div class="vote-detail" id="' + escHtml(detailId) + '" style="display:none"></div>'
@@ -1863,9 +1836,13 @@ function scrollToBill(id) {
   const bill = allBills.find(b => b.id === id);
   if (!bill) return;
   if (favoritesView) toggleFavoritesView();
-  const IN_PROGRESS = ['introduced', 'committee', 'house', 'senate'];
-  const needed = IN_PROGRESS.includes(bill.stage) || isJustPassed(bill) ? 'in_progress'
-               : bill.stage === 'signed' ? 'passed' : 'dead';
+  const PIPELINE_STAGES = new Set(['introduced', 'committee', 'house', 'senate']);
+  const visibleOnCurrent =
+    activeMainFilter === 'recent' ||
+    (activeMainFilter === 'pipeline' && PIPELINE_STAGES.has(bill.stage)) ||
+    (activeMainFilter === 'passed'   && bill.stage === 'signed') ||
+    (activeMainFilter === 'dead'     && (bill.stage === 'dead' || bill.stage === 'vetoed'));
+  const needed = visibleOnCurrent ? activeMainFilter : 'recent';
   if (activeMainFilter !== needed) {
     activeMainFilter = needed;
     document.querySelectorAll('.filter-btn[data-main]').forEach(btn =>

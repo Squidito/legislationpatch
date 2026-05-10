@@ -341,7 +341,14 @@ function render() {
     initialRender = false;
   }
 
-  el.innerHTML = groups.map(renderCategoryCard).join('');
+  const chamberBarHtml = '<div class="bill-filter-bar">'
+    + '<div class="filter-row" id="chamberFilters">'
+    + '<button class="filter-btn' + (activeFilter === 'all'    ? ' active' : '') + '" data-chamber="all">All</button>'
+    + '<button class="filter-btn' + (activeFilter === 'house'  ? ' active' : '') + '" data-chamber="house">House</button>'
+    + '<button class="filter-btn' + (activeFilter === 'senate' ? ' active' : '') + '" data-chamber="senate">Senate</button>'
+    + '</div></div>';
+
+  el.innerHTML = chamberBarHtml + groups.map(renderCategoryCard).join('');
   if (typeof scanAcronyms === 'function') scanAcronyms(el);
 }
 
@@ -424,13 +431,11 @@ async function init() {
 
   document.getElementById('loadingState').style.display = 'none';
 
-  document.querySelectorAll('[data-chamber]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeFilter = btn.dataset.chamber;
-      document.querySelectorAll('[data-chamber]')
-        .forEach(b => b.classList.toggle('active', b === btn));
-      render();
-    });
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-chamber]');
+    if (!btn) return;
+    activeFilter = btn.dataset.chamber;
+    render();
   });
 
   const searchInput = document.getElementById('floorSearch');
@@ -445,7 +450,123 @@ async function init() {
     });
   }
 
+  renderCarousel();
   render();
+}
+
+// ── Floor carousel ─────────────────────────────────────────────────────────
+
+function computeShockScore(q) {
+  let score = 0;
+  const text = (q.text || '').toLowerCase();
+  if (q.stance === 'oppose') score += 3;
+  score += (q.text.match(/!/g) || []).length * 2;
+  ['never','cannot','wrong','fail','destroy','steal','corrupt','socialism','looting',
+   'screaming','disgusting','dangerous','unconstitutional','betrayed','shameful',
+   'criminal','fraud','disaster','outrage'].forEach(w => { if (text.includes(w)) score += 1; });
+  score += Math.min(4, Math.floor((q.text || '').length / 80));
+  return score;
+}
+
+function renderCarousel() {
+  const mount = document.getElementById('floorCarousel');
+  if (!mount || !allQuotes.length) return;
+
+  // Score and dedup by speaker
+  const repKey = q => (q.bioguideId || q.name || '').toLowerCase();
+  const used = new Set();
+  const scored = [...allQuotes]
+    .filter(q => q.text && q.name)
+    .map(q => ({ ...q, shockScore: computeShockScore(q) }))
+    .sort((a, b) => b.shockScore - a.shockScore)
+    .filter(q => {
+      const key = repKey(q);
+      if (used.has(key)) return false;
+      used.add(key);
+      return true;
+    });
+
+  // Featured: top-scoring R and D (one each)
+  const featR = scored.find(q => (q.party || '').toUpperCase().startsWith('R'));
+  const featD = scored.find(q => (q.party || '').toUpperCase().startsWith('D'));
+  const featured = [featR, featD].filter(Boolean);
+  const featKeys = new Set(featured.map(repKey));
+
+  // Rest: fill up to 12 more, deduplicated
+  const rest = scored.filter(q => !featKeys.has(repKey(q))).slice(0, 12);
+  const pool = [...featured, ...rest];
+
+  if (!pool.length) return;
+
+  const BOLT = `<svg class="featured-bolt" width="10" height="15" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 0L0 9h4l-1 7 7-9H6z" fill="currentColor"/></svg>`;
+
+  const cards = pool.map((q, i) => {
+    const isFeatured = i < featured.length;
+    const color = q.party === 'D' ? '#3b82f6' : q.party === 'R' ? '#ef4444' : '#6b7280';
+    const portrait = q.bioguideId
+      ? `https://bioguide.congress.gov/bioguide/photo/${q.bioguideId[0]}/${q.bioguideId}.jpg`
+      : FALLBACK_PORTRAIT;
+    const repHref = q.bioguideId ? `rep?id=${q.bioguideId}&ref=bills` : null;
+    const portraitInner = `
+      <img class="shock-quote-portrait" src="${portrait}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" style="border:2px solid ${color}"/>
+      <div class="shock-quote-rep-text"><div class="shock-quote-name">${escHtml(q.name)}</div><div class="shock-quote-source">${escHtml(q.source||'')}</div></div>`;
+    const header = repHref
+      ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
+      : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
+    return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
+      <div class="shock-quote-header">${header}${isFeatured ? BOLT : ''}</div>
+      <div class="shock-quote-text">"${escHtml(q.text)}"</div>
+    </div>`;
+  }).join('');
+
+  mount.innerHTML = `<div class="shock-quotes-section">
+    <div class="shock-quotes-label-row">
+      <span class="shock-quotes-label">Recent and controversial quotes from the floor</span>
+    </div>
+    <div class="shock-quotes-grid"><div class="shock-quotes-track">${cards}</div></div>
+  </div>`;
+
+  initFloorCarousel();
+}
+
+function initFloorCarousel() {
+  let epoch = 0, raf = null;
+  epoch++;
+  const myEpoch = epoch;
+  if (raf) { cancelAnimationFrame(raf); raf = null; }
+
+  const grid = document.querySelector('#floorCarousel .shock-quotes-grid');
+  const el   = grid?.querySelector('.shock-quotes-track');
+  if (!el || !el.children.length) return;
+
+  el.querySelectorAll('[data-clone]').forEach(n => n.remove());
+  const originals = [...el.children];
+  originals.forEach(c => { const cl = c.cloneNode(true); cl.setAttribute('data-clone','true'); cl.setAttribute('aria-hidden','true'); el.insertBefore(cl, el.firstChild); });
+  originals.forEach(c => { const cl = c.cloneNode(true); cl.setAttribute('data-clone','true'); cl.setAttribute('aria-hidden','true'); el.appendChild(cl); });
+
+  const setWidth = el.children[originals.length].getBoundingClientRect().left - el.children[0].getBoundingClientRect().left;
+  if (setWidth === 0) { raf = requestAnimationFrame(() => { if (myEpoch === epoch) initFloorCarousel(); }); return; }
+
+  let currentX = -setWidth, paused = false, isDragging = false, startX = 0, startCurrentX = 0;
+  el.style.transform = `translateX(${currentX}px)`;
+
+  grid.addEventListener('mouseenter', () => { paused = true; });
+  grid.addEventListener('mouseleave', () => { paused = false; isDragging = false; grid.classList.remove('dragging'); });
+  grid.addEventListener('mousedown', e => { isDragging = true; startX = e.pageX; startCurrentX = currentX; grid.classList.add('dragging'); e.preventDefault(); });
+  grid.addEventListener('mouseup', () => { isDragging = false; grid.classList.remove('dragging'); });
+  grid.addEventListener('mousemove', e => { if (isDragging) currentX = startCurrentX + (e.pageX - startX) * 1.8; });
+  grid.addEventListener('touchstart', e => { startX = e.touches[0].pageX; startCurrentX = currentX; }, { passive: true });
+  grid.addEventListener('touchmove', e => { currentX = startCurrentX + (e.touches[0].pageX - startX); }, { passive: true });
+
+  const SPEED = 0.125;
+  (function tick() {
+    if (!paused && !isDragging) currentX -= SPEED;
+    const third = setWidth;
+    if (currentX < -2 * third) currentX += third;
+    if (currentX > -third + 1)  currentX -= third;
+    el.style.transform = `translateX(${currentX}px)`;
+    raf = requestAnimationFrame(tick);
+  })();
 }
 
 document.addEventListener('DOMContentLoaded', init);

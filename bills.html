@@ -3,66 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Floor Activity — LegislationPatch</title>
-  <meta name="description" content="Direct quotes from the House and Senate floor, organized by bill and topic." />
-  <link rel="canonical" href="https://legislationpatch.com/floor.html" />
-
-  <!-- Open Graph / Social -->
+  <title>Federal Bills — LegislationPatch</title>
+  <meta name="description" content="Every tracked U.S. federal bill explained in plain English. Filter by topic, status, and stage." />
+  <link rel="canonical" href="https://legislationpatch.com/bills.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://legislationpatch.com/floor.html" />
-  <meta property="og:title" content="Floor Activity — LegislationPatch" />
-  <meta property="og:description" content="Direct quotes from the House and Senate floor, organized by bill and topic." />
+  <meta property="og:url" content="https://legislationpatch.com/bills.html" />
+  <meta property="og:title" content="Federal Bills — LegislationPatch" />
+  <meta property="og:description" content="Every tracked U.S. federal bill explained in plain English." />
   <meta property="og:image" content="https://legislationpatch.com/og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Floor Activity — LegislationPatch" />
-  <meta name="twitter:description" content="Direct quotes from the House and Senate floor, organized by bill and topic." />
-  <meta name="twitter:image" content="https://legislationpatch.com/og-image.svg" />
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "name": "Floor Activity — LegislationPatch",
-        "description": "Direct quotes from the House and Senate floor, organized by bill and topic.",
-        "url": "https://legislationpatch.com/floor.html",
-        "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"}
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://legislationpatch.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Floor Activity", "item": "https://legislationpatch.com/floor.html"}
-        ]
-      }
-    ]
-  }
-  </script>
-
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://legislationpatch.com/bills.html" />
+  <meta property="twitter:title" content="Federal Bills — LegislationPatch" />
+  <meta property="twitter:description" content="Every tracked U.S. federal bill explained in plain English." />
+  <meta property="twitter:image" content="https://legislationpatch.com/og-image.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Set page flag before app.js runs -->
+  <script>window.BILLS_PAGE = true; window.activeBillCategories = new Set();</script>
 </head>
 <body>
-
-  <script>
-    (function () {
-      const t = localStorage.getItem('lpTheme');
-      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    })();
-  </script>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="logo-block">
-        <a href="index.html" style="text-decoration:none;">
-          <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
-        </a>
-      </div>
+      <a href="index.html" class="logo-block" style="text-decoration:none;">
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" id="siteLogo" />
+      </a>
       <div class="header-cta">
         <span class="header-cta__label">Take it with you</span>
         <div class="header-cta__badges">
@@ -96,23 +64,23 @@
         <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      Quotes sourced directly from Congress.gov's Congressional Record — no editorial spin.
+      Data sourced directly from Congress.gov — no editorial spin.
     </div>
   </div>
 
-  <!-- CONTROLS -->
+  <!-- CONTROLS BAR -->
   <div class="controls-bar">
     <div class="controls-inner">
       <nav class="site-nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="bills.html" class="nav-link">Bills</a>
+        <a href="bills.html" class="nav-link nav-link--active">Bills</a>
         <a href="reps.html" class="nav-link">Reps</a>
-        <a href="floor.html" class="nav-link nav-link--active">Floor Quotes</a>
+        <a href="floor.html" class="nav-link">Floor Quotes</a>
       </nav>
       <div class="header-track">
-        
-        <button class="fav-btn" id="floorFavBtn" onclick="toggleFavsView()" title="Saved quotes">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+        <span class="bills-count-label" id="billsCountLabel"></span>
+        <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
           </svg>
         </button>
@@ -128,46 +96,43 @@
   </div>
 
   <!-- PAGE HERO -->
-  <div class="floor-hero">
-    <div class="floor-hero-inner">
-      <div class="floor-hero-eyebrow">Congressional Record</div>
-      <h1 class="floor-hero-title">Floor Activity</h1>
-      <p class="floor-hero-desc">Direct statements from the House &amp; Senate floor, pulled from the Congressional Record. Organized by topic and updated weekly.</p>
+  <div class="bills-page-hero">
+    <div class="bills-page-hero-inner">
+      <div class="bills-page-hero-eyebrow">119th Congress</div>
+      <h1 class="bills-page-hero-title">Federal Bills</h1>
+      <p class="bills-page-hero-desc">Every tracked bill explained in plain English — data pulled directly from Congress.gov. Filter by topic and status.</p>
     </div>
   </div>
 
   <!-- MAIN -->
   <main class="main">
+
+    <!-- Category chip filter bar -->
+    <div class="bills-cat-bar" id="billCatBar">
+      <button class="bills-cat-chip bills-cat-chip--all active" data-cat="all">All Topics</button>
+      <button class="bills-cat-chip bills-cat-chip--war"        data-cat="war">Defense &amp; Foreign Policy</button>
+      <button class="bills-cat-chip bills-cat-chip--immigration" data-cat="immigration">Immigration</button>
+      <button class="bills-cat-chip bills-cat-chip--economy"    data-cat="economy">Economy &amp; Tax</button>
+      <button class="bills-cat-chip bills-cat-chip--health"     data-cat="health">Health &amp; Benefits</button>
+      <button class="bills-cat-chip bills-cat-chip--executive"  data-cat="executive">Executive Power</button>
+      <button class="bills-cat-chip bills-cat-chip--government" data-cat="government">Government &amp; Oversight</button>
+      <button class="bills-cat-chip bills-cat-chip--civil"      data-cat="civil">Civil Rights &amp; Justice</button>
+    </div>
+
     <div class="loading-state" id="loadingState">
       <div class="loading-spinner"></div>
-      <p>Loading floor activity&hellip;</p>
+      <p>Loading bills&hellip;</p>
     </div>
-
-    <div id="floorCarousel"></div>
-
-    <div class="floor-search-row">
-      <div class="floor-search-wrap">
-        <svg class="floor-search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-        <input id="floorSearch" class="floor-search" type="search" placeholder="Search quotes or speakers..." autocomplete="off" />
-      </div>
-    </div>
-    <div id="floorContent"></div>
+    <div class="bill-list" id="billList"></div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
-    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
-    <p class="footer-links">
-      <a href="privacy.html">Privacy Policy</a> ·
-      <a href="terms.html">Terms of Service</a>
-    </p>
   </footer>
 
   <script src="acronyms.js"></script>
-  <script src="floor.js"></script>
-  <script src="share-highlight.js"></script>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+  <script src="bills.js"></script>
 </body>
 </html>

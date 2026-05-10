@@ -97,18 +97,19 @@
         <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
         <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      Sourced directly from bill text. No editorial spin.
+      Data sourced directly from Congress.gov — no editorial spin.
     </div>
   </div>
 
   <!-- CONTROLS -->
   <div class="controls-bar">
     <div class="controls-inner">
-      <div class="filter-row" id="filtersMain">
-        <button class="filter-btn active" data-main="in_progress">In Progress</button>
-        <button class="filter-btn" data-main="passed">Passed</button>
-        <button class="filter-btn" data-main="dead">Dead</button>
-      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link nav-link--active">Home</a>
+        <a href="bills.html" class="nav-link">Bills</a>
+        <a href="reps.html" class="nav-link">Reps</a>
+        <a href="floor.html" class="nav-link">Floor Quotes</a>
+      </nav>
       <div class="header-track">
         <span class="zip-display" id="zipDisplay" title="Your ZIP code — used to find your local representatives"></span>
         <button class="fav-btn" id="favBtn" onclick="toggleFavoritesView()" title="Favorites & tracked reps">
@@ -125,13 +126,13 @@
         </label>
       </div>
     </div>
-<div class="controls-rep-row">
-      <div class="rep-strip-label">Reps</div>
-      <div class="rep-strip" id="repStrip"></div>
-      <a href="reps.html" class="rep-more-btn">View all &#8594;</a>
-    </div>
   </div>
 
+  <div class="controls-rep-row">
+    <div class="rep-strip-label">Reps</div>
+    <div class="rep-strip" id="repStrip"></div>
+    <a href="reps.html" class="rep-more-btn">View all &#8594;</a>
+  </div>
 
   <!-- MAIN CONTENT -->
   <main class="main">
