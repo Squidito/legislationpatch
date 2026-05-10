@@ -337,7 +337,7 @@ function render() {
   }
 
   if (initialRender) {
-    groups.slice(1).forEach(({ cat }) => collapsedCats.add(cat.id));
+    groups.forEach(({ cat }) => collapsedCats.add(cat.id));
     initialRender = false;
   }
 
@@ -521,7 +521,7 @@ function renderCarousel() {
 
   mount.innerHTML = `<div class="shock-quotes-section">
     <div class="shock-quotes-label-row">
-      <span class="shock-quotes-label">Recent and controversial quotes from the floor</span>
+      <span class="shock-quotes-label">Controversial quotes from the floor</span>
     </div>
     <div class="shock-quotes-grid"><div class="shock-quotes-track">${cards}</div></div>
   </div>`;

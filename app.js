@@ -85,13 +85,30 @@ let trackedReps  = [];
 // ---- Boot ----
 
 document.addEventListener('DOMContentLoaded', async () => {
-  if (!document.getElementById('billList')) return; // not the main page
+  if (!document.getElementById('billList')) return;
   loadTrackedSettings();
   loadWatchedBills();
+  setupSettings();
+
+  if (window.FAVORITES_PAGE) {
+    showLoading(true);
+    try {
+      [allBills, standaloneQuotes] = await Promise.all([
+        fetchRecentBills(),
+        fetchStandaloneQuotes()
+      ]);
+    } catch(e) {
+      showError(true, e.message);
+    } finally {
+      showLoading(false);
+    }
+    renderFavoritesView();
+    return;
+  }
+
   await autoDetectState();
   fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
   fetchRepsIndex().then(idx => { repsIndex = idx; renderRepStrip(); });
-  setupSettings();
   setupRepStripDrag();
   renderRepStrip();
   loadBills();
@@ -118,7 +135,6 @@ async function loadBills() {
     const scrollTo = urlP.get('scrollTo');
     const fromRep  = urlP.get('fromRep');
     const repName  = urlP.get('repName');
-    if (urlP.get('fav') === '1' && !favoritesView) toggleFavoritesView();
     if (scrollTo) scrollToBill(scrollTo);
     if (fromRep && repName) {
       const banner = document.getElementById('repBackBanner');
@@ -338,37 +354,24 @@ function renderRepStrip() {
   const seen = new Set();
   const pool = [];
 
-  // 1. Featured: top-scoring R + top-scoring D — always first
-  const quotePool   = buildQuotePool();
-  const quoteSorted = [...quotePool].sort((a, b) => b.shockScore - a.shockScore);
-  const featR = quoteSorted.find(q => (q.party || '').toUpperCase().startsWith('R'));
-  const featD = quoteSorted.find(q => (q.party || '').toUpperCase().startsWith('D'));
-  [featR, featD].filter(Boolean).forEach(q => {
-    if (q.bioguideId && !seen.has(q.bioguideId)) {
-      seen.add(q.bioguideId);
-      pool.push({ bioguideId: q.bioguideId, name: q.name, party: q.party, state: q.state || '', isFeatured: true });
-    }
-  });
-
   const hasLocal = repsIndex[trackedState]?.length > 0;
 
   if (hasLocal) {
-    // 2. Tracked reps first
+    // 1. Tracked reps first
     trackedReps.forEach(rep => {
       const id = getRepId(rep);
       if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
     });
 
-    // 3. Local state reps fill the rest
+    // 2. Local state reps fill the rest
     repsIndex[trackedState].forEach(rep => {
       const id = getRepId(rep);
       if (id && !seen.has(id)) { seen.add(id); pool.push(rep); }
     });
   } else {
-    // Fallback: 8 most recent quote speakers beyond the featured two
-    const featuredIds = new Set([featR?.bioguideId, featD?.bioguideId].filter(Boolean));
-    quotePool
-      .filter(q => q.bioguideId && !featuredIds.has(q.bioguideId))
+    // Fallback: most recent quote speakers
+    buildQuotePool()
+      .filter(q => q.bioguideId)
       .slice(0, 8)
       .forEach(q => {
         if (!seen.has(q.bioguideId)) {
@@ -384,19 +387,15 @@ function renderRepStrip() {
     const color      = partyColor(rep.party || 'I');
     const name       = formatRepName(rep);
     const active     = selectedRepIds.has(id);
-    const isFeatured = !!rep.isFeatured;
     const lastName   = repLastName(name);
     const isTracked  = trackedReps.some(r => r.id === id);
-    return `<div class="rep-strip-card${active ? ' rep-selected' : ''}${isFeatured ? ' rep-featured' : ''}${isTracked ? ' tracked' : ''}"
+    return `<div class="rep-strip-card${active ? ' rep-selected' : ''}${isTracked ? ' tracked' : ''}"
                  data-rep-id="${escHtml(id)}"
                  data-rep-name="${escHtml(name)}"
                  data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
                  data-rep-state="${escHtml(rep.state || rep.stateCode || '')}">
       <a href="rep?id=${escHtml(bg || id)}&ref=bills" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
-        ${isFeatured
-          ? `<div class="rep-featured-wrap"><div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div></div>`
-          : `<div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>`
-        }
+        <div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>
         <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
       </a>
       <div class="rep-name">${escHtml(lastName)}</div>
@@ -456,8 +455,9 @@ function toggleRepTracked(id, fallback = {}) {
     });
   }
   saveTrackedSettings();
-  refreshRepStripClasses(); // update tracked highlights without rebuilding the pool
-  renderAll();
+  refreshRepStripClasses();
+  if (window.FAVORITES_PAGE) renderFavoritesView();
+  else renderAll();
 }
 
 // Update tracked styling on existing strip cards without rebuilding the pool
@@ -789,21 +789,6 @@ function renderAll() {
 
 // ---- Favorites view ----
 
-function toggleFavoritesView() {
-  favoritesView = !favoritesView;
-  const btn      = document.getElementById('favBtn');
-  const controls = document.querySelector('.controls-bar');
-
-  if (favoritesView) {
-    btn.classList.add('active');
-    controls.style.display = 'none';
-    renderFavoritesView();
-  } else {
-    btn.classList.remove('active');
-    controls.style.display = '';
-    renderAll();
-  }
-}
 
 function renderFavoritesView() {
   const list = document.getElementById('billList');
@@ -1148,7 +1133,7 @@ function renderShockQuotesSection() {
   const seeAll = window.FLOOR_PAGE ? '' : '<a href="floor.html" class="shock-quotes-see-all">See all &rarr;</a>';
   return `<div class="shock-quotes-section">
     <div class="shock-quotes-label-row">
-      <span class="shock-quotes-label">Recent and controversial quotes from the floor</span>
+      <span class="shock-quotes-label">Controversial quotes from the floor</span>
       ${seeAll}
     </div>
     <div class="shock-quotes-grid"><div class="shock-quotes-track">${html}</div></div>

@@ -1299,8 +1299,8 @@ a:hover { text-decoration: underline; }
   justify-content: center;
 }
 .star-btn svg { display: block; }
-.star-btn:hover    { opacity: 0.65; color: var(--amber); }
-.star-btn.watching { opacity: 1;    color: var(--amber); }
+.star-btn:hover    { opacity: 0.65; color: #facc15; }
+.star-btn.watching { opacity: 1;    color: #facc15; }
 
 /* ---- COMPACT META BADGE ---- */
 .bill-meta-compact {
@@ -2586,9 +2586,14 @@ a:hover { text-decoration: underline; }
 }
 .fav-btn:hover { color: var(--text); border-color: var(--text-3); }
 .fav-btn.active {
-  color: var(--purple);
-  border-color: var(--purple);
-  background: var(--purple-bg);
+  color: #facc15;
+  border-color: #facc15;
+  background: rgba(250, 204, 21, 0.1);
+}
+[data-theme="dark"] .fav-btn.active {
+  color: #facc15;
+  border-color: #facc15;
+  background: rgba(250, 204, 21, 0.08);
 }
 .fav-btn.active svg polygon { fill: currentColor; }
 
@@ -2851,20 +2856,19 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 
   /* === CONTROLS === */
   .zip-display { display: none; }
+  .bills-count-label { display: none; }
   .rep-strip-star { padding-bottom: 10px; }
 
-  /* filter pills scroll horizontally, no wrap */
-  .controls-inner {
-    padding: 8px 14px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    justify-content: flex-start;
-  }
-  .controls-inner::-webkit-scrollbar { display: none; }
+  /* Nav fits on one row — tabs distribute evenly, no scroll */
+  .controls-inner { padding: 6px 14px; }
+  .site-nav { flex: 1; flex-shrink: 1; }
+  .nav-link { flex: 1; text-align: center; padding: 5px 5px; letter-spacing: 0.02em; }
+  .nav-hide-mobile { display: none; }
+  /* Stage filter tabs scroll horizontally */
   .filter-row { flex-wrap: nowrap; }
   .filter-btn { flex-shrink: 0; }
-  .bill-filter-bar { padding: 8px 0 0; }
+  .bill-filter-bar { overflow-x: auto; scrollbar-width: none; padding: 8px 0 14px; }
+  .bill-filter-bar::-webkit-scrollbar { display: none; }
   .filter-sub-row {
     padding: 0 14px 6px;
     flex-wrap: nowrap;
@@ -3100,13 +3104,13 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   color: #c9a96e;
 }
 
-[data-theme="dark"] .floor-cat-card--war         { border-left-color: var(--blue);   }
-[data-theme="dark"] .floor-cat-card--immigration { border-left-color: var(--red);    }
-[data-theme="dark"] .floor-cat-card--economy     { border-left-color: var(--amber);  }
-[data-theme="dark"] .floor-cat-card--executive   { border-left-color: var(--purple); }
-[data-theme="dark"] .floor-cat-card--government  { border-left-color: var(--teal);   }
-[data-theme="dark"] .floor-cat-card--civil       { border-left-color: var(--green);  }
-[data-theme="dark"] .floor-cat-card--other       { border-left-color: var(--border); }
+[data-theme="dark"] .floor-cat-card--war         { border-left-color: var(--red);    }
+[data-theme="dark"] .floor-cat-card--immigration { border-left-color: var(--amber);  }
+[data-theme="dark"] .floor-cat-card--economy     { border-left-color: var(--green);  }
+[data-theme="dark"] .floor-cat-card--executive   { border-left-color: var(--red);    }
+[data-theme="dark"] .floor-cat-card--government  { border-left-color: var(--blue);   }
+[data-theme="dark"] .floor-cat-card--civil       { border-left-color: var(--purple); }
+[data-theme="dark"] .floor-cat-card--other       { border-left-color: var(--text-3); }
 
 [data-theme="dark"] .logo-mark {
   background: #f0f0f3;
@@ -3625,17 +3629,18 @@ body {
 }
 .bills-cat-chip:hover { background: var(--surface-2); color: var(--text); }
 
-/* All Topics chip — active uses brand purple */
-.bills-cat-chip--all.active { background: #5F52E0; color: #fff; border-color: #5F52E0; }
+/* All Topics chip — active uses brand orange */
+.bills-cat-chip--all.active { background: #c75c0e; color: #fff; border-color: #c75c0e; }
+[data-theme="dark"] .bills-cat-chip--all.active { background: #fb923c; color: #1a0a00; border-color: #fb923c; }
 
 /* Category chips — active use their accent color */
-.bills-cat-chip--war.active        { background: var(--blue-bg);   color: var(--blue-text);   border-color: var(--blue);   }
-.bills-cat-chip--immigration.active{ background: var(--red-bg);    color: var(--red-text);    border-color: var(--red);    }
-.bills-cat-chip--economy.active    { background: var(--amber-bg);  color: var(--amber-text);  border-color: var(--amber);  }
-.bills-cat-chip--health.active     { background: var(--green-bg);  color: var(--green-text);  border-color: var(--green);  }
-.bills-cat-chip--executive.active  { background: var(--purple-bg); color: var(--purple-text); border-color: var(--purple); }
-.bills-cat-chip--government.active { background: var(--teal-bg);   color: var(--teal-text);   border-color: var(--teal);   }
-.bills-cat-chip--civil.active      { background: var(--amber-bg);  color: var(--amber-text);  border-color: var(--amber);  }
+.bills-cat-chip--war.active        { background: var(--red-bg);    color: var(--red-text);    border-color: var(--red);    }
+.bills-cat-chip--immigration.active{ background: var(--amber-bg);  color: var(--amber-text);  border-color: var(--amber);  }
+.bills-cat-chip--economy.active    { background: var(--green-bg);  color: var(--green-text);  border-color: var(--green);  }
+.bills-cat-chip--health.active     { background: var(--teal-bg);   color: var(--teal-text);   border-color: var(--teal);   }
+.bills-cat-chip--executive.active  { background: var(--red-bg);    color: var(--red-text);    border-color: var(--red);    }
+.bills-cat-chip--government.active { background: var(--blue-bg);   color: var(--blue-text);   border-color: var(--blue);   }
+.bills-cat-chip--civil.active      { background: var(--purple-bg); color: var(--purple-text); border-color: var(--purple); }
 
 /* ---- Page hero ---- */
 .floor-hero {
@@ -3728,13 +3733,13 @@ body {
 
 /* Colored left accent border per category card */
 .floor-cat-card { border-left-width: 4px; }
-.floor-cat-card--war         { border-left-color: var(--blue);   }
-.floor-cat-card--immigration { border-left-color: var(--red);    }
-.floor-cat-card--economy     { border-left-color: var(--amber);  }
-.floor-cat-card--executive   { border-left-color: var(--purple); }
-.floor-cat-card--government  { border-left-color: var(--teal);   }
-.floor-cat-card--civil       { border-left-color: var(--green);  }
-.floor-cat-card--other       { border-left-color: var(--border); }
+.floor-cat-card--war         { border-left-color: var(--red);    }
+.floor-cat-card--immigration { border-left-color: var(--amber);  }
+.floor-cat-card--economy     { border-left-color: var(--green);  }
+.floor-cat-card--executive   { border-left-color: var(--red);    }
+.floor-cat-card--government  { border-left-color: var(--blue);   }
+.floor-cat-card--civil       { border-left-color: var(--purple); }
+.floor-cat-card--other       { border-left-color: var(--text-3); }
 
 /* Icon chip — colored square with icon + count */
 .floor-cat-chip {
@@ -3767,13 +3772,13 @@ body {
 }
 
 /* Per-category chip colors */
-.cat-war         { background: var(--blue-bg);   color: var(--blue-text);   }
-.cat-immigration { background: var(--red-bg);    color: var(--red-text);    }
-.cat-economy     { background: var(--amber-bg);  color: var(--amber-text);  }
-.cat-executive   { background: var(--purple-bg); color: var(--purple-text); }
-.cat-government  { background: var(--teal-bg);   color: var(--teal-text);   }
-.cat-civil       { background: var(--green-bg);  color: var(--green-text);  }
-.cat-other       { background: var(--surface-2); color: var(--text-3);      }
+.cat-war         { background: var(--red-bg);    color: var(--red-text);    }
+.cat-immigration { background: var(--amber-bg);  color: var(--amber-text);  }
+.cat-economy     { background: var(--green-bg);  color: var(--green-text);  }
+.cat-executive   { background: var(--red-bg);    color: var(--red-text);    }
+.cat-government  { background: var(--blue-bg);   color: var(--blue-text);   }
+.cat-civil       { background: var(--purple-bg); color: var(--purple-text); }
+.cat-other       { background: var(--surface-2); color: var(--text-2);      }
 
 .floor-cat-info { min-width: 0; }
 

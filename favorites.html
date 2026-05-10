@@ -3,67 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>LegislationPatch — U.S. Federal Bills, Plain English</title>
-  <meta name="description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
-  <link rel="canonical" href="https://legislationpatch.com/" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://legislationpatch.com/" />
-  <meta property="og:title" content="LegislationPatch — U.S. Federal Bills, Plain English" />
-  <meta property="og:description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
-  <meta property="og:image" content="https://legislationpatch.com/og-image.svg" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://legislationpatch.com/" />
-  <meta property="twitter:title" content="LegislationPatch — U.S. Federal Bills, Plain English" />
-  <meta property="twitter:description" content="U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress." />
-  <meta property="twitter:image" content="https://legislationpatch.com/og-image.svg" />
-
+  <title>Saved — LegislationPatch</title>
+  <meta name="description" content="Your tracked reps, starred bills, and saved floor quotes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "LegislationPatch",
-        "url": "https://legislationpatch.com/",
-        "description": "U.S. federal legislation explained in plain English, patch notes style. Real bill text analysis, rep tracking, and what's changing in Congress.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "LegislationPatch",
-          "url": "https://legislationpatch.com/"
-        }
-      },
-      {
-        "@type": "Organization",
-        "name": "LegislationPatch",
-        "url": "https://legislationpatch.com/",
-        "description": "Making U.S. federal legislation accessible to every American through plain-English analysis sourced directly from official bill text.",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://legislationpatch.com/og-image.svg"
-        }
-      }
-    ]
-  }
-  </script>
+  <script>window.FAVORITES_PAGE = true;</script>
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-      <button class="logo-block logo-home-btn" onclick="goHome()" aria-label="Return to home">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
         <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
-      </button>
+      </a>
       <div class="header-cta">
         <span class="header-cta__label">Take it with you</span>
         <div class="header-cta__badges">
@@ -105,14 +60,13 @@
   <div class="controls-bar">
     <div class="controls-inner">
       <nav class="site-nav">
-        <a href="index.html" class="nav-link nav-link--active">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="bills.html" class="nav-link">Bills</a>
         <a href="reps.html" class="nav-link">Reps</a>
         <a href="floor.html" class="nav-link">Floor<span class="nav-hide-mobile"> Quotes</span></a>
       </nav>
       <div class="header-track">
-        <span class="zip-display" id="zipDisplay" title="Your ZIP code — used to find your local representatives"></span>
-        <a href="favorites.html" class="fav-btn" title="Favorites & tracked reps">
+        <a href="favorites.html" class="fav-btn active" title="Saved">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
             <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
           </svg>
@@ -128,36 +82,21 @@
     </div>
   </div>
 
-  <div class="controls-rep-row">
-    <div class="rep-strip-label">Reps</div>
-    <div class="rep-strip" id="repStrip"></div>
-    <a href="reps.html" class="rep-more-btn">View all &#8594;</a>
-  </div>
-
   <!-- MAIN CONTENT -->
   <main class="main">
 
-
-    <!-- LOADING STATE -->
     <div class="loading-state" id="loadingState" style="display:none">
       <div class="loading-spinner"></div>
-      <p>Fetching latest legislation...</p>
+      <p>Loading your saved items...</p>
     </div>
 
-    <!-- ERROR STATE -->
     <div class="error-state" id="errorState" style="display:none">
-      <p id="errorMsg">Something went wrong fetching bills.</p>
-      <button onclick="loadBills()">Try again</button>
+      <p id="errorMsg">Something went wrong loading data.</p>
+      <button onclick="location.reload()">Try again</button>
     </div>
 
-    <!-- REP BACK BANNER — shown when navigating from a rep's comment to a bill -->
-    <div id="repBackBanner" class="rep-back-banner" style="display:none">
-      <a id="repBackLink" href="#" class="back-btn"></a>
-      <button class="rep-back-dismiss" onclick="document.getElementById('repBackBanner').style.display='none'" aria-label="Dismiss">&times;</button>
-    </div>
-
-    <!-- BILL LIST -->
     <div class="bill-list" id="billList"></div>
+
   </main>
 
   <!-- FOOTER -->
@@ -165,7 +104,7 @@
     <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
     <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
     <p class="footer-links">
-      <a href="privacy.html">Privacy Policy</a> · 
+      <a href="privacy.html">Privacy Policy</a> ·
       <a href="terms.html">Terms of Service</a>
     </p>
   </footer>
