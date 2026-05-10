@@ -326,7 +326,7 @@ a:hover { text-decoration: underline; }
 .controls-rep-row {
   max-width: 960px;
   margin: 0 auto;
-  padding: 10px 24px 16px;
+  padding: 10px 24px 4px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -876,7 +876,7 @@ a:hover { text-decoration: underline; }
 .main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem 3rem;
+  padding: 0.6rem 1.5rem 3rem;
 }
 .section-label {
   font-size: 0.7rem;
