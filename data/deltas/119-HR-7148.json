@@ -1,0 +1,196 @@
+{
+  "billId": "119-HR-7148",
+  "generatedAt": "2026-05-10T05:17:03.606Z",
+  "bucket2": [
+    {
+      "bucket": 2,
+      "program": "Medicare Improvement Fund",
+      "from": 1400000000,
+      "to": 2060000000,
+      "delta": 660000000,
+      "deltaPercent": 47.1,
+      "direction": "increase",
+      "sourceText": "changes.modified",
+      "rawMatch": "from $1.40B to $2.06B",
+      "usCode": {
+        "title": "Medicare Improvement Fund",
+        "packageId": "USCODE-2024-title42",
+        "dateIssued": "2024-12-31",
+        "amountsFound": [
+          "$1.251B",
+          "$3.197B",
+          "$2.198B",
+          "$2.251B",
+          "$466.8M",
+          "$180.0M",
+          "$7.278B",
+          "$7.308B",
+          "$7.500B",
+          "$101.0M",
+          "$165.0M",
+          "$220.0M",
+          "$270.0M",
+          "$140.0M",
+          "$205.0M",
+          "$195.0M",
+          "$2.300B",
+          "$275.0M",
+          "$22.290B",
+          "$20.740B",
+          "$550.0M",
+          "$2.290B",
+          "$19.900B",
+          "$2.220B"
+        ],
+        "closest": 1251000000,
+        "diffPercent": 10.6
+      },
+      "confidence": "stated",
+      "verified": false,
+      "note": "US Code lags — likely intermediate appropriation"
+    }
+  ],
+  "bucket3": [
+    {
+      "program": "Counter-ISIS Train and Equip Fund",
+      "current": 342500000,
+      "sourceText": "Division A — Department of Defense Appropriations Act, 2026 [mod]",
+      "rawMatch": "Counter-ISIS Train and Equip Fund reauthorized at $342.5M",
+      "priorFY": 2025,
+      "prior": 397950000,
+      "delta": -55450000,
+      "deltaPercent": -13.9,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 397950000
+        }
+      }
+    },
+    {
+      "program": "Amtrak National Network grants",
+      "current": 1577000000,
+      "sourceText": "Division D — Transportation, Housing and Urban Development, and Related Agencies Appropriations Act, 2026 [mod]",
+      "rawMatch": "Amtrak National Network grants: $1.577B",
+      "priorFY": 2025,
+      "prior": 1286321000,
+      "delta": 290679000,
+      "deltaPercent": 22.6,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 1286321000
+        }
+      }
+    },
+    {
+      "program": "Taxpayer Services",
+      "current": 3040000000,
+      "sourceText": "Division E — Financial Services and General Government Appropriations Act, 2026 [mod]",
+      "rawMatch": "Taxpayer Services $3.04B",
+      "priorFY": 2025,
+      "prior": 2780606000,
+      "delta": 259394000,
+      "deltaPercent": 9.3,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 2780606000
+        }
+      }
+    },
+    {
+      "program": "Enforcement",
+      "current": 5000000000,
+      "sourceText": "Division E — Financial Services and General Government Appropriations Act, 2026 [mod]",
+      "rawMatch": "Enforcement $5.00B",
+      "priorFY": 2025,
+      "prior": 5437622000,
+      "delta": -437622000,
+      "deltaPercent": -8,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 5437622000
+        }
+      }
+    },
+    {
+      "program": "Operations Support",
+      "current": 3160000000,
+      "sourceText": "Division E — Financial Services and General Government Appropriations Act, 2026 [mod]",
+      "rawMatch": "Operations Support $3.16B",
+      "priorFY": 2025,
+      "prior": 4100826000,
+      "delta": -940826000,
+      "deltaPercent": -22.9,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 4100826000
+        }
+      }
+    },
+    {
+      "program": "PEPFAR",
+      "current": 5880000000,
+      "sourceText": "Division F — National Security, Department of State, and Related Programs Appropriations Act, 2026 [mod]",
+      "rawMatch": "PEPFAR: $5.88B",
+      "priorFY": 2025,
+      "prior": 3985450000,
+      "delta": 1894550000,
+      "deltaPercent": 47.5,
+      "confidence": "low",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 3985450000
+        }
+      }
+    },
+    {
+      "program": "Special Diabetes Programs extended at",
+      "current": 350000000,
+      "sourceText": "Division J — Health Care Extenders [mod]",
+      "rawMatch": "Special Diabetes Programs extended at $350M",
+      "priorFY": 2025,
+      "prior": 130000000,
+      "delta": 220000000,
+      "deltaPercent": 169.2,
+      "confidence": "mismatch",
+      "suppressReason": "Single-source delta of 169.2% exceeds 60% threshold — needs corroboration",
+      "sourceCount": 1,
+      "agreeCount": 0,
+      "sources": {
+        "a": null,
+        "b": null,
+        "c": {
+          "amount": 130000000
+        }
+      }
+    }
+  ]
+}

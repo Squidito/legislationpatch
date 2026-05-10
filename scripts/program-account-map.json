@@ -1,0 +1,109 @@
+{
+  "_notes": "Maps program names to USASpending agency codes and prior-year omnibus bill packages. Only include true annual appropriations — NOT ceilings, mandatory totals, capital authorizations, or one-time items. priorBills lists GovInfo package IDs (newest first). searchPattern is the regex used to locate the appropriation heading in that bill's text. minAmount filters out transfer-restriction noise (in dollars).",
+
+  "IRS Taxpayer Services": {
+    "agency": "020",
+    "accountSearch": "Taxpayer Services",
+    "subagency": "Internal Revenue Service",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr2882enr"],
+    "searchPattern": "taxpayer services.*?internal revenue|internal revenue.*?taxpayer services",
+    "minAmount": 1000000000,
+    "notes": "FY2024: $2.781B. IRS accounts include IRA supplemental funds in USASpending — use prior bill text instead."
+  },
+  "IRS Enforcement": {
+    "agency": "020",
+    "accountSearch": "Enforcement, Internal Revenue Service",
+    "subagency": "Internal Revenue Service",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr2882enr"],
+    "searchPattern": "internal revenue service.*?enforcement for necessary|enforcement for necessary expenses.*?internal revenue",
+    "minAmount": 1000000000,
+    "notes": "Search pattern must target the appropriation heading, not transfer restriction text."
+  },
+  "IRS Operations Support": {
+    "agency": "020",
+    "accountSearch": "Operations Support, Internal Revenue Service",
+    "subagency": "Internal Revenue Service",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr2882enr"],
+    "searchPattern": "operations support.*?internal revenue|internal revenue.*?operations support",
+    "minAmount": 1000000000
+  },
+  "PEPFAR": {
+    "agency": "019",
+    "accountSearch": "Global Health Programs",
+    "subagency": "State Department",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr2882enr"],
+    "searchPattern": "global health programs.*?foreign assistance act",
+    "minAmount": 2000000000,
+    "notes": "FY2024: $3.985B. FY2025 was CR. Comparing FY2024→FY2026 spans 2 years — label accordingly."
+  },
+  "Amtrak National Network grants": {
+    "agency": "069",
+    "accountSearch": "National Network Grants",
+    "subagency": "Federal Railroad Administration",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr4366enr"],
+    "searchPattern": "national network grants to the national railroad",
+    "minAmount": 500000000,
+    "notes": "Must NOT match Northeast Corridor grants — different account."
+  },
+  "Special Diabetes Programs": {
+    "agency": "075",
+    "accountSearch": "Special Diabetes Program",
+    "subagency": "Centers for Medicare and Medicaid Services",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr4366enr"],
+    "searchPattern": "special diabetes programs for type i|special diabetes program.*?appropriated",
+    "minAmount": 100000000
+  },
+  "Counter-ISIS Train and Equip Fund": {
+    "agency": "097",
+    "accountSearch": "Counter-ISIS Train and Equip",
+    "type": "annual_appropriation",
+    "priorBills": ["BILLS-118hr2882enr"],
+    "searchPattern": "counter-i(?:SIS|SIL) train and equip fund for",
+    "minAmount": 200000000,
+    "notes": "FY2024: $398M."
+  },
+  "Medicare Improvement Fund": {
+    "agency": "075",
+    "accountSearch": "Medicare Improvement Fund",
+    "subagency": "Centers for Medicare and Medicaid Services",
+    "type": "annual_appropriation",
+    "priorBills": [],
+    "searchPattern": "medicare improvement fund.*?shall be available",
+    "minAmount": 500000000,
+    "notes": "Bucket 2 only — prior amount is stated explicitly in the bill text. US Code lags 1-2 years."
+  },
+  "FEMA Disaster Relief Fund": {
+    "_skip": true,
+    "reason": "Supplemented frequently — baseline is ambiguous year-to-year"
+  },
+  "Medicaid": {
+    "_skip": true,
+    "reason": "Mandatory spending — not a fixed enacted appropriation"
+  },
+  "Medicare": {
+    "_skip": true,
+    "reason": "Mandatory spending — not a fixed enacted appropriation"
+  },
+  "Ginnie Mae MBS guarantee ceiling": {
+    "_skip": true,
+    "reason": "Credit guarantee ceiling, not budget authority"
+  },
+  "SBA 7(a) guarantee ceiling": {
+    "_skip": true,
+    "reason": "Credit guarantee ceiling, not budget authority"
+  },
+  "Highway obligation ceiling": {
+    "_skip": true,
+    "reason": "Obligation ceiling set by infrastructure law, not annual appropriation"
+  },
+  "AIIB capital subscription": {
+    "_skip": true,
+    "reason": "Capital authorization, not annual appropriation"
+  }
+}

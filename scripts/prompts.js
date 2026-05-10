@@ -177,8 +177,23 @@ Return ONLY a valid JSON object. No markdown fences, no explanation text outside
     "added":    ["New program or right created — from bill text"],
     "modified": ["Existing law changed — old value → new value when available"],
     "removed":  ["Existing requirement eliminated — from bill text"]
+  },
+  "budget_accounts": {
+    "Program Name as it appears in the bill text": {
+      "tas": "XXX-XXXX Treasury Account Symbol if you are confident — omit field if uncertain",
+      "agency": "3-digit agency code (e.g. 020 for Treasury/IRS, 075 for HHS, 019 for State)",
+      "currentAmount": 3040000000,
+      "note": "optional — e.g. 'IRS Taxpayer Services annual appropriation'"
+    }
   }
 }
+
+BUDGET_ACCOUNTS RULES:
+- Only include named programs with explicit dollar appropriations in the bill text.
+- Do NOT include: mandatory spending totals (Medicare, Medicaid), guarantee ceilings (SBA, Ginnie Mae), capital authorizations, or one-time transfers.
+- Only include TAS if you are confident — a wrong TAS is worse than an absent one. Omit the "tas" field rather than guess.
+- currentAmount must be the exact figure from the bill text in raw dollars (no abbreviation).
+- If a bill has no discrete named program appropriations (e.g. it is a tax or authorization bill), return "budget_accounts": {}.
 
 LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes.
 top_lines: 1-3 topic objects. Each headline is a short topic label (3-6 words), NOT a specific provision. Subs are the specific provisions/figures under that topic — 1-3 subs per headline, omit subs that add nothing. A headline with zero meaningful subs should be omitted entirely.
