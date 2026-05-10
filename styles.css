@@ -2986,6 +2986,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   align-items: center;
   cursor: pointer;
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 .theme-toggle input {
   position: absolute;
@@ -2994,6 +2995,11 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   height: 0;
   pointer-events: none;
 }
+.theme-toggle input:focus { outline: none; }
+.theme-toggle input:focus-visible ~ .toggle-track {
+  outline: 2px solid #5F52E0;
+  outline-offset: 2px;
+}
 .theme-icon {
   color: var(--text-3);
   flex-shrink: 0;
@@ -3001,7 +3007,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   transition: color 0.22s ease;
 }
 .theme-toggle input:checked ~ .theme-icon {
-  color: var(--purple);
+  color: #5F52E0;
 }
 .toggle-track {
   width: 40px;
@@ -3012,8 +3018,8 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   transition: background 0.22s ease;
   flex-shrink: 0;
 }
-.theme-toggle input:checked + .toggle-track {
-  background: var(--purple);
+.theme-toggle input:checked ~ .toggle-track {
+  background: #5F52E0;
 }
 .toggle-thumb {
   position: absolute;
@@ -3026,7 +3032,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   box-shadow: 0 1px 3px rgba(0,0,0,0.25);
   transition: transform 0.22s ease;
 }
-.theme-toggle input:checked + .toggle-track .toggle-thumb {
+.theme-toggle input:checked ~ .toggle-track .toggle-thumb {
   transform: translateX(18px);
 }
 
