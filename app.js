@@ -1158,7 +1158,7 @@ function renderShockQuotesSection() {
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    const repRef   = q.billId ? `&ref=bill-${escHtml(q.billId)}&billTitle=${encodeURIComponent(q.billTitle||'')}` : '&ref=bills';
+    const repRef   = q.billId ? `&ref=bill-${escHtml(q.billId)}` : '&ref=bills';
     const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}${repRef}` : null;
     const billInCache = q.billId && allBills.some(b => b.id === q.billId);
     const billHref = q.billId
@@ -1394,7 +1394,7 @@ function renderOneQuoteCard(q, bill) {
   const stanceCls   = q.stance === 'support' ? 'stance-support' : q.stance === 'oppose' ? 'stance-oppose' : '';
   const stanceLabel = q.stance === 'support' ? 'SUPPORT' : q.stance === 'oppose' ? 'OPPOSE' : '';
   const repHref     = q.bioguideId
-    ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}`
+    ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}`
     : null;
   const repInner = `
         <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"

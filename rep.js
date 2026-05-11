@@ -20,16 +20,14 @@ async function init() {
   if (themeToggle) themeToggle.checked = isDark;
   updateLogoForTheme(isDark);
 
-  // Contextual back button — show bill name if we came from a bill's quote card
+  // Contextual back button
   const backBtn = document.getElementById('backBtn');
   if (backBtn) {
     const ref = urlParams.get('ref') || '';
-    const billTitleParam = urlParams.get('billTitle') || '';
     if (ref.startsWith('bill-')) {
       const billId = ref.slice(5);
-      const label = billTitleParam || formatBillId(billId) || 'Bill';
       backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
-      backBtn.textContent = `← ${label}`;
+      backBtn.textContent = '← Home';
     } else if (ref === 'reps') {
       backBtn.href = 'reps.html';
       backBtn.textContent = '← Reps';
