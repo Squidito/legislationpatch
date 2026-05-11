@@ -1839,13 +1839,13 @@ a:hover { text-decoration: underline; }
     animation: sq-ring-fill 0.5s linear forwards;
   }
 
-  /* Expanded card: text opens */
-  .shock-quote-card.sq-expanded .shock-quote-text {
+  /* All cards expand text when any is expanded — matches desktop :has() pattern */
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-text {
     -webkit-line-clamp: 100;
     max-height: 20rem;
     transition: max-height 0.35s ease;
   }
-  .shock-quote-card.sq-expanded .shock-quote-bill {
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-bill {
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
