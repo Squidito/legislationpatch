@@ -1699,10 +1699,11 @@ a:hover { text-decoration: underline; }
   text-overflow: ellipsis;
 }
 .shock-quote-text-link:hover .shock-quote-bill { color: var(--purple); }
-.shock-quote-card:hover .shock-quote-bill {
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
+.shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-bill {
+  animation: sq-bill-unwrap 0.001s 0.5s forwards;
+}
+@keyframes sq-bill-unwrap {
+  to { white-space: normal; overflow: visible; text-overflow: unset; }
 }
 .shock-quote-portrait {
   width: 28px;
