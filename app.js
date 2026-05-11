@@ -717,6 +717,39 @@ function setupCarousel() {
     }, 350);
   });
 
+  // ── Mobile tap expansion ───────────────────────────────────────────────────
+  if (!isHoverDevice()) {
+    function mobileExpand(card) {
+      if (!grid._mobileHeightLocked) {
+        grid.style.height = grid.offsetHeight + 'px';
+        el.style.willChange = 'auto';
+        grid._mobileHeightLocked = true;
+      }
+      card.classList.add('sq-expanded');
+    }
+    function mobileCollapse(card) {
+      card.classList.remove('sq-expanded');
+      setTimeout(() => {
+        if (!el.querySelector('.shock-quote-card.sq-expanded')) {
+          grid.style.height = '';
+          el.style.willChange = 'transform';
+          grid._mobileHeightLocked = false;
+        }
+      }, 380);
+    }
+    el.addEventListener('click', e => {
+      if (e.target.closest('a')) return; // let links through
+      const card = e.target.closest('.shock-quote-card:not([data-clone])');
+      if (!card) return;
+      if (card.classList.contains('sq-expanded') && e.target.closest('.sq-ring')) {
+        mobileCollapse(card);
+        return;
+      }
+      el.querySelectorAll('.shock-quote-card.sq-expanded').forEach(c => { if (c !== card) mobileCollapse(c); });
+      if (!card.classList.contains('sq-expanded')) mobileExpand(card);
+    });
+  }
+
   let isDragging = false, startX = 0, startCurrentX = 0;
   grid.addEventListener('mousedown', e => {
     isDragging    = true;
@@ -1150,7 +1183,7 @@ function renderShockQuotesSection() {
       : '';
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" transform="rotate(-90 9 9)"/></svg>
+      <svg class="sq-ring" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" transform="rotate(-90 9 9)"/><line class="sq-x-line" x1="5" y1="5" x2="13" y2="13"/><line class="sq-x-line" x1="13" y1="5" x2="5" y2="13"/></svg>
       <div class="shock-quote-header">${headerArea}${boltIcon}</div>
       ${quoteBody}
     </div>`;

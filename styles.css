@@ -1824,6 +1824,40 @@ a:hover { text-decoration: underline; }
   to { stroke-dashoffset: 0; }
 }
 
+/* X lines inside ring SVG — hidden by default, shown on mobile when expanded */
+.sq-x-line {
+  fill: none;
+  stroke: #fb923c;
+  stroke-width: 2;
+  stroke-linecap: round;
+  display: none;
+}
+
+/* ── Mobile / touch expansion ─────────────────────────────────────────────── */
+@media (pointer: coarse) {
+  .shock-quote-card.sq-expanded .shock-quote-text {
+    -webkit-line-clamp: 100;
+    max-height: 20rem;
+    transition: max-height 0.35s ease;
+  }
+  .shock-quote-card.sq-expanded .shock-quote-bill {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  .shock-quote-card.sq-expanded .sq-ring {
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  .shock-quote-card.sq-expanded .sq-ring circle {
+    display: none;
+  }
+  .shock-quote-card.sq-expanded .sq-x-line {
+    display: block;
+  }
+}
+
 /* ---- WHAT CHANGED (Variation G patch blocks) ---- */
 .what-changed-section {
   padding: 0 18px 16px;
