@@ -721,7 +721,7 @@ function setupCarousel() {
     el.addEventListener('touchstart', e => {
       const card = e.target.closest('.shock-quote-card:not([data-clone])');
       if (!card || e.target.closest('a')) return;
-      if (card.classList.contains('sq-expanded')) return; // X close handled by click
+      if (el.querySelector('.shock-quote-card.sq-expanded')) return; // card open — X handles close
       // Cancel any in-progress fill on a different card
       if (holdCard && holdCard !== card) cancelHold();
       holdCard = card;
