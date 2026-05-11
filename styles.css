@@ -1836,7 +1836,7 @@ a:hover { text-decoration: underline; }
     opacity: 1;
   }
   .shock-quote-card.sq-filling .sq-ring circle {
-    animation: sq-ring-fill 0.5s linear forwards;
+    animation: sq-ring-fill 1s linear forwards;
   }
 
   /* All cards expand text when any is expanded — matches desktop :has() pattern */

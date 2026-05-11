@@ -711,24 +711,8 @@ function setupCarousel() {
   {
     let holdTimer = null, holdCard = null;
 
-    function mobileExpand(card) {
-      if (!grid._mobileHeightLocked) {
-        grid.style.height = grid.offsetHeight + 'px';
-        el.style.willChange = 'auto';
-        grid._mobileHeightLocked = true;
-      }
-      card.classList.add('sq-expanded');
-    }
-    function mobileCollapse(card) {
-      card.classList.remove('sq-expanded');
-      setTimeout(() => {
-        if (!el.querySelector('.shock-quote-card.sq-expanded')) {
-          grid.style.height = '';
-          el.style.willChange = 'transform';
-          grid._mobileHeightLocked = false;
-        }
-      }, 380);
-    }
+    function mobileExpand(card)   { card.classList.add('sq-expanded'); }
+    function mobileCollapse(card) { card.classList.remove('sq-expanded'); }
     function cancelHold() {
       if (holdTimer) { clearTimeout(holdTimer); holdTimer = null; }
       if (holdCard) { holdCard.classList.remove('sq-filling'); holdCard = null; }
@@ -747,7 +731,7 @@ function setupCarousel() {
         card.classList.remove('sq-filling');
         el.querySelectorAll('.shock-quote-card.sq-expanded').forEach(c => mobileCollapse(c));
         mobileExpand(card);
-      }, 500);
+      }, 1000);
     }, { passive: true });
 
     // Nothing cancels the gauge once started except tapping a different card
