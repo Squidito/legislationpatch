@@ -685,11 +685,16 @@ function setupCarousel() {
   el.style.transform = `translateX(${currentX}px)`;
 
   let paused = false;
-  grid.addEventListener('mouseenter', () => { paused = true; });
+  grid.addEventListener('mouseenter', () => {
+    paused = true;
+    grid.style.height = grid.offsetHeight + 'px';
+  });
   grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
+    // Release after collapse finishes (80ms grace + 250ms transition)
+    setTimeout(() => { grid.style.height = ''; }, 350);
   });
 
   let isDragging = false, startX = 0, startCurrentX = 0;
