@@ -140,7 +140,7 @@ async function loadBills() {
       const banner = document.getElementById('repBackBanner');
       const link   = document.getElementById('repBackLink');
       if (banner && link) {
-        link.href        = `rep?id=${encodeURIComponent(fromRep)}&ref=bills`;
+        link.href        = `rep?id=${encodeURIComponent(fromRep)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}`;
         link.textContent = `← ${repName}`;
         banner.style.display = 'flex';
       }
@@ -333,7 +333,7 @@ function repCardHtml(rep, size) {
   const lastName = repLastName(name);
   const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
 
-  return `<a href="rep?id=${escHtml(bioguide || id)}&ref=bills" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+  return `<a href="rep?id=${escHtml(bioguide || id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
                data-id="${escHtml(id)}"
                style="--party-color:${color}; text-decoration: none;"
                title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
@@ -394,7 +394,7 @@ function renderRepStrip() {
                  data-rep-name="${escHtml(name)}"
                  data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
                  data-rep-state="${escHtml(rep.state || rep.stateCode || '')}">
-      <a href="rep?id=${escHtml(bg || id)}&ref=bills" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
+      <a href="rep?id=${escHtml(bg || id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
         <div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>
         <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
       </a>
@@ -920,7 +920,7 @@ function removeSavedQuote(key) {
 function renderSavedFloorQuote(q) {
   const key     = quoteKeyApp(q);
   const portrait = q.bioguideId ? portraitUrl(q.bioguideId) : FALLBACK_PORTRAIT;
-  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}&ref=bills` : null;
+  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}` : null;
   const accent   = q.stance === 'oppose' ? 'accent-oppose'
                  : q.stance === 'support' ? 'accent-support' : 'accent-neutral';
   return `<div class="fav-quote-card ${accent}">
@@ -971,7 +971,7 @@ function renderRepsSection() {
   const cards = trackedReps.map(rep => {
     const color   = partyColor(rep.party);
     const imgSrc  = portraitUrl(rep.id);
-    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}&ref=bills` : null;
+    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}` : null;
 
     // Combine bill featured quotes + standalone floor quotes, newest first
     const billQuotes  = allBills.flatMap(b =>
@@ -1629,7 +1629,7 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
         + '<span class="crossover-name">' + escHtml(coBaseName) + (co.state ? ' (' + escHtml(co.state) + ')' : '') + '</span>'
         + '<span class="crossover-vote ' + coVoteCls + '">' + escHtml(co.vote || '') + '</span>';
       html += co.bioguideId
-        ? '<a class="crossover-member" href="rep?id=' + co.bioguideId + '&ref=bills">' + coInner + '</a>'
+        ? '<a class="crossover-member" href="rep?id=' + co.bioguideId + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + coInner + '</a>'
         : '<div class="crossover-member">' + coInner + '</div>';
     }
     html += '</div></div>';
@@ -1655,7 +1655,7 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
       var mInner = '<span class="vm-party party-' + mParty.toLowerCase() + '">' + escHtml(mParty) + '</span>'
         + '<span class="vm-name">' + escHtml(mBaseName) + (m.state ? ' (' + escHtml(m.state) + ')' : '') + '</span>';
       html += m.bioguideId
-        ? '<a class="vote-member" href="rep?id=' + m.bioguideId + '&ref=bills">' + mInner + '</a>'
+        ? '<a class="vote-member" href="rep?id=' + m.bioguideId + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + mInner + '</a>'
         : '<span class="vote-member">' + mInner + '</span>';
     }
     html += '</div></div>';

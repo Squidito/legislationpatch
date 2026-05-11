@@ -28,6 +28,8 @@ async function init() {
       const billId = ref.slice(5);
       backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
       backBtn.textContent = '← Home';
+    } else if (ref === 'home') {
+      backBtn.textContent = '← Home';
     } else if (ref === 'reps') {
       backBtn.href = 'reps.html';
       backBtn.textContent = '← Reps';
