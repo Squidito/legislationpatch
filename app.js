@@ -685,10 +685,13 @@ function setupCarousel() {
   el.style.transform = `translateX(${currentX}px)`;
   el.style.willChange = 'transform'; // GPU-accelerate during scroll
 
+  const isHoverDevice = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
   let paused = false;
   grid.addEventListener('mouseenter', () => {
     paused = true;
-    // Measure visibility before releasing overflow — hide cards that were <10% visible
+    if (!isHoverDevice()) return;
+    // Measure visibility before releasing overflow — hide cards that were <35% visible
     const gridRect = grid.getBoundingClientRect();
     el.querySelectorAll('.shock-quote-card').forEach(card => {
       const r = card.getBoundingClientRect();
@@ -704,8 +707,9 @@ function setupCarousel() {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
-    grid.style.overflowX = '';        // re-clip edge cards immediately
-    grid.classList.remove('sq-expanding'); // fade edges back in via CSS transition
+    if (!isHoverDevice()) return;
+    grid.style.overflowX = '';
+    grid.classList.remove('sq-expanding');
     setTimeout(() => {
       el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
       grid.style.height = '';

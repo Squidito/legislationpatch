@@ -1635,9 +1635,9 @@ a:hover { text-decoration: underline; }
   right: 0;
   background: linear-gradient(to left, var(--bg), transparent);
 }
-.shock-quotes-grid.sq-expanding::before,
-.shock-quotes-grid.sq-expanding::after {
-  opacity: 0;
+@media (hover: hover) and (pointer: fine) {
+  .shock-quotes-grid.sq-expanding::before,
+  .shock-quotes-grid.sq-expanding::after { opacity: 0; }
 }
 .shock-quotes-track {
   display: flex;
@@ -1657,6 +1657,8 @@ a:hover { text-decoration: underline; }
   width: 248px;
   flex-shrink: 0;
   position: relative;
+  -webkit-user-select: none;
+  user-select: none;
 }
 .shock-quote-card::before {
   content: '';
@@ -1665,6 +1667,7 @@ a:hover { text-decoration: underline; }
   bottom: 0;
   left: -0.4rem;
   right: -0.4rem;
+  pointer-events: none;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1731,8 +1734,10 @@ a:hover { text-decoration: underline; }
   text-overflow: ellipsis;
 }
 .shock-quote-text-link:hover .shock-quote-bill { color: var(--purple); }
-.shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-bill {
-  animation: sq-bill-unwrap 0.001s 0.5s forwards;
+@media (hover: hover) and (pointer: fine) {
+  .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-bill {
+    animation: sq-bill-unwrap 0.001s 0.5s forwards;
+  }
 }
 @keyframes sq-bill-unwrap {
   to { white-space: normal; overflow: visible; text-overflow: unset; }
@@ -1774,14 +1779,16 @@ a:hover { text-decoration: underline; }
   max-height: 5.8rem;
   transition: max-height 0.25s ease-out 0.08s;
 }
-.shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-text {
-  -webkit-line-clamp: 100;
-  max-height: 20rem;
-  transition: max-height 0.25s ease-out 0.5s;
-}
-.shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-card {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-  transition: box-shadow 0.2s ease 0.5s;
+@media (hover: hover) and (pointer: fine) {
+  .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-text {
+    -webkit-line-clamp: 100;
+    max-height: 20rem;
+    transition: max-height 0.25s ease-out 0.5s;
+  }
+  .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-card {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    transition: box-shadow 0.2s ease 0.5s;
+  }
 }
 
 /* Hover-intent progress ring */
@@ -1797,8 +1804,8 @@ a:hover { text-decoration: underline; }
 .shock-quote-card.is-featured .sq-ring {
   right: 28px;
 }
-.shock-quote-card:hover .sq-ring {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .shock-quote-card:hover .sq-ring { opacity: 1; }
 }
 .sq-ring circle {
   fill: none;
@@ -1808,8 +1815,10 @@ a:hover { text-decoration: underline; }
   stroke-dashoffset: 44;
   stroke-linecap: round;
 }
-.shock-quote-card:hover .sq-ring circle {
-  animation: sq-ring-fill 0.5s linear forwards;
+@media (hover: hover) and (pointer: fine) {
+  .shock-quote-card:hover .sq-ring circle {
+    animation: sq-ring-fill 0.5s linear forwards;
+  }
 }
 @keyframes sq-ring-fill {
   to { stroke-dashoffset: 0; }
