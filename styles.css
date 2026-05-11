@@ -1035,6 +1035,7 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow 0.15s;
+  scroll-margin-top: 60px;
 }
 .bill-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.09); }
 .bill-card:hover .bill-header,

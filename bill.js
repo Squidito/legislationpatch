@@ -97,7 +97,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Update back button
   const backBtn = document.getElementById('backBtn');
-  if (backBtn) backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
+  if (backBtn) {
+    backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
+    backBtn.textContent = '← Home';
+  }
 
   // Initialise globals app.js render functions depend on
   allBills = bills;
