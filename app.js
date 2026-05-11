@@ -696,8 +696,7 @@ function setupCarousel() {
       if (visiblePx / r.width < 0.1) card.style.visibility = 'hidden';
     });
     el.style.willChange = 'auto';
-    grid.style.webkitMaskImage = 'none';
-    grid.style.maskImage = 'none';
+    grid.classList.add('sq-expanding');
     grid.style.overflowX = 'visible';
     grid.style.height = grid.offsetHeight + 'px';
   });
@@ -705,12 +704,11 @@ function setupCarousel() {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
-    grid.style.overflowX = ''; // re-clip edge cards immediately; mask stays off until collapse done
+    grid.style.overflowX = '';        // re-clip edge cards immediately
+    grid.classList.remove('sq-expanding'); // fade edges back in via CSS transition
     setTimeout(() => {
       el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
       grid.style.height = '';
-      grid.style.webkitMaskImage = '';
-      grid.style.maskImage = '';
       el.style.willChange = 'transform';
     }, 350);
   });

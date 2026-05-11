@@ -1613,9 +1613,31 @@ a:hover { text-decoration: underline; }
   overflow-x: clip;
   overflow-y: visible;
   cursor: grab;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   padding: 4px 2px;
+  position: relative;
+}
+.shock-quotes-grid::before,
+.shock-quotes-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+.shock-quotes-grid::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+.shock-quotes-grid::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+.shock-quotes-grid.sq-expanding::before,
+.shock-quotes-grid.sq-expanding::after {
+  opacity: 0;
 }
 .shock-quotes-track {
   display: flex;
