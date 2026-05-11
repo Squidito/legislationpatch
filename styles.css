@@ -1782,8 +1782,8 @@ a:hover { text-decoration: underline; }
 /* Hover-intent progress ring */
 .sq-ring {
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: 10px;
+  right: 10px;
   width: 26px;
   height: 26px;
   opacity: 0;
@@ -1813,8 +1813,8 @@ a:hover { text-decoration: underline; }
 /* X lines inside ring SVG — hidden by default, shown on mobile when expanded */
 .sq-x-line {
   fill: none;
-  stroke: var(--text);
-  stroke-width: 2.5;
+  stroke: var(--text-2);
+  stroke-width: 2;
   stroke-linecap: round;
   display: none;
 }
@@ -1866,16 +1866,16 @@ a:hover { text-decoration: underline; }
     display: block;
   }
 
-  /* Expanded card: circle fades out (spill), X draws in */
+  /* Expanded card: circle fades to faint (gives X a button context), X draws in */
   .shock-quote-card.sq-expanded .sq-ring circle {
     stroke-dashoffset: 0;
-    opacity: 0;
+    opacity: 0.15;
     transition: opacity 0.2s ease;
   }
   .shock-quote-card.sq-expanded .sq-x-line {
     display: block;
-    stroke-dasharray: 20;
-    stroke-dashoffset: 20;
+    stroke-dasharray: 14;
+    stroke-dashoffset: 14;
     animation: sq-x-draw 0.2s ease 0.05s forwards;
   }
 }

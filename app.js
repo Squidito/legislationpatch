@@ -1172,7 +1172,7 @@ function renderShockQuotesSection() {
       : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="6" y1="6" x2="20" y2="20"/><line class="sq-x-line" x1="20" y1="6" x2="6" y2="20"/></svg>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
       <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
     </div>`;
