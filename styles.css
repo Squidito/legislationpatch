@@ -3818,10 +3818,13 @@ body {
 /* ── Bills page category chip bar ── */
 .bills-cat-bar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 6px;
   padding: 14px 0 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.bills-cat-bar::-webkit-scrollbar { display: none; }
 .bills-cat-chip {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -3836,6 +3839,7 @@ body {
   cursor: pointer;
   transition: background 0.12s, color 0.12s, border-color 0.12s;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .bills-cat-chip:hover { background: var(--surface-2); color: var(--text); }
 
