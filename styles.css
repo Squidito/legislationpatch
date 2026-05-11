@@ -1839,6 +1839,12 @@ a:hover { text-decoration: underline; }
 }
 
 @media (pointer: coarse) {
+  /* Links disabled until card is expanded — tap goes to gauge, not the link */
+  .shock-quote-card:not(.sq-expanded) .shock-quote-rep-link,
+  .shock-quote-card:not(.sq-expanded) .shock-quote-text-link {
+    pointer-events: none;
+  }
+
   /* Gauge fills while holding (sq-filling) */
   .shock-quote-card.sq-filling .sq-ring {
     opacity: 1;
