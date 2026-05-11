@@ -486,9 +486,9 @@ async function main() {
     // --bill 119-HR-7148  Force-refetch a specific bill regardless of cache status.
     // Parses congress/type/number from the standard bill ID format.
     const billArg = process.argv.find(a => a.startsWith('--bill=') || a === '--bill');
-    const billArgValue = billArg?.startsWith('--bill=')
-        ? billArg.split('=')[1]
-        : process.argv[process.argv.indexOf('--bill') + 1];
+    const billArgValue = billArg
+        ? (billArg.startsWith('--bill=') ? billArg.split('=')[1] : process.argv[process.argv.indexOf('--bill') + 1])
+        : null;
 
     if (billArgValue) {
         const parts = billArgValue.split('-');

@@ -45,6 +45,12 @@ const ACRONYMS = {
   NDAA:  'National Defense Authorization Act',
   ACA:   'Affordable Care Act',
   FISA:  'Foreign Intelligence Surveillance Act',
+  FIRE:  'Fire Improvement and Reforming Exceptional Events Act',
+  FLPMA: 'Federal Land Policy and Management Act',
+  MQ:    'MQ-9 Reaper drone (U.S. Air Force)',
+  SAVE:  'Safeguard American Voter Eligibility Act',
+  CRA:   'Congressional Review Act',
+  BLM:   'Bureau of Land Management',
   CR:    'Continuing Resolution',
   FY:    'Fiscal Year',
   GDP:   'Gross Domestic Product',
@@ -136,8 +142,8 @@ function _hideTooltip() {
   if (_acronymTooltipEl) _acronymTooltipEl.style.opacity = '0';
 }
 
-// Attach global delegation once
-(function () {
+// Attach global delegation once (browser only)
+if (typeof document !== 'undefined') (function () {
   document.addEventListener('mouseover', function (e) {
     var tip = e.target && e.target.closest && e.target.closest('.acronym-tip');
     if (tip) {

@@ -1322,40 +1322,93 @@ function renderMinorBody(bill, col, isOpen) {
     ${renderTopLines(bill)}
     ${renderChangesSection(bill)}
     ${underHtml}
-    ${renderQuoteCards(bill)}
+    ${renderQuoteCards(bill, true)}
     <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Full analysis ↓</button>
   </div>`;
 }
 
-function renderQuoteCards(bill) {
+function renderOneQuoteCard(q, bill) {
+  const stanceCls   = q.stance === 'support' ? 'stance-support' : q.stance === 'oppose' ? 'stance-oppose' : '';
+  const stanceLabel = q.stance === 'support' ? 'SUPPORT' : q.stance === 'oppose' ? 'OPPOSE' : '';
+  const repHref     = q.bioguideId
+    ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}`
+    : null;
+  const repInner = `
+        <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
+             onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
+        <div class="quote-card-name">
+          <span>${escHtml(q.name)}</span>
+          <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party || ''}</span>
+        </div>`;
+  const repBlock = repHref
+    ? `<a href="${repHref}" class="quote-card-rep" style="text-decoration:none;color:inherit;cursor:pointer">${repInner}</a>`
+    : `<div class="quote-card-rep">${repInner}</div>`;
+  return `<div class="quote-card">
+    <div class="quote-card-meta">
+      ${repBlock}
+      ${stanceLabel ? `<span class="quote-stance ${stanceCls}">${stanceLabel}</span>` : ''}
+    </div>
+    <div class="quote-text">"${escHtml(q.text)}"</div>
+  </div>`;
+}
+
+function renderQuoteCards(bill, compact = false) {
   const quotes = bill.featured_quotes;
   if (!quotes?.length) return '';
+
+  // Bill page full expansion: carousel showing all quotes, controversial first
+  if (window.BILL_PAGE_ID && !compact) {
+    const id       = `qc-${bill.id.replace(/[^a-z0-9]/gi, '-')}`;
+    const cards    = quotes.map(q => renderOneQuoteCard(q, bill)).join('');
+    const dotCount = Math.max(1, quotes.length - 1); // 2-per-view: last card is always visible
+    const dotsHtml = quotes.length > 1
+      ? Array.from({ length: dotCount }, (_, i) =>
+          `<button class="qc-dot${i === 0 ? ' qc-dot-active' : ''}" onclick="qcGoTo('${id}',${i})" aria-label="Quote ${i + 1}"></button>`
+        ).join('')
+      : '';
+    return `<div class="quote-carousel" id="${id}">
+      <div class="quote-carousel-viewport">
+        <div class="quote-carousel-track">${cards}</div>
+      </div>
+      ${quotes.length > 1 ? `<div class="quote-carousel-nav">
+        <button class="qc-arrow qc-prev" onclick="qcPrev('${id}')" aria-label="Previous">&#8249;</button>
+        <div class="qc-dots">${dotsHtml}</div>
+        <button class="qc-arrow qc-next" onclick="qcNext('${id}')" aria-label="Next">&#8250;</button>
+      </div>` : ''}
+    </div>`;
+  }
+
+  // Index cards: compact 2-column grid, first 2 quotes only
   return `<div class="quote-cards-row">
-    ${quotes.slice(0, 2).map(q => {
-      const stanceCls   = q.stance === 'support' ? 'stance-support' : q.stance === 'oppose' ? 'stance-oppose' : '';
-      const stanceLabel = q.stance === 'support' ? 'SUPPORT' : q.stance === 'oppose' ? 'OPPOSE' : '';
-      const repHref     = q.bioguideId
-        ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}&billTitle=${encodeURIComponent(bill.title||'')}`
-        : null;
-      const repInner = `
-            <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
-                 onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
-            <div class="quote-card-name">
-              <span>${escHtml(q.name)}</span>
-              <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party || ''}</span>
-            </div>`;
-      const repBlock = repHref
-        ? `<a href="${repHref}" class="quote-card-rep" style="text-decoration:none;color:inherit;cursor:pointer">${repInner}</a>`
-        : `<div class="quote-card-rep">${repInner}</div>`;
-      return `<div class="quote-card">
-        <div class="quote-card-meta">
-          ${repBlock}
-          ${stanceLabel ? `<span class="quote-stance ${stanceCls}">${stanceLabel}</span>` : ''}
-        </div>
-        <div class="quote-text">"${escHtml(q.text)}"</div>
-      </div>`;
-    }).join('')}
+    ${quotes.slice(0, 2).map(q => renderOneQuoteCard(q, bill)).join('')}
   </div>`;
+}
+
+function qcGoTo(id, idx) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const track   = el.querySelector('.quote-carousel-track');
+  const dots    = el.querySelectorAll('.qc-dot');
+  const cards   = el.querySelectorAll('.quote-card');
+  const count   = cards.length;
+  const perView = window.innerWidth >= 640 ? 2 : 1;
+  const maxIdx  = Math.max(0, count - perView);
+  idx = Math.max(0, Math.min(idx, maxIdx));
+  el._qcIdx = idx;
+  if (cards[0]) {
+    const gap  = parseFloat(getComputedStyle(track).gap) || 0;
+    const step = cards[0].offsetWidth + gap;
+    track.style.transform = `translateX(-${idx * step}px)`;
+  }
+  dots.forEach((d, i) => d.classList.toggle('qc-dot-active', i === idx));
+}
+function qcPrev(id) {
+  const el = document.getElementById(id);
+  qcGoTo(id, (el._qcIdx || 0) - 1);
+}
+function qcNext(id) {
+  const el = document.getElementById(id);
+  qcGoTo(id, (el._qcIdx || 0) + 1);
 }
 
 function renderMiniPipeline(bill) {

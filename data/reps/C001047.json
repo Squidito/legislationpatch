@@ -6,7 +6,15 @@
   "role": "Senator",
   "district": null,
   "bio": "Shelley Wellons Moore Capito is an American politician serving as the senior United States senator from West Virginia. A member of the Republican Party, Capito served from 2001 to 2015 as the U.S. representative from West Virginia's 2nd congressional district. She is the daughter of three-term West Virginia governor and six-term U.S. representative Arch Alfred Moore Jr.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "stance": "oppose",
+      "text": "This amendment would eliminate HHS funding provided in the bill — which the Trump administration actually requested in their budget — that will allow the Agency to drastically improve sponsor vetting for unaccompanied children, ensuring that they are no longer released to human traffickers.",
+      "date": "Jan 19, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Shelley_Moore_Capito",
   "voteHistory": [

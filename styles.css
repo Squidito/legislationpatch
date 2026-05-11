@@ -1474,16 +1474,84 @@ a:hover { text-decoration: underline; }
   line-height: 1.5;
   color: var(--text);
   font-style: italic;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
-  overflow: hidden;
-  max-height: 6.6rem;
-  transition: max-height 0.25s ease-out;
 }
-.quote-card:hover .quote-text {
-  -webkit-line-clamp: 100;
-  max-height: 20rem;
+
+/* Quote carousel — bill full page */
+.quote-carousel {
+  margin: 0.75rem 1.1rem 0.75rem;
+}
+.quote-carousel .quote-card:only-child {
+  flex: 0 0 100%;
+}
+.quote-carousel-viewport {
+  overflow: hidden;
+}
+.quote-carousel-track {
+  display: flex;
+  gap: 0.65rem;
+  transition: transform 0.28s ease;
+}
+.quote-carousel .quote-card {
+  flex: 0 0 calc(50% - 0.325rem);
+  min-width: 0;
+  box-sizing: border-box;
+}
+.quote-carousel .quote-text {
+  -webkit-line-clamp: unset;
+  max-height: none;
+  overflow: visible;
+}
+@media (max-width: 639px) {
+  .quote-carousel .quote-card {
+    flex: 0 0 100%;
+  }
+}
+.quote-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+.qc-arrow {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.qc-arrow:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.qc-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.qc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.18s, transform 0.18s;
+}
+.qc-dot.qc-dot-active {
+  background: var(--purple);
+  transform: scale(1.35);
 }
 
 /* Expand-to-full button */

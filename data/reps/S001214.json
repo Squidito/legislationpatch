@@ -6,7 +6,22 @@
   "role": "Representative",
   "district": 17,
   "bio": "This is a list of individuals serving in the United States House of Representatives. The membership of the House comprises 435 seats for representatives from the 50 states, apportioned by population, as well as six seats for non-voting delegates from U.S. territories and the District of Columbia. As of April 22, 2026, there are 430 representatives and 5 vacancies.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-5366",
+      "billTitle": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "stance": "support",
+      "text": "When hurricanes, wildfires, floods, tornadoes, and other disasters strike, American families are left to rebuild their homes, their businesses, their communities, and their lives. When these moments arise, the last thing they need is the Federal Government making their recovery harder by taxing relief payments or denying fair treatment for disaster losses, nor should the government be creating uncertainty in the tax code.",
+      "date": "Sep 14, 2025"
+    },
+    {
+      "billId": "119-HR-6495",
+      "billTitle": "Taxpayer Notification and Privacy Act",
+      "stance": "support",
+      "text": "At its core, this commonsense legislation is a simple due process idea: Before the IRS goes to your bank, your employer, your vendor, or another third party for information about you, when you can reasonably provide that information yourself, you should be told what they are looking for and given a fair chance to respond. Under current law, taxpayers can receive a general third-party contact notice, but too often those notices aren't specific enough to let a person meaningfully respond.",
+      "date": "Dec 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",

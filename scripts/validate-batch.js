@@ -285,6 +285,96 @@ section('Sitemap');
     }
 }
 
+// ── Check: quote quality ───────────────────────────────────────────────────
+
+section('Quote quality audit');
+{
+    const PROCEDURAL_PATTERNS = [
+        /\bi move to suspend the rules\b/i,
+        /\bi ask unanimous consent\b/i,
+        /\bi ask for the yeas and nays\b/i,
+        /\bi demand the yeas and nays\b/i,
+        /\bpursuant to (?:the order|section|house resolution|clause)\b/i,
+        /\bthe question was taken\b/i,
+        /\bthe rules were suspended\b/i,
+        /\ba motion to reconsider was laid\b/i,
+        /^in closing\b/i,
+        /\bi was unable to vote\b/i,
+        /\bi was not present\b/i,
+        /\bhad i been present\b/i,
+        /\bfor the purpose of debate\b/i,
+        /\bi yield back the balance of my time\b/i,
+        /\breserve the balance of my time\b/i,
+    ];
+
+    // Stance detection — same logic as fetch_bill_cr.js
+    function detectStance(text) {
+        const t = text.toLowerCase();
+        const hasOppose = /\b(oppose|against|vote no|reject|dangerous|harmful|harm\b|cannot support|will not support|urge.*defeat|vote against)\b/.test(t);
+        const negated   = /\b(?:do(?:es)?|did|will|would|shall|have|has)\s+not\s+oppose\b|\bnot\s+oppose\b|\bno\s+opposition\b/.test(t);
+        if (hasOppose && !negated) return 'oppose';
+        if (/\b(support|favor|proud|urge.*pass|commend|pleased|important step|must pass|vote yes|vote for)\b/.test(t)) return 'support';
+        return 'neutral';
+    }
+
+    let quoteIssues = 0;
+    const analyzedBills = bills.filter(b => b.analyzed && !b.demo && !b.live);
+
+    for (const bill of analyzedBills) {
+        const qs = bill.featured_quotes || [];
+        for (const q of qs) {
+            const text = q.text || '';
+            const words = text.trim().split(/\s+/);
+            const id = `${bill.id} "${q.name}"`;
+
+            // Too short
+            if (words.length < 10) {
+                warn(`${id}: quote only ${words.length} words — likely noise`);
+                quoteIssues++;
+            }
+
+            // CR formatting artifacts
+            if (/\[\[Page |\{time\}\s*\d/.test(text)) {
+                fail(`${id}: contains raw CR artifact ([[Page or {time})`);
+                quoteIssues++;
+            }
+
+            // Fragment markers — "Word) that the House..."
+            if (/^[A-Za-z]+\)\s/.test(text)) {
+                fail(`${id}: starts with fragment marker (e.g. "Smith) that...")`);
+                quoteIssues++;
+            }
+
+            // Truncated on title abbreviation
+            if (/\s(?:Mr|Ms|Mrs|Dr|Sen|Rep)\.\s*$/.test(text)) {
+                fail(`${id}: truncates on title abbreviation (ends with Mr./Ms. etc.)`);
+                quoteIssues++;
+            }
+
+            // Procedural language surviving in displayed text
+            const proceduralHit = PROCEDURAL_PATTERNS.find(p => p.test(text));
+            if (proceduralHit) {
+                fail(`${id}: procedural language in displayed quote`);
+                quoteIssues++;
+            }
+
+            // Stance mismatch — stored stance vs what the text actually says
+            if (q.stance && q.stance !== 'neutral') {
+                const computed = detectStance(text);
+                if (computed !== 'neutral' && computed !== q.stance) {
+                    warn(`${id}: stance stored as "${q.stance}" but text reads "${computed}"`);
+                    quoteIssues++;
+                }
+            }
+        }
+    }
+
+    const totalQuotes = analyzedBills.reduce((n, b) => n + (b.featured_quotes?.length || 0), 0);
+    if (quoteIssues === 0) {
+        pass(`All ${totalQuotes} quote(s) across ${analyzedBills.length} bills passed quality checks`);
+    }
+}
+
 // ── Summary ────────────────────────────────────────────────────────────────
 
 console.log('\n' + '═'.repeat(56));

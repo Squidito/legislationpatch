@@ -118,6 +118,26 @@ function cleanHTML(html) {
         .trim();
 }
 
+// Like cleanHTML but preserves paragraph structure by converting block-level closing
+// tags to newlines before stripping. Used for committee reports where line breaks
+// are needed to detect signature blocks at the end of views sections.
+function cleanHTMLStructured(html) {
+    return html
+        .replace(/<\/(?:p|div|h[1-6]|li|tr|blockquote|section|article)>/gi, '\n')
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
+        .replace(/[ \t]+/g, ' ')
+        .replace(/\n[ \t]+/g, '\n')
+        .replace(/[ \t]+\n/g, '\n')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+}
+
 function chunkText(text, chunkSize = 3000, overlap = 500) {
     const words = text.split(' ');
     const chunks = [];
@@ -540,6 +560,45 @@ function parseCRPageRefs(actions) {
     return refs;
 }
 
+// Parse H./S. Rept. references from action texts: "H. Rept. 119-42" → [{chamber, congress, number}]
+function parseReportRefs(actions) {
+    const seen = new Set();
+    const refs  = [];
+    for (const action of (actions || [])) {
+        for (const m of (action.text || '').matchAll(/\b([HS])\.\s*Rept\.\s*(\d+)-(\d+)/g)) {
+            const key = `${m[1]}-${m[2]}-${m[3]}`;
+            if (!seen.has(key)) {
+                seen.add(key);
+                refs.push({ chamber: m[1], congress: parseInt(m[2], 10), number: parseInt(m[3], 10) });
+            }
+        }
+    }
+    return refs;
+}
+
+// Fetch a full committee report from GovInfo and return it as structured text.
+// Package ID format: H. Rept. 119-42 → CRPT-119hrpt42
+async function fetchCommitteeReportText(chamber, congress, reportNumber) {
+    if (!GOVINFO_API_KEY) return '';
+    const chamberStr = chamber === 'H' ? 'hrpt' : 'srpt';
+    const packageId  = `CRPT-${congress}${chamberStr}${reportNumber}`;
+    console.log(`   - Fetching committee report ${packageId}...`);
+    await sleep(1000);
+    try {
+        const res = await fetch(
+            `https://api.govinfo.gov/packages/${packageId}/htm?api_key=${GOVINFO_API_KEY}`
+        );
+        if (res.status === 429) { await sleep(30000); return ''; }
+        if (!res.ok) { console.log(`   - Report ${packageId}: HTTP ${res.status}`); return ''; }
+        const html = await res.text();
+        console.log(`   - Report ${packageId}: ${html.length} chars raw`);
+        return cleanHTMLStructured(html);
+    } catch (e) {
+        console.log(`   - Report fetch error: ${e.message}`);
+        return '';
+    }
+}
+
 // Directly fetch specific CR granules by page reference — fast path, no granule iteration.
 // Each page ref gets the base granule + sub-granule suffixes (-2 through -6) because
 // the CR splits a single page into multiple sub-granules per bill or speaker.
@@ -550,9 +609,8 @@ async function fetchCRByPageRefs(refs, type, number) {
     const chunks = [];
     const seen   = new Set();
     for (const { date, page } of refs) {
-        if (chunks.join('').length > 16000) break;
         const packageId = `CREC-${date}`;
-        for (const suffix of ['', '-2', '-3', '-4', '-5', '-6']) {
+        for (const suffix of ['', '-2', '-3', '-4', '-5', '-6', '-7', '-8', '-9']) {
             const granuleId = `${packageId}-pt1-Pg${page}${suffix}`;
             if (seen.has(granuleId)) continue;
             seen.add(granuleId);
@@ -564,17 +622,15 @@ async function fetchCRByPageRefs(refs, type, number) {
                 if (r.status === 429) { await sleep(30000); continue; }
                 if (!r.ok) continue;
                 const text = cleanHTML(await r.text());
-                // Only include granule if it mentions this bill — but return the full
-                // text, not just ±window excerpts, so all speakers are captured.
-                const hasMention = extractBillMentions(text, type, number).length > 0;
+                const hasMention = extractBillMentions(text, type, number);
                 if (hasMention) {
                     console.log(`   - Found bill in ${granuleId} (${text.length} chars)`);
-                    chunks.push(text.slice(0, 8000));
+                    chunks.push(text);
                 }
             } catch (e) { continue; }
         }
     }
-    return chunks.join('\n\n===\n\n').slice(0, 20000);
+    return chunks.join('\n\n===\n\n');
 }
 
 // Single-date CR fetch via GovInfo granules — returns bill mention excerpts or ''
@@ -648,10 +704,10 @@ async function fetchCRForDate(dateStr, billType, billNumber) {
     const remainder = granules.filter(g => !priority.includes(g)).slice(0, 20);
     const toFetch   = [...priority, ...remainder].slice(0, 30);
 
-    // Step 3: Fetch each granule's HTML text and search for bill mentions
+    // Step 3: Fetch each granule's HTML text and return full granule for any that mention this bill.
+    // Full granule text (rather than ±2500-char context windows) captures all speakers in the debate.
     const found = [];
     for (const g of toFetch) {
-        if (found.join('').length > 8000) break;
         try {
             await sleep(600);
             const textRes = await fetch(
@@ -659,13 +715,12 @@ async function fetchCRForDate(dateStr, billType, billNumber) {
             );
             if (textRes.status === 429) { await sleep(30000); continue; }
             if (!textRes.ok) continue;
-            const text     = cleanHTML(await textRes.text());
-            const mentions = extractBillMentions(text, billType, billNumber);
-            if (mentions) found.push(mentions);
+            const text = cleanHTML(await textRes.text());
+            if (extractBillMentions(text, billType, billNumber)) found.push(text);
         } catch (e) { continue; }
     }
 
-    return found.join('\n\n---\n\n').slice(0, 10000);
+    return found.join('\n\n---\n\n');
 }
 
 // Primary CR fetch — tries page refs first (fast), falls back to date scanning (thorough)
@@ -687,7 +742,7 @@ async function fetchCongressionalRecord(type, number, dates, actions = []) {
     let datesChecked = 0;
 
     for (const dateStr of dates) {
-        if (datesChecked >= 12 || accumulated.length >= 12000) break;
+        if (datesChecked >= 12) break;
         process.stdout.write(`   - Checking CR ${dateStr}... `);
         const mentions = await fetchCRForDate(dateStr, type, number);
         datesChecked++;
@@ -700,34 +755,20 @@ async function fetchCongressionalRecord(type, number, dates, actions = []) {
     }
 
     if (!accumulated) console.log('   - Bill not mentioned in Congressional Record for any checked date.');
-    return accumulated.slice(0, 12000);
+    return accumulated;
 }
 
 function extractBillMentions(text, billType, billNumber) {
     const formattedType = formatBillTypeForRecord(billType);
-    const searchPatterns = [
+    const patterns = [
         `${formattedType} ${billNumber}`,
         `${formattedType}${billNumber}`,
         `${billType} ${billNumber}`,
         `${billType}.${billNumber}`,
     ];
-
-    const CONTEXT_WINDOW = 2500;
-    const MAX_MENTIONS   = 4;
-    const found = [];
-
-    for (const pattern of searchPatterns) {
-        let idx = text.indexOf(pattern);
-        while (idx !== -1 && found.length < MAX_MENTIONS) {
-            found.push(text.slice(Math.max(0, idx - CONTEXT_WINDOW), Math.min(text.length, idx + CONTEXT_WINDOW)));
-            idx = text.indexOf(pattern, idx + pattern.length);
-        }
-        if (found.length >= MAX_MENTIONS) break;
-    }
-
-    if (!found.length) { console.log('   - Bill not mentioned in Congressional Record for this date.'); return ''; }
-    console.log(`   - Found ${found.length} mention(s) in Congressional Record.`);
-    return found.join('\n\n---\n\n').slice(0, 10000);
+    const found = patterns.some(p => text.includes(p));
+    if (!found) console.log('   - Bill not mentioned in this granule.');
+    return found;
 }
 
 // --- LOCAL LLM ---
@@ -1220,11 +1261,14 @@ module.exports = {
     fetchBillActions,
     extractFloorDates,
     parseCRPageRefs,
+    parseReportRefs,
     fetchCRByPageRefs,
     fetchCRForDate,
     fetchCongressionalRecord,
+    fetchCommitteeReportText,
     fetchBillText,
     extractBillMentions,
     cleanHTML,
+    cleanHTMLStructured,
     formatBillTypeForRecord,
 };

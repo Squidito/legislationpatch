@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": null,
   "bio": "Harriet Maxine Hageman is an American politician and attorney serving as the U.S. representative for Wyoming's at-large congressional district since 2023. She is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6387",
+      "billTitle": "FIRE Act",
+      "stance": "support",
+      "text": "Active forest management through prescribed burns and mechanical thinning is essential to supporting healthy ecosystems, preventing catastrophic wildfires, and improving the long-term air quality. Unfortunately, as it currently stands under the Clean Air Act, the use of these individual wildfire mitigation measures can create uncertainty, discouraging their use out of concern that doing so would lead to noncompliance with National Ambient Air Quality Standards.",
+      "date": "Dec 2, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-4465",

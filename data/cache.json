@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-09T06:58:25.224Z",
+  "generated": "2026-05-11T04:06:56.843Z",
   "bills": [
     {
       "id": "119-S-1884",
@@ -94,20 +94,20 @@
       "criticisms": [],
       "featured_quotes": [
         {
+          "name": "Mr. Raskin",
+          "party": "D",
+          "state": "MD",
+          "bioguideId": "R000606",
+          "text": "This bill, which has already passed the Senate by unanimous consent, amends the Holocaust Expropriated Art Recovery Act of 2016 in a number of key ways to ensure that Holocaust survivors and their heirs have a fair opportunity in court to recover all of the artwork that was stolen by the Nazi regime or what is left of it. In doing so, this bill will provide these victims the chance to obtain some small measure of justice for the horrors and the injustices and indignities their families have endured.",
+          "stance": "support"
+        },
+        {
           "name": "Ms. Lee",
           "party": "D",
           "state": "NV",
           "bioguideId": "L000590",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (S. 1884) to clarify the Holocaust Expropriated Art Recovery Act of 2016, to appropriately limit the application of defenses based on the passage of time and other non-merits defenses to claims under that Act.",
-          "stance": "neutral"
-        },
-        {
-          "name": "Mr. Barrasso",
-          "party": "R",
-          "state": "WY",
-          "bioguideId": "B001261",
-          "text": "Mr. President, I ask unanimous consent that the Senate proceed to the immediate consideration of Calendar No. 271, S. 1884. The PRESIDING OFFICER. The clerk will report the bill by title. The senior assistant executive clerk read as follows: A bill (S. 1884) to clarify the Holocaust Expropriated Art Recovery Act of 2016, to appropriately limit the application of defenses based on the passage of time and other non-merits defenses to claims under that Act.",
-          "stance": "neutral"
+          "text": "it is just for Holocaust survivors and their heirs to continue to have their claims relating to art stolen from them  by the Nazis heard in court. These claims should be decided on the merits, not dismissed due to technical defenses. The Holocaust Expropriated Art Recovery Act of 2025 will ensure just that.",
+          "stance": "support"
         }
       ],
       "gaps": [
@@ -372,11 +372,35 @@
       "criticisms": [],
       "featured_quotes": [
         {
-          "name": "Mr. Smith",
+          "name": "Mr. Steube",
           "party": "R",
-          "state": "MO",
-          "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5366) to amend the Internal Revenue Code of 1986 to codify and extend the rules for personal casualty losses arising from major disasters and the rules for the exclusion from gross income of compensation for losses or damages resulting from certain wildfires, as amended.",
+          "state": "FL",
+          "bioguideId": "S001214",
+          "text": "When hurricanes, wildfires, floods, tornadoes, and other disasters strike, American families are left to rebuild their homes, their businesses, their communities, and their lives. When these moments arise, the last thing they need is the Federal Government making their recovery harder by taxing relief payments or denying fair treatment for disaster losses, nor should the government be creating uncertainty in the tax code.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Panetta",
+          "party": "D",
+          "state": "CA",
+          "bioguideId": "P000613",
+          "text": "I support the Doug LaMalfa Federal Disaster Tax Relief Certainty Act. I am a proud cosponsor, co-lead of this bill with Representatives Greg Steube and Mike Thompson, a bill that would build on the Federal Disaster Tax Relief Act which we passed last Congress, thanks to the leadership of Representative Steube, a bill that would ensure that those impacted by disasters nationwide have continued access to tax relief.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Fong",
+          "party": "R",
+          "state": "CA",
+          "bioguideId": "F000480",
+          "text": "In California, we are all too familiar with the devastation caused by wildfires. After these disasters strike in our community, survivors shouldn't have to worry about burdensome Federal taxes as they work to recover and rebuild. Today, we have an opportunity to address that while honoring my friend the late Doug LaMalfa, who was a tireless champion of rural California and an advocate for those rebuilding after wildfires.",
+          "stance": "support"
+        },
+        {
+          "name": "Ms. Tokuda",
+          "party": "D",
+          "state": "HI",
+          "bioguideId": "T000487",
+          "text": "I rise today, like so many of my colleagues on both sides of the aisle, to honor our friend Doug LaMalfa. He understood that the disaster after the disaster happens when families cannot recover and return to their hometowns because the funding and resources they receive just don't stretch far enough or, worse, are taxed and taken away from people who need absolutely every single dollar to be able to rebuild. On Saturday, I stood above Lahaina, and for a moment--the briefest of moments--in the darkness, the town almost looked normal.",
           "stance": "neutral"
         }
       ],
@@ -497,32 +521,7 @@
         }
       ],
       "criticisms": [],
-      "featured_quotes": [
-        {
-          "name": "Mr. Thompson",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "T000460",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I rise today in support of the Clergy Act. First, I thank my colleague Mr. Fong for his partnership on this issue. This is how the legislative process should work: Democrats and Republicans coming together to solve real problems for our constituents. For nearly 90 years, Social Security has done exactly what it has promised: protected workers, retirees, and people with disabilities; and kept families out of poverty.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Fong",
-          "party": "R",
-          "state": "CA",
-          "bioguideId": "F000480",
-          "text": "Mr. Speaker, I rise in support of my bill H.R. 227, the Clergy Act. This bipartisan legislation, cosponsored by my fellow California Congressman Mike Thompson, would create a one-time re- enrollment window for pastors and other clergy members who have previously opted out of Social Security, many in their youth, to voluntarily opt back in. For decades, members of the clergy have made the permanent decision of opting out of Social Security.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Carey",
-          "party": "R",
-          "state": "OH",
-          "bioguideId": "C001126",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 227) to allow a period in which members of the clergy may revoke their exemption from Social Security coverage, and for other purposes, as amended.",
-          "stance": "neutral"
-        }
-      ],
+      "featured_quotes": [],
       "gaps": [
         "The bill allows revocation effective for taxable years beginning after December 31, 2027 but does not address Social Security credits for prior years during which the exemption was in effect — those years generate no credits regardless of revocation.",
         "The 90-day outreach plan requirement specifies no minimum outreach activities, distribution channels, or funding, leaving the scope of IRS notification entirely to agency discretion."
@@ -642,11 +641,11 @@
       "criticisms": [],
       "featured_quotes": [
         {
-          "name": "Mr. Smith",
+          "name": "Mr. Schweikert",
           "party": "R",
-          "state": "MO",
-          "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7971) to provide for modernization and technological improvements of services provided by the Internal Revenue Service, as amended.",
+          "state": "AZ",
+          "bioguideId": "S001183",
+          "text": "I ask the chairman whether it is tireless or annoying. It is one or the other. Look, I have an absolute fixation, and I have got to thank my Democratic colleague and a number of the team here for tolerating my fixation on the fact that one of the ways you work within the IRS budget to make things more efficient is the adoption of technology. Imagine a world--because it is the one we live in--where some of the number one calls we get to my district office are IRS questions: Where is my refund? Do I owe money?",
           "stance": "neutral"
         }
       ],
@@ -761,24 +760,8 @@
           "party": "R",
           "state": "FL",
           "bioguideId": "S001214",
-          "text": "Mr. Speaker, I rise today in support of H.R. 6495, the Taxpayer Notification and Privacy Act. At its core, this commonsense legislation is a simple due process idea: Before the IRS goes to your bank, your employer, your vendor, or another third party for information about you, when you can reasonably provide that information yourself, you should be told what they are looking for and given a fair chance to respond.",
+          "text": "At its core, this commonsense legislation is a simple due process idea: Before the IRS goes to your bank, your employer, your vendor, or another third party for information about you, when you can reasonably provide that information yourself, you should be told what they are looking for and given a fair chance to respond. Under current law, taxpayers can receive a general third-party contact notice, but too often those notices aren't specific enough to let a person meaningfully respond.",
           "stance": "support"
-        },
-        {
-          "name": "Mr. Smith",
-          "party": "R",
-          "state": "MO",
-          "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 6495) to amend the Internal Revenue Code of 1986 to provide for specific taxpayer notice when information is sought from third parties, as amended.",
-          "stance": "neutral"
-        },
-        {
-          "name": "Mr. Panetta",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "P000613",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I thank the chairman and Representative Greg Steube for their work together with me on the Taxpayer Notification and Privacy Act. It is commonsense, bipartisan legislation, passed unanimously out of the Ways and Means Committee, that would ensure that the IRS respects the privacy and the dignity of every taxpayer when collecting needed information.",
-          "stance": "neutral"
         }
       ],
       "gaps": [
@@ -890,24 +873,7 @@
         }
       ],
       "criticisms": [],
-      "featured_quotes": [
-        {
-          "name": "Mr. Panetta",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "P000613",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I rise today in support of the NO BOSS Act, legislation from my good friend and colleague, Representative Mike Carey. I also acknowledge his co-lead on the bill, Representative Greg Landsman. This bill is a demonstration of what neighbors and neighboring congressional Members can do together in a bipartisan fashion.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Carey",
-          "party": "R",
-          "state": "OH",
-          "bioguideId": "C001126",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 6431) to amend the Internal Revenue Code of 1986 to modify the rules governing the State administration of self-employment assistance programs, as amended.",
-          "stance": "neutral"
-        }
-      ],
+      "featured_quotes": [],
       "gaps": [
         "The bill doubles participation caps and expands eligibility but does not address the funding source for increased SEA allowances, which are paid from state unemployment trust funds that vary significantly in reserves across states.",
         "The bill adds a weekly certification requirement but does not specify consequences for participants who miss certifications or the process for removing a non-compliant participant."
@@ -1019,19 +985,19 @@
       "criticisms": [],
       "featured_quotes": [
         {
-          "name": "Mr. Panetta",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "P000613",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I thank the chairman and, of course, I thank my colleague and classmate, Representative Brian Fitzpatrick for their support. I rise in support of my Supporting Early-childhood Educators' Deductions Act. We will just call it the SEED Act.",
-          "stance": "support"
-        },
-        {
           "name": "Mr. Fitzpatrick",
           "party": "R",
           "state": "PA",
           "bioguideId": "F000466",
-          "text": "Mr. Speaker, I thank the chairman for his support for this legislation and bringing it to the floor. Mr. Speaker, I rise today in strong support of H.R. 5334, the Supporting Early-childhood Educators' Deductions Act, also known as the SEED Act. Mr. Speaker, in Pennsylvania, more than 68,000 early-childhood educators support our youngest learners every single day. The first 5 years of a child's life lay down the foundation for how they learn, how they grow, and how they succeed. These educators are central to that process.",
+          "text": "Mr. Speaker, in Pennsylvania, more than 68,000 early-childhood educators support our youngest learners every single day. The first 5 years of a child's life lay down the foundation for how they learn, how they grow, and how they succeed. These educators are central to that process. They do far more than teach. They create safe, engaging environments where children can thrive.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Panetta",
+          "party": "D",
+          "state": "CA",
+          "bioguideId": "P000613",
+          "text": "By expanding eligibility for the educator expense deduction to early-childhood educators, the bill will finally recognize the incredible dedication and work of these pre-K educators. This is one step toward supporting those who extend themselves day in and day out to help grow and educate all of our children.",
           "stance": "support"
         },
         {
@@ -1039,8 +1005,8 @@
           "party": "R",
           "state": "MO",
           "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 5334) to amend the Internal Revenue Code of 1986 to allow early childhood educators to take the educator expense deduction, and for other purposes, as amended.",
-          "stance": "neutral"
+          "text": "when it comes to supporting teachers who go the extra mile to provide for their students, including paying out of pocket for supplies and other educational materials, we need to ensure we are acknowledging and rewarding the contributions of all of our educators. That includes the early-childhood teachers, who are charged with instilling in our youth a love of learning and curiosity from the youngest age.",
+          "stance": "support"
         }
       ],
       "gaps": [
@@ -1160,20 +1126,12 @@
       "criticisms": [],
       "featured_quotes": [
         {
-          "name": "Mr. Schneider",
-          "party": "D",
-          "state": "IL",
-          "bioguideId": "S001190",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I rise in support of H.R. 6956, the BARCODE Efficiency Act, which I am proud to introduce with my friend and colleague, Representative Yakym from Indiana. This bill would help expedite the digital transition at IRS, requiring the IRS to implement scanning technology to speed up paper return processing. In tax year 2023, the IRS reports that around 7 percent of tax returns were filed on paper. Now, 7 percent may sound like a small number, Mr.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Smith",
+          "name": "Mr. Yakym",
           "party": "R",
-          "state": "MO",
-          "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 6956) to require electronically prepared tax returns to include scannable code when submitted on paper, and to require the use of optical character recognition technology for paper documents received by the Internal Revenue Service, as amended.",
-          "stance": "neutral"
+          "state": "IN",
+          "bioguideId": "Y000067",
+          "text": "I am proud to co-lead this act with my friend from Illinois (Mr. Schneider). This is a simple but powerful bill that will make tax return processing faster, more accurate, and more efficient. E-filing taxes is becoming even more common. In 2009, two-thirds of taxpayers e-filed their returns. By 2015, it was up to 85 percent. Last year, 94 percent of taxpayers e-filed their returns. That remaining 6 percent still accounts for 10 million tax returns. There are good reasons to file a paper return.",
+          "stance": "support"
         }
       ],
       "gaps": [
@@ -1268,24 +1226,7 @@
       ],
       "underreported": [],
       "criticisms": [],
-      "featured_quotes": [
-        {
-          "name": "Mr. Morelle",
-          "party": "D",
-          "state": "NY",
-          "bioguideId": "M001206",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, let me begin by offering my appreciation and thanks to the gentlewoman from Oklahoma, my friend Mrs. Bice, for her leadership. I extend my appreciation as well to the chair of the Committee on House Administration, Bryan Steil, for his authorship and his partnership in advancing this bill. I rise in strong support of H.R. 8364, a bill that, as Mrs.",
-          "stance": "support"
-        },
-        {
-          "name": "Mrs. Bice",
-          "party": "R",
-          "state": "OK",
-          "bioguideId": "B000740",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 8364) to amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
-          "stance": "neutral"
-        }
-      ],
+      "featured_quotes": [],
       "gaps": [
         "The bill grants the Board discretion to set retirement age between 57 and 65 but specifies no criteria the Board must use in making that determination for individual officers or as a department-wide policy."
       ],
@@ -1398,16 +1339,7 @@
         "The bill authorizes sharing of nonpublic information generated by online marketplaces and freight operators but does not specify what categories of nonpublic data are covered or whether any types of data are excluded from the sharing authority.",
         "The bill does not address the rights of the importer or the source entity (e.g., the online marketplace) to receive notice that their nonpublic information has been shared with a third party."
       ],
-      "featured_quotes": [
-        {
-          "name": "Mr. Moore",
-          "party": "R",
-          "state": "AL",
-          "bioguideId": "M001212",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 4930) to expand the sharing of information with respect to suspected violations of intellectual property rights in trade, as amended.",
-          "stance": "neutral"
-        }
-      ],
+      "featured_quotes": [],
       "changes": {
         "added": [
           "Section 628A(a)(3) of the Tariff Act of 1930 — CBP authority to share nonpublic information generated by online marketplaces, express consignment operators, freight forwarders, and other importation-chain entities with parties assisting in IP violation determinations",
@@ -1548,24 +1480,7 @@
         "The bill changes Tax Court review to de novo but does not set a deadline for Tax Court proceedings after a whistleblower petition is filed, which has historically been a significant source of delay in award resolution.",
         "The bill extends the attorney fee deduction to discretionary awards but does not address the treatment of fees in cases where a whistleblower prevails in Tax Court review but the underlying award amount is subsequently reduced."
       ],
-      "featured_quotes": [
-        {
-          "name": "Mr. Thompson",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "T000460",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I rise in support of this bipartisan legislation and thank my colleague Mike Kelly for working wi === Congressional Record, Volume 172 Issue 73 (Monday, April 27, 2026) [Congressional Record Volume 172, Number 73 (Monday, April 27, 2026)] [House] [Page H3117] From the Congressional Record Online through the Government Publishing Office [ www.gpo.gov ] ANNOUNCEMENT BY THE SPEAKER PRO TEMPORE The SPEAKER pro tempore.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Smith",
-          "party": "R",
-          "state": "MO",
-          "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 7959) to amend the Internal Revenue Code of 1986 to make improvements with respect to the treatment of whistleblowers, and for other purposes, as amended.",
-          "stance": "neutral"
-        }
-      ],
+      "featured_quotes": [],
       "changes": {
         "added": [
           "Section 7623(b)(6)(D) of the Internal Revenue Code — whistleblower anonymity in Tax Court proceedings absent a finding of overriding societal interest",
@@ -1652,35 +1567,76 @@
         }
       ],
       "underreported": [],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Mr. Heinrich (D-NM)",
+          "why": "why are we doing it? To pad the pockets of the President's buddy from Chile so that he can take our minerals--our minerals, the American people's minerals--send them to China, process them in China, and then maybe sell them back to the American people with a tariff. This is nuts. Is that ``America First''? That is ``America Last.''"
+        },
+        {
+          "who": "Ms. Morrison (D-IL)",
+          "why": "Copper sulfide mining is the most toxic industry in America, and it is particularly ill-suited to water-rich environments because it acidifies the water. It leaches heavy metals like arsenic, lead, and mercury into that water, which is part of the reason it has never been done in Minnesota before."
+        },
+        {
+          "who": "Ms. Smith (D-MN)",
+          "why": "allowing public land orders to be rescinded under the Congressional Review Act, which is what would be happening here tonight, is a dangerous precedent that would affect every State in our country. Public land orders have never been previously submitted by any administration, including the first Trump administration, as a rule under the CRA."
+        },
+        {
+          "who": "Mr. Huffman (D-CA)",
+          "why": "The type of mining that Twin Metals has proposed has a 100 percent track record of toxic pollution. There has never been a mine of this kind that did not leach toxic pollution."
+        }
+      ],
       "gaps": [
         "The joint resolution nullifies Public Land Order 7917 but does not address the Congressional Review Act bar under chapter 8 of title 5, United States Code, which prevents the Bureau of Land Management from issuing a substantially similar rule in the future without explicit congressional authorization.",
         "The resolution removes the 20-year withdrawal but does not address the status of any tribal consultation obligations associated with the original order regarding the 1854 Ceded Territory of the Lake Superior Chippewa."
       ],
       "featured_quotes": [
         {
-          "name": "Mr. Ricketts",
-          "party": "R",
-          "state": "NE",
-          "bioguideId": "R000618",
-          "text": "Mr. m. J. Res. , all time be expired on the joint resolution, it be read a third time, and the Senate vote on passage; and that following disposition, the Senate proceed to executive session and resume consideration of Calendar No.",
-          "stance": "neutral"
+          "name": "Mr. Heinrich",
+          "party": "D",
+          "state": "NM",
+          "bioguideId": "H001046",
+          "text": "why are we doing it? To pad the pockets of the President's buddy from Chile so that he can take our minerals--our minerals, the American people's minerals--send them to China, process them in China, and then maybe sell them back to the American people with a tariff. This is nuts. Is that ``America First''? That is ``America Last.''",
+          "stance": "oppose"
         },
         {
-          "name": "Mr. Thune",
-          "party": "R",
-          "state": "SD",
-          "bioguideId": "T000250",
-          "text": "Mr. J. Res. 140 from the House. The PRESIDING OFFICER. The Senator is correct.",
-          "stance": "neutral"
+          "name": "Ms. Morrison",
+          "party": "D",
+          "state": "IL",
+          "bioguideId": "M001234",
+          "text": "Copper sulfide mining is the most toxic industry in America, and it is particularly ill-suited to water-rich environments because it acidifies the water. It leaches heavy metals like arsenic, lead, and mercury into that water, which is part of the reason it has never been done in Minnesota before.",
+          "stance": "oppose"
         },
         {
           "name": "Ms. Smith",
-          "party": "R",
-          "state": "MO",
+          "party": "D",
+          "state": "MN",
           "bioguideId": "S001195",
-          "text": "Mr. President, I rise to make a point of order, and I ask for 1 minute of comment without objection. [[Page S1780]] The PRESIDING OFFICER. Is there objection? Without objection, it is so ordered.",
-          "stance": "neutral"
+          "text": "allowing public land orders to be rescinded under the Congressional Review Act, which is what would be happening here tonight, is a dangerous precedent that would affect every State in our country. Public land orders have never been previously submitted by any administration, including the first Trump administration, as a rule under the CRA.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Huffman",
+          "party": "D",
+          "state": "CA",
+          "bioguideId": "H001068",
+          "text": "The type of mining that Twin Metals has proposed has a 100 percent track record of toxic pollution. There has never been a mine of this kind that did not leach toxic pollution.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Stauber",
+          "party": "R",
+          "state": "MN",
+          "bioguideId": "S001212",
+          "text": "On the Iron Range in northern Minnesota, we have been responsibly mining for 145 years. We mined the iron ore that won us two world wars and currently mine the taconite that is used to make 80 percent of this country's domestically produced steel.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Zinke",
+          "party": "R",
+          "state": "MT",
+          "bioguideId": "Z000018",
+          "text": "The MQ-9 Reaper, the Javelin missile system, the Virginia-class submarine, the Tomahawk, the night vision, and Amron, what do they have in common? Those minerals are found in Twin Metals in the great State of Minnesota.",
+          "stance": "support"
         }
       ],
       "changes": {
@@ -1819,23 +1775,7 @@
           "party": "R",
           "state": "MO",
           "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 6903) to require the Secretary of State to revoke any United States passport issued to an individual, on receipt of a certification by the Secretary of Health and Human Services that the individual has a child support arrearage exceeding $2,500, as amended.",
-          "stance": "support"
-        },
-        {
-          "name": "Mr. Panetta",
-          "party": "D",
-          "state": "CA",
-          "bioguideId": "P000613",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I rise today in support of the Ensuring Children Receive Support Act, which I am proud to co-lead with Representative Van Duyne. I thank her for her leadership and thank the chairman for pushing this bill forward with overwhelming support out of the Ways and Means Committee onto the House floor for this vote.",
-          "stance": "support"
-        },
-        {
-          "name": "Ms. Van Duyne",
-          "party": "R",
-          "state": "TX",
-          "bioguideId": "V000134",
-          "text": "Mr. Speaker, I thank the chairman for yielding, and I thank my colleague Congressman Panetta from California for also helping to introduce this bill. Mr. Speaker, I rise in support of my bill, H.R. 6903, the Ensuring Children Receive Support Act. Nearly 2 weeks ago, families experienced one of the largest tax refund seasons on record, with an estimated $91 billion already issued as part of an expected $370 billion refund season.",
+          "text": "This legislation has a simple premise: Parents must meet their obligations to care for their kids, period. It is pretty simple. To ensure that is happening, State-level child support agencies rely in part on the Passport Denial Program, which is run out of the State Department and, as its name suggests, is used to deny the ability of delinquent parents to obtain a passport to leave the country when they owe back child support.",
           "stance": "support"
         }
       ],
@@ -1950,26 +1890,23 @@
           "why_unreported": "The bill's stated purpose is to extend the tax exemption to sexual assault survivors. This provision specifically bars survivors who renegotiate or revise a pre-existing settlement after enactment from accessing the new exemption, a limitation not apparent from the bill's title or the headline exemption provision."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ms. Moore (R-AL)",
+          "why": "Mr. Speaker, we hear all the time about the high-profile civil cases involving sexual abuse. I am thinking about the accounts of trusted gymnast physicians abusing star athletes and the victims of Jeffrey Epstein and many of his associates. We even hear about sexual assault that occurs within our own body, and we have to address that problem. Let's just take a moment to acknowledge that all sexual abuse does not make the headlines."
+        }
+      ],
       "gaps": [
         "The bill applies to amounts received under judgments made and agreements entered after enactment but does not address the tax treatment of damages already received under pre-enactment judgments that are still paying out.",
         "The bill requires a public awareness program but specifies no timeline, appropriated funding, or minimum required outreach activities."
       ],
       "featured_quotes": [
         {
-          "name": "Ms. Moore",
-          "party": "R",
-          "state": "AL",
-          "bioguideId": "M001212",
-          "text": "Mr. Speaker, I yield myself such time as I may consume. Mr. Speaker, I want to start out by thanking Chairman Smith and Ranking Member Neal for bringing this important bill to the floor for consideration during Sexual Assault Awareness Month. As a survivor of sexual assault, I thank Mr. Smucker for teaming up with me to develop this important legislation that supports victims of sexual abuse who so often have no voice. Mr. Speaker, at its core, this bill is about fairness, dignity, and justice for survivors.",
-          "stance": "support"
-        },
-        {
           "name": "Mr. Smith",
           "party": "R",
           "state": "MO",
           "bioguideId": "S001195",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (H.R. 2347) to amend the Internal Revenue Code of 1986 to exclude from gross income any damages, other than punitive damages, received on account of any sexual acts or sexual contact, as amended.",
+          "text": "Survivors of sexual assault face a long road to recovery without having to battle with the IRS over keeping the compensatory damages or settlements that they receive. Unfortunately, right now, the burden of proof that a sexual assault survivor would have to provide to the IRS, including medical records to prove that they deserve to have their settlement funds excluded from gross income for tax purposes, ignores the fact that such victims often do not have the same observable physical injuries that other victims of assault might have.",
           "stance": "neutral"
         },
         {
@@ -1977,7 +1914,15 @@
           "party": "R",
           "state": "PA",
           "bioguideId": "S001199",
-          "text": "Mr. Speaker, I thank Chairman Smith for the time and also for bringing this bill up to the Ways and Means Committee. I thank Ms.",
+          "text": "I think the chairman and Ms. Moore both have described it really well. The core problem here, first of all, we believe our current law already says that any victim of physical abuse and any victim of sexual abuse who receives a settlement does not owe tax on that settlement, which makes complete sense.",
+          "stance": "neutral"
+        },
+        {
+          "name": "Ms. Moore",
+          "party": "R",
+          "state": "AL",
+          "bioguideId": "M001212",
+          "text": "Mr. Speaker, we hear all the time about the high-profile civil cases involving sexual abuse. I am thinking about the accounts of trusted gymnast physicians abusing star athletes and the victims of Jeffrey Epstein and many of his associates. We even hear about sexual assault that occurs within our own body, and we have to address that problem. Let's just take a moment to acknowledge that all sexual abuse does not make the headlines.",
           "stance": "neutral"
         }
       ],
@@ -2075,34 +2020,12 @@
         }
       ],
       "underreported": [],
-      "criticisms": [
-        {
-          "who": "Sen. Ron Wyden (D-OR)",
-          "why": "Opposed the clean extension, stating that warrantless searches of U.S. persons tripled in the first year of the Trump administration and that a straight reauthorization without reform is absolutely unacceptable."
-        }
-      ],
+      "criticisms": [],
       "gaps": [
         "The bill extends Title VII surveillance authorities through April 30, 2026 but sets no reporting requirement on how those authorities are used during the extension period.",
         "The bill sets a fixed April 30, 2026 expiration date but does not establish any conditions or framework governing further reauthorization after that date."
       ],
-      "featured_quotes": [
-        {
-          "name": "Sen. Ron Wyden",
-          "party": "D",
-          "state": "OR",
-          "bioguideId": "W000779",
-          "text": "Any Senator who votes to reauthorize this law without real reform will be directly responsible when the Trump team abuses their spying powers.",
-          "stance": "oppose"
-        },
-        {
-          "name": "Sen. Ron Wyden",
-          "party": "D",
-          "state": "OR",
-          "bioguideId": "W000779",
-          "text": "The number of so-called 'sensitive' warrantless searches more than tripled during the first year of the Trump administration.",
-          "stance": "oppose"
-        }
-      ],
+      "featured_quotes": [],
       "changes": {
         "added": [],
         "modified": [
@@ -2236,28 +2159,12 @@
       ],
       "featured_quotes": [
         {
-          "name": "Rep. Pramila Jayapal",
+          "name": "Mr. Himes",
           "party": "D",
-          "state": "WA",
-          "bioguideId": "J000298",
-          "text": "The war has cost taxpayers $50 billion already, and the Pentagon will request $200 billion more.",
+          "state": "CT",
+          "bioguideId": "H001047",
+          "text": "Mr. Speaker, I have been listening carefully to my Republican colleagues, and they will get no argument from me on the notion that we have been at war with Iran for decades. They will get no argument at all. As Mr. Mast keeps saying, this is a bad and evil regime. Yes, we have been at war, but at no point in those decades have we been so obviously losing that war in any strategic sense. The Iranian Navy is at the bottom of the ocean.",
           "stance": "support"
-        },
-        {
-          "name": "Rep. Gregory Meeks",
-          "party": "D",
-          "state": "NY",
-          "bioguideId": "M001137",
-          "text": "One person does not have the power to take this Nation to war alone.",
-          "stance": "support"
-        },
-        {
-          "name": "Rep. Keith Self",
-          "party": "R",
-          "state": "TX",
-          "bioguideId": "S001224",
-          "text": "We have neutered Iran, which has been at war with us for 47 years.",
-          "stance": "oppose"
         }
       ],
       "changes": {
@@ -2375,7 +2282,12 @@
           "why_unreported": "Sections 177(a) and 178(b) specify adjustments by the ratio \"if greater than 1\" — meaning adjustments only apply when GDP has grown. The condition is stated in the operative text but not in the section titles or congressional findings accompanying Section 204."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ranking Member",
+          "why": "We strongly support community banks and credit unions and stand ready to work with Republicans to advance sensible reforms to do just that. However, this package of overwhelmingly Republican and partisan bills represents the greatest amount of bank deregulation since before the 2008 global financial crisis. Instead of focusing on sensible improvements to support community banks and credit unions on Main Street, this bill will help megabanks on Wall Street and harm consumers."
+        }
+      ],
       "gaps": [
         "Title I is captioned \"Local Community Access\" but the rural area definition references OMB Urban Influence Codes and Census urban areas — neither of which covers U.S. territories, which are not addressed in the bill's rural bank formation provisions.",
         "Section 203 requires agencies to review the CBLR and report recommendations, but specifies no consumer impact assessment as part of that review despite Section 201(a)(3)(A) requiring agencies to consider the aggregate effect of regulatory actions on ability to serve customers.",
@@ -2383,7 +2295,16 @@
         "Section 202 raises the Small Bank Holding Company consolidated asset threshold to $6B but does not specify whether existing holding companies that newly qualify must re-file or are automatically reclassified.",
         "Full text of Titles IV–VIII (regulatory accountability, discount window, merger clarity, resolution transparency, bank-fintech partnerships) was not available for complete analysis — provisions in those titles may contain material changes not reflected here."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ranking Member",
+          "party": null,
+          "state": null,
+          "bioguideId": null,
+          "text": "However, this package of overwhelmingly Republican and partisan bills represents the greatest amount of bank deregulation since before the 2008 global financial crisis. Instead of focusing on sensible improvements to support community banks and credit unions on Main Street, this bill will help megabanks on Wall Street and harm consumers.",
+          "stance": "oppose"
+        }
+      ],
       "sponsor_bioguide": "H001072",
       "brief": "Raises 47 regulatory thresholds across 14 federal statutes and indexes all of them to GDP — adjusting every 5 years starting April 1, 2031 — to reduce compliance costs on community banks and credit unions.",
       "top_lines": [
@@ -2504,8 +2425,16 @@
       "underreported": [],
       "criticisms": [
         {
-          "who": "Mr. Raskin (D-MD)",
-          "why": "Mr. Speaker, I do not oppose the motion. The SPEAKER pro tempore. The gentleman from Kentucky (Mr. Massie) will control the time for the opposition. The Chair recognizes the gentleman from Ohio."
+          "who": "Mr. Roy (R-TX)",
+          "why": "Mr. Speaker, it is nice to have the gentleman from Maryland on the pro-warrant side of this conversation this go-round. I will note that there was a significant amount of abuses by the previous President with respect to the amount of focus on the American people using FISA and the abuses therein. I hope we can achieve a bipartisan consensus here on how we reform this regardless of who is in the White House and regardless of who controls Congress. We need to do that in defense of the Constitution."
+        },
+        {
+          "who": "Mr. Davidson (R-OH)",
+          "why": "Mr. Speaker, the Foreign Intelligence Surveillance Act is a fine tool for foreign intelligence. Unfortunately, it has been abused and corrupted. I am encouraged to hear Mr. Raskin reclaim his opposition to warrantless surveillance, and I am encouraged that there is a bipartisan effort to reform it. In fact, I think the will of this body is that we defend the Constitution and we defend this Nation. We can do both. We are presented this false dilemma that somehow if you just abandon your freedom, you can be more secure. That is a false tradeoff."
+        },
+        {
+          "who": "Mr. Self (R-TX)",
+          "why": "Mr. Speaker, everyone here wants 702 reauthorized. The case has been made that it is a national security issue, that our troops on the ground need it. They need the intelligence that it provides. We want the CIA and the NSA to run as fast and as far as they can to identify the bad guys. I have deployed on three continents, and believe you me, we want our military to know who to deal with when they get on foreign soil. The FBI has abused 702, and that is why we are here today."
         }
       ],
       "gaps": [
@@ -2514,28 +2443,28 @@
       ],
       "featured_quotes": [
         {
-          "name": "Mr. Raskin",
-          "party": "D",
-          "state": "MD",
-          "bioguideId": "R000606",
-          "text": "Mr. Speaker, I do not oppose the motion. The SPEAKER pro tempore. The gentleman from Kentucky (Mr. Massie) will control the time for the opposition. The Chair recognizes the gentleman from Ohio.",
+          "name": "Mr. Roy",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "R000614",
+          "text": "Mr. Speaker, it is nice to have the gentleman from Maryland on the pro-warrant side of this conversation this go-round. I will note that there was a significant amount of abuses by the previous President with respect to the amount of focus on the American people using FISA and the abuses therein. I hope we can achieve a bipartisan consensus here on how we reform this regardless of who is in the White House and regardless of who controls Congress. We need to do that in defense of the Constitution.",
           "stance": "oppose"
         },
         {
-          "name": "Mr. Jordan",
+          "name": "Mr. Davidson",
           "party": "R",
           "state": "OH",
-          "bioguideId": "J000289",
-          "text": "Mr. Speaker, I move to suspend the rules and pass the bill (S. 4465) to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
-          "stance": "neutral"
+          "bioguideId": "D000626",
+          "text": "Mr. Speaker, the Foreign Intelligence Surveillance Act is a fine tool for foreign intelligence. Unfortunately, it has been abused and corrupted. I am encouraged to hear Mr. Raskin reclaim his opposition to warrantless surveillance, and I am encouraged that there is a bipartisan effort to reform it. In fact, I think the will of this body is that we defend the Constitution and we defend this Nation. We can do both. We are presented this false dilemma that somehow if you just abandon your freedom, you can be more secure. That is a false tradeoff.",
+          "stance": "oppose"
         },
         {
-          "name": "Mr. Massie",
+          "name": "Mr. Self",
           "party": "R",
-          "state": "KY",
-          "bioguideId": "M001184",
-          "text": "Mr. Speaker, I claim the time in actual opposition to the motion. The SPEAKER pro tempore. Is the gentleman from Maryland opposed to the motion?",
-          "stance": "neutral"
+          "state": "TX",
+          "bioguideId": "S001224",
+          "text": "Mr. Speaker, everyone here wants 702 reauthorized. The case has been made that it is a national security issue, that our troops on the ground need it. They need the intelligence that it provides. We want the CIA and the NSA to run as fast and as far as they can to identify the bad guys. I have deployed on three continents, and believe you me, we want our military to know who to deal with when they get on foreign soil. The FBI has abused 702, and that is why we are here today.",
+          "stance": "oppose"
         }
       ],
       "changes": {
@@ -2685,13 +2614,67 @@
           "why_unreported": "Border crossing fees have been discussed as a potential revenue mechanism. This provision explicitly blocks even a feasibility study, making it a quiet but firm policy prohibition embedded in the appropriations text."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Mr. Schumer (D-NY)",
+          "why": "this morning, Democrats sent Republicans our counteroffer on legislation to reopen DHS, pay TSA workers, while at the same time rein in ICE with commonsense guardrails. Our offer is a reasonable, good-faith proposal that contains some of the very same asks Democrats have been talking about now for months."
+        },
+        {
+          "who": "Mr. Merkley (D-OR)",
+          "why": "The funding year ends at the end of September, so we are talking about something closer to 26 weeks. While there might be a cheer for 2 weeks, there would also be a lot of dread, and people across the Nation would be going: So the proposal is to fund for 2 weeks while the majority sends us out for a 2-week break."
+        },
+        {
+          "who": "Mr. Durbin (D-IL)",
+          "why": "There is a provision in this, which I am not sure that you are aware of. It is very important. It is at the end of the second page, and it says about the effective date of this. This section shall apply on and after the day after the date of the regularly scheduled general election for Federal office held in November 2026. I don't want to wait until November, and I think that is an approach which puts that date in play."
+        }
+      ],
       "gaps": [
         "Division B provides a short-term CR only through May 22, 2026 — remaining federal agencies without full-year appropriations will need further action before that date.",
         "The Senate failed cloture 7 times between February 12 and March 26, 2026, repeatedly falling short of 60 votes. The bill ultimately passed without a recorded Senate floor vote, most likely via unanimous consent after a deal was struck.",
         "No floor debate quotes are available — the bill appears to have cleared the Senate procedurally rather than through extended floor debate."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Schumer",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "S000148",
+          "text": "this morning, Democrats sent Republicans our counteroffer on legislation to reopen DHS, pay TSA workers, while at the same time rein in ICE with commonsense guardrails. Our offer is a reasonable, good-faith proposal that contains some of the very same asks Democrats have been talking about now for months.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Merkley",
+          "party": "D",
+          "state": "OR",
+          "bioguideId": "M001176",
+          "text": "The funding year ends at the end of September, so we are talking about something closer to 26 weeks. While there might be a cheer for 2 weeks, there would also be a lot of dread, and people across the Nation would be going: So the proposal is to fund for 2 weeks while the majority sends us out for a 2-week break.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Durbin",
+          "party": "D",
+          "state": "IL",
+          "bioguideId": "D000563",
+          "text": "There is a provision in this, which I am not sure that you are aware of. It is very important. It is at the end of the second page, and it says about the effective date of this. This section shall apply on and after the day after the date of the regularly scheduled general election for Federal office held in November 2026. I don't want to wait until November, and I think that is an approach which puts that date in play.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Thune",
+          "party": "R",
+          "state": "SD",
+          "bioguideId": "T000250",
+          "text": "we are on day 40 of Democrats' shutdown of Department of Homeland Security--day 40. And that is on top of Democrats' recordbreaking 43-day full-government shutdown in the fall. Altogether, thanks to Senate Democrats, a lot of DHS employees have been working without pay for more than 80 days so far this fiscal year. That is shameful. It is no wonder TSA agents are quitting in droves-- anyone would be if they had been working without pay for almost 50 percent of the fiscal year so far.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Moreno",
+          "party": "R",
+          "state": "OH",
+          "bioguideId": "M001242",
+          "text": "We have a situation in America today in which 260,000 families are without a paycheck. This fiscal year, they have been without a paycheck for more than half of this year. Now, in the private sector you look at it and say: Well, why would you not pay somebody?",
+          "stance": "support"
+        }
+      ],
       "changes": {
         "added": [
           "DHS Appropriations Act, 2026 — full-year funding for all DHS components through September 30, 2026",
@@ -2864,26 +2847,12 @@
           "why_unreported": "The bill title and sponsor statements focus on E15, but the statutory amendment covers any blend up to 15%, meaning mid-range blends sold during the summer ozone season would also be exempt from the 9.0 psi RVP cap."
         }
       ],
-      "criticisms": [
-        {
-          "who": "Mr. Austin Scott (D-GA)",
-          "why": "Mr. Speaker, by direction of the Committee on Rules, I call up House Resolution 1224 and ask for its immediate consideration."
-        }
-      ],
+      "criticisms": [],
       "gaps": [
         "The bill removes the summer RVP restriction on E15 but does not address the separate infrastructure requirements — many fuel pumps and storage tanks require upgrades to handle E15 — that limit its availability regardless of the waiver.",
         "The bill extends the waiver nationally but does not address California, which operates under a separate state waiver system and would require additional EPA approval to participate."
       ],
-      "featured_quotes": [
-        {
-          "name": "Mr. Austin Scott",
-          "party": "D",
-          "state": "GA",
-          "bioguideId": "S001157",
-          "text": "Mr. Speaker, by direction of the Committee on Rules, I call up House Resolution 1224 and ask for its immediate consideration.",
-          "stance": "oppose"
-        }
-      ],
+      "featured_quotes": [],
       "changes": {
         "added": [],
         "modified": [
@@ -4526,27 +4495,64 @@
           "why_unreported": "The bill title and sponsor focus entirely on wildfire smoke, but the regulatory revision mandate covers the full existing exceptional events definition. EPA regulatory changes made in response to this bill would affect the processing of all exceptional event types."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ms. Dexter (D-OR)",
+          "why": "I rise today in strong opposition to the FIRE Act, a bill that undermines the protections that keeps our air safe to breathe. In 1970, Democrats and Republicans came together to pass the Clean Air Act and put public health at the center of our national policymaking. That was a promise to the American people, and it is a promise we cannot forget. That law has delivered cleaner air and longer lives, but our work is not finished. More than 100 million Americans live in counties with unhealthy levels of pollution."
+        },
+        {
+          "who": "Ms. Stansbury (D-NM)",
+          "why": "I stand here in strong opposition to H.R. 6387, the FIRE Act, but more importantly, I rise in fierce defense of the environmental laws that protect our people and our planet. Because on Earth Day, instead of celebrating progress, we are watching a coordinated effort to dismantle the very safeguards that generations of Americans, Democrats and Republicans, have put in place."
+        },
+        {
+          "who": "Mr. Tonko (D-NY)",
+          "why": "I completely understand that many State and local governments are dealing with severe air pollution related to wildfires, but as we approach Earth Day, it is important for us to recognize that efforts like the Clean Air Act should be continued to be implemented to the fullest and even enhanced where necessary. I will be crystal clear: The Clean Air Act already allows States to submit data for air pollution caused by exceptional events, preventing these emissions from penalizing them when determining compliance with air quality standards."
+        }
+      ],
       "gaps": [
         "The bill requires EPA to revise its regulations but sets no deadline by which the revised regulations must be finalized or take effect.",
         "The bill addresses the data exclusion process but does not provide additional resources for EPA to process the increased volume of state demonstration submissions that faster timelines would require."
       ],
       "featured_quotes": [
         {
-          "name": "Mr. Pallone",
+          "name": "Ms. Dexter",
           "party": "D",
-          "state": "NJ",
-          "bioguideId": "P000034",
-          "text": "Mr. Speaker, on that I demand the yeas and nays. The yeas and nays were ordered. The SPEAKER pro tempore. This is a 5-minute vote.",
-          "stance": "neutral"
+          "state": "OR",
+          "bioguideId": "D000635",
+          "text": "I rise today in strong opposition to the FIRE Act, a bill that undermines the protections that keeps our air safe to breathe. In 1970, Democrats and Republicans came together to pass the Clean Air Act and put public health at the center of our national policymaking. That was a promise to the American people, and it is a promise we cannot forget. That law has delivered cleaner air and longer lives, but our work is not finished. More than 100 million Americans live in counties with unhealthy levels of pollution.",
+          "stance": "oppose"
         },
         {
-          "name": "Mr. Palmer",
+          "name": "Ms. Stansbury",
+          "party": "D",
+          "state": "NM",
+          "bioguideId": "S001218",
+          "text": "I stand here in strong opposition to H.R. 6387, the FIRE Act, but more importantly, I rise in fierce defense of the environmental laws that protect our people and our planet. Because on Earth Day, instead of celebrating progress, we are watching a coordinated effort to dismantle the very safeguards that generations of Americans, Democrats and Republicans, have put in place.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Mr. Tonko",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "T000469",
+          "text": "I completely understand that many State and local governments are dealing with severe air pollution related to wildfires, but as we approach Earth Day, it is important for us to recognize that efforts like the Clean Air Act should be continued to be implemented to the fullest and even enhanced where necessary. I will be crystal clear: The Clean Air Act already allows States to submit data for air pollution caused by exceptional events, preventing these emissions from penalizing them when determining compliance with air quality standards.",
+          "stance": "oppose"
+        },
+        {
+          "name": "Ms. Hageman",
           "party": "R",
-          "state": "AL",
-          "bioguideId": "P000609",
-          "text": "Mr. Speaker, pursuant to House Resolution 1174, I call up the bill (H.R. 6387) to amend the Clean Air Act to require revisions to regulations governing the review and handling of air quality monitoring data influenced by exceptional events or actions to mitigate wildfire risk, and ask for its immediate consideration in the House.",
-          "stance": "neutral"
+          "state": "WY",
+          "bioguideId": "H001096",
+          "text": "Active forest management through prescribed burns and mechanical thinning is essential to supporting healthy ecosystems, preventing catastrophic wildfires, and improving the long-term air quality. Unfortunately, as it currently stands under the Clean Air Act, the use of these individual wildfire mitigation measures can create uncertainty, discouraging their use out of concern that doing so would lead to noncompliance with National Ambient Air Quality Standards.",
+          "stance": "support"
+        },
+        {
+          "name": "Mr. Crank",
+          "party": "R",
+          "state": "CO",
+          "bioguideId": "C001137",
+          "text": "If those wildfire days were excluded in 2024, Colorado's highest ozone reading would have been 73 parts per billion instead of 88, well within the Federal standard of 75. Without these exemptions, States and local communities are forced to bear the consequences of nonattainment, whether that means new regulatory burdens, higher costs for consumers, or barriers for businesses trying to operate and grow.",
+          "stance": "support"
         }
       ],
       "changes": {
@@ -4651,28 +4657,20 @@
       ],
       "featured_quotes": [
         {
-          "name": "Mr. Pallone",
-          "party": "D",
-          "state": "NJ",
-          "bioguideId": "P000034",
-          "text": "Every 9 minutes, a woman loses her life to lung cancer. In the time it will take the House to consider this bill, more mothers, daughters, sisters, and friends will be lost. This legislation is a meaningful step in addressing the disproportionate impact of lung cancer on women. Lung cancer is the leading cause of cancer death among men and women in the United States. It kills more people each year than breast cancer, ovarian cancer, and uterine cancer combined.",
-          "stance": "support"
-        },
-        {
           "name": "Mr. Fitzpatrick",
           "party": "R",
           "state": "PA",
           "bioguideId": "F000466",
-          "text": "Lung cancer is the leading cancer death among women, and it disproportionately impacts women who have never even smoked.",
+          "text": "Lung cancer is the leading cancer death among women, and it disproportionately impacts women who have never even smoked. This bipartisan bill requires the Secretary of Health and Human Services, in consultation with the Secretaries of Defense and Veterans Affairs, to conduct an interagency review of current research on women and lung cancer. Madam Speaker, this bill addresses the disparities women with lung cancer face, and it addresses it head-on, strengthening research, access to preventative services, and raising awareness.",
           "stance": "support"
         },
         {
-          "name": "Mrs. Harshbarger",
-          "party": "R",
-          "state": "TN",
-          "bioguideId": "H001086",
-          "text": "Madam Speaker, I move to suspend the rules and pass the bill (H.R. 2319) to direct the Secretary of Health and Human Services to conduct a review to evaluate the status of research on lung cancer in women and underserved populations, and for other purposes.",
-          "stance": "neutral"
+          "name": "Mr. Boyle",
+          "party": "D",
+          "state": "PA",
+          "bioguideId": "B001296",
+          "text": "This is a bipartisan, commonsense bill that takes on a serious and too often overlooked public health disparity. The legislation would require the Secretary of HHS, in consultation with the Secretaries of Defense and Veterans Affairs, to conduct an interagency review of research on women and lung cancer, including access to preventive services. It would also strengthen interagency coordination on public awareness efforts so more women have the information they need to understand their risk, seek early detection, and get care sooner.",
+          "stance": "support"
         }
       ],
       "changes": {

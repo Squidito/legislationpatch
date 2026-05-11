@@ -1,8 +1,9 @@
 # config.js contains API keys — uncomment the line below if you ever add real keys
 # config.js
 
-# Claude Code project instructions — internal only
+# Claude Code project instructions and settings — internal only
 CLAUDE.md
+.claude/
 
 # Common files to never commit
 .env
@@ -16,8 +17,13 @@ desktop.ini
 # Articles — private, never publish
 articles/
 
-# Working files — brand/preview assets, not part of the repo
+# Budget delta extraction — experimental, not published
+data/deltas/
+scripts/program-account-map.json
+
+# Working files — brand/preview assets and temp outputs
 preview-*.png
+quotes.json
 logos\ and\ badges.png
 logo\ old.svg
 logo.png
