@@ -683,10 +683,12 @@ function setupCarousel() {
   _carouselScroll = null;
 
   el.style.transform = `translateX(${currentX}px)`;
+  el.style.willChange = 'transform'; // GPU-accelerate during scroll
 
   let paused = false;
   grid.addEventListener('mouseenter', () => {
     paused = true;
+    el.style.willChange = 'auto'; // release compositor layer so overflow-y:visible works
     grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
@@ -694,7 +696,10 @@ function setupCarousel() {
     isDragging = false;
     grid.classList.remove('dragging');
     // Release after collapse finishes (80ms grace + 250ms transition)
-    setTimeout(() => { grid.style.height = ''; }, 350);
+    setTimeout(() => {
+      grid.style.height = '';
+      el.style.willChange = 'transform'; // restore GPU acceleration
+    }, 350);
   });
 
   let isDragging = false, startX = 0, startCurrentX = 0;

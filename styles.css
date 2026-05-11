@@ -1621,7 +1621,6 @@ a:hover { text-decoration: underline; }
   display: flex;
   flex-direction: row;
   gap: 0.65rem;
-  will-change: transform;
 }
 .shock-quotes-grid.dragging { cursor: grabbing; user-select: none; }
 .shock-quote-card {
