@@ -689,9 +689,9 @@ function setupCarousel() {
   grid.addEventListener('mouseenter', () => {
     paused = true;
     el.style.willChange = 'auto';
-    // mask-image clips vertical overflow even when overflow-y:visible — remove during expansion
     grid.style.webkitMaskImage = 'none';
     grid.style.maskImage = 'none';
+    grid.style.overflowX = 'visible'; // let edge cards expand into available space
     grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
@@ -702,6 +702,7 @@ function setupCarousel() {
       grid.style.height = '';
       grid.style.webkitMaskImage = '';
       grid.style.maskImage = '';
+      grid.style.overflowX = '';
       el.style.willChange = 'transform';
     }, 350);
   });
