@@ -1797,8 +1797,8 @@ a:hover { text-decoration: underline; }
   fill: none;
   stroke: #fb923c;
   stroke-width: 2.5;
-  stroke-dasharray: 63;
-  stroke-dashoffset: 63;
+  stroke-dasharray: 53;
+  stroke-dashoffset: 53;
   stroke-linecap: round;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -1868,7 +1868,7 @@ a:hover { text-decoration: underline; }
 
   /* Expanded card: circle fades out, X draws in */
   .shock-quote-card.sq-expanded .sq-ring circle {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 53;
     opacity: 0;
     transition: opacity 0.2s ease;
   }

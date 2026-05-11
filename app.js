@@ -734,7 +734,7 @@ function setupCarousel() {
       }, 1000);
     }, { passive: true });
 
-    // Nothing cancels the gauge once started except tapping a different card
+    el.addEventListener('touchend', cancelHold, { passive: true });
 
     // Tap any X ring to close — X shows on all cards when one is expanded
     el.addEventListener('click', e => {
@@ -1172,7 +1172,7 @@ function renderShockQuotesSection() {
       : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="8.5" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
       <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
     </div>`;
