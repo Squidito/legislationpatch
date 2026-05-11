@@ -1639,8 +1639,8 @@ a:hover { text-decoration: underline; }
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -0.325rem;
-  right: -0.325rem;
+  left: -0.4rem;
+  right: -0.4rem;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1748,7 +1748,7 @@ a:hover { text-decoration: underline; }
   -webkit-line-clamp: 5;
   overflow: hidden;
   max-height: 5.8rem;
-  transition: max-height 0.25s ease-out;
+  transition: max-height 0.25s ease-out 0.08s;
 }
 .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-text {
   -webkit-line-clamp: 100;
