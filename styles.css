@@ -1783,7 +1783,7 @@ a:hover { text-decoration: underline; }
 .sq-ring {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 12px;
   width: 26px;
   height: 26px;
   opacity: 0;
@@ -1866,10 +1866,10 @@ a:hover { text-decoration: underline; }
     display: block;
   }
 
-  /* Expanded card: circle fades to faint (gives X a button context), X draws in */
+  /* Expanded card: circle fades out, X draws in */
   .shock-quote-card.sq-expanded .sq-ring circle {
     stroke-dashoffset: 0;
-    opacity: 0.15;
+    opacity: 0;
     transition: opacity 0.2s ease;
   }
   .shock-quote-card.sq-expanded .sq-x-line {
