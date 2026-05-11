@@ -688,17 +688,21 @@ function setupCarousel() {
   let paused = false;
   grid.addEventListener('mouseenter', () => {
     paused = true;
-    el.style.willChange = 'auto'; // release compositor layer so overflow-y:visible works
+    el.style.willChange = 'auto';
+    // mask-image clips vertical overflow even when overflow-y:visible — remove during expansion
+    grid.style.webkitMaskImage = 'none';
+    grid.style.maskImage = 'none';
     grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
-    // Release after collapse finishes (80ms grace + 250ms transition)
     setTimeout(() => {
       grid.style.height = '';
-      el.style.willChange = 'transform'; // restore GPU acceleration
+      grid.style.webkitMaskImage = '';
+      grid.style.maskImage = '';
+      el.style.willChange = 'transform';
     }, 350);
   });
 
