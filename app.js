@@ -693,8 +693,7 @@ function setupCarousel() {
     if (!isHoverDevice()) return;
     el.style.willChange = 'auto';
     grid.classList.add('sq-expanding');
-    // Defer height lock one frame so the GPU compositor layer fully releases
-    requestAnimationFrame(() => { grid.style.height = grid.offsetHeight + 'px'; });
+    grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
     paused = false;
@@ -774,18 +773,21 @@ function setupCarousel() {
     // Stop if a newer setupCarousel call has superseded this one.
     if (myEpoch !== _carouselEpoch) return;
 
-    if (!paused) currentX -= SPEED;
+    if (!paused) {
+      currentX -= SPEED;
 
-    // Bidirectional infinite wrap within the middle third
-    if (currentX <= -(setWidth * 2)) {
-      currentX      += setWidth;
-      startCurrentX += setWidth;
-    } else if (currentX >= 0) {
-      currentX      -= setWidth;
-      startCurrentX -= setWidth;
+      // Bidirectional infinite wrap within the middle third
+      if (currentX <= -(setWidth * 2)) {
+        currentX      += setWidth;
+        startCurrentX += setWidth;
+      } else if (currentX >= 0) {
+        currentX      -= setWidth;
+        startCurrentX -= setWidth;
+      }
+
+      el.style.transform = `translateX(${currentX}px)`;
     }
 
-    el.style.transform = `translateX(${currentX}px)`;
     _carouselRaf = requestAnimationFrame(tick);
   }
 
