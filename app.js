@@ -717,8 +717,10 @@ function setupCarousel() {
     }, 350);
   });
 
-  // ── Mobile tap expansion ───────────────────────────────────────────────────
+  // ── Mobile hold-to-expand ─────────────────────────────────────────────────
   if (!isHoverDevice()) {
+    let holdTimer = null, holdCard = null;
+
     function mobileExpand(card) {
       if (!grid._mobileHeightLocked) {
         grid.style.height = grid.offsetHeight + 'px';
@@ -737,16 +739,34 @@ function setupCarousel() {
         }
       }, 380);
     }
-    el.addEventListener('click', e => {
-      if (e.target.closest('a')) return; // let links through
+    function cancelHold() {
+      if (holdTimer) { clearTimeout(holdTimer); holdTimer = null; }
+      if (holdCard) { holdCard.classList.remove('sq-filling'); holdCard = null; }
+    }
+
+    el.addEventListener('touchstart', e => {
       const card = e.target.closest('.shock-quote-card:not([data-clone])');
-      if (!card) return;
-      if (card.classList.contains('sq-expanded') && e.target.closest('.sq-ring')) {
+      if (!card || card.classList.contains('sq-expanded') || e.target.closest('a')) return;
+      holdCard = card;
+      card.classList.add('sq-filling');
+      holdTimer = setTimeout(() => {
+        holdTimer = null; holdCard = null;
+        card.classList.remove('sq-filling');
+        el.querySelectorAll('.shock-quote-card.sq-expanded').forEach(c => mobileCollapse(c));
+        mobileExpand(card);
+      }, 500);
+    }, { passive: true });
+
+    el.addEventListener('touchend',  cancelHold, { passive: true });
+    el.addEventListener('touchmove', cancelHold, { passive: true });
+
+    // Tap the X ring to close
+    el.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      const card = e.target.closest('.shock-quote-card:not([data-clone])');
+      if (card?.classList.contains('sq-expanded') && e.target.closest('.sq-ring')) {
         mobileCollapse(card);
-        return;
       }
-      el.querySelectorAll('.shock-quote-card.sq-expanded').forEach(c => { if (c !== card) mobileCollapse(c); });
-      if (!card.classList.contains('sq-expanded')) mobileExpand(card);
     });
   }
 
