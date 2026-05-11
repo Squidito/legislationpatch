@@ -693,7 +693,7 @@ function setupCarousel() {
     el.querySelectorAll('.shock-quote-card').forEach(card => {
       const r = card.getBoundingClientRect();
       const visiblePx = Math.max(0, Math.min(r.right, gridRect.right) - Math.max(r.left, gridRect.left));
-      if (visiblePx / r.width < 0.25) card.style.visibility = 'hidden';
+      if (visiblePx / r.width < 0.35) card.style.visibility = 'hidden';
     });
     el.style.willChange = 'auto';
     grid.classList.add('sq-expanding');
