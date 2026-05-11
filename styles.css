@@ -1667,7 +1667,6 @@ a:hover { text-decoration: underline; }
   bottom: 0;
   left: -0.4rem;
   right: -0.4rem;
-  pointer-events: none;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1705,6 +1704,8 @@ a:hover { text-decoration: underline; }
   min-width: 0;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 .shock-quote-rep-link:hover .shock-quote-name { text-decoration: underline; }
 .shock-quote-rep-text { min-width: 0; }
@@ -1713,6 +1714,8 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
+  position: relative;
+  z-index: 1;
   min-height: 5.5rem;
   text-decoration: none;
   color: inherit;
@@ -1828,7 +1831,7 @@ a:hover { text-decoration: underline; }
 .sq-x-line {
   fill: none;
   stroke: #fb923c;
-  stroke-width: 2;
+  stroke-width: 2.5;
   stroke-linecap: round;
   display: none;
 }
@@ -1845,7 +1848,7 @@ a:hover { text-decoration: underline; }
     pointer-events: none;
   }
 
-  /* Gauge fills while holding (sq-filling) */
+  /* Gauge fills while touching (sq-filling) */
   .shock-quote-card.sq-filling .sq-ring {
     opacity: 1;
   }
@@ -1853,7 +1856,7 @@ a:hover { text-decoration: underline; }
     animation: sq-ring-fill 0.5s linear forwards;
   }
 
-  /* Expanded: text opens */
+  /* Expanded card: text opens */
   .shock-quote-card.sq-expanded .shock-quote-text {
     -webkit-line-clamp: 100;
     max-height: 20rem;
@@ -1865,23 +1868,31 @@ a:hover { text-decoration: underline; }
     text-overflow: unset;
   }
 
-  /* Expanded: ring becomes tappable X close button */
-  .shock-quote-card.sq-expanded .sq-ring {
+  /* All cards show X ring while any card is expanded */
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .sq-ring {
     opacity: 1;
     pointer-events: auto;
     cursor: pointer;
   }
-  /* Circle stays full then fades — "spill" overlap with X drawing in */
+
+  /* Non-expanded siblings: X appears immediately, circle hidden */
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-card:not(.sq-expanded) .sq-ring circle {
+    display: none;
+  }
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-card:not(.sq-expanded) .sq-x-line {
+    display: block;
+  }
+
+  /* Expanded card: circle fades out (spill), X draws in */
   .shock-quote-card.sq-expanded .sq-ring circle {
     stroke-dashoffset: 0;
     opacity: 0;
     transition: opacity 0.2s ease;
   }
-  /* X lines draw in from stroke-dashoffset, delayed 50ms for overlap */
   .shock-quote-card.sq-expanded .sq-x-line {
     display: block;
-    stroke-dasharray: 17;
-    stroke-dashoffset: 17;
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
     animation: sq-x-draw 0.2s ease 0.05s forwards;
   }
 }

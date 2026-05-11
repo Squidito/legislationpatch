@@ -762,12 +762,11 @@ function setupCarousel() {
 
     // Nothing cancels the gauge once started except tapping a different card
 
-    // Tap the X ring to close
+    // Tap any X ring to close — X shows on all cards when one is expanded
     el.addEventListener('click', e => {
       if (e.target.closest('a')) return;
-      const card = e.target.closest('.shock-quote-card:not([data-clone])');
-      if (card?.classList.contains('sq-expanded') && e.target.closest('.sq-ring')) {
-        mobileCollapse(card);
+      if (e.target.closest('.sq-ring')) {
+        el.querySelectorAll('.shock-quote-card.sq-expanded').forEach(c => mobileCollapse(c));
       }
     });
   }
@@ -1205,7 +1204,7 @@ function renderShockQuotesSection() {
       : '';
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="7" y1="7" x2="19" y2="19"/><line class="sq-x-line" x1="19" y1="7" x2="7" y2="19"/></svg>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="6" y1="6" x2="20" y2="20"/><line class="sq-x-line" x1="20" y1="6" x2="6" y2="20"/></svg>
       <div class="shock-quote-header">${headerArea}${boltIcon}</div>
       ${quoteBody}
     </div>`;
