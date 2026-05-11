@@ -746,7 +746,10 @@ function setupCarousel() {
 
     el.addEventListener('touchstart', e => {
       const card = e.target.closest('.shock-quote-card:not([data-clone])');
-      if (!card || card.classList.contains('sq-expanded') || e.target.closest('a')) return;
+      if (!card || e.target.closest('a')) return;
+      if (card.classList.contains('sq-expanded')) return; // X close handled by click
+      // Cancel any in-progress fill on a different card
+      if (holdCard && holdCard !== card) cancelHold();
       holdCard = card;
       holdStartX = e.touches[0].clientX;
       holdStartY = e.touches[0].clientY;
@@ -759,15 +762,13 @@ function setupCarousel() {
       }, 500);
     }, { passive: true });
 
+    // Only cancel on scroll — lifting the finger lets the gauge keep filling
     el.addEventListener('touchmove', e => {
       if (!holdTimer) return;
-      // Only cancel if finger moved enough to indicate a scroll, not a wobble
       const dx = Math.abs(e.touches[0].clientX - holdStartX);
       const dy = Math.abs(e.touches[0].clientY - holdStartY);
       if (dx > 8 || dy > 8) cancelHold();
     }, { passive: true });
-
-    el.addEventListener('touchend', cancelHold, { passive: true });
 
     // Tap the X ring to close
     el.addEventListener('click', e => {
