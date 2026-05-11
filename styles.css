@@ -1741,7 +1741,7 @@ a:hover { text-decoration: underline; }
   max-height: 5.8rem;
   transition: max-height 0.25s ease-out;
 }
-.shock-quote-card:hover .shock-quote-text {
+.shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-text {
   -webkit-line-clamp: 100;
   max-height: 20rem;
   transition: max-height 0.25s ease-out 0.5s;
