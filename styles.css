@@ -1632,6 +1632,7 @@ a:hover { text-decoration: underline; }
   cursor: grab;
   width: 248px;
   flex-shrink: 0;
+  position: relative;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1740,9 +1741,38 @@ a:hover { text-decoration: underline; }
   max-height: 5.8rem;
   transition: max-height 0.25s ease-out;
 }
-.shock-quotes-grid:hover .shock-quote-text {
+.shock-quote-card:hover .shock-quote-text {
   -webkit-line-clamp: 100;
   max-height: 20rem;
+  transition: max-height 0.25s ease-out 0.3s;
+}
+
+/* Hover-intent progress ring */
+.sq-ring {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  pointer-events: none;
+}
+.shock-quote-card:hover .sq-ring {
+  opacity: 1;
+}
+.sq-ring circle {
+  fill: none;
+  stroke: #fb923c;
+  stroke-width: 2.5;
+  stroke-dasharray: 44;
+  stroke-dashoffset: 44;
+  stroke-linecap: round;
+}
+.shock-quote-card:hover .sq-ring circle {
+  animation: sq-ring-fill 0.3s linear forwards;
+}
+@keyframes sq-ring-fill {
+  to { stroke-dashoffset: 0; }
 }
 
 /* ---- WHAT CHANGED (Variation G patch blocks) ---- */

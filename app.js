@@ -1125,6 +1125,7 @@ function renderShockQuotesSection() {
       : '';
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
+      <svg class="sq-ring" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" transform="rotate(-90 9 9)"/></svg>
       <div class="shock-quote-header">${headerArea}${boltIcon}</div>
       ${quoteBody}
     </div>`;
