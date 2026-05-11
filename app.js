@@ -717,9 +717,9 @@ function setupCarousel() {
     }, 350);
   });
 
-  // ── Mobile hold-to-expand ─────────────────────────────────────────────────
-  if (!isHoverDevice()) {
-    let holdTimer = null, holdCard = null;
+  // ── Mobile hold-to-expand (always registered; CSS pointer:coarse controls display) ──
+  {
+    let holdTimer = null, holdCard = null, holdStartX = 0, holdStartY = 0;
 
     function mobileExpand(card) {
       if (!grid._mobileHeightLocked) {
@@ -748,6 +748,8 @@ function setupCarousel() {
       const card = e.target.closest('.shock-quote-card:not([data-clone])');
       if (!card || card.classList.contains('sq-expanded') || e.target.closest('a')) return;
       holdCard = card;
+      holdStartX = e.touches[0].clientX;
+      holdStartY = e.touches[0].clientY;
       card.classList.add('sq-filling');
       holdTimer = setTimeout(() => {
         holdTimer = null; holdCard = null;
@@ -757,8 +759,15 @@ function setupCarousel() {
       }, 500);
     }, { passive: true });
 
-    el.addEventListener('touchend',  cancelHold, { passive: true });
-    el.addEventListener('touchmove', cancelHold, { passive: true });
+    el.addEventListener('touchmove', e => {
+      if (!holdTimer) return;
+      // Only cancel if finger moved enough to indicate a scroll, not a wobble
+      const dx = Math.abs(e.touches[0].clientX - holdStartX);
+      const dy = Math.abs(e.touches[0].clientY - holdStartY);
+      if (dx > 8 || dy > 8) cancelHold();
+    }, { passive: true });
+
+    el.addEventListener('touchend', cancelHold, { passive: true });
 
     // Tap the X ring to close
     el.addEventListener('click', e => {
