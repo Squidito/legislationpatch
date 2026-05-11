@@ -688,16 +688,24 @@ function setupCarousel() {
   let paused = false;
   grid.addEventListener('mouseenter', () => {
     paused = true;
+    // Measure visibility before releasing overflow — hide cards that were <10% visible
+    const gridRect = grid.getBoundingClientRect();
+    el.querySelectorAll('.shock-quote-card').forEach(card => {
+      const r = card.getBoundingClientRect();
+      const visiblePx = Math.max(0, Math.min(r.right, gridRect.right) - Math.max(r.left, gridRect.left));
+      if (visiblePx / r.width < 0.1) card.style.visibility = 'hidden';
+    });
     el.style.willChange = 'auto';
     grid.style.webkitMaskImage = 'none';
     grid.style.maskImage = 'none';
-    grid.style.overflowX = 'visible'; // let edge cards expand into available space
+    grid.style.overflowX = 'visible';
     grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
+    el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
     setTimeout(() => {
       grid.style.height = '';
       grid.style.webkitMaskImage = '';
