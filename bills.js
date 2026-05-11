@@ -48,6 +48,49 @@ window.billMatchesCategories = function(bill) {
   return billCats.some(c => window.activeBillCategories.has(c));
 };
 
+// ── Category chip bar: drag-to-scroll + right-edge fade ───────────────────
+
+(function () {
+  const bar  = document.getElementById('billCatBar');
+  const wrap = document.getElementById('billCatBarWrap');
+  if (!bar) return;
+
+  function updateFade() {
+    if (!wrap) return;
+    wrap.classList.toggle('at-end', bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 2);
+  }
+  bar.addEventListener('scroll', updateFade, { passive: true });
+  // Run once after layout so the fade reflects the initial scroll position.
+  requestAnimationFrame(updateFade);
+
+  let isDragging = false, hasDragged = false, startX = 0, startScroll = 0;
+
+  bar.addEventListener('mousedown', e => {
+    if (e.button !== 0) return;
+    isDragging = true;
+    hasDragged = false;
+    startX     = e.pageX;
+    startScroll = bar.scrollLeft;
+  });
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+    bar.classList.remove('dragging');
+  });
+  bar.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const dx = e.pageX - startX;
+    if (Math.abs(dx) > 4) {
+      hasDragged = true;
+      bar.classList.add('dragging');
+    }
+    bar.scrollLeft = startScroll - dx;
+  });
+  // Suppress chip activation after a drag (capture phase fires before document handler).
+  bar.addEventListener('click', e => {
+    if (hasDragged) { e.stopPropagation(); hasDragged = false; }
+  }, true);
+}());
+
 // ── Category chip interactions ─────────────────────────────────────────────
 
 function updateChipVisuals() {

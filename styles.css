@@ -3816,6 +3816,19 @@ body {
 [data-theme="dark"] .bills-page-hero-inner { border-color: #8b82f0; }
 
 /* ── Bills page category chip bar ── */
+.bills-cat-bar-wrap {
+  position: relative;
+}
+.bills-cat-bar-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 3rem;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+.bills-cat-bar-wrap.at-end::after { opacity: 0; }
 .bills-cat-bar {
   display: flex;
   flex-wrap: nowrap;
@@ -3823,8 +3836,10 @@ body {
   padding: 14px 0 4px;
   overflow-x: auto;
   scrollbar-width: none;
+  cursor: grab;
 }
 .bills-cat-bar::-webkit-scrollbar { display: none; }
+.bills-cat-bar.dragging { cursor: grabbing; user-select: none; }
 .bills-cat-chip {
   font-family: var(--font-mono);
   font-size: 0.68rem;
