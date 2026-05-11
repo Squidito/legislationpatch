@@ -705,12 +705,12 @@ function setupCarousel() {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
+    grid.style.overflowX = ''; // re-clip edge cards immediately; mask stays off until collapse done
     setTimeout(() => {
       el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
       grid.style.height = '';
       grid.style.webkitMaskImage = '';
       grid.style.maskImage = '';
-      grid.style.overflowX = '';
       el.style.willChange = 'transform';
     }, 350);
   });
