@@ -760,13 +760,7 @@ function setupCarousel() {
       }, 500);
     }, { passive: true });
 
-    // Cancel only when the touch leaves the card — movement within card keeps gauge going
-    el.addEventListener('touchmove', e => {
-      if (!holdTimer || !holdCard) return;
-      const t = e.touches[0];
-      const under = document.elementFromPoint(t.clientX, t.clientY);
-      if (!holdCard.contains(under)) cancelHold();
-    }, { passive: true });
+    // Nothing cancels the gauge once started except tapping a different card
 
     // Tap the X ring to close
     el.addEventListener('click', e => {
@@ -1211,7 +1205,7 @@ function renderShockQuotesSection() {
       : '';
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" transform="rotate(-90 9 9)"/><line class="sq-x-line" x1="5" y1="5" x2="13" y2="13"/><line class="sq-x-line" x1="13" y1="5" x2="5" y2="13"/></svg>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="7" y1="7" x2="19" y2="19"/><line class="sq-x-line" x1="19" y1="7" x2="7" y2="19"/></svg>
       <div class="shock-quote-header">${headerArea}${boltIcon}</div>
       ${quoteBody}
     </div>`;
