@@ -693,7 +693,8 @@ function setupCarousel() {
     if (!isHoverDevice()) return;
     el.style.willChange = 'auto';
     grid.classList.add('sq-expanding');
-    grid.style.height = grid.offsetHeight + 'px';
+    // Defer height lock one frame so the GPU compositor layer fully releases
+    requestAnimationFrame(() => { grid.style.height = grid.offsetHeight + 'px'; });
   });
   grid.addEventListener('mouseleave', () => {
     paused = false;
