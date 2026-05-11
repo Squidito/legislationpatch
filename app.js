@@ -705,8 +705,8 @@ function setupCarousel() {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
-    el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
     setTimeout(() => {
+      el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
       grid.style.height = '';
       grid.style.webkitMaskImage = '';
       grid.style.maskImage = '';
