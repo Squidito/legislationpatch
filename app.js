@@ -685,25 +685,36 @@ function setupCarousel() {
   el.style.transform = `translateX(${currentX}px)`;
   el.style.willChange = 'transform'; // GPU-accelerate during scroll
 
+  // Lock the grid height once at setup so expanded cards overflow via overflow-y:visible
+  // without pushing the bill list down. Never changed during hover — no layout jitter.
+  grid.style.height = grid.offsetHeight + 'px';
+
   const isHoverDevice = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   let paused = false;
+  let _willChangePauseTimeout = null;
+
   grid.addEventListener('mouseenter', () => {
     paused = true;
     if (!isHoverDevice()) return;
-    el.style.willChange = 'auto';
+    if (_willChangePauseTimeout) { clearTimeout(_willChangePauseTimeout); _willChangePauseTimeout = null; }
     grid.classList.add('sq-expanding');
-    grid.style.height = grid.offsetHeight + 'px';
+    // Defer willChange removal to just before card expansion (500 ms CSS delay) so the
+    // compositor-layer teardown doesn't jitter surrounding elements on every hover entry.
+    _willChangePauseTimeout = setTimeout(() => {
+      _willChangePauseTimeout = null;
+      el.style.willChange = 'auto';
+    }, 450);
   });
   grid.addEventListener('mouseleave', () => {
     paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
     if (!isHoverDevice()) return;
+    if (_willChangePauseTimeout) { clearTimeout(_willChangePauseTimeout); _willChangePauseTimeout = null; }
     grid.classList.remove('sq-expanding');
     setTimeout(() => {
-      grid.style.height = '';
-      el.style.willChange = 'transform';
+      if (el.style.willChange === 'auto') el.style.willChange = 'transform';
     }, 350);
   });
 
@@ -773,20 +784,19 @@ function setupCarousel() {
     // Stop if a newer setupCarousel call has superseded this one.
     if (myEpoch !== _carouselEpoch) return;
 
-    if (!paused) {
-      currentX -= SPEED;
+    if (!paused) currentX -= SPEED;
 
-      // Bidirectional infinite wrap within the middle third
-      if (currentX <= -(setWidth * 2)) {
-        currentX      += setWidth;
-        startCurrentX += setWidth;
-      } else if (currentX >= 0) {
-        currentX      -= setWidth;
-        startCurrentX -= setWidth;
-      }
-
-      el.style.transform = `translateX(${currentX}px)`;
+    // Wrap runs every frame so dragging near a boundary also wraps correctly.
+    if (currentX <= -(setWidth * 2)) {
+      currentX      += setWidth;
+      startCurrentX += setWidth;
+    } else if (currentX >= 0) {
+      currentX      -= setWidth;
+      startCurrentX -= setWidth;
     }
+
+    // Apply transform when auto-scrolling OR when user is manually dragging while hovering.
+    if (!paused || isDragging) el.style.transform = `translateX(${currentX}px)`;
 
     _carouselRaf = requestAnimationFrame(tick);
   }
