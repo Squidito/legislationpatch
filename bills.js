@@ -55,21 +55,23 @@ window.billMatchesCategories = function(bill) {
   const wrap = document.getElementById('billCatBarWrap');
   if (!bar) return;
 
+  const scrollable = () => bar.scrollWidth > bar.clientWidth;
+
   function updateFade() {
     if (!wrap) return;
+    if (!scrollable()) { wrap.classList.add('at-end'); return; }
     wrap.classList.toggle('at-end', bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 2);
   }
   bar.addEventListener('scroll', updateFade, { passive: true });
-  // Run once after layout so the fade reflects the initial scroll position.
   requestAnimationFrame(updateFade);
 
   let isDragging = false, hasDragged = false, startX = 0, startScroll = 0;
 
   bar.addEventListener('mousedown', e => {
-    if (e.button !== 0) return;
+    if (e.button !== 0 || !scrollable()) return;
     isDragging = true;
     hasDragged = false;
-    startX     = e.pageX;
+    startX      = e.pageX;
     startScroll = bar.scrollLeft;
   });
   window.addEventListener('mouseup', () => {
@@ -85,7 +87,6 @@ window.billMatchesCategories = function(bill) {
     }
     bar.scrollLeft = startScroll - dx;
   });
-  // Suppress chip activation after a drag (capture phase fires before document handler).
   bar.addEventListener('click', e => {
     if (hasDragged) { e.stopPropagation(); hasDragged = false; }
   }, true);

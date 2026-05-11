@@ -3858,6 +3858,21 @@ body {
 }
 .bills-cat-chip:hover { background: var(--surface-2); color: var(--text); }
 
+/* Desktop: 2 rows of 4, no scroll needed */
+@media (min-width: 640px) {
+  .bills-cat-bar-wrap::after { display: none; }
+  .bills-cat-bar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    cursor: default;
+  }
+  .bills-cat-bar.dragging { cursor: default; }
+  .bills-cat-chip {
+    flex: 1 0 calc(25% - 5px);
+    text-align: center;
+  }
+}
+
 /* All Topics chip — active uses brand orange */
 .bills-cat-chip--all.active { background: #c75c0e; color: #fff; border-color: #c75c0e; }
 [data-theme="dark"] .bills-cat-chip--all.active { background: #fb923c; color: #1a0a00; border-color: #fb923c; }
