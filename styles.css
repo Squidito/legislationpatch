@@ -1634,6 +1634,14 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
   position: relative;
 }
+.shock-quote-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -0.325rem;
+  right: -0.325rem;
+}
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
   border-color: var(--blue);
