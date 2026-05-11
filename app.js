@@ -691,17 +691,8 @@ function setupCarousel() {
   grid.addEventListener('mouseenter', () => {
     paused = true;
     if (!isHoverDevice()) return;
-    // Measure visibility before releasing overflow — hide cards that were <35% visible
-    const gridRect = grid.getBoundingClientRect();
-    el.querySelectorAll('.shock-quote-card').forEach(card => {
-      if (card.dataset.clone === 'true') { card.style.visibility = 'hidden'; return; }
-      const r = card.getBoundingClientRect();
-      const visiblePx = Math.max(0, Math.min(r.right, gridRect.right) - Math.max(r.left, gridRect.left));
-      if (visiblePx / r.width < 0.35) card.style.visibility = 'hidden';
-    });
     el.style.willChange = 'auto';
     grid.classList.add('sq-expanding');
-    grid.style.overflowX = 'visible';
     grid.style.height = grid.offsetHeight + 'px';
   });
   grid.addEventListener('mouseleave', () => {
@@ -709,10 +700,8 @@ function setupCarousel() {
     isDragging = false;
     grid.classList.remove('dragging');
     if (!isHoverDevice()) return;
-    grid.style.overflowX = '';
     grid.classList.remove('sq-expanding');
     setTimeout(() => {
-      el.querySelectorAll('.shock-quote-card').forEach(card => { card.style.visibility = ''; });
       grid.style.height = '';
       el.style.willChange = 'transform';
     }, 350);
