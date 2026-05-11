@@ -685,18 +685,20 @@ function setupCarousel() {
   el.style.transform = `translateX(${currentX}px)`;
   el.style.willChange = 'transform'; // GPU-accelerate during scroll
 
-  // Lock the grid height once at setup so expanded cards overflow via overflow-y:visible
-  // without pushing the bill list down. Never changed during hover — no layout jitter.
-  grid.style.height = grid.offsetHeight + 'px';
-
   const isHoverDevice = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  // Lock grid height on hover devices only — desktop cards overflow via overflow-y:visible
+  // so the bill list never shifts. Mobile cards expand naturally (push content down).
+  if (isHoverDevice()) grid.style.height = grid.offsetHeight + 'px';
 
   let paused = false;
   let _willChangePauseTimeout = null;
 
   grid.addEventListener('mouseenter', () => {
-    paused = true;
+    // Guard before setting paused — some mobile browsers fire synthetic mouseenter on tap,
+    // which would freeze the carousel until the user taps elsewhere (mouseleave).
     if (!isHoverDevice()) return;
+    paused = true;
     if (_willChangePauseTimeout) { clearTimeout(_willChangePauseTimeout); _willChangePauseTimeout = null; }
     grid.classList.add('sq-expanding');
     // Defer willChange removal to just before card expansion (500 ms CSS delay) so the
@@ -707,10 +709,10 @@ function setupCarousel() {
     }, 450);
   });
   grid.addEventListener('mouseleave', () => {
-    paused = false;
     isDragging = false;
     grid.classList.remove('dragging');
     if (!isHoverDevice()) return;
+    paused = false;
     if (_willChangePauseTimeout) { clearTimeout(_willChangePauseTimeout); _willChangePauseTimeout = null; }
     grid.classList.remove('sq-expanding');
     setTimeout(() => {
