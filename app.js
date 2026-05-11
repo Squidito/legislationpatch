@@ -694,6 +694,7 @@ function setupCarousel() {
     // Measure visibility before releasing overflow — hide cards that were <35% visible
     const gridRect = grid.getBoundingClientRect();
     el.querySelectorAll('.shock-quote-card').forEach(card => {
+      if (card.dataset.clone === 'true') { card.style.visibility = 'hidden'; return; }
       const r = card.getBoundingClientRect();
       const visiblePx = Math.max(0, Math.min(r.right, gridRect.right) - Math.max(r.left, gridRect.left));
       if (visiblePx / r.width < 0.35) card.style.visibility = 'hidden';
@@ -1197,15 +1198,9 @@ function renderShockQuotesSection() {
         </a>`
       : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
 
-    const boltIcon = isFeatured
-      ? `<svg class="featured-bolt" width="10" height="15" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M6 0L0 9h4l-1 7 7-9H6z" fill="currentColor"/>
-        </svg>`
-      : '';
-
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
       <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="6" y1="6" x2="20" y2="20"/><line class="sq-x-line" x1="20" y1="6" x2="6" y2="20"/></svg>
-      <div class="shock-quote-header">${headerArea}${boltIcon}</div>
+      <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
     </div>`;
   }).join('');

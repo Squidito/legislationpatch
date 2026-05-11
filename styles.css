@@ -1676,17 +1676,6 @@ a:hover { text-decoration: underline; }
 .shock-quote-card.is-featured {
   border-color: var(--amber);
 }
-.featured-bolt {
-  color: var(--amber);
-  flex-shrink: 0;
-  margin-left: auto;
-  align-self: center;
-  opacity: 0.9;
-}
-[data-theme="dark"] .featured-bolt {
-  color: #fbbf24;
-  opacity: 1;
-}
 [data-theme="dark"] .shock-quote-card.is-featured {
   border-color: #fbbf24;
   box-shadow: 0 0 0 1px #fbbf2440;
@@ -1704,8 +1693,6 @@ a:hover { text-decoration: underline; }
   min-width: 0;
   text-decoration: none;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
 }
 .shock-quote-rep-link:hover .shock-quote-name { text-decoration: underline; }
 .shock-quote-rep-text { min-width: 0; }
@@ -1714,8 +1701,6 @@ a:hover { text-decoration: underline; }
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
-  position: relative;
-  z-index: 1;
   min-height: 5.5rem;
   text-decoration: none;
   color: inherit;
@@ -1803,9 +1788,7 @@ a:hover { text-decoration: underline; }
   height: 26px;
   opacity: 0;
   pointer-events: none;
-}
-.shock-quote-card.is-featured .sq-ring {
-  right: 32px;
+  z-index: 2;
 }
 @media (hover: hover) and (pointer: fine) {
   .shock-quote-card:hover .sq-ring { opacity: 1; }
