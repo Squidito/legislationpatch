@@ -3,7 +3,7 @@
   "name": "Alexandria Ocasio-Cortez",
   "party": "D",
   "state": "NY",
-  "bio": "Alexandria Ocasio-Cortez, also known as AOC, is an American politician and activist who has served since 2019 as the U.S. representative for New York's 14th congressional district. She is a member of the Democratic Party.",
+  "bio": "Alexandria Ocasio-Cortez, also known as AOC, is an American politician and activist who has served since 2019 as the U.S. representative for New York's 14th congressional district. She is a member of the Democratic Party and the Democratic Socialists of America.",
   "comments": [
     {
       "billId": "119-HCONRES-40",
@@ -16,6 +16,34 @@
   "role": "Representative",
   "district": 14,
   "voteHistory": [
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-8365",
+      "billTitle": "Monitor Accountability Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-5625",
+      "billTitle": "Cashless Bail Reporting Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-13",
+      "vote": "Nay"
+    },
     {
       "billId": "119-S-4465",
       "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
@@ -59,6 +87,13 @@
       "vote": "Not Voting"
     },
     {
+      "billId": "119-S-723",
+      "billTitle": "Tribal Trust Land Homeownership Act of 2025",
+      "chamber": "House",
+      "date": "2026-03-04",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7148",
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "House",
@@ -78,6 +113,13 @@
       "chamber": "House",
       "date": "2026-01-21",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House",
+      "date": "2025-07-03",
+      "vote": "No"
     }
   ],
   "bioSource": "wikipedia",

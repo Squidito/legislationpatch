@@ -4,12 +4,14 @@ const QUOTES_FILE       = 'data/quotes.json';
 const FALLBACK_PORTRAIT = 'https://bioguide.congress.gov/bioguide/photo/P/P000587.jpg';
 const FLOOR_FAVS_KEY    = 'lpFloorFavs';
 
+
 const CATEGORIES = [
   {
     id:       'war',
     label:    'War & Foreign Policy',
-    keywords: ['iran', 'the war', 'war in', 'war has', 'military', 'hostilities',
-               'armed force', 'operation epic', 'sanction', 'combat', 'nato', 'troops'],
+    keywords: ['iran', 'the war', 'war in', 'war has', 'to war', 'military', 'hostilities',
+               'armed force', 'operation epic', 'sanction', 'combat', 'nato', 'troops',
+               'taiwan', 'xi jinping', 'foreign policy'],
   },
   {
     id:       'immigration',
@@ -22,7 +24,8 @@ const CATEGORIES = [
     label:    'Economy & Markets',
     keywords: ['federal reserve', 'the fed', 'fed chair', 'central bank', 'interest rate',
                'the markets', 'markets hate', 'inflation', 'tariff', 'deficit', 'fiscal',
-               'monetary', 'treasury', 'tax cut', 'tax refund', 'lower rates', 'rates will'],
+               'monetary', 'treasury', 'tax cut', 'tax refund', 'lower rates', 'rates will',
+               'income tax', 'tax break', 'groceries', 'housing cost'],
   },
   {
     id:       'executive',
@@ -35,14 +38,17 @@ const CATEGORIES = [
     id:       'government',
     label:    'Government & Oversight',
     keywords: ['shutdown', 'fema', ' dhs ', 'homeland security', ' tsa ', ' cisa ',
-               'coast guard', 'appropriation', 'continuing resolution', 'longest shutdown'],
+               'coast guard', 'appropriation', 'continuing resolution', 'longest shutdown',
+               'disaster recovery', 'recovery fund'],
   },
   {
     id:       'civil',
     label:    'Civil Liberties & Justice',
     keywords: ['fisa', 'warrantless', 'surveillance', 'rule of law', 'epstein',
                'contempt', 'breaking the law', 'civil liberties', 'due process',
-               'liberty for security', 'foreign intelligence'],
+               'liberty for security', 'foreign intelligence',
+               'gun safety', 'gun violence', 'firearm', 'nra',
+               'security and liberty'],
   },
   {
     id:       'other',
@@ -238,14 +244,16 @@ function renderEntry(q, isFirst) {
     : '';
 
   return (
-    '<div class="floor-entry ' + accentClass + (isFirst ? ' floor-entry-first' : '') + '">' +
+    '<div class="floor-entry' + (isFirst ? ' floor-entry-first' : '') + '">' +
       '<div class="floor-entry-header">' +
-        '<img class="floor-entry-portrait" src="' + escHtml(portrait) + '" alt="' + escHtml(q.name) + '"' +
-             ' onerror="this.src=\'' + FALLBACK_PORTRAIT + '\'" />' +
         '<div class="floor-entry-speaker-block">' +
-          speakerEl +
-          partyBadge +
-          stanceBadge +
+          '<div class="floor-entry-rep-frame ' + accentClass + '">' +
+            '<img class="floor-entry-portrait" src="' + escHtml(portrait) + '" alt="' + escHtml(q.name) + '"' +
+                 ' onerror="this.src=\'' + FALLBACK_PORTRAIT + '\'" />' +
+            speakerEl +
+            partyBadge +
+            stanceBadge +
+          '</div>' +
         '</div>' +
         '<div class="floor-entry-right">' +
           datePart +
@@ -498,8 +506,6 @@ function renderCarousel() {
 
   if (!pool.length) return;
 
-  const BOLT = `<svg class="featured-bolt" width="10" height="15" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 0L0 9h4l-1 7 7-9H6z" fill="currentColor"/></svg>`;
-
   const cards = pool.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = q.party === 'D' ? '#3b82f6' : q.party === 'R' ? '#ef4444' : '#6b7280';
@@ -514,7 +520,8 @@ function renderCarousel() {
       ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
       : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <div class="shock-quote-header">${header}${isFeatured ? BOLT : ''}</div>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="8.5" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
+      <div class="shock-quote-header">${header}</div>
       <div class="shock-quote-text">"${escHtml(q.text)}"</div>
     </div>`;
   }).join('');

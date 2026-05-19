@@ -5,7 +5,7 @@
   "state": "CA",
   "role": "Representative",
   "district": 19,
-  "bio": "James Varni Panetta is an American lawyer, politician, and former Navy intelligence officer from the state of California. A member of the Democratic Party, he is the U.S. representative for California's 19th congressional district. From north to south, the northernmost district includes southeast San Jose, continuing southbound, Santa Cruz, Monterey, Carmel-by-the-Sea, and finally far inland to just one city in San Luis Obispo County, Paso Robles which is correctly part of California's \"Central Coast\" region. Panetta was first elected in 2016, after working as a deputy district attorney for Monterey County. He is the son of former Secretary of Defense Leon Panetta, and represents the same geographical region his father once represented in Congress.",
+  "bio": "James Varni Panetta is an American lawyer, politician, and former Navy intelligence officer from the state of California.",
   "comments": [
     {
       "billId": "119-HR-5366",
@@ -23,6 +23,34 @@
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-8365",
+      "billTitle": "Monitor Accountability Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-5625",
+      "billTitle": "Cashless Bail Reporting Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-13",
+      "vote": "Yea"
+    },
     {
       "billId": "119-S-4465",
       "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
@@ -66,6 +94,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-S-723",
+      "billTitle": "Tribal Trust Land Homeownership Act of 2025",
+      "chamber": "House",
+      "date": "2026-03-04",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7148",
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "House",
@@ -85,6 +120,13 @@
       "chamber": "House",
       "date": "2026-01-21",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House",
+      "date": "2025-07-03",
+      "vote": "No"
     }
   ],
   "bioSource": "wikipedia",

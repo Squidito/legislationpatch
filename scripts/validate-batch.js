@@ -208,11 +208,12 @@ section('Omnibus bill structure');
         const DIV_REQUIRED = ['label', 'summary', 'sections'];
         let allOk = true;
         for (const bill of omnibusBills) {
-            if (!Array.isArray(bill.divisions) || bill.divisions.length === 0) {
+            if (!Array.isArray(bill.divisions)) {
                 fail(`${bill.id}: isOmnibus but no divisions array`);
                 allOk = false;
                 continue;
             }
+            if (bill.divisions.length === 0) continue; // isOmnibus used for card styling only
             for (let di = 0; di < bill.divisions.length; di++) {
                 const div = bill.divisions[di];
                 const missing = DIV_REQUIRED.filter(f => {

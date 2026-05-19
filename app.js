@@ -1093,6 +1093,7 @@ function buildQuotePool() {
         bioguideId: q.bioguideId, text: q.text, stance: q.stance,
         source: bill.date ? 'Floor, ' + formatDateCompact(bill.date) : '',
         billId: bill.id, billTitle: bill.title,
+        quoteDate: bill.date || '',
         shockScore: computeShockScore(q)
       });
     });
@@ -1123,7 +1124,22 @@ function renderShockQuotesSection() {
   if (!pool.length) return '';
 
   // Featured: top-scoring R + top-scoring D (one of each party)
-  const sorted = [...pool].sort((a, b) => b.shockScore - a.shockScore);
+  const _now = Date.now();
+  const recencyBonus = q => {
+    let dateStr = q.quoteDate || '';
+    if (!dateStr && q.source) {
+      const m = q.source.match(/([A-Z][a-z]+ \d+, \d{4})/);
+      if (m) dateStr = m[1];
+    }
+    const d = new Date(dateStr);
+    if (isNaN(d)) return 0;
+    const days = (_now - d.getTime()) / 86400000;
+    if (days <= 30)  return 4;
+    if (days <= 90)  return 2;
+    if (days <= 180) return 1;
+    return 0;
+  };
+  const sorted = [...pool].sort((a, b) => (b.shockScore + recencyBonus(b)) - (a.shockScore + recencyBonus(a)));
   const featR = sorted.find(q => (q.party || '').toUpperCase().startsWith('R'));
   const featD = sorted.find(q => (q.party || '').toUpperCase().startsWith('D'));
   const featured = [featR, featD].filter(Boolean);
@@ -1676,7 +1692,7 @@ function renderBody(bill, isOpen, col) {
 
   const topLinesHtml = renderTopLines(bill);
 
-  const sectionsHtml = bill.isOmnibus ? '' : bill.sections?.length
+  const sectionsHtml = (bill.isOmnibus && bill.divisions?.length) ? '' : bill.sections?.length
     ? `<div class="patch-notes">${bill.sections.map((sec, si) => renderSection(bill, sec, si)).join('')}</div>`
     : `<div class="patch-notes"><p style="font-size:0.85rem;color:var(--text-3);padding:0.5rem 0">Click "Analyze with AI" below to generate patch notes for this bill.</p></div>`;
 

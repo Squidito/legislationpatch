@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 18,
   "bio": "Christian Dashaun Menefee is an American politician and attorney serving as the U.S. representative for Texas's 18th congressional district since February 2026. A member of the Democratic Party, Menefee previously served as County Attorney for Harris County, Texas, from 2021 to 2026. He was the youngest person and the first African-American to hold the office.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6903",
+      "billTitle": "Ensuring Children Receive Support Act",
+      "stance": "support",
+      "text": "Seven million children in this country are in a home with a loaded and unlocked firearm. Every year, hundreds of kids are killed and injured because guns are within arms' reach. Safe firearm storage is one of the simplest and most effective ways to reduce gun violence, suicides, accidental deaths, and having stolen weapons end up in the hands of people who should not have them. Kimberly and her schoolmates should have come home that day.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-8365",
+      "billTitle": "Monitor Accountability Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-5625",
+      "billTitle": "Cashless Bail Reporting Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-13",
+      "vote": "Nay"
+    },
     {
       "billId": "119-S-4465",
       "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
@@ -48,6 +86,13 @@
       "billTitle": "Small Business Innovation and Economic Security Act",
       "chamber": "House",
       "date": "2026-03-17",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-723",
+      "billTitle": "Tribal Trust Land Homeownership Act of 2025",
+      "chamber": "House",
+      "date": "2026-03-04",
       "vote": "Yea"
     },
     {

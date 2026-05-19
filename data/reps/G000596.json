@@ -8,5 +8,14 @@
   "role": "Representative",
   "district": 14,
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Marjorie_Taylor_Greene"
+  "bioUrl": "https://en.wikipedia.org/wiki/Marjorie_Taylor_Greene",
+  "voteHistory": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House",
+      "date": "2025-07-03",
+      "vote": "Aye"
+    }
+  ]
 }

@@ -5,8 +5,18 @@
   "state": "IA",
   "role": "Senator",
   "district": null,
-  "bio": "Charles Ernest Grassley is an American politician serving as the senior U.S. senator from Iowa, a seat he has held since 1981. Since 2025, he serves as the president pro tempore of the United States Senate, a position he also held from 2019 to 2021. He is a member of the Republican Party.",
-  "comments": [],
+  "bio": "Charles Ernest Grassley is an American politician serving as the senior U.S. senator from Iowa, a seat he has held since 1981. Since 2025, he has been the president pro tempore of the United States Senate, a position he also held from 2019 to 2021. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "At the end of March, the Nation's publicly held debt surpassed the value of all goods and services produced in our economy. Our national debt as a percentage of gross national product was more than 100 percent. Interest on the debt alone is costing American taxpayers $1 trillion annually, and within 10 years, interest costs will top $2 trillion a year. This fiscal path is unsustainable.",
+      "source": "Senate Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Chuck_Grassley",
   "voteHistory": [
@@ -29,6 +39,13 @@
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "Senate",
       "date": "2026-01-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "Senate",
+      "date": "2025-07-01",
       "vote": "Yea"
     }
   ]

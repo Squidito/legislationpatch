@@ -11,11 +11,48 @@
       "stance": "support",
       "text": "We have neutered Iran, which has been at war with us for 47 years.",
       "date": "Apr 16, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "oppose",
+      "text": "Congress has approved the sale of critical defense systems to Taiwan. Taiwan has paid for them, and these weapons have not yet been delivered. Xi Jinping's number one goal from the summit was to convince Trump not to sell these weapons, and that is exactly why we need to. As co-chair of the bipartisan Congressional Taiwan Caucus, I call on the Trump administration to immediately complete delivery of every defense system Congress has approved and Taiwan has purchased. No more delays. No more excuses.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
     }
   ],
   "role": "Representative",
   "district": 4,
   "voteHistory": [
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-8365",
+      "billTitle": "Monitor Accountability Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "No"
+    },
+    {
+      "billId": "119-HR-5625",
+      "billTitle": "Cashless Bail Reporting Act",
+      "chamber": "House",
+      "date": "2026-05-14",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "chamber": "House",
+      "date": "2026-05-13",
+      "vote": "Yea"
+    },
     {
       "billId": "119-S-4465",
       "billTitle": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
@@ -59,6 +96,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-S-723",
+      "billTitle": "Tribal Trust Land Homeownership Act of 2025",
+      "chamber": "House",
+      "date": "2026-03-04",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7148",
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "House",
@@ -78,6 +122,13 @@
       "chamber": "House",
       "date": "2026-01-21",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House",
+      "date": "2025-07-03",
+      "vote": "No"
     }
   ],
   "bioSource": "wikipedia",

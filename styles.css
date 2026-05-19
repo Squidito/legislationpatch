@@ -2158,7 +2158,7 @@ a:hover { text-decoration: underline; }
   padding-left: 10px;
 }
 .patch-item-main {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   font-size: 0.93rem;
   font-weight: 500;
   line-height: 1.55;
@@ -4052,13 +4052,22 @@ body {
 .floor-entry {
   padding: 0.9rem 1.25rem;
   border-top: 1px solid var(--border-inner);
-  border-left: 3px solid transparent;
 }
-.floor-entry-first       { border-top: none; }
-.floor-entry.accent-dem  { border-left-color: var(--blue);   }
-.floor-entry.accent-rep  { border-left-color: var(--red);    }
-.floor-entry.accent-ind  { border-left-color: var(--border); }
-.floor-entry:hover       { background: var(--surface-2); transition: background 0.12s; }
+.floor-entry-first { border-top: none; }
+.floor-entry:hover { background: var(--surface-2); transition: background 0.12s; }
+.floor-entry-rep-frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.floor-entry-rep-frame.accent-dem { background: var(--blue-bg); border-color: rgba(26,86,160,0.25); }
+.floor-entry-rep-frame.accent-rep { background: var(--red-bg);  border-color: rgba(161,64,64,0.25); }
+.floor-entry-rep-frame.accent-ind { background: var(--surface-2); border-color: var(--border); }
+[data-theme="dark"] .floor-entry-rep-frame.accent-dem { border-color: rgba(96,165,250,0.3); }
+[data-theme="dark"] .floor-entry-rep-frame.accent-rep { border-color: rgba(248,113,113,0.3); }
 
 /* Header row: portrait | speaker + party | date + chamber + star */
 .floor-entry-header {
