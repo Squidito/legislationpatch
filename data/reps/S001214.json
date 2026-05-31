@@ -5,7 +5,7 @@
   "state": "FL",
   "role": "Representative",
   "district": 17,
-  "bio": "This is a list of individuals serving in the United States House of Representatives. The membership of the House comprises 435 seats for representatives from the 50 states, apportioned by population, as well as six seats for non-voting delegates from U.S. territories and the District of Columbia. As of April 22, 2026, there are 430 representatives and 5 vacancies.",
+  "bio": "The 2026 United States House of Representatives elections in Florida will be held on November 3, 2026, to elect the 28 U.S. representatives from the State of Florida, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 18, 2026.",
   "comments": [
     {
       "billId": "119-HR-5366",
@@ -80,6 +80,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HCONRES-40",
       "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
       "chamber": "House",
@@ -130,5 +137,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/List_of_current_United_States_representatives"
+  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Florida"
 }

@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 4,
   "bio": "Mark Allen Alford Sr. is an American politician and former television news anchor serving as the U.S. representative for Missouri's 4th congressional district since 2023. He is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "support",
+      "text": "Today, Mr. Speaker, we face a watershed moment for the American people. This Republican majority was given a clear mandate by the American people, which is the America First agenda. This bill is our opportunity to deliver on that agenda. H.R. 1 stops the largest tax increase in U.S. history, while providing the largest tax cut for working-and middle-class families ever, with no tax on tips, no tax on overtime, and tax breaks for seniors.",
+      "date": "Jul 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-6260",
@@ -63,6 +71,13 @@
       "chamber": "House",
       "date": "2026-04-22",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HCONRES-40",

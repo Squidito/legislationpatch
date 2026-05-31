@@ -5,7 +5,7 @@
   "state": "PA",
   "role": "Representative",
   "district": 1,
-  "bio": "Brian Kevin Fitzpatrick is an American politician, attorney, and former FBI agent serving in the U.S. House of Representatives since 2017. His district, which was numbered the 8th district during his first term and the 1st district since 2019, includes all of Bucks County, a mostly suburban county north of Philadelphia, as well as a sliver of Montgomery County.",
+  "bio": "Brian Kevin Fitzpatrick is an American politician, attorney, and former FBI agent serving in the U.S. House of Representatives since 2017. His district in Pennsylvania, which was numbered the 8th district during his first term and the 1st district since 2019, includes all of Bucks County, a mostly suburban county north of Philadelphia, as well as a sliver of Montgomery County.",
   "comments": [
     {
       "billId": "119-HR-2319",
@@ -85,6 +85,13 @@
       "chamber": "House",
       "date": "2026-04-22",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
     },
     {
       "billId": "119-HCONRES-40",

@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 11,
   "bio": "Shontel Monique Brown is an American politician who has served as the U.S. representative for Ohio's 11th congressional district since 2021. A member of the Democratic Party, Brown previously served as a member of the Cuyahoga County Council, representing the 9th district.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "oppose",
+      "text": "For the first time in history, this bill would force States to pay for part of SNAP benefits, and it would require States to increase their share of administrative costs. This is an unfunded mandate, plain and simple. Let's be clear. The costs are staggering, the consequences are devastating, and the cruelty is deeply disturbing. This policy punishes those who can least afford it: seniors on a fixed income, veterans, and families already forced to choose between gas and groceries. States will be stuck in a corner.",
+      "date": "Jul 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-6260",
@@ -63,6 +71,13 @@
       "chamber": "House",
       "date": "2026-04-22",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
     },
     {
       "billId": "119-HCONRES-40",

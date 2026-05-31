@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-16T21:05:48.482Z",
+  "generated": "2026-05-28T21:15:31.640Z",
   "processedDates": [
     "2026-03-28",
     "2026-03-29",
@@ -41,7 +41,11 @@
     "2026-05-12",
     "2026-05-13",
     "2026-05-14",
-    "2026-05-15"
+    "2026-05-15",
+    "2026-05-19",
+    "2026-05-21",
+    "2026-05-22",
+    "2026-05-26"
   ],
   "quotes": [
     {
@@ -566,8 +570,8 @@
       "text": "If you want to understand Republicans' priorities right now, just look at the $72 billion reconciliation bill they revealed last week. The Republican bill would pump tens of billions of dollars into ICE and Border Patrol without any guardrails. To add insult to injury, the Republican bill charges American taxpayers $1 billion to build Trump's gilded ballroom, while including zero dollars to help Americans with rising costs.",
       "source": "Senate Floor, May 11, 2026",
       "stance": "oppose",
-      "billId": null,
-      "billTitle": null
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026"
     },
     {
       "name": "Sen. John Thune",
@@ -577,8 +581,8 @@
       "text": "My Democrat colleagues refused to provide a single dollar for the men and women who protect our borders. They refused to provide a single dollar for the men and women who take dangerous criminal illegal aliens off of our streets. I can scarcely think of anything more obvious, but, apparently, the need for law enforcement is not obvious to my Democrat colleagues because they are right back to a \"defund the police\" position — this time, it is defunding law enforcement at the Department of Homeland Security.",
       "source": "Senate Floor, May 11, 2026",
       "stance": "support",
-      "billId": null,
-      "billTitle": null
+      "billId": "119-HR-7147",
+      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026"
     },
     {
       "name": "Sen. Chuck Grassley",
@@ -599,8 +603,8 @@
       "text": "DTE was hit with more than $100 million in penalties for violating the Clean Air Act by a Federal judge. Within the same week, they got a $240 million increase in rates, and DTE Energy customers are already paying some of the highest rates in the country for some of the least reliable services. Corporate polluters like DTE treat breaking environmental laws as just the cost of doing business. Polluting our communities must be as bad for business as it is for our health.",
       "source": "House Floor, May 14, 2026",
       "stance": "oppose",
-      "billId": null,
-      "billTitle": null
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -610,8 +614,8 @@
       "text": "The families of the victims and the whole community in Buffalo pushed Congress to come together in a way it hadn't for decades, beating back the dark forces of the NRA and passing the first major gun safety bill in more than a quarter century. We owe it to the victims to not just remember their names but to build a future where no community has to endure the kind of tragedy that Buffalo did 4 years ago.",
       "source": "Senate Floor, May 14, 2026",
       "stance": "support",
-      "billId": null,
-      "billTitle": null
+      "billId": "119-S-1884",
+      "billTitle": "Holocaust Expropriated Art Recovery Act of 2025"
     },
     {
       "name": "Rep. Greg Stanton",
@@ -621,8 +625,8 @@
       "text": "Congress has approved the sale of critical defense systems to Taiwan. Taiwan has paid for them, and these weapons have not yet been delivered. Xi Jinping's number one goal from the summit was to convince Trump not to sell these weapons, and that is exactly why we need to. As co-chair of the bipartisan Congressional Taiwan Caucus, I call on the Trump administration to immediately complete delivery of every defense system Congress has approved and Taiwan has purchased. No more delays. No more excuses.",
       "source": "House Floor, May 15, 2026",
       "stance": "oppose",
-      "billId": null,
-      "billTitle": null
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act"
     },
     {
       "name": "Rep. Christian Menefee",
@@ -631,6 +635,50 @@
       "bioguideId": "M001245",
       "text": "Seven million children in this country are in a home with a loaded and unlocked firearm. Every year, hundreds of kids are killed and injured because guns are within arms' reach. Safe firearm storage is one of the simplest and most effective ways to reduce gun violence, suicides, accidental deaths, and having stolen weapons end up in the hands of people who should not have them. Kimberly and her schoolmates should have come home that day.",
       "source": "House Floor, May 15, 2026",
+      "stance": "support",
+      "billId": "119-HR-6903",
+      "billTitle": "Ensuring Children Receive Support Act"
+    },
+    {
+      "name": "Sen. Chuck Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Donald Trump settles with himself in his own lawsuit against his own government to funnel taxpayer money to his political allies, January 6 insurrectionists, and far-right loyalists. That is not justice. That is not law and order. That is corruption—corruption in broad daylight—no disguise, no shame, no attempt to hide it.",
+      "source": "Senate Floor, May 19, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Sen. John Thune",
+      "party": "R",
+      "state": "SD",
+      "bioguideId": "T000250",
+      "text": "What I consider to be the most consequential action not just of this majority but of my entire time in the Senate is the Working Families Tax Cut—because of the permanent tax relief Republicans delivered in this bill, tax relief that puts more money in hard-working Americans' pockets.",
+      "source": "Senate Floor, May 19, 2026",
+      "stance": "support",
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act"
+    },
+    {
+      "name": "Rep. Hank Johnson",
+      "party": "D",
+      "state": "GA",
+      "bioguideId": "J000288",
+      "text": "Healthcare will cost more than $26 trillion through the year 2036, making healthcare the largest category of Federal spending. This Republican rubber-stamped Congress has failed to advance extensions to the enhanced premium tax credits, causing more families to make very difficult decisions—decisions we should not have to make in a country like this.",
+      "source": "House Floor, May 19, 2026",
+      "stance": "oppose",
+      "billId": null,
+      "billTitle": null
+    },
+    {
+      "name": "Rep. Tracey Mann",
+      "party": "R",
+      "state": "KS",
+      "bioguideId": "M001245",
+      "text": "Seventy years later, America's transportation needs have changed, but Congress' basic responsibility remains the same. We have a duty to maintain a surface transportation system that allows people and goods to move across this country safely, efficiently, and reliably.",
+      "source": "House Floor, May 21, 2026",
       "stance": "support",
       "billId": null,
       "billTitle": null

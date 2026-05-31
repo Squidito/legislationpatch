@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 36,
   "bio": "Brian Philip Babin is an American dentist, politician and member of the Republican Party who has served as the U.S. representative from Texas's 36th congressional district since 2015. The district includes much of southeastern Houston, some of its eastern suburbs, and some more exurban and rural areas to the east.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "support",
+      "text": "I rise today in very strong support of H.R. 1, President Trump's one big, beautiful bill. Here we are, despite months of our Democratic colleagues' best efforts to delay, fearmonger, and mislead the public about this bill, and we are ready to deliver for the American people. Here is the thing about fear-mongering. You can only say ``the sky is falling'' so many times before folks start waking up and seeing for themselves exactly what is going on. The One Big Beautiful Bill Act secures our border.",
+      "date": "Jul 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-6260",
@@ -62,6 +70,13 @@
       "billTitle": "FIRE Act",
       "chamber": "House",
       "date": "2026-04-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
       "vote": "Yea"
     },
     {

@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 4,
   "bio": "Charles Michael Thompson is an American politician serving as the U.S. representative for California's 4th congressional district since 1999. The district, in the outer northern portion of the San Francisco Bay Area, includes all of Lake and Napa counties and parts of Contra Costa, Solano, Yolo and Sonoma counties. Thompson chairs the House Gun Violence Prevention Task Force. He is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "oppose",
+      "text": "Mr. Speaker, Republicans are openly bragging about how the bill kicks children and the elderly off Medicaid, nutritional assistance, and more, all to pay for another tax break for wealthy Republican donors. My Republican colleagues are not talking about the trillions and trillions of dollars their political giveaway is going to cost. In fact, Mr. Speaker, Vice President Vance has said historic levels of Homeland Security funding in the bill sweetens the deal for the devil.",
+      "date": "Jul 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-6260",
@@ -63,6 +71,13 @@
       "chamber": "House",
       "date": "2026-04-22",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
     },
     {
       "billId": "119-HCONRES-40",

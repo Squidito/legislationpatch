@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 23,
   "bio": "Nicholas Andrew Langworthy is an American politician serving as the U.S. representative for New York's 23rd district since 2023. He was formerly the chair of the New York State Republican Committee. Langworthy was named chair of the committee in July 2019 after having chaired the Erie County, New York Republican Committee since 2010. He was the youngest state chair in party history.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "support",
+      "text": "The stakes for the American people could not be higher. We are rapidly approaching a fiscal cliff. If we do nothing, the Trump tax cuts, the most progrowth tax reforms in generations, will expire. That means higher taxes on nearly every American. That means a gutted child tax credit. That means small businesses will lose the tools they need to survive and to thrive. That means less take-home pay for working families that have already been crushed by the Biden-era inflation. This isn't some hypothetical scenario.",
+      "date": "Jul 4, 2025"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-6260",
@@ -62,6 +70,13 @@
       "billTitle": "FIRE Act",
       "chamber": "House",
       "date": "2026-04-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "chamber": "House",
+      "date": "2026-04-21",
       "vote": "Yea"
     },
     {

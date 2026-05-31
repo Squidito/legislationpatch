@@ -270,6 +270,53 @@ function saveTrackedSettings() {
   localStorage.setItem(STORAGE_KEYS.trackedReps, JSON.stringify(trackedReps));
 }
 
+function initZipEdit() {
+  const el = document.getElementById('zipDisplay');
+  if (!el) return;
+  el.title = 'Click to change your ZIP code';
+  el.addEventListener('click', () => {
+    const current = localStorage.getItem(STORAGE_KEYS.trackedZip) || '';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = current;
+    input.maxLength = 5;
+    input.className = 'zip-edit-input';
+    input.placeholder = '00000';
+    let done = false;
+    async function commit() {
+      if (done) return; done = true;
+      const val = input.value.trim();
+      input.replaceWith(el);
+      if (!/^\d{5}$/.test(val)) return;
+      localStorage.setItem(STORAGE_KEYS.trackedZip, val);
+      el.textContent = '~' + val;
+      try {
+        const res = await fetch(`https://api.zippopotam.us/us/${val}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        const stateCode = data.places?.[0]?.['state abbreviation'];
+        if (stateCode && US_STATES.some(s => s.code === stateCode)) {
+          trackedState = stateCode;
+          saveTrackedSettings();
+          renderAll();
+        }
+      } catch(e) { /* silently fail — zip saved, state unchanged */ }
+    }
+    function cancel() {
+      if (done) return; done = true;
+      input.replaceWith(el);
+    }
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { e.preventDefault(); commit(); }
+      if (e.key === 'Escape') cancel();
+    });
+    input.addEventListener('blur', commit);
+    el.replaceWith(input);
+    input.focus();
+    input.select();
+  });
+}
+
 // Silently detect state and ZIP from IP — no user prompt
 async function autoDetectState() {
   const savedZip   = localStorage.getItem(STORAGE_KEYS.trackedZip);
@@ -278,6 +325,7 @@ async function autoDetectState() {
     const zipEl = document.getElementById('zipDisplay');
     if (zipEl) zipEl.textContent = '~' + savedZip;
   }
+  initZipEdit();
   // Only skip IP lookup when both state and ZIP are already stored
   if (savedState && savedZip) return;
   try {
@@ -1264,15 +1312,15 @@ function renderHeader(bill, state, num, watching) {
 
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
-      ${bill.isOmnibus ? `<span class="status-badge status-omnibus">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
+      ${bill.isOmnibus ? `<span class="status-badge status-omnibus">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
-      ${isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
-      <div class="bill-number">#${num || ''}</div>
+      <div class="bill-portrait-wrap">
+        <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
+      </div>
     </div>
-    <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
     <div class="bill-title-block">
       <div class="bill-meta-row">
-        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}${escHtml(bill.stageLabel)} · ${escHtml(version)} · ${escHtml(dateDisplay)}</span>
+        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}${escHtml(bill.stageLabel)} · ${escHtml(dateDisplay)}</span>
       </div>
       <div class="bill-title">${escHtml(bill.title)}</div>
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
@@ -1363,7 +1411,7 @@ function renderChangesSection(bill) {
   };
 
   return `<div class="what-changed-section">
-    <div class="what-changed-label">What changed in ${escHtml(bill.version || 'this version')}</div>
+    <div class="what-changed-label">What changed</div>
     <div class="what-changed-grid">
       ${block('Added', '+', 'patch-block--added', added)}
       ${block('Modified', '~', 'patch-block--modified', modified)}
