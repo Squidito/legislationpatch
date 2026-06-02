@@ -3,7 +3,7 @@
   "name": "Richard J. Durbin",
   "party": "D",
   "state": "IL",
-  "bio": "Richard Joseph Durbin is an American politician and attorney serving as the senior United States senator from the state of Illinois, a seat he has held since 1997. A member of the Democratic Party, Durbin is in his fifth Senate term and has served since 2005 as the Senate Democratic Whip and since 2025 as the Senate minority whip. He is the longest-serving Democratic whip since the position was established in 1913.",
+  "bio": "Richard Joseph Durbin is an American politician and attorney serving as the senior United States senator from Illinois, a seat he has held since 1997. A member of the Democratic Party, Durbin is in his fifth Senate term and has served since 2005 as the Senate Democratic Whip and since 2025 as the Senate minority whip. He is the longest-serving Democratic whip since the position was established in 1913.",
   "comments": [
     {
       "billId": null,
@@ -51,6 +51,27 @@
       "billTitle": "One Big Beautiful Bill Act",
       "chamber": "Senate",
       "date": "2025-07-01",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "chamber": "Senate",
+      "date": "2025-06-17",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-S-331",
+      "billTitle": "HALT Fentanyl Act",
+      "chamber": "Senate",
+      "date": "2025-03-14",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "chamber": "Senate",
+      "date": "2025-01-20",
       "vote": "Nay"
     }
   ]

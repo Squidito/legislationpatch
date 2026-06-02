@@ -1242,6 +1242,13 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: center;
 }
+/* Actions col mirrors the rank col: status badge (ENACTED) on top, star centered below */
+.bill-actions-col {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.bill-actions-col .star-btn { margin: auto 0; }
 
 /* Chevron — CSS-drawn in footer row, controllable stroke */
 .chevron {
@@ -1283,7 +1290,7 @@ a:hover { text-decoration: underline; }
   color: var(--text-3);
   border: 1px solid var(--border);
 }
-.status-just-passed {
+.status-enacted {
   background: var(--green);
   color: #fff;
   white-space: normal;
@@ -1296,13 +1303,41 @@ a:hover { text-decoration: underline; }
 }
 .status-omnibus {
   background: var(--amber);
-  color: #7c3d00;
+  color: #ffffff;
   font-size: 0.6rem;
   letter-spacing: 0.04em;
+}
+/* Neutral structural classification (legislative form). Deliberately muted —
+   it describes what kind of bill this is, not how important it is.
+   Constrained to the 48px rank column with wrapping so long labels never spill. */
+.status-type {
+  background: var(--surface-2);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  font-size: 0.5rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  padding: 2px 5px;
+  white-space: nowrap;
 }
 .bill-card--omnibus {
   border-color: var(--amber);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--amber) 35%, transparent), var(--shadow);
+}
+.bill-card--enacted {
+  border-color: var(--green);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--green) 35%, transparent), var(--shadow);
+}
+/* Hoverable tags (type chips, OMNIBUS, ENACTED) carry a plain-English data-tip */
+.status-badge[data-tip] { cursor: help; }
+/* Type chip: rank column on desktop; moves inline into the meta row on mobile */
+.bill-meta-row .status-type { display: none; }
+@media (max-width: 640px) {
+  .bill-rank-col .status-type { display: none; }
+  .bill-meta-row .status-type { display: inline-block; }
+  /* Free the meta line for the type chip: drop the stage words (shown by the
+     ENACTED badge + footer dots anyway) so the chip fits on the same line. */
+  .meta-stage { display: none; }
 }
 
 /* ---- STAR BUTTON — SVG star, crisp at any size ---- */
@@ -1687,6 +1722,7 @@ a:hover { text-decoration: underline; }
   bottom: 0;
   left: -0.4rem;
   right: -0.4rem;
+  pointer-events: none;
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1711,37 +1747,28 @@ a:hover { text-decoration: underline; }
   gap: 0.45rem;
   flex: 1;
   min-width: 0;
-  text-decoration: none;
-  cursor: pointer;
 }
-.shock-quote-rep-link:hover .shock-quote-name { text-decoration: underline; }
 .shock-quote-rep-text { min-width: 0; }
-.shock-quote-text-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex: 1;
-  min-height: 5.5rem;
-  text-decoration: none;
-  color: inherit;
-}
 .shock-quote-card > .shock-quote-text {
   flex: 1;
   display: flex;
   align-items: flex-start;
   min-height: 5.5rem;
 }
-.shock-quote-text-link:hover .shock-quote-text { color: var(--text); }
 .shock-quote-bill {
   font-size: 0.6rem;
   color: var(--text-3);
   font-family: var(--font-mono);
-  margin-top: 0.35rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.shock-quote-text-link:hover .shock-quote-bill { color: var(--purple); }
+.shock-quote-card:hover .shock-quote-bill { color: var(--purple); }
+.shock-quote-bill--link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.shock-quote-bill--link:hover { text-decoration: underline; }
 @media (hover: hover) and (pointer: fine) {
   .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-bill {
     animation: sq-bill-unwrap 0.001s 0.5s forwards;
@@ -1845,9 +1872,8 @@ a:hover { text-decoration: underline; }
 }
 
 @media (pointer: coarse) {
-  /* Links disabled until card is expanded — tap goes to gauge, not the link */
-  .shock-quote-card:not(.sq-expanded) .shock-quote-rep-link,
-  .shock-quote-card:not(.sq-expanded) .shock-quote-text-link {
+  /* Bill link disabled until card is expanded — tap goes to gauge, not the link */
+  .shock-quote-card:not(.sq-expanded) .shock-quote-bill--link {
     pointer-events: none;
   }
 
@@ -3369,6 +3395,10 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   border-color: #fbbf24;
   box-shadow: 0 0 0 1px #fbbf2430, var(--shadow);
 }
+[data-theme="dark"] .bill-card--enacted {
+  border-color: #34d399;
+  box-shadow: 0 0 0 1px #34d39930, var(--shadow);
+}
 
 [data-theme="dark"] .expand-full-btn {
   background: var(--purple);
@@ -3428,7 +3458,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   border-color: var(--text-2);
 }
 
-[data-theme="dark"] .status-just-passed {
+[data-theme="dark"] .status-enacted {
   background: var(--green);
   color: #000;
 }
@@ -4692,4 +4722,11 @@ a.vote-member:hover { background: var(--surface-2); }
   transition: opacity 0.12s ease;
   z-index: 9999;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Sentence-length tips (tag descriptions) wrap; acronym tips stay single-line */
+.acronym-tooltip--wide {
+  white-space: normal;
+  max-width: 230px;
+  text-align: center;
+  line-height: 1.35;
 }

@@ -5,7 +5,7 @@
   "state": "SD",
   "role": "Senator",
   "district": null,
-  "bio": "John Randolph Thune is an American politician serving as the senior United States senator from South Dakota, a seat he has held since 2005. From 1997 to 2003, Thune served as the U.S. representative for South Dakota's at-large congressional district. A member of the Republican Party, Thune has served since 2025 as Senate majority leader and Senate Republican leader.",
+  "bio": "John Randolph Thune is an American politician serving as the senior United States senator from South Dakota, a seat he has held since 2005. A member of the Republican Party, Thune has served since 2025 as Senate majority leader and Senate Republican leader. From 1997 to 2003, Thune served as the U.S. representative for South Dakota's at-large congressional district.",
   "comments": [
     {
       "billId": "119-HJRES-140",
@@ -47,6 +47,15 @@
       "source": "Senate Floor, May 11, 2026",
       "granuleTitle": null,
       "date": "May 11, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "support",
+      "text": "What I consider to be the most consequential action not just of this majority but of my entire time in the Senate is the Working Families Tax Cut—because of the permanent tax relief Republicans delivered in this bill, tax relief that puts more money in hard-working Americans' pockets.",
+      "source": "Senate Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
     }
   ],
   "bioSource": "wikipedia",
@@ -78,6 +87,27 @@
       "billTitle": "One Big Beautiful Bill Act",
       "chamber": "Senate",
       "date": "2025-07-01",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "chamber": "Senate",
+      "date": "2025-06-17",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-331",
+      "billTitle": "HALT Fentanyl Act",
+      "chamber": "Senate",
+      "date": "2025-03-14",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "chamber": "Senate",
+      "date": "2025-01-20",
       "vote": "Yea"
     }
   ]

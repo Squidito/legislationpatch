@@ -12,6 +12,16 @@ const CONGRESS_API_KEY    = process.env.CONGRESS_API_KEY;
 const CONGRESS_SESSION    = parseInt(process.env.CONGRESS_SESSION || '119', 10);
 const CACHE_FILE          = path.join(__dirname, '../data/cache.json');
 const OUTPUT_FILE         = path.join(__dirname, '../data/bills_raw.json');
+const LAST_FETCH_FILE     = path.join(__dirname, '../data/last-fetch.json');
+
+function loadFetchCutoff() {
+    try {
+        const { lastRun } = JSON.parse(fs.readFileSync(LAST_FETCH_FILE, 'utf8'));
+        return new Date(new Date(lastRun).getTime() - 3 * 24 * 60 * 60 * 1000);
+    } catch {
+        return new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+    }
+}
 const PRIOR_YEAR_MAP_FILE = path.join(__dirname, 'prior-year-map.json');
 const BILL_TEXT_DIR       = path.join(__dirname, '../data/bill-text');
 
@@ -41,7 +51,7 @@ function cleanBillHTML(html) {
         .trim();
 }
 
-function detectStage(latestActionText) {
+function detectStage(latestActionText, billType) {
     const t = (latestActionText || '').toLowerCase();
     if (t.includes('signed by president') || t.includes('became public law') || t.includes('enacted'))
         return { key: 'signed', label: 'Signed into Law', step: 4 };
@@ -51,10 +61,38 @@ function detectStage(latestActionText) {
         return { key: 'house', label: 'Passed House', step: 2 };
     if (t.includes('union calendar') || t.includes('house calendar') || t.includes('senate calendar') || t.includes('placed on the calendar') || t.includes('calendar no'))
         return { key: 'committee', label: 'On House Calendar', step: 1 };
-    if (t.includes('reported by') || t.includes('ordered to be reported') || t.includes('referred to'))
+    if (t.includes('reported by') || t.includes('ordered to be reported') || t.includes('referred to')) {
+        // House-originated bills only receive Senate committee actions after passing the House.
+        // Senate markup actions start with the committee name ("Committee on X. Ordered to be reported..."),
+        // whereas House markup says "Ordered to be Reported by...". Detect Senate-side activity and
+        // infer the bill has already cleared the House floor.
+        const houseOrigin = billType && /^H(R|JRES|CONRES|RES)$/i.test(billType);
+        const senateSide  = t.startsWith('committee on') || (t.includes('senate') && !t.includes('referred to the house'));
+        if (houseOrigin && senateSide)
+            return { key: 'house', label: 'Passed House', step: 2 };
         return { key: 'committee', label: 'In Committee', step: 1 };
+    }
     return { key: 'introduced', label: 'Introduced', step: 0 };
 }
+
+// ─── BILL INCLUSION CRITERIA ─────────────────────────────────────────────────
+//
+// INCLUDE (anything with floor time that doesn't match a skip rule below):
+//   - Named legislation (HR, S, HJRES, SJRES) — core content
+//   - War powers resolutions (HCONRES/SCONRES directing troop removal)
+//   - CRA disapproval resolutions — substantive regulation reversals
+//   - Censure resolutions — rare, historically significant formal rebukes
+//   - Impeachment articles — only when they reach a floor vote (stage >= 2)
+//   - Commemorative medals / coins — small, infrequent, worth a note
+//
+// SKIP (DOA_ACTIONS): bills stuck at introduction / referral with no floor time.
+//
+// SKIP (SKIP_TITLE_PATTERNS): procedural floor rules, administrative
+//   housekeeping, non-binding sense resolutions, facility naming, memorials.
+//
+// DEFERRED — tribal / land transfer bills: strategy (bundle or skip) TBD.
+//
+// ─────────────────────────────────────────────────────────────────────────────
 
 const DOA_ACTIONS = [
     'introduced in', 'read twice and referred', 'referred to the committee',
@@ -62,10 +100,35 @@ const DOA_ACTIONS = [
 ];
 
 const SKIP_TITLE_PATTERNS = [
-    'technical correction', 'clerical amendment', 'to designate the facility',
-    'to name the ', 'expressing the sense of congress', 'expressing the sense of the',
-    'recognizing the', 'honoring the', 'commending the', 'electing members to',
-    'electing a member to', 'expressing the profound sorrow', 'on the death of',
+    // Procedural floor resolutions — set debate rules for another bill, no own content
+    'providing for consideration of',
+    'providing for the hour of meeting',
+    'fixing the daily hour of meeting',
+    'providing that section',           // in-session rules adjustments
+    // Administrative housekeeping
+    'to inform the senate that',
+    'directing the clerk of the house',
+    'requesting return of official papers',
+    'adopting the rules of the house',
+    // Technical / editorial — no policy content
+    'technical correction',
+    'clerical amendment',
+    // Facility / infrastructure naming
+    'to designate the facility',
+    'to name the ',
+    // Non-binding sense resolutions
+    'expressing the sense of congress',
+    'expressing the sense of the',
+    // Commemorative recognitions (medals handled separately under includes)
+    'recognizing the',
+    'honoring the',
+    'commending the',
+    // Committee assignment procedurals
+    'electing members to',
+    'electing a member to',
+    // Memorial resolutions
+    'expressing the profound sorrow',
+    'on the death of',
 ];
 
 function formatBillTypeForRecord(type) {
@@ -103,23 +166,40 @@ async function fetchRecentLaws(limit = 20) {
     } catch (e) { console.error('Law endpoint error:', e.message); return []; }
 }
 
-async function fetchRecentBills(limit = 20) {
-    console.log(`[1b] Fetching ${limit} recent bills...`);
-    const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}?sort=updateDate+desc&limit=${limit}&format=json&api_key=${CONGRESS_API_KEY}`;
-    await sleep(4000);
-    try {
-        const res  = await fetch(url);
-        if (!res.ok) throw new Error(`Congress API Error: ${res.status}`);
-        const data = await res.json();
-        return (data.bills || []).filter(b => {
-            const action = (b.latestAction?.text || '').toLowerCase();
-            const title  = (b.title || '').toLowerCase();
-            if (DOA_ACTIONS.some(p => action.includes(p))) return false;
-            if (SKIP_TITLE_PATTERNS.some(p => title.includes(p))) return false;
-            if (detectStage(b.latestAction?.text || '').step < 2) return false;
-            return true;
-        });
-    } catch (e) { console.error('Failed to fetch bills:', e.message); return []; }
+async function fetchRecentBills(cutoff = loadFetchCutoff()) {
+    console.log('[1b] Fetching recently updated bills...');
+    const PAGE    = 250; // API max per request
+    const results = [];
+    let   offset  = 0;
+    let   done    = false;
+
+    while (!done) {
+        const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}?sort=updateDate+desc&limit=${PAGE}&offset=${offset}&format=json&api_key=${CONGRESS_API_KEY}`;
+        await sleep(offset === 0 ? 4000 : 2000);
+        try {
+            const res  = await fetch(url);
+            if (!res.ok) throw new Error(`Congress API Error: ${res.status}`);
+            const data = await res.json();
+            const page = data.bills || [];
+            if (!page.length) break;
+
+            for (const b of page) {
+                if (new Date(b.updateDate) < cutoff) { done = true; break; }
+                const action = (b.latestAction?.text || '').toLowerCase();
+                const title  = (b.title || '').toLowerCase();
+                if (DOA_ACTIONS.some(p => action.includes(p))) continue;
+                if (SKIP_TITLE_PATTERNS.some(p => title.includes(p))) continue;
+                if (detectStage(b.latestAction?.text || '', b.type).step < 2) continue;
+                results.push(b);
+            }
+
+            if (!data.pagination?.next) break;
+            offset += PAGE;
+        } catch (e) { console.error('Failed to fetch bills:', e.message); break; }
+    }
+
+    console.log(`   Found ${results.length} qualifying bill(s) with floor time in 6-month window.`);
+    return results;
 }
 
 async function fetchSpecificBill(type, number) {
@@ -219,20 +299,37 @@ function splitIntoDivisions(displayText) {
 async function fetchBillText(congress, type, number) {
     const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/text?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(4000);
-    try {
-        const res  = await fetch(url);
-        const data = await res.json();
-        if (!data.textVersions?.length) return { display: '', analysis: '' };
-        const version    = data.textVersions[data.textVersions.length - 1];
-        const textFormat = version.formats.find(f => f.type === 'Formatted Text') || version.formats[0];
-        if (!textFormat) return { display: '', analysis: '' };
-        await sleep(1000);
-        const raw = await (await fetch(textFormat.url)).text();
-        return {
-            display:  cleanBillHTML(raw),
-            analysis: cleanHTML(raw),
-        };
-    } catch (e) { console.error('Bill text error:', e.message); return { display: '', analysis: '' }; }
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+            const res  = await fetch(url);
+            const data = await res.json();
+            if (!data.textVersions?.length) {
+                console.log(`  [text] No text versions listed on Congress.gov for ${congress}-${type}-${number}`);
+                return { display: '', analysis: '' };
+            }
+            const version    = data.textVersions[data.textVersions.length - 1];
+            const textFormat = version.formats.find(f => f.type === 'Formatted Text') || version.formats[0];
+            if (!textFormat) {
+                console.log(`  [text] No usable format for ${congress}-${type}-${number} (version: ${version.type})`);
+                return { display: '', analysis: '' };
+            }
+            await sleep(1000);
+            const rawRes = await fetch(textFormat.url);
+            if (!rawRes.ok) throw new Error(`Text URL returned HTTP ${rawRes.status}`);
+            const raw = await rawRes.text();
+            if (!raw?.trim()) throw new Error('Text URL returned empty body');
+            console.log(`  [text] Fetched ${Math.round(raw.length/1000)}K chars (${version.type}) on attempt ${attempt}`);
+            return {
+                display:  cleanBillHTML(raw),
+                analysis: cleanHTML(raw),
+            };
+        } catch (e) {
+            console.error(`  [text] Attempt ${attempt}/3 failed for ${congress}-${type}-${number}: ${e.message}`);
+            if (attempt < 3) await sleep(5000 * attempt);
+        }
+    }
+    console.error(`  [text] All 3 attempts failed — bill will be skipped (no text available).`);
+    return { display: '', analysis: '' };
 }
 
 async function fetchBillMetadata(congress, type, number) {
@@ -415,7 +512,7 @@ async function processBillEntry(congress, type, number, title) {
     if (!billTextResult.analysis) { console.log('  No text available — skipping.'); return null; }
     const actionDate = meta?.latestAction?.actionDate || '';
     const cr = await fetchCongressionalRecord(actionDate, type, number);
-    const stage = detectStage(meta?.latestAction?.text || '');
+    const stage = detectStage(meta?.latestAction?.text || '', type);
     console.log(`  Text: ${billTextResult.analysis.length} chars | CRS: ${crs.length} chars | CR: ${cr.length > 0 ? cr.length + ' chars' : 'none'} | Stage: ${stage.label}`);
 
     // Prior-year appropriations comparison
@@ -565,6 +662,7 @@ async function main() {
     }
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+    fs.writeFileSync(LAST_FETCH_FILE, JSON.stringify({ lastRun: new Date().toISOString() }));
     console.log(`\nDone. Saved ${results.length} bills to ${OUTPUT_FILE}`);
     results.forEach(r => console.log(`  ${r.billId} — ${r.title} [${r.stageLabel}]`));
 }

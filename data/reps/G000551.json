@@ -16,5 +16,14 @@
   "role": "Representative",
   "district": 7,
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Grijalva"
+  "bioUrl": "https://en.wikipedia.org/wiki/Ra%C3%BAl_Grijalva",
+  "voteHistory": [
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "chamber": "House",
+      "date": "2025-01-22",
+      "vote": "Not Voting"
+    }
+  ]
 }

@@ -168,13 +168,9 @@ function showError(on, msg) {
 
 // ---- Filters ----
 
-function isJustPassed(bill) {
-  if (bill.stage !== 'signed') return false;
-  try {
-    const ref = bill.enactedDate || bill.date;
-    const daysDiff = (Date.now() - new Date(ref).getTime()) / (1000 * 60 * 60 * 24);
-    return daysDiff <= 30;
-  } catch (e) { return false; }
+// "Enacted" = signed into law (stage 'signed'). Permanent once enacted — no time window.
+function isEnacted(bill) {
+  return bill && bill.stage === 'signed';
 }
 
 function setupFilters() {
@@ -806,19 +802,25 @@ function setupCarousel() {
     });
   }
 
-  let isDragging = false, startX = 0, startCurrentX = 0;
+  let isDragging = false, startX = 0, startCurrentX = 0, didDrag = false;
   grid.addEventListener('mousedown', e => {
     isDragging    = true;
+    didDrag       = false;
     startX        = e.pageX;
     startCurrentX = currentX;
     grid.classList.add('dragging');
-    e.preventDefault();
   });
   grid.addEventListener('mouseup', () => { isDragging = false; grid.classList.remove('dragging'); });
   grid.addEventListener('mousemove', e => {
     if (!isDragging) return;
-    currentX = startCurrentX + (e.pageX - startX) * 1.8;
+    const dx = e.pageX - startX;
+    if (Math.abs(dx) > 4) didDrag = true;
+    currentX = startCurrentX + dx * 1.8;
   });
+  // Swallow clicks that followed an actual drag so links don't fire after scrolling
+  grid.addEventListener('click', e => {
+    if (didDrag) { didDrag = false; e.preventDefault(); e.stopPropagation(); }
+  }, true);
 
   grid.addEventListener('touchstart', e => {
     startX        = e.touches[0].pageX;
@@ -1226,7 +1228,7 @@ function renderShockQuotesSection() {
     const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}${repRef}` : null;
     const billInCache = q.billId && allBills.some(b => b.id === q.billId);
     const billHref = q.billId
-      ? (billInCache ? `#card-${escHtml(q.billId)}` : `bill-pending.html?id=${escHtml(q.billId)}`)
+      ? (billInCache ? `bill?id=${escHtml(q.billId)}` : `bill-pending?id=${escHtml(q.billId)}`)
       : null;
 
     const portraitInner = `
@@ -1238,22 +1240,18 @@ function renderShockQuotesSection() {
         <div class="shock-quote-source">${escHtml(q.source || '')}</div>
       </div>`;
 
-    const headerArea = repHref
-      ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
-      : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
+    const headerArea = `<div class="shock-quote-rep-link">${portraitInner}</div>`;
 
-    const quoteLink = billHref || repHref;
-    const quoteBody = quoteLink
-      ? `<a href="${quoteLink}" class="shock-quote-text-link">
-          <div class="shock-quote-text">"${escHtml(q.text)}"</div>
-          ${q.billTitle ? `<div class="shock-quote-bill">${escHtml(q.billTitle)}</div>` : ''}
-        </a>`
-      : `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
+    const quoteBody = `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
+    const billFooter = billHref && q.billTitle
+      ? `<a href="${billHref}" class="shock-quote-bill shock-quote-bill--link">${escHtml(q.billTitle)}</a>`
+      : `<div class="shock-quote-bill">${q.billTitle ? escHtml(q.billTitle) : 'Floor Statement'}</div>`;
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
       <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="8.5" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
       <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
+      ${billFooter}
     </div>`;
   }).join('');
 
@@ -1271,7 +1269,7 @@ function renderBill(bill, num) {
   const state    = openCards.get(bill.id);
   const col      = likelihoodColor(bill.likelihood);
   const watching = watchedBills.has(bill.id);
-  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : ''}" id="card-${bill.id}">
+  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : (isEnacted(bill) ? ' bill-card--enacted' : '')}" id="card-${bill.id}">
     ${renderHeader(bill, state, num, watching)}
     ${renderLikelihoodFooter(bill, col, state)}
     ${renderMinorBody(bill, col, state === 'minor')}
@@ -1312,21 +1310,24 @@ function renderHeader(bill, state, num, watching) {
 
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
-      ${bill.isOmnibus ? `<span class="status-badge status-omnibus">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : isJustPassed(bill) ? `<span class="status-badge status-just-passed">JUST<br>PASSED</span>` : ''}
+      ${bill.isOmnibus ? `<span class="status-badge status-omnibus" data-tip="A large package bill bundling many measures or a full-year appropriations act into one.">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
+      ${billTypeBadge(bill)}
       <div class="bill-portrait-wrap">
         <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
       </div>
     </div>
     <div class="bill-title-block">
       <div class="bill-meta-row">
-        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}${escHtml(bill.stageLabel)} · ${escHtml(dateDisplay)}</span>
+        ${billTypeBadge(bill, true)}
+        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}<span class="meta-stage">${escHtml(bill.stageLabel)} · </span>${escHtml(dateDisplay)}</span>
       </div>
       <div class="bill-title">${escHtml(bill.title)}</div>
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
       <div class="bill-meta">${escHtml(sponsorMeta)}</div>
     </div>
     <div class="bill-actions-col">
+      ${isEnacted(bill) && !bill.isOmnibus ? `<span class="status-badge status-enacted" data-tip="Signed into law.">ENACTED</span>` : ''}
       <button class="star-btn${watching ? ' watching' : ''}" onclick="toggleWatch('${bill.id}', event)" title="${watching ? 'Unwatch' : 'Watch this bill'}">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="${watching ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
           <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
@@ -1925,6 +1926,35 @@ function toggleDetail(key) {
 // ---- AI Analysis ----
 
 // ---- Helpers ----
+
+// Neutral structural classification of a bill's legislative form (not a value judgment).
+// On index cards, omnibus bills already carry the OMNIBUS badge, so the type chip is
+// suppressed there to avoid redundancy. On the full bill page (window.BILL_PAGE_ID), the
+// structural type is shown for every bill, omnibus included.
+const BILL_TYPE_LABELS = {
+  framework: 'FRAMEWORK', amendment: 'AMENDMENT', appropriation: 'FUNDING',
+  reauthorization: 'EXTENSION', resolution: 'RESOLUTION', study: 'STUDY'
+};
+// Plain-English hover descriptions (data-tip → styled tooltip, same system as acronyms.js).
+const BILL_TYPE_TIPS = {
+  framework: 'Creates a brand-new federal regulatory regime, rather than changing existing law.',
+  amendment: 'Changes existing law — adjusting statutes, requirements, penalties, or thresholds.',
+  appropriation: 'Primarily provides or authorizes federal funding.',
+  reauthorization: 'Extends or renews an existing program, authority, or deadline.',
+  resolution: 'A congressional resolution — e.g. disapproving a rule or directing the President — not a standalone law.',
+  study: 'Directs a government study, review, or report, without itself changing the law.'
+};
+// inline=true renders the meta-row variant (mobile), without the hover tooltip;
+// CSS shows the rank-column chip on desktop and the inline one on mobile.
+function billTypeBadge(bill, inline) {
+  if (!bill || !bill.billType) return '';
+  if (bill.isOmnibus && !window.BILL_PAGE_ID) return '';
+  const label = BILL_TYPE_LABELS[bill.billType];
+  if (!label) return '';
+  if (inline) return `<span class="status-badge status-type">${label}</span>`;
+  const tip = BILL_TYPE_TIPS[bill.billType] || '';
+  return `<span class="status-badge status-type" data-tip="${escHtml(tip)}">${label}</span>`;
+}
 
 function badgeClass(stage) {
   return { senate: 'badge-senate', house: 'badge-house', signed: 'badge-signed',

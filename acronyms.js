@@ -95,6 +95,12 @@ const ACRONYMS = {
   // Financial / oversight
   CFIUS:  'Committee on Foreign Investment in the United States',
   CFTC:   'Commodity Futures Trading Commission',
+  CBDC:   'Central Bank Digital Currency',
+  GAAP:   'Generally Accepted Accounting Principles',
+  // Elections / voting
+  NVRA:   'National Voter Registration Act',
+  // Immigration law
+  INA:    'Immigration and Nationality Act',
   // Infrastructure / cyber
   'ARPA-I': 'Advanced Research Projects Agency–Infrastructure',
   NCPS:   'National Cybersecurity Protection System',
@@ -117,7 +123,10 @@ function _getTooltipEl() {
 
 function _showTooltip(anchorEl) {
   const el = _getTooltipEl();
-  el.textContent = anchorEl.getAttribute('data-full');
+  // .acronym-tip uses data-full (short, single-line); generic tags use data-tip (sentence, wraps)
+  const isTip = anchorEl.hasAttribute('data-tip');
+  el.textContent = isTip ? anchorEl.getAttribute('data-tip') : anchorEl.getAttribute('data-full');
+  el.classList.toggle('acronym-tooltip--wide', isTip);
 
   // Park off-screen to measure dimensions before positioning
   el.style.left = '-9999px';
@@ -148,7 +157,7 @@ function _hideTooltip() {
 // Attach global delegation once (browser only)
 if (typeof document !== 'undefined') (function () {
   document.addEventListener('mouseover', function (e) {
-    var tip = e.target && e.target.closest && e.target.closest('.acronym-tip');
+    var tip = e.target && e.target.closest && e.target.closest('.acronym-tip, [data-tip]');
     if (tip) {
       _showTooltip(tip);
     } else {

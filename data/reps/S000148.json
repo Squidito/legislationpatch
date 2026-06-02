@@ -145,6 +145,15 @@
       "source": "Senate Floor, May 14, 2026",
       "granuleTitle": null,
       "date": "May 14, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "Donald Trump settles with himself in his own lawsuit against his own government to funnel taxpayer money to his political allies, January 6 insurrectionists, and far-right loyalists. That is not justice. That is not law and order. That is corruption—corruption in broad daylight—no disguise, no shame, no attempt to hide it.",
+      "source": "Senate Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
     }
   ],
   "role": "Senator",
@@ -178,6 +187,27 @@
       "billTitle": "One Big Beautiful Bill Act",
       "chamber": "Senate",
       "date": "2025-07-01",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "chamber": "Senate",
+      "date": "2025-06-17",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-S-331",
+      "billTitle": "HALT Fentanyl Act",
+      "chamber": "Senate",
+      "date": "2025-03-14",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "chamber": "Senate",
+      "date": "2025-01-20",
       "vote": "Nay"
     }
   ]

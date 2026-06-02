@@ -8,5 +8,14 @@
   "bio": "James David Vance is an American politician and author serving as the 50th vice president of the United States. A member of the Republican Party, he represented Ohio in the United States Senate from 2023 to 2025.",
   "comments": [],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/JD_Vance"
+  "bioUrl": "https://en.wikipedia.org/wiki/JD_Vance",
+  "voteHistory": [
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "chamber": "Senate",
+      "date": "2025-01-09",
+      "vote": "Yea"
+    }
+  ]
 }

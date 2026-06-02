@@ -125,6 +125,43 @@ section('Section label format');
     if (issues === 0) pass('All section labels auto-parse or have explicit billSection');
 }
 
+// ── Check: pages field vs actual bill text file ────────────────────────────
+//
+// All analyses MUST be sourced from the actual bill text fetched from Congress.gov.
+// Training knowledge is not a valid source — it cannot be verified and may be wrong.
+//
+// Rules enforced here:
+//  1. If data/bill-text/{id}.txt exists and is non-trivial (>500 bytes), pages must be > 0.
+//     pages:0 with a real text file means the analysis was written without reading the text.
+//  2. The pages value should be roughly proportional to the file size (~2200 chars/page).
+//     A large mismatch (e.g. pages:0 while the file is 100K bytes) is a hard error.
+
+section('Bill text sourcing integrity');
+{
+    let allOk = true;
+    bills.forEach(b => {
+        if (!b.analyzed) return;
+        const txtFile = path.join(BILL_TEXT, `${b.id}.txt`);
+        if (!fs.existsSync(txtFile)) return; // missing file caught by earlier check
+
+        const fileBytes = fs.statSync(txtFile).size;
+        if (fileBytes < 500) return; // trivially short — pages:0 is fine
+
+        if (b.pages === 0) {
+            fail(`${b.id}: pages:0 but data/bill-text/${b.id}.txt exists (${Math.round(fileBytes/1000)}K bytes) — analysis was written without reading the bill text. Re-fetch and reanalyze.`);
+            allOk = false;
+            return;
+        }
+
+        // Sanity-check pages is in the right ballpark (1 page ≈ 2200 chars)
+        const estPages = Math.round(fileBytes / 2200);
+        if (b.pages > 0 && estPages > 0 && b.pages < Math.round(estPages * 0.1)) {
+            warn(`${b.id}: pages:${b.pages} but text file suggests ~${estPages} pages — pages field may be stale`);
+        }
+    });
+    if (allOk) pass('All analyzed bills have pages field consistent with text file');
+}
+
 // ── Check: raw dollar amounts ──────────────────────────────────────────────
 
 section('Dollar amount formatting');
