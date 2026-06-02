@@ -22,7 +22,6 @@ const entry = {
   "cosponsors": 0,
   "pages": 700,
   "analyzed": true,
-  "live": false,
   "demo": false,
   "enactedDate": "Feb 3, 2026",
   "stageDate": "Feb 3, 2026",

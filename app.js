@@ -1278,16 +1278,47 @@ function renderBill(bill, num) {
 }
 
 function formatDateCompact(dateStr) {
+  if (!dateStr) return '';
+  const s = String(dateStr).trim();
+  // ISO YYYY-MM-DD: format the parts directly so there's no UTC/local day shift.
+  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) return `${iso[2]}-${iso[3]}-${iso[1].slice(-2)}`;
+  // Fallback for any legacy/human format (parsed as local midnight).
   try {
-    const d = new Date(dateStr);
-    if (isNaN(d)) return dateStr;
+    const d = new Date(s);
+    if (isNaN(d)) return s;
     const dd = String(d.getDate()).padStart(2,'0');
     const mm = String(d.getMonth()+1).padStart(2,'0');
     const yy = String(d.getFullYear()).slice(-2);
-    return `${mm}/${dd}/${yy}`;
-  } catch(e) { return dateStr; }
+    return `${mm}-${dd}-${yy}`;
+  } catch(e) { return s; }
 }
 
+
+// "Sen. Britt, Katie Boyd (R-AL)" -> "BRITT (R-AL)" — last name + party/state, caps.
+function sponsorShort(name) {
+  const raw = String(name || '').trim();
+  if (!raw) return '';
+  const psMatch = raw.match(/\(([^)]+)\)\s*$/);
+  const partyState = psMatch ? psMatch[1].trim() : '';
+  const core = raw
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.)\s+/, '')
+    .trim();
+  let last;
+  if (core.includes(',')) {
+    last = core.split(',')[0].trim();
+  } else {
+    const SUFFIX = new Set(['jr', 'sr', 'ii', 'iii', 'iv', 'v', 'jr.', 'sr.']);
+    const parts = core.split(' ').filter(Boolean);
+    last = core;
+    for (let i = parts.length - 1; i >= 0; i--) {
+      if (!SUFFIX.has(parts[i].toLowerCase())) { last = parts[i]; break; }
+    }
+  }
+  const out = last.toUpperCase();
+  return partyState ? `${out} (${partyState})` : out;
+}
 
 function renderHeader(bill, state, num, watching) {
   const isOpen     = !!state;
@@ -1298,19 +1329,22 @@ function renderHeader(bill, state, num, watching) {
   const version      = bill.version || 'v1.0';
   const introDate    = formatDateCompact(bill.date);
   const stageDateStr = formatDateCompact(bill.stageDate || bill.enactedDate || '');
-  const dateDisplay  = stageDateStr && stageDateStr !== introDate
-    ? `${introDate} → ${stageDateStr}`
-    : introDate;
+  // Single date = when the bill reached its current stage (its most recent update),
+  // paired with the stage label which says what that update was. Matches mobile.
+  const dateDisplay  = stageDateStr || introDate;
 
+  // Compact sponsor/stats row: "BRITT (R-AL) · 53 COSPONSORS · 4 PAGES · 04/28/25 → 01/29/25"
+  // (date relocated here off the meta line; last name only; plurals corrected)
   const sponsorMeta = [
-    `SPONSOR · ${bill.sponsor.toUpperCase()}`,
-    cosponsors ? `${cosponsors} COSPONSORS` : null,
-    pages ? `${pages} PAGES` : null
+    sponsorShort(bill.sponsor),
+    cosponsors ? `${cosponsors} COSPONSOR${cosponsors === 1 ? '' : 'S'}` : null,
+    pages ? `${pages} PAGE${pages === 1 ? '' : 'S'}` : null,
+    dateDisplay || null
   ].filter(Boolean).join(' · ');
 
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
-      ${bill.isOmnibus ? `<span class="status-badge status-omnibus" data-tip="A large package bill bundling many measures or a full-year appropriations act into one.">OMNIBUS</span>` : bill.live ? `<span class="status-badge status-live">LIVE</span>` : ''}
+      ${bill.isOmnibus ? `<span class="status-badge status-omnibus" data-tip="A large package bill bundling many measures or a full-year appropriations act into one.">OMNIBUS</span>` : ''}
       ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
       ${billTypeBadge(bill)}
       <div class="bill-portrait-wrap">
@@ -1320,7 +1354,7 @@ function renderHeader(bill, state, num, watching) {
     <div class="bill-title-block">
       <div class="bill-meta-row">
         ${billTypeBadge(bill, true)}
-        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) + ' · ' : ''}<span class="meta-stage">${escHtml(bill.stageLabel)} · </span>${escHtml(dateDisplay)}</span>
+        <span class="bill-meta-compact">${bill.code ? escHtml(bill.code.replace('.', ' ')) : ''}<span class="meta-stage"> · ${escHtml(bill.stageLabel)}</span></span>
       </div>
       <div class="bill-title">${escHtml(bill.title)}</div>
       ${bill.summary ? `<div class="bill-summary">${escHtml(bill.summary)}</div>` : ''}
@@ -1988,7 +2022,8 @@ function escHtml(str) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 }
 
 // Renders prose text replacing bill code references (H.R. 1234, S. 40, etc.) with

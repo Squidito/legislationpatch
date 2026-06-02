@@ -4,7 +4,13 @@
   "description": "U.S. federal legislation explained in plain English — patch notes style.",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "batch": "node scripts/run-batch.js",
+    "batch:post": "node scripts/run-batch.js --post",
+    "batch:fetch": "node scripts/run-batch.js --fetch-only",
+    "validate": "node scripts/validate-batch.js",
+    "sitemap": "node scripts/generate_sitemap.js",
+    "reps": "node scripts/generate_reps.js",
+    "test": "node scripts/validate-batch.js"
   },
   "repository": {
     "type": "git",

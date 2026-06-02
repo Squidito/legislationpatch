@@ -27,6 +27,40 @@ let crRaw = [];
 try { crRaw = JSON.parse(fs.readFileSync(path.join(DATA, 'cr_raw.json'), 'utf8')); }
 catch (e) {}
 
+// --strict: treat warnings as blocking too (used by the QA loop to detect a
+// truly "perfect" pass — 0 errors AND 0 warnings).
+const STRICT = process.argv.includes('--strict');
+
+let ACRONYMS = {};
+try { ACRONYMS = require('../acronyms.js').ACRONYMS || {}; } catch (e) {}
+
+// ── Shared helpers ─────────────────────────────────────────────────────────
+
+function billText(id) {
+    try { return fs.readFileSync(path.join(BILL_TEXT, `${id}.txt`), 'utf8'); }
+    catch { return ''; }
+}
+
+const digitsOnly = s => String(s).replace(/[,\s]/g, '');
+
+// Concatenate the prose fields that describe the BILL'S OWN CONTENT (so figures
+// in them must be sourced from the bill text). Deliberately excludes criticisms
+// and likelihoodReason — those cite outside context (vote counts, dates, politics).
+function contentProse(bill) {
+    const out = [];
+    const walk = (obj) => {
+        if (typeof obj === 'string') out.push(obj);
+        else if (Array.isArray(obj)) obj.forEach(walk);
+        else if (obj && typeof obj === 'object') {
+            const SKIP = new Set(['billSection', 'why_unreported']);
+            for (const [k, v] of Object.entries(obj)) if (!SKIP.has(k)) walk(v);
+        }
+    };
+    ['summary', 'brief', 'top_lines', 'sections', 'underreported', 'gaps', 'changes', 'divisions']
+        .forEach(f => walk(bill[f]));
+    return out.join('  ');
+}
+
 // ── Reporting ──────────────────────────────────────────────────────────────
 
 let errors = 0, warnings = 0;
@@ -356,7 +390,7 @@ section('Quote quality audit');
     }
 
     let quoteIssues = 0;
-    const analyzedBills = bills.filter(b => b.analyzed && !b.demo && !b.live);
+    const analyzedBills = bills.filter(b => b.analyzed && !b.demo);
 
     for (const bill of analyzedBills) {
         const qs = bill.featured_quotes || [];
@@ -413,17 +447,196 @@ section('Quote quality audit');
     }
 }
 
+// ── Check: quote attribution (bioguide ↔ rep name/state) ───────────────────
+//
+// Floor quotes are attributed by surname ("Ms. SMITH of Minnesota"); a bioguideId
+// matched on surname ALONE grabs the wrong person when surnames repeat (Smith,
+// Mann, Johnson…) → wrong photo. This cross-checks every quote's bioguideId
+// against reps-index.json: surname must appear in the rep's name (ERROR if not —
+// wrong person), and the quote's state should match the rep's (WARN — likely a
+// state typo or a same-surname mixup).
+
+section('Quote attribution (bioguide ↔ rep)');
+{
+    let repsIdx = null;
+    try { repsIdx = JSON.parse(fs.readFileSync(path.join(DATA, 'reps-index.json'), 'utf8')); } catch (e) {}
+    if (!repsIdx) {
+        warn('reps-index.json not loaded — skipping attribution check');
+    } else {
+        const byId = {};
+        (function w(o) {
+            if (Array.isArray(o)) o.forEach(w);
+            else if (o && typeof o === 'object') {
+                if (o.bioguideId && o.name) byId[o.bioguideId] = { name: o.name, state: o.state, party: o.party };
+                Object.values(o).forEach(w);
+            }
+        })(repsIdx);
+
+        // Normalize: drop hyphens/apostrophes (so "Ocasio-Cortez" stays one token),
+        // then turn any other punctuation into spaces.
+        const norm = (s) => String(s || '').toLowerCase().replace(/['’\-]/g, '').replace(/[^a-z\s]/g, ' ');
+        const surnameOf = (n) => {
+            const t = norm(String(n || '').replace(/^(Mr|Mrs|Ms|Dr|Sen|Rep)\.?\s+/i, '')).trim().split(/\s+/).filter(Boolean);
+            return t[t.length - 1] || '';
+        };
+        const repTokens = (n) => norm(n).trim().split(/\s+/).filter(Boolean);
+
+        let issues = 0;
+        const check = (q, where) => {
+            if (!q.bioguideId) return;
+            const rep = byId[q.bioguideId];
+            if (!rep) { warn(`${where}: "${q.name}" bioguide ${q.bioguideId} not in reps-index`); issues++; return; }
+            const sn = surnameOf(q.name);
+            if (sn && !repTokens(rep.name).includes(sn)) {
+                fail(`${where}: "${q.name}" (${q.party || '?'}-${q.state || '?'}) → bioguide ${q.bioguideId} is ${rep.name} (${rep.party}-${rep.state}) — WRONG PERSON (surname mismatch)`);
+                issues++;
+            } else if (q.state && rep.state && q.state !== rep.state) {
+                warn(`${where}: "${q.name}" state=${q.state} but bioguide ${q.bioguideId} = ${rep.name} is ${rep.state} — verify`);
+                issues++;
+            }
+        };
+        for (const b of bills) for (const q of (b.featured_quotes || [])) check(q, b.id);
+        for (const q of (quotes.quotes || [])) check(q, 'quotes.json');
+        if (issues === 0) pass('All quote bioguideIds match the rep name/state');
+    }
+}
+
+// ── Check: date format (ISO storage) ───────────────────────────────────────
+//
+// Dates MUST be stored ISO (YYYY-MM-DD). Human formats like "May 19, 2026" break
+// React Native's Hermes engine (new Date() returns Invalid), which silently
+// scrambles bill ordering on the mobile app. The UI renders them as mm-dd-yy.
+
+section('Date format (ISO storage)');
+{
+    const ISO = /^\d{4}-\d{2}-\d{2}$/;
+    const DATE_FIELDS = ['date', 'stageDate', 'enactedDate'];
+    let bad = 0;
+    for (const bill of bills) {
+        for (const f of DATE_FIELDS) {
+            const v = bill[f];
+            if (v && !ISO.test(v)) {
+                fail(`${bill.id}: ${f}="${v}" is not ISO YYYY-MM-DD (breaks Hermes date sort)`);
+                bad++;
+            }
+        }
+    }
+    if (bad === 0) pass('All date fields are ISO YYYY-MM-DD');
+}
+
+// ── Check: figure sourcing (training-data guard) ───────────────────────────
+//
+// Every dollar figure, percentage, and "Section N" cite in the bill-content
+// prose should appear in the actual fetched bill text. A figure that appears
+// NOWHERE in the text is a strong signal it came from training knowledge
+// (the recurring fabrication failure mode). Conservative — warnings, not errors.
+
+section('Figure sourcing (training-data guard)');
+{
+    const SCALE = { thousand: 1e3, million: 1e6, billion: 1e9, trillion: 1e12 };
+    let flagged = 0;
+
+    for (const bill of bills) {
+        if (!bill.analyzed) continue;
+        const raw = billText(bill.id);
+        if (raw.length < 500) continue; // no/!trivial text — sourcing checked elsewhere
+        const text = raw.toLowerCase();
+        const norm = digitsOnly(text);
+        const prose = contentProse(bill);
+        const misses = new Set();
+
+        // Dollar THRESHOLD figures: integer + scale word (e.g. "$25 billion").
+        // Decimals are skipped — those are usually rounded appropriations line
+        // items that won't string-match the precise figure in the text.
+        let m;
+        const dollarRe = /\$\s?(\d+)\s*(billion|million|trillion|thousand)\b/gi;
+        while ((m = dollarRe.exec(prose))) {
+            const num = m[1], scale = m[2].toLowerCase();
+            const full = String(Math.round(parseFloat(num) * SCALE[scale]));
+            if (!(text.includes(`${num} ${scale}`) || norm.includes(full)))
+                misses.add(`$${num} ${scale}`);
+        }
+        // Percentages
+        const pctRe = /(\d+(?:\.\d+)?)\s*(?:%|percent)\b/gi;
+        while ((m = pctRe.exec(prose))) {
+            const num = m[1];
+            if (!(text.includes(`${num} percent`) || text.includes(`${num}%`) || text.includes(`${num} per centum`)))
+                misses.add(`${num}%`);
+        }
+        // "Section N" citations — match any of "section N" / "sec. N" / "sec N".
+        const secRe = /\bsection\s+(\d+[a-z]?)\b/gi;
+        while ((m = secRe.exec(prose))) {
+            const n = m[1].toLowerCase();
+            if (!new RegExp('\\bsec(?:tion|\\.)?\\s*' + n + '\\b', 'i').test(text))
+                misses.add(`Section ${m[1]}`);
+        }
+
+        if (misses.size) {
+            const list = [...misses].slice(0, 8).join(', ');
+            warn(`${bill.id}: ${misses.size} figure(s)/cite(s) not found in bill text — verify: ${list}${misses.size > 8 ? ' …' : ''}`);
+            flagged++;
+        }
+    }
+    if (flagged === 0) pass('All figures/cites in analyses are traceable to the bill text');
+}
+
+// ── Check: acronym audit ───────────────────────────────────────────────────
+//
+// Flags all-caps acronyms used in prose that are neither in acronyms.js nor
+// introduced inline with a parenthetical expansion — so readers never hit
+// undefined jargon. Advisory (warnings).
+
+section('Acronym audit');
+{
+    const STOP = new Set([
+        'US', 'USA', 'U', 'S', 'ACT', 'BILL', 'GOP', 'CEO', 'CFO', 'COO', 'FAQ', 'TV', 'AI',
+        'ID', 'OK', 'PDF', 'URL', 'HTML', 'AM', 'PM', 'USC', 'CFR', 'PL', 'HR', 'NDAA',
+        'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'IT', 'BE', 'AND', 'THE', 'FOR', 'WHO',
+    ]);
+    const known = new Set(Object.keys(ACRONYMS).map(k => k.toUpperCase()));
+    let flagged = 0;
+
+    for (const bill of bills) {
+        if (!bill.analyzed) continue;
+        const prose = contentProse(bill);
+        const introduced = new Set(); // acronyms defined inline as "(ABC)"
+        let pm;
+        const introRe = /\(([A-Z][A-Z0-9\-]{1,7})\)/g;
+        while ((pm = introRe.exec(prose))) introduced.add(pm[1].toUpperCase());
+
+        const unknown = new Set();
+        let am;
+        // 3–6 letters: 2-letter tokens are mostly state codes / common words (IP, EV, AG).
+        const acroRe = /\b([A-Z]{3,6})\b/g;
+        while ((am = acroRe.exec(prose))) {
+            const a = am[1];
+            const U = a.toUpperCase();
+            if (STOP.has(U) || known.has(U) || introduced.has(U)) continue;
+            unknown.add(a);
+        }
+        if (unknown.size) {
+            warn(`${bill.id}: ${unknown.size} undefined acronym(s): ${[...unknown].slice(0, 10).join(', ')}`);
+            flagged++;
+        }
+    }
+    if (flagged === 0) pass('All acronyms are in acronyms.js or introduced inline');
+}
+
 // ── Summary ────────────────────────────────────────────────────────────────
 
 console.log('\n' + '═'.repeat(56));
 console.log(`  ${errors} error(s)   ${warnings} warning(s)`);
+const blocking = errors > 0 || (STRICT && warnings > 0);
 if (errors > 0) {
     console.log('  ❌ NOT ready to push — fix errors first.');
 } else if (warnings > 0) {
-    console.log('  ⚠️  Ready to push — review warnings above.');
+    console.log(STRICT
+        ? '  ❌ --strict: warnings present — not a clean pass.'
+        : '  ⚠️  Ready to push — review warnings above.');
 } else {
-    console.log('  ✅ All checks passed — ready to push.');
+    console.log('  ✅ All checks passed — clean pass.');
 }
 console.log('═'.repeat(56) + '\n');
 
-if (errors > 0) process.exit(1);
+if (blocking) process.exit(1);

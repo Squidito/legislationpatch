@@ -90,14 +90,18 @@ function formatSponsor(sponsor) {
 
 function formatDate(dateStr) {
   if (!dateStr) return '';
+  const s = String(dateStr).trim();
+  // ISO YYYY-MM-DD: format parts directly (no UTC/local day shift); output mm-dd-yy.
+  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (iso) return `${iso[2]}-${iso[3]}-${iso[1].slice(-2)}`;
   try {
-    const d = new Date(dateStr);
-    if (isNaN(d)) return dateStr;
+    const d = new Date(s);
+    if (isNaN(d)) return s;
     const dd = String(d.getDate()).padStart(2,'0');
     const mm = String(d.getMonth()+1).padStart(2,'0');
     const yy = String(d.getFullYear()).slice(-2);
-    return `${mm}/${dd}/${yy}`;
-  } catch(e) { return dateStr; }
+    return `${mm}-${dd}-${yy}`;
+  } catch(e) { return s; }
 }
 
 function cleanHtml(html) {

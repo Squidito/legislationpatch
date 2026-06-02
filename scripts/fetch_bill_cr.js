@@ -7,7 +7,7 @@
 //   node scripts/fetch_bill_cr.js --all
 //
 // --bill: re-runs even if the bill already has quotes (lets you refresh a specific bill)
-// --all:  only fills bills with empty featured_quotes; skips demo/live bills
+// --all:  only fills bills with empty featured_quotes; skips demo bills
 
 'use strict';
 require('dotenv').config();
@@ -741,8 +741,8 @@ async function main() {
             process.exit(1);
         }
     } else {
-        // --all: only analyzed, non-demo, non-live bills with empty featured_quotes
-        targets = bills.filter(b => b.analyzed && !b.demo && !b.live && !b.featured_quotes?.length);
+        // --all: only analyzed, non-demo bills with empty featured_quotes
+        targets = bills.filter(b => b.analyzed && !b.demo && !b.featured_quotes?.length);
     }
 
     console.log(`=== FETCH BILL CR — ${targets.length} bill(s) ===`);

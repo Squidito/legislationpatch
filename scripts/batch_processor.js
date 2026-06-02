@@ -161,13 +161,18 @@ function chunkText(text, chunkSize = 3000, overlap = 500) {
     return chunks;
 }
 
+// Store dates as ISO YYYY-MM-DD (single canonical format). The UI renders them
+// as mm-dd-yy via formatDateCompact. Storing ISO keeps date sorting/math reliable.
 function formatDate(dateStr) {
     if (!dateStr) return '';
+    const s = String(dateStr).trim();
+    const iso = s.match(/^(\d{4}-\d{2}-\d{2})/);     // already ISO (possibly w/ time)
+    if (iso) return iso[1];
     try {
-        return new Date(dateStr).toLocaleDateString('en-US', {
-            month: 'short', day: 'numeric', year: 'numeric'
-        });
-    } catch (e) { return dateStr; }
+        const d = new Date(s);
+        if (isNaN(d)) return s;
+        return d.toISOString().slice(0, 10);
+    } catch (e) { return s; }
 }
 
 function detectStage(latestActionText, billType) {
@@ -1171,7 +1176,6 @@ An empty array [] is always correct. An invented fact is never acceptable.`,
     parsed.cosponsors       = meta?.cosponsors?.count || 0;
     parsed.pages            = estimatedPages;
     parsed.analyzed         = true;
-    parsed.live             = false;
     parsed.demo             = false;
 
     // Step 11 — Ensure all array/object fields exist
