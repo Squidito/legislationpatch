@@ -58,15 +58,19 @@ OUTPUT ZONE 3 (INPUT C + reasoning): likelihood, likelihoodLabel, likelihoodReas
 
 ━━━ QUALITY RULES ━━━
 
-RULE 1 — NUMBERS FIRST, EXACT AND UNROUNDED
-When the bill text contains a dollar amount, percentage, threshold, or deadline, lead with it.
-Use the number exactly as it appears in the source. Do NOT round or abbreviate.
-Write "$240,774,000" not "$240.8 million". Write "$3,040,000,000" not "$3.04 billion".
-The number must be copy-pasted from the source, not calculated or estimated.
-Bad:  "Increases Medicaid funding."
-Bad:  "Provides $1.2 billion for the IRS" (if the source says "$1,175,482,000")
-Good: "Provides $1,175,482,000 for IRS operations."
-If no number exists in the source, describe the mechanism instead. Never invent or round a number.
+RULE 1 — NUMBERS: PRECISE, SOURCED, SHORTENED
+Lead with the dollar amount, percentage, threshold, or deadline when the source has one.
+Every number must trace to the source text — either copied from it, or computed by ADDING explicit line items that are all in the source. Objective arithmetic on sourced figures (summing an appropriations section's line items, or a per-section subtotal) is allowed and encouraged. Estimating, guessing, rounding to a vague figure, or recalling from memory is NEVER allowed.
+Shorten amounts to the house format — never write raw statutory figures, and never substitute a loose round number for the real one:
+  - Billions -> 2 decimals: source "$46,550,000,000" becomes "$46.55B" (NOT "$46,550,000,000", NOT "$46 billion").
+  - Hundreds of millions -> 1 decimal: "$584.3M".  Tens of millions and under -> nearest whole million: "$98M".
+  - A COMPUTED total uses the same form: if a title's line items sum to $156,220,000,000, write "$156.2B" — never a hand-wave like "approximately $160 billion".
+APPROPRIATIONS vs CEILINGS: count only money actually appropriated. A "not to exceed $X" loan or loan-guarantee ceiling (e.g. "available to subsidize the principal amount of direct loans ... not to exceed $100,000,000,000") is a cap on lending authority, NOT an appropriation — exclude it from any funding total. The appropriation is the usually-much-smaller subsidy/credit amount stated alongside it.
+If no number exists in the source, describe the mechanism instead. Never invent, estimate, or round-to-a-guess.
+Bad:  "Provides approximately $160 billion for defense." (vague round number)
+Bad:  "Provides $1,175,482,000 for the IRS." (raw, unshortened)
+Good: "Provides $1.18B for IRS operations."
+Good: "Provides $156.2B in defense appropriations (sum of the title's line items, excluding the $100B loan-guarantee ceiling)."
 
 RULE 2 — EXACT BILL STRUCTURE
 Label sections after the actual bill titles (Title I, Title II, etc.) if they exist in the text.
@@ -102,10 +106,11 @@ Good: "Section 223 removes the GAO audit trigger threshold for unobligated DoD f
 Good: "Section 203(b)(1) reduces the qualifying capital ratio lower bound from 8 percent to 6 percent."
 
 RULE 8 — EXTENSION AND REAUTHORIZATION BILLS
-When a bill's primary function is to extend or reauthorize an existing program, authority, or law — rather than create or substantially modify one — the summary, brief, AND top_lines must first explain in plain English what the original program does and who it affects in real life. You may use your knowledge of the original program for this context; it is the only zone where background knowledge is permitted. Then state what the bill changes (typically: extends through [date], with or without new conditions).
+When a bill's primary function is to extend or reauthorize an existing program, authority, or law — rather than create or substantially modify one — the summary, brief, AND top_lines must first explain in plain English what the original program does and who it affects, then state what the bill changes (typically: extends through [date], with or without new conditions).
+Source the original-program description from the REFERENCED text, NOT from memory. Fetch the referenced bill or statute with scripts/fetch-reference.js (e.g. --usc "50:1881a" for FISA Section 702, or --bill 119-HR-1234), register it in the bill's referencedSources array, and tag each item drawn from it with "source": "<id>". Training knowledge is never a source here either — it may only tell you WHICH section to go fetch and read. The figure-sourcing guard verifies these cites against the recorded referenced text.
 Do not write a summary that only states the extension without explaining what is being extended — that tells the reader nothing.
 Bad:  "Extends the authorities of Title VII of FISA through April 30, 2026."
-Good: "Section 702 of FISA allows the NSA to collect communications of foreign targets without a warrant — including conversations with Americans. This bill extends that authority through April 30, 2026 with no new limits attached."
+Good: "Section 702 of FISA allows the NSA to collect communications of foreign targets without a warrant — including conversations with Americans. This bill extends that authority through April 30, 2026 with no new limits attached." (description sourced from the fetched 50 U.S.C. 1881a text; tagged "source": "usc-50-1881a")
 For top_lines: the first headline group must describe what the original program does (e.g. "What Section 702 Does" or "What SNAP Provides") with subs explaining its real-world effect. A second headline group then covers what this bill changes. Do not lead top_lines with the extension itself — a reader who does not already know the program will get nothing from the card.
 The original-program description must be accurate and factual. Do not editorialize about the original program. State what it does mechanically, then state what this bill does to it.
 
@@ -208,23 +213,6 @@ BUDGET_ACCOUNTS RULES:
 LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes.
 top_lines: 1-3 topic objects. Each headline is a short topic label (3-6 words), NOT a specific provision. Subs are the specific provisions/figures under that topic — 1-3 subs per headline, omit subs that add nothing. A headline with zero meaningful subs should be omitted entirely.
 If the source material does not support a full response in any zone, return fewer items — do not fill space with invented content.`;
-
-
-const CHUNK_MAP_PROMPT = `You are reading one chunk of a U.S. Congressional bill. Your only job is to extract what is explicitly written in this text.
-
-Do not add context from outside this text. Do not complete figures from memory. Do not infer what a provision probably means. If it is not written here, do not report it.
-
-For each significant provision found in this text, note:
-1. WHAT it does — the real-world mechanical effect as stated in the text, not inferred intent
-2. WHO it affects — named agencies, industries, thresholds, or groups explicitly mentioned
-3. EXACT NUMBERS — every dollar amount, percentage, asset threshold, population limit, and deadline exactly as written. If no number is present, do not supply one.
-4. WHAT CHANGES — which existing law or program is modified, and how, as stated in the text
-5. WHAT IS CREATED OR ELIMINATED — new programs, agencies, requirements, or rights named in the text
-6. ANYTHING TECHNICALLY OBSCURED — provisions where the plain language conceals a significant real-world effect
-
-Ignore completely: definitions sections, short titles, findings/sense-of-Congress language, effective date boilerplate, citation updates, cross-reference substitutions, and amendment-chain cleanups (provisions that swap one legal citation string for another without changing any substantive rule).
-
-Return brief bullet-point notes only. No paragraphs. No editorial comment. No figures not present in this text.`;
 
 
 // ── Omnibus / multi-division bills ────────────────────────────────────────────
@@ -393,7 +381,6 @@ Return ONLY a valid JSON object. No markdown, no explanation.
 
 module.exports = {
     SYSTEM_PROMPT,
-    CHUNK_MAP_PROMPT,
     OMNIBUS_DIVISION_PROMPT,
     OMNIBUS_TOPLEVEL_PROMPT,
 };

@@ -61,6 +61,78 @@ function contentProse(bill) {
     return out.join('  ');
 }
 
+// ── Cross-referenced-source helpers (figure sourcing) ───────────────────────
+// A bill may carry referencedSources: fetched referenced bills/laws/statutes,
+// each with a stored textFile under data/ref-text/. Analysis items that draw a
+// figure from one tag it with "source": "<id>" (string or array). The guard then
+// verifies that figure against the recorded source — provenance is required, and
+// nothing clears on "it's cross-referenced" alone. See CLAUDE.md
+// "Cross-Bill / Referenced-Source Practice".
+
+const asArray = v => Array.isArray(v) ? v.map(String) : (v ? [String(v)] : []);
+
+// Map referencedSources id -> lowercased stored text ('' if file missing).
+function refTexts(bill) {
+    const m = new Map();
+    for (const s of bill.referencedSources || []) {
+        let t = '';
+        try { t = fs.readFileSync(path.join(__dirname, '..', s.textFile || ''), 'utf8'); } catch {}
+        m.set(s.id, t.toLowerCase());
+    }
+    return m;
+}
+
+// Every "source" tag value used anywhere in the analysis (to validate it resolves).
+function collectSourceTags(bill) {
+    const tags = new Set();
+    const walk = (o) => {
+        if (Array.isArray(o)) o.forEach(walk);
+        else if (o && typeof o === 'object') {
+            if (o.source) asArray(o.source).forEach(t => tags.add(t));
+            for (const v of Object.values(o)) walk(v);
+        }
+    };
+    ['top_lines', 'sections', 'changes', 'underreported', 'gaps', 'divisions'].forEach(f => walk(bill[f]));
+    return tags;
+}
+
+// Prose units paired with the referenced-source ids that back them. [] sourceIds
+// = must be sourced from the CURRENT bill text only. Synthesis fields
+// (summary/brief/underreported/gaps) may draw on any recorded source.
+function proseUnits(bill) {
+    const units = [];
+    const allIds = (bill.referencedSources || []).map(s => s.id);
+    const push = (text, ids) => { if (text) units.push({ text, sourceIds: ids }); };
+
+    const synth = [bill.summary, bill.brief,
+                   ...(bill.underreported || []), ...(bill.gaps || [])]
+        .map(x => typeof x === 'string' ? x : (x && (x.summary || x.why || x.text || x.description)) || '')
+        .filter(Boolean).join('  ');
+    push(synth, allIds);
+
+    const tlUnit = tl => push(
+        [tl.headline, ...((tl.subs || []).map(s => typeof s === 'string' ? s : s && s.text))].filter(Boolean).join('  '),
+        asArray(tl.source));
+    const secUnits = sec => {
+        const secSrc = asArray(sec.source);
+        for (const it of sec.items || [])
+            push([it.main, it.detail, it.label, it.text].filter(Boolean).join('  '),
+                 asArray(it.source).length ? asArray(it.source) : secSrc);
+    };
+    (bill.top_lines || []).forEach(tlUnit);
+    (bill.sections || []).forEach(secUnits);
+    const ch = bill.changes || {};
+    for (const list of [ch.added || [], ch.modified || [], ch.removed || []])
+        for (const it of list)
+            push(typeof it === 'string' ? it : (it.description || it.text || ''),
+                 typeof it === 'object' ? asArray(it.source) : []);
+    for (const d of bill.divisions || []) {
+        (d.top_lines || []).forEach(tlUnit);
+        (d.sections || []).forEach(secUnits);
+    }
+    return units;
+}
+
 // ── Reporting ──────────────────────────────────────────────────────────────
 
 let errors = 0, warnings = 0;
@@ -524,51 +596,89 @@ section('Date format (ISO storage)');
     if (bad === 0) pass('All date fields are ISO YYYY-MM-DD');
 }
 
+// ── Check: referenced sources resolve + source tags are registered ─────────
+//
+// Cross-sourced figures must point to a RECORDED + FETCHED referenced source —
+// never cleared on "it's cross-referenced" alone. So: every referencedSources
+// entry must resolve to a real stored textFile, and every "source" tag in the
+// analysis must name a registered entry. These are ERRORS (blocking).
+
+section('Referenced sources');
+{
+    let ok = true;
+    for (const bill of bills) {
+        const ids = new Set((bill.referencedSources || []).map(s => s.id));
+        for (const s of bill.referencedSources || []) {
+            if (!s.id || !s.textFile) { fail(`${bill.id}: a referencedSources entry is missing id/textFile`); ok = false; continue; }
+            let t = ''; try { t = fs.readFileSync(path.join(__dirname, '..', s.textFile), 'utf8'); } catch {}
+            if (t.trim().length < 200) { fail(`${bill.id}: referenced source "${s.id}" text missing/too short — ${s.textFile} (run scripts/fetch-reference.js)`); ok = false; }
+        }
+        for (const tag of collectSourceTags(bill))
+            if (!ids.has(tag)) { fail(`${bill.id}: "source": "${tag}" has no matching referencedSources entry`); ok = false; }
+    }
+    if (ok) pass('All referenced sources resolve and all source tags are registered');
+}
+
 // ── Check: figure sourcing (training-data guard) ───────────────────────────
 //
 // Every dollar figure, percentage, and "Section N" cite in the bill-content
-// prose should appear in the actual fetched bill text. A figure that appears
-// NOWHERE in the text is a strong signal it came from training knowledge
-// (the recurring fabrication failure mode). Conservative — warnings, not errors.
+// prose should appear in the actual fetched bill text — OR, for an item tagged
+// with "source", in that recorded referenced source's text. A figure that
+// appears in NEITHER is a strong signal it came from training knowledge (the
+// recurring fabrication failure mode). Conservative — warnings, not errors.
 
 section('Figure sourcing (training-data guard)');
 {
     const SCALE = { thousand: 1e3, million: 1e6, billion: 1e9, trillion: 1e12 };
     let flagged = 0;
 
-    for (const bill of bills) {
-        if (!bill.analyzed) continue;
-        const raw = billText(bill.id);
-        if (raw.length < 500) continue; // no/!trivial text — sourcing checked elsewhere
-        const text = raw.toLowerCase();
-        const norm = digitsOnly(text);
-        const prose = contentProse(bill);
-        const misses = new Set();
-
-        // Dollar THRESHOLD figures: integer + scale word (e.g. "$25 billion").
-        // Decimals are skipped — those are usually rounded appropriations line
-        // items that won't string-match the precise figure in the text.
+    // Run the three figure checks on one prose unit against its effective source
+    // text (current bill text, plus any referenced-source text the unit cites).
+    const checkUnit = (prose, text, norm, misses) => {
         let m;
+        // Dollar THRESHOLD figures (e.g. "$25 billion"). Decimals skipped — usually
+        // rounded line items that won't string-match the precise figure in the text.
         const dollarRe = /\$\s?(\d+)\s*(billion|million|trillion|thousand)\b/gi;
         while ((m = dollarRe.exec(prose))) {
             const num = m[1], scale = m[2].toLowerCase();
             const full = String(Math.round(parseFloat(num) * SCALE[scale]));
-            if (!(text.includes(`${num} ${scale}`) || norm.includes(full)))
-                misses.add(`$${num} ${scale}`);
+            if (!(text.includes(`${num} ${scale}`) || norm.includes(full))) misses.add(`$${num} ${scale}`);
         }
         // Percentages
         const pctRe = /(\d+(?:\.\d+)?)\s*(?:%|percent)\b/gi;
         while ((m = pctRe.exec(prose))) {
             const num = m[1];
-            if (!(text.includes(`${num} percent`) || text.includes(`${num}%`) || text.includes(`${num} per centum`)))
-                misses.add(`${num}%`);
+            if (!(text.includes(`${num} percent`) || text.includes(`${num}%`) || text.includes(`${num} per centum`))) misses.add(`${num}%`);
         }
-        // "Section N" citations — match any of "section N" / "sec. N" / "sec N".
+        // "Section N" — "section N" / "sec. N" / "sec N", OR a bare enumerator at a
+        // line start ("2. Short title"), how many House bills format headers in the
+        // fetched text. Mirrors renderBtLine() on the bill page.
         const secRe = /\bsection\s+(\d+[a-z]?)\b/gi;
         while ((m = secRe.exec(prose))) {
             const n = m[1].toLowerCase();
-            if (!new RegExp('\\bsec(?:tion|\\.)?\\s*' + n + '\\b', 'i').test(text))
-                misses.add(`Section ${m[1]}`);
+            const numCore = n.replace(/[a-z]$/, '');
+            const inSecForm  = new RegExp('\\bsec(?:tion|\\.)?\\s*' + n + '\\b', 'i').test(text);
+            const inBareForm = new RegExp('(^|\\n)\\s*' + numCore + '\\.\\s', 'm').test(text);
+            if (!inSecForm && !inBareForm) misses.add(`Section ${m[1]}`);
+        }
+    };
+
+    for (const bill of bills) {
+        if (!bill.analyzed) continue;
+        const rawCur = billText(bill.id);
+        if (rawCur.length < 500) continue; // no/!trivial text — sourcing checked elsewhere
+        const curText = rawCur.toLowerCase();
+        const curNorm = digitsOnly(curText);
+        const refMap  = refTexts(bill);
+        const misses  = new Set();
+
+        for (const unit of proseUnits(bill)) {
+            let text = curText, norm = curNorm;
+            if (unit.sourceIds.length) {
+                for (const id of unit.sourceIds) { const rt = refMap.get(id); if (rt) text += '\n' + rt; }
+                norm = digitsOnly(text);
+            }
+            checkUnit(unit.text, text, norm, misses);
         }
 
         if (misses.size) {

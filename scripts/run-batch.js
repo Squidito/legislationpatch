@@ -93,7 +93,13 @@ if (!POST_ONLY) {
         console.log('  ⏸  MANUAL ANALYSIS REQUIRED');
         console.log('═'.repeat(56));
         console.log('\n  New bills in bills_raw.json that need Claude analysis:\n');
-        unprocessed.forEach(b => console.log(`    • ${b.billId} — ${b.title}`));
+        unprocessed.forEach(b => {
+            console.log(`    • ${b.billId} — ${b.title}`);
+            if (b.referenceHints?.likelyReferenceDependent) {
+                const cites = b.referenceHints.sources.map(s => s.citation).join(', ');
+                console.log(`        ↳ reference-dependent? consider fetching: ${cites}  (scripts/fetch-reference.js)`);
+            }
+        });
         console.log(`
   Instructions:
   1. Open a Claude Code session in this project folder.

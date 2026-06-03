@@ -1,0 +1,19 @@
+{
+  "_comment": "Cross-platform parity contract. The WEB copies live in legislationpatch/util.js; the MOBILE copies live in legislationpatch-app/lib/format.ts. Both must produce these exact outputs. Run `npm run parity` in EITHER repo to check. Drift between the two hand-ported copies is what caused past date-ordering bugs — this fixture is the guard. When you intentionally change shared behavior, update both implementations AND this fixture together.",
+  "formatDateCompact": [
+    { "in": "2026-05-19", "out": "05-19-26" },
+    { "in": "2026-02-03", "out": "02-03-26" },
+    { "in": "2025-12-31", "out": "12-31-25" },
+    { "in": "2026-07-04", "out": "07-04-26" },
+    { "in": "2026-01-01", "out": "01-01-26" },
+    { "in": "", "out": "" }
+  ],
+  "sponsorShort": [
+    { "in": "Sen. Britt, Katie Boyd (R-AL)", "out": "BRITT (R-AL)" },
+    { "in": "Rep. Smith, Adam (D-WA)", "out": "SMITH (D-WA)" },
+    { "in": "Dr. John Q. Public III (I-TX)", "out": "PUBLIC (I-TX)" },
+    { "in": "Ms. Ocasio-Cortez, Alexandria (D-NY)", "out": "OCASIO-CORTEZ (D-NY)" },
+    { "in": "Mike Johnson", "out": "JOHNSON" },
+    { "in": "", "out": "" }
+  ]
+}

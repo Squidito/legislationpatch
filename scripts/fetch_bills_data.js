@@ -438,6 +438,44 @@ function classifyAppropriation(title) {
     return { appType: null, agency: null };
 }
 
+// REMINDER, not a downloader. Flags a thin amend/extend bill whose substance
+// likely lives in a referenced bill/statute, and surfaces the most prominent
+// referenced sources so the analyst can fetch them with scripts/fetch-reference.js.
+// Best-effort pattern matching — expect occasional misses and extra hits; it is a
+// nudge for the analyst to decide, never authoritative. (See CLAUDE.md cross-ref practice.)
+function detectReferenceHints(text, title) {
+    const t       = text || '';
+    const titleL  = (title || '').toLowerCase();
+    const head     = (titleL + ' ' + t.slice(0, 4000));
+    const amendatory = /\b(to amend|is amended|amends|reauthoriz|extend(s|ed|ing)?|repeal date|sunset)\b/.test(head);
+    const shortBill  = t.length > 0 && t.length < 18000; // ~8 pages or less
+    const likelyReferenceDependent = amendatory && shortBill;
+    if (!likelyReferenceDependent) return null;
+
+    // Collect candidate referenced sources, deduped and ranked by how often cited.
+    const counts = new Map();
+    const add = (key, kind, citation, suggestedFetch) => {
+        if (!counts.has(key)) counts.set(key, { kind, citation, suggestedFetch, n: 0 });
+        counts.get(key).n++;
+    };
+    for (const m of t.matchAll(/\b(\d{1,2})\s+U\.?\s?S\.?\s?C\.?\s+(\d+[A-Za-z]?)/g))
+        add(`usc-${m[1]}-${m[2].toLowerCase()}`, 'statute', `${m[1]} U.S.C. ${m[2]}`, `node scripts/fetch-reference.js --usc "${m[1]}:${m[2]}"`);
+    for (const m of t.matchAll(/\bP(?:ublic|ub)\.?\s*L(?:aw)?\.?\s*(\d{2,3})-(\d{1,4})\b/gi))
+        add(`pl-${m[1]}-${m[2]}`, 'law', `Public Law ${m[1]}-${m[2]}`, null);
+    for (const m of (title || '').matchAll(/\b([A-Z][A-Za-z]+(?:\s+[A-Za-z]+){1,6}\s+Act(?:\s+of\s+\d{4})?)/g)) {
+        const name = m[1].replace(/^(?:To\s+amend\s+the\s+|To\s+amend\s+|the\s+)/i, '').trim();
+        if (/^(?:[IVXLC]+|title)\b/i.test(name)) continue; // skip "VII of the ... Act" fragments
+        add(`act-${name.toLowerCase()}`, 'act', name, null);
+    }
+
+    const sources = [...counts.values()]
+        .sort((a, b) => b.n - a.n)
+        .slice(0, 6)
+        .map(({ kind, citation, suggestedFetch }) => ({ kind, citation, suggestedFetch }));
+
+    return { likelyReferenceDependent: true, sources };
+}
+
 async function searchPriorCongressLaws(priorCongress, agencyKeyword, isOmnibus) {
     const url = `https://api.congress.gov/v3/law/${priorCongress}?limit=100&format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
@@ -549,6 +587,13 @@ async function processBillEntry(congress, type, number, title) {
     fs.writeFileSync(path.join(BILL_TEXT_DIR, `${billId}.txt`), billTextResult.display);
     console.log(`  Saved bill text → data/bill-text/${billId}.txt`);
 
+    // Reference-dependency reminder — advisory; the analyst decides whether to fetch.
+    const referenceHints = detectReferenceHints(billTextResult.display, billTitle);
+    if (referenceHints) {
+        console.log('  ℹ Looks reference-dependent (thin amend/extend bill). If the substance lives in a referenced source, fetch it before analyzing:');
+        referenceHints.sources.forEach(s => console.log(`     - ${s.citation}${s.suggestedFetch ? '   ->  ' + s.suggestedFetch : ''}`));
+    }
+
     return {
         billId,
         title: billTitle,
@@ -574,6 +619,7 @@ async function processBillEntry(congress, type, number, title) {
             : null,
         priorYearBillTitle: priorYear.billRef?.title || null,
         priorYearBillText,
+        ...(referenceHints ? { referenceHints } : {}),
     };
 }
 
@@ -667,4 +713,8 @@ async function main() {
     results.forEach(r => console.log(`  ${r.billId} — ${r.title} [${r.stageLabel}]`));
 }
 
-main().catch(console.error);
+if (require.main === module) {
+    main().catch(console.error);
+}
+
+module.exports = { detectReferenceHints };

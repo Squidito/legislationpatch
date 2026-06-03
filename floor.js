@@ -67,12 +67,7 @@ const CAT_ICONS = {
   other:       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>',
 };
 
-function escHtml(s) {
-  if (!s) return '';
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
+// escHtml() moved to util.js (loaded first on every page).
 
 function portraitUrl(bioguideId) {
   if (!bioguideId || bioguideId.length < 2) return FALLBACK_PORTRAIT;

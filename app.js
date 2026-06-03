@@ -1277,48 +1277,7 @@ function renderBill(bill, num) {
   </div>`;
 }
 
-function formatDateCompact(dateStr) {
-  if (!dateStr) return '';
-  const s = String(dateStr).trim();
-  // ISO YYYY-MM-DD: format the parts directly so there's no UTC/local day shift.
-  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (iso) return `${iso[2]}-${iso[3]}-${iso[1].slice(-2)}`;
-  // Fallback for any legacy/human format (parsed as local midnight).
-  try {
-    const d = new Date(s);
-    if (isNaN(d)) return s;
-    const dd = String(d.getDate()).padStart(2,'0');
-    const mm = String(d.getMonth()+1).padStart(2,'0');
-    const yy = String(d.getFullYear()).slice(-2);
-    return `${mm}-${dd}-${yy}`;
-  } catch(e) { return s; }
-}
-
-
-// "Sen. Britt, Katie Boyd (R-AL)" -> "BRITT (R-AL)" — last name + party/state, caps.
-function sponsorShort(name) {
-  const raw = String(name || '').trim();
-  if (!raw) return '';
-  const psMatch = raw.match(/\(([^)]+)\)\s*$/);
-  const partyState = psMatch ? psMatch[1].trim() : '';
-  const core = raw
-    .replace(/\s*\([^)]*\)\s*$/, '')
-    .replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.)\s+/, '')
-    .trim();
-  let last;
-  if (core.includes(',')) {
-    last = core.split(',')[0].trim();
-  } else {
-    const SUFFIX = new Set(['jr', 'sr', 'ii', 'iii', 'iv', 'v', 'jr.', 'sr.']);
-    const parts = core.split(' ').filter(Boolean);
-    last = core;
-    for (let i = parts.length - 1; i >= 0; i--) {
-      if (!SUFFIX.has(parts[i].toLowerCase())) { last = parts[i]; break; }
-    }
-  }
-  const out = last.toUpperCase();
-  return partyState ? `${out} (${partyState})` : out;
-}
+// formatDateCompact() and sponsorShort() moved to util.js (loaded first on every page).
 
 function renderHeader(bill, state, num, watching) {
   const isOpen     = !!state;
@@ -2016,15 +1975,7 @@ function compactSource(source) {
     (_, m, d, y) => `${d.padStart(2,'0')}/${MON[m]}/${y.slice(2)}`);
 }
 
-function escHtml(str) {
-  if (!str) return '';
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
+// escHtml() moved to util.js (loaded first on every page).
 
 // Renders prose text replacing bill code references (H.R. 1234, S. 40, etc.) with
 // linked titles when the bill is in allBills, or a plain span when self-referential.
