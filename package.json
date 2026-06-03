@@ -8,6 +8,7 @@
     "batch:post": "node scripts/run-batch.js --post",
     "batch:fetch": "node scripts/run-batch.js --fetch-only",
     "validate": "node scripts/validate-batch.js",
+    "qa-verify": "node scripts/qa-source-verify.js",
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
     "reps": "node scripts/generate_reps.js",

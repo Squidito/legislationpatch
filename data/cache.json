@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-31T18:03:20.100Z",
+  "generated": "2026-06-03T18:19:32.943Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -8724,6 +8724,1846 @@
         }
       ],
       "billType": "amendment"
+    },
+    {
+      "id": "119-S-1003",
+      "title": "Lulu’s Law",
+      "official_title": "Lulu’s Law",
+      "code": "S.1003",
+      "date": "2025-03-12",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Britt, Katie Boyd (R-AL)",
+      "sponsor_bioguide": "B001319",
+      "cosponsors": 9,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill orders the Federal Communications Commission to formally allow shark attacks to be sent out as wireless emergency alerts — the same text-message warning system used for things like AMBER Alerts and severe weather. The FCC has 180 days after the bill becomes law to issue the order.",
+      "brief": "Requires the FCC to issue an order making a shark attack an event for which a wireless emergency alert may be transmitted.",
+      "top_lines": [
+        {
+          "headline": "Shark Attack Alerts",
+          "billSection": "2",
+          "subs": [
+            "FCC must allow shark attacks to qualify for wireless emergency alerts",
+            "Uses the existing 'Alert Message' system defined in FCC rules (47 CFR 10.10(a))"
+          ]
+        },
+        {
+          "headline": "FCC Deadline",
+          "billSection": "2",
+          "subs": [
+            "FCC has 180 days after enactment to issue the order"
+          ]
+        }
+      ],
+      "likelihood": 88,
+      "likelihoodLabel": "Very Likely",
+      "likelihoodReason": "The bill is sponsored by Sen. Britt (R-AL) with 9 bipartisan cosponsors spanning both parties (Schatz, Warnock, and Kaine among the Democrats; Fischer, Ricketts, Capito, Tuberville, and Cassidy among the Republicans). It has already reached Passed House status, and a narrow, low-cost directive simply adding a hazard category to an existing alert system attracts little opposition.",
+      "sections": [
+        {
+          "label": "Section 2 — Wireless Emergency Alerts",
+          "items": [
+            {
+              "main": "Directs the FCC to issue an order providing that a shark attack is an event for which an Alert Message may be transmitted, no later than 180 days after enactment.",
+              "detail": "The bill ties the term 'Alert Message' to the definition in section 10.10(a) of title 47 of the Code of Federal Regulations (or any successor regulation), so it works within the FCC's existing Wireless Emergency Alerts framework rather than creating a new alert type. The bill specifies only that the order be issued within the 180-day window; it sets no further conditions on how the alerts are triggered or administered.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill makes shark attacks eligible for wireless emergency alerts but does not specify which authorities may originate such an alert or what criteria define a qualifying shark attack.",
+        "The bill sets a 180-day deadline for the FCC order but specifies no consequence or backstop if the order is not issued on time.",
+        "The bill addresses only that an alert may be transmitted, but does not address the geographic area, duration, or content standards for a shark-attack alert."
+      ],
+      "changes": {
+        "added": [
+          "An FCC order designating a shark attack as an event eligible for a wireless emergency Alert Message, to be issued within 180 days of enactment"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2026-05-20",
+      "billType": "amendment",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-20",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 401,
+          "nays": 6,
+          "present": 0,
+          "notVoting": 23,
+          "crossoverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "119-HR-7831",
+      "title": "License to Drill Act",
+      "official_title": "License to Drill Act",
+      "code": "HR.7831",
+      "date": "2026-03-05",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Kennedy, Mike (R-UT)",
+      "sponsor_bioguide": "K000403",
+      "cosponsors": 3,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "summary": "Federal law requires the Bureau of Land Management to charge a fee on every new application to drill for oil and gas on federal land, with the money going into a fund used to speed up permit processing. That fee requirement was set to wind down in 2026. This bill extends it through 2037 and directs that all of the fees collected each year from 2027 through 2037 go into the BLM Permit Processing Improvement Fund.",
+      "brief": "Extends the BLM oil and gas drilling-permit application fee through 2037 and routes all collected fees into the BLM Permit Processing Improvement Fund.",
+      "top_lines": [
+        {
+          "headline": "What the Drilling Permit Fee Does",
+          "billSection": "2",
+          "subs": [
+            "BLM charges a fee on each new application for a permit to drill on federal land",
+            "Fees feed the BLM Permit Processing Improvement Fund, used to process permits"
+          ]
+        },
+        {
+          "headline": "What This Bill Changes",
+          "billSection": "2",
+          "subs": [
+            "Extends the fee-collection requirement from 2026 to 2037",
+            "Directs all fees collected for fiscal years 2027-2037 to the Improvement Fund"
+          ]
+        }
+      ],
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Kennedy (R-UT) in a Republican-majority House, the bill extends an existing energy-permitting fee rather than creating a new program, which limits cost objections. It has cleared the committee stage but its narrow fee-extension scope and absence of listed cosponsors make floor priority and Senate uptake uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — BLM Oil and Gas Permit Processing Fee",
+          "items": [
+            {
+              "main": "Amends Section 35(d) of the Mineral Leasing Act to extend the drilling-permit application fee collection period and redirect the proceeds.",
+              "detail": "Paragraphs (1) and (4) are amended by striking '2026' and inserting '2037', extending the fee requirement by eleven years. Paragraph (3) is rewritten so that, for each of fiscal years 2027 through 2037, all of the fees collected under the subsection are transferred to the BLM Permit Processing Improvement Fund, replacing the prior partial-transfer formula. The bill does not state the dollar amount of the fee.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill extends and fully redirects the application fee to the BLM Permit Processing Improvement Fund but does not set or adjust the dollar amount of the fee itself.",
+        "The bill routes all collected fees into the permit-processing fund through 2037 but does not specify any performance target, such as a permit-processing time the additional funding must achieve.",
+        "The bill extends the fee through 2037 but does not address what happens to fee collection after that date."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Mineral Leasing Act Section 35(d) drilling-permit fee collection period: 2026 -> 2037",
+          "Distribution of collected fees: prior partial-transfer formula -> all fees for fiscal years 2027-2037 transferred to the BLM Permit Processing Improvement Fund"
+        ],
+        "removed": []
+      },
+      "stageDate": "2026-06-02",
+      "billType": "reauthorization",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-1687",
+      "title": "CLEAN Act",
+      "official_title": "CLEAN Act",
+      "code": "HR.1687",
+      "date": "2025-02-27",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Fulcher, Russ (R-ID)",
+      "sponsor_bioguide": "F000469",
+      "cosponsors": 4,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill amends the Geothermal Steam Act of 1970 to make the federal government hold geothermal energy lease sales more often and on a tighter schedule. It requires lease sales every year instead of every two years, requires a replacement sale in the same year if a scheduled sale is canceled or delayed, and sets 30-day deadlines for the Interior Department to act on geothermal drilling permit applications.",
+      "brief": "Requires annual federal geothermal lease sales (up from every two years), mandates replacement sales for canceled ones, and imposes 30-day permit-review deadlines.",
+      "top_lines": [
+        {
+          "headline": "More Frequent Lease Sales",
+          "billSection": "2",
+          "subs": [
+            "Geothermal lease sales required every year instead of every 2 years",
+            "Canceled or delayed sales must be replaced with another sale the same year",
+            "Interior must offer all nominated parcels eligible under the state resource management plan"
+          ]
+        },
+        {
+          "headline": "Permit Decision Deadlines",
+          "billSection": "2",
+          "subs": [
+            "Interior must confirm an application is complete (or list missing items) within 30 days",
+            "Final decision on a complete drilling-permit application due within 30 days of completeness notice"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Fulcher (R-ID) with cosponsors Maloy (R-UT) and Boebert (R-CO) in a Republican-majority House, the bill advances energy-permitting priorities likely to draw Republican support. Its mandatory annual-sale and strict deadline requirements may attract opposition over agency workload and environmental-review timelines, and as a committee-stage bill with few cosponsors its Senate path is uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — Geothermal Leasing",
+          "items": [
+            {
+              "main": "Changes the minimum frequency of geothermal lease sales under Section 4(b) of the Geothermal Steam Act from once every two years to annually, and adds a same-year replacement-sale requirement.",
+              "detail": "Paragraph (2) is amended by striking '2 years' and inserting 'year'. A new replacement-sales provision requires the Secretary of the Interior to hold a replacement sale during the same year if a scheduled sale is canceled or delayed. A new requirement directs the Secretary to offer all nominated parcels eligible for geothermal development under the resource management plan in effect for the state.",
+              "comments": []
+            },
+            {
+              "main": "Adds new 30-day deadlines for the Interior Department to process geothermal drilling permit applications.",
+              "detail": "Within 30 days of receiving an application, the Secretary must either notify the applicant that it is complete or specify what information is missing. Once an application is deemed complete, the Secretary must issue a final decision within 30 days of that completeness notice.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill sets 30-day deadlines for completeness review and final decisions but does not state what happens to an application if the Secretary misses either deadline.",
+        "The bill requires offering all eligible nominated parcels under the state resource management plan but does not address parcels in states without a current geothermal resource management plan.",
+        "The bill mandates a same-year replacement sale for canceled or delayed sales but does not address sales that cannot be rescheduled within the same year."
+      ],
+      "changes": {
+        "added": [
+          "Replacement-sale requirement: a canceled or delayed geothermal lease sale must be replaced with another sale in the same year",
+          "Requirement to offer all nominated parcels eligible under the state resource management plan",
+          "30-day deadline for completeness notice and 30-day deadline for a final decision on geothermal drilling permit applications"
+        ],
+        "modified": [
+          "Minimum frequency of geothermal lease sales under Geothermal Steam Act Section 4(b): every 2 years -> every year"
+        ],
+        "removed": []
+      },
+      "stageDate": "2026-06-02",
+      "billType": "amendment",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-3922",
+      "title": "Cross-Boundary Wildfire Solutions Act",
+      "official_title": "Cross-Boundary Wildfire Solutions Act",
+      "code": "HR.3922",
+      "date": "2025-06-11",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Neguse, Joe (D-CO)",
+      "sponsor_bioguide": "N000191",
+      "cosponsors": 6,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill orders the Government Accountability Office to study how federal programs and rules help or get in the way of fighting wildfires across property lines — where federal land, state land, private land, and tribal land all meet. The GAO must report its findings and recommendations to Congress within two years. The bill itself makes no change to wildfire programs; it only commissions the study.",
+      "brief": "Directs the Comptroller General (GAO) to study and report within two years on federal programs and rules that enable or inhibit wildfire mitigation across land-ownership boundaries.",
+      "top_lines": [
+        {
+          "headline": "GAO Wildfire Study",
+          "billSection": "2",
+          "subs": [
+            "GAO studies federal programs and rules affecting cross-boundary wildfire mitigation",
+            "Examines whether changes would give agencies, states, local, and Tribal governments more funding or capacity",
+            "Reviews activities under the Healthy Forests Restoration Act of 2003"
+          ]
+        },
+        {
+          "headline": "Report to Congress",
+          "billSection": "2",
+          "subs": [
+            "GAO report due within 2 years of enactment",
+            "Must include recommendations to simplify cross-boundary wildfire mitigation"
+          ]
+        }
+      ],
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Neguse (D-CO) with a bipartisan group of cosponsors (Kim, Harder, Obernolte), the bill orders only a GAO study with no spending or regulatory mandate, which lowers opposition. Its bipartisan backing and low cost favor House passage, though as a study-only bill referred to two committees its Senate scheduling is uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — Study on Wildfire Mitigation Across Land Ownership Boundaries",
+          "items": [
+            {
+              "main": "Requires the Comptroller General to study existing federal programs, rules, and authorities that enable or inhibit wildfire mitigation across land-ownership boundaries on federal and non-federal land.",
+              "detail": "The study must examine whether changes would give federal land management agencies, the Natural Resources Conservation Service, FEMA, the U.S. Fire Administration, states, and local and Tribal governments increased capacity or access to funding for wildfire mitigation. It must also review the activities carried out under subsection (e) of Section 103 of the Healthy Forests Restoration Act of 2003, including how to improve their efficacy and whether that subsection increased agencies' and states' access to mitigation funding.",
+              "comments": []
+            },
+            {
+              "main": "Requires a report to Congress within two years of enactment containing the study results and recommendations.",
+              "detail": "The report goes to the House Committee on Natural Resources and the Senate Committee on Energy and Natural Resources. It must include recommendations to simplify cross-boundary wildfire mitigation between federal land management agencies and state, local, and Tribal governments.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill commissions a study and recommendations on cross-boundary wildfire mitigation but does not direct any agency to act on the recommendations.",
+        "The bill requires the report within two years but specifies no funding for conducting the study.",
+        "The bill examines access to wildfire-mitigation funding but does not itself authorize or appropriate any mitigation funds."
+      ],
+      "changes": {
+        "added": [
+          "A Comptroller General study on cross-boundary wildfire mitigation programs, rules, and authorities, with a report to Congress due within two years of enactment"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2026-06-02",
+      "billType": "study",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-3831",
+      "title": "Florida Safe Seas Act of 2025",
+      "official_title": "To amend the Magnuson-Stevens Fishery Conservation and Management Act to prohibit feeding sharks in the exclusive economic zone off the State of Florida.",
+      "code": "HR.3831",
+      "date": "2025-06-06",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Webster, Daniel (R-FL)",
+      "sponsor_bioguide": "W000806",
+      "cosponsors": 5,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "summary": "Federal law already makes it illegal to put food or other substances in the water to attract sharks in the ocean zone off Hawaii and U.S. Pacific territories, unless it is for harvesting sharks or covered by an exception. This bill extends that same ban to the federal waters off Florida.",
+      "brief": "Extends the existing federal shark-feeding prohibition to the exclusive economic zone off Florida.",
+      "top_lines": [
+        {
+          "headline": "What the Shark-Feeding Ban Does",
+          "billSection": "2",
+          "subs": [
+            "Bans putting food in the water to attract sharks, except to harvest them",
+            "Currently applies to federal waters off Hawaii and U.S. Pacific territories"
+          ]
+        },
+        {
+          "headline": "What This Bill Changes",
+          "billSection": "2",
+          "subs": [
+            "Adds Florida's exclusive economic zone to the prohibition"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Webster (R-FL) with cosponsor Soto (D-FL), the bill is a narrow bipartisan amendment extending an existing prohibition to one additional state, which limits opposition. Its small scope favors House passage, but with few cosponsors and committee-stage status its Senate timing is uncertain.",
+      "sections": [
+        {
+          "label": "Section 2 — Prohibition on Feeding Sharks in Exclusive Economic Zone off State of Florida",
+          "items": [
+            {
+              "main": "Amends Section 317 of the Magnuson-Stevens Fishery Conservation and Management Act to add Florida to the existing shark-feeding prohibition.",
+              "detail": "The amendment strikes 'the State' and inserts 'the States', and inserts 'and Florida' after 'Hawaii'. The underlying prohibition makes it unlawful to introduce food or other substances into the water to attract sharks for any purpose other than to harvest them, within the exclusive economic zone covered by the section. The statute's existing exceptions still apply: where the Secretary or state law finds no public health hazard or safety risk, or where the activity is part of a research program funded in whole or in part by appropriated funds.",
+              "comments": [],
+              "source": "usc-16-1866"
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill extends the shark-feeding prohibition to Florida's exclusive economic zone but does not state any penalty specific to violations off Florida, relying on the existing statute's enforcement.",
+        "The bill adds Florida to a prohibition originally written for the Pacific Ocean Area but does not address whether the section's Pacific-area exceptions translate to Atlantic and Gulf waters off Florida.",
+        "The bill bans attracting sharks by feeding but does not address other shark-attraction practices that do not involve introducing food or substances into the water."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Magnuson-Stevens Act Section 317 shark-feeding prohibition coverage: exclusive economic zone off Hawaii and U.S. Pacific territories -> also includes the exclusive economic zone off Florida"
+        ],
+        "removed": []
+      },
+      "stageDate": "2026-06-02",
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "usc-16-1866",
+          "kind": "statute",
+          "label": "16 U.S.C. 1866",
+          "citation": "16 U.S.C. 1866",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap38-subchapIV-sec1866/htm",
+          "textFile": "data/ref-text/usc-16-1866.txt",
+          "fetchedAt": "2026-06-03"
+        }
+      ],
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-2399",
+      "title": "Rural Broadband Protection Act of 2025",
+      "official_title": "Rural Broadband Protection Act of 2025",
+      "code": "HR.2399",
+      "date": "2025-03-27",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Houchin, Erin (R-IN)",
+      "sponsor_bioguide": "H001093",
+      "cosponsors": 1,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "summary": "The FCC's high-cost universal service program pays companies to build broadband networks in rural and hard-to-serve areas. This bill requires the FCC to set up a vetting process so that money only goes to applicants who can show they actually have the technical, financial, and operational ability and a real business plan to build the networks they promise. It also requires meaningful penalties for applicants that win an award and then default before they are authorized to begin.",
+      "brief": "Requires the FCC to create a vetting process for high-cost universal service fund applicants and set minimum penalties for pre-authorization defaults.",
+      "top_lines": [
+        {
+          "headline": "Applicant Vetting Process",
+          "billSection": "2",
+          "subs": [
+            "FCC must start a rulemaking within 180 days to vet applicants",
+            "Applicants must document technical, financial, and operational capability and a business plan",
+            "Proposals judged against established standards and the applicant's past compliance history"
+          ]
+        },
+        {
+          "headline": "Default Penalties",
+          "billSection": "2",
+          "subs": [
+            "Penalty for pre-authorization defaults set at no less than $9,000 per violation",
+            "Base forfeiture may not be capped below 30 percent of the applicant's total support"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Houchin (R-IN) with one cosponsor, the bill passed the House and was placed on the Senate calendar. A Senate companion on the same subject (the Rural Broadband Protection Act, S-98) has already been enacted, which reduces the need for separate enactment of this House version even though the underlying policy enjoys bipartisan support.",
+      "sections": [
+        {
+          "label": "Section 2 — Vetting Process for Prospective High-Cost Universal Service Fund Applicants",
+          "items": [
+            {
+              "main": "Adds a new subsection (m) to Section 254 of the Communications Act requiring the FCC to vet applicants for new high-cost universal service funding awards.",
+              "detail": "Within 180 days of enactment, the FCC must begin a rulemaking to establish the vetting process. Applicants must include in their initial application a proposal with enough detail and documentation for the FCC to determine they have the technical, financial, and operational capabilities and a reasonable business plan to deploy the proposed network. The FCC must evaluate proposals against established technical, financial, and operational standards — including the standards in its Digital Opportunity Data Collection orders (WC Docket No. 19-195) — and against the applicant's history of complying with federal broadband-deployment funding programs.",
+              "comments": []
+            },
+            {
+              "main": "Requires minimum penalties for applicants that default before authorization.",
+              "detail": "In adopting rules for any new covered funding award, the FCC must set a penalty for pre-authorization defaults of at least $9,000 per violation and may not limit the base forfeiture to less than 30 percent of the applicant's total support, unless the Commission demonstrates the need for lower penalties in a particular instance.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill applies the vetting process to new covered funding awards made on or after the date the rules are promulgated but does not address existing awards or recipients already receiving high-cost support.",
+        "The bill sets a floor for pre-authorization default penalties but does not address penalties for defaults that occur after an applicant is authorized.",
+        "The bill requires the FCC to evaluate an applicant's compliance history but does not specify how far back that history must be reviewed or what level of past non-compliance disqualifies an applicant."
+      ],
+      "changes": {
+        "added": [
+          "A new Section 254(m) of the Communications Act requiring an FCC vetting process for high-cost universal service fund applicants",
+          "A minimum penalty of at least $9,000 per violation for pre-authorization defaults, with base forfeiture not capped below 30 percent of total support"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2025-04-29",
+      "billType": "amendment",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-04-28",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-04-28",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-04-28",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HCONRES-68",
+      "title": "To direct the removal of United States Armed Forces from Venezuela that have not been authorized by Congress.",
+      "official_title": "To direct the removal of United States Armed Forces from Venezuela that have not been authorized by Congress.",
+      "code": "HCONRES.68",
+      "date": "2026-01-07",
+      "version": "v1.0",
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. McGovern, James P. (D-MA)",
+      "sponsor_bioguide": "M000312",
+      "cosponsors": 126,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This is a concurrent resolution invoking the War Powers Resolution to direct the President to pull U.S. Armed Forces out of Venezuela unless Congress has explicitly authorized their use through a declaration of war or a specific authorization for military force. It expresses the will of both chambers and does not change any law.",
+      "brief": "Directs the President, under section 5(c) of the War Powers Resolution, to remove U.S. Armed Forces from Venezuela absent congressional authorization.",
+      "top_lines": [
+        {
+          "headline": "War Powers Directive on Venezuela",
+          "subs": [
+            "Invokes section 5(c) of the War Powers Resolution",
+            "Directs the President to remove U.S. Armed Forces from Venezuela",
+            "Exception only if authorized by a declaration of war or specific military-force authorization"
+          ]
+        }
+      ],
+      "likelihood": 5,
+      "likelihoodLabel": "Dead",
+      "likelihoodReason": "The concurrent resolution failed in the House on January 22, 2026 on a 215-215 tie vote (a tie defeats the measure). Because it did not pass the House, it cannot proceed to the Senate, and the matter is effectively closed for this measure.",
+      "sections": [
+        {
+          "label": "Section 1 — Removal of the Use of United States Forces for Hostilities Within or Against Venezuela",
+          "items": [
+            {
+              "main": "Directs the President, pursuant to section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)), to remove United States Armed Forces from Venezuela.",
+              "detail": "The directive applies unless the use of those forces is explicitly authorized by a declaration of war or a specific statutory authorization for the use of military force. The resolution is a single operative section and contains no findings or additional provisions.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The resolution directs removal of forces not authorized by Congress but does not state a deadline by which the President must complete the removal.",
+        "The resolution invokes the War Powers Resolution mechanism but does not specify which current U.S. military activities in or around Venezuela it considers unauthorized.",
+        "The resolution directs removal absent authorization but does not address forces engaged in self-defense or other activities not amounting to hostilities."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2026-01-22",
+      "billType": "resolution",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-01-22",
+          "question": "On Agreeing to the Resolution",
+          "result": "Failed",
+          "yeas": 215,
+          "nays": 215,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 2
+        }
+      ]
+    },
+    {
+      "id": "119-HCONRES-75",
+      "title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "official_title": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "code": "HCONRES.75",
+      "date": "2026-03-04",
+      "version": "v1.0",
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Gottheimer, Josh (D-NJ)",
+      "sponsor_bioguide": "G000583",
+      "cosponsors": 11,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This concurrent resolution invokes the War Powers Resolution to direct the President to end U.S. military hostilities against Iran within 30 days unless Congress explicitly authorizes them through a declaration of war or a specific authorization for the use of military force. It states that U.S. forces were introduced into hostilities against Iran on February 28, 2026, and includes carve-outs preserving self-defense, a defensive troop presence, and intelligence-sharing. It expresses the will of both chambers and does not change any law.",
+      "brief": "Directs the President, under section 5(c) of the War Powers Resolution, to remove U.S. Armed Forces from hostilities against Iran within 30 days of February 28, 2026, absent congressional authorization.",
+      "top_lines": [
+        {
+          "headline": "War Powers Directive on Iran",
+          "subs": [
+            "Directs the President to end hostilities against Iran within 30 days",
+            "Triggered by U.S. forces entering hostilities against Iran on February 28, 2026",
+            "Exception only if authorized by a declaration of war or specific military-force authorization"
+          ]
+        },
+        {
+          "headline": "Carve-Outs Preserved",
+          "subs": [
+            "Does not bar self-defense of U.S. forces, facilities, or allies from imminent attack",
+            "Does not bar a defensive troop presence in the region",
+            "Does not disrupt intelligence collection, analysis, or coalition intelligence-sharing"
+          ]
+        }
+      ],
+      "likelihood": 5,
+      "likelihoodLabel": "Dead",
+      "likelihoodReason": "The concurrent resolution failed in the House on May 14, 2026 on a 212-212 tie vote (a tie defeats the measure). Because it did not pass the House, it cannot proceed to the Senate, and the matter is effectively closed for this measure.",
+      "sections": [
+        {
+          "label": "Section 1 — Findings",
+          "items": [
+            {
+              "main": "States congressional findings, including that U.S. Armed Forces were introduced into hostilities against Iran on February 28, 2026, and that Congress has not declared war or provided specific statutory authorization for those hostilities.",
+              "detail": "The findings describe Iran as the leading state sponsor of terrorism and an adversary of the United States, cite its ballistic missile program, terrorist proxies, and pursuit of a nuclear weapon, and note Congress's sole constitutional power to declare war under Article I, Section 8. They also state the President is required to brief Congress on the deployment of forces, including the estimated scope and duration of their use, under the War Powers Resolution.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Termination of Use of Force",
+          "items": [
+            {
+              "main": "Directs the President, under section 5(c) of the War Powers Resolution, to remove U.S. Armed Forces from hostilities against Iran no later than 30 days after February 28, 2026, unless explicitly authorized by Congress.",
+              "detail": "The termination covers hostilities against Iran or any part of its government or military, including potential ground forces in a combat role or used for occupation. A rule of construction states the section does not prevent the U.S. from defending itself, its forces, diplomatic facilities, or allied states from imminent attack; does not prevent maintaining a troop presence in the region for defensive purposes; and does not force removal of forces in the region not engaged in hostilities against Iran.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Sections 3-4 — Rules of Construction",
+          "items": [
+            {
+              "main": "Adds rules of construction protecting intelligence activities and clarifying the resolution does not authorize force.",
+              "detail": "Section 3 provides that nothing in the resolution may be construed to influence or disrupt intelligence, counterintelligence, or investigative activities relating to threats in or emanating from Iran or surrounding countries, including the collection, analysis, and coalition sharing of intelligence where the President determines sharing is appropriate. Section 4, consistent with section 8(a)(1) of the War Powers Resolution, states that nothing in the resolution may be construed as authorizing the use of military force.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The resolution directs removal from hostilities against Iran but does not define what constitutes the 'hostilities' that began on February 28, 2026.",
+        "The resolution preserves a defensive troop presence and self-defense but does not specify who determines whether a given action is offensive hostilities or permitted self-defense.",
+        "The resolution sets a 30-day removal deadline but does not address enforcement if the President does not comply."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2026-05-14",
+      "billType": "resolution",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-14",
+          "question": "On Agreeing to the Resolution",
+          "result": "Failed",
+          "yeas": 212,
+          "nays": 212,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 4
+        }
+      ]
+    },
+    {
+      "id": "119-S-2392",
+      "title": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "official_title": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "code": "S.2392",
+      "date": "2025-07-23",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Moran, Jerry (R-KS)",
+      "sponsor_bioguide": "M000934",
+      "cosponsors": 22,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This law gives veterans a cost-of-living raise. Effective December 1, 2025, it increases the dollar amounts paid for veterans' service-connected disability compensation and for dependency and indemnity compensation paid to survivors, raising them by the same percentage as the annual Social Security cost-of-living adjustment.",
+      "brief": "Increases veterans' disability compensation and survivors' dependency and indemnity compensation rates, effective December 1, 2025, by the same percentage as the Social Security COLA.",
+      "top_lines": [
+        {
+          "headline": "Veterans' Compensation Raise",
+          "billSection": "2",
+          "subs": [
+            "Raises disability compensation and additional compensation for dependents",
+            "Raises the clothing allowance and dependency and indemnity compensation",
+            "Effective December 1, 2025"
+          ]
+        },
+        {
+          "headline": "Tied to Social Security",
+          "billSection": "2",
+          "subs": [
+            "Increase equals the same percentage as the Social Security COLA effective December 1, 2025",
+            "VA must publish the adjusted rates in the Federal Register"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law on November 25, 2025 as Public Law 119-42. It passed the Senate on November 9 and the House on November 17, 2025. Sponsored by Sen. Moran (R-KS) with 22 cosponsors, annual veterans' COLA legislation is routinely bipartisan.",
+      "sections": [
+        {
+          "label": "Section 2 — Increase in Rates of Disability Compensation and Dependency and Indemnity Compensation",
+          "items": [
+            {
+              "main": "Directs the Secretary of Veterans Affairs to increase, effective December 1, 2025, the dollar amounts in effect on November 30, 2025 for several veterans' benefit categories.",
+              "detail": "The increased amounts are wartime disability compensation (38 U.S.C. 1114), additional compensation for dependents (1115(1)), the clothing allowance (1162), dependency and indemnity compensation to a surviving spouse (1311(a)-(d)), and dependency and indemnity compensation to children (1313(a) and 1314). Each amount is increased by the same percentage as the Social Security title II benefit increase effective December 1, 2025 under section 215(i) of the Social Security Act. The Secretary may administratively adjust certain other disability rates under Public Law 85-857 consistent with these increases.",
+              "comments": []
+            },
+            {
+              "main": "Requires the Secretary to publish the adjusted rates in the Federal Register.",
+              "detail": "Publication must occur no later than the date the corresponding Social Security amounts are required to be published under section 215(i)(2)(D) of the Social Security Act for fiscal year 2026.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The law ties the veterans' increase to the Social Security COLA percentage but does not state the numeric percentage of the increase in the bill text.",
+        "The law adjusts the listed compensation categories but does not address other VA benefits not enumerated in section 2(b).",
+        "The law sets the increase effective December 1, 2025 but does not provide for a separate raise if Social Security makes a later adjustment within the same period."
+      ],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Veterans' disability compensation, dependents' additional compensation, clothing allowance, and dependency and indemnity compensation rates: increased effective December 1, 2025 by the Social Security COLA percentage"
+        ],
+        "removed": []
+      },
+      "stageDate": "2025-11-25",
+      "billType": "amendment",
+      "enactedDate": "2025-11-25",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-11-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-11-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-11-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-11-09",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-11-09",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-4405",
+      "title": "Epstein Files Transparency Act",
+      "official_title": "Epstein Files Transparency Act",
+      "code": "HR.4405",
+      "date": "2025-07-15",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Khanna, Ro (D-CA)",
+      "sponsor_bioguide": "K000389",
+      "cosponsors": 24,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This law requires the Attorney General to publicly release all unclassified Justice Department records relating to Jeffrey Epstein within 30 days, in a searchable and downloadable format. It bars withholding anything to avoid embarrassment, reputational harm, or political sensitivity, while still allowing narrow redactions to protect victims, remove child sexual abuse material, and guard genuinely classified national-security information. The DOJ must justify every redaction in the Federal Register and report to Congress.",
+      "brief": "Requires the Attorney General to publicly release all unclassified DOJ records relating to Jeffrey Epstein within 30 days, in searchable form, with only narrowly defined redactions allowed.",
+      "top_lines": [
+        {
+          "headline": "Mandatory Document Release",
+          "billSection": "2",
+          "subs": [
+            "AG must release all unclassified Epstein-related DOJ, FBI, and U.S. Attorney records within 30 days",
+            "Must be published in a searchable and downloadable format",
+            "Covers flight logs, immunity and plea deals, detention and death records, and internal DOJ communications"
+          ]
+        },
+        {
+          "headline": "Limits on Withholding",
+          "billSection": "2",
+          "subs": [
+            "No record may be withheld for embarrassment, reputational harm, or political sensitivity",
+            "Redactions allowed only for victim privacy, CSAM, active investigations, images of death/abuse, or properly classified material",
+            "Every redaction needs written justification published in the Federal Register and sent to Congress"
+          ]
+        },
+        {
+          "headline": "Reporting and Named Officials",
+          "billSection": "3",
+          "subs": [
+            "AG must report to the Judiciary Committees within 15 days of completing the release",
+            "Report must list all government officials and politically exposed persons named in the materials, with no redactions"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law on November 19, 2025 as Public Law 119-38. The House passed it on November 18 and the Senate on November 19, 2025.",
+      "sections": [
+        {
+          "label": "Section 2 — Release of Documents Relating to Jeffrey Epstein",
+          "items": [
+            {
+              "main": "Requires the Attorney General, within 30 days of enactment, to make publicly available in searchable and downloadable format all unclassified DOJ records relating to Jeffrey Epstein.",
+              "detail": "The mandate covers records held by the DOJ, FBI, and U.S. Attorneys' Offices across nine categories, including Epstein's investigations and prosecutions, Ghislaine Maxwell, flight logs and travel records, individuals and government officials named in connection with his activities, entities tied to his trafficking or financial networks, immunity and non-prosecution agreements and sealed settlements, internal DOJ communications about charging decisions, records concerning destruction or concealment of evidence, and documentation of his detention and death including autopsy and medical examiner files.",
+              "comments": []
+            },
+            {
+              "main": "Bars withholding records to protect reputations or for political reasons, while permitting narrow, justified redactions.",
+              "detail": "No record may be withheld, delayed, or redacted on the basis of embarrassment, reputational harm, or political sensitivity to any official, public figure, or foreign dignitary. The AG may redact only segregable portions that contain victim personally identifiable information, child sexual abuse material as defined in 18 U.S.C. 2256, material that would jeopardize an active investigation (narrowly tailored and temporary), images of death or abuse, or properly classified national-security information. Every redaction requires a written justification published in the Federal Register and submitted to Congress, and classified covered information must be declassified to the maximum extent possible — with an unclassified summary required where it cannot be.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Report to Congress",
+          "items": [
+            {
+              "main": "Requires the Attorney General to report to the House and Senate Judiciary Committees within 15 days of completing the release.",
+              "detail": "The report must list all categories of records released and withheld, summarize the redactions made and their legal basis, and list all government officials and politically exposed persons named or referenced in the released materials. No redactions are permitted on that list of named officials under the prohibited-grounds rule.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(c)(4) — Post-July 1, 2025 Classification Disclosure",
+          "summary": "Any decision to classify covered Epstein-related information after July 1, 2025 must be published in the Federal Register and submitted to Congress, including the date of classification, the identity of the classifying authority, and an unclassified summary of the justification.",
+          "why_unreported": "The headline obligation is releasing existing records, but this provision separately governs future classification actions, applying a retroactive cutoff date to constrain classifying covered information rather than disclosing already-held documents."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The law requires release within 30 days and reporting after completion but does not specify a consequence or enforcement mechanism if the Attorney General misses the deadline or withholds records improperly.",
+        "The law permits temporary withholding to protect active investigations but does not set an outer time limit on how long such material may remain withheld.",
+        "The law requires publishing a written justification for each redaction but does not provide a process for the public or Congress to challenge a redaction it considers unjustified."
+      ],
+      "changes": {
+        "added": [
+          "A requirement that the Attorney General publicly release, within 30 days, all unclassified DOJ records relating to Jeffrey Epstein in searchable and downloadable format",
+          "A prohibition on withholding records for embarrassment, reputational harm, or political sensitivity",
+          "A requirement to publish a written justification in the Federal Register for every redaction and to report named officials and politically exposed persons to the Judiciary Committees"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2025-11-19",
+      "billType": "amendment",
+      "enactedDate": "2025-11-19",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-11-18",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 427,
+          "nays": 1,
+          "present": 0,
+          "notVoting": 5,
+          "crossoverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "119-HR-1815",
+      "title": "VA Home Loan Program Reform Act",
+      "official_title": "VA Home Loan Program Reform Act",
+      "code": "HR.1815",
+      "date": "2025-03-03",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Van Orden, Derrick (R-WI)",
+      "sponsor_bioguide": "V000135",
+      "cosponsors": 0,
+      "pages": 6,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This law overhauls how the VA helps veterans who fall behind on a VA-guaranteed home loan. It creates a new Partial Claim Program in which the VA buys part of a defaulted loan to bring it current, requires lenders to walk a veteran through a mandatory sequence of foreclosure-prevention options before the VA steps in, and raises funding authorization for homeless-veteran service programs.",
+      "brief": "Creates a VA Partial Claim Program to prevent foreclosures, mandates a loss-mitigation sequence before the VA purchases a defaulted loan, and raises homeless-veteran program funding.",
+      "top_lines": [
+        {
+          "headline": "Partial Claim Program",
+          "billSection": "3",
+          "subs": [
+            "VA may buy part of a defaulted VA-guaranteed loan to prevent foreclosure",
+            "Partial claim capped at 25% of unpaid principal (30% for COVID-era missed payments, Mar 2020-May 2025)",
+            "Program sunsets five years after enactment"
+          ]
+        },
+        {
+          "headline": "Mandatory Loss Mitigation",
+          "billSection": "2",
+          "subs": [
+            "VA must prescribe a required sequence of loss-mitigation options lenders offer veterans",
+            "VA may not purchase an entire loan until the veteran completes the sequence",
+            "VA default decisions are final and not subject to judicial review"
+          ]
+        },
+        {
+          "headline": "Homeless Veteran Funding",
+          "billSection": "5",
+          "subs": [
+            "$344M authorized for comprehensive homeless-veteran service programs for each of FY2025 and FY2026",
+            "$257.7M authorized for each fiscal year thereafter through FY2030"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law on July 30, 2025 as Public Law 119-31. The House passed it on May 19 and the Senate on July 15, 2025, following a House Veterans' Affairs Committee report (No. 119-104).",
+      "sections": [
+        {
+          "label": "Section 2 — Authority of the Secretary in Case of Default",
+          "items": [
+            {
+              "main": "Amends Section 3732 of title 38 to expand the VA's authority to act on a defaulting guaranteed loan and adds a mandatory loss-mitigation sequence.",
+              "detail": "The VA may pay the loan holder an amount necessary to avoid foreclosure, obtain a secured interest in the property, and require the holder to place the loan in forbearance and execute necessary documents. A new subsection (d) directs the Secretary to prescribe loss-mitigation procedures, including a mandatory sequence of options (such as a partial claim agreement) offered to the veteran, and bars the VA from purchasing an entire loan until the veteran completes that sequence. Decisions under this paragraph are final, not subject to judicial review, and not treated as benefit decisions under section 511. The VA may set processing standards based on lender certification and must conduct random-sampling post-payment audits.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Partial Claim Program",
+          "items": [
+            {
+              "main": "Creates a new Partial Claim Program (38 U.S.C. 3737) under which the VA purchases a portion of a defaulted or at-risk guaranteed loan to prevent or resolve default.",
+              "detail": "The VA pays the loan holder the amount needed to prevent default and takes a secured interest subordinate to the first-lien guaranteed loan. A partial claim may not exceed 25 percent of the unpaid principal balance, or 30 percent for borrowers who missed a payment during the period from March 1, 2020 to May 1, 2025. Only one partial claim is allowed per loan, except an additional claim is permitted for borrowers who missed payments during a presidentially declared major disaster or the 120 days after it. Funds are applied first to arrearages, decisions are final and not subject to judicial review, and the program terminates five years after enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Homeless Veteran Program Funding",
+          "items": [
+            {
+              "main": "Increases the authorization of appropriations for comprehensive service programs for homeless veterans under Section 2016 of title 38.",
+              "detail": "The prior open-ended authorization is replaced with $344M for each of fiscal years 2025 and 2026, and $257.7M for each fiscal year thereafter through fiscal year 2030. The earlier 'fiscal year 2015 and each subsequent fiscal year' language is changed to cover fiscal years 2015 through 2024.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 4 — Real Estate Representation Strategy Report",
+          "summary": "Within 90 days of enactment, the VA must report to the Veterans' Affairs Committees on its strategy to ensure veterans using a VA-guaranteed loan are not disadvantaged when seeking representation by a real estate agent or broker, possibly including amendments to 38 CFR 36.4313.",
+          "why_unreported": "The bill is captioned around default and foreclosure authority, but this section addresses an unrelated buyer-side problem — veterans' access to real estate agent representation — rather than loan default handling."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The law makes VA partial-claim and default decisions final and not subject to judicial review but does not provide an internal appeal process for a veteran who disputes a decision.",
+        "The law sets a five-year sunset on the Partial Claim Program but does not address loans that default after the program terminates.",
+        "The law caps a partial claim at a percentage of unpaid principal but does not state what happens to a veteran whose arrearages exceed that cap."
+      ],
+      "changes": {
+        "added": [
+          "A new VA Partial Claim Program (38 U.S.C. 3737) allowing the VA to purchase part of a defaulted guaranteed loan, with a five-year sunset",
+          "A mandatory loss-mitigation sequence that lenders must offer veterans before the VA purchases a loan",
+          "A required VA report within 90 days on ensuring veterans are not disadvantaged in securing real estate agent representation"
+        ],
+        "modified": [
+          "Authorization for comprehensive homeless-veteran service programs (38 U.S.C. 2016): open-ended 'FY2015 and each subsequent year' -> $344M for each of FY2025-2026 and $257.7M per year through FY2030",
+          "VA default authority under 38 U.S.C. 3732: expanded to allow forbearance, secured interests, and payments to avoid foreclosure, subject to the new loss-mitigation sequence"
+        ],
+        "removed": []
+      },
+      "stageDate": "2025-07-30",
+      "billType": "amendment",
+      "enactedDate": "2025-07-30",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-07-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-07-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-36",
+      "title": "MEGOBARI Act",
+      "official_title": "MEGOBARI Act",
+      "code": "HR.36",
+      "date": "2025-01-03",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Wilson, Joe (R-SC)",
+      "sponsor_bioguide": "W000795",
+      "cosponsors": 18,
+      "pages": 11,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill responds to democratic backsliding in the nation of Georgia and its government's deepening ties with Russia, China, and Iran. It directs reports and a five-year U.S. strategy on Georgia, and sets up sanctions — visa bans and asset freezes — against Georgian officials and others who engage in corruption or violence to block Georgia's integration with Europe and NATO or who undermine Georgia's sovereignty. It also offers a path to expanded U.S. cooperation if Georgia's government demonstrates democratic progress. The whole Act sunsets after five years.",
+      "brief": "Authorizes visa and financial sanctions on Georgian officials who block Euro-Atlantic integration or undermine Georgia's sovereignty, and orders reports and a five-year U.S. strategy on Georgia.",
+      "top_lines": [
+        {
+          "headline": "Sanctions on Georgian Officials",
+          "billSection": "6",
+          "subs": [
+            "President must determine within 90 days which Georgian officials blocked Euro-Atlantic integration through corruption or violence",
+            "Mandatory visa ineligibility and revocation for those affirmatively identified",
+            "Discretionary asset freezes plus mandatory visa sanctions for undermining Georgia's sovereignty"
+          ]
+        },
+        {
+          "headline": "Reports and Strategy",
+          "billSection": "5",
+          "subs": [
+            "Classified report on Russian intelligence assets in Georgia within 180 days, with a China annex",
+            "Five-year U.S. bilateral strategy within 90 days, including whether Georgia stays the second-highest U.S. funding recipient in Europe and Eurasia"
+          ]
+        },
+        {
+          "headline": "Conditional Re-engagement",
+          "billSection": "7",
+          "subs": [
+            "If the President certifies sustained democratic progress, the U.S. should expand exchanges and military cooperation",
+            "Sense of Congress to suspend the U.S.-Georgia Strategic Partnership Commission until reforms occur",
+            "Entire Act sunsets five years after enactment"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Wilson (R-SC) with a bipartisan group of cosponsors (Cohen, Hudson, Veasey) and 18 cosponsors total, the bill passed the House and was placed on the Senate calendar. Georgia-focused, anti-Russia sanctions legislation generally draws bipartisan support, but mandatory sanctions on a partner government's officials and the discretionary waiver structure can slow Senate floor consideration.",
+      "sections": [
+        {
+          "label": "Section 5 — Reports and Briefings",
+          "items": [
+            {
+              "main": "Requires a classified report on Russian intelligence penetration in Georgia and a five-year U.S. strategy for bilateral relations.",
+              "detail": "Within 180 days, the Secretary of State, with the Director of National Intelligence and Secretary of Defense, must submit a classified report on Russian intelligence elements and assets in Georgia, with an annex on Chinese influence and potential Russian-Chinese cooperation. Within 90 days, the Secretary and USAID Administrator must submit a five-year strategy outlining objectives for bilateral ties, the tools and funding to achieve them, an assessment of whether Georgia should remain the second-highest recipient of U.S. funding in the Europe and Eurasia region, and a plan to support civil society and independent media. The strategy is unclassified with a classified annex.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Sanctions",
+          "items": [
+            {
+              "main": "Directs the President to determine within 90 days which Georgian officials and family members knowingly engaged in corruption or violence to block Euro-Atlantic integration, and to impose visa sanctions on them.",
+              "detail": "Covered persons include anyone who served as a Member of Georgia's Parliament or senior party official on or after January 1, 2014, leadership officials of the Georgian government (law enforcement, intelligence, judicial, local), and benefiting immediate family. Those affirmatively identified face mandatory visa ineligibility and revocation under subsection (d)(2). A separate authority lets the President impose IEEPA asset-blocking (discretionary) and visa sanctions (mandatory) on foreign persons who undermine the peace, security, stability, sovereignty, or territorial integrity of Georgia.",
+              "comments": []
+            },
+            {
+              "main": "Sets out the sanctions, waivers, exceptions, and a broader-corruption review.",
+              "detail": "Sanctions consist of IEEPA property blocking and visa ineligibility/revocation. The President may waive sanctions for national-security reasons or changed circumstances (renewable 180-day waivers for the sovereignty-based sanctions). Implementing regulations are due within 120 days. Within 180 days the President must report on foreign persons engaged in significant corruption in Georgia. Exceptions cover authorized intelligence activities, U.N. headquarters obligations, humanitarian and agricultural/medical transactions, and the importation of goods. Sanctions terminate when the President certifies a person has stopped the triggering conduct or at the Act's sunset.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 7 — Additional Assistance With Respect to Georgia",
+          "items": [
+            {
+              "main": "Provides for expanded U.S. cooperation with Georgia if the President certifies sustained democratic progress.",
+              "detail": "Upon the President's certification that Georgia has shown significant and sustained progress reinvigorating its democracy and advancing Euro-Atlantic integration, the Secretary of State should enhance people-to-people contacts and academic exchanges, and the President, with the Secretary of Defense, should maintain and as appropriate expand military cooperation — including territorial-defense equipment and related training — to help deter Russian aggression.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 6(b)(1)(A) — January 1, 2014 Lookback",
+          "summary": "The mandatory inadmissibility review reaches any individual who served as a Member of Georgia's Parliament or as a senior official of a Georgian political party at any point on or after January 1, 2014, not only current officeholders.",
+          "why_unreported": "The bill is framed around responding to recent backsliding, but this provision applies the corruption/violence screen to more than a decade of past and former parliamentarians and party officials, a far wider pool than sitting government officials."
+        },
+        {
+          "section": "Section 5(b)(1)(B) — Funding-Rank Reassessment",
+          "summary": "The required five-year strategy must include an assessment of whether Georgia should remain the second-highest recipient of U.S. funding in the Europe and Eurasia region.",
+          "why_unreported": "Beyond the sanctions headline, this directs an explicit review that could lead to reducing Georgia's U.S. assistance, a budgetary consequence not evident from the bill's title."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill mandates a determination of which officials blocked Euro-Atlantic integration but does not define the threshold of 'significant acts of corruption' that triggers mandatory sanctions.",
+        "The bill directs an assessment of whether Georgia should remain the second-highest U.S. funding recipient but does not itself change or condition any specific assistance program.",
+        "The bill provides broad national-security waivers for sanctions but does not set a limit on how many covered officials may be waived or for how long in aggregate.",
+        "The bill sets a five-year sunset for the entire Act but does not address what happens to sanctions still in effect on persons who continue the triggering conduct after sunset."
+      ],
+      "changes": {
+        "added": [
+          "Mandatory visa sanctions on Georgian officials and family members determined to have engaged in corruption or violence blocking Euro-Atlantic integration",
+          "Discretionary IEEPA asset-blocking and mandatory visa sanctions for foreign persons undermining Georgia's sovereignty or territorial integrity",
+          "A classified report on Russian intelligence assets in Georgia and a five-year U.S. bilateral strategy",
+          "A five-year sunset on the entire Act"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "stageDate": "2025-05-06",
+      "billType": "amendment",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-05-05",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 349,
+          "nays": 42,
+          "present": 0,
+          "notVoting": 42,
+          "crossoverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "119-HR-8469",
+      "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "official_title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "code": "HR.8469",
+      "date": "2026-04-23",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Carter, John R. (R-TX)",
+      "sponsor_bioguide": "C001051",
+      "cosponsors": 0,
+      "pages": 50,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This is the annual spending bill that funds military base construction and the Department of Veterans Affairs for fiscal year 2027. It pays for new construction and family housing across the armed services, and funds veterans' disability and pension benefits, VA medical care, cemeteries, and related agencies. As is standard for the VA, most of its health care money is appropriated a year ahead, becoming available October 1, 2027 for fiscal year 2028.",
+      "brief": "Provides fiscal year 2027 appropriations for military construction and the Department of Veterans Affairs, including advance-funded VA medical care for fiscal year 2028.",
+      "top_lines": [
+        {
+          "headline": "Military Construction",
+          "billSection": "title-I",
+          "subs": [
+            "$5.51B for Navy and Marine Corps construction",
+            "$3.76B Defense-Wide and $3.71B Air Force construction",
+            "$2.13B for Army construction"
+          ]
+        },
+        {
+          "headline": "VA Medical Care (Advance-Funded)",
+          "billSection": "title-II",
+          "subs": [
+            "$70.7B for medical services and $42B for community (non-VA) care, available Oct 1, 2027",
+            "$13.54B medical facilities and $12B medical support and compliance",
+            "$54.59B Cost of War Toxic Exposures Fund"
+          ]
+        },
+        {
+          "headline": "Veterans Benefits and Related Agencies",
+          "billSection": "title-II",
+          "subs": [
+            "$283.81B advance for compensation and pensions; $23.57B readjustment benefits",
+            "$3.74B for Veterans Benefits Administration operating expenses",
+            "$118M Arlington National Cemetery; $107.9M American Battle Monuments Commission"
+          ]
+        }
+      ],
+      "likelihood": 60,
+      "likelihoodLabel": "Likely",
+      "likelihoodReason": "Reported by Rep. Carter (R-TX) from the House Appropriations Committee, the bill passed the House and was received in the Senate. Military construction and VA appropriations are among the least controversial of the annual spending bills and typically advance with bipartisan support, though final enactment depends on the broader appropriations process and any continuing-resolution dynamics.",
+      "sections": [
+        {
+          "label": "Title I — Military Construction",
+          "items": [
+            {
+              "main": "Appropriates fiscal year 2027 military construction funds across the armed services, available until September 30, 2031.",
+              "detail": "Accounts include $2.13B for Army construction, $5.51B for Navy and Marine Corps, $3.71B for Air Force, and $3.76B for Defense-Wide construction. Reserve and National Guard construction, family housing construction and operation, the NATO Security Investment Program ($481.8M), and the Department of Defense Base Closure Account ($465.2M) are also funded. Each service account reserves a capped amount for planning and design.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Veterans Benefits Administration",
+          "items": [
+            {
+              "main": "Funds veterans' compensation, pension, and readjustment benefits, largely as advance appropriations for fiscal year 2028.",
+              "detail": "Compensation and pensions receive $10.56B added for fiscal year 2027 plus a $283.81B advance becoming available October 1, 2027. Readjustment benefits receive a $23.57B advance, and veterans insurance and indemnities $90.9M. The Veterans Benefits Administration's general operating expenses are funded at $3.74B. Several loan-program accounts (housing, vocational rehabilitation, Native American veteran housing) receive administrative-expense appropriations.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Veterans Health Administration",
+          "items": [
+            {
+              "main": "Provides VA medical care funding, with the health accounts appropriated a year in advance for fiscal year 2028.",
+              "detail": "Medical services receive a $70.7B advance (plus $100M added for fiscal year 2027), medical community care $42B, medical support and compliance $12B, medical facilities $13.54B, and medical and prosthetic research $900M. The bill rescinds $1.65B from prior-year medical support and compliance funds and $754.3M from prior-year medical facilities funds. The Cost of War Toxic Exposures Fund is funded at $54.59B.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — Related Agencies",
+          "items": [
+            {
+              "main": "Funds veterans- and military-cemetery-related agencies and the veterans courts.",
+              "detail": "The American Battle Monuments Commission receives $107.9M, the U.S. Court of Appeals for Veterans Claims $50M, Cemeterial Expenses (Arlington National Cemetery) $118M, and the Armed Forces Retirement Home $77M from its trust fund (with $27M paid from the general fund). The National Cemetery Administration is funded at $500M under Title II.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Title II — Prior-Year Rescissions",
+          "summary": "The bill rescinds $1.65B from medical support and compliance funds and $754.3M from medical facilities funds that had become available October 1, 2026 under the Continuing Appropriations Act (division D of Public Law 119-37).",
+          "why_unreported": "The bill's headline is new VA appropriations, but these provisions claw back previously appropriated medical funds, reducing the net new money below the gross appropriation figures."
+        },
+        {
+          "section": "General Administration — 25 Percent Testimony Withhold",
+          "summary": "25 percent of the VA general administration appropriation may not be obligated until the Secretary of Veterans Affairs testifies before the Appropriations Committees on the President's fiscal year 2028 budget request.",
+          "why_unreported": "Beyond simply funding VA administration, this provision conditions release of a quarter of the money on a future congressional testimony appearance, a control mechanism not evident from the account heading."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill advance-funds VA medical care for fiscal year 2028 but does not itself set fiscal year 2028 funding for the rest of the VA or for military construction, which remain on the annual cycle.",
+        "The bill rescinds prior-year medical support and medical facilities funds but does not state which planned activities those rescinded amounts would have covered.",
+        "The bill funds military construction across the services but does not, in its text, specify the individual projects, which are left to the tables in the accompanying committee report."
+      ],
+      "changes": {
+        "added": [
+          "Fiscal year 2027 appropriations for military construction, the Department of Veterans Affairs, and related agencies, with VA medical accounts advance-funded for fiscal year 2028"
+        ],
+        "modified": [],
+        "removed": [
+          "$1.65B rescinded from prior-year VA medical support and compliance funds",
+          "$754.3M rescinded from prior-year VA medical facilities funds"
+        ]
+      },
+      "stageDate": "2026-05-20",
+      "billType": "appropriation",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 400,
+          "nays": 15,
+          "present": 0,
+          "notVoting": 15,
+          "crossoverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "119-HR-7567",
+      "title": "Farm, Food, and National Security Act of 2026",
+      "official_title": "Farm, Food, and National Security Act of 2026",
+      "code": "HR.7567",
+      "date": "2026-02-13",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Thompson, Glenn (R-PA)",
+      "sponsor_bioguide": "T000467",
+      "cosponsors": 0,
+      "pages": 356,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This is a farm bill — the broad, multi-year law that reauthorizes most U.S. Department of Agriculture programs across twelve subject areas, from crop supports and conservation to food aid, farm credit, rural development, research, forestry, energy, and crop insurance. It also reauthorizes the Supplemental Nutrition Assistance Program (SNAP, formerly food stamps) and makes administrative changes to how states run it. Many existing program authorizations that lapsed are extended through 2031.",
+      "brief": "Reauthorizes USDA farm, conservation, trade, rural, research, and crop-insurance programs and SNAP through 2031, with disaster-assistance, specialty-crop, dairy, and SNAP administrative changes.",
+      "top_lines": [
+        {
+          "headline": "Commodities and Disaster Aid",
+          "billSection": "title-I",
+          "subs": [
+            "Extends suspension of permanent price support authority from 2023 to 2031",
+            "Creates a Specialty Crop Emergency Assistance Framework for disaster and market losses",
+            "Expands the Tree Assistance Program with initial payments and a Sept 30, 2035 sunset"
+          ]
+        },
+        {
+          "headline": "SNAP and Nutrition",
+          "billSection": "title-IV",
+          "subs": [
+            "Lets states hire contractors for SNAP processing when error rates hit 6 percent or backlogs occur",
+            "Requires EBT card security rulemaking within 6 months",
+            "Makes SNAP online purchasing authority permanent; reauthorizes anti-trafficking enforcement to 2031"
+          ]
+        },
+        {
+          "headline": "Conservation, Credit, and Rural Programs",
+          "billSection": "title-II",
+          "subs": [
+            "Reauthorizes conservation programs (CRP, EQIP, CSP, easements, partnerships)",
+            "Updates farm ownership and operating loan eligibility and limits",
+            "Reauthorizes rural development, trade/food-aid, research, forestry, energy, and crop insurance programs"
+          ]
+        }
+      ],
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by Rep. Thompson (R-PA), chairman of the House Agriculture Committee, the bill passed the House and was received in the Senate. Comprehensive farm bills typically have bipartisan agricultural-state support, but disagreements over the nutrition title and overall cost can stall reconciliation between the chambers, leaving final passage uncertain.",
+      "sections": [
+        {
+          "label": "Title I — Commodities",
+          "items": [
+            {
+              "main": "Extends commodity price-support authority and adds disaster and specialty-crop assistance.",
+              "detail": "Section 1001 extends the suspension of permanent price support authority under the Agricultural Act of 2014 from 2023 to 2031. Section 1002 expands the Tree Assistance Program — covering biennial crops and pest losses, allowing replanting with alternative varieties, stand densities, or locations, adding a 120-day deadline for application decisions and an optional initial payment, with that payment authority sunsetting September 30, 2035. Section 1003 creates a new Specialty Crop Emergency Assistance Framework for producers hit by adverse events, with payment limits tied to the Food Security Act and a floor of not less than $900,000 for entities deriving at least 75 percent of income from farming. The title also includes dairy reporting, storage facility loans, and supply-chain provisions.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — Nutrition",
+          "items": [
+            {
+              "main": "Reauthorizes SNAP and makes administrative changes to how states operate the program.",
+              "detail": "A new declaration of policy ties SNAP to preventing diet-related chronic disease. Section 4103 lets state agencies hire contractors to handle SNAP certification and other functions when they cannot process applications timely (for reasons such as pandemics, staffing shortages, or disasters), when their payment error rate is at or above 6 percent, or when applications surge — subject to safeguards against incentives to deny eligibility. Other sections extend prohibited-fee, anti-trafficking, and program authorization provisions from 2023 to 2031, require EBT card security rulemaking within 6 months, require reporting of all identified payment errors, and make SNAP online-purchasing authority permanent. Subtitles B and C reauthorize commodity distribution, the commodity supplemental food program, and nutrition-incentive programs.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Conservation",
+          "items": [
+            {
+              "main": "Reauthorizes and adjusts USDA conservation programs.",
+              "detail": "The title covers the Conservation Reserve Program and farmable wetland program, the Environmental Quality Incentives Program (including payment limits and conservation innovation grants), the Conservation Stewardship Program with state soil-health assistance, agricultural and forest conservation easement programs, the Regional Conservation Partnership Program, and other programs such as feral swine eradication and emergency conservation and watershed programs. Funding and administration provisions address the Commodity Credit Corporation and delivery of technical assistance.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Titles III, V-XII — Trade, Credit, Rural, and Other Programs",
+          "billSection": "title-III",
+          "items": [
+            {
+              "main": "Reauthorizes the remaining farm bill program areas, largely by amending existing USDA statutes.",
+              "detail": "Title III reauthorizes food aid and agricultural trade programs (Food for Peace, McGovern-Dole, Food for Progress, market development). Title V updates farm ownership and operating loan eligibility, experience requirements, and limits. Title VI covers rural development, including rural health and broadband (Rural Electrification Act amendments). Title VII reauthorizes agricultural research, extension, and education. Title VIII addresses forestry, Title IX energy and biofuels, Title X horticulture and marketing, Title XI crop insurance (including a specialty crop advisory committee), and Title XII miscellaneous provisions on livestock and other matters.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 1003(d)(1)(B) — $900,000 Specialty Crop Payment Floor",
+          "summary": "For a person or legal entity that derives at least 75 percent of average gross income from farming, ranching, or silviculture, the standard payment limitation does not apply and the Secretary sets the maximum specialty-crop emergency payment, which may not be set lower than $900,000.",
+          "why_unreported": "The framework is presented as broad specialty-crop disaster assistance, but this provision exempts the largest farming entities from the normal payment cap and guarantees them a much higher payment ceiling than other recipients."
+        },
+        {
+          "section": "Section 4103 — Contractor Trigger at 6 Percent Error Rate",
+          "summary": "States may contract out SNAP certification and other functions whenever their payment error rate reaches 6 percent, in addition to during backlogs or application surges.",
+          "why_unreported": "The provision is labeled staffing flexibility, but it also lets a state respond to a high error rate by adding contractors rather than by other corrective measures; the temporary-shortage authority expires only once the error rate falls below 6 percent."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill reauthorizes most programs through 2031 but, in the text reviewed, relies on existing statutory funding mechanisms rather than stating new multi-year funding totals for each title.",
+        "The bill creates a Specialty Crop Emergency Assistance Framework but makes its payment factor subject to the availability of appropriations without guaranteeing a funding level.",
+        "The bill adds SNAP contractor authority tied to error rates and backlogs but does not set standards for contractor accuracy or accountability beyond barring incentives to deny eligibility.",
+        "The bill reauthorizes conservation and rural programs but, in the text reviewed, does not specify the enrollment acreage or funding caps for each program in this top-level pass."
+      ],
+      "changes": {
+        "added": [
+          "A Specialty Crop Emergency Assistance Framework (new section 196A) for producers affected by adverse events",
+          "SNAP staffing flexibility allowing states to hire contractors during backlogs, surges, or when error rates reach 6 percent",
+          "An optional initial-payment option under the Tree Assistance Program, sunsetting September 30, 2035",
+          "Permanent authority for SNAP online purchasing"
+        ],
+        "modified": [
+          "Suspension of permanent price support authority extended from 2023 to 2031",
+          "Multiple SNAP authorizations (prohibited fees, anti-trafficking, program appropriations) extended from 2023 to 2031"
+        ],
+        "removed": []
+      },
+      "stageDate": "2026-05-19",
+      "billType": "reauthorization",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-30",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 224,
+          "nays": 200,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 17
+        },
+        {
+          "chamber": "House",
+          "date": "2026-04-30",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 211,
+          "nays": 214,
+          "present": 0,
+          "notVoting": 5,
+          "crossoverCount": 0
+        }
+      ]
+    },
+    {
+      "id": "119-S-1071",
+      "title": "National Defense Authorization Act for Fiscal Year 2026",
+      "official_title": "National Defense Authorization Act for Fiscal Year 2026",
+      "code": "S.1071",
+      "date": "2025-03-14",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Cornyn, John (R-TX)",
+      "sponsor_bioguide": "C001056",
+      "cosponsors": 1,
+      "pages": 1640,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This is the annual defense authorization law — the must-pass bill that sets policy and authorizes funding levels for the entire Department of Defense for fiscal year 2026, plus the Energy Department's nuclear-weapons work, military construction, and the armed forces' personnel and health programs. This year's version also carries full-year authorizations for the State Department, the intelligence agencies, and the Coast Guard, and a large 'Other Matters' division covering outbound-investment screening, development finance, and more. It does not itself spend money; it authorizes and directs how defense money may be used.",
+      "brief": "Authorizes fiscal year 2026 funding and policy for the Department of Defense, nuclear-weapons programs, military construction, and personnel, and carries State, intelligence, and Coast Guard authorizations plus other national-security measures.",
+      "top_lines": [
+        {
+          "headline": "Defense Authorizations",
+          "billSection": "title-I",
+          "subs": [
+            "Authorizes procurement, research and development, operations, and maintenance for the armed forces",
+            "Sets military personnel end strengths, pay, benefits, and health-care policy",
+            "Includes space, cyberspace, and strategic-programs authorizations"
+          ]
+        },
+        {
+          "headline": "Nuclear, Construction, and Allied Programs",
+          "billSection": "title-XXI",
+          "subs": [
+            "Authorizes the Energy Department's national-security and nuclear-weapons programs",
+            "Authorizes military construction across the services, including specific projects",
+            "$1.58B authorized for construction at Naval Station Norfolk; $1.04B at Portsmouth Naval Shipyard"
+          ]
+        },
+        {
+          "headline": "Beyond the Pentagon",
+          "billSection": "title-LXXXV",
+          "subs": [
+            "Carries the State Department, Intelligence, and Coast Guard authorization acts for 2026",
+            "Enacts the Comprehensive Outbound Investment National Security Act of 2025",
+            "Reauthorizes the U.S. development-finance agency, raising its liability cap to $205B"
+          ]
+        }
+      ],
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law on December 18, 2025 as Public Law 119-60. The annual National Defense Authorization Act is considered must-pass legislation and is enacted every year with bipartisan support.",
+      "sections": [
+        {
+          "label": "Division A — Department of Defense Authorizations",
+          "billSection": "title-I",
+          "items": [
+            {
+              "main": "Authorizes Department of Defense programs and sets defense policy across eighteen titles for fiscal year 2026.",
+              "detail": "The division authorizes procurement (Title I); research, development, test, and evaluation (Title II); operation and maintenance (Title III); military personnel end strengths (Title IV) and personnel policy (Title V); compensation and benefits (Title VI); health care (Title VII); acquisition policy and reform (Titles VIII and XVIII); department organization (Title IX); general provisions (Title X); civilian personnel (Title XI); matters relating to foreign nations (Title XII); cyberspace matters (Title XV); and space, strategic programs, and intelligence (Title XVI). Specific funding levels are set in the Division D funding tables.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Divisions B & C — Military Construction and Energy Department National Security",
+          "billSection": "title-XXI",
+          "items": [
+            {
+              "main": "Authorizes military construction and the Energy Department's national-security and nuclear programs.",
+              "detail": "Division B authorizes military construction for the Army, Navy, Air Force, and defense agencies, international programs, Guard and Reserve facilities, and base realignment and closure activities — including named projects such as $1.58B for Naval Station Norfolk and $1.04B for Portsmouth Naval Shipyard. Division C authorizes the Energy Department's national-security programs (nuclear weapons activities), the Defense Nuclear Facilities Safety Board, the naval petroleum reserves, and the Maritime Administration.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Divisions E, F & G — State, Intelligence, and Coast Guard Authorizations",
+          "billSection": "title-LXI",
+          "items": [
+            {
+              "main": "Carries full-year authorization acts for the State Department, the intelligence community, and the Coast Guard.",
+              "detail": "Division E is the Department of State Authorization Act for Fiscal Year 2026, covering organization, workforce, information security and cyber diplomacy, public diplomacy, and diplomatic security. Division F is the Intelligence Authorization Act for Fiscal Year 2026, including a title on artificial intelligence and other emerging technologies. Division G is the Coast Guard Authorization Act of 2025, addressing Coast Guard organization and personnel, shipping and navigation, oil-pollution response, and sexual assault and harassment response.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division H — Other Matters",
+          "billSection": "title-LXXXV",
+          "items": [
+            {
+              "main": "Carries non-defense national-security measures, including outbound-investment screening and development-finance reauthorization.",
+              "detail": "Division H enacts the Comprehensive Outbound Investment National Security Act of 2025 (Title LXXXV), establishing screening of certain U.S. investments abroad. The DFC Modernization and Reauthorization Act of 2025 (Title LXXXVII) reauthorizes the U.S. International Development Finance Corporation, raising its maximum contingent liability to $205B and authorizing $5B for its Equity Investment Account for fiscal years 2026 through 2031. The division also covers financial services, judiciary, foreign affairs, and oceanic and atmospheric matters.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Title LXXXV — Comprehensive Outbound Investment National Security Act of 2025",
+          "summary": "The defense authorization carries a standalone law establishing a federal regime to screen certain outbound U.S. investments for national-security risk.",
+          "why_unreported": "Carried inside the defense authorization rather than as a freestanding bill, this title creates an investment-screening framework whose subject is economic and financial regulation rather than defense authorization."
+        },
+        {
+          "section": "Title LXXXVII — DFC Maximum Contingent Liability",
+          "summary": "The bill raises the U.S. International Development Finance Corporation's maximum contingent liability outstanding at any one time to $205B in the aggregate, and authorizes $5B for its Equity Investment Account through fiscal year 2031.",
+          "why_unreported": "This expansion of a development-finance agency's lending and equity-investment capacity sits within the defense authorization's 'Other Matters' division, separate from any defense program."
+        }
+      ],
+      "criticisms": [],
+      "featured_quotes": [],
+      "gaps": [
+        "The bill authorizes defense programs and policy but does not itself appropriate the money, which depends on a separate defense appropriations bill.",
+        "The bill sets authorization levels through the Division D funding tables but, in this top-level pass, the overall dollar total is the sum of those tables rather than a single stated figure.",
+        "The bill carries State, intelligence, and Coast Guard authorizations but does not consolidate their separate authorization cycles into the defense schedule.",
+        "The bill enacts an outbound-investment screening regime but, in the portion reviewed, leaves the detailed covered-transaction definitions to implementing regulations."
+      ],
+      "changes": {
+        "added": [
+          "A federal outbound-investment national-security screening regime (Comprehensive Outbound Investment National Security Act of 2025)",
+          "Reauthorization of the U.S. International Development Finance Corporation with a $205B maximum contingent liability and a $5B Equity Investment Account through fiscal year 2031",
+          "Full-year authorizations for the State Department, intelligence community, and Coast Guard carried within the defense authorization"
+        ],
+        "modified": [
+          "Department of Defense program authorizations and policy updated for fiscal year 2026 across procurement, research, operations, personnel, and space and cyber programs"
+        ],
+        "removed": []
+      },
+      "stageDate": "2025-12-18",
+      "billType": "appropriation",
+      "enactedDate": "2025-12-18",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-12-17",
+          "question": "On the Motion (Motion to Concur in the House Amendment to S. 1071)",
+          "result": "Motion Agreed to",
+          "yeas": 77,
+          "nays": 20,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-12-15",
+          "question": "On the Cloture Motion S. 1071",
+          "result": "Cloture Motion Agreed to",
+          "yeas": 76,
+          "nays": 20,
+          "present": 0,
+          "notVoting": 4,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-12-11",
+          "question": "On the Motion to Proceed S. 1071",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 75,
+          "nays": 22,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2025-12-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 312,
+          "nays": 112,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2025-12-10",
+          "question": "On Motion to Commit",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 8,
+          "crossoverCount": 0
+        }
+      ]
     }
   ]
 }

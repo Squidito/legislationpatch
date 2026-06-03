@@ -6,7 +6,15 @@
   "role": "Senator",
   "district": null,
   "bio": "Christine Elizabeth Smith is an American politician, retired Democratic political consultant, and former businesswoman serving as the junior United States senator from Minnesota since 2018. She is a member of the Minnesota Democratic–Farmer–Labor Party (DFL), an affiliate of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "stance": "oppose",
+      "text": "allowing public land orders to be rescinded under the Congressional Review Act, which is what would be happening here tonight, is a dangerous precedent that would affect every State in our country. Public land orders have never been previously submitted by any administration, including the first Trump administration, as a rule under the CRA.",
+      "date": "2026-01-11"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Tina_Smith",
   "voteHistory": [
@@ -29,6 +37,13 @@
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "Senate",
       "date": "2026-01-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-S-1071",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
+      "chamber": "Senate",
+      "date": "2025-12-17",
       "vote": "Nay"
     },
     {

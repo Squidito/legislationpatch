@@ -1,0 +1,164 @@
+// qa-source-verify.js
+// Source-anchored QA verifier for the QA Loop Protocol (see CLAUDE.md).
+//
+// PURPOSE: tie every figure/percentage/year/section cite in a bill's analysis back
+// to a QUOTED line of the actual source text (data/bill-text/{id}.txt + any
+// referencedSources). It verifies claims against the SOURCE, never against cache
+// alone and never against a previous run's output — so it cannot rubber-stamp its
+// own prior conclusion. Re-running it on unchanged data is NOT an independent pass;
+// the protocol still requires a genuine human/agent fresh read of the quoted source.
+//
+// Usage:
+//   node scripts/qa-source-verify.js                 # all analyzed bills, summary
+//   node scripts/qa-source-verify.js --bill 119-HR-1 # one bill
+//   node scripts/qa-source-verify.js --quote         # print the source line for EVERY claim (forces a real read)
+//   node scripts/qa-source-verify.js --bill 119-HR-1 --quote
+//
+// Exit code: non-zero if any claim has no source evidence, or any non-statutory
+// editorial adjective is found. Intended to be run once PER PASS, with the --quote
+// output actually read against source — not diffed against the last run.
+
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.join(__dirname, '..');
+const cache = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/cache.json'), 'utf8')).bills;
+const QUOTE = process.argv.includes('--quote');
+const billArg = (process.argv.find(a => a.startsWith('--bill')) || '').split('=')[1]
+  || (process.argv.includes('--bill') ? process.argv[process.argv.indexOf('--bill') + 1] : null);
+
+// Editorial adjectives banned by RULE 7, minus phrases that are genuine statutory
+// terms (these must be quoted from the bill text to be allowed — see verifyEditorial).
+const BANNED = /\b(quietly|buried|hidden|concealed|sweeping|significant|notable|troubling|controversial|merely|surprisingly|cleverly|conveniently|ostensibly|framed as|landmark|major|crackdown|sprawling|massive)\b/i;
+
+function readSource(id, refs) {
+  const blocks = [];
+  const main = path.join(ROOT, 'data/bill-text', `${id}.txt`);
+  if (fs.existsSync(main)) blocks.push({ tag: id, lines: fs.readFileSync(main, 'utf8').split('\n') });
+  for (const r of (refs || [])) {
+    const f = path.join(ROOT, r.textFile || '');
+    if (r.textFile && fs.existsSync(f)) blocks.push({ tag: r.id || r.textFile, lines: fs.readFileSync(f, 'utf8').split('\n') });
+  }
+  return blocks;
+}
+
+function proseSegments(b) {
+  const seg = [];
+  const push = (label, s) => { if (s && typeof s === 'string') seg.push({ label, s }); };
+  push('summary', b.summary); push('brief', b.brief);
+  (b.top_lines || []).forEach((t, i) => { push(`top_lines[${i}].headline`, t.headline); (t.subs || []).forEach((s, j) => push(`top_lines[${i}].subs[${j}]`, s)); });
+  (b.sections || []).forEach((s, i) => (s.items || []).forEach((it, j) => { push(`sections[${i}].items[${j}].main`, it.main); push(`sections[${i}].items[${j}].detail`, it.detail); }));
+  (b.underreported || []).forEach((u, i) => { push(`underreported[${i}].summary`, u.summary); push(`underreported[${i}].why_unreported`, u.why_unreported); });
+  (b.gaps || []).forEach((g, i) => push(`gaps[${i}]`, g));
+  const ch = b.changes || {};
+  ['added', 'modified', 'removed'].forEach(k => (ch[k] || []).forEach((x, i) => push(`changes.${k}[${i}]`, x)));
+  return seg;
+}
+
+// Find the source line that evidences a claim. Returns {tag, lineNo, text} or null.
+function findDollar(blocks, value) {
+  for (const blk of blocks) {
+    for (let i = 0; i < blk.lines.length; i++) {
+      const m = blk.lines[i].match(/\$[0-9][0-9,]{2,}/g);
+      if (!m) continue;
+      for (const tok of m) {
+        const f = +tok.replace(/[$,]/g, '');
+        if (!isNaN(f) && Math.abs(f - value) <= Math.max(1, value * 0.006)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim() };
+      }
+    }
+  }
+  return null;
+}
+// whitespace-tolerant phrase finder (handles figures wrapped across line breaks)
+function findPhrase(blocks, ...variants) {
+  for (const blk of blocks) {
+    for (let i = 0; i < blk.lines.length; i++) {
+      const win = (blk.lines[i] + ' ' + (blk.lines[i + 1] || '')).replace(/\s+/g, ' ').toLowerCase();
+      for (const v of variants) if (win.includes(v)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim() };
+    }
+  }
+  return null;
+}
+
+function shortToVal(tok) {
+  const m = tok.match(/\$([0-9][0-9,.]*)\s*(B|M|K)?/i);
+  if (!m) return null;
+  let n = parseFloat(m[1].replace(/,/g, ''));
+  const u = (m[2] || '').toUpperCase();
+  if (u === 'B') n *= 1e9; else if (u === 'M') n *= 1e6; else if (u === 'K') n *= 1e3;
+  return n;
+}
+
+function verifyBill(b) {
+  const blocks = readSource(b.id, b.referencedSources);
+  if (!blocks.length) return { id: b.id, claims: [], flags: [{ kind: 'source', detail: 'no source text file' }] };
+  const claims = [], flags = [];
+  const seen = new Set();
+  for (const { label, s } of proseSegments(b)) {
+    // dollars
+    for (const tok of (s.match(/\$[0-9][0-9,.]*\s*(?:B|M|K)?/gi) || [])) {
+      const key = 'D' + tok.trim(); if (seen.has(key)) continue; seen.add(key);
+      const v = shortToVal(tok.trim()); if (v == null) continue;
+      const ev = findDollar(blocks, v);
+      claims.push({ kind: '$', token: tok.trim(), label, ev });
+      if (!ev) flags.push({ kind: '$', detail: `${tok.trim()} (${label})` });
+    }
+    // percentages
+    for (const m of s.matchAll(/([0-9]+(?:\.[0-9]+)?)\s*(?:percent|%)/gi)) {
+      const n = m[1]; const key = 'P' + n; if (seen.has(key)) continue; seen.add(key);
+      const ev = findPhrase(blocks, n + ' percent', n + 'percent', n + '%', n + ' %');
+      claims.push({ kind: '%', token: n + '%', label, ev });
+      if (!ev) flags.push({ kind: '%', detail: `${n}% (${label})` });
+    }
+    // years
+    for (const m of s.matchAll(/\b((?:19|20)[0-9]{2})\b/g)) {
+      const y = m[1]; const key = 'Y' + y; if (seen.has(key)) continue; seen.add(key);
+      const ev = findPhrase(blocks, y);
+      claims.push({ kind: 'yr', token: y, label, ev });
+      if (!ev) flags.push({ kind: 'yr', detail: `${y} (${label})` });
+    }
+    // section cites
+    for (const m of s.matchAll(/\bsection\s+([0-9]+[A-Za-z]?)/gi)) {
+      const sec = m[1].toLowerCase(); const key = 'S' + sec; if (seen.has(key)) continue; seen.add(key);
+      const ev = findPhrase(blocks, 'section ' + sec, 'sec. ' + sec, sec + '. ');
+      claims.push({ kind: 'sec', token: 'Section ' + sec, label, ev });
+      if (!ev) flags.push({ kind: 'sec', detail: `Section ${sec} (${label})` });
+    }
+  }
+  // editorial: a banned word is allowed ONLY if it sits inside a phrase quoted from the source
+  for (const { label, s } of proseSegments(b)) {
+    const m = s.match(BANNED); if (!m) continue;
+    const w = m[0].toLowerCase();
+    // grab a short window around the word and require it to appear in the source
+    const idx = m.index; const window = s.slice(Math.max(0, idx - 12), idx + w.length + 18).replace(/\s+/g, ' ').toLowerCase();
+    const ev = findPhrase(blocks, window) || findPhrase(blocks, w + ' '); // statutory term must be in source
+    if (!ev) flags.push({ kind: 'editorial', detail: `"${m[0]}" (${label}) — not a sourced term` });
+  }
+  return { id: b.id, claims, flags };
+}
+
+const bills = cache.filter(b => b.analyzed && (!billArg || b.id === billArg));
+let totalFlags = 0, billsWithFlags = 0;
+console.log(`qa-source-verify — ${bills.length} bill(s). Claims are matched to QUOTED source lines; read them, do not diff against a prior run.\n`);
+for (const b of bills) {
+  const r = verifyBill(b);
+  if (QUOTE) {
+    console.log(`\n=== ${b.id} — ${b.title || ''} ===`);
+    for (const c of r.claims) {
+      if (c.ev) console.log(`  ✓ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}\n        └ ${c.ev.tag}:${c.ev.lineNo}  ${c.ev.text.slice(0, 96)}`);
+      else console.log(`  ✗ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}  — NO SOURCE EVIDENCE`);
+    }
+  }
+  if (r.flags.length) {
+    billsWithFlags++; totalFlags += r.flags.length;
+    if (!QUOTE) console.log(`FLAG ${b.id}`);
+    for (const f of r.flags) console.log(`     ✗ [${f.kind}] ${f.detail}`);
+  } else if (!QUOTE) {
+    console.log(`ok   ${b.id}  (${r.claims.length} claims, all source-anchored)`);
+  }
+}
+console.log(`\n${totalFlags} flag(s) across ${billsWithFlags} bill(s).`);
+console.log(totalFlags === 0
+  ? 'No mechanical gaps. NOTE: a clean run is NOT a pass by itself — the protocol requires a fresh human/agent read of the quoted source (run with --quote).'
+  : 'Resolve flags against source before counting this pass.');
+process.exit(totalFlags === 0 ? 0 : 1);

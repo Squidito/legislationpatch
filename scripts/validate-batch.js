@@ -723,6 +723,7 @@ section('Acronym audit');
             const a = am[1];
             const U = a.toUpperCase();
             if (STOP.has(U) || known.has(U) || introduced.has(U)) continue;
+            if (/^[IVXLCDM]+$/.test(U)) continue; // roman numerals (Title XVI, LXXXV) are not acronyms
             unknown.add(a);
         }
         if (unknown.size) {
