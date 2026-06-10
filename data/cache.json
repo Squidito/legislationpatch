@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-03T18:19:32.943Z",
+  "generated": "2026-06-10T22:42:41.848Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -163,7 +163,8 @@
       "stageDate": "2025-01-29",
       "enactedDate": "2025-01-29",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-4323",
@@ -295,7 +296,8 @@
       "stageDate": "2026-01-23",
       "enactedDate": "2026-01-23",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2480",
@@ -382,7 +384,8 @@
       "stageDate": "2025-04-29",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "study"
+      "billType": "study",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-3838",
@@ -670,7 +673,8 @@
       "stageDate": "2025-09-30",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1664",
@@ -783,7 +787,8 @@
       "stageDate": "2025-06-24",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "study"
+      "billType": "study",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1479",
@@ -909,7 +914,8 @@
       "stageDate": "2025-04-29",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-866",
@@ -988,7 +994,8 @@
       "stageDate": "2025-04-29",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "study"
+      "billType": "study",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1512",
@@ -1085,7 +1092,8 @@
       "stageDate": "2025-12-02",
       "enactedDate": "2025-12-02",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-4371",
@@ -1205,7 +1213,8 @@
       "stageDate": "2025-12-17",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1919",
@@ -1314,7 +1323,8 @@
       "stageDate": "2025-07-17",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-910",
@@ -1403,7 +1413,8 @@
       "stageDate": "2025-06-24",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-1582",
@@ -1428,7 +1439,7 @@
       "pages": 44,
       "analyzed": true,
       "demo": false,
-      "summary": "The GENIUS Act creates the first U.S. federal law governing stablecoins — digital tokens designed to hold a fixed value, typically pegged to the dollar. Only licensed entities (banks, federally approved nonbank issuers, or state-licensed issuers with under $10 billion outstanding) may issue stablecoins for U.S. customers. Issuers must back every stablecoin dollar-for-dollar with U.S. cash or short-term Treasury securities and publicly disclose their reserves every month.",
+      "summary": "The GENIUS Act creates the first U.S. federal law governing stablecoins — digital tokens designed to hold a fixed value, typically pegged to the dollar. Only licensed entities (banks, federally approved nonbank issuers, or state-licensed issuers with under $10B outstanding) may issue stablecoins for U.S. customers. Issuers must back every stablecoin dollar-for-dollar with U.S. cash or short-term Treasury securities and publicly disclose their reserves every month.",
       "brief": "Creates a federal licensing and 1:1 reserve requirement for stablecoin issuers, bans unlicensed stablecoin issuance in the U.S., and classifies stablecoins as neither securities nor commodities.",
       "top_lines": [
         {
@@ -1444,9 +1455,9 @@
           "headline": "1-to-1 Reserve Requirement",
           "billSection": "4",
           "subs": [
-            "Permitted issuers must maintain reserves equal to 100% of outstanding stablecoins at all times",
+            "Permitted issuers must maintain reserves of at least 100% of outstanding stablecoins (an at-least 1-to-1 basis) at all times",
             "Eligible reserves: U.S. currency, deposits at insured banks, Treasury bills with maturity of 93 days or less, overnight repo agreements backed by Treasuries, and government money market funds",
-            "Reserves may not be rehypothecated (pledged as collateral) except for limited margin and liquidity purposes with prior regulatory approval"
+            "Reserves may not be rehypothecated (pledged as collateral) except for margin obligations, standard custodial services, and limited liquidity needs — liquidity repos must be centrally cleared or have prior regulator approval"
           ]
         },
         {
@@ -1500,7 +1511,7 @@
               "comments": []
             },
             {
-              "main": "State-qualified issuers may only operate under state supervision when their total outstanding stablecoins are $10 billion or less; growth above $10 billion requires federal approval.",
+              "main": "State-qualified issuers may only operate under state supervision when their total outstanding stablecoins are $10B or less; growth above $10B requires federal approval.",
               "detail": "State payment stablecoin regulators have primary supervisory and examination authority over state-qualified issuers, but the Federal Reserve may intervene in unusual and exigent circumstances after 48 hours' notice to the state regulator. The Federal Reserve's intervention authority includes issuing cease and desist directives limiting redemptions and affiliate transactions; these directives automatically lapse if the Board does not affirm, modify, or rescind within 10 days of the issuer's response.",
               "comments": []
             }
@@ -1531,7 +1542,7 @@
         {
           "section": "Section 7 — Federal Reserve Override Authority for State-Qualified Issuers",
           "summary": "Grants the Federal Reserve authority to issue enforceable cease and desist directives limiting redemptions and affiliate transactions of state-qualified stablecoin issuers in 'unusual and exigent circumstances,' after only 48 hours' notice to the state regulator.",
-          "why_unreported": "The bill establishes a state regulatory pathway as an alternative to federal licensing for issuers under $10 billion. This provision allows federal override of state regulatory authority in circumstances defined by the Board through rulemaking, and includes authority to suspend redemptions — a power that, if exercised, would directly affect stablecoin holders' ability to redeem their tokens."
+          "why_unreported": "The bill establishes a state regulatory pathway as an alternative to federal licensing for issuers under $10B. This provision allows federal override of state regulatory authority in circumstances defined by the Board through rulemaking, and includes authority to suspend redemptions — a power that, if exercised, would directly affect stablecoin holders' ability to redeem their tokens."
         }
       ],
       "criticisms": [],
@@ -1634,7 +1645,8 @@
       "stageDate": "2025-07-18",
       "enactedDate": "2025-07-18",
       "budget_accounts": {},
-      "billType": "framework"
+      "billType": "framework",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-3633",
@@ -1882,7 +1894,8 @@
       "stageDate": "2026-05-14",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "framework"
+      "billType": "framework",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-331",
@@ -2062,7 +2075,8 @@
       "stageDate": "2025-07-16",
       "enactedDate": "2025-07-16",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-22",
@@ -2215,7 +2229,8 @@
       "stageDate": "2025-04-10",
       "enactedDate": "",
       "budget_accounts": {},
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1",
@@ -2246,11 +2261,12 @@
         {
           "headline": "Tax Cuts Made Permanent",
           "subs": [
-            "Individual tax rates of 10%–37% made permanent; estate tax exemption increased to $15 million",
+            "Individual tax rates of 10%–37% made permanent; estate tax exemption increased to $15M",
             "Standard deduction raised to $15,750 for single filers and $31,500 for joint filers (inflation-adjusted)",
             "Child tax credit increased to $2,200 per qualifying child; SALT deduction cap raised to $40,000 through 2029, reverting to $10,000 in 2030"
           ],
-          "billSection": "title-VII"
+          "billSection": "title-VII",
+          "source": "usc-26-63"
         },
         {
           "headline": "New Deductions for Workers",
@@ -2266,7 +2282,7 @@
           "headline": "Border Security and Immigration Enforcement",
           "subs": [
             "$46.55B to U.S. Customs and Border Protection for physical barriers, technology, and access roads through FY2029",
-            "$45 billion to ICE for expanded detention capacity through FY2029",
+            "$45B to ICE for expanded detention capacity through FY2029",
             "$29.85B to ICE for hiring, transportation, and removal operations through FY2029",
             "New immigration court fees: $100 for asylum applications, $1,000 for parolees, $5,000 for individuals apprehended between ports of entry"
           ],
@@ -2285,10 +2301,10 @@
         {
           "headline": "Defense and Security Investments",
           "subs": [
-            "$29.2 billion for the shipbuilding industrial base and naval shipbuilding (FY2025)",
-            "$24.4 billion for space-based missile intercept and ground-based missile defense (FY2025)",
-            "$25.4 billion for hypersonic, cruise, and anti-ship missiles (FY2025)",
-            "$14.7 billion for nuclear forces and production, including B-21 bomber expansion (FY2025)"
+            "$29.18B for the shipbuilding industrial base and naval shipbuilding (FY2025)",
+            "$24.41B for space-based missile intercept and ground-based missile defense (FY2025)",
+            "$25.38B for hypersonic, cruise, and anti-ship missiles (FY2025)",
+            "$14.69B for nuclear forces and production, including B-21 bomber expansion (FY2025)"
           ],
           "billSection": "title-II"
         },
@@ -2300,7 +2316,8 @@
             "Wind and solar clean electricity production and investment credits terminated for new projects after 2027",
             "Clean hydrogen production credit terminated for projects starting construction after 2027"
           ],
-          "billSection": "title-VII"
+          "billSection": "title-VII",
+          "source": "usc-26-25c"
         },
         {
           "headline": "Energy Production and IRA Rescissions",
@@ -2318,7 +2335,7 @@
             "Graduate PLUS loans eliminated for new loans on or after July 1, 2026",
             "Aggregate student loan caps: $100,000 for graduate students, $200,000 for professional students, $257,500 lifetime limit",
             "All current income-based repayment plans terminated for new loans; borrowers limited to standard plan or new Repayment Assistance Plan (RAP)",
-            "$10.5 billion in additional Pell Grant funding for FY2026; new Workforce Pell Grants for 150–600 clock-hour programs"
+            "$10.5B in additional Pell Grant funding for FY2026; new Workforce Pell Grants for 150–600 clock-hour programs"
           ],
           "billSection": "title-VIII"
         },
@@ -2326,9 +2343,9 @@
           "headline": "Debt Limit and Other Provisions",
           "subs": [
             "Statutory debt limit increased by $5 trillion",
-            "$24.5 billion to the Coast Guard for vessels, aircraft, and shore infrastructure through FY2029",
-            "$12.52 billion for FAA facilities modernization including $4.75 billion for telecom infrastructure and $3 billion for radar replacement",
-            "$9.995 billion to NASA for Moon and Mars missions and International Space Station deorbit"
+            "$24.59B to the Coast Guard for vessels, aircraft, and shore infrastructure through FY2029",
+            "$12.52B for FAA facilities modernization including $4.75B for telecom infrastructure and $3B for radar replacement",
+            "$9.995B to NASA for Moon and Mars missions and International Space Station deorbit"
           ],
           "billSection": "title-IV"
         }
@@ -2347,8 +2364,9 @@
             },
             {
               "main": "Extends farm program authorities through crop year 2031, including ARC and PLC commodity support, Dairy Margin Coverage, and crop insurance enhancements.",
-              "detail": "ARC and PLC payment limits increased to $155,000 per person (from $125,000), adjusted for inflation annually. The ARC program coverage guarantee increases from 86% to 90% of benchmark revenue; maximum payment amount increases from 10% to 12.5%. Crop insurance premium subsidies increase 3–5% depending on coverage level. The Supplemental Coverage Option (SCO) premium subsidy increases from 65% to 80%.",
-              "comments": []
+              "detail": "ARC and PLC payment limits increased to $155,000 per person (from $125,000), adjusted for inflation annually. The ARC program coverage guarantee increases from 86% to 90% of benchmark revenue; maximum payment amount increases from 10% to 12% of benchmark revenue. Crop insurance premium subsidies increase 3–5% depending on coverage level. The Supplemental Coverage Option (SCO) premium subsidy increases from 65% to 80%.",
+              "comments": [],
+              "source": "usc-7-9017"
             }
           ]
         },
@@ -2356,8 +2374,8 @@
           "label": "Title II — Armed Services",
           "items": [
             {
-              "main": "Provides $156.2B in FY2025 supplemental defense funding across shipbuilding, missile systems, space, nuclear forces, aircraft, and personnel.",
-              "detail": "$29.2B for naval shipbuilding; $24.4B for missile defense and space-based sensors; $25.4B for hypersonic and other missiles; $16.05B for unmanned aerial systems and AI integration; $14.7B for nuclear forces including B-21 bomber expansion; $8.6B for aircraft modernization and prevention of F-22 retirement; $12.7B for Indo-Pacific military exercises and satellites; $7.5B for military quality of life including basic housing allowance and child care.",
+              "main": "Provides $156.22B in FY2025 supplemental defense funding across shipbuilding, missile systems, space, nuclear forces, aircraft, and personnel.",
+              "detail": "$29.18B for naval shipbuilding; $24.41B for missile defense and space-based sensors; $25.38B for hypersonic and other missiles; $16.05B for unmanned aerial systems and AI integration; $14.69B for nuclear forces including B-21 bomber expansion; $8.64B for aircraft modernization and prevention of F-22 retirement; $12.66B for Indo-Pacific military exercises and satellites; $7.48B for military quality of life including basic housing allowance and child care.",
               "comments": []
             }
           ]
@@ -2367,7 +2385,7 @@
           "items": [
             {
               "main": "Permanently extends the individual income tax rates, standard deduction, and most deduction and credit provisions of the 2017 Tax Cuts and Jobs Act.",
-              "detail": "Standard deduction set at $15,750 for single filers and $31,500 for joint filers (inflation-adjusted). Estate tax exemption increased to $15 million. Child tax credit increased to $2,200 and indexed to inflation. SALT deduction cap raised to $40,000 through 2029, then reverts to $10,000. Qualified Business Income deduction made permanent with expanded phase-in range. Alternative minimum tax exemptions permanently raised.",
+              "detail": "Standard deduction set at $15,750 for single filers and $31,500 for joint filers (inflation-adjusted). Estate tax exemption increased to $15M. Child tax credit increased to $2,200 and indexed to inflation. SALT deduction cap raised to $40,000 through 2029, then reverts to $10,000. Qualified Business Income deduction made permanent with expanded phase-in range. Alternative minimum tax exemptions permanently raised.",
               "comments": []
             },
             {
@@ -2376,9 +2394,10 @@
               "comments": []
             },
             {
-              "main": "Extends 100% bonus depreciation permanently, allows immediate expensing of domestic R&D, and increases the Section 179 deduction limit to $2.5 million.",
-              "detail": "Section 179 phase-out begins at $4 million in asset purchases. BEAT (base erosion minimum tax) rate reduced to 10.5% from 12.5% for tax years after 2025. GILTI and FDII renamed Net CFC Tested Income and Foreign-Derived Deduction Eligible Income, with the foreign tax credit haircut reduced from 20% to 10%.",
-              "comments": []
+              "main": "Extends 100% bonus depreciation permanently, allows immediate expensing of domestic R&D, and increases the Section 179 deduction limit to $2.5M.",
+              "detail": "Section 179 phase-out begins at $4M in asset purchases. BEAT (base erosion minimum tax) rate set permanently at 10.5% (up from 10%), repealing the scheduled increase to 12.5% for tax years after 2025. GILTI and FDII renamed Net CFC Tested Income and Foreign-Derived Deduction Eligible Income, with the foreign tax credit haircut reduced from 20% to 10%.",
+              "comments": [],
+              "source": "usc-26-59a"
             },
             {
               "main": "Terminates most IRA clean energy tax credits for consumers and businesses, including EV credits, home efficiency credits, and wind and solar electricity credits.",
@@ -2401,8 +2420,8 @@
               "comments": []
             },
             {
-              "main": "$10 billion per fiscal year for FY2026–FY2030 for a Rural Health Transformation Program providing states with funds to improve rural health access.",
-              "detail": "50% of funds distributed equally among approved states; remaining 50% based on proportion of rural health facilities. States must submit rural health transformation plans; no matching funds required. $200 million for FY2025 for CMS implementation.",
+              "main": "$10B per fiscal year for FY2026–FY2030 for a Rural Health Transformation Program providing states with funds to improve rural health access.",
+              "detail": "50% of funds distributed equally among approved states; remaining 50% based on proportion of rural health facilities. States must submit rural health transformation plans; no matching funds required. $200M for FY2025 for CMS implementation.",
               "comments": []
             }
           ]
@@ -2412,12 +2431,12 @@
           "items": [
             {
               "main": "Appropriates more than $109.7B through FY2029 for border barriers, CBP personnel, ICE detention, CBP surveillance equipment, and state border reimbursements.",
-              "detail": "$46.55B to CBP for physical barriers, access roads, and detection technology; $45 billion to ICE for detention facility expansion; $12.01B for CBP personnel, bonuses, and fleet; $6.17B for CBP inspection and surveillance equipment; $10 billion to reimburse states and localities for border security actions taken on or after January 20, 2021.",
+              "detail": "$46.55B to CBP for physical barriers, access roads, and detection technology; $45B to ICE for detention facility expansion; $12.01B for CBP personnel, bonuses, and fleet; $6.17B for CBP inspection and surveillance equipment; $10B to reimburse states and localities for border security actions taken on or after January 20, 2021.",
               "comments": []
             },
             {
-              "main": "$300 million to FEMA to reimburse state and local law enforcement for costs of protecting a presidential residence; $625 million for 2026 FIFA World Cup security and $1 billion for 2028 Olympics security.",
-              "detail": "FEMA State Homeland Security Grant Program also receives $500 million for drone detection technology and $450 million for Operation Stonegarden border coordination through FY2029. The Federal Employees Health Benefits program receives $66 million for a mandatory eligibility audit to verify family members.",
+              "main": "$300M to FEMA to reimburse state and local law enforcement for costs of protecting a presidential residence; $625M for 2026 FIFA World Cup security and $1B for 2028 Olympics security.",
+              "detail": "FEMA State Homeland Security Grant Program also receives $500M for drone detection technology and $450M for Operation Stonegarden border coordination through FY2029. The Federal Employees Health Benefits program receives $66M for a mandatory eligibility audit to verify family members.",
               "comments": []
             }
           ]
@@ -2427,7 +2446,7 @@
           "items": [
             {
               "main": "Establishes new or increased fees across the immigration system: $100 for asylum applications, $1,000 for parolees, $550 for asylee employment authorization, and $5,000 for individuals apprehended between ports of entry or ordered removed in absentia.",
-              "detail": "$29.85B to ICE for hiring, removal operations, and detention; $3 billion to DOJ for immigration courts and drug trafficking prosecution; $3.5 billion to reimburse states for incarcerating non-citizen criminals; $5 billion for the Bureau of Prisons; $1 billion for the Secret Service. $100 fee per calendar year that an asylum application remains pending.",
+              "detail": "$29.85B to ICE for hiring, removal operations, and detention; $3B to DOJ for immigration courts and drug trafficking prosecution; $3.5B to reimburse states for incarcerating non-citizen criminals; $5B for the Bureau of Prisons; $1B for the Secret Service. $100 fee per calendar year that an asylum application remains pending.",
               "comments": []
             },
             {
@@ -2442,7 +2461,7 @@
           "items": [
             {
               "main": "Reduces oil and gas royalty rates on federal lands, reinstates noncompetitive leasing, and mandates at least 4 ANWR lease sales and 5 NPR-A lease sales within 10 years.",
-              "detail": "Offshore royalty rates also reduced; Gulf state revenue-sharing cap raised from $500 million to $650 million per year for FY2025–FY2034. Methane royalties on vented or flared gas from federal lands eliminated. $389M for the Strategic Petroleum Reserve; Biden-era mandatory drawdown repealed. Forest Service must sell 250 million board feet of additional timber per year through FY2034.",
+              "detail": "Offshore royalty rates also reduced; Gulf state revenue-sharing cap raised from $500M to $650M per year for FY2025–FY2034. Methane royalties on vented or flared gas from federal lands eliminated. $389M for the Strategic Petroleum Reserve; Biden-era mandatory drawdown repealed. Forest Service must sell 250 million board feet of additional timber per year through FY2034.",
               "comments": []
             }
           ]
@@ -2456,7 +2475,7 @@
               "comments": []
             },
             {
-              "main": "$10.5 billion in additional Pell Grant funding for FY2026; new Workforce Pell Grants created for programs of 150–600 clock hours in workforce training.",
+              "main": "$10.5B in additional Pell Grant funding for FY2026; new Workforce Pell Grants created for programs of 150–600 clock hours in workforce training.",
               "detail": "Low-earning outcome programs — programs where graduates earn less than high school diploma holders — lose eligibility for federal funds beginning July 1, 2026. Institutions must notify enrolled students when a program loses eligibility. Borrower defense to repayment and closed school discharge regulations delayed until July 1, 2035.",
               "comments": []
             }
@@ -2466,13 +2485,13 @@
           "label": "Title IV — Commerce, Transportation, and Infrastructure",
           "items": [
             {
-              "main": "$24.5 billion to the Coast Guard through FY2029 for new vessels, aircraft, and shore facilities; $12.52 billion to the FAA for facilities modernization including $4.75 billion for telecom infrastructure and $3 billion for radar replacement.",
+              "main": "$24.59B to the Coast Guard through FY2029 for new vessels, aircraft, and shore facilities; $12.52B to the FAA for facilities modernization including $4.75B for telecom infrastructure and $3B for radar replacement.",
               "detail": "FCC spectrum auction authority reauthorized through September 30, 2034; FCC must auction at least 300 MHz including 100 MHz in the Upper C-Band within two years; NTIA must identify 500 MHz of additional federal spectrum for reallocation within four years. CAFE standard civil penalty set to $0, eliminating enforcement.",
               "comments": []
             },
             {
-              "main": "$9.995 billion to NASA for Moon and Mars missions, ISS deorbit preparation, and Artemis IV and V spacecraft procurement; $9.995 billion includes a Mars telecommunications orbiter.",
-              "detail": "NASA must identify a previously-flown crewed spacecraft to be relocated and placed on public display near a NASA field center within 18 months. Brand USA tourism promotion funding reduced from $100 million to $20 million per year through FY2027.",
+              "main": "$9.995B to NASA for Moon and Mars missions, ISS deorbit preparation, and Artemis IV and V spacecraft procurement; $9.995B includes a Mars telecommunications orbiter.",
+              "detail": "NASA must identify a previously-flown crewed spacecraft to be relocated and placed on public display near a NASA field center within 18 months. Brand USA tourism promotion funding reduced from $100M to $20M per year through FY2027.",
               "comments": []
             }
           ]
@@ -2560,25 +2579,25 @@
           "Immigration fee schedule — new fees for asylum ($100+), parole ($1,000+), employment authorization ($550+), apprehension between ports of entry ($5,000)",
           "1% excise tax on remittance transfers paid with cash, money order, or cashier's check",
           "Workforce Pell Grants — new Pell eligibility for 150–600 clock-hour workforce training programs",
-          "Rural Health Transformation Program — $10 billion per year FY2026–FY2030 for rural health access improvements",
+          "Rural Health Transformation Program — $10B per year FY2026–FY2030 for rural health access improvements",
           "$1,700 nonrefundable tax credit for contributions to scholarship-granting organizations for K–12 school expenses"
         ],
         "modified": [
-          "Individual income tax rates: made permanent at 10%, 12%, 22%, 24%, 32%, 35%, and 37% (were set to expire after 2025)",
+          "Individual income tax rates: the current seven-bracket rate structure made permanent (was set to expire after 2025)",
           "Standard deduction: raised to $15,750 single / $31,500 joint and made permanent (was scheduled to revert)",
           "Child tax credit: increased to $2,200 per child (from $2,000), inflation-adjusted annually",
           "SALT deduction cap: increased to $40,000 for 2025–2029, reverts to $10,000 in 2030 (previously $10,000 flat)",
-          "Estate tax exemption: increased to $15 million (from $5 million)",
+          "Estate tax exemption: increased to $15M (from $5M)",
           "SNAP ABAWD work requirements: age ceiling raised to 65 (from 55); parents of children 14 and older now covered",
           "SNAP federal administrative cost share: reduced to 25% (from 50%)",
           "Medicaid provider tax maximum: reduced to 3.5% by FY2032 (from current 6%)",
-          "CFPB funding cap: reduced to 6.5% of Federal Reserve combined earnings (from 12%)",
-          "Section 179 expensing limit: increased to $2.5 million with phase-out beginning at $4 million",
+          "CFPB funding cap: reduced from 12% to 6.5% of the Federal Reserve System's total operating expenses",
+          "Section 179 expensing limit: increased to $2.5M with phase-out beginning at $4M",
           "BEAT rate: reduced to 10.5% (from 12.5%) for tax years after 2025",
           "University endowment excise tax: replaced flat 1.4% with graduated rates of 1.4%, 4%, or 8% based on endowment size",
           "Medicaid eligibility redetermination: every 6 months for expansion population (was annual)",
           "CAFE civil penalty for manufacturer violations: set to $0 (was previously enforceable)",
-          "Brand USA tourism promotion funding: reduced from $100 million to $20 million per year"
+          "Brand USA tourism promotion funding: reduced from $100M to $20M per year"
         ],
         "removed": [
           "Consumer electric vehicle tax credit (up to $7,500) — terminated October 1, 2025",
@@ -2861,7 +2880,73 @@
       "enactedDate": "2025-07-04",
       "isOmnibus": true,
       "divisions": [],
-      "billType": "appropriation"
+      "billType": "appropriation",
+      "referencedSources": [
+        {
+          "id": "usc-26-63",
+          "kind": "statute",
+          "label": "26 U.S.C. 63",
+          "citation": "26 U.S.C. 63",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partI-sec63/htm",
+          "textFile": "data/ref-text/usc-26-63.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-26-25c",
+          "kind": "statute",
+          "label": "26 U.S.C. 25C",
+          "citation": "26 U.S.C. 25C",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partIV-subpartA-sec25C/htm",
+          "textFile": "data/ref-text/usc-26-25c.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-26-1",
+          "kind": "statute",
+          "label": "26 U.S.C. 1",
+          "citation": "26 U.S.C. 1",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partI-sec1/htm",
+          "textFile": "data/ref-text/usc-26-1.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-7-9017",
+          "kind": "statute",
+          "label": "7 U.S.C. 9017",
+          "citation": "7 U.S.C. 9017",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title7/granules/USCODE-2024-title7-chap115-subchapI-sec9017/htm",
+          "textFile": "data/ref-text/usc-7-9017.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-19-1321",
+          "kind": "statute",
+          "label": "19 U.S.C. 1321",
+          "citation": "19 U.S.C. 1321",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap4-subtitleII-partI-sec1321/htm",
+          "textFile": "data/ref-text/usc-19-1321.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-12-5497",
+          "kind": "statute",
+          "label": "12 U.S.C. 5497",
+          "citation": "12 U.S.C. 5497",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title12/granules/USCODE-2024-title12-chap53-subchapV-partA-sec5497/htm",
+          "textFile": "data/ref-text/usc-12-5497.txt",
+          "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-26-59a",
+          "kind": "statute",
+          "label": "26 U.S.C. 59A",
+          "citation": "26 U.S.C. 59A",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partVII-sec59A/htm",
+          "textFile": "data/ref-text/usc-26-59a.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-723",
@@ -2989,7 +3074,8 @@
       ],
       "stageDate": "2026-05-04",
       "enactedDate": "2026-05-04",
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-5625",
@@ -3075,7 +3161,8 @@
         }
       ],
       "stageDate": "2026-05-14",
-      "billType": "study"
+      "billType": "study",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-8365",
@@ -3205,7 +3292,8 @@
         }
       ],
       "stageDate": "2026-05-14",
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6260",
@@ -3302,7 +3390,8 @@
         }
       ],
       "stageDate": "2026-05-14",
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-1884",
@@ -3469,7 +3558,8 @@
           "method": "Unanimous Consent"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-3971",
@@ -3594,7 +3684,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "reauthorization"
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-5366",
@@ -3636,7 +3727,8 @@
             "Relief payments for forest or range fires federally declared a disaster after 2014 excluded from gross income",
             "Exclusion now covers payments received in tax years 2026 through 2030; prior law covered payments received in tax years 2020 through 2025"
           ],
-          "billSection": "3"
+          "billSection": "3",
+          "source": "bill-118-hr-5863"
         }
       ],
       "likelihood": 60,
@@ -3659,7 +3751,8 @@
             {
               "main": "Creates new Section 139M of the Internal Revenue Code, excluding qualified wildfire relief payments from gross income.",
               "detail": "The exclusion applies to payments for forest or range fires federally declared a disaster after December 31, 2014, and covers payments received in taxable years after December 31, 2025 and before January 1, 2031. Under prior law, the exclusion applied only to qualifying payments received in taxable years after December 31, 2019 and before January 1, 2026.",
-              "comments": []
+              "comments": [],
+              "source": "bill-118-hr-5863"
             }
           ]
         }
@@ -3746,7 +3839,19 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "bill-118-hr-5863",
+          "kind": "bill",
+          "label": "HR 5863 (118th Congress)",
+          "citation": "HR 5863",
+          "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/5863/text",
+          "textFile": "data/ref-text/bill-118-hr-5863.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-227",
@@ -3850,7 +3955,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7971",
@@ -3989,7 +4095,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6495",
@@ -4102,7 +4209,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6431",
@@ -4127,7 +4235,7 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "Self-Employment Assistance programs let unemployed workers collect their unemployment benefits as a lump-sum allowance while they start a business, instead of conducting a traditional job search. This bill doubles the cap on program participation from 5% to 10% of unemployment recipients per state, removes the requirement that participants be on track to exhaust their benefits, adds a weekly self-certification requirement, and creates an alternative qualification pathway through a state-approved business plan rather than requiring formal entrepreneurial training.",
+      "summary": "Self-Employment Assistance programs let unemployed workers collect an allowance in place of their regular unemployment benefits — paid in the same amount and at the same intervals — while they start a business, exempt from the usual work-search requirements. This bill doubles the cap on program participation from 5% to 10% of unemployment recipients per state, removes the requirement that participants be on track to exhaust their benefits, adds a weekly self-certification requirement, and creates an alternative qualification pathway through a state-approved business plan rather than requiring formal entrepreneurial training.",
       "brief": "Doubles state SEA program participation to 10%, drops the exhaustion-of-benefits eligibility requirement, and adds a business-plan qualification pathway.",
       "top_lines": [
         {
@@ -4144,7 +4252,8 @@
             "State participation cap raised from 5% to 10% of unemployment benefit recipients",
             "Participants must certify their self-employment activities on at least a weekly basis"
           ],
-          "billSection": "2"
+          "billSection": "2",
+          "source": "usc-26-3306"
         }
       ],
       "likelihood": 45,
@@ -4157,12 +4266,14 @@
             {
               "main": "Amends Section 3306(t) of the Internal Revenue Code to remove the requirement that SEA participants be identified as likely to exhaust regular unemployment compensation benefits, expanding the eligible population.",
               "detail": "Subparagraph (B) of Section 3306(t)(3), which required participants to be identified as likely to exhaust benefits, is stricken. Eligible self-employment activities may now qualify through either (i) the existing path of entrepreneurial training, business counseling, and technical assistance approved by the state, or (ii) a new path through a business plan and market feasibility study submitted by the individual and approved by the state or a designated agency. Participants must certify their activities at least weekly to a state-designated agency.",
-              "comments": []
+              "comments": [],
+              "source": "usc-26-3306"
             },
             {
               "main": "Raises the state SEA program participation cap from 5% to 10% of individuals receiving regular unemployment compensation.",
               "detail": "The change to Section 3306(t)(4) doubles the maximum share of unemployment benefit recipients a state may enroll in its SEA program. Changes take effect 2 years after enactment; states may amend their laws before then. The Secretary of Labor must adopt implementing regulations through public notice and comment, subject to OMB approval.",
-              "comments": []
+              "comments": [],
+              "source": "usc-26-3306"
             }
           ]
         }
@@ -4217,7 +4328,19 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "usc-26-3306",
+          "kind": "statute",
+          "label": "26 U.S.C. 3306",
+          "citation": "26 U.S.C. 3306",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleC-chap23-sec3306/htm",
+          "textFile": "data/ref-text/usc-26-3306.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-5334",
@@ -4242,16 +4365,17 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "K-12 teachers can deduct up to $300 per year in unreimbursed classroom expenses directly from their gross income without itemizing — but pre-K and early childhood educators are currently excluded. This bill extends that deduction to teachers and staff at schools providing early childhood education. It applies retroactively starting with tax year 2025.",
-      "brief": "Extends the $300 above-the-line educator expense deduction to early childhood and pre-K educators, retroactive to tax year 2025.",
+      "summary": "K-12 teachers can deduct a capped amount of unreimbursed classroom expenses each year directly from their gross income without itemizing ($250 statutory base, indexed for inflation) — but pre-K and early childhood educators are currently excluded. This bill extends that deduction to teachers and staff at schools providing early childhood education. It applies retroactively starting with tax year 2025.",
+      "brief": "Extends the above-the-line educator expense deduction ($250 statutory, inflation-indexed) to early childhood and pre-K educators, retroactive to tax year 2025.",
       "top_lines": [
         {
           "headline": "Expanded Educator Deduction",
           "subs": [
-            "Early childhood educators added to the up-to-$300 above-the-line deduction for unreimbursed classroom expenses",
+            "Early childhood educators added to the above-the-line deduction for unreimbursed classroom expenses ($250 statutory base, indexed for inflation)",
             "Retroactive to expenses incurred in taxable years beginning after December 31, 2024"
           ],
-          "billSection": "2"
+          "billSection": "2",
+          "source": "usc-26-62"
         },
         {
           "headline": "Who Qualifies",
@@ -4259,7 +4383,8 @@
             "Teachers, instructors, counselors, principals, and aides in schools providing early childhood (pre-kindergarten) education",
             "23 bipartisan cosponsors; eligibility criteria otherwise unchanged from existing K-12 provision"
           ],
-          "billSection": "2"
+          "billSection": "2",
+          "source": "usc-26-62"
         }
       ],
       "likelihood": 65,
@@ -4271,8 +4396,9 @@
           "items": [
             {
               "main": "Amends Section 62 of the Internal Revenue Code of 1986 to add early childhood educators to the above-the-line deduction for eligible educator expenses.",
-              "detail": "Section 62(d)(1)(A) is amended to insert \"early childhood educator\" before \"kindergarten through grade 12 teacher,\" and Section 62(d)(1)(B) is amended to include \"early childhood education\" and \"pre-kindergarten\" alongside elementary and secondary education. The heading of Section 62(a)(2)(D) is updated to reflect the expanded scope. The deduction limit — up to $300 in 2025, adjusted annually — and all other existing eligibility conditions are unchanged. Effective for expenses incurred in taxable years beginning after December 31, 2024.",
-              "comments": []
+              "detail": "Section 62(d)(1)(A) is amended to insert \"early childhood educator\" before \"kindergarten through grade 12 teacher,\" and Section 62(d)(1)(B) is amended to include \"early childhood education\" and \"pre-kindergarten\" alongside elementary and secondary education. The heading of Section 62(a)(2)(D) is updated to reflect the expanded scope. The deduction limit — $250 statutory base, indexed for inflation and rounded to the nearest $50 — and all other existing eligibility conditions are unchanged. Effective for expenses incurred in taxable years beginning after December 31, 2024.",
+              "comments": [],
+              "source": "usc-26-62"
             }
           ]
         }
@@ -4346,7 +4472,19 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "usc-26-62",
+          "kind": "statute",
+          "label": "26 U.S.C. 62",
+          "citation": "26 U.S.C. 62",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partI-sec62/htm",
+          "textFile": "data/ref-text/usc-26-62.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6956",
@@ -4474,7 +4612,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-8364",
@@ -4564,7 +4703,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-4930",
@@ -4677,7 +4817,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7959",
@@ -4809,7 +4950,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HJRES-140",
@@ -4995,7 +5137,8 @@
           "crossoverCount": 2
         }
       ],
-      "billType": "resolution"
+      "billType": "resolution",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6903",
@@ -5115,7 +5258,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2347",
@@ -5261,7 +5405,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-8322",
@@ -5387,7 +5532,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "reauthorization"
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HCONRES-40",
@@ -5396,9 +5542,9 @@
       "code": "HCONRES.40",
       "date": "2025-06-22",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -5426,13 +5572,13 @@
           "headline": "Authorization Threshold",
           "subs": [
             "Military operations against Iran may continue only if authorized by a declaration of war or a specific congressional authorization for use of military force against Iran",
-            "90 cosponsors in the House; passed April 16, 2026"
+            "90 cosponsors in the House; failed 213-214 in the House on April 16, 2026"
           ]
         }
       ],
-      "likelihood": 20,
-      "likelihoodLabel": "Long shot",
-      "likelihoodReason": "The resolution passed the House with 90 cosponsors indicating bipartisan support. However, the Senate is controlled by Republicans who are unlikely to advance a concurrent resolution challenging a Republican president's conduct of military operations. Concurrent war powers resolutions rarely clear the Senate when the president's party holds the majority.",
+      "likelihood": 5,
+      "likelihoodLabel": "Dead",
+      "likelihoodReason": "The concurrent resolution failed in the House on April 16, 2026 by a vote of 213-214. Because it did not pass the House, it cannot proceed to the Senate, and the matter is effectively closed for this measure.",
       "sections": [
         {
           "label": "Resolving Clause — Withdrawal from Iran Hostilities",
@@ -5449,7 +5595,8 @@
                   "party": "r",
                   "text": "Rep. Keith Self (R-TX): We have neutered Iran, which has been at war with us for 47 years."
                 }
-              ]
+              ],
+              "source": "usc-50-1544"
             }
           ]
         }
@@ -5487,7 +5634,7 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "2026-04-15",
+      "stageDate": "2026-04-16",
       "votes": [
         {
           "chamber": "House",
@@ -5501,7 +5648,19 @@
           "crossoverCount": 2
         }
       ],
-      "billType": "resolution"
+      "billType": "resolution",
+      "referencedSources": [
+        {
+          "id": "usc-50-1544",
+          "kind": "statute",
+          "label": "50 U.S.C. 1544",
+          "citation": "50 U.S.C. 1544",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1544/htm",
+          "textFile": "data/ref-text/usc-50-1544.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6955",
@@ -5635,7 +5794,7 @@
         {
           "section": "Section 701 — Least Cost Resolution Exception",
           "summary": "The bill lets the FDIC choose a more expensive resolution of a failed bank — one not least-cost to the Deposit Insurance Fund — when doing so avoids selling the failed bank to a global systemically important bank.",
-          "why_unreported": "The 'least cost' requirement has been a core discipline on FDIC resolutions since 1991. This exception permits a higher charge against the Deposit Insurance Fund, subject to a rule-set cap, specifically to limit further concentration among the largest banks — a trade-off not evident from the bill's title."
+          "why_unreported": "The 'least cost' requirement is a core discipline on FDIC resolutions under the Federal Deposit Insurance Act. This exception permits a higher charge against the Deposit Insurance Fund, subject to a rule-set cap, specifically to limit further concentration among the largest banks — a trade-off not evident from the bill's title."
         }
       ],
       "criticisms": [
@@ -5751,7 +5910,8 @@
       "demo": false,
       "stageDate": "2026-04-19",
       "pages": 70,
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-4465",
@@ -5891,7 +6051,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "reauthorization"
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7147",
@@ -5938,7 +6099,7 @@
           "billSection": "title-II"
         },
         {
-          "headline": "FEMA Disaster Relief Fund — $26.4 Billion",
+          "headline": "FEMA Disaster Relief Fund — $26.37B",
           "subs": [
             "$26.4B appropriated to the FEMA Disaster Relief Fund for major disaster declarations",
             "$494M for State Homeland Security grants; $300M for Nonprofit Security grants split between high-risk urban and non-urban areas",
@@ -5973,7 +6134,7 @@
           "label": "Title III — Protection, Preparedness, Response, and Recovery",
           "items": [
             {
-              "main": "Funds CISA and FEMA including a $26.4 billion disaster relief fund and over $3.8 billion in federal assistance grants.",
+              "main": "Funds CISA and FEMA including a $26.37B Disaster Relief Fund appropriation and $3.84B in Federal Assistance grants.",
               "detail": "CISA operations and support: $2.22B plus $386.5M for construction. FEMA operations: $1.67B. FEMA federal assistance grants: $3.84B, allocated across State Homeland Security ($494M), Urban Area Security Initiative ($584M), Nonprofit Security ($300M, split evenly between high-risk urban and non-urban areas), firefighter grants ($684M across SAFER and AFG), Port Security ($95M), emergency management performance ($337M), and flood hazard mapping ($297M). Disaster Relief Fund: $26.4B for major disaster declarations under the Stafford Act.",
               "comments": []
             }
@@ -6183,7 +6344,8 @@
           "crossoverCount": 8
         }
       ],
-      "billType": "appropriation"
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1346",
@@ -6290,7 +6452,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7148",
@@ -7845,7 +8008,8 @@
           }
         }
       ],
-      "billType": "appropriation"
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-6387",
@@ -8018,7 +8182,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2319",
@@ -8132,7 +8297,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "study"
+      "billType": "study",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2815",
@@ -8261,7 +8427,19 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "usc-43-1601",
+          "kind": "statute",
+          "label": "43 U.S.C. 1601",
+          "citation": "43 U.S.C. 1601",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title43/granules/USCODE-2024-title43-chap33-sec1601/htm",
+          "textFile": "data/ref-text/usc-43-1601.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2066",
@@ -8296,7 +8474,8 @@
             "Individual SBIC leverage ceiling reduced from 300% to 200% of private capital",
             "Dollar cap for quarterly/semiannual interest-paying SBICs: $250M; all other SBICs: $175M"
           ],
-          "billSection": "2"
+          "billSection": "2",
+          "source": "usc-15-683"
         },
         {
           "headline": "Common Control Limits",
@@ -8333,7 +8512,8 @@
             {
               "main": "Reduces individual SBIC leverage ceilings and restructures dollar caps by company type.",
               "detail": "Individual caps become 200% of private capital, not to exceed $250M for quarterly/semiannual interest payers or $175M for other companies. Commonly controlled caps become $475M or $350M respectively. A new subparagraph (C) explicitly excludes government-sourced funds from the private capital definition.",
-              "comments": []
+              "comments": [],
+              "source": "usc-15-683"
             },
             {
               "main": "Creates a new exclusion from the outstanding leverage calculation for investments in rural areas, covered technology categories, or small manufacturers.",
@@ -8386,7 +8566,19 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "referencedSources": [
+        {
+          "id": "usc-15-683",
+          "kind": "statute",
+          "label": "15 U.S.C. 683",
+          "citation": "15 U.S.C. 683",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap14B-subchapIII-partA-sec683/htm",
+          "textFile": "data/ref-text/usc-15-683.txt",
+          "fetchedAt": "2026-06-10"
+        }
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-972",
@@ -8502,7 +8694,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-1020",
@@ -8529,7 +8722,7 @@
       "analyzed": true,
       "demo": false,
       "summary": "Gives FERC authority to grant hydropower project licensees up to 6 additional years to begin construction, beyond the existing 8-year extension allowed under the Federal Power Act, for projects that received their license before March 13, 2020. FERC may also retroactively reinstate licenses that expired after December 31, 2023 and before enactment.",
-      "brief": "Extends available FERC hydropower construction deadlines by up to 6 additional years for pre-2020 licensed projects and allows reinstatement of licenses that lapsed after January 1, 2024.",
+      "brief": "Extends available FERC hydropower construction deadlines by up to 6 additional years for projects licensed before March 13, 2020, and allows reinstatement of licenses that expired after December 31, 2023.",
       "top_lines": [
         {
           "headline": "Construction Deadline Extension",
@@ -8606,7 +8799,8 @@
           "crossoverCount": 0
         }
       ],
-      "billType": "reauthorization"
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-98",
@@ -8723,7 +8917,8 @@
           "method": "Voice Vote"
         }
       ],
-      "billType": "amendment"
+      "billType": "amendment",
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-1003",
@@ -8748,7 +8943,7 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "This bill orders the Federal Communications Commission to formally allow shark attacks to be sent out as wireless emergency alerts — the same text-message warning system used for things like AMBER Alerts and severe weather. The FCC has 180 days after the bill becomes law to issue the order.",
+      "summary": "This bill orders the Federal Communications Commission to formally allow shark attacks to be sent out as wireless emergency alerts — the alert system defined in the FCC's existing rules (47 CFR 10.10(a)). The FCC has 180 days after the bill becomes law to issue the order.",
       "brief": "Requires the FCC to issue an order making a shark attack an event for which a wireless emergency alert may be transmitted.",
       "top_lines": [
         {
@@ -8811,7 +9006,8 @@
           "notVoting": 23,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7831",
@@ -8858,7 +9054,7 @@
       ],
       "likelihood": 55,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Sponsored by Rep. Kennedy (R-UT) in a Republican-majority House, the bill extends an existing energy-permitting fee rather than creating a new program, which limits cost objections. It has cleared the committee stage but its narrow fee-extension scope and absence of listed cosponsors make floor priority and Senate uptake uncertain.",
+      "likelihoodReason": "Sponsored by Rep. Kennedy (R-UT) with 3 cosponsors in a Republican-majority House, the bill extends an existing energy-permitting fee rather than creating a new program, which limits cost objections. It passed the House by voice vote, but its narrow fee-extension scope leaves Senate scheduling uncertain.",
       "sections": [
         {
           "label": "Section 2 — BLM Oil and Gas Permit Processing Fee",
@@ -8896,22 +9092,9 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1687",
@@ -8959,7 +9142,7 @@
       ],
       "likelihood": 45,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Sponsored by Rep. Fulcher (R-ID) with cosponsors Maloy (R-UT) and Boebert (R-CO) in a Republican-majority House, the bill advances energy-permitting priorities likely to draw Republican support. Its mandatory annual-sale and strict deadline requirements may attract opposition over agency workload and environmental-review timelines, and as a committee-stage bill with few cosponsors its Senate path is uncertain.",
+      "likelihoodReason": "Sponsored by Rep. Fulcher (R-ID) with cosponsors Maloy (R-UT) and Boebert (R-CO) in a Republican-majority House, the bill advances energy-permitting priorities likely to draw Republican support. It passed the House by voice vote, but its mandatory annual-sale and strict deadline requirements may attract opposition over agency workload and environmental-review timelines, leaving its Senate path uncertain.",
       "sections": [
         {
           "label": "Section 2 — Geothermal Leasing",
@@ -9005,22 +9188,9 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-3922",
@@ -9110,22 +9280,9 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-3831",
@@ -9171,7 +9328,7 @@
       ],
       "likelihood": 50,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Sponsored by Rep. Webster (R-FL) with cosponsor Soto (D-FL), the bill is a narrow bipartisan amendment extending an existing prohibition to one additional state, which limits opposition. Its small scope favors House passage, but with few cosponsors and committee-stage status its Senate timing is uncertain.",
+      "likelihoodReason": "Sponsored by Rep. Webster (R-FL) with cosponsor Soto (D-FL), the bill is a narrow bipartisan amendment extending an existing prohibition to one additional state, which limits opposition. It passed the House by voice vote, but with few cosponsors its Senate timing is uncertain.",
       "sections": [
         {
           "label": "Section 2 — Prohibition on Feeding Sharks in Exclusive Economic Zone off State of Florida",
@@ -9220,22 +9377,9 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-06-02",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-2399",
@@ -9260,7 +9404,7 @@
       "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "The FCC's high-cost universal service program pays companies to build broadband networks in rural and hard-to-serve areas. This bill requires the FCC to set up a vetting process so that money only goes to applicants who can show they actually have the technical, financial, and operational ability and a real business plan to build the networks they promise. It also requires meaningful penalties for applicants that win an award and then default before they are authorized to begin.",
+      "summary": "The FCC's high-cost universal service program pays companies to build broadband networks in rural and hard-to-serve areas. This bill requires the FCC to set up a vetting process so that money only goes to applicants who can show they actually have the technical, financial, and operational ability and a real business plan to build the networks they promise. It also requires minimum penalties for applicants that win an award and then default before they are authorized to begin.",
       "brief": "Requires the FCC to create a vetting process for high-cost universal service fund applicants and set minimum penalties for pre-authorization defaults.",
       "top_lines": [
         {
@@ -9326,22 +9470,9 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-04-28",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-04-28",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HCONRES-68",
@@ -9420,7 +9551,8 @@
           "notVoting": 1,
           "crossoverCount": 2
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HCONRES-75",
@@ -9527,7 +9659,8 @@
           "notVoting": 6,
           "crossoverCount": 4
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-2392",
@@ -9584,7 +9717,12 @@
               "main": "Directs the Secretary of Veterans Affairs to increase, effective December 1, 2025, the dollar amounts in effect on November 30, 2025 for several veterans' benefit categories.",
               "detail": "The increased amounts are wartime disability compensation (38 U.S.C. 1114), additional compensation for dependents (1115(1)), the clothing allowance (1162), dependency and indemnity compensation to a surviving spouse (1311(a)-(d)), and dependency and indemnity compensation to children (1313(a) and 1314). Each amount is increased by the same percentage as the Social Security title II benefit increase effective December 1, 2025 under section 215(i) of the Social Security Act. The Secretary may administratively adjust certain other disability rates under Public Law 85-857 consistent with these increases.",
               "comments": []
-            },
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Publication of Adjusted Rates",
+          "items": [
             {
               "main": "Requires the Secretary to publish the adjusted rates in the Federal Register.",
               "detail": "Publication must occur no later than the date the corresponding Social Security amounts are required to be published under section 215(i)(2)(D) of the Social Security Act for fiscal year 2026.",
@@ -9620,34 +9758,14 @@
           "method": "Voice Vote"
         },
         {
-          "chamber": "House",
-          "date": "2025-11-17",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-11-17",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "Senate",
-          "date": "2025-11-09",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Unanimous Consent"
-        },
-        {
           "chamber": "Senate",
           "date": "2025-11-09",
           "question": "On Passage",
           "result": "Passed",
           "method": "Unanimous Consent"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-4405",
@@ -9770,7 +9888,8 @@
           "notVoting": 5,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-1815",
@@ -9803,7 +9922,7 @@
           "billSection": "3",
           "subs": [
             "VA may buy part of a defaulted VA-guaranteed loan to prevent foreclosure",
-            "Partial claim capped at 25% of unpaid principal (30% for COVID-era missed payments, Mar 2020-May 2025)",
+            "Partial claim capped at 25% of unpaid principal (30% for borrowers who missed a payment between Mar 1, 2020 and May 1, 2025)",
             "Program sunsets five years after enactment"
           ]
         },
@@ -9898,34 +10017,14 @@
           "method": "Voice Vote"
         },
         {
-          "chamber": "Senate",
-          "date": "2025-07-15",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-05-19",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-05-19",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
           "chamber": "House",
           "date": "2025-05-19",
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-36",
@@ -10064,7 +10163,8 @@
           "notVoting": 42,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-8469",
@@ -10173,7 +10273,7 @@
         },
         {
           "section": "General Administration — 25 Percent Testimony Withhold",
-          "summary": "25 percent of the VA general administration appropriation may not be obligated until the Secretary of Veterans Affairs testifies before the Appropriations Committees on the President's fiscal year 2028 budget request.",
+          "summary": "25 percent of the VA general administration appropriation may not be obligated until the Secretary of Veterans Affairs testifies before the Appropriations Committees on the President's fiscal year 2027 budget request.",
           "why_unreported": "Beyond simply funding VA administration, this provision conditions release of a quarter of the money on a future congressional testimony appearance, a control mechanism not evident from the account heading."
         }
       ],
@@ -10208,7 +10308,8 @@
           "notVoting": 15,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-HR-7567",
@@ -10266,7 +10367,7 @@
       ],
       "likelihood": 55,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Sponsored by Rep. Thompson (R-PA), chairman of the House Agriculture Committee, the bill passed the House and was received in the Senate. Comprehensive farm bills typically have bipartisan agricultural-state support, but disagreements over the nutrition title and overall cost can stall reconciliation between the chambers, leaving final passage uncertain.",
+      "likelihoodReason": "Sponsored by Rep. Thompson (R-PA), the bill passed the House and was received in the Senate. Comprehensive farm bills typically have bipartisan agricultural-state support, but disagreements over the nutrition title and overall cost can stall reconciliation between the chambers, leaving final passage uncertain.",
       "sections": [
         {
           "label": "Title I — Commodities",
@@ -10314,7 +10415,7 @@
         {
           "section": "Section 1003(d)(1)(B) — $900,000 Specialty Crop Payment Floor",
           "summary": "For a person or legal entity that derives at least 75 percent of average gross income from farming, ranching, or silviculture, the standard payment limitation does not apply and the Secretary sets the maximum specialty-crop emergency payment, which may not be set lower than $900,000.",
-          "why_unreported": "The framework is presented as broad specialty-crop disaster assistance, but this provision exempts the largest farming entities from the normal payment cap and guarantees them a much higher payment ceiling than other recipients."
+          "why_unreported": "The framework is presented as broad specialty-crop disaster assistance, but this provision exempts entities deriving at least 75 percent of income from farming from the standard payment limitation and guarantees them a payment ceiling of no less than $900,000, set by the Secretary."
         },
         {
           "section": "Section 4103 — Contractor Trigger at 6 Percent Error Rate",
@@ -10368,7 +10469,8 @@
           "notVoting": 5,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     },
     {
       "id": "119-S-1071",
@@ -10393,7 +10495,7 @@
       "pages": 1640,
       "analyzed": true,
       "demo": false,
-      "summary": "This is the annual defense authorization law — the must-pass bill that sets policy and authorizes funding levels for the entire Department of Defense for fiscal year 2026, plus the Energy Department's nuclear-weapons work, military construction, and the armed forces' personnel and health programs. This year's version also carries full-year authorizations for the State Department, the intelligence agencies, and the Coast Guard, and a large 'Other Matters' division covering outbound-investment screening, development finance, and more. It does not itself spend money; it authorizes and directs how defense money may be used.",
+      "summary": "This is the annual defense authorization law, which sets policy and authorizes funding levels for the entire Department of Defense for fiscal year 2026, plus the Energy Department's nuclear-weapons work, military construction, and the armed forces' personnel and health programs. This year's version also carries full-year authorizations for the State Department, the intelligence agencies, and the Coast Guard, and a large 'Other Matters' division covering outbound-investment screening, development finance, and more. It does not itself spend money; it authorizes and directs how defense money may be used.",
       "brief": "Authorizes fiscal year 2026 funding and policy for the Department of Defense, nuclear-weapons programs, military construction, and personnel, and carries State, intelligence, and Coast Guard authorizations plus other national-security measures.",
       "top_lines": [
         {
@@ -10418,7 +10520,7 @@
           "headline": "Beyond the Pentagon",
           "billSection": "title-LXXXV",
           "subs": [
-            "Carries the State Department, Intelligence, and Coast Guard authorization acts for 2026",
+            "Carries the State Department and Intelligence authorization acts for 2026 and the Coast Guard Authorization Act of 2025",
             "Enacts the Comprehensive Outbound Investment National Security Act of 2025",
             "Reauthorizes the U.S. development-finance agency, raising its liability cap to $205B"
           ]
@@ -10433,7 +10535,7 @@
           "billSection": "title-I",
           "items": [
             {
-              "main": "Authorizes Department of Defense programs and sets defense policy across eighteen titles for fiscal year 2026.",
+              "main": "Authorizes Department of Defense programs and sets defense policy across seventeen titles for fiscal year 2026.",
               "detail": "The division authorizes procurement (Title I); research, development, test, and evaluation (Title II); operation and maintenance (Title III); military personnel end strengths (Title IV) and personnel policy (Title V); compensation and benefits (Title VI); health care (Title VII); acquisition policy and reform (Titles VIII and XVIII); department organization (Title IX); general provisions (Title X); civilian personnel (Title XI); matters relating to foreign nations (Title XII); cyberspace matters (Title XV); and space, strategic programs, and intelligence (Title XVI). Specific funding levels are set in the Division D funding tables.",
               "comments": []
             }
@@ -10563,7 +10665,8 @@
           "notVoting": 8,
           "crossoverCount": 0
         }
-      ]
+      ],
+      "analyzedAt": "2026-06-10"
     }
   ]
 }

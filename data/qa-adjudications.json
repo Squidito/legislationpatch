@@ -1,0 +1,39 @@
+{
+  "_doc": "Flags/warnings individually verified against source text by a genuine QA read. Matching entries are suppressed (printed as adjudicated) by qa-source-verify.js and validate-batch.js. Matching is exact on billId+kind+token+path (or check+key), so ANY text change that moves or alters the claim re-opens the flag for fresh adjudication. Editorial-language flags are deliberately NOT adjudicated here — they are open style debt. Reasons cite the verification evidence; sums are reproducible via: npm run facts -- --bill <id> --sums",
+  "qaSourceVerify": [
+    { "billId": "119-S-1582", "kind": "%", "token": "100%", "path": "top_lines[1].subs[0]", "reason": "Bill text L401: reserves 'on an at least 1 to 1 basis' — 100% is the direct conversion", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$109.7B", "path": "summary", "reason": "Sum of border items: $46.55B (sec 90001) + $12.008B (90002) + $45B (90003) + $6.168B (90004) = $109.726B", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$5", "path": "summary", "reason": "Tokenizer artifact of '$5 trillion'; $5,000,000,000,000 verbatim in text (debt limit)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$31,500", "path": "top_lines[0].subs[1]", "reason": "200% joint-return multiplier (26 USC 63(c)(2)(A), fetched usc-26-63) x $15,750 (verbatim in bill)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$29.18B", "path": "top_lines[4].subs[0]", "reason": "Sec 20002 line-item sum (36 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$24.41B", "path": "top_lines[4].subs[1]", "reason": "Sec 20003 line-item sum (12 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$25.38B", "path": "top_lines[4].subs[2]", "reason": "Sec 20004 line-item sum net of $100B loan ceiling", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$14.69B", "path": "top_lines[4].subs[3]", "reason": "Sec 20008 line-item sum (21 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$389M", "path": "top_lines[6].subs[2]", "reason": "SPR line items $218,000,000 + $171,000,000 = $389M (both verbatim)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$10.5B", "path": "top_lines[7].subs[3]", "reason": "Pell shortfall amendment: $12,670,000,000 - $2,170,000,000 (both verbatim) = $10.5B", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$12.52B", "path": "top_lines[8].subs[2]", "reason": "Sec 40003 FAA line-item sum = $12.520B exactly (14 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$156.22B", "path": "sections[1].items[0].main", "reason": "Defense title sum $356.216B minus two $100B loan ceilings (secs 20004/20005) = $156.216B", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$16.05B", "path": "sections[1].items[0].detail", "reason": "Sec 20005 line-item sum net of $100B loan ceiling", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$8.64B", "path": "sections[1].items[0].detail", "reason": "Sec 20007 line-item sum (19 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$7.48B", "path": "sections[1].items[0].detail", "reason": "Sec 20001 line-item sum (16 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$35", "path": "sections[3].items[0].detail", "reason": "Verbatim: Medicaid cost-sharing may not 'exceed $35' (139 STAT. 316)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$12.01B", "path": "sections[4].items[0].detail", "reason": "Sec 90002 CBP line-item sum = $12.008B (4 items)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$0,", "path": "sections[8].items[0].detail", "reason": "CAFE sec 40006: strikes '$5'/'$10', inserts '$0.00' verbatim in 49 USC 32912", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "%", "token": "6.5%", "path": "changes.modified[8]", "reason": "Sec 30001 verbatim: striking '12' and inserting '6.5' in 12 USC 5497(a)(2)(A)(iii); unit per fetched usc-12-5497", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1", "kind": "$", "token": "$0", "path": "changes.modified[13]", "reason": "CAFE penalty $0.00 verbatim (sec 40006)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-5366", "kind": "yr", "token": "2030", "path": "summary", "reason": "Sec 139M(d): 'before January 1, 2031' = taxable years through 2030 (direct conversion)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-5334", "kind": "$", "token": "$50", "path": "sections[0].items[0].detail", "reason": "Fetched usc-26-62(d)(3): increase 'rounded to the nearest multiple of $50'", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HCONRES-40", "kind": "yr", "token": "2026", "path": "top_lines[1].subs[1]", "reason": "April 16, 2026 is the recorded roll-call date (data/votes/119-HCONRES-40.json), not a bill-text claim", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1346", "kind": "%", "token": "12%", "path": "underreported[0].summary", "reason": "Explicit hypothetical inside the sourced '10 to 15 percent' range (bill text L47/L52)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-1346", "kind": "%", "token": "13%", "path": "underreported[0].summary", "reason": "Explicit hypothetical inside the sourced '10 to 15 percent' range (bill text L47/L52)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-7148", "kind": "$", "token": "$0", "path": "sections[10].items[0].detail", "reason": "CFIUS appropriation: 'estimated at not more than $0' verbatim (140 STAT. 439)", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-2066", "kind": "%", "token": "200%", "path": "summary", "reason": "Bill strikes '300' inserts '200' verbatim; 'percent of private capital' unit per fetched usc-15-683", "verifiedAt": "2026-06-10" },
+    { "billId": "119-S-1020", "kind": "yr", "token": "2024", "path": "underreported[0].summary", "reason": "'lapsed in early 2024' is a hypothetical inside the statutory window 'expires after December 31, 2023 and before enactment'", "verifiedAt": "2026-06-10" },
+    { "billId": "119-S-98", "kind": "$", "token": "$9,000 m", "path": "gaps[2]", "reason": "Tokenizer artifact of '$9,000 minimum'; $9,000 verbatim in text (140 STAT. 819)", "verifiedAt": "2026-06-10" }
+  ],
+  "validateBatch": [
+    { "billId": "119-HR-2399", "check": "figure-sourcing", "key": "30%", "reason": "Bill text L103-104: '30' / 'percent of the applicant's total support' line-broken across lines", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-6955", "check": "vote-data", "key": "no-votes", "reason": "House passage was by voice vote with no recorded action matching the fetcher's patterns; verified externally", "verifiedAt": "2026-06-10" },
+    { "billId": "119-HR-7147", "check": "section-label", "key": "Division B — Further Additional Continuing Appropriatio", "reason": "Division-prefixed label is intentional (continuing-appropriations division); no bt anchor exists for it", "verifiedAt": "2026-06-10" }
+  ]
+}

@@ -1,7 +1,24 @@
 // validate-batch.js
 // Pre-push validation — checks that all batch processing is complete and correct.
-// Run standalone: node scripts/validate-batch.js
+// Run standalone: node scripts/validate-batch.js   (--strict: warnings block too)
 // Called automatically by run-batch.js at the end of each pipeline run.
+//
+// Checks (ERROR blocks push; WARN is the QA worklist):
+//   - unprocessed bills, required fields, bill text files, pages consistency
+//   - billSection anchors, section label format, sourcing integrity
+//   - dollar formatting: raw statutory amounts (ERROR) and spelled-out
+//     "$X billion/million" magnitudes (WARN — always shorten to $X.XXB/$XM)
+//   - vote data presence
+//   - stage ↔ vote consistency (ERROR): stage claiming chamber passage while
+//     that chamber's latest passage-type vote failed (the HCONRES-40 class)
+//   - stage ↔ prose consistency (WARN): stale status narration in likelihoodReason
+//   - analysis freshness (WARN): stageDate newer than analyzedAt — bill moved
+//     after the analysis prose was last reviewed
+//   - figure sourcing (training-data guard), referenced sources, acronyms,
+//     quote quality/attribution, ISO dates, omnibus structure, sitemap
+//
+// Warnings individually verified against source can be adjudicated with evidence
+// in data/qa-adjudications.json (exact-match keyed — edits re-open the warning).
 
 const fs   = require('fs');
 const path = require('path');
@@ -142,6 +159,19 @@ function warn(msg)  { console.log(`  ⚠️  ${msg}`); warnings++; }
 function fail(msg)  { console.log(`  ❌ ${msg}`); errors++; }
 function section(label) { console.log(`\n── ${label}`); }
 
+// Adjudication ledger (data/qa-adjudications.json): warnings a QA pass has
+// individually verified against source. A matching entry downgrades the warning
+// to an informational note. Keys are exact, so any change to the underlying
+// content re-opens the warning for fresh adjudication.
+let ADJUDICATIONS = [];
+try {
+    ADJUDICATIONS = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'qa-adjudications.json'), 'utf8')).validateBatch || [];
+} catch { /* no ledger */ }
+function adjudication(billId, check, key) {
+    return ADJUDICATIONS.find(a => a.billId === billId && a.check === check && a.key === key);
+}
+function noteAdjudicated(msg, a) { console.log(`  ◦  ${msg} — adjudicated ${a.verifiedAt}: ${a.reason}`); }
+
 // ── Check: unprocessed bills ───────────────────────────────────────────────
 
 section('Unprocessed bills');
@@ -223,7 +253,11 @@ section('Section label format');
                 /^Title\s+[IVXLC]/i.test(label) ||
                 /^resolving/i.test(label);
             if (!autoOk && label.length > 0) {
-                warn(`${bill.id}: section label won't auto-link: "${label.slice(0, 55)}"`);
+                {
+                    const a = adjudication(bill.id, 'section-label', label.slice(0, 55));
+                    if (a) noteAdjudicated(`${bill.id}: section label won't auto-link: "${label.slice(0, 55)}"`, a);
+                    else warn(`${bill.id}: section label won't auto-link: "${label.slice(0, 55)}"`);
+                }
                 issues++;
             }
         }
@@ -273,13 +307,22 @@ section('Bill text sourcing integrity');
 section('Dollar amount formatting');
 {
     const RAW_DOLLAR = /\$\d{1,3}(?:,\d{3}){2,}/;
-    let found = 0;
+    // Spelled-out magnitudes ("$26.4 billion") are the training-data smell the
+    // dollar rules ban — always shorten to $26.37B / $584.3M. Trillions are not
+    // covered by the shortening rule and are left alone.
+    const SPELLED_DOLLAR = /\$\d[\d,.]*\s?[bm]illion\b/i;
+    let found = 0, spelled = 0;
 
     function walkForDollars(obj, path, billId) {
         if (typeof obj === 'string') {
             if (RAW_DOLLAR.test(obj)) {
                 fail(`${billId} ${path}: contains raw dollar amount`);
                 found++;
+            }
+            const sm = obj.match(SPELLED_DOLLAR);
+            if (sm) {
+                warn(`${billId} ${path}: spelled-out "${sm[0]}" — shorten to $X.XXB/$XM form (CLAUDE.md dollar rules)`);
+                spelled++;
             }
         } else if (Array.isArray(obj)) {
             obj.forEach((v, i) => walkForDollars(v, `${path}[${i}]`, billId));
@@ -304,6 +347,7 @@ section('Dollar amount formatting');
         walkForDollars(bill.divisions,    'divisions',    bill.id);
     }
     if (found === 0) pass('No raw dollar amounts found');
+    if (spelled === 0) pass('No spelled-out dollar magnitudes found');
 }
 
 // ── Check: vote data ───────────────────────────────────────────────────────
@@ -315,11 +359,113 @@ section('Vote data');
     for (const bill of bills) {
         if (!NEEDS_VOTES.has(bill.stage)) continue;
         if (!bill.votes || bill.votes.length === 0) {
-            warn(`${bill.id}: no votes (stage: ${bill.stage}) — voice vote or fetch returned nothing`);
-            missing++;
+            const a = adjudication(bill.id, 'vote-data', 'no-votes');
+            if (a) noteAdjudicated(`${bill.id}: no votes (stage: ${bill.stage})`, a);
+            else { warn(`${bill.id}: no votes (stage: ${bill.stage}) — voice vote or fetch returned nothing`); missing++; }
         }
     }
     if (missing === 0) pass('All passed/signed bills have vote data');
+}
+
+// ── Check: stage ↔ vote consistency ───────────────────────────────────────
+// Stage/likelihood prose is written once at analysis time; votes[] is refetched
+// mechanically afterward — the two drift apart silently (HCONRES-40 was recorded
+// "Passed House" while its own roll call said Failed 213-214). A passage-type
+// vote decides the measure itself; procedural motions (recommit, commit, table,
+// cloture, proceed) say nothing about stage and are ignored.
+
+section('Stage ↔ vote consistency');
+{
+    const PASSAGE_Q = /\b(on passage|suspend the rules and pass|agreeing to the (concurrent )?resolution|motion to concur)\b/i;
+    const PASSED = /\b(passed|agreed to)\b/i;
+    const FAILED = /\b(failed|rejected)\b/i;
+    // Chambers whose passage the stage asserts. Kept minimal (stage 'senate' does
+    // not also assert a House check) to avoid false positives on origin-chamber
+    // votes the pipeline does not track.
+    const STAGE_IMPLIES = { house: ['House'], senate: ['Senate'], signed: ['House', 'Senate'] };
+    let bad = 0;
+
+    for (const bill of bills) {
+        const latestByChamber = {};
+        let latestOverall = null;
+        for (const v of bill.votes || []) {
+            if (!PASSAGE_Q.test(v.question || '')) continue;
+            const ch = v.chamber || 'House';
+            if (!latestByChamber[ch] || String(v.date) > String(latestByChamber[ch].date)) latestByChamber[ch] = v;
+            if (!latestOverall || String(v.date) > String(latestOverall.date)) latestOverall = v;
+        }
+
+        for (const ch of STAGE_IMPLIES[bill.stage] || []) {
+            const v = latestByChamber[ch];
+            if (v && FAILED.test(v.result || '') && !PASSED.test(v.result || '')) {
+                fail(`${bill.id}: stage "${bill.stageLabel || bill.stage}" but latest ${ch} passage vote (${v.date}) is "${v.result}" ${v.yeas != null ? v.yeas + '-' + v.nays : ''} — stage contradicts the vote record`);
+                bad++;
+            }
+        }
+        if (bill.stage === 'dead' && latestOverall
+            && PASSED.test(latestOverall.result || '') && !FAILED.test(latestOverall.result || '')) {
+            warn(`${bill.id}: stage "dead" but the latest passage vote (${latestOverall.chamber} ${latestOverall.date}) is "${latestOverall.result}" — verify how the bill died`);
+        }
+    }
+    if (bad === 0) pass('No stage/vote contradictions');
+}
+
+// ── Check: stage ↔ prose consistency ──────────────────────────────────────
+// likelihoodReason narrates status in prose; catch the stale-stage phrasings
+// that have actually occurred ("committee-stage bill" after House passage,
+// "passed the House" on a bill that never did).
+
+section('Stage ↔ prose consistency');
+{
+    const AT_LEAST_HOUSE = new Set(['house', 'senate', 'signed']);
+    let flagged = 0;
+
+    for (const bill of bills) {
+        const r = bill.likelihoodReason || '';
+        if (!r) continue;
+
+        if (/committee[-\s]stage/i.test(r) && AT_LEAST_HOUSE.has(bill.stage)) {
+            warn(`${bill.id}: likelihoodReason calls this a "committee-stage" bill but stage is "${bill.stageLabel || bill.stage}" — stale prose`);
+            flagged++;
+        }
+        if (/\bpassed the house\b/i.test(r) && ['introduced', 'committee'].includes(bill.stage)) {
+            warn(`${bill.id}: likelihoodReason says "passed the House" but stage is "${bill.stageLabel || bill.stage}"`);
+            flagged++;
+        }
+        if (/\bpassed the senate\b/i.test(r) && ['introduced', 'committee'].includes(bill.stage)) {
+            warn(`${bill.id}: likelihoodReason says "passed the Senate" but stage is "${bill.stageLabel || bill.stage}"`);
+            flagged++;
+        }
+        if (/\bfailed in the (house|senate)\b/i.test(r) && !['dead', 'vetoed'].includes(bill.stage)) {
+            warn(`${bill.id}: likelihoodReason says the bill failed but stage is "${bill.stageLabel || bill.stage}"`);
+            flagged++;
+        }
+    }
+    if (flagged === 0) pass('No stage/prose mismatches');
+}
+
+// ── Check: analysis freshness (analyzedAt vs stageDate) ───────────────────
+// analyzedAt = the date the analysis prose was last written or re-verified.
+// stageDate = the bill's latest action date (refetched mechanically). If the
+// bill moved after the prose was last reviewed, the analysis may describe a
+// stale procedural reality — re-review it (the generalized HCONRES-40 lesson).
+
+section('Analysis freshness (analyzedAt)');
+{
+    let stale = 0, missing = 0;
+    for (const bill of bills) {
+        if (!bill.analyzed) continue;
+        if (!bill.analyzedAt) {
+            warn(`${bill.id}: no analyzedAt — stamp it when writing or re-verifying the analysis`);
+            missing++;
+            continue;
+        }
+        if (bill.stageDate && String(bill.stageDate) > String(bill.analyzedAt)) {
+            warn(`${bill.id}: stageDate ${bill.stageDate} is newer than analyzedAt ${bill.analyzedAt} — bill moved after the analysis was last reviewed; re-review stage/likelihood prose`);
+            stale++;
+        }
+    }
+    if (stale === 0 && missing === 0) pass('All analyses are fresh relative to their latest action date');
 }
 
 // ── Check: CR dates processed ──────────────────────────────────────────────
@@ -682,9 +828,17 @@ section('Figure sourcing (training-data guard)');
         }
 
         if (misses.size) {
-            const list = [...misses].slice(0, 8).join(', ');
-            warn(`${bill.id}: ${misses.size} figure(s)/cite(s) not found in bill text — verify: ${list}${misses.size > 8 ? ' …' : ''}`);
-            flagged++;
+            const open = [], verified = [];
+            for (const tok of misses) {
+                const a = adjudication(bill.id, 'figure-sourcing', tok);
+                if (a) verified.push({ tok, a }); else open.push(tok);
+            }
+            for (const { tok, a } of verified) noteAdjudicated(`${bill.id}: "${tok}" not string-matchable in bill text`, a);
+            if (open.length) {
+                const list = open.slice(0, 8).join(', ');
+                warn(`${bill.id}: ${open.length} figure(s)/cite(s) not found in bill text — verify: ${list}${open.length > 8 ? ' …' : ''}`);
+                flagged++;
+            }
         }
     }
     if (flagged === 0) pass('All figures/cites in analyses are traceable to the bill text');

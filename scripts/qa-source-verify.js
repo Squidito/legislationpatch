@@ -14,9 +14,14 @@
 //   node scripts/qa-source-verify.js --quote         # print the source line for EVERY claim (forces a real read)
 //   node scripts/qa-source-verify.js --bill 119-HR-1 --quote
 //
-// Exit code: non-zero if any claim has no source evidence, or any non-statutory
-// editorial adjective is found. Intended to be run once PER PASS, with the --quote
-// output actually read against source — not diffed against the last run.
+// Exit code: non-zero if any OPEN claim has no source evidence, or any
+// non-statutory editorial adjective is found. Flags a genuine QA read has
+// individually verified can be adjudicated with evidence in
+// data/qa-adjudications.json (qaSourceVerify entries) — these print as
+// "◦ adjudicated" and do not count. Matching is exact on billId+kind+token+path,
+// so any edit that moves or changes a claim re-opens its flag.
+// Intended to be run once PER PASS, with the --quote output actually read
+// against source — not diffed against the last run.
 
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +29,18 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const cache = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/cache.json'), 'utf8')).bills;
 const QUOTE = process.argv.includes('--quote');
+
+// Adjudication ledger: flags a human/agent pass has individually verified against
+// source (data/qa-adjudications.json). Matching is exact on billId+kind+token+path,
+// so any edit that moves or changes the claim re-opens the flag. The ledger records
+// PAST human verification — it is not this tool verifying itself (genuine-read rule).
+let ADJUDICATIONS = [];
+try {
+  ADJUDICATIONS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/qa-adjudications.json'), 'utf8')).qaSourceVerify || [];
+} catch { /* no ledger — all flags open */ }
+function findAdjudication(billId, kind, token, pathLabel) {
+  return ADJUDICATIONS.find(a => a.billId === billId && a.kind === kind && a.token === token && a.path === pathLabel);
+}
 const billArg = (process.argv.find(a => a.startsWith('--bill')) || '').split('=')[1]
   || (process.argv.includes('--bill') ? process.argv[process.argv.indexOf('--bill') + 1] : null);
 
@@ -101,28 +118,28 @@ function verifyBill(b) {
       const v = shortToVal(tok.trim()); if (v == null) continue;
       const ev = findDollar(blocks, v);
       claims.push({ kind: '$', token: tok.trim(), label, ev });
-      if (!ev) flags.push({ kind: '$', detail: `${tok.trim()} (${label})` });
+      if (!ev) flags.push({ kind: '$', token: tok.trim(), label, detail: `${tok.trim()} (${label})` });
     }
     // percentages
     for (const m of s.matchAll(/([0-9]+(?:\.[0-9]+)?)\s*(?:percent|%)/gi)) {
       const n = m[1]; const key = 'P' + n; if (seen.has(key)) continue; seen.add(key);
       const ev = findPhrase(blocks, n + ' percent', n + 'percent', n + '%', n + ' %');
       claims.push({ kind: '%', token: n + '%', label, ev });
-      if (!ev) flags.push({ kind: '%', detail: `${n}% (${label})` });
+      if (!ev) flags.push({ kind: '%', token: n + '%', label, detail: `${n}% (${label})` });
     }
     // years
     for (const m of s.matchAll(/\b((?:19|20)[0-9]{2})\b/g)) {
       const y = m[1]; const key = 'Y' + y; if (seen.has(key)) continue; seen.add(key);
       const ev = findPhrase(blocks, y);
       claims.push({ kind: 'yr', token: y, label, ev });
-      if (!ev) flags.push({ kind: 'yr', detail: `${y} (${label})` });
+      if (!ev) flags.push({ kind: 'yr', token: y, label, detail: `${y} (${label})` });
     }
     // section cites
     for (const m of s.matchAll(/\bsection\s+([0-9]+[A-Za-z]?)/gi)) {
       const sec = m[1].toLowerCase(); const key = 'S' + sec; if (seen.has(key)) continue; seen.add(key);
       const ev = findPhrase(blocks, 'section ' + sec, 'sec. ' + sec, sec + '. ');
       claims.push({ kind: 'sec', token: 'Section ' + sec, label, ev });
-      if (!ev) flags.push({ kind: 'sec', detail: `Section ${sec} (${label})` });
+      if (!ev) flags.push({ kind: 'sec', token: 'Section ' + sec, label, detail: `Section ${sec} (${label})` });
     }
   }
   // editorial: a banned word is allowed ONLY if it sits inside a phrase quoted from the source
@@ -132,13 +149,13 @@ function verifyBill(b) {
     // grab a short window around the word and require it to appear in the source
     const idx = m.index; const window = s.slice(Math.max(0, idx - 12), idx + w.length + 18).replace(/\s+/g, ' ').toLowerCase();
     const ev = findPhrase(blocks, window) || findPhrase(blocks, w + ' '); // statutory term must be in source
-    if (!ev) flags.push({ kind: 'editorial', detail: `"${m[0]}" (${label}) — not a sourced term` });
+    if (!ev) flags.push({ kind: 'editorial', token: m[0], label, detail: `"${m[0]}" (${label}) — not a sourced term` });
   }
   return { id: b.id, claims, flags };
 }
 
 const bills = cache.filter(b => b.analyzed && (!billArg || b.id === billArg));
-let totalFlags = 0, billsWithFlags = 0;
+let totalFlags = 0, billsWithFlags = 0, totalAdjudicated = 0;
 console.log(`qa-source-verify — ${bills.length} bill(s). Claims are matched to QUOTED source lines; read them, do not diff against a prior run.\n`);
 for (const b of bills) {
   const r = verifyBill(b);
@@ -149,16 +166,25 @@ for (const b of bills) {
       else console.log(`  ✗ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}  — NO SOURCE EVIDENCE`);
     }
   }
-  if (r.flags.length) {
-    billsWithFlags++; totalFlags += r.flags.length;
+  const open = [], adjudicated = [];
+  for (const f of r.flags) {
+    const a = findAdjudication(b.id, f.kind, f.token, f.label);
+    if (a) adjudicated.push({ f, a }); else open.push(f);
+  }
+  totalAdjudicated += adjudicated.length;
+  if (open.length) {
+    billsWithFlags++; totalFlags += open.length;
     if (!QUOTE) console.log(`FLAG ${b.id}`);
-    for (const f of r.flags) console.log(`     ✗ [${f.kind}] ${f.detail}`);
-  } else if (!QUOTE) {
+    for (const f of open) console.log(`     ✗ [${f.kind}] ${f.detail}`);
+  } else if (!QUOTE && !adjudicated.length) {
     console.log(`ok   ${b.id}  (${r.claims.length} claims, all source-anchored)`);
   }
+  for (const { f, a } of adjudicated) {
+    console.log(`     ◦ [${f.kind}] ${f.detail} — adjudicated ${a.verifiedAt}: ${a.reason}`);
+  }
 }
-console.log(`\n${totalFlags} flag(s) across ${billsWithFlags} bill(s).`);
+console.log(`\n${totalFlags} open flag(s) across ${billsWithFlags} bill(s); ${totalAdjudicated} adjudicated (data/qa-adjudications.json).`);
 console.log(totalFlags === 0
-  ? 'No mechanical gaps. NOTE: a clean run is NOT a pass by itself — the protocol requires a fresh human/agent read of the quoted source (run with --quote).'
-  : 'Resolve flags against source before counting this pass.');
+  ? 'No open mechanical gaps. NOTE: a clean run is NOT a pass by itself — the protocol requires a fresh human/agent read of the quoted source (run with --quote).'
+  : 'Resolve open flags against source (fix, fetch the reference, or adjudicate with evidence) before counting this pass.');
 process.exit(totalFlags === 0 ? 0 : 1);

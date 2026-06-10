@@ -18,7 +18,13 @@ The **processing pipeline and data** are open source under MIT:
 | `scripts/prompts.js` | LLM system prompt and chunk map prompt with zone discipline rules |
 | `scripts/scan_record.js` | Congressional Record quote scanner via GovInfo API |
 | `scripts/generate_reps.js` | Rep profile builder and bill attribution pipeline |
+| `scripts/bill-facts.js` | Pre-analysis facts sheet — every figure/percentage/deadline/date in a bill's text with line numbers, plus per-section dollar sums with spending caps excluded |
+| `scripts/validate-batch.js` | Pre-push gate — sourcing, formatting, stage↔vote consistency, analysis freshness |
+| `scripts/qa-source-verify.js` | Source-anchored QA verifier — ties every figure in an analysis to a quoted line of the bill or statute text |
+| `scripts/fetch-reference.js` | Fetches referenced bills/statutes (Congress.gov, GovInfo USCODE) so cross-referenced claims are verified against real text, never recalled |
 | `data/cache.json` | Processed bill data — public congressional record |
+| `data/qa-adjudications.json` | QA ledger — verifier flags individually checked against source, with the evidence; exact-match keyed so edited claims re-open automatically |
+| `data/ref-text/` | Fetched referenced statute/bill texts backing cross-referenced claims |
 | `data/reps-index.json` | Congressional member index by state |
 | `data/reps/` | Individual rep profile JSON files |
 
@@ -127,6 +133,22 @@ node scripts/scan_record.js --days=30
 
 ```bash
 node scripts/generate_reps.js --all
+```
+
+### Quality gates
+
+```bash
+# Pre-analysis facts sheet (figures are copied from here, never recalled)
+npm run facts -- --bill 119-HR-1 --sums
+
+# Tie every figure in an analysis to a quoted source line
+npm run qa-verify -- --bill 119-HR-1 --quote
+
+# Pre-push validation: sourcing, formatting, stage↔vote consistency, freshness
+npm run validate
+
+# Fetch vote data; --apply-stage corrects stage fields on confident mismatches
+node scripts/fetch_vote_data.js --bill 119-HR-227 --apply-stage
 ```
 
 ---

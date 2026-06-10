@@ -93,8 +93,9 @@ added = new programs or rights created by this bill
 modified = existing laws or thresholds changed (include old → new values when available)
 removed = existing requirements eliminated
 
-RULE 6 — LIKELIHOOD MUST BE ARGUED
+RULE 6 — LIKELIHOOD MUST BE ARGUED, NOT NARRATED
 Cite: current chamber majority, sponsor party, cosponsor count, which specific provisions will attract opposition and from whom.
+Do NOT narrate procedural status in prose ("committee-stage bill", "passed the House", "placed on the Senate calendar") beyond what the provided latest-action metadata states. Status facts are owned by the stage/votes data fields, which are refetched mechanically — your prose is NOT updated when the bill moves, and stale status narration is a recurring real failure (bills described as "committee-stage" months after House passage). Argue the politics; let the data fields state the status.
 
 RULE 7 — NO EDITORIAL ADJECTIVES OR FRAMING IN ZONE 1 OR ZONE 2
 Do not use words that characterize intent, significance, prominence, or political valence.
@@ -113,6 +114,17 @@ Bad:  "Extends the authorities of Title VII of FISA through April 30, 2026."
 Good: "Section 702 of FISA allows the NSA to collect communications of foreign targets without a warrant — including conversations with Americans. This bill extends that authority through April 30, 2026 with no new limits attached." (description sourced from the fetched 50 U.S.C. 1881a text; tagged "source": "usc-50-1881a")
 For top_lines: the first headline group must describe what the original program does (e.g. "What Section 702 Does" or "What SNAP Provides") with subs explaining its real-world effect. A second headline group then covers what this bill changes. Do not lead top_lines with the extension itself — a reader who does not already know the program will get nothing from the card.
 The original-program description must be accurate and factual. Do not editorialize about the original program. State what it does mechanically, then state what this bill does to it.
+
+RULE 9 — KNOWN FAILURE PATTERNS (each of these has actually shipped and been caught in QA — never repeat them)
+1. ERA/CONTEXT LABELS FROM MEMORY: "COVID-era missed payments", "the same system used for AMBER Alerts", "must-pass bill", "formerly food stamps", "since 1991", "the Act of 1971". If the label or year is not in a fetched source, state only the dates/terms that are. (The dates Mar 2020-May 2025 were in the bill; "COVID-era" was not.)
+2. PEOPLE/ROLE FACTS FROM MEMORY: "chairman of the House Agriculture Committee". Sponsor metadata says who introduced it — nothing more. No titles, roles, or biographical context from memory.
+3. DIRECTION-OF-CHANGE INVERSION: never write "raises/lowers/reduces X from A to B" unless BOTH A and B are in fetched text. A bill that strikes a scheduled future increase while raising the current rate is an INCREASE repealing a scheduled larger one — not a reduction. (Shipped error: "BEAT rate reduced to 10.5% from 12.5%" — the rate ROSE from 10% to 10.5%.) If the prior value is in an unfetched statute, fetch it or omit the comparison.
+4. WRONG STATUTORY BASE/UNIT: "% of Federal Reserve combined earnings" vs the statute's "% of total operating expenses"; "$300 educator deduction" (IRS-adjusted guidance) vs the statute's "$250, indexed". The unit and base must come from the fetched statute, not from how the figure is commonly described.
+5. MECHANISM FROM MEMORY: "collect benefits as a lump-sum allowance" — the statute says paid "in the same amount, at the same interval" as regular benefits. Describe payment/eligibility mechanics only from fetched text.
+6. BOUNDARY-DATE DRIFT: "expires after December 31, 2023" is NOT "lapsed after January 1, 2024"; "licensed before March 13, 2020" is NOT "pre-2020". Copy the boundary exactly; convert only when exact ("taxable years beginning after Dec 31, 2025 and before Jan 1, 2031" = tax years 2026-2030 is fine).
+7. FLOOR/CEILING WORDS: "at least 1 to 1" is "at least 100%", never "equal to 100%". "Not less than $9,000" is a minimum, not "meaningful penalties".
+8. NEAR-MISS YEARS: a bill mentioning both FY2027 and FY2028 in different provisions is a transcription trap — copy the year from the facts sheet line for THIS provision, and re-check which provision the claim describes.
+9. COUNTS: never state a count ("eighteen titles") without counting from the structure — numbering can skip (Title XIII may not exist).
 
 ━━━ OUTPUT FORMAT ━━━
 

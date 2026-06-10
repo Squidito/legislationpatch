@@ -101,13 +101,23 @@ if (!POST_ONLY) {
             }
         });
         console.log(`
-  Instructions:
+  Instructions (per-bill checklist — see CLAUDE.md "Bill Analysis"):
   1. Open a Claude Code session in this project folder.
-  2. Say: "Process bills_raw.json — analyze each bill and write
-     entries to cache.json following CLAUDE.md rules."
+  2. For EACH bill, in order:
+       a. npm run facts -- --bill <id>          (figures are COPIED from this
+          sheet — add --sums for appropriations; never from memory)
+       b. Clear every reference hint above: fetch it (fetch-reference.js),
+          register + tag it, or explicitly note why it is not needed.
+       c. Write the analysis per scripts/prompts.js SYSTEM_PROMPT,
+          including "analyzedAt": today's date.
+       d. npm run qa-verify -- --bill <id> --quote   — resolve every open
+          flag NOW (fix, fetch, or adjudicate in data/qa-adjudications.json).
   3. If cr_raw.json has new dates, say: "Process cr_raw.json —
      extract quotes and add to quotes.json."
-  4. Once analysis is complete, run:
+  4. ONE fresh-read pass over the new entries (genuine re-read of each
+     bill's source vs its analysis — the only defense against semantic
+     errors; see CLAUDE.md QA Loop Protocol).
+  5. Once analysis is complete, run:
 
        node scripts/run-batch.js --post
 `);

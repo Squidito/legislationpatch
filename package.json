@@ -12,7 +12,8 @@
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
     "reps": "node scripts/generate_reps.js",
-    "test": "node scripts/validate-batch.js"
+    "test": "node scripts/validate-batch.js",
+    "facts": "node scripts/bill-facts.js"
   },
   "repository": {
     "type": "git",

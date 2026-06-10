@@ -1,3 +1,18 @@
+// fetch_vote_data.js — roll call / voice vote fetcher for cached bills.
+//
+// Usage:
+//   node scripts/fetch_vote_data.js                       all cached bills
+//   node scripts/fetch_vote_data.js --bill 119-HR-227     one bill
+//   node scripts/fetch_vote_data.js --bill <id> --apply-stage
+//
+// Besides votes, this checks stage consistency against the fetched actions
+// (confident cases only: "Became Public Law" → signed; failed latest floor
+// action → dead). Mismatches warn loudly; --apply-stage corrects the
+// stage/stageLabel/currentStep fields. likelihood/likelihoodReason prose is
+// never auto-edited — re-review it after any stage correction.
+// Voice/UC passages are deduplicated (the same action arrives via both the
+// chamber source system and the Library of Congress mirror).
+
 require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
@@ -189,6 +204,55 @@ function detectCrossovers(members, yeas, nays) {
   return crossovers;
 }
 
+// ---- Stage derivation from actions (confident cases only) ----
+
+const APPLY_STAGE = process.argv.includes('--apply-stage');
+const PASSAGE_CTX = /(on passage|agreeing to the (concurrent )?resolution|suspend the rules and pass|failed of passage|passed\/agreed to)/i;
+
+function deriveStageSignal(actions) {
+  if (actions.some(a => /became public law/i.test(a.text || ''))) return { stage: 'signed' };
+  // latest floor passage-type action, by date
+  let latest = null;
+  for (const a of actions) {
+    const t = a.text || '';
+    if (!PASSAGE_CTX.test(t)) continue;
+    const failed = /\bfailed\b/i.test(t);
+    const passed = !failed && /\b(passed|agreed to)\b/i.test(t);
+    if (!failed && !passed) continue;
+    if (!latest || String(a.actionDate || '') > String(latest.date)) {
+      latest = { date: a.actionDate || '', failed, text: t, chamber: a.chamber || (/senate/i.test(t) ? 'Senate' : 'House') };
+    }
+  }
+  if (latest && latest.failed) return { stage: 'dead', chamber: latest.chamber, date: latest.date, text: latest.text };
+  return null; // no confident signal — leave stage alone
+}
+
+function checkStageConsistency(bill, actions, cacheData) {
+  const signal = deriveStageSignal(actions);
+  if (!signal || bill.stage === signal.stage) return;
+  // 'vetoed' is its own terminal stage — never overwrite it with 'dead'
+  if (bill.stage === 'vetoed') return;
+  const desc = signal.stage === 'signed'
+    ? 'actions show "Became Public Law"'
+    : `latest floor action FAILED (${signal.chamber} ${signal.date}: "${(signal.text || '').slice(0, 70)}")`;
+  console.warn(`  ⚠️  STAGE MISMATCH ${bill.id}: cache says "${bill.stageLabel || bill.stage}" but ${desc}`);
+  if (!APPLY_STAGE) {
+    console.warn('      Re-run with --apply-stage to correct the stage fields, then re-review likelihood/prose.');
+    return;
+  }
+  const idx = cacheData.bills.findIndex(b => b.id === bill.id);
+  if (idx < 0) return;
+  const target = cacheData.bills[idx];
+  if (signal.stage === 'signed') {
+    target.stage = 'signed'; target.stageLabel = 'Signed into Law'; target.currentStep = 4;
+  } else {
+    target.stage = 'dead';
+    target.stageLabel = signal.chamber === 'Senate' ? 'Failed in Senate' : 'Failed in House';
+    target.currentStep = 1;
+  }
+  console.warn(`      → stage corrected to "${target.stageLabel}". likelihood/likelihoodReason still need a human re-review.`);
+}
+
 // ---- Process votes for one bill ----
 
 async function processVotesForBill(bill, cacheData) {
@@ -204,6 +268,14 @@ async function processVotesForBill(bill, cacheData) {
 
   const actions = await fetchBillActions(congress, type, number);
 
+  // ---- Stage consistency (the HCONRES-40 drift class) ----
+  // Stage prose is written at analysis time; actions are fetched now and the two
+  // silently drift apart. Detect the CONFIDENT cases only — enacted, or failed on
+  // the floor with no later passage — warn loudly on mismatch, and correct the
+  // stage fields when run with --apply-stage. Ambiguous cases are left alone;
+  // validate-batch's stage checks are the backstop.
+  checkStageConsistency(bill, actions, cacheData);
+
   // ---- Voice vote / unanimous consent (no per-member tally) ----
   // Congress.gov returns recordedVotes (plural array), not recordedVote
   const recordedActions = actions.filter(a => Array.isArray(a.recordedVotes) && a.recordedVotes.length > 0);
@@ -215,6 +287,10 @@ async function processVotesForBill(bill, cacheData) {
           && (t.includes('voice vote') || t.includes('unanimous consent') || t.includes('without objection'));
     });
     if (voiceActions.length > 0) {
+      // Dedupe identical voice/UC passages — the same action appears under both
+      // the chamber source system and the Library of Congress mirror (no roll
+      // number to dedupe on, unlike recorded votes below)
+      const seenVoice = new Set();
       const summaries = voiceActions.map(a => {
         const t = (a.text || '').toLowerCase();
         return {
@@ -224,6 +300,11 @@ async function processVotesForBill(bill, cacheData) {
           result:   'Passed',
           method:   t.includes('unanimous consent') ? 'Unanimous Consent' : 'Voice Vote',
         };
+      }).filter(s => {
+        const k = JSON.stringify(s);
+        if (seenVoice.has(k)) return false;
+        seenVoice.add(k);
+        return true;
       });
       const idx = cacheData.bills.findIndex(b => b.id === billId);
       if (idx >= 0) cacheData.bills[idx].votes = summaries;
