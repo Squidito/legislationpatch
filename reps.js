@@ -21,7 +21,7 @@ const STATE_NAMES = {
 document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
-  const isDark = localStorage.getItem('lpTheme') === 'dark';
+  const isDark = localStorage.getItem('lpTheme') !== 'light';
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   const toggle = document.getElementById('themeToggle');
   if (toggle) toggle.checked = isDark;

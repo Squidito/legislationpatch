@@ -13,8 +13,8 @@ async function init() {
   const errorState   = document.getElementById('errorState');
   const profileEl    = document.getElementById('repProfile');
 
-  // Load theme — same key as main site
-  const isDark = localStorage.getItem('lpTheme') === 'dark';
+  // Load theme — same key as main site (dark is the default)
+  const isDark = localStorage.getItem('lpTheme') !== 'light';
   document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) themeToggle.checked = isDark;

@@ -412,12 +412,12 @@ function toggleTheme(isDark) {
 // ---- Init ----
 
 async function init() {
-  const saved = localStorage.getItem('lpTheme');
-  if (saved === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
+  const isDark = localStorage.getItem('lpTheme') !== 'light';
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  {
     const cb = document.getElementById('themeToggle');
-    if (cb) cb.checked = true;
-    updateLogo(true);
+    if (cb) cb.checked = isDark;
+    updateLogo(isDark);
   }
 
   const zip   = localStorage.getItem('lpTrackedZip');

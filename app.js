@@ -231,17 +231,15 @@ function toggleTheme(isDark) {
   updateLogoForTheme(isDark);
 }
 
-// Apply saved theme on load
+// Apply theme on load — dark is the default (light only when explicitly chosen)
 (function() {
-  const saved = localStorage.getItem('lpTheme');
-  if (saved === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    document.addEventListener('DOMContentLoaded', () => {
-      const cb = document.getElementById('themeToggle');
-      if (cb) cb.checked = true;
-      updateLogoForTheme(true);
-    });
-  }
+  const isDark = localStorage.getItem('lpTheme') !== 'light';
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  document.addEventListener('DOMContentLoaded', () => {
+    const cb = document.getElementById('themeToggle');
+    if (cb) cb.checked = isDark;
+    updateLogoForTheme(isDark);
+  });
 })();
 
 function goHome() {
