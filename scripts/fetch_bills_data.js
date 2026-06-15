@@ -27,6 +27,39 @@ const BILL_TEXT_DIR       = path.join(__dirname, '../data/bill-text');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// Resilient fetch — retries on network errors and HTTP 429/5xx with exponential
+// backoff (honoring Retry-After when present). Returns a Response like fetch() does;
+// callers still check res.ok for non-retryable 4xx. Throws only after exhausting tries.
+// This is what makes a long sequential fetch survive Congress.gov rate-limiting
+// instead of dying mid-run.
+async function fetchWithRetry(url, { tries = 5, baseDelay = 2000, label = '' } = {}) {
+    let lastErr;
+    const tag = label || (typeof url === 'string' ? url.split('?')[0] : 'fetch');
+    for (let attempt = 1; attempt <= tries; attempt++) {
+        try {
+            const res = await globalThis.fetch(url);
+            if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
+                const ra   = parseInt(res.headers.get('retry-after') || '', 10);
+                const wait = Number.isFinite(ra) ? ra * 1000 : baseDelay * Math.pow(2, attempt - 1);
+                if (attempt < tries) {
+                    console.warn(`  [retry] ${tag} → HTTP ${res.status}; waiting ${Math.round(wait/1000)}s (attempt ${attempt}/${tries})`);
+                    await sleep(wait);
+                    continue;
+                }
+            }
+            return res;
+        } catch (e) {
+            lastErr = e;
+            const wait = baseDelay * Math.pow(2, attempt - 1);
+            if (attempt < tries) {
+                console.warn(`  [retry] ${tag} network error: ${e.message}; waiting ${Math.round(wait/1000)}s (attempt ${attempt}/${tries})`);
+                await sleep(wait);
+            }
+        }
+    }
+    throw lastErr || new Error(`fetchWithRetry exhausted for ${tag}`);
+}
+
 // Flat clean — for short analysis text (CRS summaries, CR excerpts)
 function cleanHTML(html) {
     return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -153,7 +186,7 @@ async function fetchRecentLaws(limit = 20) {
     const url = `https://api.congress.gov/v3/law/${CONGRESS_SESSION}?limit=${limit}&format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res  = await fetch(url);
+        const res  = await fetchWithRetry(url);
         if (!res.ok) { console.log('    Law endpoint unavailable.'); return []; }
         const data = await res.json();
         const cutoff = new Date(Date.now() - 35 * 24 * 60 * 60 * 1000);
@@ -177,7 +210,7 @@ async function fetchRecentBills(cutoff = loadFetchCutoff()) {
         const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}?sort=updateDate+desc&limit=${PAGE}&offset=${offset}&format=json&api_key=${CONGRESS_API_KEY}`;
         await sleep(offset === 0 ? 4000 : 2000);
         try {
-            const res  = await fetch(url);
+            const res  = await fetchWithRetry(url);
             if (!res.ok) throw new Error(`Congress API Error: ${res.status}`);
             const data = await res.json();
             const page = data.bills || [];
@@ -207,7 +240,7 @@ async function fetchSpecificBill(type, number) {
     const url = `https://api.congress.gov/v3/bill/${CONGRESS_SESSION}/${type.toLowerCase()}/${number}?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res  = await fetch(url);
+        const res  = await fetchWithRetry(url);
         if (!res.ok) return null;
         return (await res.json()).bill;
     } catch (e) { console.error('Error:', e.message); return null; }
@@ -301,7 +334,7 @@ async function fetchBillText(congress, type, number) {
     await sleep(4000);
     for (let attempt = 1; attempt <= 3; attempt++) {
         try {
-            const res  = await fetch(url);
+            const res  = await fetchWithRetry(url);
             const data = await res.json();
             if (!data.textVersions?.length) {
                 console.log(`  [text] No text versions listed on Congress.gov for ${congress}-${type}-${number}`);
@@ -314,7 +347,7 @@ async function fetchBillText(congress, type, number) {
                 return { display: '', analysis: '' };
             }
             await sleep(1000);
-            const rawRes = await fetch(textFormat.url);
+            const rawRes = await fetchWithRetry(textFormat.url);
             if (!rawRes.ok) throw new Error(`Text URL returned HTTP ${rawRes.status}`);
             const raw = await rawRes.text();
             if (!raw?.trim()) throw new Error('Text URL returned empty body');
@@ -336,7 +369,7 @@ async function fetchBillMetadata(congress, type, number) {
     const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res = await fetch(url);
+        const res = await fetchWithRetry(url);
         if (!res.ok) return null;
         return (await res.json()).bill;
     } catch (e) { console.error('Metadata error:', e.message); return null; }
@@ -346,7 +379,7 @@ async function fetchCRSSummary(congress, type, number) {
     const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/summaries?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res  = await fetch(url);
+        const res  = await fetchWithRetry(url);
         if (!res.ok) return '';
         const data = await res.json();
         const summaries = data.summaries || [];
@@ -364,7 +397,7 @@ async function fetchCongressionalRecord(actionDate, type, number) {
     const url = `https://api.congress.gov/v3/congressional-record?y=${year}&m=${month}&d=${day}&format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res  = await fetch(url);
+        const res  = await fetchWithRetry(url);
         if (!res.ok) return '';
         const data = await res.json();
         const issues = data.Results?.Issues || data.dailyCongressionalRecord || [];
@@ -387,7 +420,7 @@ async function fetchCongressionalRecord(actionDate, type, number) {
         }
         if (!sectionUrl) return '';
         await sleep(1500);
-        const textRes = await fetch(sectionUrl);
+        const textRes = await fetchWithRetry(sectionUrl);
         if (!textRes.ok) return '';
         const fullText = cleanHTML(await textRes.text());
         // Extract context around bill mentions
@@ -480,7 +513,7 @@ async function searchPriorCongressLaws(priorCongress, agencyKeyword, isOmnibus) 
     const url = `https://api.congress.gov/v3/law/${priorCongress}?limit=100&format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(2000);
     try {
-        const res = await fetch(url);
+        const res = await fetchWithRetry(url);
         if (!res.ok) return [];
         const data = await res.json();
         return (data.bills || []).filter(b => {
@@ -698,23 +731,59 @@ async function main() {
     }
 
     console.log(`\nFetching data for ${newBills.length} bill(s)...`);
-    const results = [];
+
+    // Resume + incremental save: start from whatever is already in bills_raw.json,
+    // skip bills already fetched (unless --force), and persist after EVERY bill so a
+    // crash or rate-limit never loses progress — re-running picks up where it left off.
+    // (This also stops re-fetching the un-analyzed backlog on every run.)
+    const force = process.argv.includes('--force');
+    let results = [];
+    try { results = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8')); if (!Array.isArray(results)) results = []; } catch (e) {}
+    const savedIds     = new Set(results.map(r => r.billId));
+    const saveProgress = () => fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+
+    let ok = 0, skipped = 0, failed = 0;
+    const fetchedThisRun = [];
     for (const b of newBills) {
         const congress = b.congress || CONGRESS_SESSION;
         const type     = (b.type || b.billType || '').toUpperCase();
-        const result   = await processBillEntry(congress, type, b.number, b.title);
-        if (result) results.push(result);
+        const billId   = `${congress}-${type}-${b.number}`;
+        if (!force && savedIds.has(billId)) { skipped++; continue; }
+        try {
+            const result = await processBillEntry(congress, type, b.number, b.title);
+            if (result) {
+                const idx = results.findIndex(r => r.billId === billId);
+                if (idx >= 0) results[idx] = result; else results.push(result);
+                savedIds.add(billId);
+                saveProgress();           // persist immediately — resume-safe
+                fetchedThisRun.push(result);
+                ok++;
+            }
+        } catch (e) {
+            failed++;
+            console.error(`  ✗ ${billId} failed: ${e.message} — skipping; re-run to retry it.`);
+        }
         await sleep(2000);
     }
 
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
-    fs.writeFileSync(LAST_FETCH_FILE, JSON.stringify({ lastRun: new Date().toISOString() }));
-    console.log(`\nDone. Saved ${results.length} bills to ${OUTPUT_FILE}`);
-    results.forEach(r => console.log(`  ${r.billId} — ${r.title} [${r.stageLabel}]`));
+    saveProgress();
+    // Only advance the fetch cutoff on a fully clean run; if anything failed, leave it
+    // so the next run re-discovers the same window and retries the stragglers.
+    if (failed === 0) fs.writeFileSync(LAST_FETCH_FILE, JSON.stringify({ lastRun: new Date().toISOString() }));
+    console.log(`\nDone. ${ok} fetched, ${skipped} already saved (resumed), ${failed} failed. Total in bills_raw.json: ${results.length}`);
+    if (failed > 0) console.log(`  ⚠ ${failed} failed — re-run \`node scripts/fetch_bills_data.js\` to retry just those (already-fetched bills are skipped).`);
+    fetchedThisRun.forEach(r => console.log(`  ${r.billId} — ${r.title} [${r.stageLabel}]`));
 }
 
 if (require.main === module) {
-    main().catch(console.error);
+    // Safety net: a stray async rejection (e.g. a late socket error from a fetch whose
+    // result we already moved past) should be logged, not crash the whole run and lose
+    // progress. Per-bill failures are handled in the loop; bills_raw.json is saved
+    // incrementally, so the process can exit non-fatally either way.
+    process.on('unhandledRejection', (reason) => {
+        console.warn('  [warn] Unhandled promise rejection (continuing):', reason?.message || reason);
+    });
+    main().catch(e => { console.error('Fatal:', e); process.exit(1); });
 }
 
-module.exports = { detectReferenceHints };
+module.exports = { detectReferenceHints, fetchWithRetry };
