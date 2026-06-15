@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T21:20:15.830Z",
+  "generated": "2026-06-15T21:48:03.605Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -17098,6 +17098,464 @@
             "removed": [
               "Exempts Divisions E–H from PAYGO scorecard entries"
             ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-HR-6938",
+      "isOmnibus": true,
+      "title": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+      "official_title": "Making consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes.",
+      "code": "HR.6938",
+      "date": "2026-01-06",
+      "stageDate": "2026-01-23",
+      "enactedDate": "2026-01-23",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Cole, Tom (R-OK)",
+      "sponsor_bioguide": "C001053",
+      "cosponsors": 0,
+      "pages": 168,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law on January 23, 2026 as Public Law 119-74. This consolidated package bundles 3 of the 12 regular FY2026 appropriations bills — Commerce-Justice-Science, Energy and Water Development, and Interior-Environment — funding those departments and agencies through September 30, 2026. It passed the House 397-28 on January 8 and the Senate 82-15 on January 15, both with broad bipartisan majorities.",
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-01-15",
+          "question": "On Passage of the Bill H.R. 6938",
+          "result": "Bill Passed",
+          "yeas": 82,
+          "nays": 15,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-01-15",
+          "question": "On the Cloture Motion H.R. 6938",
+          "result": "Cloture Motion Agreed to",
+          "yeas": 85,
+          "nays": 14,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-01-12",
+          "question": "On Cloture on the Motion to Proceed H.R. 6938",
+          "result": "Cloture on the Motion to Proceed Agreed to",
+          "yeas": 80,
+          "nays": 13,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-08",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 397,
+          "nays": 28,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-08",
+          "question": "On Retaining Divisions B and C",
+          "result": "Passed",
+          "yeas": 419,
+          "nays": 6,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-08",
+          "question": "On Retaining Division A",
+          "result": "Passed",
+          "yeas": 375,
+          "nays": 47,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 0
+        }
+      ],
+      "summary": "A consolidated full-year appropriations law (Public Law 119-74) funding three of the twelve regular 2026 spending bills: Commerce-Justice-Science (Division A), Energy and Water Development (Division B), and Interior-Environment (Division C). It sets the 2026 budgets for the FBI, federal prisons, NASA, the National Science Foundation, the Army Corps of Engineers, the nuclear-weapons complex, the National Park Service, the EPA, the Forest Service and the Indian Health Service, among many others.",
+      "brief": "Full-year 2026 funding for the Commerce, Justice, Energy, Interior and related departments — three of the twelve regular appropriations bills bundled into one signed law.",
+      "top_lines": [
+        {
+          "headline": "Division A — Commerce, Justice, Science",
+          "billSection": "div-A",
+          "subs": [
+            "FBI $10.61B, Bureau of Prisons $8.1B, DEA $2.58B, ATF $1.59B",
+            "NOAA $4.54B + $1.58B; Patent and Trademark Office $4.96B (fee-funded)",
+            "NASA Exploration $7.78B and Science $7.25B; NSF research $7.18B"
+          ]
+        },
+        {
+          "headline": "Division B — Energy and Water Development",
+          "billSection": "div-B",
+          "subs": [
+            "NNSA nuclear Weapons Activities: $20.38B (largest account in the bill)",
+            "DOE Office of Science $8.4B; Defense Environmental Cleanup $7.38B",
+            "Corps of Engineers $6.01B operations + $3.17B construction; Reclamation $1.47B"
+          ]
+        },
+        {
+          "headline": "Division C — Interior, Environment",
+          "billSection": "div-C",
+          "subs": [
+            "EPA water-infrastructure grants $4.41B; environmental programs $3.11B",
+            "National Park Service $2.88B; Indian Health Service services $4.79B",
+            "Forest Service $2.43B plus $1.86B wildland fire + $2.48B suppression reserve"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Division A — Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026",
+          "items": [
+            {
+              "main": "Full-year FY2026 budgets for the Departments of Commerce and Justice, NASA and the National Science Foundation, and related agencies.",
+              "detail": "Funds the Commerce Department (including the Census Bureau, NIST, NOAA and the Patent and Trademark Office), the Justice Department (the FBI, federal prisons, the DEA, ATF and federal prosecutors), NASA, the National Science Foundation, and smaller related agencies for the full 2026 budget year. It also permanently cancels some unspent prior-year balances.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division B — Energy and Water Development and Related Agencies Appropriations Act, 2026",
+          "items": [
+            {
+              "main": "Full-year FY2026 budgets for the Army Corps of Engineers, the Bureau of Reclamation, the Department of Energy and the nuclear-weapons complex.",
+              "detail": "Funds the Army Corps of Engineers civil works (locks, dams, harbors and flood control), the Bureau of Reclamation’s Western water projects, the Department of Energy’s science and energy programs, and the National Nuclear Security Administration, which maintains the U.S. nuclear arsenal. Nuclear weapons activities are the single largest account in this division.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division C — Department of the Interior, Environment, and Related Agencies Appropriations Act, 2026",
+          "items": [
+            {
+              "main": "Full-year FY2026 budgets for the Interior Department, the EPA, the Forest Service, the Indian Health Service and related agencies.",
+              "detail": "Funds the National Park Service, Bureau of Land Management, Fish and Wildlife Service, U.S. Geological Survey and Indian Affairs within the Interior Department; the Environmental Protection Agency, including state water-infrastructure grants; and related agencies such as the Forest Service and the Indian Health Service. Wildfire suppression and tribal health and education programs are major components.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        "NNSA nuclear Weapons Activities at $20.38B is the single largest account anywhere in the bill, exceeding any individual Commerce, Justice, NASA, Interior or EPA account.",
+        "The Patent and Trademark Office’s $4.96B and the Indian Health Service’s $4.79B are structured unusually — the first is fully fee-offset (net $0 to the general fund) and the second is forward-funded into FY2027."
+      ],
+      "criticisms": [
+        "Section 521 of Division A permanently cancels prior-year balances from state and local justice grant programs, including $250M from the Office of Justice Programs, $36M from Violence Against Women Act prevention programs and $25M from Community Oriented Policing Services."
+      ],
+      "gaps": [
+        "The enacted bill delegates account-by-account allocations to an explanatory statement printed in the Congressional Record rather than itemizing them in the law itself, so the public statute shows lump-sum totals rather than program-level detail."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Full-year FY2026 budgets for Commerce-Justice-Science, Energy and Water, and Interior-Environment",
+          "$20.38B for NNSA nuclear Weapons Activities"
+        ],
+        "modified": [],
+        "removed": [
+          "$250M cancelled from unspent Office of Justice Programs balances",
+          "$113.2M cancelled from the DOJ Assets Forfeiture Fund"
+        ]
+      },
+      "divisions": [
+        {
+          "label": "Division A — Commerce, Justice, Science, and Related Agencies Appropriations Act, 2026",
+          "divisionKey": "A",
+          "brief": "Full-year FY2026 budgets for the Departments of Commerce and Justice, NASA and the National Science Foundation, and related agencies.",
+          "summary": "Funds the Commerce Department (including the Census Bureau, NIST, NOAA and the Patent and Trademark Office), the Justice Department (the FBI, federal prisons, the DEA, ATF and federal prosecutors), NASA, the National Science Foundation, and smaller related agencies for the full 2026 budget year. It also permanently cancels some unspent prior-year balances.",
+          "top_lines": [
+            {
+              "headline": "Justice Department Law Enforcement",
+              "subs": [
+                "FBI salaries and expenses: $10.61B",
+                "Bureau of Prisons (Federal Prison System): $8.1B",
+                "U.S. Attorneys $2.62B; DEA $2.58B; ATF $1.59B",
+                "Federal prisoner detention (U.S. Marshals): $2.24B"
+              ]
+            },
+            {
+              "headline": "Commerce Department",
+              "subs": [
+                "NOAA: $4.54B operations plus $1.58B for ships, satellites and construction",
+                "Patent and Trademark Office: $4.96B, fully offset by user fees",
+                "NIST: $1.25B research; Census periodic programs $1.17B",
+                "International Trade Administration $582M; Bureau of Industry and Security $235M"
+              ]
+            },
+            {
+              "headline": "Science — NASA and NSF",
+              "subs": [
+                "NASA Exploration $7.78B; Science $7.25B; Space Operations $4.18B",
+                "NASA Science, Aeronautics, Space Technology and Education account: $3.0B",
+                "National Science Foundation research and related activities: $7.18B"
+              ]
+            },
+            {
+              "headline": "Justice Grants and Prior-Year Rescissions",
+              "subs": [
+                "State and local justice assistance grants (Byrne/VOCA/VAWA programs): $2.4B",
+                "Cancels $250M unspent Office of Justice Programs and $25M COPS balances",
+                "$113.2M cancelled from the DOJ Assets Forfeiture Fund; $60M from Economic Development Administration"
+              ]
+            }
+          ],
+          "sections": [
+            {
+              "label": "Title I — Department of Commerce",
+              "items": [
+                {
+                  "main": "Full-year funding for Commerce agencies, led by NOAA, the Patent and Trademark Office, NIST and the Census Bureau.",
+                  "detail": "NOAA receives $4.54B for operations and $1.58B for procurement, ships, satellites and construction. The Patent and Trademark Office is funded at $4.96B but draws that entirely from user fees, leaving an estimated $0 net cost to the general fund. NIST gets $1.25B for research plus $212M for industrial technology services (including $175M for the Hollings Manufacturing Extension Partnership). The Census Bureau receives $1.17B for periodic programs and $318.5M for current surveys.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title II — Department of Justice",
+              "items": [
+                {
+                  "main": "Funds federal law enforcement, prosecution, prisons and justice grants.",
+                  "detail": "The FBI receives $10.61B and the Bureau of Prisons (Federal Prison System) $8.1B for salaries and expenses. U.S. Attorneys get $2.62B, the DEA $2.58B, the ATF $1.59B, and federal prisoner detention (handled by the U.S. Marshals) $2.24B. State and local justice assistance grants total $2.4B.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title III — Science (NASA and NSF)",
+              "items": [
+                {
+                  "main": "Funds NASA and the National Science Foundation.",
+                  "detail": "NASA accounts include Exploration $7.78B, Science $7.25B, Space Operations $4.18B, and a combined Science/Aeronautics/Space Technology/Education account of $3.0B. The National Science Foundation receives $7.18B for research and related activities.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Titles IV–V — Related Agencies, General Provisions and Rescissions",
+              "items": [
+                {
+                  "main": "Funds smaller related agencies and permanently cancels some unspent prior-year balances.",
+                  "detail": "Related agencies (Title IV) include the Legal Services Corporation, the Equal Employment Opportunity Commission, the International Trade Commission and others. Section 521 permanently rescinds prior-year balances: $250M from the Office of Justice Programs, $36M from Violence Against Women Act prevention programs, $25M from Community Oriented Policing Services, $210M from the DOJ Working Capital Fund, $113.2M from the Assets Forfeiture Fund, $60M from the Economic Development Administration, and $15M from the Census Working Capital Fund.",
+                  "comments": []
+                }
+              ]
+            }
+          ],
+          "underreported": [
+            "The Patent and Trademark Office’s $4.96B is fully offset by patent and trademark fees, so the headline number overstates its draw on the general fund — the estimated net appropriation is $0.",
+            "NOAA’s operations account also draws $399.64M transferred from the Promote and Develop Fishery Products fund and $28M from prior-year recoveries, on top of the $4.54B direct appropriation."
+          ],
+          "criticisms": [
+            "Section 521 permanently cancels $250M from the Office of Justice Programs, $36M from Violence Against Women Act prevention programs and $25M from Community Oriented Policing Services — reductions to state and local grant pipelines drawn from unspent prior-year balances."
+          ],
+          "gaps": [
+            "Detailed account-by-account allocations are delegated to the explanatory statement printed in the Congressional Record, not the bill text, so the public bill does not itemize how the lump-sum totals are distributed across programs."
+          ],
+          "featured_quotes": [],
+          "changes": {
+            "added": [],
+            "modified": [],
+            "removed": [
+              "$250M cancelled from unspent Office of Justice Programs balances",
+              "$113.2M cancelled from the DOJ Assets Forfeiture Fund",
+              "$60M cancelled from the Economic Development Administration"
+            ]
+          }
+        },
+        {
+          "label": "Division B — Energy and Water Development and Related Agencies Appropriations Act, 2026",
+          "divisionKey": "B",
+          "brief": "Full-year FY2026 budgets for the Army Corps of Engineers, the Bureau of Reclamation, the Department of Energy and the nuclear-weapons complex.",
+          "summary": "Funds the Army Corps of Engineers civil works (locks, dams, harbors and flood control), the Bureau of Reclamation’s Western water projects, the Department of Energy’s science and energy programs, and the National Nuclear Security Administration, which maintains the U.S. nuclear arsenal. Nuclear weapons activities are the single largest account in this division.",
+          "top_lines": [
+            {
+              "headline": "Nuclear Weapons and Defense (NNSA)",
+              "subs": [
+                "NNSA Weapons Activities: $20.38B",
+                "Defense Environmental Cleanup: $7.38B",
+                "Defense Nuclear Nonproliferation $2.37B; Naval Reactors $2.13B",
+                "Other Defense Activities $1.17B; NNSA federal salaries $525M"
+              ]
+            },
+            {
+              "headline": "Department of Energy Programs",
+              "subs": [
+                "Office of Science: $8.4B",
+                "Energy Efficiency and Renewable Energy: $3.1B",
+                "Nuclear Energy: $1.79B"
+              ]
+            },
+            {
+              "headline": "Water — Corps of Engineers and Reclamation",
+              "subs": [
+                "Corps of Engineers operation and maintenance: $6.01B (including $3.25B from the Harbor Maintenance Trust Fund)",
+                "Corps of Engineers construction: $3.17B",
+                "Bureau of Reclamation water and related resources: $1.47B"
+              ]
+            }
+          ],
+          "sections": [
+            {
+              "label": "Titles I–II — Corps of Engineers and Bureau of Reclamation",
+              "items": [
+                {
+                  "main": "Funds federal water infrastructure: navigation, flood control, harbors and Western water supply.",
+                  "detail": "The Army Corps of Engineers receives $6.01B for operation and maintenance (of which $3.25B is drawn from the Harbor Maintenance Trust Fund) and $3.17B for construction. The Bureau of Reclamation receives $1.47B for water and related resources across the 17 Western states.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title III — Department of Energy",
+              "items": [
+                {
+                  "main": "Funds DOE energy and science programs and the nuclear-weapons complex run by the National Nuclear Security Administration.",
+                  "detail": "NNSA Weapons Activities receive $20.38B — the largest single account in the division. Other NNSA accounts: Defense Nuclear Nonproliferation $2.37B and Naval Reactors $2.13B. The DOE Office of Science gets $8.4B, Defense Environmental Cleanup $7.38B, Energy Efficiency and Renewable Energy $3.1B, Nuclear Energy $1.79B, and Other Defense Activities $1.17B.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Titles IV–V — Independent Agencies and General Provisions",
+              "items": [
+                {
+                  "main": "Funds independent energy and water agencies and sets division-wide spending rules.",
+                  "detail": "Independent agencies in this division include the Nuclear Regulatory Commission and the Appalachian Regional Commission, along with the power marketing administrations. The general provisions title sets transfer authorities and restrictions for the division.",
+                  "comments": []
+                }
+              ]
+            }
+          ],
+          "underreported": [
+            "NNSA Weapons Activities at $20.38B is by far the largest account in the entire bill — larger than any single Commerce, Justice, Interior or EPA account — reflecting continued nuclear-arsenal modernization.",
+            "About $3.25B of the Corps of Engineers operations budget comes from the Harbor Maintenance Trust Fund (financed by a tax on imported cargo) rather than from general revenue."
+          ],
+          "criticisms": [],
+          "gaps": [
+            "As with the other divisions, specific project-by-project allocations for the Corps of Engineers and Reclamation are set out in the explanatory statement rather than the enacted bill text."
+          ],
+          "featured_quotes": [],
+          "changes": {
+            "added": [],
+            "modified": [],
+            "removed": []
+          }
+        },
+        {
+          "label": "Division C — Department of the Interior, Environment, and Related Agencies Appropriations Act, 2026",
+          "divisionKey": "C",
+          "brief": "Full-year FY2026 budgets for the Interior Department, the EPA, the Forest Service, the Indian Health Service and related agencies.",
+          "summary": "Funds the National Park Service, Bureau of Land Management, Fish and Wildlife Service, U.S. Geological Survey and Indian Affairs within the Interior Department; the Environmental Protection Agency, including state water-infrastructure grants; and related agencies such as the Forest Service and the Indian Health Service. Wildfire suppression and tribal health and education programs are major components.",
+          "top_lines": [
+            {
+              "headline": "Environmental Protection Agency",
+              "subs": [
+                "State and tribal assistance grants (water infrastructure): $4.41B",
+                "Clean Water State Revolving Fund $1.64B; Drinking Water SRF $1.13B",
+                "Environmental programs and management: $3.11B"
+              ]
+            },
+            {
+              "headline": "Interior Department Bureaus",
+              "subs": [
+                "National Park Service operations: $2.88B",
+                "Bureau of Indian Affairs programs $1.93B; Indian education $1.13B",
+                "Fish and Wildlife Service $1.45B; U.S. Geological Survey $1.42B; BLM $1.26B"
+              ]
+            },
+            {
+              "headline": "Forest Service, Wildfire and Indian Health",
+              "subs": [
+                "National Forest System management: $2.43B",
+                "Wildland fire management $1.86B plus a $2.48B suppression reserve",
+                "Indian Health Service services: $4.79B (forward-funded for FY2027)"
+              ]
+            }
+          ],
+          "sections": [
+            {
+              "label": "Title I — Department of the Interior",
+              "items": [
+                {
+                  "main": "Funds the land-management and Indian-affairs bureaus of the Interior Department.",
+                  "detail": "The National Park Service receives $2.88B for park system operations. The Bureau of Indian Affairs gets $1.93B for Indian programs and $1.13B for Indian education. The Fish and Wildlife Service receives $1.45B, the U.S. Geological Survey $1.42B, and the Bureau of Land Management $1.26B.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title II — Environmental Protection Agency",
+              "items": [
+                {
+                  "main": "Funds EPA operations and grants to states and tribes for water infrastructure.",
+                  "detail": "State and Tribal Assistance Grants total $4.41B, including $1.64B for the Clean Water State Revolving Fund and $1.13B for the Drinking Water State Revolving Fund. Environmental programs and management receives $3.11B.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title III — Related Agencies (Forest Service, Indian Health Service)",
+              "items": [
+                {
+                  "main": "Funds the Forest Service, the Indian Health Service and other related agencies.",
+                  "detail": "The Forest Service receives $2.43B for National Forest System management and $1.86B for wildland fire management, of which $1.011B is designated for wildfire suppression; a separate wildfire suppression operations reserve is funded at $2.48B. The Indian Health Service’s services account is forward-funded at $4.79B, available beginning October 1, 2026.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Title IV — General Provisions",
+              "items": [
+                {
+                  "main": "Sets division-wide spending rules, transfer authorities and policy provisions.",
+                  "detail": "The general provisions title governs how Interior, EPA and related-agency funds may be transferred and spent, and carries the division’s policy riders.",
+                  "comments": []
+                }
+              ]
+            }
+          ],
+          "underreported": [
+            "The Indian Health Service services account is forward-funded — the $4.79B does not become available until October 1, 2026, a structure used to insulate tribal health programs from any future funding lapse.",
+            "Of the Forest Service’s $1.86B wildland fire budget, $1.011B is specifically tied to the FY2022 budget-resolution wildfire-suppression cap-adjustment mechanism, with a further $2.48B suppression reserve on top."
+          ],
+          "criticisms": [],
+          "gaps": [
+            "Specific allocations within the Interior bureaus, EPA and Forest Service are set in the explanatory statement rather than the bill text."
+          ],
+          "featured_quotes": [],
+          "changes": {
+            "added": [],
+            "modified": [],
+            "removed": []
           }
         }
       ]
