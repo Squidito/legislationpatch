@@ -14308,6 +14308,460 @@
         "removed": []
       },
       "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-6028",
+      "title": "Legislative Branch Agencies Clarification Act",
+      "official_title": "To modify the appointment and removal process for certain legislative branch officers, and for other purposes.",
+      "code": "HR.6028",
+      "date": "2026-06-09",
+      "stageDate": "2026-06-09",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Griffith, H. Morgan (R-VA)",
+      "sponsor_bioguide": "G000568",
+      "cosponsors": 4,
+      "pages": 16,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 35,
+      "likelihoodReason": "Sponsored by Rep. Griffith (R-VA) with 4 cosponsors; passed the House. The bill reassigns appointment and removal power over the Librarian of Congress, the GPO Director, and the Register of Copyrights, a structural change that faces a 60-vote threshold and likely scrutiny over shifting appointment authority between the branches.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-09",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Shifts how Congress's own agency heads are chosen: the Librarian of Congress and the Government Publishing Office Director would be appointed and removed by congressional leaders rather than the President, and the Register of Copyrights would become a Presidential appointee independent of the Library of Congress.",
+      "brief": "Changes the appointment and removal of the Librarian of Congress, the GPO Director, and the Register of Copyrights.",
+      "top_lines": [
+        {
+          "headline": "Librarian of Congress Appointed by Congress",
+          "billSection": "2",
+          "subs": [
+            "Removes the President from appointing the Librarian of Congress",
+            "A congressional commission picks from 3 names recommended by oversight committee leaders",
+            "Removable at any time by a majority of House and Senate leadership"
+          ]
+        },
+        {
+          "headline": "GPO Director Under the Same Model",
+          "billSection": "4",
+          "subs": [
+            "GPO Director appointed by the congressional commission, not the President",
+            "Drops Senate advice-and-consent for the Director",
+            "Adds Deputy Director appointment and acting-officer succession rules"
+          ]
+        },
+        {
+          "headline": "Copyright Office Split From the Library",
+          "billSection": "6",
+          "subs": [
+            "Register of Copyrights becomes a Presidential appointee with Senate consent",
+            "10-year term, renewable for 5-year terms; must have a copyright-law background",
+            "Ratifies Copyright Office actions taken from May 8, 2025 through enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Librarian of Congress",
+          "items": [
+            {
+              "main": "Replaces Presidential appointment of the Librarian of Congress with appointment by a congressional commission.",
+              "detail": "Amends the Librarian of Congress Succession Modernization Act of 2015. A vacancy is filled by 'oversight committee leadership' (the chair and ranking member of the House Committee on House Administration and the Senate Committee on Rules and Administration) jointly recommending 3 individuals, from whom the 'House and Senate leadership' (the Speaker, the Senate majority leader, and the House and Senate minority leaders) selects the Librarian by majority vote, without regard to political affiliation. The Librarian may be removed at any time by a majority vote of the House and Senate leadership, and is no longer treated as a political appointee for purposes of section 747 of the Financial Services and General Government Appropriations Act, 2024.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Deputy Librarian of Congress",
+          "items": [
+            {
+              "main": "Creates a Deputy Librarian of Congress and an acting-Librarian succession line.",
+              "detail": "The Librarian must appoint a Deputy Librarian within 120 days of being appointed or of a vacancy arising. If the Librarian fails to do so, the oversight committee leadership recommends an individual whom the House and Senate leadership appoint by majority vote. The Deputy Librarian acts as Librarian during an absence, disability, or vacancy; if both positions are empty, the leadership designates an acting Librarian.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Director of the Government Publishing Office",
+          "items": [
+            {
+              "main": "Applies the same commission-appointment and leadership-removal model to the GPO Director.",
+              "detail": "Amends chapter 3 of title 44, U.S. Code. The Director of the Government Publishing Office is appointed by the congressional commission from 3 individuals recommended by the oversight committee leadership, striking the prior 'by and with the advice and consent of the Senate' language, and may be removed at any time by a majority vote of the House and Senate leadership. The Director is likewise no longer treated as a political appointee for the same appropriations-law purpose.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Deputy Director of the Government Publishing Office",
+          "items": [
+            {
+              "main": "Establishes a Deputy Director of the GPO with acting-Director succession rules.",
+              "detail": "Rewrites sections 302 and 304 of title 44 so the Director appoints a Deputy Director (within 120 days of appointment or a vacancy), with a leadership-appointment fallback if the Director does not act, and the Deputy Director serves as acting Director during an absence, disability, or vacancy.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Copyright Office",
+          "items": [
+            {
+              "main": "Removes the Library of Congress supervisory authority over the Copyright Office and makes the Register of Copyrights a Presidential appointee.",
+              "detail": "Amends title 17, U.S. Code, replacing the Librarian of Congress with the Register of Copyrights across many provisions. The Register would be appointed by the President with the advice and consent of the Senate after the chairs and ranking members of the House and Senate Judiciary Committees jointly recommend 3 individuals; the Register must be a U.S. citizen with a background in copyright law, serves a 10-year term, and may be reappointed for additional 5-year terms. It establishes an Inspector General for the Copyright Office and ratifies actions taken by the Copyright Office, the Register, the Copyright Royalty Judges, and the Copyright Claims Board between May 8, 2025 and the date of enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 7 — Government Publishing Office Personnel Reforms",
+          "items": [
+            {
+              "main": "Brings the GPO under the Congressional Accountability Act of 1995.",
+              "detail": "Adds the Government Publishing Office to the entities covered by section 101(a) of the Congressional Accountability Act of 1995 and makes conforming amendments to title 5 that remove the GPO from several executive-branch personnel provisions.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 8 — Human Capital Management System for the GPO",
+          "items": [
+            {
+              "main": "Directs the GPO Director to establish a merit-based human capital management system.",
+              "detail": "Adds a new section 306A to title 44 requiring the Director to establish and maintain a human capital system that incorporates the merit-system principles of section 2301(b) of title 5, prohibits the prohibited personnel practices and political activity barred under title 5, appoints and promotes employees only on merit and fitness, and gives a hiring preference consistent with the executive-branch veterans' preference. Regulations require public notice and comment and the approval of the Joint Committee on Printing.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 9 — Update to Print Requirements",
+          "items": [
+            {
+              "main": "Updates which entities the GPO may provide printing and publishing services to.",
+              "detail": "Rewrites section 501 of title 44 so the Government Publishing Office may perform printing, binding, blank-book work, and publishing services for Congress, the Executive Office of the President, the Judiciary, and every executive department, independent office, and establishment of the Government, and repeals a 1993 conforming provision.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 10 — Applicability",
+          "items": [
+            {
+              "main": "Sets when the appointment and removal changes apply.",
+              "detail": "The new appointment procedures apply to appointments made on or after enactment, while the new removal provisions apply to individuals serving before, on, or after enactment — meaning current officeholders become removable under the new leadership-vote standard.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        "Actions taken by the Copyright Office, the Register, the Copyright Royalty Judges, and the Copyright Claims Board between May 8, 2025 and enactment would be ratified and given full force and effect."
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not specify what happens if the oversight committee leaders cannot agree on the 3 individuals to recommend for a vacancy.",
+        "Removal of the Librarian and the GPO Director 'at any time' by a leadership majority sets no for-cause standard or fixed term of office."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A congressional commission and House/Senate leadership vote to appoint and remove the Librarian of Congress and the GPO Director; an Inspector General for the Copyright Office; a merit-based human capital system for the GPO"
+        ],
+        "modified": [
+          "Register of Copyrights becomes a Presidential appointee (with Senate consent) independent of the Librarian of Congress, with a 10-year renewable term; Librarian and GPO Director appointments drop Presidential nomination and Senate advice-and-consent"
+        ],
+        "removed": [
+          "Library of Congress supervisory authority over the Copyright Office; Senate advice-and-consent for the Librarian of Congress and the GPO Director"
+        ]
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-8463",
+      "title": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
+      "official_title": "To establish governmentwide requirements for pre-payment fraud prevention actions, to provide the U.S. Treasury appropriate data resources, to facilitate participation in governmentwide anti-fraud data sharing, and for other purposes.",
+      "code": "HR.8463",
+      "date": "2026-06-09",
+      "stageDate": "2026-06-09",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Comer, James (R-KY)",
+      "sponsor_bioguide": "C001108",
+      "cosponsors": 3,
+      "pages": 16,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 45,
+      "likelihoodReason": "Sponsored by Rep. Comer (R-KY) with 3 cosponsors; passed the House. Payment-integrity measures often draw bipartisan support, but the expanded Treasury access to IRS and Social Security data may draw privacy scrutiny, and Senate passage requires 60 votes.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-09",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Builds new fraud checks into the federal payment process: before the Treasury pays out money, agencies would have to verify the payee, the amount, and the bank account, and the Treasury's 'Do Not Pay' screening system would gain statutory footing and broad access to tax, Social Security, and new-hire data.",
+      "brief": "Adds governmentwide pre-payment fraud checks and expands the Treasury's Do Not Pay system and its data access.",
+      "top_lines": [
+        {
+          "headline": "Checks Before the Government Pays",
+          "billSection": "2",
+          "subs": [
+            "Agencies must clear pre-certification checks before certifying a payment voucher",
+            "Verify payee identity, amount, fund availability, and that the payee is not deceased",
+            "Confirm the bank account on the voucher belongs to the payee"
+          ]
+        },
+        {
+          "headline": "Do Not Pay System in Statute",
+          "billSection": "3",
+          "subs": [
+            "Gives the Treasury-run Do Not Pay system explicit statutory authority",
+            "Adds New Hires, IRS, and Social Security data to the screening pool",
+            "Up to a $5,000 fine and 5 years in prison for unlawful disclosure"
+          ]
+        },
+        {
+          "headline": "First-Time Recipient Reporting & Data Access",
+          "billSection": "4",
+          "subs": [
+            "First-time recipients of awards of $50,000 or more file a one-time use-of-funds report",
+            "Treasury gains privacy-limited access to select tax return information",
+            "Most provisions take effect 180 days after enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Pre-Payment Fraud Prevention Requirements for Agencies",
+          "items": [
+            {
+              "main": "Bars agencies from certifying a payment voucher until a set of pre-certification checks is met.",
+              "detail": "Adds a new section 3325a to title 31, U.S. Code. An agency head may not certify a voucher under section 3325 until pre-certification requirements are met, and the Treasury must issue implementing regulations within 180 days. The checks include confirming funds are available, the amount and payee name are correct, a valid Social Security, taxpayer, employer, or individual taxpayer identification number is provided, the appropriation is available with the correct Treasury Account Symbol, the payee is not deceased, and the account belongs to the payee. Disbursing officials must verify bank-account accuracy to the extent practicable. It also renames the Do Not Pay 'Initiative' as a 'System' and defines a 'fraud-risk indicator.'",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Treasury Do Not Pay System",
+          "items": [
+            {
+              "main": "Puts the Do Not Pay system in statute and expands the data the Treasury can use to screen payments.",
+              "detail": "Amends section 3354 of title 31 so each executive agency screens all recipients of federal awards or payments against Do Not Pay data assets before an award or payment. Notwithstanding the Internal Revenue Code, the Social Security Act, and the Personal Responsibility and Work Opportunity Reconciliation Act, the Treasury gains access to the National Directory of New Hires, certain IRS information under section 6103(i)(9)(A), and Social Security information under a new section 235. The Secretary may designate additional data assets after at least 30 days of public notice; such data comparisons are not treated as a Privacy Act 'matching program'; use is limited to improper-payment and law-enforcement purposes; and unlawful disclosure carries a fine of not more than $5,000, imprisonment of not more than 5 years, or both. State, local, judicial, and legislative entities get access, and the Treasury must file an annual report to Congress.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Single Report on First-Time Use of Funds",
+          "items": [
+            {
+              "main": "Requires first-time recipients of larger federal awards to file a one-time report on how they used the money.",
+              "detail": "Adds section 6107 to title 31. A 'covered recipient' — an entity receiving a 'covered award' (a federal award of not less than $50,000 in fiscal year 2027 constant dollars) from a program for the first time — must submit a one-time use-of-funds report within 180 days. OMB must issue governmentwide content and format rules within 1 year, updated at least every 5 years. Noncompliance triggers written notice and a halt to further disbursements until the report is filed, and reports are kept on file for at least 5 years.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Treasury Data Access for Program Integrity",
+          "items": [
+            {
+              "main": "Grants the Treasury access to New Hires, IRS, and Social Security data for payment screening.",
+              "detail": "Amends section 453(j) of the Social Security Act to give the Treasury access to the National Directory of New Hires for preventing improper payments, including for the Do Not Pay system. It amends section 6103(i) of the Internal Revenue Code to allow disclosure of limited return information — taxpayer identity, filing status, adjusted gross income, Schedule C net profit or loss, bank and routing information, the fact of no return filed, the taxable year, and reported identity theft — for the Do Not Pay system, covering an applicable period of at least 3 taxable years. A new section 235 of the Social Security Act sets up name and Social Security number confirmation, with the Treasury paying the Social Security Administration's full costs.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Effective Date",
+          "items": [
+            {
+              "main": "Sets the effective date 180 days after enactment.",
+              "detail": "The Act and its amendments take effect on the date that is 180 days after the date of enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        "The Treasury would gain access to IRS return information and Social Security records for payment screening, with redisclosure allowed to its agents, contractors, and entities connected to the Do Not Pay system."
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Agencies may request exemptions from some or all payment-verification requirements, and the bill leaves the scope of those exemptions to Treasury guidance.",
+        "The bill treats Do Not Pay data comparisons as outside the Privacy Act's 'matching program' protections while still requiring some privacy notices."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A new pre-payment certification step (31 U.S.C. 3325a) with identity, amount, and bank-account checks; a one-time first-use-of-funds report for first-time recipients of awards of $50,000 or more; statutory Treasury access to New Hires, IRS, and Social Security data"
+        ],
+        "modified": [
+          "The Do Not Pay 'Initiative' becomes a statutory Do Not Pay 'System' run by the Treasury's Fiscal Service, with expanded data assets, a use limitation, and a disclosure penalty"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-8312",
+      "title": "Fraud Prevention and Accountability Act",
+      "official_title": "To establish fraud prevention and program integrity functions and data sharing authorities within the Department of Treasury and a permanent governmentwide Inspector General for Fraud, Accountability, and Recovery, and for other purposes.",
+      "code": "HR.8312",
+      "date": "2026-06-11",
+      "stageDate": "2026-06-11",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Sessions, Pete (R-TX)",
+      "sponsor_bioguide": "S000250",
+      "cosponsors": 1,
+      "pages": 16,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 40,
+      "likelihoodReason": "Sponsored by Rep. Sessions (R-TX) with 1 cosponsor; passed the House. Anti-fraud oversight tends to attract bipartisan interest, but creating a new Senate-confirmed Inspector General and Treasury data role is a larger lift, and the bill needs 60 votes in the Senate with key provisions delayed to 2028.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-11",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Stands up a new permanent, Senate-confirmed Inspector General for Fraud, Accountability, and Recovery inside the Treasury, gives the Treasury's Fiscal Service a governmentwide fraud-data analysis role, and folds in the pandemic-era oversight committee's assets.",
+      "brief": "Creates a permanent governmentwide fraud Inspector General and fraud-data functions inside the Treasury.",
+      "top_lines": [
+        {
+          "headline": "New Governmentwide Fraud Inspector General",
+          "billSection": "3",
+          "subs": [
+            "Creates a permanent IG for Fraud, Accountability, and Recovery in the Treasury",
+            "Presidential appointment with Senate confirmation; oversight of \"covered funds\"",
+            "$10M authorized annually beginning in fiscal year 2035"
+          ]
+        },
+        {
+          "headline": "Treasury Fiscal Service Fraud Role",
+          "billSection": "2",
+          "subs": [
+            "Bureau of the Fiscal Service runs the Do Not Pay system and a governmentwide data-analysis program",
+            "Makes the DATA Act analysis center mandatory ('may' becomes 'shall')",
+            "Functions explicitly exclude any investigative or law-enforcement role"
+          ]
+        },
+        {
+          "headline": "Pandemic Oversight Wound Down Into the New Office",
+          "billSection": "5",
+          "subs": [
+            "Ends the Pandemic Response Accountability Committee on December 31, 2028 (moved up from 2034)",
+            "Transfers PRAC's assets, data, and staff to the new office",
+            "Treasury must flag fraud risks in any relief bill over $100B or new program over $100M"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Fraud Prevention and Financial Integrity Functions in Treasury",
+          "items": [
+            {
+              "main": "Rewrites the Fiscal Service's statutory functions around fraud prevention, data analysis, and improper-payment prevention.",
+              "detail": "Rewrites section 306 of title 31, U.S. Code. The Bureau of the Fiscal Service maintains financial-integrity, spending-transparency, and improper-payment-prevention functions — explicitly excluding any investigative or law-enforcement function. It administers the Do Not Pay system and establishes a governmentwide data-analysis program (using the DATA Act's authority) that shares data and analysis with federal agencies, states, and nongovernmental entities, requires agencies to share known or suspected fraud data and to screen awardees and payees against a centralized fraud database, and provides the new Inspector General access to data. The Treasury must report to Congress within 2 years and annually thereafter, and the bill makes the DATA Act data-analysis center mandatory by changing 'may' to 'shall.'",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Inspector General for Fraud, Accountability, and Recovery",
+          "items": [
+            {
+              "main": "Establishes a permanent, Senate-confirmed Inspector General for Fraud, Accountability, and Recovery within the Treasury.",
+              "detail": "Adds section 317 to title 31. The Inspector General is appointed by the President with the advice and consent of the Senate, without regard to political affiliation, and oversees 'covered funds' through audits and investigations, support to agency Inspectors General, an independent data-analytics platform (incorporating the platform built by the Pandemic Response Accountability Committee), coordination with the Department of Justice, an advisory committee of Inspectors General, and reporting suspected criminal violations to the Attorney General. The office may hire staff, employ annuitants, and enter contracts. The bill authorizes $10M annually beginning in fiscal year 2035, transfers the PRAC's assets and obligations to the office, and takes effect on December 31, 2028.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Data Sharing for Fraud Prevention",
+          "items": [
+            {
+              "main": "Gives the Treasury authority to negotiate data-sharing agreements and to flag fraud risks in large spending measures.",
+              "detail": "Amends section 321(a) of title 31 to let the Treasury enter memoranda of understanding with federal agencies, Inspectors General, law enforcement, and private entities to secure data access for fraud and improper-payment prevention. For any supplemental or emergency relief measure totaling more than $100B, or any new program with more than $100M in anticipated additional annual spending, the Treasury must give Congress's leadership and the relevant committees legislative recommendations so that existing fraud-prevention functions are used or expanded rather than duplicated and adequate resources are provided. OMB must issue implementing guidance within 270 days.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Termination and Transfer of PRAC Assets",
+          "items": [
+            {
+              "main": "Winds the Pandemic Response Accountability Committee down into the new office.",
+              "detail": "Amends the CARES Act to move the Pandemic Response Accountability Committee's termination date up from September 30, 2034 to December 31, 2028. On that date, the committee's assets and obligations — including contracts, data, records, unobligated balances, and identified personnel — transfer to the new Office of the Inspector General for Fraud, Accountability, and Recovery, and CARES Act section 15010 is repealed.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        "The new office would inherit the Pandemic Response Accountability Committee's data-analytics platform, assets, and personnel rather than starting from scratch."
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The new Inspector General’s funding is not authorized until fiscal year 2035, though the office and its duties take effect December 31, 2028.",
+        "'Covered funds' is defined by a fixed list of pandemic-era and other laws plus federal awards of $50,000 or more, with expansion left to future legislation."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A permanent, Senate-confirmed Inspector General for Fraud, Accountability, and Recovery within the Treasury ($10M authorized annually from fiscal year 2035); a governmentwide fraud-data analysis program in the Fiscal Service; a Treasury duty to recommend fraud safeguards for relief bills over $100B or new programs over $100M"
+        ],
+        "modified": [
+          "Rewrites the Fiscal Service's statutory functions (31 U.S.C. 306) around fraud prevention and data analysis; makes the DATA Act data-analysis center mandatory; moves the Pandemic Response Accountability Committee's sunset up to December 31, 2028"
+        ],
+        "removed": [
+          "The Pandemic Response Accountability Committee (repealed December 31, 2028, with its assets transferred to the new office)"
+        ]
+      },
+      "budget_accounts": {}
     }
   ]
 }
