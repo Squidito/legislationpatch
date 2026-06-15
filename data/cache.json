@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T20:05:46.805Z",
+  "generated": "2026-06-15T20:21:40.439Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -13924,6 +13924,387 @@
           "District of Columbia Safe and Beautiful Commission to coordinate federal law enforcement and immigration enforcement in D.C. (sunsets January 2, 2029)"
         ],
         "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-5214",
+      "title": "District of Columbia Cash Bail Reform Act of 2025",
+      "official_title": "To require mandatory pretrial and post conviction detention for crimes of violence and dangerous crimes and require mandatory cash bail for certain offenses that pose a threat to public safety or order in the District of Columbia, and for other purposes.",
+      "code": "HR.5214",
+      "date": "2025-11-20",
+      "stageDate": "2025-11-20",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Stefanik, Elise M. (R-NY)",
+      "sponsor_bioguide": "S001196",
+      "cosponsors": 3,
+      "pages": 4,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 30,
+      "likelihoodReason": "Sponsored by Rep. Stefanik (R-NY) with 3 cosponsors; passed the Republican-majority House. Federal changes to the District of Columbia's bail and detention laws would need 60 votes in the Senate and are likely to draw strong Democratic opposition over federal intervention in D.C., making passage unlikely.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-11-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 237,
+          "nays": 179,
+          "present": 0,
+          "notVoting": 17,
+          "crossoverCount": 28
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires judges in the District of Columbia to detain people charged with violent or dangerous crimes before trial, and to require cash bail for certain public-safety offenses.",
+      "brief": "Mandates pretrial detention for violent and dangerous crimes and cash bail for certain offenses in the District of Columbia.",
+      "top_lines": [
+        {
+          "headline": "Mandatory Detention",
+          "billSection": "2",
+          "subs": [
+            "Judges must detain those charged with violent or dangerous crimes before trial",
+            "Same mandatory detention applies after conviction",
+            "Expands the 'dangerous crime' and 'crime of violence' definitions"
+          ]
+        },
+        {
+          "headline": "Mandatory Cash Bail",
+          "billSection": "3",
+          "subs": [
+            "Secured cash bail required for 'public safety or order' crimes",
+            "Covers offenses such as rioting, stalking, and fleeing police"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Mandatory Pretrial and Post Conviction Detention for Crime of Violence or Dangerous Crime",
+          "items": [
+            {
+              "main": "Requires D.C. judges to detain people charged with a crime of violence or dangerous crime before trial, and after conviction.",
+              "detail": "Amends the D.C. Official Code so a judicial officer must order pretrial detention for anyone charged with a crime of violence or dangerous crime, and applies mandatory detention after conviction for the same. The definitions of 'dangerous crime' and 'crime of violence' are expanded to include first-degree burglary and robbery, attempts, and those committed with a dangerous weapon.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Requiring Cash Bail for Release of Individuals Charged With Public Safety or Order Offenses",
+          "items": [
+            {
+              "main": "Requires a secured cash bail bond for release of people charged with 'public safety or order' crimes.",
+              "detail": "Adds a category of 'public safety or order crime' — including failure to appear, obstruction of justice, fleeing law enforcement, rioting, inciting a riot, destruction of property, stalking, and certain burglary or robbery — for which a person may be released only on a secured appearance bond (cash or surety). It defines 'secured appearance bond' and adds surety-arrest provisions. The changes apply to offenses charged 30 days after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill mandates detention and cash bail but does not provide funding for additional D.C. jail capacity.",
+        "It requires secured bonds for certain offenses but does not address defendants who cannot afford to post bail."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Mandatory cash bail (secured appearance bond) for D.C. 'public safety or order' crimes"
+        ],
+        "modified": [
+          "D.C. Official Code requires pretrial and post-conviction detention for crimes of violence and dangerous crimes; the definitions of those crimes are expanded"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-187",
+      "title": "MAPWaters Act of 2025",
+      "official_title": "An Act to provide for the standardization, consolidation, and publication of data relating to public outdoor recreational use of Federal waterways among Federal land and water management agencies, and for other purposes.",
+      "code": "HR.187",
+      "date": "2025-12-26",
+      "stageDate": "2025-12-26",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Moore, Blake D. (R-UT)",
+      "sponsor_bioguide": "M001213",
+      "cosponsors": 3,
+      "pages": 4,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-62 on December 26, 2025. Passed the House on January 21, 2025 and the Senate on December 16, 2025.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-01-21",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 413,
+          "nays": 0,
+          "present": 0,
+          "notVoting": 19,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires federal land and water agencies to create and publish standardized digital maps showing where the public can boat, fish, and access federal waterways, and what restrictions apply.",
+      "brief": "Requires federal agencies to standardize and publish digital maps of public access and restrictions on federal waterways.",
+      "top_lines": [
+        {
+          "headline": "Digital Waterway Maps",
+          "billSection": "4",
+          "subs": [
+            "Agencies must publish online maps of waterway access and restrictions",
+            "Covers boating, fishing, and navigation rules",
+            "Five-year deadline to digitize and publish"
+          ]
+        },
+        {
+          "headline": "Data Standards and Reports",
+          "billSection": "3",
+          "subs": [
+            "Interagency data standards within 30 months",
+            "Annual progress reports through 2034"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 3 — Interagency Data Standardization",
+          "items": [
+            {
+              "main": "Requires federal agencies to adopt common data standards for waterway recreation data within 30 months.",
+              "detail": "The Secretaries of Agriculture (Forest Service) and the Interior, coordinating with the Federal Geographic Data Committee, must jointly develop interagency standards so federal databases on public recreational access to federal waterways and federal fishing restrictions are compatible and interoperable.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Data Consolidation and Publication",
+          "items": [
+            {
+              "main": "Requires agencies to digitize and publish online maps of waterway restrictions, access, and fishing rules within five years.",
+              "detail": "Within five years, the Bureau of Reclamation, National Park Service, Bureau of Land Management, Fish and Wildlife Service, and Forest Service must publish geographic data on waterway open/closed status, seasonal closures, motorized and anchoring restrictions, allowed watercraft, boat ramps and fishing access sites, and federal fishing restrictions (closures, no-take zones, and gear, bait, and catch-and-release rules). Data must be updated at least twice a year (in real time for fishing restrictions), with a public comment process. The Act does not change the definition of navigable waters or federal and state fishing jurisdiction.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires publishing access and restriction data but does not change any actual access rules or restrictions.",
+        "It sets a five-year publication deadline but does not provide dedicated funding for the mapping work."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Federal agencies must standardize and publish digital maps of public access and restrictions on federal waterways (new 16 U.S.C. 6871 et seq.)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2860",
+      "title": "Northwest Straits Marine Conservation Initiative Reauthorization Act of 2025",
+      "official_title": "To reauthorize the Northwest Straits Marine Conservation Initiative Act to promote the protection of the resources of the Northwest Straits, and for other purposes.",
+      "code": "HR.2860",
+      "date": "2026-06-04",
+      "stageDate": "2026-06-04",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Larsen, Rick (D-WA)",
+      "sponsor_bioguide": "L000560",
+      "cosponsors": 6,
+      "pages": 6,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 58,
+      "likelihoodReason": "Introduced by Rep. Larsen (D-WA) with 6 cosponsors; passed the House and was placed on the Senate Legislative Calendar. A modest, regionally focused conservation reauthorization tends to clear the Senate when floor time allows.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-03",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 374,
+          "nays": 49,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-15",
+      "summary": "Renews and updates a federal program that supports local efforts to protect and restore the marine waters of the Northwest Straits in Washington's Puget Sound, funded at $10M a year through 2031.",
+      "brief": "Reauthorizes the Northwest Straits Marine Conservation Initiative through fiscal year 2031 at $10M per year.",
+      "top_lines": [
+        {
+          "headline": "Northwest Straits Program",
+          "billSection": "2",
+          "subs": [
+            "Reauthorizes the Northwest Straits Marine Conservation Initiative",
+            "$10M per year authorized for fiscal years 2026-2031",
+            "Supports local marine protection in Puget Sound"
+          ]
+        },
+        {
+          "headline": "Commission Structure",
+          "billSection": "2",
+          "subs": [
+            "14-member advisory commission with county, tribal, and state seats",
+            "Commission advises and reports; cannot issue regulations"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Reauthorization of Northwest Straits Marine Conservation Initiative Act",
+          "items": [
+            {
+              "main": "Reauthorizes and rewrites the Northwest Straits Marine Conservation Initiative (title IV of Public Law 105-384).",
+              "detail": "Authorizes $10M per year for fiscal years 2026 through 2031 (and such sums as necessary thereafter) to the Under Secretary of Commerce for Oceans and Atmosphere. It rewrites the program's findings, definitions, and the 14-member Advisory Commission (county marine resources committee appointees, two tribal representatives, and Washington gubernatorial appointees), whose goal is to protect and restore the marine waters, habitats, and species of the Northwest Straits region of Puget Sound. The Commission advises, collects data, and reports annually against benchmarks but has no authority to issue regulations.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill authorizes $10M a year but the actual funding depends on later appropriations.",
+        "It reauthorizes an advisory commission that cannot itself implement or enforce any protections."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Northwest Straits Marine Conservation Initiative (title IV of Public Law 105-384) reauthorized at $10M per year for fiscal years 2026-2031, with a rewritten commission structure and duties"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-8467",
+      "title": "ZOMBIE Act",
+      "official_title": "To reform the Payment Integrity Information Act of 2019 to ensure executive agencies focus on fraud prevention, and for other purposes.",
+      "code": "HR.8467",
+      "date": "2026-06-11",
+      "stageDate": "2026-06-11",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Palmer, Gary J. (R-AL)",
+      "sponsor_bioguide": "P000609",
+      "cosponsors": 0,
+      "pages": 8,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 45,
+      "likelihoodReason": "Sponsored by Rep. Palmer (R-AL) with no cosponsors; passed the House. Payment-integrity and fraud-prevention reforms are often bipartisan, but the lack of cosponsors and the need for 60 votes leave its Senate path uncertain.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Refocuses federal improper-payment law on payments that actually cause financial loss to the government — rather than all paperwork errors — and adds fraud-risk management requirements for agencies.",
+      "brief": "Reforms the Payment Integrity Information Act to focus agencies on improper payments that cause real financial loss and on fraud prevention.",
+      "top_lines": [
+        {
+          "headline": "Focus on Financial Loss",
+          "billSection": "2",
+          "subs": [
+            "Targets improper payments that cause actual financial loss",
+            "Excludes payments that were correct but missed paperwork steps",
+            "Defines 'financial loss to the Government'"
+          ]
+        },
+        {
+          "headline": "Fraud Risk Management",
+          "billSection": "2",
+          "subs": [
+            "Treasury risk-assessment guidance within 1 year",
+            "Agencies adopt the GAO fraud-risk framework",
+            "Shifts some reviews from annual to every 3 years"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Reforms to Payment Integrity Information Act of 2019",
+          "items": [
+            {
+              "main": "Refocuses federal improper-payment requirements on payments that result in financial loss to the government and strengthens fraud-risk management.",
+              "detail": "Amends the Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3352). It adds a definition of 'financial loss to the Government' — payments above the legally correct amount that cause a loss, excluding correct-amount payments that missed certain administrative procedures — and reorients agency estimates, reports, and reduction plans around such payments. It requires the Treasury to develop risk-assessment guidance within one year; agencies to run risk assessments and adopt fraud-risk-management practices (including the GAO 'Framework for Managing Fraud Risks in Federal Programs'); designates agency liaisons who meet with OMB, the Treasury, Inspectors General, and the Pandemic Response Accountability Committee; and changes several reviews and reports from annual to at least once every three years.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill narrows the focus to payments causing financial loss but does not change the penalties for improper payments.",
+        "It shifts several reviews from annual to once every three years, which could reduce how often improper payments are reassessed."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Definition of 'financial loss to the Government' and a Treasury risk-assessment guidance requirement within one year"
+        ],
+        "modified": [
+          "Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3352) refocused on improper payments that cause financial loss, with added fraud-risk-management requirements and some reviews shifted from annual to triennial"
+        ],
         "removed": []
       },
       "budget_accounts": {}
