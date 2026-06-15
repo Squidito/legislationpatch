@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T18:58:27.707Z",
+  "generated": "2026-06-15T19:13:15.844Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -11678,6 +11678,721 @@
       "changes": {
         "added": [
           "Annual FERC report to Congress on the status of long-pending hydropower relicensing applications (new subsection (g) of Federal Power Act Section 15)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-224",
+      "title": "Disabled Veterans Housing Support Act",
+      "official_title": "An Act to amend section 102(a)(20) of the Housing and Community Development Act of 1974 to require the exclusion of service-connected disability compensation when determining whether a person is a person of low and moderate income, a person of low income, or a person of moderate income, and for other purposes.",
+      "code": "HR.224",
+      "date": "2026-01-20",
+      "stageDate": "2026-01-20",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. De La Cruz, Monica (R-TX)",
+      "sponsor_bioguide": "D000594",
+      "cosponsors": 11,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-70 on January 20, 2026. Passed the House on February 10, 2025 and the Senate on January 6, 2026.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-01-06",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-02-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires that VA service-connected disability compensation be left out when deciding whether a veteran counts as low- or moderate-income for HUD housing programs.",
+      "brief": "Excludes VA service-connected disability compensation from income when determining low- and moderate-income status under the Housing and Community Development Act.",
+      "top_lines": [
+        {
+          "headline": "Disability Pay Excluded From Income",
+          "billSection": "2",
+          "subs": [
+            "VA service-connected disability compensation excluded from income tests",
+            "Applies to low-, moderate-, and low-and-moderate-income determinations",
+            "States, local governments, and tribes must apply the exclusion"
+          ]
+        },
+        {
+          "headline": "GAO Review",
+          "billSection": "3",
+          "subs": [
+            "GAO report within 1 year on HUD program treatment of disability pay"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Service Connected Disability Compensation",
+          "items": [
+            {
+              "main": "Requires VA service-connected disability compensation to be excluded when determining low- and moderate-income status under the Housing and Community Development Act of 1974.",
+              "detail": "Amends Section 102(a)(20) (42 U.S.C. 5302(a)(20)). A State, unit of general local government, or Indian tribe must exclude any service-connected disability compensation received from the Department of Veterans Affairs when determining whether a person is a person of low income, moderate income, or low and moderate income.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Report",
+          "items": [
+            {
+              "main": "Requires a GAO report within one year on how VA disability compensation is treated across HUD programs.",
+              "detail": "The Comptroller General must examine how service-connected disability compensation is treated for eligibility across all programs administered by the Secretary of Housing and Urban Development, identify inconsistencies with the Section 2 change, and provide legislative recommendations.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill changes the income test under the Community Development Act, but the GAO report only reviews other HUD programs without changing them.",
+        "It excludes VA service-connected disability compensation but does not address other disability benefits such as Social Security disability."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "GAO report within one year on HUD program treatment of service-connected disability compensation"
+        ],
+        "modified": [
+          "Low/moderate income determinations under the Housing and Community Development Act (42 U.S.C. 5302(a)(20)) must now exclude VA service-connected disability compensation"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-1491",
+      "title": "Disaster Related Extension of Deadlines Act",
+      "official_title": "An Act to amend the Internal Revenue Code of 1986 to make the postponement of certain deadlines by reason of disasters applicable to the limitation on credit or refund, and to take postponements into account for purposes of sending collection notices.",
+      "code": "HR.1491",
+      "date": "2025-12-26",
+      "stageDate": "2025-12-26",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Murphy, Gregory F. (R-NC)",
+      "sponsor_bioguide": "M001210",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-64 on December 26, 2025. Passed the House on March 31-April 1, 2025 and the Senate on December 11, 2025.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-04-01",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 423,
+          "nays": 0,
+          "present": 0,
+          "notVoting": 8,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "When the IRS postpones tax deadlines because of a disaster, this makes that extra time also count toward the deadline for claiming a tax refund, and requires collection notices to reflect the postponement.",
+      "brief": "Counts IRS disaster-related deadline postponements toward the refund-claim limitation period and in collection notices.",
+      "top_lines": [
+        {
+          "headline": "Disaster Deadline Postponements",
+          "billSection": "2",
+          "subs": [
+            "Disaster postponement periods count toward the refund-claim window",
+            "Collection notices must reflect disaster postponements",
+            "Applies to claims filed and notices issued after enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Postponement of Certain Deadlines by Reason of Disasters Made Applicable to Limitation on Credit or Refund",
+          "items": [
+            {
+              "main": "Treats IRS disaster-related deadline postponements as filing extensions for purposes of the time limit on tax credits or refunds.",
+              "detail": "Adds subsection (f) to Section 7508A of the Internal Revenue Code so any period disregarded for filing a return is treated as an extension of time for filing under the refund-limitation rule (Section 6511(b)(2)(A)). It also amends Section 6303(b) so the last date for payment shown in a collection notice accounts for any period disregarded under Section 7508A. The changes apply to claims filed and notices issued after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill aligns disaster postponements with the refund-claim window but does not change the underlying disaster-postponement authority itself.",
+        "It applies to claims and notices going forward but does not address refunds already denied for filing outside the prior window."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "IRS disaster deadline postponements (Section 7508A) now count as filing extensions for the refund-claim limitation (Section 6511(b)(2)(A))",
+          "Collection notices (Section 6303(b)) must account for disaster-related postponement periods"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-970",
+      "title": "Fairness for Servicemembers and their Families Act of 2025",
+      "official_title": "An Act to amend title 38, United States Code, to require the Secretary of Veterans Affairs to periodically review the automatic maximum coverage under the Servicemembers' Group Life Insurance program and the Veterans' Group Life Insurance program, and for other purposes.",
+      "code": "HR.970",
+      "date": "2025-12-12",
+      "stageDate": "2025-12-12",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Strickland, Marilyn (D-WA)",
+      "sponsor_bioguide": "S001159",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-54 on December 12, 2025. Passed the House on April 7, 2025 and the Senate on November 20, 2025.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-11-20",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-04-07",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "study",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires the VA to review every five years whether the maximum automatic coverage under military and veterans' group life insurance has kept pace with inflation, and report to Congress.",
+      "brief": "Requires the VA to review SGLI and VGLI maximum coverage against inflation every five years and report to Congress.",
+      "top_lines": [
+        {
+          "headline": "Group Life Insurance Coverage Review",
+          "billSection": "2",
+          "subs": [
+            "VA must review SGLI and VGLI maximum coverage every 5 years",
+            "Benchmark: $500,000 adjusted by average CPI change over 5 years",
+            "Results reported to the Veterans' Affairs Committees"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Periodic Review of Automatic Maximum Coverage Under Servicemembers' Group Life Insurance and Veterans' Group Life Insurance",
+          "items": [
+            {
+              "main": "Requires the VA to review, every five years starting January 1, 2026, the automatic maximum coverage under SGLI and VGLI.",
+              "detail": "Adds Section 1980B to title 38. The Secretary compares the maximum coverage amount in Section 1967(a)(3)(A)(i) to a benchmark equal to $500,000 adjusted by the average percentage change in the Consumer Price Index over the preceding five fiscal years, and reports the results to the House and Senate Committees on Veterans' Affairs as a guide for possible coverage increases.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires a review against an inflation benchmark but does not itself raise the maximum coverage amount.",
+        "It directs the review to serve as a guide for increases but does not require the VA to act on the findings."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "VA 5-year review of SGLI and VGLI maximum automatic coverage against a $500,000 CPI-adjusted benchmark, reported to Congress (new Section 1980B of title 38)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-3872",
+      "title": "MERICA Act of 2025",
+      "official_title": "To amend the Mineral Leasing Act for Acquired Lands to make that Act applicable to hardrock minerals.",
+      "code": "HR.3872",
+      "date": "2026-06-10",
+      "stageDate": "2026-06-10",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Fallon, Pat (R-TX)",
+      "sponsor_bioguide": "F000246",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 58,
+      "likelihoodReason": "Sponsored by Rep. Fallon (R-TX) with 2 cosponsors; passed the House and was ordered reported favorably by the Senate Energy and Natural Resources Committee. Expanding domestic hardrock-mineral leasing has bipartisan appeal on supply-chain grounds, though it still needs Senate floor time.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Extends the federal leasing system for minerals on government-acquired lands to hardrock minerals such as base, precious, and industrial metals and gemstones.",
+      "brief": "Makes the Mineral Leasing Act for Acquired Lands apply to hardrock minerals.",
+      "top_lines": [
+        {
+          "headline": "Hardrock Minerals on Acquired Lands",
+          "billSection": "2",
+          "subs": [
+            "Hardrock minerals added to the Mineral Leasing Act for Acquired Lands",
+            "Covers base, precious, and industrial metals and gemstones",
+            "Excludes coal, oil, gas, sulfur, sodium, potassium, and Materials Act minerals"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Application of Mineral Leasing Act for Acquired Lands to Hardrock Minerals",
+          "items": [
+            {
+              "main": "Makes hardrock minerals leasable under the Mineral Leasing Act for Acquired Lands (30 U.S.C. 351 et seq.).",
+              "detail": "Restructures the definitions in Section 2 (30 U.S.C. 351) and adds a definition of 'hardrock mineral' covering minerals found in sedimentary or other rocks, base metals, precious metals, industrial metals, and precious and semi-precious gemstones — but not coal, oil, oil shale, gas, sodium, potassium, sulfur, or materials under the Materials Act of 1947 (30 U.S.C. 601 et seq.). Section 3 (30 U.S.C. 352) is amended to add hardrock minerals to the minerals the Act covers.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill makes hardrock minerals leasable on acquired lands but does not set royalty rates or lease terms specific to them.",
+        "It applies only to lands acquired by the United States and does not change leasing on the broader public domain."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Mineral Leasing Act for Acquired Lands (30 U.S.C. 351, 352) now applies to hardrock minerals (base/precious/industrial metals and gemstones), excluding coal, oil, gas, sulfur, sodium, potassium, and Materials Act minerals"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-517",
+      "title": "Filing Relief for Natural Disasters Act",
+      "official_title": "An Act to amend the Internal Revenue Code of 1986 to modify the rules for postponing certain deadlines by reason of disaster.",
+      "code": "HR.517",
+      "date": "2025-07-24",
+      "stageDate": "2025-07-24",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Kustoff, David (R-TN)",
+      "sponsor_bioguide": "K000392",
+      "cosponsors": 1,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-29 on July 24, 2025. Passed the House on March 31, 2025 and the Senate on July 10, 2025.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-03-31",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
+          "result": "Passed",
+          "yeas": 388,
+          "nays": 0,
+          "present": 0,
+          "notVoting": 42,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Lets the IRS postpone federal tax deadlines after a state-declared disaster (not just a federal one) at a governor's request, and doubles the automatic extension period from 60 to 120 days.",
+      "brief": "Allows IRS tax-deadline postponements for state-declared disasters and extends the mandatory extension from 60 to 120 days.",
+      "top_lines": [
+        {
+          "headline": "State-Declared Disaster Tax Relief",
+          "billSection": "2",
+          "subs": [
+            "IRS may postpone tax deadlines for state-declared disasters",
+            "Triggered by written request of a Governor (or D.C. Mayor)",
+            "Mandatory extension period doubled from 60 to 120 days"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Modification of Rules for Postponing Certain Deadlines by Reason of Disaster",
+          "items": [
+            {
+              "main": "Authorizes the IRS to postpone federal tax deadlines for state-declared disasters and lengthens the mandatory extension period.",
+              "detail": "Adds subsection (c) to Section 7508A of the Internal Revenue Code: on the written request of a Governor (or the Mayor of D.C.), after consulting FEMA, the IRS may apply its disaster-postponement rules to a 'qualified State declared disaster' (natural catastrophes, or any fire, flood, or explosion of sufficient severity). 'State' includes D.C., Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Northern Mariana Islands. The mandatory extension period is increased from 60 days to 120 days. The changes apply to declarations made after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill lets governors request federal tax postponements but does not require the IRS to grant a request.",
+        "It covers state-declared disasters but does not otherwise change the rules for federally declared disasters beyond the longer extension period."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "IRS authority to postpone federal tax deadlines for state-declared disasters on a Governor's request (new Section 7508A(c))"
+        ],
+        "modified": [
+          "Mandatory disaster extension period increased from 60 days to 120 days (Section 7508A(e))"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-1912",
+      "title": "Veteran Fraud Reimbursement Act of 2025",
+      "official_title": "An Act to amend title 38, United States Code, to improve the repayment by the Secretary of Veterans Affairs of benefits misused by a fiduciary, and for other purposes.",
+      "code": "HR.1912",
+      "date": "2025-12-12",
+      "stageDate": "2025-12-12",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Connolly, Gerald E. (D-VA)",
+      "sponsor_bioguide": "C001078",
+      "cosponsors": 7,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-56 on December 12, 2025. Passed the House on May 5, 2025 and the Senate on November 20, 2025.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-11-20",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-05",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires the VA to repay veterans the full amount of any benefits stolen or misused by their appointed fiduciary, and to try to recover the money from the fiduciary.",
+      "brief": "Requires the VA to reissue the full amount of benefits misused by a fiduciary and recoup it from the fiduciary.",
+      "top_lines": [
+        {
+          "headline": "Reimbursing Misused Veteran Benefits",
+          "billSection": "2",
+          "subs": [
+            "VA must repay the full amount a fiduciary misused",
+            "VA must seek recoupment from the fiduciary",
+            "Reissuance not delayed by a pending VA-negligence review"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Improvement to Repayment by Secretary of Veterans Affairs of Certain Misused Benefits",
+          "items": [
+            {
+              "main": "Requires the VA to pay a beneficiary (or successor fiduciary) the full amount of benefits a fiduciary misused.",
+              "detail": "Rewrites Section 6107 of title 38. When a fiduciary misuses a beneficiary's benefits, the Secretary must reissue an equal amount, make a good-faith effort to recoup it from the fiduciary, and promptly remit any recouped funds. For a beneficiary who has died, payment follows Section 5121 (but not to the fiduciary who misused the benefits). Total payments may not exceed the amount misused. The Secretary must set methods and timing for determining whether misuse resulted from VA negligence, but may not withhold reissuance pending that determination and need not make a determination for every instance.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill guarantees repayment of misused benefits but does not set a deadline for the VA to reissue the funds.",
+        "It requires good-faith recoupment from fiduciaries but does not specify penalties for fiduciaries who misuse benefits."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "VA reissuance of fiduciary-misused benefits (Section 6107 of title 38): now requires paying the full misused amount and may not be withheld pending a VA-negligence determination"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-3490",
+      "title": "Gerald E. Connolly Esophageal Cancer Awareness Act of 2025",
+      "official_title": "An Act to require the Government Accountability Office to produce a report on esophageal cancer, and for other purposes.",
+      "code": "HR.3490",
+      "date": "2026-06-09",
+      "stageDate": "2026-06-09",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Connolly, Gerald E. (D-VA)",
+      "sponsor_bioguide": "C001078",
+      "cosponsors": 1,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-96 on June 9, 2026. Passed the House on June 3, 2025 and the Senate on May 20, 2026.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-05-20",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-06-03",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "study",
+      "analyzedAt": "2026-06-15",
+      "summary": "Directs the GAO to report on esophageal cancer costs and screening among federal employees and retirees, and records congressional findings about the disease.",
+      "brief": "Requires a GAO report on esophageal cancer spending and screening under the Federal Employees Health Benefits Program.",
+      "top_lines": [
+        {
+          "headline": "Esophageal Cancer GAO Report",
+          "billSection": "3",
+          "subs": [
+            "GAO report within 1 year on esophageal cancer under FEHB",
+            "Reviews cancer-related spending for federal employees and retirees",
+            "Reviews how often high-risk enrollees are screened"
+          ]
+        },
+        {
+          "headline": "Congressional Findings",
+          "billSection": "2",
+          "subs": [
+            "Bill cites a rise of more than 700% in recent decades",
+            "Cites about 1 in 5 patients surviving 5 years"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 3 — GAO Report",
+          "items": [
+            {
+              "main": "Requires a GAO report within one year on esophageal cancer under the Federal Employees Health Benefits Program.",
+              "detail": "The Comptroller General must evaluate total esophageal-cancer-related health care spending under the Federal Employees Health Benefits Program for federal employees and retirees diagnosed with the disease, and how often FEHB enrollees whose records indicate high risk are screened according to established guidelines.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Findings",
+          "items": [
+            {
+              "main": "Records congressional findings on esophageal cancer.",
+              "detail": "The findings state that esophageal cancer is among the fastest-increasing cancers (cited as up more than 700 percent in recent decades), that about 1 in 5 patients survive five years, and that early detection of its precursor, Barrett's esophagus, sharply improves survival (cited as high as 49 percent at an early stage).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill orders a report on FEHB esophageal cancer screening but does not require any screening coverage or program changes.",
+        "Its findings emphasize early detection, but the bill creates no awareness or screening program — only a report."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "GAO report within one year on esophageal cancer spending and screening under the Federal Employees Health Benefits Program"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-6359",
+      "title": "Pregnant Students' Rights Act",
+      "official_title": "To require institutions of higher education to disseminate information on the rights of, and accommodations and resources for, pregnant students, and for other purposes.",
+      "code": "HR.6359",
+      "date": "2026-01-26",
+      "stageDate": "2026-01-26",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hinson, Ashley (R-IA)",
+      "sponsor_bioguide": "H001091",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 42,
+      "likelihoodReason": "Sponsored by Rep. Hinson (R-IA) with 3 cosponsors; passed the House and was placed on the Senate Legislative Calendar. As an information-disclosure mandate touching abortion-adjacent politics, it is likely to draw Democratic opposition in the Senate, where 60 votes would be needed.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-01-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 217,
+          "nays": 211,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-22",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 213,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 2,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires colleges to tell students each year about the rights, accommodations, and resources available to pregnant students who choose to carry a pregnancy to term.",
+      "brief": "Requires colleges to disseminate information on pregnant students' rights, accommodations, and resources.",
+      "top_lines": [
+        {
+          "headline": "Pregnant Student Information",
+          "billSection": "2",
+          "subs": [
+            "Colleges must share pregnant-student rights and resources yearly",
+            "Includes campus and community resources and accommodations",
+            "Includes how to file a Title IX complaint"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Notice of Pregnant Student Rights, Accommodations, and Resources",
+          "items": [
+            {
+              "main": "Requires colleges in federal student-aid programs to inform students about resources and accommodations for pregnant students carrying a baby to term.",
+              "detail": "Adds subsection (n) to Section 485 of the Higher Education Act of 1965 (20 U.S.C. 1092). Institutions must give prospective and enrolled students a list of campus and community resources, information on available accommodations, and instructions for filing a Title IX complaint with the Department of Education or the institution. Dissemination must include an annual email, student handbooks, orientations, health or counseling centers, and the institution's website. The subsection does not authorize the Secretary to require additional information or create additional rights.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires distributing information about existing rights but does not create any new accommodations or rights for pregnant students.",
+        "It mandates dissemination but specifies no penalty or enforcement mechanism for institutions that fail to comply."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Annual college disclosure of pregnant students' rights, accommodations, and resources (new subsection (n) of Higher Education Act Section 485)"
         ],
         "modified": [],
         "removed": []
