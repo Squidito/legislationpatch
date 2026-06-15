@@ -67,6 +67,7 @@ const ACRONYMS = {
   VGLI:  'Veterans Group Life Insurance',
   FEHB:  'Federal Employees Health Benefits Program',
   CPI:   'Consumer Price Index',
+  ATF:   'Bureau of Alcohol, Tobacco, Firearms and Explosives',
   MQ:    'MQ-9 Reaper drone (U.S. Air Force)',
   SAVE:  'Safeguard American Voter Eligibility Act',
   CRA:   'Congressional Review Act',
