@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-10T22:42:41.848Z",
+  "generated": "2026-06-15T18:47:25.687Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -10667,6 +10667,520 @@
         }
       ],
       "analyzedAt": "2026-06-10"
+    },
+    {
+      "id": "119-S-2393",
+      "title": "Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act",
+      "official_title": "An Act to authorize a major medical facility project for the Department of Veterans Affairs for fiscal year 2026 in St. Louis, Missouri, and for other purposes.",
+      "code": "S.2393",
+      "date": "2026-06-09",
+      "stageDate": "2026-06-09",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed Senate",
+        "Passed House",
+        "Signed"
+      ],
+      "sponsor": "Sen. Moran, Jerry (R-KS)",
+      "sponsor_bioguide": "M000934",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-97 on June 9, 2026. Passed the Senate on December 17, 2025 and the House on May 19-20, 2026.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-20",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 405,
+          "nays": 5,
+          "present": 0,
+          "notVoting": 20,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "summary": "Authorizes the Department of Veterans Affairs to build a new medical facility in St. Louis, Missouri, and approves up to $1.76B for the construction.",
+      "brief": "Authorizes a $1.76B VA medical facility construction project in St. Louis, Missouri, for fiscal year 2026.",
+      "top_lines": [
+        {
+          "headline": "St. Louis VA Medical Facility",
+          "billSection": "2",
+          "subs": [
+            "$1.76B authorized for VA construction in St. Louis, Missouri",
+            "New bed tower, clinical expansion, admin building, utility plant, garages",
+            "Authorized for fiscal year 2026"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Authorization of Major Medical Facility Project",
+          "items": [
+            {
+              "main": "Authorizes a new VA medical facility project in St. Louis, Missouri, at a cost not to exceed $1.76B.",
+              "detail": "The project consists of a new bed tower, clinical building expansion, a consolidated administrative building and warehouse, a utility plant, and parking garages. The same $1.76B is authorized to be appropriated from the Construction, Major Projects account for fiscal year 2026 (or the year in which funds are appropriated).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The Act authorizes the $1.76B to be appropriated but does not itself appropriate the funds, which depend on a later appropriations act.",
+        "The bill authorizes the St. Louis project but sets no construction timeline or completion deadline beyond the fiscal year 2026 authorization.",
+        "Titled the 'Fiscal Year 2025' authorization act, the bill authorizes the project for fiscal year 2026 and addresses no other facility projects."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Authorizes a new VA major medical facility project in St. Louis, Missouri — a new bed tower, clinical building expansion, consolidated administrative building and warehouse, utility plant, and parking garages"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HJRES-142",
+      "title": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025",
+      "official_title": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025.",
+      "code": "HJRES.142",
+      "date": "2026-02-18",
+      "stageDate": "2026-02-18",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Gill, Brandon (R-TX)",
+      "sponsor_bioguide": "G000603",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-78 on February 18, 2026. Passed the House on February 4, 2026 and the Senate on February 11-12, 2026.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-02-12",
+          "question": "On the Joint Resolution H.J.Res. 142",
+          "result": "Joint Resolution Passed",
+          "yeas": 49,
+          "nays": 47,
+          "present": 0,
+          "notVoting": 4,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-02-11",
+          "question": "On the Motion to Proceed H.J.Res. 142",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 51,
+          "nays": 46,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "House",
+          "date": "2026-02-04",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 215,
+          "nays": 210,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "resolution",
+      "analyzedAt": "2026-06-15",
+      "summary": "Uses Congress's authority over the District of Columbia to overturn a D.C. Council act that revised the District's income and franchise tax rules.",
+      "brief": "Disapproves the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025, blocking it from taking effect.",
+      "top_lines": [
+        {
+          "headline": "D.C. Tax Act Disapproval",
+          "subs": [
+            "Overturns D.C. Act 26-217, a D.C. Council tax measure",
+            "Acts under section 602(c)(1) of the D.C. Home Rule Act",
+            "Enacted as Public Law 119-78"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Disapproval of D.C. Council Act",
+          "items": [
+            {
+              "main": "Disapproves the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025, blocking it from taking effect.",
+              "detail": "Congress disapproves D.C. Act 26-217, enacted by the Council of the District of Columbia on December 20, 2025 and transmitted to Congress on December 30, 2025 under section 602(c)(1) of the District of Columbia Home Rule Act. The disapproval prevents the D.C. act from taking effect.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The resolution disapproves the act by name but does not describe what tax changes the D.C. measure would have made.",
+        "It addresses the 'Temporary' amendment act as named and does not reference any related permanent or emergency D.C. measure."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": [
+          "Blocks D.C. Act 26-217 (the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025) from taking effect"
+        ]
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HCONRES-84",
+      "title": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from Lebanon",
+      "official_title": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from Lebanon.",
+      "code": "HCONRES.84",
+      "date": "2026-06-04",
+      "stageDate": "2026-06-04",
+      "version": "v1.0",
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Tlaib, Rashida (D-MI)",
+      "sponsor_bioguide": "T000481",
+      "cosponsors": 25,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 5,
+      "likelihoodReason": "Failed in the House on June 4, 2026 by a 92-324 vote. As a concurrent resolution it carries no force of law and is not presented to the President; the House defeat ends its progress.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-04",
+          "question": "On Agreeing to the Resolution",
+          "result": "Failed",
+          "yeas": 92,
+          "nays": 324,
+          "present": 2,
+          "notVoting": 12,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "resolution",
+      "analyzedAt": "2026-06-15",
+      "summary": "Directs the President to withdraw U.S. military forces from Lebanon within 7 days, using Congress's war powers authority.",
+      "brief": "Directs the President to remove U.S. Armed Forces from Lebanon no later than 7 days after the resolution is adopted.",
+      "top_lines": [
+        {
+          "headline": "Withdrawal of Forces from Lebanon",
+          "billSection": "1",
+          "subs": [
+            "Directs removal of U.S. Armed Forces from Lebanon",
+            "Deadline: 7 days after the resolution is adopted",
+            "Invokes section 5(c) of the War Powers Resolution"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Removal of United States Armed Forces from Lebanon",
+          "items": [
+            {
+              "main": "Directs the President to remove all U.S. Armed Forces from Lebanon no later than 7 days after the resolution is adopted.",
+              "detail": "Acts under section 5(c) of the War Powers Resolution (50 U.S.C. 1544(c)), which allows Congress to direct the removal of armed forces by concurrent resolution. The resolution sets the removal deadline at not later than 7 days after its adoption.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The resolution directs withdrawal from Lebanon but does not define which forces, units, or deployments it covers.",
+        "It sets a 7-day removal deadline but specifies no consequence or enforcement mechanism if forces are not withdrawn."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-5107",
+      "title": "Common-Sense Law Enforcement and Accountability Now in DC Act of 2025",
+      "official_title": "To repeal the Comprehensive Policing and Justice Reform Amendment Act of 2022 enacted by the District of Columbia Council.",
+      "code": "HR.5107",
+      "date": "2025-11-20",
+      "stageDate": "2025-11-20",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Clyde, Andrew S. (R-GA)",
+      "sponsor_bioguide": "C001116",
+      "cosponsors": 29,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 38,
+      "likelihoodReason": "Sponsored by Rep. Clyde (R-GA) with 29 cosponsors; passed the Republican-majority House. In the Senate it would need 60 votes, and repealing a D.C. policing-and-justice-reform law is likely to draw unified Democratic opposition, making passage uncertain.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-11-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 233,
+          "nays": 190,
+          "present": 0,
+          "notVoting": 10,
+          "crossoverCount": 20
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Repeals a 2022 District of Columbia policing law, restoring the prior law as if that act had never been enacted.",
+      "brief": "Repeals the D.C. Comprehensive Policing and Justice Reform Amendment Act of 2022 and revives the law it had changed.",
+      "top_lines": [
+        {
+          "headline": "D.C. Policing Law Repeal",
+          "billSection": "2",
+          "subs": [
+            "Repeals the D.C. Comprehensive Policing and Justice Reform Amendment Act of 2022",
+            "Restores any law that act had amended or repealed",
+            "Uses Congress's authority over the District of Columbia"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Repeal of Comprehensive Policing and Justice Reform Amendment Act of 2022",
+          "items": [
+            {
+              "main": "Repeals the D.C. Comprehensive Policing and Justice Reform Amendment Act of 2022 (D.C. Law 24-345).",
+              "detail": "Any provision of law that the 2022 D.C. act amended or repealed is restored or revived as if that act had never been enacted. The bill exercises Congress's constitutional authority over the District of Columbia.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill repeals the 2022 D.C. policing act but does not enumerate which underlying laws are restored beyond directing that they revive as if the act had never passed.",
+        "It repeals the act outright but does not establish any replacement policing or accountability standard for the District."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Restores any law the 2022 D.C. act had amended or repealed, as if that act had never been enacted"
+        ],
+        "removed": [
+          "Repeals the D.C. Comprehensive Policing and Justice Reform Amendment Act of 2022 (D.C. Law 24-345)"
+        ]
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-755",
+      "title": "Critical Mineral Consistency Act of 2025",
+      "official_title": "To amend the Energy Act of 2020 to include critical materials in the definition of critical mineral, and for other purposes.",
+      "code": "HR.755",
+      "date": "2026-03-04",
+      "stageDate": "2026-03-04",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Ciscomani, Juan (R-AZ)",
+      "sponsor_bioguide": "C001133",
+      "cosponsors": 13,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 62,
+      "likelihoodReason": "Sponsored by Rep. Ciscomani (R-AZ) with 13 cosponsors from both parties; passed the House and was placed on the Senate Legislative Calendar. The change is a technical, definitional alignment with bipartisan backing, which improves its odds of a Senate vote.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-03",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Changes federal law so materials the Energy Department designates as 'critical materials' are also treated as 'critical minerals,' and requires the official list to be updated quickly.",
+      "brief": "Amends the Energy Act of 2020 to fold 'critical materials' into the definition of 'critical mineral' and requires the list to be updated within 45 days of a new designation.",
+      "top_lines": [
+        {
+          "headline": "Critical Minerals Definition",
+          "billSection": "2",
+          "subs": [
+            "Adds 'critical materials' to the definition of 'critical mineral'",
+            "List must be updated within 45 days of a new designation",
+            "Amends Section 7002 of the Energy Act of 2020"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Critical Materials Included as Critical Minerals",
+          "items": [
+            {
+              "main": "Amends the Energy Act of 2020 so any material the Secretary of Energy designates as a 'critical material' also counts as a 'critical mineral.'",
+              "detail": "Rewrites the definition of 'critical mineral' in Section 7002 of the Energy Act of 2020 (30 U.S.C. 1606) to include critical materials determined by the Secretary of Energy. When the Secretary determines a non-fuel mineral, element, substance, or material is a critical material, the published critical minerals list must be updated to include it within 45 days.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill merges critical materials into the critical minerals list but does not change what benefits or requirements attach to that designation.",
+        "It sets a 45-day deadline to add new critical materials but specifies no process or deadline for removing materials no longer considered critical."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Requires the critical minerals list to be updated within 45 days of a new critical-material determination"
+        ],
+        "modified": [
+          "Definition of 'critical mineral' in the Energy Act of 2020 (30 U.S.C. 1606) now includes 'critical materials' determined by the Secretary of Energy"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2189",
+      "title": "Law-Enforcement Innovate to De-Escalate Act",
+      "official_title": "To modernize Federal firearms laws to account for advancements in technology and less-than-lethal weapons, and for other purposes.",
+      "code": "HR.2189",
+      "date": "2026-02-24",
+      "stageDate": "2026-02-24",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Fitzgerald, Scott (R-WI)",
+      "sponsor_bioguide": "F000471",
+      "cosponsors": 95,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 60,
+      "likelihoodReason": "Introduced by Rep. Fitzgerald (R-WI) with Rep. Correa (D-CA) and 95 cosponsors; passed the House. Broad bipartisan cosponsorship and a narrow, technical scope improve its chances in the Senate, though it has not yet received a Senate vote.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-02-12",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 233,
+          "nays": 185,
+          "present": 0,
+          "notVoting": 13,
+          "crossoverCount": 23
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Carves 'less-than-lethal projectile devices' out of federal firearms restrictions and defines what qualifies, so they are not regulated as firearms.",
+      "brief": "Amends federal firearms law to exempt 'less-than-lethal projectile devices' from regulation and defines the term.",
+      "top_lines": [
+        {
+          "headline": "Less-Than-Lethal Device Exemption",
+          "billSection": "2",
+          "subs": [
+            "Exempts 'less-than-lethal projectile devices' from Title 18 firearms rules",
+            "Defines the term by velocity (under 500 fps) and design",
+            "Attorney General must rule on a device within 90 days"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Exemption of Certain Less-Than-Lethal Projectile Devices",
+          "items": [
+            {
+              "main": "Amends the firearms definitions in Section 921(a) of title 18 to exclude 'less-than-lethal projectile devices.'",
+              "detail": "Defines a less-than-lethal projectile device as one not designed (and not readily convertible) to fire common handgun, rifle, or shotgun ammunition or any projectile faster than 500 feet per second, designed to be used in a way not likely to cause death or serious bodily injury, and unable to accept semiautomatic-style ammunition feeding devices. If a person asks the Attorney General to determine whether a device qualifies, the Attorney General must decide within 90 days of receiving the device.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill exempts qualifying devices from Title 18 firearms rules but does not address how state law treats the same devices.",
+        "It requires the Attorney General to rule within 90 days of receiving a device but specifies no consequence if that deadline is missed."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Creates a 90-day Attorney General determination process for whether a device qualifies as less-than-lethal"
+        ],
+        "modified": [
+          "Firearms definition in Section 921(a) of title 18 now excludes 'less-than-lethal projectile devices'"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
     }
   ]
 }
