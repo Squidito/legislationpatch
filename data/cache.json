@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T20:21:40.439Z",
+  "generated": "2026-06-15T20:58:59.321Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -14760,6 +14760,1032 @@
         "removed": [
           "The Pandemic Response Accountability Committee (repealed December 31, 2028, with its assets transferred to the new office)"
         ]
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2483",
+      "title": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
+      "official_title": "To reauthorize certain programs that provide for opioid use disorder prevention, treatment, and recovery, and for other purposes.",
+      "code": "HR.2483",
+      "date": "2025-12-01",
+      "stageDate": "2025-12-01",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Guthrie, Brett (R-KY)",
+      "sponsor_bioguide": "G000558",
+      "cosponsors": 1,
+      "pages": 23,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Enacted as Public Law 119-44. Passed the House June 4, 2025 and the Senate September 18, 2025, and was signed into law December 1, 2025. A reauthorization of existing opioid programs originally created by the bipartisan 2018 SUPPORT Act.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-06-04",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 366,
+          "nays": 57,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-09-18",
+          "question": "On Passage",
+          "result": "Passed"
+        }
+      ],
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-15",
+      "summary": "Reauthorizes the opioid prevention, treatment, and recovery programs created by the 2018 SUPPORT Act through fiscal year 2030, mostly at higher funding levels, and adds new provisions covering fetal alcohol spectrum disorder services, cybersecurity for the 988 Suicide & Crisis Lifeline, fentanyl-contamination coordination, at-home drug disposal, and expanded prescriber training.",
+      "brief": "Reauthorizes the 2018 SUPPORT Act's opioid programs through 2030 at higher funding, plus new FASD, 988 cybersecurity, and fentanyl provisions.",
+      "top_lines": [
+        {
+          "headline": "Reauthorizes the Opioid Response Through 2030",
+          "billSection": "103",
+          "subs": [
+            "Extends dozens of prevention, treatment, and recovery programs from the 2018 SUPPORT Act through fiscal year 2030",
+            "Most reauthorized programs get funding increases (e.g., overdose prevention rises to $505.58M/year; first-responder training $36M to $57M/year)",
+            "Allows fentanyl and xylazine test strips under State and Tribal opioid response grants"
+          ]
+        },
+        {
+          "headline": "New and Expanded Health Programs",
+          "billSection": "104",
+          "subs": [
+            "Creates a standalone Fetal Alcohol Spectrum Disorder program with $12.5M/year through 2030",
+            "Adds cybersecurity reporting requirements for the 988 Suicide & Crisis Lifeline plus a GAO study",
+            "Raises authorizations for recovery, trauma, and treatment-workforce programs (e.g., Building Communities of Recovery $5M to $17M/year)"
+          ]
+        },
+        {
+          "headline": "Fentanyl, Disposal, and Prescriber Provisions",
+          "billSection": "110",
+          "subs": [
+            "\"Bruce's Law\" sets up a federal interagency work group on fentanyl contamination of illegal drugs",
+            "Directs HHS guidance on at-home drug disposal systems within one year",
+            "Expands the list of organizations whose courses satisfy controlled-substance prescriber training"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 103 — Preventing Overdoses of Controlled Substances",
+          "items": [
+            {
+              "main": "Broadens the CDC overdose-prevention program beyond opioids and reauthorizes it at a higher level.",
+              "detail": "Amends section 392A of the Public Health Service Act so the surveillance and rapid-response grant program covers \"substances causing overdose\" and associated risk factors rather than opioids alone, and explicitly allows innovative approaches such as wastewater surveillance. The authorization rises from $496M to $505.58M for each of fiscal years 2026 through 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 104 — Fetal Alcohol Spectrum Disorder Program",
+          "items": [
+            {
+              "main": "Replaces the existing FASD provisions with a new prevention, intervention, and services program.",
+              "detail": "Rewrites Part O of title III of the Public Health Service Act to establish an FASD education, prevention, identification, intervention, and services-delivery program, with grants and technical assistance to states, Tribes, local governments, and nonprofits, and a separate capacity-building and clearinghouse role. It authorizes $12.5M for each of fiscal years 2026 through 2030 and requires HHS to report to Congress within four years and annually thereafter.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 106 — First Responder Training Program",
+          "items": [
+            {
+              "main": "Expands the first-responder overdose training program beyond opioids and increases its funding.",
+              "detail": "Amends section 546 of the Public Health Service Act to cover overdose-reversal drugs that are \"approved, cleared, or otherwise legally marketed\" and to address heroin and other drug overdoses, not just opioids. The authorization rises from $36M to $57M for each of fiscal years 2026 through 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 107 — Donald J. Cohen National Child Traumatic Stress Initiative",
+          "items": [
+            {
+              "main": "Reauthorizes the National Child Traumatic Stress Initiative and adds a dissemination role for grantees.",
+              "detail": "Amends section 582 of the Public Health Service Act to require NCTSI grantees to develop trainings and resources that support implementation of the evidence-based practices they develop. It authorizes $98.89M for each of fiscal years 2026 through 2028 and $100M for each of fiscal years 2029 and 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 108 — Protecting the 988 Lifeline From Cybersecurity Incidents",
+          "items": [
+            {
+              "main": "Adds cybersecurity protection and reporting requirements for the 988 Suicide & Crisis Lifeline.",
+              "detail": "Amends section 520E-3 of the Public Health Service Act to require the Lifeline program to take steps to protect against cybersecurity incidents and eliminate known vulnerabilities, and to require the program's network administrator and participating crisis centers to report identified vulnerabilities and incidents to the Assistant Secretary in a privacy-protective manner. It also directs the Comptroller General to complete a study of cybersecurity risks to the 988 Lifeline within 180 days of enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 110 — Bruce's Law",
+          "items": [
+            {
+              "main": "Strengthens youth fentanyl-awareness work and creates a federal work group on fentanyl-contaminated illegal drugs.",
+              "detail": "Amends the youth prevention provisions of the 2018 SUPPORT Act to add education on the potency and dangers of synthetic opioids, including drugs contaminated with fentanyl. It directs the Interdepartmental Substance Use Disorders Coordinating Committee to establish a Federal Interagency Work Group on Fentanyl Contamination of Illegal Drugs, which consults with families of overdose victims and reports annually with recommendations. The Coordinating Committee is set to terminate September 30, 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 113 — State and Tribal Opioid Response Grants",
+          "items": [
+            {
+              "main": "Allows opioid response grant funds to be used for drug-detection tools such as fentanyl and xylazine test strips.",
+              "detail": "Clarifies that activities under the 21st Century Cures Act State and Tribal opioid response grant program may include facilitating access to products that detect substances such as fentanyl and xylazine test strips, to the extent their purchase and possession is consistent with federal and state law.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 204 — Loan Repayment for the Treatment Workforce",
+          "items": [
+            {
+              "main": "Reauthorizes the substance use disorder treatment workforce loan-repayment program at a higher level.",
+              "detail": "Amends section 781 of the Public Health Service Act, raising the authorization from $25M to $40M for each of fiscal years 2026 through 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 209 — Reviewing Buprenorphine/Naloxone Scheduling",
+          "items": [
+            {
+              "main": "Directs HHS to review the controlled-substance scheduling of approved buprenorphine-naloxone combination products.",
+              "detail": "Requires the Secretary of HHS to review data on the scheduling of FDA-approved products containing a combination of buprenorphine and naloxone and, if appropriate, ask the Attorney General to begin rulemaking to revise the schedules. The Attorney General must review any such request under the Controlled Substances Act criteria.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 301 — Building Communities of Recovery",
+          "items": [
+            {
+              "main": "Sharply increases funding for the Building Communities of Recovery program.",
+              "detail": "Amends section 547 of the Public Health Service Act, raising the authorization from $5M to $17M for each of fiscal years 2026 through 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 304 — Youth Prevention and Recovery",
+          "items": [
+            {
+              "main": "Reauthorizes and expands the youth prevention and recovery program with a rising funding schedule.",
+              "detail": "Amends section 7102(c) of the 2018 SUPPORT Act to broaden eligible applicants (including consortia of local educational agencies and secondary schools) and require sustainability plans. It authorizes $10M for fiscal year 2026, $12M for 2027, $13M for 2028, $14M for 2029, and $15M for 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 305 — CAREER Act",
+          "items": [
+            {
+              "main": "Reauthorizes the CAREER Act workforce grants and the recovery housing pilot, with new performance reporting.",
+              "detail": "Amends section 7183 of the 2018 SUPPORT Act to rename the program, update the targeting formula to use 2018-2022 overdose, unemployment, and labor-force data, allow up to 5 percent of grant funds for transportation, and add employment-and-earnings outcome reporting. It raises the authorization from $5M to $12M for each of fiscal years 2026 through 2030 and reauthorizes the recovery housing pilot program through 2030.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 401 — Pharmacy Delivery to a Prescribing Practitioner",
+          "items": [
+            {
+              "main": "Adjusts when a pharmacy may deliver a controlled substance to a prescribing practitioner for administration.",
+              "detail": "Amends section 309A of the Controlled Substances Act so the exception covers schedule III, IV, or V drugs administered by injection or implantation for maintenance or detoxification treatment, or drugs subject to an FDA risk evaluation and mitigation strategy that includes post-administration monitoring by a health care provider.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 402 — Required Training for Prescribers",
+          "items": [
+            {
+              "main": "Expands the list of organizations and schools whose courses satisfy controlled-substance prescriber training.",
+              "detail": "Amends section 303 of the Controlled Substances Act to add organizations such as the American Academy of Family Physicians, the American Podiatric Medical Association, the Academy of General Dentistry, the American Optometric Association, the American Pharmacists Association, and others, and to include podiatric medicine and accredited schools of pharmacy. The amendment takes effect as if enacted on December 29, 2022.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2913",
+      "title": "Ukraine Support Act",
+      "official_title": "To authorize support for Ukraine, and for other purposes.",
+      "code": "HR.2913",
+      "date": "2026-06-08",
+      "stageDate": "2026-06-08",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Meeks, Gregory W. (D-NY)",
+      "sponsor_bioguide": "M001137",
+      "cosponsors": 43,
+      "pages": 47,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 30,
+      "likelihoodReason": "Passed the House narrowly, 226-195 (19 crossover votes), and was received in the Senate. Sponsored by Rep. Meeks (D-NY), the ranking member on Foreign Affairs, with 43 cosponsors. The close, largely partisan margin and the bill's mandatory sanctions triggers, 500% tariffs, and frozen-asset tax make clearing the 60-vote Senate threshold and earning a signature unlikely.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-04",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 226,
+          "nays": 195,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 19
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Authorizes a broad package of U.S. support for Ukraine — diplomatic, economic, and military — and builds a Russia sanctions regime that the President must impose whenever he determines Russia is waging war on or refusing to negotiate peace with Ukraine, backed by tariffs, export controls, a tax on frozen Russian assets, and congressional review of any move to lift sanctions.",
+      "brief": "Authorizes U.S. support for Ukraine and a Russia sanctions regime triggered whenever the President finds Russia is waging war or blocking peace.",
+      "top_lines": [
+        {
+          "headline": "Sanctions Triggered by a Russia War Determination",
+          "billSection": "301",
+          "subs": [
+            "Every 90 days the President must determine whether Russia is waging a war of aggression or refusing to negotiate peace",
+            "An affirmative finding forces sanctions on major Russian banks, oil/mining firms, top officials, Rosatom, and price-cap-violating vessels",
+            "Lifting any Russia sanction requires advance notice and a 30-day congressional review with a joint resolution of approval"
+          ]
+        },
+        {
+          "headline": "Diplomatic and Reconstruction Support",
+          "billSection": "110",
+          "subs": [
+            "Creates a Ukraine Reconstruction Trust Fund funded by a new tax on income from frozen Russian sovereign assets",
+            "Authorizes $250M for Radio Free Europe/Radio Liberty in FY2026 and $30M/year for U.S.-European nuclear cooperation",
+            "Condemns Russia's forced transfer of at least 19,000 Ukrainian children as an act of genocide"
+          ]
+        },
+        {
+          "headline": "Military and Economic Pressure",
+          "billSection": "202",
+          "subs": [
+            "Extends Lend-Lease authority and the Ukraine Security Assistance Initiative ($300M for FY2026 and FY2027) and raises the Ukraine/NATO direct-loan cap to $8B",
+            "Imposes a duty of at least 500% on Russian goods and a 100% tax on income from frozen Russian and Belarusian state assets",
+            "Bans imports of fuel refined from Russian crude and tightens dual-use export controls"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 101 — Affirming Support for Ukraine",
+          "items": [
+            {
+              "main": "Sets out findings on Russia's 2022 invasion and a sense of Congress backing Ukraine's sovereignty.",
+              "detail": "Recounts Russia's February 24, 2022 full-scale invasion, documented war crimes, and the forced deportation of at least 19,000 Ukrainian children, and states that any peace must include Ukraine and its European allies, that Russian forces should withdraw including from Crimea and the Donbas, and that Putin and Russian leaders should be prosecuted for war crimes. This section is a non-binding statement of policy.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 108 — Support for Radio Free Europe",
+          "items": [
+            {
+              "main": "Backs restoring Radio Free Europe/Radio Liberty and authorizes funding for it.",
+              "detail": "States that RFE/RL should be restored to full capacity, authorizes $250M for RFE/RL for fiscal year 2026, encourages opening new bureaus around Russia's periphery, and requires the President to report within 90 days on staffing and bureau recommendations.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 110 — Ukraine Reconstruction Trust Fund",
+          "items": [
+            {
+              "main": "Creates a Treasury trust fund for Ukraine's reconstruction, financed by the new tax on frozen Russian assets.",
+              "detail": "Adds section 9512 to the Internal Revenue Code establishing the Ukraine Reconstruction Trust Fund, into which the net revenues from the section 316 tax on frozen Russian-asset income are deposited. The Secretary of State may use the funds, subject to appropriations, for reconstruction, humanitarian assistance, economic growth, and accountable governance in Ukraine, under Foreign Assistance Act requirements.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 111 — U.S.-European Nuclear Energy Cooperation",
+          "items": [
+            {
+              "main": "Directs a strategy to counter Russian influence in Europe's nuclear-energy sector and authorizes funding.",
+              "detail": "Requires the Secretary of State, with the Secretary of Energy, to develop a strategy to strengthen U.S.-European nuclear cooperation and counter Russian malign influence (including an assessment of Rosatom), submitted within 120 days, and authorizes $30M for each of fiscal years 2025 through 2029 to support that engagement.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 201 — Lend-Lease Authority",
+          "items": [
+            {
+              "main": "Extends the Ukraine Lend-Lease authority and adds reporting on loaned defense articles.",
+              "detail": "Amends the Ukraine Democracy Defense Lend-Lease Act of 2022 to extend the loan/lease authority from fiscal years 2022-2023 through fiscal years 2022 through 2028, and requires the Secretary of State to report within 90 days of any use of the authority on the articles provided and a plan for their recovery and return.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 202 — Direct Loans and Foreign Military Financing",
+          "items": [
+            {
+              "main": "Raises the cap on direct loans to Ukraine and NATO allies to $8B.",
+              "detail": "Authorizes direct loans under section 23 of the Arms Export Control Act for Ukraine and NATO allies through fiscal year 2026, with principal not to exceed $8B, and amends the Ukraine Supplemental Appropriations Act of 2022 by raising its loan ceiling from $4B to $8B.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 203 — Support for Baltic Countries",
+          "items": [
+            {
+              "main": "Authorizes military-capacity assistance for the Baltic states.",
+              "detail": "Directs the Secretary of State to build the capacity of Baltic militaries and border forces under the 2024 Bilateral Defense Cooperation Roadmaps, and authorizes, for each of fiscal years 2026, 2027, and 2028, $30M in Foreign Military Financing and $4M in Nonproliferation, Anti-terrorism, Demining, and Related programs for each Baltic country.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 204 — Extension of Ukraine Security Assistance Initiative",
+          "items": [
+            {
+              "main": "Extends and funds the Ukraine Security Assistance Initiative through 2027.",
+              "detail": "Amends section 1250 of the FY2016 NDAA to authorize $300M for the Ukraine Security Assistance Initiative for each of fiscal years 2026 and 2027 and extends the program's authority from December 31, 2026 to December 31, 2027.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 301 — Sanctions Trigger Determination",
+          "items": [
+            {
+              "main": "Sets up the recurring determination that activates the bill's mandatory sanctions.",
+              "detail": "Requires the President, within 15 days of enactment and at least every 90 days thereafter, to determine whether Russia or a proxy is conducting a war of aggression against Ukraine, refusing to sincerely negotiate peace, or violating a negotiated peace agreement. An affirmative determination triggers the sanctions in sections 302 through 316. Section 322 defines a 'war of aggression' to include a ground assault, blockade, drone or missile attack, or physically damaging cyberattack in the 30 days before a determination.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 302 — Sanctions on Russian Financial Institutions",
+          "items": [
+            {
+              "main": "Forces sanctions on major Russian banks once the trigger is met.",
+              "detail": "Upon an affirmative determination, the President must within 15 days impose blocking sanctions on three or more of thirteen named institutions — including Sberbank, VTB, Gazprombank, Promsvyazbank, and the Central Bank of the Russian Federation — and must periodically list and sanction additional significant Russian-government-owned financial institutions.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 307 — Rosatom Sanctions",
+          "items": [
+            {
+              "main": "Sanctions Russia's state nuclear company and its partners, with a medical-isotope waiver.",
+              "detail": "Requires sanctions on Rosatom, its subsidiaries, and foreign persons engaged in significant nuclear-reactor-construction transactions with Rosatom, but lets the President waive them for transactions necessary to produce medical or industrial isotopes if domestic supply is insufficient and the U.S. is taking steps to build non-Rosatom supply chains.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 314 — Duties on the Russian Federation",
+          "items": [
+            {
+              "main": "Imposes tariffs of at least 500% on all imports from Russia after a trigger determination.",
+              "detail": "Requires the President, within 15 days of an affirmative determination, to raise the duty on all goods and services imported from Russia to a rate of not less than 500 percent ad valorem, and to report within 60 days on the impact of the tariffs.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 316 — Taxing Capital Gains on Russian Sovereign Assets",
+          "items": [
+            {
+              "main": "Taxes income from frozen Russian and Belarusian state assets at 100 percent.",
+              "detail": "Within 15 days of an affirmative determination, imposes a tax equal to 100 percent of the 'disqualified income' (interest or dividends on blocked assets) of the Russian and Belarusian governments, with 100 percent withholding, applied notwithstanding any U.S. treaty obligation. The revenue flows into the Ukraine Reconstruction Trust Fund.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 321 — Congressional Review of Russia Sanctions",
+          "items": [
+            {
+              "main": "Blocks the President from easing Russia sanctions without congressional review.",
+              "detail": "Before terminating, waiving, or significantly altering Russia sanctions (under this Act or a list of named executive orders), the President must report to Congress and observe a 30-day review period during which the action cannot take effect unless a joint resolution of approval is enacted; a joint resolution of disapproval can block the action, with expedited procedures in both chambers.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "official_title": "Making further continuing appropriations and other extensions for the fiscal year ending September 30, 2025, and for other purposes.",
+      "code": "HR.1968",
+      "date": "2025-03-15",
+      "stageDate": "2025-03-15",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Cole, Tom (R-OK)",
+      "sponsor_bioguide": "C001053",
+      "cosponsors": 0,
+      "pages": 39,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Enacted as Public Law 119-4 on March 15, 2025. This was the full-year measure that funded the federal government for the rest of fiscal year 2025 and averted a shutdown after the prior stopgap expired.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-03-14",
+          "question": "On Passage of the Bill H.R. 1968",
+          "result": "Bill Passed",
+          "yeas": 54,
+          "nays": 46,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 3
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-03-14",
+          "question": "On the Cloture Motion H.R. 1968",
+          "result": "Cloture Motion Agreed to",
+          "yeas": 62,
+          "nays": 38,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 11
+        },
+        {
+          "chamber": "House",
+          "date": "2025-03-11",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 217,
+          "nays": 213,
+          "present": 0,
+          "notVoting": 2,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "House",
+          "date": "2025-03-11",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 213,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "summary": "Funds the federal government for the rest of fiscal year 2025 (through September 30, 2025) by continuing fiscal year 2024 appropriations, but with the Department of Defense funded at new line-item levels and given added flexibility while most nondefense agencies stay at prior-year amounts. It also extends a set of expiring health programs — community health centers, telehealth, and several Medicare and Medicaid provisions — and a handful of other authorities.",
+      "brief": "Full-year stopgap funding the government through September 30, 2025: continues FY2024 levels, sets new defense amounts, and extends expiring health programs.",
+      "top_lines": [
+        {
+          "headline": "Full-Year Funding Through September 30, 2025",
+          "billSection": "1101",
+          "subs": [
+            "Continues fiscal year 2024 appropriations for most of the government for the rest of FY2025",
+            "Funds run through September 30, 2025, replacing the expiring short-term stopgap",
+            "Strips out the earmarks (community project funding) that were carried in the FY2024 bills"
+          ]
+        },
+        {
+          "headline": "Defense Funded in Full; Nondefense Held Flat",
+          "billSection": "1401",
+          "subs": [
+            "Sets specific, account-by-account funding levels for the Department of Defense rather than simply continuing prior-year amounts",
+            "Most nondefense agencies remain at FY2024 levels, an effective cut after inflation",
+            "Requires agencies to submit detailed FY2025 spending plans and OMB to report monthly on obligations"
+          ]
+        },
+        {
+          "headline": "Health Program Extensions",
+          "billSection": "2101",
+          "subs": [
+            "Extends funding for community health centers, the National Health Service Corps, and teaching health centers through September 30, 2025",
+            "Extends Medicare telehealth flexibilities and hospital-at-home authority and delays Medicaid DSH payment cuts",
+            "Extends the temporary scheduling order for fentanyl-related substances through September 30, 2025"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1101 — Continuing Appropriations",
+          "items": [
+            {
+              "main": "Continues fiscal year 2024 funding levels, authorities, and conditions for most of the government.",
+              "detail": "Appropriates, for the listed FY2024 appropriations Acts, the same amounts and under the same authorities and conditions, for projects and activities not otherwise specifically provided for. It applies to all twelve appropriations subcommittees' bills, subject to specific exceptions and dollar substitutions ('anomalies') spelled out account by account.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1106 — Period of Availability",
+          "items": [
+            {
+              "main": "Sets the funding to run through the end of fiscal year 2025.",
+              "detail": "Unless otherwise provided, appropriations and authority under the division are available through September 30, 2025.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1111 — Earmarks",
+          "items": [
+            {
+              "main": "Nullifies the earmarks that were attached to the FY2024 appropriations.",
+              "detail": "Provides that any language specifying an earmark in an FY2024 appropriations Act, or in an accompanying committee report or joint explanatory statement, has no legal effect for funds appropriated by the division. 'Earmark' is defined by reference to House Rule XXI and Senate Rule XLIV (congressional earmarks, community project funding, congressionally directed spending).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1113 — Spending Plans",
+          "items": [
+            {
+              "main": "Requires departments and agencies to submit detailed FY2025 operating plans.",
+              "detail": "Within 45 days of enactment, each of the listed departments and agencies must submit to the Appropriations Committees a spending, expenditure, or operating plan at the program, project, or activity level (or, for foreign assistance, by country and program). Section 1114 separately requires OMB to report monthly, from May 15 through November 1, 2025, on obligations by account compared to the same period in FY2024.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1401 — Department of Defense Levels",
+          "items": [
+            {
+              "main": "Sets specific dollar levels for Defense accounts instead of simply continuing prior-year funding.",
+              "detail": "Notwithstanding the general continuing-appropriations rule, the division specifies funding account by account for the Department of Defense — for example, $51.18B for Military Personnel, Army and $73.66B for Operation and Maintenance, Navy — and provides new line-item procurement and research figures. This gives the Pentagon updated amounts and reprogramming room that the rest of the government, held at FY2024 levels, does not get.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2101 — Community Health Center and Workforce Extensions",
+          "items": [
+            {
+              "main": "Extends mandatory funding for community health centers and related workforce programs through September 30, 2025.",
+              "detail": "Amends the Affordable Care Act and Public Health Service Act to add $2.14B for community health centers, $172.97M for the National Health Service Corps, and $87.74M for teaching health centers that operate graduate medical education programs, each for the period April 1 through September 30, 2025.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2102 — Special Diabetes Programs",
+          "items": [
+            {
+              "main": "Extends the Special Diabetes Program and the Special Diabetes Program for Indians.",
+              "detail": "Adds $79.83M for each program for the period April 1 through September 30, 2025, to remain available until expended.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2207 — Medicare Telehealth Flexibilities",
+          "items": [
+            {
+              "main": "Extends the pandemic-era Medicare telehealth flexibilities by six months.",
+              "detail": "Pushes the expiration of multiple telehealth provisions in the Social Security Act from March 31, 2025 to September 30, 2025 — including the removal of geographic and originating-site restrictions, the expanded list of eligible practitioners, audio-only services, telehealth for federally qualified health centers and rural health clinics, and the delay of in-person requirements for tele-mental-health.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2210 — Medicare Improvement Fund",
+          "items": [
+            {
+              "main": "Increases the Medicare Improvement Fund balance.",
+              "detail": "Amends section 1898(b)(1) of the Social Security Act to change the fund amount from $1.25B to $1.8B.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2401 — Delaying Medicaid DSH Reductions",
+          "items": [
+            {
+              "main": "Delays scheduled cuts to Medicaid Disproportionate Share Hospital payments.",
+              "detail": "Amends section 1923(f)(7)(A) of the Social Security Act to remove the reduction for the April 1 through September 30, 2025 period and to extend the schedule of reductions through fiscal year 2028 instead of 2027.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3105 — Fentanyl-Related Substances",
+          "items": [
+            {
+              "main": "Extends the temporary class-wide scheduling of fentanyl-related substances.",
+              "detail": "Amends the Temporary Reauthorization and Study of the Emergency Scheduling of Fentanyl Analogues Act to push the order's expiration from March 31, 2025 to September 30, 2025.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3106 — Budgetary Effects",
+          "items": [
+            {
+              "main": "Exempts the health and other-matters divisions from PAYGO scorecards.",
+              "detail": "Provides that the budgetary effects of divisions B and C are not entered on the statutory or Senate PAYGO scorecards.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-8029",
+      "title": "Pay Our Homeland Defenders Act",
+      "official_title": "Making appropriations for the Department of Homeland Security for the fiscal year ending September 30, 2026, and for other purposes.",
+      "code": "HR.8029",
+      "date": "2026-04-02",
+      "stageDate": "2026-04-02",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Ciscomani, Juan (R-AZ)",
+      "sponsor_bioguide": "C001133",
+      "cosponsors": 0,
+      "pages": 48,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 45,
+      "likelihoodReason": "Passed the House and was received in the Senate. Sponsored by Rep. Ciscomani (R-AZ). It pairs full-year Homeland Security funding with provisions to cover a funding lapse and pay employees, which creates pressure to act, but full-year DHS appropriations are contentious over immigration enforcement and it still needs 60 votes in the Senate.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-26",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 218,
+          "nays": 206,
+          "present": 0,
+          "notVoting": 8,
+          "crossoverCount": 4
+        },
+        {
+          "chamber": "House",
+          "date": "2026-03-26",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 210,
+          "nays": 215,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "summary": "Provides full-year fiscal year 2026 funding for the Department of Homeland Security — including Customs and Border Protection, Immigration and Customs Enforcement, and the TSA — and, in a second division, retroactively covers a lapse in appropriations that began around February 13, 2026 and makes the pay and benefits of affected employees available, effectively reopening the government and authorizing back pay.",
+      "brief": "Full-year DHS funding for FY2026 plus a division that covers a February 2026 funding lapse and pays affected employees.",
+      "top_lines": [
+        {
+          "headline": "Full-Year Homeland Security Funding",
+          "billSection": "II",
+          "subs": [
+            "Funds Customs and Border Protection operations at $17.73B and ICE operations at $10.04B",
+            "Funds the Transportation Security Administration at $10.64B (about $7.6B from the general fund after security fees)",
+            "Covers the Department through the end of fiscal year 2026"
+          ]
+        },
+        {
+          "headline": "Covers a Funding Lapse and Back Pay",
+          "billSection": "1001",
+          "subs": [
+            "Treats the period of the appropriations lapse that began around February 13, 2026 as covered by the FY2026 continuing resolution",
+            "Makes employee pay, allowances, and benefits available for payment under the Antideficiency Act's exception",
+            "Ratifies obligations incurred during the lapse to protect life and property"
+          ]
+        },
+        {
+          "headline": "Enforcement Funding and Controls",
+          "billSection": "503",
+          "subs": [
+            "Authorizes CBP to buy up to 7,500 police-type vehicles and ICE up to 3,790",
+            "Earmarks ICE funds for forced-child-labor enforcement, intellectual-property investigations, and child-rescue apprenticeships",
+            "Requires congressional notification before larger reprogrammings (over $5M or 10%) and most fund transfers"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Title II — Customs and Border Protection",
+          "items": [
+            {
+              "main": "Funds CBP operations and procurement for fiscal year 2026.",
+              "detail": "Appropriates $17.73B for CBP operations and support — covering air and marine support, transportation of unaccompanied minors, and up to 7,500 police-type vehicles (6,500 for replacement) — with $550M available through September 30, 2027, plus $222.89M for procurement, construction, and improvements.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Immigration and Customs Enforcement",
+          "items": [
+            {
+              "main": "Funds ICE operations and sets aside amounts for specific enforcement priorities.",
+              "detail": "Appropriates $10.04B for ICE operations and support (including up to 3,790 police-type vehicles), of which Homeland Security Investigations amounts include not less than $6M for enforcing laws against forced child labor, not less than $15M for intellectual-property-rights investigations, and $3M for child-rescue apprenticeships, plus $5M for procurement, construction, and improvements.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Transportation Security Administration",
+          "items": [
+            {
+              "main": "Funds the TSA, offset by aviation security fees.",
+              "detail": "Appropriates $10.64B for TSA operations and support, with security service fees credited as offsetting collections so that the net general-fund appropriation is estimated at not more than $7.61B for fiscal year 2026.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 503 — Reprogramming and Transfers",
+          "items": [
+            {
+              "main": "Sets limits and notification requirements on moving DHS funds between purposes.",
+              "detail": "Bars reprogrammings that create or eliminate programs, augment a program by more than $5M or 10 percent, or cut a program or personnel by 10 percent or more, unless the Appropriations Committees are notified 30 days in advance, and limits transfers between appropriations to 5 percent (and no more than a 10 percent increase to any account).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1001 — Coverage of the Appropriations Lapse",
+          "items": [
+            {
+              "main": "Retroactively treats a funding lapse as covered by the FY2026 continuing resolution.",
+              "detail": "Provides that, for purposes of the Continuing Appropriations Act, 2026 (division A of Public Law 119-37), the time covered includes the period beginning on or about February 13, 2026 during which a lapse in appropriations occurred.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1002 — Employee Pay",
+          "items": [
+            {
+              "main": "Makes pay, allowances, and benefits available to affected employees.",
+              "detail": "Provides that amounts under the FY2026 continuing resolution and the DHS appropriations in division A for personnel pay, allowances, and benefits are available for payments under the Antideficiency Act exception (31 U.S.C. 1341(c)), and that such payments shall be made.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 1003 — Ratification of Lapse Obligations",
+          "items": [
+            {
+              "main": "Ratifies obligations incurred during the lapse.",
+              "detail": "Ratifies and approves obligations incurred in anticipation of the FY2026 continuing resolution and division A for maintaining the essential level of activity to protect life and property and to bring about an orderly termination of government functions, if otherwise in accord with the applicable Act.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-8646",
+      "title": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2027",
+      "official_title": "Making appropriations for Agriculture, Rural Development, Food and Drug Administration, and Related Agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "code": "HR.8646",
+      "date": "2026-06-08",
+      "stageDate": "2026-06-08",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Harris, Andy (R-MD)",
+      "sponsor_bioguide": "H001052",
+      "cosponsors": 0,
+      "pages": 64,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 35,
+      "likelihoodReason": "Passed the House and was received in the Senate. This is one of the twelve annual appropriations bills; standalone House-passed appropriations bills typically are not taken up as-is by the Senate but instead get renegotiated and folded into a year-end package, and it would need 60 votes there.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-04",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 213,
+          "nays": 210,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 9
+        },
+        {
+          "chamber": "House",
+          "date": "2026-06-04",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 210,
+          "nays": 212,
+          "present": 0,
+          "notVoting": 8,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "summary": "Sets fiscal year 2027 funding for the Department of Agriculture, rural development programs, the Food and Drug Administration, and related agencies. The largest pieces are the domestic nutrition programs — SNAP, WIC, and child nutrition — which together account for most of the bill, alongside farm, research, conservation, and FDA accounts.",
+      "brief": "FY2027 funding for Agriculture, rural development, and the FDA, dominated by the SNAP, WIC, and child-nutrition programs.",
+      "top_lines": [
+        {
+          "headline": "Domestic Nutrition Programs",
+          "billSection": "IV",
+          "subs": [
+            "$101.24B for the Supplemental Nutrition Assistance Program (SNAP), including a $3B reserve",
+            "$8B for WIC and $37.9B for child nutrition programs",
+            "Sets the WIC fruit-and-vegetable cash voucher at 267% (children) and 428% (women) of the fiscal year 2020 amount"
+          ]
+        },
+        {
+          "headline": "Food and Drug Administration",
+          "billSection": "VI",
+          "subs": [
+            "$7.11B total for the FDA, including industry user fees",
+            "$1.28B for the Human Foods Program and $2.54B for the Center for Drug Evaluation and Research",
+            "Sets aside funds for unannounced foreign drug inspections and foreign seafood inspections"
+          ]
+        },
+        {
+          "headline": "Farm, Research, and Rural Programs",
+          "billSection": "I",
+          "subs": [
+            "Funds USDA departmental offices, the Agricultural Research Service ($1.8B), and farm and conservation programs",
+            "Funds rural development, foreign food assistance, and related agencies",
+            "Caps USDA's vehicle fleet at its 2018 size absent advance congressional approval"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Title I — Agricultural Programs and Research",
+          "items": [
+            {
+              "main": "Funds USDA departmental offices and research agencies.",
+              "detail": "Provides salaries and expenses for the Office of the Secretary and USDA management offices and funds the research mission area, including $1.8B for the Agricultural Research Service (with per-building construction and alteration limits) and $99.97M for the Office of Inspector General.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — Supplemental Nutrition Assistance Program",
+          "items": [
+            {
+              "main": "Funds SNAP, the largest single program in the bill.",
+              "detail": "Appropriates $101.24B to carry out the Food and Nutrition Act of 2008, of which $3B is placed in reserve (available through September 30, 2029) for use only as needed for program operations, and continues work-registration and program-integrity conditions.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — WIC",
+          "items": [
+            {
+              "main": "Funds the Special Supplemental Nutrition Program for Women, Infants, and Children.",
+              "detail": "Appropriates $8B for WIC through September 30, 2028, requires at least $90M for breastfeeding peer counselors, and directs that the fruit-and-vegetable cash-value voucher be set at 267 percent of the fiscal year 2020 amount for children and 428 percent for women.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — Child Nutrition Programs",
+          "items": [
+            {
+              "main": "Funds school meals and other child nutrition programs.",
+              "detail": "Appropriates $37.9B (available through September 30, 2028) to carry out the National School Lunch Act and Child Nutrition Act, including $18M to carry out section 19 of the Child Nutrition Act, $22.38M for studies and evaluations, and farm-to-school grants capped at $500,000 per recipient for fiscal year 2027.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — Commodity Assistance",
+          "items": [
+            {
+              "main": "Funds commodity and disaster food assistance.",
+              "detail": "Appropriates $546.07M, of which $460M is for the Commodity Supplemental Food Program, $75M for the Emergency Food Assistance Act, and $10M for the Farmers' Market Nutrition Program.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title VI — Food and Drug Administration",
+          "items": [
+            {
+              "main": "Funds the FDA, including amounts derived from industry user fees.",
+              "detail": "Appropriates $7.11B for FDA salaries and expenses, including $1.64B from prescription-drug user fees, $712M from tobacco product user fees, and other fee streams. Of the total, $1.28B is for the Human Foods Program, $2.54B for the Center for Drug Evaluation and Research (with at least $10M for pilots to increase unannounced foreign inspections), $985.57M for the Center for Devices and Radiological Health, and $687.12M for the Center for Tobacco Products.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 701 — Vehicle Fleet",
+          "items": [
+            {
+              "main": "Caps the USDA vehicle fleet at its 2018 level.",
+              "detail": "Allows the Secretary to purchase passenger vehicles only so long as the total purchased in fiscal year 2027 does not exceed the number owned or leased in fiscal year 2018, and bars increasing the fleet above the 2018 level without advance written approval from the Appropriations Committees.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
       },
       "budget_accounts": {}
     }
