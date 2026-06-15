@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T19:13:15.844Z",
+  "generated": "2026-06-15T19:24:43.580Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -12395,6 +12395,748 @@
           "Annual college disclosure of pregnant students' rights, accommodations, and resources (new subsection (n) of Higher Education Act Section 485)"
         ],
         "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-3857",
+      "title": "Snow Water Supply Forecasting Reauthorization Act of 2025",
+      "official_title": "To amend the Snow Water Supply Forecasting Program Authorization Act.",
+      "code": "HR.3857",
+      "date": "2026-06-10",
+      "stageDate": "2026-06-10",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hurd, Jeff (R-CO)",
+      "sponsor_bioguide": "H001100",
+      "cosponsors": 2,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 60,
+      "likelihoodReason": "Introduced by Rep. Hurd (R-CO) with Rep. Neguse (D-CO) and 2 cosponsors; passed the House and was ordered reported favorably by the Senate Energy and Natural Resources Committee. A bipartisan reauthorization of an existing water-data program tends to clear the Senate when floor time allows.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-10",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-15",
+      "summary": "Renews and updates the federal Snow Water Supply Forecasting Program through 2031, shifting its focus toward advanced snowpack measurement and modeling technologies.",
+      "brief": "Reauthorizes the Snow Water Supply Forecasting Program for fiscal years 2027-2031 and refocuses it on integrated snowpack measurement and modeling.",
+      "top_lines": [
+        {
+          "headline": "Program Reauthorization",
+          "billSection": "2",
+          "subs": [
+            "Reauthorizes appropriations for fiscal years 2027-2031",
+            "Replaces the prior aggregate fiscal year 2022-2026 authorization"
+          ]
+        },
+        {
+          "headline": "Technology Focus",
+          "billSection": "2",
+          "subs": [
+            "Emphasis on integrated snowpack measurement and modeling",
+            "Names airborne laser altimetry and imaging spectroscopy",
+            "Removes a prior interim report requirement"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Snow Water Supply Forecasting Program",
+          "items": [
+            {
+              "main": "Reauthorizes and updates the Snow Water Supply Forecasting Program (43 U.S.C. 1477) through fiscal year 2031.",
+              "detail": "Reauthorizes appropriations for each of fiscal years 2027 through 2031, replacing the prior aggregate authorization for fiscal years 2022 through 2026. Refocuses the program on deploying commercially available technologies that integrate snowpack measurement and modeling — including airborne laser altimetry, airborne imaging spectroscopy, and integrated physics-based snowpack and hydrologic modeling — and on real-time integration with water supply forecasts, including for interstate water management. Removes a prior interim report requirement.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill reauthorizes the program through 2031, but the annual funding amount is set in the underlying statute and is not changed here.",
+        "It emphasizes new measurement technologies but does not require the resulting data to be made publicly available."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Snow Water Supply Forecasting Program (43 U.S.C. 1477) reauthorized for fiscal years 2027-2031 and refocused on integrated snowpack measurement and modeling technologies"
+        ],
+        "removed": [
+          "A prior interim report requirement under the program"
+        ]
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2808",
+      "title": "Homebuyers Privacy Protection Act",
+      "official_title": "An Act to amend the Fair Credit Reporting Act to prevent consumer reporting agencies from furnishing consumer reports under certain circumstances, and for other purposes.",
+      "code": "HR.2808",
+      "date": "2025-09-05",
+      "stageDate": "2025-09-05",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Rose, John W. (R-TN)",
+      "sponsor_bioguide": "R000612",
+      "cosponsors": 89,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-36 on September 5, 2025. Passed the House on June 23, 2025 and the Senate on August 2, 2025.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-08-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-06-23",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Cracks down on mortgage 'trigger leads' by barring credit bureaus from selling a homebuyer's information to other lenders when the buyer applies for a mortgage, unless the buyer agreed or the lender already works with them.",
+      "brief": "Restricts credit bureaus from selling mortgage 'trigger leads' unless the consumer consented or the recipient already has a relationship with them.",
+      "top_lines": [
+        {
+          "headline": "Mortgage Trigger Leads",
+          "billSection": "2",
+          "subs": [
+            "Limits selling a mortgage applicant's credit data to other lenders",
+            "Allowed only with consumer consent or an existing relationship",
+            "Must be a firm offer of credit or insurance"
+          ]
+        },
+        {
+          "headline": "GAO Study",
+          "billSection": "4",
+          "subs": [
+            "GAO study on text-message trigger leads within 1 year"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Treatment of Prescreening Report Requests",
+          "items": [
+            {
+              "main": "Restricts when credit bureaus may sell a mortgage applicant's information as a 'trigger lead.'",
+              "detail": "Amends Section 604(c) of the Fair Credit Reporting Act (15 U.S.C. 1681b(c)). When someone requests a consumer report for a residential mortgage credit transaction, the credit bureau may not furnish that consumer's report to another person based on that request unless it is a firm offer of credit or insurance and the recipient either has the consumer's authorization or already has a relationship with them — having originated the consumer's current mortgage, servicing it, or being an insured depository institution or credit union holding a current account. Takes effect 180 days after enactment.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — GAO Study",
+          "items": [
+            {
+              "main": "Requires a GAO study on the value of trigger leads received by text message.",
+              "detail": "The Comptroller General must study the value of text-message trigger leads with input from state regulators, mortgage lenders, depository institutions, consumer reporting agencies, and consumers, and report to Congress within 12 months.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill restricts trigger leads for residential mortgages but does not address trigger leads for other credit products such as auto loans.",
+        "It allows trigger leads with consumer authorization but does not specify how that authorization must be obtained or documented."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "GAO study within one year on the value of text-message mortgage trigger leads"
+        ],
+        "modified": [
+          "Fair Credit Reporting Act (Section 604(c), 15 U.S.C. 1681b(c)) now bars mortgage trigger leads unless the consumer consented or the recipient has an existing relationship"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-S-260",
+      "title": "Bottles and Breastfeeding Equipment Screening Enhancement Act",
+      "official_title": "An Act to amend the Bottles and Breastfeeding Equipment Screening Act to require hygienic handling of breast milk and baby formula by security screening personnel of the Transportation Security Administration and personnel of private security companies providing security screening, and for other purposes.",
+      "code": "S.260",
+      "date": "2025-11-25",
+      "stageDate": "2025-11-25",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Duckworth, Tammy (D-IL)",
+      "sponsor_bioguide": "D000622",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-41 on November 25, 2025. Passed the Senate on May 14, 2025 and the House on November 17, 2025.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-11-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-05-14",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires the TSA to issue guidance for the hygienic handling of breast milk, baby formula, and related items during airport security re-screening, and orders an audit of how well it is followed.",
+      "brief": "Requires TSA guidance on hygienic handling of breast milk and baby formula during airport screening, plus an Inspector General audit.",
+      "top_lines": [
+        {
+          "headline": "Hygienic Screening of Infant Items",
+          "billSection": "3",
+          "subs": [
+            "TSA must issue hygienic-handling guidance within 90 days",
+            "Covers breast milk, baby formula, infant water, and juice",
+            "Applies to TSA and private screening personnel"
+          ]
+        },
+        {
+          "headline": "Compliance Audit",
+          "billSection": "4",
+          "subs": [
+            "DHS Inspector General audit of compliance within 1 year"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 3 — Hygienic Handling of Breast Milk and Baby Formula During Aviation Security Screening",
+          "items": [
+            {
+              "main": "Requires the TSA to issue guidance to minimize contamination of breast milk, baby formula, infant water, and juice during airport re-screening.",
+              "detail": "Adds Section 3 to the Bottles and Breastfeeding Equipment Screening Act (Public Law 114-293). Within 90 days of enactment, and every five years thereafter if appropriate, the TSA Administrator must issue or update guidance, developed with nationally recognized maternal health organizations, to minimize contamination risk for breast milk, baby formula, purified deionized water for infants, and juice (and the ice, freezer, and gel packs used to cool them) that is re-screened or subject to additional screening. The guidance applies to TSA screeners and private screening company personnel.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Inspector General Audit",
+          "items": [
+            {
+              "main": "Requires a DHS Inspector General audit of compliance within one year.",
+              "detail": "The DHS Inspector General must report to the House Homeland Security Committee and the Senate Commerce, Science, and Transportation Committee on compliance with the new requirements, including the effect of screening technologies such as bottled liquid scanners and the rate at which these items are denied entry into the sterile area.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires hygienic-handling guidance but leaves the specific contamination standards to the TSA rather than setting them in law.",
+        "It mandates an audit of compliance but specifies no consequence if screeners fail to follow the guidance."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "TSA hygienic-handling guidance for breast milk, baby formula, infant water, and juice during screening (new Section 3 of Public Law 114-293)",
+          "DHS Inspector General audit of compliance within one year (new Section 4)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-617",
+      "title": "American Music Tourism Act of 2025",
+      "official_title": "To amend the Visit America Act to promote music tourism, and for other purposes.",
+      "code": "HR.617",
+      "date": "2025-04-29",
+      "stageDate": "2025-04-29",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Harshbarger, Diana (R-TN)",
+      "sponsor_bioguide": "H001086",
+      "cosponsors": 10,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 58,
+      "likelihoodReason": "Introduced by Rep. Harshbarger (R-TN) with Rep. Barragan (D-CA) and 10 cosponsors; passed the House and was placed on the Senate Legislative Calendar. A low-cost, bipartisan addition to existing tourism-promotion duties has a reasonable path to Senate passage.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-04-28",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Adds promoting 'music tourism' to the duties of the Commerce Department's travel and tourism office, directing it to identify and promote U.S. music destinations and events.",
+      "brief": "Amends the Visit America Act to make promoting music tourism a duty of the Commerce travel and tourism office.",
+      "top_lines": [
+        {
+          "headline": "Music Tourism Promotion",
+          "billSection": "2",
+          "subs": [
+            "Commerce must identify and promote U.S. music destinations",
+            "Covers both domestic and international travel promotion",
+            "Defines 'music tourism' in law"
+          ]
+        },
+        {
+          "headline": "Reporting",
+          "billSection": "2",
+          "subs": [
+            "New report to Congress every 2 years on travel goals"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Responsibilities of the Assistant Secretary of Commerce for Travel and Tourism",
+          "items": [
+            {
+              "main": "Adds promoting music tourism to the duties of the Assistant Secretary of Commerce for Travel and Tourism.",
+              "detail": "Amends the Visit America Act (15 U.S.C. 9803, 9801). The Assistant Secretary must identify U.S. locations and events important to music tourism and promote both domestic and international travel to them, alongside existing duties for meetings, conferences, and rural and cultural destinations. Adds a report to the Senate Commerce and House Energy and Commerce Committees within one year and every two years thereafter, and defines 'music tourism' as traveling to visit music-related attractions such as museums, studios, and venues, or to attend music festivals, concerts, or other live musical events.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill directs promotion of music tourism but provides no dedicated funding for the new activities.",
+        "It defines music tourism and requires reports but sets no measurable target for increasing it."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "'Music tourism' promotion added to the Assistant Secretary of Commerce's travel duties; biennial report to Congress; statutory definition of 'music tourism' (Visit America Act, 15 U.S.C. 9803, 9801)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HJRES-133",
+      "title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026",
+      "official_title": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026.",
+      "code": "HJRES.133",
+      "date": "2025-12-02",
+      "stageDate": "2025-12-02",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Aderholt, Robert B. (R-AL)",
+      "sponsor_bioguide": "A000055",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-46 on December 2, 2025. Passed the House on November 18, 2025 and the Senate on November 20, 2025.",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-11-20",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
+        {
+          "chamber": "House",
+          "date": "2025-11-18",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "resolution",
+      "analyzedAt": "2026-06-15",
+      "summary": "Asks the Interior Department to allow special one-time displays of 250th-anniversary materials on the National Mall — including projections on the Washington Monument for five nights — around New Year's 2025-2026.",
+      "brief": "Requests the Interior Secretary authorize one-time 250th-anniversary displays on the National Mall and Washington Monument, December 31, 2025 to January 5, 2026.",
+      "top_lines": [
+        {
+          "headline": "250th Anniversary Displays",
+          "subs": [
+            "Requests Interior to allow National Mall displays",
+            "Includes 5 nights of projection on the Washington Monument",
+            "For the period December 31, 2025 to January 5, 2026"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Request to the Secretary of the Interior",
+          "items": [
+            {
+              "main": "Requests the Interior Secretary authorize unique, one-time displays of 250th-anniversary materials on and around the National Mall.",
+              "detail": "Congress requests that the Secretary of the Interior authorize one-time arrangements to display United States semiquincentennial materials, artifacts, digital content, and film footage in and around the National Mall — including projection onto the surface of the Washington Monument for five nights of public display — during the period December 31, 2025 to January 5, 2026, and requests that an enrolled copy be transmitted to the Secretary and the Chair of the United States Semiquincentennial Commission.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The resolution requests the displays but does not require the Interior Secretary to grant the request.",
+        "It authorizes a one-time event window but provides no funding for the displays."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-7084",
+      "title": "Defending American Property Abroad Act of 2026",
+      "official_title": "To amend title 46, United States Code, with respect to the types of vessels that may enter or operate in navigable waters of the United States or transfer cargo in any port or place under the jurisdiction of the United States, and for other purposes.",
+      "code": "HR.7084",
+      "date": "2026-04-02",
+      "stageDate": "2026-04-02",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Pfluger, August (R-TX)",
+      "sponsor_bioguide": "P000048",
+      "cosponsors": 7,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 55,
+      "likelihoodReason": "Introduced by Rep. Pfluger (R-TX) with a bipartisan group of cosponsors (including Reps. Carbajal and Sewell); passed the House. A targeted maritime measure aimed at protecting U.S.-owned port property has bipartisan support, though it has not yet received a Senate vote.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 247,
+          "nays": 164,
+          "present": 0,
+          "notVoting": 20,
+          "crossoverCount": 41
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Lets the President restrict ships from entering U.S. ports if they used a port in a Western Hemisphere free-trade partner country that seized port property owned by a U.S. company.",
+      "brief": "Allows the President to bar from U.S. ports vessels that used a Western Hemisphere free-trade-partner port expropriated from a U.S. owner.",
+      "top_lines": [
+        {
+          "headline": "Port Entry Restrictions",
+          "billSection": "2",
+          "subs": [
+            "President may designate expropriated foreign ports",
+            "Targets Western Hemisphere free-trade-partner countries",
+            "Vessels using designated ports restricted from U.S. ports"
+          ]
+        },
+        {
+          "headline": "Removal of Designation",
+          "billSection": "2",
+          "subs": [
+            "Designation lifted if the property is returned or compensated"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Condition for Entry into Ports in the United States",
+          "items": [
+            {
+              "main": "Lets the President designate foreign ports that expropriated U.S.-owned port property, restricting vessels that used them from entering U.S. ports.",
+              "detail": "Amends Section 70022 of title 46. The President may designate a port, harbor, or marine terminal in a Western Hemisphere country with a U.S. free trade agreement if that country nationalized or expropriated port property owned or controlled by a U.S. person and the port is accessible only through U.S.-person-controlled land. Vessels that transited a designated port become subject to the title's port-entry restriction. The President must remove a designation if the property is returned, adequate compensation is paid, the conditions no longer apply, or the dispute is otherwise resolved. Emergencies and owner-authorized transits are excepted.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill targets Western Hemisphere free-trade partners but does not address expropriated port property elsewhere in the world.",
+        "It excludes matters in pending free-trade-agreement arbitration but sets no deadline for resolving such disputes."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Presidential authority to designate Western Hemisphere free-trade-partner ports that expropriate U.S.-owned port property and restrict vessels using them from U.S. ports (Section 70022 of title 46)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-4307",
+      "title": "Enhancing Detection of Human Trafficking Act",
+      "official_title": "To direct the Secretary of Labor to train certain employees of Department of Labor how to effectively detect and assist law enforcement in preventing human trafficking during the course of their official duties, and for other purposes.",
+      "code": "HR.4307",
+      "date": "2026-03-04",
+      "stageDate": "2026-03-04",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Walberg, Tim (R-MI)",
+      "sponsor_bioguide": "W000798",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 60,
+      "likelihoodReason": "Introduced by Rep. Walberg (R-MI) with Rep. McBath (D-GA) and 3 cosponsors; passed the House. A bipartisan, low-cost training mandate on human-trafficking detection has a reasonable path through the Senate, though it has not yet received a vote there.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-03",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Directs the Labor Department to train relevant employees to spot human trafficking during their work and refer cases to law enforcement, and to report yearly to Congress.",
+      "brief": "Directs the Secretary of Labor to train relevant employees to detect human trafficking and refer cases, with annual reports to Congress.",
+      "top_lines": [
+        {
+          "headline": "Trafficking Detection Training",
+          "billSection": "3",
+          "subs": [
+            "Labor Department training program within 180 days",
+            "Targets employees whose duties relate to detection",
+            "Wage and Hour staff in high child-labor states prioritized"
+          ]
+        },
+        {
+          "headline": "Reporting",
+          "billSection": "4",
+          "subs": [
+            "Annual report on training and trafficking cases referred"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 3 — Training for Department Personnel to Identify Human Trafficking",
+          "items": [
+            {
+              "main": "Directs the Secretary of Labor to train relevant employees to detect human trafficking and refer cases.",
+              "detail": "Within 180 days of enactment, the Secretary of Labor must implement training and periodic continuing education for Department of Labor employees whose official duties warrant it. For Wage and Hour Division staff, the Secretary must consider employees in states with a significant increase in oppressive child labor (as defined in the Fair Labor Standards Act). Training covers detecting trafficking, identifying suspected victims and traffickers, and a clear path for referring cases to the Department of Justice and other authorities while protecting victims' rights. 'Human trafficking' is defined by reference to the Trafficking Victims Protection Act of 2000 (22 U.S.C. 7102).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Reports to Congress",
+          "items": [
+            {
+              "main": "Requires annual reports to Congress on the training and trafficking referrals.",
+              "detail": "Within one year of first implementing the program and annually after, the Secretary must report to the House Education and Workforce Committee and the Senate Committee on Health, Education, Labor, and Pensions on the training provided (including its effectiveness and the number of employees trained) and the number of trafficking-detection cases referred to the Department of Justice and other authorities.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill mandates trafficking-detection training but provides no dedicated funding for the program.",
+        "It requires referral of suspected cases to the Department of Justice but does not address what happens to workers identified as potential victims."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Department of Labor program to train relevant employees to detect human trafficking and refer cases (within 180 days)",
+          "Annual reports to Congress on the training and trafficking cases referred to the Department of Justice"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-S-616",
+      "title": "Foundation of the Federal Bar Association Charter Amendments Act of 2025",
+      "official_title": "An Act to amend title 36, United States Code, to revise the Federal charter for the Foundation of the Federal Bar Association.",
+      "code": "S.616",
+      "date": "2025-12-12",
+      "stageDate": "2025-12-12",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Kennedy, John (R-LA)",
+      "sponsor_bioguide": "K000393",
+      "cosponsors": 1,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-57 on December 12, 2025. Passed the Senate on April 30, 2025 and the House on December 1, 2025.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-01",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-04-30",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Modernizes the federal charter for the Foundation of the Federal Bar Association, moving governance details to its bylaws and updating standard nonprofit restrictions.",
+      "brief": "Revises the Title 36 federal charter of the Foundation of the Federal Bar Association.",
+      "top_lines": [
+        {
+          "headline": "Charter Modernization",
+          "billSection": "4",
+          "subs": [
+            "Governance and membership rules moved to the bylaws",
+            "Standard nonprofit restrictions updated",
+            "Principal office no longer fixed in D.C."
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 5 — Restrictions",
+          "items": [
+            {
+              "main": "Updates the restrictions on the Foundation, barring stock, dividends, political activity, lobbying, private inurement, and insider loans.",
+              "detail": "Rewrites Section 70507 of title 36. The corporation may not issue stock or pay dividends; may not use its funds or property for political activity or to influence legislation; may not let income or assets benefit a director, officer, or member (except reasonable compensation and expense reimbursement); may not make loans to insiders; members and individuals are not liable for its obligations; and it may not claim U.S. government approval or authority for its activities.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Governing Body",
+          "items": [
+            {
+              "main": "Makes the board of directors the governing body, with most details set in the bylaws.",
+              "detail": "Rewrites Section 70504 so the board of directors governs the corporation and may exercise its powers, with the board's responsibilities and the officers' election left to the bylaws. Related amendments move membership eligibility (Section 70503) to the bylaws, allow the principal office to be any U.S. location set by the board (Section 70508, previously the District of Columbia), and update the service-of-process and dissolution rules.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill modernizes the Foundation's charter but does not change its purpose or activities.",
+        "It moves governance details from federal law into the Foundation's bylaws, reducing what is fixed in statute."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Federal charter of the Foundation of the Federal Bar Association (title 36, chapter 705) revised — governance and membership moved to bylaws, nonprofit restrictions updated, principal office no longer fixed in D.C."
+        ],
         "removed": []
       },
       "budget_accounts": {}
