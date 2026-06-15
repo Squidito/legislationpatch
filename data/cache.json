@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T18:47:25.687Z",
+  "generated": "2026-06-15T18:58:27.707Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -11178,6 +11178,508 @@
         "modified": [
           "Firearms definition in Section 921(a) of title 18 now excludes 'less-than-lethal projectile devices'"
         ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-3692",
+      "title": "Captain Accursio “Gus” Sanfilippo Young Fishermen's Development Act",
+      "official_title": "To reauthorize the Young Fishermen's Development Act.",
+      "code": "HR.3692",
+      "date": "2026-03-04",
+      "stageDate": "2026-03-04",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Moulton, Seth (D-MA)",
+      "sponsor_bioguide": "M001196",
+      "cosponsors": 8,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 55,
+      "likelihoodReason": "Introduced by Rep. Moulton (D-MA) with 8 cosponsors from both parties; passed the House. As a straightforward reauthorization of an existing, modestly funded program, it faces little organized opposition, though it still needs Senate floor time.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-03",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "reauthorization",
+      "analyzedAt": "2026-06-15",
+      "referencedSources": [
+        {
+          "id": "usc-33-1144",
+          "kind": "statute",
+          "label": "33 U.S.C. 1144",
+          "citation": "33 U.S.C. 1144",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title33/granules/USCODE-2024-title33-chap22-subchapIII-sec1144/htm",
+          "textFile": "data/ref-text/usc-33-1144.txt",
+          "fetchedAt": "2026-06-15"
+        }
+      ],
+      "summary": "Extends the funding authorization for the Young Fishermen's Development program — a Sea Grant marine program — for five more years, through fiscal year 2031.",
+      "brief": "Reauthorizes the Young Fishermen's Development program's funding through fiscal year 2031.",
+      "top_lines": [
+        {
+          "headline": "Young Fishermen's Development Program",
+          "source": "usc-33-1144",
+          "subs": [
+            "A Sea Grant marine program under federal law",
+            "$2M per year authorized through fiscal year 2026"
+          ],
+          "billSection": "1"
+        },
+        {
+          "headline": "What This Bill Changes",
+          "billSection": "1",
+          "subs": [
+            "Extends the funding authorization through fiscal year 2031",
+            "Strikes '2026' and inserts '2031' in the program's funding section"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Young Fishermen's Development Act Reauthorization",
+          "items": [
+            {
+              "main": "Extends the Young Fishermen's Development program's funding authorization from fiscal year 2026 through fiscal year 2031.",
+              "detail": "Amends Section 5(a) of the Young Fishermen's Development Act (33 U.S.C. 1144(a)) by striking '2026' and inserting '2031.' Current law authorizes $2M per year for the program; the bill extends that authorization period by five years without changing the amount.",
+              "source": "usc-33-1144",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill extends the program's funding authorization but does not change the $2M annual amount or the program's activities.",
+        "It reauthorizes appropriations through fiscal year 2031 but does not itself appropriate any funds."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Young Fishermen's Development Act funding authorization extended from fiscal year 2026 to fiscal year 2031"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-S-4530",
+      "title": "A bill to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police",
+      "official_title": "An Act to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police.",
+      "code": "S.4530",
+      "date": "2026-05-29",
+      "stageDate": "2026-05-29",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. McConnell, Mitch (R-KY)",
+      "sponsor_bioguide": "M000355",
+      "cosponsors": 1,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 100,
+      "likelihoodReason": "Became Public Law 119-95 on May 29, 2026. Passed the Senate on May 14, 2026 and the House on May 19, 2026.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-19",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2026-05-14",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Lets the Capitol Police Board set the mandatory retirement age for Capitol Police officers anywhere from 57 to 62, instead of the fixed age of 60.",
+      "brief": "Replaces the fixed mandatory retirement age of 60 for the Capitol Police with a Board-set age between 57 and 62.",
+      "top_lines": [
+        {
+          "headline": "Capitol Police Retirement Age",
+          "billSection": "1",
+          "subs": [
+            "Mandatory retirement age changes from a fixed 60 to a Board-set 57-62",
+            "Applies under both the CSRS and FERS retirement systems"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Authorization To Increase Retirement Age for Member of the Capitol Police",
+          "items": [
+            {
+              "main": "Allows the Capitol Police Board to set the mandatory retirement age between 57 and 62, replacing the fixed age of 60.",
+              "detail": "Amends Section 8335(c) (Civil Service Retirement System) and Section 8425(c) (Federal Employees' Retirement System) of title 5 by striking 'becomes 60 years of age' and inserting an age determined by the Board that is not less than 57 and not more than 62 years of age.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill authorizes a Board-set retirement age but does not state what age the Board will choose or when.",
+        "It changes the mandatory separation age going forward but does not address officers who already separated at 60."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Capitol Police mandatory retirement age: fixed 60 -> Board-set, not less than 57 and not more than 62 (CSRS Section 8335(c) and FERS Section 8425(c) of title 5)"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-4495",
+      "title": "SBA Fraud Enforcement Extension Act",
+      "official_title": "To extend the statute of limitations for fraud under certain pandemic programs, and for other purposes.",
+      "code": "HR.4495",
+      "date": "2025-12-02",
+      "stageDate": "2025-12-02",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Downing, Troy (R-MT)",
+      "sponsor_bioguide": "D000634",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 60,
+      "likelihoodReason": "Sponsored by Rep. Downing (R-MT) with 2 cosponsors; passed the House and was placed on the Senate Legislative Calendar. Extending fraud-enforcement deadlines for pandemic programs is a low-controversy measure, which favors Senate passage.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-01",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Sets a 10-year deadline for prosecuting or pursuing fraud in two pandemic relief programs: the Shuttered Venue Operators Grants and the Restaurant Revitalization Fund.",
+      "brief": "Establishes a 10-year statute of limitations for fraud in the Shuttered Venue Operators Grant and Restaurant Revitalization Fund programs.",
+      "top_lines": [
+        {
+          "headline": "Pandemic Grant Fraud Deadline",
+          "billSection": "2",
+          "subs": [
+            "10-year statute of limitations for fraud in two pandemic grant programs",
+            "Covers Shuttered Venue Operators grants",
+            "Covers Restaurant Revitalization Fund grants"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Statute of Limitations for Certain Programs",
+          "items": [
+            {
+              "main": "Sets a 10-year statute of limitations for criminal prosecution or civil enforcement of fraud in two pandemic grant programs.",
+              "detail": "Adds a 10-year filing deadline (from the date of the violation or conspiracy) for specified fraud offenses under sections 371, 641, 1001, 1028A, 1029, 1341, 1343, 1349, 1956, and 1957 of title 18 and sections 3729 and 3802 of title 31. It applies to the Shuttered Venue Operators Grants (15 U.S.C. 9009a) and the Restaurant Revitalization Fund (15 U.S.C. 9009c).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The title refers broadly to 'SBA' fraud and 'certain pandemic programs,' but the bill addresses only the Shuttered Venue Operators and Restaurant Revitalization programs.",
+        "It extends the deadline to file fraud cases but does not change the penalties or the underlying grant programs."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "10-year statute of limitations for fraud in the Shuttered Venue Operators Grant program (15 U.S.C. 9009a)",
+          "10-year statute of limitations for fraud in the Restaurant Revitalization Fund (15 U.S.C. 9009c)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-2262",
+      "title": "Flexibility for Workers Education Act",
+      "official_title": "To amend the Fair Labor Standards Act of 1938 to exclude certain activities from hours worked, and for other purposes.",
+      "code": "HR.2262",
+      "date": "2026-01-13",
+      "stageDate": "2026-01-13",
+      "version": "v1.0",
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hinson, Ashley (R-IA)",
+      "sponsor_bioguide": "H001091",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 5,
+      "likelihoodReason": "Failed in the House on January 13, 2026 by a 209-215 vote. A failed floor vote ends the bill’s progress in this Congress.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-01-13",
+          "question": "On Passage",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 215,
+          "present": 0,
+          "notVoting": 7,
+          "crossoverCount": 6
+        },
+        {
+          "chamber": "House",
+          "date": "2026-01-13",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 213,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 0
+        }
+      ],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Says that time employees spend in voluntary, off-hours education or training does not count as paid 'hours worked' under federal wage law.",
+      "brief": "Amends the Fair Labor Standards Act so voluntary, off-the-clock education or training time is not counted as hours worked.",
+      "top_lines": [
+        {
+          "headline": "Off-Hours Training Not Paid Time",
+          "billSection": "2",
+          "subs": [
+            "Voluntary off-hours education or training excluded from 'hours worked'",
+            "Applies whether or not the employer offers the activity",
+            "Activity must be voluntary, with no productive work performed"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Treatment of Attendance or Participation in Certain Activities",
+          "items": [
+            {
+              "main": "Excludes voluntary, off-hours education or training time from 'hours worked' under the Fair Labor Standards Act.",
+              "detail": "Rewrites FLSA Section 3(o) (29 U.S.C. 203(o)). For minimum-wage and overtime purposes, time spent attending lectures, education or training programs, and similar activities is excluded from hours worked if it occurs outside regular working hours, is voluntary (with no adverse effect on employment for not attending), and involves no productive work for the employer. The existing exclusion for clothes-changing and washing under a collective-bargaining agreement is retained. The change applies to hours worked on or after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The exclusion depends on attendance being 'voluntary' and not affecting employment, but the bill does not specify how a worker disputes an employer's claim that training was voluntary.",
+        "It excludes the time from 'hours worked' for federal wage purposes but does not address state wage-and-hour laws."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "FLSA 'hours worked' (Section 3(o), 29 U.S.C. 203(o)) now also excludes voluntary off-hours education and training time"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-4366",
+      "title": "Save Local Business Act",
+      "official_title": "To clarify the treatment of 2 or more employers as joint employers under the National Labor Relations Act and the Fair Labor Standards Act of 1938.",
+      "code": "HR.4366",
+      "date": "2026-01-13",
+      "stageDate": "2026-01-13",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "On House Calendar",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Comer, James (R-KY)",
+      "sponsor_bioguide": "C001108",
+      "cosponsors": 2,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 30,
+      "likelihoodReason": "Sponsored by Rep. Comer (R-KY) with 2 cosponsors. The House adopted a rule (H. Res. 988) to consider the bill, but no passage vote has been recorded. The joint-employer standard is among the most contested issues in labor law; a narrow direct-control test would draw unified opposition from labor and Democratic members, making the 60 votes needed in the Senate difficult.",
+      "votes": [],
+      "billType": "amendment",
+      "analyzedAt": "2026-06-15",
+      "summary": "Narrows when two companies are treated as 'joint employers' under federal labor and wage laws, requiring direct, hands-on control over the workers.",
+      "brief": "Sets a 'direct, actual, and immediate control' test for joint-employer status under the National Labor Relations Act and the Fair Labor Standards Act.",
+      "top_lines": [
+        {
+          "headline": "Joint Employer Standard",
+          "billSection": "2",
+          "subs": [
+            "Joint-employer status requires direct, actual, immediate control",
+            "Control over hiring, firing, pay, supervision, scheduling, or discipline",
+            "Applies under both the NLRA and the FLSA"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Clarification of Joint Employment",
+          "items": [
+            {
+              "main": "Limits joint-employer status to employers that directly, actually, and immediately exercise significant control over another company's employees.",
+              "detail": "Amends the National Labor Relations Act (Section 2(2), 29 U.S.C. 152(2)) and the Fair Labor Standards Act (Section 3(d), 29 U.S.C. 203(d)). An employer is a joint employer only if each employer directly, actually, and immediately exercises significant control over essential terms and conditions of employment — such as hiring, discharging, setting pay and benefits, day-to-day supervision, assigning schedules or tasks, or discipline. The FLSA applies the same test using that Act's own definitions of 'employee' and 'employer.'",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill defines joint-employer status by direct control but does not name how franchise or staffing-agency relationships are treated.",
+        "It sets the standard for the NLRA and FLSA only and does not address joint-employer rules under other employment laws."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [],
+        "modified": [
+          "Joint-employer test under the NLRA (Section 2(2)) and FLSA (Section 3(d)) limited to employers with direct, actual, and immediate control over essential terms and conditions of employment"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-3657",
+      "title": "Hydropower Licensing Transparency Act",
+      "official_title": "To amend the Federal Power Act to require the Federal Energy Regulatory Commission to annually submit to Congress a report on the status of ongoing hydropower relicensing applications.",
+      "code": "HR.3657",
+      "date": "2026-06-10",
+      "stageDate": "2026-06-10",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Schrier, Kim (D-WA)",
+      "sponsor_bioguide": "S001216",
+      "cosponsors": 3,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 60,
+      "likelihoodReason": "Introduced by Rep. Schrier (D-WA) with Rep. Fulcher (R-ID) and 3 cosponsors; passed the House and was ordered reported favorably by the Senate Energy and Natural Resources Committee. A bipartisan reporting-transparency measure with no spending or regulatory mandate tends to clear the Senate when floor time allows.",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-07-14",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "billType": "study",
+      "analyzedAt": "2026-06-15",
+      "summary": "Requires federal energy regulators to send Congress an annual report on the status of hydropower dam relicensing applications that have been pending for years.",
+      "brief": "Requires FERC to submit an annual report to Congress on the status of long-pending hydropower relicensing applications.",
+      "top_lines": [
+        {
+          "headline": "Hydropower Relicensing Reports",
+          "billSection": "2",
+          "subs": [
+            "FERC must report annually on pending relicensing applications",
+            "Covers licenses where notice was given 3+ years earlier",
+            "First report due within 180 days of enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Annual Relicensing Status Report",
+          "items": [
+            {
+              "main": "Requires FERC to report to Congress every year on hydropower relicensing applications that remain pending after early notice.",
+              "detail": "Adds subsection (g) to Section 15 of the Federal Power Act (16 U.S.C. 808). Within 180 days of enactment and annually after, FERC must report on each new license where the existing licensee notified the Commission (under subsection (b)(1)) at least 3 years before the report that it intended to apply, but the new license has not yet been issued. Each report must include the notice date, any docket number, whether an application was filed, the status and anticipated issue date, upcoming proceedings, and any required actions by the licensee, FERC, and fish and wildlife agencies.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires annual status reports on delayed relicensing but sets no deadline for FERC to actually issue the licenses.",
+        "It requires reporting on applications pending 3+ years after notice but does not address applications where notice was given more recently."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Annual FERC report to Congress on the status of long-pending hydropower relicensing applications (new subsection (g) of Federal Power Act Section 15)"
+        ],
+        "modified": [],
         "removed": []
       },
       "budget_accounts": {}
