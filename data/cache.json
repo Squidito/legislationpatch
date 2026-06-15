@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-15T21:48:03.605Z",
+  "generated": "2026-06-15T22:03:53.784Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -17556,6 +17556,287 @@
             "added": [],
             "modified": [],
             "removed": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "119-HR-7006",
+      "isOmnibus": true,
+      "title": "Financial Services and General Government and National Security, State, and Related Programs Appropriations Act, 2026",
+      "official_title": "Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act, 2026",
+      "code": "HR.7006",
+      "date": "2026-01-12",
+      "stageDate": "2026-01-14",
+      "version": "Engrossed in House",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Cole, Tom (R-OK)",
+      "sponsor_bioguide": "C001053",
+      "cosponsors": 0,
+      "pages": 178,
+      "analyzed": true,
+      "demo": false,
+      "likelihood": 35,
+      "likelihoodReason": "Passed the House and was received in the Senate. This consolidated package bundles 2 of the 12 regular FY2026 appropriations bills (Financial Services and General Government; and National Security, State and Related Programs). Standalone House-passed appropriations bills of this kind are typically not taken up as-is by the Senate, where 60 votes are needed, but are renegotiated and folded into a later government-wide package.",
+      "billType": "appropriation",
+      "analyzedAt": "2026-06-15",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-01-14",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 341,
+          "nays": 79,
+          "present": 0,
+          "notVoting": 11,
+          "crossoverCount": 0
+        }
+      ],
+      "summary": "A consolidated House-passed appropriations package combining two of the twelve regular FY2026 bills: Financial Services and General Government (Division A) and National Security, Department of State, and Related Programs (Division B), plus a short Division C of other matters. It funds the Treasury and IRS, the federal courts, the District of Columbia and independent agencies on the domestic side, and the State Department, foreign assistance and security assistance on the international side.",
+      "brief": "Full-year FY2026 funding for the Treasury/IRS, the federal Judiciary, independent financial agencies, the State Department and U.S. foreign assistance, bundled into one House-passed package.",
+      "top_lines": [
+        {
+          "headline": "Division A — Financial Services and General Government",
+          "billSection": "div-A",
+          "subs": [
+            "IRS across three accounts: Taxpayer Services $3.04B, Enforcement $5.0B, Technology and Operations Support $3.16B",
+            "Judiciary salaries and expenses $6.13B; GSA Federal Buildings Fund $9.69B",
+            "SEC $2.15B, fully fee-offset (no net general-fund cost)"
+          ]
+        },
+        {
+          "headline": "Division B — National Security, State, and Related Programs",
+          "billSection": "div-B",
+          "subs": [
+            "State Diplomatic Programs $9.36B; UN dues $1.39B; peacekeeping $1.23B",
+            "PEPFAR HIV/AIDS $5.88B; humanitarian assistance $5.4B; Global Health $3.53B",
+            "Foreign Military Financing $6.16B (Israel $3.3B); Economic Support/National Security Investment Programs $6.77B"
+          ]
+        },
+        {
+          "headline": "Division C — Other Matters",
+          "billSection": "div-C",
+          "subs": [
+            "Bars U.S. contributions to the UN Relief and Works Agency (UNRWA) through March 25, 2027"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Division A — Financial Services and General Government Appropriations Act, 2026",
+          "items": [
+            {
+              "main": "Full-year FY2026 budgets for the Treasury and IRS, the federal courts, the District of Columbia, the Executive Office of the President, and independent financial and small-business agencies.",
+              "detail": "The IRS is funded across three separate accounts: Taxpayer Services $3.04B, Enforcement $5.0B, and Technology and Operations Support $3.16B. The Judiciary’s main account is $6.13B. The GSA Federal Buildings Fund aggregate is $9.69B. The SEC ($2.15B) is fully offset by transaction fees, leaving essentially no net cost.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division B — National Security, Department of State, and Related Programs Appropriations Act, 2026",
+          "items": [
+            {
+              "main": "Full-year FY2026 funding for the State Department, embassy security, global health and humanitarian aid, and security assistance.",
+              "detail": "State Diplomatic Programs are $9.36B; UN dues $1.39B and peacekeeping $1.23B. HIV/AIDS programs (PEPFAR) are $5.88B (including $1.25B to the Global Fund); humanitarian assistance $5.4B; Global Health Programs $3.53B. Foreign Military Financing is $6.16B, of which at least $3.3B is for Israel. The former Economic Support Fund, renamed National Security Investment Programs, is $6.77B.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division C — Other Matters",
+          "items": [
+            {
+              "main": "A single funding limitation on U.S. payments to the UN Relief and Works Agency.",
+              "detail": "Division C bars funds appropriated by Division B or other State-foreign-operations laws from being used for any contribution, grant or payment to the United Nations Relief and Works Agency (UNRWA) for prior years and FY2026, and through March 25, 2027 for FY2027 amounts.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        "The SEC’s $2.15B is fully offset by section 31 transaction fees, so its net draw on the general fund is reduced to essentially zero; the Small Business Administration’s $16.5B and $35.5B figures are loan-guarantee ceilings, not appropriations.",
+        "Two of the largest dollar figures in Division B — $3.2B for the World Bank’s 21st IDA replenishment and $7.8B for a callable-capital subscription — are authorizations that require separate future appropriations, not money provided by this bill."
+      ],
+      "criticisms": [
+        "Division C bars any U.S. contribution to UNRWA through March 25, 2027, and Division B carries extensive country- and organization-specific conditions on foreign assistance.",
+        "Account-level allocations beneath the headline totals are largely delegated to the explanatory statement printed in the Congressional Record rather than written into the bill text."
+      ],
+      "gaps": [
+        "The bill text states lump-sum account totals but leaves most program- and country-level allocations to the accompanying explanatory statement, so the public bill does not itemize how the totals are distributed."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Full-year FY2026 budgets for Financial Services/General Government and for State-Foreign Operations",
+          "New \"America First Opportunity Fund\" drawn from portions of existing foreign-assistance accounts"
+        ],
+        "modified": [
+          "Economic Support Fund renamed \"National Security Investment Programs\" ($6.77B)"
+        ],
+        "removed": [
+          "Bars U.S. contributions to the UN Relief and Works Agency (UNRWA) through March 25, 2027"
+        ]
+      },
+      "divisions": [
+        {
+          "label": "Division A — Financial Services and General Government Appropriations Act, 2026",
+          "divisionKey": "div-A",
+          "brief": "Full-year FY2026 funding for the Treasury Department and IRS, the federal Judiciary, the District of Columbia, the Executive Office of the President, and independent financial-regulatory and small-business agencies.",
+          "summary": "Division A is one of the twelve regular annual appropriations bills, covering the Treasury Department (including the IRS), the Executive Office of the President, the federal courts, the District of Columbia, and a set of independent agencies such as the SEC, the GSA, the Small Business Administration and the FCC. The largest single line is the General Services Administration’s Federal Buildings Fund; the IRS is funded across three separate accounts; and the SEC and Patent-style fee agencies are written to draw on collections rather than the general fund.",
+          "top_lines": [
+            {
+              "headline": "Internal Revenue Service",
+              "subs": [
+                "Taxpayer Services: $3.04B",
+                "Enforcement: $5.0B",
+                "Technology and Operations Support: $3.16B"
+              ]
+            },
+            {
+              "headline": "The Judiciary",
+              "subs": [
+                "Courts of Appeals, District Courts and Other Judicial Services (salaries and expenses): $6.13B",
+                "Defender Services: $1.77B"
+              ]
+            },
+            {
+              "headline": "General Services Administration and independent agencies",
+              "subs": [
+                "Federal Buildings Fund (aggregate activity): $9.69B — rental of space $5.57B, building operations $3.01B",
+                "Securities and Exchange Commission: $2.15B, fully offset by transaction fees (no net general-fund cost)",
+                "Small Business Administration disaster loans: $282M (business-loan guarantee ceilings excluded)"
+              ]
+            }
+          ],
+          "sections": [
+            {
+              "label": "Treasury, IRS and the Executive Office of the President",
+              "items": [
+                {
+                  "main": "Funds the Treasury Department and a three-account IRS, plus the White House and Executive Office of the President.",
+                  "detail": "The IRS is funded through three accounts: $3.04B for Taxpayer Services, $5.0B for Enforcement, and $3.16B for Technology and Operations Support. Treasury Departmental Offices receive $287.58M, and the Office of Terrorism and Financial Intelligence $237.66M. The bill funds the Executive Office of the President and related offices in Title II.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "The Judiciary, the District of Columbia and independent agencies",
+              "items": [
+                {
+                  "main": "Pays for the federal courts, federal-payment support to the District of Columbia, and independent regulators and agencies.",
+                  "detail": "The courts’ main Salaries and Expenses account is $6.13B, with Defender Services at $1.77B. The General Services Administration’s Federal Buildings Fund is set at an aggregate $9.69B (including $5.57B for rental of space and $3.01B for building operations). The Securities and Exchange Commission is funded at $2.15B but offset entirely by section 31 transaction fees, leaving essentially no net draw on the general fund. The Small Business Administration’s business-loan guarantee authority is set by ceiling rather than appropriation; its disaster-loan account is $282M.",
+                  "comments": []
+                }
+              ]
+            }
+          ],
+          "underreported": [
+            "The Securities and Exchange Commission’s $2.15B is fully offset by section 31 transaction fees, so the headline figure overstates its cost — the bill provides that the net general-fund appropriation is reduced to essentially zero as fees come in.",
+            "The Small Business Administration’s large dollar figures ($16.5B and $35.5B) are loan and guarantee commitment ceilings, not money appropriated; the actual SBA appropriations (disaster loans $282M, loan administration $158M) are far smaller."
+          ],
+          "criticisms": [
+            "IRS Enforcement is funded at $5.0B in annual appropriations, separate from the multi-year IRS funding provided in prior laws; the bill does not itself restore or rescind those separate balances."
+          ],
+          "gaps": [
+            "Account-by-account allocations below the headline totals are delegated to the explanatory statement printed in the Congressional Record, so the public bill text does not itemize how lump sums are distributed across programs."
+          ],
+          "featured_quotes": [],
+          "changes": {
+            "added": [
+              "Full-year FY2026 budgets for Treasury/IRS, the Judiciary, the District of Columbia and independent financial agencies",
+              "GSA Federal Buildings Fund aggregate activity of $9.69B"
+            ],
+            "modified": [],
+            "removed": []
+          }
+        },
+        {
+          "label": "Division B — National Security, Department of State, and Related Programs Appropriations Act, 2026",
+          "divisionKey": "div-B",
+          "brief": "Full-year FY2026 funding for the State Department, U.S. diplomacy and embassy security, global health and humanitarian aid, security assistance including Foreign Military Financing, and U.S. contributions to international organizations.",
+          "summary": "Division B is the State-Foreign Operations appropriations bill. It funds the day-to-day operations of the State Department and U.S. embassies, U.S. dues to the United Nations and other international organizations, global health programs including HIV/AIDS, humanitarian and refugee assistance, and security assistance such as Foreign Military Financing. It carries extensive country-specific earmarks (notably for Israel and Jordan) and policy conditions, and renames the former Economic Support Fund as “National Security Investment Programs.”",
+          "top_lines": [
+            {
+              "headline": "State Department operations and international organizations",
+              "subs": [
+                "Diplomatic Programs: $9.36B, including $3.76B for Worldwide Security Protection",
+                "Embassy security, construction and worldwide security upgrades: $1.20B",
+                "Contributions to International Organizations (UN dues): $1.39B",
+                "Contributions for International Peacekeeping Activities: $1.23B"
+              ]
+            },
+            {
+              "headline": "Global health and humanitarian assistance",
+              "subs": [
+                "HIV/AIDS (PEPFAR): $5.88B, including a $1.25B contribution to the Global Fund",
+                "Global Health Programs: $3.53B",
+                "International Humanitarian Assistance: $5.4B"
+              ]
+            },
+            {
+              "headline": "Economic and security assistance",
+              "subs": [
+                "National Security Investment Programs (the renamed Economic Support Fund): $6.77B",
+                "Foreign Military Financing: $6.16B, of which not less than $3.3B is for Israel",
+                "International Narcotics Control and Law Enforcement: $1.4B"
+              ]
+            }
+          ],
+          "sections": [
+            {
+              "label": "State Department, embassies and international organizations",
+              "items": [
+                {
+                  "main": "Funds U.S. diplomacy, embassy security and construction, and assessed dues to the UN and other bodies.",
+                  "detail": "Diplomatic Programs is the largest State account at $9.36B, of which up to $3.76B is for Worldwide Security Protection. A further $1.20B funds worldwide security upgrades, acquisition and embassy construction. The bill provides $1.39B for Contributions to International Organizations (chiefly assessed UN dues) and $1.23B for Contributions for International Peacekeeping Activities.",
+                  "comments": []
+                }
+              ]
+            },
+            {
+              "label": "Foreign assistance: health, humanitarian, economic and security",
+              "items": [
+                {
+                  "main": "Funds global health, humanitarian relief, economic-support and security-assistance programs, with extensive country earmarks.",
+                  "detail": "HIV/AIDS programs (PEPFAR) receive $5.88B, including a $1.25B contribution to the Global Fund to Fight AIDS, Tuberculosis and Malaria; Global Health Programs add $3.53B. International Humanitarian Assistance is $5.4B. The Economic Support Fund is renamed National Security Investment Programs and funded at $6.77B. Foreign Military Financing is $6.16B, of which not less than $3.3B is earmarked for grants to Israel and $1.65B is directed to Jordan across security and economic accounts. International Narcotics Control and Law Enforcement receives $1.4B, and the U.S. contribution to the World Bank’s International Development Association is $1.07B.",
+                  "comments": []
+                }
+              ]
+            }
+          ],
+          "underreported": [
+            "Two of the bill’s largest dollar figures are authorizations, not appropriations: it authorizes $3.2B for the World Bank’s 21st IDA replenishment and $7.8B for a U.S. callable-capital subscription to a development bank, both of which require separate future appropriations to take effect.",
+            "The Economic Support Fund — historically the main U.S. economic-aid account — is renamed “National Security Investment Programs” ($6.77B), and a new “America First Opportunity Fund” is created by consolidating portions of several existing accounts."
+          ],
+          "criticisms": [
+            "Division C bars any U.S. contribution, grant or payment to the United Nations Relief and Works Agency (UNRWA) for prior years and FY2026, and through March 25, 2027 for FY2027 funds.",
+            "Israel’s $3.3B in Foreign Military Financing must be disbursed within 30 days of enactment, a faster cash-flow than for most other recipients, and the bill conditions or restricts a range of other contributions through country- and organization-specific provisos."
+          ],
+          "gaps": [
+            "As with Division A, detailed allocations within each foreign-assistance account are set by the explanatory statement rather than the bill text, so the public bill does not itemize most country and program funding levels below the account headlines."
+          ],
+          "featured_quotes": [],
+          "changes": {
+            "added": [
+              "Full-year FY2026 funding for the State Department, diplomacy and foreign assistance",
+              "New \"America First Opportunity Fund\" assembled from portions of existing foreign-assistance accounts"
+            ],
+            "modified": [
+              "Economic Support Fund renamed \"National Security Investment Programs\" ($6.77B)"
+            ],
+            "removed": [
+              "Bars contributions to the UN Relief and Works Agency (UNRWA) through March 25, 2027 (Division C)"
+            ]
           }
         }
       ]
