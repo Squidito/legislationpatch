@@ -59,20 +59,61 @@ function readSource(id, refs) {
   return blocks;
 }
 
+// Collect every prose string carrying a checkable figure. Walks the top-level fields
+// AND every divisions[] block — omnibus bills (e.g. HR-6938's NASA $3.0B, which exists
+// ONLY in the division layer) would otherwise go entirely unchecked. underreported is
+// handled as either a string or {summary,why_unreported}.
 function proseSegments(b) {
   const seg = [];
   const push = (label, s) => { if (s && typeof s === 'string') seg.push({ label, s }); };
-  push('summary', b.summary); push('brief', b.brief);
-  (b.top_lines || []).forEach((t, i) => { push(`top_lines[${i}].headline`, t.headline); (t.subs || []).forEach((s, j) => push(`top_lines[${i}].subs[${j}]`, s)); });
-  (b.sections || []).forEach((s, i) => (s.items || []).forEach((it, j) => { push(`sections[${i}].items[${j}].main`, it.main); push(`sections[${i}].items[${j}].detail`, it.detail); }));
-  (b.underreported || []).forEach((u, i) => { push(`underreported[${i}].summary`, u.summary); push(`underreported[${i}].why_unreported`, u.why_unreported); });
-  (b.gaps || []).forEach((g, i) => push(`gaps[${i}]`, g));
-  const ch = b.changes || {};
-  ['added', 'modified', 'removed'].forEach(k => (ch[k] || []).forEach((x, i) => push(`changes.${k}[${i}]`, x)));
+  const walk = (o, p) => {
+    push(`${p}summary`, o.summary); push(`${p}brief`, o.brief);
+    (o.top_lines || []).forEach((t, i) => { push(`${p}top_lines[${i}].headline`, t.headline); (t.subs || []).forEach((s, j) => push(`${p}top_lines[${i}].subs[${j}]`, s)); });
+    (o.sections || []).forEach((s, i) => (s.items || []).forEach((it, j) => { push(`${p}sections[${i}].items[${j}].main`, it.main); push(`${p}sections[${i}].items[${j}].detail`, it.detail); }));
+    (o.underreported || []).forEach((u, i) => { if (typeof u === 'string') push(`${p}underreported[${i}]`, u); else { push(`${p}underreported[${i}].summary`, u.summary); push(`${p}underreported[${i}].why_unreported`, u.why_unreported); } });
+    (o.criticisms || []).forEach((c, i) => push(`${p}criticisms[${i}]`, c));
+    (o.gaps || []).forEach((g, i) => push(`${p}gaps[${i}]`, g));
+    const ch = o.changes || {};
+    ['added', 'modified', 'removed'].forEach(k => (ch[k] || []).forEach((x, i) => push(`${p}changes.${k}[${i}]`, x)));
+  };
+  walk(b, '');
+  (b.divisions || []).forEach(d => walk(d, `div[${d.divisionKey || d.label || '?'}].`));
   return seg;
 }
 
-// Find the source line that evidences a claim. Returns {tag, lineNo, text} or null.
+// A figure proves PRESENCE; it does not prove it belongs to the account the analysis
+// claims (the "right number, wrong account" class — e.g. $3.0B labelled a fake NASA
+// account when it is Safety/Security/Mission Services; or NFS↔Wildland-Fire swapped).
+// To let the reader check the BINDING, we surface the enclosing account heading.
+// In this corpus account headings are blank-line-delimited; body/proviso lines never
+// are. Agency + sub-account headings are stacked with only blanks between them, while
+// sibling accounts are separated by a body paragraph — so collecting the contiguous
+// heading stack yields "Agency › sub-account" and never grabs a neighbouring account.
+function looksLikeHeading(lines, i) {
+  const t = (lines[i] || '').trim();
+  if (!t) return false;
+  if (i > 0 && lines[i - 1].trim() !== '') return false; // headings sit under a blank line
+  if (/\$/.test(t)) return false;                         // carries a figure → appropriation/body
+  if (/[,:;]$/.test(t)) return false;                     // trailing separator → mid-sentence/proviso
+  if (/\.$/.test(t)) return false;                        // ends a sentence → body
+  if (/[;]/.test(t)) return false;                        // semicolon → body enumeration, never an account heading
+  if (/^[([]/.test(t)) return false;                      // "(including...", "[[Page ...]]"
+  if (/^(For\b|Provided\b|In addition\b|Notwithstanding\b|That\b|``)/i.test(t)) return false;
+  if (t.length > 70) return false;
+  return /[A-Za-z]/.test(t);
+}
+function enclosingHeading(lines, idx) {
+  let i = idx - 1;
+  while (i >= 0 && !looksLikeHeading(lines, i)) i--; // walk up through the appropriation body
+  const stack = [];
+  while (i >= 0 && looksLikeHeading(lines, i) && stack.length < 3) {
+    stack.unshift(lines[i].trim());
+    for (i--; i >= 0 && lines[i].trim() === ''; i--) { /* skip blanks to next heading */ }
+  }
+  return stack.join(' › ');
+}
+
+// Find the source line that evidences a claim. Returns {tag, lineNo, text, heading} or null.
 function findDollar(blocks, value) {
   for (const blk of blocks) {
     for (let i = 0; i < blk.lines.length; i++) {
@@ -80,7 +121,7 @@ function findDollar(blocks, value) {
       if (!m) continue;
       for (const tok of m) {
         const f = +tok.replace(/[$,]/g, '');
-        if (!isNaN(f) && Math.abs(f - value) <= Math.max(1, value * 0.006)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim() };
+        if (!isNaN(f) && Math.abs(f - value) <= Math.max(1, value * 0.006)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim(), heading: enclosingHeading(blk.lines, i) };
       }
     }
   }
@@ -91,7 +132,7 @@ function findPhrase(blocks, ...variants) {
   for (const blk of blocks) {
     for (let i = 0; i < blk.lines.length; i++) {
       const win = (blk.lines[i] + ' ' + (blk.lines[i + 1] || '')).replace(/\s+/g, ' ').toLowerCase();
-      for (const v of variants) if (win.includes(v)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim() };
+      for (const v of variants) if (win.includes(v)) return { tag: blk.tag, lineNo: i + 1, text: blk.lines[i].trim(), heading: enclosingHeading(blk.lines, i) };
     }
   }
   return null;
@@ -115,7 +156,7 @@ function verifyBill(b) {
     // dollars
     for (const tok of (s.match(/\$[0-9][0-9,.]*\s*(?:B|M|K)?/gi) || [])) {
       const key = 'D' + tok.trim(); if (seen.has(key)) continue; seen.add(key);
-      const v = shortToVal(tok.trim()); if (v == null) continue;
+      const v = shortToVal(tok.trim()); if (v == null || v === 0) continue; // "$0" = a net-cost characterization (fee-offset), not a sourceable appropriation line
       const ev = findDollar(blocks, v);
       claims.push({ kind: '$', token: tok.trim(), label, ev });
       if (!ev) flags.push({ kind: '$', token: tok.trim(), label, detail: `${tok.trim()} (${label})` });
@@ -156,14 +197,20 @@ function verifyBill(b) {
 
 const bills = cache.filter(b => b.analyzed && (!billArg || b.id === billArg));
 let totalFlags = 0, billsWithFlags = 0, totalAdjudicated = 0;
-console.log(`qa-source-verify — ${bills.length} bill(s). Claims are matched to QUOTED source lines; read them, do not diff against a prior run.\n`);
+console.log(`qa-source-verify — ${bills.length} bill(s). Claims are matched to QUOTED source lines; read them, do not diff against a prior run.`);
+if (QUOTE) console.log(`A ✓ proves the number is PRESENT, not that it belongs to the named account — check each "under account heading →" against the account the analysis attributes the figure to.`);
+console.log('');
 for (const b of bills) {
   const r = verifyBill(b);
   if (QUOTE) {
     console.log(`\n=== ${b.id} — ${b.title || ''} ===`);
     for (const c of r.claims) {
-      if (c.ev) console.log(`  ✓ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}\n        └ ${c.ev.tag}:${c.ev.lineNo}  ${c.ev.text.slice(0, 96)}`);
-      else console.log(`  ✗ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}  — NO SOURCE EVIDENCE`);
+      if (c.ev) {
+        console.log(`  ✓ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}\n        └ ${c.ev.tag}:${c.ev.lineNo}  ${c.ev.text.slice(0, 96)}`);
+        if (c.ev.heading) console.log(`          under account heading → ${c.ev.heading}   [does this match the account the analysis names?]`);
+      } else {
+        console.log(`  ✗ ${c.kind} ${String(c.token).padEnd(14)} ${c.label}  — NO SOURCE EVIDENCE`);
+      }
     }
   }
   const open = [], adjudicated = [];
