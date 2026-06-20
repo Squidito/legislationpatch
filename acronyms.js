@@ -31,6 +31,8 @@ const ACRONYMS = {
   IRS:   'Internal Revenue Service',
   CBP:   'Customs and Border Protection',
   ICE:   'Immigration and Customs Enforcement',
+  HSI:   'Homeland Security Investigations',
+  BIS:   'Bureau of Industry and Security',
   TSA:   'Transportation Security Administration',
   FEMA:  'Federal Emergency Management Agency',
   NIH:   'National Institutes of Health',
