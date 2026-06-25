@@ -272,6 +272,70 @@
       "path": "summary",
       "reason": "Computed total: sum of explicit appropriations line items $9.55B (Sec 101) + $7.45B (Sec 102) + $3.45B (Sec 103) + $2.5B (Sec 104) + $13.02B (Sec 201) + $31.075B (Sec 202) + $2.5B (Sec 203) = $69.545B -> $69.55B. The $108.5M and $350M are of-which subsets, excluded.",
       "verifiedAt": "2026-06-19"
+    },
+    {
+      "billId": "119-HR-4",
+      "kind": "$",
+      "token": "$7.90B",
+      "path": "summary",
+      "reason": "Computed sum of the 19 explicit rescission line items in Sec 2(b) (L38-155): $33.0M+$168.8M+$203.3M+$157.9M+$500M+$800M+$43M+$83M+$1.65B+$125M+$436.92M+$2.50B+$460M+$496M+$125M+$57M+$27M+$22M+$15M = $7,903,000,001. Re-derivable via: npm run facts -- --bill 119-HR-4 --sums",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "%",
+      "token": "0.9%",
+      "path": "top_lines[1].subs[1]",
+      "reason": "Bill L148 inserts ``0.9 in place of ``0.8 at 28 USC 1930(a)(6)(B)(ii)(II); the unit (percent of disbursements) is sourced to the fetched usc-28-1930 (which reads \"0.8 percent of disbursements\"). 0.9 is the new inserted value, present only in the bill text as a bare number.",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$60",
+      "path": "summary",
+      "reason": "Verifier source-side regex $[0-9][0-9,]{2,} cannot match sub-$100 amounts; $60 present in findings L67/75/80 (\"$60 per case\")",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$45",
+      "path": "top_lines[0].subs[1]",
+      "reason": "Sub-$100 regex limit; $45 present at L68 and L106 (striking ``$45)",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$15",
+      "path": "top_lines[0].subs[1]",
+      "reason": "Sub-$100 regex limit; $15 present at L68 (\"$15 from subsection 330(b)(2)\")",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$63.51",
+      "path": "sections[0].items[0].detail",
+      "reason": "Sub-$100 regex limit; $63.51 present at L115 (deposit to section 1931 fund)",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$25.00",
+      "path": "sections[0].items[0].detail",
+      "reason": "Sub-$100 regex limit; $25.00 present at L117 (Deficit Reduction Act of 2005 fund)",
+      "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3424",
+      "kind": "$",
+      "token": "$51.49",
+      "path": "sections[0].items[0].detail",
+      "reason": "Sub-$100 regex limit; $51.49 present at L120 and L128 (US Trustee System Fund)",
+      "verifiedAt": "2026-06-25"
     }
   ],
   "validateBatch": [
@@ -295,6 +359,13 @@
       "key": "Division B — Further Additional Continuing Appropriatio",
       "reason": "Division-prefixed label is intentional (continuing-appropriations division); no bt anchor exists for it",
       "verifiedAt": "2026-06-10"
+    },
+    {
+      "billId": "119-S-3424",
+      "check": "figure-sourcing",
+      "key": "0.9%",
+      "reason": "Bill L148 inserts ``0.9 at 28 USC 1930(a)(6)(B)(ii)(II); unit sourced to fetched usc-28-1930 (\"0.8 percent of disbursements\"). New inserted value, bare number in bill text.",
+      "verifiedAt": "2026-06-25"
     }
   ]
 }

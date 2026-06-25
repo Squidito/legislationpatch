@@ -17,6 +17,27 @@
   "district": 5,
   "voteHistory": [
     {
+      "billId": "119-HR-7401",
+      "billTitle": "Small Business Lending Fraud Prevention Act",
+      "chamber": "House",
+      "date": "2026-06-24",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-915",
+      "billTitle": "Small Business Technological Act of 2025",
+      "chamber": "House",
+      "date": "2026-06-24",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-629",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-06-23",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-8464",
       "billTitle": "Stopping Fraudulent Payments Act",
       "chamber": "House",
@@ -57,6 +78,13 @@
       "chamber": "House",
       "date": "2026-06-04",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-254",
+      "billTitle": "ARTIST Act",
+      "chamber": "House",
+      "date": "2026-06-03",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-2860",
@@ -381,6 +409,13 @@
       "vote": "No"
     },
     {
+      "billId": "119-HR-4",
+      "billTitle": "Rescissions Act of 2025",
+      "chamber": "House",
+      "date": "2025-06-12",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-S-331",
       "billTitle": "HALT Fentanyl Act",
       "chamber": "House",
@@ -435,6 +470,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-43",
+      "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
+      "chamber": "House",
+      "date": "2025-02-04",
+      "vote": "Yea"
     },
     {
       "billId": "119-S-5",
