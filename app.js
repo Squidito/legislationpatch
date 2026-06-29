@@ -880,8 +880,8 @@ function renderAll() {
   const filterBarHtml = `<div class="bill-filter-bar">
     <div class="filter-row" id="filtersMain">
       <button class="filter-btn${activeMainFilter === 'recent' ? ' active' : ''}" data-main="recent">Recently Updated</button>
-      <button class="filter-btn${activeMainFilter === 'pipeline' ? ' active' : ''}" data-main="pipeline">In the Pipeline</button>
       <button class="filter-btn${activeMainFilter === 'enacted' ? ' active' : ''}" data-main="enacted">Enacted</button>
+      <button class="filter-btn${activeMainFilter === 'pipeline' ? ' active' : ''}" data-main="pipeline">In the Pipeline</button>
       <button class="filter-btn${activeMainFilter === 'dead' ? ' active' : ''}" data-main="dead">Dead</button>
     </div>
   </div>`;
