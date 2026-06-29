@@ -510,14 +510,20 @@ function renderCarousel() {
     const repHref = q.bioguideId ? `rep?id=${q.bioguideId}&ref=bills` : null;
     const portraitInner = `
       <img class="shock-quote-portrait" src="${portrait}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" style="border:2px solid ${color}"/>
-      <div class="shock-quote-rep-text"><div class="shock-quote-name">${escHtml(q.name)}</div><div class="shock-quote-source">${escHtml(q.source||'')}</div></div>`;
+      <div class="shock-quote-rep-text"><div class="shock-quote-name">${escHtml(q.name)}</div><div class="shock-quote-source">${escHtml(quoteContext(q))}</div></div>`;
     const header = repHref
       ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`
       : `<div class="shock-quote-rep-link">${portraitInner}</div>`;
+    const quoteDate = quoteDateCompact(q);
+    const footer = quoteDate
+      ? `<div class="shock-quote-foot"><span class="shock-quote-foot-date">${escHtml(quoteDate)}</span></div>`
+      : '';
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="8.5" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
+      <span class="sq-corner sq-corner-tl"></span><span class="sq-corner sq-corner-tr"></span><span class="sq-corner sq-corner-bl"></span><span class="sq-corner sq-corner-br"></span>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
       <div class="shock-quote-header">${header}</div>
       <div class="shock-quote-text">"${escHtml(q.text)}"</div>
+      ${footer}
     </div>`;
   }).join('');
 

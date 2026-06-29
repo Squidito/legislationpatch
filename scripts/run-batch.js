@@ -152,6 +152,9 @@ if (needVotes.length > 0) {
 }
 
 run('Update rep profiles', ['scripts/generate_reps.js'], { optional: true });
+// Backfill chamber onto featured/standalone quotes from the (just-refreshed)
+// reps-index, so quoteTagline() can render "House/Senate floor …" consistently.
+run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], { optional: true });
 run('Regenerate sitemap', ['scripts/generate_sitemap.js'], { optional: true });
 run('Validate batch output', ['scripts/validate-batch.js']);
 

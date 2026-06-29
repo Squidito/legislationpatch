@@ -57,7 +57,8 @@
       "source": "Senate Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -68,7 +69,8 @@
       "source": "Senate Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HR-1",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -79,7 +81,8 @@
       "source": "Senate Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": "Directing the President to remove U.S. Armed Forces from hostilities with Iran"
+      "billTitle": "Directing the President to remove U.S. Armed Forces from hostilities with Iran",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -90,7 +93,8 @@
       "source": "Senate Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Pramila Jayapal",
@@ -101,7 +105,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Melanie Stansbury",
@@ -112,7 +117,8 @@
       "source": "House Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HR-6387",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Melanie Stansbury",
@@ -123,7 +129,8 @@
       "source": "House Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Tim Kennedy",
@@ -134,7 +141,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Tim Kennedy",
@@ -145,7 +153,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Gregory Meeks",
@@ -156,7 +165,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Keith Self",
@@ -167,7 +177,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "support",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Alexandria Ocasio-Cortez",
@@ -178,7 +189,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Chip Roy",
@@ -189,7 +201,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HR-1689",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Pressley",
@@ -200,7 +213,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "support",
       "billId": "119-HR-1689",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -211,7 +225,8 @@
       "source": "Senate Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -222,7 +237,8 @@
       "source": "Senate Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Dick Durbin",
@@ -233,7 +249,8 @@
       "source": "Senate Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-S-5",
-      "billTitle": "Laken Riley Act"
+      "billTitle": "Laken Riley Act",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Raul Grijalva",
@@ -244,7 +261,8 @@
       "source": "House Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HR-6398",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Seth Magaziner",
@@ -255,7 +273,8 @@
       "source": "House Floor, Apr 15, 2026",
       "stance": "neutral",
       "billId": "119-HCONRES-40",
-      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran."
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "chamber": "House"
     },
     {
       "name": "Rep. Paul Tonko",
@@ -266,7 +285,8 @@
       "source": "House Floor, Apr 15, 2026",
       "stance": "oppose",
       "billId": "119-HR-6409",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Rep. Jim Jordan",
@@ -277,7 +297,8 @@
       "source": "House Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HR-1689",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     },
     {
       "name": "Sen. Amy Klobuchar",
@@ -288,7 +309,8 @@
       "source": "Senate Floor, Apr 16, 2026",
       "stance": "oppose",
       "billId": "119-HCONRES-40",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -299,7 +321,8 @@
       "source": "Senate Floor, Apr 21, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -310,7 +333,8 @@
       "source": "Senate Floor, Apr 21, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -321,7 +345,8 @@
       "source": "Senate Floor, Apr 21, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -332,7 +357,8 @@
       "source": "Senate Floor, Apr 21, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -343,7 +369,8 @@
       "source": "Senate Floor, Apr 21, 2026",
       "stance": "oppose",
       "billId": "119-HR-1",
-      "billTitle": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14."
+      "billTitle": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -354,7 +381,8 @@
       "source": "Senate Floor, Apr 20, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -365,7 +393,8 @@
       "source": "Senate Floor, Apr 20, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -376,7 +405,8 @@
       "source": "Senate Floor, Apr 20, 2026",
       "stance": "oppose",
       "billId": "119-HR-7147",
-      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026"
+      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -387,7 +417,8 @@
       "source": "Senate Floor, Apr 20, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -398,7 +429,8 @@
       "source": "Senate Floor, Apr 20, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -409,7 +441,8 @@
       "source": "Senate Floor, Apr 17, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -420,7 +453,8 @@
       "source": "Senate Floor, Apr 17, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -431,7 +465,8 @@
       "source": "Senate Floor, Apr 17, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -442,7 +477,8 @@
       "source": "Senate Floor, Apr 17, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Ron Wyden",
@@ -453,7 +489,8 @@
       "source": "Senate Floor, Apr 17, 2026",
       "stance": "oppose",
       "billId": "119-HR-8322",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Josh Hawley",
@@ -464,7 +501,8 @@
       "source": "Senate Floor, Apr 2, 2026",
       "stance": "oppose",
       "billId": "119-HR-7147",
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -476,7 +514,8 @@
       "stance": "oppose",
       "billId": "119-HR-7148",
       "billTitle": "Consolidated Appropriations Act, 2026",
-      "granuleTitle": "U.S. SECRET SERVICE"
+      "granuleTitle": "U.S. SECRET SERVICE",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. John Thune",
@@ -488,7 +527,8 @@
       "stance": "neutral",
       "billId": null,
       "billTitle": null,
-      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' ASSOCIATION DINNER SHOOTING"
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' ASSOCIATION DINNER SHOOTING",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -500,7 +540,8 @@
       "stance": "oppose",
       "billId": "119-HR-7147",
       "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
-      "granuleTitle": "TRUMP ADMINISTRATION"
+      "granuleTitle": "TRUMP ADMINISTRATION",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Rashida Tlaib",
@@ -512,7 +553,8 @@
       "stance": "oppose",
       "billId": "119-HR-8322",
       "billTitle": null,
-      "granuleTitle": "OUR GOVERNMENT IS SPYING ON US"
+      "granuleTitle": "OUR GOVERNMENT IS SPYING ON US",
+      "chamber": "House"
     },
     {
       "name": "Rep. Seth Magaziner",
@@ -524,7 +566,8 @@
       "stance": "oppose",
       "billId": null,
       "billTitle": null,
-      "granuleTitle": "POWERFUL CORPORATIONS MUST PAY THEIR FAIR SHARE OF TAXES"
+      "granuleTitle": "POWERFUL CORPORATIONS MUST PAY THEIR FAIR SHARE OF TAXES",
+      "chamber": "House"
     },
     {
       "name": "Sen. Marsha Blackburn",
@@ -536,7 +579,8 @@
       "stance": "oppose",
       "billId": null,
       "billTitle": null,
-      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' DINNER SHOOTING"
+      "granuleTitle": "WHITE HOUSE CORRESPONDENTS' DINNER SHOOTING",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Chuck Edwards",
@@ -548,7 +592,8 @@
       "stance": "oppose",
       "billId": null,
       "billTitle": null,
-      "granuleTitle": "FUNDING DISASTER RELIEF"
+      "granuleTitle": "FUNDING DISASTER RELIEF",
+      "chamber": "House"
     },
     {
       "name": "Sen. John Thune",
@@ -560,7 +605,8 @@
       "stance": "oppose",
       "billId": "119-HR-7148",
       "billTitle": "Consolidated Appropriations Act, 2026",
-      "granuleTitle": "DEPARTMENT OF HOMELAND SECURITY"
+      "granuleTitle": "DEPARTMENT OF HOMELAND SECURITY",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -571,7 +617,8 @@
       "source": "Senate Floor, May 11, 2026",
       "stance": "oppose",
       "billId": "119-HR-7148",
-      "billTitle": "Consolidated Appropriations Act, 2026"
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. John Thune",
@@ -582,7 +629,8 @@
       "source": "Senate Floor, May 11, 2026",
       "stance": "support",
       "billId": "119-HR-7147",
-      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026"
+      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
+      "chamber": "Senate"
     },
     {
       "name": "Sen. Chuck Grassley",
@@ -593,7 +641,8 @@
       "source": "Senate Floor, May 12, 2026",
       "stance": "neutral",
       "billId": "119-HR-1",
-      "billTitle": "One Big Beautiful Bill Act"
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Rashida Tlaib",
@@ -604,7 +653,8 @@
       "source": "House Floor, May 14, 2026",
       "stance": "oppose",
       "billId": "119-HR-1",
-      "billTitle": "One Big Beautiful Bill Act"
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -615,7 +665,8 @@
       "source": "Senate Floor, May 14, 2026",
       "stance": "support",
       "billId": "119-S-1884",
-      "billTitle": "Holocaust Expropriated Art Recovery Act of 2025"
+      "billTitle": "Holocaust Expropriated Art Recovery Act of 2025",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Greg Stanton",
@@ -626,7 +677,8 @@
       "source": "House Floor, May 15, 2026",
       "stance": "oppose",
       "billId": "119-HR-1",
-      "billTitle": "One Big Beautiful Bill Act"
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House"
     },
     {
       "name": "Rep. Christian Menefee",
@@ -637,7 +689,8 @@
       "source": "House Floor, May 15, 2026",
       "stance": "support",
       "billId": "119-HR-6903",
-      "billTitle": "Ensuring Children Receive Support Act"
+      "billTitle": "Ensuring Children Receive Support Act",
+      "chamber": "House"
     },
     {
       "name": "Sen. Chuck Schumer",
@@ -648,7 +701,8 @@
       "source": "Senate Floor, May 19, 2026",
       "stance": "oppose",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "Senate"
     },
     {
       "name": "Sen. John Thune",
@@ -659,7 +713,8 @@
       "source": "Senate Floor, May 19, 2026",
       "stance": "support",
       "billId": "119-HR-1",
-      "billTitle": "One Big Beautiful Bill Act"
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "Senate"
     },
     {
       "name": "Rep. Hank Johnson",
@@ -670,7 +725,8 @@
       "source": "House Floor, May 19, 2026",
       "stance": "oppose",
       "billId": "119-HR-1",
-      "billTitle": "One Big Beautiful Bill Act"
+      "billTitle": "One Big Beautiful Bill Act",
+      "chamber": "House"
     },
     {
       "name": "Rep. Tracey Mann",
@@ -681,7 +737,8 @@
       "source": "House Floor, May 21, 2026",
       "stance": "support",
       "billId": null,
-      "billTitle": null
+      "billTitle": null,
+      "chamber": "House"
     }
   ]
 }

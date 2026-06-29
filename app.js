@@ -978,7 +978,7 @@ function renderSavedFloorQuote(q) {
       ${repHref
         ? `<a href="${repHref}" class="fav-quote-speaker">${escHtml(q.name)}</a>`
         : `<span class="fav-quote-speaker">${escHtml(q.name)}</span>`}
-      <span class="fav-quote-source">${escHtml(q.source)}</span>
+      <span class="fav-quote-source">${escHtml(quoteTagline(q))}</span>
       <button class="tracked-rep-untrack" data-key="${escHtml(key)}"
               onclick="removeSavedQuote(this.dataset.key)" title="Remove">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -1139,7 +1139,7 @@ function buildQuotePool() {
       quotes.push({
         name: q.name, party: q.party, state: q.state,
         bioguideId: q.bioguideId, text: q.text, stance: q.stance,
-        source: bill.date ? 'Floor, ' + formatDateCompact(bill.date) : '',
+        chamber: q.chamber || '',
         billId: bill.id, billTitle: bill.title,
         quoteDate: bill.date || '',
         shockScore: computeShockScore(q)
@@ -1235,18 +1235,26 @@ function renderShockQuotesSection() {
            style="border: 2px solid ${color}" />
       <div class="shock-quote-rep-text">
         <div class="shock-quote-name">${escHtml(q.name)}</div>
-        <div class="shock-quote-source">${escHtml(q.source || '')}</div>
+        <div class="shock-quote-source">${escHtml(quoteContext(q))}</div>
       </div>`;
 
     const headerArea = `<div class="shock-quote-rep-link">${portraitInner}</div>`;
 
     const quoteBody = `<div class="shock-quote-text">"${escHtml(q.text)}"</div>`;
-    const billFooter = billHref && q.billTitle
+    // Footer: bill title (truncates) on the left, date pinned right. Statement
+    // cards (no bill) drop the redundant "Floor Statement" text — the name-line
+    // context already says "… floor statement" — and show just the date.
+    const quoteDate = quoteDateCompact(q);
+    const billLabel = billHref && q.billTitle
       ? `<a href="${billHref}" class="shock-quote-bill shock-quote-bill--link">${escHtml(q.billTitle)}</a>`
-      : `<div class="shock-quote-bill">${q.billTitle ? escHtml(q.billTitle) : 'Floor Statement'}</div>`;
+      : (q.billTitle ? `<span class="shock-quote-bill">${escHtml(q.billTitle)}</span>` : '');
+    const billFooter = (billLabel || quoteDate)
+      ? `<div class="shock-quote-foot">${billLabel}${quoteDate ? `<span class="shock-quote-foot-date">${escHtml(quoteDate)}</span>` : ''}</div>`
+      : '';
 
     return `<div class="shock-quote-card${isFeatured ? ' is-featured' : ''}">
-      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="8.5" transform="rotate(-90 13 13)"/><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
+      <span class="sq-corner sq-corner-tl"></span><span class="sq-corner sq-corner-tr"></span><span class="sq-corner sq-corner-bl"></span><span class="sq-corner sq-corner-br"></span>
+      <svg class="sq-ring" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><line class="sq-x-line" x1="8" y1="8" x2="18" y2="18"/><line class="sq-x-line" x1="18" y1="8" x2="8" y2="18"/></svg>
       <div class="shock-quote-header">${headerArea}</div>
       ${quoteBody}
       ${billFooter}

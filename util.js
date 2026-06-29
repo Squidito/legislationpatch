@@ -49,6 +49,57 @@ function formatDate(dateStr) {
   return formatDateCompact(dateStr);
 }
 
+// ── Quote provenance taglines (web display) ───────────────────────────────
+// These build the small line under a speaker's name on quote cards. They are
+// web-display helpers shared between app.js (index carousel + favorites) and
+// floor.js (floor carousel) so the label is built ONE way everywhere; they are
+// not part of the mobile-mirrored parity contract above.
+
+// Chamber ("House" | "Senate" | "") from the best available signal: the stored
+// `chamber` field (backfilled by scripts/backfill_quote_chamber.js), then the
+// "Rep."/"Sen." name prefix, then a "House/Senate Floor" source prefix.
+function quoteChamber(q) {
+  if (q && q.chamber) return q.chamber;
+  const name = (q && q.name) || '';
+  if (/^\s*Sen\./i.test(name)) return 'Senate';
+  if (/^\s*Rep\./i.test(name)) return 'House';
+  const source = (q && q.source) || '';
+  if (/^\s*Senate\b/i.test(source)) return 'Senate';
+  if (/^\s*House\b/i.test(source))  return 'House';
+  return '';
+}
+
+// mm-dd-yy date for a quote — from a structured `quoteDate` (ISO) when present,
+// else parsed out of the free-text `source` string (long-form or already-compact).
+function quoteDateCompact(q) {
+  if (q && q.quoteDate) return formatDateCompact(q.quoteDate);
+  const source = String((q && q.source) || '');
+  const long = source.match(/[A-Z][a-z]{2,8}\.?\s+\d{1,2},\s+\d{4}/);
+  if (long) return formatDateCompact(long[0]);
+  const compact = source.match(/\d{2}-\d{2}-\d{2}/);
+  return compact ? compact[0] : '';
+}
+
+// Context label (no date): "{Chamber} floor {debate|statement}".
+//   debate    = the remark was made while a specific bill was on the floor (q.billId set)
+//   statement = a standalone floor remark not tied to a bill
+// Chamber is dropped to a plain "Floor" only when it can't be resolved.
+// The carousel cards show this on the name line and put the date in the footer.
+function quoteContext(q) {
+  const chamber = quoteChamber(q);
+  const venue   = chamber ? chamber + ' floor' : 'Floor';
+  const kind    = (q && q.billId) ? 'debate' : 'statement';
+  return venue + ' ' + kind;
+}
+
+// Full one-line tagline: "{context} · {mm-dd-yy}". Used where there's no footer
+// to carry the date (e.g. the favorites card).
+function quoteTagline(q) {
+  const ctx  = quoteContext(q);
+  const date = quoteDateCompact(q);
+  return date ? ctx + ' · ' + date : ctx;
+}
+
 // "Sen. Britt, Katie Boyd (R-AL)" -> "BRITT (R-AL)" — last name + party/state, caps.
 // Used for the compact sponsor/stats row on bill cards.
 // MIRRORED in mobile lib/format.ts as sponsorShort.
@@ -78,5 +129,5 @@ function sponsorShort(name) {
 
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { escHtml, formatDateCompact, formatDate, sponsorShort };
+  module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort };
 }

@@ -1639,14 +1639,27 @@ a:hover { text-decoration: underline; }
   -webkit-user-select: none;
   user-select: none;
 }
-.shock-quote-card::before {
+/* Hover bridges across the inter-card gap (track gap is 0.65rem). Two thin
+   strips that live ONLY in the gap — never over card content — so moving the
+   mouse card→card never drops :has(:hover) (which would collapse the row and
+   re-trigger the 500ms expand delay = the stutter). Each strip is 0.45rem so a
+   pair overlaps (0.9rem > 0.65rem gap) with no dead pixel, yet stays clear of
+   the neighbouring card's body, keeping links + acronym tooltips clickable.
+   Interactive on desktop hover only. */
+.shock-quote-card::before,
+.shock-quote-card::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -0.4rem;
-  right: -0.4rem;
+  width: 0.45rem;
   pointer-events: none;
+}
+.shock-quote-card::before { left: -0.45rem; }
+.shock-quote-card::after  { right: -0.45rem; }
+@media (hover: hover) and (pointer: fine) {
+  .shock-quote-card::before,
+  .shock-quote-card::after { pointer-events: auto; }
 }
 .shock-quotes-grid.dragging .shock-quote-card { cursor: grabbing; }
 .shock-quote-card.is-tracked {
@@ -1674,12 +1687,30 @@ a:hover { text-decoration: underline; }
 }
 .shock-quote-rep-text { min-width: 0; }
 .shock-quote-card > .shock-quote-text {
-  /* flex-GROW only (it's a flex item of the card column). Do NOT set display:flex
-     here — that would override the base display:-webkit-box, breaking line-clamp
-     and laying out injected acronym <span>s as horizontal flex items (the "2
+  /* Sizes to its own content (NOT flex:1) so the empty space on a short card
+     falls between the quote and the footer — the footer is pinned to the bottom
+     by `.shock-quote-foot { margin-top:auto }`. Do NOT set display:flex here —
+     that would override the base display:-webkit-box, breaking line-clamp and
+     laying out injected acronym <span>s as horizontal flex items (the "2
      columns" / gap bug on quotes containing acronyms like FISA/CRA/TPS). */
-  flex: 1;
   min-height: 5.5rem;
+}
+/* Footer row: bill title (truncates) on the left, date pinned right.
+   Floor-page carousel uses date only (no bill) — it still sits right. */
+.shock-quote-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: auto; /* pin to the card bottom; empty space lands above it (between quote and footer) */
+}
+.shock-quote-foot .shock-quote-bill { flex: 1; min-width: 0; }
+.shock-quote-foot-date {
+  flex-shrink: 0;
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+  white-space: nowrap;
 }
 .shock-quote-bill {
   font-size: var(--fs-2xs);
@@ -1696,12 +1727,29 @@ a:hover { text-decoration: underline; }
 }
 .shock-quote-bill--link:hover { text-decoration: underline; }
 @media (hover: hover) and (pointer: fine) {
+  /* On expand (after the 0.5s dwell) stack the footer into a column: the bill
+     name gets the full container width and wraps to the full title; the date
+     drops to its own row, bottom-left. Delays match the text/bill-unwrap 0.5s
+     so the whole card reflows together. (flex-direction isn't transitionable,
+     so the change is applied via a 0.001s/0.5s-delay animation like the unwrap.) */
+  .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-foot {
+    animation: sq-foot-stack 0.001s 0.5s forwards;
+  }
   .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-bill {
     animation: sq-bill-unwrap 0.001s 0.5s forwards;
   }
+  .shock-quotes-track:has(.shock-quote-card:hover) .shock-quote-foot-date {
+    animation: sq-date-stack 0.001s 0.5s forwards;
+  }
 }
 @keyframes sq-bill-unwrap {
-  to { white-space: normal; overflow: visible; text-overflow: unset; }
+  to { white-space: normal; overflow: visible; text-overflow: unset; flex: none; width: 100%; }
+}
+@keyframes sq-foot-stack {
+  to { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+}
+@keyframes sq-date-stack {
+  to { margin-left: 0; }
 }
 .shock-quote-portrait {
   width: 28px;
@@ -1753,7 +1801,10 @@ a:hover { text-decoration: underline; }
   }
 }
 
-/* Hover-intent progress ring */
+/* Close-X button (formerly the progress ring) — X lines defined below.
+   Stays hidden until a card is expanded; the dwell indicator is now the
+   corner brackets. The .sq-ring element + click target are unchanged so the
+   expand/close mechanics keep working. */
 .sq-ring {
   position: absolute;
   top: 10px;
@@ -1764,24 +1815,40 @@ a:hover { text-decoration: underline; }
   pointer-events: none;
   z-index: 2;
 }
-@media (hover: hover) and (pointer: fine) {
-  .shock-quote-card:hover .sq-ring { opacity: 1; }
+
+/* Hover-intent dwell indicator — four corner brackets draw inward to frame
+   the card. Same triggers/timing as the old fill ring (0.5s hover, 1s touch). */
+.sq-corner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  border-color: var(--orange);
+  border-style: solid;
+  border-width: 0;
 }
-.sq-ring circle {
-  fill: none;
-  stroke: var(--orange);
-  stroke-width: 2.5;
-  stroke-dasharray: 53;
-  stroke-dashoffset: 53;
-  stroke-linecap: round;
-}
+.sq-corner-tl { top: 7px;    left: 7px;  border-top-width: 2px;    border-left-width: 2px;  border-top-left-radius: 3px; }
+.sq-corner-tr { top: 7px;    right: 7px; border-top-width: 2px;    border-right-width: 2px; border-top-right-radius: 3px; }
+.sq-corner-bl { bottom: 7px; left: 7px;  border-bottom-width: 2px; border-left-width: 2px;  border-bottom-left-radius: 3px; }
+.sq-corner-br { bottom: 7px; right: 7px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 3px; }
 @media (hover: hover) and (pointer: fine) {
-  .shock-quote-card:hover .sq-ring circle {
-    animation: sq-ring-fill 0.5s linear forwards;
+  .shock-quote-card:hover .sq-corner {
+    opacity: 1;
+    animation: sq-corner-draw 0.5s ease forwards;
   }
 }
-@keyframes sq-ring-fill {
-  to { stroke-dashoffset: 0; }
+@keyframes sq-corner-draw {
+  from { width: 0;    height: 0; }
+  to   { width: 16px; height: 16px; }
+}
+/* Once any card is expanded the dwell brackets are no longer relevant */
+.shock-quotes-track:has(.shock-quote-card.sq-expanded) .sq-corner {
+  opacity: 0;
+  animation: none;
+  width: 0;
+  height: 0;
 }
 
 /* X lines inside ring SVG — hidden by default, shown on mobile when expanded */
@@ -1804,12 +1871,10 @@ a:hover { text-decoration: underline; }
     pointer-events: none;
   }
 
-  /* Gauge fills while touching (sq-filling) */
-  .shock-quote-card.sq-filling .sq-ring {
+  /* Corner brackets draw in while touching (sq-filling) */
+  .shock-quote-card.sq-filling .sq-corner {
     opacity: 1;
-  }
-  .shock-quote-card.sq-filling .sq-ring circle {
-    animation: sq-ring-fill 1s linear forwards;
+    animation: sq-corner-draw 1s ease forwards;
   }
 
   /* All cards expand text when any is expanded — matches desktop :has() pattern */
@@ -1823,6 +1888,19 @@ a:hover { text-decoration: underline; }
     overflow: visible;
     text-overflow: unset;
   }
+  /* Expanded footer stacks: full-width wrapping bill name, date on its own row */
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-foot .shock-quote-bill {
+    flex: none;
+    width: 100%;
+  }
+  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-foot-date {
+    margin-left: 0;
+  }
 
   /* All cards show X ring while any card is expanded */
   .shock-quotes-track:has(.shock-quote-card.sq-expanded) .sq-ring {
@@ -1831,20 +1909,12 @@ a:hover { text-decoration: underline; }
     cursor: pointer;
   }
 
-  /* Non-expanded siblings: X appears immediately, circle hidden */
-  .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-card:not(.sq-expanded) .sq-ring circle {
-    display: none;
-  }
+  /* Non-expanded siblings: X appears immediately */
   .shock-quotes-track:has(.shock-quote-card.sq-expanded) .shock-quote-card:not(.sq-expanded) .sq-x-line {
     display: block;
   }
 
-  /* Expanded card: circle fades out, X draws in */
-  .shock-quote-card.sq-expanded .sq-ring circle {
-    stroke-dashoffset: 53;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
+  /* Expanded card: X draws in */
   .shock-quote-card.sq-expanded .sq-x-line {
     display: block;
     stroke-dasharray: 14;
