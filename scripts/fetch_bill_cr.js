@@ -84,6 +84,28 @@ const SKIP_NAME_WORDS = ['PRESIDING', 'PRESIDENT', 'CHAIR', 'ACTING', 'SPEAKER',
 
 const PROCEDURAL_RE = /^(?:(?:madam|mr\.?)\s+(?:speaker|president|chair),\s*)?(?:i yield|i claim the time|i do not oppose|i have no objection|i ask unanimous consent|i ask for the yeas and nays|i demand the yeas and nays|on that i demand|by direction of the committee|for the purpose of debate|pursuant to (?:the order|section|house resolution|senate rule|clause)|i was unable to vote|i was not recorded|i was not present|i was unavoidably absent|had i been present|i had a \w+ flight|will the gentleman|unanimous consent|point of order|quorum call|i move to suspend|i move to reconsider|i suggest the absence|i ask that)/i;
 
+// Procedural phrases that disqualify a quote if they appear ANYWHERE in the
+// final displayed excerpt (not just the opener). Mirrors validate-batch.js's
+// PROCEDURAL_PATTERNS so the extractor never produces a quote the validator
+// would then ERROR on. Keep the two lists in sync.
+const DISPLAY_PROCEDURAL = [
+    /\bi move to suspend the rules\b/i,
+    /\bi ask unanimous consent\b/i,
+    /\bi ask for the yeas and nays\b/i,
+    /\bi demand the yeas and nays\b/i,
+    /\bpursuant to (?:the order|section|house resolution|clause)\b/i,
+    /\bthe question was taken\b/i,
+    /\bthe rules were suspended\b/i,
+    /\ba motion to reconsider was laid\b/i,
+    /^in closing\b/i,
+    /\bi was unable to vote\b/i,
+    /\bi was not present\b/i,
+    /\bhad i been present\b/i,
+    /\bfor the purpose of debate\b/i,
+    /\bi yield back the balance of my time\b/i,
+    /\breserve the balance of my time\b/i,
+];
+
 // Filler sentence patterns — applied to every sentence in the quote, regardless of position.
 const FILLER_SENTENCE_RE = [
     // Yield / procedural openers
@@ -290,6 +312,7 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '') {
         if (!substantive) continue;  // all sentences were filler
         const text        = bestExcerpt(substantive);
         if (text.length < 30) continue;
+        if (DISPLAY_PROCEDURAL.some(p => p.test(text))) continue;  // reject leftover procedural language
 
         quotes.push({
             name:       displayName,
@@ -367,6 +390,11 @@ function viewsSectionsToQuotes(sections) {
             displayName = rawName.split(/\s+/)
                 .map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
             repInfo = resolveRepInfo(rawName.split(/\s+/).pop().toUpperCase());
+            // The "VIEWS OF X" regex sometimes grabs a role ("Ranking Member") or a
+            // section heading ("Waste Disposal") instead of a real name. If it
+            // doesn't resolve to an actual rep, it's not a real attributable
+            // speaker — skip it rather than display a junk name with no portrait.
+            if (!repInfo.bioguideId) continue;
         } else {
             const typeLabel = sec.viewsType.charAt(0) + sec.viewsType.slice(1).toLowerCase();
             displayName = `Committee ${typeLabel} Members`;
@@ -760,4 +788,16 @@ async function main() {
     console.log(`\nDone. ${updated}/${targets.length} bill(s) updated.`);
 }
 
-main().catch(console.error);
+// Run as CLI, or expose the extraction engine for reuse (extract_floor_quotes.js
+// passes empty bill args to extractQuotesFromCR to get general, non-bill quotes).
+if (require.main === module) {
+    main().catch(console.error);
+}
+
+module.exports = {
+    extractQuotesFromCR,
+    detectStance,
+    bestExcerpt,
+    stripFillerSentences,
+    resolveRepInfo,
+};

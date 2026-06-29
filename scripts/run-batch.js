@@ -85,6 +85,10 @@ console.log('═'.repeat(56));
 if (!POST_ONLY) {
     run('Fetch new bill data', ['scripts/fetch_bills_data.js']);
     run(`Fetch Congressional Record (last ${CR_DAYS} days)`, ['scripts/fetch_cr_data.js', `--days=${CR_DAYS}`]);
+    // Auto-extract general (non-bill) floor statements from the cr_raw.json the
+    // step above produced — "spicy filter" (oppose/support only, ranked by
+    // shock, capped per day). Replaces hand-writing add_cr_quotes.js.
+    run('Extract floor statements', ['scripts/extract_floor_quotes.js'], { optional: true });
 
     const unprocessed = findUnprocessed();
 
@@ -152,6 +156,14 @@ if (needVotes.length > 0) {
 }
 
 run('Update rep profiles', ['scripts/generate_reps.js'], { optional: true });
+// Backfill CR floor quotes for any cached bill still missing featured_quotes.
+// The fetch pipeline only fetches NOT-yet-cached bills, so a bill whose CR
+// quotes were unavailable at analysis time (API down / recess / not yet posted)
+// would otherwise stay quote-less forever. --all is regex-based (no LLM),
+// idempotent (skips bills that already have quotes), and re-checks quote-less
+// bills cheaply each run. Runs BEFORE the chamber backfill so new quotes get
+// their chamber set in the same pass. (Resolves the May→June quote backlog.)
+run('Backfill missing CR quotes', ['scripts/fetch_bill_cr.js', '--all'], { optional: true });
 // Backfill chamber onto featured/standalone quotes from the (just-refreshed)
 // reps-index, so quoteTagline() can render "House/Senate floor …" consistently.
 run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], { optional: true });
