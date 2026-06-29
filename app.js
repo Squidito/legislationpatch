@@ -1432,7 +1432,7 @@ function renderMinorBody(bill, col, isOpen) {
         <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
       </div>`
     : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
-        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
+        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(bill.likelihood)} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
         <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
       </div>`;
 
@@ -1766,7 +1766,7 @@ function renderBody(bill, isOpen, col) {
         <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
       </div>`
     : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid ${col.fill}">
-        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
+        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(bill.likelihood)} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
         <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
       </div>`;
 
