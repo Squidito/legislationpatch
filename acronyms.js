@@ -14,6 +14,7 @@ const ACRONYMS = {
   RESIDE: 'Revitalizing Empty Structures Into Desirable Environments',
   PRICE: 'Preservation and Reinvestment Initiative for Community Enhancement',
   VALID: 'Veterans Affairs Loan Informed Disclosure',
+  FINRA: 'Financial Industry Regulatory Authority',
   DEA:   'Drug Enforcement Administration',
   NOAA:  'National Oceanic and Atmospheric Administration',
   NSF:   'National Science Foundation',
