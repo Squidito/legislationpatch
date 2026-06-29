@@ -18394,14 +18394,14 @@
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
       "likelihoodReason": "Enacted as Public Law 119-34 on August 19, 2025. Sponsored by Rep. Ronny Jackson (R-TX) with two cosponsors; the export-control oversight measure passed both chambers before being signed.",
-      "summary": "Requires the Commerce Department's Bureau of Industry and Security to report to Congress every year on export-license decisions and end-use checks for shipments to foreign entities in arms-embargoed countries that are on U.S. export-restriction lists.",
-      "brief": "Requires BIS to file an annual report to Congress on export licenses and end-use checks involving covered entities in arms-embargoed countries.",
+      "summary": "Requires the Secretary, under the Export Control Reform Act, to report to Congress every year on export-license decisions and end-use checks for exports to certain foreign entities — those located in Country Group D:5 countries and listed on Supplement No. 4 or No. 7 to part 744 of the Export Administration Regulations.",
+      "brief": "Requires an annual report to Congress on export licenses and end-use checks involving covered entities in Country Group D:5 countries.",
       "top_lines": [
         {
           "headline": "Annual Export-License Reporting",
           "billSection": "2",
           "subs": [
-            "BIS must report to Congress within one year, then at least annually",
+            "The Secretary must report to Congress within one year, then at least annually",
             "Covers license applications, authorizations, and end-use checks for covered entities",
             "Each entry lists the applicant, item, end-user, location, value, and decision"
           ]
@@ -18410,8 +18410,8 @@
           "headline": "Covered Entities Defined",
           "billSection": "2",
           "subs": [
-            "Applies to entities in Country Group D:5 (arms-embargoed countries)",
-            "And on the Entity List or Military End-User List"
+            "Applies to entities located in Country Group D:5 countries",
+            "And listed on Supplement No. 4 or No. 7 to part 744 of the Export Administration Regulations"
           ]
         },
         {
@@ -18448,8 +18448,8 @@
         },
         {
           "section": "Section 2 — covered-entity intersection",
-          "summary": "A covered entity must be both located in a Country Group D:5 country and listed on the Entity List or Military End-User List.",
-          "why_unreported": "Requiring both conditions narrows the report to a specific intersection of high-risk entities rather than all entities in embargoed countries."
+          "summary": "A covered entity must be both located in a Country Group D:5 country and listed on Supplement No. 4 or Supplement No. 7 to part 744 of the Export Administration Regulations.",
+          "why_unreported": "Requiring both conditions narrows the report to a specific intersection of high-risk entities rather than all entities located in those countries."
         }
       ],
       "criticisms": [],
@@ -18515,7 +18515,7 @@
       "enactedDate": "2026-01-14",
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
-      "likelihoodReason": "Enacted as Public Law 119-69 on January 14, 2026. Sponsored by Sen. Roger Marshall (R-KS) with 16 cosponsors; the measure drew bipartisan, dairy-state support and passed both chambers before being signed.",
+      "likelihoodReason": "Enacted as Public Law 119-69 on January 14, 2026. Sponsored by Sen. Roger Marshall (R-KS) with 16 cosponsors; the measure passed both chambers before being signed.",
       "summary": "Lets schools in the National School Lunch Program serve whole and reduced-fat milk — not just low-fat and fat-free — and stops counting milk fat toward school-meal saturated-fat limits. It also requires food-allergy training for school food-service staff.",
       "brief": "Allows schools to offer whole and reduced-fat milk, excludes milk fat from saturated-fat limits, and adds food-allergy training for school food-service personnel.",
       "top_lines": [
@@ -18535,7 +18535,8 @@
             "Milk fat no longer counts toward the saturated-fat limit for school meals",
             "Removes the requirement to match the latest Dietary Guidelines",
             "Parents or guardians — not only physicians — may request a milk substitute"
-          ]
+          ],
+          "source": "usc-42-1758"
         },
         {
           "headline": "Food-Allergy Training",
@@ -18600,7 +18601,7 @@
       "featured_quotes": [],
       "changes": {
         "added": [
-          "Food-allergy training module and annual certification for school food-service personnel (Child Nutrition Act Sec 7(g))"
+          "Food-allergy training module added to required food-service personnel training, with certification expanded to cover it (Child Nutrition Act Sec 7(g))"
         ],
         "modified": [
           "Section 9(a)(2) of the National School Lunch Act: permissible school milk expanded from fat-free/low-fat only to also include whole and reduced-fat milk",
@@ -18628,7 +18629,18 @@
         }
       ],
       "budget_accounts": {},
-      "analyzedAt": "2026-06-19"
+      "analyzedAt": "2026-06-19",
+      "referencedSources": [
+        {
+          "id": "usc-42-1758",
+          "kind": "statute",
+          "label": "42 U.S.C. 1758",
+          "citation": "42 U.S.C. 1758",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap13-sec1758/htm",
+          "textFile": "data/ref-text/usc-42-1758.txt",
+          "fetchedAt": "2026-06-29"
+        }
+      ]
     },
     {
       "id": "119-S-2585",
@@ -19866,7 +19878,7 @@
       "stageDate": "2026-06-23",
       "likelihood": 90,
       "likelihoodLabel": "Very Likely",
-      "likelihoodReason": "Introduced by Sen. Deb Fischer (R-NE) with a bipartisan trio of cosponsors (Sens. Lujan and Schiff, both Democrats). The bill eases advance-payment access for farmers recovering from disasters under existing conservation programs — a constituency-driven change with support across rural-state members of both parties and little organized opposition.",
+      "likelihoodReason": "Introduced by Sen. Deb Fischer (R-NE) with a bipartisan trio of cosponsors (Sens. Lujan and Schiff, both Democrats). The bill eases advance-payment access for farmers recovering from disasters under existing conservation programs, a narrow, constituency-driven change.",
       "summary": "Makes it easier for farmers and forest owners to get federal help repairing land after disasters. It lets them receive part of an Emergency Conservation Program or Emergency Forest Restoration Program payment up front, before doing the work, and gives them more time to use the funds.",
       "brief": "Lets farmers and forest landowners receive advance payments for emergency conservation and forest-restoration work and extends the time to use the funds.",
       "top_lines": [
