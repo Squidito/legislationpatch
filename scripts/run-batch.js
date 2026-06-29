@@ -131,6 +131,11 @@ if (!POST_ONLY) {
 
 // ── Phase 2: Post-analysis ─────────────────────────────────────────────────
 
+// Refresh already-cached bills: resurface any that had new activity (bump
+// stageDate → moves to top) and advance the stage on confident passage markers.
+// Prints a RE-REVIEW list for any bill whose stage changed (prose is not auto-edited).
+run('Refresh cached bill stages', ['scripts/refresh_stages.js', '--apply'], { optional: true });
+
 // Votes — only for bills missing them
 const needVotes = findBillsNeedingVotes();
 if (needVotes.length > 0) {

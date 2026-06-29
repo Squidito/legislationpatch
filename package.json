@@ -13,7 +13,8 @@
     "sitemap": "node scripts/generate_sitemap.js",
     "reps": "node scripts/generate_reps.js",
     "test": "node scripts/validate-batch.js",
-    "facts": "node scripts/bill-facts.js"
+    "facts": "node scripts/bill-facts.js",
+    "refresh": "node scripts/refresh_stages.js"
   },
   "repository": {
     "type": "git",
