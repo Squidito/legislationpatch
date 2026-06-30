@@ -1356,7 +1356,7 @@ function renderTopLines(bill) {
       ? `<a class="top-line-headline-link" href="#${tlAnchor}" onclick="event.preventDefault();scrollToBillSection('${tlAnchor}')">${escHtml(item.headline || '')}</a>`
       : escHtml(item.headline || '');
     const subs = (item.subs || []).slice(0, 3).map(s =>
-      `<div class="top-line-sub">${billRefHtml(s, bill.id)}</div>`
+      `<div class="top-line-sub">${billRefHtml(s, bill.id, true)}</div>`
     ).join('');
     return `<div class="top-line-item">
       <span class="top-line-bullet">—</span>
@@ -1393,7 +1393,11 @@ function renderStageStrip(bill) {
 function renderChangesSection(bill) {
   if (!bill.changes) return '';
   const { added = [], modified = [], removed = [] } = bill.changes;
-  if (!added.length && !modified.length && !removed.length) return '';
+  // Only show for bills that actually change EXISTING law (something modified or
+  // removed). Brand-new bills only "add" new law — for them this diff is just
+  // confusing (Modified/Removed = None), so the section is hidden entirely; the
+  // top-lines already cover what a new bill does. Amendments still show all three.
+  if (!modified.length && !removed.length) return '';
 
   const block = (label, symbol, cls, items) => {
     if (!items.length) return `<div class="patch-block ${cls}">
@@ -1420,6 +1424,36 @@ function renderChangesSection(bill) {
   </div>`;
 }
 
+// V2 likelihood readout — a mono "spec-sheet" verdict line (PASSAGE LIKELIHOOD →
+// 90% Very likely) instead of a tinted pill box. The brief is NOT repeated here
+// (it shows once in top-lines); signed/vetoed bills get a date note instead.
+function renderLikelihoodReadout(bill, col, marginBottom) {
+  const margin = `margin:0.65rem 1.1rem ${marginBottom}`;
+  const tag = '<span class="analysis-tag">analyst judgment</span>';
+  if (bill.stage === 'signed') {
+    return `<div class="likelihood-readout" style="${margin}">
+      <div class="lr-row"><span class="lr-key">Status</span><span class="lr-arrow">&rarr;</span><span class="lr-lab" style="color:var(--green)">Signed into Law</span></div>
+      <div class="lr-note">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` &middot; Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
+    </div>`;
+  }
+  if (bill.stage === 'vetoed') {
+    return `<div class="likelihood-readout" style="${margin}">
+      <div class="lr-row"><span class="lr-key">Status</span><span class="lr-arrow">&rarr;</span><span class="lr-lab" style="color:var(--red)">Vetoed by President</span></div>
+      <div class="lr-note">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` &middot; Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
+    </div>`;
+  }
+  const label = bill.likelihoodLabel || labelFromPct(bill.likelihood);
+  return `<div class="likelihood-readout" style="${margin}">
+    <div class="lr-row">
+      <span class="lr-key">Passage likelihood</span>
+      <span class="lr-arrow">&rarr;</span>
+      <span class="lr-val" style="color:${col.text}">${bill.likelihood}%</span>
+      <span class="lr-lab" style="color:${col.text}">${escHtml(label)}</span>
+      ${tag}
+    </div>
+  </div>`;
+}
+
 function renderMinorBody(bill, col, isOpen) {
   const topUnder = bill.underreported?.[0];
   const underHtml = topUnder ? `
@@ -1429,20 +1463,7 @@ function renderMinorBody(bill, col, isOpen) {
       <div class="underreported-preview">${billRefHtml(topUnder.summary, bill.id)}</div>
     </div>` : '';
 
-  const likelihoodDetail = bill.stage === 'signed'
-    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--green)">
-        <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
-        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` · Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
-      </div>`
-    : bill.stage === 'vetoed'
-    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid var(--red)">
-        <div class="likelihood-detail-title" style="color:var(--red)">Vetoed by President</div>
-        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
-      </div>`
-    : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0;border-left:3px solid ${col.fill}">
-        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(bill.likelihood)} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
-        <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
-      </div>`;
+  const likelihoodDetail = renderLikelihoodReadout(bill, col, '0');
 
   return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
     ${likelihoodDetail}
@@ -1763,20 +1784,7 @@ function renderBody(bill, isOpen, col) {
   const viewBillLink = window.BILL_PAGE_ID ? '' :
     `<div class="view-bill-link-row"><a href="bill?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`;
 
-  const stageDetailHtml = bill.stage === 'signed'
-    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid var(--green)">
-        <div class="likelihood-detail-title" style="color:var(--green)">Signed into Law</div>
-        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.enactedDate ? ` · Enacted ${escHtml(formatDateCompact(bill.enactedDate))}` : ''}</div>
-      </div>`
-    : bill.stage === 'vetoed'
-    ? `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid var(--red)">
-        <div class="likelihood-detail-title" style="color:var(--red)">Vetoed by President</div>
-        <div class="likelihood-detail-text">Introduced ${escHtml(formatDateCompact(bill.date || ''))}${bill.stageDate ? ` · Vetoed ${escHtml(formatDateCompact(bill.stageDate))}` : ''}</div>
-      </div>`
-    : `<div class="likelihood-detail" style="margin:0.65rem 1.1rem 0.25rem;border-left:3px solid ${col.fill}">
-        <div class="likelihood-detail-title" style="color:${col.text}">${bill.likelihoodLabel || labelFromPct(bill.likelihood)} · ${bill.likelihood}% chance of passage <span class="analysis-tag">analyst judgment</span></div>
-        <div class="likelihood-detail-text">${escHtml(bill.brief || bill.likelihoodReason || '')}</div>
-      </div>`;
+  const stageDetailHtml = renderLikelihoodReadout(bill, col, '0.25rem');
 
   const divisionsHtml = renderDivisions(bill);
 
@@ -1884,7 +1892,7 @@ function renderItem(bill, item, si, ii) {
   ).join('') || '';
 
   return `<div class="patch-item">
-    <div class="patch-item-main">${billRefHtml(item.main, bill.id)}</div>
+    <div class="patch-item-main">${billRefHtml(item.main, bill.id, true)}</div>
     ${chipsHtml}
     ${item.detail ? `
       <button class="more-btn" onclick="toggleDetail('${key}')">${isOpen ? '▲ hide details' : '▼ more info'}</button>
@@ -1985,8 +1993,17 @@ function compactSource(source) {
 
 // Renders prose text replacing bill code references (H.R. 1234, S. 40, etc.) with
 // linked titles when the bill is in allBills, or a plain span when self-referential.
-function billRefHtml(text, currentBillId) {
+// Escape + bold figures (%, $amounts, day/year/month counts). The numbers are
+// the substance of a bill, so emphasizing them makes the changes scannable.
+// Runs on already-escaped text; figure tokens contain no HTML-special chars.
+function escFig(text) {
+  const FIG_RE = /(\$\d[\d,]*(?:\.\d+)?\s?(?:billion|million|trillion|B|M|T)?|\d+(?:\.\d+)?%|\b\d[\d,]*\s?(?:days?|years?|months?)\b)/gi;
+  return escHtml(text).replace(FIG_RE, '<b class="fig">$1</b>');
+}
+
+function billRefHtml(text, currentBillId, emphFig) {
   if (!text) return '';
+  const esc = emphFig ? escFig : escHtml;
   const BILL_RE = /(H\.R\.|H\.Con\.Res\.|H\.J\.Res\.|H\.Res\.|S\.Con\.Res\.|S\.J\.Res\.|S\.Res\.|S\.)\s*(\d+)/g;
   const typeMap = {
     'H.R.': 'HR', 'S.': 'S',
@@ -1997,7 +2014,7 @@ function billRefHtml(text, currentBillId) {
   let result = '', lastIndex = 0, match;
   BILL_RE.lastIndex = 0;
   while ((match = BILL_RE.exec(text)) !== null) {
-    result += escHtml(text.slice(lastIndex, match.index));
+    result += esc(text.slice(lastIndex, match.index));
     const type   = typeMap[match[1]] || 'HR';
     const billId = `119-${type}-${match[2]}`;
     const bill   = allBills.find(b => b.id === billId);
@@ -2012,7 +2029,7 @@ function billRefHtml(text, currentBillId) {
     }
     lastIndex = BILL_RE.lastIndex;
   }
-  return result + escHtml(text.slice(lastIndex));
+  return result + esc(text.slice(lastIndex));
 }
 
 function scrollToBill(id) {

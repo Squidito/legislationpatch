@@ -1941,8 +1941,10 @@ a:hover { text-decoration: underline; }
   gap: 10px;
 }
 .patch-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 10px 12px;
+  padding: 11px 13px;
 }
 .patch-block-label {
   display: flex;
@@ -1964,14 +1966,27 @@ a:hover { text-decoration: underline; }
   font-size: var(--fs-xs);
   line-height: 1.4;
   color: var(--text-2);
+  position: relative;
+  padding-left: 13px;
 }
-.patch-block-item--none { font-style: italic; color: var(--text-3); }
-.patch-block--added    { background: var(--green-bg); }
+.patch-block-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.patch-block-item--none { font-style: italic; color: var(--text-3); padding-left: 0; }
+.patch-block-item--none::before { display: none; }
+/* Quiet cards: color lives only in the label + per-item dot (no saturated fill) */
 .patch-block--added    .patch-block-label { color: var(--green); }
-.patch-block--modified { background: var(--amber-bg); }
+.patch-block--added    .patch-block-item::before { background: var(--green); }
 .patch-block--modified .patch-block-label { color: var(--amber); }
-.patch-block--removed  { background: var(--red-bg); }
+.patch-block--modified .patch-block-item::before { background: var(--amber); }
 .patch-block--removed  .patch-block-label { color: var(--red); }
+.patch-block--removed  .patch-block-item::before { background: var(--red); }
 
 /* ---- STAGE STRIP ---- */
 .stage-strip {
@@ -2075,7 +2090,6 @@ a:hover { text-decoration: underline; }
   margin: 0.65rem 18px 0;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--purple-border);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -2088,14 +2102,15 @@ a:hover { text-decoration: underline; }
   font-style: italic;
 }
 .top-line-item {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border-inner);
+  padding: 11px 16px;
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
 }
 .top-line-item:last-child { border-bottom: none; }
+/* Dash bullet removed — the bold headline + hairline now carries the section */
 .top-line-bullet {
+  display: none;
   color: var(--purple);
   flex-shrink: 0;
   font-size: var(--fs-base);
@@ -2115,6 +2130,8 @@ a:hover { text-decoration: underline; }
   font-weight: 700;
   color: var(--text);
   line-height: 1.3;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--border-inner);
 }
 .top-line-headline-link {
   color: inherit;
@@ -2135,9 +2152,21 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
   color: var(--text-2);
   line-height: 1.45;
-  padding-left: 10px;
-  border-left: 2px solid var(--purple-border);
+  position: relative;
+  padding-left: 15px;
 }
+.top-line-sub::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 0.62em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+/* Figures (%, $amounts, day/year counts) bolded so the substance of a bill pops */
+.fig { color: var(--text); font-weight: 700; }
 
 /* Likelihood detail */
 .likelihood-detail {
@@ -2161,13 +2190,34 @@ a:hover { text-decoration: underline; }
   line-height: 1.5;
 }
 
+/* Likelihood readout (V2) — a mono "spec-sheet" verdict line instead of a tinted
+   pill box. The card already meters likelihood up top; this states the verdict.
+   margin is set inline per call site. */
+.likelihood-readout {
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--border);
+}
+.lr-row {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1.4;
+}
+.lr-key   { color: var(--text-3); text-transform: uppercase; letter-spacing: 0.06em; }
+.lr-arrow { color: var(--text-3); opacity: 0.55; }
+.lr-val   { font-weight: 700; font-size: var(--fs-sm); }
+.lr-lab   { font-weight: 600; }
+.lr-note  { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); margin-top: 5px; }
+
 /* Patch notes */
 .patch-notes {
   margin: 0 1.1rem 0.85rem;
   padding: 10px 14px 12px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--purple-border);
   border-radius: var(--radius-md);
 }
 .patch-section { margin-bottom: 1rem; }
@@ -2191,8 +2241,18 @@ a:hover { text-decoration: underline; }
 .patch-section-title-link:hover::after { opacity: 0.75; }
 .patch-item {
   margin-bottom: 8px;
-  border-left: 2px solid var(--border-strong);
-  padding-left: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+.patch-item::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 0.7em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--purple);
 }
 .patch-item-main {
   font-family: var(--font-body);
@@ -2402,7 +2462,6 @@ a:hover { text-decoration: underline; }
 .division-block {
   margin-bottom: 1.25rem;
   border: 1px solid var(--border);
-  border-left: 3px solid var(--purple-border);
   border-radius: var(--radius-md);
   background: var(--surface);
   overflow: hidden;
@@ -3380,13 +3439,6 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   background: #3a3a45;
 }
 
-[data-theme="dark"] .top-lines {
-  border-left-color: var(--purple);
-}
-
-[data-theme="dark"] .top-line-bullet {
-  color: var(--purple);
-}
 
 [data-theme="dark"] .bill-card:hover .bill-header,
 [data-theme="dark"] .bill-card:hover .likelihood-footer {
