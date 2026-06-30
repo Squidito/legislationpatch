@@ -1988,6 +1988,67 @@ a:hover { text-decoration: underline; }
 .patch-block--removed  .patch-block-label { color: var(--red); }
 .patch-block--removed  .patch-block-item::before { background: var(--red); }
 
+/* ---- VERSION TIMELINE (bill page) ---- */
+.version-timeline-section {
+  margin: 0 1.1rem 0.85rem;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.vt-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  margin-bottom: 11px;
+}
+.vt-summary {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  line-height: 1.5;
+}
+.vt-track {
+  position: relative;
+  margin-top: 13px;
+  padding-top: 13px;
+  border-top: 1px solid var(--border-inner);
+}
+.vt-node {
+  position: relative;
+  padding-left: 18px;
+  padding-bottom: 13px;
+}
+.vt-node:last-child { padding-bottom: 0; }
+/* connecting line between dots */
+.vt-node::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  bottom: -6px;
+  width: 1px;
+  background: var(--border);
+}
+.vt-node:last-child::before { display: none; }
+.vt-dot {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1.5px solid var(--purple);
+}
+.vt-node--last .vt-dot { background: var(--purple); }
+.vt-label { font-size: var(--fs-sm); font-weight: 600; color: var(--text); line-height: 1.3; }
+.vt-label a { color: inherit; text-decoration: none; }
+.vt-label a:hover { text-decoration: underline; text-decoration-color: var(--purple); text-underline-offset: 2px; }
+.vt-date { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); margin-top: 1px; }
+
 /* ---- STAGE STRIP ---- */
 .stage-strip {
   display: flex;
@@ -2316,6 +2377,40 @@ a:hover { text-decoration: underline; }
   font-size: var(--fs-xs);
   color: var(--text-2);
 }
+
+/* Sections breakdown — numbered spine + folded admin (2026-06-30 rework) */
+.patch-spine { margin-top: 2px; }
+.patch-spine .ps-row,
+.patch-spine .ps-admin-strip { position: relative; padding-left: 46px; padding-bottom: 16px; }
+.ps-rail { position: absolute; left: 16px; top: 24px; bottom: -2px; width: 2px; background: var(--border); }
+.patch-spine .ps-last .ps-rail { display: none; }
+.ps-num {
+  position: absolute; left: 0; top: 0; min-width: 32px; height: 21px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: var(--fs-2xs); font-weight: 700; color: var(--purple);
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 0 5px; box-sizing: border-box;
+}
+.ps-num.admin { color: var(--text-3); }
+.ps-dot { position: absolute; left: 12px; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: var(--purple); }
+.ps-title { font-size: var(--fs-sm); font-weight: 600; color: var(--text); margin-bottom: 5px; }
+.ps-adm .ps-title { color: var(--text-2); }
+/* neutralize the legacy bullet/indent inside the spine */
+.patch-spine .patch-section { margin-bottom: 0; }
+.patch-spine .patch-item { padding-left: 0; margin-bottom: 6px; }
+.patch-spine .patch-item::before { display: none; }
+.ps-adm .patch-item-main { color: var(--text-2); }
+/* folded admin strip */
+.ps-admin-strip { cursor: pointer; }
+.ps-admin-label { font-size: var(--fs-xs); font-weight: 600; color: var(--text-3); padding-top: 2px; }
+.ps-admin-strip:hover .ps-admin-label { color: var(--text-2); }
+.ps-admin-sub { font-weight: 500; opacity: 0.85; }
+.ps-caret { font-family: var(--font-mono); margin-left: 6px; opacity: 0.7; }
+.ps-admin-kids { display: none; }
+.ps-admin-kids.open { display: block; }
+/* quieter details affordance within the spine */
+.patch-spine .more-btn { text-decoration: none; color: var(--text-3); }
+.patch-spine .more-btn:hover { color: var(--text-2); }
+.patch-spine .item-detail { background: none; border-left: 2px solid var(--border); border-radius: 0; padding: 4px 0 4px 11px; }
 
 /* Divider */
 .section-divider {

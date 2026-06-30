@@ -21,8 +21,14 @@ articles/
 data/deltas/
 scripts/program-account-map.json
 
+# Version-diff intermediate texts — fetched per-bill for the "What changed" diff, not published
+data/version-text/
+
 # Working files — brand/preview assets and temp outputs
 preview-*.png
+vp*.png
+section-demo.html
+fetch-*.log
 quotes.json
 logos\ and\ badges.png
 logo\ old.svg

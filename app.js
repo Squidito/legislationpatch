@@ -77,7 +77,10 @@ const DEMO_REPS = [
   { bioguideId: 'M001163', name: 'Rep. Matsui',    party: 'D', state: 'CA' },
 ];
 
-const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' fill='%23374151'/%3E%3Ccircle cx='22' cy='16' r='9' fill='%236b7280'/%3E%3Cellipse cx='22' cy='40' rx='15' ry='11' fill='%236b7280'/%3E%3C/svg%3E";
+// NOTE: quotes inside this data-URI MUST stay URL-encoded as %27 — it is embedded
+// in onerror="this.src='...'", so a raw ' would close the JS string early and throw
+// "Unexpected identifier 'http'" when a portrait 404s. Browsers decode %27 → ' fine.
+const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E";
 
 let trackedState = 'TX';
 let trackedReps  = [];
@@ -1468,7 +1471,7 @@ function renderMinorBody(bill, col, isOpen) {
   return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
     ${likelihoodDetail}
     ${renderTopLines(bill)}
-    ${renderChangesSection(bill)}
+    ${renderWhatChanged(bill)}
     ${underHtml}
     ${renderQuoteCards(bill, true)}
     <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Full analysis ↓</button>
@@ -1749,6 +1752,82 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
   detailEl.innerHTML = '<div class="vote-detail-inner">' + html + '</div>';
 }
 
+// Map a raw Congress.gov text-version type to a clean milestone label, or null
+// for pure-procedural reprints (Placed on Calendar / Referred / Received) that
+// carry no text change and shouldn't clutter the timeline.
+function versionMilestoneLabel(type) {
+  const t = (type || '').toLowerCase();
+  if (t.includes('introduced')) return 'Introduced';
+  if (t.includes('reported'))   return 'Reported by committee';
+  if (t.includes('engrossed amendment')) return t.includes('senate') ? 'Senate amended' : 'House amended';
+  if (t.includes('engrossed') || t.includes('considered and passed')) return t.includes('senate') ? 'Passed the Senate' : 'Passed the House';
+  if (t.includes('enrolled'))    return 'Enrolled (final text)';
+  // "Public Law" is a status, not a distinct text (same text as Enrolled) — hide
+  // it so the timeline ends cleanly at "Enrolled (final text)". The stage
+  // pipeline already conveys that the bill was signed.
+  return null;
+}
+
+function normalizeVersions(versions) {
+  const out = [];
+  for (const v of versions || []) {
+    const label = versionMilestoneLabel(v.type);
+    if (!label) continue;                                   // hide procedural reprints
+    if (out.length && out[out.length - 1].label === label) continue; // dedupe consecutive
+    out.push({ label, date: v.date, url: v.url });
+  }
+  return out;
+}
+
+// "What changed" — the bill's version-to-version changelog. EMPTY until the bill
+// is actually revised (a `versionSummary` exists): introduced = nothing to show;
+// advanced unchanged = nothing to show; revised = the net change vs. the
+// introduced text, so a returning reader sees what's different without re-reading.
+// On the bill page it also shows the version history (milestones + dates).
+// "What changed" — the bill's version-to-version changelog, as patch-notes
+// Added / Modified / Removed bullets covering the bill's lifespan (Introduced ->
+// latest text). EMPTY until the bill is actually revised: `bill.versionChanges`
+// is only set once a revision produces real differences. Lets a returning reader
+// see what's different from the version they read, without re-reading.
+function renderWhatChanged(bill) {
+  const vc = bill.versionChanges;
+  if (!vc) return '';
+  const { added = [], modified = [], removed = [] } = vc;
+  if (!added.length && !modified.length && !removed.length) return '';
+
+  const block = (label, symbol, cls, items) => `<div class="patch-block ${cls}">
+      <div class="patch-block-label"><span class="patch-block-symbol">${symbol}</span>${label}</div>
+      <div class="patch-block-items">${
+        items.length
+          ? items.map(t => `<div class="patch-block-item">${billRefHtml(t, bill.id, true)}</div>`).join('')
+          : '<div class="patch-block-item patch-block-item--none">None</div>'
+      }</div>
+    </div>`;
+
+  return `<div class="what-changed-section">
+    <div class="what-changed-label">What changed <span class="analysis-tag">${whatChangedBaselineTag(vc)}</span></div>
+    <div class="what-changed-grid">
+      ${block('Added', '+', 'patch-block--added', added)}
+      ${block('Modified', '~', 'patch-block--modified', modified)}
+      ${block('Removed', '−', 'patch-block--removed', removed)}
+    </div>
+  </div>`;
+}
+
+// The diff baseline is Introduced when available, otherwise the earliest text
+// version on file (Reported/Engrossed/etc.) — say so instead of always claiming
+// "as introduced", which is false for bills that were never diffed against an
+// introduced text.
+function whatChangedBaselineTag(vc) {
+  const t = ((vc && vc.fromVersion && vc.fromVersion.type) || '').toLowerCase();
+  if (!t || t.includes('introduced')) return 'vs. as introduced';
+  if (t.includes('reported')) return 'vs. as reported';
+  if (t.includes('placed on calendar')) return 'vs. as placed on the calendar';
+  if (t.includes('engrossed amendment')) return 'vs. as passed with amendments';
+  if (t.includes('engrossed') || t.includes('considered and passed')) return 'vs. as first passed';
+  return 'vs. ' + (vc.fromVersion.type || 'earliest version');
+}
+
 function renderBody(bill, isOpen, col) {
   const pipelineHtml = `<div class="full-pipeline">
     ${bill.pipeline.map((step, i) => {
@@ -1762,7 +1841,7 @@ function renderBody(bill, isOpen, col) {
   const topLinesHtml = renderTopLines(bill);
 
   const sectionsHtml = (bill.isOmnibus && bill.divisions?.length) ? '' : bill.sections?.length
-    ? `<div class="patch-notes">${bill.sections.map((sec, si) => renderSection(bill, sec, si)).join('')}</div>`
+    ? `<div class="patch-notes">${renderSections(bill)}</div>`
     : `<div class="patch-notes"><p style="font-size:0.85rem;color:var(--text-3);padding:0.5rem 0">Click "Analyze with AI" below to generate patch notes for this bill.</p></div>`;
 
   const positionsHtml     = renderPositionsSection(bill);
@@ -1791,10 +1870,10 @@ function renderBody(bill, isOpen, col) {
   return `<div class="bill-body ${isOpen ? 'open' : ''}">
     ${stageDetailHtml}
     ${topLinesHtml}
-    ${renderChangesSection(bill)}
     ${renderQuoteCards(bill)}
     ${sectionsHtml}
     ${divisionsHtml}
+    ${renderWhatChanged(bill)}
     ${underreportedHtml}
     ${criticismsHtml}
     ${gapsHtml}
@@ -1823,6 +1902,7 @@ function renderDivision(bill, div, di) {
   const underHtml    = renderUnderreportedSection(synth);
   const topLinesHtml = renderTopLines(synth);
   const changesHtml  = renderChangesSection(synth);
+  const sectionsHtml = synth.sections.length ? renderSections(synth) : '';
 
   const criticismsHtml = synth.criticisms.length ? `
     <div class="criticism-section">
@@ -1842,7 +1922,8 @@ function renderDivision(bill, div, di) {
       <span class="division-block-label">${escHtml(div.label || '')}</span>
     </div>
     ${div.summary ? `<div class="division-summary">${escHtml(div.summary)}</div>` : ''}
-    ${topLinesHtml}
+    ${sectionsHtml ? '' : topLinesHtml}
+    ${sectionsHtml}
     ${changesHtml}
     ${underHtml}
     ${criticismsHtml}
@@ -1868,13 +1949,62 @@ function patchSectionAnchor(sec) {
   return null;
 }
 
-function renderSection(bill, sec, si) {
+// Section breakdown rendered as a numbered "spine": each section is a node with a
+// mono §N / Title / Division marker on a continuous vertical rail. Boilerplate
+// sections flagged `admin:true` collapse into one quiet folded node at the top.
+function renderSections(bill) {
+  const secs = bill.sections || [];
+  if (!secs.length) return '';
+  const admin = secs.filter(s => s.admin);
+  const main  = secs.filter(s => !s.admin);
+  let html = '<div class="patch-spine">';
+  if (admin.length) {
+    const aid = `psadm-${escHtml(bill.id)}`;
+    const sub = admin.map(s => secMarker(s.label)).filter(Boolean).join(', ');
+    html += `<div class="ps-admin-strip" onclick="var k=this.nextElementSibling;k.classList.toggle('open');var c=this.querySelector('.ps-caret');if(c)c.textContent=k.classList.contains('open')?'▴':'▾'">
+        <span class="ps-num admin">§§</span><span class="ps-rail"></span>
+        <div class="ps-admin-label">Administrative provisions${sub ? ` <span class="ps-admin-sub">· ${sub}</span>` : ''}<span class="ps-caret">▾</span></div>
+      </div>
+      <div class="ps-admin-kids" id="${aid}">${admin.map((s, i) => renderSection(bill, s, 'a' + i, {})).join('')}</div>`;
+  }
+  html += main.map((s, i) => renderSection(bill, s, i, { last: i === main.length - 1 })).join('');
+  return html + '</div>';
+}
+
+// Derive the rail marker shown for a section label. Falls back to null (→ plain dot).
+function secMarker(label) {
+  const L = (label || '').trim();
+  let m;
+  if (m = L.match(/^Sections\s+(\w+)\s*[-–—]\s*(\w+)/i)) return /end/i.test(m[2]) ? `§${m[1]}+` : `§${m[1]}–${m[2]}`;
+  if (m = L.match(/^Sec(?:tion)?\.?\s+(\d+[A-Za-z]?)/i)) return `§${m[1]}`;
+  if (m = L.match(/^Title\s+([IVXLC]+)/i)) return m[1];
+  if (m = L.match(/^Division\s+([A-Z0-9]+)/i)) return m[1];
+  return null;
+}
+
+// Strip the "Section N — " / "Title I — " prefix so the title sits next to the marker.
+function secTitle(label) {
+  const L = label || '';
+  if (!/^(Sec|Title|Division)/i.test(L)) return L;
+  for (const sep of [' — ', ' – ', ' - ']) { const i = L.indexOf(sep); if (i >= 0) return L.slice(i + sep.length).trim(); }
+  const i = L.search(/[—–]/);
+  return i >= 0 ? L.slice(i + 1).trim() : L;
+}
+
+function renderSection(bill, sec, si, opts) {
+  opts = opts || {};
+  const marker = secMarker(sec.label);
+  const title  = secTitle(sec.label);
   const anchor = window.BILL_PAGE_ID ? patchSectionAnchor(sec) : null;
   const titleHtml = anchor
-    ? `<a class="patch-section-title-link" href="#${anchor}" onclick="event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(sec.label)}</a>`
-    : escHtml(sec.label);
-  return `<div class="patch-section">
-    <div class="patch-section-title">${titleHtml}</div>
+    ? `<a class="patch-section-title-link" href="#${anchor}" onclick="event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(title)}</a>`
+    : escHtml(title);
+  const node = marker
+    ? `<span class="ps-num${sec.admin ? ' admin' : ''}">${escHtml(marker)}</span>`
+    : `<span class="ps-dot"></span>`;
+  return `<div class="patch-section ps-row${opts.last ? ' ps-last' : ''}${sec.admin ? ' ps-adm' : ''}">
+    ${node}<span class="ps-rail"></span>
+    <div class="ps-title">${titleHtml}</div>
     ${sec.items.map((item, ii) => renderItem(bill, item, si, ii)).join('')}
   </div>`;
 }
@@ -1895,7 +2025,7 @@ function renderItem(bill, item, si, ii) {
     <div class="patch-item-main">${billRefHtml(item.main, bill.id, true)}</div>
     ${chipsHtml}
     ${item.detail ? `
-      <button class="more-btn" onclick="toggleDetail('${key}')">${isOpen ? '▲ hide details' : '▼ more info'}</button>
+      <button class="more-btn" onclick="toggleDetail('${key}')">${isOpen ? '▴ hide' : '▾ details'}</button>
       <div class="item-detail ${isOpen ? 'open' : ''}" id="detail-${key}">
         <div>${billRefHtml(item.detail, bill.id)}</div>
         ${commentsDetail}

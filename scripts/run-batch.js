@@ -156,6 +156,9 @@ if (needVotes.length > 0) {
 }
 
 run('Update rep profiles', ['scripts/generate_reps.js'], { optional: true });
+// Record every text version per bill (Introduced -> ... -> Enrolled) for the
+// Version Timeline. Re-run each batch so bills that advanced pick up new versions.
+run('Fetch bill text versions', ['scripts/fetch_versions.js', '--apply'], { optional: true });
 // Backfill CR floor quotes for any cached bill still missing featured_quotes.
 // The fetch pipeline only fetches NOT-yet-cached bills, so a bill whose CR
 // quotes were unavailable at analysis time (API down / recess / not yet posted)
