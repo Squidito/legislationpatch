@@ -690,9 +690,11 @@ section('Quote attribution (bioguide ↔ rep)');
             }
         })(repsIdx);
 
-        // Normalize: drop hyphens/apostrophes (so "Ocasio-Cortez" stays one token),
-        // then turn any other punctuation into spaces.
-        const norm = (s) => String(s || '').toLowerCase().replace(/['’\-]/g, '').replace(/[^a-z\s]/g, ' ');
+        // Normalize: strip diacritics (so the CR's ASCII "Barragan" matches "Barragán"),
+        // drop hyphens/apostrophes (so "Ocasio-Cortez" stays one token), then turn any
+        // other punctuation into spaces.
+        const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+            .toLowerCase().replace(/['’\-]/g, '').replace(/[^a-z\s]/g, ' ');
         const surnameOf = (n) => {
             const t = norm(String(n || '').replace(/^(Mr|Mrs|Ms|Dr|Sen|Rep)\.?\s+/i, '')).trim().split(/\s+/).filter(Boolean);
             return t[t.length - 1] || '';

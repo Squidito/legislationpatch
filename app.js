@@ -857,8 +857,68 @@ function setupCarousel() {
   _carouselRaf = requestAnimationFrame(tick);
 }
 
+// Bills page header readout: net legislative movement over a recent window.
+// Widens 7d -> 30d if the data is quiet, falls back to a tracked-total if fully stale.
+function renderBillActivity() {
+  const host = document.getElementById('pageHeadStat');
+  if (!host || !allBills.length) return;
+
+  const DAY = 86400000;
+  const dateOf = b => {
+    const ds = b.stageDate || b.enactedDate || b.date;
+    const t  = ds ? new Date(ds).getTime() : NaN;
+    return isNaN(t) ? null : t;
+  };
+  // Anchor the window to the dataset's most recent activity, NOT the wall clock —
+  // the data updates in batches, so a Date.now() window would silently shrink to
+  // zero as real days pass with no new data ("4 advanced" quietly becoming "1").
+  const anchor = Math.max(...allBills.map(dateOf).filter(t => t !== null));
+  const isFinal = b => b.stage === 'signed' || b.stage === 'dead' || b.stage === 'vetoed';
+  const within = (b, days) => {
+    const t = dateOf(b);
+    return t !== null && (anchor - t) <= days * DAY;
+  };
+  const tally = days => {
+    const active = allBills.filter(b => within(b, days));
+    return {
+      advanced: active.filter(b => !isFinal(b)).length,
+      enacted:  active.filter(b => b.stage === 'signed').length,
+      dead:     active.filter(b => b.stage === 'dead' || b.stage === 'vetoed').length,
+      total:    active.length,
+    };
+  };
+
+  // "Latest activity" (not "Past 7 days") because the window is anchored to the
+  // data's newest date, not the wall clock — so it stays honest when the data is
+  // a few days/weeks stale, and it covers the 7d->30d widen without leaking it.
+  const label = 'Latest activity';
+  let d = tally(7);
+  if (!d.total) d = tally(30);
+  if (!d.total) {
+    host.innerHTML =
+      '<div class="page-head-stat-num">' + allBills.length + '</div>' +
+      '<div class="page-head-stat-label">Bills tracked</div>';
+    return;
+  }
+
+  const delta = (n, lbl, cls) => n
+    ? '<div class="ph-delta ph-delta--' + cls + '"><span class="ph-delta-num">' + n +
+      '</span><span class="ph-delta-label">' + lbl + '</span></div>'
+    : '';
+
+  host.innerHTML =
+    '<div class="page-head-activity-label">' + label + '</div>' +
+    '<div class="page-head-deltas">' +
+      delta(d.advanced, 'advanced', 'advanced') +
+      delta(d.enacted,  'enacted',  'enacted') +
+      delta(d.dead,     'dead',     'dead') +
+    '</div>';
+}
+
 function renderAll() {
   if (favoritesView) { renderFavoritesView(); return; }
+
+  renderBillActivity();
 
   const list = document.getElementById('billList');
   const PIPELINE_STAGES = new Set(['introduced', 'committee', 'house', 'senate']);

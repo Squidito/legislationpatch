@@ -31,6 +31,14 @@ async function init() {
     const res   = await fetch('data/reps-index.json');
     if (!res.ok) throw new Error('fetch failed');
     const index = await res.json();
+
+    const countEl = document.getElementById('pageHeadCount');
+    if (countEl) {
+      const total = Object.values(index)
+        .reduce((n, v) => n + (Array.isArray(v) ? v.length : 0), 0);
+      if (total) countEl.textContent = total;
+    }
+
     renderRepsPage(index);
   } catch (err) {
     document.getElementById('loadingState').innerHTML = '<p style="color:var(--text-2);padding:1rem">Could not load representatives data.</p>';

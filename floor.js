@@ -32,14 +32,23 @@ const CATEGORIES = [
     label:    'Executive Power',
     keywords: ['25th amendment', 'kash patel', 'remove the president', 'coercion',
                'fbi director', 'pardon', 'attorney general', 'cabinet must',
-               'national security', 'unqualified'],
+               'national security', 'unqualified',
+               'executive order', 'executive orders', 'executive branch',
+               'executive overreach', 'executive action', 'abuse of power',
+               'checks and balances', 'separation of powers', 'impeach', 'impeachment',
+               'presidential power', 'veto', 'vetoed',
+               'imperial presidency', 'unitary executive'],
   },
   {
     id:       'government',
     label:    'Government & Oversight',
     keywords: ['shutdown', 'fema', ' dhs ', 'homeland security', ' tsa ', ' cisa ',
                'coast guard', 'appropriation', 'continuing resolution', 'longest shutdown',
-               'disaster recovery', 'recovery fund'],
+               'disaster recovery', 'recovery fund',
+               'oversight', 'subpoena', 'subpoenas', 'inspector general', 'whistleblower',
+               'accountability', 'government accountability', 'government waste',
+               'wasteful spending', 'transparency', 'watchdog', 'ethics', 'gao',
+               'audit', 'red tape', 'government efficiency'],
   },
   {
     id:       'civil',
@@ -47,8 +56,51 @@ const CATEGORIES = [
     keywords: ['fisa', 'warrantless', 'surveillance', 'rule of law', 'epstein',
                'contempt', 'breaking the law', 'civil liberties', 'due process',
                'liberty for security', 'foreign intelligence',
-               'gun safety', 'gun violence', 'firearm', 'nra',
+               'gun safety', 'gun violence', 'firearm', 'firearms', 'nra',
                'security and liberty'],
+  },
+  {
+    id:       'health',
+    label:    'Health Care',
+    keywords: ['health care', 'healthcare', 'medicaid', 'medicare', 'hospital', 'hospitals',
+               'health insurance', 'prescription', 'prescriptions', 'affordable care act',
+               'patients', 'nurses', 'physicians', 'opioid', 'opioids', 'mental health',
+               'premiums', 'drug prices'],
+  },
+  {
+    id:       'energy',
+    label:    'Energy & Environment',
+    keywords: ['energy', 'oil', 'natural gas', 'gasoline', 'gas prices', 'climate',
+               'clean air', 'emissions', 'pipeline', 'pipelines', 'power grid', 'the grid',
+               'renewable', 'renewables', 'coal', 'drilling', 'environment', 'environmental',
+               'solar', 'nuclear power', 'power plant', 'power plants', 'clean energy'],
+  },
+  {
+    id:       'education',
+    label:    'Education',
+    keywords: ['school', 'schools', 'student', 'students', 'education', 'teacher', 'teachers',
+               'college', 'colleges', 'university', 'universities', 'tuition', 'student loan',
+               'student loans', 'classroom', 'classrooms', 'pell grant', 'public schools'],
+  },
+  {
+    id:       'veterans',
+    label:    'Veterans & Military',
+    keywords: ['veteran', 'veterans', 'veterans affairs', 'servicemember', 'servicemembers',
+               'gi bill', 'gold star', 'military families', 'active duty', 'the troops'],
+  },
+  {
+    id:       'agriculture',
+    label:    'Agriculture & Rural',
+    keywords: ['farm', 'farms', 'farmer', 'farmers', 'farming', 'agriculture', 'agricultural',
+               'crop', 'crops', 'livestock', 'rancher', 'ranchers', 'usda', 'harvest', 'dairy',
+               'soybeans', 'farm bill', 'rural communities'],
+  },
+  {
+    id:       'crime',
+    label:    'Crime & Public Safety',
+    keywords: ['crime', 'criminal', 'police', 'law enforcement', 'fentanyl', 'trafficking',
+               'violent crime', 'homicide', 'gang', 'gangs', 'prison', 'sentencing',
+               'cartel', 'cartels', 'public safety', 'drug trafficking', 'overdose'],
   },
   {
     id:       'other',
@@ -64,6 +116,12 @@ const CAT_ICONS = {
   executive:   '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>',
   government:  '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12,2 20,7 4,7"/></svg>',
   civil:       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/><polyline points="9 12 11 14 15 10"/></svg>',
+  health:      '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+  energy:      '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+  education:   '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/></svg>',
+  veterans:    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 12.5 17 22l-5-3-5 3 1.5-9.5"/></svg>',
+  agriculture: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg>',
+  crime:       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
   other:       '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>',
 };
 
@@ -101,11 +159,24 @@ function chamberLabelFromSource(source) {
   return '';
 }
 
+// Precompile one word-boundary regex per category. Substring matching mis-filed
+// huge numbers of quotes — "ice" matched offICE/servICE/polICE/justICE, "nato"
+// matched seNATOr, "war" matched toWARd — so any quote naming a Senator landed in
+// War & Foreign Policy, etc. \b matching also makes the old manual ' dhs ' padding
+// unnecessary and stops "the fed" matching "the federal".
+const _catMatchers = CATEGORIES
+  .filter(cat => cat.id !== 'other' && cat.keywords.length)
+  .map(cat => ({
+    id: cat.id,
+    re: new RegExp('\\b(?:' +
+      cat.keywords.map(kw => kw.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') +
+      ')\\b', 'i'),
+  }));
+
 function classifyQuote(q) {
-  const haystack = (q.text + ' ' + (q.granuleTitle || '')).toLowerCase();
-  for (const cat of CATEGORIES) {
-    if (cat.id === 'other') continue;
-    if (cat.keywords.some(kw => haystack.includes(kw))) return cat.id;
+  const haystack = q.text + ' ' + (q.granuleTitle || '');
+  for (const m of _catMatchers) {
+    if (m.re.test(haystack)) return m.id;
   }
   return 'other';
 }
@@ -201,9 +272,9 @@ function renderEntry(q, isFirst) {
   const shortDate    = shortDateFromSource(q.source);
   const chamberLabel = chamberLabelFromSource(q.source);
 
-  const accentClass = party === 'D' ? 'accent-dem'
-                    : party === 'R' ? 'accent-rep'
-                    : 'accent-ind';
+  const ringClass = party === 'D' ? 'ring-dem'
+                  : party === 'R' ? 'ring-rep'
+                  : 'ring-ind';
 
   const stance      = q.stance || 'neutral';
   const stanceLabel = stance === 'support' ? 'support'
@@ -241,14 +312,12 @@ function renderEntry(q, isFirst) {
   return (
     '<div class="floor-entry' + (isFirst ? ' floor-entry-first' : '') + '">' +
       '<div class="floor-entry-header">' +
+        '<img class="floor-entry-portrait ' + ringClass + '" src="' + escHtml(portrait) + '" alt="' + escHtml(q.name) + '"' +
+             ' onerror="this.src=\'' + FALLBACK_PORTRAIT + '\'" />' +
         '<div class="floor-entry-speaker-block">' +
-          '<div class="floor-entry-rep-frame ' + accentClass + '">' +
-            '<img class="floor-entry-portrait" src="' + escHtml(portrait) + '" alt="' + escHtml(q.name) + '"' +
-                 ' onerror="this.src=\'' + FALLBACK_PORTRAIT + '\'" />' +
-            speakerEl +
-            partyBadge +
-            stanceBadge +
-          '</div>' +
+          speakerEl +
+          partyBadge +
+          stanceBadge +
         '</div>' +
         '<div class="floor-entry-right">' +
           datePart +
@@ -281,10 +350,7 @@ function renderCategoryCard({ cat, quotes }) {
   return (
     '<div class="bill-card floor-cat-card floor-cat-card--' + cat.id + '" id="floor-cat-' + cat.id + '">' +
       '<div class="floor-cat-header" onclick="toggleCategory(\'' + cat.id + '\')">' +
-        '<div class="floor-cat-chip cat-' + cat.id + '">' +
-          '<div class="floor-cat-chip-icon">' + icon + '</div>' +
-          '<div class="floor-cat-chip-count">' + count + '</div>' +
-        '</div>' +
+        '<div class="floor-cat-chip cat-' + cat.id + '">' + icon + '</div>' +
         '<div class="floor-cat-info">' +
           '<div class="floor-cat-name">' + escHtml(cat.label) + '</div>' +
           '<div class="floor-cat-meta">' + metaStr + '</div>' +
@@ -433,6 +499,15 @@ async function init() {
   }
 
   document.getElementById('loadingState').style.display = 'none';
+
+  const latestEl = document.getElementById('pageHeadLatest');
+  if (latestEl) {
+    const newest = allQuotes
+      .map(q => ({ q, t: parseSourceDate(q.source) }))
+      .filter(x => x.t)
+      .sort((a, b) => b.t - a.t)[0];
+    if (newest) latestEl.textContent = shortDateFromSource(newest.q.source);
+  }
 
   document.addEventListener('click', e => {
     const btn = e.target.closest('[data-chamber]');

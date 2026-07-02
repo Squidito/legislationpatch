@@ -27,12 +27,21 @@ const { extractQuotesFromCR } = require('./fetch_bill_cr');
 
 const CR_RAW      = path.join(__dirname, '../data/cr_raw.json');
 const QUOTES_FILE = path.join(__dirname, '../data/quotes.json');
-const PER_DAY_CAP = 6;   // keep the top N spiciest per session day
-// Minimum shockScore to qualify as "controversial". Stance alone is too loose —
-// "I am proud / I commend" ceremonial speeches read as support but score ~4
-// (length only). Genuine controversy (oppose stance, charged words, "!") scores
-// 5+. This bar drops National-Forest-Week / memorial / choir-tribute noise.
-const MIN_SHOCK   = 5;
+// Balanced coverage (2026-06-30): quotes.json feeds the WHOLE floor page (the
+// category accordion), not just the carousel — so we store comprehensively and
+// let the carousel keep ranking by shock score to surface the spiciest. We keep
+// all stances (incl. neutral) and apply only a light quality bar to drop pure
+// procedural/ceremonial filler. The per-day cap is per chamber, by speaker.
+const PER_DAY_CAP = 15;  // keep up to N statements per session day
+// Light floor under which a quote is just a one-liner / procedural fragment.
+// (A substantive statement of ~160+ chars clears this on length alone.)
+const MIN_SHOCK   = 2;
+
+// Ceremonial tributes ("I rise to honor/recognize/congratulate X", memorials,
+// anniversaries) are real floor statements but not policy debate — drop them so
+// the topic page stays about legislation. Matched only against the opener so a
+// policy speech that happens to say "remember" later isn't caught.
+const TRIBUTE_RE = /\b(?:rise (?:today )?to (?:honor|recognize|congratulate|celebrate|pay tribute|remember|commemorate|mark the|acknowledge)|in (?:honor|memory|recognition|celebration) of|congratulat\w+|pay(?:ing)? tribute|\d{2,3}(?:th|st|nd|rd) anniversary|life and legacy of|for (?:his|her|their) (?:many years of |decades of )?(?:dedicated |distinguished )?service)\b/i;
 
 // Mirror of computeShockScore() in app.js — keep in sync if that changes.
 function computeShockScore(q) {
@@ -53,6 +62,20 @@ function isoToDisplay(iso) {
     return m ? `${MONTHS[+m[2]-1]} ${+m[3]}, ${m[1]}` : '';
 }
 
+const CONGRESS = process.env.CONGRESS_SESSION || '119';
+// Extract bill references ("H.R. 1234", "H. Con. Res. 40", "S. 5") → normalized ids.
+// Longest forms first; a lookbehind blocks the "U.S. 50" → "S. 50" false match.
+const BILL_REF_RE = /(?<![A-Za-z]\.)\b(H\.?\s?Con\.?\s?Res\.?|S\.?\s?Con\.?\s?Res\.?|H\.?\s?J\.?\s?Res\.?|S\.?\s?J\.?\s?Res\.?|H\.?\s?Res\.?|S\.?\s?Res\.?|H\.?\s?R\.?|S\.?)\s?(\d{1,5})\b/gi;
+const REF_TYPE = { HR:'HR', HJRES:'HJRES', HCONRES:'HCONRES', HRES:'HRES', SJRES:'SJRES', SCONRES:'SCONRES', SRES:'SRES', S:'S' };
+function billRefsInText(text) {
+    const out = new Set();
+    for (const m of (text || '').matchAll(BILL_REF_RE)) {
+        const t = REF_TYPE[m[1].toUpperCase().replace(/[^A-Z]/g, '')];
+        if (t) out.add(`${CONGRESS}-${t}-${m[2]}`);
+    }
+    return out;
+}
+
 function main() {
     if (!fs.existsSync(CR_RAW)) { console.log('No data/cr_raw.json — run fetch_cr_data.js first.'); return; }
     const granules = JSON.parse(fs.readFileSync(CR_RAW, 'utf8'));
@@ -62,14 +85,52 @@ function main() {
     const existing   = quotesData.quotes || [];
     const seen       = new Set(existing.map(q => `${q.name}|${(q.text || '').slice(0, 40)}`));
 
+    // Cached bill titles, for high-confidence bill attribution below.
+    const cacheTitle = {};
+    try {
+        const cache = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/cache.json'), 'utf8'));
+        for (const b of (cache.bills || [])) cacheTitle[b.id] = b.title || b.official_title || null;
+    } catch (e) { console.warn('Warning: cache.json not loaded — bill attribution disabled'); }
+    const cachedIds = new Set(Object.keys(cacheTitle));
+
+    // Attribute a bill only when the granule clearly centers on ONE cached bill:
+    // (1) exactly one cached bill referenced, (2) not a multi-bill grab-bag, and
+    // (3) the granule's TITLE substantially matches the bill's title — the debate
+    // heading IS that measure, not a different topic that cites it in passing.
+    // (3) is what rejects e.g. a "Highlighting Women's Health" granule that mentions
+    // the Ukraine Support Act once, or a quote tagged to a bill from an "S. Res. 616"
+    // granule. Procedural granule titles (rule waivers, etc.) reduce to no signal
+    // words and are correctly rejected.
+    const TITLE_STOP = new Set(['act','the','and','for','resolution','bill','providing',
+        'consideration','making','appropriations','related','other','purposes','fiscal',
+        'year','amendment','directing','pursuant','section','requirement','clause','rule',
+        'waiving','further','additional','providing','concurrent','joint']);
+    const sigWords = s => new Set((s || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ')
+        .split(/\s+/).filter(w => w.length > 3 && !TITLE_STOP.has(w)));
+    function titleMatch(billTitle, granuleTitle) {
+        const bt = sigWords(billTitle), gt = sigWords(granuleTitle);
+        if (!bt.size) return false;
+        let hit = 0; for (const w of bt) if (gt.has(w)) hit++;
+        return hit / bt.size >= 0.6;
+    }
+    function granuleBill(g) {
+        const refs = billRefsInText(g.text || '');
+        const cached = [...refs].filter(id => cachedIds.has(id));
+        if (cached.length === 1 && refs.size <= 4 && titleMatch(cacheTitle[cached[0]], g.granuleTitle)) {
+            return { id: cached[0], title: cacheTitle[cached[0]] || null };
+        }
+        return null;
+    }
+
     // Gather candidates grouped by date.
     const byDate = {};
     for (const g of granules) {
-        const cands = extractQuotesFromCR(g.text || '', '', '');   // empty bill args = general
+        const cands = extractQuotesFromCR(g.text || '', '', '', g.chamber);   // empty bill args = general; chamber disambiguates speakers
+        const gb = granuleBill(g);                                            // one cached bill for the whole granule, or null
         for (const q of cands) {
-            if (q.stance !== 'oppose' && q.stance !== 'support') continue;   // spicy: drop neutral
             const shock = computeShockScore(q);
-            if (shock < MIN_SHOCK) continue;                                 // spicy: drop ceremonial/low-heat
+            if (shock < MIN_SHOCK) continue;                                 // drop one-liners / procedural fragments
+            if (TRIBUTE_RE.test((q.text || '').slice(0, 180))) continue;      // drop ceremonial tributes
             const key = `${q.name}|${(q.text || '').slice(0, 40)}`;
             if (seen.has(key)) continue;
             (byDate[g.date] = byDate[g.date] || []).push({
@@ -77,8 +138,9 @@ function main() {
                 text: q.text,
                 source: `${g.chamber} Floor, ${isoToDisplay(g.date)}`,
                 stance: q.stance,
-                billId: null, billTitle: null,
+                billId: gb ? gb.id : null, billTitle: gb ? gb.title : null,
                 chamber: g.chamber,
+                granuleId: g.granuleId || null,
                 _score: computeShockScore(q),
                 _key: key,
             });
@@ -112,7 +174,8 @@ function main() {
 
     fs.writeFileSync(QUOTES_FILE, JSON.stringify(quotesData, null, 2) + '\n');
 
-    console.log(`Added ${toAdd.length} general floor statement(s). Total quotes: ${quotesData.quotes.length}.`);
+    const withBill = toAdd.filter(e => e.billId).length;
+    console.log(`Added ${toAdd.length} general floor statement(s) (${withBill} attributed to a cached bill). Total quotes: ${quotesData.quotes.length}.`);
     const perDay = {};
     toAdd.forEach(e => { perDay[e.source] = (perDay[e.source] || 0) + 1; });
     Object.entries(perDay).sort().forEach(([s, n]) => console.log(`  + ${s}: ${n}`));

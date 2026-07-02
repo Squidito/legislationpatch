@@ -52,27 +52,73 @@ const CACHE_FILE = path.join(__dirname, '../data/cache.json');
 const sleep      = ms => new Promise(r => setTimeout(r, ms));
 
 // --- Rep index lookup ---
+// Strip diacritics so the CR's ASCII "GARCIA" matches "García", "VELAZQUEZ" matches
+// "Velázquez", etc. Without this, accented-surname members (García, Barragán, Sánchez,
+// Velázquez, Luján, Hernández…) are invisible and their quotes misattribute to an
+// ASCII-surname namesake in another state.
+const deaccent = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+const lastNameKey = fullName => deaccent(
+    fullName.replace(/,?\s+(jr\.?|sr\.?|ii+v?|iv|v)\s*$/i, '').trim().split(/\s+/).pop()
+).toLowerCase();
+
 const repsByLastName = {};
 try {
     const repsIndex = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/reps-index.json'), 'utf8'));
     for (const stateReps of Object.values(repsIndex)) {
         for (const rep of stateReps) {
-            // Strip name suffixes like "Jr.", "Sr.", "III" before extracting last name
-            const clean = rep.name.replace(/,?\s+(jr\.?|sr\.?|ii+v?|iv|v)\s*$/i, '').trim();
-            const ln    = clean.split(/\s+/).pop().toLowerCase();
+            const ln = lastNameKey(rep.name);
             if (!repsByLastName[ln]) repsByLastName[ln] = [];
             repsByLastName[ln].push(rep);
         }
     }
 } catch (e) { console.warn('Warning: could not load reps-index.json — party/state resolution disabled'); }
 
-function resolveRepInfo(allCapsName) {
-    // allCapsName: "WYDEN" or "VAN HOLLEN" (already stripped of "of State")
-    const lastName = allCapsName.split(/\s+/).pop().toLowerCase();
+// Full state/territory name -> USPS code, for disambiguating the CR's
+// "Mr. SMITH of Missouri" speaker lines by state.
+const STATE_CODE = {
+    'alabama':'AL','alaska':'AK','arizona':'AZ','arkansas':'AR','california':'CA',
+    'colorado':'CO','connecticut':'CT','delaware':'DE','florida':'FL','georgia':'GA',
+    'hawaii':'HI','idaho':'ID','illinois':'IL','indiana':'IN','iowa':'IA','kansas':'KS',
+    'kentucky':'KY','louisiana':'LA','maine':'ME','maryland':'MD','massachusetts':'MA',
+    'michigan':'MI','minnesota':'MN','mississippi':'MS','missouri':'MO','montana':'MT',
+    'nebraska':'NE','nevada':'NV','new hampshire':'NH','new jersey':'NJ','new mexico':'NM',
+    'new york':'NY','north carolina':'NC','north dakota':'ND','ohio':'OH','oklahoma':'OK',
+    'oregon':'OR','pennsylvania':'PA','rhode island':'RI','south carolina':'SC',
+    'south dakota':'SD','tennessee':'TN','texas':'TX','utah':'UT','vermont':'VT',
+    'virginia':'VA','washington':'WA','west virginia':'WV','wisconsin':'WI','wyoming':'WY',
+    'district of columbia':'DC','puerto rico':'PR','guam':'GU','american samoa':'AS',
+    'virgin islands':'VI','northern mariana islands':'MP',
+};
+
+function repChamber(rep) {
+    const role = (rep.role || '').toLowerCase();
+    if (role.includes('senator')) return 'Senate';
+    return 'House';   // Representative / Delegate / Member of Congress
+}
+
+// allCapsName: "WYDEN" or "VAN HOLLEN" (already stripped of "of State").
+// chamber ("House"/"Senate") + ofStateName ("Missouri") disambiguate shared
+// surnames — never pick by surname alone (Congress has many shared surnames,
+// and a wrong pick shows the wrong person, party, and photo).
+function resolveRepInfo(allCapsName, chamber = '', ofStateName = '') {
+    const lastName = deaccent(allCapsName.split(/\s+/).pop()).toLowerCase();
     if (!lastName || lastName.length < 2) return {};
-    const candidates = repsByLastName[lastName] || [];
+    let candidates = repsByLastName[lastName] || [];
     if (!candidates.length) return {};
-    return { bioguideId: candidates[0].bioguideId, party: candidates[0].party, state: candidates[0].state };
+
+    // Most specific: the CR's "of State" qualifier.
+    const stateCode = ofStateName ? STATE_CODE[ofStateName.trim().toLowerCase()] : '';
+    if (stateCode) {
+        const byState = candidates.filter(c => (c.state || '').toUpperCase() === stateCode);
+        if (byState.length) candidates = byState;
+    }
+    // Then the chamber the statement was made in.
+    if (candidates.length > 1 && chamber) {
+        const byChamber = candidates.filter(c => repChamber(c) === chamber);
+        if (byChamber.length) candidates = byChamber;
+    }
+    const r = candidates[0];
+    return { bioguideId: r.bioguideId, party: r.party, state: r.state };
 }
 
 // --- Pattern-based speaker extraction ---
@@ -232,7 +278,7 @@ function buildBillPatterns(billType, billNumber) {
     return pats;
 }
 
-function extractQuotesFromCR(crText, billType = '', billNumber = '') {
+function extractQuotesFromCR(crText, billType = '', billNumber = '', chamber = '') {
     const speakerMatches = [...crText.matchAll(SPEAKER_RE)];
     if (!speakerMatches.length) return [];
 
@@ -296,7 +342,8 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '') {
             }
         }
 
-        // Parse name: strip "of State" for lookup, title-case for display
+        // Parse name: capture "of State" for disambiguation, strip it for lookup/display
+        const ofStateName = (rawName.match(/\s+of\s+(.+)$/i)?.[1] || '').trim();
         const namePart    = rawName.replace(/\s+of\s+.+$/i, '').trim();
         const nameKey     = namePart.toLowerCase();
         if (seenNames.has(nameKey)) continue;
@@ -307,10 +354,12 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '') {
         ).join(' ');
         const displayName = `${prefix} ${displayLast}`;
 
-        const repInfo    = resolveRepInfo(namePart);
+        const repInfo    = resolveRepInfo(namePart, chamber, ofStateName);
         const substantive = stripFillerSentences(stripped);
         if (!substantive) continue;  // all sentences were filler
-        const text        = bestExcerpt(substantive);
+        // Capitalize the first letter: stripping the salutation ("Mr. President, this is…")
+        // often leaves the excerpt starting mid-sentence with a lowercase word.
+        const text        = bestExcerpt(substantive).replace(/^[a-z]/, c => c.toUpperCase());
         if (text.length < 30) continue;
         if (DISPLAY_PROCEDURAL.some(p => p.test(text))) continue;  // reject leftover procedural language
 

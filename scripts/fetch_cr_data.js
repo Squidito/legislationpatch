@@ -78,7 +78,7 @@ async function getSubstantiveGranules(packageId, chamber) {
 // Step 3: fetch text of a granule
 async function fetchGranuleText(packageId, granuleId) {
   try {
-    await sleep(2000);
+    await sleep(1200);
     const url = `https://api.govinfo.gov/packages/${packageId}/granules/${granuleId}/htm?api_key=${GOVINFO_API_KEY}`;
     const res  = await fetch(url);
     if (res.status === 429) { await sleep(30000); return ''; }
@@ -114,7 +114,7 @@ async function main() {
       console.log(`  [${chamber}] ${granules.length} substantive granule(s)`);
       if (!granules.length) continue;
 
-      for (const g of granules.slice(0, 8)) {
+      for (const g of granules.slice(0, 40)) {
         const title = g.title || '';
         process.stdout.write(`    ${title.slice(0, 60)}...\r`);
         const text = await fetchGranuleText(packageId, g.granuleId);
@@ -125,7 +125,7 @@ async function main() {
           granuleId: g.granuleId,
           granuleTitle: title,
           chamber,
-          text: text.slice(0, 12000),
+          text: text.slice(0, 30000),
         });
       }
       console.log(`  [${chamber}] Done.`);
