@@ -17,6 +17,8 @@ require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 
+const { PASSAGE_CONTEXT } = require("./lib/patterns.js");
+
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
 const CACHE_FILE   = path.join(__dirname, '../data/cache.json');
 const VOTES_DIR    = path.join(__dirname, '../data/votes');
@@ -207,7 +209,7 @@ function detectCrossovers(members, yeas, nays) {
 // ---- Stage derivation from actions (confident cases only) ----
 
 const APPLY_STAGE = process.argv.includes('--apply-stage');
-const PASSAGE_CTX = /(on passage|agreeing to the (concurrent )?resolution|suspend the rules and pass|failed of passage|passed\/agreed to)/i;
+const PASSAGE_CTX = PASSAGE_CONTEXT; // shared — scripts/lib/patterns.js (was a third drifting copy)
 
 function deriveStageSignal(actions) {
   if (actions.some(a => /became public law/i.test(a.text || ''))) return { stage: 'signed' };

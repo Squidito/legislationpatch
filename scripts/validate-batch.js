@@ -277,9 +277,12 @@ section('Smart-quote character safety');
 {
     let bad = 0;
 
+    // billSection values become HTML anchor ids — ANY non-ASCII (curly quote,
+    // en-dash "title–II", NBSP…) silently breaks the anchor, not just curly quotes.
+    const NON_ASCII = /[^\x20-\x7E]/;
     const checkBillSection = (billId, where, o) => {
-        if (o && typeof o === 'object' && typeof o.billSection === 'string' && SMART_QUOTES.test(o.billSection)) {
-            fail(`${billId}${where}: billSection contains curly quotes: "${o.billSection}" — anchors break; use straight ASCII`);
+        if (o && typeof o === 'object' && typeof o.billSection === 'string' && NON_ASCII.test(o.billSection)) {
+            fail(`${billId}${where}: billSection contains non-ASCII character(s): "${o.billSection}" — anchors break; use plain ASCII (digits or title-II form)`);
             bad++;
         }
     };

@@ -8,7 +8,7 @@
 // extractQuotesFromCR with EMPTY bill args, which skips the bill-proximity
 // filter and returns any substantive speaker quote), then keep only
 // oppose/support-stance statements (drop neutral/procedural), rank by the SAME
-// computeShockScore the carousel uses (app.js), and cap a handful per session
+// computeShockScore the carousel uses (app-carousel.js), and cap a handful per session
 // day. No LLM. Idempotent: dedups against existing quotes + processedDates.
 //
 // Pipeline: runs in run-batch.js after fetch_cr_data.js (which produces
@@ -43,7 +43,7 @@ const MIN_SHOCK   = 2;
 // policy speech that happens to say "remember" later isn't caught.
 const TRIBUTE_RE = /\b(?:rise (?:today )?to (?:honor|recognize|congratulate|celebrate|pay tribute|remember|commemorate|mark the|acknowledge)|in (?:honor|memory|recognition|celebration) of|congratulat\w+|pay(?:ing)? tribute|\d{2,3}(?:th|st|nd|rd) anniversary|life and legacy of|for (?:his|her|their) (?:many years of |decades of )?(?:dedicated |distinguished )?service)\b/i;
 
-// Mirror of computeShockScore() in app.js — keep in sync if that changes.
+// Mirror of computeShockScore() in app-carousel.js — keep in sync if that changes.
 function computeShockScore(q) {
     let score = 0;
     const text = (q.text || '').toLowerCase();

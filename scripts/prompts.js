@@ -224,6 +224,7 @@ BUDGET_ACCOUNTS RULES:
 
 LIMITS: 2-4 sections, 1-3 items per section, 0-4 underreported, 0-4 criticisms, 3-5 gaps, 0-3 featured quotes.
 top_lines: 1-3 topic objects. Each headline is a short topic label (3-6 words), NOT a specific provision. Subs are the specific provisions/figures under that topic — 1-3 subs per headline, omit subs that add nothing. A headline with zero meaningful subs should be omitted entirely.
+Every top_lines object needs a billSection field pointing at a section anchor in the bill text (digits like "3" or "title-II" form) — plain ASCII only, no curly/smart quotes or dashes; validate-batch.js ERRORs on non-ASCII billSection values.
 If the source material does not support a full response in any zone, return fewer items — do not fill space with invented content.`;
 
 
