@@ -262,6 +262,27 @@ const ACRONYMS = {
   ACES:   'Agriculture Conservation Experienced Services Program',
   HALT:   'HALT Fentanyl Act',
   REAL:   'REAL ID Act',
+
+  // Bill-name backronyms + named entities — expansions sourced from each bill's
+  // own text (short-title sections / sanctions lists), added in the 2026-07-06 QA pass.
+  CLEAN:  'Committing Leases for Energy Access Now (HR-1687) / Common-Sense Law Enforcement and Accountability Now in DC (HR-5107)',
+  MERICA: 'Mineral Extraction for Renewable Industry and Critical Applications',
+  ASCEND: 'Accessing Satellite Capabilities to Enable New Discoveries',
+  ZOMBIE: 'Zeroing Out Monetary Benefits Improperly Expended',
+  CAREER: 'CAREER Act — treatment, recovery, and workforce support grants (Section 7183, SUPPORT for Patients and Communities Act)',
+  VTB:    "Russian financial institution named in the bill's sanctions list (alongside Sberbank, Gazprombank, VEB.RF)",
+  TAKE:   'Tools to Address Known Exploitation by Immobilizing Technological Deepfakes on Websites and Networks (TAKE IT DOWN Act)',
+  DOWN:   'Tools to Address Known Exploitation by Immobilizing Technological Deepfakes on Websites and Networks (TAKE IT DOWN Act)',
+  MAP:    'Modernization, Accountability, and Planning (for Broadband Funding)',
+  ARTIST: "Alaska's Right To Ivory Sales and Tradition",
+  DLARA:  'Disaster Loan Accountability and Reform Act',
+  SECURE: 'Securing Community Upgrades for a Resilient Grid',
+  KIDS:   'Kids Internet and Digital Safety',
+  SCREEN: "Shielding Children's Retinas from Egregious Exposure on the Net",
+  SPY:    'Stop Profiling Youth and Kids (SPY Kids Act)',
+  GAMING: 'Safer Guarding of Adolescents from Malicious Interactions on Network Games (Safer GAMING Act)',
+  SAFE:   'Safeguarding Adolescents From Exploitative BOTs (SAFE BOTs Act)',
+  AWARE:  'AI Warnings And Resources for Education',
 };
 
 // ---- Tooltip element (one shared instance appended to body) ----

@@ -260,14 +260,19 @@ section('billSection fields on top_lines');
 
 section('Section label format');
 {
+    // Resolution types have no section anchors in their texts (same rationale as
+    // the top_lines NO_ANCHOR_TYPES exemption) — a label that cannot link is fine.
+    const NO_ANCHOR = new Set(['HJRES', 'HCONRES', 'SCONRES', 'SRES', 'HRES', 'SJRES']);
     let issues = 0;
     for (const bill of bills) {
+        if (NO_ANCHOR.has(bill.id.split('-')[1])) continue;
         for (const sec of (bill.sections || [])) {
             if (sec.billSection) continue;
             const label = sec.label || '';
             const autoOk =
                 /^Sections?\s+\d/i.test(label) ||
                 /^Title\s+[IVXLC]/i.test(label) ||
+                /^Division\s+[A-Z0-9]+\b/i.test(label) || // bt-div anchors exist since 2026-07-06
                 /^resolving/i.test(label);
             if (!autoOk && label.length > 0) {
                 {
@@ -594,9 +599,12 @@ section('Omnibus bill structure');
                     const autoOk =
                         /^Sections?\s+\d/i.test(label) ||
                         /^Title\s+[IVXLC]/i.test(label) ||
+                        /^Division\s+[A-Z0-9]+\b/i.test(label) || // bt-div anchors exist since 2026-07-06
                         /^resolving/i.test(label);
                     if (!autoOk && label.length > 0) {
-                        warn(`${bill.id} div ${div.divisionKey}: section label won't auto-link: "${label.slice(0, 55)}"`);
+                        const a = adjudication(bill.id, 'section-label', label.slice(0, 55));
+                        if (a) noteAdjudicated(`${bill.id} div ${div.divisionKey}: section label won't auto-link: "${label.slice(0, 55)}"`, a);
+                        else warn(`${bill.id} div ${div.divisionKey}: section label won't auto-link: "${label.slice(0, 55)}"`);
                     }
                 }
             }

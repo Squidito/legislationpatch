@@ -366,6 +366,69 @@
       "key": "0.9%",
       "reason": "Bill L148 inserts ``0.9 at 28 USC 1930(a)(6)(B)(ii)(II); unit sourced to fetched usc-28-1930 (\"0.8 percent of disbursements\"). New inserted value, bare number in bill text.",
       "verifiedAt": "2026-06-25"
+    },
+    {
+      "billId": "119-S-3971",
+      "check": "figure-sourcing",
+      "key": "100%",
+      "reason": "Bill text L310-311: 'demonstrate not less than 100' / 'percent matching funds' line-broken; claim verified genuine (sections[2].items[0].detail)",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-S-3971",
+      "check": "figure-sourcing",
+      "key": "5%",
+      "reason": "Bill text L558-559: 'more than 5' / 'percent of the topics' line-broken; claim verified genuine (sections[3].items[0].detail)",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-6938",
+      "check": "section-label",
+      "key": "Titles IV–V — Related Agencies, General Provisions and ",
+      "reason": "Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-6938",
+      "check": "section-label",
+      "key": "Titles I–II — Corps of Engineers and Bureau of Reclamat",
+      "reason": "Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-6938",
+      "check": "section-label",
+      "key": "Titles IV–V — Independent Agencies and General Provisio",
+      "reason": "Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-7006",
+      "check": "section-label",
+      "key": "Treasury, IRS and the Executive Office of the President",
+      "reason": "Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-7006",
+      "check": "section-label",
+      "key": "The Judiciary, the District of Columbia and independent",
+      "reason": "Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-7006",
+      "check": "section-label",
+      "key": "State Department, embassies and international organizat",
+      "reason": "Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.",
+      "verifiedAt": "2026-07-06"
+    },
+    {
+      "billId": "119-HR-7006",
+      "check": "section-label",
+      "key": "Foreign assistance: health, humanitarian, economic and ",
+      "reason": "Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.",
+      "verifiedAt": "2026-07-06"
     }
   ]
 }

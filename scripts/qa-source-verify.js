@@ -123,7 +123,7 @@ function enclosingHeading(lines, idx) {
 function findDollar(blocks, value) {
   for (const blk of blocks) {
     for (let i = 0; i < blk.lines.length; i++) {
-      const m = blk.lines[i].match(/\$[0-9][0-9,]{2,}/g);
+      const m = blk.lines[i].match(/\$[0-9][0-9,]*(?:\.[0-9]+)?/g); // incl. decimals ($63.51) and short amounts ($50) — value-equality below keeps precision
       if (!m) continue;
       for (const tok of m) {
         const f = +tok.replace(/[$,]/g, '');
