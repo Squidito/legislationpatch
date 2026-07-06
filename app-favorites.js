@@ -47,11 +47,7 @@ function renderBillsSection() {
   return header + `<div class="fav-section-body${isCollapsed ? '' : ' open'}" id="fav-body-bills">${body}</div>`;
 }
 
-function parseFavDate(source) {
-  if (!source) return 0;
-  const m = source.match(/(\w+ \d+, \d+)$/);
-  return m ? (new Date(m[1]).getTime() || 0) : 0;
-}
+// (deduped into util.js 2026-07-06) parseFavDate — use parseSourceDate from util.js
 
 function quoteKeyApp(q) {
   return q.name + '|' + q.source + '|' + (q.text || '').slice(0, 40);
@@ -131,7 +127,7 @@ function renderRepsSection() {
       .map(q => ({ ...q, context: q.source }));
 
     const topTwo = [...billQuotes, ...floorQuotes]
-      .sort((a, b) => parseFavDate(b.source) - parseFavDate(a.source))
+      .sort((a, b) => parseSourceDate(b.source) - parseSourceDate(a.source))
       .slice(0, 2);
 
     const quotesHtml = topTwo.length

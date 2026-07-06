@@ -3,28 +3,13 @@
 
 // ---- Portrait helpers ----
 
-const PHOTO_OVERRIDES = {
-  'C001115': 'https://clerk.house.gov/images/members/C001115.jpg',
-};
+// (deduped into util.js 2026-07-06) PHOTO_OVERRIDES lives in util.js
 
-function portraitUrl(bioguideId) {
-  if (!bioguideId || typeof bioguideId !== 'string' || bioguideId.length < 2) return FALLBACK_PORTRAIT;
-  const id = bioguideId.toUpperCase();
-  return PHOTO_OVERRIDES[id] || `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
-}
+// (deduped into util.js 2026-07-06) portraitUrl lives in util.js
 
-function partyColor(party) {
-  const p = String(party || '').trim().toUpperCase()[0];
-  if (p === 'D') return '#3b82f6';
-  if (p === 'R') return '#ef4444';
-  return '#8b5cf6';
-}
+// (deduped into util.js 2026-07-06) partyColor lives in util.js
 
-function repLastName(name) {
-  const clean = String(name || '').replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.) /, '');
-  const parts  = clean.trim().split(' ');
-  return parts[parts.length - 1] || clean;
-}
+// (deduped into util.js 2026-07-06) repLastName lives in util.js
 
 function repCardHtml(rep, size) {
   const id       = getRepId(rep);

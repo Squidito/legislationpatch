@@ -1,5 +1,5 @@
 // rep.js
-const FALLBACK_PORTRAIT = 'https://www.congress.gov/img/member/blank_200.jpg';
+// (deduped into util.js 2026-07-06) (fallback changes from congress.gov blank_200 to the neutral SVG)
 
 let currentRep = null; // set when profile loads, used by toggleRepStar
 
@@ -103,18 +103,7 @@ function updateStarBtn(tracked) {
 // ---- Profile rendering ----
 
 const PARTY_FULL = { D: 'Democrat', R: 'Republican', I: 'Independent' };
-const STATE_FULL = {
-  AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',
-  CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',
-  IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',
-  ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',
-  MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',
-  NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',
-  ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',
-  RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',
-  UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',
-  WI:'Wisconsin',WY:'Wyoming',DC:'D.C.',PR:'Puerto Rico',GU:'Guam',VI:'Virgin Islands',
-};
+const STATE_FULL = STATE_NAMES; // (deduped into util.js 2026-07-06) — same map, kept under rep.js's local name
 
 function renderProfile(rep) {
   var repRole = rep.role === 'Senator' ? 'Senator' : 'Representative';
@@ -329,16 +318,9 @@ function formatBillId(billId) {
 
 // escHtml() moved to util.js (loaded first on every page).
 
-function updateLogoForTheme(isDark) {
-  const logo = document.querySelector('.logo-img');
-  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
-}
+// (deduped into util.js 2026-07-06)
 
-function toggleTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
-  updateLogoForTheme(isDark);
-}
+// (deduped into util.js 2026-07-06)
 
 function renderVotingHistory(rep) {
   var container = document.getElementById('repVoteHistory');

@@ -52,16 +52,9 @@ function loadTrackedSettings() {
   catch (err) { trackedReps = []; }
 }
 
-function updateLogoForTheme(isDark) {
-  const logo = document.querySelector('.logo-img');
-  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
-}
+// (deduped into util.js 2026-07-06) updateLogoForTheme lives in util.js
 
-function toggleTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
-  updateLogoForTheme(isDark);
-}
+// (deduped into util.js 2026-07-06) toggleTheme lives in util.js
 
 // Apply theme on load — dark is the default (light only when explicitly chosen)
 (function() {

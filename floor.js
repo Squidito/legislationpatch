@@ -1,7 +1,7 @@
 // floor.js — Floor Activity page
 
 const QUOTES_FILE       = 'data/quotes.json';
-const FALLBACK_PORTRAIT = 'https://bioguide.congress.gov/bioguide/photo/P/P000587.jpg';
+// (deduped into util.js 2026-07-06) FALLBACK_PORTRAIT (was a real member's photo — now the neutral SVG from util.js)
 const FLOOR_FAVS_KEY    = 'lpFloorFavs';
 
 
@@ -127,17 +127,9 @@ const CAT_ICONS = {
 
 // escHtml() moved to util.js (loaded first on every page).
 
-function portraitUrl(bioguideId) {
-  if (!bioguideId || bioguideId.length < 2) return FALLBACK_PORTRAIT;
-  const id = bioguideId.toUpperCase();
-  return 'https://bioguide.congress.gov/bioguide/photo/' + id[0] + '/' + id + '.jpg';
-}
+// (deduped into util.js 2026-07-06) portraitUrl (floor's copy skipped PHOTO_OVERRIDES — util.js version honors them)
 
-function parseSourceDate(source) {
-  if (!source) return 0;
-  const m = source.match(/(\w+ \d+, \d+)$/);
-  return m ? (new Date(m[1]).getTime() || 0) : 0;
-}
+// (deduped into util.js 2026-07-06) parseSourceDate lives in util.js
 
 function chamberFromSource(source) {
   if (!source) return 'unknown';
@@ -464,16 +456,7 @@ function toggleCategory(id) {
 
 // ---- Theme ----
 
-function updateLogo(isDark) {
-  const logo = document.querySelector('.logo-img');
-  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
-}
-
-function toggleTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
-  updateLogo(isDark);
-}
+// (deduped into util.js 2026-07-06) toggleTheme + updateLogoForTheme live in util.js
 
 // ---- Init ----
 
@@ -483,7 +466,7 @@ async function init() {
   {
     const cb = document.getElementById('themeToggle');
     if (cb) cb.checked = isDark;
-    updateLogo(isDark);
+    updateLogoForTheme(isDark);
   }
 
   const zip   = localStorage.getItem('lpTrackedZip');

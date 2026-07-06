@@ -84,7 +84,7 @@ const DEMO_REPS = [
 // NOTE: quotes inside this data-URI MUST stay URL-encoded as %27 — it is embedded
 // in onerror="this.src='...'", so a raw ' would close the JS string early and throw
 // "Unexpected identifier 'http'" when a portrait 404s. Browsers decode %27 → ' fine.
-const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E";
+// (deduped into util.js 2026-07-06) FALLBACK_PORTRAIT lives in util.js
 
 let trackedState = 'TX';
 let trackedReps  = [];

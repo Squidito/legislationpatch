@@ -554,8 +554,4 @@ function copyBillLink() {
 
 // ---- Theme (mirrors rep.js) ----
 
-function toggleTheme(isDark) {
-  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
-  if (typeof updateLogoForTheme === 'function') updateLogoForTheme(isDark);
-}
+// (deduped into util.js 2026-07-06) toggleTheme — redundant redeclaration removed

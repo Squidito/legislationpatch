@@ -127,6 +127,68 @@ function sponsorShort(name) {
   return partyState ? `${out} (${partyState})` : out;
 }
 
+// ── Rep, theme & date helpers (deduped 2026-07-06) ─────────────────────────
+// Single source of truth — these were hand-copied across app-reps/app-settings/
+// floor.js/reps.js/rep.js/bill.js and had drifted (floor.js portraitUrl skipped
+// PHOTO_OVERRIDES; three different FALLBACK_PORTRAIT values existed, one of them
+// a real member's photo). util.js loads FIRST on every page.
+
+const FALLBACK_PORTRAIT = "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E";
+
+const PHOTO_OVERRIDES = {
+  'C001115': 'https://clerk.house.gov/images/members/C001115.jpg',
+};
+
+const STATE_NAMES = {
+  AL:'Alabama', AK:'Alaska', AZ:'Arizona', AR:'Arkansas', CA:'California',
+  CO:'Colorado', CT:'Connecticut', DE:'Delaware', FL:'Florida', GA:'Georgia',
+  HI:'Hawaii', ID:'Idaho', IL:'Illinois', IN:'Indiana', IA:'Iowa', KS:'Kansas',
+  KY:'Kentucky', LA:'Louisiana', ME:'Maine', MD:'Maryland', MA:'Massachusetts',
+  MI:'Michigan', MN:'Minnesota', MS:'Mississippi', MO:'Missouri', MT:'Montana',
+  NE:'Nebraska', NV:'Nevada', NH:'New Hampshire', NJ:'New Jersey', NM:'New Mexico',
+  NY:'New York', NC:'North Carolina', ND:'North Dakota', OH:'Ohio', OK:'Oklahoma',
+  OR:'Oregon', PA:'Pennsylvania', RI:'Rhode Island', SC:'South Carolina',
+  SD:'South Dakota', TN:'Tennessee', TX:'Texas', UT:'Utah', VT:'Vermont',
+  VA:'Virginia', WA:'Washington', WV:'West Virginia', WI:'Wisconsin', WY:'Wyoming',
+  DC:'D.C.', PR:'Puerto Rico', GU:'Guam', VI:'Virgin Islands',
+};
+
+function portraitUrl(bioguideId) {
+  if (!bioguideId || typeof bioguideId !== 'string' || bioguideId.length < 2) return FALLBACK_PORTRAIT;
+  const id = bioguideId.toUpperCase();
+  return PHOTO_OVERRIDES[id] || `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
+}
+
+function partyColor(party) {
+  const p = String(party || '').trim().toUpperCase()[0];
+  if (p === 'D') return '#3b82f6';
+  if (p === 'R') return '#ef4444';
+  return '#8b5cf6';
+}
+
+function repLastName(name) {
+  const clean = String(name || '').replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.) /, '');
+  const parts  = clean.trim().split(' ');
+  return parts[parts.length - 1] || clean;
+}
+
+function updateLogoForTheme(isDark) {
+  const logo = document.querySelector('.logo-img');
+  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
+}
+
+function toggleTheme(isDark) {
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+  updateLogoForTheme(isDark);
+}
+
+function parseSourceDate(source) {
+  if (!source) return 0;
+  const m = source.match(/(\w+ \d+, \d+)$/);
+  return m ? (new Date(m[1]).getTime() || 0) : 0;
+}
+
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort };
