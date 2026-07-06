@@ -59,8 +59,16 @@ function readSource(id, refs) {
   const main = path.join(ROOT, 'data/bill-text', `${id}.txt`);
   if (fs.existsSync(main)) blocks.push({ tag: id, lines: fs.readFileSync(main, 'utf8').split('\n') });
   for (const r of (refs || [])) {
-    const f = path.join(ROOT, r.textFile || '');
-    if (r.textFile && fs.existsSync(f)) blocks.push({ tag: r.id || r.textFile, lines: fs.readFileSync(f, 'utf8').split('\n') });
+    if (!r.textFile) continue;
+    // SECURITY: textFile comes from cache.json data (authored during analysis). Resolve
+    // and confirm containment within ROOT before reading — a "../"-style value must not
+    // let a bad/edited entry read files outside the repo.
+    const f = path.resolve(ROOT, r.textFile);
+    if (f !== ROOT && !f.startsWith(ROOT + path.sep)) {
+      console.warn(`  ! skipping out-of-tree referencedSources textFile: ${JSON.stringify(r.textFile)}`);
+      continue;
+    }
+    if (fs.existsSync(f)) blocks.push({ tag: r.id || r.textFile, lines: fs.readFileSync(f, 'utf8').split('\n') });
   }
   return blocks;
 }

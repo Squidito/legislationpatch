@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Privacy Policy — LegislationPatch</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,26 +65,35 @@
 
   <main class="main" style="max-width:720px">
     <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Privacy Policy</h1>
-    <p class="section-label" style="margin-bottom:2rem">Last updated: April 2026</p>
+    <p class="section-label" style="margin-bottom:2rem">Last updated: July 2026</p>
 
     <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Information We Collect</h2>
-    <p>LegislationPatch is designed to be as private as possible. We do not require you to create an account and we do not store your personal information on our servers.</p>
+    <p>LegislationPatch is designed to be as private as possible. There are no accounts, no logins, and no backend server that belongs to us — the site is a set of static files. We do not collect, store, or transmit your personal information, because there is nowhere for us to store it. The site does, however, make a small number of requests to the third-party services listed below, and any request your browser makes necessarily reveals your IP address to whoever receives it. That is inherent to how the web works, not something we can see or retain.</p>
+
+    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Bill &amp; Legislative Data</h3>
+    <p>All bill analyses, votes, representative profiles, and floor quotes are prepared ahead of time and shipped with the site as static data files. Your browser loads them directly from LegislationPatch — <strong>it does not call the Congress.gov, GovInfo, or any other legislative API while you browse.</strong> Those government sources are queried only offline, on the maintainer's own machine, when the data is generated.</p>
 
     <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">IP Geolocation (Representative Tracker)</h3>
-    <p>To automatically show your local congressional representatives, we use a third-party service (<a href="https://ipapi.co/">ipapi.co</a>) to approximate your state based on your IP address. This data is processed in real-time and is <strong>not stored</strong> by LegislationPatch.</p>
+    <p>To automatically show your local congressional representatives, the site asks a third-party service (<a href="https://ipapi.co/" target="_blank" rel="noopener noreferrer">ipapi.co</a>) to approximate your state from your IP address. This happens in real time and the result is <strong>not stored by LegislationPatch</strong>. It runs only on pages that use the representative tracker; ipapi.co's own handling of the request is governed by their privacy policy.</p>
+
+    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">ZIP Code Lookup</h3>
+    <p>If you <em>manually</em> enter a 5-digit ZIP code to set your tracked state, that ZIP is sent to <a href="https://api.zippopotam.us/" target="_blank" rel="noopener noreferrer">api.zippopotam.us</a> to convert it into a state. This request is made only when you type a ZIP yourself, and the result is not stored by us beyond the local setting described below.</p>
+
+    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Fonts &amp; Representative Photos</h3>
+    <p>The site loads its typefaces from <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) and displays official representative portraits served directly from <strong>bioguide.congress.gov</strong> and <strong>clerk.house.gov</strong>. Because your browser fetches these files from those providers, each provider receives your IP address as part of the normal request. We send them no other information.</p>
 
     <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Local Storage</h3>
-    <p>Any settings you configure — such as your tracked representatives, saved bills, or dark mode preference — are stored entirely locally in your browser using <code>localStorage</code>. This data never leaves your device and is never transmitted to us.</p>
+    <p>Any settings you configure — tracked representatives, tracked ZIP/state, saved bills, saved floor quotes, and your dark-mode preference — are stored entirely locally in your browser using <code>localStorage</code>. This data never leaves your device and is never transmitted to us.</p>
 
-    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Third-Party APIs</h2>
-    <p>We use the <strong>Congress.gov API</strong> for all bill and legislative data. No personally identifying information is sent to this service.</p>
+    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Analytics &amp; Tracking</h2>
+    <p>LegislationPatch runs no analytics, no advertising, and no tracking cookies. The requests described above are the only ones the site makes to outside services.</p>
 
     <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Contact</h2>
     <p>If you have any questions regarding this privacy policy, please contact us.</p>
   </main>
 
   <footer class="site-footer">
-    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank">Congress.gov API</a></p>
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
     <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
     <p class="footer-links">
       <a href="privacy.html">Privacy Policy</a> ·

@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const bill = bills.find(b => b.id === billId);
   if (!bill) {
-    loading.innerHTML = `<p style="color:var(--text-3)">Bill "${billId}" not found.</p>`;
+    loading.innerHTML = `<p style="color:var(--text-3)">Bill "${escHtml(billId)}" not found.</p>`;
     return;
   }
 

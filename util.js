@@ -155,8 +155,20 @@ const STATE_NAMES = {
 
 function portraitUrl(bioguideId) {
   if (!bioguideId || typeof bioguideId !== 'string' || bioguideId.length < 2) return FALLBACK_PORTRAIT;
+  // SECURITY: bioguide IDs are always alphanumeric (e.g. "C001098"). Reject anything
+  // else so a hostile id from ingested data (quotes/reps/votes JSON) can never break
+  // out of the src="" attribute this URL gets interpolated into. Validating at the
+  // source closes every portrait sink at once — security pass 2026-07-06.
+  if (!/^[A-Za-z0-9]+$/.test(bioguideId)) return FALLBACK_PORTRAIT;
   const id = bioguideId.toUpperCase();
   return PHOTO_OVERRIDES[id] || `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;
+}
+
+// SECURITY: validate a bioguide id for use in a `rep?id=…` href. Same alphanumeric
+// rule as portraitUrl; returns '' for anything hostile so the caller can skip the
+// link rather than emit an attribute-breakout. Use wherever an id lands in an href.
+function safeBioId(bioguideId) {
+  return (typeof bioguideId === 'string' && /^[A-Za-z0-9]+$/.test(bioguideId)) ? bioguideId : '';
 }
 
 function partyColor(party) {
@@ -194,5 +206,5 @@ if (typeof module !== 'undefined' && module.exports) {
   // Second line: web-only helpers deduped here 2026-07-06 — locked by
   // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
-                     partyColor, repLastName, parseSourceDate, portraitUrl };
+                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId };
 }

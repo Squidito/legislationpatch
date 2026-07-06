@@ -117,12 +117,11 @@ function renderProfile(rep) {
   );
   injectRepSchema(rep);
 
-  // Portrait
+  // Portrait. SECURITY: rep.photo is from ingested rep JSON — only allow an https
+  // image URL; portraitUrl() validates the bioguide id for the fallback path.
   const portrait = document.getElementById('repPortrait');
-  portrait.src = rep.photo
-    || (rep.bioguideId
-      ? 'https://bioguide.congress.gov/bioguide/photo/' + rep.bioguideId[0].toUpperCase() + '/' + rep.bioguideId + '.jpg'
-      : FALLBACK_PORTRAIT);
+  const httpsPhoto = (typeof rep.photo === 'string' && /^https:\/\//i.test(rep.photo)) ? rep.photo : null;
+  portrait.src = httpsPhoto || portraitUrl(rep.bioguideId);
   portrait.onerror = () => { portrait.src = FALLBACK_PORTRAIT; };
 
   // Profile card — party accent class
@@ -196,9 +195,13 @@ function renderProfile(rep) {
   const bioEl    = document.getElementById('repBio');
   if (bioEl && rep.bio && rep.bio.length > 120) {
     bioEl.textContent = rep.bio;
-    if (rep.bioUrl) {
+    // SECURITY: rep.bioUrl comes from the Wikipedia-API ingestion — only render the
+    // link if it's a real http(s) URL, so a "javascript:"/"data:" scheme can't run.
+    var bioHref = null;
+    try { var u = new URL(rep.bioUrl); if (u.protocol === 'https:' || u.protocol === 'http:') bioHref = u.href; } catch (e) { /* not a valid URL — skip the link */ }
+    if (bioHref) {
       var attrib = document.createElement('a');
-      attrib.href        = rep.bioUrl;
+      attrib.href        = bioHref;
       attrib.target      = '_blank';
       attrib.rel         = 'noopener noreferrer';
       attrib.className   = 'rep-bio-source';

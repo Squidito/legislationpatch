@@ -29,6 +29,7 @@
 
 'use strict';
 
+require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 const https = require('https');
@@ -38,7 +39,7 @@ const https = require('https');
 const CACHE_PATH     = path.join(__dirname, '../data/cache.json');
 const MAP_PATH       = path.join(__dirname, 'program-account-map.json');
 const DELTAS_DIR     = path.join(__dirname, '../data/deltas');
-const GOVINFO_KEY    = 'GOVINFO_API_KEY_REMOVED';
+const GOVINFO_KEY    = process.env.GOVINFO_API_KEY; // was a hardcoded literal — rotated + moved to .env 2026-07-06
 const TOLERANCE      = 0.05;   // 5% — sources must agree within this
 const LAG_THRESHOLD  = 0.15;   // 15% — US Code lag range (not a real mismatch)
 const DELAY_MS       = 400;

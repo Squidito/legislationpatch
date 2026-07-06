@@ -562,12 +562,11 @@ function renderCarousel() {
   const cards = pool.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = q.party === 'D' ? '#3b82f6' : q.party === 'R' ? '#ef4444' : '#6b7280';
-    const portrait = q.bioguideId
-      ? `https://bioguide.congress.gov/bioguide/photo/${q.bioguideId[0]}/${q.bioguideId}.jpg`
-      : FALLBACK_PORTRAIT;
-    const repHref = q.bioguideId ? `rep?id=${q.bioguideId}&ref=bills` : null;
+    const portrait = portraitUrl(q.bioguideId); // SECURITY: validates id + safe src (was raw interpolation)
+    const safeId = safeBioId(q.bioguideId);
+    const repHref = safeId ? `rep?id=${safeId}&ref=bills` : null;
     const portraitInner = `
-      <img class="shock-quote-portrait" src="${portrait}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" style="border:2px solid ${color}"/>
+      <img class="shock-quote-portrait" src="${escHtml(portrait)}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" style="border:2px solid ${color}"/>
       <div class="shock-quote-rep-text"><div class="shock-quote-name">${escHtml(q.name)}</div><div class="shock-quote-source">${escHtml(quoteContext(q))}</div></div>`;
     const header = repHref
       ? `<a href="${repHref}" class="shock-quote-rep-link">${portraitInner}</a>`

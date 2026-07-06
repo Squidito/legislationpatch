@@ -449,7 +449,7 @@ function renderOneQuoteCard(q, bill) {
              onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" />
         <div class="quote-card-name">
           <span>${escHtml(q.name)}</span>
-          <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${q.party || ''}</span>
+          <span class="chip chip-${(q.party||'n').toLowerCase()[0]}">${escHtml(q.party || '')}</span>
         </div>`;
   const repBlock = repHref
     ? `<a href="${repHref}" class="quote-card-rep" style="text-decoration:none;color:inherit;cursor:pointer">${repInner}</a>`
@@ -580,10 +580,10 @@ function renderVoteSection(bill) {
     if (v.method) {
       tallyHtml = '<span class="tally-method">' + escHtml(v.method) + '</span>';
     } else {
-      tallyHtml = '<span class="tally-yea">Yea ' + v.yeas + '</span>'
+      tallyHtml = '<span class="tally-yea">Yea ' + Number(v.yeas) + '</span>'
         + '<span class="tally-sep">·</span>'
-        + '<span class="tally-nay">Nay ' + v.nays + '</span>'
-        + (v.notVoting > 0 ? '<span class="tally-sep">·</span><span class="tally-nv">NV ' + v.notVoting + '</span>' : '');
+        + '<span class="tally-nay">Nay ' + Number(v.nays) + '</span>'
+        + (v.notVoting > 0 ? '<span class="tally-sep">·</span><span class="tally-nv">NV ' + Number(v.notVoting) + '</span>' : '');
     }
     var expandBtn = v.method ? '' :
       '<button class="vote-expand-btn" data-open="0" onclick="expandVoteDetail(\'' + bill.id + '\',' + i + ',this)">Show votes ▾</button>';
@@ -676,8 +676,8 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
       var coInner = '<span class="crossover-party party-' + coParty.toLowerCase() + '">' + escHtml(coParty) + '</span>'
         + '<span class="crossover-name">' + escHtml(coBaseName) + (co.state ? ' (' + escHtml(co.state) + ')' : '') + '</span>'
         + '<span class="crossover-vote ' + coVoteCls + '">' + escHtml(co.vote || '') + '</span>';
-      html += co.bioguideId
-        ? '<a class="crossover-member" href="rep?id=' + co.bioguideId + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + coInner + '</a>'
+      html += safeBioId(co.bioguideId)
+        ? '<a class="crossover-member" href="rep?id=' + safeBioId(co.bioguideId) + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + coInner + '</a>'
         : '<div class="crossover-member">' + coInner + '</div>';
     }
     html += '</div></div>';
@@ -702,8 +702,8 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
       var mBaseName = (m.name || '').replace(/\s*\([A-Z]{2}\)\s*$/, '').trim();
       var mInner = '<span class="vm-party party-' + mParty.toLowerCase() + '">' + escHtml(mParty) + '</span>'
         + '<span class="vm-name">' + escHtml(mBaseName) + (m.state ? ' (' + escHtml(m.state) + ')' : '') + '</span>';
-      html += m.bioguideId
-        ? '<a class="vote-member" href="rep?id=' + m.bioguideId + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + mInner + '</a>'
+      html += safeBioId(m.bioguideId)
+        ? '<a class="vote-member" href="rep?id=' + safeBioId(m.bioguideId) + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + mInner + '</a>'
         : '<span class="vote-member">' + mInner + '</span>';
     }
     html += '</div></div>';

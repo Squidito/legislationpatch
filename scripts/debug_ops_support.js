@@ -1,6 +1,7 @@
 'use strict';
+require('dotenv').config();
 const https = require('https');
-const KEY   = 'GOVINFO_API_KEY_REMOVED';
+const KEY   = process.env.GOVINFO_API_KEY; // was a hardcoded literal — rotated + moved to .env 2026-07-06
 function get(url) {
   return new Promise((res,rej) => {
     https.get(url+'?api_key='+KEY,{headers:{'User-Agent':'LP/1.0'}},r=>{

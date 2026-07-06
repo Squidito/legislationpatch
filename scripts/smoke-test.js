@@ -51,8 +51,20 @@ async function waitForServer(url, ms = 15000) {
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
   const consoleErrors = [];
+  const netFailures = [];   // request URLs that failed at the network layer or returned 4xx/5xx
   page.on('console', msg => { if (msg.type() === 'error') consoleErrors.push(msg.text()); });
   page.on('pageerror', e => consoleErrors.push('PAGEERROR: ' + e.message));
+  // Network failures are judged by URL, not by the console text — the browser logs a
+  // bare, URL-less "Failed to load resource: net::ERR_FAILED" for CORS/network drops
+  // (e.g. the ipapi geo-lookup rate-limit), which no origin filter on the string can
+  // classify. These events always carry the URL, so first-party vs third-party is
+  // decidable here and every cross-origin degrade (ipapi/zippopotam/fonts/CDNs) is
+  // allowlisted automatically by the origin check in the gate below.
+  // Skip ERR_ABORTED: pages boot with <img src="logo.svg"> then the theme script swaps
+  // src to logo-dark.svg, cancelling the in-flight logo.svg request. A cancelled request
+  // is not a broken resource, so it must not fail the gate.
+  page.on('requestfailed', req => { if (!/ERR_ABORTED/i.test(req.failure()?.errorText || '')) netFailures.push(req.url()); });
+  page.on('response', r => { if (r.status() >= 400) netFailures.push(r.url()); });
 
   const go = async url => { await page.goto(BASE + url, { waitUntil: 'load', timeout: 20000 }); await page.waitForTimeout(700); };
   const count = sel => page.locator(sel).count();
@@ -137,9 +149,27 @@ async function waitForServer(url, ms = 15000) {
   check(await count('.bill-card') === BILLS, 'mobile: bill cards render');
   check(await page.locator('[data-main]').first().isVisible(), 'mobile: filter tabs visible');
 
-  // ── Console errors (favicon allowlisted) ──
-  const errs = consoleErrors.filter(e => !/favicon\.ico/.test(e));
-  check(errs.length === 0, errs.length ? `console errors: ${errs.slice(0, 3).join(' | ')}` : 'zero console errors across all pages');
+  // ── Console errors ──
+  // The gate catches OUR bugs: JS exceptions, same-origin failures, and CSP
+  // violations (a broken CSP surfaces as "...Content Security Policy..." — those
+  // must always fail). It ALLOWLISTS third-party network/CORS conditions the app
+  // is designed to degrade from (ipapi/zippopotam geo-lookup rate-limits, font/
+  // portrait CDN hiccups) and the dev-server favicon 404 — none are our code.
+  // (1) Network failures that matter = first-party (same-origin) resources only, minus
+  // the dev-server favicon 404. Cross-origin failures are third-party degrades the app
+  // is built to survive, so the origin check allowlists them without naming any domain.
+  const isFavicon = u => /favicon\.ico/.test(u);
+  const netErrs = [...new Set(netFailures)].filter(u => u.startsWith(BASE) && !isFavicon(u));
+  // (2) Console errors that matter = CSP violations (always) and real JS exceptions, but
+  // NOT URL-less resource-load lines — those are covered authoritatively by netErrs above.
+  const isCsp = e => /content security policy/i.test(e);
+  // Network noise the URL-based netErrs check owns: bare resource-load / net::ERR_ lines
+  // AND cross-origin CORS rejections (same-origin requests never trigger CORS, so a CORS
+  // error is always a third-party degrade — e.g. the ipapi geo-lookup rate-limit).
+  const isNetNoise = e => /Failed to load resource|net::ERR_|blocked by CORS policy|Access-Control-Allow-Origin/i.test(e);
+  const jsErrs = consoleErrors.filter(e => isCsp(e) || !isNetNoise(e));
+  const errs = [...jsErrs, ...netErrs.map(u => `first-party resource failed: ${u.replace(BASE, '')}`)];
+  check(errs.length === 0, errs.length ? `console errors: ${errs.slice(0, 3).join(' | ')}` : 'zero first-party/CSP console errors across all pages');
 
   await browser.close();
   server.kill();

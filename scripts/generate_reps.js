@@ -314,6 +314,14 @@ async function run() {
   let written = 0, skipped = 0;
 
   for (const id of bioguideIds) {
+    // SECURITY: bioguide IDs are always alphanumeric (e.g. "C001098"). These ids can
+    // arrive from CLI args, comment data, or the members index, so validate before
+    // interpolating into a path — a "../"-style id would otherwise write outside repsDir.
+    if (typeof id !== 'string' || !/^[A-Za-z0-9]+$/.test(id)) {
+      console.warn(`  ! skipping invalid bioguide id: ${JSON.stringify(id)}`);
+      skipped++;
+      continue;
+    }
     const filePath = path.join(repsDir, `${id}.json`);
     // In non-all mode, skip if file already exists and no new comments
     if (!ALL_MODE && fs.existsSync(filePath) && !commentsByBioguide[id]?.length) {
