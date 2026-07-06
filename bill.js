@@ -240,7 +240,22 @@ function joinContinuations(lines) {
 }
 
 // Classify and render a single (already-joined) line of bill text
-function renderBtLine(line) {
+// The anchor id a line would claim (bt-title-X / bt-sec-N), or null. Used to
+// dedupe: a Table-of-Contents entry and the real header produce the same id, so
+// we only assign it to the LAST occurrence (the real header always follows the TOC).
+function btLineId(t) {
+  if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t)) {
+    const m = t.match(/^TITLE\s+([IVXLC]+)/);
+    return m ? `bt-title-${m[1]}` : null;
+  }
+  if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/.test(t) || /^\d+\.\s+[A-Z]/.test(t)) {
+    const m = t.match(/^(?:SECTION|SEC\.)\s+(\d+)/) || t.match(/^(\d+)\./);
+    return m ? `bt-sec-${m[1]}` : null;
+  }
+  return null;
+}
+
+function renderBtLine(line, idForLine) {
   const t = line.trim();
   if (!t) return '<div class="bt-blank"></div>';
 
@@ -255,16 +270,14 @@ function renderBtLine(line) {
   // TITLE / SUBTITLE / PART — no /i flag: statute headers are ALL CAPS;
   // mixed-case "Title I--..." lines are TOC entries and must not get IDs.
   if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t)) {
-    const titleM = t.match(/^TITLE\s+([IVXLC]+)/);
-    const id = titleM ? ` id="bt-title-${titleM[1]}"` : '';
+    const id = idForLine ? ` id="${idForLine}"` : '';
     return `<div class="bt-title"${id}>${escHtml(t)}</div>`;
   }
 
   // Section headers — no /i flag: "SECTION 1." / "SEC. 2." are all-caps in statute text;
   // mixed-case "Sec. 1." lines inside a Table of Contents must not get IDs.
   if (/^(SECTION|SEC\.)\s+\d+[A-Z]?[.\s]/.test(t) || /^\d+\.\s+[A-Z]/.test(t)) {
-    const secM = t.match(/^(?:SECTION|SEC\.)\s+(\d+)/) || t.match(/^(\d+)\./);
-    const id = secM ? ` id="bt-sec-${secM[1]}"` : '';
+    const id = idForLine ? ` id="${idForLine}"` : '';
     return `<div class="bt-section"${id}>${escHtml(t)}</div>`;
   }
 
@@ -337,6 +350,30 @@ function renderBillText(rawText, bill) {
       ? `<div class="${cls}">${lines.map(l => `<div>${escHtml(l)}</div>`).join('')}</div>`
       : '';
 
+  // Anchor ids: a TOC entry and the real header produce the same id — assign it
+  // only to the LAST occurrence (the real header) so section links don't land on
+  // the table of contents.
+  const trimmed = statuteLines.map(l => l.trim());
+  const lineIds = trimmed.map(btLineId);
+  const lastIdx = {};
+  lineIds.forEach((id, i) => { if (id) lastIdx[id] = i; });
+  const idAt = i => (lineIds[i] && lastIdx[lineIds[i]] === i) ? lineIds[i] : null;
+  const renderRange = (a, b) => statuteLines.slice(a, b).map((l, k) => renderBtLine(l, idAt(a + k))).join('');
+
+  // Fold the Table of Contents into a collapsible block (it lists every section
+  // and otherwise dominates the top of the text).
+  let tocStart = -1, tocEnd = -1;
+  for (let i = 0; i < trimmed.length; i++) {
+    if (tocStart < 0 && /table of contents for this act is as follows/i.test(trimmed[i])) { tocStart = i; continue; }
+    if (tocStart >= 0 && /^(SECTION|SEC\.)\s+\d/.test(trimmed[i])) { tocEnd = i; break; }
+  }
+
+  const statuteHtml = (tocStart >= 0 && tocEnd > tocStart)
+    ? renderRange(0, tocStart)
+      + `<details class="bt-toc"><summary>Table of contents</summary><div class="bt-toc-body">${renderRange(tocStart, tocEnd)}</div></details>`
+      + renderRange(tocEnd, statuteLines.length)
+    : renderRange(0, statuteLines.length);
+
   // Header uses block divs so stacking works without CSS flex
   return `<div class="bill-text-container">
     <div class="bill-text-header">
@@ -345,7 +382,7 @@ function renderBillText(rawText, bill) {
     </div>
     <div class="bill-text-body">
       ${renderMeta(preambleLines, 'bt-preamble')}
-      ${statuteLines.map(renderBtLine).join('')}
+      ${statuteHtml}
       ${renderMeta(epilogueLines, 'bt-epilogue')}
     </div>
   </div>`;

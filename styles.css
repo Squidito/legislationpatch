@@ -2288,6 +2288,14 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.01em;
   margin-bottom: 10px;
 }
+/* Flash when a top-line headline scrolls to its spine section */
+.patch-section.spine-flash { animation: spine-flash 1.4s ease; border-radius: 6px; }
+@keyframes spine-flash {
+  0%, 15% { background: var(--purple-bg); }
+  100% { background: transparent; }
+}
+/* Bill-page shortcut under "Further Analysis" — mobile only */
+.view-bill-link-mobile { display: none; }
 .patch-section { margin-bottom: 1rem; }
 .patch-section-title {
   font-size: var(--fs-xs);
@@ -2782,6 +2790,37 @@ a:hover { text-decoration: underline; }
   scroll-margin-top: 60px;
 }
 .bt-title { scroll-margin-top: 60px; }
+/* Collapsible Table of Contents inside the bill text */
+.bt-toc { margin: 6px 0 12px; }
+.bt-toc > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-2);
+  padding: 6px 11px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.bt-toc > summary::-webkit-details-marker { display: none; }
+.bt-toc > summary::before { content: '▸'; font-size: 0.85em; opacity: 0.7; }
+.bt-toc[open] > summary::before { content: '▾'; }
+.bt-toc-body { padding: 8px 0 2px 8px; opacity: 0.82; }
+/* TOC entries: quiet the nested title/section headers so they read as a list */
+.bt-toc-body .bt-title,
+.bt-toc-body .bt-section {
+  text-align: left;
+  margin: 6px 0 2px;
+  padding-top: 0;
+  border-top: none;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+}
 /* Enacting clause */
 .bt-enacting {
   font-style: italic;
@@ -3334,7 +3373,11 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
     margin-left: 0.75rem;
     margin-right: 0.75rem;
   }
-  .patch-notes { margin-left: 0.75rem; margin-right: 0.75rem; padding: 10px 11px 12px; }
+  /* Drop the container frame on mobile — the spine's own rail + detail border
+     already add vertical lines; a third (the box) is visual overload in the
+     narrow column. Content sits unboxed, aligned with the rest of the card. */
+  .patch-notes { margin-left: 0.75rem; margin-right: 0.75rem; padding: 0; border: none; background: none; }
+  .view-bill-link-mobile { display: block; margin: 0.5rem 0.75rem 0.25rem; }
   /* Spine: reclaim the wide left gutter on narrow screens so text isn't cramped */
   .patch-spine .ps-row,
   .patch-spine .ps-admin-strip { padding-left: 32px; padding-bottom: 14px; }

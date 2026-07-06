@@ -1399,9 +1399,34 @@ function renderHeader(bill, state, num, watching) {
   </div>`;
 }
 
-function renderTopLines(bill) {
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+
+// Resolve a top-line's billSection to an EXISTING spine section anchor. Exact
+// match first (bt-sec-N / bt-title-X); if the spine is organized by Title but the
+// top-line cites a section number, fall back to the Title that contains it
+// (section 214 -> Title II, via the hundreds digit). Returns the anchor or null.
+function resolveTopLineSpineAnchor(billSection, spineAnchors) {
+  if (billSection == null) return null;
+  const raw = String(billSection);
+  const suffix = raw.startsWith('title-') ? `bt-${raw}` : `bt-sec-${raw}`;
+  if (spineAnchors.has(suffix)) return suffix;
+  const num = parseInt(raw, 10);
+  if (num >= 100) {
+    const t = `bt-title-${ROMAN[Math.floor(num / 100)] || ''}`;
+    if (spineAnchors.has(t)) return t;
+  }
+  return null;
+}
+
+// hasSpine: whether the section spine is rendered alongside (full body / bill page).
+// Headlines only become spine links when there's a spine to scroll to.
+function renderTopLines(bill, hasSpine) {
   const items = bill.top_lines || [];
   if (!items.length && !bill.brief) return '';
+
+  const spineAnchors = hasSpine
+    ? new Set((bill.sections || []).map(patchSectionAnchor).filter(Boolean))
+    : new Set();
 
   const renderLine = item => {
     if (typeof item === 'string') {
@@ -1411,12 +1436,12 @@ function renderTopLines(bill) {
         <div class="top-line-content"><div class="top-line-headline">${billRefHtml(item, bill.id)}</div></div>
       </div>`;
     }
-    // New headline + subs format
-    const tlAnchor = window.BILL_PAGE_ID && item.billSection
-      ? (item.billSection.startsWith('title-') ? `bt-${item.billSection}` : `bt-sec-${item.billSection}`)
-      : null;
-    const headlineHtml = tlAnchor
-      ? `<a class="top-line-headline-link" href="#${tlAnchor}" onclick="event.preventDefault();scrollToBillSection('${tlAnchor}')">${escHtml(item.headline || '')}</a>`
+    // New headline + subs format. Headlines link to the matching section-by-section
+    // spine entry (not the raw bill text) — on both the card's full view and the bill page.
+    const spineSuffix = resolveTopLineSpineAnchor(item.billSection, spineAnchors);
+    const tlSpineId = spineSuffix ? `sp-${bill.id}-${spineSuffix}` : null;
+    const headlineHtml = tlSpineId
+      ? `<a class="top-line-headline-link" href="#${tlSpineId}" onclick="event.preventDefault();scrollToSpineSection('${tlSpineId}')">${escHtml(item.headline || '')}</a>`
       : escHtml(item.headline || '');
     const subs = (item.subs || []).slice(0, 3).map(s =>
       `<div class="top-line-sub">${billRefHtml(s, bill.id, true)}</div>`
@@ -1534,7 +1559,8 @@ function renderMinorBody(bill, col, isOpen) {
     ${renderWhatChanged(bill)}
     ${underHtml}
     ${renderQuoteCards(bill, true)}
-    <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Full analysis ↓</button>
+    <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Further Analysis ↓</button>
+    ${window.BILL_PAGE_ID ? '' : `<div class="view-bill-link-row view-bill-link-mobile"><a href="bill?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`}
   </div>`;
 }
 
@@ -1898,7 +1924,7 @@ function renderBody(bill, isOpen, col) {
     }).join('')}
   </div>`;
 
-  const topLinesHtml = renderTopLines(bill);
+  const topLinesHtml = renderTopLines(bill, true);
 
   const sectionsHtml = (bill.isOmnibus && bill.divisions?.length) ? '' : bill.sections?.length
     ? `<div class="patch-notes">${renderSections(bill)}</div>`
@@ -2000,6 +2026,23 @@ function renderDivisions(bill) {
   </div>`;
 }
 
+// Smooth-scroll to a section-by-section spine entry (top-line headline links).
+// Works on the card and the bill page; opens the folded admin group if needed.
+function scrollToSpineSection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const kids = el.closest('.ps-admin-kids');
+  if (kids && !kids.classList.contains('open')) {
+    kids.classList.add('open');
+    const caret = kids.previousElementSibling && kids.previousElementSibling.querySelector('.ps-caret');
+    if (caret) caret.textContent = '▴';
+  }
+  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  el.classList.remove('spine-flash');
+  void el.offsetWidth;
+  el.classList.add('spine-flash');
+}
+
 function patchSectionAnchor(sec) {
   if (sec.billSection) return `bt-sec-${sec.billSection}`;
   const secM = sec.label?.match(/^Sections?\s+(\d+)/i);
@@ -2055,14 +2098,15 @@ function renderSection(bill, sec, si, opts) {
   opts = opts || {};
   const marker = secMarker(sec.label);
   const title  = secTitle(sec.label);
-  const anchor = window.BILL_PAGE_ID ? patchSectionAnchor(sec) : null;
+  const spineAnchor = patchSectionAnchor(sec);              // spine id — top-lines scroll target (all views)
+  const anchor = window.BILL_PAGE_ID ? spineAnchor : null;  // section title → bill text (bill page only)
   const titleHtml = anchor
     ? `<a class="patch-section-title-link" href="#${anchor}" onclick="event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(title)}</a>`
     : escHtml(title);
   const node = marker
     ? `<span class="ps-num${sec.admin ? ' admin' : ''}">${escHtml(marker)}</span>`
     : `<span class="ps-dot"></span>`;
-  return `<div class="patch-section ps-row${opts.last ? ' ps-last' : ''}${sec.admin ? ' ps-adm' : ''}">
+  return `<div class="patch-section ps-row${opts.last ? ' ps-last' : ''}${sec.admin ? ' ps-adm' : ''}"${spineAnchor ? ` id="sp-${escHtml(bill.id)}-${spineAnchor}"` : ''}>
     ${node}<span class="ps-rail"></span>
     <div class="ps-title">${titleHtml}</div>
     ${sec.items.map((item, ii) => renderItem(bill, item, si, ii)).join('')}
