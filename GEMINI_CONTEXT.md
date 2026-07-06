@@ -79,8 +79,8 @@ The browser reads only `data/cache.json`. Do not add live API calls to `api.js` 
 
 ```
 index.html          Main app page
-styles.css          All styles — CSS custom properties, dark mode at bottom
-app.js              All UI logic, rendering, state management
+styles-*.css        All styles, 3 slice files loaded in order (shared -> bills -> pages)
+app-*.js            All UI logic, 7 domain files (state/settings/reps/render/carousel/favorites/boot)
 api.js              Reads data/cache.json ONLY — no live fetching
 rep.html            Rep detail page
 rep.js              Rep page logic (tracking, theme, profile render)

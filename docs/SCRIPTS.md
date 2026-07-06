@@ -4,7 +4,7 @@ Full pipeline/script reference, moved out of CLAUDE.md (2026-07-06).
 
 ## Scripts
 
-**npm aliases** (preferred): `npm run batch` · `batch:post` · `batch:fetch` · `validate` · `qa-verify` · `facts` · `parity` · `sitemap` · `reps` · `refresh` (and `npm test` = validate).
+**npm aliases** (preferred): `npm run add-bills` · `npm run batch` · `batch:post` · `batch:fetch` · `validate` · `qa-verify` · `facts` · `parity` · `sitemap` · `reps` · `refresh` (and `npm test` = validate).
 
 > **Pre-commit hook:** `.git/hooks/pre-commit` runs `npm run validate` and blocks the commit on ERRORS only (warnings pass). Per-clone (not version-controlled). Bypass with `git commit --no-verify`. A commented-out `npm run parity` line in the hook can be enabled to also block on web↔mobile drift.
 
@@ -22,7 +22,7 @@ The canonical **pipeline** is `run-batch.js` → `fetch_bills_data` + `fetch_cr_
 | `node scripts/run-batch.js --days=N` | Override CR lookback window (default 7) |
 | `node scripts/validate-batch.js` (`npm run validate`) | Pre-push validation — fields, formatting, ISO dates, figure-sourcing guard, acronym audit, sitemap |
 | `node scripts/validate-batch.js --strict` | Same, but warnings also block (exit 1) — the "perfect pass" bar for the QA loop |
-| `node scripts/qa-source-verify.js [--bill ID] [--quote]` | QA-loop source-anchored verifier — ties every figure/%/year/section cite in the analysis to a **quoted source line** (bill text + referencedSources). `--quote` prints the evidence line per claim. Stateless (never reads a prior run); see QA Loop Protocol's GENUINE-READ RULE |
+| `node scripts/qa-source-verify.js [--bill ID] [--quote]` | QA-loop source-anchored verifier — ties every figure/%/year/section cite in the analysis to a **quoted source line** (bill text + referencedSources). `--quote` prints the evidence line per claim. Stateless (never reads a prior run); see the QA Loop Protocol's GENUINE-READ RULE in CLAUDE.md (kept inline there as a hard rule) |
 | `node scripts/fetch_bills_data.js --bill 119-HR-7148` | Force-refetch one bill into bills_raw.json (bypasses cache check — use to re-run through updated pipeline) |
 | `node scripts/fetch_bill_cr.js --bill 119-HR-2319` | Retroactively fetch CR quotes for one bill |
 | `node scripts/fetch_bill_cr.js --all` | Fetch CR quotes for all analyzed bills missing them |

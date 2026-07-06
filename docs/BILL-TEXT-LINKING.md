@@ -36,7 +36,7 @@ Patch section titles and top-line headlines link to the corresponding section in
 
 **How it works:**
 - `renderBtLine()` in `bill.js` assigns `id="bt-sec-N"` to section headers (`SECTION 1.`, `SEC. 2.`, `2. Title`) and `id="bt-title-I"` to TITLE headers
-- `patchSectionAnchor(sec)` in `app.js` parses the section number from the label — handles `"Section 2 — ..."`, `"Sections 3–End — ..."`, `"Title I — ..."`. Falls back to `sec.billSection` for thematic labels
+- `patchSectionAnchor(sec)` in `app-render.js` parses the section number from the label — handles `"Section 2 — ..."`, `"Sections 3–End — ..."`, `"Title I — ..."`. Falls back to `sec.billSection` for thematic labels
 - `renderSection()` wraps the `.patch-section-title` in a `<a class="patch-section-title-link">` when `window.BILL_PAGE_ID` is set (bill page only)
 - `renderTopLines()` does the same for `item.headline` when `item.billSection` is set
 - `scrollToBillSection(anchorId)` in `bill.js` does the scroll + flash. Also handles URL hash on load (direct linking)
@@ -56,3 +56,7 @@ Add `"billSection": "1"` to the top_line object in cache.json:
 
 **On the main index page**, no links are rendered (guarded by `window.BILL_PAGE_ID`).
 
+
+## Division anchors (omnibus, added 2026-07-06)
+
+DIVISION headers in the full bill text get id="bt-div-X" (renderBtLine/btLineId in bill.js; patchSectionAnchor in app-render.js parses "Division A" labels to bt-div-A). Same click-to-scroll behavior as bt-sec-N / bt-title-I.

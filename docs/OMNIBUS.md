@@ -100,11 +100,11 @@ Top-level fields work identically to a normal bill. Additional fields:
 }
 ```
 
-Note: `divisions[N].sections[]` is still populated in the data (used to build the top-level `sections[]`) but is NOT rendered in the division block on the bill page — `renderDivision()` in `app.js` intentionally skips it to avoid duplication.
+Note: `divisions[N].sections[]` is still populated in the data (used to build the top-level `sections[]`) but is NOT rendered in the division block on the bill page — `renderDivision()` in `app-*.js` (see CLAUDE.md Key Files for the split map) intentionally skips it to avoid duplication.
 
 ### Display behavior
 
-- **Bill card** (`renderBill` in `app.js`): gets `.bill-card--omnibus` class → amber border + glow. Badge column shows the **OMNIBUS** badge.
+- **Bill card** (`renderBill` in `app-*.js` (see CLAUDE.md Key Files for the split map)): gets `.bill-card--omnibus` class → amber border + glow. Badge column shows the **OMNIBUS** badge.
 - **Index card expansion** (`renderBody`): top-lines (per-division overview) only — patch notes section suppressed for omnibus (`bill.isOmnibus` guard in `renderBody`).
 - **Bill page** (`bill.html`): top-level `sections[]` renders as normal patch notes (per-title breakdown), followed by `divisions[]` as "Division-by-Division Analysis" — each block shows summary, top_lines bullets, changes, underreported, and gaps.
 

@@ -4,9 +4,9 @@ Detailed UI/layout reference, moved out of CLAUDE.md (2026-07-06). Read when wor
 
 ## Logo / Dark Mode
 
-Logo swap handled by `updateLogoForTheme(isDark)` in `app.js` and `rep.js`. Static pages (bill-pending, privacy, terms) have it inline in their `apply(dark)` function.
+Logo swap handled by `updateLogoForTheme(isDark)` in `app-*.js` (see CLAUDE.md Key Files for the split map) and `rep.js`. Static pages (bill-pending, privacy, terms) have it inline in their `apply(dark)` function.
 
-**Dark is the DEFAULT theme (2026-06-11).** Every page has an inline "before paint" script right after `<body>` that sets `data-theme="dark"` unless `localStorage.lpTheme === 'light'` — this prevents a light-flash on load. The per-page JS init (`app.js`/`floor.js`/`rep.js`/`reps.js`; `bill.js` just reads the attribute) syncs the toggle checkbox + logo using `lpTheme !== 'light'`. An explicit light choice is stored and respected on every page; absence of a saved preference = dark. (Site still ignores OS `prefers-color-scheme`.)
+**Dark is the DEFAULT theme (2026-06-11).** Every page has an inline "before paint" script right after `<body>` that sets `data-theme="dark"` unless `localStorage.lpTheme === 'light'` — this prevents a light-flash on load. The per-page JS init (`app-*.js` (see CLAUDE.md Key Files for the split map)/`floor.js`/`rep.js`/`reps.js`; `bill.js` just reads the attribute) syncs the toggle checkbox + logo using `lpTheme !== 'light'`. An explicit light choice is stored and respected on every page; absence of a saved preference = dark. (Site still ignores OS `prefers-color-scheme`.)
 
 ## Header Structure (all pages)
 
@@ -38,11 +38,11 @@ Mobile (≤640px): `.zip-display` is hidden.
 
 ## Rep Portraits
 
-Portrait URL logic: `portraitUrl(bioguideId)` in `app.js` checks `PHOTO_OVERRIDES` first, then falls back to `bioguide.congress.gov/bioguide/photo/X/BIOGUIDE.jpg`. `rep.js` checks `rep.photo` first, then constructs the bioguide URL.
+Portrait URL logic: `portraitUrl(bioguideId)` in `app-*.js` (see CLAUDE.md Key Files for the split map) checks `PHOTO_OVERRIDES` first, then falls back to `bioguide.congress.gov/bioguide/photo/X/BIOGUIDE.jpg`. `rep.js` checks `rep.photo` first, then constructs the bioguide URL.
 
 **Adding a photo override** (when a rep's bioguide photo is missing/broken):
 1. Add `"photo": "https://clerk.house.gov/images/members/BIOGUIDE.jpg"` to `data/reps/BIOGUIDE.json` — survives `generate_reps.js` regeneration (API doesn't return this field, so `mergeWithExisting` preserves it).
-2. Add the bioguide ID → clerk URL to `PHOTO_OVERRIDES` in `app.js` (covers rep strip + tracked reps panel).
+2. Add the bioguide ID → clerk URL to `PHOTO_OVERRIDES` in `app-*.js` (see CLAUDE.md Key Files for the split map) (covers rep strip + tracked reps panel).
 
 **Known overrides:** `C001115` (Michael Cloud) — bioguide photo missing, served from `clerk.house.gov`.
 
@@ -175,7 +175,7 @@ Dedicated bills page with category chip filter + stage tabs.
 - All Topics, Defense & Foreign Policy, Immigration, Economy & Tax, Health & Benefits, Executive Power, Government & Oversight, Civil Rights & Justice
 - Keyword matching via `window.getBillCategories(bill)` in `bills.js` — runs on title + summary + brief + changes.added
 - Active chip gets category-colored border (blue=defense, red=immigration, amber=economy, green=health, purple=executive, teal=government, amber=civil)
-- `window.billMatchesCategories(bill)` called in `app.js` `renderAll()` as a second filter pass
+- `window.billMatchesCategories(bill)` called in `app-*.js` (see CLAUDE.md Key Files for the split map) `renderAll()` as a second filter pass
 
 **app.js integration:** `bills.html` sets `window.BILLS_PAGE = true` inline before loading scripts. In `renderAll()`:
 - Shock quote carousel suppressed (`window.BILLS_PAGE` guard)
@@ -190,7 +190,7 @@ Patch section titles and top-line headlines link to the corresponding section in
 
 **How it works:**
 - `renderBtLine()` in `bill.js` assigns `id="bt-sec-N"` to section headers (`SECTION 1.`, `SEC. 2.`, `2. Title`) and `id="bt-title-I"` to TITLE headers
-- `patchSectionAnchor(sec)` in `app.js` parses the section number from the label — handles `"Section 2 — ..."`, `"Sections 3–End — ..."`, `"Title I — ..."`. Falls back to `sec.billSection` for thematic labels
+- `patchSectionAnchor(sec)` in `app-*.js` (see CLAUDE.md Key Files for the split map) parses the section number from the label — handles `"Section 2 — ..."`, `"Sections 3–End — ..."`, `"Title I — ..."`. Falls back to `sec.billSection` for thematic labels
 - `renderSection()` wraps the `.patch-section-title` in a `<a class="patch-section-title-link">` when `window.BILL_PAGE_ID` is set (bill page only)
 - `renderTopLines()` does the same for `item.headline` when `item.billSection` is set
 - `scrollToBillSection(anchorId)` in `bill.js` does the scroll + flash. Also handles URL hash on load (direct linking)
