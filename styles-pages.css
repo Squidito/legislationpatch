@@ -1,4 +1,4 @@
-/* styles-pages.css — slice 3623–4839 of the former styles.css (split 2026-07-06).
+/* styles-pages.css — lines 3623-4838 (the final slice) of the former styles.css (split 2026-07-06).
    Contents: mobile tap targets, rep page, floor page, positions/votes, dark-mode overrides.
    LOAD ORDER MATTERS: every page loads shared → bills → pages, preserving the
    original cascade exactly. Do not reorder or per-page prune without testing. */
