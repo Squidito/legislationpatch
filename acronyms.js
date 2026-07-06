@@ -7,7 +7,7 @@ const ACRONYMS = {
   NSA:   'National Security Agency',
   FBI:   'Federal Bureau of Investigation',
   CPB:   'Corporation for Public Broadcasting',
-  PRC:   'People’s Republic of China',
+  PRC:   "People's Republic of China",
   EIDL:  'Economic Injury Disaster Loan',
   FHA:   'Federal Housing Administration',
   VASH:  'Veterans Affairs Supportive Housing',

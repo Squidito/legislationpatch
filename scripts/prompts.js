@@ -359,7 +359,7 @@ Per CLAUDE.md rules — shorten all amounts: $11,083,012,000 → $11.08B, $584,2
 
 ━━━ billSection for top_lines ━━━
 
-Every top_lines item needs a "billSection" field pointing to a section in the bill text. Use section numbers from the bill's general provisions (e.g. "billSection": "3" for SEC. 3). Division-spanning headlines should point to the most relevant general section.
+Every top_lines item needs a "billSection" field pointing to a section in the bill text. Use section numbers from the bill's general provisions (e.g. "billSection": "3" for SEC. 3). Division-spanning headlines should point to the most relevant general section. billSection values are anchor ids — digits or "title-II" form, straight ASCII characters only (curly/smart quotes break the anchor; validate-batch.js ERRORs on them).
 
 ━━━ OUTPUT FORMAT ━━━
 

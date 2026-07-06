@@ -53,8 +53,8 @@ function cleanBillSource(raw, isXML) {
         // Remove GPO typesetting annotations
         .replace(/<<[^>]*>>/g, '')
         // Fix archaic typewriter quotes
-        .replace(/``/g, '“')
-        .replace(/''/g, '”')
+        .replace(/``/g, '“') // smart-quotes-ok: processes typographic quotes deliberately
+        .replace(/''/g, '”') // smart-quotes-ok: processes typographic quotes deliberately
         // Normalise double-hyphen em dash
         .replace(/ -- /g, ' — ')
         // Normalise horizontal whitespace per line (preserve newlines)

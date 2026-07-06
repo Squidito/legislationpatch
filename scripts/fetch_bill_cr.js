@@ -313,8 +313,8 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '', chamber = '
                                 .trim();
 
         // Skip fragment bodies: must start with a capital letter or opening quote,
-        // and must not start with “Word)” which indicates mid-sentence extraction.
-        if (!/^[A-Z”’”’]/.test(body) || /^[A-Za-z]+\)/.test(body)) continue;
+        // and must not start with “Word)” which indicates mid-sentence extraction. // smart-quotes-ok: processes typographic quotes deliberately
+        if (!/^[A-Z”’”’]/.test(body) || /^[A-Za-z]+\)/.test(body)) continue; // smart-quotes-ok: processes typographic quotes deliberately
 
         // Strip leading yield-of-time sentence before procedural check
         const stripped = body.replace(/^I yield[^.]+\.\s*/i, '').trim();
@@ -583,8 +583,8 @@ const CR_CACHE_DIR = path.join(__dirname, '../data/cr-cache');
 function normalizeForVerify(text) {
     return text
         .toLowerCase()
-        .replace(/[‘’]/g, "'")
-        .replace(/[“”]/g, '"')
+        .replace(/[‘’]/g, "'") // smart-quotes-ok: processes typographic quotes deliberately
+        .replace(/[“”]/g, '"') // smart-quotes-ok: processes typographic quotes deliberately
         .replace(/—/g, '--')
         .replace(/\s+/g, ' ')
         .trim();

@@ -22,6 +22,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { PASSAGE_CONTEXT, SMART_QUOTES } = require('./lib/patterns.js');
 
 const DATA         = path.join(__dirname, '../data');
 const BILL_TEXT    = path.join(DATA, 'bill-text');
@@ -265,6 +266,60 @@ section('Section label format');
     if (issues === 0) pass('All section labels auto-parse or have explicit billSection');
 }
 
+// ── Check: smart-quote character safety ────────────────────────────────────
+// Curly quotes (U+2018/2019/201C/201D) silently corrupt anchor ids (billSection
+// → bt-sec-N links) and JS template literals — the known Edit-tool corruption
+// class (see CLAUDE.md "Watch out" under Bill Text Section Linking). Prose
+// fields legitimately contain typographic quotes (CR quote text) and are NOT
+// checked; this guards structural fields and JS source files only.
+
+section('Smart-quote character safety');
+{
+    let bad = 0;
+
+    const checkBillSection = (billId, where, o) => {
+        if (o && typeof o === 'object' && typeof o.billSection === 'string' && SMART_QUOTES.test(o.billSection)) {
+            fail(`${billId}${where}: billSection contains curly quotes: "${o.billSection}" — anchors break; use straight ASCII`);
+            bad++;
+        }
+    };
+    for (const bill of bills) {
+        (bill.top_lines || []).forEach(o => checkBillSection(bill.id, '', o));
+        (bill.sections || []).forEach(o => checkBillSection(bill.id, '', o));
+        for (const d of bill.divisions || []) {
+            (d.top_lines || []).forEach(o => checkBillSection(bill.id, ` div ${d.divisionKey}`, o));
+            (d.sections || []).forEach(o => checkBillSection(bill.id, ` div ${d.divisionKey}`, o));
+        }
+        for (const sec of [...(bill.sections || []), ...(bill.divisions || []).flatMap(d => d.sections || [])]) {
+            if (sec.label && SMART_QUOTES.test(sec.label)) {
+                warn(`${bill.id}: section label contains curly quotes: "${sec.label.slice(0, 55)}" — normalize to ASCII`);
+            }
+        }
+    }
+
+    // JS source files: no curly quote belongs in any tracked .js file — inside a
+    // template literal it breaks HTML attribute ids without any parse error.
+    // (scripts/archive/ is legacy and deliberately skipped.)
+    const jsDirs = [path.join(__dirname, '..'), __dirname, path.join(__dirname, 'lib')];
+    const jsFiles = jsDirs.flatMap(dir => {
+        try { return fs.readdirSync(dir).filter(f => f.endsWith('.js')).map(f => path.join(dir, f)); }
+        catch { return []; }
+    });
+    for (const file of jsFiles) {
+        if (path.basename(file) === 'patterns.js') continue; // defines the pattern itself
+        const src = fs.readFileSync(file, 'utf8');
+        if (!SMART_QUOTES.test(src)) continue;
+        src.split('\n').forEach((l, i) => {
+            if (l.includes('smart-quotes-ok')) return; // explicit opt-out for code that PROCESSES typographic quotes
+            if (SMART_QUOTES.test(l)) {
+                fail(`${path.relative(path.join(__dirname, '..'), file)}:${i + 1}: curly quote in JS source — Edit-tool corruption class; replace with ASCII`);
+                bad++;
+            }
+        });
+    }
+    if (bad === 0) pass('No curly quotes in billSection fields or JS source files');
+}
+
 // ── Check: pages field vs actual bill text file ────────────────────────────
 //
 // All analyses MUST be sourced from the actual bill text fetched from Congress.gov.
@@ -376,7 +431,7 @@ section('Vote data');
 
 section('Stage ↔ vote consistency');
 {
-    const PASSAGE_Q = /\b(on passage|suspend the rules and pass|agreeing to the (concurrent )?resolution|motion to concur)\b/i;
+    const PASSAGE_Q = PASSAGE_CONTEXT; // shared with refresh_stages.js — scripts/lib/patterns.js
     const PASSED = /\b(passed|agreed to)\b/i;
     const FAILED = /\b(failed|rejected)\b/i;
     // Chambers whose passage the stage asserts. Kept minimal (stage 'senate' does
@@ -694,7 +749,7 @@ section('Quote attribution (bioguide ↔ rep)');
         // drop hyphens/apostrophes (so "Ocasio-Cortez" stays one token), then turn any
         // other punctuation into spaces.
         const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
-            .toLowerCase().replace(/['’\-]/g, '').replace(/[^a-z\s]/g, ' ');
+            .toLowerCase().replace(/['’\-]/g, '').replace(/[^a-z\s]/g, ' '); // smart-quotes-ok: processes typographic quotes deliberately
         const surnameOf = (n) => {
             const t = norm(String(n || '').replace(/^(Mr|Mrs|Ms|Dr|Sen|Rep)\.?\s+/i, '')).trim().split(/\s+/).filter(Boolean);
             return t[t.length - 1] || '';

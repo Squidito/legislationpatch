@@ -30,6 +30,7 @@
 require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
+const { PASSAGE_CONTEXT } = require('./lib/patterns.js');
 
 const KEY   = process.env.CONGRESS_API_KEY;
 const CACHE = path.join(__dirname, '../data/cache.json');
@@ -65,7 +66,7 @@ function deriveProgress(actions, originHouse) {
   let failed = null;
   for (const a of actions) {
     const t = a.text || '';
-    if (!/(on passage|suspend the rules and pass|agreeing to the (concurrent )?resolution|passed\/agreed to|failed of passage)/i.test(t)) continue;
+    if (!PASSAGE_CONTEXT.test(t)) continue; // shared with validate-batch.js — scripts/lib/patterns.js
     if (/\bfailed\b/i.test(t) && (!failed || String(a.actionDate || '') > failed.date)) {
       failed = { date: a.actionDate || '', text: t, chamber: a.chamber || (/senate/i.test(t) ? 'Senate' : 'House') };
     }
