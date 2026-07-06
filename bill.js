@@ -244,6 +244,8 @@ function joinContinuations(lines) {
 // dedupe: a Table-of-Contents entry and the real header produce the same id, so
 // we only assign it to the LAST occurrence (the real header always follows the TOC).
 function btLineId(t) {
+  const divM = t.match(/^DIVISION\s+([A-Z0-9]+)/);
+  if (divM) return `bt-div-${divM[1]}`;
   if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t)) {
     const m = t.match(/^TITLE\s+([IVXLC]+)/);
     return m ? `bt-title-${m[1]}` : null;
@@ -269,6 +271,12 @@ function renderBtLine(line, idForLine) {
 
   // TITLE / SUBTITLE / PART — no /i flag: statute headers are ALL CAPS;
   // mixed-case "Title I--..." lines are TOC entries and must not get IDs.
+  // Division headers (omnibus) — render as a header and carry the bt-div anchor
+  if (/^DIVISION\s+[A-Z0-9]+/.test(t)) {
+    const id = idForLine ? ` id="${idForLine}"` : '';
+    return `<div class="bt-title bt-division"${id}>${escHtml(t)}</div>`;
+  }
+
   if (/^(TITLE\s+[IVXLC]+|SUBTITLE|PART\s+[IVXA-Z]|CHAPTER\s+[IVXA-Z])/.test(t)) {
     const id = idForLine ? ` id="${idForLine}"` : '';
     return `<div class="bt-title"${id}>${escHtml(t)}</div>`;
@@ -361,11 +369,29 @@ function renderBillText(rawText, bill) {
   const renderRange = (a, b) => statuteLines.slice(a, b).map((l, k) => renderBtLine(l, idAt(a + k))).join('');
 
   // Fold the Table of Contents into a collapsible block (it lists every section
-  // and otherwise dominates the top of the text).
+  // and otherwise dominates the top of the text). The TOC ends where the real
+  // body begins — detected as the first REAL (all-caps) header that repeats an
+  // entry already listed in the TOC. Case-insensitive so it works whether the
+  // body resumes with a TITLE (e.g. HR-6644) or a SEC. (e.g. the KIDS Act);
+  // matching only on all-caps SEC would swallow the real Title header otherwise.
+  const ciId = t => {
+    let m = t.match(/^(?:SECTION|SEC)\.?\s+(\d+)/i); if (m) return 'sec-' + m[1];
+    m = t.match(/^TITLE\s+([IVXLC]+)/i);             if (m) return 'title-' + m[1].toUpperCase();
+    m = t.match(/^DIVISION\s+([A-Z0-9]+)/i);          if (m) return 'div-' + m[1].toUpperCase();
+    return null;
+  };
   let tocStart = -1, tocEnd = -1;
   for (let i = 0; i < trimmed.length; i++) {
-    if (tocStart < 0 && /table of contents for this act is as follows/i.test(trimmed[i])) { tocStart = i; continue; }
-    if (tocStart >= 0 && /^(SECTION|SEC\.)\s+\d/.test(trimmed[i])) { tocEnd = i; break; }
+    if (/table of contents[\s\S]{0,40}as follows/i.test(trimmed[i])) { tocStart = i; break; }
+  }
+  if (tocStart >= 0) {
+    const seen = new Set();
+    for (let i = tocStart; i < trimmed.length; i++) {
+      const ci = ciId(trimmed[i]);
+      if (!ci) continue;
+      if (btLineId(trimmed[i]) && seen.has(ci)) { tocEnd = i; break; } // real header repeating a TOC entry
+      seen.add(ci);
+    }
   }
 
   const statuteHtml = (tocStart >= 0 && tocEnd > tocStart)

@@ -2049,6 +2049,8 @@ function patchSectionAnchor(sec) {
   if (secM) return `bt-sec-${secM[1]}`;
   const titleM = sec.label?.match(/^Title\s+([IVXLC]+)/i);
   if (titleM) return `bt-title-${titleM[1].toUpperCase()}`;
+  const divM = sec.label?.match(/^Division\s+([A-Z0-9]+)/i);
+  if (divM) return `bt-div-${divM[1].toUpperCase()}`;
   return null;
 }
 
