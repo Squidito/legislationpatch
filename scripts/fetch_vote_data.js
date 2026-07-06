@@ -18,6 +18,7 @@ const fs   = require('fs');
 const path = require('path');
 
 const { PASSAGE_CONTEXT } = require("./lib/patterns.js");
+const congressApi = require('./lib/congress-api.js');
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
 const CACHE_FILE   = path.join(__dirname, '../data/cache.json');
@@ -57,19 +58,10 @@ function saveCache(data) {
 }
 
 // ---- Congress.gov actions ----
-
+// Unified + paginated in scripts/lib/congress-api.js; [] on failure preserves
+// this script's historical contract.
 async function fetchBillActions(congress, type, number) {
-  const url = 'https://api.congress.gov/v3/bill/' + congress + '/' + type.toLowerCase() + '/' + number
-            + '/actions?format=json&limit=250&api_key=' + CONGRESS_API_KEY;
-  await sleep(2000);
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return [];
-    return (await res.json()).actions || [];
-  } catch (e) {
-    console.error('   - Failed to fetch actions:', e.message);
-    return [];
-  }
+  return (await congressApi.fetchBillActions(congress, type, number, { pace: 2000 })) || [];
 }
 
 // ---- XML fetching ----

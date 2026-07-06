@@ -31,27 +31,18 @@ require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 const { PASSAGE_CONTEXT } = require('./lib/patterns.js');
+const { fetchBillActions } = require('./lib/congress-api.js');
 
 const KEY   = process.env.CONGRESS_API_KEY;
 const CACHE = path.join(__dirname, '../data/cache.json');
 const APPLY = process.argv.includes('--apply');
 const ONE   = (() => { const i = process.argv.indexOf('--bill'); return i >= 0 ? process.argv[i + 1] : null; })();
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
 const FINAL = new Set(['signed', 'vetoed', 'dead']);
 
-async function fetchActions(congress, type, number) {
-  const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/actions?format=json&limit=250&api_key=${KEY}`;
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    await sleep(attempt === 1 ? 1500 : 4000 * attempt);
-    try {
-      const res = await fetch(url);
-      if (res.ok) return (await res.json()).actions || [];
-      if (res.status === 404) return [];
-    } catch (_) { /* retry */ }
-  }
-  return null; // null = fetch failed (distinguish from "no actions")
-}
+// Unified + paginated in scripts/lib/congress-api.js (fixes the old 250-action
+// single-page cap). Same contract: Array on success, [] on 404, null on failure.
+const fetchActions = (congress, type, number) => fetchBillActions(congress, type, number, { pace: 1500 });
 
 // Furthest milestone reached, from the full actions list. Uses Congress.gov's
 // canonical "Passed/agreed to in [Chamber]" passage markers (these carry an actual

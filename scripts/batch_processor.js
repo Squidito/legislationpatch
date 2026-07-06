@@ -16,55 +16,20 @@
 // If a local model is ever reintroduced, the auto-analysis CLI can be rebuilt on
 // top of these helpers. Natural follow-up: rename this file to lib/congress-api.js.
 
-require('dotenv').config();
+// --- CONFIGURATION + shared helpers (scripts/lib/, B2 extraction 2026-07-06) ---
+const { CONGRESS_API_KEY, GOVINFO_API_KEY, CONGRESS_SESSION } = require('./lib/config.js');
+const { sleep, cleanHTML, cleanHTMLStructured } = require('./lib/fetch-helpers.js');
+const congressApi = require('./lib/congress-api.js');
+const { formatBillTypeForRecord } = congressApi;
 
-// --- CONFIGURATION ---
-const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
-const GOVINFO_API_KEY  = process.env.GOVINFO_API_KEY  || '';
-const CONGRESS_SESSION = parseInt(process.env.CONGRESS_SESSION || '119', 10);
-
-// --- UTILITIES ---
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-function cleanHTML(html) {
-    return html
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
-        .replace(/\s+/g, ' ')
-        .trim();
-}
+// (moved to scripts/lib/fetch-helpers.js) cleanHTML
 
 // Like cleanHTML but preserves paragraph structure by converting block-level closing
 // tags to newlines before stripping. Used for committee reports where line breaks
 // are needed to detect signature blocks at the end of views sections.
-function cleanHTMLStructured(html) {
-    return html
-        .replace(/<\/(?:p|div|h[1-6]|li|tr|blockquote|section|article)>/gi, '\n')
-        .replace(/<br\s*\/?>/gi, '\n')
-        .replace(/<[^>]+>/g, ' ')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n))
-        .replace(/[ \t]+/g, ' ')
-        .replace(/\n[ \t]+/g, '\n')
-        .replace(/[ \t]+\n/g, '\n')
-        .replace(/\n{3,}/g, '\n\n')
-        .trim();
-}
+// (moved to scripts/lib/fetch-helpers.js) cleanHTMLStructured
 
-function formatBillTypeForRecord(type) {
-    const map = {
-        'HR': 'H.R.', 'HRES': 'H. Res.', 'HJRES': 'H.J. Res.', 'HCONRES': 'H. Con. Res.',
-        'S':  'S.',   'SRES': 'S. Res.', 'SJRES': 'S.J. Res.', 'SCONRES': 'S. Con. Res.',
-    };
-    return map[type.toUpperCase()] || type;
-}
+// (moved to scripts/lib/congress-api.js) formatBillTypeForRecord
 
 async function fetchBillText(bill) {
     const { congress, type, number } = bill;
@@ -103,17 +68,11 @@ async function fetchBillText(bill) {
     return { text: '', isXML: false };
 }
 
+// Unified paginated fetch lives in scripts/lib/congress-api.js. This wrapper
+// preserves this module's historical contract for downstream importers
+// (fetch_bill_cr.js): [] on failure, never null.
 async function fetchBillActions(congress, type, number) {
-    const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/actions?format=json&limit=250&api_key=${CONGRESS_API_KEY}`;
-    await sleep(2000);
-    try {
-        const res = await fetch(url);
-        if (!res.ok) return [];
-        return (await res.json()).actions || [];
-    } catch (e) {
-        console.error('Failed to fetch bill actions:', e.message);
-        return [];
-    }
+    return (await congressApi.fetchBillActions(congress, type, number, { pace: 2000 })) || [];
 }
 
 function extractFloorDates(actions, fallbackDate) {
