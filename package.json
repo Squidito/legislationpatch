@@ -4,6 +4,7 @@
   "description": "U.S. federal legislation explained in plain English — patch notes style.",
   "main": "api.js",
   "scripts": {
+    "add-bills": "node scripts/add-bills.js",
     "batch": "node scripts/run-batch.js",
     "batch:post": "node scripts/run-batch.js --post",
     "batch:fetch": "node scripts/run-batch.js --fetch-only",
