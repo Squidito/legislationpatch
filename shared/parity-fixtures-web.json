@@ -1,0 +1,95 @@
+{
+  "_comment": "WEB-ONLY regression lock for helpers deduped into util.js on 2026-07-06. NOT part of the mobile contract (mobile parity reads only parity-fixtures.json). Frozen from the live implementations at dedupe time; a mismatch means util.js drifted. parseSourceDate has only its deterministic cases here — its dated outputs are local-timezone-dependent epoch millis and must not be frozen.",
+  "partyColor": [
+    {
+      "in": "D",
+      "out": "#3b82f6"
+    },
+    {
+      "in": "R",
+      "out": "#ef4444"
+    },
+    {
+      "in": "I",
+      "out": "#8b5cf6"
+    },
+    {
+      "in": "d",
+      "out": "#3b82f6"
+    },
+    {
+      "in": " republican",
+      "out": "#ef4444"
+    },
+    {
+      "in": "",
+      "out": "#8b5cf6"
+    },
+    {
+      "in": null,
+      "out": "#8b5cf6"
+    }
+  ],
+  "repLastName": [
+    {
+      "in": "Rep. Nancy Pelosi",
+      "out": "Pelosi"
+    },
+    {
+      "in": "Sen. Ted Cruz",
+      "out": "Cruz"
+    },
+    {
+      "in": "Ms. Ocasio-Cortez",
+      "out": "Ocasio-Cortez"
+    },
+    {
+      "in": "Dr. John Q. Public",
+      "out": "Public"
+    },
+    {
+      "in": "Cloud",
+      "out": "Cloud"
+    },
+    {
+      "in": "",
+      "out": ""
+    }
+  ],
+  "parseSourceDate": [
+    {
+      "in": "no date here",
+      "out": 0
+    },
+    {
+      "in": "",
+      "out": 0
+    }
+  ],
+  "portraitUrl": [
+    {
+      "in": "C001115",
+      "out": "https://clerk.house.gov/images/members/C001115.jpg"
+    },
+    {
+      "in": "c001098",
+      "out": "https://bioguide.congress.gov/bioguide/photo/C/C001098.jpg"
+    },
+    {
+      "in": "P000587",
+      "out": "https://bioguide.congress.gov/bioguide/photo/P/P000587.jpg"
+    },
+    {
+      "in": "",
+      "out": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E"
+    },
+    {
+      "in": null,
+      "out": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E"
+    },
+    {
+      "in": "X",
+      "out": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E"
+    }
+  ]
+}

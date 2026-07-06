@@ -191,5 +191,8 @@ function parseSourceDate(source) {
 
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort };
+  // Second line: web-only helpers deduped here 2026-07-06 — locked by
+  // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
+  module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
+                     partyColor, repLastName, parseSourceDate, portraitUrl };
 }

@@ -13,6 +13,11 @@
 //   node scripts/qa-source-verify.js --bill 119-HR-1 # one bill
 //   node scripts/qa-source-verify.js --quote         # print the source line for EVERY claim (forces a real read)
 //   node scripts/qa-source-verify.js --bill 119-HR-1 --quote
+//   node scripts/qa-source-verify.js --headings      # figure→account BINDING review: for each dollar
+//                                                    # claim, the analysis snippet vs the bill-text
+//                                                    # account heading, side by side. This is the fast
+//                                                    # path for the "right number, wrong account" check
+//                                                    # (QA Loop step 2.5) — scan for pairs that disagree.
 //
 // Exit code: non-zero if any OPEN claim has no source evidence, or any
 // non-statutory editorial adjective is found. Flags a genuine QA read has
@@ -29,6 +34,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const cache = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/cache.json'), 'utf8')).bills;
 const QUOTE = process.argv.includes('--quote');
+const HEADINGS = process.argv.includes('--headings');
 
 // Adjudication ledger: flags a human/agent pass has individually verified against
 // source (data/qa-adjudications.json). Matching is exact on billId+kind+token+path,
@@ -158,7 +164,11 @@ function verifyBill(b) {
       const key = 'D' + tok.trim(); if (seen.has(key)) continue; seen.add(key);
       const v = shortToVal(tok.trim()); if (v == null || v === 0) continue; // "$0" = a net-cost characterization (fee-offset), not a sourceable appropriation line
       const ev = findDollar(blocks, v);
-      claims.push({ kind: '$', token: tok.trim(), label, ev });
+      // ctx: what the ANALYSIS says around this figure — the claimed binding,
+      // for --headings side-by-side comparison against the found heading.
+      const at = s.indexOf(tok);
+      const ctx = s.slice(Math.max(0, at - 45), at + tok.length + 65).replace(/\s+/g, ' ').trim();
+      claims.push({ kind: '$', token: tok.trim(), label, ev, ctx });
       if (!ev) flags.push({ kind: '$', token: tok.trim(), label, detail: `${tok.trim()} (${label})` });
     }
     // percentages
@@ -202,6 +212,22 @@ if (QUOTE) console.log(`A ✓ proves the number is PRESENT, not that it belongs 
 console.log('');
 for (const b of bills) {
   const r = verifyBill(b);
+  if (HEADINGS) {
+    // Figure→account binding review: each dollar claim's ANALYSIS context vs the
+    // BILL-TEXT heading its number was found under. The mechanical ✓ only proves
+    // presence — a human/agent must judge each pair. Disagreeing pairs are the
+    // "right number, wrong account" class (NASA $3.0B; NFS↔Wildland-Fire).
+    const dollars = r.claims.filter(c => c.kind === '$');
+    if (dollars.length) {
+      console.log(`\n=== ${b.id} — ${(b.title || '').slice(0, 70)} ===`);
+      for (const c of dollars) {
+        if (!c.ev) { console.log(`  ✗ ${String(c.token).padEnd(10)} NO SOURCE EVIDENCE — resolve as a flag first`); continue; }
+        console.log(`  ${String(c.token).padEnd(10)} analysis: "…${c.ctx}…"`);
+        console.log(`  ${' '.repeat(10)} bill txt : ${c.ev.heading || '(no account heading found — likely non-appropriations text)'}   [${c.ev.tag}:${c.ev.lineNo}]`);
+      }
+    }
+    continue; // headings mode replaces the standard per-bill output
+  }
   if (QUOTE) {
     console.log(`\n=== ${b.id} — ${b.title || ''} ===`);
     for (const c of r.claims) {

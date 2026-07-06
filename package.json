@@ -5,6 +5,7 @@
   "main": "api.js",
   "scripts": {
     "add-bills": "node scripts/add-bills.js",
+    "smoke": "node scripts/smoke-test.js",
     "batch": "node scripts/run-batch.js",
     "batch:post": "node scripts/run-batch.js --post",
     "batch:fetch": "node scripts/run-batch.js --fetch-only",
@@ -31,5 +32,8 @@
   "homepage": "https://github.com/Squidito/legislationpatch#readme",
   "dependencies": {
     "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
   }
 }

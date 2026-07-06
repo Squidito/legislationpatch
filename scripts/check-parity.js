@@ -18,6 +18,13 @@ const util     = require('../util.js');
 const fixtures = JSON.parse(
     fs.readFileSync(path.join(__dirname, '../shared/parity-fixtures.json'), 'utf8')
 );
+// Web-only regression lock (helpers deduped into util.js 2026-07-06) — same
+// schema, checked here only; the mobile runner does not read this file.
+try {
+    Object.assign(fixtures, JSON.parse(
+        fs.readFileSync(path.join(__dirname, '../shared/parity-fixtures-web.json'), 'utf8')
+    ));
+} catch { /* web-only fixture absent — fine */ }
 
 let failures = 0;
 let checked  = 0;
