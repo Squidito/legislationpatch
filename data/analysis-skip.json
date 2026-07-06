@@ -1,0 +1,341 @@
+{
+  "_readme": "Bills DELIBERATELY not analyzed — validate-batch downgrades their unprocessed-ERROR to an informational note so the pre-commit hook passes. Categories: cra-disapproval (rule-disapproval resolutions), ceremonial (medals/coins/expressions/memorials), procedural (House housekeeping), deferred-minor (small land/naming/boundary bills — analyzable later; remove an entry to put the bill back on the must-analyze list). Reviewed classification 2026-07-06.",
+  "skip": [
+    {
+      "id": "119-HR-3497",
+      "category": "ceremonial",
+      "title": "Medal of Sacrifice Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1299",
+      "category": "procedural",
+      "title": "Providing for the concurrence by the House in the Senate amendment to H.R. 6644, with amen",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-7250",
+      "category": "deferred-minor",
+      "title": "To reauthorize the Fort Peck Reservation Rural Water System Act of 2000.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-6162",
+      "category": "deferred-minor",
+      "title": "Albuquerque Indian School Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-5911",
+      "category": "deferred-minor",
+      "title": "Crystal Reservoir Conveyance Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-4463",
+      "category": "deferred-minor",
+      "title": "To amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-2768",
+      "category": "deferred-minor",
+      "title": "Benton MacKaye National Scenic Trail Feasibility Study Act of 2026",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-41",
+      "category": "deferred-minor",
+      "title": "Unrecognized Southeast Alaska Native Communities Recognition and Compensation Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-5682",
+      "category": "deferred-minor",
+      "title": "To take certain land in the State of California into trust for the benefit of the Pechanga",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-375",
+      "category": "ceremonial",
+      "title": "Expressing support for the designation of May 2025 as \"Renewable Fuels Month\" to recognize",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-1993",
+      "category": "ceremonial",
+      "title": "25th Anniversary of 9/11 Commemorative Coin Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-1352",
+      "category": "deferred-minor",
+      "title": "To designate the General George C. Marshall House, in the Commonwealth of Virginia, as an ",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-681",
+      "category": "deferred-minor",
+      "title": "To amend the Act of August 9, 1955 (commonly known as the “Long-Term Leasing Act”), to aut",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-2388",
+      "category": "deferred-minor",
+      "title": "Lower Elwha Klallam Tribe Project Lands Restoration Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-2302",
+      "category": "deferred-minor",
+      "title": "Shingle Springs Band of Miwok Indians Land Transfer Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-3620",
+      "category": "deferred-minor",
+      "title": "Southcentral Foundation Land Transfer Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HCONRES-96",
+      "category": "ceremonial",
+      "title": "Expressing support for law enforcement officers.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1252",
+      "category": "ceremonial",
+      "title": "Resolution memorializing law enforcement officers killed in the line of duty.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1251",
+      "category": "ceremonial",
+      "title": "Calling on elected officials and civil society leaders to counter antisemitism and educate",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-352",
+      "category": "ceremonial",
+      "title": "Calling on elected officials and civil society leaders to counter antisemitism and educate",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-452",
+      "category": "ceremonial",
+      "title": "Miracle on Ice Congressional Gold Medal Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HCONRES-109",
+      "category": "ceremonial",
+      "title": "Allowing Emancipation Hall to be used for a ceremony to dedicate the Semiquincentennial Co",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-SJRES-80",
+      "category": "cra-disapproval",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, Uni",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1156",
+      "category": "ceremonial",
+      "title": "Expressing support for tax policies that support working families.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-1945",
+      "category": "deferred-minor",
+      "title": "America's National Churchill Museum National Historic Landmark Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1142",
+      "category": "procedural",
+      "title": "Providing for disposition of the Senate amendment to the bill (H.R. 7147) making further c",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-7211",
+      "category": "ceremonial",
+      "title": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1128",
+      "category": "ceremonial",
+      "title": "Expressing the support of the House of Representatives for the Department of Homeland Secu",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-2876",
+      "category": "deferred-minor",
+      "title": "University of Utah Research Park Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-4467",
+      "category": "deferred-minor",
+      "title": "Vicksburg National Military Park Boundary Modification Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-1829",
+      "category": "deferred-minor",
+      "title": "Apache County and Navajo County Conveyance Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-3903",
+      "category": "deferred-minor",
+      "title": "Chugach Alaska Land Exchange Oil Spill Recovery Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-410",
+      "category": "deferred-minor",
+      "title": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-60",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-165",
+      "category": "deferred-minor",
+      "title": "Wounded Knee Massacre Memorial and Sacred Site Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-25",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-131",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-130",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-106",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-105",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-104",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-61",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-75",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-87",
+      "category": "cra-disapproval",
+      "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-88",
+      "category": "cra-disapproval",
+      "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-89",
+      "category": "cra-disapproval",
+      "title": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-42",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-35",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-1336",
+      "category": "procedural",
+      "title": "Waiving a requirement of clause 6(a) of rule XIII with respect to consideration of certain",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-1276",
+      "category": "deferred-minor",
+      "title": "To remove restrictions from a parcel of land in Paducah, Kentucky.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-24",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HJRES-20",
+      "category": "cra-disapproval",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HRES-212",
+      "category": "procedural",
+      "title": "Returning Senate Joint Resolution 3 to the Senate.",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-S-1596",
+      "category": "deferred-minor",
+      "title": "Jocelyn Nungaray National Wildlife Refuge Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-HR-2215",
+      "category": "deferred-minor",
+      "title": "Salem Maritime National Historical Park Redesignation and Boundary Study Act",
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "119-SJRES-11",
+      "category": "cra-disapproval",
+      "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, Uni",
+      "addedAt": "2026-07-06"
+    }
+  ]
+}

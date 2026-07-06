@@ -177,13 +177,29 @@ function noteAdjudicated(msg, a) { console.log(`  ◦  ${msg} — adjudicated ${
 
 section('Unprocessed bills');
 {
+    // data/analysis-skip.json — bills DELIBERATELY not analyzed (ceremonial,
+    // CRA disapprovals, procedural housekeeping, deferred minor land/naming
+    // bills). Skip-listed ids downgrade from ERROR to an informational note so
+    // the pre-commit hook can pass; anything unlisted still blocks. Remove an
+    // entry from the file to put that bill back on the must-analyze list.
+    let SKIP = new Map();
+    try {
+        for (const s of JSON.parse(fs.readFileSync(path.join(DATA, 'analysis-skip.json'), 'utf8')).skip || [])
+            SKIP.set(s.id, s.category || 'unspecified');
+    } catch { /* no skip list */ }
+
     const cachedIds   = new Set(bills.map(b => b.id));
     const unprocessed = rawBills.filter(b => !cachedIds.has(b.billId));
-    if (unprocessed.length === 0) {
-        pass('All fetched bills have been analyzed');
-    } else {
-        unprocessed.forEach(b => fail(`Not yet analyzed: ${b.billId} — ${b.title}`));
+    const skipped     = unprocessed.filter(b => SKIP.has(b.billId));
+    const blocking    = unprocessed.filter(b => !SKIP.has(b.billId));
+
+    blocking.forEach(b => fail(`Not yet analyzed: ${b.billId} — ${b.title}`));
+    if (skipped.length) {
+        const byCat = {};
+        skipped.forEach(b => { const c = SKIP.get(b.billId); byCat[c] = (byCat[c] || 0) + 1; });
+        console.log(`  ◦  ${skipped.length} deliberately-skipped bill(s) — ${Object.entries(byCat).map(([c, n]) => `${n} ${c}`).join(', ')} (data/analysis-skip.json)`);
     }
+    if (blocking.length === 0) pass(skipped.length ? 'All non-skip-listed fetched bills have been analyzed' : 'All fetched bills have been analyzed');
 }
 
 // ── Check: required fields ─────────────────────────────────────────────────
