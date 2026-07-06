@@ -2017,7 +2017,7 @@ function renderSections(bill) {
   if (!secs.length) return '';
   const admin = secs.filter(s => s.admin);
   const main  = secs.filter(s => !s.admin);
-  let html = '<div class="patch-spine">';
+  let html = '<div class="patch-notes-title">Section-by-section breakdown</div><div class="patch-spine">';
   if (admin.length) {
     const aid = `psadm-${escHtml(bill.id)}`;
     const sub = admin.map(s => secMarker(s.label)).filter(Boolean).join(', ');

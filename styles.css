@@ -2275,11 +2275,18 @@ a:hover { text-decoration: underline; }
 
 /* Patch notes */
 .patch-notes {
-  margin: 0 1.1rem 0.85rem;
+  margin: 1rem 1.1rem 0.85rem;
   padding: 10px 14px 12px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+}
+.patch-notes-title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-3);
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
 }
 .patch-section { margin-bottom: 1rem; }
 .patch-section-title {
@@ -3327,7 +3334,14 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
     margin-left: 0.75rem;
     margin-right: 0.75rem;
   }
-  .patch-notes { margin-left: 0.75rem; margin-right: 0.75rem; }
+  .patch-notes { margin-left: 0.75rem; margin-right: 0.75rem; padding: 10px 11px 12px; }
+  /* Spine: reclaim the wide left gutter on narrow screens so text isn't cramped */
+  .patch-spine .ps-row,
+  .patch-spine .ps-admin-strip { padding-left: 32px; padding-bottom: 14px; }
+  .patch-spine .ps-num { min-width: 26px; height: 19px; font-size: 0.6rem; padding: 0 3px; }
+  .patch-spine .ps-rail { left: 12px; }
+  .patch-spine .ps-dot { left: 9px; }
+  .patch-spine .item-detail { padding-left: 8px; }
   .what-changed-section { padding: 0 0.75rem 12px; }
   .what-changed-grid { grid-template-columns: 1fr; }
   .section-divider { margin-left: 0.75rem; margin-right: 0.75rem; }
@@ -3574,12 +3588,16 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   .rep-more-btn, 
   .fav-btn, 
   .star-btn, 
-  .ai-btn, 
+  .ai-btn,
   .expand-full-btn,
   .close-settings {
     min-height: 44px;
     min-width: 44px;
   }
+  /* Quote-carousel nav is exempt from the 44px min — the blanket button rule
+     was inflating the tiny scroll dots/arrows into huge bubbles on mobile. */
+  .qc-arrow { min-width: 0; min-height: 0; width: 32px; height: 32px; }
+  .qc-dot   { min-width: 0; min-height: 0; width: 8px; height: 8px; }
 }
 
 /* Safe area insets for notched devices */
