@@ -4,7 +4,7 @@
 
 LegislationPatch takes U.S. federal legislation and turns it into structured, plain-English patch notes — the kind of format you'd expect from a software release, not a news article. Every fact is extracted directly from the bill text or Congressional Record. No pundit framing, no takes, no invented figures.
 
-**Live site:** [legislation-patch.netlify.app](https://legislation-patch.netlify.app) *(occasionally down during active development)*
+**Live site:** [squidito.github.io/legislationpatch](https://squidito.github.io/legislationpatch/) *(occasionally down during active development)*
 
 ---
 

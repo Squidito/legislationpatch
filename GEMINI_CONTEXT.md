@@ -8,7 +8,7 @@ This document captures the full current state of the project for handoff between
 
 A static civic web app that explains U.S. federal bills in plain English, styled like video game patch notes. Nonpartisan. No accounts. No backend.
 
-**Live site:** deployed via Netlify, auto-deploys on push to `main`.
+**Live site:** deployed via GitHub Pages, auto-deploys on push to `main`.
 **Local dev:** `npx serve . --listen 3131`
 
 ---
@@ -17,7 +17,7 @@ A static civic web app that explains U.S. federal bills in plain English, styled
 
 **The site is fully static. No live API calls happen in the browser.**
 
-All bill analysis is done locally on James's machine via a batch processor (`scripts/batch_processor.js`), which uses a local LLM (LM Studio / Qwen3.5 9B on port 1235). The output is written to `data/cache.json`, committed, and pushed to GitHub, which triggers a Netlify deploy.
+All bill analysis is done locally on James's machine via a batch processor (`scripts/batch_processor.js`), which uses a local LLM (LM Studio / Qwen3.5 9B on port 1235). The output is written to `data/cache.json`, committed, and pushed to GitHub, which triggers a GitHub Pages deploy.
 
 The browser reads only `data/cache.json`. Do not add live API calls to `api.js` or `app.js`.
 
