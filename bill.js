@@ -1,7 +1,7 @@
 // bill.js — bill detail page logic
-// Reuses app.js render functions; overrides renderAll and toggleCard for single-bill context.
+// Reuses the app-*.js render functions (app-render.js); overrides renderAll and toggleCard for single-bill context.
 
-// Re-render only this bill's card (replaces the full-page renderAll from app.js)
+// Re-render only this bill's card (replaces the full-page renderAll from app-render.js)
 function renderAll() {
   if (!window.BILL_PAGE_ID) return;
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Update back button
   const backBtn = document.getElementById('backBtn');
   if (backBtn) {
-    backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
+    backBtn.href = `./?scrollTo=${encodeURIComponent(billId)}`;
     backBtn.textContent = '← Home';
   }
 
-  // Initialise globals app.js render functions depend on
+  // Initialise globals the app-*.js render functions depend on (declared in app-state.js)
   allBills = bills;
   loadWatchedBills();
   loadTrackedSettings();

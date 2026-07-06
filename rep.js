@@ -26,7 +26,7 @@ async function init() {
     const ref = urlParams.get('ref') || '';
     if (ref.startsWith('bill-')) {
       const billId = ref.slice(5);
-      backBtn.href = `index.html?scrollTo=${encodeURIComponent(billId)}`;
+      backBtn.href = `./?scrollTo=${encodeURIComponent(billId)}`;
       backBtn.textContent = '← Home';
     } else if (ref === 'home') {
       backBtn.textContent = '← Home';
@@ -238,7 +238,7 @@ function renderProfile(rep) {
     const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
     const billLabel   = c.billTitle || formatBillId(c.billId) || chamberFallback;
     const billUrl     = c.billId
-      ? `index.html?fromRep=${encodeURIComponent(rep.bioguideId)}&repName=${encodeURIComponent(rep.name)}&scrollTo=${encodeURIComponent(c.billId)}`
+      ? `./?fromRep=${encodeURIComponent(rep.bioguideId)}&repName=${encodeURIComponent(rep.name)}&scrollTo=${encodeURIComponent(c.billId)}`
       : null;
     const titleEl     = billUrl
       ? `<a href="${billUrl}" class="rep-bill-link">${escHtml(billLabel)}</a>`
@@ -359,7 +359,7 @@ function renderVotingHistory(rep) {
     var v         = history[i];
     var billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId);
     var billIdFmt = escHtml(formatBillId(v.billId) || '');
-    var billUrl   = 'index.html?scrollTo=' + encodeURIComponent(v.billId);
+    var billUrl   = './?scrollTo=' + encodeURIComponent(v.billId);
     var rawVote   = (v.vote || '').toLowerCase();
     var voteDisplay = rawVote.includes('yea') || rawVote.includes('yes') ? 'Yea'
                     : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'

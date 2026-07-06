@@ -75,8 +75,10 @@ function toggleTheme(isDark) {
 })();
 
 function goHome() {
-  // favoritesView is only true on favorites.html — toggleFavoritesView() no longer
-  // exists (favorites became its own page), so "home" means navigating there.
+  // Defensive: nothing currently sets favoritesView to true (legacy of the removed
+  // in-page favorites toggle; favorites.html renders directly via FAVORITES_PAGE).
+  // The old branch called toggleFavoritesView(), which no longer exists anywhere —
+  // kept as a safe navigation fallback instead of a latent ReferenceError.
   if (favoritesView) { window.location.href = 'index.html'; return; }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

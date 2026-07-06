@@ -1,5 +1,5 @@
 // bills.js — Bills page logic
-// Loaded after app.js. window.BILLS_PAGE and window.activeBillCategories
+// Loaded after the app-*.js set. window.BILLS_PAGE and window.activeBillCategories
 // are set inline in bills.html before any scripts run.
 
 const BILL_CAT_RULES = [

@@ -1,7 +1,7 @@
 // util.js — shared pure helpers for the web app.
 //
 // Single source of truth for functions that were previously hand-copied across
-// app.js / api.js / floor.js / rep.js / reps.js. Loaded as the FIRST <script> on
+// the app-*.js set / api.js / floor.js / rep.js / reps.js. Loaded as the FIRST <script> on
 // every page that uses them, so the globals exist before the page scripts run.
 //
 // These are mirrored on the mobile app in legislationpatch-app/lib/format.ts.
@@ -51,7 +51,7 @@ function formatDate(dateStr) {
 
 // ── Quote provenance taglines (web display) ───────────────────────────────
 // These build the small line under a speaker's name on quote cards. They are
-// web-display helpers shared between app.js (index carousel + favorites) and
+// web-display helpers shared between app-carousel.js/app-favorites.js and
 // floor.js (floor carousel) so the label is built ONE way everywhere; they are
 // not part of the mobile-mirrored parity contract above.
 

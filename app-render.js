@@ -1144,15 +1144,17 @@ function billRefHtml(text, currentBillId, emphFig) {
 
 function scrollToBill(id) {
   if (!document.getElementById('billList')) {
-    window.location.href = `index.html?scrollTo=${encodeURIComponent(id)}`;
+    window.location.href = `./?scrollTo=${encodeURIComponent(id)}`;
     return;
   }
   const bill = allBills.find(b => b.id === id);
   if (!bill) return;
-  // On favorites.html the target card isn't rendered (and toggleFavoritesView()
-  // no longer exists) — jump to the home list and let it scroll there.
+  // Defensive: nothing currently sets favoritesView to true (legacy of the removed
+  // in-page favorites toggle). The old branch called toggleFavoritesView(), which no
+  // longer exists anywhere — kept as a safe navigation fallback instead of a latent
+  // ReferenceError. ./? not index.html? — serve strips queries on the .html redirect.
   if (favoritesView) {
-    window.location.href = `index.html?scrollTo=${encodeURIComponent(id)}`;
+    window.location.href = `./?scrollTo=${encodeURIComponent(id)}`;
     return;
   }
   const PIPELINE_STAGES = new Set(['introduced', 'committee', 'house', 'senate']);
