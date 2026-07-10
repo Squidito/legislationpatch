@@ -1,0 +1,55 @@
+#!/bin/sh
+# LegislationPatch pre-commit hook — TRACKED version (scripts/hooks/pre-commit).
+#
+# Activated via:  git config core.hooksPath scripts/hooks
+# (done automatically by `npm install` — see the "prepare" script in package.json,
+# so the hook survives re-clones and new machines.)
+#
+# Three gates, in order of severity:
+#
+#   1. security-check.js   — secrets / CSP / noopener / XSS heuristic.
+#                            BLOCKS on errors. NO sanctioned bypass.
+#   2. test-security-helpers.js — hostile payloads through escHtml/portraitUrl/
+#                            safeBioId. BLOCKS on failure. NO sanctioned bypass.
+#   3. validate-batch      — data QA (figures, stages, formatting).
+#                            BLOCKS on errors. Sanctioned bypass for data-QA-only
+#                            situations:  SKIP_VALIDATE=1 git commit ...
+#
+# `git commit --no-verify` skips EVERYTHING including the security gates —
+# never use it; use SKIP_VALIDATE=1 if you need to commit past a data-QA error.
+# See SECURITY.md for the invariant -> gate map.
+
+echo "[pre-commit] 1/3 security-check..."
+node scripts/security-check.js
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "[pre-commit] X security-check failed — commit BLOCKED."
+  echo "[pre-commit]   No bypass for security errors. Fix them (see output above)."
+  exit 1
+fi
+
+echo "[pre-commit] 2/3 security-helper tests..."
+node scripts/test-security-helpers.js
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "[pre-commit] X a keystone sanitizer in util.js was weakened — commit BLOCKED."
+  echo "[pre-commit]   No bypass. Restore escHtml/portraitUrl/safeBioId behavior."
+  exit 1
+fi
+
+if [ "$SKIP_VALIDATE" = "1" ]; then
+  echo "[pre-commit] 3/3 validate-batch SKIPPED (SKIP_VALIDATE=1)."
+else
+  echo "[pre-commit] 3/3 validate-batch (npm run validate)..."
+  npm run --silent validate
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "[pre-commit] X validate-batch reported errors — commit BLOCKED."
+    echo "[pre-commit]   Fix them, or for a deliberate data-QA bypass:"
+    echo "[pre-commit]     SKIP_VALIDATE=1 git commit ..."
+    exit 1
+  fi
+fi
+
+echo "[pre-commit] OK all gates passed."
+exit 0

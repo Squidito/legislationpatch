@@ -584,6 +584,7 @@ function renderCarousel() {
     </div>`;
   }).join('');
 
+  // xss-ok: `cards` is assembled above with escHtml/safeBioId/portraitUrl on every dynamic value
   mount.innerHTML = `<div class="shock-quotes-section">
     <div class="shock-quotes-label-row">
       <span class="shock-quotes-label">Controversial quotes from the floor</span>

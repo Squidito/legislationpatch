@@ -14,9 +14,12 @@
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
     "reps": "node scripts/generate_reps.js",
-    "test": "node scripts/validate-batch.js",
+    "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/validate-batch.js",
     "facts": "node scripts/bill-facts.js",
-    "refresh": "node scripts/refresh_stages.js"
+    "refresh": "node scripts/refresh_stages.js",
+    "security": "node scripts/security-check.js",
+    "test:security": "node scripts/test-security-helpers.js",
+    "prepare": "git config core.hooksPath scripts/hooks"
   },
   "repository": {
     "type": "git",

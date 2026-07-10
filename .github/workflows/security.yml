@@ -1,0 +1,40 @@
+# Security + data-QA tripwire.
+#
+# This is the layer that survives everything local: a re-clone without the
+# pre-commit hook, a `git commit --no-verify`, a different machine, a different
+# AI model. It cannot BLOCK a GitHub Pages deploy (Pages publishes main on push
+# regardless) — it exists to put a red X and an email on any commit that broke
+# a security invariant, within minutes of it landing.
+#
+# See SECURITY.md for the invariant -> gate map.
+name: security
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Dependency-free gates first — these must pass even if npm install breaks.
+      - name: security-check (secrets / CSP / noopener / XSS heuristic)
+        run: node scripts/security-check.js
+
+      - name: hostile-payload tests (escHtml / portraitUrl / safeBioId)
+        run: node scripts/test-security-helpers.js
+
+      # Data-QA gate (needs dotenv only; keys are NOT required — validate reads
+      # tracked local files and never calls external APIs).
+      - name: install runtime deps
+        run: npm ci --omit=dev --ignore-scripts
+
+      - name: validate-batch (data QA)
+        run: npm run --silent validate
