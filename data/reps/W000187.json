@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 43,
   "bio": "Maxine Moore Waters is an American politician serving as the U.S. representative for California's 43rd congressional district since 1991. The district, numbered as the 29th district from 1991 to 1993 and as the 35th district from 1993 to 2013, includes much of southern Los Angeles, as well as portions of Gardena, Inglewood and Torrance.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "oppose",
+      "text": "I include in the Record the following letters from organizations that oppose this terrible bill: a letter from the AFL-CIO, which is scoring this vote, and a letter from Public Citizen. AFL-CIO, Legislative Alert, July 14, 2025. Dear Representative: On behalf of the AFL-CIO, I am writing to urge you to oppose two bills on crypto currency that may soon be up on the House floor for a vote this week.",
+      "date": "2025-07-18"
+    },
+    {
+      "billId": "119-HCONRES-75",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "stance": "oppose",
+      "text": "Tonight, you see members of the Congressional Black Caucus on the floor of the House of Representatives. If you think what you see tonight is a strong voice against an attempt to disrupt, undermine, and destroy the Voting Rights Act, you ain't seen nothing yet. This is just the beginning of what we must do, of what we have to do. Donald Trump's war on democracy did not start with redistricting, and it certainly will not end there.",
+      "source": "House Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 5,
   "bio": "Jahana Hayes is an American politician serving as the U.S. representative for Connecticut's 5th congressional district since 2019. The district, once represented by U.S. Senator Chris Murphy, comprises much of the state's northwestern portion, including New Britain, Danbury, and Waterbury. A member of the Democratic Party, Hayes became the first Black woman elected to represent Connecticut in Congress. She was recognized as the National Teacher of the Year in 2016.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7567",
+      "billTitle": "Farm, Food, and National Security Act of 2026",
+      "stance": "neutral",
+      "text": "The Acting CHAIR. The question is on the amendment offered by the gentleman from Arkansas (Mr. Crawford). The amendment was agreed to. Amendment No. 8 Offered by Mr. Crawford The Acting CHAIR. It is now in order to consider amendment No. 8 printed in part B of House Report 119-628.",
+      "date": "2026-02-13"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Not Voting"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Not Voting"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

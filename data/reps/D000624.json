@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 6,
   "bio": "Deborah Ann Dingell is an American politician serving as a U.S. representative from Michigan since 2015, representing the state's 6th congressional district since 2023. A member of the Democratic Party, she succeeded her late husband, John Dingell, who was the longest-serving member of Congress in U.S. history.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-146",
+      "billTitle": "TAKE IT DOWN Act",
+      "stance": "support",
+      "text": "Mr. Speaker, I rise today as a strong and unwavering advocate for women, children, and survivors of abuse and in support of a bill that I helped lead, S. 146, the TAKE IT DOWN Act. The rise of deepfake pornography and nonconsensual intimate images is a growing crisis that demands urgent action now. We need to work together to protect women and children from these evolving threats. New generative artificial intelligence tools are being weaponized to humiliate, silence, and terrorize women and children.",
+      "date": "2025-05-19"
+    },
+    {
+      "billId": "119-S-2878",
+      "billTitle": "Great Lakes Fishery Research Reauthorization Act",
+      "stance": "support",
+      "text": "The Great Lakes aren't just a part of Michigan and the heartland's landscape. They are part of our economy, our identity, and our heritage. They are more than 20 percent of the world's freshwater and must be protected. They provide drinking water to millions. They are home to a thriving ecosystem for a wide breadth of species. They support countless jobs. Our Great Lakes' fishing economy alone is worth more than $5 billion.",
+      "date": "2025-12-26"
+    },
+    {
+      "billId": "119-S-284",
+      "billTitle": "Congressional Award Program Reauthorization Act",
+      "stance": "support",
+      "text": "I rise today to share my strong support for S. 284, the Congressional Award Program Reauthorization Act. Mr. Speaker, I am proud to co-lead it with my colleague, Representative Hudson, whom you just heard from, and also Congressmen Mike Levin and John Rutherford. This bill will reauthorize the Congressional Award program, which has been responsible for printing and distributing awards to young Americans across this country since 1979. This important program expired nearly 18 months ago, and it is in desperate need of reauthorization.",
+      "date": "2025-01-28"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +547,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

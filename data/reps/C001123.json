@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 31,
   "bio": "Gilbert Ray Cisneros Jr. is an American politician and former naval officer serving as the U.S. representative for California's 31st congressional district since 2025. A member of the Democratic Party, he previously served as Under Secretary of Defense for Personnel and Readiness in the Biden administration and was the U.S. representative for California's 39th congressional district from 2019 to 2021.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2066",
+      "billTitle": "Investing in All of America Act of 2025",
+      "stance": "support",
+      "text": "I would like to close by once again thanking Mr. Meuser and Ms. Scholten for their leadership on this bill and their efforts to extend additional capital to rural and underserved entrepreneurs, as well as the critical technology industry. Mr. Speaker, I am pleased to support this bill and encourage all of my colleagues to do the same.",
+      "date": "2026-05-19"
+    },
+    {
+      "billId": "119-HR-4495",
+      "billTitle": "SBA Fraud Enforcement Extension Act",
+      "stance": "neutral",
+      "text": "I will close by thanking Mr. Conaway, Mr. Downing, and Chairman Williams for their work on ensuring taxpayer funds are protected from fraudsters.",
+      "date": "2025-12-02"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "stance": "support",
+      "text": "I would like to commend the Charter Oak High School Cheer and STUNT Team for making history by becoming the first San Gabriel Valley school to win a CIF Southern Section STUNT cheer championship. Their hard work and dedication paid off. They should all be very proud of themselves for capturing the Division 2 title. Congratulations to Coach Ashley Garcia for all the time and energy she spent training these talented athletes.",
+      "source": "House Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +549,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

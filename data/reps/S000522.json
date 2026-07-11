@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 4,
   "bio": "Christopher Henry Smith is an American politician serving as the U.S. representative for New Jersey's 4th congressional district since 1981. Though it has taken various forms, his district has always been situated in central New Jersey. Currently, the district contains parts of Ocean and Monmouth counties. Smith is a member of the Republican Party, having switched from the Democratic Party in 1978.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2347",
+      "billTitle": "Survivor Justice Tax Prevention Act",
+      "stance": "neutral",
+      "text": "He has been tenacious. Mr. Speaker, we have people who will be speaking and some who couldn't be here who have never given up in trying to protect and preserve the lives of women and children from the violence of abortion. Four years ago today, the Supreme Court's Dobbs v. Jackson decision, brilliantly authored by Justice Sam Alito, who is from my hometown of Hamilton in New Jersey, reversed the infamous holdings of Roe v. Wade and Planned Parenthood v. Casey.",
+      "source": "House Floor, Jun 24, 2026",
+      "granuleTitle": null,
+      "date": "Jun 24, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

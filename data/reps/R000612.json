@@ -6,8 +6,53 @@
   "role": "Representative",
   "district": 6,
   "bio": "John Williams Rose is an American politician and businessman serving as the U.S. representative for Tennessee's 6th congressional district since 2019. A member of the Republican Party, he previously served as the 33rd agriculture commissioner of Tennessee from 2002 to 2003.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-3838",
+      "billTitle": "SPEED Act",
+      "stance": "neutral",
+      "text": "My amendment is intended to address the Janet Mello fraud case, the Army civilian who was indicted and pleaded guilty to stealing over $100 million that were intended for the 4-H Military Partnership Grant Program. The 4-H Military Partnership Grant Program serves 4-H clubs that are in many military installation youth centers. These programs include 4-H positive youth development programming, engaging in hands-on learning in day and overnight summer camps, including military team adventure camps.",
+      "date": "2025-06-09"
+    },
+    {
+      "billId": "119-HR-1919",
+      "billTitle": "Anti-CBDC Surveillance State Act",
+      "stance": "neutral",
+      "text": "Among the many rights that we enjoy as Americans, privacy is among the most fundamental. Establishing a central bank digital currency would not only usurp consumers' privacy and individual freedoms, but it would also hinder free market innovation. Digital assets are here to stay. I agree strongly with President Trump that the United States should be a leader in this space. However, the last administration held a very different view.",
+      "date": "2025-03-06"
+    },
+    {
+      "billId": "119-HR-7128",
+      "billTitle": "TRIA Program Reauthorization Act of 2026",
+      "stance": "neutral",
+      "text": "Too often Congress reflexively renews sprawling federal backstops that the market no longer needs--quietly gambling with taxpayers' exposure to potentially massive losses while ignoring the absence of any real market breakdown. This TRIA reauthorization fits the pattern perfectly: another automatic green light for an open-ended federal guarantee, despite no evidence of a genuine market failure.",
+      "date": "2026-01-16"
+    },
+    {
+      "billId": "119-S-1071",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
+      "stance": "neutral",
+      "text": "I have introduced an amendment to the National Defense Authorization Act addressing the massive Janet Mello fraud scandal at Fort Sam Houston and the broader pattern of abuse it has exposed. This amendment simply requires a public, comprehensive report on how more than $100 million meant for the 4-H Military Partnership Grant program was stolen over several years. What red flags were missed? What reforms will prevent this from ever happening again?",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Not Voting"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +278,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +425,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +556,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 7,
   "bio": "Brittany Louise Pettersen is an American politician serving as the U.S. representative from Colorado's 7th congressional district since 2023. She previously served as a member of the Colorado Senate from the 22nd district, and in the Colorado House of Representatives, representing the 28th district. She is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "support",
+      "text": "This week, the Trump administration launched moms.gov, another performative political stunt pretending to support moms, but the health and well-being of women and families has never been under greater threat than under this administration. Our access to healthcare is being decimated with cuts to Medicaid and  the ACA, while women are also dealing with the ongoing consequences of the Dobbs decision across this country and, somehow, it might even get worse.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    },
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "neutral",
+      "text": "Across Colorado, families are being squeezed by the skyrocketing cost of housing. Whether it is in the suburbs or our rural communities, there are simply not enough homes. In Colorado alone, we are short 100,000 units, and that is driving up costs for all of us. We know that owning a home is one of the most important pathways to economic opportunity, stability, and generational wealth. It has also been a cornerstone of the American Dream. Yet, it has never been further out of reach.",
+      "source": "House Floor, Jun 24, 2026",
+      "granuleTitle": null,
+      "date": "Jun 24, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +544,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 2,
   "bio": "Steven Brett Guthrie is an American businessman and politician serving as the U.S. representative for Kentucky's 2nd congressional district since 2009. The district is in central Kentucky and includes Fort Knox, Owensboro, Bowling Green, and a portion of eastern Louisville. Guthrie previously served as a Republican member of the Kentucky Senate.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-146",
+      "billTitle": "TAKE IT DOWN Act",
+      "stance": "neutral",
+      "text": "I echo the sentiments of Representative Dean and my friend Representative Salazar. I appreciate the comments that they just made. Last month, I joined a bipartisan group convened by the First Lady. We heard from young survivors and their parents who were targeted by those abhorrent practices. I am sad to say that this issue struck close to home with the heartbreaking death of my constituent, 16-year-old Elijah Heacock.",
+      "date": "2025-05-19"
+    },
+    {
+      "billId": "119-HR-7266",
+      "billTitle": "Rural and Municipal Utility Cybersecurity Act",
+      "stance": "neutral",
+      "text": "I appreciate my good friends from Virginia and Iowa working together on this bill.",
+      "date": "2026-01-27"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

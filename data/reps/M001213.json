@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 1,
   "bio": "Blake David Moore is an American politician and former diplomat from the state of Utah. He is the U.S. representative for Utah's 1st congressional district, serving since January 2021. Since November 8, 2023, he has been the vice chair of the House Republican Conference.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7757",
+      "billTitle": "KIDS Act",
+      "stance": "neutral",
+      "text": "It is my privilege to be joined by my colleagues for this Police Week Special Order. Law enforcement across this country is putting their lives on the line every day to protect our communities, and 1 week per year honoring them will never be enough. I want to respect the time of our colleagues so I will turn the time over to them before I give my remarks. Mr. Speaker, I yield to the gentlewoman from South Carolina (Mrs. Biggs).",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

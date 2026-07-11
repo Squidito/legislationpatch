@@ -3,7 +3,7 @@
   "name": "Elizabeth Warren",
   "party": "D",
   "state": "MA",
-  "bio": "Elizabeth Ann Warren is an American politician and former law professor who is the senior United States senator from the state of Massachusetts, serving since 2013. A member of the Democratic Party and regarded as a progressive, Warren has focused on consumer protection, equitable economic opportunity, and the social safety net while in the Senate. Warren was a candidate in the 2020 Democratic Party presidential primaries, ultimately finishing third after Joe Biden and Bernie Sanders.",
+  "bio": "Elizabeth Ann Warren is an American politician and former law professor serving as the senior United States senator from Massachusetts, a seat she has held since 2013. A member of the Democratic Party and regarded as a progressive, Warren has focused on consumer protection, equitable economic opportunity, and the social safety net while in the Senate. Warren was also a candidate in the 2020 Democratic Party presidential primaries, ultimately finishing third after Joe Biden and Bernie Sanders.",
   "comments": [
     {
       "billId": "119-HR-6955",
@@ -11,6 +11,33 @@
       "stance": "oppose",
       "text": "We are calling a fifty-billion-dollar bank a community bank. That is laundering language.",
       "date": "Apr 20, 2026"
+    },
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "oppose",
+      "text": "Senate Democrats are on the floor today to fight back against President Donald Trump's actions to raise the cost of living for American families. Now, you may remember that Donald Trump promised to lower costs on day one. Instead, he is deliberately raising them. His war in Iran sent gas prices soaring. His chaotic tariffs are jacking up the costs of everything from coffee to housing. And as we will discuss today, his attack on the Consumer Financial Protection Bureau cost families at least $19 billion in just 1 year alone.",
+      "source": "Senate Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    },
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "support",
+      "text": "America is in a full-blown housing crisis. Across this country, home prices are sky high, rent is through the roof, and the median age of a first-time home buyer is now at an alltime high. But for too long, the Federal Government has been asleep at the switch, and that changes today. I stand here in support of the historic 21st Century ROAD to Housing Act. This landmark bill will boost housing supply, bring down costs, and, for the first time ever, stop private equity from buying up single-family homes.",
+      "source": "Senate Floor, Jun 16, 2026",
+      "granuleTitle": null,
+      "date": "Jun 16, 2026"
+    },
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "neutral",
+      "text": "We are closer than ever to passing the biggest housing bill since 1990, when the average price of a home in America sold for $150,000. Today, 36 years later, the average home is selling for over $500,000. The American dream of home ownership is now out of reach for millions of families. The median age of a first-time home buyer is now at an alltime high, and it is no secret why this has happened. Our Nation has a shortage of millions of homes. And our housing crisis doesn't just affect the opportunity to buy a home.",
+      "source": "Senate Floor, Jun 22, 2026",
+      "granuleTitle": null,
+      "date": "Jun 22, 2026"
     }
   ],
   "role": "Senator",

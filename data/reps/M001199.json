@@ -5,9 +5,49 @@
   "state": "FL",
   "role": "Representative",
   "district": 21,
-  "bio": "Brian Jeffrey Mast is an American politician and U.S. military veteran who has served as the U.S. representative for Florida's 21st congressional district since 2017. The district, numbered as the 18th district before the 2020 redistricting cycle, includes the Treasure Coast and northern portions of Palm Beach County. A member of the Republican Party, Mast is in his fifth House term.",
-  "comments": [],
+  "bio": "Brian Jeffrey Mast is an American politician and veteran serving as the U.S. representative for Florida's 21st congressional district since 2017. The district, numbered as the 18th district before the 2020 redistricting cycle, includes the Treasure Coast and northern portions of Palm Beach County. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HCONRES-84",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from Lebanon",
+      "stance": "neutral",
+      "text": "I am reclaiming. So the United States Armed Forces that are training the LAF who are fighting Hezbollah, fighting Hezbollah who is killing children there, killing civilians, would you like to see them stay? And I yield you some time.",
+      "date": "2026-06-04"
+    },
+    {
+      "billId": "119-HCONRES-75",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "stance": "oppose",
+      "text": "I am glad to hear the gentleman say that because Iran is an imminent threat against us. Mr. Speaker, I appreciate Representative Gottheimer dialoguing with me for a moment.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    },
+    {
+      "billId": "119-HCONRES-40",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "stance": "neutral",
+      "text": "This week, my colleague wants to make the argument about an imminent threat. I am glad he wants to have that debate. Last week, my colleague voted, as I outlined already, to say literally that Iran is the leading state sponsor of terror and Iran wants to attack the United States and our allies with ballistic missiles, terrorist proxies, and, if obtained, a nuclear weapon. I would ask my colleague across the aisle: You voted to say Iran was an imminent threat. How do you define an imminent threat? You voted for it last week.",
+      "source": "House Floor, May 20, 2026",
+      "granuleTitle": null,
+      "date": "May 20, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +273,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +420,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +550,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -6,7 +6,33 @@
   "role": "Senator",
   "district": null,
   "bio": "Ashley Brooke Moody is an American politician and attorney serving since 2025 as the junior United States senator from Florida. A member of the Republican Party, she served from 2019 to 2025 as the 38th attorney general of Florida.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6938",
+      "billTitle": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "I am honored to rise on the floor today to recognize some of Florida's--the Sunshine State--very best. As you know, last week we celebrated Law Enforcement Appreciation Day, and I wanted to recognize two great officers from the Tampa Bay area, where I, as one of the newest U.S. Senators, hail from. Last month, Tampa Police Department Officers Jason Sikoski and Kaleb Girard saved an 86-year-old man who was found dangling off of his roof.",
+      "date": "2026-01-06"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "If there is no further business to come before the Senate, I ask that following the confirmation vote of the nominations to be considered en bloc pursuant to S. Res. 690, the Senate resume legislative session and stand adjourned under the previous order.",
+      "source": "Senate Floor, May 18, 2026",
+      "granuleTitle": null,
+      "date": "May 18, 2026"
+    },
+    {
+      "billId": "119-HR-6359",
+      "billTitle": "Pregnant Students' Rights Act",
+      "stance": "support",
+      "text": "Today, we have an opportunity to ensure that students have the information and support they need should they become pregnant. Navigating college can be challenging for any student but especially for pregnant women. Unfortunately, they oftentimes feel pressured to end their pregnancies or risk academic failure. No woman should ever feel like she has to choose between continuing classes or continuing a pregnancy.",
+      "source": "Senate Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Ashley_Moody",
   "voteHistory": [

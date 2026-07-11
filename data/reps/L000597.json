@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 15,
   "bio": "Laurel Frances Lee is an American attorney, former judge, and politician serving as the U.S. representative for Florida's 15th congressional district since 2023. A member of the Republican Party, she previously served as Florida's secretary of state from 2019 to 2022 and as a judge on Florida's Thirteenth Judicial Circuit from 2013 to 2019.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7258",
+      "billTitle": "Energy Emergency Leadership Act",
+      "stance": "neutral",
+      "text": "This legislation passed out of the Subcommittee on Energy unanimously because both Republicans and Democrats on the Committee recognized how critical it is to have accountable leadership protecting our electric grid. Today, the United States is experiencing record energy demand, driven by artificial intelligence, data centers, renewed domestic manufacturing, and widespread electrification across our economy. Meeting that demand safely requires not only robust and reliable generation but also a secure and resilient grid to deliver it.",
+      "date": "2026-01-27"
+    },
+    {
+      "billId": "119-HR-7757",
+      "billTitle": "KIDS Act",
+      "stance": "neutral",
+      "text": "Children today are growing up in a digital world that looks dramatically different than it did just a generation ago. While technology has created tremendous opportunities to learn and to connect, it has also exposed young people to online predators, sexual exploitation, privacy violations, and increasingly sophisticated threats driven by artificial intelligence. Parents are doing everything they can to protect their children online but should not have to navigate these challenges alone.",
+      "date": "2026-03-03"
+    },
+    {
+      "billId": "119-HR-1329",
+      "billTitle": "Smithsonian American Women's History Museum Act",
+      "stance": "neutral",
+      "text": "Before coming to Congress, I had the privilege of serving as Florida's Secretary of State. In that role, I oversaw our State's museums, archives, and historical resources, and I gained a deep appreciation for the importance of preserving our history carefully and telling it well. Museums are not simply collections of artifacts. They are places where we remember who we are, where we came from, and the values that shaped this Nation. The story of America cannot be fully told without the story of American women.",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +548,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -5,8 +5,27 @@
   "state": "MO",
   "role": "Senator",
   "district": null,
-  "bio": "Eric Stephen Schmitt is an American attorney and Republican Party politician serving since 2023 as the junior United States senator from Missouri. Schmitt served as the 46th state treasurer of Missouri from 2017 to 2019 and as the 43rd Missouri attorney general from 2019 to 2023.",
-  "comments": [],
+  "bio": "Eric Stephen Schmitt is an American attorney and politician serving since 2023 as the junior United States senator from Missouri. A member of the Republican Party, Schmitt served as the 46th state treasurer of Missouri from 2017 to 2019 and as the 43rd Missouri attorney general from 2019 to 2023.",
+  "comments": [
+    {
+      "billId": "119-HR-36",
+      "billTitle": "MEGOBARI Act",
+      "stance": "support",
+      "text": "Throughout his entire life, Art's spirit was focused on those around him, as he continually searched for opportunities to protect and serve others. After graduating from the University of Missouri, he would receive a commission and join the U.S. Army, deploying first with the 25th Infantry Division in Vietnam, and later earning the rank of captain, serving in the Strategic Ammunition Support Command in Europe as a nuclear weapons adviser to American and Belgian forces.",
+      "source": "Senate Floor, May 11, 2026",
+      "granuleTitle": null,
+      "date": "May 11, 2026"
+    },
+    {
+      "billId": "119-HR-6903",
+      "billTitle": "Ensuring Children Receive Support Act",
+      "stance": "neutral",
+      "text": "On July 4, 1776, 56 men crossed a line from which there was no return. These men knew the King they defied. They knew the empire would come for them. They knew the prisons that could hold them and the gallows that could take them. They had wives, children, homes, names, property, and honor. They signed anyway. They made a bold declaration to the world that had never been made before. It was, in fact, revolutionary. Our rights come from God. Government rests on consent. Citizens are not subjects. America is a nation.",
+      "source": "Senate Floor, Jun 18, 2026",
+      "granuleTitle": null,
+      "date": "Jun 18, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Eric_Schmitt",
   "voteHistory": [

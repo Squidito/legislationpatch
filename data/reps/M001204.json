@@ -5,9 +5,45 @@
   "state": "PA",
   "role": "Representative",
   "district": 9,
-  "bio": "Daniel Philip Meuser is an American businessman and politician serving as the U.S. representative for Pennsylvania's 9th congressional district since 2019. A Republican, he previously served as the secretary of revenue in the cabinet of Pennsylvania governor Tom Corbett. He was previously president of the Pride Corporation, a manufacturer of motorized wheelchairs in the Wilkes-Barre/Scranton metro area of Pennsylvania, and currently serves the company as a board member and consultant. He has testified before Congress regarding the criticality for federal practices surrounding rights and caring for the disabled.",
-  "comments": [],
+  "bio": "Daniel Philip Meuser is an American businessman and politician serving as the U.S. representative for Pennsylvania's 9th congressional district since 2019. A Republican, he previously served as the secretary of revenue in the cabinet of Pennsylvania governor Tom Corbett. He was previously president of the Pride Corporation, a manufacturer of motorized wheelchairs in the Wilkes-Barre/Scranton metro area of Pennsylvania, and currently serves the company as a board member and consultant.",
+  "comments": [
+    {
+      "billId": "119-HR-1919",
+      "billTitle": "Anti-CBDC Surveillance State Act",
+      "stance": "neutral",
+      "text": "This bill is about defending our Constitution and protecting the privacy of the American people. The Constitution is unambiguous in Article I, Section 8, which grants only Congress exclusive authority to coin money, regulate the value thereof, and of foreign coin. This is a clear provision of the United States Constitution. It is a foundational element of our constitutional Republic designed to keep such important authority over our Nation's currency issuance within the hands of the people's Representatives.",
+      "date": "2025-03-06"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "neutral",
+      "text": "I also recognize President Trump's administration, crypto czar David Sacks, and SEC Chair Paul Atkins for  their efforts to reverse the Biden-era irrational opposition and misguided regulations that we lived with for 4 years toward innovation and now we are setting America back on a progrowth America First course. Mr. Speaker, the Senate's legislation built on 2 years of groundwork by the House, crafting a framework for stablecoins that protects consumers, the dollar, and unleashes private-sector innovation. This bill achieves three goals.",
+      "date": "2025-07-18"
+    },
+    {
+      "billId": "119-HR-2066",
+      "billTitle": "Investing in All of America Act of 2025",
+      "stance": "neutral",
+      "text": "This legislation will incentivize greater investment from small business investment companies, SBICs, to small businesses located in rural or low-income areas, as well as small businesses in the manufacturing and national security technology sectors. SBICs are privately owned and managed investment funds that are licensed and regulated by the SBA. These companies raise private capital, which is then matched with additional leverage by the SBA, capped at $175 million.",
+      "date": "2026-05-19"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 8,
   "bio": "The 2024 United States House of Representatives elections in Pennsylvania were held on November 5, 2024, to elect the 17 U.S. representatives from the State of Pennsylvania, one from each of the state's congressional districts. The elections coincided with the 2024 U.S. presidential election, as well as other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections were held on April 23, 2024.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7266",
+      "billTitle": "Rural and Municipal Utility Cybersecurity Act",
+      "stance": "oppose",
+      "text": "This bipartisan bill makes sure that the Federal resources designed to help small businesses bolster their cybersecurity defenses are working as intended and are identifying where they are falling short. Small businesses are 210 percent more likely to experience cyber incidents compared to larger companies, yet many lack the resources and the expertise necessary to defend against these threats. As cyber incidents become more common, it is very clear: Congress can no longer afford to overlook this growing issue.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

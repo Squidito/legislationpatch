@@ -6,8 +6,75 @@
   "role": "Representative",
   "district": 10,
   "bio": "Suhas Subramanyam is an American politician and attorney serving as the U.S. representative for Virginia's 10th congressional district since 2025. A member of the Democratic Party, he served in the Virginia Senate from 2024 to 2025 and in the Virginia House of Delegates from 2020 to 2024.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8463",
+      "billTitle": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
+      "stance": "support",
+      "text": "I also rise in support of H.R. 8463, the Pre-Payment Fraud Prevention and Treasury Data Access Act. This bill will help prevent improper payments by requiring that agencies verify with the U.S. Treasury that payments are going to the right place before they are made. Agencies would be required to use the Treasury's Do Not Pay system to confirm that recipients, one, have a valid Social Security number; two, are not deceased; and, three, have a valid bank account. The bill would also impose heavy fines for any misuse of the Do Not Pay system.",
+      "date": "2026-06-09"
+    },
+    {
+      "billId": "119-HR-970",
+      "billTitle": "Fairness for Servicemembers and their Families Act of 2025",
+      "stance": "oppose",
+      "text": "This Military Appreciation Month, we honor those who have worn the uniform of the United States Armed Forces and those who continue to wear it today. We celebrate veterans and their families who carry the burden of war with them and the American servicemembers currently standing watch in dangerous and uncertain places around the world. Every day, they choose duty to their country over comfort.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-6431",
+      "billTitle": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "stance": "oppose",
+      "text": "As I was saying before, what do you do when people in your administration constantly break the law? Do you clean house of all corruption and self-dealing or increase transparency and accountability? Well, this administration decided to go the opposite direction and just announced a plan last week to require all Federal workers to sign NDAs. The new message: If you see something, don't say something, even if that something is against the law. These NDAs aren't just meant to cover sensitive, internal deliberations or classified information.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    },
+    {
+      "billId": "119-HR-7959",
+      "billTitle": "IRS Whistleblower Program Improvement Act",
+      "stance": "neutral",
+      "text": "This bipartisan bill would increase the maximum cash bonus awarded to Federal employees who report waste, fraud, and abuse, from $10,000 to $20,000. Increasing this award will encourage more Federal workers to come forward and report on waste and improper spending. It will reward employees for acting in the best interest of American taxpayers. The bill also requires agencies to report on the wasteful and improper spending reported by employees, promoting transparency.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    },
+    {
+      "billId": "119-HR-4930",
+      "billTitle": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+      "stance": "neutral",
+      "text": "There are a lot of reasons why we are seeing rising costs. One reason is particularly troubling, and it is called surveillance pricing. You see, it is common for businesses to track our online activity, like searches and web browsing, and to use that to decide who to target with ads. What if they actually used that information to charge you a higher price for something they knew you actually needed? That is surveillance pricing. It is unfortunately becoming very common.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    },
+    {
+      "billId": "119-S-1884",
+      "billTitle": "Holocaust Expropriated Art Recovery Act of 2025",
+      "stance": "neutral",
+      "text": "As the Senate looks to confirm or not confirm Acting Attorney General Todd Blanche, I want to point to the body a recent DOJ memo on the Supreme Court's Olmstead decision which threatens to turn back the clock decades to a time when Americans with disabilities were offered less choice, less freedom, and less care. This memo means that DOJ will not require States to serve people with disabilities in the most integrated setting appropriate to their needs.",
+      "source": "House Floor, Jun 29, 2026",
+      "granuleTitle": null,
+      "date": "Jun 29, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +300,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +447,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Present"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +578,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

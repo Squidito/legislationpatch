@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 17,
   "bio": "Peter Anderson Sessions is an American politician who serves in the United States House of Representatives for Texas's 17th congressional district as a member of the Republican Party. He chaired the House Rules Committee from 2013 to 2019 and is a former chair of the National Republican Congressional Committee.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8312",
+      "billTitle": "Fraud Prevention and Accountability Act",
+      "stance": "oppose",
+      "text": "Mr. Comer has begun telling the story about H.R. 8312, Fraud Prevention and Accountability Act, which we today will discuss, but I think it is important that we probably tell a story because this has two tales, but one truth to it. The bottom line is that our friends, if they oppose this today, it is because they are embarrassed.",
+      "date": "2026-06-11"
+    },
+    {
+      "billId": "119-HR-4323",
+      "billTitle": "Trafficking Survivors Relief Act",
+      "stance": "neutral",
+      "text": "I do want to respond to the gentleman. I do want to respond to the gentleman and tell him today is that open invitation. He and I know that this is a lot of work, work that is factually based. It is not just showing up--and I don't doubt anything he has said--but showing up with the evidence of who, how, where, why did this happen, and what is being done. I would just say that the gentleman knows that our Government Operations Subcommittee is ready and open and available--that he would have to admit here on the floor-- on a bipartisan basis.",
+      "source": "House Floor, Jun 11, 2026",
+      "granuleTitle": null,
+      "date": "Jun 11, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +541,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

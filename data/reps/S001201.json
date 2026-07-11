@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 3,
   "bio": "Thomas Richard Suozzi is an American politician serving as the U.S. representative for New York's 3rd congressional district since 2024 and previously from 2017 to 2023. A member of the Democratic Party, he was the county executive of Nassau County on Long Island from 2002 to 2009 and served before then as the mayor of Glen Cove for eight years. His district, which is largely suburban, includes northern Nassau County and parts of northeastern Queens.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8873",
+      "billTitle": "Recover COVID Unemployment Fraud in Banks Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, I yield myself the balance of my time. H.R. 8873, the Recover COVID Unemployment Fraud in Banks Act, is a commonsense bill that helps eliminate waste, fraud, and abuse; recovers stolen taxpayer dollars; and protects some of our most vulnerable citizens, including older Americans.",
+      "date": "2026-05-19"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

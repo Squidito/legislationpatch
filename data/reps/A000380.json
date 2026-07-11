@@ -6,8 +6,50 @@
   "role": "Representative",
   "district": 1,
   "bio": "Gabriel Felix Kofi Amo is an American politician serving as the U.S. representative for Rhode Island's 1st congressional district since 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HJRES-133",
+      "billTitle": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026",
+      "stance": "neutral",
+      "text": "Recently Trump's Agriculture Secretary bragged with great pride about kicking 4.5 million Americans off of SNAP. At a time when Republicans' tariffs and wars have jacked up grocery prices, it is not good news that Trump and Republicans are making Americans hungrier. SNAP provides the bare minimum, just enough. But it means that kids in Woonsocket can focus on school and not on an empty stomach. It means moms in Pawtucket can worry a little less if there is enough on the breakfast table.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "stance": "neutral",
+      "text": "I rise today to reveal a theft from the American people. Donald Trump is stealing our money. At every turn, he is taking money from Americans' bank accounts to pad his pockets and those of his billionaire buddies. His tariffs, which were twice ruled illegal, cost the average working family of four $1,700 last year. At the gas pump, Americans have collectively paid an extra $40 billion to fuel up since the start of this war of choice with Iran. What is Trump's latest grift?",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
+    },
+    {
+      "billId": "119-S-3971",
+      "billTitle": "Small Business Innovation and Economic Security Act",
+      "stance": "neutral",
+      "text": "Trump's corruption is out of control. Since taking office, he has increased his net worth by at least $4 billion, accepted a $400 million plane from a foreign country, routinely bought stock in companies doing business with the government,  and wasted $14 million of taxpayer money ruining the Reflecting Pool. He has tried to bully the IRS into a sweetheart deal that grants him tax immunity for life and, if he can get away with it, establishes a slush fund to pay off cop beaters. His kids and cronies are also getting rich.",
+      "source": "House Floor, Jun 24, 2026",
+      "granuleTitle": null,
+      "date": "Jun 24, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +275,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +422,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +553,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 3,
   "bio": "Gregory Francis Murphy is an American politician and urologist representing North Carolina's 3rd congressional district in the U.S. House of Representatives since 2019. He served as a representative in the North Carolina General Assembly from 2015 to 2019.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1491",
+      "billTitle": "Disaster Related Extension of Deadlines Act",
+      "stance": "neutral",
+      "text": "I am blessed to live in eastern North Carolina, which is all too familiar with the devastation caused by natural disasters. For coastal Carolina, it is not a question of if but rather a question of when a hurricane will hit my district. We stick out far in the ocean and have a big bull's-eye target on us. We are still recovering from Hurricane Florence, which occurred in 2018. Despite being 7 years ago, there are still homes and businesses shuttered from the damage of that powerful hurricane.",
+      "date": "2025-12-26"
+    },
+    {
+      "billId": "119-HR-5347",
+      "billTitle": "Health Care Efficiency Through Flexibility Act",
+      "stance": "neutral",
+      "text": "I rise today to continue to shed light on the egregious, unethical, and deliberately unscrupulous practices of our health  insurance companies that deny patients care and rip off the American taxpayer. I have spent 35 years taking care of patients. The amount of treachery in the healthcare industry at this point in time continues to boggle my mind. A few months ago, the House Ways and Means Committee hosted representatives from the Nation's leading insurers.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +541,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

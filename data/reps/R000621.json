@@ -6,8 +6,55 @@
   "role": "Representative",
   "district": 6,
   "bio": "Emily Elissa Randall is an American politician and healthcare advocate serving as the U.S. representative for Washington's 6th congressional district since 2025. A member of the Democratic Party, she previously served in the Washington State Senate from 2019 to 2024. Her district encompasses the Olympic Peninsula, the Kitsap Peninsula, and most of the city of Tacoma. Randall was elected to succeed fellow Democrat Derek Kilmer in the U.S. House of Representatives.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6359",
+      "billTitle": "Pregnant Students' Rights Act",
+      "stance": "neutral",
+      "text": "If the sponsor of this bill and the majority party actually believed in supporting student parents, then they would take real action, not just grandstand on the House floor because the March for Life is this weekend. The bill before us today requires the dissemination of incomplete information, but it also comes after House Republicans have worked alongside the Trump regime to dismantle and weaken the Department of Education and protections for students who file complaints around Title IX violations, among other things.",
+      "date": "2026-01-26"
+    },
+    {
+      "billId": "119-HR-1329",
+      "billTitle": "Smithsonian American Women's History Museum Act",
+      "stance": "neutral",
+      "text": "I have a motion to recommit at the desk. The material previously referred to by Ms. Randall is as follows: Ms. Randall of Washington moves to recommit the bill H.R. 1329 to the Committee on House Administration with instructions to report the same back to the House forthwith with the following amendment: Strike all after the enacting clause and insert the following: SECTION 1. SHORT TITLE. This Act may be cited as the ``Smithsonian American Women's History Museum and  Smithsonian National Museum of the American Latino Act''. SEC. 2.",
+      "date": "2026-05-21"
+    },
+    {
+      "billId": "119-HR-6431",
+      "billTitle": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "stance": "neutral",
+      "text": "This bill is rooted in a pretty basic idea: If someone is convicted of defrauding a Federal program, they should not be able to turn around and keep doing business with the Federal Government. This isn't about politics. It is about protecting taxpayer dollars and making sure that the Federal Government is worthy of the trust that the people place in it. In every community we represent, people work hard, pay their taxes, and expect government programs to be run with honesty and accountability.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    },
+    {
+      "billId": "119-HR-4930",
+      "billTitle": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+      "stance": "neutral",
+      "text": "A memorandum of understanding, the first of its kind, between the Suquamish Tribe and the U.S. Navy has finally been reached after years of good faith negotiations. This MOU sets a new standard for how our U.S. military collaborates with Tribal Governments to respect Tribal sovereignty and to preserve treaty rights.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +280,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +427,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +558,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

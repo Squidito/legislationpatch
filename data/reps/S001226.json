@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 6,
   "bio": "Andrea Rose Salinas is an American politician serving as the U.S. representative for Oregon's 6th congressional district since 2023. Oregon's 6th congressional district includes all of Yamhill and Polk counties, the part of Marion County that includes Salem and Woodburn, a small piece of Beaverton, and the suburban communities to the southwest of Portland, including Tigard, Tualatin, and Sherwood.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8312",
+      "billTitle": "Fraud Prevention and Accountability Act",
+      "stance": "neutral",
+      "text": "This summer, Allan is retiring from his role as general manager of the Salem Area Mass Transit District known as Cherriots. Under Allan's leadership, Cherriots has grown steadily. They restored weekend and late-night service, underwent a comprehensive rebranding, and have put sustainable, climate-friendly electric buses into circulation. Cherriots now provides over 3 million rides yearly.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "President Trump and I ran for office on the same promise: to lower costs. Let's review the promises President Trump made to the American people. The average cost of gas on the day President Trump took office was around $3 per gallon. On the campaign trail, he said he would bring the price of gas to under $2 a gallon. Today, the national average of gas is $4 a gallon, and it is over $5 in Oregon. Diesel is even higher, around $6 a gallon. Oregonians, from families to farmers, are paying the steep price.",
+      "source": "House Floor, Jun 11, 2026",
+      "granuleTitle": null,
+      "date": "Jun 11, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +544,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

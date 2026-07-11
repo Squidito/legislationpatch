@@ -6,8 +6,50 @@
   "role": "Representative",
   "district": 2,
   "bio": "Deborah Ross is an American lawyer and politician who has served as the U.S. representative for North Carolina's 2nd congressional district since 2021. Her district is based in Raleigh. A member of the Democratic Party, Ross served as a member of the North Carolina House of Representatives from 2003 to 2013, representing the state's 38th and then 34th House district, including much of northern Raleigh and surrounding suburbs in Wake County.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6903",
+      "billTitle": "Ensuring Children Receive Support Act",
+      "stance": "support",
+      "text": "Madam Speaker, I yield myself the balance of my time. This bill would provide a limited and logical extension of the authority to share criminal history records so that those who help screen law enforcement officers have the information they need to maintain hiring standards. As we observe National Police Week, I am pleased to support this legislation that strengthens our law enforcement agencies and improves public safety by ensuring that applicants are appropriately screened.",
+      "source": "House Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    },
+    {
+      "billId": "119-HR-8364",
+      "billTitle": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "stance": "neutral",
+      "text": "If we defeat the previous question, we will offer a bill, my bill, that will truly honor police officers: H.R. 7711, my No Rewards for January 6 Rioters Act. On January 6, as we all know, violent rioters assaulted Capitol Police, beating them with flag poles, dragging them through crowds, and pepper spraying them in the face at point-blank range. President Trump has not only called these criminals patriots, he decided January 6 insurrectionists deserved a blanket pardon for their attacks on police officers. It is shameful.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "neutral",
+      "text": "From the first puck drop of the season to the final horn, the Hurricanes showed the grit and teamwork that define our State. They proved that success isn't built overnight. It is earned through discipline, perseverance, and trust in one another. Today, we celebrate the players, coaches, staff, and the hundreds of thousands of Caniacs who never stopped believing, especially Head Coach Rod Brind'Amour, who first led our team to victory in 2006 as team captain.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +275,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +422,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +553,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

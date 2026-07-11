@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 7,
   "bio": "Eugene Semyon Vindman is an American politician, lawyer, and retired U.S. Army officer serving as the U.S. representative for Virginia's 7th congressional district since 2025. A member of the Democratic Party, he was a deputy legal advisor for the United States National Security Council (NSC) until he was reassigned on February 7, 2020.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "support",
+      "text": "as the vice ranking member of the Commodity Markets, Digital Assets, and Rural Development Subcommittee of the House Committee on Agriculture, I rise today in support of both the CLARITY and GENIUS Acts. These bills aren't perfect, but digital innovation is critical to our economy, and I support a regulatory framework that protects consumers in the financial system. However, I am concerned about the ability of certain officials to use these assets for self-enrichment at the highest levels of our government.",
+      "date": "2025-07-18"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

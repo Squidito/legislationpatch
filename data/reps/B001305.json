@@ -6,7 +6,17 @@
   "role": "Senator",
   "district": null,
   "bio": "Theodore Paul Budd is an American businessman and politician serving since 2023 as the junior United States senator for North Carolina. A member of the Republican Party, he was the U.S. representative for North Carolina's 13th congressional district from 2017 to 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Earlier this month, on June 3, the AV-8B Harrier aircraft retired from combat after four decades in service. Since the aircraft's introduction in 1985, the Harrier has symbolized the Marine Corps' elite operational mobility. Its vertical and short takeoff, combined with its landing capabilities, have enabled marines to operate from remote locations and ships around the world. From supporting missions in diverse environments, including Afghanistan and the Persian Gulf, the jump jet has proven itself to be a reliable aircraft time and time again.",
+      "source": "Senate Floor, Jun 16, 2026",
+      "granuleTitle": null,
+      "date": "Jun 16, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Ted_Budd",
   "voteHistory": [

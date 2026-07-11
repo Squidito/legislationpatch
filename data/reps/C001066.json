@@ -5,9 +5,31 @@
   "state": "FL",
   "role": "Representative",
   "district": 14,
-  "bio": "Katherine Anne Castor is an American politician and lawyer currently representing Florida's 14th congressional district in the United States House of Representatives, serving since 2007. The district, numbered as the 11th district from 2007 to 2013, is based in Tampa. A Democrat, Castor was a member of the Hillsborough County Commission.",
-  "comments": [],
+  "bio": "Katherine Anne Castor is an American politician and lawyer serving as the U.S. representative for Florida's 14th congressional district since 2007. The district, based in Tampa, was numbered as the 11th district from 2007 to 2013. A member of the Democratic Party, she previously served on the Hillsborough County Commission from 2002 to 2006.",
+  "comments": [
+    {
+      "billId": "119-HR-1479",
+      "billTitle": "Hotel Fees Transparency Act of 2025",
+      "stance": "neutral",
+      "text": "Mr. Speaker, have you ever planned a vacation and when you searched online, you thought you found a great deal at a hotel or a short-term rental, but then you were surprised at check-in or check-out that there were a lot of surprise fees added on? This piece of legislation will prohibit that kind of unfair or misleading price advertising for hotels and rentals. It will require accurate price listings that must include all mandatory and resort fees.",
+      "date": "2025-02-21"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

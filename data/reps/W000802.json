@@ -6,7 +6,26 @@
   "role": "Senator",
   "district": null,
   "bio": "Sheldon Whitehouse is an American politician and attorney serving as the junior United States senator from Rhode Island, a seat he has held since 2007. A member of the Democratic Party, he served as the United States Attorney for the District of Rhode Island from 1993 to 1998, and as the 71st attorney general of Rhode Island from 1999 to 2003. He was elected to the Senate in 2006, defeating Republican incumbent Lincoln Chafee. He was reelected in 2012, 2018, and 2024.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "I am here now for the 307th time with my trusty and increasingly battered ``Time to Wake Up'' chart to warn this Chamber about how America's worst polluters have occupied the Trump administration from within. These polluters are up to no good. They are desperate--desperate--to pollute for free. That is their business model, to pollute for free, even though polluting for free is wrong--wrong under the laws of economics, wrong under the laws of morality, wrong under the laws of nature.",
+      "source": "Senate Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "stance": "neutral",
+      "text": "I think it is virtually undisputed, among people who are not on fossil fuel's payroll, that climate change is real. Earlier this year, I came to the floor, and I asked my colleagues if they could all agree on that simple, scientific fact. Well, unfortunately, they could not. So I came back. I returned to the floor in hopes that my Republican colleagues could, at least, agree to some of the simple truths that make up the bigger picture of climate change.",
+      "source": "Senate Floor, Jun 18, 2026",
+      "granuleTitle": null,
+      "date": "Jun 18, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Sheldon_Whitehouse",
   "voteHistory": [

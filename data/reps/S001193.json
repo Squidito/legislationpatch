@@ -5,8 +5,16 @@
   "state": "CA",
   "role": "Representative",
   "district": 14,
-  "bio": "Eric Michael Swalwell is an American politician who served as a U.S. representative from California from 2013 until his resignation in 2026. A member of the Democratic Party, Swalwell served on the Dublin City Council from 2010 to 2013.",
-  "comments": [],
+  "bio": "Eric Michael Swalwell is an American politician who served as a U.S. representative from California from 2013 until his resignation in 2026. A member of the Democratic Party, Swalwell previously served on the Dublin, California City Council from 2010 to 2013.",
+  "comments": [
+    {
+      "billId": "119-S-260",
+      "billTitle": "Bottles and Breastfeeding Equipment Screening Enhancement Act",
+      "stance": "neutral",
+      "text": "Air travel with children is a nightmare, and I am just talking for the nonparents who have to deal with them at an airport. For parents, it is hell. It is like an Olympic sport. It is like going through a gauntlet dragging little kids who just want to be attached to tablets or anything but the directions that you are giving to them to hopefully get them from the entrance of the airport to the plane. Oftentimes with little kids, you have, in transit with them, a mother who is breastfeeding.",
+      "date": "2025-11-25"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-7084",
@@ -156,6 +164,13 @@
       "vote": "Not Voting"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -280,6 +295,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

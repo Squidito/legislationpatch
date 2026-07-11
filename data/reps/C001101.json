@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 5,
   "bio": "Katherine Marlea Clark is an American lawyer and politician who has served as House minority whip since 2023 and is currently in her seventh term as the U.S. representative for Massachusetts's 5th congressional district, having held the post since 2013. She previously served as assistant speaker from 2021 to 2023 and vice chair of the House Democratic Caucus from 2019 to 2021. Clark was a member of the Massachusetts House of Representatives from 2008 to 2011 and the Massachusetts Senate from 2011 to 2013.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HCONRES-75",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "stance": "neutral",
+      "text": "Mr. Speaker, we have been at war with Iran for 2\\1/2\\ months. What do we have to show for it? There is no victory. There is no strategy. We still don't have an objective. In fact, the President keeps saying this war is over, but we have 50,000 troops deployed to the region. The strait is still closed. Shipping is still blockaded, and negotiations that should be about making sure Iran never gets a nuclear weapon are completely stalled out. Meanwhile, every single day, working Americans are paying the price. Gas prices have spiked.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

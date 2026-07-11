@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 1,
   "bio": "Nathaniel Quentin Moran is an American politician and attorney who has served as the U.S. representative for Texas's 1st congressional district since 2023. A member of the Republican Party, he previously served as a member of the Tyler, Texas city council from the 5th district and as the county judge of Smith County, Texas.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "neutral",
+      "text": "I have introduced legislation, as is introduced on an annual basis. We have done so again this year to make certain that the rate of disability compensation and other financial benefits from the Department of Veterans Affairs for veterans and military survivors keeps pace with the rate of inflation.",
+      "date": "2025-07-23"
+    },
+    {
+      "billId": "119-HR-6495",
+      "billTitle": "Taxpayer Notification and Privacy Act",
+      "stance": "neutral",
+      "text": "This bill addresses a simple problem. Under current law, taxpayers who challenge an IRS collection action can lose important other rights and remedies simply because that process takes too long. That is not the result we want for taxpayers. Congress has a duty to ensure that when Americans dispute a tax liability, the rules are clear, consistent, and taxpayer-friendly. H.R. 6506 makes three important reforms to do just that. First, it suspends the statute of limitations on refund claims while collection disputes are pending.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +541,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

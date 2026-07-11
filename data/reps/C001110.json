@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 46,
   "bio": "Jose Luis Correa is an American businessman and politician serving as the U.S. representative for California's 46th congressional district since 2017. His district serves most of the majority-Hispanic areas of Orange County and includes most of Anaheim, all of Santa Ana, and parts of Orange. A member of the Democratic Party, Correa represented the 34th district in the California State Senate from 2006 to 2014.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-3486",
+      "billTitle": "Stop Illegal Entry Act of 2025",
+      "stance": "neutral",
+      "text": "there are many marines right now whose parents are undocumented who are ready to lay down their lives for this country. My colleagues on the other side of the aisle, let's work on immigration reform. This does nothing to strengthen our country or our national defense. It hurts our economy. Why are we going down this path? Let's get serious about immigration reform. Let's pass some laws that enable workers to work legally and let employers hire these workers legally, as well.",
+      "date": "2025-09-15"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "I rise today to wish Bishop Kevin Vann a happy 75th birthday. Since 2012, Bishop Vann has led the Catholic Church in Orange County, guiding it through becoming one of the largest and most dynamic diocese in the Nation. He has also led the remarkable transformation of the former Crystal Cathedral, a protestant church, to Christ Cathedral, now a vibrant center of Catholic worship. We are talking about relations, good relations, between Catholics and Protestants.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

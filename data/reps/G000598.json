@@ -5,9 +5,45 @@
   "state": "CA",
   "role": "Representative",
   "district": 42,
-  "bio": "Robert Julio Garcia is an American politician serving as the U.S. representative for California's 42nd congressional district since 2023. A member of the Democratic Party, he served as the 28th mayor of Long Beach, California, from 2014 to 2022. He was both the city's youngest and first elected openly LGBT mayor, as well as the first Latino to hold the office. He is the second person of color to be mayor of Long Beach, after Republican Eunice Sato, a Japanese American who served from 1980 to 1982. A former member of the Long Beach City Council, he was vice mayor from 2012 to 2014.",
-  "comments": [],
+  "bio": "The 2026 United States House of Representatives elections in California will be held on November 3, 2026, to elect the 52 U.S. representatives from the State of California, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The passage of Proposition 50 in 2025 significantly altered many districts. The primary elections took place on June 2, 2026.",
+  "comments": [
+    {
+      "billId": "119-HJRES-142",
+      "billTitle": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025",
+      "stance": "oppose",
+      "text": "Mr. Speaker, I also strongly oppose this resolution, which is yet another attack on the rights of over 700,000 D.C. residents. This is the 10th bill that House Republicans are considering to either repeal or amend local D.C. laws. We know that D.C. has more residents than two States, pays more in Federal taxes than 26 States, and more per capita than any State as it relates to paying those taxes.",
+      "date": "2026-02-18"
+    },
+    {
+      "billId": "119-HR-3490",
+      "billTitle": "Gerald E. Connolly Esophageal Cancer Awareness Act of 2025",
+      "stance": "oppose",
+      "text": "Mr. Speaker, I strongly support this bill, which of course, supports our fight against cancer and to improve healthcare for all Federal workers. This is such an important way to honor the legacy of our colleague, our Ranking Member Gerry Connolly. Gerry was a dedicated public servant, a fighter, and a mentor to all of us on the Oversight Committee. Gerry worked to hold our government accountable for over 30 years and was dedicated to improving the lives of all Americans.",
+      "date": "2026-06-09"
+    },
+    {
+      "billId": "119-HR-7084",
+      "billTitle": "Defending American Property Abroad Act of 2026",
+      "stance": "neutral",
+      "text": "I rise today to voice my strong opposition to this bill. First of all, this bill and the substance of the bill, this dispute, is undergoing consideration by the international bodies established by the U.S.-Mexico-Canada trade agreement. We really should wait until a decision is arrived at with respect to that mechanism, but there are other considerations. First, let's consider other far-reaching implications.",
+      "date": "2026-04-02"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -499,6 +549,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-43",
       "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
       "chamber": "House",
@@ -521,5 +578,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Robert_Garcia_(California_congressman)"
+  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California"
 }

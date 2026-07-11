@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 3,
   "bio": "Michael Stephen Kennedy is an American politician, attorney, and physician serving as the U.S. representative from Utah’s 3rd congressional district since 2025. He previously served as a Republican member of the Utah Senate from 2021 to 2025 and as a member of the Utah House of Representatives from 2013 to 2019. Kennedy was a candidate in the 2018 U.S. Senate election in Utah; Although he received the most votes at the Utah State Republican Convention, he was defeated by former Governor of Massachusetts and 2012 Republican presidential nominee Mitt Romney in the subsequent primary for the Republican nomination.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "Mr. Speaker, it should not take an act of Congress to fly an American flag on a mountain, but here we are, as we often are, in Congress. In 2000, a constituent of mine, Scoutmaster Robert Collins, led a Scout troop on a hike to Kyhv Peak above Utah Valley in Provo to raise the American flag at its summit. What began as a patriotic gesture by the Scouts evolved into an annual tradition. Each year, for over two decades, Robert Collins, joined by relatives, friends, and community members, hiked to the summit to continue the tradition.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "This bill ensures the Federal Government has the operational resources to process energy permits efficiently without unnecessary delay. Every American takes part in an electrified economy, whether they choose to or not, and right now that economy is facing a critical point. We are heading toward a severe energy deficit. We possess the most dynamic economy in the world, but every single engine of that economy runs on power.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +543,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

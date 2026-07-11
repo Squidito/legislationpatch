@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 4,
   "bio": "Glenn Frederick Ivey is an American politician and attorney serving as the U.S. representative for Maryland's 4th congressional district since 2023. The district covers most of the black-majority areas on the Maryland side of the Washington metropolitan area.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "support",
+      "text": "I rise today in observance of National Police Week. Over 300 names were added to the wall in memoriam this week. One of those names was my cousin, Earl Ivey, Jr. He served as an officer for the Mount Rainier Police Department, the Office of the Sheriff, the Seat Pleasant Police Department, and he did double duty as chief and chaplain of the Fairmount Heights Police Department. He was an excellent man, an excellent father and husband, and a great neighbor and friend. I commend him and all of the others who were added to the wall this week.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

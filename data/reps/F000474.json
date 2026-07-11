@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 1,
   "bio": "Michael John Flood is an American attorney, businessman, and politician serving as the U.S. representative for Nebraska's 1st congressional district since July 2022. A member of the Republican Party, he previously served two stints as a member of the Nebraska Legislature from the 19th district, from 2005 to 2013 and 2021 to 2022. He served as speaker of the legislature from 2007 to 2013.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "neutral",
+      "text": "I start by thanking our chairman, French Hill, who has shouldered the burden of helping us get this through Congress, together with our Ranking Member Waters, my colleague Emanuel Cleaver from Kansas City, myself, and all the staff that have made this happen.",
+      "date": "2026-06-23"
+    },
+    {
+      "billId": "119-HR-7128",
+      "billTitle": "TRIA Program Reauthorization Act of 2026",
+      "stance": "neutral",
+      "text": "I will start today by thanking Chairman Hill, Ranking Member Waters, and my co-lead on this bill, Congressman Andrew Garbarino. All of us have worked together on legislative text that would reauthorize the Terrorism Risk Insurance Program while also making changes that will protect taxpayers. This legislation would reauthorize TRIA, the program established by Congress in the aftermath of the September 11, 2001, terrorist attacks, through 2034. We are so fortunate that we have never seen a TRIA claim in the program's entire history.",
+      "date": "2026-01-16"
+    },
+    {
+      "billId": "119-HR-5103",
+      "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
+      "stance": "oppose",
+      "text": "The arrest of a man in Omaha accused of leading the plot to attack the White House's UFC event this month is a stark reminder about the threats that face our Nation. According to DHS, the suspect entered the U.S. illegally and allegedly sought to make the attack `` . . . as deadly as we can get.'' This case underscores the importance of securing our borders, enforcing our immigration laws, and remaining vigilant against those who seek political violence rather than political debate.",
+      "source": "House Floor, Jun 24, 2026",
+      "granuleTitle": null,
+      "date": "Jun 24, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +548,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -11,11 +11,52 @@
       "stance": "support",
       "text": "American farmers cannot operate under fifty different rulebooks. This is a unity bill.",
       "date": "Apr 21, 2026"
+    },
+    {
+      "billId": "119-HR-5103",
+      "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
+      "stance": "support",
+      "text": "Established by a joint resolution of Congress in 1962, this week serves as a solemn tribute to the men and women in blue who lost their lives in the line of duty. Since then, support for National Police Week has grown significantly. National Police Week is sponsored by the National Law Enforcement Officers Memorial fund. Its mission is to tell the story of American law enforcement, honor the fallen, and make it safer for those who serve.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HCONRES-75",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove the United States Armed Forces from hostilities against the Islamic Republic of Iran.",
+      "stance": "neutral",
+      "text": "In 1999, the late Senator John McCain introduced S. Res. 33. It passed unanimously and was adopted by the House, officially designating May as Military Appreciation Month. Mr. Speaker, I want to specifically recognize the thousands of Pennsylvanians currently in uniform. Your courage and selflessness do not go unnoticed. We applaud your commitment to defending our Nation's freedoms at all costs. Through every conflict since our founding, the men and women of our Armed Forces have never wavered.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-1262",
+      "billTitle": "Mikaela Naylon Give Kids a Chance Act",
+      "stance": "neutral",
+      "text": "I rise today to highlight the power of civic engagement and the profound impact volunteering has on all of our communities. To champion the vital work of service clubs and their volunteers, I founded the Congressional Service Organization Caucus in 2019 with my friend Congressman Jimmy Panetta of California. Volunteer service is a cornerstone of a successful and strong community. The relationships we create through service often give people the courage to take the next steps in life.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
     }
   ],
   "role": "Representative",
   "district": 15,
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -241,6 +282,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -381,6 +429,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -504,6 +559,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

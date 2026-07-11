@@ -1,0 +1,131 @@
+[
+  {
+    "id": "119-HR-2316",
+    "code": "HR.2316",
+    "title": "Wetlands Conservation and Access Improvement Act of 2025",
+    "official_title": "To amend the Pittman-Robertson Wildlife Restoration Act to provide that interest on obligations held in the Federal aid to wildlife restoration fund shall become available for apportionment at the beginning of fiscal year 2033.",
+    "date": "2025-11-25",
+    "version": "v1.0",
+    "stage": "signed",
+    "stageLabel": "Signed into Law",
+    "currentStep": 4,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Hurd, Jeff (R-CO)",
+    "sponsor_bioguide": "H001100",
+    "cosponsors": 3,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-11-25",
+    "enactedDate": "2025-11-25",
+    "likelihood": 100,
+    "likelihoodLabel": "Enacted",
+    "likelihoodReason": "Enacted as Public Law 119-40 on November 25, 2025. Sponsored by Rep. Jeff Hurd (R-CO) with 3 cosponsors; per the printed legislative history, it passed the House on July 14, 2025 and the Senate on October 23, 2025 before being signed.",
+    "summary": "Money from federal excise taxes on firearms and ammunition sits in a wildlife restoration fund, and the interest it earns is allocated to wetlands conservation projects. This law delays until fiscal year 2033 — instead of fiscal year 2026 — the date that interest becomes available to be divided among state wildlife programs.",
+    "brief": "Delays from fiscal year 2026 to fiscal year 2033 the date Pittman-Robertson fund interest becomes available for apportionment, leaving it allocated to wetlands conservation projects in the meantime.",
+    "top_lines": [
+      {
+        "headline": "Wildlife Fund Interest Timing",
+        "billSection": "2",
+        "subs": [
+          "Interest apportionment date moves from fiscal 2026 to 2033",
+          "Interest is credited to the wildlife restoration fund"
+        ],
+        "source": "usc-16-669b"
+      },
+      {
+        "headline": "Wetlands Project Funding",
+        "billSection": "2",
+        "subs": [
+          "Fund interest is allocated to wetlands conservation projects",
+          "30-60% goes to projects in Canada and Mexico",
+          "Non-federal sponsors generally must match the federal amount"
+        ],
+        "source": "usc-16-4407"
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Wetlands Conservation and Access Improvement Act of 2025\".",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Availability of Interest on Obligations Held in Federal Aid to Wildlife Restoration Fund",
+        "items": [
+          {
+            "main": "Delays from the beginning of fiscal year 2026 to the beginning of fiscal year 2033 the date when interest earned by the federal aid to wildlife restoration fund becomes available for apportionment under the Pittman-Robertson Wildlife Restoration Act.",
+            "detail": "The fund holds revenue from federal excise taxes — 10% on pistols and revolvers, 11% on other firearms and on shells and cartridges — and the Treasury invests balances not needed for current withdrawals in interest-bearing U.S. obligations. The interest is credited to the fund and constitutes the sums the Secretary allocates under section 4407 of title 16.",
+            "comments": [],
+            "source": ["usc-16-669b", "usc-26-4181"]
+          },
+          {
+            "main": "Keeps fund interest running through the North American Wetlands Conservation allocation formula rather than state apportionment for seven more years.",
+            "detail": "Under that formula, between 30% and 60% of available sums goes to approved wetlands conservation projects in Canada and Mexico and the remainder to projects in the United States. Non-federal sponsors generally must at least match the federal amount, though projects on federal lands and waters may be fully federally funded.",
+            "comments": [],
+            "source": "usc-16-4407"
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2 — the Act's only operative provision",
+        "summary": "The entire Act consists of striking \"2026\" and inserting \"2033\" in the Pittman-Robertson interest-availability clause.",
+        "why_unreported": "The title promises wetlands conservation and access improvements; mechanically the Act only postpones the date when fund interest shifts from wetlands-project allocation to apportionment among state wildlife programs."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The title references access improvement, but the Act contains no provision addressing public access.",
+      "The Act moves the apportionment date to fiscal 2033 but does not change how much interest the fund earns or how wetlands allocations are divided.",
+      "The Act sets a new 2033 date without stating any criteria for whether the shift to state apportionment should occur then."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [],
+      "modified": [
+        "Pittman-Robertson fund interest — becomes available for apportionment at the beginning of fiscal year 2033 instead of fiscal year 2026"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-10",
+    "referencedSources": [
+      {
+        "id": "usc-16-669b",
+        "kind": "statute",
+        "label": "16 U.S.C. 669b",
+        "citation": "16 U.S.C. 669b",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap5B-sec669b/htm",
+        "textFile": "data/ref-text/usc-16-669b.txt",
+        "fetchedAt": "2026-07-11"
+      },
+      {
+        "id": "usc-16-4407",
+        "kind": "statute",
+        "label": "16 U.S.C. 4407",
+        "citation": "16 U.S.C. 4407",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap64-sec4407/htm",
+        "textFile": "data/ref-text/usc-16-4407.txt",
+        "fetchedAt": "2026-07-11"
+      },
+      {
+        "id": "usc-26-4181",
+        "kind": "statute",
+        "label": "26 U.S.C. 4181",
+        "citation": "26 U.S.C. 4181",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleD-chap32-subchapD-partIII-sec4181/htm",
+        "textFile": "data/ref-text/usc-26-4181.txt",
+        "fetchedAt": "2026-07-11"
+      }
+    ]
+  }
+]

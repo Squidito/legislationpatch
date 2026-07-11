@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 1,
   "bio": "Suzanne Marie Bonamici is an American lawyer and politician serving as the U.S. representative for Oregon's 1st congressional district, a seat she was first elected to in a 2012 special election. The district includes most of Portland west of the Willamette River, along with most of Portland's western suburbs such as Beaverton, Hillsboro, Tigard, and Lake Oswego.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6359",
+      "billTitle": "Pregnant Students' Rights Act",
+      "stance": "oppose",
+      "text": "Mr. Speaker, I oppose this bill because, among other reasons, the information that is required is incomplete and biased. As written, the Pregnant Students' Rights Act is unfairly limited regarding the information it requires colleges to provide to students and the students it chooses to support. It does not include information about comprehensive family planning resources, and it only supports pregnant students who carry a baby to term. Simply put, the bill fails to support any student with a different pregnancy-related outcome.",
+      "date": "2026-01-26"
+    },
+    {
+      "billId": "119-HR-3838",
+      "billTitle": "SPEED Act",
+      "stance": "neutral",
+      "text": "I call for the House to impeach Secretary of Education Linda McMahon, whose mission is to close down the Department of Education, which is something that she does not have the authority to do. Secretary McMahon has betrayed students, families, and educators by dismantling and destroying the Department of Education without coming to Congress for approval. She violated Federal law and her oath of office, lied to Congress, and created chaos and disruption in education funding for the students who need it the most.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

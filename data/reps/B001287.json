@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 6,
   "bio": "Amerish Babulal \"Ami\" Bera is an American physician and politician who has been serving as a member of the United States House of Representatives from California since 2013. He is a member of the Democratic Party and represents California's 6th congressional district, which is in Sacramento County.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-3633",
+      "billTitle": "Digital Asset Market Clarity Act of 2025",
+      "stance": "neutral",
+      "text": "Since its establishment 28 years ago, USCIRF has served as an independent, bipartisan watchdog monitoring conditions on the ground and providing policy recommendations to Congress and the administration. Its work reinforces the principles reflected in Article 18 of the Universal Declaration of Human Rights and helps ensure that our advocacy for religious freedom is consistent, credible, and universal. True religious liberty cannot mean protection for only a favored few. It extends to all people.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

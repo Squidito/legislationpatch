@@ -6,7 +6,24 @@
   "role": "Senator",
   "district": null,
   "bio": "John Henry Hoeven III is an American politician and banker serving as the senior U.S. senator from North Dakota, a seat he has held since 2011. A member of the Republican Party, Hoeven served as the 31st governor of North Dakota from 2000 to 2010.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-187",
+      "billTitle": "MAPWaters Act of 2025",
+      "stance": "neutral",
+      "text": "reserving the right to object, I do have a hold on one of the bills in this package. It is not the bill that Senator Sullivan is talking about. It is one of the other bills. But I do have a hold on one of the bills. And it is because there are holds on the Democratic side on one of my priorities in the jurisdiction of the Energy and Natural Resources Committee. That is S. 675, which is the Theodore Roosevelt Presidential Library Museum Artifacts Act. This bill passed the Senate by unanimous consent last year. I will try that one more time.",
+      "date": "2025-12-26"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "The bill clerk read as follows: A bill (S. 675) to contribute funds and artifacts to the Theodore Roosevelt Presidential Library in Medora, North Dakota. There being no objection, the committee was discharged, and the Senate proceeded to consider the bill.",
+      "source": "Senate Floor, Jun 22, 2026",
+      "granuleTitle": null,
+      "date": "Jun 22, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/John_Hoeven",
   "voteHistory": [

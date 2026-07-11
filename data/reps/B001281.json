@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 3,
   "bio": "Joyce Marie Beatty, is an American politician serving as U.S. representative for Ohio's 3rd congressional district since 2013 and as chair of the Congressional Black Caucus from 2021 to 2023. A member of the Democratic Party, Beatty represented the 27th district in the Ohio House of Representatives from 1999 to 2008, serving for a time as minority leader. She was also previously senior vice president of outreach and engagement at Ohio State University.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "support",
+      "text": "First, let me thank Ranking Member Waters and Chairman Hill for their leadership. This landmark, bipartisan package represents a major step forward in addressing the Nation's challenges in housing, and I am especially proud that six of my bills are included in this legislation. My HOME Investment Partnerships Reauthorization and Improvement Act will make it easier for local organizations to fund affordable housing projects, while another provision strengthens coordination between the Departments of Housing, Agriculture, and Veterans Affairs.",
+      "date": "2026-06-23"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "stance": "neutral",
+      "text": "This bill modernizes the treatment of reciprocal deposits to help small banks and midsize banks improve liquidity, increase local community lending, and better compete for larger accounts, all without jeopardizing the safety and the soundness of our financial system. Following the bank failures in 2023, we have seen many banks turn to reciprocal deposits to meet consumer demand, to increase their insured deposits, and, really, to prevent capital flight.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

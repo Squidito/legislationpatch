@@ -6,8 +6,48 @@
   "role": "Representative",
   "district": 29,
   "bio": "Luz Maria Rivas is an American politician who has served as the U.S. representative from California's 29th congressional district since 2025. A member of the Democratic Party, she previously represented the 43rd district in the California State Assembly from 2018 to 2024.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4371",
+      "billTitle": "Kayla Hamilton Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, the bill we are debating today is a bad bill. It is a bad bill that will harm vulnerable children, do nothing to fix our immigration system, and embolden Trump to continue wreaking havoc in our communities. Republicans are exploiting a tragedy to push forth a bill that undermines and strips away critical rights and protections for vulnerable children. H.R. 4371 treats immigrant children like criminals and prevents unaccompanied minors from being reunited with their families.",
+      "date": "2025-07-14"
+    },
+    {
+      "billId": "119-HR-7147",
+      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "Last September, the Trump administration announced that it would roll back the EPA's Greenhouse Gas Reporting Program, or the GHGRP. I led 29 of my colleagues urging the EPA to preserve the GHGRP. I also introduced a resolution to protect it from the Trump administration's attacks. Since 2010, the GHGRP has collected and tracked greenhouse gas emissions from more than 8,000 sites, including landfills, power plants, and oil refineries.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "The San Fernando Valley mourns the loss of Nancy Oda. Nancy was born in the Tule Lake Segregation Center during World War II, where her family was persecuted for their Japanese heritage. Her family's hope was that she would bring harmony into the world and overcome the challenges and discrimination they were facing at the time. Nancy did what she could to bring that harmony by choosing a life of service to her community.",
+      "source": "House Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +273,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +420,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +551,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

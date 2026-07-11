@@ -5,7 +5,7 @@
   "state": "OH",
   "role": "Representative",
   "district": 8,
-  "bio": "Warren Earl Davidson is an American politician and former military officer serving as the U.S. representative for Ohio's 8th congressional district since 2016. The district includes a swath of suburban and exurban territory between Cincinnati and Dayton. Davidson is a member of the Republican Party.",
+  "bio": "Warren Earl Davidson is an American politician and former military officer serving as the U.S. representative for Ohio's 8th congressional district since 2016. The district includes a swath of suburban and exurban territory between Cincinnati and Dayton. He is a member of the Republican Party.",
   "comments": [
     {
       "billId": "119-S-4465",
@@ -13,9 +13,30 @@
       "stance": "oppose",
       "text": "Mr. Speaker, the Foreign Intelligence Surveillance Act is a fine tool for foreign intelligence. Unfortunately, it has been abused and corrupted. I am encouraged to hear Mr. Raskin reclaim his opposition to warrantless surveillance, and I am encouraged that there is a bipartisan effort to reform it. In fact, I think the will of this body is that we defend the Constitution and we defend this Nation. We can do both. We are presented this false dilemma that somehow if you just abandon your freedom, you can be more secure. That is a false tradeoff.",
       "date": "Apr 29, 2026"
+    },
+    {
+      "billId": "119-HR-36",
+      "billTitle": "MEGOBARI Act",
+      "stance": "support",
+      "text": "Madam Speaker, I generally support everything that the chairman supports. This is a wrongheaded bill. Our colleagues need to say ``no'' to this. The American people did not send us here to expand America's security blanket to more parts of the world. We don't have to get involved in every conflict we are invited to, and we certainly don't need to seek out extra ones. We can wish the people of Georgia well without expanding our commitment to be Europe's defense force with a blank check to defend every country.",
+      "date": "2025-01-03"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -241,6 +262,13 @@
       "vote": "Present"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -381,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Present"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -504,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

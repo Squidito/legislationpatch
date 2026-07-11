@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 8,
   "bio": "Morgan Joe Luttrell is an American politician, businessman, and military veteran serving as the U.S. representative for Texas's 8th congressional district since 2023. He is a member of the Republican Party. On September 11, 2025, Luttrell announced he would not seek re-election in 2026.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "neutral",
+      "text": "First, I thank Senator Moran and Senator Blumenthal for leading this bill in the Senate. As chairman of the Subcommittee on Disability Assistance and Memorial Affairs, I am dedicated to serving my fellow veterans. This legislation is necessary to ensure that benefits paid to veterans, who are disabled as a result of their military service, do not lose value because of economic change outside of their control. Without their disability compensation benefits, veterans may not be able to afford the cost-of-living increase.",
+      "date": "2025-07-23"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +532,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -5,8 +5,18 @@
   "state": "TX",
   "role": "Senator",
   "district": null,
-  "bio": "John Cornyn III is an American politician and former judge who is the senior United States senator from Texas, a seat he has held since 2002. He is a member of the Republican Party.",
-  "comments": [],
+  "bio": "John Cornyn III is an American politician and former judge who is the senior United States senator for Texas, a seat he has held since 2002. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-8322",
+      "billTitle": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "stance": "neutral",
+      "text": "The Senator from Oregon is prepared to let this essential foreign intelligence surveillance tool go dark unless we accede to his demands. And frankly, the demand for a warrant to search lawfully collected foreign intelligence makes no sense whatsoever. Section 702 is probably the most important law most people have never heard about.",
+      "source": "Senate Floor, Jun 10, 2026",
+      "granuleTitle": null,
+      "date": "Jun 10, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/John_Cornyn",
   "voteHistory": [

@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 1,
   "bio": "Wesley Jonell-Cleavon Bell is an American attorney and politician serving as the U.S. representative for Missouri's 1st congressional district since 2025. A member of the Democratic Party, he previously served as prosecuting attorney for St. Louis County, Missouri, from 2019 to 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8464",
+      "billTitle": "Stopping Fraudulent Payments Act",
+      "stance": "neutral",
+      "text": "no one in this Chamber disputes that improper and fraudulent payments are a serious problem. The question before us is not whether to fight fraud; it is how we fight fraud. If this bill actually does that--and I will give you a hint: It does not. The Stopping Fraudulent Payments Act allows agency officials to block payments whenever they have sufficient reason to believe there is an elevated risk of fraud. This bill sets the standard so low that any administration can use it to cut off legitimate recipients before a single fact is even proven.",
+      "date": "2026-06-11"
+    },
+    {
+      "billId": "119-HR-8464",
+      "billTitle": "Stopping Fraudulent Payments Act",
+      "stance": "neutral",
+      "text": "No one in this Chamber disputes that improper and fraudulent payments are a serious problem. The question before us is not whether to fight fraud; it is how we fight fraud. If this bill actually does that--and I will give you a hint: It does not. The Stopping Fraudulent Payments Act allows agency officials to block payments whenever they have sufficient reason to believe there is an elevated risk of fraud. This bill sets the standard so low that any administration can use it to cut off legitimate recipients before a single fact is even proven.",
+      "source": "House Floor, Jun 10, 2026",
+      "granuleTitle": null,
+      "date": "Jun 10, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

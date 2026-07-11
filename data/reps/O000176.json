@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 2,
   "bio": "John Anthony Olszewski Jr., also known by his nickname Johnny O, is an American politician who has served as a member of the U.S. House of Representatives from Maryland's 2nd congressional district since 2025. A member of the Democratic Party, he served as the 14th county executive of Baltimore County, Maryland, from 2018 to 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-36",
+      "billTitle": "MEGOBARI Act",
+      "stance": "neutral",
+      "text": "I have no further requests for time, and I yield myself the balance of my time for the purposes of closing. Madam Speaker, H.R. 36 works to show the people of Georgia that the  United States remains committed to its Euro-Atlantic aspirations and provides a framework for appropriate cooperation with the Georgian Government in light of worrying democratic backsliding in the country.",
+      "date": "2025-01-03"
+    },
+    {
+      "billId": "119-HR-915",
+      "billTitle": "Small Business Technological Act of 2025",
+      "stance": "neutral",
+      "text": "Mr. Speaker, last year, the 7(a) program provided more than 78,000 loans to small businesses worth more than $37.2 billion. Thus far, in 2026, the program has originated more than 38,000 loans worth more than $20.3 billion with an average loan size of approximately $533,000. As I mentioned earlier, small businesses have been able to utilize 7(a) loans to finance digital tools, including software and cloud computing services.",
+      "date": "2026-06-24"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +540,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

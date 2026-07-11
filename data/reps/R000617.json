@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 3,
   "bio": "Delia Catalina Ramirez is an American politician serving as the U.S. representative for Illinois's 3rd congressional district since 2023. She is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4371",
+      "billTitle": "Kayla Hamilton Act",
+      "stance": "neutral",
+      "text": "we are less than 10 days away from Christmas, a day in which many celebrate the birth of Jesus, a refugee. In regard to the hypocrisy of those who would quote Scripture asserting the preciousness of children while they pursue new, cruel punishments for child refugees, I find that not just hypocritical but despicable. This administration and the Republicans have used their power not to protect children but, instead, to strip unaccompanied children who come to this country fleeing danger, looking for safety or protection.",
+      "date": "2025-07-14"
+    },
+    {
+      "billId": "119-HCONRES-84",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from Lebanon",
+      "stance": "neutral",
+      "text": "You are having a different debate here, but let me come back to what the Congresswoman just mentioned, too.",
+      "date": "2026-06-04"
+    },
+    {
+      "billId": "119-HR-4405",
+      "billTitle": "Epstein Files Transparency Act",
+      "stance": "oppose",
+      "text": "I rise today to join human rights defenders across the world to call for the immediate and unconditional release of Ruth Eleonora Lopez, who has been held in pretrial detention for over 1 year without any due process and without access to her family or even her lawyer. A Salvadoran lawyer and human rights defender, Ruth is a political prisoner, unjustly targeted for her tireless fight against corruption and her demands for justice, accountability, and transparency from Bukele's government in El Salvador.",
+      "source": "House Floor, Jun 3, 2026",
+      "granuleTitle": null,
+      "date": "Jun 3, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +549,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

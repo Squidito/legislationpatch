@@ -5,9 +5,33 @@
   "state": "MI",
   "role": "Representative",
   "district": 3,
-  "bio": "Hillary Jeanne Scholten is an American politician and attorney who has served as the U.S. representative from Michigan's 3rd congressional district since 2023. She is the first woman and first Democrat since Howard Wolpe left office in 1993 to represent the district, and the first Democrat to represent Grand Rapids in Congress since Richard Vander Veen left office in 1977. Before her election, Scholten worked as an attorney for the Department of Justice and in private practice. Her district, which was once represented by former President Gerald Ford, is based in Grand Rapids and much of the urban core of West Michigan.",
-  "comments": [],
+  "bio": "Hillary Jeanne Scholten is an American politician and attorney who has served as the U.S. representative from Michigan's 3rd congressional district since 2023. She is a member of the Democratic Party. Her district, which was once represented by former President Gerald Ford, is based in Grand Rapids and includes much of the urban core of West Michigan. Before her election, Scholten worked as an attorney for the Department of Justice and in private practice.",
+  "comments": [
+    {
+      "billId": "119-S-3971",
+      "billTitle": "Small Business Innovation and Economic Security Act",
+      "stance": "oppose",
+      "text": "It means so much to me. As an attorney, I have to say this might be one of the easiest debates I have ever participated in. I think we are all in agreement that this is an essential bill for this moment in America. Small businesses are the foundation of our economy, but too often they are left to compete against a handful of large corporations, a real David and Goliath situation.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -15,9 +15,53 @@
       "source": "House Floor, May 19, 2026",
       "granuleTitle": null,
       "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HR-22",
+      "billTitle": "SAVE Act",
+      "stance": "neutral",
+      "text": "I have a motion to recommit at the desk. The material previously referred to by Ms. Johnson of Texas is as follows: Ms. Johnson of Texas moves to recommit the bill H.R. 22 to the Committee on House Administration with instructions to report the same back to the House forthwith, with the following amendment: Page 8, line 24, insert ``, online, or by mail'' after ``in person''. The question is on the motion to recommit.",
+      "date": "2025-01-03"
+    },
+    {
+      "billId": "119-S-723",
+      "billTitle": "Tribal Trust Land Homeownership Act of 2025",
+      "stance": "neutral",
+      "text": "this bill, S. 723, is identical to a bill that I had introduced here in the House, H.R. 2130. It made its way through the Natural Resources Committee and had a hearing, for which I am very thankful to the chair and ranking member of that committee. It passed out of that committee unanimously. This is a strong piece of commonsense legislation. Mr. Speaker, what does it do? First off, we know that our country is facing a housing affordability crisis. In Indian Country, it is even worse.",
+      "date": "2026-05-04"
+    },
+    {
+      "billId": "119-HR-2189",
+      "billTitle": "Law-Enforcement Innovate to De-Escalate Act",
+      "stance": "oppose",
+      "text": "Police already have access to less-than-lethal weapons like tasers. They don't need a change in the law. That is not an excuse for changing the law. This bill expands access to dangerous, prohibited individuals by stripping away Federal safeguards. Tasers may not shoot bullets, but they are still dangerous in the wrong hands. This bill would mean that anyone can buy them without a background check including people convicted of serious violent crimes and domestic abusers with restraining orders against them.",
+      "date": "2026-02-24"
+    },
+    {
+      "billId": "119-HR-8469",
+      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "stance": "neutral",
+      "text": "I rise today to sound the alarm on skyrocketing healthcare costs in this country. Americans all across the country, including Georgia's Fourth Congressional District, are having a hard time and making very difficult decisions. They have to decide whether it is more important to pay for their groceries--and don't get me started on the cost of gas to go to work--or to provide their family with healthcare.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -243,6 +287,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -383,6 +434,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -507,6 +565,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

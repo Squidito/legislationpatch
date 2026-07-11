@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 5,
   "bio": "Nikema Natassha Williams is an American politician serving as the representative for Georgia's 5th congressional district. The district includes almost three-quarters of Atlanta. She was a member of the Georgia State Senate for the 39th district from 2017 to 2021, and served as Chair of the Democratic Party of Georgia from 2019 to 2025. Williams served as one of 16 electors for Georgia in the Electoral College following the 2020 United States presidential election.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4495",
+      "billTitle": "SBA Fraud Enforcement Extension Act",
+      "stance": "neutral",
+      "text": "We cannot let fraudsters get away with American taxpayer dollars.",
+      "date": "2025-12-02"
+    },
+    {
+      "billId": "119-HR-7401",
+      "billTitle": "Small Business Lending Fraud Prevention Act",
+      "stance": "support",
+      "text": "we must pass H.R. 7401 to strengthen integrity in SBA lending programs by requiring employees involved in loan decisions to certify they have no prohibited conflicts of interest.",
+      "date": "2026-06-24"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +540,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

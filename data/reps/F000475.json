@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 1,
   "bio": "Bradley Howard Finstad is an American politician serving since 2022 as the U.S. representative for Minnesota's 1st congressional district. Finstad represents a section of southern Minnesota along the border with Iowa. A member of the Republican Party, he served in the Minnesota House of Representatives from 2003 to 2009.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "stance": "neutral",
+      "text": "As a fourth-generation corn and soybean farmer from southern Minnesota raising that fifth generation and representing 21 counties in southern Minnesota, a very strong egg-producing district, I have had many conversations with my neighbor farmers. I know by hearing what they are telling me and firsthand in my own experience as a farmer that we are facing uncertainty in our input costs and uncertainty in the global markets. We need a new domestic opportunity for our corn. E15 delivers on that.",
+      "date": "2025-02-12"
+    },
+    {
+      "billId": "119-HR-7567",
+      "billTitle": "Farm, Food, and National Security Act of 2026",
+      "stance": "neutral",
+      "text": "As a fourth-generation farmer raising that fifth generation, I know firsthand that farm country has faced compounding challenges over the past several years. I am committed to addressing these issues by passing a strong, bipartisan farm bill that is written by farmers and for farmers, by rural communities and for rural communities. The ag title of working families tax cuts made the most significant investment in farm safety net spending since the 2002 farm bill.",
+      "date": "2026-02-13"
+    },
+    {
+      "billId": "119-S-222",
+      "billTitle": "Whole Milk for Healthy Kids Act of 2025",
+      "stance": "neutral",
+      "text": "As a fourth generation farmer raising the fifth generation, I know firsthand the importance of ensuring families have access to healthy and nutritious milk products. As a father of seven, my wife and I have purchased our fair share of milk on trips to the grocery store. This legislation has been in the making for a long time, and it is past due that we send it to the President's desk and make this the law of the land.",
+      "date": "2026-01-14"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

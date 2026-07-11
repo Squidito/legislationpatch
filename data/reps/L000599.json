@@ -5,9 +5,42 @@
   "state": "NY",
   "role": "Representative",
   "district": 17,
-  "bio": "Michael Vincent Lawler is an American politician serving as the U.S. representative for New York's 17th congressional district since 2023. From 2021 to 2022, he was a Republican member of the New York State Assembly from the 97th district in Rockland County.",
-  "comments": [],
+  "bio": "Michael Vincent Lawler is an American politician serving as the U.S. representative for New York's 17th congressional district since 2023. The district includes all of Rockland County and Putnam County, as well as most of Northern Westchester County, and portions of southern Dutchess County. Previously, he was a member of the New York State Assembly representing the 97th district from 2021 to 2022. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "support",
+      "text": "A New Jersey native, Brett grew up in South Hackensack and earned a degree from William Paterson University in 1989. From a young age, he dreamed of owning a restaurant where people from all walks of life could gather and enjoy authentic Italian cuisine. Through his strong work ethic, Brett built a career in the hospitality industry. In 1995, his dream became a reality when he became the proud owner of La Terrazza.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-5107",
+      "billTitle": "Common-Sense Law Enforcement and Accountability Now in DC Act of 2025",
+      "stance": "neutral",
+      "text": "Chief Noble's career has been defined by commitment, sacrifice, and an unwavering sense of duty. For more than 30 years in law enforcement, including nearly a decade as chief, he led the Yorktown Police Department with professionalism and steady leadership. For Chief Noble, policing was never simply a job, it was a vocation. He described the department as a second family and fostered a culture of trust, respect, and community engagement.",
+      "source": "House Floor, Jun 24, 2026",
+      "granuleTitle": null,
+      "date": "Jun 24, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +543,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 22,
   "bio": "John W. Mannion is an American educator and politician who has served as the U.S. representative from New York's 22nd congressional district since 2025. He previously served as a state senator from the 50th district between 2020 and 2024. Before entering politics, Mannion was a high school biology teacher.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "support",
+      "text": "I commend my colleagues for their months-long negotiation to get this done. In central New York and the Mohawk Valley, we are ready for growth in the years to come, but we must meet the housing challenge. Our community leaders need resources and more flexibility from our housing programs to make that happen. Developers and builders want to be a part of the solution, but we need to remove the needless hurdles that keep projects from getting off the ground.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

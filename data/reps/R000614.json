@@ -3,7 +3,7 @@
   "name": "Chip Roy",
   "party": "R",
   "state": "TX",
-  "bio": "Charles Eugene \"Chip\" Roy is an American attorney and politician serving as the U.S. representative for Texas's 21st congressional district. A member of the Republican Party, Roy took office on January 3, 2019. Before his election to Congress, he was chief of staff to Senator Ted Cruz and as first assistant attorney general of Texas. A member of and policy chair of the House Freedom Caucus, Roy is considered a member of the most conservative faction of the House Republican Conference.",
+  "bio": "Charles Eugene \"Chip\" Roy is an American attorney and politician serving as the U.S. representative for Texas's 21st congressional district since 2019. Previously, he was Senator Ted Cruz's chief of staff and first assistant attorney general of Texas under Ken Paxton. He is a member of the Republican Party.",
   "comments": [
     {
       "billId": "119-HR-8469",
@@ -25,11 +25,32 @@
       "stance": "oppose",
       "text": "Mr. Speaker, it is nice to have the gentleman from Maryland on the pro-warrant side of this conversation this go-round. I will note that there was a significant amount of abuses by the previous President with respect to the amount of focus on the American people using FISA and the abuses therein. I hope we can achieve a bipartisan consensus here on how we reform this regardless of who is in the White House and regardless of who controls Congress. We need to do that in defense of the Constitution.",
       "date": "Apr 29, 2026"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "stance": "oppose",
+      "text": "I appreciate my colleagues on both sides of this debate and where they are coming from. I understand my friends who come from States that want support for farming. We all want to make sure that we are figuring that out. We worked through the farm bill. I just think we ought to be going about this a different way. If we need to do something to support farmers, let's have a direct conversation about it. Expanding E15 is just the wrong direction to go. It is going to harm refiners. It is going to drive up the cost of gas.",
+      "date": "2025-02-12"
     }
   ],
   "role": "Representative",
   "district": 21,
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -255,6 +276,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -395,6 +423,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -518,6 +553,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

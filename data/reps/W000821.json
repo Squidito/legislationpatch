@@ -6,8 +6,90 @@
   "role": "Representative",
   "district": 4,
   "bio": "Bruce Eugene Westerman is an American forester and politician serving as the U.S. representative for Arkansas's 4th congressional district. Previously, he served as member and the majority leader of the Arkansas House of Representatives. He is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7831",
+      "billTitle": "License to Drill Act",
+      "stance": "neutral",
+      "text": "America has some of the richest energy resources in the world, and House Republicans are working alongside the Trump administration to put those resources to work.",
+      "date": "2026-03-05"
+    },
+    {
+      "billId": "119-HR-1687",
+      "billTitle": "CLEAN Act",
+      "stance": "neutral",
+      "text": "most of America's geothermal resources lie beneath Federal lands, and interest in leasing those areas continues to grow. It is imperative that we increase the frequency of geothermal lease sales from every 2 years to annually and further streamline the permitting process. Doing so will help keep energy costs low and keep America's lights on.",
+      "date": "2025-02-27"
+    },
+    {
+      "billId": "119-HR-3922",
+      "billTitle": "Cross-Boundary Wildfire Solutions Act",
+      "stance": "neutral",
+      "text": "to address the enormity of the wildfire crisis, it is critical that we find ways to improve forest management across manmade jurisdictional boundaries. H.R. 3922 is a good bipartisan bill that will do just that by identifying existing Federal policies that can be changed to streamline proactive forest management.",
+      "date": "2025-06-11"
+    },
+    {
+      "billId": "119-HR-2860",
+      "billTitle": "Northwest Straits Marine Conservation Initiative Reauthorization Act of 2025",
+      "stance": "support",
+      "text": "I support this bill to reauthorize the Northwest Straits Advisory Commission. I commend my colleague, the gentleman from the State of Washington (Mr. Larsen), not only for his work on this bill but for his leadership to pass the successful highway transportation reauthorization bill recently. Again, I support the legislation.",
+      "date": "2026-06-04"
+    },
+    {
+      "billId": "119-S-254",
+      "billTitle": "ARTIST Act",
+      "stance": "support",
+      "text": "last year, a bipartisan group of members of our committee traveled to Alaska. As part of that visit, we held a roundtable with Alaska Native organizations during which we heard about the importance of subsistence hunting for Alaska Native communities, cultures, and economies. Enacting this bill will remove a longstanding barrier for the sale of Alaska Native handicrafts and artwork, and I am pleased that Congress is championing policies that are important to the Alaska Native way of life.",
+      "date": "2026-06-12"
+    },
+    {
+      "billId": "119-HR-42",
+      "billTitle": "Alaska Native Settlement Trust Eligibility Act",
+      "stance": "neutral",
+      "text": "again, this legislation would ensure that amounts distributed or benefits provided from Alaska Native corporation settlement trusts to Alaska Natives who are blind, disabled, or elders aged 65 and older, or their descendants, are excluded when determining eligibility for means-tested Federal benefits.",
+      "date": "2025-07-07"
+    },
+    {
+      "billId": "119-HR-43",
+      "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
+      "stance": "neutral",
+      "text": "again, this legislation would amend ANCSA to return the land in question to impacted Alaska Native Village Corporations and eliminate the unnecessary land conveyance requirement in the statute.",
+      "date": "2025-07-07"
+    },
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "I once again thank Representative Kennedy for his leadership on the Star-Spangled Summit Act of 2026. This bill restores a meaningful community tradition, cuts through unnecessary red tape, and ensures that the American flag can continue flying over Provo in a way that respects both patriotism and responsible stewardship of our public lands.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HJRES-140",
+      "billTitle": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+      "stance": "neutral",
+      "text": "Again, the Pechanga Band of Indians have worked to consolidate their ancestral and cultural land for years. The conveyance authorized by this legislation will unwind much of the checkerboard pattern that has prevented the Pechanga Band from readily accessing its lands, including its most sacred site, the Pu'eska Mountain.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +315,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +462,13 @@
       "vote": "Not Voting"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +592,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

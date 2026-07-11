@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 1,
   "bio": "Alice Constandina \"Dina\" Titus is an American politician who has been the United States representative for Nevada's 1st congressional district since 2013. Previously, she served as the U.S. representative for Nevada's 3rd congressional district from 2009 to 2011. Titus is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8365",
+      "billTitle": "Monitor Accountability Act",
+      "stance": "support",
+      "text": "Our veterans sacrifice everything for our country. We don't leave them behind on the field, and we shouldn't leave them behind when they come home. One way that we can serve them is providing this option when it comes to medical care. They need to have an honest conversation with their doctors to understand what their options are and how they can best recover from the pains that continue after they have come home. Mr. Chair, I proudly support this amendment.",
+      "date": "2026-05-14"
+    },
+    {
+      "billId": "119-HR-972",
+      "billTitle": "Sloan Canyon Conservation and Lateral Pipeline Act",
+      "stance": "support",
+      "text": "I, too, am rising today in support of this bill, H.R. 972, that I brought before you. It is the Sloan Canyon Conservation and Lateral Pipeline Act. As we barrel toward record low water projections at Lake Mead and the increasing risk of prolonged drought due to climate change, there is no time to waste in securing water reliability for southern Nevadans. My bill would allow a portion of the Southern Nevada Water Authority's Horizon Lateral water pipeline project to tunnel beneath Sloan Canyon National Conservation Area.",
+      "date": "2026-05-19"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +540,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

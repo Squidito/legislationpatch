@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 6,
   "bio": "Randall Adam Fine is an American politician and former gambling industry executive serving as the U.S. representative for Florida's 6th congressional district since April 2025. A member of the Republican Party, he previously served in the Florida Senate from 2024 to 2025 and in the Florida House of Representatives from 2016 to 2024. His congressional district covers a six-county area that includes Daytona Beach.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "oppose",
+      "text": "One would have thought after October 7, 2023, the world's worst attack against Jews since the Holocaust, which obviously took place in Europe, there would have been an outpouring of sympathy and less anti-Semitism in the world. In Europe, in particular, that is not what happened. A study conducted by the European Union Agency for Fundamental Rights recorded an increase of up to 400 percent in anti-Semitic activity since October 7.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -370,6 +401,13 @@
       "billTitle": "Common-Sense Law Enforcement and Accountability Now in DC Act of 2025",
       "chamber": "House",
       "date": "2025-11-19",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
       "vote": "Yea"
     },
     {

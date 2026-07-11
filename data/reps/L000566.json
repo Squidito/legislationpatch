@@ -5,9 +5,45 @@
   "state": "OH",
   "role": "Representative",
   "district": 5,
-  "bio": "Robert Edward Latta is an American politician who is the United States representative for Ohio's 5th congressional district. Currently in his 10th term, Latta has served in Congress since 2007, and prior to that he served four terms in the Ohio House of Representatives. He is a member of the Republican Party. The fifth district includes many of Toledo's suburbs, as well as Findlay, Bowling Green, Napoleon, Sylvania, Defiance and Van Wert, and a sliver of Toledo itself.",
-  "comments": [],
+  "bio": "Robert Edward Latta is an American politician who is the United States representative for Ohio's 5th congressional district. Currently in his 10th term, Latta has served in Congress since 2007, and prior to that he served four terms in the Ohio House of Representatives. He is a member of the Republican Party. The fifth district includes many of Toledo's suburbs, as well as Findlay, Bowling Green, Tiffin, Napoleon, Sylvania, Defiance and Van Wert, and a sliver of Toledo itself.",
+  "comments": [
+    {
+      "billId": "119-HR-866",
+      "billTitle": "ROUTERS Act",
+      "stance": "neutral",
+      "text": "Routers and modems play a key role in communications networks. They are the entry point through which the public accesses the internet. Thus, we make sure that they are secure. Bad actors can exploit vulnerabilities in routers to infect users' computers, access their information, or disrupt their network.",
+      "date": "2025-01-31"
+    },
+    {
+      "billId": "119-HR-2483",
+      "billTitle": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
+      "stance": "support",
+      "text": "I appreciate it. The SUPPORT for Patients and Communities Reauthorization Act of 2025 is one of the most impactful bills the Committee on Energy and Commerce has worked on during my time in Congress. Simply put, we came together to implement bipartisan policies that would save lives. Gone are the days that substance abuse and addiction are a far off problem that doesn't impact each one of our districts.",
+      "date": "2025-12-01"
+    },
+    {
+      "billId": "119-HR-7257",
+      "billTitle": "SECURE Grid Act",
+      "stance": "neutral",
+      "text": "State energy security plans, or SESPs, provide States with an opportunity to identify threats and vulnerabilities in their respective energy networks. This collaborative process ensures that States can stay on the cutting edge of an evolving threat landscape. While the initial exercise of SESPs has meaningfully assisted States in managing their energy systems, there is room for improvement to enhance visibility and threat detection and to holistically consider disparate vulnerabilities across the sector.",
+      "date": "2026-01-27"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

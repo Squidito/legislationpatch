@@ -5,8 +5,27 @@
   "state": "VT",
   "role": "Senator",
   "district": null,
-  "bio": "Bernard Sanders is an American politician and activist serving as the senior United States senator from Vermont, a seat he has held since 2007. He is the longest-serving independent in U.S. congressional history, but maintains a close relationship with the Democratic Party, having caucused with House and Senate Democrats for most of his congressional career and sought the party's presidential nomination in 2016 and 2020. Ideologically a democratic socialist, Sanders is regarded as one of the main leaders of the modern American progressive movement.",
-  "comments": [],
+  "bio": "Bernard Sanders is an American politician and activist serving as the senior United States senator from Vermont, a seat he has held since 2007. He is the longest-serving independent in U.S. congressional history, but maintains a close relationship with the Democratic Party, having caucused with House and Senate Democrats for most of his congressional career and sought the party's presidential nomination in 2016 and 2020. A self-described democratic socialist, Sanders is regarded as one of the main leaders of the 21st-century American progressive movement.",
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Artificial intelligence will almost certainly be the most transformational technology in the history of the world. It will profoundly impact the lives of every man, woman, and child in our country and, in fact, throughout the world. It will bring and it is already bringing unimaginable changes to our economy, to our democracy and political system, to our emotional well-being, to the health of our children, to our environment, and to how we educate and raise our kids.",
+      "source": "Senate Floor, Jun 1, 2026",
+      "granuleTitle": null,
+      "date": "Jun 1, 2026"
+    },
+    {
+      "billId": "119-HR-4371",
+      "billTitle": "Kayla Hamilton Act",
+      "stance": "neutral",
+      "text": "I want to say a few words about what I consider to be one of the most important issues not only facing our country but facing the world, and that is the advent of artificial intelligence, which most experts agree will almost certainly be the most transformational technology in the history of humanity. It will profoundly impact the lives of every man, woman, and child in our country.",
+      "source": "Senate Floor, Jun 22, 2026",
+      "granuleTitle": null,
+      "date": "Jun 22, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Bernie_Sanders",
   "voteHistory": [

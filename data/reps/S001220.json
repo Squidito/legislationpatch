@@ -5,9 +5,31 @@
   "state": "AL",
   "role": "Representative",
   "district": 5,
-  "bio": "The 2026 United States House of Representatives elections in Alabama will be held on November 3, 2026, to elect the seven U.S. representatives from the State of Alabama, one from all seven of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on May 19, and in races where no candidate receives over 50% in a primary, runoff elections will take place on June 16.",
-  "comments": [],
+  "bio": "The 2026 United States House of Representatives elections in Alabama will be held on November 3, 2026, to elect the seven U.S. representatives from the State of Alabama, one from all seven of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections were held on May 19, and in races where no candidate receives over 50% in a primary, runoff elections took place on June 16. Special primary elections will be held on August 11 in districts that were affected by the new congressional map following redistricting in May.",
+  "comments": [
+    {
+      "billId": "119-HR-7084",
+      "billTitle": "Defending American Property Abroad Act of 2026",
+      "stance": "oppose",
+      "text": "the question is: Do we support President Trump with this authority? Absolutely, we do. This legislation makes it clear: The United States will not stand for unlawful harassment campaigns against American companies and American workers. For over 35 years, Vulcan Materials Company, based in Alabama, has lawfully owned and operated a limestone quarry in Mexico. Yet, since 2018, the Mexican Government has unlawfully restricted Vulcan's operations and wrongfully targeted them through coercion and intimidation.",
+      "date": "2026-04-02"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +532,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

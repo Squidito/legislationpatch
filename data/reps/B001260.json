@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 16,
   "bio": "Vernon Gale Buchanan is an American businessman, politician, and Air Force National Guard veteran serving as the U.S. representative for Florida's 16th congressional district since 2013. A member of the Republican Party, he first entered Congress in 2007, representing Florida's 13th congressional district until redistricting. His district is anchored by Bradenton. On January 27, 2026, Buchanan announced he would not run for re-election in 2026.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-5347",
+      "billTitle": "Health Care Efficiency Through Flexibility Act",
+      "stance": "support",
+      "text": "We must move away from fee-for-service. As someone who has been in business for a long time, the incentives are wrong. That is part of the problem. The more you do, the more you make. The sicker you are, the more you make, and I just don't like it. Not to say that doctors take advantage of it, but the incentives are wrong, and we need to fix that. That is why I am in strong support of accountable care organizations. Americans are served better, and the focus needs to be on quality of care, not quantity.",
+      "source": "House Floor, Jun 29, 2026",
+      "granuleTitle": null,
+      "date": "Jun 29, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

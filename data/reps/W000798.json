@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 5,
   "bio": "Timothy Lee Walberg is an American politician serving as a U.S. representative from Michigan since 2011, representing the state's 5th congressional district since 2023. A member of the Republican Party, he previously represented the 7th district from 2007 to 2009 and from 2011 to 2023 as the longest tenured member from Michigan.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6359",
+      "billTitle": "Pregnant Students' Rights Act",
+      "stance": "neutral",
+      "text": "to my dear friend and colleague from Georgia, as she has discussed that tragic story with me before, my heart does break. Having experienced that in my own personal family, as well, I understand what she is saying. I am just not capable, I guess, of communicating that this bill is affording all the questions to be answered and all of the issue to be addressed. It also gives pregnant women, who are blessed to be able to continue carrying to completion, the opportunity to also know that their academic opportunity will continue, as well.",
+      "date": "2026-01-26"
+    },
+    {
+      "billId": "119-S-222",
+      "billTitle": "Whole Milk for Healthy Kids Act of 2025",
+      "stance": "neutral",
+      "text": "For nearly 80 years, the National School Lunch Program has provided low-cost or free lunches to children each school day. We know that healthy diets can improve student success both in and out of the classroom. Whole milk is a nutrient-rich food, and its higher fat content allows children to stay fuller longer. Unfortunately, misconceptions about certain types of fat or calories have prevented schools from offering whole milk as an option to our children.",
+      "date": "2026-01-14"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

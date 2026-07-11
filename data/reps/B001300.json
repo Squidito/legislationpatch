@@ -5,9 +5,51 @@
   "state": "CA",
   "role": "Representative",
   "district": 44,
-  "bio": "Nanette Díaz Barragán is an American politician and attorney serving as the U.S. representative for California's 44th congressional district since 2017. A member of the Democratic Party, she previously served as an Hermosa Beach city councilmember from 2013 to 2015.",
-  "comments": [],
+  "bio": "Nanette Díaz Barragán is an American politician and attorney serving as the U.S. representative for California's 44th congressional district since 2017. A member of the Democratic Party, she previously served as a Hermosa Beach city councilmember from 2013 to 2015.",
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "Do you know what the price of a gallon of gasoline costs today? It is too much. In Toledo, Ohio, it is $4.56. In Gainesville, Florida, it is $4.43. In Salt Lake City, Utah, it is $4.57. That is too expensive. Do you know what President Trump said about it? He basically said that it is tough luck. He said that he doesn't think about Americans' financial situation. His priorities make that clear. Do you know what is a priority for Trump and Republicans?",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-2347",
+      "billTitle": "Survivor Justice Tax Prevention Act",
+      "stance": "oppose",
+      "text": "President Trump sued the IRS for $10 billion. Now President Trump is settling the lawsuit with the very Justice Department that he controls. What is in the settlement? There is a provision that says the IRS can never investigate or bring claims against the President or his family for past tax issues. Imagine that, Mr. Speaker, imagine the American people getting the same deal. It would never happen. This is corruption. It is special treatment for the President and his family.",
+      "source": "House Floor, May 20, 2026",
+      "granuleTitle": null,
+      "date": "May 20, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Families are struggling to pay for groceries, gas, rent, and healthcare. What are Republicans doing? They are bringing a budget to the floor this week to give ICE and Border Patrol another $70 billion blank check--no guardrails, no oversight, no accountability. Not a single dollar in this bill covers the cost of living for Americans. Not a single dollar makes life more affordable for working families. Instead, Republicans are spending billions to bankroll Donald Trump's cruelty and corruption.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +275,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +422,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +553,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

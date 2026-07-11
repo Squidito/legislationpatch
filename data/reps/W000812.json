@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 2,
   "bio": "Ann Louise Wagner is an American politician and former diplomat serving as the U.S. representative for Missouri's 2nd congressional district since 2013. A member of the Republican Party, she was the United States ambassador to Luxembourg from 2005 to 2009.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1512",
+      "billTitle": "Taiwan Assurance Implementation Act",
+      "stance": "support",
+      "text": "Mr. Speaker, it is undeniable that the People's Republic of China is the single gravest threat to our national security. It is undeniable that China has increased its destabilizing military activities in the Pacific. It is undeniable that China has its sights set on the full- scale invasion of Taiwan. The United States must not waver in our deterrence of this threat and our support for this nation.",
+      "date": "2025-12-02"
+    },
+    {
+      "billId": "119-HR-2478",
+      "billTitle": "Financial Exploitation Prevention Act of 2025",
+      "stance": "neutral",
+      "text": "Far too often, back home in Missouri and across this Nation, our senior citizens are directly targeted for financial fraud. Like Chairman Hill, I, too, hear from scores and scores of constituents in my district who have fallen prey to these horrible, horrible scams and fraudsters. The consequences of this crime extend to millions of Americans, with one out of every five senior investors falling victim to financial fraud and exploitation. Sadly, the problem is only getting more severe.",
+      "date": "2026-06-25"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

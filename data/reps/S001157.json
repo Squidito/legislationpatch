@@ -6,7 +6,29 @@
   "role": "Representative",
   "district": 13,
   "bio": "David Albert Scott was an American politician and businessman who served as the U.S. representative for Georgia's 13th congressional district from 2003 until his death in 2026. Scott's district included all of Rockdale County, as well as portions of Clayton, DeKalb, Gwinnett, Henry, and Newton counties. Before his election to Congress in 2002, Scott served as a Democratic member of both chambers of the Georgia Legislature and operated a small business. From 2023 to 2025, he was the ranking member of the House Agriculture Committee.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HJRES-142",
+      "billTitle": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025",
+      "stance": "neutral",
+      "text": "I move to proceed to Calendar No. 315, H.J. Res. 142.",
+      "date": "2026-02-18"
+    },
+    {
+      "billId": "119-HR-2262",
+      "billTitle": "Flexibility for Workers Education Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, according to last week's Bureau of Labor statistics, 2025 was the worst year for job growth in this country since the last Trump administration. 2025 had 3 months of job losses. Meanwhile, President Biden had 48 consecutive months without a single loss. At this point in President Biden's term, he had already created millions of jobs. At the end of the first year, President Trump has only created a few hundred thousand.",
+      "date": "2026-01-13"
+    },
+    {
+      "billId": "119-HR-5408",
+      "billTitle": "Faster Labor Contracts Act",
+      "stance": "neutral",
+      "text": "could you advise how much time is remaining on both sides. The minority side has 15\\1/2\\ minutes remaining. I believe the majority side has 7 minutes remaining.",
+      "date": "2026-06-10"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-S-1020",
@@ -27,6 +49,13 @@
       "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
       "chamber": "House",
       "date": "2026-04-16",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
       "vote": "Yea"
     },
     {
@@ -177,6 +206,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -301,6 +337,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

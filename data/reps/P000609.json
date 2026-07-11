@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 6,
   "bio": "Gary James Palmer is an American politician serving as the U.S. representative for Alabama's 6th congressional district since 2015. His district includes the wealthier parts of Birmingham, as well as most of its suburbs. Before becoming an elected official, Palmer co-founded and served as the longtime president of the Alabama Policy Institute, a conservative think tank.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-1003",
+      "billTitle": "Lulu’s Law",
+      "stance": "neutral",
+      "text": "I would point out that Lulu and her family are in the gallery observing the debate and will be here for the vote.",
+      "date": "2025-03-12"
+    },
+    {
+      "billId": "119-HR-7084",
+      "billTitle": "Defending American Property Abroad Act of 2026",
+      "stance": "oppose",
+      "text": "This legislation codifies the commonsense principle that foreign nations should not profit from properties stolen from Americans. This bill is needed because for years the Mexican Government has engaged in a deliberate campaign against an American company, Vulcan Materials, headquartered in my district. In 2022, Mexican authorities used military force to shut down Vulcan's lawful operations. Then, in 2024, they took the dramatic step of declaring Vulcan's private property a protected natural area.",
+      "date": "2026-04-02"
+    },
+    {
+      "billId": "119-HR-8467",
+      "billTitle": "ZOMBIE Act",
+      "stance": "support",
+      "text": "every year, hardworking Americans dutifully pay their taxes to support Federal public programs and other priorities. Unfortunately, the Federal Government has too often squandered their money through mismanagement. For example, just last year, the Federal Government lost an estimated $186 billion in improper payments. Six years ago, the COVID-19 pandemic produced what is now often referred to as the greatest theft of taxpayer dollars in history. This is not new.",
+      "date": "2026-06-11"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -5,9 +5,38 @@
   "state": "IL",
   "role": "Representative",
   "district": 12,
-  "bio": "Michael Joseph Bost is an American politician. A member of the Republican Party, he has served as the U.S. representative for Illinois's 12th congressional district since 2015. From 1995 to 2015, Bost was a member of the Illinois House of Representatives, representing the 115th district. Before holding elected office, he was a firefighter.",
-  "comments": [],
+  "bio": "Michael Joseph Bost is an American politician serving as the U.S. representative for Illinois's 12th congressional district since 2015. Previously, Bost was a member of the Illinois House of Representatives, representing the 115th district from 1995 to 2015. Before entering politics, he was a firefighter. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "neutral",
+      "text": "once again, I encourage all of our Members to vote ``yes.'' Mr. Speaker, I thank our veterans. This is the right piece of legislation and something that we need to do, and make sure we do every year, to make sure that those costs of living are covered for our veterans and their survivors.",
+      "date": "2025-07-23"
+    },
+    {
+      "billId": "119-S-201",
+      "billTitle": "ACES Act of 2025",
+      "stance": "neutral",
+      "text": "understand that we at the committee have hearings and will continue to have hearings on things like this many times. We will take the ranking member's comments under advisement. We will set the agenda and figure out what we will have hearings on and what we won't. I appreciate the request. This is why we have these types of hearings, and that is why we have this legislation here today.",
+      "date": "2025-08-14"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

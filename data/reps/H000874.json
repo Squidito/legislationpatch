@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 5,
   "bio": "Steny Hamilton Hoyer is an American politician and retired attorney who has served as the U.S. representative for Maryland's 5th congressional district since 1981. From 2003 to 2023, Hoyer was the second-ranking Democrat in the House of Representatives behind Nancy Pelosi. He served twice as House Majority Leader, from 2007 to 2011 and again from 2019 to 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-755",
+      "billTitle": "Critical Mineral Consistency Act of 2025",
+      "stance": "support",
+      "text": "I want to say that the chairman, who is on the floor, is a good friend of mine and one of, I think, our best leaders in the Congress. I rise, Mr. Speaker, to address the American public, of course, through the Speaker. We are at war, Mr. Speaker. When I rise in support of this bill,  which is a bill on which we all agree, I want to suggest that we also, at this time of crisis, pass something that we all agree on, that we have already voted on, that passed the House. It is legislation which funds Homeland Security.",
+      "date": "2026-03-04"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

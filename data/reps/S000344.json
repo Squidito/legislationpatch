@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 32,
   "bio": "Bradley James Sherman is an American accountant and politician serving as the U.S. representative for California's 32nd congressional district. A member of the Democratic Party, he first entered Congress in 1997. Sherman represented California's 24th congressional district for three terms, California's 27th congressional district for five terms, and California's 30th congressional district for five terms. His district includes parts of the San Fernando Valley in Los Angeles County and Simi Valley in Ventura County.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-910",
+      "billTitle": "Taiwan Non-Discrimination Act of 2025",
+      "stance": "support",
+      "text": "H.R. 910 is a bipartisan bill that requires that the United States use its vote and its voice at the IMF to support Taiwan's membership. Taiwan has been an excellent contributor to the global economy and should not be absent from organizations such as the IMF. Congress should support this bill, and I urge my Republican colleagues not only to urge that Donald Trump carry this bill out but also support the people of Taiwan and support the role of the IMF as we go forward.",
+      "date": "2025-02-04"
+    },
+    {
+      "billId": "119-HR-224",
+      "billTitle": "Disabled Veterans Housing Support Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, I join with the gentleman in his comments about how we need to protect our veterans from the ill-considered actions of President Trump and, I was about to say Secretary Musk, whatever he is. I, of course, join with Mr. Vargas in welcoming our new chair of the Financial Services Committee. I want to focus on the bill at hand, actually two bills at hand. We are dealing with this bill now and about four other bills will go by, and then we will deal with the companion legislation.",
+      "date": "2026-01-20"
+    },
+    {
+      "billId": "119-HR-2808",
+      "billTitle": "Homebuyers Privacy Protection Act",
+      "stance": "oppose",
+      "text": "I yield myself the balance of my time. As I have discussed, H.R. 2808 is an important positive step to strengthen data privacy for consumers and curb the harmful practice of trigger leads, protecting consumers from entities that they didn't want to do business with, never sought to do business with, finding out that they are applying for a mortgage and then harassing them with a host of texts and calls, et cetera.",
+      "date": "2025-09-05"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +547,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

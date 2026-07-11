@@ -6,7 +6,17 @@
   "role": "Senator",
   "district": null,
   "bio": "Christopher Van Hollen Jr. is an American attorney and politician serving as the senior United States senator from Maryland, a seat he has held since 2017. A member of the Democratic Party, he served as the U.S. representative for Maryland's 8th congressional district from 2003 to 2017 and as a Maryland state senator from 1995 to 2003.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "oppose",
+      "text": "I rise today to oppose Kevin Warsh's nomination to serve as Chairman of the Federal Reserve. I am not persuaded, based on his record and his testimony at his hearing before the Senate Banking Committee, that he has demonstrated the independence or the judgment this position requires. The Federal Reserve has a statutory dual mandate: maximum employment to support jobs and price stability to avoid excessive inflation.",
+      "source": "Senate Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Chris_Van_Hollen"
 }

@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 6,
   "bio": "Juan Ciscomani III is an American politician serving as the U.S. representative for Arizona's 6th congressional district since 2023. A Republican, he was a senior adviser to former Governor Doug Ducey and vice chair of the Arizona-Mexico Commission. Ciscomani was chosen to deliver the Republican response to the 2023 State of the Union Address in Spanish.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "The number five Willcox Cowgirls defeated the number two Mohave Accelerated in Bullhead City with a score of 5-3 to claim the championship and finish the season with an impressive 16-3 record. This victory marks the Cowgirls' first State softball title in 16 years, an accomplishment certainly to be celebrated. This championship didn't come easy, though. On their way to the game, the team's bus broke down, but the Cowgirls didn't let this setback get in the way of the most important day of the season.",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

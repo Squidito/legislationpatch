@@ -5,9 +5,51 @@
   "state": "OH",
   "role": "Representative",
   "district": 9,
-  "bio": "Marcia Carolyn Kaptur is an American politician serving as the U.S. representative for Ohio's 9th congressional district since 1983. A member of the Democratic Party, she is the longest-serving woman in congressional history and has served as the dean of Ohio's congressional delegation since 2009. Her district stretches across northwestern Ohio along the southern shore of Lake Erie and includes parts of Toledo and surrounding communities.",
-  "comments": [],
+  "bio": "Marcia Carolyn Kaptur is an American politician serving as the U.S. representative for Ohio's 9th congressional district since 1983. Her district stretches across northwestern Ohio along the southern shore of Lake Erie and includes parts of Toledo and surrounding communities. She is a member of the Democratic Party.",
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "oppose",
+      "text": "They have returned home after the longest aircraft carrier deployment since the Vietnam war. For nearly 300 days, nearly 11 months, these Americans served halfway around the world, missing their families, carrying out every mission asked of them with discipline, courage, and professionalism. They endured combat operations, dangerous onboard conditions, and extraordinary strain on both ship and crew. We must also recognize the growing burden these extended operations place upon our sailors, our military families, and our Nation.",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
+    },
+    {
+      "billId": "119-HR-7257",
+      "billTitle": "SECURE Grid Act",
+      "stance": "oppose",
+      "text": "The Lincoln Memorial Reflecting Pool requires a civil engineering plan. First, replace the fractured subterranean pipes: Underground, the pool's 12-inch supply and return lines are deteriorated. They leak an estimated 16 million gallons of water every year. The Mall site actually sits in a floodplain related to drainage into the Potomac River. Water pressure pushes upward against the floor, forcing paint and sealant to blister, pop, and peel off. Second, stabilize the lateral soil movement.",
+      "source": "House Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "This past weekend, former New Jersey Congressman Frank Guarini passed away at the ripe age of 101 years old, just 2 months shy of attaining his 102nd birthday. Frank was an American patriot, World War II decorated Pacific Navy veteran, successful lawyer, and business leader. His milestone life included service in this House from 1979 to 1993.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +275,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +422,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Present"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +553,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

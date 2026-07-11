@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 3,
   "bio": "Jeffrey Stephen Hurd is an American politician and lawyer from Colorado. A Republican, he is the member for Colorado's 3rd congressional district in the United States House of Representatives.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-3857",
+      "billTitle": "Snow Water Supply Forecasting Reauthorization Act of 2025",
+      "stance": "neutral",
+      "text": "this bill reauthorizes a vital program that helps water managers promptly and effectively plan for and respond to drought.",
+      "date": "2026-06-10"
+    },
+    {
+      "billId": "119-HR-2600",
+      "billTitle": "ASCEND Act",
+      "stance": "support",
+      "text": "This bill builds on a model that already works. In 2017, NASA launched the Commercial Small Satellite Data Acquisition Pilot Program to test whether commercially available Earth observation data could support NASA's scientific missions. The results were clear: Participating scientists found the data reliable, valuable, and highly effective across a broad range of research applications. The ASCEND Act takes that successful pilot and makes it permanent.",
+      "date": "2026-02-24"
+    },
+    {
+      "billId": "119-S-1020",
+      "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
+      "stance": "neutral",
+      "text": "I begin by thanking my Republican colleagues Representatives Lee, Maloy, and Kennedy and my Democratic colleagues Representatives Ansari and Ocasio-Cortez for their partnership on this bipartisan legislation. At a time when Americans are often told Congress cannot work together across the aisle, this bill is proof that we still can. Geothermal energy represents one of the most promising opportunities in America's energy future.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +548,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 1,
   "bio": "Frank John Mrvan is an American politician who has served as the U.S. representative for Indiana's 1st congressional district since 2021. From 2005 until 2021, he served as the township trustee for North Township, Indiana. Mrvan is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-5408",
+      "billTitle": "Faster Labor Contracts Act",
+      "stance": "support",
+      "text": "The men and women who pour our steel and power our grid built the middle class with a union card in their pocket. This bill makes sure the next generation of workers can earn one without waiting to be heard for months, years, or decades. I rise today to express my strong support for H.R. 5408, the Faster Labor Contracts Act. My good friend, the chairman of the Education and Workforce Committee, mentioned this administration and how much they like the working public, working men and women.",
+      "date": "2026-06-10"
+    },
+    {
+      "billId": "119-S-2393",
+      "billTitle": "Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act",
+      "stance": "oppose",
+      "text": "I rise today in solidarity with the hardworking men and women of the United Steelworkers who have been locked out of their jobs for almost 2 months at the British Petroleum facility in Whiting, Indiana. Since day one under the administration's Project 2025, we have seen attacks against organized labor, the gutting of the Department of Labor, and a National Labor Relations Board that only sides with corporate interests.",
+      "source": "House Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

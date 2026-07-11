@@ -6,7 +6,26 @@
   "role": "Senator",
   "district": null,
   "bio": "Christopher Philip Yorke Murphy is a British politician.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "stance": "support",
+      "text": "I am glad to join Senator Kaine on the floor today in support of his resolution. I have admittedly lost count on how many of these resolutions we have brought before the body. This must be our seventh, eighth, or ninth. That is extraordinary, duplicative, redundant, but necessary because, at least in my time in the Senate, never before has this country engaged in such a significant, consequential, deadly, and costly military operation overseas without the consent of the people and without the consent of Congress.",
+      "source": "Senate Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HR-6431",
+      "billTitle": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "stance": "neutral",
+      "text": "Colleagues, over the last year and a half, our President Donald Trump has turned the White House into a 24-7 corruption operation. This is a national crisis, and we should start acting like it. The President's goal is to engage in so much corruption, so much self-enrichment--to hand out so many favors to his friends, his family, and his political allies--that it just becomes the pitter-patter of rain. It is normal. It is constant. It is never-ending.",
+      "source": "Senate Floor, Jun 23, 2026",
+      "granuleTitle": null,
+      "date": "Jun 23, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Christopher_Murphy_(British_politician)",
   "voteHistory": [

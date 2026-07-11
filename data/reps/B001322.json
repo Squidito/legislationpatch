@@ -5,9 +5,42 @@
   "state": "WA",
   "role": "Representative",
   "district": 5,
-  "bio": "Michael James Baumgartner is an American politician and former diplomat currently serving as the U.S. representative from Washington's 5th congressional district, a post he has held since 2025. Baumgartner, a Republican, previously served as the 28th Spokane County treasurer and as a member of the Washington State Senate, representing the 6th district from 2011 to 2019 and was his party's nominee in the 2012 election for the United States Senate, unsuccessfully challenging Democratic incumbent Maria Cantwell.",
-  "comments": [],
+  "bio": "Michael James Baumgartner is an American politician and former diplomat serving as the U.S. representative from Washington's 5th congressional district since 2025. Previously, he served as the 28th Spokane County treasurer from 2019 to 2025 and as a member of the Washington State Senate from 2011 to 2019, representing the 6th district. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "I believe that every Member of Congress claims to have the most beautiful and wonderful district in the country, but I know it with the Fifth District of  Washington State and the good people of eastern Washington. Over the last break, I had the opportunity to do a 12-county and 12- day whistle-stop tour across my district, and I want to share with the good Members of Congress and the people of America what I learned.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-6644",
+      "billTitle": "21st Century ROAD to Housing Act",
+      "stance": "neutral",
+      "text": "For one full century, the venerable post in downtown Clarkston has stood as a sanctuary of service, transforming the heavy, unspoken burdens of global conflict into a legacy of enduring local fellowship. Mr. Speaker, it is deeply fitting that we celebrate this centennial milestone precisely as our Nation marks its 250th anniversary of American independence. The history of VFW Post 1443 is a microcosm of the grand tapestry of American freedom. It bridges the gap between the revolutionary ideals of 1776 and modern preservation of liberty.",
+      "source": "House Floor, Jun 3, 2026",
+      "granuleTitle": null,
+      "date": "Jun 3, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +543,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

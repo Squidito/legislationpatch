@@ -5,9 +5,56 @@
   "state": "CA",
   "role": "Representative",
   "district": 40,
-  "bio": "Young Oak Kim is a South Korean-born American politician and businesswoman serving as the U.S. representative for California's 40th congressional district, previously representing the 39th congressional district from 2021 to 2023. Her district includes northern parts of Orange County. In the 2020 United States House of Representatives elections, Kim, Michelle Steel, and Marilyn Strickland became the first Korean-American women elected to the United States Congress.",
-  "comments": [],
+  "bio": "Young Oak Kim is a South Korean–born American politician and businesswoman serving as the U.S. representative for California's 40th congressional district, previously representing the 39th congressional district from 2021 to 2023. Her district includes northern parts of Orange County. She is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-1479",
+      "billTitle": "Hotel Fees Transparency Act of 2025",
+      "stance": "neutral",
+      "text": "Hidden fees on short-term lodging, whether it is at hotels, motels, inns, resorts, or rentals, make it harder for families to plan for a trip. Too often, what looks like an affordable overnight stay online turns out to be far more expensive once these deceptive charges are added. Additionally, the way these prices are advertised are fragmented and not uniform. Americans deserve price transparency so that they can appropriately budget for their travels.",
+      "date": "2025-02-21"
+    },
+    {
+      "billId": "119-HR-910",
+      "billTitle": "Taiwan Non-Discrimination Act of 2025",
+      "stance": "neutral",
+      "text": "I would also like to thank Representative Green of Texas for co-leading H.R. 910 and making this a bipartisan effort. This bill is simple. It requires the Treasury Department to advocate for Taiwan to join the International Monetary Fund, or IMF. Unfortunately, China has consistently blocked Taiwan's participation in international forums, including IMF. China pursues these tactics because they know that financial security is just as important as military security.",
+      "date": "2025-02-04"
+    },
+    {
+      "billId": "119-HR-7148",
+      "billTitle": "Consolidated Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "This resolution sends a very clear message: The United States will not be silent while the Chinese Communist Party continues to detain, torture, and disappear innocent people, including family members of American citizens. These individuals are not criminals. They are pastors, doctors, publishers, and brave voices who have been targeted simply because they threaten the CCP's fabricated narrative and grip on power.",
+      "source": "House Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    },
+    {
+      "billId": "119-HR-1329",
+      "billTitle": "Smithsonian American Women's History Museum Act",
+      "stance": "neutral",
+      "text": "Ursula Ellen Kennedy made history as the first woman elected to the Tustin City Council and the first woman to serve as mayor of Tustin. At a time when few women held public office, Ursula stepped forward to serve the city she loved. In 1978, she was elected to the Tustin City Council, and 6 years later, her colleagues chose her to serve as Tustin's mayor. However, her story did not begin in city hall. While raising her family, she became a writer, publishing more than 500 articles and a book of essays.",
+      "source": "House Floor, Jun 29, 2026",
+      "granuleTitle": null,
+      "date": "Jun 29, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +280,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +427,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +557,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

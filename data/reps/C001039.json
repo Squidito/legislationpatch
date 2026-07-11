@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 3,
   "bio": "Kathryn Christine Cammack is an American politician serving as the U.S. representative for Florida's 3rd congressional district. A member of the Republican Party, Cammack previously served as deputy chief of staff to her predecessor, Representative Ted Yoho, who retired in 2020. Her congressional district covers a twelve-county area that includes much of North Central Florida.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1664",
+      "billTitle": "Deploying American Blockchains Act of 2025",
+      "stance": "neutral",
+      "text": "This bill is about far more than emerging technology. It is about securing America's future, economically, strategically, and technologically, in an increasingly digital world. Blockchain technology is not a passing trend. It is a foundational innovation that is reshaping how we think about security, identity, data integrity, and commerce. From supply chains and finance to healthcare and identity management, blockchain is transforming the way our systems function. Mr. Speaker, we are at a crossroads.",
+      "date": "2025-02-27"
+    },
+    {
+      "billId": "119-HR-1329",
+      "billTitle": "Smithsonian American Women's History Museum Act",
+      "stance": "neutral",
+      "text": "I appreciate my colleague from the great State of Wisconsin for his leadership on this issue. As you can see, I have my daughter, Augusta Dair, here with me today because I wanted her to be a witness to this incredible moment in our Nation's history where we stood up for all of the women who have helped build this country and told their stories. That is what this museum is. It is not a political statement. It is a promise, a promise that the women who came before us will not be erased, will not be minimized, and will not be forgotten.",
+      "date": "2026-05-21"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, this week, during National Police Week, we honor the brave men and women in law enforcement who put on the badge every single day and run toward danger while others are running away. These officers respond to violent crimes, overdoses, domestic disputes, natural disasters, and unimaginable tragedies. They carry burdens that most Americans will never fully understand.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +548,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

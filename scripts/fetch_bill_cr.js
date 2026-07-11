@@ -122,13 +122,25 @@ function resolveRepInfo(allCapsName, chamber = '', ofStateName = '') {
 }
 
 // --- Pattern-based speaker extraction ---
-// CR format: "Mr. LASTNAME." or "Mr. LASTNAME of State." (all-caps last name is distinctive)
-const SPEAKER_RE = /\b(Mr\.|Ms\.|Mrs\.|Dr\.)\s+([A-Z]{2,}(?:\s+[A-Z]{2,})?(?:\s+of\s+[A-Za-z][a-z]+(?:\s+[A-Za-z][a-z]+)*)?)\./g;
+// CR format: "Mr. LASTNAME." or "Mr. LASTNAME of State." (all-caps last name is distinctive).
+// Surname tokens must contain a run of 2+ capitals (so title-case prose references like
+// "Mr. Connolly" never match) but allow the CR's mixed-case prefixes (McGARVEY, DeGETTE,
+// LaMALFA), hyphenated names (MILLER-MEEKS, DIAZ-BALART), and particles (De La CRUZ).
+// The old all-caps-only pattern missed those speakers entirely, so their speeches were
+// absorbed into the PREVIOUS speaker's body — producing mixed-speaker misattributions.
+const SPEAKER_WORD = "(?:Mc|Mac|De|Des|Di|Da|Du|La|Le|Van|Von|O'|D')?[A-Z]{2,}(?:[-'](?:Mc|Mac)?[A-Z]{2,})*";
+const SPEAKER_RE = new RegExp(
+    "\\b(Mr\\.|Ms\\.|Mrs\\.|Dr\\.)\\s+" +
+    "((?:(?:De|Di|Da|Du|La|Le|Van|Von|Der|Den|Mc|Mac|St\\.)\\s+){0,2}" + SPEAKER_WORD +
+    "(?:\\s+" + SPEAKER_WORD + ")?" +
+    "(?:\\s+of\\s+[A-Za-z][a-z]+(?:\\s+[A-Za-z][a-z]+)*)?)\\.",
+    'g'
+);
 
 // Titles that indicate a presiding officer, not a member giving a speech
 const SKIP_NAME_WORDS = ['PRESIDING', 'PRESIDENT', 'CHAIR', 'ACTING', 'SPEAKER', 'CLERK', 'SECRETARY', 'TEMPORE'];
 
-const PROCEDURAL_RE = /^(?:(?:madam|mr\.?)\s+(?:speaker|president|chair),\s*)?(?:i yield|i claim the time|i do not oppose|i have no objection|i ask unanimous consent|i ask for the yeas and nays|i demand the yeas and nays|on that i demand|by direction of the committee|for the purpose of debate|pursuant to (?:the order|section|house resolution|senate rule|clause)|i was unable to vote|i was not recorded|i was not present|i was unavoidably absent|had i been present|i had a \w+ flight|will the gentleman|unanimous consent|point of order|quorum call|i move to suspend|i move to reconsider|i suggest the absence|i ask that)/i;
+const PROCEDURAL_RE = /^(?:(?:madam|mr\.?)\s+(?:speaker|president|chair),\s*)?(?:i yield|i claim the time|i do not oppose|i have no objection|i ask unanimous consent|i ask for the yeas and nays|i demand the yeas and nays|on that i demand|by direction of the committee|for the purpose of debate|pursuant to (?:the order|section|house resolution|senate rule|clause)|i was unable to vote|i was unavailable to vote|i was absent|i was not recorded|i was not present|i was unavoidably absent|had i been present|i had a \w+ flight|will the gentleman|unanimous consent|point of order|quorum call|i move to suspend|i move to reconsider|i move to proceed|i move that|i suggest the absence|i ask that|i have (?:a|an) (?:motion|amendment)[^.]{0,40} at the desk|i send (?:a|an) [^.]{0,30}(?:motion|resolution) to the desk|i announce that|i demand a recorded vote|i include in the record|there being no objection|i know of no further debate|i have no statement|may i inquire|could you advise|i rise to raise a question of the privileges)/i;
 
 // Procedural phrases that disqualify a quote if they appear ANYWHERE in the
 // final displayed excerpt (not just the opener). Mirrors validate-batch.js's
@@ -150,6 +162,30 @@ const DISPLAY_PROCEDURAL = [
     /\bfor the purpose of debate\b/i,
     /\bi yield back the balance of my time\b/i,
     /\breserve the balance of my time\b/i,
+    // Classes found in the 2026-07-10 quote review (motions, vote corrections,
+    // absence announcements, clerk/chair narration leaking into speech bodies):
+    /\bi have (?:a|an) (?:motion|amendment)(?: to \w+)? at the desk\b/i,
+    /\bthe material previously referred to\b/i,
+    /\bmoves? to recommit the bill\b/i,
+    /\bi move that the (?:house|committee|senate)\b/i,
+    /\bi move to proceed\b/i,
+    /\bcloture motion\b/i,
+    /\bnecessarily absent\b/i,
+    /\bi announce that the senator\b/i,
+    /\bmistakenly (?:voted|recorded)\b/i,
+    /\bon roll call no\b/i,
+    /\bhad i recorded my vote\b/i,
+    /\bi was absent from the chamber\b/i,
+    /\ba recorded vote (?:was ordered|has been demanded)\b/i,
+    /\bi demand a recorded vote\b/i,
+    /\bthe question is on\b/i,
+    /\bhow much time (?:i have |is )?remaining\b/i,
+    /\bi know of no further debate\b/i,
+    /\bthere being no objection\b/i,
+    /\bthe committee was discharged\b/i,
+    /\bi have no statement to make\b/i,
+    /\bquestion of the privileges of the house\b/i,
+    /\bthe clerk (?:will )?(?:read|designate|redesignate)\b/i,
 ];
 
 // Filler sentence patterns — applied to every sentence in the quote, regardless of position.
@@ -168,6 +204,18 @@ const FILLER_SENTENCE_RE = [
     /^(?:And\s+)?I\s+(?:will\s+start|will\s+begin)\s+by\s+(?:acknowledg|recogniz|thank|commend)/i,
     /^(?:And\s+)?I\s+also\s+want\s+to\s+(?:commend|thank|congratulat|recogniz)/i,
     /^Before\s+I\s+(?:begin|speak|continue),?\s+I\s+(?:want\s+to\s+|would\s+like\s+to\s+)?(?:thank|recognize|acknowledge)/i,
+    // Yield-of-time sentences anywhere in the quote (classic trailing artifact:
+    // "Mr. Speaker, I yield 2 minutes to the gentleman from ... (Mr. X).")
+    /^(?:(?:Madam|Mr\.?)\s+(?:Speaker|President|Chair(?:man|woman)?),?\s+)?I\s+yield\s+\d+\s+minutes?\s+to\b/i,
+    /^(?:(?:Madam|Mr\.?)\s+(?:Speaker|President|Chair(?:man|woman)?),?\s+)?I\s+yield\s+such\s+time\s+as\b/i,
+    /^(?:And\s+)?I\s+yield\s+(?:you\s+)?some\s+time\b/i,
+    /^I\s+am\s+reclaiming(?:\s+my\s+time)?\.?\s*$/i,
+    // Record insertions and floor housekeeping
+    /^(?:I|We)\s+(?:also\s+)?include\s+in\s+the\s+Record\b/i,
+    /^There\s+being\s+no\s+objection\b/i,
+    /^I\s+have\s+no\s+further\s+requests\s+for\s+time\b/i,
+    /^I\s+have\s+no\s+more\s+speakers\b/i,
+    /^I\s+demand\s+a\s+recorded\s+vote\b/i,
     // Closing statements
     /^I\s+have\s+no\s+further\s+speakers/i,
     /^I\s+(?:have\s+no\s+)?(?:further\s+)?speakers?,?\s+and\s+I\s+(?:yield|reserve)/i,
@@ -211,10 +259,10 @@ function stripFillerSentences(text) {
     const cleaned = text.replace(SALUTATION_RE, '');
     // Temporarily neutralise title abbreviations so "Mr. Smith" doesn't get split
     // into ["Mr.", "Smith"] by the sentence boundary regex.
-    const TITLES = /\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr)\.\s+([A-Z])/g;
+    const TITLES = /\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)\.\s+([A-Z])/g;
     const guarded   = cleaned.replace(TITLES, '$1·$2');
     const sentences = guarded.split(/(?<=[a-z0-9][.!?])\s+(?=[A-Z])/)
-        .map(s => s.replace(/\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr)·([A-Z])/g, '$1. $2'));
+        .map(s => s.replace(/\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)·([A-Z])/g, '$1. $2'));
     const kept = sentences.filter(s => {
         const t  = s.trim();
         const ts = t.replace(SALUTATION_RE, '');
@@ -228,7 +276,18 @@ function stripFillerSentences(text) {
 
 function detectStance(text) {
     const t = text.toLowerCase();
-    const hasOppose = /\b(oppose|against|vote no|reject|dangerous|harmful|cannot support|will not support|urge.*defeat|vote against)\b/.test(t);
+    // Explicit first-person declarations about THIS bill take priority — the keyword
+    // fallback below misfires on incidental phrasing ("harassment campaigns against
+    // American companies" is not opposition to the bill; "strong opposition" contains
+    // no bare "oppose" token, so it used to read as neutral).
+    const explicitOppose  = /\b(?:i|we)\s+(?:strongly\s+|firmly\s+|respectfully\s+)?oppose\s+(?:this|the)\s+(?:bill|resolution|legislation|measure|act)\b/.test(t)
+        || /\b(?:rise|stand|here)[^.!?]{0,40}\bin\s+(?:strong\s+|firm\s+|fierce\s+)?opposition\b/.test(t)
+        || /\b(?:voice|voicing|express(?:ing)?|register(?:ing)?)\s+(?:my\s+|our\s+)?(?:strong\s+|firm\s+)?opposition\s+to\b/.test(t);
+    const explicitSupport = /\b(?:i|we)\s+(?:strongly\s+|proudly\s+|fully\s+)?support\s+(?:this|the)\s+(?:bill|resolution|legislation|measure|act)\b/.test(t)
+        || /\b(?:rise|stand|here)[^.!?]{0,40}\bin\s+(?:very\s+)?(?:strong\s+|proud\s+|full\s+)?support\s+of\b/.test(t);
+    if (explicitOppose && !explicitSupport) return 'oppose';
+    if (explicitSupport && !explicitOppose) return 'support';
+    const hasOppose = /\b(?:(?:i|we)\s+oppose|oppose\s+(?:this|the)\s+(?:bill|legislation|resolution|measure|act)|(?:vote|voting|voted|stand|standing|am|are|is)\s+against|against\s+(?:this|the)\s+(?:bill|legislation|resolution|measure|act)|vote\s+no|reject\s+(?:this|the)|wrongheaded|dangerous|harmful|harm\b|cannot\s+support|will\s+not\s+support|urge.*defeat)\b/.test(t);
     const negated   = /\b(?:do(?:es)?|did|will|would|shall|have|has)\s+not\s+oppose\b|\bnot\s+oppose\b|\bno\s+opposition\b/.test(t);
     if (hasOppose && !negated) return 'oppose';
     if (/\b(support|favor|proud|urge.*pass|commend|pleased|important step|must pass|vote yes|vote for)\b/.test(t)) return 'support';
@@ -237,10 +296,10 @@ function detectStance(text) {
 
 function bestExcerpt(text, maxLen = 550) {
     // Protect title abbreviations before splitting so "Mr. Smith" isn't split mid-name.
-    const TITLES = /\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr)\.\s+([A-Z])/g;
+    const TITLES = /\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)\.\s+([A-Z])/g;
     const guarded = text.replace(TITLES, '$1·$2');
     const parts = guarded.split(/(?<=[a-z0-9][.!?])\s+(?=[A-Z])/)
-        .map(s => s.replace(/\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr)·([A-Z])/g, '$1. $2'));
+        .map(s => s.replace(/\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)·([A-Z])/g, '$1. $2'));
     let result = '';
     for (const s of parts) {
         if (result && result.length + 1 + s.length > maxLen) break;
@@ -308,7 +367,8 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '', chamber = '
                                 .replace(/\[\[Page [^\]]+\]\]/g, '')        // strip [[Page H3113]] artifacts
                                 .replace(/\{time\}\s*\d+\s*/g, '')         // strip {time} 1420 artifacts
                                 .replace(/\s*(?:The Clerk (?:read|will designate) the (?:title|bill)|The text of the bill is as follows|Be it enacted by the Senate).*/i, '')
-                                .replace(/\s*The (?:SPEAKER|CHAIR|PRESIDENT|PRESIDING OFFICER)(?:\s+pro\s+tempore)?\.\s[^.!?]+[.!?]/g, '')
+                                .replace(/\s*_{8,}.*$/, '')                // strip cross-granule "____ === Congressional Record…" separators
+                                .replace(/\s*The (?:Acting\s+)?(?:SPEAKER|CHAIR|CHAIRMAN|PRESIDENT|PRESIDING OFFICER)(?:\s+pro\s+tempore)?(?:\s*\([^)]*\))?\.\s[^.!?]+[.!?]/g, '')
                                 .replace(/\s*The (?:Chair|Speaker|President)\s+(?:recognizes|yields|directs)\s[^.!?]+[.!?]/g, '')
                                 .trim();
 
@@ -350,11 +410,18 @@ function extractQuotesFromCR(crText, billType = '', billNumber = '', chamber = '
         seenNames.add(nameKey);
 
         const displayLast = namePart.split(/\s+/).map(w =>
-            w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+            w.split('-').map(seg => {
+                const pm = seg.match(/^(Mc|Mac|O'|D')(.+)$/);   // CR keeps these prefix letters lowercase
+                if (pm) return pm[1] + pm[2].charAt(0).toUpperCase() + pm[2].slice(1).toLowerCase();
+                return seg.charAt(0).toUpperCase() + seg.slice(1).toLowerCase();
+            }).join('-')
         ).join(' ');
         const displayName = `${prefix} ${displayLast}`;
 
         const repInfo    = resolveRepInfo(namePart, chamber, ofStateName);
+        // HARD RULE (docs/CR-QUOTES.md): never ship a quote that can't be attributed to
+        // a real member — an unresolvable surname is a misparse or a non-member officer.
+        if (!repInfo.bioguideId) continue;
         const substantive = stripFillerSentences(stripped);
         if (!substantive) continue;  // all sentences were filler
         // Capitalize the first letter: stripping the salutation ("Mr. President, this is…")
@@ -414,6 +481,9 @@ function extractViewsQuotes(reportText) {
         // Skip bodies starting with "[" (report header artifacts) or formal letter headers
         if (/^\[/.test(body)) continue;
         if (/^Congress\s+of\s+the\s+United\s+States|^Dear\s+\w|^To\s+(?:Whom|the\s+Chair)/i.test(body)) continue;
+        // Rule-citation boilerplate ("Pursuant to the provisions of clause 3(a)(1) of
+        // House rule XIII…") is a views-section header, not a member's argument.
+        if (/^Pursuant\s+to\b/i.test(body)) continue;
         if (!body || body.split(/\s+/).length < 20) continue;
 
         let stance;

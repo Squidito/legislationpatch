@@ -6,8 +6,59 @@
   "role": "Representative",
   "district": 16,
   "bio": "George Stephen Latimer is an American politician serving as the U.S. representative for New York's 16th congressional district since 2025. He is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8469",
+      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "stance": "neutral",
+      "text": "I rise today to salute the men of The American Legion Post 128 in Rye, New York, for their patriotism and their true sense of civic duty. This post, comprised of veterans of military service, is just one part of The American Legion Department of New York, and it is led by Commander Fred de Barros and Adjutant Tim Moynihan. Their commitment to American values will be on display this Memorial Day weekend as they host the annual parade and ceremony on the Village Green in Rye.",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
+    },
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "neutral",
+      "text": "Under the able leadership of Maryann Nielsen in the Port Chester Senior Community Center in Village Hall, the Port Chester Seniors serves hundreds of seniors annually with a daily nutrition program at lunchtime 6 days a week, along with activities and programs to engage seniors of all ages, including on Saturday, which is unique among many other programs. There are fitness classes from tai chi to chair yoga, mental fitness programs, a variety of board games--mah-jongg; bridge; along with the classic senior staple, bingo.",
+      "source": "House Floor, Jun 4, 2026",
+      "granuleTitle": null,
+      "date": "Jun 4, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "UFOs; the Gulf of America; water pressure in your shower; shrimp farms; pardoning insurrectionist rioters and providing a way for them to be paid for their behavior; the blue water color of the reflecting pool on The Mall; and building an MMA stadium on the lawn of the White House and a big, beautiful ballroom, too, that America doesn't need--these aren't topics of bizarre nightmares. They are some of the things that the White House and the congressional majority have prioritized in the last 18 months. What should we be doing?",
+      "source": "House Floor, Jun 10, 2026",
+      "granuleTitle": null,
+      "date": "Jun 10, 2026"
+    },
+    {
+      "billId": "119-HJRES-133",
+      "billTitle": "Requesting the Secretary of the Interior to authorize unique and one-time arrangements for displays on the National Mall and the Washington Monument during the period beginning on December 31, 2025, and ending on January 5, 2026",
+      "stance": "neutral",
+      "text": "I rise today as students around the country celebrate well-earned graduations from high school and college and prepare to enter the workforce. I remember when I graduated from Fordham University, a long time ago, you almost were guaranteed a job--the jobs were plentiful--that would allow you to make ends meet. Now, the percentage of graduates with entry-levels jobs in their field was only 30 percent last year and represents an unsustainable decline.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +284,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +431,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +562,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

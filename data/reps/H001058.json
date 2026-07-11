@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 4,
   "bio": "William Patrick Huizenga is an American politician serving as a U.S. representative from Michigan since 2011, representing the state's 4th congressional district since 2023. A member of the Republican Party, Huizenga served in the Michigan House of Representatives from 2003 to 2009. His district covers much of Southwestern Michigan, including Kalamazoo, Battle Creek, and Holland. He previously represented the 2nd district from 2011 to 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7757",
+      "billTitle": "KIDS Act",
+      "stance": "neutral",
+      "text": "Roughly 16,000 young adults age out of the child welfare system annually, and far too many of them face significant challenges in reaching their full potential. Tragically, nearly 35 percent, a full third of these young adults, also experience homelessness by age 21. To address these challenges and to improve outcomes for children and young adults across America, this week the House passed H.R. 7432, the Fostering the Future Act. This bipartisan legislation equips young adults with the tools to succeed and the skills for in-demand jobs.",
+      "source": "House Floor, May 20, 2026",
+      "granuleTitle": null,
+      "date": "May 20, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +534,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

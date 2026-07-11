@@ -6,8 +6,50 @@
   "role": "Representative",
   "district": 6,
   "bio": "Glenn Sholes Grothman is an American attorney and politician serving as the U.S. representative from Wisconsin's 6th congressional district. A member of the Republican Party, he was first elected to his seat in 2014.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8364",
+      "billTitle": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "stance": "oppose",
+      "text": "National Police Week serves as an important reminder of the brave law enforcement officers who put their lives on the line every day to protect our communities. During this week, we honor the officers who answer the call knowing that they may face dangerous and unpredictable situations in service to our community. Their courage, sacrifice, and dedication deserve not only our gratitude, but our continued support.",
+      "source": "House Floor, May 13, 2026",
+      "granuleTitle": null,
+      "date": "May 13, 2026"
+    },
+    {
+      "billId": "119-HR-998",
+      "billTitle": "Internal Revenue Service Math and Taxpayer Help Act",
+      "stance": "support",
+      "text": "Mr. Speaker, hearing the comments from a lot of my colleagues here, I will repeat a quote that has been put over and over again on the news the last couple of days. It is a Ronald Reagan quote: ``I'm from the government, and I'm here to help.'' That is never going to happen. Okay. Now I am here to support the Taxpayer Due Process Enhancement Act.",
+      "source": "House Floor, May 19, 2026",
+      "granuleTitle": null,
+      "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HR-8463",
+      "billTitle": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
+      "stance": "neutral",
+      "text": "It is a bipartisan bill that strengthens fraud prevention efforts across the Federal Government. Americans work hard for their money. They pay their taxes, follow the rules, and expect the Federal Government to treat every dollar with care. Unfortunately, fraud in Federal programs remains far too common, and too often it could have been prevented. The problem is not only the bad actors who try to steal from the taxpayer.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +275,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +422,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +552,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

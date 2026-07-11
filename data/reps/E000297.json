@@ -5,9 +5,38 @@
   "state": "NY",
   "role": "Representative",
   "district": 13,
-  "bio": "Adriano de Jesús Espaillat Rodríguez is a Dominican-American politician who has served as the U.S. representative for New York's 13th congressional district since 2017. He is the first Dominican American and first formerly undocumented immigrant to serve in Congress. He previously served in the New York State Senate and the New York State Assembly.",
-  "comments": [],
+  "bio": "Adriano de Jesús Espaillat Rodríguez is a Dominican-American politician who has served as the U.S. representative for New York's 13th congressional district since 2017. He is the chair of the Congressional Hispanic Caucus, as well as the first Dominican-American and first formerly undocumented immigrant to serve in Congress. Previously, he served in the New York State Senate from 2011 to 2016 and in the New York State Assembly from 1997 to 2010; he is the first Dominican-born American elected to a state house in the United States. He is a member of the Democratic Party.",
+  "comments": [
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "stance": "neutral",
+      "text": "In fact, the provisions in this bill to penalize those who have committed violent crimes are already included in the penal code. So this legislation is redundant. What it does do, in fact, is it would force ICE to treat minor offenses as violent ones. That includes, of course, a child caught stealing a candy bar from Walmart, someone who jumps the turnstile in a New York City subway or takes a box of cornflakes because they otherwise have no way to make ends meet.",
+      "date": "2025-01-29"
+    },
+    {
+      "billId": "119-HR-5371",
+      "billTitle": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
+      "stance": "neutral",
+      "text": "Today's backroom deal does nothing to stop 20 million Americans who will see their healthcare premiums double or triple. It does absolutely nothing to stop provisions in the reconciliation package that will strip 15 million people of their Medicaid coverage. These cuts will have a resounding impact on individuals and the healthcare industry and economy as a whole. Safety net hospitals like Montefiore in my district and federally funded clinics like Boriken in East Harlem face having to eliminate services or completely close.",
+      "date": "2025-09-16"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +540,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

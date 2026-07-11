@@ -6,7 +6,15 @@
   "role": "Representative",
   "district": 11,
   "bio": "Gerald Edward Connolly was an American politician who served as the U.S. representative for Virginia's 11th congressional district from 2009 until his death in 2025. A member of the Democratic Party, he was first elected in 2008 to replace retiring Republican incumbent Tom Davis, who did not seek re-election and later resigned shortly after the election. The 11th district is situated in the suburbs of Northern Virginia. It is anchored in the affluent Fairfax County, where Connolly served on the county's board of supervisors before his election to Congress, and also includes the entirety of Fairfax City.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1912",
+      "billTitle": "Veteran Fraud Reimbursement Act of 2025",
+      "stance": "neutral",
+      "text": "As a Nation, we have a solemn obligation to ensure that the men and women who have served in our Armed Forces and their families receive the benefits they have rightfully earned through their sacrifice and unwavering dedication. Unfortunately, an unintended consequence of the Johnny Isakson and David P. Roe, M.D. Veterans Health Care and Benefits Improvement Act of 2020 has hindered this mission.",
+      "date": "2025-12-12"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Gerry_Connolly",
   "voteHistory": [
@@ -51,6 +59,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 14,
   "bio": "David Patrick Joyce is an American politician and attorney currently serving in the United States House of Representatives for Ohio's 14th congressional district since 2013. A member of the Republican Party, Joyce was previously the prosecutor of Geauga County, Ohio.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-331",
+      "billTitle": "HALT Fentanyl Act",
+      "stance": "neutral",
+      "text": "This bipartisan bill will save lives by providing critical tools for law enforcement to combat the ongoing opioid crisis across our country. Thousands of Americans continue to die each year from fentanyl overdoses, and Ohio has been particularly hard-hit by the epidemic. Prior to the temporary rescheduling in 2018, fentanyl-related substances could only be controlled individually, allowing cartel chemists to easily create new uncontrolled compounds.",
+      "date": "2025-07-16"
+    },
+    {
+      "billId": "119-S-3971",
+      "billTitle": "Small Business Innovation and Economic Security Act",
+      "stance": "neutral",
+      "text": "Organized retail crime is far beyond isolated shoplifting. It is a highly coordinated criminal enterprise that harms businesses, workers, and families in every corner of our country. Whether you are a truck driver, a small business owner, or an everyday consumer, this issue affects you. These criminal organizations are engaging in large-scale theft operations involving violence and intimidation, putting the lives of retail workers, small business owners, and everyday shoppers at risk.",
+      "source": "House Floor, May 12, 2026",
+      "granuleTitle": null,
+      "date": "May 12, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Not Voting"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +541,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

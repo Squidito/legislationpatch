@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 3,
   "bio": "Robert Cortez Scott is an American politician and lawyer serving as the U.S. representative for Virginia's 3rd congressional district since 1993. A member of the Democratic Party, he is the dean of Virginia's congressional delegation since 2019, he previously shared the deanship with Bob Goodlatte until the latter's retirement that year, and the first Filipino American voting member of Congress. The district serves most of the majority-black precincts of Hampton Roads, including all of the independent cities of Norfolk, Newport News, Hampton and Portsmouth, and parts of the independent city of Chesapeake. From 2019 to 2023, Scott was chair of the House Education and Labor Committee. He has been ranking member on that committee since 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "stance": "neutral",
+      "text": "I include in the Record a letter from public health and anti-hunger organizations, a couple of dozen of them, that says in part that the provisions of H.R.  7723 which are now in this bill ``would use existing Serious Deficiency process to trigger disbarment, which is problematic because it is a tool that is inconsistently applied and is often triggered by minor errors rather than fraud or misconduct.'' May 18, 2026.",
+      "source": "House Floor, Jun 3, 2026",
+      "granuleTitle": null,
+      "date": "Jun 3, 2026"
+    },
+    {
+      "billId": "119-HR-8312",
+      "billTitle": "Fraud Prevention and Accountability Act",
+      "stance": "neutral",
+      "text": "It says, in part: ``H.R. 7892, the No Aid for Ghost Students Act, is seemingly about cracking down on the real concern about fraud in the Federal financial aid system. However, according to the Secretary of Education's own recent congressional testimony, that fraud is already being successfully addressed with existing tools at the Department of Education's disposal.",
+      "source": "House Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +544,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

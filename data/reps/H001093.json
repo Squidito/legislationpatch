@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 9,
   "bio": "Erin Suzanne Houchin is an American politician serving as the U.S. representative for Indiana's 9th congressional district since 2023. A member of the Republican Party, she represented the 47th district in the Indiana Senate from 2014 to 2022.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-98",
+      "billTitle": "Rural Broadband Protection Act of 2025",
+      "stance": "neutral",
+      "text": "In April, we passed the House version of this bill. In June, the Senate passed the identical text, sponsored by my friend Senator Capito also by voice vote. Today, we have a chance to finish the job and send this legislation to the President's desk. Across Indiana and rural America, families, farmers, students, and small business owners still struggle with slow and unreliable internet access, and it is more than an inconvenience. It is a barrier to opportunity, to education, to healthcare, and to economic growth.",
+      "date": "2026-05-11"
+    },
+    {
+      "billId": "119-HR-2399",
+      "billTitle": "Rural Broadband Protection Act of 2025",
+      "stance": "support",
+      "text": "Mr. Speaker, I rise today in proud support of H.R. 2399, the Rural Broadband Protection Act of 2025, a bill that I am proud to sponsor. Across Indiana and throughout rural America, families, farmers, students, and small business owners still struggle with slow or unreliable internet access. It is not just inconvenient, it is a barrier to opportunity, to education, to healthcare, and to economic growth.",
+      "date": "2025-03-27"
+    },
+    {
+      "billId": "119-HR-8646",
+      "billTitle": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2027",
+      "stance": "neutral",
+      "text": "I am happy to hear my colleague acknowledge that pregnant women carry babies. Mr. Speaker, I yield 3 minutes to the gentleman from Ohio (Mr. Taylor).",
+      "date": "2026-06-08"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

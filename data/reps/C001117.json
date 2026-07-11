@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 6,
   "bio": "Sean Thomas Casten is an American businessman and politician serving as the U.S. representative for Illinois's 6th congressional district. The district covers southwestern Chicago, as well",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "What should we say to angry men in robes? What are we going to say to men in robes who are angry about the outcome of the Civil War? What are we going to say to men in robes who are angry about Reconstruction-era amendments to our Constitution that said that anyone born in America can't have their voice or their vote suppressed, regardless of their race? What are we going to say to men in robes who are angry that Congress finally enshrined those protections into law through the 1964 and 1965 Civil Rights Acts?",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "stance": "neutral",
+      "text": "Happy summer. It is time to fire up the grill, fire up the air conditioner, and book some road trips, if you can afford to fuel them. Since Donald Trump's election, gasoline prices have skyrocketed. Household energy bills are up by as much as 18 percent. In response to this, the President said: ``I don't think about Americans' financial situation.'' That is more than just a psychotic lack of empathy because he also said: ``. . . when oil prices go up we make a lot of money.'' Who is ``we'' in this situation?",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +544,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

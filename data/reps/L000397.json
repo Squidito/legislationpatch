@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 18,
   "bio": "Susan Ellen \"Zoe\" Lofgren is an American politician and lawyer serving as a U.S. representative from California. A member of the Democratic Party, Lofgren is in her 16th term in Congress, having been first elected in 1994. Lofgren has long served on the House Judiciary Committee, and chaired the House Administration Committee in the 116th and 117th Congresses.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-3971",
+      "billTitle": "Small Business Innovation and Economic Security Act",
+      "stance": "support",
+      "text": "For more than 40 years, and Small Business Innovation Research Program (SBIR), and later its companion program the Small Business Technology Transfer Program (STTR), have been contributing to U.S. leadership in technological innovation through support for small business research and development. I have had a front-row seat to the explosive growth of entrepreneurship in Silicon Valley over my lifetime. I understand well the importance of innovative small businesses to our local economy and to the U.S. economy.",
+      "date": "2026-03-02"
+    },
+    {
+      "billId": "119-HR-5366",
+      "billTitle": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "stance": "neutral",
+      "text": "We welcome a new Member of the California congressional delegation to our ranks. On June 2, James Gallagher was duly elected in a special election to fill the remainder of the term vacated by our friend and former colleague, the beloved late Doug LaMalfa. Doug was passionate about his commitment to the people of northern California and advocating for rural Californians, a passion that I am sure is shared by Representative Gallagher.",
+      "source": "House Floor, Jun 10, 2026",
+      "granuleTitle": null,
+      "date": "Jun 10, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

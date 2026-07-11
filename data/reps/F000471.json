@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 5,
   "bio": "Scott Lawrence Fitzgerald is an American politician and former newspaper publisher. A Republican, he represents Wisconsin's 5th congressional district in the U.S. House of Representatives. The district includes many of Milwaukee's northern and western suburbs, such as Waukesha, West Bend, Brookfield, and Mequon. He represented the 13th district in the Wisconsin State Senate from 1995 to 2021.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-331",
+      "billTitle": "HALT Fentanyl Act",
+      "stance": "neutral",
+      "text": "This is a historic moment, Mr. Speaker. House Republicans are delivering on a promise to stop the flow of deadly fentanyl that, for years, has been flooding our communities and, tragically, tearing families apart. Today, drug overdose is the leading cause of accidental death across the country, and fentanyl-driven overdoses are the leading cause of death for American adults between 18 and 45 years of age. That is because it is cheap to make, easy to transport, and so potent. Just a few milligrams can be lethal.",
+      "date": "2025-07-16"
+    },
+    {
+      "billId": "119-HR-2189",
+      "billTitle": "Law-Enforcement Innovate to De-Escalate Act",
+      "stance": "oppose",
+      "text": "Mrs. McBATH. Mr. Speaker, I yield myself the balance of my time. Mr. Speaker, H.R. 2189 does nothing to help law enforcement, who already uses these weapons in all 50 States. It does not provide any new tools or training that would reduce police shootings or promote the safety of officers or the public. Instead, it makes dangerous weapons widely available to everyone, including those who should not have them. It allows those weapons to be untraceable, undetectable by equipment, and sold to anyone without a background check.",
+      "date": "2026-02-24"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

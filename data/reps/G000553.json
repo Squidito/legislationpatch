@@ -5,7 +5,7 @@
   "state": "TX",
   "role": "Representative",
   "portraitUrl": "https://bioguide.congress.gov/bioguide/photo/G/G000553.jpg",
-  "bio": "Alexander N. Green is an American lawyer and politician serving as a U.S. representative from Texas's 9th congressional district since 2005. A member of the Democratic Party, Green served as the justice of the peace of Harris County, Texas from 1977 to 2004. Green is a member of the United States House Committee on Financial Services.",
+  "bio": "Alexander N. Green is an American lawyer and politician serving as the U.S. representative for Texas's 9th congressional district since 2005. A member of the Democratic Party, Green served as the justice of the peace of Harris County, Texas from 1977 to 2004. Green is a member of the United States House Committee on Financial Services.",
   "comments": [
     {
       "billId": "119-HR-8071",
@@ -13,10 +13,49 @@
       "stance": "support",
       "text": "Ensuring the Defense Production Act Committee regularly tests its own readiness is basic accountability.",
       "date": "Mar 24, 2026"
+    },
+    {
+      "billId": "119-HR-1968",
+      "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "stance": "oppose",
+      "text": "and still I rise, to oppose a Continuing Resolution that will allow a chainsaw to, among other things: minimize Medicaid with underfunded block grants to states, marginalize Medicare's ``Dual Eligibles'' long-term Medicaid care, and privatize Social Security by allowing private investment of Social Security funds in the stock market with no protections from market downturns. Mr. Speaker, the costs of the cuts in spending will be measurable. However, the human cost in pain and suffering will be immeasurable.",
+      "date": "2025-03-15"
+    },
+    {
+      "billId": "119-HR-3633",
+      "billTitle": "Digital Asset Market Clarity Act of 2025",
+      "stance": "neutral",
+      "text": "And still I rise. And still I rise, unbought, unbossed, unafraid: a liberated Democrat. I rise as an unbought, liberated, and unafraid Democrat. I am unbought by crypto cash, unbought by the millions of dollars that the crypto industry spends to elect people to Congress so that they can have influence over legislation, and unbossed by the  cryptocrats, the people who are among the greediest when it comes to controlling money and who desire to not only avoid taxes but to evade taxes.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "support",
+      "text": "And still I rise, a very proud, unbought, unbossed, liberated Democrat, a Democrat who has been censured in this very House, censured but not silenced. I am proud to say, Mr. Speaker, that I recognize and respect freedom of speech in this country. It is at the very foundation of our freedoms, the ability to express one's opinions. The Constitution protects freedom of speech, but it does not say that some speech, which can be hateful speech, is speech that cannot be condemned.",
+      "source": "House Floor, May 21, 2026",
+      "granuleTitle": null,
+      "date": "May 21, 2026"
     }
   ],
   "district": 9,
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -242,6 +281,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -382,6 +428,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -506,6 +559,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

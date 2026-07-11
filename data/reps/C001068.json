@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 9,
   "bio": "Stephen Ira Cohen is an American attorney and politician serving as the U.S. representative from Tennessee's 9th congressional district, a majority-minority district centered in Memphis, since 2007. Previously, he served in the Tennessee Senate from 1983 to 2006. He is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-36",
+      "billTitle": "MEGOBARI Act",
+      "stance": "neutral",
+      "text": "Madam Speaker, Georgia has long been a great friend to the United States. I went to Georgia for their election when they elected the Georgian Dream ticket about 12 years ago, but the Georgian Dream party has turned into the Georgian nightmare. In America, Dr. King had a dream, and that dream still lives. Yet, the dream in Georgia, the country, is no longer alive and is pulling that country closer to our adversaries.",
+      "date": "2025-01-03"
+    },
+    {
+      "billId": "119-HR-5103",
+      "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
+      "stance": "support",
+      "text": "Mr. Speaker, I was the original sponsor of this bill, and I am happy that Mr. Fleischmann, whose district is much closer to it and probably encompasses part of it, accepted the proud sponsorship that has got it to this point. The Benton MacKaye Trail is a beautiful and long trail. It is the longest trail in the Great Smoky Mountain National Park. It overlaps the Appalachian Trail at six separate points and passes through three national forests.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

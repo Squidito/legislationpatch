@@ -6,8 +6,48 @@
   "role": "Representative",
   "district": 2,
   "bio": "Troy Bryan Downing is an American politician and businessman serving as a member of the U.S. House of Representatives for Montana's 2nd congressional district since 2025. A member of the Republican Party, he previously held the office of Montana state auditor from 2021 to 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4495",
+      "billTitle": "SBA Fraud Enforcement Extension Act",
+      "stance": "support",
+      "text": "waste, fraud, and abuse fundamentally undermine the American people's trust in the government. When well- intentioned Federal programs are defrauded by criminal bad actors, taxpayer dollars are wasted, and funding for businesses and individuals in need of this vital support is squandered and stolen. Over the course of the COVID pandemic, the Small Business Administration carried out an extensive effort, channeling funding to small businesses facing unprecedented economic challenges.",
+      "date": "2025-12-02"
+    },
+    {
+      "billId": "119-HR-7567",
+      "billTitle": "Farm, Food, and National Security Act of 2026",
+      "stance": "neutral",
+      "text": "I will take this opportunity to recognize the importance of the passage of the 2026 farm bill. The House-passed 2026 farm bill delivers certainty for our producers through enhancing critical initiatives such as the USDA's farm credit and crop insurance programs. These measures will ensure that farmers and ranchers have access to the capital that they need in order to navigate ongoing challenges like volatile commodity prices and extreme weather events going forward.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Passage of this bill will ensure the completion of a vital piece of water infrastructure for my constituents living in one of the most rural areas of the country. Northeast Montana faces a variety of significant water access challenges, including regular droughts and contaminated groundwater. Towns, farms, ranches, and Tribes in the region need reliable water treatment facilities and infrastructure in order to overcome these issues.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +273,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +420,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +550,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

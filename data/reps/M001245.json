@@ -5,7 +5,7 @@
   "state": "TX",
   "role": "Representative",
   "district": 18,
-  "bio": "Christian Dashaun Menefee is an American politician and attorney serving as the U.S. representative for Texas's 18th congressional district since February 2026. A member of the Democratic Party, Menefee previously served as County Attorney for Harris County, Texas, from 2021 to 2026. He was the youngest person to hold the office.",
+  "bio": "Christian Dashaun Menefee is an American politician and attorney serving as the U.S. representative for Texas's 18th congressional district since February 2026. A member of the Democratic Party, Menefee previously served as County Attorney for Harris County, Texas, from 2021 to 2026. He was the youngest person and the first African-American to hold the office.",
   "comments": [
     {
       "billId": "119-HR-6903",
@@ -24,9 +24,66 @@
       "source": "House Floor, May 21, 2026",
       "granuleTitle": null,
       "date": "May 21, 2026"
+    },
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "stance": "support",
+      "text": "I was proud to defend that consent decree. Let's be clear about what this is. If somebody is a threat to the community, they should be in jail, regardless of whether they have a billion dollars or a thousand dollars. If they are not a threat to the community, they should not be left to languish in jail, potentially lose their livelihood, their family, all so we can make cash bail companies more rich. We should be about protecting the community, not protecting industry.",
+      "date": "2026-05-14"
+    },
+    {
+      "billId": "119-HR-6260",
+      "billTitle": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "stance": "neutral",
+      "text": "I want to be very clear about what this bill is. This is part of a greater effort to ensure that we have cash bail systems throughout this country, which would keep rich people on the streets, even if they are violent criminals, and would have poor people locked behind bars because they don't have the money. Picture two people accused of the same low-level, nonviolent misdemeanor and who come from the same background. A judge looks at both of them and says neither is a flight risk and neither is a threat of harm to the community.",
+      "source": "House Floor, May 14, 2026",
+      "granuleTitle": null,
+      "date": "May 14, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "I rise today to introduce the Kimberly Vaughan Firearm Safe Storage Act. Eight years ago, Kimberly was a student at a Texas high school, and she and several of her classmates and teachers were murdered by a student who brought his parents' gun to school because it was not properly secured. Their deaths were both a tragedy and entirely preventable.",
+      "source": "House Floor, May 15, 2026",
+      "granuleTitle": null,
+      "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-1919",
+      "billTitle": "Anti-CBDC Surveillance State Act",
+      "stance": "neutral",
+      "text": "June is Pride Month, a month celebrating the contributions of the LGBTQ community, but it also must be a month of speaking hard truths. Texas has more anti-trans murders than any other State in the Nation. Over half of Texas victims are Black transgender women. We cannot celebrate Marsha P. Johnson and not protect the women who look like her. Last week, Persia Amarra Conway was killed in Houston. She was 33 years old. She was loved, and she is not alone.",
+      "source": "House Floor, Jun 4, 2026",
+      "granuleTitle": null,
+      "date": "Jun 4, 2026"
+    },
+    {
+      "billId": "119-HR-8463",
+      "billTitle": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
+      "stance": "oppose",
+      "text": "I rise to oppose H.R. 7892, the so-called No Aid for Ghost Students Act. Think about a first-generation student who is applying with a FAFSA for the first time. It is already one of the most confusing processes out there, but all this bill does is make it worse. This bill would require the government to run every single financial aid application through a fraud detection algorithm, and if you get flagged, the college that you have been admitted to cannot release a single dollar until you jump through hoops to prove who you are.",
+      "source": "House Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -249,6 +306,13 @@
       "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
       "chamber": "House",
       "date": "2026-04-16",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
       "vote": "Yea"
     },
     {

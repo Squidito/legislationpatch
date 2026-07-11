@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 8,
   "bio": "Subramanian Raja Krishnamoorthi is an American attorney and politician serving as the U.S. representative for Illinois's 8th congressional district since 2017. He is a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-5408",
+      "billTitle": "Faster Labor Contracts Act",
+      "stance": "neutral",
+      "text": "Across America, workers exercise one of the most fundamental rights protected under our labor laws--namely, the right to organize and bargain collectively. Yet, far too often, after workers vote to form a union, they are forced to wait months and even years before seeing the benefits of that decision. In fact, the average time to secure a first contract exceeds 450 days. During that time, workers can face uncertainty, delays, and frustration while negotiations drag on with no clear path to resolution. There are countless examples.",
+      "date": "2026-06-10"
+    },
+    {
+      "billId": "119-HR-8463",
+      "billTitle": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
+      "stance": "neutral",
+      "text": "H.R. 8428, the Federal Fraud Prevention Workforce Training Act, is legislation that would address a central concern of the American people, which is fraud and waste in government. Every dollar lost to fraud is a dollar that cannot be used to serve the American people. Yet, over the last 20 years, at least $3 trillion in improper payments have been made by the American Government. Our bipartisan bill protects taxpayer dollars by creating a universal Federal training program to fight fraud.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +264,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +411,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +542,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

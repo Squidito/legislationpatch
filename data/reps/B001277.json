@@ -6,7 +6,26 @@
   "role": "Senator",
   "district": null,
   "bio": "Richard Blumenthal is an American politician and attorney serving as the senior United States senator from Connecticut. A member of the Democratic Party, he has been a member of the Senate since 2011. Blumenthal previously served as U.S. attorney for the District of Connecticut, as a member of the Connecticut General Assembly, and as the 23rd Connecticut attorney general.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "I am here to talk about the costs of war. The United States is at war at this moment. I am here to talk about the costs of war that should include the costs of caring for our veterans because they are the ones who fight our wars and keep our Nation strong and free. We are failing to pay the costs of war for more than 50,000 combat- injured veterans.",
+      "source": "Senate Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
+    },
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "neutral",
+      "text": "I am back again after Republicans have blocked my effort for a vote--a vote--on the Major Richard Star Act. Six times Republicans have blocked benefits for combat-injured veterans. Let's be very clear. Right now, a combat-injured veteran with less than 20 years, including at least 400 service men and women who have been injured in the Iran war, are going to be docked dollar for dollar in their retirement pay for what that received in disability benefits. That is wrong. It is morally wrong. It is legally wrong. It is politically wrong.",
+      "source": "Senate Floor, Jun 17, 2026",
+      "granuleTitle": null,
+      "date": "Jun 17, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Richard_Blumenthal",
   "voteHistory": [

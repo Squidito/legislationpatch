@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 17,
   "bio": "Christopher Raphael Deluzio is an American politician, attorney, and former U.S. Navy officer. A progressive Democrat, he serves as the U.S. representative for Pennsylvania's 17th congressional district since 2023. The district encompasses most of the northwestern suburbs and exurbs of Pittsburgh, and includes the entirety of Beaver County.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HCONRES-68",
+      "billTitle": "To direct the removal of United States Armed Forces from Venezuela that have not been authorized by Congress.",
+      "stance": "neutral",
+      "text": "Mr. Speaker, to respond to the notion of hypocrisy, that we should rely on the Secretary of State's notification when required, we were not notified--the Congress did not receive notification--or asked for authorization before Americans were sent to fight and to bleed in Venezuela. Seven Americans were wounded in that military operation. There is a functional blockade of Venezuelan oil.",
+      "date": "2026-01-07"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +533,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 4,
   "bio": "Madeleine Dean Cunnane is an American politician and lawyer serving as the U.S. representative for Pennsylvania's 4th congressional district since 2019. The district includes almost all of Montgomery County, a suburban county north of Philadelphia, as well as a northeastern portion of Berks County. Before being elected to Congress, Dean was a Democratic member of the Pennsylvania General Assembly, representing the 153rd district in the Pennsylvania House of Representatives.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HCONRES-40",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "stance": "neutral",
+      "text": "For the past 27 years, the Bipartisan Women's Caucus has held an annual wreath-laying ceremony at Arlington's Military Women's Memorial. It is a solemn event, a time when Republicans and Democrats come together to honor the immense service of women in the United States Armed Forces--until this year. Several military branches declined to participate in what would have been the 28th annual ceremony, leading to the event being canceled.",
+      "source": "House Floor, Jun 11, 2026",
+      "granuleTitle": null,
+      "date": "Jun 11, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +257,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +404,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +535,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

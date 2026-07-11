@@ -6,8 +6,37 @@
   "role": "Representative",
   "district": 4,
   "bio": "Lauren Opal Boebert is an American politician, businesswoman, and gun rights activist serving as the U.S. representative for Colorado's 4th congressional district beginning in 2025, having previously represented Colorado's 3rd congressional district from 2021 to 2025. From 2013 to 2022, she owned Shooters Grill, a restaurant in Rifle, Colorado, where staff members were encouraged to carry firearms openly.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8464",
+      "billTitle": "Stopping Fraudulent Payments Act",
+      "stance": "support",
+      "text": "I strongly support H.R. 8464, the Stopping Fraudulent Payments Act. This legislation is a commonsense, taxpayer-first bill that finally puts an end to the reckless pay-and-chase scam that has drained billions from hardworking American families. For too long, the Washington bureaucracy has operated like an open checkbook for fraudsters. They cut the checks first, ask the questions later while American taxpayers foot the bill for waste, abuse, and outright theft.",
+      "date": "2026-06-11"
+    },
+    {
+      "billId": "119-HR-8312",
+      "billTitle": "Fraud Prevention and Accountability Act",
+      "stance": "support",
+      "text": "The American people expect their government to be a responsible steward of taxpayer dollars, yet every year, the Federal Government loses hundreds of billions of dollars to fraud, waste, and abuse of our hard-earned money. While the Federal Government provides families, workers, and businesses with the support they need, several COVID-era spending programs exposed serious weaknesses in our ability to prevent fraud. Once those dollars were lost, it has proven to be nearly impossible to recover them.",
+      "date": "2026-06-11"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +262,13 @@
       "vote": "Not Voting"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +409,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +539,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

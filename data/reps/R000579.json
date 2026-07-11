@@ -5,9 +5,31 @@
   "state": "NY",
   "role": "Representative",
   "district": 18,
-  "bio": "Patrick Kevin Ryan is an American businessman, politician, and former U.S. Army intelligence officer serving as the U.S. representative for New York's 18th congressional district since 2023. A member of the Democratic Party, he previously served as the representative for New York's 19th congressional district from 2022 to 2023 after being elected in a special election. Before being elected to the House, he was the county executive of Ulster County, New York.",
-  "comments": [],
+  "bio": "The 2026 United States House of Representatives elections in Montana will be held on November 3, 2026, to elect the two U.S. representatives from the state of Montana, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on June 2, 2026.",
+  "comments": [
+    {
+      "billId": "119-HCONRES-68",
+      "billTitle": "To direct the removal of United States Armed Forces from Venezuela that have not been authorized by Congress.",
+      "stance": "neutral",
+      "text": "Mr. Speaker, we face a fundamental question here: Who makes the decision to send our most precious resource, our young men and women in uniform, into harm's way? Is it a five-time draft dodger who has called them suckers and losers, or is it the American people with us as their voices? Mr. Speaker, I was on the receiving end of this same chicken-hawk bs for 27 months in combat in Iraq, and I don't need to be lectured by my colleagues.",
+      "date": "2026-01-07"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -499,6 +535,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-43",
       "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
       "chamber": "House",
@@ -521,5 +564,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Pat_Ryan_(politician)"
+  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Montana"
 }

@@ -677,12 +677,48 @@ section('Quote quality audit');
         /\bfor the purpose of debate\b/i,
         /\bi yield back the balance of my time\b/i,
         /\breserve the balance of my time\b/i,
+        // Classes found in the 2026-07-10 quote review (motions, vote corrections,
+        // absence announcements, clerk/chair narration) — mirrored in fetch_bill_cr.js
+        // DISPLAY_PROCEDURAL (keep the two lists in sync).
+        /\bi have (?:a|an) (?:motion|amendment)(?: to \w+)? at the desk\b/i,
+        /\bthe material previously referred to\b/i,
+        /\bmoves? to recommit the bill\b/i,
+        /\bi move that the (?:house|committee|senate)\b/i,
+        /\bi move to proceed\b/i,
+        /\bcloture motion\b/i,
+        /\bnecessarily absent\b/i,
+        /\bi announce that the senator\b/i,
+        /\bmistakenly (?:voted|recorded)\b/i,
+        /\bon roll call no\b/i,
+        /\bhad i recorded my vote\b/i,
+        /\bi was absent from the chamber\b/i,
+        /\ba recorded vote (?:was ordered|has been demanded)\b/i,
+        /\bi demand a recorded vote\b/i,
+        /\bthe question is on\b/i,
+        /\bhow much time (?:i have |is )?remaining\b/i,
+        /\bi know of no further debate\b/i,
+        /\bthere being no objection\b/i,
+        /\bthe committee was discharged\b/i,
+        /\bi have no statement to make\b/i,
+        /\bquestion of the privileges of the house\b/i,
+        /\bthe clerk (?:will )?(?:read|designate|redesignate)\b/i,
     ];
 
-    // Stance detection — same logic as fetch_bill_cr.js
+    // Stance detection — same logic as fetch_bill_cr.js (keep in sync)
     function detectStance(text) {
         const t = text.toLowerCase();
-        const hasOppose = /\b(oppose|against|vote no|reject|dangerous|harmful|harm\b|cannot support|will not support|urge.*defeat|vote against)\b/.test(t);
+        // Explicit first-person declarations about THIS bill take priority — the keyword
+        // fallback below misfires on incidental phrasing ("harassment campaigns against
+        // American companies" is not opposition to the bill; "strong opposition" contains
+        // no bare "oppose" token, so it used to read as neutral).
+        const explicitOppose  = /\b(?:i|we)\s+(?:strongly\s+|firmly\s+|respectfully\s+)?oppose\s+(?:this|the)\s+(?:bill|resolution|legislation|measure|act)\b/.test(t)
+            || /\b(?:rise|stand|here)[^.!?]{0,40}\bin\s+(?:strong\s+|firm\s+|fierce\s+)?opposition\b/.test(t)
+            || /\b(?:voice|voicing|express(?:ing)?|register(?:ing)?)\s+(?:my\s+|our\s+)?(?:strong\s+|firm\s+)?opposition\s+to\b/.test(t);
+        const explicitSupport = /\b(?:i|we)\s+(?:strongly\s+|proudly\s+|fully\s+)?support\s+(?:this|the)\s+(?:bill|resolution|legislation|measure|act)\b/.test(t)
+            || /\b(?:rise|stand|here)[^.!?]{0,40}\bin\s+(?:very\s+)?(?:strong\s+|proud\s+|full\s+)?support\s+of\b/.test(t);
+        if (explicitOppose && !explicitSupport) return 'oppose';
+        if (explicitSupport && !explicitOppose) return 'support';
+        const hasOppose = /\b(?:(?:i|we)\s+oppose|oppose\s+(?:this|the)\s+(?:bill|legislation|resolution|measure|act)|(?:vote|voting|voted|stand|standing|am|are|is)\s+against|against\s+(?:this|the)\s+(?:bill|legislation|resolution|measure|act)|vote\s+no|reject\s+(?:this|the)|wrongheaded|dangerous|harmful|harm\b|cannot\s+support|will\s+not\s+support|urge.*defeat)\b/.test(t);
         const negated   = /\b(?:do(?:es)?|did|will|would|shall|have|has)\s+not\s+oppose\b|\bnot\s+oppose\b|\bno\s+opposition\b/.test(t);
         if (hasOppose && !negated) return 'oppose';
         if (/\b(support|favor|proud|urge.*pass|commend|pleased|important step|must pass|vote yes|vote for)\b/.test(t)) return 'support';

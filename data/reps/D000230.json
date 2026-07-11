@@ -6,8 +6,46 @@
   "role": "Representative",
   "district": 1,
   "bio": "Donald Gene Davis is an American politician and former Air Force officer serving as the United States representative for North Carolina's 1st congressional district since 2023. A member of the Democratic Party, he previously served in the North Carolina Senate, representing the 5th district from 2009 to 2011 and again from 2013 to 2023.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-3633",
+      "billTitle": "Digital Asset Market Clarity Act of 2025",
+      "stance": "support",
+      "text": "I am honored to serve as a co-lead on this legislation, alongside Chairman Thompson, Chairman Hill, Ranking Member Craig, Subcommittee Chair Johnson, and so many others who came to the table in good faith to get this done. Let me also take a moment to thank the staff, both the majority and the minority staff. They put in so many hours working on this. I know I was up late one night. It was probably midnight. I really commend the team.",
+      "date": "2025-05-29"
+    },
+    {
+      "billId": "119-HR-8469",
+      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "stance": "neutral",
+      "text": "after voting on Thursday, May 14, I traveled to Fort Benning, Georgia, to participate in Family Day as my son, Justin, completed U.S. Army basic training.",
+      "date": "2026-04-23"
+    },
+    {
+      "billId": "119-HR-1815",
+      "billTitle": "VA Home Loan Program Reform Act",
+      "stance": "neutral",
+      "text": "For generations, the sound of a Harrier over eastern North Carolina meant one thing: Marines were ready. As Marine Attack Squadron 223, the Bulldogs, completed a Harrier sundown ceremony, the final operational flight of the AV-8B Harrier II, at Cherry Point on June 3, we honor decades of service, sacrifice, and excellence. The aircraft made history, but the marines behind it built the legacy. To every Bulldog who wore the patch, turned a wrench, launched a mission, or brought a Harrier safely home, I thank them.",
+      "source": "House Floor, Jun 9, 2026",
+      "granuleTitle": null,
+      "date": "Jun 9, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +271,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +418,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +549,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

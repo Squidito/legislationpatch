@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 11,
   "bio": "James Robert Walkinshaw is an American politician and former congressional aide serving as the U.S. representative for Virginia's 11th congressional district since September 2025. A member of the Democratic Party, he previously served as a member of the Fairfax County Board of Supervisors from the Braddock District from 2020 until his resignation in 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8469",
+      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "stance": "neutral",
+      "text": "The bipartisan package makes progress on important veteran healthcare priorities as well as funding for the Toxic Exposures Fund, but our work is far from finished. When it comes to ensuring that our Federal Government is leading by example and tackling one of the most enduring and largely unaddressed national priorities in the post-COVID world, we must upgrade our building standards to ensure we have the highest possible air quality.",
+      "date": "2026-04-23"
+    },
+    {
+      "billId": "119-HR-8464",
+      "billTitle": "Stopping Fraudulent Payments Act",
+      "stance": "neutral",
+      "text": "I am reclaiming my time. Madam Speaker, I will just give one agency, Social Security, an agency that has been under assault by this administration. It is estimated that 10,000 times a year, Social Security falsely declares somebody dead. Imagine that. You wake up one morning, and your own government says you are dead. It happens oftentimes because States send bad information to the Social Security Administration. Time after time after time, the IG has recommended that Social Security and this body make improvements in that process.",
+      "date": "2026-06-11"
+    },
+    {
+      "billId": "119-HR-5214",
+      "billTitle": "District of Columbia Cash Bail Reform Act of 2025",
+      "stance": "neutral",
+      "text": "Mr. Speaker, 2 months ago, I was a local government official not far from here, in Fairfax County. In the 6 years I spent in that role, I learned that the people best positioned to make decisions about the local policies in their local communities are local leaders after listening to that local community. My colleagues across the aisle who are advocating for these bills, with due respect, know very little about the District of Columbia, know very little outside of perhaps their walk from their apartment in Navy Yard to this Capitol complex.",
+      "date": "2025-11-20"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -370,6 +413,13 @@
       "billTitle": "Common-Sense Law Enforcement and Accountability Now in DC Act of 2025",
       "chamber": "House",
       "date": "2025-11-19",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
       "vote": "Nay"
     },
     {

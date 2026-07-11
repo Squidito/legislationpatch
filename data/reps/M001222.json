@@ -6,8 +6,44 @@
   "role": "Representative",
   "district": 7,
   "bio": "Max Leonard Miller is an American politician who has served as the U.S. representative for Ohio's 7th congressional district since 2023. A member of the Republican Party, he previously served as a political appointee in the first Trump administration.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HCONRES-84",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from Lebanon",
+      "stance": "neutral",
+      "text": "Res. 84, but like most of my colleagues, whether they will admit it or not, I am a little confused. The United States, to my knowledge, doesn't have any troops in Lebanon. In fact, the last time American servicemembers were deployed in Lebanon was in 1984. Even though the gentlewoman from Michigan believes that the U.S. is the root of all evil, the United States is playing a vital role in advancing peace, security, and stability in Lebanon as we currently speak.",
+      "date": "2026-06-04"
+    },
+    {
+      "billId": "119-HR-6359",
+      "billTitle": "Pregnant Students' Rights Act",
+      "stance": "support",
+      "text": "Mr. Speaker, college can be a challenging environment, especially for pregnant women. Many feel forced to choose between motherhood and their education. Nearly 30 percent of all abortions in the United States are performed on women in college. Title IX already protects the right of pregnant women to stay in school. However, many of them face a lack of resources and support. Some even fear punishment and a loss of scholarships simply for carrying their baby to full term while taking classes.",
+      "date": "2026-01-26"
+    },
+    {
+      "billId": "119-HR-5408",
+      "billTitle": "Faster Labor Contracts Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, I join the majority of my Republican colleagues in voicing strong opposition to H.R. 5408, the Faster Labor Contracts Act. This bill puts the selfish needs of the union bosses above the welfare of American workers. It would force employers to begin bargaining with new unions within 10 days of certification. It would force Federal mediation to intervene if no contract is signed. It would force the arbitrated contracts to last 2 years, and they cannot be appealed. Let me be clear.",
+      "date": "2026-06-10"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +416,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +546,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

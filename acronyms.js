@@ -106,6 +106,8 @@ const ACRONYMS = {
   OTC:   'Over-the-Counter',
   CSFP:  'Commodity Supplemental Food Program',
   VBA:   'Veterans Benefits Administration',
+  VHA:   'Veterans Health Administration',
+  PREA:  'Pediatric Research Equity Act',
   MQ:    'MQ-9 Reaper drone (U.S. Air Force)',
   SAVE:  'Safeguard American Voter Eligibility Act',
   CRA:   'Congressional Review Act',
@@ -260,6 +262,7 @@ const ACRONYMS = {
   PAYGO:  'Pay-As-You-Go (budget rule)',
   HELP:   'Haiti Economic Lift Program Act',
   ACES:   'Agriculture Conservation Experienced Services Program',
+  ACRES:  'Accurately Counting Risk Elimination Solutions Act',
   HALT:   'HALT Fentanyl Act',
   REAL:   'REAL ID Act',
 

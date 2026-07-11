@@ -5,9 +5,61 @@
   "state": "AK",
   "role": "Representative",
   "district": null,
-  "bio": "Nicholas Joseph Begich III is an American politician and businessman who has served as the U.S. representative for Alaska's at-large congressional district since 2025. A member of the Republican Party, he had previously run for the seat in the 2022 special and regular elections before his election in 2024.",
-  "comments": [],
+  "bio": "The 2022 Alaska's at-large congressional district special election was held on August 16 to fill the seat left vacant after the death of Republican incumbent Don Young. Mary Peltola was elected in a 3-way race against former governor Sarah Palin and Nick Begich III in the election, becoming the first Alaska Native and woman to represent Alaska in the House.",
+  "comments": [
+    {
+      "billId": "119-HR-2815",
+      "billTitle": "Cape Fox Land Entitlement Finalization Act of 2025",
+      "stance": "neutral",
+      "text": "Alaska's future is tied to land. It is how we build infrastructure, develop our resources, and create opportunities for our communities, but for far too long, Alaska Native Corporations have faced unnecessary delays and constraints in securing the lands they were promised under the Alaska Native Claims Settlement Act. After more than 50 years, Cape Fox Corporation, representing the village of Saxman, is among the last southeast villages still waiting for a full land entitlement. H.R. 2815 fixes that.",
+      "date": "2026-05-19"
+    },
+    {
+      "billId": "119-S-254",
+      "billTitle": "ARTIST Act",
+      "stance": "neutral",
+      "text": "For generations, Alaska Native artisans along our north Pacific and Arctic coasts have carved walrus ivory into works of extraordinary beauty, a tradition handed down through families, woven into the culture life of entire communities, and for many, a vital source of income. In recent years, well-meaning efforts to crack down on the illegal elephant ivory trade have swept up something they were never meant to touch: the legal, sustainable, lawfully harvested ivory at the heart of Alaska Native art. Buyers grew confused.",
+      "date": "2026-06-12"
+    },
+    {
+      "billId": "119-HR-42",
+      "billTitle": "Alaska Native Settlement Trust Eligibility Act",
+      "stance": "support",
+      "text": "This legislation makes a simple but necessary fix to Federal law, ensuring that certain benefits distributed through Alaska Native corporation settlement trusts do not unreasonably disqualify vulnerable Alaskans from receiving assistance. For decades, Alaska Native corporations have provided vital support to their shareholders, including through settlement trusts, an essential tool Congress authorized in 1988 to deliver benefits in a structured, perpetual way.",
+      "date": "2025-07-07"
+    },
+    {
+      "billId": "119-HR-43",
+      "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
+      "stance": "neutral",
+      "text": "This bill corrects a decades-old oversight in the Alaska Native Claims Settlement Act to ensure Alaska Native communities can fully use their own land. In 1971, ANCSA granted fee simple land ownership to Alaska Natives, resolving historic land claims and enabling statehood land entitlements. However, section 14(c)(3) required Native Village Corporations to transfer land to the State of Alaska to be held in trust for future municipalities.",
+      "date": "2025-07-07"
+    },
+    {
+      "billId": "119-HR-2815",
+      "billTitle": "Cape Fox Land Entitlement Finalization Act of 2025",
+      "stance": "neutral",
+      "text": "This bill rights a wrong that has endured for more than 50 years. When Congress passed the Alaska Native Claims Settlement Act in 1971, it made a promise to Alaska Native people: land and the right to form their own corporations to manage that land and build their futures. However, five southeast Alaska communities, Haines, Ketchikan, Petersburg, Tenakee, and Wrangell, were left out. Through no fault of their own, the Native people of these communities were given a name no Native community should ever have to carry: the Landless.",
+      "source": "House Floor, Jun 2, 2026",
+      "granuleTitle": null,
+      "date": "Jun 2, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +285,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +432,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -499,6 +565,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-43",
       "billTitle": "Alaska Native Village Municipal Lands Restoration Act of 2025",
       "chamber": "House",
@@ -521,5 +594,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Nick_Begich_III"
+  "bioUrl": "https://en.wikipedia.org/wiki/2022_Alaska's_at-large_congressional_district_special_election"
 }

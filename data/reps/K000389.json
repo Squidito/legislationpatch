@@ -6,8 +6,41 @@
   "role": "Representative",
   "district": 17,
   "bio": "Rohit \"Ro\" Khanna is an American politician and attorney serving as the U.S. representative from California's 17th congressional district since 2017. A member of the Democratic Party, he defeated eight-term incumbent Democratic representative Mike Honda in the 2016 general election, after first running for the same seat in 2014. Khanna also served as the deputy assistant secretary in the United States Department of Commerce under President Barack Obama from 2009 to 2011.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-1582",
+      "billTitle": "GENIUS Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, I appreciate the House taking up the Government Audit and Accountability of Federally Funded State-Administered Programs Act. It is a long way of saying that this is a bill to go after fraud. The bill is straightforward. It directs the Government Accountability Office to conduct an independent review of Federal programs that States administer on behalf of working families. Congress has a responsibility to ensure that every tax dollar reaches the people and communities these programs are intended to serve.",
+      "source": "House Floor, Jun 8, 2026",
+      "granuleTitle": null,
+      "date": "Jun 8, 2026"
+    },
+    {
+      "billId": "119-HR-1262",
+      "billTitle": "Mikaela Naylon Give Kids a Chance Act",
+      "stance": "neutral",
+      "text": "The progressive movement is winning across the country, from the heart of New York to Michigan to Maine. The people are saying no to foreign wars, and they are saying no to genocide in Gaza. They are saying no to the unfair and lopsided economy that has allowed a few people to hoard extreme wealth and power, and they are saying yes to Medicare for All, to unions for all, to childcare for all, to making sure that we have a housing guarantee for kids by the time they are 35 if they work hard. Now, some of the oligarchs don't like it.",
+      "source": "House Floor, Jun 25, 2026",
+      "granuleTitle": null,
+      "date": "Jun 25, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +266,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +413,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Nay"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -497,6 +544,13 @@
       "chamber": "House",
       "date": "2025-03-11",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-43",

@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 4,
   "bio": "Robert Brown Aderholt is an American politician and attorney from Alabama. A socially conservative member of the Republican Party and a member of the Tea Party Caucus, he is currently serving as a U.S. representative, representing Alabama's 4th congressional district since 1997. The district includes most of Tuscaloosa County north of the Black Warrior River, as well as Birmingham's far northern suburbs in Walker County and the southern suburbs of Huntsville and Decatur.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7084",
+      "billTitle": "Defending American Property Abroad Act of 2026",
+      "stance": "neutral",
+      "text": "today, the U.S. House of Representatives is acting in response to a situation in which a foreign government shut down an American company's operations, seized its property, and ignored the rule of law. When an American business is targeted in this way, it is not just an attack on one company, it is an attack on American workers, American jobs, and American interests. Vulcan Materials, an Alabama company, has lawfully operated for 35 years in Mexico. Yet the Mexican government illegally seized its assets.",
+      "date": "2026-04-02"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HCONRES-108",
+      "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HRES-1399",
+      "billTitle": "Directing the Committee on Ethics to preserve and publicly release records relating to monetary settlements involving acts of sexual harassment.",
+      "chamber": "House",
+      "date": "2026-06-30",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-7128",
       "billTitle": "TRIA Program Reauthorization Act of 2026",
@@ -233,6 +255,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-1011",
+      "billTitle": "Emergency Conservation Program Improvement Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-14",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-7084",
       "billTitle": "Defending American Property Abroad Act of 2026",
       "chamber": "House",
@@ -373,6 +402,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HRES-878",
+      "billTitle": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "chamber": "House",
+      "date": "2025-11-18",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-4405",
       "billTitle": "Epstein Files Transparency Act",
       "chamber": "House",
@@ -496,6 +532,13 @@
       "billTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025",
       "chamber": "House",
       "date": "2025-03-11",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-695",
+      "billTitle": "Medal of Honor Act",
+      "chamber": "House",
+      "date": "2025-02-26",
       "vote": "Yea"
     },
     {

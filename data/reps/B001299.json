@@ -6,7 +6,17 @@
   "role": "Senator",
   "district": null,
   "bio": "James Edward Banks is an American politician and naval officer serving since 2025 as the junior United States senator from Indiana. A member of the Republican Party, he was the U.S. representative for Indiana's 3rd congressional district from 2017 to 2025 and an Indiana state senator from 2010 to 2016.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "23-year-old Brett Scrogham of Greenwood, IN, had a bright future ahead of him. After graduating recently as a top 100 student from the IU Kelley School of Business, Brett had plans to invest in housing properties and help his community grow and prosper. As a young child, Brett helped a neighbor rescue her dogs from a terrible house fire. Friends of his referred to him as ``a God-fearing Christian man'' who was always willing to help people. Though I never had the chance to meet him, it is clear to me that Brett was really an incredible person.",
+      "source": "Senate Floor, Jun 1, 2026",
+      "granuleTitle": null,
+      "date": "Jun 1, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Jim_Banks",
   "voteHistory": [
