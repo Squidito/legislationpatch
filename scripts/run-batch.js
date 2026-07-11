@@ -59,7 +59,9 @@ function findUnprocessed() {
 }
 
 function findBillsNeedingVotes() {
-    const voteStages = new Set(['house', 'senate', 'signed']);
+    // 'dead' included: a bill that died ON THE FLOOR has a roll call too
+    // (HCONRES-108 failed 189-235 but was skipped here; QA had to backfill it).
+    const voteStages = new Set(['house', 'senate', 'signed', 'dead']);
     return loadCache().bills.filter(b =>
         b.analyzed &&
         voteStages.has(b.stage) &&
