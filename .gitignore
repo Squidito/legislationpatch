@@ -25,6 +25,7 @@ scripts/program-account-map.json
 data/version-text/
 
 # Working files — brand/preview assets and temp outputs
+tmp_*
 preview-*.png
 vp*.png
 section-demo.html
