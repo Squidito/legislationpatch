@@ -27,9 +27,30 @@
       "stance": "neutral",
       "text": "Mr. Speaker, 2 months ago, I was a local government official not far from here, in Fairfax County. In the 6 years I spent in that role, I learned that the people best positioned to make decisions about the local policies in their local communities are local leaders after listening to that local community. My colleagues across the aisle who are advocating for these bills, with due respect, know very little about the District of Columbia, know very little outside of perhaps their walk from their apartment in Navy Yard to this Capitol complex.",
       "date": "2025-11-20"
+    },
+    {
+      "billId": "119-HR-8464",
+      "billTitle": "Stopping Fraudulent Payments Act",
+      "stance": "neutral",
+      "text": "I will just give one agency, Social Security, an agency that has been under assault by this administration. It is estimated that 10,000 times a year, Social Security falsely declares somebody dead. Imagine that. You wake up one morning, and your own government says you are dead. It happens oftentimes because States send bad information to the Social Security Administration. Time after time after time, the IG has recommended that Social Security and this body make improvements in that process.",
+      "date": "2026-06-11"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-3106",
+      "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-8897",
+      "billTitle": "Improving Travel for American Families Act",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HCONRES-108",
       "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
@@ -248,6 +269,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-HR-2493",
+      "billTitle": "Improving Care in Rural America Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-S-1020",
       "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
       "chamber": "House",
@@ -395,10 +423,24 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-2550",
+      "billTitle": "Protect America's Workforce Act",
+      "chamber": "House",
+      "date": "2025-12-11",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-S-1071",
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6019",
+      "billTitle": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
+      "chamber": "House",
+      "date": "2025-11-19",
       "vote": "Yea"
     },
     {
@@ -434,6 +476,34 @@
       "billTitle": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
       "chamber": "House",
       "date": "2025-11-12",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-5143",
+      "billTitle": "District of Columbia Policing Protection Act of 2025",
+      "chamber": "House",
+      "date": "2025-09-17",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-5125",
+      "billTitle": "District of Columbia Judicial Nominations Reform Act of 2025",
+      "chamber": "House",
+      "date": "2025-09-17",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-4922",
+      "billTitle": "D.C. CRIMES Act",
+      "chamber": "House",
+      "date": "2025-09-16",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-5140",
+      "billTitle": "To lower the age at which a minor may be tried as an adult for certain criminal offenses in the District of Columbia to 14 years of age.",
+      "chamber": "House",
+      "date": "2025-09-16",
       "vote": "Nay"
     },
     {

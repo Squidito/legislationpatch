@@ -7,6 +7,11 @@ function isEnacted(bill) {
   return bill && bill.stage === 'signed';
 }
 
+// "Dead" = failed or vetoed (the bill is no longer advancing).
+function isDead(bill) {
+  return bill && (bill.stage === 'dead' || bill.stage === 'vetoed');
+}
+
 
 function extractVotePositions(actions) {
   const entries = [];
@@ -212,11 +217,97 @@ function renderBill(bill, num) {
   const state    = openCards.get(bill.id);
   const col      = likelihoodColor(bill.likelihood);
   const watching = watchedBills.has(bill.id);
-  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : (isEnacted(bill) ? ' bill-card--enacted' : '')}" id="card-${bill.id}">
+  return `<div class="bill-card${bill.isOmnibus ? ' bill-card--omnibus' : (isEnacted(bill) ? ' bill-card--enacted' : (isDead(bill) ? ' bill-card--dead' : ''))}" id="card-${bill.id}">
     ${renderHeader(bill, state, num, watching)}
     ${renderLikelihoodFooter(bill, col, state)}
-    ${renderMinorBody(bill, col, state === 'minor')}
-    ${renderBody(bill, state === 'full', col)}
+    ${renderBody(bill, !!state, col)}
+  </div>`;
+}
+
+// Full bill PAGE (bill.html) — an app-style page, NOT the card. Drops the card header/
+// portrait, the clickable likelihood footer, and the likelihood readout entirely (the
+// pipeline conveys stage, like the mobile app). Sections flow down with eyebrow labels.
+// Reuses the existing section builders so nothing regresses.
+function renderBillPage(bill) {
+  const watching     = watchedBills.has(bill.id);
+  const introDate    = formatDateCompact(bill.date);
+  const stageDateStr = formatDateCompact(bill.stageDate || bill.enactedDate || '');
+  const dateDisplay  = stageDateStr || introDate;
+  const cosponsors   = bill.raw?.cosponsors?.count || bill.cosponsors || 0;
+  const pages        = bill.pages || '';
+  const sponsorMeta  = [
+    sponsorShort(bill.sponsor),
+    cosponsors ? `${cosponsors} COSPONSOR${cosponsors === 1 ? '' : 'S'}` : null,
+    pages ? `${pages} PAGE${pages === 1 ? '' : 'S'}` : null,
+    dateDisplay || null,
+  ].filter(Boolean).join(' · ');
+
+  const statusBadge = bill.isOmnibus
+    ? `<span class="status-badge status-omnibus" data-tip="A large package bill bundling many measures or a full-year appropriations act into one.">OMNIBUS</span>`
+    : isEnacted(bill)
+      ? `<span class="status-badge status-enacted" data-tip="Signed into law.">ENACTED</span>`
+      : isDead(bill)
+        ? `<span class="status-badge status-dead" data-tip="This bill failed or was vetoed — it is no longer advancing.">DEAD</span>`
+        : '';
+
+  const codeLine = [
+    bill.code ? escHtml(bill.code.replace('.', ' ')) : '',
+    bill.stageLabel ? escHtml(bill.stageLabel) : '',
+    dateDisplay ? escHtml(dateDisplay) : '',
+  ].filter(Boolean).join(' · ');
+
+  const titleBlock = `<div class="bp-title-block">
+    <div class="bp-badge-row">
+      ${billTypeBadge(bill)}
+      ${statusBadge}
+      <button class="star-btn bp-star${watching ? ' watching' : ''}" onclick="toggleWatch('${bill.id}', event)" title="${watching ? 'Unwatch' : 'Watch this bill'}" aria-label="${watching ? 'Unwatch' : 'Watch this bill'}">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="${watching ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      </button>
+    </div>
+    ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
+    <h1 class="bp-title">${escHtml(bill.title)}</h1>
+    ${sponsorMeta ? `<div class="bp-meta">${escHtml(sponsorMeta)}</div>` : ''}
+  </div>`;
+
+  // Each section is one `.bp-section` for uniform spacing; `label` adds a neutral eyebrow
+  // for the sections that lack an internal title (the colored cards keep their own titles).
+  const wrap = (label, contentHtml) => contentHtml
+    ? `<section class="bp-section">${label ? `<div class="bp-label">${label}</div>` : ''}${contentHtml}</section>`
+    : '';
+
+  const summaryHtml  = bill.summary ? `<p class="bp-summary">${billRefHtml(bill.summary, bill.id)}</p>` : '';
+  const pipelineHtml = bill.pipeline ? renderStageStrip(bill) : '';
+  const topLinesHtml = renderTopLines(bill, true);
+  const changesHtml  = renderChangesAppStyle(bill);
+  const patchHtml    = (bill.isOmnibus && bill.divisions?.length) ? '' :
+    (bill.sections?.length ? renderSections(bill) : '');
+  const divisionsHtml = renderDivisions(bill);
+
+  const criticismsHtml = bill.criticisms?.length ? `<div class="criticism-section">
+      <div class="criticism-title">⚑ Opposed — who and why</div>
+      ${bill.criticisms.map(c => `<div class="criticism-item"><span class="criticism-who">${escHtml(c.who)}:</span> ${billRefHtml(c.why, bill.id)}</div>`).join('')}
+    </div>` : '';
+  const gapsHtml = bill.gaps?.length ? `<div class="gaps-section">
+      <div class="gaps-title">◈ Not addressed in this bill <span class="analysis-tag">analyst judgment</span></div>
+      ${bill.gaps.map(g => `<div class="gaps-item">${billRefHtml(g, bill.id)}</div>`).join('')}
+    </div>` : '';
+  const underHtml     = renderUnderreportedSection(bill);
+  const quotesHtml    = renderQuoteCards(bill);
+  const positionsHtml = renderPositionsSection(bill);
+
+  return `<div class="bill-page" id="card-${bill.id}">
+    ${titleBlock}
+    ${wrap('Summary', summaryHtml)}
+    ${wrap('Pipeline', pipelineHtml)}
+    ${wrap('Key provisions', topLinesHtml)}
+    ${wrap('What changed', changesHtml)}
+    ${wrap('Patch notes', patchHtml)}
+    ${wrap(null, divisionsHtml)}
+    ${wrap(null, criticismsHtml)}
+    ${wrap(null, gapsHtml)}
+    ${wrap(null, underHtml)}
+    ${wrap('Floor statements', quotesHtml)}
+    ${wrap(null, positionsHtml)}
   </div>`;
 }
 
@@ -264,6 +355,7 @@ function renderHeader(bill, state, num, watching) {
     </div>
     <div class="bill-actions-col">
       ${isEnacted(bill) && !bill.isOmnibus ? `<span class="status-badge status-enacted" data-tip="Signed into law.">ENACTED</span>` : ''}
+      ${isDead(bill) && !bill.isOmnibus ? `<span class="status-badge status-dead" data-tip="This bill failed or was vetoed — it is no longer advancing.">DEAD</span>` : ''}
       <button class="star-btn${watching ? ' watching' : ''}" onclick="toggleWatch('${bill.id}', event)" title="${watching ? 'Unwatch' : 'Watch this bill'}">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="${watching ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
           <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
@@ -296,7 +388,7 @@ function resolveTopLineSpineAnchor(billSection, spineAnchors) {
 // Headlines only become spine links when there's a spine to scroll to.
 function renderTopLines(bill, hasSpine) {
   const items = bill.top_lines || [];
-  if (!items.length && !bill.brief) return '';
+  if (!items.length) return '';
 
   const spineAnchors = hasSpine
     ? new Set((bill.sections || []).map(patchSectionAnchor).filter(Boolean))
@@ -330,24 +422,35 @@ function renderTopLines(bill, hasSpine) {
   };
 
   return `<div class="top-lines">
-    ${bill.brief ? `<div class="top-lines-brief">${billRefHtml(bill.brief, bill.id)}</div>` : ''}
     ${items.map(renderLine).join('')}
   </div>`;
 }
 
+// Vertical pipeline (bill page) — mirrors the app's StageStrip. Uses bill.pipeline (the
+// bill's actual stages, e.g. "Passed Senate" → "Passed House") stacked with connecting
+// rails: done = filled purple dot + purple rail; active (currentStep) = purple ring with
+// a light centre + purple-bold label; pending = grey. Vetoed active step goes red.
 function renderStageStrip(bill) {
-  const stages = ['Introduced', 'Committee', 'House', 'Senate', 'Signed'];
-  const idx = bill.currentStep || 0;
-  return `<div class="stage-strip">
-    ${stages.map((s, i) => {
-      const dotCls  = i < idx ? 'done' : i === idx ? 'active' : 'pending';
-      const dotSize = i === idx ? '13px' : '9px';
-      const lblCls  = i <= idx ? 'stage-strip-label-on' : '';
-      const conCls  = i < idx ? 'stage-strip-connector-done' : 'stage-strip-connector-pending';
-      return `<div class="stage-strip-step">
-        <div class="stage-strip-dot ${dotCls}" style="width:${dotSize};height:${dotSize}"></div>
-        <div class="stage-strip-label ${lblCls}">${s}</div>
-      </div>${i < stages.length - 1 ? `<div class="stage-strip-connector ${conCls}"></div>` : ''}`;
+  const steps = bill.pipeline || [];
+  if (!steps.length) return '';
+  const current = bill.currentStep || 0;
+  const vetoed  = bill.stage === 'vetoed';
+  return `<div class="vpipe">
+    ${steps.map((step, i) => {
+      const done   = i < current;
+      const active = i === current;
+      const dotCls = active ? (vetoed ? 'vp-vetoed' : 'vp-active') : done ? 'vp-done' : 'vp-pending';
+      const lblCls = active ? (vetoed ? 'vp-label-vetoed' : 'vp-label-active') : done ? 'vp-label-done' : 'vp-label-pending';
+      const line   = i < steps.length - 1
+        ? `<span class="vp-line ${done ? 'vp-line-done' : 'vp-line-pending'}"></span>`
+        : '';
+      return `<div class="vp-row">
+        <span class="vp-dotcol">
+          <span class="vp-dot ${dotCls}">${(done || active) ? '<span class="vp-dot-inner"></span>' : ''}</span>
+          ${line}
+        </span>
+        <span class="vp-label ${lblCls}">${escHtml(step)}</span>
+      </div>`;
     }).join('')}
   </div>`;
 }
@@ -413,28 +516,6 @@ function renderLikelihoodReadout(bill, col, marginBottom) {
       <span class="lr-lab" style="color:${col.text}">${escHtml(label)}</span>
       ${tag}
     </div>
-  </div>`;
-}
-
-function renderMinorBody(bill, col, isOpen) {
-  const topUnder = bill.underreported?.[0];
-  const underHtml = topUnder ? `
-    <div class="underreported-teaser">
-      <span class="underreported-badge">⚠ Underreported</span>
-      <div class="underreported-headline">${escHtml(topUnder.section)}</div>
-      <div class="underreported-preview">${billRefHtml(topUnder.summary, bill.id)}</div>
-    </div>` : '';
-
-  const likelihoodDetail = renderLikelihoodReadout(bill, col, '0');
-
-  return `<div class="bill-body-minor ${isOpen ? 'open' : ''}">
-    ${likelihoodDetail}
-    ${renderTopLines(bill)}
-    ${renderWhatChanged(bill)}
-    ${underHtml}
-    ${renderQuoteCards(bill, true)}
-    <button class="expand-full-btn" onclick="expandFull('${bill.id}', event)">Further Analysis ↓</button>
-    ${window.BILL_PAGE_ID ? '' : `<div class="view-bill-link-row view-bill-link-mobile"><a href="bill?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`}
   </div>`;
 }
 
@@ -739,54 +820,9 @@ function normalizeVersions(versions) {
   return out;
 }
 
-// "What changed" — the bill's version-to-version changelog. EMPTY until the bill
-// is actually revised (a `versionSummary` exists): introduced = nothing to show;
-// advanced unchanged = nothing to show; revised = the net change vs. the
-// introduced text, so a returning reader sees what's different without re-reading.
-// On the bill page it also shows the version history (milestones + dates).
-// "What changed" — the bill's version-to-version changelog, as patch-notes
-// Added / Modified / Removed bullets covering the bill's lifespan (Introduced ->
-// latest text). EMPTY until the bill is actually revised: `bill.versionChanges`
-// is only set once a revision produces real differences. Lets a returning reader
-// see what's different from the version they read, without re-reading.
-function renderWhatChanged(bill) {
-  const vc = bill.versionChanges;
-  if (!vc) return '';
-  const { added = [], modified = [], removed = [] } = vc;
-  if (!added.length && !modified.length && !removed.length) return '';
-
-  const block = (label, symbol, cls, items) => `<div class="patch-block ${cls}">
-      <div class="patch-block-label"><span class="patch-block-symbol">${symbol}</span>${label}</div>
-      <div class="patch-block-items">${
-        items.length
-          ? items.map(t => `<div class="patch-block-item">${billRefHtml(t, bill.id, true)}</div>`).join('')
-          : '<div class="patch-block-item patch-block-item--none">None</div>'
-      }</div>
-    </div>`;
-
-  return `<div class="what-changed-section">
-    <div class="what-changed-label">What changed <span class="analysis-tag">${whatChangedBaselineTag(vc)}</span></div>
-    <div class="what-changed-grid">
-      ${block('Added', '+', 'patch-block--added', added)}
-      ${block('Modified', '~', 'patch-block--modified', modified)}
-      ${block('Removed', '−', 'patch-block--removed', removed)}
-    </div>
-  </div>`;
-}
-
-// The diff baseline is Introduced when available, otherwise the earliest text
-// version on file (Reported/Engrossed/etc.) — say so instead of always claiming
-// "as introduced", which is false for bills that were never diffed against an
-// introduced text.
-function whatChangedBaselineTag(vc) {
-  const t = ((vc && vc.fromVersion && vc.fromVersion.type) || '').toLowerCase();
-  if (!t || t.includes('introduced')) return 'vs. as introduced';
-  if (t.includes('reported')) return 'vs. as reported';
-  if (t.includes('placed on calendar')) return 'vs. as placed on the calendar';
-  if (t.includes('engrossed amendment')) return 'vs. as passed with amendments';
-  if (t.includes('engrossed') || t.includes('considered and passed')) return 'vs. as first passed';
-  return 'vs. ' + (vc.fromVersion.type || 'earliest version');
-}
+// "What changed" now uses bill.changes (the analyst's added/modified/removed) via
+// renderChangesAppStyle, on BOTH the card and the bill page. The old version-diff
+// renderer (renderWhatChanged / bill.versionChanges) was removed 2026-07-14.
 
 function renderBody(bill, isOpen, col) {
   const pipelineHtml = `<div class="full-pipeline">
@@ -798,7 +834,10 @@ function renderBody(bill, isOpen, col) {
     }).join('')}
   </div>`;
 
-  const topLinesHtml = renderTopLines(bill, true);
+  // Card headlines are un-linked (no spine on the card — patch notes live on the bill page);
+  // the bill page has the spine, so its headlines link down to it.
+  const onBillPage = !!window.BILL_PAGE_ID;
+  const topLinesHtml = renderTopLines(bill, onBillPage);
 
   const sectionsHtml = (bill.isOmnibus && bill.divisions?.length) ? '' : bill.sections?.length
     ? `<div class="patch-notes">${renderSections(bill)}</div>`
@@ -820,26 +859,52 @@ function renderBody(bill, isOpen, col) {
       ${bill.gaps.map(g => `<div class="gaps-item">${billRefHtml(g, bill.id)}</div>`).join('')}
     </div>` : '';
 
-  const viewBillLink = window.BILL_PAGE_ID ? '' :
-    `<div class="view-bill-link-row"><a href="bill?id=${encodeURIComponent(bill.id)}">View full bill page →</a></div>`;
+  // Card: the button opens the bill page (which holds the section-by-section patch notes).
+  // Bill page: it IS the page, so no link.
+  const viewBillLink = onBillPage ? '' :
+    `<div class="view-bill-link-row"><a href="bill?id=${encodeURIComponent(bill.id)}">View full patch notes →</a></div>`;
 
   const stageDetailHtml = renderLikelihoodReadout(bill, col, '0.25rem');
+  const divisionsHtml   = renderDivisions(bill);
+  const quotesHtml      = renderQuoteCards(bill);
+  // What changed — bill.changes (the analyst's added/modified/removed), consistent with the
+  // bill page. Wrapped in the card's inset section with a mono "What changed" label.
+  const changesApp      = renderChangesAppStyle(bill);
+  const changesHtml     = changesApp
+    ? `<div class="what-changed-section"><div class="what-changed-label">What changed</div>${changesApp}</div>`
+    : '';
 
-  const divisionsHtml = renderDivisions(bill);
+  // Two section orders. Both end Floor statements → Congressional positions (Congressional
+  // last on both surfaces, per James 2026-07-14 — a deliberate divergence from the app card,
+  // which shows Congressional early):
+  //  • Card (single expanded view): NO likelihood readout (the footer bar already shows it)
+  //    and NO patch notes (the button opens them on the bill page).
+  //  • Bill page: full detail — summary/pipeline lead, what changed → patch notes → …
+  const inner = onBillPage
+    ? `
+      ${stageDetailHtml}
+      ${topLinesHtml}
+      ${changesHtml}
+      ${sectionsHtml}
+      ${divisionsHtml}
+      ${criticismsHtml}
+      ${gapsHtml}
+      ${underreportedHtml}
+      ${quotesHtml}
+      ${positionsHtml}
+    `
+    : `
+      ${topLinesHtml}
+      ${changesHtml}
+      ${criticismsHtml}
+      ${gapsHtml}
+      ${underreportedHtml}
+      ${quotesHtml}
+      ${positionsHtml}
+      ${viewBillLink}
+    `;
 
-  return `<div class="bill-body ${isOpen ? 'open' : ''}">
-    ${stageDetailHtml}
-    ${topLinesHtml}
-    ${renderQuoteCards(bill)}
-    ${sectionsHtml}
-    ${divisionsHtml}
-    ${renderWhatChanged(bill)}
-    ${underreportedHtml}
-    ${criticismsHtml}
-    ${gapsHtml}
-    ${positionsHtml}
-    ${viewBillLink}
-  </div>`;
+  return `<div class="bill-body ${isOpen ? 'open' : ''}">${inner}</div>`;
 }
 
 // ── Omnibus division rendering (bill page only) ────────────────────────────
@@ -931,23 +996,36 @@ function patchSectionAnchor(sec) {
 // Section breakdown rendered as a numbered "spine": each section is a node with a
 // mono §N / Title / Division marker on a continuous vertical rail. Boilerplate
 // sections flagged `admin:true` collapse into one quiet folded node at the top.
+// App-style "What changed" — driven by bill.changes (the analyst's added/modified/removed,
+// present on ~145/155 bills), matching the mobile ChangesSection: one quiet card with three
+// stacked, colour-labelled segments. Used by both the card and the bill page. (Replaced the
+// old versionChanges diff, which existed for only ~half of bills — hence the earlier blanks.)
+function renderChangesAppStyle(bill) {
+  const ch = bill.changes;
+  if (!ch) return '';
+  const { added = [], modified = [], removed = [] } = ch;
+  if (!added.length && !modified.length && !removed.length) return '';
+  const segment = (label, cls, items) => `<div class="wc-seg">
+      <div class="wc-seg-label ${cls}">${label}</div>
+      <div class="wc-seg-rule"></div>
+      ${items.length
+        ? items.map(t => `<div class="wc-item"><span class="wc-dot ${cls}"></span><span class="wc-item-text">${billRefHtml(t, bill.id)}</span></div>`).join('')
+        : '<div class="wc-none">None</div>'}
+    </div>`;
+  return `<div class="wc-card">
+    ${segment('Added', 'wc-added', added)}
+    ${segment('Modified', 'wc-modified', modified)}
+    ${segment('Removed', 'wc-removed', removed)}
+  </div>`;
+}
+
+// Patch notes = a stack of quiet section cards (mirrors the app's PatchSection): purple
+// label, purple-dotted items, detail shown INLINE (no per-item toggle). Preserves the
+// per-section spine anchor so KEY PROVISIONS headlines still scroll here.
 function renderSections(bill) {
   const secs = bill.sections || [];
   if (!secs.length) return '';
-  const admin = secs.filter(s => s.admin);
-  const main  = secs.filter(s => !s.admin);
-  let html = '<div class="patch-notes-title">Section-by-section breakdown</div><div class="patch-spine">';
-  if (admin.length) {
-    const aid = `psadm-${escHtml(bill.id)}`;
-    const sub = admin.map(s => secMarker(s.label)).filter(Boolean).join(', ');
-    html += `<div class="ps-admin-strip" onclick="var k=this.nextElementSibling;k.classList.toggle('open');var c=this.querySelector('.ps-caret');if(c)c.textContent=k.classList.contains('open')?'▴':'▾'">
-        <span class="ps-num admin">§§</span><span class="ps-rail"></span>
-        <div class="ps-admin-label">Administrative provisions${sub ? ` <span class="ps-admin-sub">· ${sub}</span>` : ''}<span class="ps-caret">▾</span></div>
-      </div>
-      <div class="ps-admin-kids" id="${aid}">${admin.map((s, i) => renderSection(bill, s, 'a' + i, {})).join('')}</div>`;
-  }
-  html += main.map((s, i) => renderSection(bill, s, i, { last: i === main.length - 1 })).join('');
-  return html + '</div>';
+  return `<div class="patch-cards">${secs.map((s, i) => renderSection(bill, s, i)).join('')}</div>`;
 }
 
 // Derive the rail marker shown for a section label. Falls back to null (→ plain dot).
@@ -970,68 +1048,58 @@ function secTitle(label) {
   return i >= 0 ? L.slice(i + 1).trim() : L;
 }
 
-function renderSection(bill, sec, si, opts) {
-  opts = opts || {};
-  const marker = secMarker(sec.label);
-  const title  = secTitle(sec.label);
-  const spineAnchor = patchSectionAnchor(sec);              // spine id — top-lines scroll target (all views)
-  const anchor = window.BILL_PAGE_ID ? spineAnchor : null;  // section title → bill text (bill page only)
-  const titleHtml = anchor
-    ? `<a class="patch-section-title-link" href="#${anchor}" onclick="event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(title)}</a>`
-    : escHtml(title);
-  const node = marker
-    ? `<span class="ps-num${sec.admin ? ' admin' : ''}">${escHtml(marker)}</span>`
-    : `<span class="ps-dot"></span>`;
-  return `<div class="patch-section ps-row${opts.last ? ' ps-last' : ''}${sec.admin ? ' ps-adm' : ''}"${spineAnchor ? ` id="sp-${escHtml(bill.id)}-${spineAnchor}"` : ''}>
-    ${node}<span class="ps-rail"></span>
-    <div class="ps-title">${titleHtml}</div>
-    ${sec.items.map((item, ii) => renderItem(bill, item, si, ii)).join('')}
+function renderSection(bill, sec, si) {
+  const spineAnchor = patchSectionAnchor(sec);              // spine id — KEY PROVISIONS scroll target
+  const anchor = window.BILL_PAGE_ID ? spineAnchor : null;  // label → full bill text (bill page only)
+  const label = sec.label || '';
+  // Title still links to the verbatim text; stopPropagation so tapping it doesn't also collapse.
+  const labelHtml = anchor
+    ? `<a class="patch-card-title-link" href="#${anchor}" onclick="event.stopPropagation();event.preventDefault();scrollToBillSection('${anchor}')">${escHtml(label)}</a>`
+    : escHtml(label);
+  return `<div class="patch-card${sec.admin ? ' patch-card--admin' : ''}"${spineAnchor ? ` id="sp-${escHtml(bill.id)}-${spineAnchor}"` : ''}>
+    <div class="patch-card-label" onclick="togglePatchCard(this)">
+      <span class="patch-card-label-text">${labelHtml}</span>
+      <span class="patch-card-caret">▾</span>
+    </div>
+    <div class="patch-card-items">
+      ${(sec.items || []).map((item, ii) => renderItem(bill, item, si, ii)).join('')}
+    </div>
   </div>`;
 }
 
-function renderItem(bill, item, si, ii) {
-  const key    = `${bill.id}-${si}-${ii}`;
-  const isOpen = openDetails[key];
-  const chipsHtml = item.comments?.length
-    ? `<div class="comment-chips">${item.comments.map(c =>
-        `<span class="chip chip-${c.party}" title="${escHtml(c.text)}">${c.party === 'd' ? 'D' : c.party === 'r' ? 'R' : '●'}</span>`
-      ).join('')}</div>`
-    : '';
-  const commentsDetail = item.comments?.map(c =>
-    `<div class="item-detail-comment">${billRefHtml(c.text, bill.id)}</div>`
-  ).join('') || '';
+// Collapse/expand one patch-note section card (mirrors the app's collapsible PatchSection;
+// starts expanded). The section label is the toggle; its title link stops propagation.
+function togglePatchCard(labelEl) {
+  const card = labelEl.closest('.patch-card');
+  if (!card) return;
+  const collapsed = card.classList.toggle('collapsed');
+  const caret = labelEl.querySelector('.patch-card-caret');
+  if (caret) caret.textContent = collapsed ? '▸' : '▾';
+}
 
-  return `<div class="patch-item">
-    <div class="patch-item-main">${billRefHtml(item.main, bill.id, true)}</div>
-    ${chipsHtml}
-    ${item.detail ? `
-      <button class="more-btn" onclick="toggleDetail('${key}')">${isOpen ? '▴ hide' : '▾ details'}</button>
-      <div class="item-detail ${isOpen ? 'open' : ''}" id="detail-${key}">
-        <div>${billRefHtml(item.detail, bill.id)}</div>
-        ${commentsDetail}
-      </div>` : ''}
+function renderItem(bill, item, si, ii) {
+  const commentsHtml = item.comments?.length
+    ? item.comments.map(c =>
+        `<div class="patch-card-comment"><span class="chip chip-${c.party}">${c.party === 'd' ? 'D' : c.party === 'r' ? 'R' : '●'}</span> ${billRefHtml(c.text, bill.id)}</div>`
+      ).join('')
+    : '';
+  return `<div class="patch-card-item">
+    <span class="patch-card-dot"></span>
+    <div class="patch-card-item-body">
+      <div class="patch-card-main">${billRefHtml(item.main, bill.id, true)}</div>
+      ${item.detail ? `<div class="patch-card-detail">${billRefHtml(item.detail, bill.id)}</div>` : ''}
+      ${commentsHtml}
+    </div>
   </div>`;
 }
 
 // ---- Interactions ----
 
+// Single expanded view: the card is either open or closed (no more minor/full tiers).
 function toggleCard(id) {
   const state = openCards.get(id);
-  if (state) openCards.delete(id);      // minor or full → closed
-  else openCards.set(id, 'minor');      // closed → minor
-  renderAll();
-}
-
-function expandFull(id, e) {
-  e && e.stopPropagation();
-  openCards.set(id, 'full');
-  // Auto-open all detail panels when entering full expansion
-  const bill = allBills.find(b => b.id === id);
-  (bill?.sections || []).forEach((sec, si) => {
-    (sec.items || []).forEach((item, ii) => {
-      if (item.detail) openDetails[`${id}-${si}-${ii}`] = true;
-    });
-  });
+  if (state) openCards.delete(id);      // open → closed
+  else openCards.set(id, 'open');       // closed → open
   renderAll();
 }
 

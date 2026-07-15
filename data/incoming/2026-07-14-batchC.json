@@ -1,0 +1,1271 @@
+{
+  "bills": [
+    {
+      "id": "119-HR-7574",
+      "code": "HR.7574",
+      "title": "ELO Realignment and Strategic Engagement Reform Act of 2026",
+      "official_title": "To provide for the reorganization and realignment of the Engagement, Liaison, and Outreach Office of the Department of Homeland Security, and for other purposes.",
+      "date": "2026-02-13",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Evans, Gabe (R-CO-8)",
+      "sponsor_bioguide": "E000300",
+      "cosponsors": 2,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-13",
+      "likelihood": 40,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with two cosponsors; referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
+      "summary": "Directs the Secretary of Homeland Security to submit a comprehensive plan within 120 days for reorganizing the Engagement, Liaison, and Outreach Office (ELO) inside the Office of Intelligence and Analysis (I&A) and realigning its essential functions and personnel into the Partner Engagement directorate of I&A. The plan must identify redundant or non-essential positions, programs, or functions; establish clear communication protocols with priority law enforcement agencies; centralize points of contact; enhance information-sharing; reduce outreach duplication across DHS components; and improve accountability and performance metrics. The Secretary must certify commencement of implementation within 60 days of starting the plan, and until both the plan is submitted and implementation is certified, the Secretary may not expand ELO's staffing, budget, or programmatic scope, nor establish new offices duplicating ELO's or the Partner Engagement directorate's mission without specific congressional authorization.",
+      "brief": "Requires DHS to submit within 120 days a plan to reorganize the Engagement, Liaison, and Outreach Office and fold its essential functions into I&A's Partner Engagement directorate, and freezes ELO expansion until the plan is submitted and implementation is certified.",
+      "top_lines": [
+        {
+          "headline": "120-Day DHS Reorganization Plan",
+          "billSection": "2",
+          "subs": [
+            "Secretary must submit a comprehensive plan to the House Homeland Security Committee and the Senate Homeland Security and Governmental Affairs Committee",
+            "Plan must identify redundant or non-essential ELO positions, programs, or functions",
+            "Plan must realign ELO's essential functions and personnel within I&A's Partner Engagement directorate"
+          ]
+        },
+        {
+          "headline": "Coordination Requirements",
+          "billSection": "2(a)(3)",
+          "subs": [
+            "Establish clear communication protocols with priority law enforcement agencies",
+            "Centralize points of contact for law enforcement engagement",
+            "Enhance information-sharing mechanisms",
+            "Reduce outreach duplication across DHS components",
+            "Improve accountability and performance metrics related to stakeholder engagement"
+          ]
+        },
+        {
+          "headline": "Plan Content Requirements",
+          "billSection": "2(b)",
+          "subs": [
+            "Organizational analysis with cost-benefit estimates",
+            "Detailed staffing proposals, including reassignment plans",
+            "Transition timeline for realignment within I&A's Partner Engagement directorate",
+            "Internal oversight mechanisms to monitor implementation",
+            "Recommendations for future engagement models",
+            "Assurance of continuity of intelligence support and convenings to State, local, Tribal, and territorial (SLTT) entity partners, including relevant HSIN-INTEL access"
+          ]
+        },
+        {
+          "headline": "Certification and Freeze",
+          "billSection": "2(c)–(d)",
+          "subs": [
+            "Certification of implementation commencement due within 60 days of starting the plan",
+            "Until plan is submitted and implementation is certified, Secretary may not expand ELO's staffing, budget, or programmatic scope",
+            "Secretary may not establish new offices duplicating ELO or Partner Engagement mission without specific congressional authorization"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"ELO Realignment and Strategic Engagement Reform Act of 2026.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Plan for Reorganization and Realignment of DHS Engagement, Liaison, and Outreach Office",
+          "items": [
+            {
+              "main": "Not later than 120 days after enactment, the Secretary must submit to the House Homeland Security Committee and Senate Homeland Security and Governmental Affairs Committee a comprehensive plan to identify redundant or non-essential ELO positions, programs, or functions; realign ELO's essential functions and personnel within the Partner Engagement directorate of I&A; and improve coordination with priority law enforcement agencies.",
+              "detail": "The coordination improvements listed in subsection (a)(3) are establishing clear communication protocols, centralizing points of contact, enhancing information-sharing, reducing outreach duplication across DHS components, and improving accountability and performance metrics.",
+              "comments": []
+            },
+            {
+              "main": "Plan must include an organizational analysis justifying the reorganization (with cost-benefit estimates), detailed staffing proposals including reassignment plans, a transition timeline for the realignment, internal oversight mechanisms, recommendations for future engagement models, and assurance of continuity of intelligence support and convenings to SLTT entity partners, including relevant HSIN-INTEL access.",
+              "detail": "Subsection (b) enumerates six specific plan requirements. Continuity of intelligence support to State, local, Tribal, and territorial partners is called out separately in paragraph (6).",
+              "comments": []
+            },
+            {
+              "main": "Not later than 60 days after commencing implementation of the plan, the Secretary must submit a certification to the same congressional committees.",
+              "detail": "Subsection (c) sets the certification-of-commencement requirement.",
+              "comments": []
+            },
+            {
+              "main": "Until the Secretary submits the plan and certifies implementation, the Secretary may not expand ELO's staffing, budget, or programmatic scope, and may not establish new offices in DHS duplicating ELO's or the Partner Engagement directorate's mission without specific congressional authorization.",
+              "detail": "Subsection (d) is the pre-plan expansion freeze — it applies until both the plan is submitted (subsection (a)) and implementation commencement is certified (subsection (c)).",
+              "comments": []
+            },
+            {
+              "main": "Defines \"Department\" (DHS), \"ELO Office\" (Engagement, Liaison, and Outreach office within I&A), \"I&A\" (Office of Intelligence and Analysis), \"Secretary\" (of Homeland Security), \"SLTT entity\" (via section 2200 of the Homeland Security Act of 2002, 6 U.S.C. 650), and \"priority law enforcement agencies\" (Federal, State, and local law enforcement agencies identified by the Secretary as key partners for national security, counterterrorism, emergency response, or other mission-critical operations).",
+              "detail": "Definitions section in subsection (e).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not specify the total number of ELO positions or the current ELO budget baseline that the reorganization applies to.",
+        "The bill does not describe consequences if the Secretary fails to submit the plan within the 120-day deadline.",
+        "The bill does not define what a \"non-essential\" position or function is beyond leaving the determination to the plan itself.",
+        "The bill does not authorize any additional funds for the reorganization or transition."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "120-day DHS plan requirement to reorganize ELO and fold its essential functions into I&A's Partner Engagement directorate",
+          "60-day certification-of-implementation-commencement requirement",
+          "Pre-plan freeze on ELO staffing, budget, or programmatic scope expansion",
+          "Prohibition on establishing new DHS offices duplicating ELO or Partner Engagement mission without specific congressional authorization"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-8770",
+      "code": "HR.8770",
+      "title": "SAFEGUARDS Act of 2026",
+      "official_title": "To amend title 49, United States Code, to establish funds for investments in aviation security, and for other purposes.",
+      "date": "2026-05-12",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Strong, Dale W. (R-AL-5)",
+      "sponsor_bioguide": "S001220",
+      "cosponsors": 6,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-13",
+      "likelihood": 45,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with six cosponsors and referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
+      "summary": "Amends title 49, United States Code, to dedicate portions of the 9/11 Security Fee (collected under section 44940) to two aviation security funds beginning in fiscal year 2027. Under subsection (h) of section 44923 as amended, the first $500M in fees each fiscal year is deposited in the existing Aviation Security Capital Fund and the TSA Administrator is directed to impose the fee so as to collect at least $500M for that fund. A new subsection (i) creates the Aviation Security Checkpoint Technology Fund (ASCT Fund) into which the next $250M in fees is deposited each fiscal year — available until expended for testing, procurement, deployment, installation, and sustainment of aviation security checkpoint technology, again with a fee-setting instruction to collect not less than $250M. A sense of Congress declares that the 9/11 Security Fee is airline-passenger-paid and should be used exclusively for aviation security, and that diversion should end no later than 2027. A conforming amendment updates the cross-reference in section 44940(j)(1) from \"section 44923(h)\" to \"subsections (h) and (i) of section 44923.\"",
+      "brief": "Dedicates the first $500M of the 9/11 Security Fee each fiscal year to the Aviation Security Capital Fund and creates a new Aviation Security Checkpoint Technology Fund that receives the next $250M, both starting in fiscal year 2027.",
+      "top_lines": [
+        {
+          "headline": "$500M to the Aviation Security Capital Fund",
+          "billSection": "3(a)",
+          "subs": [
+            "Beginning FY2027 and each fiscal year thereafter, the first $500M from 9/11 Security Fee receipts is deposited in the Aviation Security Capital Fund",
+            "TSA Administrator directed to set the fee so as to collect at least $500M annually",
+            "Amounts available to the Administrator to make grants or enter related agreements under section 44923"
+          ]
+        },
+        {
+          "headline": "New Aviation Security Checkpoint Technology Fund",
+          "billSection": "3(b)",
+          "subs": [
+            "Establishes ASCT Fund within DHS",
+            "Beginning FY2027 and each fiscal year thereafter, the next $250M in fees (after the $500M Capital Fund deposit) is deposited in the ASCT Fund",
+            "TSA Administrator directed to set the fee so as to collect not less than $250M annually",
+            "Amounts available until expended for testing, procurement, deployment, installation, and sustainment of aviation security checkpoint technology"
+          ]
+        },
+        {
+          "headline": "Sense of Congress",
+          "billSection": "2",
+          "subs": [
+            "9/11 Security Fee is an airline-passenger-paid fee established to sustain aviation security",
+            "Revenue should be used exclusively for aviation security (screening, technology upgrades, personnel support)",
+            "Use of the fee for unrelated purposes undermines public trust",
+            "Diversion of fee revenue should end no later than 2027, per section 44940(i)(4) of title 49, U.S.C., as in effect on the date of enactment"
+          ]
+        },
+        {
+          "headline": "Conforming Cross-Reference",
+          "billSection": "3(c)",
+          "subs": [
+            "Section 44940(j)(1) reference updated from \"section 44923(h)\" to \"subsections (h) and (i) of section 44923\""
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"Spending Aviation Fees for Equipment, Guaranteeing Upgraded and Advanced Risk Detection and Safety Act of 2026\" or the \"SAFEGUARDS Act of 2026.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Sense of Congress",
+          "items": [
+            {
+              "main": "States that the 9/11 Security Fee (49 U.S.C. 44940) is an airline-passenger-paid fee established with the express purpose of sustaining aviation security; that revenue should be used exclusively to fund activities, programs, equipment, and initiatives directly improving commercial aviation security (including passenger and baggage screening, security technology upgrades, and personnel support); that use for unrelated purposes undermines public trust; and that diversion should be ended no later than 2027 in accordance with section 44940(i)(4) as it read on the date of enactment.",
+              "detail": "Sense-of-Congress declarations are non-binding but frame the operative amendments in section 3.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Aviation Security Funds",
+          "items": [
+            {
+              "main": "Amends subsection (h) of section 44923 of title 49, U.S.C., so that beginning FY2027 and for each fiscal year thereafter, the first $500M derived from fees received under section 44940(a)(1) is available to be deposited in the Aviation Security Capital Fund, and the TSA Administrator is directed to impose the fee so as to collect at least $500M annually for that Fund.",
+              "detail": "Strikes the second, third, and fourth sentences of paragraph (1) of subsection (h) and inserts the new $500M-floor sentences. Paragraphs (2) and (3) are struck and replaced with a single paragraph (2) making Fund amounts available to the TSA Administrator for grants and related agreements under section 44923.",
+              "source": ["119-HR-8770"]
+            },
+            {
+              "main": "Establishes the Aviation Security Checkpoint Technology (ASCT) Fund within DHS. Beginning FY2027 and each fiscal year thereafter, after the first $500M is deposited into the Aviation Security Capital Fund, the next $250M from fees received under section 44940(a)(1) is available to be deposited in the ASCT Fund; the Administrator must set the fee so as to collect not less than $250M annually for the ASCT Fund. Amounts are available until expended for testing, procurement, deployment, installation, and sustainment of aviation security checkpoint technology.",
+              "detail": "Adds new subsection (i) to section 44923 (redesignating the existing subsection (i) as (j)). ASCT Fund disbursement authority mirrors the Capital Fund's — available to the TSA Administrator to make grants or enter related agreements.",
+              "source": ["119-HR-8770"]
+            },
+            {
+              "main": "Conforming amendment: paragraph (1) of section 44940(j) (as redesignated) is amended by striking \"section 44923(h)\" and inserting \"subsections (h) and (i) of section 44923.\"",
+              "detail": "Updates the 9/11 Security Fee statute's cross-reference to reflect that the fee now flows into both the Capital Fund and the new ASCT Fund.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not identify what happens to 9/11 Security Fee receipts above the combined $750M ($500M + $250M) floors — the current allocation to general revenues or other uses is not described within this Act's text.",
+        "The bill does not define \"aviation security checkpoint technology\" for the ASCT Fund beyond authorizing testing, procurement, deployment, installation, and sustainment.",
+        "The bill does not specify grant-application procedures, matching requirements, or eligibility criteria for either fund.",
+        "The bill does not include an oversight or reporting requirement on how deposited amounts are spent."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "$500M annual floor from 9/11 Security Fee to Aviation Security Capital Fund starting FY2027",
+          "New Aviation Security Checkpoint Technology Fund receiving the next $250M annually starting FY2027",
+          "New fee-setting directives requiring TSA to collect at least $500M for Capital Fund and not less than $250M for ASCT Fund",
+          "Sense of Congress that the 9/11 Security Fee should be used exclusively for aviation security and that diversion should end no later than 2027"
+        ],
+        "modified": [
+          "49 U.S.C. 44923(h) restructured: prior second, third, and fourth sentences of paragraph (1) replaced; paragraphs (2) and (3) replaced with a single disbursement-authority paragraph",
+          "49 U.S.C. 44940(j)(1) cross-reference updated to point to both subsections (h) and (i) of section 44923"
+        ],
+        "removed": [
+          "Second, third, and fourth sentences of prior 49 U.S.C. 44923(h)(1)",
+          "Prior paragraphs (2) and (3) of 49 U.S.C. 44923(h)"
+        ]
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-4549",
+      "code": "HR.4549",
+      "title": "Office of Rural Affairs Enhancement Act",
+      "official_title": "To amend the Small Business Act to clarify the responsibilities of the Office of Rural Affairs of the Small Business Administration, and for other purposes.",
+      "date": "2025-07-21",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Goodlander, Maggie (D-NH-2)",
+      "sponsor_bioguide": "G000604",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2025-12-02",
+      "likelihood": 55,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "Received in the Senate on December 2, 2025 and placed on the Senate Legislative Calendar under General Orders (Calendar No. 282). Sponsored by a Democratic member with three cosponsors; referred in the House to the Committee on Small Business.",
+      "summary": "Amends section 26 of the Small Business Act (15 U.S.C. 653) to clarify the Office of Rural Affairs (ORA) of the Small Business Administration. The Office is to be administered by an Assistant Administrator who is an employee in the competitive service and who must have education, professional experience, or knowledge of rural affairs and small business issues, as well as experience providing development assistance to rural small business concerns. The bill rewrites the duties in subsection (c) — replacing references to \"small business concerns located in rural areas\" with \"rural small business concerns,\" changing \"provide information\" to \"promote\" the policies and programs of SBA and other federal agencies, updating the cross-reference from the United States Tourism and Travel Administration to the National Travel and Tourism Office of the Department of Commerce, and adding a new duty to host webinars and outreach events. New subsection (d) requires the Assistant Administrator to host webinars and outreach events across regions and to invite district-office representatives, resource partners, and Federal/State agencies. New subsection (e) requires the Administrator to submit annual reports (first due 180 days after enactment of the subsection) to the House Small Business Committee and the Senate Small Business and Entrepreneurship Committee, and make them publicly available, covering operational details, activities under subsection (c), number of webinars/events, an analysis of SBA lending programs' service to rural small businesses, and information gathered from outreach. New subsection (f) defines \"Assistant Administrator,\" \"resource partners\" (small business development centers, women's business centers under section 29, SCORE chapters under section 8(b)(1)(B), and Veteran Business Outreach Centers under section 32), and \"rural small business concern\" (a small business concern in a rural area as defined in section 7(b)(16)).",
+      "brief": "Restructures the Office of Rural Affairs at SBA — sets qualifications for a competitive-service Assistant Administrator, rewrites the Office's duties, requires nationwide webinars and outreach events, and adds an annual public report to the House and Senate small business committees.",
+      "top_lines": [
+        {
+          "headline": "Competitive-Service Assistant Administrator",
+          "billSection": "2(1)",
+          "subs": [
+            "Office of Rural Affairs to be administered by an Assistant Administrator who is an employee in the competitive service",
+            "Must have education, professional experience, or knowledge of rural affairs and issues relating to small business concerns",
+            "Must have experience providing development assistance to rural small business concerns"
+          ]
+        },
+        {
+          "headline": "Rewritten Office Duties",
+          "billSection": "2(2)",
+          "subs": [
+            "\"Small business concerns located in rural areas\" replaced with \"rural small business concerns\" throughout paragraph (1)",
+            "In paragraph (3), \"provide information\" changed to \"promote\" the policies and programs of SBA and other federal agencies for assisting rural small business concerns",
+            "In paragraph (5), reference updated from the United States Tourism and Travel Administration to the National Travel and Tourism Office of the Department of Commerce",
+            "New paragraph (6) added: host webinars and outreach events for rural small business concerns as described in subsection (d)"
+          ]
+        },
+        {
+          "headline": "New Outreach Duties",
+          "billSection": "2(3), subsection (d)",
+          "subs": [
+            "Assistant Administrator must host webinars and outreach events in various regions of the United States for rural small business concerns",
+            "Must invite representatives from SBA district offices, resource partners, Federal and State agencies, and other interested persons"
+          ]
+        },
+        {
+          "headline": "Annual Public Report",
+          "billSection": "2(3), subsection (e)",
+          "subs": [
+            "First report due 180 days after enactment of subsection (e); annually thereafter",
+            "Submitted to the House Small Business Committee and the Senate Small Business and Entrepreneurship Committee, and made publicly available on an SBA website",
+            "Must include operational details (Assistant Administrator's name, Office budget, staffing), summary of subsection (c) activities, webinar/event counts, an analysis of SBA lending programs' service to rural small business concerns, and information gathered from outreach"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"Office of Rural Affairs Enhancement Act.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Office of Rural Affairs of the Small Business Administration",
+          "items": [
+            {
+              "main": "Amends section 26 of the Small Business Act (15 U.S.C. 653), subsection (b), to require the Office to be administered by an Assistant Administrator who is an employee in the competitive service, and who has education/professional experience or knowledge of rural affairs and small business issues, plus experience providing development assistance to rural small business concerns.",
+              "detail": "Paragraph (1) sets the appointment as a competitive-service position; paragraph (2) sets the qualifications.",
+              "comments": []
+            },
+            {
+              "main": "Amends subsection (c) — changes references from \"small business concerns located in rural areas\" to \"rural small business concerns,\" changes \"provide information\" to \"promote\" the policies and programs of SBA and other federal agencies, updates the reference from the United States Tourism and Travel Administration to the National Travel and Tourism Office of the Department of Commerce, and adds new paragraph (6) requiring the Office to host webinars and outreach events as described in subsection (d).",
+              "detail": "Multiple striking-and-inserting amendments across paragraphs (1), (3), (4), and (5); paragraph (6) is the added item.",
+              "comments": []
+            },
+            {
+              "main": "Adds new subsection (d) requiring the Assistant Administrator to host webinars and outreach events in various regions of the United States for rural small business concerns, and to invite representatives from SBA district offices, resource partners, Federal and State agencies, and other interested persons.",
+              "detail": "Subsection (d) implements the new paragraph (6) duty added to subsection (c).",
+              "comments": []
+            },
+            {
+              "main": "Adds new subsection (e) requiring the Administrator to submit annual reports to the House Committee on Small Business and the Senate Committee on Small Business and Entrepreneurship, and make each report publicly available on an SBA website. Reports must include operational details of the Office (Assistant Administrator's name, Office budget, number of full-time employees), a summary of subsection (c) activities, the number of webinars and outreach events, an analysis of SBA lending programs' service to rural small business concerns, and information gathered from outreach events.",
+              "detail": "First report due not later than 180 days after enactment of subsection (e); annually thereafter.",
+              "comments": []
+            },
+            {
+              "main": "Adds new subsection (f) definitions: \"Assistant Administrator\" (of the Office of Rural Affairs, appointed under subsection (b)); \"resource partners\" (small business development centers, women's business centers under section 29, SCORE chapters established under section 8(b)(1)(B), and Veteran Business Outreach Centers under section 32); \"rural small business concern\" (a small business concern located in a rural area as defined in section 7(b)(16)).",
+              "detail": "Definitions in subsection (f).",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not authorize additional funding to carry out the outreach or reporting requirements.",
+        "The bill does not specify the frequency of webinars or a minimum number of regions to be covered.",
+        "The bill does not describe consequences if the Administrator fails to meet the report deadlines.",
+        "The bill does not modify SBA lending program terms — only the reporting analysis of those programs' rural service."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Qualifications requirements for the Office of Rural Affairs Assistant Administrator",
+          "New paragraph (6) in 15 U.S.C. 653(c): host webinars and outreach events for rural small business concerns",
+          "New subsection (d) requiring nationwide webinars and outreach events with invited district-office, resource-partner, and Federal/State agency representation",
+          "New subsection (e) requiring an annual public report to House and Senate small business committees, first due 180 days after enactment",
+          "New subsection (f) with definitions of \"Assistant Administrator,\" \"resource partners,\" and \"rural small business concern\""
+        ],
+        "modified": [
+          "15 U.S.C. 653(b): rewritten as a two-paragraph structure (appointment + qualifications)",
+          "15 U.S.C. 653(c)(1): \"small business concerns located in rural areas\" replaced with \"rural small business concerns\"",
+          "15 U.S.C. 653(c)(3): \"provide information\" changed to \"promote\" the policies and programs of SBA and other federal agencies",
+          "15 U.S.C. 653(c)(5): reference updated from the United States Tourism and Travel Administration to the National Travel and Tourism Office of the Department of Commerce, and \"small businesses in rural areas\" replaced with \"rural small business concerns\""
+        ],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-8168",
+      "code": "HR.8168",
+      "title": "Major Non-NATO Ally Terror Threat Assessment Act",
+      "official_title": "To require an assessment of terrorism threats to the United States posed by foreign terrorist organizations and Specially Designated Global Terrorists present in countries that are major non-NATO allies, and for other purposes.",
+      "date": "2026-03-30",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Van Epps, Matt (R-TN-7)",
+      "sponsor_bioguide": "V000139",
+      "cosponsors": 1,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "billType": "study",
+      "stageDate": "2026-07-13",
+      "likelihood": 45,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with one cosponsor; referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
+      "summary": "Requires the Secretary of Homeland Security, in consultation with the Secretary of State and the Director of National Intelligence, to submit to the appropriate congressional committees an assessment of terrorism threats to the United States posed by foreign terrorist organizations (FTOs) and Specially Designated Global Terrorists (SDGTs) present in countries that are operating or designated as major non-NATO allies (MNNAs). The first assessment is due within 180 days after enactment; biennial assessments follow. Each assessment must identify each FTO or SDGT present in each MNNA; describe their activities within each ally (including use of artificial intelligence or critical and emerging technologies); describe the MNNA government's efforts to disrupt and degrade those activities and any cooperation with elements of the U.S. intelligence community; assess DHS's capability to identify, monitor, and mitigate the threats and to prevent members from entering the United States; and identify any additional resources required. Assessments are submitted in classified form and made available to every Member of Congress upon request; each assessment is followed by a congressional briefing. Definitions incorporate: \"artificial intelligence\" (section 5002 of the National Artificial Intelligence Initiative Act of 2020, 15 U.S.C. 9401), \"critical and emerging technologies\" (the February 2024 Critical and Emerging Technologies List Update issued by NSTC, or any successor), \"intelligence community\" (section 3(4) of the National Security Act of 1947, 50 U.S.C. 3003(4)), \"foreign terrorist organization\" (section 219 of the Immigration and Nationality Act, 8 U.S.C. 1189), \"major non-NATO ally\" (section 644 of the Foreign Assistance Act of 1961, 22 U.S.C. 2403), \"specially designated global terrorist\" (per Executive Order 13224, September 23, 2001; 66 Fed. Reg. 49079), and \"terrorism\" (section 2 of the Homeland Security Act of 2002, 6 U.S.C. 101).",
+      "brief": "Directs DHS, in consultation with State and ODNI, to submit a classified biennial assessment (first due 180 days after enactment) of FTO and SDGT presence and activity in major non-NATO ally countries — including use of AI and critical and emerging technologies — plus a congressional briefing on each.",
+      "top_lines": [
+        {
+          "headline": "180-Day/Biennial DHS Assessment",
+          "billSection": "2(a)",
+          "subs": [
+            "Secretary of Homeland Security submits the assessment, in consultation with the Secretary of State and the Director of National Intelligence",
+            "First assessment due not later than 180 days after enactment",
+            "Biennial thereafter"
+          ]
+        },
+        {
+          "headline": "Elements for Each MNNA",
+          "billSection": "2(b)",
+          "subs": [
+            "Identify each FTO or SDGT present in each MNNA",
+            "Describe each identified group's or individual's activities, including use of artificial intelligence or critical and emerging technologies",
+            "Describe MNNA government efforts to disrupt/degrade those activities and any cooperation with U.S. intelligence community elements",
+            "Assess DHS capability to identify, monitor, and mitigate the threats",
+            "Assess DHS capability to prevent identified members from entering the United States",
+            "Identify any additional resources required"
+          ]
+        },
+        {
+          "headline": "Classified Form + Member Access",
+          "billSection": "2(c)–(d)",
+          "subs": [
+            "Assessment submitted in classified form",
+            "Made available to every Member of Congress upon request",
+            "Secretary must provide a congressional briefing upon submission of each assessment"
+          ]
+        },
+        {
+          "headline": "Cross-Referenced Definitions",
+          "billSection": "2(e)",
+          "subs": [
+            "\"Appropriate congressional committees\": House Homeland Security + Senate Homeland Security and Governmental Affairs",
+            "\"Artificial intelligence\": section 5002 of the National Artificial Intelligence Initiative Act of 2020 (15 U.S.C. 9401)",
+            "\"Critical and emerging technologies\": February 2024 Critical and Emerging Technologies List Update issued by NSTC, or any successor",
+            "\"Foreign terrorist organization\": section 219 of the Immigration and Nationality Act (8 U.S.C. 1189)",
+            "\"Major non-NATO ally\": section 644 of the Foreign Assistance Act of 1961 (22 U.S.C. 2403)",
+            "\"Specially designated global terrorist\": per Executive Order 13224 (September 23, 2001; 66 Fed. Reg. 49079)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"Major Non-NATO Ally Terror Threat Assessment Act.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Assessment of Terrorism Threats to the United States by FTOs and SDGTs Present in Countries That Are Major Non-NATO Allies",
+          "items": [
+            {
+              "main": "Not later than 180 days after enactment and biennially thereafter, the Secretary of Homeland Security — in consultation with the Secretary of State and the Director of National Intelligence — must submit an assessment of terrorism threats to the United States posed by FTOs and SDGTs present in countries operating or designated as major non-NATO allies.",
+              "detail": "Subsection (a) sets the recurring assessment requirement.",
+              "comments": []
+            },
+            {
+              "main": "Each assessment must, for each MNNA: identify each FTO or SDGT present; describe all activities each identified group or individual is engaged in within that ally, including the extent to which they are using artificial intelligence or critical and emerging technologies; describe the government of each MNNA's disruption and degradation efforts, including cooperation with U.S. intelligence community elements; assess DHS's capability to identify, monitor, and mitigate the threats; assess DHS's capability to prevent identified members from entering the United States; and identify any additional resources required to counter the threats.",
+              "detail": "Subsection (b) enumerates six required elements for each MNNA.",
+              "comments": []
+            },
+            {
+              "main": "Each assessment is submitted in classified form and made available to every Member of Congress upon request. The Secretary must provide a congressional briefing on each assessment upon submission.",
+              "detail": "Subsections (c) and (d) set form/availability and briefing requirements.",
+              "comments": []
+            },
+            {
+              "main": "Definitions in subsection (e) tie all key terms to existing statutes and issuances: \"artificial intelligence\" to 15 U.S.C. 9401; \"critical and emerging technologies\" to the February 2024 NSTC list; \"intelligence community\" to 50 U.S.C. 3003(4); \"foreign terrorist organization\" to 8 U.S.C. 1189; \"major non-NATO ally\" to 22 U.S.C. 2403; \"specially designated global terrorist\" to Executive Order 13224; and \"terrorism\" to 6 U.S.C. 101.",
+              "detail": "Definitions rely on incorporated cross-references rather than newly created terms.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not identify which countries currently qualify as major non-NATO allies — that list is maintained under other law and would need to be consulted separately.",
+        "The bill does not authorize additional funding to carry out the assessment or briefing requirements.",
+        "The bill does not specify consequences if the Secretary misses the 180-day or biennial deadline.",
+        "The bill does not require a public or unclassified summary of the assessment."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "180-day and biennial classified DHS assessment of FTO and SDGT activity in major non-NATO allies",
+          "Requirement to describe use of artificial intelligence and critical and emerging technologies by identified FTOs/SDGTs",
+          "Requirement to assess DHS capability to identify, monitor, and mitigate the threats, and to prevent identified members from entering the United States",
+          "Congressional briefing on each assessment upon submission",
+          "Any-Member-upon-request availability of the classified assessment"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-4922",
+      "code": "HR.4922",
+      "title": "D.C. CRIMES Act",
+      "official_title": "To limit youth offender status in the District of Columbia to individuals 18 years of age or younger, to direct the Attorney General of the District of Columbia to establish and operate a publicly accessible website containing updated statistics on juvenile crime in the District of Columbia, to amend the District of Columbia Home Rule Act to prohibit the Council of the District of Columbia from enacting changes to existing criminal liability sentences, and for other purposes.",
+      "date": "2025-08-08",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Donalds, Byron (R-FL-19)",
+      "sponsor_bioguide": "D000032",
+      "cosponsors": 8,
+      "pages": 4,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2025-09-17",
+      "likelihood": 30,
+      "likelihoodLabel": "Low",
+      "likelihoodReason": "Received in the Senate on September 17, 2025 after House action; latest action indicates House-side movement. Sponsored by a Republican member with eight cosponsors and referred in the House to the Committee on Oversight and Government Reform.",
+      "summary": "Amends the District of Columbia Youth Rehabilitation Act of 1985 to lower the age ceiling for \"youth offender\" status from \"24 years of age or younger\" to \"18 years of age or younger\" (Section 2(6) of the Youth Rehabilitation Act, D.C. Official Code section 24-901(6)). Two conforming amendments follow: Section 3(a-1) of the Act (D.C. Official Code section 24-902(a-1)) is amended by striking paragraph (3) (which addressed strategic planning for individuals 18 through 24 in facilities, treatment, and services), and Section 4(a)(2) (D.C. Official Code section 24-903(a)(2)) is amended to change \"15 to 24 years of age\" to \"15 to 18 years of age.\" Section 4(b) (D.C. Official Code section 24-903(b)) is restructured — paragraph (2) (which addressed sentencing below the mandatory-minimum term) is struck and paragraph (3) is redesignated as paragraph (2). Section 3 adds a new section 16-2340a to Subchapter I of chapter 23 of title 16, D.C. Official Code, requiring the D.C. Attorney General to establish and operate a publicly accessible website with 11 juvenile-crime data measures (arrests by year, arrests broken down by age/race/sex, petty crime arrests, crime-of-violence arrests, first-offense arrests, prior-arrest history, declination rates, adult-court transfers, sentencing outcomes, and time-served information), updated monthly and archived, in a machine-readable bulk-download format, and without personally identifiable information. Conforming amendments (D.C. Code sections 16-2331, 16-2332, and 16-2333) allow the release of juvenile case, social, and law-enforcement records to the D.C. Attorney General for the website. The website must be established within 180 days of enactment. Section 4 amends section 602(a) of the District of Columbia Home Rule Act (D.C. Code section 1-206.02(a)) to prohibit the D.C. Council from enacting any act, resolution, or rule to change any criminal liability sentence in effect on the date of enactment of the D.C. CRIMES Act.",
+      "brief": "Lowers the D.C. \"youth offender\" ceiling from 24 to 18, restricts sub-mandatory-minimum sentencing for that group, requires the D.C. Attorney General to run a monthly-updated public juvenile-crime statistics website with 11 specified data measures, and bars the D.C. Council from changing existing criminal liability sentences.",
+      "top_lines": [
+        {
+          "headline": "Youth Offender Age Ceiling: 24 → 18",
+          "billSection": "2(a)",
+          "subs": [
+            "Section 2(6) of the D.C. Youth Rehabilitation Act (D.C. Code section 24-901(6)) amended by striking \"24 years of age or younger\" and inserting \"18 years of age or younger\"",
+            "Conforming: Section 3(a-1) paragraph (3) (D.C. Code section 24-902(a-1)) — addressing strategic planning for individuals 18 through 24 — is struck",
+            "Conforming: Section 4(a)(2) (D.C. Code section 24-903(a)(2)) amended by striking \"15 to 24 years of age\" and inserting \"15 to 18 years of age\""
+          ]
+        },
+        {
+          "headline": "Mandatory-Minimum Sentencing Restructure",
+          "billSection": "2(b)",
+          "subs": [
+            "Section 4(b) of the Act (D.C. Code section 24-903(b)) is restructured — the \"(b)(1)\" designation is replaced with \"(b)\"",
+            "Paragraph (2) — which addressed sentences less than the mandatory-minimum term — is struck",
+            "Paragraph (3) is redesignated as paragraph (2)"
+          ]
+        },
+        {
+          "headline": "Juvenile Crime Statistics Website (Section 16-2340a)",
+          "billSection": "3(a)",
+          "subs": [
+            "D.C. Attorney General must establish and operate a publicly accessible website",
+            "11 required statistical measures: total arrests annually; arrests by age/race/sex; petty-crime arrests (vandalism, theft, shoplifting); crime-of-violence arrests; first-offense arrests; prior-arrest history; number of prior arrests among repeat arrestees; declination rate for OAG prosecutions; number tried as adults; sentencing outcomes (no sentence / misdemeanor / felony); length of correctional-facility time to be served",
+            "Updated monthly; archived for indefinite historical access; available in machine-readable bulk-download format; no personally identifiable information",
+            "Website must be established within 180 days of enactment"
+          ]
+        },
+        {
+          "headline": "Records-Access Conforming Amendments",
+          "billSection": "3(b)",
+          "subs": [
+            "D.C. Code section 16-2331 (juvenile case records of family court) — new subsection (i) requires provision of records to the Attorney General for the website",
+            "D.C. Code section 16-2332 (juvenile social records of family court) — new subsection (h) requires provision of records to the Attorney General for the website",
+            "D.C. Code section 16-2333 (police and other law enforcement records) — new subsection (g) requires provision of records to the Attorney General for the website"
+          ]
+        },
+        {
+          "headline": "Bar on D.C. Council Sentence Changes",
+          "billSection": "4",
+          "subs": [
+            "Section 602(a) of the District of Columbia Home Rule Act (D.C. Code section 1-206.02(a)) amended by adding paragraph (11)",
+            "Prohibits the D.C. Council from enacting any act, resolution, or rule to change any criminal liability sentence in effect on the date of enactment of the D.C. CRIMES Act"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"DC Criminal Reforms to Immediately Make Everyone Safe Act\" or the \"DC CRIMES Act.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Youth Offenders",
+          "items": [
+            {
+              "main": "Amends Section 2(6) of the Youth Rehabilitation Act of 1985 (D.C. Code section 24-901(6)) by striking \"24 years of age or younger\" and inserting \"18 years of age or younger.\"",
+              "detail": "This is the operative age-ceiling change. Two conforming amendments follow: Section 3(a-1) paragraph (3) (D.C. Code section 24-902(a-1)) is struck (it addressed strategic planning for individuals 18 through 24 in facilities, treatment, and services), and Section 4(a)(2) (D.C. Code section 24-903(a)(2)) is amended by striking \"15 to 24 years of age\" and inserting \"15 to 18 years of age.\"",
+              "comments": []
+            },
+            {
+              "main": "Amends Section 4(b) of the Act (D.C. Code section 24-903(b)) to strike the \"(b)(1)\" designation and insert \"(b),\" strike paragraph (2), and redesignate paragraph (3) as paragraph (2). This removes the paragraph that addressed sentencing below the mandatory-minimum term.",
+              "detail": "Restructures the subsection so that only the redesignated paragraph (2) (formerly (3)) remains after the base subsection (b).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Establishment and Operation of Website on District of Columbia Juvenile Crime Statistics",
+          "items": [
+            {
+              "main": "Adds new section 16-2340a to Subchapter I of chapter 23 of title 16, D.C. Official Code, requiring the D.C. Attorney General to establish and operate a publicly accessible website containing 11 juvenile-crime statistical measures.",
+              "detail": "The 11 measures are: (1) total juveniles arrested each year; (2) totals and percentages by age, race, and sex; (3) petty-crime arrests (vandalism, theft, shoplifting); (4) crime-of-violence arrests (as defined in D.C. Code section 23-1331(4)); (5) first-offense arrests; (6) prior-arrest history; (7) number of prior arrests among the previously-arrested cohort; (8) declination rate for prosecutions by the D.C. Office of the Attorney General; (9) number tried as adults; (10) sentencing outcomes (no sentence / misdemeanor / felony); (11) length of correctional-facility time to be served.",
+              "comments": []
+            },
+            {
+              "main": "Requires monthly updates, indefinite archival, and machine-readable bulk-download format; prohibits inclusion of personally identifiable information. Defines \"crime\" (per D.C. Code section 23-1331(2) \"offense\") and \"juvenile\" (per Section 2(6) of the Youth Rehabilitation Act, as amended by this bill).",
+              "detail": "Subsections (b) through (f) of new section 16-2340a.",
+              "comments": []
+            },
+            {
+              "main": "Conforming records-access amendments: D.C. Code section 16-2331 (juvenile case records) new subsection (i); section 16-2332 (juvenile social records) new subsection (h); section 16-2333 (police and other law enforcement records) new subsection (g) — each requiring a person to provide the specified records to the Attorney General for purposes of the website established under section 16-2340a.",
+              "detail": "Each amendment overrides the applicable confidentiality provision of the underlying section (subsections (b) or (a) as noted in the text).",
+              "comments": []
+            },
+            {
+              "main": "Effective date: the D.C. Attorney General must establish the website within 180 days of enactment.",
+              "detail": "Subsection (c) of Section 3. Note the effective-date subsection references \"section 16-2341\" though subsection (a) adds section 16-2340a — the deadline applies to the website established under the new section.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Prohibiting Council From Enacting Changes to Existing Criminal Liability Sentences",
+          "items": [
+            {
+              "main": "Amends Section 602(a) of the District of Columbia Home Rule Act (D.C. Code section 1-206.02(a)) by adding a new paragraph (11) that prohibits the D.C. Council from enacting any act, resolution, or rule to change any criminal liability sentence in effect on the date of enactment of the D.C. CRIMES Act.",
+              "detail": "Section 602(a) of the Home Rule Act lists limitations on the Council's legislative authority; paragraph (11) is added at the end. Conforming edits change \"or\" at the end of paragraph (9) to a semicolon, and the period at the end of paragraph (10) to \"; or.\"",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not modify or replace the confidentiality standards that would otherwise apply to juvenile case, social, and law-enforcement records — the amendments override those standards only for the website reporting purpose.",
+        "The bill does not describe how the D.C. Attorney General is to handle transitional cases involving individuals aged 19 through 24 who currently receive youth offender treatment.",
+        "The bill does not authorize funding for the D.C. Attorney General to establish or operate the website.",
+        "The bill does not create an enforcement mechanism or judicial-review pathway for the paragraph (11) Council prohibition."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New D.C. Code section 16-2340a: publicly accessible juvenile-crime statistics website with 11 required data measures, monthly updates, indefinite archival, machine-readable bulk download, no personally identifiable information",
+          "New subsection (i) in D.C. Code section 16-2331 requiring provision of juvenile case records to the D.C. Attorney General for the website",
+          "New subsection (h) in D.C. Code section 16-2332 requiring provision of juvenile social records to the D.C. Attorney General for the website",
+          "New subsection (g) in D.C. Code section 16-2333 requiring provision of law-enforcement records to the D.C. Attorney General for the website",
+          "New paragraph (11) in section 602(a) of the D.C. Home Rule Act barring the D.C. Council from changing any criminal liability sentence in effect on the date of enactment"
+        ],
+        "modified": [
+          "D.C. Code section 24-901(6) (Section 2(6) of the Youth Rehabilitation Act): age ceiling lowered from \"24 years of age or younger\" to \"18 years of age or younger\"",
+          "D.C. Code section 24-903(a)(2): community-service age range narrowed from \"15 to 24 years of age\" to \"15 to 18 years of age\"",
+          "D.C. Code section 24-903(b): restructured — \"(b)(1)\" designation replaced with \"(b);\" paragraph (3) redesignated as paragraph (2)"
+        ],
+        "removed": [
+          "D.C. Code section 24-902(a-1) paragraph (3): prior consideration of individuals 18 through 24 in the strategic plan for facilities, treatment, and services",
+          "D.C. Code section 24-903(b) paragraph (2): prior provision that addressed sentencing below the mandatory-minimum term for youth offenders"
+        ]
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-2269",
+      "code": "HR.2269",
+      "title": "WIPPES Act",
+      "official_title": "To require certain products to be labeled with \"Do Not Flush\" labeling, and for other purposes.",
+      "date": "2025-03-21",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. McClain, Lisa C. (R-MI-9)",
+      "sponsor_bioguide": "M001136",
+      "cosponsors": 7,
+      "pages": 5,
+      "analyzed": true,
+      "demo": false,
+      "billType": "framework",
+      "stageDate": "2025-06-24",
+      "likelihood": 40,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "Received in the Senate on June 24, 2025 following House action. Sponsored by a Republican member with seven cosponsors and referred in the House to the Committee on Energy and Commerce.",
+      "summary": "Establishes a federal \"Do Not Flush\" labeling regime for premoistened, nonwoven disposable wipes marketed as baby or diapering wipes, and for household or personal-care wipes that are composed entirely or in part of petrochemical-derived fibers and have significant potential to be flushed (including antibacterial and disinfecting wipes, general and bathroom cleaning wipes, and body/personal-care wipes such as hand sanitizing, makeup removal, feminine and adult hygiene, and body cleansing). Covered entities (manufacturers, wholesalers, suppliers, individuals, or retailers responsible for the labeling or retail packaging of a covered product sold or offered for retail sale in the United States) must display both the phrase \"Do Not Flush\" (the \"label notice\") and the INDA/EDANA \"Do Not Flush\" symbol clearly and conspicuously in accordance with packaging-type rules. For cylindrical/near-cylindrical dispensing packages, the symbol and label notice must appear on the principal display panel or, alternatively, the symbol appears on the panel while the label notice (or combination) covers at least 8 percent of the flip lid. Flexible film packaging, rigid/refillable packaging, packaging not intended to dispense individual wipes, and bulk retail packaging each have their own placement rules. Outer packaging of combined products is exempt (with an accommodation for combined-product packages smaller than 3 inches by 3 inches). The symbol and label notice must each be equal in size to at least 2 percent of the principal display panel's surface area, and must have a contrast percentage of at least 70 percent against the background — light-on-dark or dark-on-light — except an embossed symbol or label notice on the flip lid of cylindrical or near-cylindrical packaging is exempt from the contrast rule. Covered entities may not make any express or implied representation that a covered product can or should be flushed. The Federal Trade Commission enforces the section: a violation is treated as a violation of a regulation under section 18(a)(1)(B) of the FTC Act (15 U.S.C. 57a(a)(1)(B)) regarding unfair or deceptive acts or practices, and the FTC may promulgate implementing regulations under section 553 of title 5, U.S.C., consulting with EPA, FDA, and the Consumer Product Safety Commission as appropriate. State laws that are not identical to the federal requirements are preempted. The section applies to covered entities beginning 1 year after the date of enactment.",
+      "brief": "Requires baby/diapering wipes and specified household or personal-care wipes made even partly of petrochemical fibers to carry a \"Do Not Flush\" label notice and the INDA/EDANA symbol on packaging (with specific placement, size, and contrast rules), bars flushability claims, gives the FTC enforcement authority, preempts non-identical State laws, and takes effect 1 year after enactment.",
+      "top_lines": [
+        {
+          "headline": "Federal \"Do Not Flush\" Label + Symbol Requirement",
+          "billSection": "2(a)",
+          "subs": [
+            "Covered entities must label covered products clearly and conspicuously with both the \"Do Not Flush\" label notice and the INDA/EDANA symbol",
+            "Covered entities may not make any express or implied representation that a covered product can or should be flushed",
+            "Effective 1 year after enactment"
+          ]
+        },
+        {
+          "headline": "Placement Rules by Packaging Type",
+          "billSection": "2(b)",
+          "subs": [
+            "Cylindrical dispensing packaging: symbol + label notice on principal display panel — or symbol on panel with label notice (or combination) covering at least 8 percent of the flip lid",
+            "Flexible film dispensing packaging: symbol on principal display panel and on dispensing side panel if different; label notice on principal display panel or dispensing side panel",
+            "Rigid/refillable dispensing packaging: symbol + label notice on principal display panel visible each time a wipe is dispensed",
+            "Packaging not intended to dispense individual wipes: symbol + label notice on principal display panel visible to the user",
+            "Bulk retail: symbol + label notice on both outer packaging and individual packaging, with two enumerated exemptions",
+            "Combined-product packaging: outer packaging exempt; individual covered-product packages smaller than 3 by 3 inches may satisfy the requirement with prominent placement"
+          ]
+        },
+        {
+          "headline": "Size + Contrast Standards",
+          "billSection": "2(c)",
+          "subs": [
+            "Symbol and label notice each must equal at least 2 percent of the principal display panel's surface area",
+            "Contrast percentage of at least 70 percent between symbol/notice and immediate background, using the formula (B1 − B2) / B1 × 100 where B1 and B2 are light reflectance values",
+            "Light on dark or dark on light",
+            "Embossed symbol or label notice on the flip lid of a cylindrical or near-cylindrical package is exempt from the contrast rule"
+          ]
+        },
+        {
+          "headline": "FTC Enforcement + State Preemption",
+          "billSection": "2(e)–(f)",
+          "subs": [
+            "Violations treated as violations of a regulation under section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B)) — unfair or deceptive acts or practices",
+            "FTC enforcement with same jurisdiction, powers, and duties as under the FTC Act (15 U.S.C. 41 et seq.)",
+            "FTC may promulgate regulations under section 553 of title 5, U.S.C., and may consult with EPA, FDA, or the Consumer Product Safety Commission",
+            "State or local requirements not identical to the federal requirements are preempted"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the \"Wastewater Infrastructure Pollution Prevention and Environmental Safety Act\" or the \"WIPPES Act.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — \"Do Not Flush\" Labeling",
+          "items": [
+            {
+              "main": "Requires covered entities to label covered products clearly and conspicuously with both the label notice (\"Do Not Flush\") and the symbol (the INDA/EDANA \"Do Not Flush\" symbol from the most recent edition of the Guidelines for Assessing the Flushability of Disposable Nonwoven Products, or an FTC-adopted equivalent).",
+              "detail": "Subsection (a) sets the core labeling duty. Definitions in subsection (g) tie \"label notice\" to the phrase \"Do Not Flush\" and \"symbol\" to the INDA/EDANA depiction.",
+              "comments": []
+            },
+            {
+              "main": "Placement rules vary by packaging type: cylindrical dispensing packaging must display both on the principal display panel or, alternatively, the symbol on the panel with the label notice (or combination) covering at least 8 percent of the flip lid; flexible film dispensing packaging requires the symbol on the principal display panel and on the dispensing side panel if different, with the label notice on either; rigid/refillable dispensing packaging requires both on the principal display panel visible each time a wipe is dispensed; non-dispensing packaging requires both on the principal display panel; bulk retail requires both on outer and individual packaging (with two enumerated exemptions); combined-product outer packaging is exempt, and combined-product packages under 3 by 3 inches may satisfy the requirement with prominent placement.",
+              "detail": "Subsection (b) contains the placement rules across six enumerated packaging categories.",
+              "comments": []
+            },
+            {
+              "main": "Reasonable visibility: symbol and label notice must not be obscured by packaging seams, folds, or design elements; each must equal at least 2 percent of the principal display panel's surface area; each must have high contrast (at least 70 percent contrast percentage under the (B1 − B2) / B1 × 100 formula) with the immediate background — light on dark or dark on light. An embossed symbol or label notice on the flip lid of a cylindrical or near-cylindrical package is exempt from the contrast rule. The symbol and label notice may be adjacent or on separate areas of the principal display panel.",
+              "detail": "Subsection (c) sets the size and contrast standards.",
+              "comments": []
+            },
+            {
+              "main": "Prohibits covered entities from making any express or implied representation that a covered product can or should be flushed.",
+              "detail": "Subsection (d) is the flushability-claim prohibition.",
+              "comments": []
+            },
+            {
+              "main": "FTC enforcement: a violation of the section or an implementing regulation is treated as a violation of a regulation under section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B)) regarding unfair or deceptive acts or practices. The Commission enforces with the same jurisdiction, powers, and duties as under the FTC Act (15 U.S.C. 41 et seq.), and violators are subject to the same penalties. The Commission may promulgate implementing regulations under section 553 of title 5, U.S.C., and may consult with the EPA Administrator, the Commissioner of Food and Drugs, the Consumer Product Safety Commission, or any other agency as appropriate. Nothing limits the Commission's other statutory authority.",
+              "detail": "Subsection (e) is the enforcement and rulemaking framework.",
+              "comments": []
+            },
+            {
+              "main": "State-law preemption: no State or political subdivision may establish or continue in effect requirements with respect to the \"Do Not Flush\" labeling of covered products that are not identical to the federal requirements and implementing regulations.",
+              "detail": "Subsection (f) is the preemption clause.",
+              "comments": []
+            },
+            {
+              "main": "Definitions in subsection (g) — including \"covered product\" (premoistened, nonwoven disposable wipes marketed as baby or diapering wipes, or household/personal care wipes composed entirely or in part of petrochemical-derived fibers and having significant potential to be flushed, with named inclusions covering antibacterial, disinfecting, general/bathroom cleaning, and personal-care wipes such as hand sanitizing, makeup removal, feminine hygiene, adult hygiene, and body cleansing); \"combined product\" (two or more products in shared retail packaging where at least one is a covered product and at least one is a consumer product intended to be used with it); \"covered entity\" (a manufacturer, wholesaler, supplier, individual or group of individuals, or retailer responsible for the labeling or retail packaging of a covered product sold or offered for retail sale in the U.S.); \"high contrast,\" \"label notice,\" \"principal display panel,\" \"State,\" and \"symbol.\"",
+              "detail": "Definitions in subsection (g).",
+              "comments": []
+            },
+            {
+              "main": "Effective date: section applies to covered entities beginning on the date that is 1 year after the date of enactment.",
+              "detail": "Subsection (h) sets the 1-year effective date.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The bill does not authorize any civil penalty amounts specific to this section — it relies on the general penalty structure under the FTC Act.",
+        "The bill does not define \"significant potential to be flushed,\" leaving that judgment to covered entities and, ultimately, FTC enforcement.",
+        "The bill does not describe how existing State \"Do Not Flush\" labeling laws (already in place in some States) transition to the federal identical-requirement standard.",
+        "The bill does not set a deadline within which the FTC must issue implementing regulations."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Federal \"Do Not Flush\" label notice and symbol requirement for covered wipes, effective 1 year after enactment",
+          "Placement, 2 percent minimum size, and 70 percent contrast rules across six packaging categories",
+          "Prohibition on express or implied flushability representations by covered entities",
+          "FTC enforcement via section 18(a)(1)(B) of the FTC Act, with rulemaking authority under section 553 of title 5, U.S.C.",
+          "State-law preemption: only requirements identical to the federal rule are allowed",
+          "Definitions of \"covered product,\" \"covered entity,\" \"combined product,\" \"high contrast,\" \"label notice,\" \"principal display panel,\" \"State,\" and \"symbol\""
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-S-423",
+      "code": "S.423",
+      "title": "PRO Veterans Act of 2025",
+      "official_title": "To protect regular order for budgeting for the Department of Veterans Affairs, and for other purposes.",
+      "date": "2025-08-14",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": ["Introduced", "Committee", "Passed Senate", "Passed House", "Signed"],
+      "sponsor": "Sen. Sullivan, Dan (R-AK)",
+      "sponsor_bioguide": "S001198",
+      "cosponsors": 13,
+      "pages": 6,
+      "analyzed": true,
+      "demo": false,
+      "billType": "framework",
+      "stageDate": "2025-08-14",
+      "enactedDate": "2025-08-14",
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Enacted as Public Law 119-33 on August 14, 2025. Per the printed legislative history for S. 423, the Senate considered and passed the measure on April 8, 2025 and the House considered and passed it on July 21, 2025.",
+      "summary": "Enacts two Department of Veterans Affairs administrative reforms in a single Act. Section 1 (the \"Protecting Regular Order for Veterans Act of 2025\") requires the Secretary of Veterans Affairs to provide quarterly, in-person briefings to the House and Senate Veterans' Affairs and Appropriations Committees on the VA's budget and any shortfall the Department may be experiencing, beginning the first quarter after enactment and continuing until the date that is 3 years after enactment; when a shortfall is reported, the Secretary must also present plans to address or mitigate it (a \"shortfall\" is defined as appropriations required to meet all statutory obligations exceeding the amount requested in the President's budget under 31 U.S.C. 1105(a)). Section 1(c) amends 38 U.S.C. 706(d) by adding a new paragraph (7): a critical skill incentive under paragraph (1) may not be provided to a Senior Executive Service (SES) employee (or comparable senior-level position, as defined by the Secretary) whose position is at the VA Central Office — including the Veterans Health Administration, Veterans Benefits Administration, and National Cemetery Administration — regardless of where the employee actually performs the functions of the position; for SES employees not at Central Office, incentives may only be provided on an individual basis (not to a group) and only with approval from a specified list of officers (Under Secretary for Benefits, Health, or Memorial Affairs; Assistant Secretary for Human Resources and Administration; Director of the Office of Management or CFO; Assistant Secretary for Accountability and Whistleblower Protection; General Counsel; and such other officers as the Secretary determines appropriate). For an SES employee whose position is primarily at Central Office but who performs some job function at other VA facilities, the employee is not considered a Central Office employee for the non-Central-Office portion of their job, and any critical skill incentive for that portion must be proportionate to the time spent at those facilities. The Secretary must submit an annual report to the House and Senate Veterans' Affairs Committees on SES employees who received critical skill incentives; reports may be incorporated into other required reports. Section 2 (the \"Improving Veterans' Experience Act of 2025\") adds new section 325 to chapter 3 of title 38, U.S.C., establishing the Veterans Experience Office within the Department under the Office of the Secretary, headed by a Chief Veterans Experience Officer appointed by and reporting directly to the Secretary. The Office's functions include carrying out customer experience initiatives; requiring other VA offices to report regularly on customer experience metrics and improvement efforts; collecting veteran-derived data on satisfaction and usage; providing strategic guidance for engagement; and assessing and advising on VA websites and customer service. The Chief Veterans Experience Officer must submit an annual summary to the Secretary, who must submit an annual analysis to Congress within 180 days of receiving that summary, including customer service data and satisfaction data disaggregated by benefit or service and by relevant demographic categories (with potential non-use reasons such as eligibility, lack of awareness, and barriers of technology, information, or time). The Office's information must exclude personally identifiable information unless the individual consents; funds from other VA organizations may be available to reimburse the Office at cost-recovery rates when the Secretary determines contributing will not undermine those organizations' ability to provide required services; nothing in the subsection authorizes an increase in the Department's overall full-time-employee count. The Office is subject to the Privacy Act of 1974 (5 U.S.C. 552a). Section 325's requirements and authorities terminate on September 30, 2028. Section 2(c) requires the Comptroller General to complete, not later than 540 days after enactment, an analysis of the methodology, effectiveness, and implementation of veteran and beneficiary customer-experience findings and feedback used by VA (including through \"trust-scores,\" VSignals, and related survey and data-collection activities), and submit a report on the findings to the House and Senate Veterans' Affairs Committees.",
+      "brief": "Signed as Public Law 119-33 on August 14, 2025 — requires quarterly in-person VA budget-and-shortfall briefings to four congressional committees for 3 years, restricts VA Senior Executive Service critical skill incentives at Central Office, and establishes a Veterans Experience Office headed by a Chief Veterans Experience Officer (sunset September 30, 2028) with a GAO review due 540 days after enactment.",
+      "top_lines": [
+        {
+          "headline": "Quarterly In-Person VA Budget Briefings (3 Years)",
+          "billSection": "1(b)",
+          "subs": [
+            "Secretary of Veterans Affairs must provide quarterly in-person briefings",
+            "To the House and Senate Veterans' Affairs Committees and House and Senate Appropriations Committees",
+            "Beginning the first quarter after enactment and continuing until 3 years after enactment",
+            "When a shortfall is reported, Secretary must present plans to address or mitigate it",
+            "\"Shortfall\" defined as required appropriations exceeding the President's budget request under 31 U.S.C. 1105(a)"
+          ]
+        },
+        {
+          "headline": "SES Critical Skill Incentive Restrictions",
+          "billSection": "1(c) — new 38 U.S.C. 706(d)(7)",
+          "subs": [
+            "Critical skill incentives under 38 U.S.C. 706(d)(1) may not be provided to VA SES employees whose position is at the Central Office (including VHA, VBA, and NCA), regardless of where the employee performs the functions",
+            "For non-Central-Office SES employees, incentives may only be provided on an individual basis (not to a group) and only with approval from six specified officers or the Secretary's other designees",
+            "Named approving officers: Under Secretary for Benefits, Health, or Memorial Affairs; Assistant Secretary for Human Resources and Administration; Director of the Office of Management or the CFO; Assistant Secretary for Accountability and Whistleblower Protection; General Counsel",
+            "For SES employees primarily at Central Office but performing some job function elsewhere, incentives for the non-Central-Office portion must be proportionate to time spent at those facilities",
+            "Annual report to House and Senate Veterans' Affairs Committees required; may be incorporated into other required reports"
+          ]
+        },
+        {
+          "headline": "Veterans Experience Office (New 38 U.S.C. 325)",
+          "billSection": "2(b)",
+          "subs": [
+            "Establishes the Veterans Experience Office within the Department under the Office of the Secretary",
+            "Head: Chief Veterans Experience Officer, appointed by the Secretary and reporting directly to the Secretary",
+            "Functions include carrying out customer experience initiatives; requiring other VA offices to report on customer experience metrics; collecting veteran-derived data; providing engagement strategy; assessing VA websites and customer service",
+            "Annual summary from Chief Officer to Secretary; annual Secretary-to-Congress report within 180 days of receiving the summary, disaggregated by benefit/service and demographic data",
+            "Excludes personally identifiable information unless the individual consents",
+            "Reimbursement from other VA organizations at cost-recovery rates; no authorized increase in the Department's overall FTE count",
+            "Subject to the Privacy Act of 1974 (5 U.S.C. 552a)",
+            "Sunset: requirements and authorities terminate September 30, 2028"
+          ]
+        },
+        {
+          "headline": "540-Day GAO Review",
+          "billSection": "2(c)",
+          "subs": [
+            "Comptroller General must complete an analysis of VA customer-experience methodology, effectiveness, and implementation not later than 540 days after enactment",
+            "Analysis covers the Veterans Experience Office and use of \"trust-scores,\" VSignals, and related survey and data-collection activities",
+            "Report of findings submitted to the House and Senate Veterans' Affairs Committees"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Protecting Regular Order for Veterans",
+          "items": [
+            {
+              "main": "Names the section the \"Protecting Regular Order for Veterans Act of 2025\" or the \"PRO Veterans Act of 2025\" (subsection (a); 38 U.S.C. 101 note).",
+              "detail": "Short-title subsection.",
+              "comments": []
+            },
+            {
+              "main": "Requires the VA Secretary to provide quarterly, in-person briefings to the House and Senate Veterans' Affairs Committees and House and Senate Appropriations Committees on the VA budget and any shortfall the Department may be experiencing, beginning the first quarter after enactment and continuing until 3 years after enactment. When a shortfall is reported, the Secretary must present plans to address or mitigate it. \"Shortfall\" is defined as an amount of appropriations required by the Department for a fiscal year to meet all statutory obligations that exceeds the appropriations requested in the President's budget under 31 U.S.C. 1105(a).",
+              "detail": "Subsection (b): quarterly briefings and definitions.",
+              "comments": []
+            },
+            {
+              "main": "Amends 38 U.S.C. 706(d) by adding new paragraph (7): a critical skill incentive under paragraph (1) may not be provided to an SES employee (or comparable senior-level position, as defined by the Secretary) whose position is at the VA Central Office (including VHA, VBA, and NCA), regardless of where the employee actually performs the functions.",
+              "detail": "Subsection (c); the Central-Office bar is in new subparagraph (A) of paragraph (7).",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "For SES employees not at Central Office, critical skill incentives may only be provided (i) on an individual basis (not to a group) and (ii) upon approval from a specified list of officers (or those in acting capacity): the Under Secretary for Benefits, Under Secretary for Health, or Under Secretary for Memorial Affairs; the Assistant Secretary for Human Resources and Administration; the Director of the Office of Management or the Chief Financial Officer; the Assistant Secretary for Accountability and Whistleblower Protection; the General Counsel; and such other officers as the Secretary determines appropriate.",
+              "detail": "New 38 U.S.C. 706(d)(7)(B)(i) — enumerates the six approving-officer categories.",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "For an SES employee primarily at Central Office but performing some job function at other VA facilities, the employee is not treated as a Central Office employee with respect to the non-Central-Office portion, and any critical skill incentive for that portion must be proportionate to the time spent at those facilities.",
+              "detail": "New 38 U.S.C. 706(d)(7)(B)(ii) — the split-duty rule.",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "Annual report requirement: not later than 1 year after enactment and annually thereafter, the Secretary must submit to the House and Senate Veterans' Affairs Committees a report on SES employees who were provided a critical skill incentive; reports may be incorporated into other congressionally mandated reports to those committees.",
+              "detail": "New 38 U.S.C. 706(d)(7)(C).",
+              "source": ["119-S-423"]
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Establishment of Veterans Experience Office",
+          "items": [
+            {
+              "main": "Names the section the \"Improving Veterans' Experience Act of 2025\" (subsection (a); 38 U.S.C. 101 note).",
+              "detail": "Short-title subsection.",
+              "comments": []
+            },
+            {
+              "main": "Adds new section 325 to chapter 3 of title 38, U.S.C., establishing the Veterans Experience Office within the Department under the Office of the Secretary. The head is the Chief Veterans Experience Officer, appointed by the Secretary from among individuals the Secretary considers qualified, reporting directly to the Secretary, and responsible for carrying out the functions of the Office.",
+              "detail": "New 38 U.S.C. 325(a)–(b).",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "Functions include: carrying out key customer experience initiatives (setting strategy, framework, policy, and other guidance for the Department, and ensuring coordination and non-duplication with other VA activities); requiring other VA organizations to report regularly on customer experience metrics, action plans, and other improvement efforts; collecting veteran-derived data to determine satisfaction and usage of benefits and services, to be considered during policymaking; providing strategic guidance and strategies for engaging with veterans and beneficiaries, including those not using benefits and services; assessing and advising the Secretary on the accuracy and helpfulness of VA websites and other customer-facing information; and assessing and advising on VA customer service efforts.",
+              "detail": "New 38 U.S.C. 325(c) — six enumerated functions.",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "Reporting: Each year, the Chief Veterans Experience Officer must submit to the Secretary a summary of the data received under subsection (c)(2). Each year, not later than 180 days after the Secretary receives that summary, the Secretary must submit to Congress an annual summary and analysis. Annual summaries must include customer service and experience feedback data disaggregated by benefit or service (and by relevant demographic data), and satisfaction/usage data (disaggregated similarly) including potential reasons for not using benefits (eligibility; lack of knowledge or awareness; barriers of technology, information, or time; other related reasons) and an analysis of how such reasons may be addressed.",
+              "detail": "New 38 U.S.C. 325(d).",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "Staff and resources: the Secretary must ensure the Office has the necessary staff, resources, and access to customer service and experience information; information must exclude personally identifiable information of individual veterans, survivors, dependents, or other beneficiaries unless the individual provides appropriate consent. Funds available for basic pay and administrative expenses of other VA organizations may be used to reimburse the Office at cost-recovery rates for services provided to those organizations if the Secretary determines that contributing will not undermine those organizations' ability to provide required services. Nothing in the subsection authorizes an increase in the number of full-time employees otherwise authorized for the Department. The Office is subject to the Privacy Act of 1974 (5 U.S.C. 552a).",
+              "detail": "New 38 U.S.C. 325(e)–(f).",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "Sunset: the requirements and authorities of new section 325 terminate on September 30, 2028.",
+              "detail": "New 38 U.S.C. 325(g). A clerical amendment adds \"325. Veterans Experience Office.\" to the table of sections at the beginning of chapter 3 of title 38.",
+              "source": ["119-S-423"]
+            },
+            {
+              "main": "GAO review: not later than 540 days after enactment, the Comptroller General must complete an analysis of the methodology, effectiveness, and implementation of veteran and beneficiary customer-experience findings and feedback used by VA — including the Veterans Experience Office — through \"trust-scores,\" VSignals, and related survey and data-collection activities. The Comptroller General must submit a report of the findings to the House and Senate Veterans' Affairs Committees.",
+              "detail": "Subsection (c) of Section 2.",
+              "source": ["119-S-423"]
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "The Act does not describe consequences if the Secretary fails to provide a quarterly briefing or misses a report deadline.",
+        "The Act does not authorize additional appropriations for the Veterans Experience Office or the shortfall-mitigation plans — the Office is subject to a no-FTE-increase constraint and reimbursement-at-cost mechanism only.",
+        "The Act does not specify the criteria the Secretary uses to designate positions comparable to Senior Executive Service for purposes of the critical skill incentive restrictions.",
+        "The Act does not describe how the Veterans Experience Office's activities are to continue (or be transferred) after the September 30, 2028 sunset."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Quarterly in-person VA budget-and-shortfall briefings to four congressional committees for 3 years after enactment",
+          "New 38 U.S.C. 706(d)(7): SES critical-skill-incentive bar at VA Central Office and approval-officer/individual-basis limits elsewhere",
+          "Annual report to Veterans' Affairs Committees on SES critical-skill-incentive recipients",
+          "New 38 U.S.C. 325: Veterans Experience Office headed by a Chief Veterans Experience Officer, with annual Secretary-to-Congress reports",
+          "Cost-recovery reimbursement mechanism for the Veterans Experience Office; no authorized increase in the Department's overall FTE count",
+          "September 30, 2028 sunset for the Veterans Experience Office requirements and authorities",
+          "GAO review of VA customer-experience methodology (including trust-scores and VSignals) due 540 days after enactment"
+        ],
+        "modified": [
+          "38 U.S.C. 706(d) expanded to include new paragraph (7) restricting VA SES critical skill incentives"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    },
+    {
+      "id": "119-HR-2444",
+      "code": "HR.2444",
+      "title": "Promoting Resilient Supply Chains Act of 2025",
+      "official_title": "To establish a critical supply chain resiliency and crisis response program in the Department of Commerce, and to secure American leadership in deploying emerging technologies, and for other purposes.",
+      "date": "2025-03-27",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. James, John (R-MI-10)",
+      "sponsor_bioguide": "J000307",
+      "cosponsors": 4,
+      "pages": 14,
+      "analyzed": true,
+      "demo": false,
+      "billType": "framework",
+      "stageDate": "2025-04-29",
+      "likelihood": 45,
+      "likelihoodLabel": "Moderate",
+      "likelihoodReason": "Received in the Senate on April 29, 2025 and placed on the Senate Legislative Calendar under General Orders (Calendar No. 62) after House action. Sponsored by a Republican member with four cosponsors and referred in the House to the Committee on Energy and Commerce.",
+      "summary": "Establishes a critical supply chain resiliency and crisis response program in the Department of Commerce administered by the Assistant Secretary of Commerce for Industry and Analysis. Section 2 adds eight responsibilities for the Assistant Secretary: promoting the stability and resilience of critical supply chains and critical and emerging technologies; leading the new Supply Chain Resilience Working Group and consulting nongovernmental representatives, industry, higher education, and State and local governments; encouraging U.S. production and manufacturing of emerging technologies; assessing resilience, diversity, and strength of critical supply chains and critical and emerging technologies; supporting availability of critical goods from domestic manufacturers and allies/key international partner nations (in consultation with the Secretary of State and USTR); assisting the Federal Government in preparing for and responding to supply chain shocks; encouraging reduced reliance of domestic manufacturers on critical goods from countries described in section 7(2)(B); and encouraging relocation of critical-good manufacturing to the United States and allies/partners. Section 3 requires the Assistant Secretary to establish, not later than 120 days after enactment, a Supply Chain Resilience Working Group composed of the Federal agencies that rely on the Industry and Analysis business unit's analysis (including the Departments of State, Defense, Homeland Security, Transportation, Energy, Agriculture, the Interior, and Health and Human Services; the Office of the Director of National Intelligence; and the Small Business Administration). Within 1 year of enactment, the Assistant Secretary must carry out enumerated assessment, mapping, modeling, gap-identification, workforce, and coordination activities in consultation with the Working Group. The Assistant Secretary must designate — within 120 days of enactment, with public comment — critical industries, critical supply chains, and critical goods, updating those designations at least every 4 years. An implementation report is due to the relevant committees within 1 year after enactment. A national strategy and review of critical supply chain resiliency and manufacturing is due to the relevant committees within 18 months after enactment and annually thereafter — covering critical infrastructure, critical and emerging technologies, critical industries/supply chains/goods, other crisis-critical supplies and services, substitutes, authentication/traceability methods (including blockchain and other distributed ledger technologies), and allies/key international partner nations; assessing the manufacturing base, supply chains, and workforce; identifying threats and supply chain shocks (with threats originating from section 7(2)(B) countries listed); and developing a Commerce Department strategy for resilience, diversity, and strength of critical supply chains. Reports may not include non-aggregated critical supply chain information, confidential business information, or classified information; a public comment period is required; reports are unclassified with an optional classified annex. Voluntarily submitted critical supply chain information (accompanied by a specified express statement) is exempt from FOIA under 5 U.S.C. 552(b)(3), is not subject to ex parte communication rules, may not be used against the submitter in civil actions or by other authorities without written consent, may not be disclosed by federal officers for purposes other than the Act (with narrow exceptions), and does not constitute a waiver of trade-secret or other protections. The subsection does not apply to voluntary submissions in an application for federal financial assistance under section 9902 of the William M. (Mac) Thornberry NDAA for FY2021 (Public Law 116-283). Section 4 requires the Secretary to submit, within 2 years of enactment, a Department of Commerce capability assessment identifying the duties, responsibilities, resources, programs, and expertise within Commerce offices and bureaus relevant to critical supply chain resilience and manufacturing innovation, plus recommendations to enhance those activities and a strategy to implement them as appropriate. Section 5 provides that no additional funds are authorized to be appropriated to carry out this title. Section 6 provides that the title and all its requirements terminate 10 years after the date of enactment. Section 7 defines all key terms — including \"ally or key international partner nation\" (which excludes countries posing a significant risk to U.S. national or economic security and countries described in section 503(b) of the RANSOMWARE Act, title V of division BB of the Consolidated Appropriations Act, 2023, Public Law 117-328, 136 Stat. 5564), \"critical good,\" \"critical industry,\" \"critical infrastructure\" (via 42 U.S.C. 5195c), \"critical supply chain,\" \"critical supply chain information,\" \"domestic enterprise,\" \"domestic manufacturer,\" \"emerging technology\" (including technologies in the American COMPETE Act (title XV of division FF of the Consolidated Appropriations Act, 2021, Public Law 116-260, 134 Stat. 3276) and a named list including artificial intelligence, automated vehicles and unmanned delivery systems, blockchain and other distributed ledger technologies, quantum computing and sensing, additive manufacturing, advanced manufacturing and IoT, nanotechnology, robotics, microelectronics and advanced computer hardware/software, semiconductors, and advanced materials science), \"institution of higher education\" (via 20 U.S.C. 1001), \"manufacture\" (excluding software unrelated to manufacturing), \"manufacturing technology,\" \"production equipment,\" \"relevant committees of Congress\" (Senate Commerce, Science, and Transportation; House Energy and Commerce), \"resilient critical supply chain,\" \"Secretary\" (of Commerce), \"State,\" and \"supply chain shock.\"",
+      "brief": "Adds eight critical-supply-chain responsibilities to the Commerce Assistant Secretary for Industry and Analysis, establishes a 10-agency Supply Chain Resilience Working Group and a 120-day designation of critical industries/supply chains/goods, requires an implementation report (1 year), a national strategy and review (18 months + annual), a Department capability assessment (2 years), protects voluntarily-submitted supply chain information from FOIA/discovery, authorizes no additional funds, and sunsets the title 10 years after enactment.",
+      "top_lines": [
+        {
+          "headline": "Eight New Assistant Secretary Responsibilities",
+          "billSection": "2",
+          "subs": [
+            "Promote stability and resilience of critical supply chains and critical and emerging technologies",
+            "Lead the Supply Chain Resilience Working Group and consult nongovernmental representatives, industry, higher education, and State/local governments",
+            "Encourage U.S. production and manufacturing of emerging technologies",
+            "Assess resilience, diversity, and strength of critical supply chains and critical and emerging technologies",
+            "In consultation with the Secretary of State and USTR, support availability of critical goods from domestic manufacturers and allies/key international partner nations",
+            "Assist the Federal Government in preparing for and responding to supply chain shocks",
+            "Encourage reduced reliance of domestic enterprises/manufacturers on critical goods from countries described in section 7(2)(B)",
+            "Encourage relocation of critical-good manufacturing to the United States and allies/partners"
+          ]
+        },
+        {
+          "headline": "Supply Chain Resilience Working Group (10 Agencies)",
+          "billSection": "3(a), 3(c)",
+          "subs": [
+            "Established within 120 days of enactment",
+            "Composed of Federal agencies that rely on the Industry and Analysis business unit's analysis",
+            "Enumerated members: Department of State; Department of Defense; Department of Homeland Security; Department of Transportation; Department of Energy; Department of Agriculture; Department of the Interior; Department of Health and Human Services; Office of the Director of National Intelligence; Small Business Administration"
+          ]
+        },
+        {
+          "headline": "1-Year Activities in Consultation with the Working Group",
+          "billSection": "3(b)",
+          "subs": [
+            "Assess, map, and model critical supply chains, including for critical and emerging technologies",
+            "Identify high-priority gaps and vulnerabilities in critical supply chains and critical industries",
+            "Identify potential supply chain shocks to a critical supply chain",
+            "Evaluate capability and capacity of domestic and allied manufacturers to source critical goods, production equipment, and manufacturing technology",
+            "Evaluate market-stability effects of supply chain disruption",
+            "Evaluate the manufacturing workforce and identify opportunities to create high-quality manufacturing jobs",
+            "Identify tools (including commercially available risk assessment tools) that leverage data and industry expertise for supply chain vulnerability insight"
+          ]
+        },
+        {
+          "headline": "120-Day Designations of Critical Industries/Supply Chains/Goods",
+          "billSection": "3(d)",
+          "subs": [
+            "Assistant Secretary designates critical industries, critical supply chains, and critical goods within 120 days of enactment",
+            "Public comment period required",
+            "Designations updated not less than once every 4 years"
+          ]
+        },
+        {
+          "headline": "Reports and National Strategy",
+          "billSection": "3(e)–(f), 4",
+          "subs": [
+            "Implementation report to the relevant committees within 1 year after enactment",
+            "National strategy and review of critical supply chain resiliency and manufacturing within 18 months, annually thereafter — with an unclassified report and optional classified annex",
+            "Reports may not include non-aggregated critical supply chain information, confidential business information, or classified information (except in the optional classified annex)",
+            "Department of Commerce capability assessment due within 2 years of enactment, with recommendations and an implementation strategy"
+          ]
+        },
+        {
+          "headline": "Voluntary Information Protections",
+          "billSection": "3(i)",
+          "subs": [
+            "Voluntarily submitted critical supply chain information (with the specified express statement) is exempt from FOIA under 5 U.S.C. 552(b)(3)",
+            "Not subject to ex parte communication rules",
+            "May not be used against the submitter (without written consent) in civil actions or by other Federal/State/local authorities",
+            "May not be disclosed by federal officers for purposes other than this section — narrow exceptions for criminal investigation/prosecution and specified congressional/GAO oversight",
+            "Not a waiver of trade-secret or other legal protections",
+            "Does not apply to voluntary submissions in an application for federal financial assistance under section 9902 of the William M. (Mac) Thornberry NDAA for FY2021 (Public Law 116-283)"
+          ]
+        },
+        {
+          "headline": "No Additional Funds; 10-Year Sunset",
+          "billSection": "5–6",
+          "subs": [
+            "Section 5: no additional funds are authorized to be appropriated to carry out this title",
+            "Section 6: the title and all its requirements, responsibilities, and obligations terminate 10 years after the date of enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the title the \"Promoting Resilient Supply Chains Act of 2025.\"",
+              "detail": "Short-title section only; no substantive effect.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Additional Responsibilities of Assistant Secretary of Commerce for Industry and Analysis",
+          "items": [
+            {
+              "main": "Adds eight new responsibilities on top of the Assistant Secretary's existing duties: promoting stability and resilience of critical supply chains and critical and emerging technologies; leading the Supply Chain Resilience Working Group and consulting covered nongovernmental representatives, industry, higher education, and State and local governments; encouraging U.S. production and manufacturing of emerging technologies; assessing resilience, diversity, and strength of critical supply chains and critical and emerging technologies; supporting availability of critical goods from domestic manufacturers and allies/key international partner nations (in consultation with the Secretary of State and USTR); assisting the Federal Government in preparing for and responding to supply chain shocks (including by improving flexible manufacturing capacities and capabilities); encouraging reduced reliance of domestic enterprises and manufacturers on critical goods from countries described in section 7(2)(B); and encouraging relocation of manufacturing facilities that manufacture critical goods from section 7(2)(B) countries to the United States and allies/partners.",
+              "detail": "Section 2 enumerates the eight paragraphs of added responsibilities.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Critical Supply Chain Resilience Working Group",
+          "items": [
+            {
+              "main": "Not later than 120 days after enactment, the Assistant Secretary must establish a Supply Chain Resilience Working Group composed of the Federal agencies that rely on the Industry and Analysis business unit's analysis, including the Department of State, the Department of Defense, the Department of Homeland Security, the Department of Transportation, the Department of Energy, the Department of Agriculture, the Department of the Interior, the Department of Health and Human Services, the Office of the Director of National Intelligence, and the Small Business Administration.",
+              "detail": "Subsections (a) and (c) — 10 enumerated agencies.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "Not later than 1 year after enactment, the Assistant Secretary, in consultation with the Working Group, must assess, map, and model critical supply chains (including for critical and emerging technologies); identify high-priority gaps and vulnerabilities; identify potential supply chain shocks; evaluate the capability and capacity of domestic and allied manufacturers to serve as sources for critical goods, production equipment, and manufacturing technology; evaluate market-stability effects of disruption, strain, or elimination of a critical supply chain; evaluate the state of the manufacturing workforce (including identifying opportunities to create high-quality manufacturing jobs); and identify tools — including commercially available risk assessment tools — that leverage data and industry expertise to provide insights into critical supply chain vulnerabilities.",
+              "detail": "Subsection (b)(1) — assessment activities in consultation with the Working Group.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "In consultation with State and local governments, the Working Group, and (as appropriate) allies/key international partner nations: identify opportunities to reduce gaps and vulnerabilities; encourage consultation between the Federal Government, industry, nongovernmental representatives, higher education, and State/local governments; encourage consultation between the Federal Government and governments of allies/partners; identify opportunities to build U.S. capacity in critical supply chains, critical industries, and emerging technologies; identify opportunities to build allies/partners' capacity in critical industries and critical supply chains; and develop and assess contingency plans and coordination mechanisms.",
+              "detail": "Subsection (b)(2) — coordination activities.",
+              "comments": []
+            },
+            {
+              "main": "Not later than 120 days after enactment, the Assistant Secretary must designate critical industries, critical supply chains, and critical goods; provide for a period of public comment and review; and update the designations not less than once every 4 years, including designations for technologies not described in section 7(12)(B) that the Assistant Secretary considers necessary.",
+              "detail": "Subsection (d) — designations, public comment, and 4-year update cycle.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "Not later than 1 year after enactment, the Assistant Secretary must submit to the relevant committees of Congress an implementation report detailing supply chain activities conducted, describing supply chain data collected/retained/analyzed, identifying necessary tools including commercially available risk assessment tools, identifying all Federal agencies with authorities/responsibilities described in subsection (b), and identifying Federal agencies/programs/bureaus with duplicative purposes.",
+              "detail": "Subsection (e) — 1-year implementation report.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "Not later than 18 months after enactment, and annually thereafter, the Assistant Secretary, in consultation with the Working Group, covered nongovernmental representatives, industries, higher education, and State/local governments, must submit to the relevant committees a national strategy and review that identifies critical infrastructure, critical and emerging technologies, designated critical industries/supply chains/goods, other crisis-preparedness supplies and services, substitutes for critical goods/production equipment/manufacturing technology, methods and technologies for authentication and traceability of critical goods (including blockchain technology, distributed ledger technology, and other critical and emerging technologies as appropriate), and allies/partners; describes the U.S. manufacturing base, critical supply chains, and emerging technologies (including for critical goods, production equipment, and manufacturing technology) and the U.S. ability to maintain readiness and surge production; assesses and describes demand/supply, production by domestic manufacturers, and rural/Tribal/underserved-community effects; identifies threats and supply chain shocks — listing any threat or shock that may originate from a country (or entity/individual from a country) described in section 7(2)(B); assesses U.S. and allied manufacturing base resilience and workforce capacity; assesses flexible manufacturing capacity; and develops a Commerce Department strategy for resilience, diversity, and strength of critical supply chains.",
+              "detail": "Subsection (f)(1) — 18-month national strategy and review with annual updates.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "The national strategy report may not include critical supply chain information that is not aggregated, confidential business information of a private-sector entity, or classified information; the report is submitted in unclassified form and may include a classified annex; a public comment period is required.",
+              "detail": "Subsection (f)(2)–(4).",
+              "comments": []
+            },
+            {
+              "main": "Not later than 1 year after enactment, the Assistant Secretary must enter into an agreement with the head of any relevant agency to obtain any information, data, or assistance necessary to conduct subsection (b) activities.",
+              "detail": "Subsection (g) — consultation agreements.",
+              "source": ["119-HR-2444"]
+            },
+            {
+              "main": "Rule of construction: nothing in the section requires any private entity to share information with the Secretary or Assistant Secretary, to request assistance, or to implement any recommendation.",
+              "detail": "Subsection (h) — no private-entity mandate.",
+              "comments": []
+            },
+            {
+              "main": "Voluntarily submitted critical supply chain information (identity of submitter included) — when accompanied by the specified express written or oral statement — is exempt from FOIA under 5 U.S.C. 552(b)(3); is not subject to ex parte communication rules; may not, without the submitter's written consent, be used directly by Commerce or any Federal, State, or local authority or third party in any civil action arising under Federal or State law when submitted in good faith; may not, without the submitter's written consent, be used or disclosed by federal officers for purposes other than the Act's purposes (with narrow exceptions for criminal investigation/prosecution and specified congressional/GAO oversight); may not, if provided to State or local governments, be made available under State/local disclosure law, distributed without consent, or used for purposes other than this section (or criminal investigation/prosecution); and does not constitute a waiver of any applicable privilege or protection under law, such as trade-secret protection.",
+              "detail": "Subsection (i)(1)(A) — six enumerated protections tied to the express-statement mechanism in (i)(1)(B).",
+              "comments": []
+            },
+            {
+              "main": "The voluntary submission mechanism does not apply to voluntary submissions of critical supply chain information in an application for Federal financial assistance under section 9902 of the William M. (Mac) Thornberry National Defense Authorization Act for Fiscal Year 2021 (Public Law 116-283).",
+              "detail": "Subsection (i)(5) — CHIPS-Act-application carveout.",
+              "source": ["119-HR-2444"]
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Department of Commerce Capability Assessment",
+          "items": [
+            {
+              "main": "Not later than 2 years after enactment, the Secretary must submit to the relevant committees a report — identifying duties/responsibilities/resources/programs/expertise within Commerce offices and bureaus relevant to critical supply chain resilience and manufacturing innovation, assessing the purpose/legal authority/effectiveness/efficiency/limitations of each identified office or bureau, and providing recommendations to enhance activities (including improving effectiveness and coordination, and consulting with agencies implementing similar activities) — along with a strategy to implement the recommendations as appropriate.",
+              "detail": "Section 4 — Commerce capability assessment.",
+              "source": ["119-HR-2444"]
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — No Additional Funds",
+          "items": [
+            {
+              "main": "No additional funds are authorized to be appropriated to carry out this title.",
+              "detail": "Section 5 — no-additional-funds clause.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Sunset",
+          "items": [
+            {
+              "main": "This title and all requirements, responsibilities, and obligations under this title terminate 10 years after the date of enactment.",
+              "detail": "Section 6 — 10-year sunset.",
+              "source": ["119-HR-2444"]
+            }
+          ]
+        },
+        {
+          "label": "Section 7 — Definitions",
+          "items": [
+            {
+              "main": "Defines key terms used in the title, including: \"agency\" (5 U.S.C. 551); \"ally or key international partner nation\" (excludes countries posing significant risk to U.S. national or economic security and countries described in section 503(b) of the RANSOMWARE Act, title V of division BB of the Consolidated Appropriations Act, 2023, Public Law 117-328, 136 Stat. 5564); \"Assistant Secretary\" (Assistant Secretary of Commerce directing Industry and Analysis); \"critical good\"; \"critical industry\"; \"critical infrastructure\" (via 42 U.S.C. 5195c); \"critical supply chain\"; \"critical supply chain information\"; \"domestic enterprise\"; \"domestic manufacturer\"; \"emerging technology\" (including technologies in the American COMPETE Act, title XV of division FF of the Consolidated Appropriations Act, 2021, Public Law 116-260, 134 Stat. 3276, and a named list — artificial intelligence; automated vehicles and unmanned delivery systems; blockchain and other distributed ledger, data storage, data management, and cybersecurity technologies; quantum computing and quantum sensing; additive manufacturing; advanced manufacturing and the Internet of Things; nanotechnology; robotics; microelectronics, optical fiber ray, and high performance and advanced computer hardware and software; semiconductors; advanced materials science); \"institution of higher education\" (20 U.S.C. 1001); \"manufacture\" (excluding software unrelated to manufacturing); \"manufacturing technology\"; \"production equipment\"; \"relevant committees of Congress\" (Senate Commerce, Science, and Transportation; House Energy and Commerce); \"resilient critical supply chain\"; \"Secretary\" (of Commerce); \"State\" (each State, D.C., commonwealth, territory, possession, and each federally recognized Indian Tribe); and \"supply chain shock\" (an event causing severe or serious disruption, including a natural disaster, pandemic, biological threat, cyber attack, geopolitical conflict, terrorist or geopolitical attack, trade disruption caused by section 7(2)(B) countries or their entities/individuals, and Presidentially declared major disasters or emergencies under section 401 or 501 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act (42 U.S.C. 5170; 42 U.S.C. 5191)).",
+              "detail": "Section 7 — full definition list.",
+              "source": ["119-HR-2444"]
+            }
+          ]
+        }
+      ],
+      "underreported": [],
+      "criticisms": [],
+      "gaps": [
+        "Section 7(2)(B) refers to \"a country that poses a significant risk to the national security or economic security of the United States\" — no list of such countries is provided within this title, leaving that determination to other law or executive designation.",
+        "The bill authorizes no additional funds (Section 5) but imposes new assessment, mapping, modeling, working-group, designation, reporting, and consultation obligations on Commerce and 10 other agencies.",
+        "The bill does not create any enforcement mechanism for the private-sector no-mandate rule of construction (Section 3(h)) or provide any incentive to submit voluntary information beyond the Section 3(i) protections.",
+        "The bill does not describe how the Assistant Secretary's four-yearly redesignations under Section 3(d) interact with the annual national strategy updates under Section 3(f)."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Eight new statutory responsibilities on the Assistant Secretary of Commerce for Industry and Analysis (Section 2)",
+          "New Supply Chain Resilience Working Group of 10 named agencies, established within 120 days (Section 3)",
+          "120-day designation of critical industries, critical supply chains, and critical goods, with public comment and 4-year updates (Section 3(d))",
+          "1-year implementation report to relevant committees (Section 3(e))",
+          "18-month national strategy and review with annual updates and optional classified annex (Section 3(f))",
+          "2-year Department of Commerce capability assessment report (Section 4)",
+          "Voluntary-submission protections for critical supply chain information — FOIA exemption via 5 U.S.C. 552(b)(3), civil-action non-use, and disclosure restrictions (Section 3(i))",
+          "No-additional-funds clause (Section 5)",
+          "10-year sunset (Section 6)"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-14"
+    }
+  ]
+}

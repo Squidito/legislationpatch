@@ -1,0 +1,161 @@
+{
+  "id": "119-HR-973",
+  "code": "HR.973",
+  "title": "Setting Consumer Standards for Lithium-Ion Batteries Act",
+  "official_title": "To establish consumer standards for lithium-ion batteries.",
+  "date": "2025-04-29",
+  "version": "v1.0",
+  "stage": "senate",
+  "stageLabel": "Passed Senate",
+  "currentStep": 3,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Torres, Ritchie (D-NY-15)",
+  "sponsor_bioguide": "T000486",
+  "cosponsors": 23,
+  "pages": 2,
+  "analyzed": true,
+  "demo": false,
+  "billType": "framework",
+  "stageDate": "2025-04-29",
+  "likelihood": 55,
+  "likelihoodLabel": "Moderate",
+  "likelihoodReason": "Sponsored by Rep. Ritchie Torres (D-NY) with 23 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+  "summary": "Requires the Consumer Product Safety Commission (CPSC), not later than 180 days after enactment, to promulgate three named voluntary standards as final consumer product safety standards under section 553 of title 5, U.S. Code: ANSI/CAN/UL 2271 (Batteries for Use in Light Electric Vehicle Applications), ANSI/CAN/UL 2849 (Electrical Systems for eBikes), and ANSI/CA/UL 2272 (Electrical Systems for Personal E-Mobility Devices), as in effect on the date of enactment. The Commission must limit the standards' application to consumer products as defined in section 3(a)(5) of the Consumer Product Safety Act (15 U.S.C. 2052(a)(5)). Future revisions of the standards become consumer product safety standards effective 180 days after notice unless the CPSC rejects them within 90 days. Promulgated standards are treated as consumer product safety rules under section 9 of the CPSA (15 U.S.C. 2058). Not later than five years after enactment, the CPSC must report to the Senate Commerce, Science, and Transportation Committee and the House Energy and Commerce Committee on fires, explosions, and other hazards involving lithium-ion batteries in micromobility products.",
+  "brief": "Requires the CPSC to adopt three UL micromobility-battery standards as final consumer product safety standards within 180 days, treats future revisions as effective 180 days after notice absent CPSC rejection, and requires a five-year hazards report to House Energy and Commerce and Senate Commerce, Science, and Transportation.",
+  "top_lines": [
+    {
+      "headline": "Three UL Standards Adopted Within 180 Days",
+      "billSection": "2",
+      "subs": [
+        "CPSC shall promulgate under section 553 of title 5 not later than 180 days after enactment",
+        "ANSI/CAN/UL 2271 — Batteries for Use in Light Electric Vehicle Applications",
+        "ANSI/CAN/UL 2849 — Electrical Systems for eBikes",
+        "ANSI/CA/UL 2272 — Electrical Systems for Personal E-Mobility Devices",
+        "As in effect on the date of enactment"
+      ]
+    },
+    {
+      "headline": "Automatic Revision Adoption Absent CPSC Rejection",
+      "billSection": "2",
+      "subs": [
+        "Revisions become consumer product safety standards effective 180 days after notice",
+        "Unless CPSC notifies the standards organization within 90 days that the revision does not improve safety",
+        "Treated as consumer product safety rules under section 9 of the CPSA (15 U.S.C. 2058)"
+      ]
+    },
+    {
+      "headline": "Five-Year Hazards Report",
+      "billSection": "2",
+      "subs": [
+        "Not later than 5 years after enactment",
+        "To Senate Committee on Commerce, Science, and Transportation and House Committee on Energy and Commerce",
+        "Covers fires, explosions, and other hazards involving lithium-ion batteries used in micromobility products"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the \"Setting Consumer Standards for Lithium-Ion Batteries Act.\"",
+          "detail": "Short-title section — citation name only; no substantive effect.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Consumer Product Safety Standard for Certain Batteries",
+      "items": [
+        {
+          "main": "Subsection (a) requires the CPSC, not later than 180 days after enactment, to promulgate under section 553 of title 5, U.S. Code, the provisions of ANSI/CAN/UL 2271, ANSI/CAN/UL 2849, and ANSI/CA/UL 2272 — as in effect on the date of enactment — as final consumer product safety standards. Subsection (b) requires the CPSC, in adopting the standards, to limit their application to consumer products as defined in section 3(a)(5) of the Consumer Product Safety Act (15 U.S.C. 2052(a)(5)).",
+          "detail": "The three UL standards named in the bill are the operative reference set; the scope limitation is fixed by the existing CPSA definition of \"consumer product.\"",
+          "comments": []
+        },
+        {
+          "main": "Subsection (c) requires the standards organization to notify the CPSC after final approval of any revision. The revised voluntary standard is considered a consumer product safety standard issued by the CPSC under section 9 of the Consumer Product Safety Act (15 U.S.C. 2058), effective 180 days after notification (or such later date specified by the Commission in the Federal Register), unless within 90 days after receiving that notice the CPSC notifies the organization that it has determined the proposed revision (in whole or in part) does not improve safety and that the Commission is retaining the existing standard.",
+          "detail": "The default rule flips the usual rulemaking presumption for revisions: adoption is automatic unless the CPSC affirmatively rejects within 90 days.",
+          "comments": []
+        },
+        {
+          "main": "Subsection (d) treats standards promulgated under section 2 (including revisions adopted by the Commission) as consumer product safety rules promulgated under section 9 of the CPSA (15 U.S.C. 2058). Subsection (e) requires the CPSC, not later than 5 years after enactment, to report to the Senate Commerce, Science, and Transportation Committee and the House Energy and Commerce Committee on fires, explosions, and other hazards relating to lithium-ion batteries used in micromobility products during the period beginning on enactment and ending on the report date, including source of information, make and model, standard-compliance status if known, and manufacturer/country of manufacture if known.",
+          "detail": "The five-year report window runs from enactment; the four required content elements are enumerated.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 2(c) — automatic revision adoption",
+      "summary": "Revisions to any of the three UL standards become binding CPSC standards 180 days after the organization notifies the CPSC, unless the CPSC rejects within 90 days.",
+      "why_unreported": "The public-facing framing is that Congress is adopting current UL standards; the automatic-adoption default for future revisions delegates ongoing rulemaking authority to a private standards body."
+    }
+  ],
+  "criticisms": [],
+  "gaps": [
+    "The bill does not authorize additional funding for CPSC rulemaking or enforcement of the new standards.",
+    "The bill does not preempt or coordinate with state-level battery-safety requirements.",
+    "The bill does not require a public docket for the CPSC's 90-day review of proposed revisions.",
+    "The bill does not describe how imports will be certified or tested for compliance."
+  ],
+  "featured_quotes": [
+    {
+      "name": "Mr. Torres",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "T000486",
+      "text": "Mr. Speaker, I am deeply grateful to Chair Guthrie, Ranking Member Pallone, Chair Bilirakis, and all the members of the Energy and Commerce Committee for their support. I am equally grateful to my partners in this effort, Congress Members Yvette Clarke, Andrew Garbarino, and Nick Langworthy. At the heart of our legislative progress has been the tireless advocacy of the FDNY, the finest and bravest fire department in the Nation. The sheer speed and scale of destruction caused by a lithium-ion battery fire is nothing short of staggering.",
+      "stance": "support",
+      "chamber": "House"
+    }
+  ],
+  "changes": {
+    "added": [
+      "180-day CPSC deadline to promulgate ANSI/CAN/UL 2271, ANSI/CAN/UL 2849, and ANSI/CA/UL 2272 as final consumer product safety standards",
+      "Automatic-adoption rule for future revisions of those UL standards (effective 180 days after notice absent 90-day CPSC rejection)",
+      "Five-year CPSC report on fires, explosions, and other hazards from micromobility lithium-ion batteries to House Energy and Commerce and Senate Commerce, Science, and Transportation Committees"
+    ],
+    "modified": [],
+    "removed": []
+  },
+  "budget_accounts": {},
+  "analyzedAt": "2026-07-14",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2025-04-28",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "yeas": 365,
+      "nays": 42,
+      "present": 0,
+      "notVoting": 25,
+      "crossoverCount": 0
+    }
+  ],
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-02-04",
+      "url": "https://www.congress.gov/119/bills/hr973/BILLS-119hr973ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2025-04-24",
+      "url": "https://www.congress.gov/119/bills/hr973/BILLS-119hr973rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2025-04-28",
+      "url": "https://www.congress.gov/119/bills/hr973/BILLS-119hr973eh.htm"
+    }
+  ]
+}

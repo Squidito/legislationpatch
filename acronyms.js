@@ -286,6 +286,42 @@ const ACRONYMS = {
   GAMING: 'Safer Guarding of Adolescents from Malicious Interactions on Network Games (Safer GAMING Act)',
   SAFE:   'Safeguarding Adolescents From Exploitative BOTs (SAFE BOTs Act)',
   AWARE:  'AI Warnings And Resources for Education',
+
+  // 2026-07-15 batch additions — verified from each bill's own text
+  UASI:   'Urban Area Security Initiative (DHS/FEMA grant program)',
+  MPD:    'Metropolitan Police Department of the District of Columbia',
+  FEC:    'Federal Election Commission',
+  APA:    'Administrative Procedure Act',
+  PRA:    'Paperwork Reduction Act',
+  HSGAC:  'Senate Homeland Security and Governmental Affairs Committee',
+  ANSI:   'American National Standards Institute',
+  CPSA:   'Consumer Product Safety Act',
+  CPSC:   'Consumer Product Safety Commission',
+  UDAP:   'Unfair or Deceptive Acts or Practices (FTC Act §5 enforcement authority)',
+  HSIN:   'Homeland Security Information Network',
+  SCORE:  'Service Corps of Retired Executives (SBA mentoring program)',
+  MNNA:   'Major Non-NATO Ally (State Department designation)',
+  FTO:    'Foreign Terrorist Organization (State Department designation)',
+  SDGT:   'Specially Designated Global Terrorist (Executive Order 13224 designation)',
+  ODNI:   'Office of the Director of National Intelligence',
+  NSTC:   'National Science and Technology Council',
+  OAG:    'Office of the Attorney General',
+  INDA:   'Association of the Nonwoven Fabrics Industry (trade group)',
+  EDANA:  'European Disposables and Nonwovens Association',
+  NCA:    'National Cemetery Administration',
+  FTE:    'Full-Time Equivalent (staffing measure)',
+  USTR:   'U.S. Trade Representative',
+  CHIPS:  'Creating Helpful Incentives to Produce Semiconductors Act (Public Law 117-167)',
+  // Bill-name backronyms added in this batch
+  VETS:   "Focused Assistance and Skills Training for Veterans' Employment and Transition Success (FAST VETS Act)",
+  FAST:   "Focused Assistance and Skills Training for Veterans' Employment and Transition Success (FAST VETS Act)",
+  CRIMES: 'Curbing Reoffenders and Impunity in the Metropolitan Area to Make Everyone Safe Act (DC CRIMES Act)',
+  WIPPES: 'Wastewater Infrastructure Pollution Prevention and Environmental Safety Act',
+  PRO:    'Protecting Regular Order for Veterans Act of 2025',
+  // Compound HSIN-INTEL: INTEL is the intelligence-community access module of HSIN
+  INTEL:  'HSIN Intelligence — the intelligence-community access module of the Homeland Security Information Network',
+  // CAN in "ANSI/CAN/UL" designations = joint standard endorsed by the Standards Council of Canada
+  CAN:    'Standards Council of Canada (joint standard designator in ANSI/CAN/UL bicentennial standards)',
 };
 
 // ---- Tooltip element (one shared instance appended to body) ----

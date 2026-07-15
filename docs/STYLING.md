@@ -6,7 +6,9 @@ Key colors: `--bg`, `--surface`, `--surface-2`, `--border`, `--text`, `--text-2`
 Accent palette: `--purple`, `--teal`, `--green`, `--amber`, `--red` — each has `-bg`, `-text`, `-border` variants.
 Trust bar dark mode: `background: #1c1208` → changed to `var(--surface-2)` with `color: #fb923c`.
 
-**What Changed patch blocks** (`.what-changed-grid`) use `.patch-block--added/modified/removed` CSS classes that reference the accent CSS variables, NOT hardcoded colors. Dark mode overrides automatically via the variable cascade. Do not add inline styles here.
+**What Changed** (`.wc-card`, from `renderChangesAppStyle`) uses `.wc-seg-label` / `.wc-dot` in `.wc-added` / `.wc-modified` / `.wc-removed` variants that reference the accent CSS variables (green / amber / red), NOT hardcoded colors. Dark mode overrides automatically via the variable cascade. Do not add inline styles here. (Replaced the old `.what-changed-grid` / `.patch-block--*` version-diff renderer, deleted 2026-07-14.)
+
+**Dead-bill frame** (`.bill-card--dead`): a deep oxblood/maroon — the one intentional off-palette literal (light `#6e1a2b`, dark `#a83c4b`) so it sits clearly away from the bright `--red` used for votes. Underreported's light-mode tint (`#f9f0dd`) is the other deliberate literal (palette `--amber-bg` was too weak to differentiate from grey Not-addressed).
 
 ## Fonts
 

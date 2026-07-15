@@ -1,0 +1,151 @@
+{
+  "id": "119-HR-9328",
+  "code": "HR.9328",
+  "title": "Improving Travel for Military Members Act",
+  "official_title": "To improve travel for active-duty military personnel and accompanying family, and for other purposes.",
+  "date": "2026-07-13",
+  "version": "v1.0",
+  "stage": "house",
+  "stageLabel": "Passed House",
+  "currentStep": 2,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Biggs, Sheri (R-SC-3)",
+  "sponsor_bioguide": "B001325",
+  "cosponsors": 2,
+  "pages": 2,
+  "analyzed": true,
+  "demo": false,
+  "billType": "study",
+  "stageDate": "2026-07-13",
+  "likelihood": 55,
+  "likelihoodLabel": "Moderate",
+  "likelihoodReason": "Sponsored by Rep. Sheri Biggs (R-SC) with 2 cosponsors. Cleared the House per the latest recorded action.",
+  "summary": "Authorizes the TSA Administrator, not later than 60 days after enactment, to establish a pilot program at airports to expedite access to security screening for traveling active-duty military personnel and accompanying family members, so long as such access does not compromise security protocols. The pilot must screen each covered passenger under Secure Flight per paragraph (2) of section 44903(j) of title 49, prevent access to TSA PreCheck or other expedited lanes without an eligibility-indicating boarding pass under section 44901 of title 49, and permit local management to open or close checkpoint lanes and reallocate resources based on passenger volume. Selection criteria prioritize airports within an Administrator-set distance of a military installation (as defined in section 2801 of title 10) meeting an active-duty threshold. A briefing to House Homeland Security and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation Committees is due nine months after establishment, and the pilot has a three-year sunset.",
+  "brief": "Lets TSA set up a pilot within 60 days to expedite airport screening for active-duty military personnel and accompanying family, under three security-preserving requirements, a nine-month briefing, and a three-year sunset.",
+  "top_lines": [
+    {
+      "headline": "TSA Pilot Program Within 60 Days",
+      "billSection": "2",
+      "subs": [
+        "Administrator may establish the pilot not later than 60 days after enactment",
+        "Only to the extent that expedited access does not compromise security protocols",
+        "Covers active-duty military personnel and accompanying family members"
+      ]
+    },
+    {
+      "headline": "Three Security Requirements",
+      "billSection": "2",
+      "subs": [
+        "Screen each passenger per Secure Flight, in accordance with paragraph (2) of section 44903(j) of title 49",
+        "No TSA PreCheck or other expedited lane access without a boarding pass indicating eligibility under section 44901 of title 49",
+        "Permit local management to open or close lanes and reallocate resources as needed"
+      ]
+    },
+    {
+      "headline": "Selection, Briefing, and Three-Year Sunset",
+      "billSection": "2",
+      "subs": [
+        "Priority to airports within an Administrator-set distance of a military installation (as defined in section 2801 of title 10) with an Administrator-set active-duty threshold",
+        "Briefing to House Homeland Security, Senate HSGAC, and Senate Commerce, Science, and Transportation Committees within nine months of establishment",
+        "Pilot runs for a period of three years"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the \"Improving Travel for Military Members Act.\"",
+          "detail": "Short-title section — citation name only; no substantive effect.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Improving Travel for Active-Duty Military Personnel and Accompanying Family",
+      "items": [
+        {
+          "main": "Subsection (a) authorizes the TSA Administrator, not later than 60 days after enactment, to establish a pilot program at airports to expedite access to security screening for traveling active-duty military personnel and accompanying family members. The Administrator may carry out this subsection only to the extent such access does not compromise security protocols.",
+          "detail": "Authority is may, not shall — the pilot is discretionary. Subsections (c), (d), and (e) only apply if the Administrator establishes the pilot.",
+          "comments": []
+        },
+        {
+          "main": "Subsection (b) sets three security requirements the Administrator must carry out: (1) ensure each passenger described in subsection (a) is screened in accordance with the vetting status under the TSA's Secure Flight program, in accordance with paragraph (2) of section 44903(j) of title 49; (2) prevent individuals carrying out screening functions under section 44901 from allowing any passenger into a TSA PreCheck or other expedited security screening lane unless the passenger has received a boarding pass indicating eligibility for TSA PreCheck or such other expedited security screening; and (3) permit local Administration management to open or close checkpoint lanes and reallocate available resources as needed to maximize security effectiveness and efficiency based on passenger volume.",
+          "detail": "The three requirements preserve Secure Flight-based screening, enforce the boarding-pass-eligibility precondition for expedited lanes, and preserve local flexibility over lane configuration.",
+          "comments": []
+        },
+        {
+          "main": "Subsection (c) directs the Administrator, in selecting airports for the pilot program, to (1) give priority to an airport that is not more than a certain distance, as determined by the Administrator, from a military installation (as defined in section 2801 of title 10) to which not fewer than a certain number, as determined by the Administrator, of active-duty military personnel are stationed; (2) consider airports with adequate space to accommodate dedicated screening lanes for the covered population; and (3) use any other consideration the Administrator determines necessary. Subsection (d) requires a briefing to the House Homeland Security Committee and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation Committees not later than nine months after establishment. Subsection (e) sunsets the pilot at three years.",
+          "detail": "The distance threshold and the active-duty personnel threshold are both delegated to the Administrator; the briefing recipients are three named committees.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 2 — discretionary authority",
+      "summary": "Every operative subsection except (a) and (b) is conditioned on \"if the Administrator establishes the pilot program.\" The Administrator retains discretion over whether to establish the pilot at all.",
+      "why_unreported": "The bill's title suggests a program will exist; the operative text authorizes but does not require it."
+    }
+  ],
+  "criticisms": [],
+  "gaps": [
+    "The bill does not fix the distance from a military installation or the active-duty threshold; both are set by the Administrator.",
+    "The bill does not authorize funding for the pilot.",
+    "The bill does not require a public evaluation or metrics beyond the nine-month committee briefing.",
+    "The bill does not specify how accompanying family members are identified for purposes of the expedited lane."
+  ],
+  "featured_quotes": [
+    {
+      "name": "Mrs. Biggs",
+      "party": "R",
+      "state": "SC",
+      "bioguideId": "B001325",
+      "text": "I don't speak on this legislation as an outside observer. As a Member currently serving in the Air National Guard, I have worn the uniform. I have seen firsthand what it asks of servicemembers and their families. This legislation is written from experience, not just policy.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "changes": {
+    "added": [
+      "Three-year TSA pilot program at airports to expedite screening for active-duty military personnel and accompanying family members",
+      "Three security requirements — Secure Flight vetting per section 44903(j)(2), boarding-pass-eligibility precondition for expedited lanes under section 44901, and preserved local lane-management flexibility",
+      "Airport selection criteria tied to distance from and active-duty presence at a military installation (section 2801 of title 10)",
+      "Nine-month briefing to House Homeland Security, Senate HSGAC, and Senate Commerce, Science, and Transportation Committees"
+    ],
+    "modified": [],
+    "removed": []
+  },
+  "budget_accounts": {},
+  "analyzedAt": "2026-07-14",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2026-07-13",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2026-06-18",
+      "url": "https://www.congress.gov/119/bills/hr9328/BILLS-119hr9328ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2026-07-13",
+      "url": "https://www.congress.gov/119/bills/hr9328/BILLS-119hr9328rh.htm"
+    }
+  ]
+}

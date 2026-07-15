@@ -770,8 +770,12 @@ section('Quote quality audit');
             if (q.stance && q.stance !== 'neutral') {
                 const computed = detectStance(text);
                 if (computed !== 'neutral' && computed !== q.stance) {
-                    warn(`${id}: stance stored as "${q.stance}" but text reads "${computed}"`);
-                    quoteIssues++;
+                    const a = adjudication(bill.id, 'quote-stance', q.name);
+                    if (a) noteAdjudicated(`${id}: stance stored as "${q.stance}" but text reads "${computed}"`, a);
+                    else {
+                        warn(`${id}: stance stored as "${q.stance}" but text reads "${computed}"`);
+                        quoteIssues++;
+                    }
                 }
             }
         }
@@ -977,6 +981,8 @@ section('Acronym audit');
         'ID', 'OK', 'PDF', 'URL', 'HTML', 'AM', 'PM', 'USC', 'CFR', 'PL', 'HR', 'NDAA',
         'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII',
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'IT', 'BE', 'AND', 'THE', 'FOR', 'WHO',
+        // Common English words that appear in ALL-CAPS quoted bill headings/short-titles
+        'USE', 'LAW', 'NEW', 'ANY', 'ALL', 'END', 'RUN', 'ADD', 'OUT', 'OFF', 'OWN',
     ]);
     const known = new Set(Object.keys(ACRONYMS).map(k => k.toUpperCase()));
     let flagged = 0;

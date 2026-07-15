@@ -244,6 +244,19 @@ const FILLER_SENTENCE_RE = [
     /^The question was taken\b/i,
     /^The rules were suspended\b/i,
     /^A motion to reconsider was laid\b/i,
+    // UC-objection opener — Senate procedural, common when a senator interrupts
+    // a unanimous-consent request. Strip it so the substantive follow-on remains.
+    /^Reserving\s+the\s+right\s+to\s+object[,.:]?\s*$/i,
+    /^(?:Yes,?\s+there\s+is,?\s+(?:Madam|Mr\.?)\s+(?:Speaker|President)\.\s+)?Reserving\s+the\s+right\s+to\s+object[,.:]/i,
+    // Bare endorsement sentences (7-10 words) that carry no policy content —
+    // "H.R. N is a commonsense bipartisan bill.", "I urge support for this
+    // legislation.", "The name of the bill itself is pretty self-explanatory."
+    /^H\.?\s?(?:R|J\.?\s?Res|Con\.?\s?Res|Res|Rept)\.?\s*\d+\s+is\s+(?:a|an)\s+(?:great|good|important|critical|commonsense|common-sense|bipartisan|simple)(?:[, ]+(?:great|good|important|critical|commonsense|common-sense|bipartisan|simple))*\s+(?:bill|resolution|measure|legislation)\.?\s*$/i,
+    /^S\.?\s*\d+\s+is\s+(?:a|an)\s+(?:great|good|important|critical|commonsense|common-sense|bipartisan|simple)(?:[, ]+(?:great|good|important|critical|commonsense|common-sense|bipartisan|simple))*\s+(?:bill|resolution|measure|legislation)\.?\s*$/i,
+    /^(?:The\s+name\s+of\s+)?(?:this|the)\s+(?:bill|legislation|measure|resolution)(?:\s+itself)?\s+is\s+(?:pretty\s+|fairly\s+|quite\s+|very\s+)?self[- ]explanatory\.?\s*$/i,
+    /^I\s+(?:strongly\s+)?urge\s+(?:support|passage|adoption|approval)\s+(?:for|of)\s+this\s+(?:bill|legislation|resolution|measure)\.?\s*$/i,
+    /^I\s+couldn'?t\s+agree\s+more\.?/i,
+    /^This\s+is\s+an?\s+important\s+piece\s+of\s+legislation[,.]?\s*(?:particularly\s+for\s+\w+(?:\s+\w+)*)?\.?\s*$/i,
 ];
 
 // Optional salutation prefix senators use before their actual statement.
@@ -724,6 +737,20 @@ function verifyCRQuotes(rawQuotes, crText) {
         if (failures.length > 0) {
             console.log(`  ✕ REJECTED (text not verbatim in CR): ${name}`);
             failures.forEach(f => console.log(`    ↳ "${f.slice(0, 80)}..."`));
+            continue;
+        }
+
+        // Substance filter (parallels extractQuotesFromCR): reject pure filler,
+        // procedural language, and non-substantive endorsements. Without this,
+        // apply-quotes accepts short quotes like "I urge support for this
+        // legislation." (7 words) that the CR-extraction path would reject.
+        const substantive = stripFillerSentences(text);
+        if (!substantive || substantive.split(/\s+/).length < 20) {
+            console.log(`  ✕ REJECTED (non-substantive / filler-only): ${name}`);
+            continue;
+        }
+        if (DISPLAY_PROCEDURAL.some(p => p.test(text))) {
+            console.log(`  ✕ REJECTED (procedural language): ${name}`);
             continue;
         }
 

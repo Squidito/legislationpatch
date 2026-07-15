@@ -48,20 +48,21 @@ Portrait URL logic: `portraitUrl(bioguideId)` in `app-*.js` (see CLAUDE.md Key F
 
 ## Card Status Badges & Frames
 
-Two status markers, separate from `billType`:
+Status markers, separate from `billType`:
 - **OMNIBUS** — `.status-omnibus` (amber), shown for `bill.isOmnibus` in the left rank column; card gets the gold frame `.bill-card--omnibus`.
 - **ENACTED** — `.status-enacted` (green), shown by `isEnacted(bill)` (just `stage === 'signed'` — **permanent, no time window**), top-right above the star in `.bill-actions-col`, only when `!isOmnibus`; card gets the green frame `.bill-card--enacted`.
-- **Omnibus takes precedence over enacted** for both the frame and the right-side badge.
+- **DEAD** — no badge; `isDead(bill)` (`stage === 'dead'` or `'vetoed'`) gives the card a deep oxblood/maroon frame `.bill-card--dead` (light `#6e1a2b`, dark `#a83c4b` — intentionally shifted off the bright partisan/vote red). The "Failed …" stage label + "Dead" in the footer carry the meaning. (2026-07-14)
+- **Frame precedence:** omnibus > enacted > dead (mutually exclusive in practice; the class ternary in `renderBill` picks the first match).
 - Tags carrying a `data-tip` (type chips, OMNIBUS, ENACTED) show the plain-English hover tooltip; `.status-badge[data-tip] { cursor: help }`.
 - History: this badge was "JUST PASSED" (30-day window via the old `isJustPassed`) → "PASSED" → now **"ENACTED"**; `isEnacted()` and `.status-enacted` / `.bill-card--enacted` are the current names.
 
-## Section breakdown — numbered spine (`renderSections`)
+## Section breakdown — patch-note cards (`renderSections`)
 
-The per-section breakdown ("patch notes") renders as a numbered **spine**: each section is a node with a mono marker (`§N` / roman `Title` / `Division` letter, dot fallback for odd labels) on a continuous vertical rail. `renderSections(bill)` wraps `renderSection` rows; helpers `secMarker()` / `secTitle()` derive the chip + strip the "Section N — " prefix. Boilerplate sections flagged `admin:true` (Short Title, Table of Contents, Definitions, Findings, Sense of Congress, Severability, Effective Date, Rule of Construction, etc.) collapse into one folded "Administrative provisions" node at the top of the spine. Every section of a bill should have an entry (admin ones carry a short flavor/admin note); grouped entries ("Sections 8-10") are split per-section. CSS: `.patch-spine` / `.ps-row` / `.ps-rail` / `.ps-num` / `.ps-admin-strip` block in styles.css. **Omnibus divisions** (`renderDivision`) render their `divisions[N].sections[]` through the same `renderSections` spine (the old dotted `top_lines` overview is suppressed when sections exist, to avoid duplicating the same per-title content).
+**2026-07-14 rewrite** (mirrors the mobile app's `PatchSection`; replaced the old numbered `.patch-spine`). The per-section breakdown ("PATCH NOTES") renders as a stack of quiet **section cards**: `renderSections(bill)` → `.patch-cards` wrapping one `renderSection` card per section — a purple section label + purple-dotted `renderItem` rows with each item's detail shown **inline** (no per-item "▾ details" toggle anymore). Each card is **collapsible**: the label is the toggle (`togglePatchCard(labelEl)`, caret ▾↔▸, starts expanded). The admin-provisions grouping was dropped — all sections render flat, like the app (`secMarker()`/`secTitle()` are now unused). Each card keeps `id="sp-<billId>-<anchor>"` so KEY PROVISIONS headlines still scroll to it, and its title links to the verbatim bill text (`.patch-card-title-link` → `scrollToBillSection`, with `stopPropagation` so tapping the title doesn't also collapse the card). CSS: `.patch-cards` / `.patch-card` / `.patch-card-label` / `.patch-card-item` / `.patch-card-dot` / `.patch-card-detail`. Only rendered on the **bill page** (`renderBillPage`) and omnibus **divisions** (`renderDivision`) — the home/bills card dropped patch notes entirely. (The old `.patch-spine` / `.ps-*` CSS is left in place but unused.)
 
-## Congressional Positions Section (bill card)
+## Congressional Positions Section (bill card + bill page)
 
-Single `.positions-section` container holds both vote data and sponsor:
+Rendered by `renderPositionsSection` (via `renderVoteSection`); now the **last** analysis section on both the card and the bill page (2026-07-14). Single `.positions-section` container holds both vote data and sponsor:
 - Vote rows first (more prominent) — collapsed tally with pass bar; "Show votes" lazily fetches `data/votes/{billId}.json`
 - Pass bar: green/red bar showing Yea vs Nay proportion with a threshold line (50% default, 60% cloture, 67% two-thirds)
 - "SPONSOR" divider, then sponsor row(s) below
@@ -146,13 +147,22 @@ rep.js reads `ref === 'reps'` and sets backBtn to "← Reps" → `reps.html`.
 - **Likelihood footer:** `display: flex` (was CSS grid). `.footer-stage-dots` is `flex-shrink: 0`; `.footer-likelihood-inner` has `flex: 1`.
 - **Pipeline dots:** `.fp-line` is `width: 14px; flex-shrink: 0` (fixed width, no margin — lines connect flush to dots). Mobile (`≤640px`): dots shrink to 5px (6px active), lines to 8px.
 - **Mobile bill summary:** no longer clamped on `≤640px` — shows full text.
-- **Expansion states:** closed → minor → full. Clicking header from ANY open state collapses fully.
-- **Full expansion layout order:** top-lines → what-changed → quote cards → patch notes → positions → underreported → criticisms → gaps
-- **Changes section (`.what-changed-grid`):** stacks Added/Modified/Removed vertically (`flexDirection: column`). Uses CSS variable accent colors, no inline styles.
-- **Patch notes container:** `.patch-notes` has surface background + purple left border, matching `.top-lines` style
-- **Quote cards:** clamp 5 lines, expand to full on hover (`-webkit-line-clamp: 100`). Rep portrait/name links to rep page only when `bioguideId` is present. Neutral stance shows no badge.
-- **Gaps section:** `.gaps-section` has amber card container matching `.underreported-section` style
-- **Omnibus card:** `bill.isOmnibus` → adds `.bill-card--omnibus` class (amber border + glow) and renders the **OMNIBUS** badge. Patch notes suppressed on card expansion — only top-lines shown.
+- **Single expanded view (2026-07-11):** the card is either closed or open (`openCards` holds `'open'`); the old closed → minor → full two-tier was removed (`renderMinorBody` / `expandFull` deleted). Clicking the header or footer toggles.
+- **Card body order (2026-07-14):** Key provisions (`.top-lines`) → What changed → Opposed → Not addressed → Underreported → Floor statements (quote cards) → **Congressional positions** → "View full patch notes →" button. NO likelihood readout (the footer bar already has it), NO patch notes (the button opens the bill page), and top-line headlines are un-linked on the card. `renderBody`'s inner branches on `window.BILL_PAGE_ID`.
+- **What changed (`.wc-card`):** app-style card driven by `bill.changes` (analyst added/modified/removed) via `renderChangesAppStyle` — one quiet card, three colour-labelled stacked segments (Added green / Modified amber / Removed red); empty ones show "None". Same renderer on card + page. (Replaced `renderWhatChanged` / `.what-changed-grid`, the version-diff, which was deleted 2026-07-14.)
+- **Quote cards (`.quote-cards-row`):** 2-up grid on the card; clamp 5 lines, expand to full on hover. Carries a bottom margin so it doesn't touch the Congressional card that now follows it. Rep portrait/name links to the rep page only when `bioguideId` is present; neutral stance shows no badge.
+- **Not addressed vs Underreported:** deliberately differentiated — `.gaps-section` is a neutral grey card (`--surface-2` + `--border`, grey title); `.underreported-section` is a soft-amber card (light `#f9f0dd` + `#e9d5ad` border, dark `--surface-2` + `--amber-border`) with an amber title. (Was: both amber.)
+- **Omnibus card:** `bill.isOmnibus` → `.bill-card--omnibus` (amber border + glow) + the **OMNIBUS** badge. Divisions & patch notes are bill-page only, never on the card.
+
+## Full Bill Page (bill.html / `renderBillPage`)
+
+**2026-07-14 rebuild** — the bill page no longer reuses the card (`renderBill`); `bill.js` renders **`renderBillPage(bill)`** into `#bill-card-mount` — an app-style page (mirrors the mobile `app/bill/[id].tsx`), NOT an expanded card. No card border, no clickable likelihood footer / chevron, no collapse toggle (always fully shown), and **no passage-likelihood readout at all** (the pipeline conveys stage — matches the app).
+
+**Layout:** a `.bp-title-block` (type/status badges + watch star + `CODE · STAGE · DATE` mono line + title + sponsor line, no portrait), then eyebrow-labelled `.bp-section`s in order: **SUMMARY → PIPELINE → KEY PROVISIONS → WHAT CHANGED → PATCH NOTES → (DIVISION-BY-DIVISION) → OPPOSED → NOT ADDRESSED → UNDERREPORTED → FLOOR STATEMENTS → CONGRESSIONAL POSITIONS** (Congressional last on both page *and* card). Reuses the existing section builders; page-scoped CSS (`.bill-page .*`) strips the reused sections' card insets, uppercases their internal titles into eyebrows, and hides the `.patch-notes-title` subtitle. The inline full-bill-text (`#bill-text-mount`) still renders below, unchanged.
+
+**Pipeline (`renderStageStrip` → `.vpipe`):** rewritten from the horizontal hardcoded strip to a **vertical** stack (mirrors the app `StageStrip`), driven by `bill.pipeline` + `bill.currentStep` (real per-bill stages, e.g. "Passed Senate" → "Passed House"): done = filled purple dot + purple rail; active (`currentStep`) = purple ring (light centre via `--bg`) + purple-bold label; pending = grey; vetoed active step is red.
+
+**CSS:** `.bill-page`, `.bp-title-block`/`.bp-badge-row`/`.bp-code`/`.bp-title`/`.bp-meta`, `.bp-section`/`.bp-label`/`.bp-summary`, plus `.vpipe`/`.vp-*` (pipeline) and `.wc-*` (What changed). `bill.js` keeps only the Copy-link action (dropped the "Collapse analysis" toggle; the page is always expanded).
 
 ## Bill Filter Tabs (index.html and bills.html)
 
@@ -191,7 +201,7 @@ Patch section titles and top-line headlines link to the corresponding section in
 **How it works:**
 - `renderBtLine()` in `bill.js` assigns `id="bt-sec-N"` to section headers (`SECTION 1.`, `SEC. 2.`, `2. Title`) and `id="bt-title-I"` to TITLE headers
 - `patchSectionAnchor(sec)` in `app-*.js` (see CLAUDE.md Key Files for the split map) parses the section number from the label — handles `"Section 2 — ..."`, `"Sections 3–End — ..."`, `"Title I — ..."`. Falls back to `sec.billSection` for thematic labels
-- `renderSection()` wraps the `.patch-section-title` in a `<a class="patch-section-title-link">` when `window.BILL_PAGE_ID` is set (bill page only)
+- `renderSection()` wraps the section label in `<a class="patch-card-title-link">` when `window.BILL_PAGE_ID` is set (bill page only; `stopPropagation` so the link doesn't also collapse the card)
 - `renderTopLines()` does the same for `item.headline` when `item.billSection` is set
 - `scrollToBillSection(anchorId)` in `bill.js` does the scroll + flash. Also handles URL hash on load (direct linking)
 

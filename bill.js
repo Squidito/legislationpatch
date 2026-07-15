@@ -7,10 +7,7 @@ function renderAll() {
   const bill = allBills.find(b => b.id === window.BILL_PAGE_ID);
   if (!bill) return;
   const mount = document.getElementById('bill-card-mount');
-  mount.innerHTML = renderBill(bill, 1);
-  const isFull = openCards.get(window.BILL_PAGE_ID) === 'full';
-  const btn = document.getElementById('analysisToggle');
-  if (btn) btn.textContent = isFull ? '▲ Collapse analysis' : '▼ Show analysis';
+  mount.innerHTML = renderBillPage(bill);
   if (typeof scanAcronyms === 'function') scanAcronyms(mount);
 }
 
@@ -127,17 +124,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
 
-  // Render the bill card
+  // Render the full bill page (app-style layout, always expanded)
   const cardMount = document.getElementById('bill-card-mount');
-  cardMount.innerHTML = renderBill(bill, 1);
+  cardMount.innerHTML = renderBillPage(bill);
   if (typeof scanAcronyms === 'function') scanAcronyms(cardMount);
   loading.style.display = 'none';
 
-  // Analysis collapse toggle — mirrors clicking the card header
+  // Copy-link action (no collapse toggle — the page is always fully shown, like the app)
   const toggleRow = document.getElementById('analysis-toggle-row');
-  toggleRow.innerHTML = '<button class="analysis-toggle-btn" id="analysisToggle">▲ Collapse analysis</button>'
-    + '<button class="share-btn" id="shareBtn" onclick="copyBillLink()" title="Copy link to this bill">' + SHARE_LINK_SVG + ' Copy link</button>';
-  document.getElementById('analysisToggle').addEventListener('click', () => toggleCard(billId));
+  toggleRow.innerHTML = '<button class="share-btn" id="shareBtn" onclick="copyBillLink()" title="Copy link to this bill">' + SHARE_LINK_SVG + ' Copy link</button>';
 
   // Sync theme toggle state
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';

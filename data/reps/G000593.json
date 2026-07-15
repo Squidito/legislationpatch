@@ -5,9 +5,33 @@
   "state": "FL",
   "role": "Representative",
   "district": 28,
-  "bio": "Carlos Antonio Giménez is an American politician and retired firefighter serving as the U.S. representative for Florida's 28th congressional district since 2023. He was redistricted from Florida's 26th congressional district in 2022, which he represented since 2021. A Republican, he served as mayor of Miami-Dade County from 2011 to 2020. He served as a Miami-Dade County Commissioner from 2003 to 2011, and was the fire chief of the Miami Fire-Rescue Department.",
-  "comments": [],
+  "bio": "Carlos Antonio Giménez is an American politician and retired firefighter serving in the U.S. House of Representatives since 2021. He has represented Florida's 28th congressional district since 2023, previously representing the 26th district in his first term. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-1316",
+      "billTitle": "Maintaining American Superiority by Improving Export Control Transparency Act",
+      "stance": "neutral",
+      "text": "In south Florida, Miami International Airport is one of the busiest international gateways in the United States. Every day, millions of passengers pass through airports like Miami International Airport throughout the country. We have a responsibility to keep those passengers and our airports moving efficiently while maintaining the highest security standards. This bill does exactly that.",
+      "source": "House Floor, Jul 13, 2026",
+      "granuleTitle": null,
+      "date": "Jul 13, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-3106",
+      "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-8897",
+      "billTitle": "Improving Travel for American Families Act",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HCONRES-108",
       "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
@@ -226,6 +250,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-2493",
+      "billTitle": "Improving Care in Rural America Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-S-1020",
       "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
       "chamber": "House",
@@ -373,11 +404,25 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-2550",
+      "billTitle": "Protect America's Workforce Act",
+      "chamber": "House",
+      "date": "2025-12-11",
+      "vote": "Not Voting"
+    },
+    {
       "billId": "119-S-1071",
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Not Voting"
+    },
+    {
+      "billId": "119-HR-6019",
+      "billTitle": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
+      "chamber": "House",
+      "date": "2025-11-19",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-5214",
@@ -412,6 +457,34 @@
       "billTitle": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
       "chamber": "House",
       "date": "2025-11-12",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-5143",
+      "billTitle": "District of Columbia Policing Protection Act of 2025",
+      "chamber": "House",
+      "date": "2025-09-17",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-5125",
+      "billTitle": "District of Columbia Judicial Nominations Reform Act of 2025",
+      "chamber": "House",
+      "date": "2025-09-17",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-4922",
+      "billTitle": "D.C. CRIMES Act",
+      "chamber": "House",
+      "date": "2025-09-16",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-5140",
+      "billTitle": "To lower the age at which a minor may be tried as an adult for certain criminal offenses in the District of Columbia to 14 years of age.",
+      "chamber": "House",
+      "date": "2025-09-16",
       "vote": "Yea"
     },
     {
@@ -492,6 +565,20 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-859",
+      "billTitle": "Informing Consumers about Smart Devices Act",
+      "chamber": "House",
+      "date": "2025-04-29",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-973",
+      "billTitle": "Setting Consumer Standards for Lithium-Ion Batteries Act",
+      "chamber": "House",
+      "date": "2025-04-28",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-S-146",
       "billTitle": "TAKE IT DOWN Act",
       "chamber": "House",
@@ -553,6 +640,13 @@
       "chamber": "House",
       "date": "2025-01-21",
       "vote": "Not Voting"
+    },
+    {
+      "billId": "119-HR-28",
+      "billTitle": "Protection of Women and Girls in Sports Act of 2025",
+      "chamber": "House",
+      "date": "2025-01-14",
+      "vote": "Yea"
     }
   ],
   "bioSource": "wikipedia",

@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 7,
   "bio": "Matthew Robert Van Epps is an American politician and former Army officer serving as the U.S representative for Tennessee's 7th congressional district since December 2025. A member of the Republican Party, he was elected in the 2025 special election. He previously served as the commissioner of the Tennessee Department of General Services from 2024 to 2025. He was sworn in on December 4, 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8168",
+      "billTitle": "Major Non-NATO Ally Terror Threat Assessment Act",
+      "stance": "neutral",
+      "text": "When the United States designates a nation as a major non-NATO ally, MNNA, it comes with security cooperation and possible trade deals for defense equipment. This is an important designation that our Nation does not grant lightly. However, we cannot ignore the fact that foreign terrorist organizations continue to operate in or around some MNNA countries, creating threats that could have serious consequences for U.S. national security.",
+      "source": "House Floor, Jul 13, 2026",
+      "granuleTitle": null,
+      "date": "Jul 13, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-3106",
+      "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-8897",
+      "billTitle": "Improving Travel for American Families Act",
+      "chamber": "House",
+      "date": "2026-07-13",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HCONRES-108",
       "billTitle": "Directing the President pursuant to section 5(c) of the War Powers Resolution to remove United States Armed Forces from hostilities in Lebanon.",
@@ -226,6 +250,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-HR-2493",
+      "billTitle": "Improving Care in Rural America Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2026-04-21",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-S-1020",
       "billTitle": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
       "chamber": "House",
@@ -371,6 +402,13 @@
       "chamber": "House",
       "date": "2025-12-15",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-2550",
+      "billTitle": "Protect America's Workforce Act",
+      "chamber": "House",
+      "date": "2025-12-11",
+      "vote": "Nay"
     },
     {
       "billId": "119-S-1071",

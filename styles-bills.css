@@ -209,6 +209,15 @@
   font-size: var(--fs-2xs);
   letter-spacing: 0.04em;
 }
+/* DEAD — solid deep oxblood/maroon fill, pairs with the .bill-card--dead frame
+   (off the bright partisan/vote red). Dark lifts it to stay legible on the dark card. */
+.status-dead {
+  background: #6e1a2b;
+  color: #ffffff;
+}
+[data-theme="dark"] .status-dead {
+  background: #a83c4b;
+}
 /* Neutral structural classification (legislative form). Deliberately muted —
    it describes what kind of bill this is, not how important it is.
    Constrained to the 48px rank column with wrapping so long labels never spill. */
@@ -229,6 +238,12 @@
 .bill-card--enacted {
   border-color: var(--green);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--green) 35%, transparent), var(--shadow);
+}
+/* Dead / vetoed — a deep dark oxblood/maroon, intentionally shifted away from the
+   bright partisan red used for votes so it reads as "no longer advancing", not "GOP". */
+.bill-card--dead {
+  border-color: #6e1a2b;
+  box-shadow: 0 0 0 1px color-mix(in srgb, #6e1a2b 40%, transparent), var(--shadow);
 }
 /* Hoverable tags (type chips, OMNIBUS, ENACTED) carry a plain-English data-tip */
 .status-badge[data-tip] { cursor: help; }
@@ -325,6 +340,176 @@
 }
 .bill-body-minor.open { display: block; }
 
+/* ── Full bill PAGE (bill.html) — app-style layout, replaces the expanded card ── */
+.bill-page { padding: 0.25rem 0 1rem; }
+.bp-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+.bp-badge-row { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.bp-star { margin-left: auto; }
+.bp-code {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.bp-title {
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin: 0.15rem 0 0.1rem;
+}
+.bp-meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+}
+.bp-section { margin-bottom: 1.7rem; }
+.bp-section:last-child { margin-bottom: 0.5rem; }
+.bp-label {
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.7rem;
+}
+.bp-summary {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0;
+}
+/* Reused section builders were designed for the card (horizontal insets + own titles).
+   Strip their insets so bp-section controls spacing; uppercase their internal titles so
+   they read as app-style eyebrows; hide the redundant patch-notes subtitle. */
+.bill-page .top-lines,
+.bill-page .what-changed-section,
+.bill-page .patch-notes,
+.bill-page .criticism-section,
+.bill-page .gaps-section,
+.bill-page .underreported-section,
+.bill-page .positions-section,
+.bill-page .quote-carousel,
+.bill-page .quote-cards-row,
+.bill-page .omnibus-divisions { margin-left: 0; margin-right: 0; }
+.bill-page .what-changed-label { margin-top: 0; }
+.bill-page .what-changed-label,
+.bill-page .criticism-title,
+.bill-page .gaps-title,
+.bill-page .underreported-title,
+.bill-page .positions-title { text-transform: uppercase; letter-spacing: 0.6px; }
+.bill-page .patch-notes-title { display: none; }
+
+/* Vertical pipeline (bill page) — mirrors the app's StageStrip: stacked dots + rails,
+   labels to the right; done = filled purple, active = purple ring, pending = grey. */
+.vpipe { padding: 2px 0; }
+.vp-row { display: flex; align-items: flex-start; }
+.vp-dotcol { display: flex; flex-direction: column; align-items: center; width: 14px; margin-right: 12px; flex-shrink: 0; }
+.vp-dot {
+  width: 13px; height: 13px; border-radius: 50%; box-sizing: border-box;
+  border: 2px solid var(--border); background: var(--border); margin-top: 3px;
+  display: flex; align-items: center; justify-content: center;
+}
+.vp-dot.vp-done   { border-color: var(--purple); background: var(--purple); }
+.vp-dot.vp-active { border-color: var(--purple); background: var(--purple); }
+.vp-dot.vp-vetoed { border-color: var(--red);    background: var(--red); }
+.vp-dot-inner { width: 4px; height: 4px; border-radius: 50%; }
+.vp-done .vp-dot-inner   { background: var(--purple); }
+.vp-active .vp-dot-inner { background: var(--bg); }
+.vp-vetoed .vp-dot-inner { background: var(--bg); }
+.vp-line { width: 2px; flex: 1; min-height: 15px; margin-top: 2px; }
+.vp-line-done    { background: var(--purple); }
+.vp-line-pending { background: var(--border); }
+.vp-label { flex: 1; font-size: var(--fs-sm); line-height: 1.35; padding-bottom: 11px; color: var(--text-3); }
+.vp-label-done    { color: var(--text); }
+.vp-label-active  { color: var(--purple); font-weight: 600; }
+.vp-label-vetoed  { color: var(--red); font-weight: 600; }
+.vp-label-pending { color: var(--text-3); }
+
+/* App-style "What changed" — one quiet card, three colour-labelled segments (bill page). */
+.wc-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.wc-seg { display: flex; flex-direction: column; gap: 8px; }
+.wc-seg-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.wc-seg-label.wc-added    { color: var(--green); }
+.wc-seg-label.wc-modified { color: var(--amber); }
+.wc-seg-label.wc-removed  { color: var(--red); }
+.wc-seg-rule { height: 1px; background: var(--border); }
+.wc-item { display: flex; gap: 8px; align-items: flex-start; }
+.wc-dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+.wc-dot.wc-added    { background: var(--green); }
+.wc-dot.wc-modified { background: var(--amber); }
+.wc-dot.wc-removed  { background: var(--red); }
+.wc-item-text { flex: 1; font-size: var(--fs-sm); line-height: 1.5; color: var(--text-2); }
+.wc-none { font-size: var(--fs-xs); font-style: italic; color: var(--text-3); opacity: 0.7; }
+
+/* App-style patch notes — a stack of quiet section cards (bill page). */
+.patch-cards { display: flex; flex-direction: column; gap: 10px; }
+.patch-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+}
+.patch-card-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--purple);
+  letter-spacing: 0.2px;
+  padding: 12px 12px 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.patch-card-label-text { flex: 1; min-width: 0; }
+.patch-card-caret { flex-shrink: 0; font-size: 10px; color: var(--text-3); }
+.patch-card.collapsed .patch-card-label { padding-bottom: 12px; }
+.patch-card.collapsed .patch-card-items { display: none; }
+.patch-card-title-link { color: var(--purple); text-decoration: none; }
+.patch-card-title-link:hover { text-decoration: underline; }
+.patch-card-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 8px 12px 10px;
+}
+.patch-card-item + .patch-card-item { border-top: 1px solid var(--border); padding-top: 10px; }
+.patch-card-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--purple); margin-top: 7px; flex-shrink: 0;
+}
+.patch-card-item-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.patch-card-main { font-size: var(--fs-sm); line-height: 1.45; font-weight: 500; color: var(--text); }
+.patch-card-detail { font-size: var(--fs-xs); line-height: 1.5; color: var(--text-2); }
+.patch-card-comment {
+  display: flex; gap: 6px; align-items: flex-start;
+  font-size: var(--fs-xs); line-height: 1.4; color: var(--text-2); font-style: italic;
+}
+
 /* Underreported teaser in minor expand */
 .underreported-teaser {
   margin: 0.85rem 1.1rem 0;
@@ -360,7 +545,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.65rem;
-  margin: 0.75rem 1.1rem 0;
+  margin: 0.75rem 1.1rem 0.85rem;
 }
 .quote-card {
   border-radius: var(--radius-md);
@@ -1038,8 +1223,8 @@
   border-radius: 50%;
   transition: all 0.2s;
 }
-.stage-strip-dot.done { background: var(--accent); }
-.stage-strip-dot.active { background: var(--accent); box-shadow: 0 0 0 3px #fff, 0 0 0 4.5px var(--accent); }
+.stage-strip-dot.done { background: var(--purple); }
+.stage-strip-dot.active { background: var(--purple); box-shadow: 0 0 0 3px var(--bg), 0 0 0 4.5px var(--purple); }
 .stage-strip-dot.pending { background: var(--border); }
 .stage-strip-label {
   font-family: var(--font-mono);
@@ -1053,7 +1238,7 @@
   flex: 1;
   margin-top: -22px;
 }
-.stage-strip-connector-done    { background: var(--accent); }
+.stage-strip-connector-done    { background: var(--purple); }
 .stage-strip-connector-pending { background: var(--border); }
 .stage-strip-label-on { color: var(--text) !important; font-weight: 600; }
 
@@ -1243,6 +1428,13 @@
 .lr-val   { font-weight: 700; font-size: var(--fs-sm); }
 .lr-lab   { font-weight: 600; }
 .lr-note  { font-family: var(--font-mono); font-size: var(--fs-2xs); color: var(--text-3); margin-top: 5px; }
+/* Mobile: keep the passage-likelihood readout on ONE row — drop the "analyst judgment"
+   tag (it's the trailing item that wrapped the row to two lines). The verdict itself is
+   minor/redundant here (the card already surfaces the %), so the tag is expendable on
+   narrow screens. */
+@media (max-width: 639px) {
+  .lr-row .analysis-tag { display: none; }
+}
 
 /* Patch notes */
 .patch-notes {
@@ -1432,28 +1624,37 @@
 .criticism-who { font-weight: 500; color: var(--red); }
 
 /* Underreported section */
+/* Underreported — softened from the filled amber to a quiet card with an amber accent
+   (border + header) and neutral body text. Mirrors the app; theme vars handle dark mode. */
+/* Light: a genuine soft-amber tint + visible amber border so it reads clearly warm next
+   to the grey Not-addressed (the palette --amber-bg is too weak to differentiate here).
+   Dark: keep the neutral surface — the bright amber title/border already pop against it. */
 .underreported-section {
   margin: 0 1.1rem 0.85rem;
   padding: 10px 12px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(176,106,0,0.28);
-  background: rgba(255,243,205,0.8);
+  border: 1px solid #e9d5ad;
+  background: #f9f0dd;
+}
+[data-theme="dark"] .underreported-section {
+  border-color: var(--amber-border);
+  background: var(--surface-2);
 }
 .underreported-title {
   font-size: var(--fs-xs);
   font-weight: 600;
   margin-bottom: 10px;
-  color: #7a5500;
+  color: var(--amber-text);
 }
 .underreported-item {
   padding: 10px 0;
-  border-top: 1px solid rgba(176,106,0,0.2);
+  border-top: 1px solid var(--border);
 }
 .underreported-item:first-child { border-top: none; }
 .underreported-section-name {
   font-size: var(--fs-sm);
   font-weight: 600;
-  color: #714d05;
+  color: var(--text);
   margin-bottom: 4px;
 }
 .underreported-summary,
@@ -1461,9 +1662,9 @@
   font-size: var(--fs-sm);
   font-weight: 500;
   line-height: 1.5;
-  color: var(--text);
+  color: var(--text-2);
 }
-.underreported-why { color: #6b4700; margin-top: 6px; }
+.underreported-why { color: var(--text-3); margin-top: 6px; }
 
 /* Positions section */
 .positions-section {
@@ -1504,17 +1705,18 @@
 .role-sponsored { background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border); }
 .role-grey      { background: var(--surface-2); color: var(--text-3); }
 /* Gaps section */
+/* Not addressed — neutral/grey card, deliberately distinct from the amber Underreported. */
 .gaps-section {
   margin: 0 1.1rem 0.85rem;
   padding: 10px 12px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(176,106,0,0.28);
-  background: var(--amber-bg);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
 }
 .gaps-title {
   font-size: var(--fs-xs);
   font-weight: 600;
-  color: var(--amber-text);
+  color: var(--text-2);
   margin-bottom: 9px;
 }
 .gaps-item {
@@ -1523,8 +1725,6 @@
   color: var(--text);
   line-height: 1.5;
   margin-bottom: 6px;
-  padding-left: 9px;
-  border-left: 2px solid rgba(176,106,0,0.35);
 }
 .gaps-item:last-child { margin-bottom: 0; }
 
@@ -2491,26 +2691,7 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   border-color: var(--border);
 }
 
-[data-theme="dark"] .underreported-section {
-  background: rgba(100,50,0,0.22);
-  border-color: rgba(200,130,0,0.3);
-}
-[data-theme="dark"] .underreported-title {
-  color: var(--amber);
-}
-[data-theme="dark"] .underreported-item {
-  border-top-color: rgba(200,130,0,0.2);
-}
-[data-theme="dark"] .underreported-section-name {
-  color: #fcd34d;
-}
-[data-theme="dark"] .underreported-summary {
-  color: var(--text);
-}
-[data-theme="dark"] .underreported-why {
-  color: #c9a96e;
-}
-
+/* Underreported/Not-addressed dark styling is now var-driven (see the light rules) — no override needed. */
 
 [data-theme="dark"] .logo-mark {
   background: #f0f0f3;
@@ -2541,6 +2722,12 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 [data-theme="dark"] .bill-card--enacted {
   border-color: var(--green);
   box-shadow: 0 0 0 1px #34d39930, var(--shadow);
+}
+/* Dark: lift the oxblood so the frame stays legible on the dark card, still clearly a
+   deep muted wine-red (not the bright partisan red). */
+[data-theme="dark"] .bill-card--dead {
+  border-color: #a83c4b;
+  box-shadow: 0 0 0 1px #a83c4b38, var(--shadow);
 }
 
 [data-theme="dark"] .expand-full-btn {

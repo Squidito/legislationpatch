@@ -1,0 +1,1134 @@
+[
+  {
+    "id": "119-HR-5125",
+    "code": "HR.5125",
+    "title": "District of Columbia Judicial Nominations Reform Act of 2025",
+    "official_title": "To amend the District of Columbia Home Rule Act to terminate the District of Columbia Judicial Nomination Commission, and for other purposes.",
+    "date": "2025-09-18",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Sessions, Pete (R-TX-17)",
+    "sponsor_bioguide": "S000250",
+    "cosponsors": 2,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-09-18",
+    "likelihood": 45,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Pete Sessions (R-TX) with 2 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+    "summary": "Terminates the District of Columbia Judicial Nomination Commission by striking section 434 of the District of Columbia Home Rule Act (sec. 1-204.34, D.C. Official Code). Conforming amendments to section 431(b) hand designation of chief judges to the President, section 433(a) removes the President's obligation to nominate from a Commission list, section 433(b) drops Commission-service credit from the judicial qualifications, and section 11-1528(a)(2) of the D.C. Official Code strikes subparagraph (C). The amendments apply to appointments made on or after the date of enactment.",
+    "brief": "Strikes section 434 of the D.C. Home Rule Act to shut down the D.C. Judicial Nomination Commission, hands chief-judge designation and nominee selection to the President, and applies to appointments made on or after enactment.",
+    "top_lines": [
+      {
+        "headline": "Commission Terminated",
+        "billSection": "2",
+        "subs": [
+          "Amends the District of Columbia Home Rule Act by striking section 434 (sec. 1-204.34, D.C. Official Code)",
+          "Table of contents updated to strike the item for section 434"
+        ]
+      },
+      {
+        "headline": "President-Only Chief-Judge Designation and Nominations",
+        "billSection": "2",
+        "subs": [
+          "Section 431(b): \"the District of Columbia Judicial Nominating Commission established by section 434\" replaced with \"the President\"",
+          "Section 433(a): the President-shall-nominate-from-a-Commission-list clause is replaced with \"The President shall nominate,\""
+        ]
+      },
+      {
+        "headline": "Qualifications and Cross-Reference Cleanup",
+        "billSection": "2",
+        "subs": [
+          "Section 433(b): paragraph (4) struck, paragraph (5) redesignated as (4); phrase \"or of the District of Columbia Judicial Nomination Commission\" struck from the redesignated paragraph (4)",
+          "Section 11-1528(a)(2), D.C. Official Code: subparagraph (C) struck",
+          "Applies to appointments made on or after enactment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"District of Columbia Judicial Nominations Reform Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Termination of District of Columbia Judicial Nomination Commission",
+        "items": [
+          {
+            "main": "Subsection (a) amends the District of Columbia Home Rule Act by striking section 434 (sec. 1-204.34, D.C. Official Code), the section establishing the Judicial Nomination Commission.",
+            "detail": "Subsection (d) strikes the corresponding table-of-contents item so the removal carries through the Act's front matter.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) makes three conforming amendments to the Home Rule Act's judicial provisions: section 431(b) replaces \"the District of Columbia Judicial Nominating Commission established by section 434\" with \"the President\"; section 433(a) strikes the Commission-list requirement so the clause simply reads \"The President shall nominate,\"; and section 433(b) drops paragraph (4) (renumbering paragraph (5) as (4)) and strikes \"or of the District of Columbia Judicial Nomination Commission\" from the redesignated paragraph.",
+            "detail": "Each amendment removes a reference that would otherwise be left dangling once section 434 is gone.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (c) amends section 11-1528(a)(2) of the D.C. Official Code by striking subparagraph (C); subsection (e) states the amendments apply to appointments made on or after the date of enactment.",
+            "detail": "The bill has no other effective-date carve-outs; existing appointees are unaffected.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not describe what section 434 required the Commission to do, so the Commission's prior role is not visible in the text of this Act.",
+      "The bill does not establish an alternative advisory or vetting process for judicial nominees to replace the Commission.",
+      "The bill does not address pending vetting or lists already produced by the Commission at the time of enactment.",
+      "The bill does not authorize funding or transition procedures to wind down the Commission."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [],
+      "modified": [
+        "D.C. Home Rule Act section 431(b): chief-judge designation authority moved from the Judicial Nominating Commission to the President",
+        "D.C. Home Rule Act section 433(a): President's Commission-list requirement removed; nomination clause simplified to \"The President shall nominate,\"",
+        "D.C. Home Rule Act section 433(b): paragraph (4) struck and paragraph (5) redesignated as (4); Commission-service reference stripped from the redesignated paragraph"
+      ],
+      "removed": [
+        "Section 434 of the D.C. Home Rule Act (sec. 1-204.34, D.C. Official Code) — the District of Columbia Judicial Nomination Commission",
+        "Section 11-1528(a)(2)(C) of the D.C. Official Code",
+        "The table-of-contents entry for section 434 of the D.C. Home Rule Act"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-8897",
+    "code": "HR.8897",
+    "title": "Improving Travel for American Families Act",
+    "official_title": "To improve travel for American families, and for other purposes.",
+    "date": "2026-07-13",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Mackenzie, Ryan (R-PA-7)",
+    "sponsor_bioguide": "M001230",
+    "cosponsors": 2,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "study",
+    "stageDate": "2026-07-13",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Ryan Mackenzie (R-PA) with 2 cosponsors. Cleared the House per the latest recorded action.",
+    "summary": "Directs the TSA Administrator to establish a two-year pilot program at a minimum of five airports to implement alternative security screening lanes and approaches for passengers and accompanying child passengers twelve years of age and under. The bill is issued \"notwithstanding any other provision of law,\" including the Administrative Procedure Act, the Congressional Review Act, and the Paperwork Reduction Act. Airport selection must prioritize high-family-volume airports and consider space and staffing. A briefing to House Homeland Security and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation committees is required within one year of enactment.",
+    "brief": "Sets up a TSA pilot program at five or more airports to test alternative screening lanes for passengers traveling with children twelve or under, running two years, with a one-year briefing to committee.",
+    "top_lines": [
+      {
+        "headline": "Two-Year Pilot at Five or More Airports",
+        "billSection": "2",
+        "subs": [
+          "Pilot for passengers and accompanying child passengers twelve years of age and under",
+          "Minimum of five airports",
+          "Sunset: pilot runs for two years"
+        ]
+      },
+      {
+        "headline": "Bypasses APA, CRA, and PRA",
+        "billSection": "2",
+        "subs": [
+          "\"Notwithstanding any other provision of law\" for issuance of regulations",
+          "Named exclusions: chapters 5 and 8 of title 5 (APA and Congressional Review Act) and chapter 35 of title 44 (Paperwork Reduction Act)"
+        ]
+      },
+      {
+        "headline": "Airport Selection Criteria and Briefing",
+        "billSection": "2",
+        "subs": [
+          "Priority to airports the Administrator determines have a high volume of passengers traveling with accompanying child passengers",
+          "Consider adequate space and sufficient personnel to keep other lanes staffed",
+          "Briefing to House Homeland Security and Senate HSGAC and Commerce committees within one year of enactment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Improving Travel for American Families Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Improving Travel for American Families Pilot Program",
+        "items": [
+          {
+            "main": "Subsection (a) directs the TSA Administrator to establish a pilot program, to be carried out at a minimum of five airports, to implement alternative security screening lanes and approaches for passengers and accompanying child passengers twelve years of age and under. The Administrator acts \"notwithstanding any other provision of law,\" including provisions applicable to issuance of regulations such as chapters 5 and 8 of title 5 (the APA and Congressional Review Act) and chapter 35 of title 44 (the Paperwork Reduction Act).",
+            "detail": "The bill uses shall — not may — for establishing the pilot, and names the APA/CRA/PRA carve-outs by title.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) sets airport-selection factors: priority to airports the Administrator determines have a high volume of passengers traveling with accompanying child passengers, consideration of airports with adequate space to accommodate additional or larger screening lanes and sufficient personnel to maintain adequate staffing of other lanes, and any other consideration the Administrator determines necessary. Subsection (c) requires a briefing to the House Homeland Security Committee and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation Committees not later than one year after enactment.",
+            "detail": "Selection criteria are permissive and enumerated; the briefing recipients are three named committees.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (d) sets a two-year sunset: the Administrator shall carry out the pilot program for a period of two years.",
+            "detail": "The sunset applies to the pilot program itself, not to the briefing requirement.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a) — regulatory bypass",
+        "summary": "The Administrator's authority to establish the pilot is stated \"notwithstanding any other provision of law,\" including the APA (chapters 5 and 8 of title 5), the Congressional Review Act, and the Paperwork Reduction Act (chapter 35 of title 44).",
+        "why_unreported": "The public-facing framing of the bill is a family-lane pilot; the sweeping bypass of standard rulemaking and paperwork-approval statutes is a legally distinct and more consequential feature."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not require a public evaluation or metrics report at the end of the pilot; only a one-year briefing to committees is required.",
+      "The bill does not authorize funding for the pilot or require reallocation from existing TSA appropriations.",
+      "The bill does not set eligibility criteria that airports must meet to volunteer, beyond the Administrator's discretionary considerations.",
+      "The bill does not specify how children ages 13-17 traveling as \"accompanying family\" are treated, since the pilot text names only twelve years of age and under."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "Two-year TSA pilot program at a minimum of five airports for family-friendly screening lanes for passengers traveling with children twelve and under",
+        "Selection criteria prioritizing high-family-volume airports and adequate lane space and personnel",
+        "One-year briefing to House Homeland Security, Senate HSGAC, and Senate Commerce, Science, and Transportation Committees"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-9388",
+    "code": "HR.9388",
+    "title": "One-Stop Pilot Program Extension Act",
+    "official_title": "To amend title 49, United States Code, to authorize an extension of a program to permit screened passengers and their property arriving on direct flights or flight segments originating at certain foreign last point of departure airports to continue on additional flights or flight segments originating in the United States without additional screening, and for other purposes.",
+    "date": "2026-07-13",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Gimenez, Carlos A. (R-FL-28)",
+    "sponsor_bioguide": "G000593",
+    "cosponsors": 1,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-13",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Carlos Gimenez (R-FL) with 1 cosponsor. Cleared the House per the latest recorded action.",
+    "summary": "Rewrites subsection (d) of section 7132 of the James M. Inhofe National Defense Authorization Act for Fiscal Year 2023 (Public Law 117-263; 49 U.S.C. 44901 note) so the TSA Administrator, in coordination with the Commissioner of U.S. Customs and Border Protection, may permit checked baggage arriving from participating foreign last point of departure airports to continue on additional flights originating in the United States without additional TSA re-screening if four conditions are met. Subsection (b) also amends subsection (k) of section 7132 by striking \"six\" and inserting \"ten,\" extending the associated authority.",
+    "brief": "Rewrites section 7132(d) of the FY2023 NDAA to let TSA and CBP allow checked-baggage transfers from participating foreign airports to continue without re-screening on U.S. connecting flights when four conditions are met, and changes \"six\" to \"ten\" in subsection (k).",
+    "top_lines": [
+      {
+        "headline": "Rewritten Checked-Baggage Re-Screening Rule",
+        "billSection": "2",
+        "subs": [
+          "Amends 49 U.S.C. 44901 note (section 7132(d) of the FY2023 NDAA, Public Law 117-263)",
+          "TSA Administrator, in coordination with the CBP Commissioner, may permit continuation without additional TSA re-screening"
+        ]
+      },
+      {
+        "headline": "Four Conditions Must Be Met",
+        "billSection": "2",
+        "subs": [
+          "Initial checked baggage screening at the foreign airport used an explosives detection system under an aviation security screening agreement described in subsection (e)",
+          "Passengers cannot access their checked baggage until arrival at their final destination",
+          "CBP has received timely images meeting CBP requirements before U.S. arrival",
+          "CBP has not identified any such passenger or baggage for further inspection"
+        ]
+      },
+      {
+        "headline": "Extension — \"six\" to \"ten\"",
+        "billSection": "2",
+        "subs": [
+          "Amends section 7132(k) of the FY2023 NDAA by striking \"six\" and inserting \"ten\""
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"One-Stop Pilot Program Extension Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — One-Stop Program",
+        "items": [
+          {
+            "main": "Subsection (a) amends subsection (d) of section 7132 of the James M. Inhofe National Defense Authorization Act for Fiscal Year 2023 (Public Law 117-263; 49 U.S.C. 44901 note) by rewriting it so that, subject to subsection (f), the TSA Administrator, in coordination with the Commissioner of U.S. Customs and Border Protection, may permit checked baggage arriving on direct flights or flight segments arriving from participating foreign last point of departure airports (referred to in subsection (b)) to continue on additional flights or flight segments originating in the United States without additional TSA security re-screening if four conditions are satisfied.",
+            "detail": "The rewrite retains the subsection heading (\"Re-Screening of Checked Baggage\") and the subject-to-(f) limitation while restructuring the substantive conditions.",
+            "comments": []
+          },
+          {
+            "main": "The four conditions in the new subsection (d) are: (1) initial checked baggage screening at the foreign airport was conducted using an explosives detection system in accordance with an aviation security screening agreement described in subsection (e); (2) passengers arriving from such airports cannot access their checked baggage until arrival at their final destination; (3) CBP has received timely images of the baggage prior to arrival in the United States that satisfy CBP requirements, corresponding to the checked baggage, to ensure appropriate border security enforcement can be completed in an efficient manner; and (4) CBP has not identified any such passenger or baggage for further inspection.",
+            "detail": "All four conditions must be met; the coordination with CBP is baked into the granting authority and further reinforced by the CBP-specific conditions in paragraphs (3) and (4).",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) amends subsection (k) of section 7132 of the FY2023 NDAA by striking \"six\" and inserting \"ten.\"",
+            "detail": "Subsection (k) is not otherwise reproduced in this Act; the change is a single numeric substitution.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not restate what subsection (k) of section 7132 measures (the \"six\" being changed to \"ten\"), so the practical effect of that change is not visible in the Act's own text.",
+      "The bill does not authorize funding for TSA or CBP implementation.",
+      "The bill does not describe how the aviation security screening agreements in subsection (e) are negotiated or approved.",
+      "The bill does not require public reporting on which foreign airports participate or how often the no-re-screening authority is used."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [],
+      "modified": [
+        "Section 7132(d) of the FY2023 NDAA (49 U.S.C. 44901 note): rewritten to condition no-re-screening on four enumerated criteria with TSA/CBP coordination",
+        "Section 7132(k) of the FY2023 NDAA: \"six\" replaced with \"ten\""
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-5143",
+    "code": "HR.5143",
+    "title": "District of Columbia Policing Protection Act of 2025",
+    "official_title": "To establish standards for law enforcement officers in the District of Columbia to engage in vehicular pursuits of suspects, and for other purposes.",
+    "date": "2025-09-18",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Higgins, Clay (R-LA-3)",
+    "sponsor_bioguide": "H001077",
+    "cosponsors": 2,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-09-18",
+    "likelihood": 45,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Clay Higgins (R-LA) with 2 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+    "summary": "Amends the D.C. Comprehensive Policing and Justice Reform Amendment Act of 2022 (D.C. Law 24-345) to rewrite the vehicular pursuit standard. Section 128 is replaced with a rule that an officer who encounters a suspect fleeing in a motor vehicle shall engage in a vehicular pursuit unless the officer, or a higher-ranking official with supervisory authority over the officer, reasonably believes pursuit would entail an unacceptable risk of harm to a person other than the suspect or be futile, or that the suspect can be apprehended more effectively or expeditiously by another means. Section 127(a) is trimmed to eliminate paragraphs (1)-(5) and (8)-(11) and renumber the survivors, and the subtitle S heading is updated. Subsection (b) requires the Attorney General, within three years, to evaluate PursuitAlert or a similar technology and report to four named congressional committees.",
+    "brief": "Rewrites the D.C. vehicular-pursuit standard to a shall-pursue default with three narrow exceptions, cuts most of section 127(a)'s limitations, and requires a DOJ PursuitAlert cost-benefit evaluation within three years.",
+    "top_lines": [
+      {
+        "headline": "Shall-Pursue Default with Three Exceptions",
+        "billSection": "2",
+        "subs": [
+          "Section 128 of the Comprehensive Policing and Justice Reform Amendment Act of 2022 is rewritten (subsections (a), (b), and (c) struck and replaced)",
+          "Officer shall engage in vehicular pursuit unless the officer or a supervisor reasonably believes it (A) would entail an unacceptable risk of harm to a person other than the suspect, (B) would be futile, or (C) the suspect can be apprehended more effectively or expeditiously by another means"
+        ]
+      },
+      {
+        "headline": "Section 127(a) Trimmed and Renumbered",
+        "billSection": "2",
+        "subs": [
+          "Paragraphs (1)-(5) struck",
+          "Paragraphs (6) and (7) redesignated as (1) and (2)",
+          "Paragraphs (8)-(11) struck; paragraph (12) redesignated as (3)",
+          "Subtitle S heading updated by striking \"LIMITATIONS ON THE\""
+        ]
+      },
+      {
+        "headline": "DOJ PursuitAlert Evaluation",
+        "billSection": "2",
+        "subs": [
+          "Attorney General must evaluate costs and benefits of MPD adopting PursuitAlert or a similar technology within three years of enactment",
+          "Report to Senate HSGAC, Senate Judiciary, House Oversight, and House Judiciary committees"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"District of Columbia Policing Protection Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Vehicular Pursuits by Law Enforcement Officers in District of Columbia",
+        "items": [
+          {
+            "main": "Subsection (a) amends the Comprehensive Policing and Justice Reform Amendment Act of 2022 (D.C. Law 24-345) by striking \"LIMITATIONS ON THE\" from the subtitle S heading of title I and by striking paragraphs (1) through (5) of section 127(a) (sec. 5-365.01(a), D.C. Official Code), redesignating paragraphs (6) and (7) as (1) and (2), striking paragraphs (8) through (11), and redesignating paragraph (12) as (3).",
+            "detail": "The section leaves the surviving paragraphs intact but strips out the surrounding limitations.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (a) also amends section 128 (sec. 5-365.02, D.C. Official Code) by striking subsections (a), (b), and (c) and inserting a new rule: if a law enforcement officer encounters a suspect fleeing in a motor vehicle, the officer shall engage in a vehicular pursuit unless the officer or a higher-ranking official with supervisory authority reasonably believes that (1)(A) pursuit would entail an unacceptable risk of harm to a person other than the suspect, (1)(B) pursuit would be futile, or (2) the suspect can be apprehended more effectively or expeditiously by a means other than vehicular pursuit. The table of contents item for subtitle S of title I is updated to \"SUBTITLE S. USE OF VEHICULAR PURSUITS BY LAW ENFORCEMENT OFFICERS.\"",
+            "detail": "The shall-pursue default reverses the prior orientation of section 128 by making pursuit the presumptive response.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) requires the Attorney General, not later than three years after enactment, to evaluate the costs and benefits of the Metropolitan Police Department of the District of Columbia adopting PursuitAlert or another similar technology capable of alerting members of the public to the presence of a police pursuit in their immediate vicinity, publish a report on the evaluation, and submit it to the Senate Committee on Homeland Security and Governmental Affairs, the Senate Committee on the Judiciary, the House Committee on Oversight, and the House Committee on the Judiciary.",
+            "detail": "The three-year timer runs from enactment; the report must be both published and submitted to the four named committees.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a) — section 127(a) reductions",
+        "summary": "The amendments to section 127(a) strike paragraphs (1)-(5) and (8)-(11), leaving only three surviving paragraphs. The bill does not restate the content of the struck paragraphs.",
+        "why_unreported": "The vehicular-pursuit rewrite in section 128 gets the headline treatment, but the substantive effect on D.C. policing turns equally on which limitations in section 127(a) are being removed."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not restate the content of the struck paragraphs of section 127(a); the substance of what is being removed is not visible in the Act's own text.",
+      "The bill does not describe how compliance with the new section 128 standard will be reviewed or enforced.",
+      "The bill does not authorize funding for MPD training, PursuitAlert deployment, or the DOJ evaluation.",
+      "The bill does not address parallel D.C. Code provisions or MPD general-order regimes that reference the deleted section 127 language."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New section 128 rule: officer shall engage in vehicular pursuit unless one of three specified conditions is reasonably believed",
+        "DOJ PursuitAlert cost-benefit evaluation, publication, and report to Senate HSGAC/Judiciary and House Oversight/Judiciary within three years of enactment"
+      ],
+      "modified": [
+        "Subtitle S heading of title I: \"LIMITATIONS ON THE\" struck",
+        "Section 127(a) of the Comprehensive Policing and Justice Reform Amendment Act of 2022: paragraph list reduced to three renumbered paragraphs (former (6), (7), (12))",
+        "Table-of-contents item for subtitle S of title I updated to \"USE OF VEHICULAR PURSUITS BY LAW ENFORCEMENT OFFICERS\""
+      ],
+      "removed": [
+        "Section 128 subsections (a), (b), and (c) of the 2022 D.C. law",
+        "Section 127(a) paragraphs (1)-(5) and (8)-(11)"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-3106",
+    "code": "HR.3106",
+    "title": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
+    "official_title": "To require the Secretary of Homeland Security to conduct a collective response to a terrorism exercise that includes the management of cascading effects on critical infrastructure during times of extreme cold weather, and for other purposes.",
+    "date": "2026-07-13",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Kennedy, Timothy M. (D-NY-26)",
+    "sponsor_bioguide": "K000402",
+    "cosponsors": 1,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "study",
+    "stageDate": "2026-07-13",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Timothy Kennedy (D-NY) with 1 cosponsor. Cleared the House per the latest recorded action.",
+    "summary": "Directs the Secretary of Homeland Security to develop and conduct a collective response to terrorism exercise that includes management of cascading effects on critical infrastructure (as defined in section 1016(e) of Public Law 107-56, 42 U.S.C. 5195c(e)) in accordance with six scenario requirements. The scenario must include an extreme cold weather event (such as one caused by a polar vortex) affecting access to critical services, cascading effects on critical infrastructure, mitigation options, community resilience, coordination with federal, state, local, Tribal, and territorial agencies, and coordination with private sector and community stakeholders. Not later than 60 days after completion of the exercise, the Secretary must submit an after-action report to the House Homeland Security and Senate Homeland Security and Governmental Affairs Committees.",
+    "brief": "Requires DHS to run a collective terrorism-response exercise focused on cascading effects to critical infrastructure during an extreme cold weather event, followed by an after-action report to House Homeland Security and Senate HSGAC within 60 days of completion.",
+    "top_lines": [
+      {
+        "headline": "Collective Response Exercise",
+        "billSection": "2",
+        "subs": [
+          "Secretary of Homeland Security shall develop and conduct the exercise",
+          "In addition to or as part of exercise programs currently carried out by the Department"
+        ]
+      },
+      {
+        "headline": "Six Scenario Requirements",
+        "billSection": "2",
+        "subs": [
+          "Extreme cold weather event, such as one caused by a polar vortex, affecting access to critical services",
+          "Cascading effects on critical infrastructure (as defined in section 1016(e) of Public Law 107-56, 42 U.S.C. 5195c(e))",
+          "Mitigation by emergency managers, State officials, and private-sector and community stakeholders",
+          "Community resilience bolstering",
+          "Coordination with federal, State, local, Tribal, and territorial agencies",
+          "Coordination with private-sector and community stakeholders"
+        ]
+      },
+      {
+        "headline": "After-Action Report Within 60 Days",
+        "billSection": "2",
+        "subs": [
+          "To the House Homeland Security Committee and Senate Homeland Security and Governmental Affairs Committee",
+          "Must be consistent with protection of classified information",
+          "Includes initial findings, plans for incorporating lessons learned, and any proposed legislative changes"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Exercise on Terrorist Attack During Extreme Cold",
+        "items": [
+          {
+            "main": "Subsection (a) directs the Secretary of Homeland Security, acting through appropriate offices and components of the Department, to develop and conduct a collective response to terrorism exercise that includes management of cascading effects on critical infrastructure — using the definition of \"critical infrastructure\" in section 1016(e) of Public Law 107-56 (42 U.S.C. 5195c(e)) — in accordance with the scenario requirements in subsection (b).",
+            "detail": "The exercise is authorized as an addition to or part of existing DHS exercise programs; the definition anchor is section 1016(e) of Public Law 107-56.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) specifies six scenario requirements: (1) an extreme cold weather event, such as an event caused by a polar vortex, with respect to access to critical services; (2) any cascading effects on critical infrastructure; (3) how the effects of a successful terrorist attack against critical infrastructure could be mitigated by emergency managers, State officials, and appropriate private sector and community stakeholders; (4) how community resilience could be bolstered; (5) coordination with appropriate federal departments and agencies and State, local, Tribal, and territorial agencies; and (6) coordination with appropriate private sector and community stakeholders.",
+            "detail": "All six elements are required to appear in the exercise scenario as written; the Secretary retains discretion over specific design choices within each element.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (c) requires the Secretary, not later than 60 days after the completion of the exercise, to submit an after-action report — consistent with the protection of classified information — to the House Committee on Homeland Security and the Senate Committee on Homeland Security and Governmental Affairs. The report must present initial findings, any immediate and longer-term plans for incorporating lessons learned into future DHS operations, and any proposed legislative changes informed by the exercise.",
+            "detail": "The 60-day report clock runs from exercise completion, not from enactment.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not fix a date by which the exercise itself must be completed, only a 60-day report clock after completion.",
+      "The bill does not authorize funding for the exercise or the after-action report.",
+      "The bill does not require a public version of the after-action report; the classified-information protection may keep findings inside the two named committees.",
+      "The bill does not describe how state, local, Tribal, and territorial agencies will be resourced to participate in the coordination elements."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New DHS requirement: develop and conduct a collective response to terrorism exercise on extreme-cold cascading effects to critical infrastructure",
+        "Six-element scenario requirement covering extreme cold, cascading effects, mitigation, resilience, and intergovernmental and private-sector coordination",
+        "60-day after-action report to House Homeland Security and Senate HSGAC, consistent with classified-information protection"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-9328",
+    "code": "HR.9328",
+    "title": "Improving Travel for Military Members Act",
+    "official_title": "To improve travel for active-duty military personnel and accompanying family, and for other purposes.",
+    "date": "2026-07-13",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Biggs, Sheri (R-SC-3)",
+    "sponsor_bioguide": "B001325",
+    "cosponsors": 2,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "study",
+    "stageDate": "2026-07-13",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Sheri Biggs (R-SC) with 2 cosponsors. Cleared the House per the latest recorded action.",
+    "summary": "Authorizes the TSA Administrator, not later than 60 days after enactment, to establish a pilot program at airports to expedite access to security screening for traveling active-duty military personnel and accompanying family members, so long as such access does not compromise security protocols. The pilot must screen each covered passenger under Secure Flight per paragraph (2) of section 44903(j) of title 49, prevent access to TSA PreCheck or other expedited lanes without an eligibility-indicating boarding pass under section 44901 of title 49, and permit local management to open or close checkpoint lanes and reallocate resources based on passenger volume. Selection criteria prioritize airports within an Administrator-set distance of a military installation (as defined in section 2801 of title 10) meeting an active-duty threshold. A briefing to House Homeland Security and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation Committees is due nine months after establishment, and the pilot has a three-year sunset.",
+    "brief": "Lets TSA set up a pilot within 60 days to expedite airport screening for active-duty military personnel and accompanying family, under three security-preserving requirements, a nine-month briefing, and a three-year sunset.",
+    "top_lines": [
+      {
+        "headline": "TSA Pilot Program Within 60 Days",
+        "billSection": "2",
+        "subs": [
+          "Administrator may establish the pilot not later than 60 days after enactment",
+          "Only to the extent that expedited access does not compromise security protocols",
+          "Covers active-duty military personnel and accompanying family members"
+        ]
+      },
+      {
+        "headline": "Three Security Requirements",
+        "billSection": "2",
+        "subs": [
+          "Screen each passenger per Secure Flight, in accordance with paragraph (2) of section 44903(j) of title 49",
+          "No TSA PreCheck or other expedited lane access without a boarding pass indicating eligibility under section 44901 of title 49",
+          "Permit local management to open or close lanes and reallocate resources as needed"
+        ]
+      },
+      {
+        "headline": "Selection, Briefing, and Three-Year Sunset",
+        "billSection": "2",
+        "subs": [
+          "Priority to airports within an Administrator-set distance of a military installation (as defined in section 2801 of title 10) with an Administrator-set active-duty threshold",
+          "Briefing to House Homeland Security, Senate HSGAC, and Senate Commerce, Science, and Transportation Committees within nine months of establishment",
+          "Pilot runs for a period of three years"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Improving Travel for Military Members Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Improving Travel for Active-Duty Military Personnel and Accompanying Family",
+        "items": [
+          {
+            "main": "Subsection (a) authorizes the TSA Administrator, not later than 60 days after enactment, to establish a pilot program at airports to expedite access to security screening for traveling active-duty military personnel and accompanying family members. The Administrator may carry out this subsection only to the extent such access does not compromise security protocols.",
+            "detail": "Authority is may, not shall — the pilot is discretionary. Subsections (c), (d), and (e) only apply if the Administrator establishes the pilot.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (b) sets three security requirements the Administrator must carry out: (1) ensure each passenger described in subsection (a) is screened in accordance with the vetting status under the TSA's Secure Flight program, in accordance with paragraph (2) of section 44903(j) of title 49; (2) prevent individuals carrying out screening functions under section 44901 from allowing any passenger into a TSA PreCheck or other expedited security screening lane unless the passenger has received a boarding pass indicating eligibility for TSA PreCheck or such other expedited security screening; and (3) permit local Administration management to open or close checkpoint lanes and reallocate available resources as needed to maximize security effectiveness and efficiency based on passenger volume.",
+            "detail": "The three requirements preserve Secure Flight-based screening, enforce the boarding-pass-eligibility precondition for expedited lanes, and preserve local flexibility over lane configuration.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (c) directs the Administrator, in selecting airports for the pilot program, to (1) give priority to an airport that is not more than a certain distance, as determined by the Administrator, from a military installation (as defined in section 2801 of title 10) to which not fewer than a certain number, as determined by the Administrator, of active-duty military personnel are stationed; (2) consider airports with adequate space to accommodate dedicated screening lanes for the covered population; and (3) use any other consideration the Administrator determines necessary. Subsection (d) requires a briefing to the House Homeland Security Committee and the Senate Homeland Security and Governmental Affairs and Commerce, Science, and Transportation Committees not later than nine months after establishment. Subsection (e) sunsets the pilot at three years.",
+            "detail": "The distance threshold and the active-duty personnel threshold are both delegated to the Administrator; the briefing recipients are three named committees.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2 — discretionary authority",
+        "summary": "Every operative subsection except (a) and (b) is conditioned on \"if the Administrator establishes the pilot program.\" The Administrator retains discretion over whether to establish the pilot at all.",
+        "why_unreported": "The bill's title suggests a program will exist; the operative text authorizes but does not require it."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not fix the distance from a military installation or the active-duty threshold; both are set by the Administrator.",
+      "The bill does not authorize funding for the pilot.",
+      "The bill does not require a public evaluation or metrics beyond the nine-month committee briefing.",
+      "The bill does not specify how accompanying family members are identified for purposes of the expedited lane."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "Three-year TSA pilot program at airports to expedite screening for active-duty military personnel and accompanying family members",
+        "Three security requirements — Secure Flight vetting per section 44903(j)(2), boarding-pass-eligibility precondition for expedited lanes under section 44901, and preserved local lane-management flexibility",
+        "Airport selection criteria tied to distance from and active-duty presence at a military installation (section 2801 of title 10)",
+        "Nine-month briefing to House Homeland Security, Senate HSGAC, and Senate Commerce, Science, and Transportation Committees"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-831",
+    "code": "HR.831",
+    "title": "Lower Colorado River Multi-Species Conservation Program Amendment Act of 2025",
+    "official_title": "To establish an interest-bearing account for the non-Federal contributions to the Lower Colorado River Multi-Species Conservation Program, and for other purposes.",
+    "date": "2026-03-17",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Calvert, Ken (R-CA-41)",
+    "sponsor_bioguide": "C000059",
+    "cosponsors": 5,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-03-17",
+    "likelihood": 60,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Ken Calvert (R-CA) with 5 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+    "summary": "Amends section 9402 of the Omnibus Public Land Management Act of 2009 (Public Law 111-11; 123 Stat. 1328) by adding a new subsection (c) that establishes a Non-Federal Funding Account for the Lower Colorado River Multi-Species Conservation Program in the Treasury. The account holds any unexpended non-Federal contributions provided before enactment and any provided on or after enactment, together with any investment interest. The Treasury Secretary transfers previously contributed funds within 90 days of enactment and moves future contributions as soon as practicable. The Secretary of the Interior may spend funds without further appropriation as provided in the Program Documents and this section. Investment is limited to interest-bearing U.S. obligations; State Parties are not responsible for investment losses.",
+    "brief": "Creates a Treasury account for non-Federal contributions to the Lower Colorado River Multi-Species Conservation Program, mandates a 90-day transfer of previously contributed funds, and lets those amounts plus interest be spent without further appropriation.",
+    "top_lines": [
+      {
+        "headline": "New Treasury Account for Non-Federal Contributions",
+        "billSection": "2",
+        "subs": [
+          "Amends section 9402 of the Omnibus Public Land Management Act of 2009 (Public Law 111-11; 123 Stat. 1328) by adding subsection (c)",
+          "Establishes the Non-Federal Funding Account for the Lower Colorado River Multi-Species Conservation Program in the Treasury",
+          "Account holds pre- and post-enactment non-Federal contributions plus investment interest"
+        ]
+      },
+      {
+        "headline": "Transfers Within 90 Days",
+        "billSection": "2",
+        "subs": [
+          "Previously contributed funds transferred from the general fund of the Treasury within 90 days of enactment",
+          "Future non-Federal contributions transferred as soon as practicable after receipt"
+        ]
+      },
+      {
+        "headline": "Available Without Further Appropriation",
+        "billSection": "2",
+        "subs": [
+          "Fund amounts and interest available to the Secretary for expenditure without further appropriation",
+          "Investments limited to interest-bearing obligations of the United States",
+          "State Parties not responsible for losses due to investment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Lower Colorado River Multi-Species Conservation Program Amendment Act of 2025.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Interest-Bearing Fund",
+        "items": [
+          {
+            "main": "Amends section 9402 of the Omnibus Public Land Management Act of 2009 (Public Law 111-11; 123 Stat. 1328) by adding a new subsection (c) titled \"Interest-Bearing Account for Non-Federal Contributions.\" The subsection defines \"Agreement\" as the Lower Colorado River Multi-Species Conservation Program Funding and Management Agreement dated April 4, 2005; \"Fund\" as the Non-Federal Funding Account established by paragraph (2); \"non-Federal contribution\" as an amount contributed by a State Party for the non-Federal cost share described in section 8 of the Agreement; and \"State Party\" per section 3 of the Agreement.",
+            "detail": "The four definitions anchor the rest of the subsection to the referenced Agreement.",
+            "comments": []
+          },
+          {
+            "main": "Paragraph (2) establishes in the Treasury of the United States a fund known as the Non-Federal Funding Account for the Lower Colorado River Multi-Species Conservation Program, consisting of amounts deposited under paragraph (3) plus any interest earned on investment under paragraph (4). Paragraph (3) directs the Treasury Secretary, pursuant to section 8.4 of the Agreement, to deposit any unexpended non-Federal contributions provided before the date of enactment of the subsection and any provided on or after that date; amounts and any interest are available to the Interior Secretary, without further appropriation, for expenditure as provided in the Program Documents and in accordance with this section.",
+            "detail": "The reference is specifically to section 8.4 of the Agreement; deposit authority is not open-ended.",
+            "comments": []
+          },
+          {
+            "main": "Paragraph (4) permits the Treasury Secretary to invest any portion of the Fund not required to meet current needs, only in interest-bearing obligations of the United States. Paragraph (5)(A) requires transfer of previously contributed amounts from the general fund of the Treasury to the Fund not later than 90 days after the date of enactment of the subsection. Paragraph (5)(B) requires transfer of future amounts as soon as practicable after they are contributed. Paragraph (5)(C) provides that in accordance with the Agreement, on deposit of amounts under paragraph (3), the State Parties are not responsible for any losses due to investment of those amounts in the Fund.",
+            "detail": "The 90-day transfer clock applies only to the previously contributed portion; ongoing contributions are handled on an as-soon-as-practicable basis.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not restate what the Lower Colorado River Multi-Species Conservation Program does; the substantive program is set by the referenced Agreement and by section 9402 of the 2009 Act.",
+      "The bill does not describe the total amount of non-Federal contributions expected to move into the Fund.",
+      "The bill does not require public reporting on Fund balances, investment returns, or expenditures.",
+      "The bill does not set a sunset for the Fund's availability without further appropriation."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New subsection (c) to section 9402 of the Omnibus Public Land Management Act of 2009: Non-Federal Funding Account in the Treasury for the Lower Colorado River Multi-Species Conservation Program, with definitions, deposit/investment rules, and 90-day transfer of previously contributed amounts",
+        "Availability of Fund amounts and interest to the Secretary without further appropriation, per the Program Documents and the new subsection"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-973",
+    "code": "HR.973",
+    "title": "Setting Consumer Standards for Lithium-Ion Batteries Act",
+    "official_title": "To establish consumer standards for lithium-ion batteries.",
+    "date": "2025-04-29",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Torres, Ritchie (D-NY-15)",
+    "sponsor_bioguide": "T000486",
+    "cosponsors": 23,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2025-04-29",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Ritchie Torres (D-NY) with 23 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+    "summary": "Requires the Consumer Product Safety Commission (CPSC), not later than 180 days after enactment, to promulgate three named voluntary standards as final consumer product safety standards under section 553 of title 5, U.S. Code: ANSI/CAN/UL 2271 (Batteries for Use in Light Electric Vehicle Applications), ANSI/CAN/UL 2849 (Electrical Systems for eBikes), and ANSI/CA/UL 2272 (Electrical Systems for Personal E-Mobility Devices), as in effect on the date of enactment. The Commission must limit the standards' application to consumer products as defined in section 3(a)(5) of the Consumer Product Safety Act (15 U.S.C. 2052(a)(5)). Future revisions of the standards become consumer product safety standards effective 180 days after notice unless the CPSC rejects them within 90 days. Promulgated standards are treated as consumer product safety rules under section 9 of the CPSA (15 U.S.C. 2058). Not later than five years after enactment, the CPSC must report to the Senate Commerce, Science, and Transportation Committee and the House Energy and Commerce Committee on fires, explosions, and other hazards involving lithium-ion batteries in micromobility products.",
+    "brief": "Requires the CPSC to adopt three UL micromobility-battery standards as final consumer product safety standards within 180 days, treats future revisions as effective 180 days after notice absent CPSC rejection, and requires a five-year hazards report to House Energy and Commerce and Senate Commerce, Science, and Transportation.",
+    "top_lines": [
+      {
+        "headline": "Three UL Standards Adopted Within 180 Days",
+        "billSection": "2",
+        "subs": [
+          "CPSC shall promulgate under section 553 of title 5 not later than 180 days after enactment",
+          "ANSI/CAN/UL 2271 — Batteries for Use in Light Electric Vehicle Applications",
+          "ANSI/CAN/UL 2849 — Electrical Systems for eBikes",
+          "ANSI/CA/UL 2272 — Electrical Systems for Personal E-Mobility Devices",
+          "As in effect on the date of enactment"
+        ]
+      },
+      {
+        "headline": "Automatic Revision Adoption Absent CPSC Rejection",
+        "billSection": "2",
+        "subs": [
+          "Revisions become consumer product safety standards effective 180 days after notice",
+          "Unless CPSC notifies the standards organization within 90 days that the revision does not improve safety",
+          "Treated as consumer product safety rules under section 9 of the CPSA (15 U.S.C. 2058)"
+        ]
+      },
+      {
+        "headline": "Five-Year Hazards Report",
+        "billSection": "2",
+        "subs": [
+          "Not later than 5 years after enactment",
+          "To Senate Committee on Commerce, Science, and Transportation and House Committee on Energy and Commerce",
+          "Covers fires, explosions, and other hazards involving lithium-ion batteries used in micromobility products"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Setting Consumer Standards for Lithium-Ion Batteries Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Consumer Product Safety Standard for Certain Batteries",
+        "items": [
+          {
+            "main": "Subsection (a) requires the CPSC, not later than 180 days after enactment, to promulgate under section 553 of title 5, U.S. Code, the provisions of ANSI/CAN/UL 2271, ANSI/CAN/UL 2849, and ANSI/CA/UL 2272 — as in effect on the date of enactment — as final consumer product safety standards. Subsection (b) requires the CPSC, in adopting the standards, to limit their application to consumer products as defined in section 3(a)(5) of the Consumer Product Safety Act (15 U.S.C. 2052(a)(5)).",
+            "detail": "The three UL standards named in the bill are the operative reference set; the scope limitation is fixed by the existing CPSA definition of \"consumer product.\"",
+            "comments": []
+          },
+          {
+            "main": "Subsection (c) requires the standards organization to notify the CPSC after final approval of any revision. The revised voluntary standard is considered a consumer product safety standard issued by the CPSC under section 9 of the Consumer Product Safety Act (15 U.S.C. 2058), effective 180 days after notification (or such later date specified by the Commission in the Federal Register), unless within 90 days after receiving that notice the CPSC notifies the organization that it has determined the proposed revision (in whole or in part) does not improve safety and that the Commission is retaining the existing standard.",
+            "detail": "The default rule flips the usual rulemaking presumption for revisions: adoption is automatic unless the CPSC affirmatively rejects within 90 days.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (d) treats standards promulgated under section 2 (including revisions adopted by the Commission) as consumer product safety rules promulgated under section 9 of the CPSA (15 U.S.C. 2058). Subsection (e) requires the CPSC, not later than 5 years after enactment, to report to the Senate Commerce, Science, and Transportation Committee and the House Energy and Commerce Committee on fires, explosions, and other hazards relating to lithium-ion batteries used in micromobility products during the period beginning on enactment and ending on the report date, including source of information, make and model, standard-compliance status if known, and manufacturer/country of manufacture if known.",
+            "detail": "The five-year report window runs from enactment; the four required content elements are enumerated.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(c) — automatic revision adoption",
+        "summary": "Revisions to any of the three UL standards become binding CPSC standards 180 days after the organization notifies the CPSC, unless the CPSC rejects within 90 days.",
+        "why_unreported": "The public-facing framing is that Congress is adopting current UL standards; the automatic-adoption default for future revisions delegates ongoing rulemaking authority to a private standards body."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not authorize additional funding for CPSC rulemaking or enforcement of the new standards.",
+      "The bill does not preempt or coordinate with state-level battery-safety requirements.",
+      "The bill does not require a public docket for the CPSC's 90-day review of proposed revisions.",
+      "The bill does not describe how imports will be certified or tested for compliance."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "180-day CPSC deadline to promulgate ANSI/CAN/UL 2271, ANSI/CAN/UL 2849, and ANSI/CA/UL 2272 as final consumer product safety standards",
+        "Automatic-adoption rule for future revisions of those UL standards (effective 180 days after notice absent 90-day CPSC rejection)",
+        "Five-year CPSC report on fires, explosions, and other hazards from micromobility lithium-ion batteries to House Energy and Commerce and Senate Commerce, Science, and Transportation Committees"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-28",
+    "code": "HR.28",
+    "title": "Protection of Women and Girls in Sports Act of 2025",
+    "official_title": "To amend the Education Amendments of 1972 to provide that for purposes of determining compliance with title IX of such Act in athletics, sex shall be recognized based solely on a person's reproductive biology and genetics at birth.",
+    "date": "2025-01-15",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Steube, W. Gregory (R-FL-17)",
+    "sponsor_bioguide": "S001214",
+    "cosponsors": 83,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-01-15",
+    "likelihood": 45,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. W. Gregory Steube (R-FL) with 83 cosponsors. The House-passed measure has moved to the Senate per the latest recorded action.",
+    "summary": "Amends section 901 of the Education Amendments of 1972 (20 U.S.C. 1681) by adding a new subsection (d). Paragraph (1) makes it a violation of subsection (a) for a recipient of Federal financial assistance who operates, sponsors, or facilitates an athletic program or activity to permit a person whose sex is male to participate in an athletic program or activity that is designated for women or girls. Paragraph (2) provides that for the purposes of the new subsection, sex shall be recognized based solely on a person's reproductive biology and genetics at birth. Paragraph (3) defines \"athletic programs and activities\" to include, but not be limited to, all programs or activities provided conditional upon participation with any athletic team. Paragraph (4) allows a recipient to permit males to train or practice with a female-designated program so long as no female is deprived of a listed benefit. Paragraph (5) directs the Comptroller General to study the meaning of \"any other benefit\" and to submit a report to the House Education and Workforce Committee and the Senate Health, Education, Labor, and Pensions Committee.",
+    "brief": "Adds subsection (d) to 20 U.S.C. 1681 defining a title IX violation for federally funded recipients that permit males to participate in athletic programs designated for women or girls (sex defined by reproductive biology and genetics at birth), and orders a Comptroller General report to House Education and Workforce and Senate HELP.",
+    "top_lines": [
+      {
+        "headline": "New Title IX Violation for Athletics",
+        "billSection": "2",
+        "subs": [
+          "Amends section 901 of the Education Amendments of 1972 (20 U.S.C. 1681) by adding subsection (d)",
+          "Violation of subsection (a) for a recipient of Federal financial assistance to permit a person whose sex is male to participate in an athletic program or activity designated for women or girls"
+        ]
+      },
+      {
+        "headline": "Sex Defined by Reproductive Biology and Genetics at Birth",
+        "billSection": "2",
+        "subs": [
+          "Paragraph (2): sex recognized based solely on a person's reproductive biology and genetics at birth",
+          "Paragraph (3): athletic programs and activities include (but are not limited to) all programs or activities provided conditional upon participation with any athletic team",
+          "Paragraph (4) practice/training carve-out: allowed only if no female is deprived of a roster spot, practice/competition opportunity, scholarship, admission, or other benefit"
+        ]
+      },
+      {
+        "headline": "Comptroller General Study and Report",
+        "billSection": "2",
+        "subs": [
+          "Study to determine the meaning of \"any other benefit\" as used in paragraph (4)",
+          "Document adverse psychological, developmental, participatory, and sociological results",
+          "Report to House Education and Workforce Committee and Senate Health, Education, Labor, and Pensions Committee"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Protection of Women and Girls in Sports Act of 2025.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Amendment",
+        "items": [
+          {
+            "main": "Amends section 901 of the Education Amendments of 1972 (20 U.S.C. 1681) by adding a new subsection (d). Paragraph (1) makes it a violation of subsection (a) for a recipient of Federal financial assistance who operates, sponsors, or facilitates an athletic program or activity to permit a person whose sex is male to participate in an athletic program or activity that is designated for women or girls.",
+            "detail": "The prohibition binds only recipients of Federal financial assistance and only in the athletic-program/activity context.",
+            "comments": []
+          },
+          {
+            "main": "Paragraph (2) provides that for the purposes of the new subsection, sex shall be recognized based solely on a person's reproductive biology and genetics at birth. Paragraph (3) defines \"athletic programs and activities\" to include, but not be limited to, all programs or activities that are provided conditional upon participation with any athletic team. Paragraph (4) provides a carve-out permitting males to train or practice with a female-designated program so long as no female is deprived of a roster spot, opportunity to participate in a practice or competition, scholarship, admission to an educational institution, or any other benefit that accompanies participating in the program.",
+            "detail": "The four terms in paragraph (4) frame the training/practice exception, and the phrase \"any other benefit\" triggers the paragraph (5) study.",
+            "comments": []
+          },
+          {
+            "main": "Paragraph (5) directs the Comptroller General to carry out a study to determine the meaning of the phrase \"any other benefit\" as used in paragraph (4), documenting adverse psychological, developmental, participatory, and sociological results to girls of allowing males to compete, be members of a sports team, or participate in athletic programs designed for girls, including displacement or discouragement from sports participation, deprivation of a roster spot, loss of practice or competition opportunity, loss of a scholarship or scholarship opportunities, loss or displacement of admission to an educational institution, deprivation of an environment free of hostility based on sexual assault or harassment, or loss of any other benefit. The Comptroller General must submit the results to the House Education and Workforce Committee and the Senate Health, Education, Labor, and Pensions Committee.",
+            "detail": "The paragraph enumerates the categories of adverse results the study must cover; the two named committees receive the report.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not describe how a recipient's compliance with the new subsection (d) will be enforced beyond incorporation into subsection (a) of section 901.",
+      "The bill does not authorize funding for the Comptroller General study or CPSC-style enforcement of the standard.",
+      "The bill does not set a deadline for the Comptroller General to submit the paragraph (5) study.",
+      "The bill does not describe how a recipient must verify a participant's reproductive biology and genetics at birth for eligibility purposes."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New subsection (d) of 20 U.S.C. 1681: paragraph (1) makes it a violation of subsection (a) for federally funded recipients to permit males to participate in athletic programs designated for women or girls",
+        "Paragraph (2) definition of sex based solely on reproductive biology and genetics at birth for purposes of the new subsection",
+        "Paragraph (3) definition of \"athletic programs and activities\" (including programs conditional on athletic-team participation)",
+        "Paragraph (4) train/practice carve-out conditioned on no deprivation of enumerated female benefits",
+        "Paragraph (5) Comptroller General study on the meaning of \"any other benefit\" and report to House Education and Workforce Committee and Senate HELP Committee"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  },
+  {
+    "id": "119-HR-859",
+    "code": "HR.859",
+    "title": "Informing Consumers about Smart Devices Act",
+    "official_title": "To require the disclosure of a camera or recording capability in certain internet-connected devices.",
+    "date": "2025-04-30",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Fulcher, Russ (R-ID-1)",
+    "sponsor_bioguide": "F000469",
+    "cosponsors": 1,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2025-04-30",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Sponsored by Rep. Russ Fulcher (R-ID) with 1 cosponsor. The House-passed measure has moved to the Senate and been placed on the Senate Legislative Calendar (General Orders, Calendar No. 64).",
+    "summary": "Requires each manufacturer of a \"covered device\" to disclose, clearly and conspicuously and prior to purchase, whether the device contains a camera or microphone as a component. Enforcement is handled by the Federal Trade Commission under the Federal Trade Commission Act (15 U.S.C. 41 et seq.), with a violation treated as a violation of a rule defining an unfair or deceptive act or practice under section 18(a)(1)(B) of that Act (15 U.S.C. 57a(a)(1)(B)). Within 180 days of enactment, the FTC must issue guidance on best practices for making the disclosure clear, conspicuous, and age-appropriate, including on use of pictorial representations as defined in section 2(a) of the Consumer Review Fairness Act of 2016 (15 U.S.C. 45b(a)). A \"covered device\" is a consumer product (per 15 U.S.C. 2052(a)) capable of connecting to the internet with a camera or microphone component, but not phones, laptops, tablets, devices marketed as cameras/microphones/telecom devices, or devices covered by named subsections of the Communications Act of 1934. The Act applies to devices manufactured after 180 days from FTC guidance and is not retroactive.",
+    "brief": "Requires manufacturers of certain internet-connected devices to disclose (before purchase) whether the device has a camera or microphone; enforced by the FTC under the FTC Act, with 180-day FTC guidance and a no-retroactive-application effective date tied to that guidance.",
+    "top_lines": [
+      {
+        "headline": "Pre-Purchase Camera/Microphone Disclosure",
+        "billSection": "2",
+        "subs": [
+          "Each manufacturer of a covered device shall disclose \"clearly and conspicuously and prior to purchase\" whether the device contains a camera or microphone as a component"
+        ]
+      },
+      {
+        "headline": "FTC Enforcement Under the FTC Act",
+        "billSection": "3",
+        "subs": [
+          "Violation treated as a violation of a rule defining an unfair or deceptive act or practice under section 18(a)(1)(B) of the FTC Act (15 U.S.C. 57a(a)(1)(B))",
+          "FTC enforces with the same jurisdiction, powers, and duties as under the FTC Act (15 U.S.C. 41 et seq.)",
+          "180-day FTC guidance on clear, conspicuous, age-appropriate disclosure — including pictorial representations under section 2(a) of the Consumer Review Fairness Act of 2016 (15 U.S.C. 45b(a))"
+        ]
+      },
+      {
+        "headline": "Covered Device Definition and Effective Date",
+        "billSection": "4",
+        "subs": [
+          "Covered device: consumer product (as defined in 15 U.S.C. 2052(a)) capable of connecting to the internet with a camera or microphone component",
+          "Excludes phones/laptops/tablets, devices marketed as cameras/microphones/telecom devices, and devices covered by sections 255, 716, and 718 and subsections (aa) and (bb) of section 303 of the Communications Act of 1934",
+          "Applies only to covered devices manufactured after 180 days from issuance of FTC guidance under section 3(c); not retroactive"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Short Title",
+        "admin": true,
+        "items": [
+          {
+            "main": "Names the Act the \"Informing Consumers about Smart Devices Act.\"",
+            "detail": "Short-title section — citation name only; no substantive effect.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2 — Required Disclosure of a Camera or Recording Capability in Certain Internet-Connected Devices",
+        "items": [
+          {
+            "main": "Each manufacturer of a covered device shall disclose, clearly and conspicuously and prior to purchase, whether the covered device manufactured by the manufacturer contains a camera or microphone as a component of the covered device.",
+            "detail": "The requirement is unqualified for covered devices and applies at the manufacturer level. The disclosure trigger is presence of a camera or microphone as a component.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Enforcement by the Federal Trade Commission",
+        "items": [
+          {
+            "main": "Subsection (a) treats a violation of section 2 as a violation of a rule defining an unfair or deceptive act or practice under section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B)). Subsection (b) authorizes the FTC to enforce the Act with the same jurisdiction, powers, and duties (and to impose the same penalties and privileges) as under the FTC Act (15 U.S.C. 41 et seq.), and contains a savings clause preserving the Commission's other authority.",
+            "detail": "The enforcement construction routes the disclosure obligation directly into the FTC's existing UDAP toolkit; no new enforcement office is created.",
+            "comments": []
+          },
+          {
+            "main": "Subsection (c) requires the FTC, not later than 180 days after enactment, through outreach to relevant private entities, to issue guidance to assist manufacturers in complying with the Act, including guidance on best practices for making the disclosure clear, conspicuous, and age-appropriate and on the use of a pictorial (as defined in section 2(a) of the Consumer Review Fairness Act of 2016 (15 U.S.C. 45b(a))) visual representation of the information disclosed. Subsection (d) allows a manufacturer to petition the FTC for tailored guidance; subsection (e) limits the effect of guidance so that it confers no rights and does not bind the Commission or any person and cannot be the sole basis for an enforcement action.",
+            "detail": "The 180-day clock runs from enactment; the tailored-guidance petition and no-binding-effect limits preserve FTC discretion.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 — Definition of Covered Device",
+        "items": [
+          {
+            "main": "\"Covered device\" means a consumer product, as defined by section 3(a) of the Consumer Product Safety Act (15 U.S.C. 2052(a)), that is capable of connecting to the internet, a component of which is a camera or microphone. The definition excludes (A) a telephone (including a mobile phone), a laptop, tablet, or any device that a consumer would reasonably expect to have a microphone or camera; (B) any device that is specifically marketed as a camera, telecommunications device, or microphone; and (C) any device or apparatus described in sections 255, 716, and 718, and subsections (aa) and (bb) of section 303 of the Communications Act of 1934 (47 U.S.C. 255; 617; 619; and 303(aa) and (bb)), and any regulations promulgated thereunder.",
+            "detail": "The exclusions are drafted at the device-category level and rely on cross-references to the Communications Act; the reasonable-expectation exclusion in clause (A) is drafted broadly.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 5 — Effective Date",
+        "items": [
+          {
+            "main": "The Act applies to all covered devices manufactured after the date that is 180 days after the date on which the FTC guidance under section 3(c) is issued, and does not apply to covered devices manufactured or sold before that date, or otherwise introduced into interstate commerce before that date.",
+            "detail": "The effective-date clock is tied to the FTC guidance date, not to the date of enactment; the Act does not sweep in existing inventory.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 3(e) — no-binding-effect limitation",
+        "summary": "The FTC's guidance under section 3(c) \"shall confer any rights\" on no person, does not bind the Commission or any person, and cannot be used as the sole basis for an enforcement action.",
+        "why_unreported": "The section's headline is that the FTC must issue guidance; the same subsection substantially limits what the guidance can do in an enforcement setting."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill does not describe how the manufacturer must physically present the disclosure (labeling, packaging, online listing) beyond \"clearly and conspicuously and prior to purchase.\"",
+      "The bill does not authorize funding for FTC guidance or enforcement.",
+      "The bill does not extend the disclosure duty to importers or retailers when the manufacturer is offshore.",
+      "The bill does not address parallel state disclosure requirements or preemption."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "Manufacturer disclosure duty: clearly and conspicuously and prior to purchase, disclose whether a covered device contains a camera or microphone as a component",
+        "FTC enforcement construction routing the duty into the FTC Act (15 U.S.C. 41 et seq.) as a UDAP rule violation under 15 U.S.C. 57a(a)(1)(B)",
+        "180-day FTC guidance mandate on clear, conspicuous, age-appropriate disclosure and pictorial representation under 15 U.S.C. 45b(a)",
+        "Covered-device definition tied to 15 U.S.C. 2052(a) with named exclusions and a Communications Act cross-reference",
+        "Effective date tied to 180 days after FTC guidance, with no retroactive application"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-14"
+  }
+]
