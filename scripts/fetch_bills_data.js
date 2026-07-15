@@ -40,7 +40,17 @@ function detectStage(latestActionText, billType) {
     const t = (latestActionText || '').toLowerCase();
     if (t.includes('signed by president') || t.includes('became public law') || t.includes('enacted'))
         return { key: 'signed', label: 'Signed into Law', step: 4 };
-    if (t.includes('passed senate') || t.includes('senate agreed') || t.includes('received in the senate'))
+    // "Received in the {chamber}" is a TRANSMISSION marker, not a passage — the bill
+    // passed the OTHER chamber and was sent here. Match it BEFORE the "passed …" lines
+    // so a House bill "Received in the Senate" is read as Passed House (step 2), not
+    // Passed Senate. (This was the mislabel bug; refresh_stages.js avoids it by scanning
+    // canonical "Passed/agreed to in …" markers, but detectStage only sees the latest
+    // action, so it maps the transmission marker back to the sending chamber.)
+    if (t.includes('received in the senate'))            // a House bill cleared the House
+        return { key: 'house', label: 'Passed House', step: 2 };
+    if (t.includes('received in the house'))             // a Senate bill cleared the Senate
+        return { key: 'senate', label: 'Passed Senate', step: 3 };
+    if (t.includes('passed senate') || t.includes('senate agreed'))
         return { key: 'senate', label: 'Passed Senate', step: 3 };
     if (t.includes('passed house') || t.includes('passed the house') || t.includes('house agreed') || t.includes('on passage') || t.includes('motion to reconsider laid on the table agreed to'))
         return { key: 'house', label: 'Passed House', step: 2 };
