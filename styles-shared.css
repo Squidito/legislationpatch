@@ -953,7 +953,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* ---- BILL LIST ---- */
-.bill-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.bill-list { display: flex; flex-direction: column; gap: 0.5rem; }
 .empty-state {
   text-align: center;
   padding: 2.5rem 0;

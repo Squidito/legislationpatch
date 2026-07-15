@@ -74,7 +74,7 @@ async function loadBills() {
 
 function showLoading(on) {
   document.getElementById('loadingState').style.display = on ? 'block' : 'none';
-  document.getElementById('billList').style.display     = on ? 'none'  : 'block';
+  document.getElementById('billList').style.display     = on ? 'none'  : '';  // '' → CSS flex (keeps the .bill-list gap; 'block' killed it)
 }
 
 function showError(on, msg) {
