@@ -721,7 +721,10 @@
 
 /* ---- SHOCK QUOTES SECTION ---- */
 .shock-quotes-section {
-  max-width: 960px;
+  /* max-width:100%, not 960px: this section is a flex item of .bill-list, so on a narrow
+     (mobile) viewport a fixed 960px let it blow out past the screen → horizontal page
+     scroll. .main already caps the width, so 960px here was redundant anyway. */
+  max-width: 100%;
   margin: 0 auto 1.25rem;
   padding: 0 24px;
   position: relative;
