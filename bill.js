@@ -80,15 +80,29 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  // Load cache.json (root-absolute so it resolves from /bill/<slug>/ too)
+  // Load this bill's data. Prefer the small per-bill file (/data/bills/<id>.json,
+  // a few KB) written by generate_bill_pages.js; fall back to the full ~2 MB
+  // /data/cache.json only if that 404s (e.g. a stale deploy without the split).
+  // Root-absolute so both resolve from /bill/<slug>/ too. Only the bill page
+  // uses this path — the homepage/app still load cache.json via api.js.
   let bills;
   try {
-    const data = await fetch('/data/cache.json').then(r => r.json());
-    bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    const res = await fetch('/data/bills/' + encodeURIComponent(billId) + '.json');
+    if (res.ok) {
+      bills = [await res.json()];
+    } else {
+      const data = await fetch('/data/cache.json').then(r => r.json());
+      bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    }
   } catch (e) {
-    if (hasServerContent) { bail(); return; }
-    if (loading) loading.innerHTML = '<p style="color:var(--text-3)">Could not load bill data.</p>';
-    return;
+    try {
+      const data = await fetch('/data/cache.json').then(r => r.json());
+      bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    } catch (e2) {
+      if (hasServerContent) { bail(); return; }
+      if (loading) loading.innerHTML = '<p style="color:var(--text-3)">Could not load bill data.</p>';
+      return;
+    }
   }
 
   const bill = bills.find(b => b.id === billId);

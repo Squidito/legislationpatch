@@ -105,6 +105,207 @@ function sponsorPersonName(raw) {
   return s;
 }
 
+// ── v1.1 answer-layer helpers (structured-field templating only) ─────────────
+// These assemble the visible "answer" passages. HARD RULE: prose content is
+// verbatim from existing cache fields (brief, summary, stageLabel, votes[], …);
+// only connective boilerplate and ordering are added — never a new claim.
+
+// Generation date, stamped visibly ("As of <GEN_DATE>") so answer passages
+// carry a freshness signal. Computed at run time from the local clock.
+const _NOW = new Date();
+const _pad = n => String(n).padStart(2, '0');
+const TODAY_ISO = `${_NOW.getFullYear()}-${_pad(_NOW.getMonth() + 1)}-${_pad(_NOW.getDate())}`;
+const GEN_DATE  = dateHuman(TODAY_ISO);
+
+// Bill type code (e.g. "HR", "S", "HJRES") from the id "119-HR-6955".
+function billTypeCode(bill) {
+  const parts = String(bill.id || '').split('-');
+  return (parts[1] || '').toUpperCase();
+}
+
+// Bill code spaced from the id ("119-HR-6955" -> "HR 6955") — matches the
+// question-heading examples and is stable regardless of code punctuation.
+function codeSpaced(bill) {
+  const parts = String(bill.id || '').split('-');
+  if (parts.length < 3) return String(bill.code || bill.id || '').replace(/\./g, ' ').replace(/\s+/g, ' ').trim();
+  return `${parts[1].toUpperCase()} ${parts[parts.length - 1]}`;
+}
+
+// Origin chamber + measure noun — structural facts derived from the bill type.
+function chamberOf(bill) {
+  const t = billTypeCode(bill);
+  if (/^H/.test(t)) return 'House';
+  if (/^S/.test(t)) return 'Senate';
+  return '';
+}
+function measureNoun(bill) {
+  const t = billTypeCode(bill);
+  if (t === 'HJRES' || t === 'SJRES') return 'joint resolution';
+  if (t === 'HCONRES' || t === 'SCONRES') return 'concurrent resolution';
+  if (t === 'HRES' || t === 'SRES') return 'resolution';
+  return 'bill';
+}
+
+// "Sen. Britt, Katie Boyd (R-AL)" -> "Sen. Katie Boyd Britt (R-AL)" for prose.
+function sponsorInline(bill) {
+  const raw = String(bill.sponsor || '').trim();
+  if (!raw) return '';
+  const hon = (raw.match(/^(Sen\.|Rep\.|Del\.|Com\.|Resident Commissioner)\s+/) || [])[1] || '';
+  const party = (raw.match(/\(([^)]*)\)\s*$/) || [])[1] || '';
+  const name = sponsorPersonName(raw);
+  return `${hon ? hon + ' ' : ''}${name}${party ? ` (${party})` : ''}`.trim();
+}
+
+// Short, human title for the "What does <X> do?" heading. Uses the bill's short
+// title when it reads like an Act name; falls back to the spaced code for the
+// long descriptive "To amend..." titles.
+function shortTitle(bill) {
+  const t = String(bill.title || '').trim();
+  if (t && t.length <= 60 &&
+      !/^(To\b|An Act\b|A bill\b|Providing for\b|Making\b|Designating\b|A resolution\b|A concurrent\b|A joint\b|Recognizing\b|Expressing\b|Directing\b|Authorizing\b|Proposing\b|Condemning\b|Honoring\b|Supporting\b)/i.test(t)) {
+    return t;
+  }
+  return codeSpaced(bill);
+}
+
+// Ensure a fragment ends with sentence punctuation so pieces join cleanly.
+function endStop(s) {
+  const t = String(s || '').trim();
+  if (!t) return '';
+  return /[.!?]$/.test(t) ? t : t + '.';
+}
+
+// Structured lead: names the bill, its chamber, measure type, and sponsor
+// (party+state) — all from structured fields, no substantive claim added.
+function leadSentence(bill) {
+  const code = codeSpaced(bill);
+  const chamberNoun = [chamberOf(bill), measureNoun(bill)].filter(Boolean).join(' ');
+  const sp = sponsorInline(bill);
+  if (sp && chamberNoun) return `${code} is a ${chamberNoun} sponsored by ${sp}.`;
+  if (chamberNoun)        return `${code} is a ${chamberNoun}.`;
+  if (sp)                 return `${code} is sponsored by ${sp}.`;
+  return '';
+}
+
+// Content-token overlap test: the brief is dropped only when it is essentially
+// a restatement of the summary (>=60% of its content words already appear), so
+// the answer passage never repeats itself — but a brief that adds specifics
+// (e.g. dollar thresholds) is kept.
+const _STOP = new Set(['the','a','an','and','or','to','of','in','on','for','with','that','which','by','is','are','be','it','its','as','at','from','this','these','those','their','they','also','any','who','has','have','had','been','will','would','under','over','new','into','than','when','while','such','including','include','other','most','each','all']);
+function contentTokens(s) {
+  return String(s || '').toLowerCase()
+    .replace(/[^a-z0-9$%.\- ]/g, ' ')
+    .split(/\s+/)
+    .filter(w => w && !_STOP.has(w));
+}
+function briefIsRedundant(brief, summary) {
+  const bt = contentTokens(brief);
+  if (!bt.length) return true;
+  const ss = new Set(contentTokens(summary));
+  const covered = bt.filter(t => ss.has(t)).length;
+  return covered / bt.length >= 0.6;
+}
+
+// Abbreviation-aware sentence splitter. A word ends a sentence when it ends in
+// . ! ? (with an optional closing quote/paren), is NOT a known abbreviation, and
+// the next word starts with a capital/digit/quote (or the text ends).
+const _ABBR = new Set(['u.s.','u.s.c.','no.','nos.','sec.','secs.','st.','mr.','mrs.','ms.','dr.','e.g.','i.e.','vs.','inc.','corp.','co.','jr.','sr.','ph.d.','fig.','approx.','dept.','cir.','art.','pt.']);
+function splitSentences(text) {
+  const s = String(text || '').replace(/\s+/g, ' ').trim();
+  if (!s) return [];
+  const words = s.split(' ');
+  const out = [];
+  let cur = '';
+  for (let i = 0; i < words.length; i++) {
+    const w = words[i];
+    cur += (cur ? ' ' : '') + w;
+    if (/[.!?][")']?$/.test(w)) {
+      const lastWord = w.toLowerCase().replace(/[")']+$/, '');
+      const next = words[i + 1];
+      const boundary = next === undefined || /^[A-Z0-9"('$]/.test(next);
+      if (!_ABBR.has(lastWord) && boundary) { out.push(cur); cur = ''; }
+    }
+  }
+  if (cur) out.push(cur);
+  return out;
+}
+
+// Bound an over-long answer to whole sentences near `softMax` words, so every
+// passage stays a self-contained ~130–170-word answer (the format AI answer
+// engines favor). Only excerpts — never rewrites — and always keeps at least the
+// opening two sentences (the structured lead + the summary's whole-bill purpose
+// statement), so an excerpt is faithful, not a partial claim. Answers already
+// at/under the target are returned unchanged.
+function capAnswer(text, softMax) {
+  if (wordCount(text) <= softMax) return text;
+  const sents = splitSentences(text);
+  const kept = [];
+  let count = 0;
+  for (const sent of sents) {
+    const w = wordCount(sent);
+    if (kept.length >= 2 && count + w > softMax) break;
+    kept.push(sent);
+    count += w;
+  }
+  return (kept.length ? kept : sents.slice(0, 2)).join(' ').replace(/\s+/g, ' ').trim();
+}
+
+// The self-contained answer paragraph: structured lead + summary (+ brief when
+// it is not redundant), bounded to a ~130–170-word answer passage. Prose is
+// verbatim from cache fields; only the lead, ordering, and length bound are
+// templated. Never invents claims.
+const ANSWER_MAX_WORDS = 170;
+function answerParagraph(bill) {
+  const brief   = String(bill.brief || '').trim();
+  const summary = String(bill.summary || '').trim();
+  const lead    = leadSentence(bill);
+  const parts = [];
+  if (lead) parts.push(lead);
+  if (summary) parts.push(endStop(summary));
+  if (brief && (!summary || !briefIsRedundant(brief, summary))) parts.push(endStop(brief));
+  const assembled = parts.join(' ').replace(/\s+/g, ' ').trim();
+  return capAnswer(assembled, ANSWER_MAX_WORDS);
+}
+
+// Word count (for the generator's own report line).
+function wordCount(s) {
+  return String(s || '').trim().split(/\s+/).filter(Boolean).length;
+}
+
+// Detailed latest-vote line: chamber, result, tally or method, date.
+function voteLineDetailed(v) {
+  if (!v) return '';
+  let s = [v.chamber || '', v.result || ''].filter(Boolean).join(' ');
+  const hasTally = typeof v.yeas === 'number' && typeof v.nays === 'number';
+  if (hasTally) s += ` ${v.yeas}–${v.nays}`;
+  else if (v.method) s += ` by ${String(v.method).toLowerCase()}`;
+  if (hasTally && v.method) s += ` (${v.method})`;
+  if (v.date) s += ` on ${dateHuman(v.date)}`;
+  return s.trim();
+}
+
+// stageLabel -> natural-language phrase for the machine-friendly status sentence.
+function stagePhrase(bill) {
+  const s = bill.stageLabel || '';
+  const map = {
+    'Signed into Law': 'been signed into law' + (bill.enactedDate ? ' on ' + dateHuman(bill.enactedDate) : ''),
+    'Passed House':  'passed the House',
+    'Passed Senate': 'passed the Senate',
+    'Failed in House':  'failed in the House',
+    'Failed in Senate': 'failed in the Senate',
+    'House Calendar':    'been placed on the House calendar and is awaiting a floor vote',
+    'On House Calendar': 'been placed on the House calendar and is awaiting a floor vote',
+    'Senate Calendar':    'been placed on the Senate calendar and is awaiting a floor vote',
+    'On Senate Calendar': 'been placed on the Senate calendar and is awaiting a floor vote',
+  };
+  if (map[s]) return map[s];
+  if (!s) return 'not yet advanced past introduction';
+  return `reached the ${s} stage`;
+}
+function statusSentence(bill) {
+  return `As of ${GEN_DATE}, ${codeSpaced(bill)} has ${stagePhrase(bill)}.`;
+}
+
 // JSON-LD embedded safely inside a <script> (guard against "</script>" in data).
 function jsonLd(obj) {
   return JSON.stringify(obj, null, 0).replace(/</g, '\\u003c');
@@ -126,21 +327,32 @@ function staticBody(bill) {
     bill.pages ? `${bill.pages} page${bill.pages === 1 ? '' : 's'}` : '',
   ].filter(Boolean).join(' · ');
 
-  const v = latestVote(bill);
-  const voteLine = v
-    ? `${escHtml(v.chamber || '')} ${escHtml(v.result || '')}` +
-      (typeof v.yeas === 'number' ? ` ${v.yeas}–${v.nays}` : '') +
-      (v.date ? ` (${escHtml(dateCompact(v.date))})` : '')
+  // ── Answer section: "What does <short title> do?" (self-contained passage) ──
+  const answer = answerParagraph(bill);
+  const answerHtml = answer
+    ? `<section class="bp-section bp-answer-block">
+      <h2 class="bp-label">What does the ${escHtml(shortTitle(bill))} do?</h2>
+      <p class="bp-answer">${escHtml(answer)}</p>
+    </section>`
     : '';
 
+  // ── Status section: "Did <CODE> pass? Where it stands" ──
+  const code = codeSpaced(bill);
+  const v = latestVote(bill);
   const statusRows = [
     bill.stageLabel ? `<p class="bs-row"><span class="bs-key">Status:</span> ${escHtml(bill.stageLabel)}</p>` : '',
-    voteLine        ? `<p class="bs-row"><span class="bs-key">Latest vote:</span> ${voteLine}</p>` : '',
+    v ? `<p class="bs-row"><span class="bs-key">Latest vote:</span> ${escHtml(voteLineDetailed(v))}</p>` : '',
     bill.likelihoodLabel ? `<p class="bs-row"><span class="bs-key">Outlook:</span> ${escHtml(bill.likelihoodLabel)}</p>` : '',
-  ].filter(Boolean).join('\n      ');
+    bill.enactedDate ? `<p class="bs-row"><span class="bs-key">Enacted:</span> Signed into law on ${escHtml(dateHuman(bill.enactedDate))}</p>` : '',
+  ].filter(Boolean).join('\n        ');
 
-  const summaryHtml = bill.summary ? `<p class="bp-summary">${escHtml(bill.summary)}</p>` : '';
-  const briefHtml   = bill.brief   ? `<p class="bill-static-brief">${escHtml(bill.brief)}</p>` : '';
+  const statusHtml = `<section class="bp-section bp-status-block">
+      <h2 class="bp-label">Did ${escHtml(code)} pass? Where it stands</h2>
+      <p class="bp-status-sentence">${escHtml(statusSentence(bill))}</p>
+      <div class="bill-static-status">
+        ${statusRows}
+      </div>
+    </section>`;
 
   const topLines = Array.isArray(bill.top_lines) ? bill.top_lines : [];
   const topLinesHtml = topLines.length ? `
@@ -171,11 +383,8 @@ function staticBody(bill) {
     ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
     <h1 class="bp-title">${escHtml(bill.title || bill.code || bill.id)}</h1>
     ${metaLine ? `<div class="bp-meta">${metaLine}</div>` : ''}
-    <div class="bill-static-status">
-      ${statusRows}
-    </div>
-    ${summaryHtml}
-    ${briefHtml}
+    ${answerHtml}
+    ${statusHtml}
     ${topLinesHtml}
     ${updatedHtml}
     ${fullTextHtml}
@@ -186,7 +395,8 @@ function staticBody(bill) {
 // ── JSON-LD graph ────────────────────────────────────────────────────────────
 
 function structuredData(bill, url) {
-  const desc = truncate(bill.brief || bill.summary || '', 300);
+  // Keep the schema description consistent with the visible answer passage.
+  const desc = truncate(answerParagraph(bill) || bill.brief || bill.summary || '', 300);
   const article = {
     '@type': 'Article',
     headline: bill.title || bill.code || bill.id,
@@ -226,7 +436,7 @@ function structuredData(bill, url) {
 
 // ── Full page document ───────────────────────────────────────────────────────
 
-const CSP = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'";
+const CSP = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'";
 
 function billPage(bill, slug) {
   const url    = `${BASE}/bill/${slug}/`;
@@ -343,7 +553,9 @@ function billPage(bill, slug) {
     <p class="footer-links">
       <a href="/privacy.html">Privacy Policy</a> ·
       <a href="/terms.html">Terms of Service</a> ·
-      <a href="/articles/">Guides</a>
+      <a href="/articles/">Guides</a> ·
+      <a href="/about.html">About</a> ·
+      <a href="/corrections.html">Corrections</a>
     </p>
   </footer>
 
@@ -490,11 +702,25 @@ function main() {
   fs.writeFileSync(mapPath, JSON.stringify(slugMap, null, 2) + '\n');
   fs.writeFileSync(path.join(DATA, 'slug-index.json'), JSON.stringify(slugIndex, null, 0) + '\n');
 
+  // 5b. Per-bill JSON split — one record per file so a bill page fetches only
+  //     its own data (~a few KB) instead of the full ~2 MB cache.json. bill.js
+  //     prefers /data/bills/<id>.json and falls back to /data/cache.json on 404
+  //     (stale deploy). Rebuilt deterministically each run, like bill/.
+  const billsJsonDir = path.join(DATA, 'bills');
+  fs.rmSync(billsJsonDir, { recursive: true, force: true });
+  fs.mkdirSync(billsJsonDir, { recursive: true });
+  let jsonCount = 0;
+  for (const { bill } of records) {
+    fs.writeFileSync(path.join(billsJsonDir, `${bill.id}.json`), JSON.stringify(bill));
+    jsonCount++;
+  }
+
   // 6. Inject the crawlable homepage bill index.
   const injected = injectHomepage(records);
 
   console.log(`generate_bill_pages: ${pageCount} bill pages, ${stubCount} redirect stub(s)`);
   console.log(`  data/slug-map.json + data/slug-index.json written (${Object.keys(slugIndex).length} ids)`);
+  console.log(`  data/bills/<id>.json written (${jsonCount} per-bill records)`);
   console.log(`  homepage static bill index: ${injected ? 'injected' : 'SKIPPED (markers missing)'}`);
 }
 
