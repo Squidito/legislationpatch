@@ -32,6 +32,12 @@ const DATA = path.join(ROOT, 'data');
 const BASE = 'https://legislationpatch.com';
 const OG_IMAGE = BASE + '/og-image.png';
 
+// Per-bill social card. The path is keyed on bill.id (NOT the slug) on purpose:
+// a bill rename changes the slug/URL but never the image path, so shared links
+// keep working. Rendered by scripts/generate_brand_assets.js --bills into
+// og/bills/<id>.png. The site-wide OG_IMAGE is still used for the publisher logo.
+function billOgImage(bill) { return `${BASE}/og/bills/${bill.id}.png`; }
+
 // ── Load data ───────────────────────────────────────────────────────────────
 
 const cache = JSON.parse(fs.readFileSync(path.join(DATA, 'cache.json'), 'utf8'));
@@ -401,6 +407,7 @@ function structuredData(bill, url) {
     '@type': 'Article',
     headline: bill.title || bill.code || bill.id,
     description: desc,
+    image: billOgImage(bill),
     url,
     datePublished: bill.date || undefined,
     dateModified: bill.analyzedAt || bill.stageDate || bill.date || undefined,
@@ -444,6 +451,7 @@ function billPage(bill, slug) {
   const desc   = truncate(bill.brief || bill.summary || '', 155);
   const descAttr = escHtml(desc);
   const titleAttr = escHtml(title);
+  const billImg = billOgImage(bill);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -456,6 +464,7 @@ function billPage(bill, slug) {
   <meta name="description" content="${descAttr}" />
   <meta name="bill-id" content="${escHtml(bill.id)}" />
   <link rel="canonical" href="${url}" />
+  <meta name="robots" content="max-image-preview:large" />
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
@@ -466,12 +475,14 @@ function billPage(bill, slug) {
   <meta property="og:url" content="${url}" />
   <meta property="og:title" content="${titleAttr}" />
   <meta property="og:description" content="${descAttr}" />
-  <meta property="og:image" content="${OG_IMAGE}" />
+  <meta property="og:image" content="${billImg}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="LegislationPatch" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${titleAttr}" />
   <meta name="twitter:description" content="${descAttr}" />
-  <meta name="twitter:image" content="${OG_IMAGE}" />
+  <meta name="twitter:image" content="${billImg}" />
 
   <!-- Structured data (bill.js leaves this in place — it is the richer copy) -->
   <script type="application/ld+json" id="bill-schema">${jsonLd(structuredData(bill, url))}</script>

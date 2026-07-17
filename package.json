@@ -14,6 +14,7 @@
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
     "pages": "node scripts/generate_bill_pages.js",
+    "og": "node scripts/generate_brand_assets.js --bills",
     "reps": "node scripts/generate_reps.js",
     "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/validate-batch.js",
     "facts": "node scripts/bill-facts.js",

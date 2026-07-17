@@ -175,6 +175,10 @@ run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], 
 // Emit the per-bill static SEO pages + slug map/index and inject the crawlable
 // homepage bill list. Runs BEFORE the sitemap so the sitemap reflects the slugs.
 run('Generate static bill pages', ['scripts/generate_bill_pages.js'], { optional: true });
+// Render per-bill social cards (og/bills/<id>.png). Runs AFTER the pages (which
+// reference og/bills/<id>.png) and BEFORE the sitemap (which lists no images).
+// Manifest-gated: only bills whose card inputs changed re-render.
+run('Generate per-bill OG cards', ['scripts/generate_brand_assets.js', '--bills'], { optional: true });
 run('Regenerate sitemap', ['scripts/generate_sitemap.js'], { optional: true });
 run('Validate batch output', ['scripts/validate-batch.js']);
 
