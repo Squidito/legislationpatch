@@ -566,7 +566,8 @@ function billPage(bill, slug) {
       <a href="/terms.html">Terms of Service</a> ·
       <a href="/articles/">Guides</a> ·
       <a href="/about.html">About</a> ·
-      <a href="/corrections.html">Corrections</a>
+      <a href="/corrections.html">Corrections</a> ·
+      <a href="/changelog/">Changelog</a>
     </p>
   </footer>
 

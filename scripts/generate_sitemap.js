@@ -102,6 +102,29 @@ if (fs.existsSync(articlesIndex)) {
   }
 }
 
+// Changelog ("Congress Patch Notes") — hub + one permanent page per edition.
+// Editions come from data/digest-state.json (written by generate_digest.js,
+// which runs immediately before this in the pipeline). The hub's lastmod is the
+// newest edition date; each edition is dated and effectively permanent.
+let changelogCount = 0;
+const changelogHub = path.join(ROOT, 'changelog', 'index.html');
+if (fs.existsSync(changelogHub)) {
+  let editions = [];
+  try {
+    const dstate = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'digest-state.json'), 'utf8'));
+    editions = Array.isArray(dstate.editions) ? dstate.editions.slice() : [];
+  } catch (_) {}
+  editions.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const latest = editions[0] ? editions[0].date : todayStr();
+  entries.push(urlEntry(BASE + '/changelog/', latest, 'weekly', '0.7'));
+  changelogCount = 1;
+  for (const ed of editions) {
+    if (!ed || !ed.date) continue;
+    entries.push(urlEntry(BASE + '/changelog/' + ed.date + '/', ed.date, 'monthly', '0.5'));
+    changelogCount++;
+  }
+}
+
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
@@ -118,4 +141,7 @@ console.log('  Reps         : ' + bioguideIds.length);
 if (fs.existsSync(articlesIndex)) {
   const count = fs.readdirSync(path.join(ROOT, 'articles')).filter(f => f.endsWith('.html')).length;
   console.log('  Articles     : ' + count);
+}
+if (changelogCount) {
+  console.log('  Changelog    : ' + changelogCount + ' (hub + editions)');
 }
