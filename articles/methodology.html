@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>How LegislationPatch Analyzes Federal Bills — Our Methodology</title>
+  <meta name="description" content="LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law — no summaries, no press releases." />
+  <link rel="canonical" href="https://legislationpatch.com/articles/methodology.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://legislationpatch.com/articles/methodology.html" />
+  <meta property="og:title" content="How LegislationPatch Analyzes Federal Bills — Our Methodology" />
+  <meta property="og:description" content="LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How LegislationPatch Analyzes Federal Bills: Our Methodology",
+    "description": "LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law — no summaries, no press releases.",
+    "author": {"@type": "Organization", "name": "LegislationPatch", "url": "https://legislationpatch.com"},
+    "publisher": {"@type": "Organization", "name": "LegislationPatch", "url": "https://legislationpatch.com"},
+    "datePublished": "2026-05-08",
+    "dateModified": "2026-07-17",
+    "url": "https://legislationpatch.com/articles/methodology.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://legislationpatch.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://legislationpatch.com/articles/"},
+        {"@type": "ListItem", "position": 3, "name": "Our Methodology", "item": "https://legislationpatch.com/articles/methodology.html"}
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles-shared.css" />
+  <link rel="stylesheet" href="../styles-bills.css" />
+  <link rel="stylesheet" href="../styles-pages.css" />
+  <link rel="stylesheet" href="articles.css" />
+</head>
+<body>
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('lpTheme');
+      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo-block" style="text-decoration:none" aria-label="Return to home">
+        <img src="../logo.svg" alt="LegislationPatch" class="logo-img" id="articleLogo" />
+      </a>
+    </div>
+  </header>
+
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <a href="index.html" class="back-btn">&larr; Articles</a>
+      <div class="header-track">
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <article class="article-container">
+
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="index.html">Articles</a>
+        <span class="sep">/</span>
+        Our Methodology
+      </nav>
+
+      <h1 class="article-title">How LegislationPatch Analyzes Federal Bills: Our Methodology</h1>
+
+      <div class="article-meta">
+        <span>By LegislationPatch Team</span>
+        <span>Published May 2026</span>
+        <span>Updated July 2026</span>
+        <span>~6 min read</span>
+      </div>
+
+      <div class="article-body">
+
+        <p>Federal legislation is written in a language most Americans don't speak — not because they lack the intelligence, but because bill drafting conventions haven't meaningfully changed since the 19th century. A bill that extends a federal surveillance program by six weeks can run 40 pages of cross-references to sections of law passed in 1978. LegislationPatch exists to translate that.</p>
+
+        <p>Here's exactly how we do it, where the data comes from, and what we're deliberately not doing.</p>
+
+        <h2>Where Our Data Comes From</h2>
+
+        <p>Every analysis begins with two official government sources: <a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> and <a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a>.</p>
+
+        <p>Congress.gov is the Library of Congress's official federal legislation database. Its public API gives us structured data about each bill: sponsor and co-sponsors, committee referrals, action history, and the chronological record of a bill's movement through the process. When a bill receives a committee vote, floor action, or presidential signature, that event is recorded in Congress.gov with a date and description.</p>
+
+        <p>GovInfo is the U.S. Government Publishing Office's official repository for federal document text. This is where the actual bill language lives. We pull enrolled bill text — the version that has passed both chambers, before or after presidential action — from GovInfo, not from news summaries or third-party aggregators. When you read our analysis, the quoted language is from the official enrolled text.</p>
+
+        <p>For what members of Congress say on the floor, we use the <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> via GovInfo. Quotes attributed to members in our analysis appear verbatim from the Record, the official transcript of floor proceedings. We don't paraphrase floor statements and present them as quotes.</p>
+
+        <h2>What We Actually Read</h2>
+
+        <p>A 200-page appropriations bill and a 3-page technical extension of existing law get the same treatment: we read the actual sections.</p>
+
+        <p>Here's what we build for each bill:</p>
+
+        <p><strong>What changed relative to existing law.</strong> This is the core of the patch notes format. Every bill either modifies existing U.S. Code, creates new law, or extends existing authority. We identify what the current baseline is and describe, section by section, what the bill adds, removes, or alters. "Added: new Section 5(f) to the Holocaust Expropriated Art Recovery Act, permanently barring time-based dismissal defenses" is more useful than "the bill strengthens victim protections."</p>
+
+        <p><strong>Who's driving it.</strong> The primary sponsor and co-sponsor list tells you a lot about a bill's trajectory. A Senate bill with 40 bipartisan co-sponsors and a House companion bill has a fundamentally different path than a single-sponsor measure that hasn't moved in committee for eight months. We note the sponsor, party, and state; co-sponsor count; and whether support crossed party lines.</p>
+
+        <p><strong>Vote records.</strong> For bills with recorded roll call votes, we include the final counts, party breakdown, and — for close votes, specifically those where the margin is within 30% of total yeas plus nays — we flag members who voted against their party's majority. Vote data comes from the <a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener">House Clerk</a> and <a href="https://www.senate.gov/legislative/votes_new.htm" target="_blank" rel="noopener">Senate</a> official roll call archives.</p>
+
+        <p><strong>Passage likelihood.</strong> For bills still in progress, we include a rough likelihood estimate based on the legislative stage, committee status, and political environment. This is a judgment call, not a statistical model.</p>
+
+        <h2>The Patch Notes Format and Why It Works</h2>
+
+        <p>Software engineers maintain change logs — patch notes — that describe exactly what changed between versions of a program. The discipline is strict: describe only what's different, relative to what existed before. Don't repeat the entire documentation. Don't editorialize.</p>
+
+        <p>Legislation is a version control problem. The U.S. Code is a living document that gets modified by each bill that passes. When Congress extends the Foreign Intelligence Surveillance Act for another 90 days, that's a patch. The question everyone should be able to answer quickly is: what changed? What's new? What was removed?</p>
+
+        <p>Applied to legislation, that discipline produces something specific: "Section 1 extends the Section 702 surveillance authority (50 U.S.C. 1881a) from April 30, 2026 to June 12, 2026" tells you what you need to know. The alternative — "Congress passed legislation extending surveillance authorities" — tells you almost nothing actionable.</p>
+
+        <h2>What We Don't Do</h2>
+
+        <p>We don't summarize news coverage of a bill. If a major outlet reports that a bill "could affect millions of Americans," we don't relay that; we look at what the bill actually says. News coverage may be accurate, but it's not primary source material, and we don't treat it as such.</p>
+
+        <p>We don't predict floor votes or policy outcomes. We note what stage a bill is at, which procedural steps remain, and the current political dynamics. That's different from forecasting a vote.</p>
+
+        <p>We don't take editorial positions on whether a bill is good policy. We note that a particular bill removes a procedural defense available to defendants; whether that's appropriate is not our determination to make. Our analysis describes the change. The value judgment belongs to the reader.</p>
+
+        <h2>Our Limits</h2>
+
+        <p>We're not lawyers. Significant legal nuance in complex legislation — statutory construction questions, constitutional issues, how courts might interpret ambiguous provisions — may require analysis by attorneys with specialized training that our team doesn't have. We note these limits in individual analyses where we encounter them.</p>
+
+        <p>Bill coverage is selective. We prioritize legislation with active floor action, high co-sponsorship, or significant public search interest. If a bill you're looking for isn't in our database, it may be in the processing queue.</p>
+
+        <p>Analysis can lag. Congress passes extended periods of quiet followed by intense legislative activity. Our target is to have analysis available within 24 to 48 hours of significant floor action, but in high-volume periods — particularly at the end of fiscal years or before recess deadlines — turnaround may be longer.</p>
+
+        <div class="article-source-box">
+          <div class="article-source-box-label">Primary Sources Referenced in This Article</div>
+          <ul>
+            <li><a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> — official bill status, sponsor data, action history (Library of Congress)</li>
+            <li><a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a> — official enrolled bill text and public laws (U.S. GPO)</li>
+            <li><a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> — official floor transcripts (via GovInfo)</li>
+            <li><a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener">House Clerk Roll Call Votes</a></li>
+            <li><a href="https://www.senate.gov/legislative/votes_new.htm" target="_blank" rel="noopener">Senate Roll Call Votes</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (function() {
+      var isDark = localStorage.getItem('lpTheme') === 'dark';
+      var toggle = document.getElementById('themeToggle');
+      if (toggle) toggle.checked = isDark;
+      var logo = document.getElementById('articleLogo');
+      if (logo) logo.src = isDark ? '../logo-dark.svg' : '../logo.svg';
+    })();
+
+    function toggleTheme(isDark) {
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+      var logo = document.getElementById('articleLogo');
+      if (logo) logo.src = isDark ? '../logo-dark.svg' : '../logo.svg';
+    }
+  </script>
+
+</body>
+</html>

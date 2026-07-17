@@ -14,8 +14,7 @@ node_modules/
 Thumbs.db
 desktop.ini
 
-# Articles — private, never publish
-articles/
+# Articles are now published SEO content — intentionally tracked, not ignored
 
 # Budget delta extraction — experimental, not published
 data/deltas/

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>How LegislationPatch Sources Congressional Quotes from the Congressional Record</title>
+  <meta name="description" content="Every quote attributed to a member of Congress on LegislationPatch comes from the Congressional Record via GovInfo. Here's exactly how we extract, verify, and display floor statements." />
+  <link rel="canonical" href="https://legislationpatch.com/articles/how-we-source-quotes.html" />
+  <meta property="og:type" content="article" /><meta property="og:url" content="https://legislationpatch.com/articles/how-we-source-quotes.html" /><meta property="og:title" content="How LegislationPatch Sources Congressional Quotes" /><meta property="og:description" content="Every quote attributed to a member of Congress on LegislationPatch comes directly from the Congressional Record. Here's our process for extraction and verification." /><meta property="og:image" content="https://legislationpatch.com/og-image.svg" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://legislationpatch.com/og-image.svg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How LegislationPatch Sources Congressional Quotes from the Congressional Record","author":{"@type":"Organization","name":"LegislationPatch","url":"https://legislationpatch.com"},"publisher":{"@type":"Organization","name":"LegislationPatch","url":"https://legislationpatch.com"},"datePublished":"2026-05-08","url":"https://legislationpatch.com/articles/how-we-source-quotes.html"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles-shared.css" />
+  <link rel="stylesheet" href="../styles-bills.css" />
+  <link rel="stylesheet" href="../styles-pages.css" /><link rel="stylesheet" href="articles.css" />
+</head>
+<body>
+  <script>(function(){var t=localStorage.getItem('lpTheme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
+  <header class="site-header"><div class="header-inner"><a href="../index.html" class="logo-block" style="text-decoration:none" aria-label="Return to home"><img src="../logo.svg" alt="LegislationPatch" class="logo-img" id="articleLogo" /></a></div></header>
+  <div class="trust-bar"><div class="trust-bar-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sourced directly from bill text. No editorial spin.</div></div>
+  <div class="controls-bar"><div class="controls-inner"><a href="index.html" class="back-btn">&larr; Articles</a><div class="header-track"><label class="theme-toggle" title="Toggle dark mode"><input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" /><svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div></div>
+  <main class="main">
+    <article class="article-container">
+      <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="index.html">Articles</a><span class="sep">/</span>How We Source Quotes</nav>
+      <h1 class="article-title">How LegislationPatch Sources Congressional Quotes from the Congressional Record</h1>
+      <div class="article-meta"><span>By LegislationPatch Team</span><span>Published May 2026</span><span>~6 min read</span></div>
+      <div class="article-body">
+        <p>Every quote attributed to a member of Congress on LegislationPatch comes from the Congressional Record, the official daily transcript of House and Senate floor proceedings, accessed through <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">GovInfo</a>. We do not paraphrase. We do not pull from news articles. We do not quote press releases. The text shown is verbatim from the primary source.</p>
+        <p>This article explains our sourcing process in detail — including the GovInfo API we use, how we identify which member said what, how we select excerpts, and the limits of what the Congressional Record itself represents.</p>
+        <h2>The Source: GovInfo Congressional Record Granules</h2>
+        <p>The Congressional Record is published daily by the Government Publishing Office (GPO) and made available through the GovInfo API. GovInfo doesn't just publish the full Record as a single document — it breaks each day's proceedings into "granules," individual units corresponding to specific speeches, sections, or procedural blocks within the Record.</p>
+        <p>Each granule has a unique identifier that can be used to link directly to the specific section of the Record where a statement appears. For example, a granule identified as <code>CREC-2026-04-13-pt1-PgH1147</code> points to a specific page range in the April 13, 2026 Record. We store these granule identifiers with each quote so that the source is traceable and verifiable.</p>
+        <h2>How We Identify Speakers</h2>
+        <p>The Congressional Record formats floor statements with a standard pattern: "Mr. CORNYN. [Statement text]." or "Ms. WARREN. [Statement text]." The speaker is identified by last name in all-capital letters, preceded by a title (Mr., Ms., Mrs., Dr., The PRESIDING OFFICER, etc.).</p>
+        <p>We use pattern matching to identify speaker boundaries within the granule text. The all-caps last name format is consistent throughout the Record, which makes automated extraction reliable. We then match the last name against our Congress member database, cross-referencing state and chamber to resolve ambiguities (multiple members with the same last name). For senators, whose names appear consistently in the Senate portion of the Record, the match is usually straightforward. For representatives, we use the chamber context (House section vs. Senate section) and state information when available.</p>
+        <h2>Excerpt Selection</h2>
+        <p>A floor statement can run several paragraphs. Our excerpt selection targets the most substantive passage — the portion where the member is directly discussing the bill or issue at hand, rather than procedural preliminaries or acknowledgments. We strip common filler openings ("I yield myself such time as I may consume," "I rise in support of...," "Mr. President, I ask unanimous consent that...") and select from the remaining substance.</p>
+        <p>Excerpts are trimmed to end at the last complete sentence within approximately 550 characters. We never cut a sentence in the middle. The truncation may omit context — which is why we link back to the source granule when available, so readers can verify the full statement.</p>
+        <h2>The Revise-and-Extend Caveat</h2>
+        <p>As we explain in our <a href="what-is-congressional-record.html">Congressional Record guide</a>, members of Congress can revise and extend their remarks before they appear in the printed Record. This means the text we extract from the Record may differ slightly from what was actually said verbatim on the floor. For most statements, revisions are minor grammatical corrections. But for quotes where the exact wording matters — particularly when a statement is being cited in a legal or factual dispute — the C-SPAN video record is the authoritative verbatim source.</p>
+        <p>We flag this limitation in our methodology but continue to use the Record as the primary source because: it covers all floor proceedings (C-SPAN doesn't), it's searchable, it's machine-readable through the GovInfo API, and for the vast majority of statements, the printed Record is accurate to what was said.</p>
+        <h2>Standalone Quotes vs. Bill-Attached Quotes</h2>
+        <p>LegislationPatch maintains two categories of member quotes. <em>Bill-attached quotes</em> are statements made by members about a specific bill in our database — they appear on that bill's page and are part of the bill analysis. <em>Standalone quotes</em> are significant floor statements that don't connect to a specific bill in our database but reflect important positions or newsworthy remarks. Both categories appear on our Floor Activity page, organized by topic area.</p>
+        <div class="article-source-box">
+          <div class="article-source-box-label">Primary Sources</div>
+          <ul>
+            <li><a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record — GovInfo</a></li>
+            <li><a href="https://api.govinfo.gov" target="_blank" rel="noopener">GovInfo API Documentation</a></li>
+            <li><a href="../floor.html">LegislationPatch Floor Activity — all tracked quotes</a></li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script>(function(){var isDark=localStorage.getItem('lpTheme')==='dark';var toggle=document.getElementById('themeToggle');if(toggle)toggle.checked=isDark;var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';})();function toggleTheme(isDark){document.documentElement.setAttribute('data-theme',isDark?'dark':'light');localStorage.setItem('lpTheme',isDark?'dark':'light');var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';}</script>
+</body>
+</html>
