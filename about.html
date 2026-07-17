@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About — LegislationPatch</title>
+  <meta name="description" content="LegislationPatch is an independent, nonpartisan project that explains U.S. federal legislation in plain English, sourced directly from official Congress.gov bill text." />
+  <link rel="canonical" href="https://legislationpatch.com/about.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legislationpatch.com/about.html" />
+  <meta property="og:title" content="About — LegislationPatch" />
+  <meta property="og:description" content="An independent, nonpartisan project explaining U.S. federal legislation in plain English, sourced directly from official Congress.gov bill text." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://legislationpatch.com/about.html" />
+  <meta name="twitter:title" content="About — LegislationPatch" />
+  <meta name="twitter:description" content="An independent, nonpartisan project explaining U.S. federal legislation in plain English." />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": "About — LegislationPatch",
+        "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, sourced directly from official Congress.gov bill text.",
+        "url": "https://legislationpatch.com/about.html",
+        "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"}
+      },
+      {
+        "@type": "Organization",
+        "name": "LegislationPatch",
+        "url": "https://legislationpatch.com/",
+        "logo": "https://legislationpatch.com/og-image.png",
+        "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, patch-notes style. No political affiliation, no outside funding, no advertising."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-shared.css" />
+  <link rel="stylesheet" href="styles-bills.css" />
+  <link rel="stylesheet" href="styles-pages.css" />
+</head>
+<body>
+
+  <!-- Apply theme before paint — dark is the default -->
+  <script>
+    (function(){
+      try { if (localStorage.getItem('lpTheme') !== 'light') document.documentElement.setAttribute('data-theme', 'dark'); }
+      catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
+      </a>
+      <div class="header-track">
+        <a href="index.html" class="back-btn">← Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('lpTheme');
+      var tog = null;
+      function apply(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        var logo = document.querySelector('.logo-img'); if (logo) logo.src = dark ? 'logo-dark.svg' : 'logo.svg';
+        if (tog) tog.checked = dark;
+      }
+      apply(saved !== 'light');
+      document.addEventListener('DOMContentLoaded', function() {
+        tog = document.getElementById('themeToggle');
+        if (tog) {
+          tog.checked = saved !== 'light';
+          tog.addEventListener('change', function() {
+            localStorage.setItem('lpTheme', this.checked ? 'dark' : 'light');
+            apply(this.checked);
+          });
+        }
+      });
+    })();
+  </script>
+
+  <main class="main" style="max-width:720px">
+    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">About LegislationPatch</h1>
+    <p class="section-label" style="margin-bottom:2rem">Last updated: July 2026</p>
+
+    <p>LegislationPatch is an independent, nonpartisan project that explains U.S. federal legislation in plain English, patch-notes style. It has no political affiliation, no outside funding, and no advertising. The aim is simple: let anyone read what a bill actually does — section by section, in the bill's own terms — without wading through legislative jargon or relying on someone else's characterization of it.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">How the analysis is produced</h2>
+    <p>Every bill analysis is generated from the bill's official text as published by <a href="https://congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov</a> — never from press releases, news coverage, or secondhand summaries. Each analysis is then run through a documented multi-pass quality-assurance process that checks every figure, date, and statutory citation against the source text before it is published. When a bill amends or extends another law, the referenced source is fetched and read directly so the numbers come from the actual statute rather than from memory.</p>
+    <p>Two guides describe this in full: our <a href="articles/methodology.html">methodology</a>, which walks through exactly how a bill is sourced, read, and verified, and our <a href="articles/no-editorial-spin.html">neutrality policy</a>, which sets out where the line sits between neutral description and political framing.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the site covers</h2>
+    <p>LegislationPatch tracks federal bills and explains their contents, records how members voted on the roll calls tied to those bills, collects direct statements made on the House and Senate floor from the Congressional Record, and maintains profiles of members of Congress. Everything is drawn from official government sources and prepared ahead of time as static data — the site does not call live government APIs while you browse.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the site deliberately avoids</h2>
+    <p>The project does not apply editorial labels such as "landmark," "radical," or "common-sense" to legislation, does not endorse or oppose any bill or political position, and does not present predictions as fact. Where the likelihood of a bill advancing is discussed, it is framed in structural terms — sponsorship, stage, and recorded vote outcomes — rather than as a forecast. AI is used to help read and draft the analyses, but every published figure and citation is checked against the official text.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Corrections</h2>
+    <p>Factual errors are corrected promptly and visibly. If you spot one, see the <a href="corrections.html">Corrections policy</a> for how to report it and how corrections are logged.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="articles/">Guides</a> ·
+      <a href="about.html">About</a> ·
+      <a href="corrections.html">Corrections</a>
+    </p>
+  </footer>
+
+</body>
+</html>

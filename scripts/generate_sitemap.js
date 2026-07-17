@@ -68,6 +68,8 @@ entries.push(urlEntry(BASE + '/floor.html',   todayStr(), 'daily',   '0.8'));
 entries.push(urlEntry(BASE + '/reps.html',    todayStr(), 'monthly', '0.6'));
 entries.push(urlEntry(BASE + '/privacy.html', null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/terms.html',   null,       'yearly',  '0.3'));
+entries.push(urlEntry(BASE + '/about.html',   null,       'yearly',  '0.3'));
+entries.push(urlEntry(BASE + '/corrections.html', null,   'yearly',  '0.3'));
 
 // Bill pages — static /bill/<slug>/ URLs (only current slugs; historical
 // redirect stubs are noindex and intentionally excluded).
@@ -110,7 +112,7 @@ const xml = [
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 
 console.log('sitemap.xml written — ' + entries.length + ' URLs total');
-console.log('  Static pages : 5');
+console.log('  Static pages : 7');
 console.log('  Bills        : ' + bills.length);
 console.log('  Reps         : ' + bioguideIds.length);
 if (fs.existsSync(articlesIndex)) {

@@ -15,7 +15,7 @@ flowing into `innerHTML`.
 | # | Invariant | Why | Enforced by |
 |---|---|---|---|
 | 1 | No secret/API key in any tracked file — keys live in `.env` only | A GovInfo key was once hardcoded in scripts and shipped in a public repo; it took a full `git filter-repo` history purge + key rotation to clean up | `security-check.js` E1/E2 (pre-commit + CI); GitHub secret scanning |
-| 2 | Every HTML page carries the CSP meta tag, un-weakened (no `unsafe-eval`, no external `script-src` hosts) | CSP is the backstop for any XSS that slips past escaping — an injected `<script src>` won't execute | `security-check.js` E3 (pre-commit + CI) |
+| 2 | Every HTML page carries the CSP meta tag, un-weakened (no `unsafe-eval`; no external `script-src` hosts except the single allowlisted `https://static.cloudflareinsights.com` for Cloudflare Web Analytics, owner-approved 2026-07-17) | CSP is the backstop for any XSS that slips past escaping — an injected `<script src>` won't execute | `security-check.js` E3 (pre-commit + CI) |
 | 3 | Every HTML page carries `<meta name="referrer" content="no-referrer">` | Don't leak reading habits to every outbound site | `security-check.js` E4 (pre-commit + CI) |
 | 4 | Every `target="_blank"` link has `rel="noopener"` | Reverse tabnabbing — the opened page can navigate the opener | `security-check.js` E5 (pre-commit + CI) |
 | 5 | `escHtml`, `portraitUrl`, `safeBioId` in `util.js` neutralize hostile input | Every `innerHTML` sink in the app assumes these three work; weakening one silently breaks all sinks at once | `test-security-helpers.js` — 91 hostile-payload assertions (pre-commit + CI + `npm test`) |

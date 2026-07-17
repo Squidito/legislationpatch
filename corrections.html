@@ -5,7 +5,34 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Privacy Policy — LegislationPatch</title>
+  <title>Corrections — LegislationPatch</title>
+  <meta name="description" content="How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page. How to report an error." />
+  <link rel="canonical" href="https://legislationpatch.com/corrections.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legislationpatch.com/corrections.html" />
+  <meta property="og:title" content="Corrections — LegislationPatch" />
+  <meta property="og:description" content="How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://legislationpatch.com/corrections.html" />
+  <meta name="twitter:title" content="Corrections — LegislationPatch" />
+  <meta name="twitter:description" content="How LegislationPatch handles factual errors and how to report one." />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Corrections — LegislationPatch",
+    "description": "How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page.",
+    "url": "https://legislationpatch.com/corrections.html",
+    "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"}
+  }
+  </script>
+
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -67,32 +94,19 @@
   </script>
 
   <main class="main" style="max-width:720px">
-    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Privacy Policy</h1>
+    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Corrections</h1>
     <p class="section-label" style="margin-bottom:2rem">Last updated: July 2026</p>
 
-    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Information We Collect</h2>
-    <p>LegislationPatch is designed to be as private as possible. There are no accounts, no logins, and no backend server that belongs to us — the site is a set of static files. We do not collect, store, or transmit your personal information, because there is nowhere for us to store it. The site does, however, make a small number of requests to the third-party services listed below, and any request your browser makes necessarily reveals your IP address to whoever receives it. That is inherent to how the web works, not something we can see or retain.</p>
+    <p>LegislationPatch corrects factual errors promptly and visibly. Accuracy is the point of the project: every analysis is built from official bill text and checked through a documented review process before it is published. That process reduces errors but does not eliminate them, so when one is found it is fixed as soon as possible and recorded rather than quietly overwritten.</p>
 
-    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Bill &amp; Legislative Data</h3>
-    <p>All bill analyses, votes, representative profiles, and floor quotes are prepared ahead of time and shipped with the site as static data files. Your browser loads them directly from LegislationPatch — <strong>it does not call the Congress.gov, GovInfo, or any other legislative API while you browse.</strong> Those government sources are queried only offline, on the maintainer's own machine, when the data is generated.</p>
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What counts as a correction</h2>
+    <p>A correction is a change that fixes a factual error — a wrong figure, date, vote count, statutory citation, or a statement that misrepresents what a bill does. Routine copy edits, formatting changes, and updates that reflect new legislative activity (a bill advancing a stage, a new vote) are part of normal maintenance and are not logged here. Material factual errors are.</p>
 
-    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">IP Geolocation (Representative Tracker)</h3>
-    <p>To automatically show your local congressional representatives, the site asks a third-party service (<a href="https://ipapi.co/" target="_blank" rel="noopener noreferrer">ipapi.co</a>) to approximate your state from your IP address. This happens in real time and the result is <strong>not stored by LegislationPatch</strong>. It runs only on pages that use the representative tracker; ipapi.co's own handling of the request is governed by their privacy policy.</p>
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">How to report an error</h2>
+    <p>If you believe something on the site is factually wrong, you can report it via our <a href="https://github.com/Squidito/legislationpatch/issues" target="_blank" rel="noopener noreferrer">public issue tracker</a>. Please include the page or bill in question and, where possible, a pointer to the official source text (for example, the relevant section on <a href="https://congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov</a>) so the claim can be checked against the record quickly.</p>
 
-    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">ZIP Code Lookup</h3>
-    <p>If you <em>manually</em> enter a 5-digit ZIP code to set your tracked state, that ZIP is sent to <a href="https://api.zippopotam.us/" target="_blank" rel="noopener noreferrer">api.zippopotam.us</a> to convert it into a state. This request is made only when you type a ZIP yourself, and the result is not stored by us beyond the local setting described below.</p>
-
-    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Fonts &amp; Representative Photos</h3>
-    <p>The site loads its typefaces from <strong>Google Fonts</strong> (<code>fonts.googleapis.com</code>, <code>fonts.gstatic.com</code>) and displays official representative portraits served directly from <strong>bioguide.congress.gov</strong> and <strong>clerk.house.gov</strong>. Because your browser fetches these files from those providers, each provider receives your IP address as part of the normal request. We send them no other information.</p>
-
-    <h3 style="font-size:0.9rem;font-weight:600;margin:1.25rem 0 0.35rem">Local Storage</h3>
-    <p>Any settings you configure — tracked representatives, tracked ZIP/state, saved bills, saved floor quotes, and your dark-mode preference — are stored entirely locally in your browser using <code>localStorage</code>. This data never leaves your device and is never transmitted to us.</p>
-
-    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Analytics &amp; Tracking</h2>
-    <p>LegislationPatch runs no analytics, no advertising, and no tracking cookies. The requests described above are the only ones the site makes to outside services.</p>
-
-    <h2 style="font-size:1rem;font-weight:600;margin:1.5rem 0 0.4rem">Contact</h2>
-    <p>If you have any questions regarding this privacy policy, please contact us.</p>
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Corrections log</h2>
+    <p>When a material factual error is corrected, it is logged here with the date, the page affected, and a short description of what changed. No corrections have been logged yet. This page begins its record with the July 2026 content-accuracy review, during which the site's analyses and reference guides were checked against source text; any corrections arising from that review or from later reports will be listed below.</p>
   </main>
 
   <footer class="site-footer">
