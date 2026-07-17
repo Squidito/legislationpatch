@@ -862,7 +862,7 @@ function renderBody(bill, isOpen, col) {
   // Card: the button opens the bill page (which holds the section-by-section patch notes).
   // Bill page: it IS the page, so no link.
   const viewBillLink = onBillPage ? '' :
-    `<div class="view-bill-link-row"><a href="bill?id=${encodeURIComponent(bill.id)}">View full patch notes →</a></div>`;
+    `<div class="view-bill-link-row"><a href="/bill/${billSlug(bill)}/">View full patch notes →</a></div>`;
 
   const stageDetailHtml = renderLikelihoodReadout(bill, col, '0.25rem');
   const divisionsHtml   = renderDivisions(bill);

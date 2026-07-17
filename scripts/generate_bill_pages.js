@@ -1,0 +1,501 @@
+// generate_bill_pages.js — emit a real, server-rendered static HTML page per bill.
+//
+// WHY: every bill used to render client-side at bill.html?id=<id> off ONE shared
+// shell with a generic <head> and an id-less canonical — so search engines and
+// AI crawlers saw a single page with no per-bill title/description/canonical and
+// no readable content without JavaScript. This script fixes the core SEO defect
+// by writing a static page at  bill/<slug>/index.html  for every cached bill,
+// each with a unique <title>/description/canonical, JSON-LD, and body content
+// that is complete and readable with JavaScript OFF. The existing client scripts
+// still load and progressively upgrade the page to the full interactive view.
+//
+// Outputs (all under the repo root):
+//   bill/<slug>/index.html         — one per bill (current slug)
+//   bill/<old-slug>/index.html     — redirect stub for every historical slug
+//   data/slug-map.json             — { <id>: { slug, history:[] } }  (source of truth)
+//   data/slug-index.json           — { <id>: <current-slug> }        (client lookup)
+//   index.html                     — static bill index injected between markers
+//
+// Run:  npm run pages   (or  node scripts/generate_bill_pages.js )
+// No new dependencies. Slug logic is shared with the client via util.js so the
+// generated URLs and the client's internal links can never drift.
+
+'use strict';
+
+const fs   = require('fs');
+const path = require('path');
+
+const { billSlug, escHtml } = require('../util.js');
+
+const ROOT = path.join(__dirname, '..');
+const DATA = path.join(ROOT, 'data');
+const BASE = 'https://legislationpatch.com';
+const OG_IMAGE = BASE + '/og-image.png';
+
+// ── Load data ───────────────────────────────────────────────────────────────
+
+const cache = JSON.parse(fs.readFileSync(path.join(DATA, 'cache.json'), 'utf8'));
+const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bills || {});
+
+// ── Small formatters ─────────────────────────────────────────────────────────
+
+// mm-dd-yy for compact metadata rows (mirrors util.formatDateCompact behavior;
+// re-implemented tiny so the generator has no DOM/browser assumptions).
+function dateCompact(dateStr) {
+  if (!dateStr) return '';
+  const m = String(dateStr).trim().match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (m) return `${m[2]}-${m[3]}-${m[1].slice(-2)}`;
+  return String(dateStr);
+}
+
+const MONTHS = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+// "2026-06-10" -> "June 10, 2026" for the human-facing "Last updated" line.
+function dateHuman(dateStr) {
+  const m = String(dateStr || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!m) return String(dateStr || '');
+  const mo = MONTHS[Number(m[2]) - 1] || m[2];
+  return `${mo} ${Number(m[3])}, ${m[1]}`;
+}
+
+// Collapse whitespace, truncate at a word boundary near `max`, add an ellipsis.
+function truncate(str, max) {
+  const s = String(str || '').replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  let cut = s.slice(0, max);
+  const sp = cut.lastIndexOf(' ');
+  if (sp > max * 0.6) cut = cut.slice(0, sp);
+  return cut.replace(/[\s.,;:—-]+$/, '') + '…';
+}
+
+// Latest vote (most recent by date) from bill.votes[].
+function latestVote(bill) {
+  const votes = Array.isArray(bill.votes) ? bill.votes : [];
+  if (!votes.length) return null;
+  return votes.slice().sort((a, b) =>
+    new Date(b.date || 0) - new Date(a.date || 0))[0];
+}
+
+// Authoritative full-text link on Congress.gov, built from the bill id parts.
+const CG_TYPE = {
+  HR: 'house-bill', S: 'senate-bill',
+  HRES: 'house-resolution', SRES: 'senate-resolution',
+  HJRES: 'house-joint-resolution', SJRES: 'senate-joint-resolution',
+  HCONRES: 'house-concurrent-resolution', SCONRES: 'senate-concurrent-resolution',
+};
+function congressGovUrl(bill) {
+  const parts = String(bill.id || '').split('-');
+  if (parts.length < 3) return '';
+  const congress = parts[0];
+  const type = parts[1].toUpperCase();
+  const num = parts[parts.length - 1];
+  const seg = CG_TYPE[type];
+  if (!seg || !/^\d+$/.test(congress) || !/^\d+$/.test(num)) return '';
+  return `https://www.congress.gov/bill/${congress}th-congress/${seg}/${num}`;
+}
+
+// "Sen. Britt, Katie Boyd (R-AL)" -> "Katie Boyd Britt" for schema.org Person.
+function sponsorPersonName(raw) {
+  let s = String(raw || '').replace(/\s*\([^)]*\)\s*$/, '')
+    .replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.)\s+/, '').trim();
+  if (s.includes(',')) {
+    const [last, first] = s.split(',').map(x => x.trim());
+    s = `${first} ${last}`.trim();
+  }
+  return s;
+}
+
+// JSON-LD embedded safely inside a <script> (guard against "</script>" in data).
+function jsonLd(obj) {
+  return JSON.stringify(obj, null, 0).replace(/</g, '\\u003c');
+}
+
+// ── Server-rendered body (readable with JS OFF) ──────────────────────────────
+
+function staticBody(bill) {
+  const codeLine = [
+    bill.code ? bill.code.replace('.', ' ') : '',
+    bill.stageLabel || '',
+    dateCompact(bill.stageDate || bill.enactedDate || bill.date),
+  ].filter(Boolean).map(escHtml).join(' · ');
+
+  const cosponsors = bill.cosponsors || 0;
+  const metaLine = [
+    bill.sponsor ? escHtml(bill.sponsor) : '',
+    cosponsors ? `${cosponsors} cosponsor${cosponsors === 1 ? '' : 's'}` : '',
+    bill.pages ? `${bill.pages} page${bill.pages === 1 ? '' : 's'}` : '',
+  ].filter(Boolean).join(' · ');
+
+  const v = latestVote(bill);
+  const voteLine = v
+    ? `${escHtml(v.chamber || '')} ${escHtml(v.result || '')}` +
+      (typeof v.yeas === 'number' ? ` ${v.yeas}–${v.nays}` : '') +
+      (v.date ? ` (${escHtml(dateCompact(v.date))})` : '')
+    : '';
+
+  const statusRows = [
+    bill.stageLabel ? `<p class="bs-row"><span class="bs-key">Status:</span> ${escHtml(bill.stageLabel)}</p>` : '',
+    voteLine        ? `<p class="bs-row"><span class="bs-key">Latest vote:</span> ${voteLine}</p>` : '',
+    bill.likelihoodLabel ? `<p class="bs-row"><span class="bs-key">Outlook:</span> ${escHtml(bill.likelihoodLabel)}</p>` : '',
+  ].filter(Boolean).join('\n      ');
+
+  const summaryHtml = bill.summary ? `<p class="bp-summary">${escHtml(bill.summary)}</p>` : '';
+  const briefHtml   = bill.brief   ? `<p class="bill-static-brief">${escHtml(bill.brief)}</p>` : '';
+
+  const topLines = Array.isArray(bill.top_lines) ? bill.top_lines : [];
+  const topLinesHtml = topLines.length ? `
+    <section class="bp-section">
+      <h2 class="bp-label">Key provisions</h2>
+      <ul class="bill-static-toplines">
+        ${topLines.map(tl => {
+          const subs = Array.isArray(tl.subs) ? tl.subs : [];
+          const subList = subs.length
+            ? `<ul>${subs.map(s => `<li>${escHtml(s)}</li>`).join('')}</ul>`
+            : '';
+          return `<li><strong>${escHtml(tl.headline || '')}</strong>${subList}</li>`;
+        }).join('\n        ')}
+      </ul>
+    </section>` : '';
+
+  const cgUrl = congressGovUrl(bill);
+  const fullTextHtml = cgUrl
+    ? `<p class="bill-static-fulltext"><a href="${escHtml(cgUrl)}" rel="noopener noreferrer" target="_blank">Read the full bill text on Congress.gov →</a></p>`
+    : '';
+
+  const updated = bill.analyzedAt || bill.stageDate || bill.date;
+  const updatedHtml = updated
+    ? `<p class="bill-static-updated">Last updated ${escHtml(dateHuman(updated))}</p>`
+    : '';
+
+  return `<article class="bill-static" data-server-rendered="1">
+    ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
+    <h1 class="bp-title">${escHtml(bill.title || bill.code || bill.id)}</h1>
+    ${metaLine ? `<div class="bp-meta">${metaLine}</div>` : ''}
+    <div class="bill-static-status">
+      ${statusRows}
+    </div>
+    ${summaryHtml}
+    ${briefHtml}
+    ${topLinesHtml}
+    ${updatedHtml}
+    ${fullTextHtml}
+    <noscript><p class="bill-static-note">You are viewing a condensed, text-only summary. Enable JavaScript for the full section-by-section analysis and annotated bill text.</p></noscript>
+  </article>`;
+}
+
+// ── JSON-LD graph ────────────────────────────────────────────────────────────
+
+function structuredData(bill, url) {
+  const desc = truncate(bill.brief || bill.summary || '', 300);
+  const article = {
+    '@type': 'Article',
+    headline: bill.title || bill.code || bill.id,
+    description: desc,
+    url,
+    datePublished: bill.date || undefined,
+    dateModified: bill.analyzedAt || bill.stageDate || bill.date || undefined,
+    publisher: {
+      '@type': 'Organization',
+      name: 'LegislationPatch',
+      url: BASE + '/',
+      logo: { '@type': 'ImageObject', url: OG_IMAGE },
+    },
+  };
+  const legislation = {
+    '@type': 'Legislation',
+    name: bill.title || bill.code || bill.id,
+    legislationIdentifier: bill.code || bill.id,
+    legislationDate: bill.date || undefined,
+    url,
+  };
+  if (bill.billType) legislation.legislationType = bill.billType;
+  if (bill.sponsor) {
+    legislation.legislationSponsor = { '@type': 'Person', name: sponsorPersonName(bill.sponsor) };
+    legislation.sponsor = { '@type': 'Person', name: sponsorPersonName(bill.sponsor) };
+  }
+  const breadcrumb = {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home',  item: BASE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Bills', item: BASE + '/bills.html' },
+      { '@type': 'ListItem', position: 3, name: bill.title || bill.code || bill.id, item: url },
+    ],
+  };
+  return { '@context': 'https://schema.org', '@graph': [article, legislation, breadcrumb] };
+}
+
+// ── Full page document ───────────────────────────────────────────────────────
+
+const CSP = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'";
+
+function billPage(bill, slug) {
+  const url    = `${BASE}/bill/${slug}/`;
+  const title  = `${bill.title || bill.code || bill.id} — Plain-English Summary | LegislationPatch`;
+  const desc   = truncate(bill.brief || bill.summary || '', 155);
+  const descAttr = escHtml(desc);
+  const titleAttr = escHtml(title);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="${CSP}">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>${titleAttr}</title>
+  <meta name="description" content="${descAttr}" />
+  <meta name="bill-id" content="${escHtml(bill.id)}" />
+  <link rel="canonical" href="${url}" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="${url}" />
+  <meta property="og:title" content="${titleAttr}" />
+  <meta property="og:description" content="${descAttr}" />
+  <meta property="og:image" content="${OG_IMAGE}" />
+  <meta property="og:site_name" content="LegislationPatch" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${titleAttr}" />
+  <meta name="twitter:description" content="${descAttr}" />
+  <meta name="twitter:image" content="${OG_IMAGE}" />
+
+  <!-- Structured data (bill.js leaves this in place — it is the richer copy) -->
+  <script type="application/ld+json" id="bill-schema">${jsonLd(structuredData(bill, url))}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles-shared.css" />
+  <link rel="stylesheet" href="/styles-bills.css" />
+  <link rel="stylesheet" href="/styles-pages.css" />
+</head>
+<body>
+
+  <!-- Apply saved theme before paint -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('lpTheme');
+      if (t !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo-block" style="text-decoration:none" aria-label="Return to home">
+        <img src="/logo.svg" alt="LegislationPatch" class="logo-img" />
+      </a>
+      <div class="header-cta">
+        <span class="header-cta__label">Apps coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced direct from bill text
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <a id="backBtn" href="/" class="back-btn">&larr; Bills</a>
+      <div class="header-track">
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <div id="bill-loading" class="loading-state" style="display:none">
+      <div class="loading-spinner"></div>
+      <p>Loading bill...</p>
+    </div>
+
+    <!-- Server-rendered summary (replaced by the richer client render when JS loads;
+         preserved as-is if the client data fetch fails). -->
+    <div class="bills-list" id="bill-card-mount">${staticBody(bill)}</div>
+    <div id="analysis-toggle-row"></div>
+    <div class="bills-list" id="bill-text-mount"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a> ·
+      <a href="/terms.html">Terms of Service</a> ·
+      <a href="/articles/">Guides</a>
+    </p>
+  </footer>
+
+  <script src="/util.js?v=4"></script>
+  <script src="/api.js?v=4"></script>
+  <script src="/app-state.js"></script>
+  <script src="/app-settings.js"></script>
+  <script src="/app-reps.js"></script>
+  <script src="/app-render.js"></script>
+  <script src="/app-carousel.js"></script>
+  <script src="/app-favorites.js"></script>
+  <script src="/app-boot.js"></script>
+  <script src="/acronyms.js"></script>
+  <script src="/bill.js?v=4"></script>
+  <script src="/share-highlight.js"></script>
+
+</body>
+</html>
+`;
+}
+
+// ── Redirect stub for a historical slug ──────────────────────────────────────
+
+function redirectStub(currentSlug) {
+  const target = `/bill/${currentSlug}/`;
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting — LegislationPatch</title>
+  <link rel="canonical" href="${BASE}${target}" />
+  <meta http-equiv="refresh" content="0; url=${target}" />
+  <script>location.replace(${JSON.stringify(target)});</script>
+</head>
+<body>
+  <p>This bill has moved. <a href="${target}">Continue to the current page →</a></p>
+</body>
+</html>
+`;
+}
+
+// ── Homepage static bill index (crawlable list, replaced at runtime by JS) ────
+
+function homepageStaticList(records) {
+  // Recency order = default homepage sort (stageDate desc), so the static list
+  // matches what the client renders first.
+  const sorted = records.slice().sort((a, b) => {
+    const da = new Date(a.bill.stageDate || a.bill.enactedDate || a.bill.date || 0);
+    const db = new Date(b.bill.stageDate || b.bill.enactedDate || b.bill.date || 0);
+    return db - da;
+  });
+  const items = sorted.map(({ bill, slug }) =>
+    `      <a class="static-bill-index__item" href="/bill/${slug}/">` +
+    `<span class="static-bill-index__title">${escHtml(bill.title || bill.code || bill.id)}</span>` +
+    `<span class="static-bill-index__stage">${escHtml(bill.stageLabel || '')}</span></a>`
+  ).join('\n');
+  return `\n    <h2 class="static-bill-index__heading">All tracked bills</h2>\n    <div class="static-bill-index">\n${items}\n    </div>\n    `;
+}
+
+function injectHomepage(records) {
+  const idxPath = path.join(ROOT, 'index.html');
+  let html;
+  try { html = fs.readFileSync(idxPath, 'utf8'); }
+  catch (e) { console.warn('  ! index.html not found — skipping homepage injection'); return false; }
+
+  const START = '<!-- static-bill-list:start -->';
+  const END   = '<!-- static-bill-list:end -->';
+  const si = html.indexOf(START);
+  const ei = html.indexOf(END);
+  if (si === -1 || ei === -1 || ei < si) {
+    console.warn('  ! homepage markers not found (' + START + ' ... ' + END + ') — skipping injection');
+    return false;
+  }
+  const before = html.slice(0, si + START.length);
+  const after  = html.slice(ei);
+  const next   = before + homepageStaticList(records) + after;
+  if (next !== html) fs.writeFileSync(idxPath, next);
+  return true;
+}
+
+// ── Main ─────────────────────────────────────────────────────────────────────
+
+function main() {
+  // 1. Compute current slug for every bill (shared billSlug — never drifts).
+  const records = bills.map(bill => ({ bill, slug: billSlug(bill) }));
+
+  // Collision guard: ids are unique so slugs should be unique, but fail loud if not.
+  const bySlug = new Map();
+  for (const r of records) {
+    if (bySlug.has(r.slug)) {
+      console.error(`  ! SLUG COLLISION: ${r.slug}  (${bySlug.get(r.slug)} vs ${r.bill.id})`);
+    }
+    bySlug.set(r.slug, r.bill.id);
+  }
+  const currentSlugs = new Set(records.map(r => r.slug));
+
+  // 2. Load + update the slug map (history of past slugs per bill).
+  const mapPath = path.join(DATA, 'slug-map.json');
+  let slugMap = {};
+  try { slugMap = JSON.parse(fs.readFileSync(mapPath, 'utf8')); } catch (_) {}
+
+  for (const { bill, slug } of records) {
+    const prev = slugMap[bill.id];
+    if (prev && prev.slug && prev.slug !== slug) {
+      const history = Array.isArray(prev.history) ? prev.history.slice() : [];
+      if (!history.includes(prev.slug)) history.push(prev.slug);
+      slugMap[bill.id] = { slug, history: history.filter(h => h !== slug) };
+    } else {
+      slugMap[bill.id] = { slug, history: (prev && Array.isArray(prev.history) ? prev.history : []).filter(h => h !== slug) };
+    }
+  }
+
+  // 3. Clean + rebuild the bill/ directory deterministically (current pages +
+  //    redirect stubs re-emitted from the slug map's history each run).
+  const billDir = path.join(ROOT, 'bill');
+  fs.rmSync(billDir, { recursive: true, force: true });
+  fs.mkdirSync(billDir, { recursive: true });
+
+  let pageCount = 0;
+  for (const { bill, slug } of records) {
+    const dir = path.join(billDir, slug);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'index.html'), billPage(bill, slug));
+    pageCount++;
+  }
+
+  // 4. Redirect stubs for historical slugs (skip any that collide with a current slug).
+  let stubCount = 0;
+  for (const [, entry] of Object.entries(slugMap)) {
+    for (const old of (entry.history || [])) {
+      if (currentSlugs.has(old)) continue;
+      const dir = path.join(billDir, old);
+      fs.mkdirSync(dir, { recursive: true });
+      fs.writeFileSync(path.join(dir, 'index.html'), redirectStub(entry.slug));
+      stubCount++;
+    }
+  }
+
+  // 5. Emit the maps.
+  const slugIndex = {};
+  for (const { bill, slug } of records) slugIndex[bill.id] = slug;
+  fs.writeFileSync(mapPath, JSON.stringify(slugMap, null, 2) + '\n');
+  fs.writeFileSync(path.join(DATA, 'slug-index.json'), JSON.stringify(slugIndex, null, 0) + '\n');
+
+  // 6. Inject the crawlable homepage bill index.
+  const injected = injectHomepage(records);
+
+  console.log(`generate_bill_pages: ${pageCount} bill pages, ${stubCount} redirect stub(s)`);
+  console.log(`  data/slug-map.json + data/slug-index.json written (${Object.keys(slugIndex).length} ids)`);
+  console.log(`  homepage static bill index: ${injected ? 'injected' : 'SKIPPED (markers missing)'}`);
+}
+
+main();

@@ -186,7 +186,10 @@ function repLastName(name) {
 
 function updateLogoForTheme(isDark) {
   const logo = document.querySelector('.logo-img');
-  if (logo) logo.src = isDark ? 'logo-dark.svg' : 'logo.svg';
+  // Root-absolute so the swap also resolves on the two-levels-deep /bill/<slug>/
+  // static pages (a relative 'logo-dark.svg' would 404 there). Every page is
+  // served from the site root, so this is equivalent to the old relative path.
+  if (logo) logo.src = isDark ? '/logo-dark.svg' : '/logo.svg';
 }
 
 function toggleTheme(isDark) {
@@ -201,10 +204,45 @@ function parseSourceDate(source) {
   return m ? (new Date(m[1]).getTime() || 0) : 0;
 }
 
+// ── SEO slug helpers (shared client + generator) ───────────────────────────
+// A bill's static-page URL is /bill/<billSlug>/ . Both the generator
+// (scripts/generate_bill_pages.js) and the client (internal links in
+// app-render.js / app-carousel.js) derive the slug through THESE functions,
+// so the URL is produced exactly one way and the two can never drift.
+// Pure string logic — safe in the browser and require()-able from Node.
+
+// Slugify a bill title: ASCII-fold, lowercase, non-alphanumeric -> hyphen,
+// collapse repeats, trim, cap ~70 chars at a word (hyphen) boundary.
+function slugifyTitle(title) {
+  let s = String(title || '')
+    .normalize('NFKD').replace(new RegExp('[^\x00-\x7F]', 'g'), '') // ASCII-fold: drop combining marks left by NFKD
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')                        // non-alphanumeric -> hyphen
+    .replace(/-+/g, '-')                                // collapse repeats
+    .replace(/^-+|-+$/g, '');                           // trim leading/trailing
+  if (s.length > 70) {
+    s = s.slice(0, 70);
+    const cut = s.lastIndexOf('-');
+    if (cut > 0) s = s.slice(0, cut);                   // back off to a word boundary
+    s = s.replace(/-+$/, '');
+  }
+  return s;
+}
+
+// Full slug for a bill record: <lowercased id>-<slugified title>.
+// The id prefix (e.g. "119-hr-2480") guarantees global uniqueness; the title
+// tail is for humans/SEO. Falls back to the bare id if the title is empty.
+function billSlug(bill) {
+  const id = String((bill && bill.id) || '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  const tail = slugifyTitle(bill && bill.title);
+  return tail ? id + '-' + tail : id;
+}
+
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
   // Second line: web-only helpers deduped here 2026-07-06 — locked by
   // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
-                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId };
+                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, slugifyTitle, billSlug };
 }

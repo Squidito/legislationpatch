@@ -172,6 +172,9 @@ run('Backfill missing CR quotes', ['scripts/fetch_bill_cr.js', '--all'], { optio
 // Backfill chamber onto featured/standalone quotes from the (just-refreshed)
 // reps-index, so quoteTagline() can render "House/Senate floor …" consistently.
 run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], { optional: true });
+// Emit the per-bill static SEO pages + slug map/index and inject the crawlable
+// homepage bill list. Runs BEFORE the sitemap so the sitemap reflects the slugs.
+run('Generate static bill pages', ['scripts/generate_bill_pages.js'], { optional: true });
 run('Regenerate sitemap', ['scripts/generate_sitemap.js'], { optional: true });
 run('Validate batch output', ['scripts/validate-batch.js']);
 
