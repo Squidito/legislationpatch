@@ -302,9 +302,12 @@ function renderShockQuotesSection() {
     const color = partyColor(q.party);
     const repRef   = q.billId ? `&ref=bill-${escHtml(q.billId)}` : '&ref=bills';
     const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}${repRef}` : null;
-    const billInCache = q.billId && allBills.some(b => b.id === q.billId);
+    // Link cached bills to their static /bill/<slug>/ page (slug derived via the
+    // shared util.billSlug so it can never drift from the generated URL); fall
+    // back to bill-pending for a quote whose bill is not yet in cache.
+    const billObj = q.billId ? allBills.find(b => b.id === q.billId) : null;
     const billHref = q.billId
-      ? (billInCache ? `bill?id=${escHtml(q.billId)}` : `bill-pending?id=${escHtml(q.billId)}`)
+      ? (billObj ? `/bill/${billSlug(billObj)}/` : `bill-pending?id=${escHtml(q.billId)}`)
       : null;
 
     const portraitInner = `

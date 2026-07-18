@@ -3,6 +3,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { billSlug } = require('../util.js');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://legislationpatch.com';
@@ -37,6 +38,14 @@ function urlEntry(loc, lastmod, changefreq, priority) {
 const cache     = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'cache.json'),      'utf8'));
 const repsIndex = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'reps-index.json'), 'utf8'));
 
+// Current bill slugs (source of truth = data/slug-map.json, written by
+// generate_bill_pages.js which runs immediately before this in the pipeline).
+// Fall back to deriving the slug via the shared util.billSlug so a standalone
+// `npm run sitemap` before the pages exist still emits the correct URLs.
+let slugMap = {};
+try { slugMap = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'slug-map.json'), 'utf8')); } catch (_) {}
+const slugFor = bill => (slugMap[bill.id] && slugMap[bill.id].slug) || billSlug(bill);
+
 const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bills || {});
 
 // Collect bioguide IDs — deduplicate
@@ -59,14 +68,17 @@ entries.push(urlEntry(BASE + '/floor.html',   todayStr(), 'daily',   '0.8'));
 entries.push(urlEntry(BASE + '/reps.html',    todayStr(), 'monthly', '0.6'));
 entries.push(urlEntry(BASE + '/privacy.html', null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/terms.html',   null,       'yearly',  '0.3'));
+entries.push(urlEntry(BASE + '/about.html',   null,       'yearly',  '0.3'));
+entries.push(urlEntry(BASE + '/corrections.html', null,   'yearly',  '0.3'));
 
-// Bill pages
+// Bill pages — static /bill/<slug>/ URLs (only current slugs; historical
+// redirect stubs are noindex and intentionally excluded).
 for (const bill of bills) {
   const isEnacted    = bill.stage === 'signed';
   const changefreq   = isEnacted ? 'monthly' : 'weekly';
   const priority     = isEnacted ? '0.8'     : '0.9';
   entries.push(urlEntry(
-    BASE + '/bill.html?id=' + encodeURIComponent(bill.id),
+    BASE + '/bill/' + slugFor(bill) + '/',
     billLastMod(bill),
     changefreq,
     priority
@@ -78,15 +90,38 @@ for (const id of bioguideIds) {
   entries.push(urlEntry(BASE + '/rep.html?id=' + id, null, 'weekly', '0.7'));
 }
 
-// Articles index — only include when passing --articles flag (articles are not yet deployed)
+// Articles — published guides/explainers (SEO). Included by default when the folder is present.
 const articlesIndex = path.join(ROOT, 'articles', 'index.html');
-if (process.argv.includes('--articles') && fs.existsSync(articlesIndex)) {
+if (fs.existsSync(articlesIndex)) {
   entries.push(urlEntry(BASE + '/articles/', null, 'weekly', '0.7'));
   // Add individual article files
   const articleFiles = fs.readdirSync(path.join(ROOT, 'articles'))
     .filter(f => f.endsWith('.html') && f !== 'index.html');
   for (const f of articleFiles) {
     entries.push(urlEntry(BASE + '/articles/' + f, null, 'monthly', '0.6'));
+  }
+}
+
+// Changelog ("Congress Patch Notes") — hub + one permanent page per edition.
+// Editions come from data/digest-state.json (written by generate_digest.js,
+// which runs immediately before this in the pipeline). The hub's lastmod is the
+// newest edition date; each edition is dated and effectively permanent.
+let changelogCount = 0;
+const changelogHub = path.join(ROOT, 'changelog', 'index.html');
+if (fs.existsSync(changelogHub)) {
+  let editions = [];
+  try {
+    const dstate = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'digest-state.json'), 'utf8'));
+    editions = Array.isArray(dstate.editions) ? dstate.editions.slice() : [];
+  } catch (_) {}
+  editions.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const latest = editions[0] ? editions[0].date : todayStr();
+  entries.push(urlEntry(BASE + '/changelog/', latest, 'weekly', '0.7'));
+  changelogCount = 1;
+  for (const ed of editions) {
+    if (!ed || !ed.date) continue;
+    entries.push(urlEntry(BASE + '/changelog/' + ed.date + '/', ed.date, 'monthly', '0.5'));
+    changelogCount++;
   }
 }
 
@@ -100,13 +135,13 @@ const xml = [
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 
 console.log('sitemap.xml written — ' + entries.length + ' URLs total');
-console.log('  Static pages : 5');
+console.log('  Static pages : 7');
 console.log('  Bills        : ' + bills.length);
 console.log('  Reps         : ' + bioguideIds.length);
-if (process.argv.includes('--articles') && fs.existsSync(articlesIndex)) {
+if (fs.existsSync(articlesIndex)) {
   const count = fs.readdirSync(path.join(ROOT, 'articles')).filter(f => f.endsWith('.html')).length;
   console.log('  Articles     : ' + count);
-} else if (fs.existsSync(articlesIndex)) {
-  const count = fs.readdirSync(path.join(ROOT, 'articles')).filter(f => f.endsWith('.html')).length;
-  console.log('  Articles     : ' + count + ' local (not included — pass --articles to add)');
+}
+if (changelogCount) {
+  console.log('  Changelog    : ' + changelogCount + ' (hub + editions)');
 }

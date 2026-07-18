@@ -145,10 +145,11 @@ for (const f of htmlFiles) {
     }
     const scriptSrc = policy.match(/script-src\s+([^;]+)/);
     if (scriptSrc) {
-      const allowed = new Set(["'self'", "'unsafe-inline'"]);
+      // Sole allowlisted external host: Cloudflare Web Analytics beacon (owner-approved 2026-07-17, see SECURITY.md invariant 2)
+      const allowed = new Set(["'self'", "'unsafe-inline'", "https://static.cloudflareinsights.com"]);
       for (const tok of scriptSrc[1].trim().split(/\s+/)) {
         if (!allowed.has(tok)) {
-          errors.push(`E3 ${f} — CSP script-src contains "${tok}". Only 'self' and 'unsafe-inline' are permitted; external script hosts defeat the whole policy.`);
+          errors.push(`E3 ${f} — CSP script-src contains "${tok}". Only 'self', 'unsafe-inline', and the allowlisted Cloudflare analytics host are permitted; other external script hosts defeat the whole policy.`);
         }
       }
     } else {

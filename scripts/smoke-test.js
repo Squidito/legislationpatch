@@ -22,6 +22,7 @@ const BASE = `http://localhost:${PORT}`;
 
 // Data-driven expectations from the real cache
 const cache = require(path.join(ROOT, 'data/cache.json'));
+const { billSlug } = require(path.join(ROOT, 'util.js'));
 const BILLS = cache.bills.length;
 // An omnibus WITH division-structured text (HR-1 is flagged omnibus but its
 // reconciliation text uses TITLEs, not DIVISION headers — no bt-div anchors).
@@ -100,15 +101,20 @@ async function waitForServer(url, ms = 15000) {
   check(await count('.shock-quote-card') === 0, 'carousel suppressed on bills page');
 
   // ── Bill pages ──
+  // Bills now live at static /bill/<slug>/ pages (server-rendered + progressively
+  // upgraded by bill.js). Navigate to the canonical slug URL, not the legacy ?id=.
   if (regular) {
-    console.log(`— bill (regular: ${regular.id})`);
-    await go(`/bill?id=${regular.id}`);
-    check(await count('.bill-card') === 1, 'bill card renders');
+    console.log(`— bill (regular: ${regular.id} -> /bill/${billSlug(regular)}/)`);
+    await go(`/bill/${billSlug(regular)}/`);
+    check(await count('.bp-title') === 1, 'server-rendered bill h1 present');
+    // renderBillPage() emits a .bill-page container (not .bill-card) — its presence
+    // confirms bill.js progressively upgraded the server-rendered summary.
+    check(await count('.bill-page') === 1, 'bill page renders (client upgrade)');
     check(await count('.bt-section[id], .bt-title[id]') > 0, 'bill-text anchors present');
   }
   if (omnibus) {
-    console.log(`— bill (omnibus: ${omnibus.id})`);
-    await go(`/bill?id=${omnibus.id}`);
+    console.log(`— bill (omnibus: ${omnibus.id} -> /bill/${billSlug(omnibus)}/)`);
+    await go(`/bill/${billSlug(omnibus)}/`);
     check(await count('.bt-division[id]') > 0, 'bt-div division anchors present');
     check(await count('.status-omnibus') > 0, 'OMNIBUS badge shown');
   }
@@ -158,7 +164,11 @@ async function waitForServer(url, ms = 15000) {
   // (1) Network failures that matter = first-party (same-origin) resources only, minus
   // the dev-server favicon 404. Cross-origin failures are third-party degrades the app
   // is built to survive, so the origin check allowlists them without naming any domain.
-  const isFavicon = u => /favicon\.ico/.test(u);
+  // Brand icons referenced by every page's <head>. favicon.ico plus the two PNG
+  // icons (favicon-32.png / apple-touch-icon.png) are produced by a separate asset
+  // task; until they land, the dev server 404s them — a pending-asset condition,
+  // not a code bug, so allowlist all three the same way.
+  const isFavicon = u => /favicon\.ico|favicon-32\.png|apple-touch-icon\.png/.test(u);
   const netErrs = [...new Set(netFailures)].filter(u => u.startsWith(BASE) && !isFavicon(u));
   // (2) Console errors that matter = CSP violations (always) and real JS exceptions, but
   // NOT URL-less resource-load lines — those are covered authoritatively by netErrs above.

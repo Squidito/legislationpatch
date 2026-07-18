@@ -882,6 +882,74 @@ a:hover { text-decoration: underline; }
   margin-bottom: 0.85rem;
 }
 
+/* ---- HOME HERO (crawlable h1 + tagline; integrated above the bill list) ---- */
+.home-hero {
+  margin: 0.1rem 0 1.15rem;
+}
+.home-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.home-hero__tagline {
+  margin-top: 0.35rem;
+  font-size: var(--fs-md);
+  color: var(--text-3);
+  max-width: 46rem;
+}
+
+/* ---- STATIC BILL INDEX (no-JS / crawler view; replaced by the app at runtime) ---- */
+.static-bill-index__heading {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--text-3);
+  margin-bottom: 0.85rem;
+}
+.static-bill-index {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.static-bill-index__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--text);
+  text-decoration: none;
+}
+.static-bill-index__item:hover { border-color: var(--purple); text-decoration: none; }
+.static-bill-index__title { font-weight: 600; font-size: var(--fs-md); }
+.static-bill-index__stage {
+  flex-shrink: 0;
+  font-size: var(--fs-xs);
+  font-family: var(--font-mono);
+  color: var(--text-3);
+  white-space: nowrap;
+}
+.static-bill-index__note { margin-top: 1rem; font-size: var(--fs-sm); color: var(--text-3); }
+
+/* ---- STATIC BILL PAGE (server-rendered body before JS upgrades it) ---- */
+.bill-static { padding: 0.25rem 0 1rem; }
+.bill-static-status { margin: 0.9rem 0; }
+.bill-static-status .bs-row { font-size: var(--fs-md); margin: 0.15rem 0; }
+.bill-static-status .bs-key { color: var(--text-3); font-weight: 600; }
+.bill-static-brief { margin: 0.6rem 0; font-size: var(--fs-md); color: var(--text-2); }
+.bill-static-toplines { margin: 0.3rem 0 0 1.1rem; font-size: var(--fs-md); }
+.bill-static-toplines > li { margin-bottom: 0.6rem; }
+.bill-static-toplines ul { margin: 0.2rem 0 0 1.1rem; color: var(--text-2); }
+.bill-static-updated { margin-top: 1rem; font-size: var(--fs-sm); color: var(--text-3); }
+.bill-static-fulltext { margin-top: 0.6rem; font-size: var(--fs-md); }
+.bill-static-note { margin-top: 0.8rem; font-size: var(--fs-sm); color: var(--text-3); }
+
 /* ---- SETUP BANNER ---- */
 .setup-banner {
   background: var(--amber-bg);

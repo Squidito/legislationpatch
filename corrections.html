@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="max-image-preview:large" />
+  <title>Corrections — LegislationPatch</title>
+  <meta name="description" content="How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page. How to report an error." />
+  <link rel="canonical" href="https://legislationpatch.com/corrections.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legislationpatch.com/corrections.html" />
+  <meta property="og:title" content="Corrections — LegislationPatch" />
+  <meta property="og:description" content="How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://legislationpatch.com/corrections.html" />
+  <meta name="twitter:title" content="Corrections — LegislationPatch" />
+  <meta name="twitter:description" content="How LegislationPatch handles factual errors and how to report one." />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Corrections — LegislationPatch",
+    "description": "How LegislationPatch handles factual errors: corrections are made promptly and visibly, and logged on this page.",
+    "url": "https://legislationpatch.com/corrections.html",
+    "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"}
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-shared.css" />
+  <link rel="stylesheet" href="styles-bills.css" />
+  <link rel="stylesheet" href="styles-pages.css" />
+</head>
+<body>
+
+  <!-- Apply theme before paint — dark is the default -->
+  <script>
+    (function(){
+      try { if (localStorage.getItem('lpTheme') !== 'light') document.documentElement.setAttribute('data-theme', 'dark'); }
+      catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
+      </a>
+      <div class="header-track">
+        <a href="index.html" class="back-btn">← Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('lpTheme');
+      var tog = null;
+      function apply(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        var logo = document.querySelector('.logo-img'); if (logo) logo.src = dark ? 'logo-dark.svg' : 'logo.svg';
+        if (tog) tog.checked = dark;
+      }
+      apply(saved !== 'light');
+      document.addEventListener('DOMContentLoaded', function() {
+        tog = document.getElementById('themeToggle');
+        if (tog) {
+          tog.checked = saved !== 'light';
+          tog.addEventListener('change', function() {
+            localStorage.setItem('lpTheme', this.checked ? 'dark' : 'light');
+            apply(this.checked);
+          });
+        }
+      });
+    })();
+  </script>
+
+  <main class="main" style="max-width:720px">
+    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Corrections</h1>
+    <p class="section-label" style="margin-bottom:2rem">Last updated: July 2026</p>
+
+    <p>LegislationPatch corrects factual errors promptly and visibly. Accuracy is the point of the project: every analysis is built from official bill text and checked through a documented review process before it is published. That process reduces errors but does not eliminate them, so when one is found it is fixed as soon as possible and recorded rather than quietly overwritten.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What counts as a correction</h2>
+    <p>A correction is a change that fixes a factual error — a wrong figure, date, vote count, statutory citation, or a statement that misrepresents what a bill does. Routine copy edits, formatting changes, and updates that reflect new legislative activity (a bill advancing a stage, a new vote) are part of normal maintenance and are not logged here. Material factual errors are.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">How to report an error</h2>
+    <p>If you believe something on the site is factually wrong, you can report it via our <a href="https://github.com/Squidito/legislationpatch/issues" target="_blank" rel="noopener noreferrer">public issue tracker</a>. Please include the page or bill in question and, where possible, a pointer to the official source text (for example, the relevant section on <a href="https://congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov</a>) so the claim can be checked against the record quickly.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Corrections log</h2>
+    <p>When a material factual error is corrected, it is logged here with the date, the page affected, and a short description of what changed. No corrections have been logged yet. This page begins its record with the July 2026 content-accuracy review, during which the site's analyses and reference guides were checked against source text; any corrections arising from that review or from later reports will be listed below.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="articles/">Guides</a> ·
+      <a href="about.html">About</a> ·
+      <a href="corrections.html">Corrections</a> ·
+      <a href="changelog/">Changelog</a>
+    </p>
+  </footer>
+
+</body>
+</html>

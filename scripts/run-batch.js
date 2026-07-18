@@ -172,7 +172,22 @@ run('Backfill missing CR quotes', ['scripts/fetch_bill_cr.js', '--all'], { optio
 // Backfill chamber onto featured/standalone quotes from the (just-refreshed)
 // reps-index, so quoteTagline() can render "House/Senate floor …" consistently.
 run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], { optional: true });
+// Emit the per-bill static SEO pages + slug map/index and inject the crawlable
+// homepage bill list. Runs BEFORE the sitemap so the sitemap reflects the slugs.
+run('Generate static bill pages', ['scripts/generate_bill_pages.js'], { optional: true });
+// Render per-bill social cards (og/bills/<id>.png). Runs AFTER the pages (which
+// reference og/bills/<id>.png) and BEFORE the sitemap (which lists no images).
+// Manifest-gated: only bills whose card inputs changed re-render.
+run('Generate per-bill OG cards', ['scripts/generate_brand_assets.js', '--bills'], { optional: true });
+// "Congress Patch Notes" changelog: diff cache.json against data/digest-state.json
+// and emit a dated edition for whatever advanced / passed / was signed. Emits
+// nothing when nothing changed. Runs AFTER the OG cards and BEFORE the sitemap
+// so the sitemap picks up any new changelog/ pages this run produced.
+run('Generate changelog digest', ['scripts/generate_digest.js'], { optional: true });
 run('Regenerate sitemap', ['scripts/generate_sitemap.js'], { optional: true });
+// Advisory: flag any article whose referenced bill has moved past the article's
+// "last updated" date. Prints only — never blocks (a parallel process owns articles/).
+run('Article staleness (advisory)', ['scripts/article-staleness.js'], { optional: true });
 run('Validate batch output', ['scripts/validate-batch.js']);
 
 console.log('\n' + '═'.repeat(56));

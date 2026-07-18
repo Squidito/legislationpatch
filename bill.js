@@ -58,44 +58,72 @@ function setPageMeta(title, description, url) {
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // The id comes from the static page's <meta name="bill-id"> (the /bill/<slug>/
+  // pages carry no query string); the ?id= param is a legacy fallback.
   const params = new URLSearchParams(window.location.search);
-  const billId = params.get('id');
+  const metaId = document.querySelector('meta[name="bill-id"]');
+  const billId = params.get('id') || (metaId && metaId.getAttribute('content')) || '';
 
-  const loading = document.getElementById('bill-loading');
-  loading.style.display = 'flex';
+  const loading   = document.getElementById('bill-loading');
+  const cardMount = document.getElementById('bill-card-mount');
+  // These pages ship a server-rendered summary inside #bill-card-mount. When it
+  // is present we must NOT flash a spinner over it, and we must NOT wipe it if
+  // the data fetch fails — the static content is the graceful fallback.
+  const hasServerContent = !!(cardMount && cardMount.querySelector('[data-server-rendered]'));
+  const bail = () => { if (loading) loading.style.display = 'none'; };
+
+  if (loading && !hasServerContent) loading.style.display = 'flex';
 
   if (!billId) {
-    loading.innerHTML = '<p style="color:var(--text-3)">No bill ID specified.</p>';
+    if (hasServerContent) { bail(); return; }
+    if (loading) loading.innerHTML = '<p style="color:var(--text-3)">No bill ID specified.</p>';
     return;
   }
 
-  // Load cache.json
+  // Load this bill's data. Prefer the small per-bill file (/data/bills/<id>.json,
+  // a few KB) written by generate_bill_pages.js; fall back to the full ~2 MB
+  // /data/cache.json only if that 404s (e.g. a stale deploy without the split).
+  // Root-absolute so both resolve from /bill/<slug>/ too. Only the bill page
+  // uses this path — the homepage/app still load cache.json via api.js.
   let bills;
   try {
-    const data = await fetch('data/cache.json').then(r => r.json());
-    bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    const res = await fetch('/data/bills/' + encodeURIComponent(billId) + '.json');
+    if (res.ok) {
+      bills = [await res.json()];
+    } else {
+      const data = await fetch('/data/cache.json').then(r => r.json());
+      bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    }
   } catch (e) {
-    loading.innerHTML = '<p style="color:var(--text-3)">Could not load bill data.</p>';
-    return;
+    try {
+      const data = await fetch('/data/cache.json').then(r => r.json());
+      bills = Array.isArray(data.bills) ? data.bills : Object.values(data.bills || {});
+    } catch (e2) {
+      if (hasServerContent) { bail(); return; }
+      if (loading) loading.innerHTML = '<p style="color:var(--text-3)">Could not load bill data.</p>';
+      return;
+    }
   }
 
   const bill = bills.find(b => b.id === billId);
   if (!bill) {
-    loading.innerHTML = `<p style="color:var(--text-3)">Bill "${escHtml(billId)}" not found.</p>`;
+    if (hasServerContent) { bail(); return; }
+    if (loading) loading.innerHTML = `<p style="color:var(--text-3)">Bill "${escHtml(billId)}" not found.</p>`;
     return;
   }
 
+  const billUrl = 'https://legislationpatch.com/bill/' + billSlug(bill) + '/';
   setPageMeta(
     bill.title + ' — LegislationPatch',
     (bill.brief || bill.summary || '').slice(0, 160),
-    'https://legislationpatch.com/bill.html?id=' + encodeURIComponent(billId)
+    billUrl
   );
-  injectBillSchema(bill, billId);
+  injectBillSchema(bill, billUrl);
 
   // Update back button
   const backBtn = document.getElementById('backBtn');
   if (backBtn) {
-    backBtn.href = `./?scrollTo=${encodeURIComponent(billId)}`;
+    backBtn.href = `/?scrollTo=${encodeURIComponent(billId)}`;
     backBtn.textContent = '← Home';
   }
 
@@ -124,11 +152,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
 
-  // Render the full bill page (app-style layout, always expanded)
-  const cardMount = document.getElementById('bill-card-mount');
+  // Render the full bill page (app-style layout, always expanded). This replaces
+  // the server-rendered summary in #bill-card-mount with the richer client view.
   cardMount.innerHTML = renderBillPage(bill);
   if (typeof scanAcronyms === 'function') scanAcronyms(cardMount);
-  loading.style.display = 'none';
+  if (loading) loading.style.display = 'none';
 
   // Copy-link action (no collapse toggle — the page is always fully shown, like the app)
   const toggleRow = document.getElementById('analysis-toggle-row');
@@ -143,7 +171,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Load and render full bill text
   const textMount = document.getElementById('bill-text-mount');
   try {
-    const res = await fetch(`data/bill-text/${billId}.txt`);
+    const res = await fetch(`/data/bill-text/${billId}.txt`);
     if (res.ok) {
       textMount.innerHTML = renderBillText(await res.text(), bill);
     } else {
@@ -162,14 +190,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // ---- JSON-LD schema injector ----
 
-function injectBillSchema(bill, billId) {
+function injectBillSchema(bill, url) {
   var el = document.getElementById('bill-schema');
   if (!el) return;
-  var url = 'https://legislationpatch.com/bill.html?id=' + encodeURIComponent(billId);
+  // The static /bill/<slug>/ pages already ship a richer JSON-LD graph
+  // (Article + Legislation + BreadcrumbList) — do not overwrite it.
+  if (el.textContent && el.textContent.trim()) return;
   var about = {
     '@type': 'LegislativeAction',
     'name': bill.title,
-    'identifier': bill.code || billId
+    'identifier': bill.code || bill.id
   };
   if (bill.date) about.legislationDate = bill.date;
   if (bill.sponsor) about.sponsor = {'@type': 'Person', 'name': bill.sponsor};

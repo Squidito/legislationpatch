@@ -1,8 +1,14 @@
 // floor.js — Floor Activity page
 
 const QUOTES_FILE       = 'data/quotes.json';
+const SLUG_INDEX_FILE   = 'data/slug-index.json';  // id -> current bill slug (generated)
 // (deduped into util.js 2026-07-06) FALLBACK_PORTRAIT (was a real member's photo — now the neutral SVG from util.js)
 const FLOOR_FAVS_KEY    = 'lpFloorFavs';
+
+// id -> "/bill/<slug>/" lookup, loaded alongside the quotes so bill links point
+// at the static bill pages. Empty until loadData() resolves; links degrade to
+// bill-pending for any bill not present.
+let billSlugIndex = {};
 
 
 const CATEGORIES = [
@@ -195,9 +201,15 @@ function saveFavs() {
 // ---- Data ----
 
 async function loadData() {
-  const res  = await fetch(QUOTES_FILE);
+  const [res, slugRes] = await Promise.all([
+    fetch(QUOTES_FILE),
+    fetch(SLUG_INDEX_FILE).catch(() => null),
+  ]);
   const data = await res.json();
   allQuotes  = data.quotes || [];
+  if (slugRes && slugRes.ok) {
+    try { billSlugIndex = await slugRes.json(); } catch (_) {}
+  }
 }
 
 function formatBillId(billId) {
@@ -293,8 +305,12 @@ function renderEntry(q, isFirst) {
 
   const favTitle = isFav ? 'Remove from saved' : 'Save quote';
 
+  const billSlugStr = q.billId ? billSlugIndex[q.billId] : '';
+  const billHref = billSlugStr
+    ? '/bill/' + billSlugStr + '/'
+    : 'bill-pending?id=' + encodeURIComponent(q.billId);
   const billTag = q.billId
-    ? '<a class="floor-entry-bill" href="bill?id=' + encodeURIComponent(q.billId) + '">' +
+    ? '<a class="floor-entry-bill" href="' + billHref + '">' +
         '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>' +
         '<span class="floor-entry-bill-id">' + escHtml(formatBillId(q.billId)) + '</span>' +
         (q.billTitle ? '<span class="floor-entry-bill-title">' + escHtml(q.billTitle) + '</span>' : '') +

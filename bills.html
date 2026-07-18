@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="max-image-preview:large" />
   <title>Federal Bills — LegislationPatch</title>
   <meta name="description" content="Every tracked U.S. federal bill explained in plain English. Filter by topic, status, and stage." />
   <link rel="canonical" href="https://legislationpatch.com/bills.html" />
@@ -12,12 +13,15 @@
   <meta property="og:url" content="https://legislationpatch.com/bills.html" />
   <meta property="og:title" content="Federal Bills — LegislationPatch" />
   <meta property="og:description" content="Every tracked U.S. federal bill explained in plain English." />
-  <meta property="og:image" content="https://legislationpatch.com/og-image.svg" />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://legislationpatch.com/bills.html" />
   <meta property="twitter:title" content="Federal Bills — LegislationPatch" />
   <meta property="twitter:description" content="Every tracked U.S. federal bill explained in plain English." />
-  <meta property="twitter:image" content="https://legislationpatch.com/og-image.svg" />
+  <meta property="twitter:image" content="https://legislationpatch.com/og-image.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -154,6 +158,14 @@
 
   <footer class="site-footer">
     <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="articles/">Guides</a> ·
+      <a href="about.html">About</a> ·
+      <a href="corrections.html">Corrections</a> ·
+      <a href="changelog/">Changelog</a>
+    </p>
   </footer>
 
   <script src="util.js"></script>
