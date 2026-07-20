@@ -1103,3 +1103,20 @@ a:hover { text-decoration: underline; }
 .bill-card:hover .bill-header,
 .bill-card:hover .likelihood-footer { background: var(--surface-2); }
 
+
+/* ---- Header search entry (magnifier link, all pages) ---- */
+.header-search-link {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 9px;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.header-search-link:hover { color: var(--text); border-color: var(--text-3); }
+.header-search-link--solo { margin-left: auto; }

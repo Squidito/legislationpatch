@@ -196,9 +196,27 @@ function renderAll() {
     </div>
   </div>`;
 
-  const billsHtml = filtered.length
-    ? filtered.map((b, i) => renderBill(b, i + 1)).join('')
+  // Pager: render at most billRenderCap cards so the footer stays reachable.
+  // Below the cap sits either the two pager buttons or (once endless scroll is
+  // enabled) a sentinel the IntersectionObserver watches.
+  const visible   = filtered.slice(0, billRenderCap);
+  const remaining = filtered.length - visible.length;
+
+  const billsHtml = visible.length
+    ? visible.map((b, i) => renderBill(b, i + 1)).join('')
     : '<div class="empty-state">No bills found for this filter.</div>';
+
+  const pagerHtml = remaining > 0
+    ? (endlessScrollOn
+        ? '<div class="bill-pager" id="billPagerSentinel"><span class="bill-pager__count">Loading more…</span></div>'
+        : `<div class="bill-pager">
+            <span class="bill-pager__count">Showing ${visible.length} of ${filtered.length} bills</span>
+            <div class="bill-pager__btns">
+              <button class="bill-pager__btn bill-pager__btn--primary" id="billPagerMore">Show ${Math.min(BILL_PAGE_SIZE, remaining)} more</button>
+              <button class="bill-pager__btn" id="billPagerEndless">Enable endless scroll</button>
+            </div>
+          </div>`)
+    : '';
 
   const sectionLabel = window.BILLS_PAGE ? '' : '<div class="section-label">Recent bills</div>';
 
@@ -206,10 +224,28 @@ function renderAll() {
     (window.BILLS_PAGE ? '' : renderShockQuotesSection()) +
     filterBarHtml +
     sectionLabel +
-    billsHtml;
+    billsHtml +
+    pagerHtml;
 
   setupCarousel();
+  setupBillPagerObserver();
   if (typeof scanAcronyms === 'function') scanAcronyms(list);
+}
+
+// Endless-scroll sentinel — re-armed on every renderAll while enabled; the
+// 600px rootMargin loads the next page before the user reaches the bottom.
+function setupBillPagerObserver() {
+  if (_billPagerObserver) { _billPagerObserver.disconnect(); _billPagerObserver = null; }
+  if (!endlessScrollOn) return;
+  const sentinel = document.getElementById('billPagerSentinel');
+  if (!sentinel || typeof IntersectionObserver === 'undefined') return;
+  _billPagerObserver = new IntersectionObserver(entries => {
+    if (!entries.some(en => en.isIntersecting)) return;
+    billRenderCap += BILL_PAGE_SIZE;
+    saveBillPager();
+    renderAll();
+  }, { rootMargin: '600px 0px' });
+  _billPagerObserver.observe(sentinel);
 }
 
 

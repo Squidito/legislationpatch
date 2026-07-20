@@ -18,6 +18,19 @@ let selectedRepIds    = new Set();
 let standaloneQuotes  = [];
 let repsIndex         = {};
 
+// ---- Bill list pager (home + bills pages) ----
+// 24-card initial render keeps the footer reachable; "Show 24 more" pages in,
+// "Enable endless scroll" arms an IntersectionObserver for the rest of the
+// session (sessionStorage, so a fresh visit always starts button-gated).
+const BILL_PAGE_SIZE = 24;
+let billRenderCap    = BILL_PAGE_SIZE;
+let endlessScrollOn  = false;
+let _billPagerObserver = null;
+try {
+  billRenderCap   = parseInt(sessionStorage.getItem('lpBillCap'), 10) || BILL_PAGE_SIZE;
+  endlessScrollOn = sessionStorage.getItem('lpEndless') === '1';
+} catch (e) {}
+
 // Placeholder shock quotes — replace with live Congressional Record feed when available
 const SHOCK_QUOTES = [
   {

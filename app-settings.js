@@ -13,8 +13,37 @@ function setupFilters() {
     document.querySelectorAll('[data-main]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeMainFilter = btn.dataset.main;
+    resetBillPagerCap();
     renderAll();
   });
+
+  // Pager buttons live inside the re-rendered list, so delegate these too
+  document.addEventListener('click', e => {
+    if (e.target.closest('#billPagerMore')) {
+      billRenderCap += BILL_PAGE_SIZE;
+      saveBillPager();
+      renderAll();
+    } else if (e.target.closest('#billPagerEndless')) {
+      endlessScrollOn = true;
+      saveBillPager();
+      renderAll();
+    }
+  });
+}
+
+// A new filter context starts back at one page (a filtered list is short anyway)
+function resetBillPagerCap() {
+  billRenderCap = BILL_PAGE_SIZE;
+  saveBillPager();
+}
+
+// sessionStorage (not localStorage): back-nav restores the loaded count, but a
+// fresh visit always starts footer-friendly at 24 with endless scroll off.
+function saveBillPager() {
+  try {
+    sessionStorage.setItem('lpBillCap', String(billRenderCap));
+    sessionStorage.setItem('lpEndless', endlessScrollOn ? '1' : '0');
+  } catch (e) {}
 }
 
 

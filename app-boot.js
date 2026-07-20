@@ -3,6 +3,7 @@
 
 
 document.addEventListener('DOMContentLoaded', async () => {
+  injectHeaderSearch();
   if (!document.getElementById('billList')) return;
   loadTrackedSettings();
   loadWatchedBills();
@@ -82,5 +83,24 @@ function showError(on, msg) {
   if (!el) return;
   el.style.display = on ? 'block' : 'none';
   if (msg) { const em = document.getElementById('errorMsg'); if (em) em.textContent = msg; }
+}
+
+// ---- Header search entry ----
+// Adds the magnifier link to the header on every page that loads the app-*.js
+// set (home, bills, favorites, bill.html, and the generated /bill/ pages — the
+// generated pages get it without an HTML rebuild). Standalone pages (floor,
+// reps, rep, about, corrections, articles) carry the link in their HTML.
+function injectHeaderSearch() {
+  if (document.querySelector('.header-search-link')) return;
+  const track = document.querySelector('.controls-bar .header-track') ||
+                document.querySelector('.site-header .header-track');
+  if (!track) return;
+  const a = document.createElement('a');
+  a.href = '/search.html';
+  a.className = 'header-search-link';
+  a.setAttribute('aria-label', 'Search');
+  a.title = 'Search';
+  a.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>';
+  track.insertBefore(a, track.firstChild);
 }
 
