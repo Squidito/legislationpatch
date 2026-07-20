@@ -532,7 +532,7 @@ function billPage(bill, slug) {
     <div class="controls-inner">
       <a id="backBtn" href="/" class="back-btn">&larr; Bills</a>
       <div class="header-track">
-        <a href="/search.html" class="header-search-link" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
+        <a href="/search" class="header-search-link" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
         <label class="theme-toggle" title="Toggle dark mode">
           <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
           <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

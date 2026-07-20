@@ -281,7 +281,7 @@ const HEADER = `<body>
       </a>
       <div class="header-track">
         <a href="/" class="back-btn">&larr; Back to Bills</a>
-        <a href="/search.html" class="header-search-link" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
+        <a href="/search" class="header-search-link" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
         <label class="theme-toggle" title="Toggle dark mode">
           <input type="checkbox" id="themeToggle" />
           <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -328,6 +328,7 @@ const FOOTER = `  <footer class="site-footer">
     </p>
   </footer>
 
+  <script src="/search-widget.js" defer></script>
 </body>
 </html>`;
 

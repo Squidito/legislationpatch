@@ -208,7 +208,7 @@ function renderAll() {
 
   const pagerHtml = remaining > 0
     ? (endlessScrollOn
-        ? '<div class="bill-pager" id="billPagerSentinel"><span class="bill-pager__count">Loading more…</span></div>'
+        ? '<div class="bill-pager" id="billPagerSentinel"><span class="bill-pager__count">Loading more…</span><button class="bill-pager__btn" id="billPagerEndlessOff">Turn off endless scroll</button></div>'
         : `<div class="bill-pager">
             <span class="bill-pager__count">Showing ${visible.length} of ${filtered.length} bills</span>
             <div class="bill-pager__btns">

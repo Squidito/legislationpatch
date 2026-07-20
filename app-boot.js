@@ -96,11 +96,21 @@ function injectHeaderSearch() {
                 document.querySelector('.site-header .header-track');
   if (!track) return;
   const a = document.createElement('a');
-  a.href = '/search.html';
+  a.href = '/search';
   a.className = 'header-search-link';
   a.setAttribute('aria-label', 'Search');
   a.title = 'Search';
   a.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>';
   track.insertBefore(a, track.firstChild);
+
+  // Upgrade the magnifier into the inline expand-in-place search box.
+  // Same-origin dynamic script — allowed by the CSP (script-src 'self').
+  if (!document.getElementById('lpSearchWidgetJs')) {
+    const s = document.createElement('script');
+    s.id = 'lpSearchWidgetJs';
+    s.src = '/search-widget.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  }
 }
 

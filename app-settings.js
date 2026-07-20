@@ -27,6 +27,10 @@ function setupFilters() {
       endlessScrollOn = true;
       saveBillPager();
       renderAll();
+    } else if (e.target.closest('#billPagerEndlessOff')) {
+      endlessScrollOn = false;
+      saveBillPager();
+      renderAll();
     }
   });
 }
