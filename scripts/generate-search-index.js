@@ -83,6 +83,7 @@ for (const q of quotesData.quotes || []) {
     t: 'quote',
     id: q.bioguideId || q.name,
     url: slug ? `/bill/${slug}/` : '/floor.html',
+    billId: q.billId || null, // the app routes by bill id, not slug URL
     title: q.name,
     sub: [q.party && q.state ? `${q.party}-${q.state}` : null, q.billTitle ? `on ${trim(q.billTitle, 60)}` : null]
       .filter(Boolean).join(' · '),
