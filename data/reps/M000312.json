@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 2,
   "bio": "James Patrick McGovern is an American politician who has been a member of the United States House of Representatives since 1997, representing Massachusetts's 2nd congressional district since 2013. A Democrat, he is the ranking member of the House Rules Committee, chaired the Congressional-Executive Commission on China, and is the co-chair of the Tom Lantos Human Rights Commission. His district, numbered as the 3rd district from 1997 to 2013, stretches from Worcester to the Pioneer Valley.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-S-222",
+      "billTitle": "Whole Milk for Healthy Kids Act of 2025",
+      "stance": "neutral",
+      "text": "When schools are closed for the summer, far too many kids in America go hungry because they don't have access to nutritious breakfasts or lunches. That is where the incredible Summer Eats program comes in. Funded by USDA and in partnership with States, local schools, and community organizations, Summer Eats provides free, nutritious summer meals to kids across the country. Last week, I joined Project Bread on a visit to Summer Eats programs in Leominster and Turners Falls, two communities in my district.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +423,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

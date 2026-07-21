@@ -7,8 +7,23 @@
   "district": 27,
   "photo": "https://clerk.house.gov/images/members/C001115.jpg",
   "bio": "Michael Jonathan Cloud is an American politician representing Texas's 27th congressional district in the United States House of Representatives since 2018. He is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2550",
+      "billTitle": "Protect America's Workforce Act",
+      "stance": "neutral",
+      "text": "The proposed legislation is designed to nullify President Trump's lawful executive order to exclude agencies with national security missions from collective bargaining agreements. Article II of the Constitution is crystal clear: The executive power is invested in the President of the United States. Let me repeat: All authority in the executive branch flows from the people to the duly elected executive.",
+      "date": "2025-12-15"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +421,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

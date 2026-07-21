@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 2,
   "bio": "Margaret Vivian Goodlander is an American politician, lawyer, and former naval officer who has served as the U.S. representative from New Hampshire's 2nd congressional district since 2025. A member of the Democratic Party, she is married to former U.S. national security advisor Jake Sullivan.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4549",
+      "billTitle": "Office of Rural Affairs Enhancement Act",
+      "stance": "neutral",
+      "text": "H.R. 4549 is a bill that will deliver a fair deal for America's rural small businesses and entrepreneurs by cutting red tape, delivering access to key Federal resources, and ensuring experienced and accountable representation and leadership within our government. It is a bill that will ensure the voices of rural America aren't just heard but are truly prioritized within our government. Running a small business is really an act of faith.",
+      "date": "2025-07-21"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

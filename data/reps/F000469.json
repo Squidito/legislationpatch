@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 1,
   "bio": "Russell Mark Fulcher is an American businessman and politician serving as the U.S. representative for Idaho's 1st congressional district since 2019. Previously, he served in the Idaho Senate from 2005 to 2014. A member of the Republican Party, Fulcher previously sought the party's nomination in the 2014 Idaho gubernatorial election, unsuccessfully challenging incumbent Butch Otter in the primary.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-859",
+      "billTitle": "Informing Consumers about Smart Devices Act",
+      "stance": "neutral",
+      "text": "This bill would require manufacturers of internet-connected so-called smart appliances to disclose to consumers prior to purchase when their product is equipped with a camera or microphone. Manufacturers today produce appliances that connect to software applications that can be set, managed, and monitored through one's computing device. They are designed to capture voice commands from around the vicinity, recording information to adapt to the way individuals give commands.",
+      "date": "2025-04-30"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

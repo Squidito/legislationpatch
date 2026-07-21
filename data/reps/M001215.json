@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 1,
   "bio": "Mariannette Jane Miller-Meeks is an American physician and politician who has served as a U.S. representative from Iowa since 2021. Her district, numbered the 2nd from 2021 to 2023 and the 1st since 2023, includes most of Iowa's southeastern quadrant, including Davenport, Bettendorf, Burlington, and Iowa City. Previously, Miller-Meeks served as in the Iowa Senate from 2019 to 2021. She is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7266",
+      "billTitle": "Rural and Municipal Utility Cybersecurity Act",
+      "stance": "neutral",
+      "text": "Just this spring, national security experts warned that hostile nation-states are shifting from isolated cyber incidents to sustained campaigns against U.S. critical infrastructure, including the energy sector. Yet, many small and rural utilities lack the capacity and expertise to act on this information. RMUC is designed to close that gap. In Iowa's First District, rural electric cooperatives serve ratepayers across 20 counties and face the same threats as major urban systems but with fewer resources.",
+      "date": "2026-01-27"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "Led by 21-year band director Dameon Place, the Pella Marching Dutch includes 225 talented high school students. Participation in the band gives students the opportunity to develop leadership, discipline, teamwork, and a commitment to excellence that will serve them well after graduation. I know this firsthand because my children participated in band and orchestra. While the Independence Day Parade was, unfortunately, canceled because of the extreme heat, the students made the most of their once- in-a-lifetime trip.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +429,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

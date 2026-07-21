@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 3,
   "bio": "Sheryl Lynn Biggs is an American politician from South Carolina. A Republican, she represents South Carolina's 3rd congressional district in the United States House of Representatives.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-9328",
+      "billTitle": "Improving Travel for Military Members Act",
+      "stance": "neutral",
+      "text": "I don't speak on this legislation as an outside observer. As a Member currently serving in the Air National Guard, I have worn the uniform. I have seen firsthand what it asks of servicemembers and their families. This legislation is written from experience, not just policy.",
+      "date": "2026-07-13"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

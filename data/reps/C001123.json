@@ -29,9 +29,23 @@
       "source": "House Floor, Jun 9, 2026",
       "granuleTitle": null,
       "date": "Jun 9, 2026"
+    },
+    {
+      "billId": "119-HR-4549",
+      "billTitle": "Office of Rural Affairs Enhancement Act",
+      "stance": "neutral",
+      "text": "Mr. Speaker, I will, once again, thank my colleagues, Ms. Goodlander, Mr. Wied, and Mr. Golden, for their bipartisan efforts to pass this legislation. By strengthening the Office of Rural Affairs, we can ensure all small businesses have adequate access to the resources at their disposal.",
+      "date": "2025-07-21"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -429,6 +443,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

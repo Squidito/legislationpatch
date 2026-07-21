@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 3,
   "bio": "Rosa Luisa DeLauro is an American politician serving as the U.S. representative for Connecticut's 3rd congressional district since 1991. She is a member of the Democratic Party. The district is based in New Haven and includes most of its suburbs. DeLauro has been the dean of Connecticut's congressional delegation since 2013 upon the retirement of Senator Joe Lieberman.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2444",
+      "billTitle": "Promoting Resilient Supply Chains Act of 2025",
+      "stance": "neutral",
+      "text": "I also extend my appreciation to Chairman Diaz-Balart and Chairman Cole for their partnership. It undercuts humanitarian assistance, undermines global health programs, threatens women's health, and breaks promises to our partners and our allies, while surrendering influence to our adversaries. After failing to bring this bill to the floor for several weeks, Republican leadership has decided to attach an entirely unrelated measure that would restrict voting access for American citizens.",
+      "source": "House Floor, Jul 15, 2026",
+      "granuleTitle": null,
+      "date": "Jul 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +422,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

@@ -57,11 +57,27 @@
       "source": "House Floor, Jun 11, 2026",
       "granuleTitle": null,
       "date": "Jun 11, 2026"
+    },
+    {
+      "billId": "119-S-423",
+      "billTitle": "PRO Veterans Act of 2025",
+      "stance": "neutral",
+      "text": "This week the administration has continued its assault on our public and sacred lands, repealing critical protections for Chaco Canyon and Bears Ears, two of our most sacred cultural landscapes. For New Mexico's Tribes and pueblos, these are not relics of the past. They are living, sacred places where history, culture, religion, and identity endure. They hold thousands of ancestral sites that are central to ceremonies, traditions, the stories, and the people who have cared for these lands since time immemorial.",
+      "source": "House Floor, Jul 16, 2026",
+      "granuleTitle": null,
+      "date": "Jul 16, 2026"
     }
   ],
   "role": "Representative",
   "district": 1,
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -460,6 +476,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

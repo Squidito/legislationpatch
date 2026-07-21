@@ -29,11 +29,25 @@
       "source": "House Floor, May 15, 2026",
       "granuleTitle": null,
       "date": "May 15, 2026"
+    },
+    {
+      "billId": "119-HR-831",
+      "billTitle": "Lower Colorado River Multi-Species Conservation Program Amendment Act of 2025",
+      "stance": "neutral",
+      "text": "The Colorado River is the lifeblood of our region. More than 40 million people across the seven basin States depend on it for drinking water, agriculture, and economic vitality. In Arizona alone, it supports our cities, our farmers, our Tribal communities, and our economy, including our critical semiconductor industry. But this river is under enormous pressure from a drought now entering its 25th year, from overuse, and from a changing climate that is reshaping the West as we know it.",
+      "date": "2026-03-17"
     }
   ],
   "role": "Representative",
   "district": 4,
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -431,6 +445,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

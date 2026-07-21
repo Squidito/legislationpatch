@@ -5,9 +5,24 @@
   "state": "TX",
   "role": "Representative",
   "district": 25,
-  "bio": "The 2026 United States House of Representatives elections in Texas will be held on November 3, 2026, to elect the thirty-eight U.S. representatives from the State of Texas, one from each of the state's thirty-eight congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on March 3, 2026, and in races where no candidate receives over 50% in a primary, runoff elections will take place on May 26, 2026.",
-  "comments": [],
+  "bio": "The 2026 United States House of Representatives elections in Texas will be held on November 3, 2026, to elect the thirty-eight U.S. representatives from the State of Texas, one from each of the state's thirty-eight congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on March 3, 2026, and in races where no candidate receives over 50% in a primary, runoff elections took place on May 26.",
+  "comments": [
+    {
+      "billId": "119-HR-7401",
+      "billTitle": "Small Business Lending Fraud Prevention Act",
+      "stance": "support",
+      "text": "We must pass H.R. 7401 to strengthen integrity in SBA lending programs by requiring employees involved in loan decisions to certify they have no prohibited conflicts of interest.",
+      "date": "2026-06-24"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

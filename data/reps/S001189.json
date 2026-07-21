@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 8,
   "bio": "James Austin Scott is an American politician who is the U.S. representative for Georgia's 8th congressional district, serving since 2011. Scott served as a Republican member of the Georgia House of Representatives before being elected to the U.S. House. He is the most senior Republican currently serving in Georgia's congressional delegation.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6019",
+      "billTitle": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
+      "stance": "neutral",
+      "text": "Wow. There has been a lot said in the last few minutes. Let's be clear: Senate Democratic leadership knew about the language, as well as Senate Republican leadership. Both sides knew about this language. Nobody in the House supported this language. This language did not go through any committee in the Senate, did not go through any committee in the House, and could never be passed and signed into law if it was discussed openly where the American citizens could actually see and understand what was happening.",
+      "date": "2025-11-20"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

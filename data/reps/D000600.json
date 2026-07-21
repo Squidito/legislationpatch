@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 26,
   "bio": "Mario Rafael Díaz-Balart y Caballero is an American politician serving as the U.S. representative for Florida's 26th congressional district. A member of the Republican Party, he was elected in 2002, and his district includes much of northwestern Miami-Dade County, including Hialeah, and much of the northern portion of the Everglades.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7006",
+      "billTitle": "Financial Services and General Government and National Security, State, and Related Programs Appropriations Act, 2026",
+      "stance": "support",
+      "text": "As chairman of the National Security, Department of State, and Related Programs Subcommittee, I rise in strong support for H.R. 7006. This full-year funding bill really carries out our Nation's foreign policy in a historic way in so many different aspects.",
+      "date": "2026-01-12"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

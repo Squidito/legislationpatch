@@ -24,9 +24,25 @@
       "source": "House Floor, Jun 11, 2026",
       "granuleTitle": null,
       "date": "Jun 11, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "I rise today to mark 1 year of the Republicans' big, ugly bill, which has left our children, veterans, and seniors hungry. When President Trump signed this bill, he promised to lower costs for everyday people. Instead, his bill cut billions of dollars for SNAP across the Nation, including $425 million in my home State of Oregon. These cuts are taking food off families' tables. In Oregon, 70,000 people--parents, friends, and neighbors--have lost their food benefits. Why did Mr. Trump do this? It was to give tax cuts to his billionaire buddies.",
+      "source": "House Floor, Jul 16, 2026",
+      "granuleTitle": null,
+      "date": "Jul 16, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -425,6 +441,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

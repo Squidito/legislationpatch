@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 2,
   "bio": "Gabriel Vasquez is an American politician serving as the U.S. representative for New Mexico's 2nd congressional district since 2023. A member of the Democratic Party, he previously served on the Las Cruces City Council from 2017 to 2021. Vasquez's district covers southern New Mexico, including Las Cruces, Carlsbad, and the southern fourth of Albuquerque.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "Lorenzo Salgado, como cualquier papa, debio haber llegado a su casa, recibido por su esposa y sus hijos en la tarde del 7 de Julio. Debio haberse sentado en su patio, como lo hacia cada tarde, escuchando su musica, y jugando con su perro. Pero Lorenzo no regreso ese dia. Fallecio a manos de ICE. Lorenzo tenia 52 anos. Paso 35 de esos anos construyendo casas en Houston--casas que para muchas familias, fueron su sueno Americano. Lorenzo abrio su propio negocio. Y cuando alguien tocaba a su puerta buscando trabajo, Lorenzo le daba trabajo.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +422,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {
