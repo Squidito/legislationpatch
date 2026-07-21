@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 10,
   "bio": "The 2026 United States House of Representatives elections in Michigan will be held on November 3, 2026, to elect the 13 U.S. representatives from the State of Michigan, one from all the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections will take place on August 4, 2026. The filing deadline to run for the August 4 primary was April 21.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2444",
+      "billTitle": "Promoting Resilient Supply Chains Act of 2025",
+      "stance": "support",
+      "text": "I especially thank my chairman, friend, and mentor, the gentleman from Florida (Mr. Bilirakis), for his leadership and support. The gentlewoman has been a family friend for such a long time. I also have the pleasure of sharing the opportunity on this bill with Erin Houchin, my classmate; Robin Kelly; and Pat Ryan, my West Point classmate. This is an example of Congress coming together, reaching across the aisle, and working in the best interests of the American people.",
+      "date": "2025-03-27"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +421,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HR-6019",

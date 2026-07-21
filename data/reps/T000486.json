@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 15,
   "bio": "Ritchie John Torres is an American politician serving as the U.S. representative for New York's 15th congressional district since 2021. A member of the Democratic Party, he previously served on the New York City Council from 2014 to 2020.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-973",
+      "billTitle": "Setting Consumer Standards for Lithium-Ion Batteries Act",
+      "stance": "support",
+      "text": "Mr. Speaker, I am deeply grateful to Chair Guthrie, Ranking Member Pallone, Chair Bilirakis, and all the members of the Energy and Commerce Committee for their support. I am equally grateful to my partners in this effort, Congress Members Yvette Clarke, Andrew Garbarino, and Nick Langworthy. At the heart of our legislative progress has been the tireless advocacy of the FDNY, the finest and bravest fire department in the Nation. The sheer speed and scale of destruction caused by a lithium-ion battery fire is nothing short of staggering.",
+      "date": "2025-04-29"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +421,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 3,
   "bio": "Sarah Kelly Elfreth is an American politician who is serving as the U.S. representative for Maryland's 3rd congressional district since 2025. A member of the Democratic Party, she represented the 30th district in the Maryland Senate from 2019 to 2025.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-831",
+      "billTitle": "Lower Colorado River Multi-Species Conservation Program Amendment Act of 2025",
+      "stance": "neutral",
+      "text": "If I could, this is the last of a marathon of bills. I think the breadth of the bills we saw today are a testament to this committee, from protecting sequoias in California to addressing invasive blue catfish in the Chesapeake to supporting national parks in Mississippi, Missouri, and Arizona to the bill before us now. I am just in awe of this committee's work product. This is what Americans sent us to do, and I am grateful to be a part of it.",
+      "date": "2026-03-17"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

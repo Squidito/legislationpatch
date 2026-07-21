@@ -5,9 +5,26 @@
   "state": "IN",
   "role": "Representative",
   "district": 4,
-  "bio": "James Richard Baird is an American businessman and politician serving as the U.S. representative for Indiana's 4th congressional district since 2019. A member of the Republican Party, Baird served from 2010 to 2018 as a member of the Indiana House of Representatives and as a Putnam County commissioner from 2006 to 2010.",
-  "comments": [],
+  "bio": "James Richard Baird is an American businessman and politician serving as the U.S. representative for Indiana's 4th congressional district since 2019. A Republican, he previously served as a member of the Indiana House of Representatives from 2010 to 2018 and as a Putnam County commissioner from 2006 to 2010.",
+  "comments": [
+    {
+      "billId": "119-HR-6938",
+      "billTitle": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "FFA is the largest U.S. career and technical student organization. FFA is rooted in farming and preparing youth for careers in agribusiness, science, veterinary medicine, and using hands-on learning techniques. Katie McClain from Carroll High School was elected as secretary. She is the granddaughter of a former Indiana State representative, Rich McClain, who I had the privilege of serving with. She is the 2026 Lilly Scholar winner, which has a full ride to Purdue University.",
+      "source": "House Floor, Jul 15, 2026",
+      "granuleTitle": null,
+      "date": "Jul 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +423,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HR-6019",

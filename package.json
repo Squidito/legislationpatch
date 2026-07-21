@@ -13,6 +13,7 @@
     "qa-verify": "node scripts/qa-source-verify.js",
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
+    "search-index": "node scripts/generate-search-index.js",
     "digest": "node scripts/generate_digest.js",
     "stale": "node scripts/article-staleness.js",
     "pages": "node scripts/generate_bill_pages.js",

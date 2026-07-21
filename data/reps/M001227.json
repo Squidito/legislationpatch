@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 4,
   "bio": "Jennifer Leigh McClellan is an American politician and attorney serving as the U.S. representative for Virginia's 4th congressional district since 2023. A member of the Democratic Party, she represented the 9th district in the Virginia State Senate from 2017 to 2023 and the 71st district in the Virginia House of Delegates from 2006 to 2017. She ran in the Democratic primary for governor of Virginia in the 2021 election, losing to former governor Terry McAuliffe.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7266",
+      "billTitle": "Rural and Municipal Utility Cybersecurity Act",
+      "stance": "neutral",
+      "text": "This bill represents the sort of bipartisan work that is important for the security and stability of the American grid and the safety of the American people. This bill reauthorizes the vital RMUC program, which helps rural and small municipalities to protect themselves against ever-multiplying and more sophisticated cybersecurity threats that could prove severely disruptive to small and rural communities alike, just like the ones I represent in Virginia's Fourth Congressional District.",
+      "date": "2026-01-27"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +420,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

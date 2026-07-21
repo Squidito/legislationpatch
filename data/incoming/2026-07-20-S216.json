@@ -1,0 +1,249 @@
+[
+  {
+    "id": "119-S-216",
+    "code": "S.216",
+    "title": "Save Our Seas 2.0 Amendments Act",
+    "official_title": "To amend the Save Our Seas 2.0 Act to improve the administration of the Marine Debris Foundation, to amend the Marine Debris Act to improve the administration of the Marine Debris Program of the National Oceanic and Atmospheric Administration, and for other purposes.",
+    "date": "2025-01-23",
+    "version": "v1.0",
+    "stage": "signed",
+    "stageLabel": "Signed into Law",
+    "currentStep": 4,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Sullivan, Dan (R-AK)",
+    "sponsor_bioguide": "S001198",
+    "cosponsors": 1,
+    "pages": 6,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-12-26",
+    "likelihood": 100,
+    "likelihoodLabel": "Enacted",
+    "likelihoodReason": "Signed into law December 26, 2025 as Public Law 119-65. Sponsored by Sen. Dan Sullivan (R-AK) with one cosponsor; passed the Senate May 20, 2025 and the House December 15, 2025 on the strength of a favorable Commerce Committee report (S. Rept. 119-12). The bill is largely structural and administrative — restructuring an existing NOAA program and its associated congressionally chartered foundation — rather than authorizing new dollars, which is the profile that typically clears both chambers by voice or unanimous consent.",
+    "referencedSources": [
+      {
+        "id": "usc-33-1951",
+        "kind": "statute",
+        "label": "33 U.S.C. 1951 (Marine Debris Act — Purpose)",
+        "citation": "33 U.S.C. 1951",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title33/granules/USCODE-2024-title33-chap33A-sec1951/htm",
+        "textFile": "data/ref-text/usc-33-1951.txt",
+        "fetchedAt": "2026-07-20"
+      },
+      {
+        "id": "usc-33-1952",
+        "kind": "statute",
+        "label": "33 U.S.C. 1952 (NOAA Marine Debris Program)",
+        "citation": "33 U.S.C. 1952",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title33/granules/USCODE-2024-title33-chap33A-sec1952/htm",
+        "textFile": "data/ref-text/usc-33-1952.txt",
+        "fetchedAt": "2026-07-20"
+      }
+    ],
+    "summary": "The National Oceanic and Atmospheric Administration (NOAA) Marine Debris Program identifies, prevents, and removes marine debris (including lost and discarded fishing gear) to protect the U.S. economy, marine environment, and navigation safety; the Marine Debris Foundation is the congressionally chartered nonprofit that raises private funds and runs grant programs alongside it. This bill restructures both — reorganizing the Marine Debris Act into subtitles, giving the NOAA Marine Debris Program authority to use \"other agreements\" and in-kind contributions, tightening Foundation governance (Board recommendations, Secretary of Commerce approval, a chief executive officer role, and location in the National Capital Region or a coastal shoreline community), adding Indian Tribe / Tribal Government engagement provisions, and reauthorizing the underlying Marine Debris Act through fiscal year 2029 with an additional $2M for fiscal year 2025.",
+    "brief": "Restructures NOAA's Marine Debris Program and the Marine Debris Foundation, adds Tribal engagement and outreach requirements, and reauthorizes the underlying Marine Debris Act through fiscal year 2029.",
+    "top_lines": [
+      {
+        "headline": "What the Program & Foundation Do",
+        "billSection": "2",
+        "source": ["usc-33-1951", "usc-33-1952"],
+        "subs": [
+          "NOAA Marine Debris Program identifies, prevents, and removes marine debris nationwide",
+          "Runs national/regional coordination with states, Tribes, and regional organizations",
+          "Marine Debris Foundation raises private funds and awards grants alongside the program"
+        ]
+      },
+      {
+        "headline": "Program Modernization",
+        "billSection": "2",
+        "subs": [
+          "Adds \"other agreements\" to NOAA Marine Debris Program contracting authority",
+          "Lets the Under Secretary contribute in-kind for non-grant, non-cooperative-agreement projects",
+          "Reorganizes the Marine Debris Act into Subtitles A (NOAA/Coast Guard), B (Foundation), C (transferred), and D (Administration)"
+        ]
+      },
+      {
+        "headline": "Foundation Governance Overhaul",
+        "billSection": "3",
+        "subs": [
+          "Board must recommend candidates before Under Secretary appoints",
+          "Director appointments now require Secretary of Commerce approval",
+          "6-year terms for appointed Directors",
+          "Adds USAID Administrator to the Board's ex officio membership",
+          "Foundation must locate its principal office in the National Capital Region or a coastal shoreline community"
+        ]
+      },
+      {
+        "headline": "New CEO Role",
+        "billSection": "3",
+        "subs": [
+          "Board appoints, reviews, and may remove the Foundation's chief executive officer",
+          "Chief executive officer, in turn, appoints and reviews all Foundation officers and employees"
+        ]
+      },
+      {
+        "headline": "Tribal Engagement Added",
+        "billSection": "3",
+        "subs": [
+          "Foundation must develop best practices for outreach to Indian Tribes and Tribal Governments",
+          "Includes technical assistance, capacity building, and awareness of grants",
+          "Adds Indian Tribes, Tribal organizations, regional organizations, and foreign governments to the list of authorized grant recipients",
+          "Rule of construction: nothing satisfies government-to-government consultation or affects treaty rights"
+        ]
+      },
+      {
+        "headline": "Money & Reauthorization",
+        "billSection": "3",
+        "subs": [
+          "Adds $2M for fiscal year 2025 to the Marine Debris Foundation authorization",
+          "Reauthorizes the underlying Marine Debris Act appropriations through fiscal year 2029"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Modifications to the Marine Debris Program of the National Oceanic and Atmospheric Administration",
+        "items": [
+          {
+            "main": "Reorganizes the Marine Debris Act by inserting a new \"Subtitle A — NOAA and Coast Guard Programs\" heading and redesignating sections 3 through 6 (33 U.S.C. 1952-1955) as sections 101 through 104.",
+            "detail": "The renumbering is structural — no substantive change to the underlying program authorities — and sets up the transfers of the Save Our Seas 2.0 Act's Foundation and cross-cutting provisions into the Marine Debris Act as Subtitle B and Subtitle C, respectively.",
+            "comments": []
+          },
+          {
+            "main": "Expands the NOAA Marine Debris Program's contracting authority under Section 101(d) (33 U.S.C. 1952(d)) to include \"other agreements\" and adds a new in-kind contribution mechanism.",
+            "detail": "The subsection heading and text are amended to add \"other agreements\" alongside the existing grants, cooperative agreements, and contracts. A new paragraph (7) allows the Under Secretary to contribute in-kind — up to the amount of the benefit NOAA derives from the project — for projects funded through a contract or other agreement that is not a cooperative agreement or a grant.",
+            "comments": [],
+            "source": "usc-33-1952"
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Modifications to the Marine Debris Foundation",
+        "items": [
+          {
+            "main": "Transfers Subtitle B of title I of the Save Our Seas 2.0 Act (Public Law 116-224) into the Marine Debris Act after new Section 104, so the Marine Debris Foundation provisions now live in the Marine Debris Act at 33 U.S.C. 1961-1969.",
+            "detail": "The transfer places the Foundation charter, Board of Directors, Powers, and related provisions inside the Marine Debris Act framework. Section 111(a) is amended to describe the Foundation as a \"corporation\" rather than an \"organization\", and Section 111(b) adds \"Indian Tribes\" to the purposes reference alongside \"Tribal governments\".",
+            "comments": []
+          },
+          {
+            "main": "Overhauls the Board of Directors selection under Section 112(b): the Board must recommend candidates before the Under Secretary appoints, appointments now require Secretary of Commerce approval, and appointed Directors serve 6-year terms.",
+            "detail": "New paragraph (1) requires the Board to submit candidate recommendations to the Under Secretary. Amendments to paragraphs (2) and (4)(A) require the Secretary of Commerce's approval for appointments and removals. Paragraph (3) is rewritten to set Director terms at 6 years. Paragraph (6) adds the Administrator of the United States Agency for International Development to the ex officio membership and requires Secretary of Commerce approval alongside the EPA Administrator.",
+            "comments": []
+          },
+          {
+            "main": "Creates a chief executive officer role for the Foundation with hire, review, and removal authority over all other Foundation officers and employees.",
+            "detail": "A new Section 112(h) provides that the Board shall appoint and review the performance of, and may remove, the chief executive officer of the Foundation. The chief executive officer, in turn, may appoint, remove, and review the performance of any officer or employee of the Foundation. Conforming amendments in Section 112(g) shift the earlier reference from \"officers and employees\" to \"the initial officers and employees\" and swap \"its chief operating officer\" for \"the chief executive officer of the Foundation.\"",
+            "comments": []
+          },
+          {
+            "main": "Requires the Foundation's principal office to be located in the National Capital Region — as defined in 10 U.S.C. 2674(f)(2) — or a coastal shoreline community, and adds best-practices requirements for Tribal outreach.",
+            "detail": "A new Section 113(g) sets the principal-office location. A new Section 113(h) requires the Foundation to develop and implement best practices for outreach to Indian Tribes and Tribal Governments, including a process to support technical assistance and capacity building and to promote awareness of programs and grants. A new Section 113(i) is a rule of construction: nothing in the Act satisfies government-to-government consultation with Tribal Governments or affects or modifies any treaty right of any Tribal Government.",
+            "comments": []
+          },
+          {
+            "main": "Amends Section 118(a) — the Foundation authorization — to add $2M for fiscal year 2025 and to broaden the list of authorized grant recipients.",
+            "detail": "Paragraph (1) inserts the fiscal year 2025 amount after the existing \"through 2024\" authorization language. Paragraph (2) replaces \"and State and local government agencies\" with \", State and local government agencies, regional organizations, Indian Tribes, Tribal organizations, and foreign governments\" — extending grant eligibility beyond the prior State/local baseline.",
+            "comments": []
+          },
+          {
+            "main": "Reauthorizes Section 9(a) of the Marine Debris Act — the underlying appropriations authorization — through fiscal year 2029.",
+            "detail": "The prior authorization language is replaced with \"for each of fiscal years 2018 through 2029 for carrying out\" — extending the appropriations window that funds the NOAA Marine Debris Program and related activities.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 — Transfers",
+        "items": [
+          {
+            "main": "Transfers Subtitle C of title I of the Save Our Seas 2.0 Act (33 U.S.C. 1971-1977) into the Marine Debris Act after Section 119, and moves sections 7, 8, 9 (as amended), and 10 of the Marine Debris Act (33 U.S.C. 1981-1984) to appear after Section 127 as new Sections 131, 132, 133, and 134.",
+            "detail": "A new heading \"Subtitle D — Administration\" is inserted before Section 131. The transfers put the definitions, authorization, and general-provisions sections all inside a single reorganized Marine Debris Act.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 5 — Definitions",
+        "items": [
+          {
+            "main": "Rewrites the definitions section (new Section 131 / 33 U.S.C. 1981) — striking one paragraph, renumbering the remaining paragraphs, and inserting seven new terms.",
+            "detail": "New defined terms include \"circular economy,\" \"coastal shoreline community\" (city or county directly adjacent to the open ocean, major estuaries, or the Great Lakes), \"EPA Administrator,\" \"Indian Tribe\" (with the meaning given in 25 U.S.C. 5304 — Indian Self-Determination and Education Assistance Act), \"nonprofit organization,\" \"post-consumer materials management,\" \"Tribal Government\" (with reference to 25 U.S.C. 5131), \"Tribal organization,\" and \"Under Secretary.\" Section 2(7) of the Save Our Seas 2.0 Act is transferred into Section 131 and redesignated as paragraph (8), and Section 2 of the Save Our Seas 2.0 Act is renumbered accordingly. Existing paragraph (13) is amended to add \"Indian Tribe\" alongside the other listed entities.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 6 — Conforming Amendments",
+        "items": [
+          {
+            "main": "Replaces \"Administrator\" with \"Under Secretary\" throughout the Marine Debris Act's operative sections (33 U.S.C. 1951 and note, 1952, 1953, 1955, 1983) and makes matching conforming changes to cross-references and terminology.",
+            "detail": "Section 103 of the Marine Debris Act replaces \"Administrator of the National Oceanic and Atmospheric Administration\" with \"Under Secretary\" and \"Administrator of the Environmental Protection Agency\" with \"EPA Administrator,\" and updates a cross-reference from \"section 3\" to \"section 101.\" Section 123 changes \"title I\" to \"subtitle B.\" Section 133 updates cross-references from \"sections 3, 5, and 6\" to \"sections 101, 103, and 104.\" Section 134 uses \"EPA Administrator\" in place of the full agency name. Subtitle A changes lowercase \"tribal government\" to capitalized \"Tribal Government\" throughout.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 3(d)(1)(F)(i) — Board Ex Officio Membership",
+        "summary": "The bill adds the Administrator of the United States Agency for International Development to the Marine Debris Foundation's Board ex officio membership.",
+        "why_unreported": "The section heading is titled \"Board of Directors\" (appointment / vacancies / removal) but this specific provision inserts a new federal agency head into the Board — a governance change not signaled by the section label or the bill's short title."
+      },
+      {
+        "section": "Section 3(f) — Principal Office",
+        "summary": "The Foundation must locate its principal office either in the National Capital Region or in a coastal shoreline community.",
+        "why_unreported": "The bill title describes administrative improvements; a mandated headquarters siting rule limiting the Foundation's principal-office location is a distinct operational constraint not visible in the title."
+      },
+      {
+        "section": "Section 3(g) — Rule of Construction",
+        "summary": "The bill states that nothing in the Act satisfies any requirement for government-to-government consultation with Tribal Governments or affects any treaty right.",
+        "why_unreported": "The section captioned \"Best Practices; Rule of Construction\" places a substantive limit on Tribal consultation obligations alongside a best-practices requirement — the limitation is bundled inside a section otherwise focused on outreach."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill reauthorizes the Marine Debris Act appropriations through fiscal year 2029 but sets no annual dollar amount for the NOAA Marine Debris Program itself — only $2M for fiscal year 2025 for the Foundation authorization.",
+      "The bill mandates that the Foundation develop best practices for Tribal outreach but does not set a deadline for adopting those practices or reporting on them.",
+      "The bill adds Indian Tribes, Tribal organizations, regional organizations, and foreign governments to the list of authorized grant recipients but does not set aside or reserve any minimum share of funds for those recipients.",
+      "The bill requires the Foundation's principal office to be in the National Capital Region or a coastal shoreline community but does not address whether existing office arrangements must relocate or the timeline for compliance.",
+      "The bill restructures the Marine Debris Foundation Board with Secretary of Commerce approval requirements but does not set a deadline for filling vacancies or a maximum period during which appointments may remain unapproved."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New Subtitle A (NOAA and Coast Guard Programs), Subtitle B (Foundation, transferred from Save Our Seas 2.0 Act), Subtitle C (transferred from Save Our Seas 2.0 Act), and Subtitle D (Administration) structure inside the Marine Debris Act",
+        "New paragraph (7) in Section 101(d) (33 U.S.C. 1952(d)) — in-kind contributions by the Under Secretary for non-grant, non-cooperative-agreement projects",
+        "New Section 112(b)(1) — Board must recommend candidates before Under Secretary appoints",
+        "New Section 112(h) — chief executive officer role, Board appoints/reviews/removes, chief executive officer appoints and reviews other officers and employees",
+        "New Section 113(g) — Foundation principal office located in the National Capital Region or a coastal shoreline community",
+        "New Section 113(h) — Foundation best practices for Tribal outreach, including technical assistance and capacity building",
+        "New Section 113(i) — rule of construction that nothing satisfies government-to-government Tribal consultation or affects treaty rights",
+        "New defined terms in Section 131 — circular economy, coastal shoreline community, EPA Administrator, Indian Tribe, nonprofit organization, post-consumer materials management, Tribal Government, Tribal organization, Under Secretary"
+      ],
+      "modified": [
+        "33 U.S.C. 1952(d) (grants, cooperative agreements, contracts) — heading and text expanded to include \"other agreements\"",
+        "Section 111(a) of the Marine Debris Act (Foundation status) — \"organization\" changed to \"corporation\"",
+        "Section 112(b)(3) of the Marine Debris Act — appointed Director term set at 6 years",
+        "Section 112(b)(6) of the Marine Debris Act — USAID Administrator added to Board ex officio membership; Secretary of Commerce approval required alongside EPA Administrator",
+        "Section 112(g)(2)(B)(i) of the Marine Debris Act — reference to \"its chief operating officer\" replaced with \"the chief executive officer of the Foundation\"",
+        "Section 113(c)(1) of the Marine Debris Act — \"nonprofit\" inserted before \"corporation\" and \"acting as a trustee\" replaced with \"formed\"",
+        "Section 118(a)(1) of the Marine Debris Act (Foundation authorization) — $2M added for fiscal year 2025 after the existing \"through 2024\" language",
+        "Section 118(a)(2) of the Marine Debris Act — grant recipient list expanded to include regional organizations, Indian Tribes, Tribal organizations, and foreign governments",
+        "Section 9(a) of the Marine Debris Act (33 U.S.C. 1958) — appropriations authorization set to fiscal years 2018 through 2029",
+        "Terminology in 33 U.S.C. 1951 and note, 1952, 1953, 1955, and 1983 — \"Administrator\" replaced with \"Under Secretary\" throughout"
+      ],
+      "removed": [
+        "Paragraph (1) of the prior definitions section (Section 131 / 33 U.S.C. 1981), struck by Section 5(a)(1)"
+      ]
+    },
+    "budget_accounts": {
+      "Marine Debris Foundation": {
+        "agency": "013",
+        "currentAmount": 2000000,
+        "note": "$2M authorization for fiscal year 2025, added by Section 3(h)(1) to Section 118(a)(1) of the Marine Debris Act"
+      }
+    },
+    "analyzedAt": "2026-07-20"
+  }
+]

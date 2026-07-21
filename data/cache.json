@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-15T09:49:07.604Z",
+  "generated": "2026-07-20T19:23:40.210Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -883,21 +883,12 @@
       ],
       "featured_quotes": [
         {
-          "name": "Committee Additional Members",
-          "party": null,
-          "state": null,
-          "bioguideId": null,
-          "text": "Following the passage of this year's National Defense Authorization Act by the House Armed Services Committee, I write to share my additional views and concerns with the bill as marked up by the full committee. The National Defense Authorization Act (NDAA) for Fiscal Year 2026 authorizes commendable investments in our military's infrastructure, energy resilience, water management, barracks construction, and pay and services for our service members.",
-          "stance": "oppose"
-        },
-        {
           "name": "Ms. Houlahan",
           "party": "D",
           "state": "PA",
           "bioguideId": "H001085",
           "text": "I was very proud of the markup that passed out of the Armed Services Committee. The bill that we delivered to this floor this week was overwhelmingly bipartisan. It supported our men and women in uniform and strengthened our national defense. It was an honor to work so closely with Chairman Rogers and Ranking Member Smith on that bill. Unfortunately, the toxically amended bill that is here before us is no longer that.",
-          "stance": "support",
-          "chamber": "House"
+          "stance": "support"
         },
         {
           "name": "Mr. Rogers",
@@ -905,8 +896,7 @@
           "state": "AL",
           "bioguideId": "R000575",
           "text": "I echo the ranking member's comments. This is a very bipartisan product that came out of committee. It is a good product, and it deserves this Chamber's support. He has been a great partner in fashioning what we bring to the floor today.",
-          "stance": "support",
-          "chamber": "House"
+          "stance": "support"
         },
         {
           "name": "Mr. Jackson",
@@ -914,8 +904,7 @@
           "state": "TX",
           "bioguideId": "J000304",
           "text": "The Intelligence and Special Operations Subcommittee portions of this bill, in conjunction with approximately $2.2 billion in reconciliation funding, continues to focus on providing our Special Operations Forces, the Defense Intelligence Enterprise, and the security cooperation enterprise with the tools required to ensure their capabilities can support the Department's efforts in strategic competition and in countering malign PRC actions.",
-          "stance": "support",
-          "chamber": "House"
+          "stance": "support"
         },
         {
           "name": "Mr. McCormick",
@@ -923,8 +912,7 @@
           "state": "GA",
           "bioguideId": "M001218",
           "text": "I rise and offer my amendment No. 25 to H.R. 3838, the National Defense Authorization Act for Fiscal Year 2026. My amendment expands on language already in law, in this bill, and in the Senate NDAA to combat the indirect censorship of conservative news outlets in the Department of War.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Mr. Rose",
@@ -932,8 +920,7 @@
           "state": "TN",
           "bioguideId": "R000612",
           "text": "My amendment is intended to address the Janet Mello fraud case, the Army civilian who was indicted and pleaded guilty to stealing over $100 million that were intended for the 4-H Military Partnership Grant Program. The 4-H Military Partnership Grant Program serves 4-H clubs that are in many military installation youth centers. These programs include 4-H positive youth development programming, engaging in hands-on learning in day and overnight summer camps, including military team adventure camps.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Mr. Stauber",
@@ -941,8 +928,7 @@
           "state": "MN",
           "bioguideId": "S001212",
           "text": "The first requires the Secretary of the Air Force and the Director of the Air National Guard to work together to modernize the Air National Guard's fighter fleet. Last year's NDAA required a similar report, but this report did not fulfill several requirements, like consultation from the Director of the Air National Guard and recapitalization plans for all fighter wings. It was entirely inadequate.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         }
       ],
       "changes": {
@@ -3817,7 +3803,8 @@
             {
               "main": "Tightens SNAP eligibility and cost structure: work requirements extended to age 65, state cost-sharing of 5–15% beginning FY2028, and federal administrative cost share cut from 50% to 25%.",
               "detail": "SNAP state cost-sharing is calculated on a sliding scale based on the state's payment error rate — states below 6% pay nothing; states at 10% or above pay 15%. States may no longer request waivers of the three-month SNAP time limit based on insufficient job availability. SNAP-ED nutrition education grants are eliminated. SNAP eligibility is removed for certain legally present immigrants, including domestic violence and trafficking survivors.",
-              "comments": []
+              "comments": [],
+              "source": "usc-7-2015"
             },
             {
               "main": "Extends farm program authorities through crop year 2031, including ARC and PLC commodity support, Dairy Margin Coverage, and crop insurance enhancements.",
@@ -3847,7 +3834,7 @@
             },
             {
               "main": "Creates new above-the-line deductions for tip income (up to $25,000), overtime compensation (up to $12,500), and passenger vehicle loan interest (up to $10,000), all available for tax years 2025–2028.",
-              "detail": "All three deductions phase out for individuals with modified AGI above $150,000 ($300,000 for joint filers) and require work-eligible Social Security numbers. A new \"Trump account\" IRA for individuals under 18 allows up to $5,000 annually; the federal government deposits a one-time $1,000 into accounts for children born in 2025–2028.",
+              "detail": "The tip and overtime deductions phase out at MAGI above $150,000 ($300,000 joint) and require the taxpayer's Social Security number on the return; the passenger vehicle loan interest deduction phases out at $100,000 ($200,000 joint) and requires the vehicle's VIN on the return. A new \"Trump account\" IRA for individuals under 18 allows up to $5,000 annually; the federal government deposits a one-time $1,000 into accounts for children born in 2025–2028.",
               "comments": []
             },
             {
@@ -4406,9 +4393,18 @@
           "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partVII-sec59A/htm",
           "textFile": "data/ref-text/usc-26-59a.txt",
           "fetchedAt": "2026-06-10"
+        },
+        {
+          "id": "usc-7-2015",
+          "kind": "statute",
+          "label": "7 U.S.C. 2015",
+          "citation": "7 U.S.C. 2015",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title7/granules/USCODE-2024-title7-chap51-sec2015/htm",
+          "textFile": "data/ref-text/usc-7-2015.txt",
+          "fetchedAt": "2026-07-20"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-20",
       "versions": [
         {
           "type": "Reported in House",
@@ -6728,7 +6724,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "votes": [
         {
           "chamber": "House",
@@ -6780,6 +6776,11 @@
           "type": "Engrossed in House",
           "date": "2026-04-27",
           "url": "https://www.congress.gov/119/bills/hr5334/BILLS-119hr5334eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr5334/BILLS-119hr5334pcs.htm"
         }
       ]
     },
@@ -7924,7 +7925,7 @@
       ],
       "criticisms": [
         {
-          "who": "Ms. Moore (R-AL)",
+          "who": "Ms. Moore (D-WI)",
           "why": "Mr. Speaker, we hear all the time about the high-profile civil cases involving sexual abuse. I am thinking about the accounts of trusted gymnast physicians abusing star athletes and the victims of Jeffrey Epstein and many of his associates. We even hear about sexual assault that occurs within our own body, and we have to address that problem. Let's just take a moment to acknowledge that all sexual abuse does not make the headlines."
         }
       ],
@@ -7970,7 +7971,7 @@
         "modified": [],
         "removed": []
       },
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "votes": [
         {
           "chamber": "House",
@@ -7995,7 +7996,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-07-15",
+      "analyzedAt": "2026-07-20",
       "versions": [
         {
           "type": "Introduced in House",
@@ -8011,6 +8012,11 @@
           "type": "Engrossed in House",
           "date": "2026-04-27",
           "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347pcs.htm"
         }
       ],
       "versionChanges": {
@@ -8763,14 +8769,14 @@
       "analyzedAt": "2026-06-10",
       "versions": [
         {
-          "type": "Engrossed in Senate",
-          "date": "2026-04-30",
-          "url": "https://www.congress.gov/119/bills/s4465/BILLS-119s4465es.htm"
-        },
-        {
           "type": "Considered and Passed Senate",
           "date": "2026-04-30",
           "url": "https://www.congress.gov/119/bills/s4465/BILLS-119s4465cps.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2026-04-30",
+          "url": "https://www.congress.gov/119/bills/s4465/BILLS-119s4465es.htm"
         },
         {
           "type": "Public Law",
@@ -12644,7 +12650,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-06-03",
+      "stageDate": "2026-07-15",
       "billType": "reauthorization",
       "votes": [
         {
@@ -12655,7 +12661,7 @@
           "method": "Voice Vote"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-20",
       "versions": [
         {
           "type": "Introduced in House",
@@ -12797,7 +12803,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-06-03",
+      "stageDate": "2026-07-15",
       "billType": "amendment",
       "votes": [
         {
@@ -12808,7 +12814,7 @@
           "method": "Voice Vote"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-20",
       "versions": [
         {
           "type": "Introduced in House",
@@ -14585,6 +14591,11 @@
           "type": "Engrossed in House",
           "date": "2026-05-15",
           "url": "https://www.congress.gov/119/bills/hr8469/BILLS-119hr8469eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8469/BILLS-119hr8469pcs.htm"
         }
       ],
       "versionChanges": {
@@ -14963,17 +14974,7 @@
           "state": "IA",
           "bioguideId": "G000386",
           "text": "I understand that representatives of the Russian Orthodox Church are on Capitol Hill this week falsely claiming persecution by the Ukrainian Government. This is because of a law requiring churches in Ukraine to stop taking directions from the patriarch in Moscow, who was a KGB agent and reports directly to Vladimir Putin. Two years ago, I met with Ukrainian faith leaders in my office--about 30 of them--from many backgrounds, including Orthodox, Catholic, Evangelical, Jewish, and Muslim.",
-          "stance": "neutral",
-          "chamber": "Senate"
-        },
-        {
-          "name": "Mr. Thune",
-          "party": "R",
-          "state": "SD",
-          "bioguideId": "T000250",
-          "text": "I move to refer the House message on S. 1071 to the Committee on Armed Services with instructions to report back forthwith with an amendment numbered 3963. The senior assistant legislative clerk read as follows: The Senator from South Dakota [Mr. Thune] moves to refer the House message to accompany S. 1071 to the Committee on Armed Services with instructions to report back forthwith with an amendment numbered 3963.",
-          "stance": "neutral",
-          "chamber": "Senate"
+          "stance": "neutral"
         }
       ],
       "gaps": [
@@ -16252,14 +16253,14 @@
       "likelihoodLabel": "Enacted",
       "versions": [
         {
-          "type": "Engrossed in Senate",
-          "date": "2026-05-14",
-          "url": "https://www.congress.gov/119/bills/s4530/BILLS-119s4530es.htm"
-        },
-        {
           "type": "Considered and Passed Senate",
           "date": "2026-05-14",
           "url": "https://www.congress.gov/119/bills/s4530/BILLS-119s4530cps.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2026-05-14",
+          "url": "https://www.congress.gov/119/bills/s4530/BILLS-119s4530es.htm"
         },
         {
           "type": "Public Law",
@@ -18389,7 +18390,7 @@
       "criticisms": [
         {
           "who": "Mr. Sherman (D-CA)",
-          "why": "I yield myself the balance of my time. As I have discussed, H.R. 2808 is an important positive step to strengthen data privacy for consumers and curb the harmful practice of trigger leads, protecting consumers from entities that they didn't want to do business with, never sought to do business with, finding out that they are applying for a mortgage and then harassing them with a host of texts and calls, et cetera."
+          "why": "As I have discussed, H.R. 2808 is an important positive step to strengthen data privacy for consumers and curb the harmful practice of trigger leads, protecting consumers from entities that they didn't want to do business with, never sought to do business with, finding out that they are applying for a mortgage and then harassing them with a host of texts and calls, et cetera."
         }
       ],
       "gaps": [
@@ -18402,9 +18403,8 @@
           "party": "D",
           "state": "CA",
           "bioguideId": "S000344",
-          "text": "I yield myself the balance of my time. As I have discussed, H.R. 2808 is an important positive step to strengthen data privacy for consumers and curb the harmful practice of trigger leads, protecting consumers from entities that they didn't want to do business with, never sought to do business with, finding out that they are applying for a mortgage and then harassing them with a host of texts and calls, et cetera.",
-          "stance": "oppose",
-          "chamber": "House"
+          "text": "As I have discussed, H.R. 2808 is an important positive step to strengthen data privacy for consumers and curb the harmful practice of trigger leads, protecting consumers from entities that they didn't want to do business with, never sought to do business with, finding out that they are applying for a mortgage and then harassing them with a host of texts and calls, et cetera.",
+          "stance": "support"
         }
       ],
       "changes": {
@@ -22528,7 +22528,7 @@
       "official_title": "To authorize support for Ukraine, and for other purposes.",
       "code": "HR.2913",
       "date": "2026-06-08",
-      "stageDate": "2026-06-08",
+      "stageDate": "2026-07-16",
       "version": "v1.0",
       "stage": "house",
       "stageLabel": "Passed House",
@@ -22562,7 +22562,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-20",
       "summary": "Authorizes a broad package of U.S. support for Ukraine — diplomatic, economic, and military — and builds a Russia sanctions regime that the President must impose whenever he determines Russia is waging war on or refusing to negotiate peace with Ukraine, backed by tariffs, export controls, a tax on frozen Russian assets, and congressional review of any move to lift sanctions.",
       "brief": "Authorizes U.S. support for Ukraine and a Russia sanctions regime triggered whenever the President finds Russia is waging war or blocking peace.",
       "top_lines": [
@@ -28887,9 +28887,9 @@
       "official_title": "To amend the Agricultural Credit Act of 1978 to remove barriers to agricultural producers in accessing funds to carry out emergency measures under the emergency conservation program, and for other purposes.",
       "date": "2026-06-23",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 3,
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -28904,10 +28904,10 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-06-30",
+      "stageDate": "2026-07-12",
       "likelihood": 90,
       "likelihoodLabel": "Very Likely",
-      "likelihoodReason": "Sponsored by Sen. Deb Fischer (R-NE) with a bipartisan trio of cosponsors (Sens. Lujan and Schiff, both Democrats). The Senate passed the bill by unanimous consent on March 24, 2026, and the House passed it 368-19 on June 23, 2026 — the last chamber has cleared it, leaving only the presidential signature.",
+      "likelihoodReason": "Sponsored by Sen. Deb Fischer (R-NE) with a bipartisan trio of cosponsors (Sens. Lujan and Schiff, both Democrats). The Senate passed the bill by unanimous consent on March 24, 2026, and the House passed it 368-19 on June 23, 2026. It became Public Law 119-102 on July 12, 2026.",
       "summary": "Makes it easier for farmers and forest owners to get federal help repairing land after disasters. It lets them receive part of an Emergency Conservation Program or Emergency Forest Restoration Program payment up front, before doing the work, and gives them more time to use the funds.",
       "brief": "Lets farmers and forest landowners receive advance payments for emergency conservation and forest-restoration work and extends the time to use the funds.",
       "top_lines": [
@@ -29022,7 +29022,7 @@
           "crossoverCount": 0
         }
       ],
-      "analyzedAt": "2026-07-11",
+      "analyzedAt": "2026-07-20",
       "versions": [
         {
           "type": "Introduced in Senate",
@@ -29033,6 +29033,11 @@
           "type": "Engrossed in Senate",
           "date": "2026-03-24",
           "url": "https://www.congress.gov/119/bills/s629/BILLS-119s629es.htm"
+        },
+        {
+          "type": "Public Law",
+          "date": "2026-07-13",
+          "url": null
         },
         {
           "type": "Enrolled Bill",
@@ -29054,7 +29059,8 @@
           "type": "Introduced in Senate",
           "date": "2025-02-19"
         }
-      }
+      },
+      "enactedDate": "2026-07-12"
     },
     {
       "id": "119-HR-915",
@@ -29186,6 +29192,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-24",
           "url": "https://www.congress.gov/119/bills/hr915/BILLS-119hr915eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr915/BILLS-119hr915rfs.htm"
         }
       ],
       "versionChanges": {
@@ -29327,6 +29338,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-24",
           "url": "https://www.congress.gov/119/bills/hr7401/BILLS-119hr7401eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7401/BILLS-119hr7401rfs.htm"
         }
       ],
       "versionChanges": {
@@ -29352,9 +29368,9 @@
       "official_title": "To address housing supply through reforms to housing, community-development, manufactured-housing, rural-housing, and veterans-housing programs, with provisions on community banks, institutional single-family-home ownership, and central bank digital currency.",
       "date": "2026-06-23",
       "version": "v1.0",
-      "stage": "senate",
-      "stageLabel": "Passed Senate",
-      "currentStep": 3,
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -29703,6 +29719,11 @@
           "url": "https://www.congress.gov/119/bills/hr6644/BILLS-119hr6644eas2.htm"
         },
         {
+          "type": "Public Law",
+          "date": "2026-07-12",
+          "url": null
+        },
+        {
           "type": "Enrolled Bill",
           "date": null,
           "url": "https://www.congress.gov/119/bills/hr6644/BILLS-119hr6644enr.htm"
@@ -29732,7 +29753,8 @@
           "type": "Introduced in House",
           "date": "2025-12-11"
         }
-      }
+      },
+      "enactedDate": "2026-07-11"
     },
     {
       "id": "119-HR-2478",
@@ -29902,6 +29924,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-25",
           "url": "https://www.congress.gov/119/bills/hr2478/BILLS-119hr2478eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr2478/BILLS-119hr2478rfs.htm"
         }
       ],
       "versionChanges": {
@@ -30407,6 +30434,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7257/BILLS-119hr7257eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7257/BILLS-119hr7257rfs.htm"
         }
       ]
     },
@@ -30558,6 +30590,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7258/BILLS-119hr7258eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7258/BILLS-119hr7258rfs.htm"
         }
       ]
     },
@@ -30734,6 +30771,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7266/BILLS-119hr7266eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7266/BILLS-119hr7266rfs.htm"
         }
       ]
     },
@@ -30890,6 +30932,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7305/BILLS-119hr7305eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7305/BILLS-119hr7305rfs.htm"
         }
       ]
     },
@@ -31141,6 +31188,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7757/BILLS-119hr7757eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7757/BILLS-119hr7757rfs.htm"
         }
       ]
     },
@@ -31350,6 +31402,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr7128/BILLS-119hr7128eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7128/BILLS-119hr7128rfs.htm"
         }
       ]
     },
@@ -31513,6 +31570,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr5347/BILLS-119hr5347eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr5347/BILLS-119hr5347rfs.htm"
         }
       ]
     },
@@ -31643,17 +31705,15 @@
           "state": "TX",
           "bioguideId": "V000134",
           "text": "This commonsense legislation creates a Federal task force to work with States to recover unspent Federal pandemic unemployment funds that remain frozen in financial institutions and return those taxpayer dollars to the U.S. Treasury, but Congress must act quickly. Last December, the Department of Labor's Office of Inspector General issued two fraud alerts identifying nearly $1 billion in unspent Federal unemployment funds frozen by banks because of suspected fraud.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Mr. Suozzi",
           "party": "D",
           "state": "NY",
           "bioguideId": "S001201",
-          "text": "Mr. Speaker, I yield myself the balance of my time. H.R. 8873, the Recover COVID Unemployment Fraud in Banks Act, is a commonsense bill that helps eliminate waste, fraud, and abuse; recovers stolen taxpayer dollars; and protects some of our most vulnerable citizens, including older Americans.",
-          "stance": "neutral",
-          "chamber": "House"
+          "text": "H.R. 8873, the Recover COVID Unemployment Fraud in Banks Act, is a commonsense bill that helps eliminate waste, fraud, and abuse; recovers stolen taxpayer dollars; and protects some of our most vulnerable citizens, including older Americans. At a time when too many families face the uncertainty of unemployment, high gas and grocery prices, and seniors are forced to choose between food, rent, and healthcare, we can't allow fraudsters to get away with stealing funds meant to help hardworking families.",
+          "stance": "neutral"
         }
       ],
       "changes": {
@@ -31694,6 +31754,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-29",
           "url": "https://www.congress.gov/119/bills/hr8873/BILLS-119hr8873eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8873/BILLS-119hr8873rfs.htm"
         }
       ]
     },
@@ -33776,7 +33841,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "reauthorization",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Andrew Garbarino (R-NY) with 1 cosponsor. Cleared the House per the latest recorded action; no Senate action is recorded yet.",
@@ -33866,6 +33931,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr9391/BILLS-119hr9391rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr9391/BILLS-119hr9391eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr9391/BILLS-119hr9391rfs.htm"
         }
       ]
     },
@@ -33893,7 +33968,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Troy Carter (D-LA) with 2 cosponsors. Cleared the House per the latest recorded action.",
@@ -33980,6 +34055,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr8874/BILLS-119hr8874rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8874/BILLS-119hr8874eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8874/BILLS-119hr8874rfs.htm"
         }
       ]
     },
@@ -34007,7 +34092,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Joseph Morelle (D-NY) with 3 cosponsors. Cleared the House per the latest recorded action; no Senate action is recorded.",
@@ -34109,6 +34194,16 @@
           "type": "Introduced in House",
           "date": "2026-05-12",
           "url": "https://www.congress.gov/119/bills/hr8738/BILLS-119hr8738ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8738/BILLS-119hr8738eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8738/BILLS-119hr8738rfs.htm"
         }
       ]
     },
@@ -34320,7 +34415,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Brian Fitzpatrick (R-PA) with 2 cosponsors. Cleared the House per the latest recorded action.",
@@ -34442,6 +34537,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr3535/BILLS-119hr3535rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr3535/BILLS-119hr3535eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr3535/BILLS-119hr3535rfs.htm"
         }
       ],
       "referencedSources": [
@@ -34543,15 +34648,6 @@
         "The bill does not include an appropriation or resource plan for the D.C. courts or corrections agencies that would handle the change."
       ],
       "featured_quotes": [
-        {
-          "name": "Ms. Norton",
-          "party": "D",
-          "state": "DC",
-          "bioguideId": "N000147",
-          "text": "The D.C. statehood bill, H.R. 51, the Washington, D.C. Admission Act, grants D.C. residents full local self-government and voting representation in Congress. H.R. 51 reduces the size of the Federal District from 68 square miles to 2 square miles, consisting of the White House, the Capitol, the Supreme Court, and the National Mall and remaining under the control of Congress.",
-          "stance": "neutral",
-          "chamber": "House"
-        },
         {
           "name": "Mr. Comer",
           "party": "R",
@@ -35287,7 +35383,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Ryan Mackenzie (R-PA) with 2 cosponsors. Cleared the House per the latest recorded action.",
@@ -35413,6 +35509,16 @@
           "type": "Reported in House",
           "date": "2026-07-09",
           "url": "https://www.congress.gov/119/bills/hr8897/BILLS-119hr8897rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8897/BILLS-119hr8897eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8897/BILLS-119hr8897rfs.htm"
         }
       ]
     },
@@ -35440,7 +35546,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Carlos Gimenez (R-FL) with 1 cosponsor. Cleared the House per the latest recorded action.",
@@ -35563,6 +35669,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr9388/BILLS-119hr9388rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr9388/BILLS-119hr9388eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr9388/BILLS-119hr9388rfs.htm"
         }
       ]
     },
@@ -35689,15 +35805,6 @@
           "text": "As a matter of background, Mr. Speaker, in January 2023, the D.C. Council enacted the Comprehensive Policing and Justice Reform Amendment Act of 2022, the CPJRA Act, D.C. Law 24-345, among numerous other police-related policy matters, most of which we advised against in the Oversight and Government Reform Committee. We met with D.C. officials, including in hearings, and we advised against what they intended to do.",
           "stance": "neutral",
           "chamber": "House"
-        },
-        {
-          "name": "Ms. Norton",
-          "party": "D",
-          "state": "DC",
-          "bioguideId": "N000147",
-          "text": "The D.C. statehood bill, H.R. 51, the Washington, D.C. Admission Act, grants D.C. residents full local self-government and voting representation in Congress. H.R. 51 reduces the size of the Federal District from 68 square miles to 2 square miles, consisting of the White House, the Capitol, the Supreme Court, The National Mall and remaining under the control of Congress.",
-          "stance": "neutral",
-          "chamber": "House"
         }
       ],
       "changes": {
@@ -35767,7 +35874,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Timothy Kennedy (D-NY) with 1 cosponsor. Cleared the House per the latest recorded action.",
@@ -35890,6 +35997,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr3106/BILLS-119hr3106rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr3106/BILLS-119hr3106eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr3106/BILLS-119hr3106rfs.htm"
         }
       ]
     },
@@ -35917,7 +36034,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Sponsored by Rep. Sheri Biggs (R-SC) with 2 cosponsors. Cleared the House per the latest recorded action.",
@@ -36041,6 +36158,16 @@
           "type": "Reported in House",
           "date": "2026-07-13",
           "url": "https://www.congress.gov/119/bills/hr9328/BILLS-119hr9328rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr9328/BILLS-119hr9328eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr9328/BILLS-119hr9328rfs.htm"
         }
       ]
     },
@@ -36475,9 +36602,8 @@
           "party": "D",
           "state": "OR",
           "bioguideId": "B001278",
-          "text": "As trans student and successful athlete Rebekah said: ``I know what it is like to have my gender questioned. . . . It is invasive and embarrassing. I wouldn't want anyone else to have to go through that,'' and, ``It is awful. Legislators are bullying kids.'' Mr. Speaker, I yield 1 minute to the gentleman from California (Mr. Takano).",
-          "stance": "neutral",
-          "chamber": "House"
+          "text": "As trans student and successful athlete Rebekah said: ``I know what it is like to have my gender questioned. . . . It is invasive and embarrassing. I wouldn't want anyone else to have to go through that,'' and, ``It is awful. Legislators are bullying kids.",
+          "stance": "neutral"
         },
         {
           "name": "Mr. Takano",
@@ -36485,8 +36611,7 @@
           "state": "CA",
           "bioguideId": "T000472",
           "text": "I rise in strong, unequivocal opposition to H.R. 28, the Republican child predator empowerment act. This bill lets politicians in Washington dictate to parents, school districts, and athletic associations across the country who can and cannot participate in their local sports leagues. It creates a one-size-fits-all policy that holds a kindergartner wanting to play soccer to the same standards as an elite athlete.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Mr. Walberg",
@@ -36494,8 +36619,7 @@
           "state": "MI",
           "bioguideId": "W000798",
           "text": "I would call attention to the fact that, in this bill, we offer no requirement for any type of invasive checks on women or men. They simply have to go to the birth certificate. That will give the answer.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Mr. Rulli",
@@ -36503,8 +36627,7 @@
           "state": "OH",
           "bioguideId": "R000619",
           "text": "There is no reason we should even be having this conversation right now. H.R. 28 is a women's rights bill to protect Title IX, which was constructed to protect women's rights. This first came on my radar while I was a member of the Ohio Senate. I had a lesbian couple shopping in my store, and they asked me to step aside to talk to me for a minute. They said that I needed to protect women's sports. We had Title IX. Since we had Stonewall 50 years ago, this couple told me, they have worked their entire life for women's rights.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Ms. Adams",
@@ -36512,8 +36635,7 @@
           "state": "NC",
           "bioguideId": "A000370",
           "text": "I rise because this bill threatens the principles that make our schools and sports fields places of opportunity. This bill does not protect anyone. It unjustly targets transgender women and girls under the guise of fairness, but exclusion is not fairness, Mr. Speaker. Fairness is ensuring that every athlete can participate, grow, and thrive. For this reason, at the appropriate time, I will offer a motion to recommit this bill back to the committee.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         },
         {
           "name": "Ms. Ansari",
@@ -36521,8 +36643,7 @@
           "state": "AZ",
           "bioguideId": "A000381",
           "text": "I rise today to oppose the GOP child predator empowerment act. This bill is an egregious attack on young women and girls. Everyone in this room knows that this legislation has the power to threaten the physical and mental safety of minors. Schools and athletic institutions already have rules around fairness and safety in children's sports. This is literally why we have the NCAA. This bill is textbook government overreach meant to fuel division.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "neutral"
         }
       ],
       "changes": {
@@ -36797,7 +36918,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 40,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with two cosponsors; referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
@@ -36939,6 +37060,16 @@
           "type": "Reported in House",
           "date": "2026-07-09",
           "url": "https://www.congress.gov/119/bills/hr7574/BILLS-119hr7574rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr7574/BILLS-119hr7574eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr7574/BILLS-119hr7574rfs.htm"
         }
       ]
     },
@@ -36966,7 +37097,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 45,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with six cosponsors and referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
@@ -37097,6 +37228,16 @@
           "type": "Reported in House",
           "date": "2026-07-09",
           "url": "https://www.congress.gov/119/bills/hr8770/BILLS-119hr8770rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8770/BILLS-119hr8770eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8770/BILLS-119hr8770rfs.htm"
         }
       ]
     },
@@ -37313,7 +37454,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-07-13",
+      "stageDate": "2026-07-14",
       "likelihood": 45,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "House passage recorded July 13, 2026 per the latest action. Sponsored by a Republican member with one cosponsor; referred to the House Committee on Homeland Security. The measure now moves to the Senate.",
@@ -37452,6 +37593,16 @@
           "type": "Reported in House",
           "date": "2026-07-09",
           "url": "https://www.congress.gov/119/bills/hr8168/BILLS-119hr8168rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-13",
+          "url": "https://www.congress.gov/119/bills/hr8168/BILLS-119hr8168eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr8168/BILLS-119hr8168rfs.htm"
         }
       ]
     },
@@ -38354,6 +38505,1130 @@
           "type": "Placed on Calendar Senate",
           "date": "2025-04-29",
           "url": "https://www.congress.gov/119/bills/hr2444/BILLS-119hr2444pcs.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-911",
+      "code": "S.911",
+      "title": "Chief Herbert D. Proffitt Act of 2025",
+      "official_title": "To amend the Omnibus Crime Control and Safe Streets Act of 1968 to include certain retired law enforcement officers in the public safety officers' death benefits program.",
+      "date": "2025-03-10",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Cortez Masto, Catherine (D-NV)",
+      "sponsor_bioguide": "C001113",
+      "cosponsors": 9,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2025-08-01",
+      "likelihood": 75,
+      "likelihoodLabel": "Likely",
+      "likelihoodReason": "Introduced by Sen. Catherine Cortez Masto (D-NV) with Sen. Mitch McConnell (R-KY) — a cross-aisle sponsor pairing on public-safety benefits. The measure passed the Senate by Unanimous Consent on July 29, 2025 and was received in the House on August 1, 2025 per the latest recorded action. The 2012 retroactivity window and the fiscal cost of new claims are the most likely points of pushback.",
+      "referencedSources": [
+        {
+          "id": "usc-34-10281",
+          "kind": "statute",
+          "label": "34 U.S.C. 10281",
+          "citation": "34 U.S.C. 10281",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title34/granules/USCODE-2024-title34-subtitleI-chap101-subchapXI-partA-sec10281/htm",
+          "textFile": "data/ref-text/usc-34-10281.txt",
+          "fetchedAt": "2026-07-20"
+        }
+      ],
+      "summary": "The Public Safety Officers' Benefits program, run by the Justice Department's Bureau of Justice Assistance, pays a $250,000 line-of-duty death benefit (adjusted each year for inflation) and matching disability benefit to the families of police, firefighters, and other public safety officers killed or permanently disabled on the job. This bill extends the same benefit to retired law enforcement officers who die or become permanently and totally disabled as a direct and proximate result of a targeted attack because of their prior service as an officer.",
+      "brief": "Adds retired law enforcement officers targeted for their prior service to the federal Public Safety Officers' Benefits program, with claims applying retroactively to attacks on or after January 1, 2012.",
+      "top_lines": [
+        {
+          "headline": "What the Program Pays",
+          "billSection": "2",
+          "source": "usc-34-10281",
+          "subs": [
+            "$250,000 death benefit, adjusted each October for inflation",
+            "Same amount payable for permanent and total disability",
+            "Interim benefit up to $6,000 while a claim is pending"
+          ]
+        },
+        {
+          "headline": "New Eligibility for Retired Officers",
+          "billSection": "2",
+          "subs": [
+            "Covers officers who separated in good standing as a law enforcement officer",
+            "Trigger: death or permanent total disability from a targeted attack",
+            "Attack must be because of the officer's prior law enforcement service"
+          ]
+        },
+        {
+          "headline": "Retroactive Window",
+          "billSection": "2",
+          "subs": [
+            "Applies to any qualifying attack on or after January 1, 2012",
+            "Also covers claims pending before the Bureau of Justice Assistance",
+            "Takes effect on the date of enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Inclusion of Certain Retired Public Safety Officers in the Public Safety Officers' Death Benefits Program",
+          "items": [
+            {
+              "main": "Adds a new subsection (p) to 34 U.S.C. 10281 making retired law enforcement officers eligible for the Public Safety Officers' Benefits program when they die or become permanently and totally disabled from a targeted attack tied to their prior service.",
+              "detail": "A \"retired law enforcement officer\" is defined as an individual who separated in good standing as a law enforcement officer in an official capacity at a public agency, with or without compensation. Eligibility requires that the death or permanent-and-total disability be the direct and proximate result of a personal injury from a targeted attack because of the officer's service as a law enforcement officer. Claims are processed by the Bureau of Justice Assistance under the existing benefits framework.",
+              "comments": []
+            },
+            {
+              "main": "Sets a retroactive effective date so the new eligibility reaches back to targeted attacks occurring on or after January 1, 2012.",
+              "detail": "The amendments take effect on the date of enactment and apply to any matter pending before the Bureau of Justice Assistance on that date, or filed or accruing after it. As an exception to that general rule, the amendment applies to any action taken against a retired law enforcement officer on or after January 1, 2012.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(b)(2) — Exceptions",
+          "summary": "The bill reaches back nearly 14 years before enactment, applying the new eligibility to any qualifying targeted attack on or after January 1, 2012.",
+          "why_unreported": "The section heading names an \"exception\" to the general effective-date rule, but the operative effect is a broad retroactivity window that opens years of prior incidents to new claim filings — a scope not stated in the bill's short title or Section 2 heading."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill extends eligibility to retired officers but does not define \"targeted attack\" or list the evidence required to establish that an attack was \"because of\" the retiree's prior service.",
+        "The bill applies retroactively to January 1, 2012 but does not set a filing deadline for pre-enactment claims or address how the Bureau of Justice Assistance should prioritize backlogged retroactive claims against current-year filings.",
+        "The bill relies on the existing inflation-adjusted death benefit and disability-benefit mechanism in 34 U.S.C. 10281 but does not authorize additional appropriations to cover the new class of claims.",
+        "The bill uses \"retired law enforcement officer\" only and does not address whether retired firefighters, emergency medical responders, or other public safety officers targeted for prior service qualify."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New subsection 34 U.S.C. 10281(p) — eligibility for retired law enforcement officers who die or become permanently and totally disabled from a targeted attack tied to their prior service"
+        ],
+        "modified": [
+          "34 U.S.C. 10281 (Public Safety Officers' Death Benefits — Payment of death benefits) — expanded to cover certain retired officers, with retroactive reach to targeted attacks on or after January 1, 2012"
+        ],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-20",
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-07-29",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in Senate",
+          "date": "2025-03-10",
+          "url": "https://www.congress.gov/119/bills/s911/BILLS-119s911is.htm"
+        },
+        {
+          "type": "Reported to Senate",
+          "date": "2025-05-20",
+          "url": "https://www.congress.gov/119/bills/s911/BILLS-119s911rs.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2025-07-29",
+          "url": "https://www.congress.gov/119/bills/s911/BILLS-119s911es.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-356",
+      "code": "S.356",
+      "title": "Secure Rural Schools Reauthorization Act of 2025",
+      "official_title": "To extend the Secure Rural Schools and Community Self-Determination Act of 2000.",
+      "date": "2025-02-03",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Crapo, Mike (R-ID)",
+      "sponsor_bioguide": "C000880",
+      "cosponsors": 28,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "billType": "reauthorization",
+      "stageDate": "2025-12-18",
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law December 18, 2025 as Public Law 119-58. Sponsored by Sen. Mike Crapo (R-ID) with 28 cosponsors; passed the Senate June 18, 2025 and the House December 9, 2025.",
+      "referencedSources": [
+        {
+          "id": "usc-16-7101",
+          "kind": "statute",
+          "label": "16 U.S.C. 7101",
+          "citation": "16 U.S.C. 7101",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-sec7101/htm",
+          "textFile": "data/ref-text/usc-16-7101.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7111",
+          "kind": "statute",
+          "label": "16 U.S.C. 7111",
+          "citation": "16 U.S.C. 7111",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapI-sec7111/htm",
+          "textFile": "data/ref-text/usc-16-7111.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7112",
+          "kind": "statute",
+          "label": "16 U.S.C. 7112",
+          "citation": "16 U.S.C. 7112",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapI-sec7112/htm",
+          "textFile": "data/ref-text/usc-16-7112.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7113",
+          "kind": "statute",
+          "label": "16 U.S.C. 7113",
+          "citation": "16 U.S.C. 7113",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapI-sec7113/htm",
+          "textFile": "data/ref-text/usc-16-7113.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7125",
+          "kind": "statute",
+          "label": "16 U.S.C. 7125",
+          "citation": "16 U.S.C. 7125",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapII-sec7125/htm",
+          "textFile": "data/ref-text/usc-16-7125.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7128",
+          "kind": "statute",
+          "label": "16 U.S.C. 7128",
+          "citation": "16 U.S.C. 7128",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapII-sec7128/htm",
+          "textFile": "data/ref-text/usc-16-7128.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7142",
+          "kind": "statute",
+          "label": "16 U.S.C. 7142",
+          "citation": "16 U.S.C. 7142",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapIII-sec7142/htm",
+          "textFile": "data/ref-text/usc-16-7142.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-16-7144",
+          "kind": "statute",
+          "label": "16 U.S.C. 7144",
+          "citation": "16 U.S.C. 7144",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap90-subchapIII-sec7144/htm",
+          "textFile": "data/ref-text/usc-16-7144.txt",
+          "fetchedAt": "2026-07-20"
+        }
+      ],
+      "summary": "The Secure Rural Schools (SRS) program, first enacted in 2000, pays counties that contain Forest Service or Bureau of Land Management (BLM) land a formula-based \"State payment\" or \"county payment\" for schools, roads, and other municipal services — an alternative to the traditional 25-percent (Forest Service) or 50-percent (BLM) share of receipts from timber sales and other federal-land revenues. This Act reauthorizes those SRS payments through fiscal year 2026, restores the lapsed payments for fiscal years 2024 and 2025 (which the Secretary of the Treasury must pay within 45 days of enactment), and extends the authority to initiate Resource Advisory Committee (RAC) Title II special projects on federal land and to spend Title III county funds through fiscal year 2028.",
+      "brief": "Reauthorizes the Secure Rural Schools program through fiscal year 2026, pays out the lapsed fiscal year 2024 and 2025 amounts within 45 days of enactment, and extends the Title II special-projects and Title III county-funds authorities through fiscal year 2028.",
+      "top_lines": [
+        {
+          "headline": "What SRS Pays For",
+          "billSection": "2",
+          "source": [
+            "usc-16-7101",
+            "usc-16-7111",
+            "usc-16-7112"
+          ],
+          "subs": [
+            "Formula payments to counties containing Forest Service or BLM land",
+            "Funds schools, roads, and other municipal services",
+            "Alternative to the 25-percent (Forest Service) or 50-percent (BLM) revenue share"
+          ]
+        },
+        {
+          "headline": "SRS Payments Extended",
+          "billSection": "2",
+          "subs": [
+            "State/county payment authority extended through fiscal year 2026",
+            "Restores payments that lapsed for fiscal years 2024 and 2025",
+            "Treasury must issue those lapsed payments within 45 days of enactment"
+          ]
+        },
+        {
+          "headline": "Election Waived for 2024-2025",
+          "billSection": "2",
+          "source": "usc-16-7112",
+          "subs": [
+            "Counties skip the biennial election for fiscal years 2024 and 2025",
+            "Their fiscal year 2023 election choice carries over automatically"
+          ]
+        },
+        {
+          "headline": "Title II & Title III Extensions",
+          "billSection": "2",
+          "source": [
+            "usc-16-7128",
+            "usc-16-7125"
+          ],
+          "subs": [
+            "RAC special-projects initiation authority extended from 2025 to 2028",
+            "Unobligated Title II funds return to Treasury deadline pushed from 2026 to 2029",
+            "County Title III fund-expenditure authority extended from 2025 to 2028",
+            "RAC composition waiver and pilot program authorities extended to 2026"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Extension of Secure Rural Schools and Community Self-Determination Act of 2000",
+          "items": [
+            {
+              "main": "Extends the SRS State and county payment authority in Section 101 (16 U.S.C. 7111) and the California-only county-share distribution rule in Section 103(d)(2) (16 U.S.C. 7113(d)(2)) by striking \"2023\" and inserting \"2026\" wherever those year references appear.",
+              "detail": "Section 101 sets the formula the Secretary of Agriculture and Secretary of the Interior use to calculate the State payment (Forest Service counties) and county payment (BLM counties) for eligible jurisdictions. Section 103(d) is a California-only rule that distributes the State-payment share to California's eligible counties in the same proportion those counties received under the pre-2008 formula. The prior authorization covered fiscal years 2008-2015 and 2017-2023; the extension adds fiscal years 2024, 2025, and 2026.",
+              "comments": [],
+              "source": ["usc-16-7111", "usc-16-7113"]
+            },
+            {
+              "main": "Adds a new Section 101(e) with a special rule for fiscal year 2024 and 2025 payments and a 45-day prompt-payment deadline for the Secretary of the Treasury.",
+              "detail": "For any eligible county that already received a share of the 25-percent (Forest Service) or 50-percent (BLM) payment for fiscal year 2024 or 2025, the corresponding State or county payment is reduced by the amount already received — preventing double payment. The Secretary of the Treasury must make all title I payments for fiscal years 2024 and 2025 not later than 45 days after enactment.",
+              "comments": []
+            },
+            {
+              "main": "Amends Section 102 (16 U.S.C. 7112) so counties do not have to file a fresh biennial election for fiscal years 2024 and 2025 — their fiscal year 2023 election choice carries over.",
+              "detail": "Under existing law each affected county elects between the 25-percent/50-percent traditional payment and the State/county SRS payment on a two-fiscal-year cycle. The bill waives that election for fiscal years 2024 and 2025 for both the payment-type choice in subsection (b) and the intended use-of-funds choice in subsection (d), with the fiscal year 2023 elections treated as effective for those years.",
+              "comments": [],
+              "source": "usc-16-7112"
+            },
+            {
+              "main": "Extends the Title II authority to initiate special projects on federal land under Section 208 (16 U.S.C. 7128) from September 30, 2025 to September 30, 2028, and pushes the deadline for depositing unobligated project funds in the Treasury from September 30, 2026 to September 30, 2029.",
+              "detail": "Title II projects — proposed by Resource Advisory Committees for forest restoration, road maintenance, watershed work, and similar activities on Forest Service and BLM land — could no longer be initiated after September 30, 2025 under prior law. The bill gives RACs three more fiscal years to obligate project funds and three more years before unspent balances revert.",
+              "comments": [],
+              "source": "usc-16-7128"
+            },
+            {
+              "main": "Extends the Title III authority for eligible counties to expend county funds under Section 305 (16 U.S.C. 7144) from 2025 to 2028, and the corresponding return-of-funds deadline from 2026 to 2029.",
+              "detail": "Title III funds are the portion of the SRS payment a county may spend directly on carrying out the Firewise Communities program, reimbursing emergency services on federal land, or developing community wildfire protection plans. The bill extends both the authority to spend and the deadline to obligate by three fiscal years.",
+              "comments": [],
+              "source": ["usc-16-7142", "usc-16-7144"]
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Resource Advisory Committee Pilot Program Extension",
+          "items": [
+            {
+              "main": "Extends the Resource Advisory Committee pilot program in Section 205(g) (16 U.S.C. 7125(g)) from 2023 to 2026 by striking \"2023\" in the paragraph (5) termination-of-effectiveness clause, and strikes paragraph (6) (the post-termination \"Report to Congress\" requirement).",
+              "detail": "Paragraph (5) is the pilot program's actual sunset — before this bill it terminated on October 1, 2023. Paragraph (6) required the Secretary to report back to Congress within 180 days of that termination date on how regional vs. national appointments compared. Extending paragraph (5)'s date to 2026 keeps the pilot running through fiscal year 2026, and striking paragraph (6) removes the accompanying report-to-Congress requirement.",
+              "comments": [],
+              "source": "usc-16-7125"
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Technical Corrections",
+          "items": [
+            {
+              "main": "Makes technical corrections to Section 205 (16 U.S.C. 7125) and Section 206(b)(2) (16 U.S.C. 7126(b)(2)) — punctuation, a missing article, and replacing \"the date of the enactment of this Act\" with the fixed date \"October 3, 2008\".",
+              "detail": "The corrections replace \"concerned,\" with \"concerned\" in two places (Section 205(c)(1) and Section 206(b)(2)), insert \"the\" into the phrase \"to extent\", and fix the ambiguous cross-reference to an enactment date by naming the specific date the underlying provisions took effect.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a)(1)(B) — Prompt Payment",
+          "summary": "The Secretary of the Treasury has 45 days after enactment to issue every fiscal year 2024 and 2025 SRS payment — a fixed deliverable placed inside the retroactive-payment offset rules.",
+          "why_unreported": "The 45-day Treasury deadline sits inside a subsection captioned \"Special Rule for Fiscal Year 2024 and 2025 Payments,\" whose text is otherwise devoted to double-payment offsets — the operational deliverable is not surfaced in the section heading."
+        },
+        {
+          "section": "Section 3 — Resource Advisory Committee Pilot Program Extension",
+          "summary": "Along with extending the pilot, the section strikes paragraph (6) of 16 U.S.C. 7125(g) entirely — a removal, not just an extension.",
+          "why_unreported": "The section label describes only the extension; the removal of paragraph (6) is not signaled in the section title."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill extends SRS payments through fiscal year 2026 but does not appropriate a specific dollar amount — the payment formula in 16 U.S.C. 7111 relies on the \"full funding amount\" defined elsewhere in the underlying Act, and no new authorization figure is stated.",
+        "The bill provides retroactive fiscal year 2024 and 2025 payments but does not address whether counties owe interest, penalty offsets, or reconciliation for spending decisions already made on the assumption no payment would arrive.",
+        "The bill extends Title II special-projects authority to fiscal year 2028 but does not add or modify criteria for which projects a Resource Advisory Committee may recommend.",
+        "The bill relies on the existing 25-percent and 50-percent revenue-sharing baselines but does not adjust those percentages to reflect current federal-land receipt levels.",
+        "The bill covers Forest Service and Bureau of Land Management counties but does not extend SRS eligibility to counties containing other categories of federal land (e.g., National Park Service, Bureau of Indian Affairs, military installations)."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New Section 101(e) of the Secure Rural Schools Act (16 U.S.C. 7111) — special rule for fiscal year 2024 and 2025 payments with double-payment offsets and a 45-day Treasury prompt-payment deadline",
+          "New Section 102(b)(1)(E), 102(b)(2)(C), 102(d)(1)(G), and 102(d)(3)(E) (16 U.S.C. 7112) — waiver of the biennial election for fiscal years 2024 and 2025 and carryover of fiscal year 2023 elections"
+        ],
+        "modified": [
+          "16 U.S.C. 7111 (SRS State and county payment authority) — year \"2023\" replaced with \"2026\" in subsections (a) and (b)",
+          "16 U.S.C. 7113(d)(2) (distribution of payments to eligible counties) — year \"2023\" replaced with \"2026\"",
+          "16 U.S.C. 7125(d)(6)(C) (RAC committee composition waiver authority) — year \"2023\" replaced with \"2026\"",
+          "16 U.S.C. 7125(g)(5) (RAC pilot program) — year \"2023\" replaced with \"2026\"",
+          "16 U.S.C. 7128(a) (Title II authority to initiate special projects) — termination date moved from September 30, 2025 to September 30, 2028",
+          "16 U.S.C. 7128(b) (Title II unobligated-funds deadline) — date moved from September 30, 2026 to September 30, 2029",
+          "16 U.S.C. 7144(a) (Title III county fund expenditure authority) — year \"2025\" replaced with \"2028\"",
+          "16 U.S.C. 7144(b) (Title III county fund return date) — year \"2026\" replaced with \"2029\""
+        ],
+        "removed": [
+          "Paragraph (6) of 16 U.S.C. 7125(g) — the RAC pilot program sunset paragraph struck by Section 3"
+        ]
+      },
+      "budget_accounts": {},
+      "analyzedAt": "2026-07-20",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-09",
+          "question": "On Motion to Suspend the Rules and Pass",
+          "result": "Passed",
+          "yeas": 399,
+          "nays": 5,
+          "present": 0,
+          "notVoting": 28,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in Senate",
+          "date": "2025-02-03",
+          "url": "https://www.congress.gov/119/bills/s356/BILLS-119s356is.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2025-06-18",
+          "url": "https://www.congress.gov/119/bills/s356/BILLS-119s356es.htm"
+        },
+        {
+          "type": "Public Law",
+          "date": "2025-12-19",
+          "url": "https://www.congress.gov/119/plaws/publ58/PLAW-119publ58.htm"
+        },
+        {
+          "type": "Enrolled Bill",
+          "date": null,
+          "url": "https://www.congress.gov/119/bills/s356/BILLS-119s356enr.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-216",
+      "code": "S.216",
+      "title": "Save Our Seas 2.0 Amendments Act",
+      "official_title": "To amend the Save Our Seas 2.0 Act to improve the administration of the Marine Debris Foundation, to amend the Marine Debris Act to improve the administration of the Marine Debris Program of the National Oceanic and Atmospheric Administration, and for other purposes.",
+      "date": "2025-01-23",
+      "version": "v1.0",
+      "stage": "signed",
+      "stageLabel": "Signed into Law",
+      "currentStep": 4,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Sullivan, Dan (R-AK)",
+      "sponsor_bioguide": "S001198",
+      "cosponsors": 1,
+      "pages": 6,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2025-12-26",
+      "likelihood": 100,
+      "likelihoodLabel": "Enacted",
+      "likelihoodReason": "Signed into law December 26, 2025 as Public Law 119-65. Sponsored by Sen. Dan Sullivan (R-AK) with one cosponsor; passed the Senate May 20, 2025 and the House December 15, 2025 on the strength of a favorable Commerce Committee report (S. Rept. 119-12). The bill is largely structural and administrative — restructuring an existing NOAA program and its associated congressionally chartered foundation — rather than authorizing new dollars, which is the profile that typically clears both chambers by voice or unanimous consent.",
+      "referencedSources": [
+        {
+          "id": "usc-33-1951",
+          "kind": "statute",
+          "label": "33 U.S.C. 1951 (Marine Debris Act — Purpose)",
+          "citation": "33 U.S.C. 1951",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title33/granules/USCODE-2024-title33-chap33A-sec1951/htm",
+          "textFile": "data/ref-text/usc-33-1951.txt",
+          "fetchedAt": "2026-07-20"
+        },
+        {
+          "id": "usc-33-1952",
+          "kind": "statute",
+          "label": "33 U.S.C. 1952 (NOAA Marine Debris Program)",
+          "citation": "33 U.S.C. 1952",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title33/granules/USCODE-2024-title33-chap33A-sec1952/htm",
+          "textFile": "data/ref-text/usc-33-1952.txt",
+          "fetchedAt": "2026-07-20"
+        }
+      ],
+      "summary": "The National Oceanic and Atmospheric Administration (NOAA) Marine Debris Program identifies, prevents, and removes marine debris (including lost and discarded fishing gear) to protect the U.S. economy, marine environment, and navigation safety; the Marine Debris Foundation is the congressionally chartered nonprofit that raises private funds and runs grant programs alongside it. This bill restructures both — reorganizing the Marine Debris Act into subtitles, giving the NOAA Marine Debris Program authority to use \"other agreements\" and in-kind contributions, tightening Foundation governance (Board recommendations, Secretary of Commerce approval, a chief executive officer role, and location in the National Capital Region or a coastal shoreline community), adding Indian Tribe / Tribal Government engagement provisions, and reauthorizing the underlying Marine Debris Act through fiscal year 2029 with an additional $2M for fiscal year 2025.",
+      "brief": "Restructures NOAA's Marine Debris Program and the Marine Debris Foundation, adds Tribal engagement and outreach requirements, and reauthorizes the underlying Marine Debris Act through fiscal year 2029.",
+      "top_lines": [
+        {
+          "headline": "What the Program & Foundation Do",
+          "billSection": "2",
+          "source": [
+            "usc-33-1951",
+            "usc-33-1952"
+          ],
+          "subs": [
+            "NOAA Marine Debris Program identifies, prevents, and removes marine debris nationwide",
+            "Runs national/regional coordination with states, Tribes, and regional organizations",
+            "Marine Debris Foundation raises private funds and awards grants alongside the program"
+          ]
+        },
+        {
+          "headline": "Program Modernization",
+          "billSection": "2",
+          "subs": [
+            "Adds \"other agreements\" to NOAA Marine Debris Program contracting authority",
+            "Lets the Under Secretary contribute in-kind for non-grant, non-cooperative-agreement projects",
+            "Reorganizes the Marine Debris Act into Subtitles A (NOAA/Coast Guard), B (Foundation), C (transferred), and D (Administration)"
+          ]
+        },
+        {
+          "headline": "Foundation Governance Overhaul",
+          "billSection": "3",
+          "subs": [
+            "Board must recommend candidates before Under Secretary appoints",
+            "Director appointments now require Secretary of Commerce approval",
+            "6-year terms for appointed Directors",
+            "Adds USAID Administrator to the Board's ex officio membership",
+            "Foundation must locate its principal office in the National Capital Region or a coastal shoreline community"
+          ]
+        },
+        {
+          "headline": "New CEO Role",
+          "billSection": "3",
+          "subs": [
+            "Board appoints, reviews, and may remove the Foundation's chief executive officer",
+            "Chief executive officer, in turn, appoints and reviews all Foundation officers and employees"
+          ]
+        },
+        {
+          "headline": "Tribal Engagement Added",
+          "billSection": "3",
+          "subs": [
+            "Foundation must develop best practices for outreach to Indian Tribes and Tribal Governments",
+            "Includes technical assistance, capacity building, and awareness of grants",
+            "Adds Indian Tribes, Tribal organizations, regional organizations, and foreign governments to the list of authorized grant recipients",
+            "Rule of construction: nothing satisfies government-to-government consultation or affects treaty rights"
+          ]
+        },
+        {
+          "headline": "Money & Reauthorization",
+          "billSection": "3",
+          "subs": [
+            "Adds $2M for fiscal year 2025 to the Marine Debris Foundation authorization",
+            "Reauthorizes the underlying Marine Debris Act appropriations through fiscal year 2029"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Modifications to the Marine Debris Program of the National Oceanic and Atmospheric Administration",
+          "items": [
+            {
+              "main": "Reorganizes the Marine Debris Act by inserting a new \"Subtitle A — NOAA and Coast Guard Programs\" heading and redesignating sections 3 through 6 (33 U.S.C. 1952-1955) as sections 101 through 104.",
+              "detail": "The renumbering is structural — no substantive change to the underlying program authorities — and sets up the transfers of the Save Our Seas 2.0 Act's Foundation and cross-cutting provisions into the Marine Debris Act as Subtitle B and Subtitle C, respectively.",
+              "comments": []
+            },
+            {
+              "main": "Expands the NOAA Marine Debris Program's contracting authority under Section 101(d) (33 U.S.C. 1952(d)) to include \"other agreements\" and adds a new in-kind contribution mechanism.",
+              "detail": "The subsection heading and text are amended to add \"other agreements\" alongside the existing grants, cooperative agreements, and contracts. A new paragraph (7) allows the Under Secretary to contribute in-kind — up to the amount of the benefit NOAA derives from the project — for projects funded through a contract or other agreement that is not a cooperative agreement or a grant.",
+              "comments": [],
+              "source": "usc-33-1952"
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Modifications to the Marine Debris Foundation",
+          "items": [
+            {
+              "main": "Transfers Subtitle B of title I of the Save Our Seas 2.0 Act (Public Law 116-224) into the Marine Debris Act after new Section 104, so the Marine Debris Foundation provisions now live in the Marine Debris Act at 33 U.S.C. 1961-1969.",
+              "detail": "The transfer places the Foundation charter, Board of Directors, Powers, and related provisions inside the Marine Debris Act framework. Section 111(a) is amended to describe the Foundation as a \"corporation\" rather than an \"organization\", and Section 111(b) adds \"Indian Tribes\" to the purposes reference alongside \"Tribal governments\".",
+              "comments": []
+            },
+            {
+              "main": "Overhauls the Board of Directors selection under Section 112(b): the Board must recommend candidates before the Under Secretary appoints, appointments now require Secretary of Commerce approval, and appointed Directors serve 6-year terms.",
+              "detail": "New paragraph (1) requires the Board to submit candidate recommendations to the Under Secretary. Amendments to paragraphs (2) and (4)(A) each insert \"with the approval of the Secretary of Commerce\" after \"the Board\", extending Commerce Department sign-off to the Board actions those paragraphs govern. Paragraph (3) is rewritten to set Director terms at 6 years. Paragraph (6) adds the Administrator of the United States Agency for International Development to the ex officio membership and requires Secretary of Commerce approval alongside the EPA Administrator.",
+              "comments": []
+            },
+            {
+              "main": "Creates a chief executive officer role for the Foundation with hire, review, and removal authority over all other Foundation officers and employees.",
+              "detail": "A new Section 112(h) provides that the Board shall appoint and review the performance of, and may remove, the chief executive officer of the Foundation. The chief executive officer, in turn, may appoint, remove, and review the performance of any officer or employee of the Foundation. Conforming amendments in Section 112(g) shift the earlier reference from \"officers and employees\" to \"the initial officers and employees\" and swap \"its chief operating officer\" for \"the chief executive officer of the Foundation.\"",
+              "comments": []
+            },
+            {
+              "main": "Requires the Foundation's principal office to be located in the National Capital Region — as defined in 10 U.S.C. 2674(f)(2) — or a coastal shoreline community, and adds best-practices requirements for Tribal outreach.",
+              "detail": "A new Section 113(g) sets the principal-office location. A new Section 113(h) requires the Foundation to develop and implement best practices for outreach to Indian Tribes and Tribal Governments, including a process to support technical assistance and capacity building and to promote awareness of programs and grants. A new Section 113(i) is a rule of construction: nothing in the Act satisfies government-to-government consultation with Tribal Governments or affects or modifies any treaty right of any Tribal Government.",
+              "comments": []
+            },
+            {
+              "main": "Amends Section 118(a) — the Foundation authorization — to add $2M for fiscal year 2025 and to broaden the list of authorized grant recipients.",
+              "detail": "Paragraph (1) inserts the fiscal year 2025 amount after the existing \"through 2024\" authorization language. Paragraph (2) replaces \"and State and local government agencies\" with \", State and local government agencies, regional organizations, Indian Tribes, Tribal organizations, and foreign governments\" — extending grant eligibility beyond the prior State/local baseline.",
+              "comments": []
+            },
+            {
+              "main": "Reauthorizes Section 9(a) of the Marine Debris Act — the underlying appropriations authorization — through fiscal year 2029.",
+              "detail": "The prior authorization language is replaced with \"for each of fiscal years 2018 through 2029 for carrying out\" — extending the appropriations window that funds the NOAA Marine Debris Program and related activities.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Transfers",
+          "items": [
+            {
+              "main": "Transfers Subtitle C of title I of the Save Our Seas 2.0 Act (33 U.S.C. 1971-1977) into the Marine Debris Act after Section 119, and moves sections 7, 8, 9 (as amended), and 10 of the Marine Debris Act (33 U.S.C. 1981-1984) to appear after Section 127 as new Sections 131, 132, 133, and 134.",
+              "detail": "A new heading \"Subtitle D — Administration\" is inserted before Section 131. The transfers put the definitions, authorization, and general-provisions sections all inside a single reorganized Marine Debris Act.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Definitions",
+          "items": [
+            {
+              "main": "Rewrites the definitions section (new Section 131 / 33 U.S.C. 1981) — striking one paragraph, renumbering the remaining paragraphs, and inserting nine new terms.",
+              "detail": "New defined terms include \"circular economy,\" \"coastal shoreline community\" (city or county directly adjacent to the open ocean, major estuaries, or the Great Lakes), \"EPA Administrator,\" \"Indian Tribe\" (with the meaning given in 25 U.S.C. 5304 — Indian Self-Determination and Education Assistance Act), \"nonprofit organization,\" \"post-consumer materials management,\" \"Tribal Government\" (with reference to 25 U.S.C. 5131), \"Tribal organization,\" and \"Under Secretary.\" Section 2(7) of the Save Our Seas 2.0 Act is transferred into Section 131 and redesignated as paragraph (8), and Section 2 of the Save Our Seas 2.0 Act is renumbered accordingly. Existing paragraph (13) is amended to add \"Indian Tribe\" alongside the other listed entities.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Conforming Amendments",
+          "items": [
+            {
+              "main": "Replaces \"Administrator\" with \"Under Secretary\" throughout the Marine Debris Act's operative sections (33 U.S.C. 1951 and note, 1952, 1953, 1955, 1983) and makes matching conforming changes to cross-references and terminology.",
+              "detail": "Section 103 of the Marine Debris Act replaces \"Administrator of the National Oceanic and Atmospheric Administration\" with \"Under Secretary\" and \"Administrator of the Environmental Protection Agency\" with \"EPA Administrator,\" and updates a cross-reference from \"section 3\" to \"section 101.\" Section 123 changes \"title I\" to \"subtitle B.\" Section 133 updates cross-references from \"sections 3, 5, and 6\" to \"sections 101, 103, and 104.\" Section 134 uses \"EPA Administrator\" in place of the full agency name. Subtitle A changes lowercase \"tribal government\" to capitalized \"Tribal Government\" throughout.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3(d)(1)(F)(i) — Board Ex Officio Membership",
+          "summary": "The bill adds the Administrator of the United States Agency for International Development to the Marine Debris Foundation's Board ex officio membership.",
+          "why_unreported": "The section heading is titled \"Board of Directors\" (appointment / vacancies / removal) but this specific provision inserts a new federal agency head into the Board — a governance change not signaled by the section label or the bill's short title."
+        },
+        {
+          "section": "Section 3(f) — Principal Office",
+          "summary": "The Foundation must locate its principal office either in the National Capital Region or in a coastal shoreline community.",
+          "why_unreported": "The bill title describes administrative improvements; a mandated headquarters siting rule limiting the Foundation's principal-office location is a distinct operational constraint not visible in the title."
+        },
+        {
+          "section": "Section 3(g) — Rule of Construction",
+          "summary": "The bill states that nothing in the Act satisfies any requirement for government-to-government consultation with Tribal Governments or affects any treaty right.",
+          "why_unreported": "The section captioned \"Best Practices; Rule of Construction\" places a substantive limit on Tribal consultation obligations alongside a best-practices requirement — the limitation is bundled inside a section otherwise focused on outreach."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill reauthorizes the Marine Debris Act appropriations through fiscal year 2029 but sets no annual dollar amount for the NOAA Marine Debris Program itself — only $2M for fiscal year 2025 for the Foundation authorization.",
+        "The bill mandates that the Foundation develop best practices for Tribal outreach but does not set a deadline for adopting those practices or reporting on them.",
+        "The bill adds Indian Tribes, Tribal organizations, regional organizations, and foreign governments to the list of authorized grant recipients but does not set aside or reserve any minimum share of funds for those recipients.",
+        "The bill requires the Foundation's principal office to be in the National Capital Region or a coastal shoreline community but does not address whether existing office arrangements must relocate or the timeline for compliance.",
+        "The bill restructures the Marine Debris Foundation Board with Secretary of Commerce approval requirements but does not set a deadline for filling vacancies or a maximum period during which appointments may remain unapproved."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "New Subtitle A (NOAA and Coast Guard Programs), Subtitle B (Foundation, transferred from Save Our Seas 2.0 Act), Subtitle C (transferred from Save Our Seas 2.0 Act), and Subtitle D (Administration) structure inside the Marine Debris Act",
+          "New paragraph (7) in Section 101(d) (33 U.S.C. 1952(d)) — in-kind contributions by the Under Secretary for non-grant, non-cooperative-agreement projects",
+          "New Section 112(b)(1) — Board must recommend candidates before Under Secretary appoints",
+          "New Section 112(h) — chief executive officer role, Board appoints/reviews/removes, chief executive officer appoints and reviews other officers and employees",
+          "New Section 113(g) — Foundation principal office located in the National Capital Region or a coastal shoreline community",
+          "New Section 113(h) — Foundation best practices for Tribal outreach, including technical assistance and capacity building",
+          "New Section 113(i) — rule of construction that nothing satisfies government-to-government Tribal consultation or affects treaty rights",
+          "New defined terms in Section 131 — circular economy, coastal shoreline community, EPA Administrator, Indian Tribe, nonprofit organization, post-consumer materials management, Tribal Government, Tribal organization, Under Secretary"
+        ],
+        "modified": [
+          "33 U.S.C. 1952(d) (grants, cooperative agreements, contracts) — heading and text expanded to include \"other agreements\"",
+          "Section 111(a) of the Marine Debris Act (Foundation status) — \"organization\" changed to \"corporation\"",
+          "Section 112(b)(3) of the Marine Debris Act — appointed Director term set at 6 years",
+          "Section 112(b)(6) of the Marine Debris Act — USAID Administrator added to Board ex officio membership; Secretary of Commerce approval required alongside EPA Administrator",
+          "Section 112(g)(2)(B)(i) of the Marine Debris Act — reference to \"its chief operating officer\" replaced with \"the chief executive officer of the Foundation\"",
+          "Section 113(c)(1) of the Marine Debris Act — \"nonprofit\" inserted before \"corporation\" and \"acting as a trustee\" replaced with \"formed\"",
+          "Section 118(a)(1) of the Marine Debris Act (Foundation authorization) — $2M added for fiscal year 2025 after the existing \"through 2024\" language",
+          "Section 118(a)(2) of the Marine Debris Act — grant recipient list expanded to include regional organizations, Indian Tribes, Tribal organizations, and foreign governments",
+          "Section 9(a) of the Marine Debris Act (33 U.S.C. 1958) — appropriations authorization set to fiscal years 2018 through 2029",
+          "Terminology in 33 U.S.C. 1951 and note, 1952, 1953, 1955, and 1983 — \"Administrator\" replaced with \"Under Secretary\" throughout"
+        ],
+        "removed": [
+          "Paragraph (1) of the prior definitions section (Section 131 / 33 U.S.C. 1981), struck by Section 5(a)(1)"
+        ]
+      },
+      "budget_accounts": {
+        "Marine Debris Foundation": {
+          "agency": "013",
+          "currentAmount": 2000000,
+          "note": "$2M authorization for fiscal year 2025, added by Section 3(h)(1) to Section 118(a)(1) of the Marine Debris Act"
+        }
+      },
+      "analyzedAt": "2026-07-20",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-12-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-05-20",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in Senate",
+          "date": "2025-01-23",
+          "url": "https://www.congress.gov/119/bills/s216/BILLS-119s216is.htm"
+        },
+        {
+          "type": "Reported to Senate",
+          "date": "2025-04-08",
+          "url": "https://www.congress.gov/119/bills/s216/BILLS-119s216rs.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2025-05-20",
+          "url": "https://www.congress.gov/119/bills/s216/BILLS-119s216es.htm"
+        },
+        {
+          "type": "Public Law",
+          "date": "2025-12-27",
+          "url": "https://www.congress.gov/119/plaws/publ65/PLAW-119publ65.htm"
+        },
+        {
+          "type": "Enrolled Bill",
+          "date": null,
+          "url": "https://www.congress.gov/119/bills/s216/BILLS-119s216enr.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-8595",
+      "code": "H.R.8595",
+      "title": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "official_title": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes.",
+      "date": "2026-04-30",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Diaz-Balart, Mario (R-FL-26)",
+      "sponsor_bioguide": "D000600",
+      "cosponsors": 0,
+      "pages": 138,
+      "analyzed": true,
+      "demo": false,
+      "billType": "appropriation",
+      "stageDate": "2026-07-15",
+      "likelihood": 55,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Reported by House Appropriations Chair Rep. Mario Diaz-Balart (R-FL-26) on April 30, 2026 as Union Calendar No. 547 (Report No. 119-631) and passed by the House on July 15, 2026. Regular State-Foreign Operations appropriations bills typically require reconciliation with a Senate companion or inclusion in an end-of-year package before enactment; policy riders on UNRWA, the International Criminal Court, the World Health Organization, and Paris Agreement participation are the most likely points of contention in that reconciliation.",
+      "referencedSources": [],
+      "summary": "This bill provides full-year FY2027 appropriations for the Department of State, USAID successor programs, and related national-security and foreign-assistance accounts. Title I funds the State Department and related programs. Title II funds oversight through the Offices of Inspector General. Title III funds bilateral economic assistance including global health, humanitarian relief, and development programs. Title IV funds international security assistance including foreign military financing and international military training. Title V funds contributions to multilateral development banks and the Global Environment Facility. Title VI funds the Export-Import Bank and the U.S. International Development Finance Corporation. Titles VII and VIII carry the bill's policy riders, including preconditions on assistance to the Palestinian Authority, prohibitions on funding UNRWA, the International Court of Justice, the International Criminal Court, and the Green Climate Fund, and Israel and Egypt assistance floors.",
+      "brief": "House-passed FY2027 State/Foreign Operations appropriations — $9.76B State Department diplomatic programs, $5.53B PEPFAR, $6.75B Foreign Military Financing (Israel floor $3.30B, Egypt floor $1.30B), and standing prohibitions on funds for UNRWA, the ICJ, the ICC, the Green Climate Fund, and Paris Agreement implementation.",
+      "top_lines": [
+        {
+          "headline": "State Department Operations — $9.76B Diplomatic Programs",
+          "billSection": "title-I",
+          "subs": [
+            "$9.76B for Diplomatic Programs, of which up to $4.16B is for Worldwide Security Protection",
+            "$533M from Consular and Border Security Program fees, available until expended for passport backlogs and visa wait times",
+            "$647M for Educational and Cultural Exchange Programs, of which not less than $287.8M is for the Fulbright Program",
+            "$413.6M for the Capital Investment Fund"
+          ]
+        },
+        {
+          "headline": "Global Health, Humanitarian, and Development",
+          "billSection": "title-III",
+          "subs": [
+            "$3.35B for Global Health Programs plus $5.53B for HIV/AIDS (PEPFAR), including a $1.25B contribution to the Global Fund to Fight AIDS, Tuberculosis and Malaria",
+            "$5.0B for International Humanitarian Assistance (not less than $2.75B for disaster relief under section 491 of the Foreign Assistance Act) plus $100M for the Emergency Refugee and Migration Assistance Fund",
+            "$6.89B for National Security Investment Programs (not less than 15% for Africa)",
+            "$830M for the Millennium Challenge Corporation and $410.5M for the Peace Corps"
+          ]
+        },
+        {
+          "headline": "Foreign Military Financing — Israel and Egypt Floors",
+          "billSection": "title-IV",
+          "subs": [
+            "$6.75B for the Foreign Military Financing Program",
+            "Not less than $3.30B in FMF grants for Israel, disbursed within 30 days of enactment, of which not less than $250.3M for in-Israel procurement",
+            "Not less than $1.30B FMF for Egypt (within a $1.425B total-assistance floor conditioned on U.S.-Egypt strategic relationship and the 1979 Egypt-Israel Peace Treaty)",
+            "Not less than $1.65B in total assistance for Jordan (plus an additional $400M NSIP and $50M FMF)"
+          ]
+        },
+        {
+          "headline": "Multilateral, Export, and Development Finance",
+          "billSection": "title-V",
+          "subs": [
+            "$504.0M contribution to the International Development Association and $139.6M to the Global Environment Facility",
+            "$983.25M for the U.S. International Development Finance Corporation Corporate Capital Account (net $676.45M after offsetting collections), with a $22.0B cap on total DFC loan and guarantee principal outstanding",
+            "$125M for Export-Import Bank administrative expenses (offset to a net $0 general-fund appropriation) plus $8.86M for the Ex-Im OIG",
+            "$87M for the U.S. Trade and Development Agency"
+          ]
+        },
+        {
+          "headline": "Policy Riders — UNRWA, ICJ, ICC, WHO, Climate",
+          "billSection": "title-VII",
+          "subs": [
+            "No funds for UNRWA, the International Court of Justice, or the International Criminal Court, notwithstanding any other provision of law",
+            "No funds in contravention of Executive Order 14155 (Withdrawing the United States from the World Health Organization) or in support of the Pandemic Preparedness Accord until Senate ratification",
+            "No funds for the Green Climate Fund, Clean Technology Fund, or Loss and Damages Fund; no implementation of the Paris Agreement or a carbon tax (Sec. 7061)",
+            "Preconditions on assistance to a new Palestinian state (Sec. 7037), and no funds to move the U.S. Embassy in Israel away from Jerusalem (Sec. 7004(e))"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Title I — Department of State and Related Programs",
+          "items": [
+            {
+              "main": "Provides $9.76B for State Department Diplomatic Programs, with $4.16B set aside for Worldwide Security Protection, and $533M in fee-funded Consular and Border Security Program spending.",
+              "detail": "Diplomatic Programs ($9.76B) is allocated across Human Resources ($4.00B, WSP up to $738.55M), Overseas Programs ($1.44B), Diplomatic Policy and Support ($871.6M), and Security Programs ($3.45B, WSP up to $3.42B). Consular and Border Security Programs draws on fees collected under section 7069(e) of the FY2022 SFOPS act (division K of P.L. 117-103) — $533M available until expended, including to reduce passport backlogs and visa wait times. Capital Investment Fund ($413.6M) and Educational and Cultural Exchange Programs ($647M, Fulbright floor $287.8M) are separately appropriated.",
+              "comments": []
+            },
+            {
+              "main": "Funds international organizations, commissions, and related U.S. programs including the National Endowment for Democracy ($296.1M) and the East-West Center ($16.7M).",
+              "detail": "National Endowment for Democracy: $296.1M ($197.7M traditional/core institutes, $98.4M democracy programs). Asia Foundation: $17M. East-West Center: $16.7M. International Fisheries Commissions: $75.4M. Congressional-Executive Commission on the PRC: $2.3M. U.S.-China Economic and Security Review Commission: $4.3M. Israeli Arab Scholarship, Eisenhower Exchange, and the Center for Middle Eastern-Western Dialogue Trust Fund receive only their accrued interest and earnings for FY2027.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title II — Oversight (Offices of Inspector General)",
+          "items": [
+            {
+              "main": "Appropriates $123.55M for the State Department Office of Inspector General plus $62.5M for the successor OIG with continuing jurisdiction over foreign-assistance programs formerly administered by USAID.",
+              "detail": "State Department OIG: $123.55M (up to $18.5M available through September 30, 2028), notwithstanding section 209(a)(1) of the Foreign Service Act (22 U.S.C. 3929(a)(1)) on post inspections. The successor OIG: $62.5M (up to $9.4M available through September 30, 2028), operating under section 409 of title 5 U.S.C., section 614(f) of the Millennium Challenge Act (22 U.S.C. 7713(f)), section 8A(a) of the Inspector General Act of 1978, section 401 of the Inter-American Foundation Act (22 U.S.C. 290f), and section 505 of the African Development Foundation Act (22 U.S.C. 290h).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title III — Bilateral Economic Assistance",
+          "items": [
+            {
+              "main": "Provides $3.35B for Global Health Programs plus $5.53B for HIV/AIDS activities, including a $1.25B U.S. contribution to the Global Fund to Fight AIDS, Tuberculosis and Malaria.",
+              "detail": "Global Health Programs ($3.35B, available through September 30, 2029) covers child survival and maternal health, immunization, HIV/AIDS, tuberculosis, polio, malaria, neglected tropical diseases, and family planning/reproductive health, apportioned directly to the State Department. HIV/AIDS activities under PEPFAR: $5.53B, including the $1.25B Global Fund contribution and up to $35M for administrative expenses. Standing statutory prohibitions on funding coercive abortion or involuntary sterilization programs and on lobbying for or against abortion are carried forward.",
+              "comments": []
+            },
+            {
+              "main": "Provides $5.0B for International Humanitarian Assistance and $100M for the Emergency Refugee and Migration Assistance Fund.",
+              "detail": "International Humanitarian Assistance ($5.0B) covers disaster relief under section 491 of the Foreign Assistance Act (of which not less than $2.75B), Migration and Refugee Assistance (22 U.S.C. 2601), and related personnel costs. Not less than $6.5M is set aside for refugees resettling in Israel. Emergency Refugee and Migration Assistance Fund: $100M, transferrable to International Humanitarian Assistance.",
+              "comments": []
+            },
+            {
+              "main": "Provides $6.89B for National Security Investment Programs, $205.2M for the Democracy Fund, $410.5M for the Peace Corps, and $830M for the Millennium Challenge Corporation.",
+              "detail": "National Security Investment Programs ($6.89B) is drawn from sections 103, 105, 106, 214, 251-255, chapter 10 of part I, and chapter 4 of part II of the Foreign Assistance Act, the FREEDOM Support Act, and the SEED Act. Not less than 15% must be made available for programs in Africa. Democracy Fund: $205.2M for the Human Rights and Democracy Fund at the State Department's Bureau of Democracy, Human Rights, and Labor. Peace Corps: $410.5M (of which $7.8M for its OIG). MCC: $830M. A new $100M appropriation is made to the U.S. Foundation for Natural Security and Counterterrorism under section 5102 of the FY2025 NDAA (22 U.S.C. 10602).",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title IV — International Security Assistance",
+          "items": [
+            {
+              "main": "Provides $6.75B for the Foreign Military Financing Program, with statutory floors of $3.30B for Israel, $1.30B for Egypt, and $425M for Jordan.",
+              "detail": "FMF appropriation: $6.75B. Israel: not less than $3.30B in grants, disbursed within 30 days of enactment, of which not less than $250.3M is for in-Israel procurement of defense articles and services. Egypt: not less than $1.30B FMF (within a $1.425B total-assistance floor that also includes $125M in National Security Investment Programs), conditioned on Secretary of State certification that Egypt is sustaining the strategic relationship with the U.S. and meeting its obligations under the 1979 Egypt-Israel Peace Treaty. Jordan: not less than $1.65B in total assistance, of which not less than $845.1M for budget support and not less than $425M for FMF, plus an additional $400M NSIP for budget support and $50M FMF. Not more than $32M of FMF may be obligated for administering military assistance and sales. Not more than $1.808B of Foreign Military Sales trust-fund receipts may be obligated for administrative expenses under 22 U.S.C. 2792(b) ($30M State Department, $1.778B Defense Department).",
+              "comments": []
+            },
+            {
+              "main": "Provides $1.66B for International Narcotics Control and Law Enforcement, $870M for Nonproliferation, Anti-terrorism, Demining and Related Programs (NADR), $235M for Security Sector Programs, and $119.2M for International Military Education and Training.",
+              "detail": "INCLE ($1.66B) is drawn from section 481 of the Foreign Assistance Act, with authority to use section 608 excess-property transfers without its normal restrictions. NADR ($870M) covers anti-terrorism assistance, demining, small-arms destruction, a U.S. contribution to the Comprehensive Nuclear Test Ban Treaty Preparatory Commission, and a voluntary contribution to the International Atomic Energy Agency (subject to the Israel-participation condition). Security Sector Programs ($235M) is drawn from section 551 of the Foreign Assistance Act and includes not less than $30M for the Multinational Force and Observers in the Sinai. IMET ($119.2M) includes $3.5M for programs to increase the participation of women.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title V — Multilateral Assistance",
+          "items": [
+            {
+              "main": "Provides U.S. contributions to the major multilateral development institutions — $504.0M to the International Development Association, $139.6M to the Global Environment Facility, and $67.5M to the European Bank for Reconstruction and Development.",
+              "detail": "GEF: $139.6M. IDA: $504.0M. Asian Development Fund: $43.6M. African Development Bank paid-in capital: $32.4M, with U.S. Governor authorized to subscribe to callable capital not to exceed $856.2M without fiscal-year limitation. EBRD: $67.5M. Inter-American Investment Corporation: $30M. International Fund for Agricultural Development: $30M. Treasury International Assistance Programs: $50M, of which up to $50M may be used for the cost of loan guarantees to international financial institutions.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title VI — Export and Investment Assistance",
+          "items": [
+            {
+              "main": "Funds the Export-Import Bank at $125M in administrative expenses (offset to a net $0 general-fund appropriation) and the U.S. International Development Finance Corporation at $983.25M gross (net $676.45M), with a $22.0B cap on total DFC loan and guarantee principal outstanding.",
+              "detail": "Export-Import Bank: $8.86M for the OIG, $125M for administrative expenses, $30M for the cost of direct loans, loan guarantees, insurance, and tied-aid grants under section 10 of the Ex-Im Act (available through September 30, 2030); receipts collected under the Ex-Im Act reduce the general-fund appropriation dollar-for-dollar to an estimated $0 net. DFC: $7.2M for the OIG, $983.25M for the Corporate Capital Account ($243M administrative expenses, $740.25M program activities under sections 1421(b),(c),(e),(f),(g) of the BUILD Act), reduced dollar-for-dollar by offsetting collections to a net general-fund appropriation of $676.45M; total loan principal or guaranteed principal is capped at $22.0B. Trade and Development Agency: $87M.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title VII — General Provisions and Policy Riders",
+          "items": [
+            {
+              "main": "Bars any use of funds for UNRWA, the International Court of Justice, the International Criminal Court, the World Health Organization (in contravention of Executive Order 14155), the Pandemic Preparedness Accord (until Senate ratification), or the Arms Trade Treaty (until Senate ratification).",
+              "detail": "Sec. 7048(l) prohibits any contribution to the ICJ or the ICC. Sec. 7048(e) prohibits any contribution to UNRWA and any solicitation of UNRWA funds from other donors. Sec. 7049 conditions any U.N. Secretariat funding on written assurance from the Secretary-General that privileges and immunities will not be asserted for UNRWA staff or other U.N. personnel in cases involving gross human-rights violations, terrorism, material support to designated terrorist organizations, or other serious criminal conduct including corruption offenses outside official duties. Sec. 7048(l) also bars funds from supporting iVerify or any similar U.N. fact-checking tool and from any international organization chaired by a Communist Party of China-endorsed PRC national.",
+              "comments": []
+            },
+            {
+              "main": "Bars funds for the Green Climate Fund, the Clean Technology Fund, the Loss and Damages Fund, implementation of the Paris Agreement, or support for a carbon tax (Sec. 7061).",
+              "detail": "Sec. 7061(a) codifies the funding restrictions of Executive Order 14162 (Putting America First in International Environmental Agreements). Sec. 7061(b) bars use of funds to impede the uninterrupted transit of hydrocarbons by pipeline under the 1977 U.S.-Canada Transit Pipelines Agreement.",
+              "comments": []
+            },
+            {
+              "main": "Sets preconditions on assistance to a new Palestinian state (Sec. 7037), bars any funds for Hamas or the Palestine Liberation Organization (Sec. 7040(f)), and imposes recognition-of-terrorism, oversight, and Taylor Force Act requirements on West Bank and Gaza assistance (Sec. 7039, Sec. 7041(g)).",
+              "detail": "Sec. 7037 bars funds from being provided to support a Palestinian state unless the Secretary of State determines the new governing entity has demonstrated a firm commitment to peaceful co-existence with Israel, is taking measures to counter terrorism and terrorist financing in the West Bank and Gaza, and that the Palestinian Authority is working with other countries in the region toward a just, lasting, and comprehensive Middle East peace. Sec. 7039(c)(1) bars West Bank and Gaza Program funds from being used to recognize or honor individuals who have committed acts of terrorism, or for any educational institution in the West Bank or Gaza named after such an individual. Sec. 7040(f) bars any funds for assistance to Hamas or any entity controlled by Hamas and bars any funds for the Palestine Liberation Organization. Sec. 7041(g)(4) requires that National Security Investment Programs funds made available for the West Bank and Gaza be made available consistent with section 1004(a) of the Taylor Force Act (title X of division S of Public Law 115-141). Sec. 7041(g)(3) imposes Gaza-diversion certifications, third-party monitoring, and quarterly reports on humanitarian assistance for Gaza.",
+              "comments": []
+            },
+            {
+              "main": "Bars funds for direct assistance or reparations to Cuba, North Korea, or Iran (Sec. 7007) and bars any government whose duly elected head is deposed by military coup d'etat (Sec. 7008).",
+              "detail": "Sec. 7007 bars any assistance including direct loans, credits, insurance, and Ex-Im guarantees to the governments of Cuba, North Korea, or Iran. Sec. 7008 bars assistance to any country whose duly elected head of government is deposed by military coup d'etat, with resumption permitted after Secretary of State certification of a democratically elected successor government, and with a national-security-interest waiver available on a program-by-program basis. Sec. 7004(e) bars any use of funds to move the U.S. Embassy in Israel to a location other than Jerusalem.",
+              "comments": []
+            },
+            {
+              "main": "Iran-specific provisions require sanctions enforcement, semi-annual and 180-day reporting, and bar use of funds to implement the Joint Comprehensive Plan of Action or to revoke the IRGC Foreign Terrorist Organization designation (Sec. 7041(b)).",
+              "detail": "Sec. 7041(b)(1) directs use of Diplomatic Programs, NSIP, and NADR funds for preventing Iran from producing a nuclear weapon, responding to U.N. Security Council Resolution violations, and enforcing bilateral and secondary sanctions. Sec. 7041(b)(3) bars any funds from being used to implement an agreement with Iran on its nuclear program or to renew the JCPOA (adopted October 18, 2015) in contravention of the Iran Nuclear Agreement Review Act of 2015 (42 U.S.C. 2160e), or to revoke the IRGC's designation as a Foreign Terrorist Organization under 8 U.S.C. 1189.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Title VIII — Additional General Provision",
+          "items": [
+            {
+              "main": "Sets the Spending Reduction Account for this Act at $0 (Sec. 8001) and provides the short title `National Security, Department of State, and Related Programs Appropriations Act, 2027'.",
+              "detail": "Title VIII contains a single section — the Spending Reduction Account is set at $0, meaning no additional discretionary spending reductions are attributed to this bill beyond those reflected in the titled appropriations.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 7061 — Paris Agreement, Green Climate Fund, and Carbon Tax Prohibitions",
+          "summary": "The bill bars any funds from being used to implement the Paris Agreement, to contribute to the Green Climate Fund, Clean Technology Fund, or Loss and Damages Fund, or to support the implementation of a carbon tax — codifying the funding restrictions of Executive Order 14162 into appropriations law for FY2027.",
+          "why_unreported": "Coverage of annual SFOPS bills tends to focus on the headline Israel and Egypt aid figures. The Sec. 7061 codification converts an executive-order posture on international climate finance into a statutory bar, which persists for the life of the appropriations period regardless of the executive order's status."
+        },
+        {
+          "section": "Section 7048(l) — International Court of Justice and International Criminal Court Prohibitions",
+          "summary": "The bill bars any contribution, grant, or other payment to either the International Court of Justice or the International Criminal Court, notwithstanding any other provision of law.",
+          "why_unreported": "Both prohibitions are placed inside a broader `prohibitions on funding' subsection that also covers WHO, the Pandemic Preparedness Accord, iVerify, and the Arms Trade Treaty. The ICJ prohibition in particular is a step beyond prior-year practice, which had focused on the ICC."
+        },
+        {
+          "section": "Section 7049 — U.N. Privileges Certification",
+          "summary": "The bill freezes any funding for the U.N. Secretariat or any affiliated U.N. entity until the Secretary of State certifies that the U.N. Secretary-General has provided written assurance that privileges, exemptions, and immunities will not be asserted for UNRWA or other U.N. personnel in cases involving gross human-rights violations, terrorism, material support to terrorist organizations, or other serious criminal conduct.",
+          "why_unreported": "The certification requirement effectively conditions all U.N. Secretariat funding on a change in U.N. immunity practice — a broader lever than the direct UNRWA prohibition it accompanies."
+        },
+        {
+          "section": "Section 7048(l)(7) — Prohibition on International Organizations Chaired by PRC-Endorsed Nationals",
+          "summary": "The bill bars any funds from being made available to any international organization chaired by a Communist Party of China-endorsed national of the People's Republic of China.",
+          "why_unreported": "This is a novel category of prohibition that applies across the entire international-organizations funding stream in the bill, and its practical scope depends on U.S. determinations about which chairs are `Communist Party of China-endorsed.'"
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The Senate has not yet enacted its own FY2027 SFOPS bill, and the Foreign Military Financing floors, UNRWA/ICJ/ICC prohibitions, and Paris Agreement carve-outs in this House-passed text are likely to be renegotiated before enactment.",
+        "The bill's $22.0B cap on total U.S. International Development Finance Corporation loan and guarantee principal is a ceiling on lending authority, not an appropriation, and is not counted toward the DFC's $983.25M gross appropriation ($676.45M net) for FY2027.",
+        "The Export-Import Bank's $125M administrative expenses and $30M program-budget appropriations are offset dollar-for-dollar by receipts collected under the Ex-Im Act and the Federal Credit Reform Act, resulting in an estimated $0 net general-fund appropriation — the bill does not fix a specific offsetting-collections target.",
+        "Sec. 7041(g)(4) applies section 1004(a) of the Taylor Force Act to National Security Investment Programs funds made available for the West Bank and Gaza, but the bill itself does not restate the Taylor Force Act's withholding formula or specify how the required reduction is calculated for the FY2027 appropriation."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "$100M for the U.S. Foundation for Natural Security and Counterterrorism under section 5102 of the FY2025 NDAA (22 U.S.C. 10602)",
+          "Sec. 7048(l)(3) — new prohibition on funding iVerify or any other U.N. fact-checking tool",
+          "Sec. 7048(l)(7) — new prohibition on any international organization chaired by a Communist Party of China-endorsed PRC national",
+          "Sec. 7061 codification of Executive Order 14162 restrictions on the Green Climate Fund, Clean Technology Fund, Loss and Damages Fund, Paris Agreement implementation, and carbon-tax support",
+          "Sec. 7048(l)(1)-(2) codification of Executive Order 14155 (WHO withdrawal) restrictions and the Pandemic Preparedness Accord bar"
+        ],
+        "modified": [
+          "Foreign Military Financing Program — $6.75B appropriated, with statutory floors for Israel ($3.30B), Egypt ($1.30B), and Jordan ($425M)",
+          "Global Health Programs — $3.35B, plus $5.53B for PEPFAR, including a $1.25B Global Fund contribution",
+          "U.S. International Development Finance Corporation — $983.25M gross ($676.45M net) with the loan and guarantee principal cap set at $22.0B for FY2027",
+          "Millennium Challenge Corporation — $830M appropriation for FY2027"
+        ],
+        "removed": [
+          "No U.S. contribution to UNRWA (Sec. 7048(e)), the International Court of Justice, or the International Criminal Court (Sec. 7048(l))",
+          "No U.S. participation costs for the Paris Agreement, Green Climate Fund, Clean Technology Fund, or Loss and Damages Fund (Sec. 7061)"
+        ]
+      },
+      "budget_accounts": {
+        "Diplomatic Programs": {
+          "amount": "$9.76B",
+          "note": "State Department core operations, of which up to $4.16B for Worldwide Security Protection"
+        },
+        "Worldwide Security Protection": {
+          "amount": "up to $4.16B",
+          "note": "Set-aside within Diplomatic Programs"
+        },
+        "Consular and Border Security Programs": {
+          "amount": "$533M",
+          "note": "Fee-funded, available until expended"
+        },
+        "Educational and Cultural Exchange Programs": {
+          "amount": "$647M",
+          "note": "Includes not less than $287.8M for the Fulbright Program"
+        },
+        "Capital Investment Fund": {
+          "amount": "$413.6M",
+          "note": "State Department"
+        },
+        "State Department Office of Inspector General": {
+          "amount": "$123.55M",
+          "note": "Plus $62.5M for the successor OIG with jurisdiction over foreign-assistance programs"
+        },
+        "Global Health Programs": {
+          "amount": "$3.35B",
+          "note": "Child survival, maternal health, family planning; apportioned to the State Department"
+        },
+        "HIV/AIDS (PEPFAR)": {
+          "amount": "$5.53B",
+          "note": "Includes $1.25B Global Fund contribution"
+        },
+        "International Humanitarian Assistance": {
+          "amount": "$5.0B",
+          "note": "Not less than $2.75B for disaster relief; $6.5M for refugees resettling in Israel"
+        },
+        "Emergency Refugee and Migration Assistance Fund": {
+          "amount": "$100M",
+          "note": "Transferable to International Humanitarian Assistance"
+        },
+        "National Security Investment Programs": {
+          "amount": "$6.89B",
+          "note": "Not less than 15% for programs in Africa"
+        },
+        "Democracy Fund": {
+          "amount": "$205.2M",
+          "note": "State Department Bureau of Democracy, Human Rights, and Labor"
+        },
+        "Peace Corps": {
+          "amount": "$410.5M",
+          "note": "Includes $7.8M for the Office of Inspector General"
+        },
+        "Millennium Challenge Corporation": {
+          "amount": "$830M",
+          "note": "Available until expended"
+        },
+        "U.S. Foundation for Natural Security and Counterterrorism": {
+          "amount": "$100M",
+          "note": "New; under section 5102 of the FY2025 NDAA (22 U.S.C. 10602)"
+        },
+        "International Narcotics Control and Law Enforcement": {
+          "amount": "$1.66B",
+          "note": "Section 481 of the Foreign Assistance Act"
+        },
+        "Nonproliferation, Anti-terrorism, Demining and Related Programs (NADR)": {
+          "amount": "$870M",
+          "note": "Includes CTBT and IAEA contributions"
+        },
+        "International Military Education and Training (IMET)": {
+          "amount": "$119.2M",
+          "note": "Includes $3.5M for programs to increase participation of women"
+        },
+        "Foreign Military Financing Program (FMF)": {
+          "amount": "$6.75B",
+          "note": "Israel floor $3.30B, Egypt floor $1.30B, Jordan floor $425M"
+        },
+        "International Development Association (IDA)": {
+          "amount": "$504.0M",
+          "note": "Treasury contribution"
+        },
+        "Global Environment Facility (GEF)": {
+          "amount": "$139.6M",
+          "note": "Treasury contribution"
+        },
+        "Asian Development Fund": {
+          "amount": "$43.6M",
+          "note": "Treasury contribution"
+        },
+        "African Development Bank paid-in capital": {
+          "amount": "$32.4M",
+          "note": "Callable capital subscription authorized up to $856.2M without fiscal-year limitation"
+        },
+        "European Bank for Reconstruction and Development": {
+          "amount": "$67.5M",
+          "note": "Treasury contribution"
+        },
+        "Export-Import Bank administrative expenses": {
+          "amount": "$125M",
+          "note": "Offset by receipts to an estimated $0 net general-fund appropriation"
+        },
+        "U.S. International Development Finance Corporation Corporate Capital Account": {
+          "amount": "$983.25M gross ($676.45M net)",
+          "note": "Total DFC loan and guarantee principal capped at $22.0B"
+        },
+        "U.S. Trade and Development Agency": {
+          "amount": "$87M",
+          "note": "Under section 661 of the Foreign Assistance Act"
+        }
+      },
+      "analyzedAt": "2026-07-20",
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 217,
+          "nays": 209,
+          "present": 0,
+          "notVoting": 5,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "House",
+          "date": "2026-07-15",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Reported in House",
+          "date": "2026-04-30",
+          "url": "https://www.congress.gov/119/bills/hr8595/BILLS-119hr8595rh.htm"
         }
       ]
     }

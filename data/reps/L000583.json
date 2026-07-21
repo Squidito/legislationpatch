@@ -5,9 +5,26 @@
   "state": "GA",
   "role": "Representative",
   "district": 11,
-  "bio": "Barry Dean Loudermilk is an American politician from the state of Georgia who has been the United States House representative from Georgia's 11th congressional district since 2015. Prior to this, Loudermilk served in the Georgia House of Representatives (2005–2010) and the Georgia Senate (2011–2013). He stepped down from the Georgia Senate to run for Phil Gingrey's congressional seat in the 11th district; Gingrey ran for a U.S. Senate seat.",
-  "comments": [],
+  "bio": "Barry Dean Loudermilk is an American politician from the state of Georgia who has been the United States House representative from Georgia's 11th congressional district since 2015. Prior to this, Loudermilk served in the Georgia House of Representatives (2005–2010) and the Georgia Senate (2011–2013). Loudermilk stepped down from the Georgia Senate to run for Phil Gingrey's congressional seat in the 11th district.",
+  "comments": [
+    {
+      "billId": "119-HR-224",
+      "billTitle": "Disabled Veterans Housing Support Act",
+      "stance": "support",
+      "text": "As the Representative of Georgia `s 11th Congressional District and a veteran of the United States Air Force, I proudly rise today in support of H.R. 5362 to name the Department of Veterans Affairs multispecialty clinic in Marietta, Georgia, as the Colonel Michael H. Boyce Department of Veterans Affairs Multispecialty Clinic. As he was to many, Mike Boyce was a friend of mine, who unfortunately passed away in 2022. Mike took his duties to our country and our community seriously.",
+      "source": "House Floor, Jul 15, 2026",
+      "granuleTitle": null,
+      "date": "Jul 15, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +422,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

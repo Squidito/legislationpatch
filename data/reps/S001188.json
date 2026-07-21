@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 3,
   "bio": "Marlin Andrew Stutzman is an American politician who has served as the U.S. representative from Indiana's 3rd congressional district since 2025, having previously represented that district from 2010 to 2017. A member of the Republican Party, Stutzman previously served in the Indiana House of Representatives from 2003 to 2009 and in the Indiana Senate from 2009 to 2010.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-4549",
+      "billTitle": "Office of Rural Affairs Enhancement Act",
+      "stance": "neutral",
+      "text": "The summer of soccer is alive and well in northeast Indiana. Fort Wayne Football Club's new state-of-the-art stadium recently celebrated its grand opening. Privately funded, Ruoff Mortgage Stadium seats over 7,000 fans and has already become a hub for soccer fans across Indiana. I had the pleasure of attending a game this past weekend and was honored to present the match ball for the Fort Wayne Football Club's USL Cup match against Detroit City.",
+      "source": "House Floor, Jul 16, 2026",
+      "granuleTitle": null,
+      "date": "Jul 16, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +422,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

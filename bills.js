@@ -120,5 +120,6 @@ document.addEventListener('click', e => {
     }
   }
   updateChipVisuals();
+  if (typeof resetBillPagerCap === 'function') resetBillPagerCap();
   if (typeof renderAll === 'function') renderAll();
 });

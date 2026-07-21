@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 10,
   "bio": "Mark James DeSaulnier is an American politician who has served as a U.S. representative from California since 2015. He has represented the 10th congressional district since 2023, although it was previously numbered the 11th district for his first eight years in office. The district includes most of Contra Costa County, a suburban county in the East Bay. Until 2000, he was a member of the Republican Party; he has since been a member of the Democratic Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2444",
+      "billTitle": "Promoting Resilient Supply Chains Act of 2025",
+      "stance": "neutral",
+      "text": "I rise today to express my outrage about recent FDA regulatory actions on e-cigarettes. On April 30, Reynolds American donated $5 million to MAGA Inc., a Trump-backed super-PAC. In the following 8 days, the President dined with top tobacco executives, and the FDA issued guidance making it easier for tobacco companies to sell flavored e-cigarettes. In 2024, 1.63 million middle and high school students in America used e-cigarettes, and nearly 90 percent of them used flavored products.",
+      "source": "House Floor, Jul 16, 2026",
+      "granuleTitle": null,
+      "date": "Jul 16, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +423,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

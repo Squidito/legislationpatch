@@ -5,9 +5,26 @@
   "state": "WV",
   "role": "Representative",
   "district": 2,
-  "bio": "Riley McGowan Moore is an American politician serving as the U.S. representative for West Virginia's 2nd congressional district since 2025. A member of the Republican Party, he previously served as the 25th West Virginia State Treasurer from 2021 to 2025 and represented district 67 in the West Virginia House of Delegates from 2017 to 2019.",
-  "comments": [],
+  "bio": "Riley McGowan Moore is an American politician who has served as the U.S. representative for West Virginia's 2nd congressional district since 2025. A member of the Republican Party, he served as the 25th treasurer of West Virginia from 2021 to 2025 and as West Virginia's state delegate for its 67th district from 2017 to 2019.",
+  "comments": [
+    {
+      "billId": "119-S-5",
+      "billTitle": "Laken Riley Act",
+      "stance": "oppose",
+      "text": "My bill preserves two fundamental rights: the right to privacy and the right to bear arms. Americans should not be forced to disclose to payment processors when they buy firearms. The bill preserves Americans' rights by prohibiting the creation of a separate merchant category code for firearms. This would, of course, become a de facto gun registry. The bill also preempts harmful State laws and gives the Attorney General authority to take any bank or payment processor that assigns or requires a separate code to Federal court.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +423,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Not Voting"
     },
     {
       "billId": "119-HR-6019",

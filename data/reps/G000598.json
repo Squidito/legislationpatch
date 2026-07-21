@@ -5,7 +5,7 @@
   "state": "CA",
   "role": "Representative",
   "district": 42,
-  "bio": "Robert Julio Garcia is an American politician serving as the U.S. representative for California's 42nd congressional district since 2023. A member of the Democratic Party, he served as the 28th mayor of Long Beach, California, from 2014 to 2022. He was both the city's youngest and first elected openly LGBT mayor, as well as the first Latino to hold the office. He is the second person of color to be mayor of Long Beach, after Republican Eunice Sato, a Japanese American who served from 1980 to 1982. A former member of the Long Beach City Council, he was vice mayor from 2012 to 2014.",
+  "bio": "The 2026 United States House of Representatives elections in California will be held on November 3, 2026, to elect the 52 U.S. representatives from the State of California, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The passage of Proposition 50 in 2025 significantly altered many districts. The primary elections took place on June 2, 2026.",
   "comments": [
     {
       "billId": "119-HJRES-142",
@@ -27,9 +27,23 @@
       "stance": "neutral",
       "text": "I rise today to voice my strong opposition to this bill. First of all, this bill and the substance of the bill, this dispute, is undergoing consideration by the international bodies established by the U.S.-Mexico-Canada trade agreement. We really should wait until a decision is arrived at with respect to that mechanism, but there are other considerations. First, let's consider other far-reaching implications.",
       "date": "2026-04-02"
+    },
+    {
+      "billId": "119-HR-5125",
+      "billTitle": "District of Columbia Judicial Nominations Reform Act of 2025",
+      "stance": "oppose",
+      "text": "I just want to remind my good friend that in Texas local judges are elected by Texas citizens, not chosen directly by the President. In this case, in this bill, they want to bypass any sort of local control of the selection of judges and have these appointees be chosen directly by Donald Trump. That is wrong, and Members should oppose this bill.",
+      "date": "2025-09-18"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -430,6 +444,13 @@
       "vote": "Nay"
     },
     {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-6019",
       "billTitle": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
       "chamber": "House",
@@ -662,5 +683,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/Robert_Garcia_(California_congressman)"
+  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California"
 }

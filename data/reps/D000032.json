@@ -5,9 +5,24 @@
   "state": "FL",
   "role": "Representative",
   "district": 19,
-  "bio": "Byron Lowell Donalds is an American politician serving as the U.S. representative for Florida's 19th congressional district since 2021. A member of the Republican Party, he served in the Florida House of Representatives from 2016 to 2020. His congressional district includes much of Southwest Florida.",
-  "comments": [],
+  "bio": "Byron Lowell Donalds is an American politician serving as the U.S. representative for Florida's 19th congressional district since 2021. His congressional district includes much of Southwest Florida. Previously, he served in the Florida House of Representatives from 2016 to 2020. He is a member of the Republican Party.",
+  "comments": [
+    {
+      "billId": "119-HR-4922",
+      "billTitle": "D.C. CRIMES Act",
+      "stance": "neutral",
+      "text": "Now, in reference to what the gentleman was just talking about, Article I, Section 8, Clause 17 of the United States Constitution is quite clear. It grants Congress the power to exercise exclusive, exclusive jurisdiction over the Federal District, which all Americans know now is Washington, D.C., and it is the Nation's Capital. That is in the Constitution that was ratified by several States. Congress does have the constitutional authority to regulate activities within the Federal District.",
+      "date": "2025-08-08"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +421,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

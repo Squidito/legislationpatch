@@ -15,9 +15,23 @@
       "source": "House Floor, Jul 13, 2026",
       "granuleTitle": null,
       "date": "Jul 13, 2026"
+    },
+    {
+      "billId": "119-HR-9388",
+      "billTitle": "One-Stop Pilot Program Extension Act",
+      "stance": "neutral",
+      "text": "This bipartisan measure will modernize our aviation system, reduce unnecessary delays, and strengthen our international security partnership that keeps our skies safe. Today, the international passengers connecting to domestic flights must often retrieve their checked bags, clear customs, and undergo yet another screening process through TSA before re-entering the terminal, creating congestion, long connection times, and avoidable operational strain on airports and the airlines.",
+      "date": "2026-07-13"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -415,6 +429,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

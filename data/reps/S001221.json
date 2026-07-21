@@ -15,9 +15,25 @@
       "source": "House Floor, Jun 23, 2026",
       "granuleTitle": null,
       "date": "Jun 23, 2026"
+    },
+    {
+      "billId": "119-HR-224",
+      "billTitle": "Disabled Veterans Housing Support Act",
+      "stance": "support",
+      "text": "Keon was just 25 years old. Keon chose to serve his country, and his passing has left a family grieving, fellow airmen mourning a brother, and a west Michigan community heartbroken. When someone raises their hand to put on our country's uniform, they make a commitment to all Americans. In return, we owe them a debt of gratitude, our support, and our promise that their service will never be forgotten or taken for granted. Today, we remember Keon, and we stand with everyone who loved him.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -415,6 +431,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

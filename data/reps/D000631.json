@@ -15,9 +15,25 @@
       "source": "House Floor, Jun 11, 2026",
       "granuleTitle": null,
       "date": "Jun 11, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "This month, as our country celebrated 250 years of American democracy, a moment for profound reflection and unity, instead my Republican colleagues rejoiced in one year of the big, beautiful bill. It was anything but beautiful. SNAP cuts have literally taken food out of the mouths of babes, kicking 1.5  million children from nutrition assistance, leaving families hungry and afraid for tomorrow. Because of this now-law, Medicare cuts have left seniors facing life-threatening barriers to healthcare.",
+      "source": "House Floor, Jul 16, 2026",
+      "granuleTitle": null,
+      "date": "Jul 16, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -415,6 +431,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

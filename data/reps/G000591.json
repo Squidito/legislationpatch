@@ -6,8 +6,25 @@
   "role": "Representative",
   "district": 3,
   "bio": "Michael Patrick Guest is an American attorney and Republican politician. He has represented Mississippi's 3rd congressional district in the United States House of Representatives since 2019. He became the ranking member of the United States House Committee on Ethics upon the August 2022 death of Jackie Walorski, and he became its chair in the 118th Congress after Republicans won a House majority that November.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-7147",
+      "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
+      "stance": "neutral",
+      "text": "Mr. Keenan was a respected law enforcement officer and a devoted husband, father, grandfather, friend, and neighbor whose service and character left a lasting mark on his community. Born in Rose Hill, Mississippi, Mr. Keenan graduated from Heidelberg High School in 1964. He began his career at La-Z-Boy in Newton before entering public service as a deputy with the Jasper County Sheriff's Department.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -405,6 +422,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

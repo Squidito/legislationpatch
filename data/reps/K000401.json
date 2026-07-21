@@ -40,9 +40,25 @@
       "source": "House Floor, Jun 25, 2026",
       "granuleTitle": null,
       "date": "Jun 25, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "Many Californians were shocked to  learn that our legislature and Governor have just imposed what is being called the largest tax increase in State history, which is saying quite a lot in a State that already has the highest taxes in the country. Included in that is a massive new healthcare tax that is estimated to raise the healthcare premiums for many Californians by hundreds of dollars. This is something that our State simply cannot afford.",
+      "source": "House Floor, Jul 15, 2026",
+      "granuleTitle": null,
+      "date": "Jul 15, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -440,6 +456,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

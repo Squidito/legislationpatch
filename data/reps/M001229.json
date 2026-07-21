@@ -6,8 +6,23 @@
   "role": "Representative",
   "district": 10,
   "bio": "LaMonica R. McIver is an American politician serving as the U.S. representative for New Jersey's 10th congressional district since 2024. A member of the Democratic Party, she served on the Newark municipal council from 2018 to 2024. McIver was first elected to Congress in a September 2024 special election to succeed Donald Payne Jr. in Congress, who died in office in April.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-5143",
+      "billTitle": "District of Columbia Policing Protection Act of 2025",
+      "stance": "support",
+      "text": "I rise today with deep concern for our Nation's Capital, also known as chocolate city. The four Republican bills on the floor this week are a direct attack on the people of this city, particularly the Black and Brown communities who have called D.C. home for generations. These are residents who have built thriving small businesses, who have received an education from the D.C. school system, residents who have raised families and who call themselves proud Washingtonians since birth.",
+      "date": "2025-09-18"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -406,6 +421,13 @@
       "chamber": "House",
       "date": "2025-12-10",
       "vote": "Nay"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
     },
     {
       "billId": "119-HR-6019",

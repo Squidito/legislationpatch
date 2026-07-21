@@ -5,9 +5,24 @@
   "state": "OH",
   "role": "Representative",
   "district": 6,
-  "bio": "The 2026 United States House of Representatives elections in Ohio will be held on November 3, 2026, to elect the fifteen U.S. representatives from the State of Ohio, one from each of the state's congressional districts. The elections coincide with other elections to the House of Representatives, a special election to the United States Senate, and various state and local elections. The primary elections took place on May 5, 2026.",
-  "comments": [],
+  "bio": "The 2024 United States House of Representatives elections in Ohio were held on November 5, 2024, to elect the fifteen U.S. representatives from the State of Ohio, one from each of the state's congressional districts. The elections coincided with the 2024 U.S. presidential election, as well as other elections to the House of Representatives, an election to the United States Senate, and various state and local elections. The primary elections took place on March 19, 2024.",
+  "comments": [
+    {
+      "billId": "119-HR-28",
+      "billTitle": "Protection of Women and Girls in Sports Act of 2025",
+      "stance": "neutral",
+      "text": "There is no reason we should even be having this conversation right now. H.R. 28 is a women's rights bill to protect Title IX, which was constructed to protect women's rights. This first came on my radar while I was a member of the Ohio Senate. I had a lesbian couple shopping in my store, and they asked me to step aside to talk to me for a minute. They said that I needed to protect women's sports. We had Title IX. Since we had Stonewall 50 years ago, this couple told me, they have worked their entire life for women's rights.",
+      "date": "2025-01-15"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -408,6 +423,13 @@
       "vote": "Yea"
     },
     {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
+      "vote": "Yea"
+    },
+    {
       "billId": "119-HR-6019",
       "billTitle": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
       "chamber": "House",
@@ -640,5 +662,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Ohio"
+  "bioUrl": "https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections_in_Ohio"
 }

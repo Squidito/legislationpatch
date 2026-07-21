@@ -1103,3 +1103,54 @@ a:hover { text-decoration: underline; }
 .bill-card:hover .bill-header,
 .bill-card:hover .likelihood-footer { background: var(--surface-2); }
 
+
+/* ---- Header search entry (magnifier link, all pages) ---- */
+.header-search-link {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 9px;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.header-search-link:hover { color: var(--text); border-color: var(--text-3); }
+.header-search-link--solo { margin-left: auto; }
+
+/* ---- Inline header search widget (search-widget.js upgrades the link) ---- */
+.header-search-form {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.header-search-form--solo { margin-left: auto; }
+.header-search-form .header-search-link--solo { margin-left: 0; }
+.header-search-input {
+  width: 0;
+  opacity: 0;
+  padding: 6px 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  outline: none;
+  transition: width 0.18s ease, opacity 0.18s ease, padding 0.18s ease, margin 0.18s ease;
+}
+.header-search-form.open .header-search-input {
+  width: 170px;
+  opacity: 1;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-color: var(--border-strong);
+}
+.header-search-input:focus { border-color: var(--purple); }
+@media (max-width: 640px) {
+  .header-search-form.open .header-search-input { width: 120px; }
+}

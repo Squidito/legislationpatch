@@ -458,6 +458,13 @@
       "key": "Mr. Fitzpatrick",
       "reason": "False positive — detectStance() hasOppose keyword \"dangerous\" fired on the praise phrase \"closes a dangerous and longstanding loophole\". Fitzpatrick is the bill's SPONSOR and the quote frames the legislation approvingly (\"built on a simple principle...American elections should be decided by the American people\"). Stored \"support\" is correct.",
       "verifiedAt": "2026-07-15"
+    },
+    {
+      "billId": "119-HR-2808",
+      "check": "quote-stance",
+      "key": "Mr. Sherman",
+      "reason": "False positive — detectStance() hasOppose keyword \"harmful\" fired on the phrase \"curb the harmful practice of trigger leads\". Sherman describes trigger leads (the practice the bill curbs) as harmful, not the bill itself. He explicitly praises the bill as \"an important positive step to strengthen data privacy for consumers.\" Stored \"support\" is correct.",
+      "verifiedAt": "2026-07-20"
     }
   ],
   "adjudications": []

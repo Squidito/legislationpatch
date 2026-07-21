@@ -55,11 +55,27 @@
       "source": "House Floor, May 19, 2026",
       "granuleTitle": null,
       "date": "May 19, 2026"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "stance": "neutral",
+      "text": "When a bank fails, regulators need to move fast to protect depositors, preserve confidence in our financial system, consider potential buyers, and minimize disruption to families, businesses, and communities. All of that often takes place in a very short period of time, between Friday at close of business and Monday morning at opening for business. At that same time, those decisions should be made by a process that is fair, transparent, and promotes competition.",
+      "source": "House Floor, Jul 14, 2026",
+      "granuleTitle": null,
+      "date": "Jul 14, 2026"
     }
   ],
   "role": "Representative",
   "district": 2,
   "voteHistory": [
+    {
+      "billId": "119-HR-8595",
+      "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-15",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-3106",
       "billTitle": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
@@ -457,6 +473,13 @@
       "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
       "chamber": "House",
       "date": "2025-12-10",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-S-356",
+      "billTitle": "Secure Rural Schools Reauthorization Act of 2025",
+      "chamber": "House",
+      "date": "2025-12-09",
       "vote": "Yea"
     },
     {

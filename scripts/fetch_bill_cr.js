@@ -140,7 +140,7 @@ const SPEAKER_RE = new RegExp(
 // Titles that indicate a presiding officer, not a member giving a speech
 const SKIP_NAME_WORDS = ['PRESIDING', 'PRESIDENT', 'CHAIR', 'ACTING', 'SPEAKER', 'CLERK', 'SECRETARY', 'TEMPORE'];
 
-const PROCEDURAL_RE = /^(?:(?:madam|mr\.?)\s+(?:speaker|president|chair),\s*)?(?:i yield|i claim the time|i do not oppose|i have no objection|i ask unanimous consent|i ask for the yeas and nays|i demand the yeas and nays|on that i demand|by direction of the committee|for the purpose of debate|pursuant to (?:the order|section|house resolution|senate rule|clause)|i was unable to vote|i was unavailable to vote|i was absent|i was not recorded|i was not present|i was unavoidably absent|had i been present|i had a \w+ flight|will the gentleman|unanimous consent|point of order|quorum call|i move to suspend|i move to reconsider|i move to proceed|i move that|i suggest the absence|i ask that|i have (?:a|an) (?:motion|amendment)[^.]{0,40} at the desk|i send (?:a|an) [^.]{0,30}(?:motion|resolution) to the desk|i announce that|i demand a recorded vote|i include in the record|there being no objection|i know of no further debate|i have no statement|may i inquire|could you advise|i rise to raise a question of the privileges)/i;
+const PROCEDURAL_RE = /^(?:(?:madam|mr\.?)\s+(?:speaker|president|chair),\s*)?(?:i yield|i claim the time|i do not oppose|i have no objection|i ask unanimous consent|i ask for the yeas and nays|i demand the yeas and nays|on that i demand|by direction of the committee|for the purpose of debate|pursuant to (?:the order|section|house resolution|senate rule|clause)|i was unable to vote|i was unavailable to vote|i was absent|i was not recorded|i was not present|i was unavoidably absent|had i been present|i had a \w+ flight|will the gentleman|unanimous consent|point of order|quorum call|i move to suspend|i move to reconsider|i move to proceed|i move to refer|i move that|i suggest the absence|i ask that|i have (?:a|an) (?:motion|amendment)[^.]{0,40} at the desk|i send (?:a|an) [^.]{0,30}(?:motion|resolution) to the desk|i announce that|i demand a recorded vote|i include in the record|there being no objection|i know of no further debate|i have no statement|may i inquire|could you advise|i rise to raise a question of the privileges)/i;
 
 // Procedural phrases that disqualify a quote if they appear ANYWHERE in the
 // final displayed excerpt (not just the opener). Mirrors validate-batch.js's
@@ -191,8 +191,8 @@ const DISPLAY_PROCEDURAL = [
 // Filler sentence patterns — applied to every sentence in the quote, regardless of position.
 const FILLER_SENTENCE_RE = [
     // Yield / procedural openers
-    /^(?:Madam|Mr\.?)\s+(?:Speaker|President),?\s+I\s+yield\s+myself\s+such\s+time/i,
-    /^I\s+yield\s+myself\s+such\s+time/i,
+    /^(?:Madam|Mr\.?)\s+(?:Speaker|President),?\s+I\s+yield\s+myself\s+(?:such\s+time|the\s+balance\s+of\s+my\s+time)/i,
+    /^I\s+yield\s+myself\s+(?:such\s+time|the\s+balance\s+of\s+my\s+time)/i,
     /^(?:Madam|Mr\.?)\s+(?:Speaker|President),?\s+I\s+rise\s+(?:today\s+)?in\s+(?:strong\s+)?(?:support\s+of|opposition\s+to)/i,
     /^I\s+rise\s+(?:today\s+)?in\s+(?:strong\s+)?(?:support\s+of|opposition\s+to)/i,
     /^(?:Madam|Mr\.?)\s+(?:Speaker|President),?\s+I\s+ask\s+unanimous\s+consent/i,
@@ -239,7 +239,9 @@ const FILLER_SENTENCE_RE = [
     /\bthank\s+you\s+(?:very\s+much\s+)?(?:Madam|Mr\.?)\s+(?:Speaker|President|Chair)\b/i,
     // Administrative/parliamentary announcements
     /^The following (?:Senator|Representative|Member)s?\s+(?:is|are)\s+necessarily absent/i,
-    /^The (?:legislative\s+)?clerk (?:read|called|will)/i,
+    /^The (?:senior\s+)?(?:assistant\s+)?(?:legislative\s+)?clerk (?:read|called|will|designated)/i,
+    /^I\s+have\s+an?\s+amendment\s+to\s+the\s+instructions\b/i,
+    /^The\s+Senator\s+from\s+[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)*(?:\s+\[[^\]]+\])?\s+(?:proposes|moves|offers)\b/i,
     /^There appears to be a sufficient second/i,
     /^The question was taken\b/i,
     /^The rules were suspended\b/i,
@@ -274,7 +276,11 @@ function stripFillerSentences(text) {
     // into ["Mr.", "Smith"] by the sentence boundary regex.
     const TITLES = /\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)\.\s+([A-Z])/g;
     const guarded   = cleaned.replace(TITLES, '$1·$2');
-    const sentences = guarded.split(/(?<=[a-z0-9][.!?])\s+(?=[A-Z])/)
+    // Split on sentence boundaries. The optional [''"''] tail handles the CR-style
+    // trailing quote — e.g. `bullying kids.'' Mr. Speaker, I yield 1 minute...` —
+    // where the period sits inside a closing quote and would otherwise glue the
+    // yield-tail to the previous sentence, defeating the FILLER_SENTENCE_RE check.
+    const sentences = guarded.split(/(?<=[a-z0-9][.!?][''""'"]{0,2})\s+(?=[A-Z])/)
         .map(s => s.replace(/\b(Mr|Ms|Mrs|Dr|Sen|Rep|Prof|Hon|Gov|Jr|Sr|Con|Res|St|Gen|Col|Lt|Capt|Sgt|Maj)·([A-Z])/g, '$1. $2'));
     const kept = sentences.filter(s => {
         const t  = s.trim();
@@ -528,8 +534,11 @@ function viewsSectionsToQuotes(sections) {
             // speaker — skip it rather than display a junk name with no portrait.
             if (!repInfo.bioguideId) continue;
         } else {
-            const typeLabel = sec.viewsType.charAt(0) + sec.viewsType.slice(1).toLowerCase();
-            displayName = `Committee ${typeLabel} Members`;
+            // Anonymous views section with no signer we could resolve to a real member.
+            // Skip it — a "Committee Additional Members" placeholder with no bioguide
+            // is not a real attributable speaker, and the resulting card has no portrait
+            // or party/state, misleading readers about who is speaking. (HR-3838 case.)
+            continue;
         }
 
         const text = bestExcerpt(stripFillerSentences(sec.body.replace(/\n+/g, ' ')));
