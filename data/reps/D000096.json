@@ -15,9 +15,39 @@
       "source": "House Floor, Jun 3, 2026",
       "granuleTitle": null,
       "date": "Jun 3, 2026"
+    },
+    {
+      "billId": null,
+      "billTitle": null,
+      "stance": "neutral",
+      "text": "I just want to remind my colleagues that despite the rhetoric we will hear this afternoon on the floor, there is nothing in this bill that actually addresses fraud in the TANF program. Nowhere in H.R. 8872, outside of its title, does the word ``fraud'' even appear in this bill.",
+      "source": "House Floor, Jun 3, 2026",
+      "granuleTitle": null,
+      "date": "Jun 3, 2026"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",

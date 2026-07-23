@@ -344,6 +344,22 @@
       "path": "gaps[0]",
       "reason": "Computed sum: $500M (line 74) + $250M (line 99) both present in bill text; the gap statement explicitly shows the arithmetic (\"($500M + $250M)\").",
       "verifiedAt": "2026-07-14"
+    },
+    {
+      "billId": "119-HR-5160",
+      "kind": "$",
+      "token": "$2M",
+      "path": "top_lines[1].subs[2]",
+      "reason": "Arithmetic delta of two explicit verbatim figures: $33,009,000 (L50) - $31,009,000 (L44) = $2,000,000",
+      "verifiedAt": "2026-07-23"
+    },
+    {
+      "billId": "119-HR-5160",
+      "kind": "$",
+      "token": "$2,000,000",
+      "path": "sections[0].items[0].detail",
+      "reason": "Arithmetic delta of two explicit verbatim figures: $33,009,000 (L50) - $31,009,000 (L44) = $2,000,000",
+      "verifiedAt": "2026-07-23"
     }
   ],
   "validateBatch": [
@@ -465,6 +481,13 @@
       "key": "Mr. Sherman",
       "reason": "False positive — detectStance() hasOppose keyword \"harmful\" fired on the phrase \"curb the harmful practice of trigger leads\". Sherman describes trigger leads (the practice the bill curbs) as harmful, not the bill itself. He explicitly praises the bill as \"an important positive step to strengthen data privacy for consumers.\" Stored \"support\" is correct.",
       "verifiedAt": "2026-07-20"
+    },
+    {
+      "billId": "119-HR-3838",
+      "check": "quote-stance",
+      "key": "Ms. Houlahan",
+      "reason": "detectStance() reads \"support\" from opener praise (\"very proud of the markup\", \"honor to work so closely with Chairman Rogers\"), but the quote pivots at \"Unfortunately, the toxically amended bill that is here before us is no longer that\" — she is opposing the FLOOR version. Stored \"oppose\" reflects the substantive stance.",
+      "verifiedAt": "2026-07-22"
     }
   ],
   "adjudications": []

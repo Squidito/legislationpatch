@@ -6,8 +6,39 @@
   "role": "Representative",
   "district": 1,
   "bio": "Nancy Ruth Mace is an American politician serving as the U.S. representative for South Carolina's 1st congressional district since 2021. A member of the Republican Party, she previously served in the South Carolina General Assembly from 2018 to 2020.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-28",
+      "billTitle": "Protection of Women and Girls in Sports Act of 2025",
+      "stance": "support",
+      "text": "Let me be clear. There are two biological sexes: male and female. They are assigned at conception and cannot be changed. Biology doesn't care how many hormones someone pumps into their bodies or how they mutilate their bodies. Biological reality cannot be changed by medical intervention. In the Fiscal Year 2025 NDAA, Congress prohibited TRICARE from covering medical interventions to treat gender dysphoria, which would result in the sterilization of children. This was an important step, but there is more to be done.",
+      "source": "House Floor, Jul 21, 2026",
+      "granuleTitle": null,
+      "date": "Jul 21, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Not Voting"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
