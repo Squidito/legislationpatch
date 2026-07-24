@@ -1,0 +1,158 @@
+{
+  "id": "119-HR-1687",
+  "title": "CLEAN Act",
+  "official_title": "CLEAN Act",
+  "code": "HR.1687",
+  "date": "2025-02-27",
+  "version": "v1.0",
+  "stage": "house",
+  "stageLabel": "Passed House",
+  "currentStep": 2,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Fulcher, Russ (R-ID)",
+  "sponsor_bioguide": "F000469",
+  "cosponsors": 4,
+  "pages": 1,
+  "analyzed": true,
+  "demo": false,
+  "summary": "This bill amends the Geothermal Steam Act of 1970 to make the federal government hold geothermal energy lease sales more often and on a tighter schedule. It requires lease sales every year instead of every two years, requires a replacement sale in the same year if a scheduled sale is canceled or delayed, and sets 30-day deadlines for the Interior Department to act on geothermal drilling permit applications.",
+  "brief": "Requires annual federal geothermal lease sales (up from every two years), mandates replacement sales for canceled ones, and imposes 30-day permit-review deadlines.",
+  "top_lines": [
+    {
+      "headline": "More Frequent Lease Sales",
+      "billSection": "2",
+      "subs": [
+        "Geothermal lease sales required every year instead of every 2 years",
+        "Canceled or delayed sales must be replaced with another sale the same year",
+        "Interior must offer all nominated parcels eligible under the state resource management plan"
+      ]
+    },
+    {
+      "headline": "Permit Decision Deadlines",
+      "billSection": "2",
+      "subs": [
+        "Interior must confirm an application is complete (or list missing items) within 30 days",
+        "Final decision on a complete drilling-permit application due within 30 days of completeness notice"
+      ]
+    }
+  ],
+  "likelihood": 45,
+  "likelihoodLabel": "Possible",
+  "likelihoodReason": "Sponsored by Rep. Fulcher (R-ID) with cosponsors Maloy (R-UT) and Boebert (R-CO) in a Republican-majority House, the bill advances energy-permitting priorities likely to draw Republican support. It passed the House by voice vote, but its mandatory annual-sale and strict deadline requirements may attract opposition over agency workload and environmental-review timelines, leaving its Senate path uncertain.",
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “Committing Leases for Energy Access Now Act” (the “CLEAN Act”).",
+          "detail": "Short-title section — citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Geothermal Leasing",
+      "items": [
+        {
+          "main": "Changes the minimum frequency of geothermal lease sales under Section 4(b) of the Geothermal Steam Act from once every two years to annually, and adds a same-year replacement-sale requirement.",
+          "detail": "Paragraph (2) is amended by striking '2 years' and inserting 'year'. A new replacement-sales provision requires the Secretary of the Interior to hold a replacement sale during the same year if a scheduled sale is canceled or delayed. A new requirement directs the Secretary to offer all nominated parcels eligible for geothermal development under the resource management plan in effect for the state.",
+          "comments": []
+        },
+        {
+          "main": "Adds new 30-day deadlines for the Interior Department to process geothermal drilling permit applications.",
+          "detail": "Within 30 days of receiving an application, the Secretary must either notify the applicant that it is complete or specify what information is missing. Once an application is deemed complete, the Secretary must issue a final decision within 30 days of that completeness notice.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [],
+  "criticisms": [],
+  "featured_quotes": [
+    {
+      "name": "Mr. Westerman",
+      "party": "R",
+      "state": "AR",
+      "bioguideId": "W000821",
+      "text": "most of America's geothermal resources lie beneath Federal lands, and interest in leasing those areas continues to grow. It is imperative that we increase the frequency of geothermal lease sales from every 2 years to annually and further streamline the permitting process. Doing so will help keep energy costs low and keep America's lights on.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "gaps": [
+    "The bill sets 30-day deadlines for completeness review and final decisions but does not state what happens to an application if the Secretary misses either deadline.",
+    "The bill requires offering all eligible nominated parcels under the state resource management plan but does not address parcels in states without a current geothermal resource management plan.",
+    "The bill mandates a same-year replacement sale for canceled or delayed sales but does not address sales that cannot be rescheduled within the same year."
+  ],
+  "changes": {
+    "added": [
+      "Replacement-sale requirement: a canceled or delayed geothermal lease sale must be replaced with another sale in the same year",
+      "Requirement to offer all nominated parcels eligible under the state resource management plan",
+      "30-day deadline for completeness notice and 30-day deadline for a final decision on geothermal drilling permit applications"
+    ],
+    "modified": [
+      "Minimum frequency of geothermal lease sales under Geothermal Steam Act Section 4(b): every 2 years -> every year"
+    ],
+    "removed": []
+  },
+  "stageDate": "2026-07-15",
+  "billType": "amendment",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2026-06-02",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "analyzedAt": "2026-07-20",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-02-27",
+      "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2026-05-20",
+      "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2026-06-02",
+      "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687eh.htm"
+    },
+    {
+      "type": "Referred in Senate",
+      "date": "2026-06-03",
+      "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687rfs.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "Deferred-decision track added: if NEPA/other law isn't done within 30 days, Secretary may defer and give the applicant a notice of steps needed plus an agency action list with deadlines not exceeding NEPA section 107(g)",
+      "Deadline for a deferred permit decision: Secretary must decide within 10 days after the applicant takes the specified steps and the agency completes its listed actions"
+    ],
+    "modified": [
+      "Lease-sale offering requirement rewritten: instead of offering all eligible nominated parcels, Secretary must offer 75 percent, plus the remaining 25 percent unless a written statutory, environmental, or administrative justification prevents it",
+      "Drilling-permit decision step reframed from a flat 30-day final decision to a 30-day 'issuance or deferral' choice tied to NEPA completion"
+    ],
+    "removed": [],
+    "throughVersion": {
+      "type": "Engrossed in House",
+      "date": "2026-06-02"
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-02-27"
+    }
+  }
+}

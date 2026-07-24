@@ -1,0 +1,222 @@
+{
+  "id": "119-HR-1815",
+  "title": "VA Home Loan Program Reform Act",
+  "official_title": "VA Home Loan Program Reform Act",
+  "code": "HR.1815",
+  "date": "2025-03-03",
+  "version": "v1.0",
+  "stage": "signed",
+  "stageLabel": "Signed into Law",
+  "currentStep": 4,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Van Orden, Derrick (R-WI)",
+  "sponsor_bioguide": "V000135",
+  "cosponsors": 0,
+  "pages": 6,
+  "analyzed": true,
+  "demo": false,
+  "summary": "This law overhauls how the VA helps veterans who fall behind on a VA-guaranteed home loan. It creates a new Partial Claim Program in which the VA buys part of a defaulted loan to bring it current, requires lenders to walk a veteran through a mandatory sequence of foreclosure-prevention options before the VA steps in, and raises funding authorization for homeless-veteran service programs.",
+  "brief": "Creates a VA Partial Claim Program to prevent foreclosures, mandates a loss-mitigation sequence before the VA purchases a defaulted loan, and raises homeless-veteran program funding.",
+  "top_lines": [
+    {
+      "headline": "Partial Claim Program",
+      "billSection": "3",
+      "subs": [
+        "VA may buy part of a defaulted VA-guaranteed loan to prevent foreclosure",
+        "Partial claim capped at 25% of unpaid principal (30% for borrowers who missed a payment between Mar 1, 2020 and May 1, 2025)",
+        "Program sunsets five years after enactment"
+      ]
+    },
+    {
+      "headline": "Mandatory Loss Mitigation",
+      "billSection": "2",
+      "subs": [
+        "VA must prescribe a required sequence of loss-mitigation options lenders offer veterans",
+        "VA may not purchase an entire loan until the veteran completes the sequence",
+        "VA default decisions are final and not subject to judicial review"
+      ]
+    },
+    {
+      "headline": "Homeless Veteran Funding",
+      "billSection": "5",
+      "subs": [
+        "$344M authorized for comprehensive homeless-veteran service programs for each of FY2025 and FY2026",
+        "$257.7M authorized for each fiscal year thereafter through FY2030"
+      ]
+    }
+  ],
+  "likelihood": 100,
+  "likelihoodLabel": "Enacted",
+  "likelihoodReason": "Signed into law on July 30, 2025 as Public Law 119-31. The House passed it on May 19 and the Senate on July 15, 2025, following a House Veterans' Affairs Committee report (No. 119-104).",
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “VA Home Loan Program Reform Act”.",
+          "detail": "Short-title section — citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Authority of the Secretary in Case of Default",
+      "items": [
+        {
+          "main": "Amends Section 3732 of title 38 to expand the VA's authority to act on a defaulting guaranteed loan and adds a mandatory loss-mitigation sequence.",
+          "detail": "The VA may pay the loan holder an amount necessary to avoid foreclosure, obtain a secured interest in the property, and require the holder to place the loan in forbearance and execute necessary documents. A new subsection (d) directs the Secretary to prescribe loss-mitigation procedures, including a mandatory sequence of options (such as a partial claim agreement) offered to the veteran, and bars the VA from purchasing an entire loan until the veteran completes that sequence. Decisions under this paragraph are final, not subject to judicial review, and not treated as benefit decisions under section 511. The VA may set processing standards based on lender certification and must conduct random-sampling post-payment audits.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 3 — Partial Claim Program",
+      "items": [
+        {
+          "main": "Creates a new Partial Claim Program (38 U.S.C. 3737) under which the VA purchases a portion of a defaulted or at-risk guaranteed loan to prevent or resolve default.",
+          "detail": "The VA pays the loan holder the amount needed to prevent default and takes a secured interest subordinate to the first-lien guaranteed loan. A partial claim may not exceed 25 percent of the unpaid principal balance, or 30 percent for borrowers who missed a payment during the period from March 1, 2020 to May 1, 2025. Only one partial claim is allowed per loan, except an additional claim is permitted for borrowers who missed payments during a presidentially declared major disaster or the 120 days after it. Funds are applied first to arrearages, decisions are final and not subject to judicial review, and the program terminates five years after enactment.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 4 — Strategy of the Secretary of Veterans Affairs Regarding the Effect of Certain Litigation",
+      "items": [
+        {
+          "main": "Requires the Secretary of Veterans Affairs, within 90 days of enactment, to report to the House and Senate Veterans' Affairs Committees on a strategy to ensure veterans using chapter 37 guaranteed loans are not disadvantaged when securing a real estate agent or broker.",
+          "detail": "The strategy may include amendments to section 36.4313 of title 38, Code of Federal Regulations."
+        }
+      ]
+    },
+    {
+      "label": "Section 5 — Homeless Veteran Program Funding",
+      "items": [
+        {
+          "main": "Increases the authorization of appropriations for comprehensive service programs for homeless veterans under Section 2016 of title 38.",
+          "detail": "The prior open-ended authorization is replaced with $344M for each of fiscal years 2025 and 2026, and $257.7M for each fiscal year thereafter through fiscal year 2030. The earlier 'fiscal year 2015 and each subsequent fiscal year' language is changed to cover fiscal years 2015 through 2024.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 4 — Real Estate Representation Strategy Report",
+      "summary": "Within 90 days of enactment, the VA must report to the Veterans' Affairs Committees on its strategy to ensure veterans using a VA-guaranteed loan are not disadvantaged when seeking representation by a real estate agent or broker, possibly including amendments to 38 CFR 36.4313.",
+      "why_unreported": "The bill is captioned around default and foreclosure authority, but this section addresses an unrelated buyer-side problem — veterans' access to real estate agent representation — rather than loan default handling."
+    }
+  ],
+  "criticisms": [],
+  "featured_quotes": [
+    {
+      "name": "Mr. Van Orden",
+      "party": "R",
+      "state": "WI",
+      "bioguideId": "V000135",
+      "text": "This legislation establishes a permanent partial claims program within the VA Home Loan Program, bringing VA in line with all of the other Federal agencies that lend moneys for homes. As the chairman of the House Economic Opportunity Subcommittee, I am responsible for the two most successful programs the history of the United States Government has ever administered, the GI home loan program and the GI VA home loan guaranty.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "gaps": [
+    "The law makes VA partial-claim and default decisions final and not subject to judicial review but does not provide an internal appeal process for a veteran who disputes a decision.",
+    "The law sets a five-year sunset on the Partial Claim Program but does not address loans that default after the program terminates.",
+    "The law caps a partial claim at a percentage of unpaid principal but does not state what happens to a veteran whose arrearages exceed that cap."
+  ],
+  "changes": {
+    "added": [
+      "A new VA Partial Claim Program (38 U.S.C. 3737) allowing the VA to purchase part of a defaulted guaranteed loan, with a five-year sunset",
+      "A mandatory loss-mitigation sequence that lenders must offer veterans before the VA purchases a loan",
+      "A required VA report within 90 days on ensuring veterans are not disadvantaged in securing real estate agent representation"
+    ],
+    "modified": [
+      "Authorization for comprehensive homeless-veteran service programs (38 U.S.C. 2016): open-ended 'FY2015 and each subsequent year' -> $344M for each of FY2025-2026 and $257.7M per year through FY2030",
+      "VA default authority under 38 U.S.C. 3732: expanded to allow forbearance, secured interests, and payments to avoid foreclosure, subject to the new loss-mitigation sequence"
+    ],
+    "removed": []
+  },
+  "stageDate": "2025-07-30",
+  "billType": "amendment",
+  "enactedDate": "2025-07-30",
+  "votes": [
+    {
+      "chamber": "Senate",
+      "date": "2025-07-15",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    },
+    {
+      "chamber": "House",
+      "date": "2025-05-19",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "analyzedAt": "2026-06-10",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-03-03",
+      "url": "https://www.congress.gov/119/bills/hr1815/BILLS-119hr1815ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2025-05-19",
+      "url": "https://www.congress.gov/119/bills/hr1815/BILLS-119hr1815rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2025-05-19",
+      "url": "https://www.congress.gov/119/bills/hr1815/BILLS-119hr1815eh.htm"
+    },
+    {
+      "type": "Referred in Senate",
+      "date": "2025-05-20",
+      "url": "https://www.congress.gov/119/bills/hr1815/BILLS-119hr1815rfs.htm"
+    },
+    {
+      "type": "Public Law",
+      "date": "2025-07-31",
+      "url": "https://www.congress.gov/119/plaws/publ31/PLAW-119publ31.htm"
+    },
+    {
+      "type": "Enrolled Bill",
+      "date": null,
+      "url": "https://www.congress.gov/119/bills/hr1815/BILLS-119hr1815enr.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "New SEC. 5 raises homeless-veteran comprehensive-service authorization to $344,000,000 for each of fiscal years 2025 and 2026, then $257,700,000 per year through fiscal year 2030",
+      "Partial-claim cap can reach 30 percent for borrowers who missed a payment between March 1, 2020 and May 1, 2025 (the standard cap is now 25 percent)",
+      "Allows an additional partial claim on a loan for a borrower who missed a payment during a Presidentially declared major disaster or the 120 days following it",
+      "Adds rule that a partial-claim payment does not count against the chapter's guaranty amount and may not be applied to the guaranteed portion of the loan",
+      "Adds a clerical amendment inserting 'Sec. 3737. Partial Claim Program' into the chapter 37 table of sections"
+    ],
+    "modified": [
+      "Partial Claim Program moved from a free-standing program into a newly codified Section 3737 of title 38 (subchapter III of chapter 37)",
+      "Standard partial-claim cap raised from 20 percent to 25 percent of the unpaid principal balance",
+      "Program termination changed from a fixed 'after September 30, 2027' date to 'five years after the date of enactment'"
+    ],
+    "removed": [
+      "Dropped the explicit borrower-Secretary repayment-agreement structure with 0 percent interest (monthly payments within three years) or 0.5 percent interest tiers from the partial-claim terms"
+    ],
+    "throughVersion": {
+      "type": "Enrolled Bill",
+      "date": null
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-03-03"
+    }
+  }
+}

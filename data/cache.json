@@ -1061,14 +1061,14 @@
       "pages": 5,
       "analyzed": true,
       "demo": false,
-      "summary": "The Deploying American Blockchains Act designates the Secretary of Commerce as the principal presidential advisor on blockchain technology policy and directs Commerce to create a Blockchain Deployment Program within the Department. The program will develop best practices, establish advisory committees including industry and government representatives, and report annually to Congress. The program terminates after seven years.",
-      "brief": "Creates a Blockchain Deployment Program at Commerce, designates Commerce as the President's principal blockchain technology advisor, and requires annual congressional reporting on U.S. blockchain competitiveness.",
+      "summary": "The Deploying American Blockchains Act designates the Secretary of Commerce as a principal presidential advisor on blockchain technology policy and directs Commerce to create a Blockchain Deployment Program within the Department. The program will develop best practices, establish advisory committees including industry and government representatives, and report annually to Congress. The program terminates after seven years.",
+      "brief": "Creates a Blockchain Deployment Program at Commerce, designates Commerce as a presidential advisor on blockchain technology policy, and requires annual congressional reporting on U.S. blockchain competitiveness.",
       "top_lines": [
         {
           "headline": "Commerce as Principal Blockchain Policy Advisor",
           "billSection": "3",
           "subs": [
-            "Secretary of Commerce designated as the principal advisor to the President on blockchain policy, including deployment, application, and competitiveness of blockchain technology, tokens, and tokenization",
+            "Secretary of Commerce designated as a principal advisor to the President on blockchain policy, including deployment, application, and competitiveness of blockchain technology, tokens, and tokenization",
             "Commerce must develop policies on cybersecurity, decentralized identity, artificial intelligence, supply chain resiliency, e-commerce, healthcare applications, and fraud reduction using blockchain"
           ]
         },
@@ -1160,7 +1160,7 @@
       "changes": {
         "added": [
           "Blockchain Deployment Program at the Department of Commerce with 7-year term",
-          "Designation of Commerce Secretary as principal presidential advisor on blockchain policy",
+          "Designation of Commerce Secretary as a principal presidential advisor on blockchain policy",
           "Advisory committees for blockchain best practice development, including industry, government, and civil society members",
           "Annual congressional reporting requirement starting two years after enactment"
         ],
@@ -1180,7 +1180,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "study",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-23",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1307,7 +1307,7 @@
       ],
       "criticisms": [],
       "gaps": [
-        "The bill covers hotels and short-term rentals but does not address fees imposed by vacation rental platforms, which in some markets charge platform service fees that are separate from both the host's base price and the platform's booking fee.",
+        "The Section 2(d)(8) definition of \"service fee\" excludes any charge for an \"optional product or service associated with the covered services that may be selected by a purchaser\" — a covered entity could plausibly recharacterize a fee as optional (e.g. resort amenities, cleaning add-ons) and avoid the up-front total-price disclosure requirement.",
         "The bill requires disclosure of government taxes before final purchase but does not specify the format or prominence required for that disclosure, leaving enforcement of the tax disclosure requirement subject to FTC interpretation."
       ],
       "featured_quotes": [
@@ -1349,27 +1349,13 @@
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-04-28",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2025-04-28",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
         }
       ],
       "stageDate": "2025-04-29",
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1568,7 +1554,7 @@
       "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "The Taiwan Assurance Implementation Act requires the State Department to review and update its internal guidance on relations with Taiwan at least once every five years and to report those updates to Congress within 90 days of completing each review. Under current law, the review was required only once; this bill makes it an ongoing obligation.",
+      "summary": "The Taiwan Assurance Implementation Act amends Section 315 of the Taiwan Assurance Act of 2020 to require the State Department to review its internal guidance on relations with Taiwan (the 'Guidelines on Relations with Taiwan' memorandum and related documents) at least once every five years and to report the updates to Congress within 90 days of each review.",
       "brief": "Converts the State Department's one-time review of its Taiwan guidelines into a recurring obligation — required at least once every five years — with a congressional report due 90 days after each review.",
       "top_lines": [
         {
@@ -1661,7 +1647,7 @@
       "enactedDate": "2025-12-02",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1974,7 +1960,7 @@
       ],
       "likelihood": 22,
       "likelihoodLabel": "Uphill",
-      "likelihoodReason": "The bill passed the House in July 2025 with strong Republican support and 135 cosponsors, all Republican. In the Senate, 60 votes are needed to break a filibuster and Democrats have shown little interest in restricting a financial technology that the Federal Reserve has not proposed deploying in a retail form. The Senate Banking Committee has not advanced the bill.",
+      "likelihoodReason": "Passed the House 219-210 on a near-party-line vote with 2 Democratic crossovers and 135 Republican cosponsors. Faces the 60-vote Senate cloture threshold with 53 Republican senators; a partisan-line House record makes Senate advancement dependent on substantial Democratic crossover.",
       "sections": [
         {
           "label": "Section 1 — Short Title",
@@ -2105,7 +2091,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-23",
       "versions": [
         {
           "type": "Introduced in House",
@@ -3496,13 +3482,13 @@
           "subs": [
             "States must remove non-citizens from voter rolls immediately upon receiving documentary proof or verified information that a registrant is not a citizen",
             "States must establish programs using DHS, Social Security Administration, or state ID agency data to identify and remove non-citizen registrants within 30 days of enactment",
-            "Private right of action against election officials who register applicants who failed to provide citizenship proof; criminal penalties added for officials who knowingly register such applicants"
+            "Private right of action against election officials who register applicants who failed to provide citizenship proof; criminal penalties added for election officials who register such applicants and for executive-branch officers who provide material assistance to a noncitizen attempting to register or vote"
           ]
         }
       ],
       "likelihood": 28,
       "likelihoodLabel": "Uphill",
-      "likelihoodReason": "The bill passed the House in April 2025 with Republican support but has stalled in the Senate, where Democrats can filibuster and no bipartisan path has emerged. The SAVE Act addresses a voter registration requirement that opponents argue will disenfranchise millions of eligible citizens who lack easily accessible documents, making Democratic support unlikely. With 53 Republican senators and 60 votes needed to break a filibuster, passage requires substantial Democratic crossover that has not materialized.",
+      "likelihoodReason": "Passed the House 220-208 on a near-party-line vote with all Republican support plus 4 Democratic crossovers. Faces the 60-vote Senate cloture threshold with 53 Republican senators; Senate advancement would require substantial Democratic crossover that Senate voter-registration measures have historically not attracted.",
       "sections": [
         {
           "label": "Section 1 — Short Title",
@@ -3652,7 +3638,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -3773,7 +3759,7 @@
           "subs": [
             "Oil and gas royalty rates reduced on federal lands; onshore lease sales resumed in specified states",
             "ANWR: at least 4 lease sales within 10 years; NPR-A: at least 5 lease sales within 10 years",
-            "$389M for the Strategic Petroleum Reserve; repeals Biden-era drawdown requirement",
+            "$389M for the Strategic Petroleum Reserve; repeals prior SPR drawdown-and-sale mandate at PL 115-97 §20003",
             "Rescinds unobligated IRA funds for Greenhouse Gas Reduction Fund, school air quality, climate justice grants, and dozens of other EPA climate programs"
           ],
           "billSection": "title-V"
@@ -3794,7 +3780,7 @@
             "Statutory debt limit increased by $5 trillion",
             "$24.59B to the Coast Guard for vessels, aircraft, and shore infrastructure through FY2029",
             "$12.52B for FAA facilities modernization including $4.75B for telecom infrastructure and $3B for radar replacement",
-            "$9.995B to NASA for Moon and Mars missions and International Space Station deorbit"
+            "$9.995B to NASA for Moon and Mars missions and continued International Space Station operation"
           ],
           "billSection": "title-IV"
         }
@@ -3871,7 +3857,7 @@
             },
             {
               "main": "$10B per fiscal year for FY2026–FY2030 for a Rural Health Transformation Program providing states with funds to improve rural health access.",
-              "detail": "50% of funds distributed equally among approved states; remaining 50% based on proportion of rural health facilities. States must submit rural health transformation plans; no matching funds required. $200M for FY2025 for CMS implementation.",
+              "detail": "50% of funds distributed equally among approved states; remaining 50% allocated at the CMS Administrator's discretion considering four factors — state population in rural census tracts, proportion of rural health facilities, situation of hospitals under §1902(a)(13)(A)(iv), and any other factors the Administrator deems appropriate — with at least one-quarter of approved states receiving funds from this discretionary tranche. States must submit rural health transformation plans; no matching funds required. $200M for FY2025 for CMS implementation.",
               "comments": []
             }
           ]
@@ -3895,8 +3881,8 @@
           "label": "Title X — Immigration, Judiciary, and Radiation Compensation",
           "items": [
             {
-              "main": "Establishes new or increased fees across the immigration system: $100 for asylum applications, $1,000 for parolees, $550 for asylee employment authorization, and $5,000 for individuals apprehended between ports of entry or ordered removed in absentia.",
-              "detail": "$29.85B to ICE for hiring, removal operations, and detention; $3B to DOJ for immigration courts and drug trafficking prosecution; $3.5B to reimburse states for incarcerating non-citizen criminals; $5B for the Bureau of Prisons; $1B for the Secret Service. $100 fee per calendar year that an asylum application remains pending.",
+              "main": "Establishes new or increased fees across the immigration system: $100 for asylum applications, $1,000 for parolees, $550 initial employment-authorization fee on asylum applicants, parolees, and TPS holders, and $5,000 for individuals apprehended between ports of entry or ordered removed in absentia.",
+              "detail": "$29.85B to ICE for hiring, removal operations, and detention; $3.33B to DOJ (Sec 100054) available through Sep 30, 2029 for seven purposes — immigration judge hiring (EOIR capped at 800 judges effective Nov 1, 2028), drug trafficking prosecution, prosecution of immigration/gang/child-trafficking/unlawful-voting/Alien Registration Act matters, attorneys for injunctive-relief litigation against the federal government, Byrne/COPS grants, lawsuit-settlement attorney staffing, and state compensation for incarcerating criminal aliens; up to $3.5B for a separate DOJ-administered BIDEN Reimbursement Fund (Sec 100055) covering state and local activities related to unlawfully-present aliens who commit crimes (apprehension, prosecution, court operations, temporary detention, transportation); $5B for the Bureau of Prisons; $1.17B for the Secret Service. $100 fee per calendar year that an asylum application remains pending.",
               "comments": []
             },
             {
@@ -3911,7 +3897,7 @@
           "items": [
             {
               "main": "Reduces oil and gas royalty rates on federal lands, reinstates noncompetitive leasing, and mandates at least 4 ANWR lease sales and 5 NPR-A lease sales within 10 years.",
-              "detail": "Offshore royalty rates also reduced; Gulf state revenue-sharing cap raised from $500M to $650M per year for FY2025–FY2034. Methane royalties on vented or flared gas from federal lands eliminated. $389M for the Strategic Petroleum Reserve; Biden-era mandatory drawdown repealed. Forest Service must sell 250 million board feet of additional timber per year through FY2034.",
+              "detail": "Offshore royalty rates also reduced; Gulf state revenue-sharing cap raised from $500M to $650M per year for FY2025–FY2034. Methane royalties on vented or flared gas from federal lands eliminated. $389M for the Strategic Petroleum Reserve; prior SPR drawdown-and-sale mandate at PL 115-97 §20003 repealed. Forest Service must sell timber annually FY2026–FY2034 in a quantity not less than 250M board-feet greater than the previous fiscal year (cumulative year-over-year increase, subject to the applicable forest plan's maximum allowable sale quantity).",
               "comments": []
             }
           ]
@@ -3940,8 +3926,8 @@
               "comments": []
             },
             {
-              "main": "$9.995B to NASA for Moon and Mars missions, ISS deorbit preparation, and Artemis IV and V spacecraft procurement; $9.995B includes a Mars telecommunications orbiter.",
-              "detail": "NASA must identify a previously-flown crewed spacecraft to be relocated and placed on public display near a NASA field center within 18 months. Brand USA tourism promotion funding reduced from $100M to $20M per year through FY2027.",
+              "main": "$9.995B to NASA for Moon and Mars missions, continued International Space Station operation, and Artemis IV and V spacecraft procurement; $9.995B includes a Mars telecommunications orbiter.",
+              "detail": "NASA must identify a previously-flown crewed spacecraft to be relocated and placed on public display near a NASA field center within 18 months. Brand USA tourism promotion funding permanently reduced from $100M to $20M per year (Sec 40009 amends 22 U.S.C. 2131(d)(2)(B) — no sunset).",
               "comments": []
             }
           ]
@@ -3960,7 +3946,7 @@
         },
         {
           "section": "Section 71113 (Title VII)",
-          "summary": "Prohibits federal Medicaid payment for one year to any nonprofit health care provider with more than $800,000 in annual Medicaid payments if the provider primarily furnishes family planning services and provides abortions outside of rape, incest, or life-threatening circumstances.",
+          "summary": "Prohibits federal Medicaid payment for one year to any nonprofit health care provider with more than $800,000 in fiscal year 2023 Medicaid payments if the provider primarily furnishes family planning services and provides abortions outside of rape, incest, or life-threatening circumstances.",
           "why_unreported": "The provision is structured as a Medicaid payment restriction on a category of providers meeting specific criteria, but its operative effect — cutting off federal Medicaid funding to qualifying Planned Parenthood affiliates — is not stated in the section title or described in the bill's stated purposes."
         },
         {
@@ -4410,7 +4396,7 @@
           "fetchedAt": "2026-07-20"
         }
       ],
-      "analyzedAt": "2026-07-20",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Reported in House",
@@ -7461,22 +7447,24 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "In 2023, the Bureau of Land Management blocked mineral mining and geothermal drilling on 225,504 acres of National Forest land in Minnesota — including land bordering the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa — for 20 years to protect the watershed. This joint resolution, signed into law under the Congressional Review Act, cancels that protection and reopens the land for mineral and geothermal leasing.",
-      "brief": "Cancels the federal mining ban on 225,504 acres of Minnesota National Forest bordering the Boundary Waters, reopening it for mineral and geothermal leasing.",
+      "summary": "In 2023, the Bureau of Land Management withdrew 225,504 acres of Superior National Forest land in Cook, Lake, and Saint Louis Counties, Minnesota from mineral and geothermal leasing — to protect the Rainy River Watershed, the Boundary Waters Canoe Area Wilderness, and the 1854 Ceded Territory of the Lake Superior Chippewa — for 20 years. This joint resolution, signed into law under the Congressional Review Act, cancels that withdrawal and reopens the land for mineral and geothermal leasing.",
+      "brief": "Cancels the federal mining ban on 225,504 acres of Superior National Forest in Minnesota that had been withdrawn to protect the Boundary Waters watershed, reopening it for mineral and geothermal leasing.",
       "top_lines": [
         {
           "headline": "Mining Ban Reversed",
           "subs": [
-            "225,504 acres of Minnesota National Forest reopened for mineral and geothermal leasing",
+            "225,504 acres of Superior National Forest in Minnesota reopened for mineral and geothermal leasing",
             "Nullifies a 2023 BLM order that had barred mining for 20 years"
-          ]
+          ],
+          "source": "fr-2023-01969"
         },
         {
           "headline": "What Was Protected",
           "subs": [
-            "Land borders the Boundary Waters Canoe Area Wilderness and the 1854 Ceded Territory of the Lake Superior Chippewa",
+            "Withdrawal was to protect the Boundary Waters Canoe Area Wilderness, the Mining Protection Area, and the 1854 Ceded Territory of the Lake Superior Chippewa",
             "Cook, Lake, and Saint Louis Counties, MN — Rainy River Watershed included"
-          ]
+          ],
+          "source": "fr-2023-01969"
         }
       ],
       "likelihood": 100,
@@ -7489,7 +7477,8 @@
             {
               "main": "Congress disapproves Bureau of Land Management Public Land Order No. 7917 (88 Fed. Reg. 6308, January 31, 2023) under the Congressional Review Act, rendering it without force or effect.",
               "detail": "Public Land Order 7917 withdrew approximately 225,504 acres of National Forest System lands in Cook, Lake, and Saint Louis Counties, Minnesota from mineral and geothermal leasing for 20 years. The BLM issued the order to protect the Rainy River Watershed, the Boundary Waters Canoe Area Wilderness, the Boundary Waters Canoe Area Wilderness Mining Protection Area, and the 1854 Ceded Territory of the Lake Superior Chippewa from the potential adverse effects of mineral and geothermal exploration and development. Nullification restores those acres to availability for mineral and geothermal leasing.",
-              "comments": []
+              "comments": [],
+              "source": "fr-2023-01969"
             }
           ]
         }
@@ -7628,7 +7617,18 @@
         }
       ],
       "billType": "resolution",
-      "analyzedAt": "2026-06-10",
+      "referencedSources": [
+        {
+          "id": "fr-2023-01969",
+          "kind": "law",
+          "label": "Public Land Order No. 7917 (88 FR 6308)",
+          "citation": "88 Fed. Reg. 6308 (January 31, 2023)",
+          "srcUrl": "https://www.federalregister.gov/documents/2023/01/31/2023-01969/public-land-order-no-7917-for-withdrawal-of-federal-lands-cook-lake-and-saint-louis-counties-mn",
+          "textFile": "data/ref-text/fr-2023-01969.txt",
+          "fetchedAt": "2026-07-23"
+        }
+      ],
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -9213,14 +9213,14 @@
       "pages": 4,
       "analyzed": true,
       "demo": false,
-      "summary": "Under current law, gasoline blended with 15% ethanol (E15) cannot be sold at gas stations during summer months because E15 evaporates more readily than E10, contributing to ground-level ozone. This bill removes that summer ban by extending the existing E10 vapor pressure waiver to cover E15 year-round, allowing gas stations in all states to sell E15 from June 1 through September 15.",
+      "summary": "Under current law, gasoline blended with 15% ethanol (E15) cannot be sold at gas stations during the high ozone season because E15 evaporates more readily than E10, contributing to ground-level ozone. This bill removes that seasonal ban by extending the existing E10 vapor pressure waiver to cover E15 year-round, allowing gas stations in all states to sell E15 during the summer high ozone season.",
       "brief": "Allows E15 ethanol-blended gasoline to be sold year-round by extending the E10 Reid Vapor Pressure waiver to E15, removing the current summer ozone-season prohibition.",
       "top_lines": [
         {
           "headline": "Ethanol Blend Waiver",
           "subs": [
             "Applies the existing Clean Air Act Reid Vapor Pressure waiver for E10 to gasoline blended with up to 15% ethanol",
-            "Removes the current June 1–September 15 prohibition on E15 sales that applies in most of the country"
+            "Removes the current high-ozone-season prohibition on E15 sales that applies in most of the country"
           ],
           "billSection": "1"
         },
@@ -9261,7 +9261,7 @@
         {
           "section": "Clean Air Act Section 211(h) amendment",
           "summary": "The RVP waiver extension applies to all ethanol blend percentages from 10% up to 15%, not just to E15 specifically. A retailer blending at 12% or 13% ethanol would also fall under the waiver.",
-          "why_unreported": "The bill title and sponsor statements focus on E15, but the statutory amendment covers any blend up to 15%, meaning mid-range blends sold during the summer ozone season would also be exempt from the 9.0 psi RVP cap."
+          "why_unreported": "The bill title and sponsor statements focus on E15, but the statutory amendment covers any blend of 10 to 15 percent denatured anhydrous ethanol, meaning mid-range blends sold during the summer ozone season would also be exempt from the Clean Air Act §211(h) Reid Vapor Pressure limitation."
         }
       ],
       "criticisms": [],
@@ -9313,7 +9313,7 @@
           "Clean Air Act Section 211(h) — Reid Vapor Pressure waiver extended from gasoline blended with 10% ethanol to gasoline blended with up to 15% ethanol"
         ],
         "removed": [
-          "Seasonal prohibition on selling E15 during the summer ozone season (June 1–September 15) in non-waiver areas"
+          "Seasonal prohibition on selling E15 during the high ozone season in non-waiver areas"
         ]
       },
       "stageDate": "2026-05-14",
@@ -9342,7 +9342,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -11405,7 +11405,7 @@
       "sponsor": "Rep. Begich, Nicholas J. (R-AK)",
       "sponsor_bioguide": "B001323",
       "cosponsors": 0,
-      "pages": null,
+      "pages": 2,
       "analyzed": true,
       "demo": false,
       "summary": "The Alaska Native Claims Settlement Act of 1971 (ANCSA) gave Alaska Native corporations the right to select federal land as compensation for aboriginal land claims. Cape Fox Corporation — the Native village corporation for Saxman, Alaska — still has acres remaining from that original entitlement. This bill lets Cape Fox satisfy that remaining entitlement by selecting approximately 180 acres in the Tongass National Forest rather than a previously required township parcel near Saxman. The subsurface estate of the selected land goes to Sealaska Corporation, and a public access easement is reserved.",
@@ -11652,7 +11652,7 @@
       "sponsor": "Rep. Meuser, Daniel (R-PA-9)",
       "sponsor_bioguide": "M001204",
       "cosponsors": 8,
-      "pages": null,
+      "pages": 2,
       "analyzed": true,
       "demo": false,
       "summary": "Reduces the maximum leverage a Small Business Investment Company (SBIC) can obtain from the SBA from 300% to 200% of its private capital, while adding a new exclusion from the leverage calculation for investments in rural areas, covered technology categories, or small manufacturers — up to the lesser of 50% of private capital or $125M. Also expands what counts as private capital to include college and university endowments and foundations.",
@@ -11727,7 +11727,7 @@
         {
           "section": "Section 2(a)(3)",
           "summary": "A new subparagraph (C) added to the private capital definition explicitly excludes any funds obtained directly or indirectly from any federal, state, or local government or government agency, with limited exceptions for pension plan funds and college/university trust/endowment funds.",
-          "why_unreported": "The bill is framed as expanding private capital to include university endowments, but Section 2(a)(3) simultaneously adds a government-funds exclusion that could disqualify capital sources previously counted under the prior definition's silence on the issue."
+          "why_unreported": "The bill expands the private-capital definition to include university endowments and foundations, but Section 2(a)(3) simultaneously adds a government-funds exclusion that could disqualify capital sources previously counted under the prior definition's silence on the issue."
         }
       ],
       "criticisms": [],
@@ -11797,7 +11797,7 @@
           "fetchedAt": "2026-06-10"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-23",
       "likelihoodLabel": "Enacted",
       "versions": [
         {
@@ -11875,7 +11875,7 @@
       "sponsor": "Rep. Titus, Dina (D-NV-1)",
       "sponsor_bioguide": "T000468",
       "cosponsors": 0,
-      "pages": null,
+      "pages": 3,
       "analyzed": true,
       "demo": false,
       "summary": "Expands the Sloan Canyon National Conservation Area in Clark County, Nevada from 48,438 to 57,728 acres and grants the Southern Nevada Water Authority mandatory rights-of-way through BLM land at no charge to construct and operate a water transmission pipeline, with BLM required to complete the rights-of-way grant within one year of enactment.",
@@ -12088,7 +12088,7 @@
       "sponsor": "Sen. Daines, Steve (R-MT)",
       "sponsor_bioguide": "D000618",
       "cosponsors": 7,
-      "pages": null,
+      "pages": 1,
       "analyzed": true,
       "demo": false,
       "summary": "Gives FERC authority to grant hydropower project licensees up to 6 additional years to begin construction, beyond the existing 8-year extension allowed under the Federal Power Act, for projects that received their license before March 13, 2020. FERC may also retroactively reinstate licenses that expired after December 31, 2023 and before enactment.",
@@ -12250,7 +12250,7 @@
       "sponsor": "Sen. Capito, Shelley Moore (R-WV)",
       "sponsor_bioguide": "C001047",
       "cosponsors": 4,
-      "pages": null,
+      "pages": 2,
       "analyzed": true,
       "demo": false,
       "summary": "Requires the FCC to establish within 180 days a formal vetting process for applicants seeking high-cost universal service fund grants to deploy rural broadband networks. Applicants must document technical, financial, and operational capabilities and submit a business plan; the FCC must evaluate compliance history with other government broadband programs and set a minimum $9,000 per-violation penalty for pre-authorization defaults.",
@@ -15879,7 +15879,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-23",
       "summary": "Carves 'less-than-lethal projectile devices' out of federal firearms restrictions and defines what qualifies, so they are not regulated as firearms.",
       "brief": "Amends federal firearms law to exempt 'less-than-lethal projectile devices' from regulation and defines the term.",
       "top_lines": [
@@ -15926,8 +15926,8 @@
           "why": "Police already have access to less-than-lethal weapons like tasers. They don't need a change in the law. That is not an excuse for changing the law. This bill expands access to dangerous, prohibited individuals by stripping away Federal safeguards. Tasers may not shoot bullets, but they are still dangerous in the wrong hands. This bill would mean that anyone can buy them without a background check including people convicted of serious violent crimes and domestic abusers with restraining orders against them."
         },
         {
-          "who": "Mr. Fitzgerald (R-WI)",
-          "why": "Mrs. McBATH. Mr. Speaker, I yield myself the balance of my time. Mr. Speaker, H.R. 2189 does nothing to help law enforcement, who already uses these weapons in all 50 States. It does not provide any new tools or training that would reduce police shootings or promote the safety of officers or the public. Instead, it makes dangerous weapons widely available to everyone, including those who should not have them. It allows those weapons to be untraceable, undetectable by equipment, and sold to anyone without a background check."
+          "who": "Mrs. McBath (D-GA)",
+          "why": "Mr. Speaker, I yield myself the balance of my time. Mr. Speaker, H.R. 2189 does nothing to help law enforcement, who already uses these weapons in all 50 States. It does not provide any new tools or training that would reduce police shootings or promote the safety of officers or the public. Instead, it makes dangerous weapons widely available to everyone, including those who should not have them. It allows those weapons to be untraceable, undetectable by equipment, and sold to anyone without a background check."
         }
       ],
       "gaps": [
@@ -21077,7 +21077,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-23",
       "summary": "Requires federal land and water agencies to create and publish standardized digital maps showing where the public can boat, fish, and access federal waterways, and what restrictions apply.",
       "brief": "Requires federal agencies to standardize and publish digital maps of public access and restrictions on federal waterways.",
       "top_lines": [
@@ -21179,8 +21179,8 @@
         {
           "name": "Mr. Moore",
           "party": "R",
-          "state": "AL",
-          "bioguideId": "M001212",
+          "state": "UT",
+          "bioguideId": "M001213",
           "text": "This legislation builds upon the success of my MAPLand Act, enacted in 2022, and MAP Army Corps language included in last year's Water Resources Development Act to ensure Americans can quickly see the public resources around them and spend more time recreating on the land and water they love.",
           "stance": "neutral",
           "chamber": "House"
@@ -22870,7 +22870,7 @@
         }
       ],
       "billType": "appropriation",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-24",
       "summary": "Funds the federal government for the rest of fiscal year 2025 (through September 30, 2025) by continuing fiscal year 2024 appropriations, but with the Department of Defense funded at new line-item levels and given added flexibility while most nondefense agencies stay at prior-year amounts. It also extends a set of expiring health programs — community health centers, telehealth, and several Medicare and Medicaid provisions — and a handful of other authorities.",
       "brief": "Full-year stopgap funding the government through September 30, 2025: continues FY2024 levels, sets new defense amounts, and extends expiring health programs.",
       "top_lines": [
@@ -22988,7 +22988,7 @@
           "items": [
             {
               "main": "Increases the Medicare Improvement Fund balance.",
-              "detail": "Amends section 1898(b)(1) of the Social Security Act to change the fund amount from $1.25B to $1.8B.",
+              "detail": "Amends section 1898(b)(1) of the Social Security Act to change the fund amount from $1.25B to $1.80B.",
               "comments": []
             }
           ]
@@ -26630,7 +26630,7 @@
             },
             {
               "main": "Defines covered entities and shields the report details from public disclosure.",
-              "detail": "A covered entity is one located in a Country Group D:5 country (arms-embargoed) that is also on the Entity List or the Military End-User List. The reported information, other than aggregate statistics, is exempt from public disclosure, and the Secretary must exclude anything that could jeopardize an ongoing investigation. The requirement is subject to the availability of appropriations.",
+              "detail": "A covered entity is one located in a Country Group D:5 country under Supplement No. 1 to part 740 of the Export Administration Regulations that is also identified under Supplement No. 4 or No. 7 to part 744 of those regulations. The reported information, other than aggregate statistics, is exempt from public disclosure, and the Secretary must exclude anything that could jeopardize an ongoing investigation. The requirement is subject to the availability of appropriations.",
               "comments": []
             }
           ]
@@ -26650,7 +26650,7 @@
       ],
       "criticisms": [],
       "gaps": [
-        "The bill requires annual reporting but sets no penalty or consequence if BIS fails to submit the report.",
+        "The bill requires annual reporting but sets no penalty or consequence if the Secretary fails to submit the report.",
         "The report covers covered entities in Country Group D:5 but does not address comparable-risk entities in other country groups.",
         "The bill exempts the report from public disclosure except aggregate statistics but sets no schedule for releasing those statistics publicly."
       ],
@@ -26667,7 +26667,7 @@
       ],
       "changes": {
         "added": [
-          "New annual BIS report to Congress on export licensing to covered entities (new 50 U.S.C. 4815(e))"
+          "New annual Secretary report to Congress on export licensing to covered entities (new 50 U.S.C. 4815(e))"
         ],
         "modified": [
           "Amends Section 1756 of the Export Control Reform Act of 2018 to add the reporting requirement"
@@ -26691,7 +26691,7 @@
         }
       ],
       "budget_accounts": {},
-      "analyzedAt": "2026-06-19",
+      "analyzedAt": "2026-07-24",
       "versions": [
         {
           "type": "Introduced in House",
@@ -38287,7 +38287,7 @@
       "stageDate": "2025-04-29",
       "likelihood": 45,
       "likelihoodLabel": "Moderate",
-      "likelihoodReason": "Received in the Senate on April 29, 2025 and placed on the Senate Legislative Calendar under General Orders (Calendar No. 62) after House action. Sponsored by a Republican member with four cosponsors and referred in the House to the Committee on Energy and Commerce.",
+      "likelihoodReason": "Passed the House by voice vote on 2025-04-28 (no recorded opposition), a bipartisan-consent signal. Sponsored by a Republican member with 4 cosponsors. Senate advancement still faces the 60-vote cloture threshold.",
       "summary": "Establishes a critical supply chain resiliency and crisis response program in the Department of Commerce administered by the Assistant Secretary of Commerce for Industry and Analysis. Section 2 adds eight responsibilities for the Assistant Secretary: promoting the stability and resilience of critical supply chains and critical and emerging technologies; leading the new Supply Chain Resilience Working Group and consulting nongovernmental representatives, industry, higher education, and State and local governments; encouraging U.S. production and manufacturing of emerging technologies; assessing resilience, diversity, and strength of critical supply chains and critical and emerging technologies; supporting availability of critical goods from domestic manufacturers and allies/key international partner nations (in consultation with the Secretary of State and USTR); assisting the Federal Government in preparing for and responding to supply chain shocks; encouraging reduced reliance of domestic manufacturers on critical goods from countries described in section 7(2)(B); and encouraging relocation of critical-good manufacturing to the United States and allies/partners. Section 3 requires the Assistant Secretary to establish, not later than 120 days after enactment, a Supply Chain Resilience Working Group composed of the Federal agencies that rely on the Industry and Analysis business unit's analysis (including the Departments of State, Defense, Homeland Security, Transportation, Energy, Agriculture, the Interior, and Health and Human Services; the Office of the Director of National Intelligence; and the Small Business Administration). Within 1 year of enactment, the Assistant Secretary must carry out enumerated assessment, mapping, modeling, gap-identification, workforce, and coordination activities in consultation with the Working Group. The Assistant Secretary must designate — within 120 days of enactment, with public comment — critical industries, critical supply chains, and critical goods, updating those designations at least every 4 years. An implementation report is due to the relevant committees within 1 year after enactment. A national strategy and review of critical supply chain resiliency and manufacturing is due to the relevant committees within 18 months after enactment and annually thereafter — covering critical infrastructure, critical and emerging technologies, critical industries/supply chains/goods, other crisis-critical supplies and services, substitutes, authentication/traceability methods (including blockchain and other distributed ledger technologies), and allies/key international partner nations; assessing the manufacturing base, supply chains, and workforce; identifying threats and supply chain shocks (with threats originating from section 7(2)(B) countries listed); and developing a Commerce Department strategy for resilience, diversity, and strength of critical supply chains. Reports may not include non-aggregated critical supply chain information, confidential business information, or classified information; a public comment period is required; reports are unclassified with an optional classified annex. Voluntarily submitted critical supply chain information (accompanied by a specified express statement) is exempt from FOIA under 5 U.S.C. 552(b)(3), is not subject to ex parte communication rules, may not be used against the submitter in civil actions or by other authorities without written consent, may not be disclosed by federal officers for purposes other than the Act (with narrow exceptions), and does not constitute a waiver of trade-secret or other protections. The subsection does not apply to voluntary submissions in an application for federal financial assistance under section 9902 of the William M. (Mac) Thornberry NDAA for FY2021 (Public Law 116-283). Section 4 requires the Secretary to submit, within 2 years of enactment, a Department of Commerce capability assessment identifying the duties, responsibilities, resources, programs, and expertise within Commerce offices and bureaus relevant to critical supply chain resilience and manufacturing innovation, plus recommendations to enhance those activities and a strategy to implement them as appropriate. Section 5 provides that no additional funds are authorized to be appropriated to carry out this title. Section 6 provides that the title and all its requirements terminate 10 years after the date of enactment. Section 7 defines all key terms — including \"ally or key international partner nation\" (which excludes countries posing a significant risk to U.S. national or economic security and countries described in section 503(b) of the RANSOMWARE Act, title V of division BB of the Consolidated Appropriations Act, 2023, Public Law 117-328, 136 Stat. 5564), \"critical good,\" \"critical industry,\" \"critical infrastructure\" (via 42 U.S.C. 5195c), \"critical supply chain,\" \"critical supply chain information,\" \"domestic enterprise,\" \"domestic manufacturer,\" \"emerging technology\" (including technologies in the American COMPETE Act (title XV of division FF of the Consolidated Appropriations Act, 2021, Public Law 116-260, 134 Stat. 3276) and a named list including artificial intelligence, automated vehicles and unmanned delivery systems, blockchain and other distributed ledger technologies, quantum computing and sensing, additive manufacturing, advanced manufacturing and IoT, nanotechnology, robotics, microelectronics and advanced computer hardware/software, semiconductors, and advanced materials science), \"institution of higher education\" (via 20 U.S.C. 1001), \"manufacture\" (excluding software unrelated to manufacturing), \"manufacturing technology,\" \"production equipment,\" \"relevant committees of Congress\" (Senate Commerce, Science, and Transportation; House Energy and Commerce), \"resilient critical supply chain,\" \"Secretary\" (of Commerce), \"State,\" and \"supply chain shock.\"",
       "brief": "Adds eight critical-supply-chain responsibilities to the Commerce Assistant Secretary for Industry and Analysis, establishes a 10-agency Supply Chain Resilience Working Group and a 120-day designation of critical industries/supply chains/goods, requires an implementation report (1 year), a national strategy and review (18 months + annual), a Department capability assessment (2 years), protects voluntarily-submitted supply chain information from FOIA/discovery, authorizes no additional funds, and sunsets the title 10 years after enactment.",
       "top_lines": [
@@ -38515,7 +38515,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-07-15",
+      "analyzedAt": "2026-07-23",
       "votes": [
         {
           "chamber": "House",

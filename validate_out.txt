@@ -1,0 +1,291 @@
+
+> legislationpatch@1.0.0 validate
+> node scripts/validate-batch.js
+
+
+── Unprocessed bills
+  ◦  104 deliberately-skipped bill(s) — 28 ceremonial, 27 procedural, 26 deferred-minor, 23 cra-disapproval (data/analysis-skip.json)
+  ✅ All non-skip-listed fetched bills have been analyzed
+
+── Required fields
+  ✅ All bills have required fields
+
+── Bill text files
+  ✅ All bills have text files
+
+── billSection fields on top_lines
+  ✅ All top_lines have billSection fields
+
+── Section label format
+  ✅ All section labels auto-parse or have explicit billSection
+
+── Smart-quote character safety
+  ✅ No curly quotes in billSection fields or JS source files
+
+── Bill text sourcing integrity
+  ✅ All analyzed bills have pages field consistent with text file
+
+── Dollar amount formatting
+  ✅ No raw dollar amounts found
+  ✅ No spelled-out dollar magnitudes found
+
+── Vote data
+  ✅ All passed/signed bills have vote data
+
+── Stage ↔ vote consistency
+  ✅ No stage/vote contradictions
+
+── Stage ↔ prose consistency
+  ✅ No stage/prose mismatches
+
+── Analysis freshness (analyzedAt)
+  ✅ All analyses are fresh relative to their latest action date
+
+── CR dates processed
+  ✅ All 2 CR date(s) have been processed
+
+── Omnibus bill structure
+  ✅ 119-HR-7148: 9 divisions all have required fields
+  ✅ 119-HR-5371: 8 divisions all have required fields
+  ◦  119-HR-6938 div A: section label won't auto-link: "Titles IV–V — Related Agencies, General Provisions and " — adjudicated 2026-07-06: Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.
+  ◦  119-HR-6938 div B: section label won't auto-link: "Titles I–II — Corps of Engineers and Bureau of Reclamat" — adjudicated 2026-07-06: Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.
+  ◦  119-HR-6938 div B: section label won't auto-link: "Titles IV–V — Independent Agencies and General Provisio" — adjudicated 2026-07-06: Title-range label spanning multiple titles; per-division TITLE numerals repeat across divisions so a bt-title anchor would be ambiguous (could scroll to another division's title). Intentional grouped label — same class as the adjudicated HR-7147 division label.
+  ✅ 119-HR-6938: 3 divisions all have required fields
+  ◦  119-HR-7006 div div-A: section label won't auto-link: "Treasury, IRS and the Executive Office of the President" — adjudicated 2026-07-06: Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.
+  ◦  119-HR-7006 div div-A: section label won't auto-link: "The Judiciary, the District of Columbia and independent" — adjudicated 2026-07-06: Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.
+  ◦  119-HR-7006 div div-B: section label won't auto-link: "State Department, embassies and international organizat" — adjudicated 2026-07-06: Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.
+  ◦  119-HR-7006 div div-B: section label won't auto-link: "Foreign assistance: health, humanitarian, economic and " — adjudicated 2026-07-06: Thematic division-layer label (division content grouped by subject, not statute structure); sections-path billSection only produces bt-sec anchors, and no unambiguous section anchor exists for this grouping. Intentional.
+  ✅ 119-HR-7006: 2 divisions all have required fields
+
+── Omnibus raw data (bills_raw.json)
+  ✅ No omnibus entries in bills_raw.json
+
+── Sitemap
+  ⚠️  119-S-5 not in sitemap.xml
+  ⚠️  119-HR-4323 not in sitemap.xml
+  ⚠️  119-HR-2480 not in sitemap.xml
+  ⚠️  119-HR-3838 not in sitemap.xml
+  ⚠️  119-HR-1664 not in sitemap.xml
+  ⚠️  119-HR-1479 not in sitemap.xml
+  ⚠️  119-HR-866 not in sitemap.xml
+  ⚠️  119-HR-1512 not in sitemap.xml
+  ⚠️  119-HR-4371 not in sitemap.xml
+  ⚠️  119-HR-1919 not in sitemap.xml
+  ⚠️  119-HR-910 not in sitemap.xml
+  ⚠️  119-S-1582 not in sitemap.xml
+  ⚠️  119-HR-3633 not in sitemap.xml
+  ⚠️  119-S-331 not in sitemap.xml
+  ⚠️  119-HR-22 not in sitemap.xml
+  ⚠️  119-HR-1 not in sitemap.xml
+  ⚠️  119-S-723 not in sitemap.xml
+  ⚠️  119-HR-5625 not in sitemap.xml
+  ⚠️  119-HR-8365 not in sitemap.xml
+  ⚠️  119-HR-6260 not in sitemap.xml
+  ⚠️  119-S-1884 not in sitemap.xml
+  ⚠️  119-S-3971 not in sitemap.xml
+  ⚠️  119-HR-5366 not in sitemap.xml
+  ⚠️  119-HR-227 not in sitemap.xml
+  ⚠️  119-HR-7971 not in sitemap.xml
+  ⚠️  119-HR-6495 not in sitemap.xml
+  ⚠️  119-HR-6431 not in sitemap.xml
+  ⚠️  119-HR-5334 not in sitemap.xml
+  ⚠️  119-HR-6956 not in sitemap.xml
+  ⚠️  119-HR-8364 not in sitemap.xml
+  ⚠️  119-HR-4930 not in sitemap.xml
+  ⚠️  119-HR-7959 not in sitemap.xml
+  ⚠️  119-HJRES-140 not in sitemap.xml
+  ⚠️  119-HR-6903 not in sitemap.xml
+  ⚠️  119-HR-2347 not in sitemap.xml
+  ⚠️  119-HR-8322 not in sitemap.xml
+  ⚠️  119-HCONRES-40 not in sitemap.xml
+  ⚠️  119-HR-6955 not in sitemap.xml
+  ⚠️  119-S-4465 not in sitemap.xml
+  ⚠️  119-HR-7147 not in sitemap.xml
+  ⚠️  119-HR-1346 not in sitemap.xml
+  ⚠️  119-HR-7148 not in sitemap.xml
+  ⚠️  119-HR-6387 not in sitemap.xml
+  ⚠️  119-HR-2319 not in sitemap.xml
+  ⚠️  119-HR-2815 not in sitemap.xml
+  ⚠️  119-HR-2066 not in sitemap.xml
+  ⚠️  119-HR-972 not in sitemap.xml
+  ⚠️  119-S-1020 not in sitemap.xml
+  ⚠️  119-S-98 not in sitemap.xml
+  ⚠️  119-S-1003 not in sitemap.xml
+  ⚠️  119-HR-7831 not in sitemap.xml
+  ⚠️  119-HR-1687 not in sitemap.xml
+  ⚠️  119-HR-3922 not in sitemap.xml
+  ⚠️  119-HR-3831 not in sitemap.xml
+  ⚠️  119-HR-2399 not in sitemap.xml
+  ⚠️  119-HCONRES-68 not in sitemap.xml
+  ⚠️  119-HCONRES-75 not in sitemap.xml
+  ⚠️  119-S-2392 not in sitemap.xml
+  ⚠️  119-HR-4405 not in sitemap.xml
+  ⚠️  119-HR-1815 not in sitemap.xml
+  ⚠️  119-HR-36 not in sitemap.xml
+  ⚠️  119-HR-8469 not in sitemap.xml
+  ⚠️  119-HR-7567 not in sitemap.xml
+  ⚠️  119-S-1071 not in sitemap.xml
+  ⚠️  119-S-2393 not in sitemap.xml
+  ⚠️  119-HJRES-142 not in sitemap.xml
+  ⚠️  119-HCONRES-84 not in sitemap.xml
+  ⚠️  119-HR-5107 not in sitemap.xml
+  ⚠️  119-HR-755 not in sitemap.xml
+  ⚠️  119-HR-2189 not in sitemap.xml
+  ⚠️  119-HR-3692 not in sitemap.xml
+  ⚠️  119-S-4530 not in sitemap.xml
+  ⚠️  119-HR-4495 not in sitemap.xml
+  ⚠️  119-HR-2262 not in sitemap.xml
+  ⚠️  119-HR-4366 not in sitemap.xml
+  ⚠️  119-HR-3657 not in sitemap.xml
+  ⚠️  119-HR-224 not in sitemap.xml
+  ⚠️  119-HR-1491 not in sitemap.xml
+  ⚠️  119-HR-970 not in sitemap.xml
+  ⚠️  119-HR-3872 not in sitemap.xml
+  ⚠️  119-HR-517 not in sitemap.xml
+  ⚠️  119-HR-1912 not in sitemap.xml
+  ⚠️  119-HR-3490 not in sitemap.xml
+  ⚠️  119-HR-6359 not in sitemap.xml
+  ⚠️  119-HR-3857 not in sitemap.xml
+  ⚠️  119-HR-2808 not in sitemap.xml
+  ⚠️  119-S-260 not in sitemap.xml
+  ⚠️  119-HR-617 not in sitemap.xml
+  ⚠️  119-HJRES-133 not in sitemap.xml
+  ⚠️  119-HR-7084 not in sitemap.xml
+  ⚠️  119-HR-4307 not in sitemap.xml
+  ⚠️  119-S-616 not in sitemap.xml
+  ⚠️  119-HR-3486 not in sitemap.xml
+  ⚠️  119-HR-3937 not in sitemap.xml
+  ⚠️  119-HR-2600 not in sitemap.xml
+  ⚠️  119-HR-5408 not in sitemap.xml
+  ⚠️  119-HR-1329 not in sitemap.xml
+  ⚠️  119-HR-5200 not in sitemap.xml
+  ⚠️  119-HR-8464 not in sitemap.xml
+  ⚠️  119-HR-5103 not in sitemap.xml
+  ⚠️  119-HR-5214 not in sitemap.xml
+  ⚠️  119-HR-187 not in sitemap.xml
+  ⚠️  119-HR-2860 not in sitemap.xml
+  ⚠️  119-HR-8467 not in sitemap.xml
+  ⚠️  119-HR-6028 not in sitemap.xml
+  ⚠️  119-HR-8463 not in sitemap.xml
+  ⚠️  119-HR-8312 not in sitemap.xml
+  ⚠️  119-HR-2483 not in sitemap.xml
+  ⚠️  119-HR-2913 not in sitemap.xml
+  ⚠️  119-HR-1968 not in sitemap.xml
+  ⚠️  119-HR-8029 not in sitemap.xml
+  ⚠️  119-HR-8646 not in sitemap.xml
+  ⚠️  119-HR-5371 not in sitemap.xml
+  ⚠️  119-HR-6938 not in sitemap.xml
+  ⚠️  119-HR-7006 not in sitemap.xml
+  ⚠️  119-S-2 not in sitemap.xml
+  ⚠️  119-S-146 not in sitemap.xml
+  ⚠️  119-HR-998 not in sitemap.xml
+  ⚠️  119-HR-1316 not in sitemap.xml
+  ⚠️  119-S-222 not in sitemap.xml
+  ⚠️  119-S-2585 not in sitemap.xml
+  ⚠️  119-HR-4 not in sitemap.xml
+  ⚠️  119-S-3424 not in sitemap.xml
+  ⚠️  119-S-269 not in sitemap.xml
+  ⚠️  119-S-254 not in sitemap.xml
+  ⚠️  119-S-160 not in sitemap.xml
+  ⚠️  119-HR-42 not in sitemap.xml
+  ⚠️  119-HR-43 not in sitemap.xml
+  ⚠️  119-HR-4238 not in sitemap.xml
+  ⚠️  119-S-629 not in sitemap.xml
+  ⚠️  119-HR-915 not in sitemap.xml
+  ⚠️  119-HR-7401 not in sitemap.xml
+  ⚠️  119-HR-6644 not in sitemap.xml
+  ⚠️  119-HR-2478 not in sitemap.xml
+  ⚠️  119-S-201 not in sitemap.xml
+  ⚠️  119-S-2878 not in sitemap.xml
+  ⚠️  119-HR-7257 not in sitemap.xml
+  ⚠️  119-HR-7258 not in sitemap.xml
+  ⚠️  119-HR-7266 not in sitemap.xml
+  ⚠️  119-HR-7305 not in sitemap.xml
+  ⚠️  119-HR-7757 not in sitemap.xml
+  ⚠️  119-HR-7128 not in sitemap.xml
+  ⚠️  119-HR-5347 not in sitemap.xml
+  ⚠️  119-HR-8873 not in sitemap.xml
+  ⚠️  119-S-3705 not in sitemap.xml
+  ⚠️  119-S-284 not in sitemap.xml
+  ⚠️  119-HR-1823 not in sitemap.xml
+  ⚠️  119-HR-1262 not in sitemap.xml
+  ⚠️  119-HR-204 not in sitemap.xml
+  ⚠️  119-HR-1011 not in sitemap.xml
+  ⚠️  119-HR-2316 not in sitemap.xml
+  ⚠️  119-HR-695 not in sitemap.xml
+  ⚠️  119-HRES-878 not in sitemap.xml
+  ⚠️  119-HRES-1399 not in sitemap.xml
+  ⚠️  119-HCONRES-108 not in sitemap.xml
+  ⚠️  119-HR-6019 not in sitemap.xml
+  ⚠️  119-HR-9391 not in sitemap.xml
+  ⚠️  119-HR-8874 not in sitemap.xml
+  ⚠️  119-HR-8738 not in sitemap.xml
+  ⚠️  119-HR-2550 not in sitemap.xml
+  ⚠️  119-HR-3535 not in sitemap.xml
+  ⚠️  119-HR-5140 not in sitemap.xml
+  ⚠️  119-HR-4446 not in sitemap.xml
+  ⚠️  119-HR-983 not in sitemap.xml
+  ⚠️  119-HR-2493 not in sitemap.xml
+  ⚠️  119-HR-5125 not in sitemap.xml
+  ⚠️  119-HR-8897 not in sitemap.xml
+  ⚠️  119-HR-9388 not in sitemap.xml
+  ⚠️  119-HR-5143 not in sitemap.xml
+  ⚠️  119-HR-3106 not in sitemap.xml
+  ⚠️  119-HR-9328 not in sitemap.xml
+  ⚠️  119-HR-831 not in sitemap.xml
+  ⚠️  119-HR-973 not in sitemap.xml
+  ⚠️  119-HR-28 not in sitemap.xml
+  ⚠️  119-HR-859 not in sitemap.xml
+  ⚠️  119-HR-7574 not in sitemap.xml
+  ⚠️  119-HR-8770 not in sitemap.xml
+  ⚠️  119-HR-4549 not in sitemap.xml
+  ⚠️  119-HR-8168 not in sitemap.xml
+  ⚠️  119-HR-4922 not in sitemap.xml
+  ⚠️  119-HR-2269 not in sitemap.xml
+  ⚠️  119-S-423 not in sitemap.xml
+  ⚠️  119-HR-2444 not in sitemap.xml
+  ⚠️  119-S-911 not in sitemap.xml
+  ⚠️  119-S-356 not in sitemap.xml
+  ⚠️  119-S-216 not in sitemap.xml
+  ⚠️  119-HR-8595 not in sitemap.xml
+  ⚠️  119-HR-9770 not in sitemap.xml
+  ⚠️  119-HR-2069 not in sitemap.xml
+  ⚠️  119-HR-4348 not in sitemap.xml
+  ⚠️  119-HR-4541 not in sitemap.xml
+  ⚠️  119-HR-2821 not in sitemap.xml
+  ⚠️  119-HR-5578 not in sitemap.xml
+  ⚠️  119-HR-5160 not in sitemap.xml
+  ⚠️  Run generate_sitemap.js to update
+
+── Quote quality audit
+  ◦  119-HR-3838 "Ms. Houlahan": stance stored as "oppose" but text reads "support" — adjudicated 2026-07-22: detectStance() reads "support" from opener praise ("very proud of the markup", "honor to work so closely with Chairman Rogers"), but the quote pivots at "Unfortunately, the toxically amended bill that is here before us is no longer that" — she is opposing the FLOOR version. Stored "oppose" reflects the substantive stance.
+  ◦  119-HR-2808 "Mr. Sherman": stance stored as "support" but text reads "oppose" — adjudicated 2026-07-20: False positive — detectStance() hasOppose keyword "harmful" fired on the phrase "curb the harmful practice of trigger leads". Sherman describes trigger leads (the practice the bill curbs) as harmful, not the bill itself. He explicitly praises the bill as "an important positive step to strengthen data privacy for consumers." Stored "support" is correct.
+  ◦  119-HR-2550 "Mr. Comer": stance stored as "oppose" but text reads "support" — adjudicated 2026-07-15: False positive — detectStance() keyword-matched "They support our Federal employees" (rhetorical praise of Republicans/employees, not endorsement of the bill). HR-2550 nullifies Trump EO 14251 restricting federal collective bargaining; Comer's remarks defend the EO and attack the Democratic-leader position, i.e. opposition to the bill. Stored "oppose" is correct.
+  ◦  119-HR-3535 "Mr. Fitzpatrick": stance stored as "support" but text reads "oppose" — adjudicated 2026-07-15: False positive — detectStance() hasOppose keyword "dangerous" fired on the praise phrase "closes a dangerous and longstanding loophole". Fitzpatrick is the bill's SPONSOR and the quote frames the legislation approvingly ("built on a simple principle...American elections should be decided by the American people"). Stored "support" is correct.
+  ✅ All 367 quote(s) across 194 bills passed quality checks
+
+── Quote attribution (bioguide ↔ rep)
+  ✅ All quote bioguideIds match the rep name/state
+
+── Date format (ISO storage)
+  ✅ All date fields are ISO YYYY-MM-DD
+
+── Referenced sources
+  ✅ All referenced sources resolve and all source tags are registered
+
+── Figure sourcing (training-data guard)
+  ◦  119-S-3971: "100%" not string-matchable in bill text — adjudicated 2026-07-06: Bill text L310-311: 'demonstrate not less than 100' / 'percent matching funds' line-broken; claim verified genuine (sections[2].items[0].detail)
+  ◦  119-S-3971: "5%" not string-matchable in bill text — adjudicated 2026-07-06: Bill text L558-559: 'more than 5' / 'percent of the topics' line-broken; claim verified genuine (sections[3].items[0].detail)
+  ◦  119-HR-2399: "30%" not string-matchable in bill text — adjudicated 2026-06-10: Bill text L103-104: '30' / 'percent of the applicant's total support' line-broken across lines
+  ◦  119-S-3424: "0.9%" not string-matchable in bill text — adjudicated 2026-06-25: Bill L148 inserts ``0.9 at 28 USC 1930(a)(6)(B)(ii)(II); unit sourced to fetched usc-28-1930 ("0.8 percent of disbursements"). New inserted value, bare number in bill text.
+  ◦  119-HR-2269: "70%" not string-matchable in bill text — adjudicated 2026-07-14: Bill text L206-207: "at least 70" / "percent between such symbol" — line-broken across lines; figure verified genuine via qa-source-verify.
+  ✅ All figures/cites in analyses are traceable to the bill text
+
+── Acronym audit
+  ✅ All acronyms are in acronyms.js or introduced inline
+
+════════════════════════════════════════════════════════
+  0 error(s)   195 warning(s)
+  ⚠️  Ready to push — review warnings above.
+════════════════════════════════════════════════════════
+

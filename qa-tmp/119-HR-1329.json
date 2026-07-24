@@ -1,0 +1,160 @@
+{
+  "id": "119-HR-1329",
+  "title": "Smithsonian American Women's History Museum Act",
+  "official_title": "To permit the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall, and for other purposes.",
+  "code": "HR.1329",
+  "date": "2026-05-21",
+  "stageDate": "2026-05-21",
+  "version": "v1.0",
+  "stage": "dead",
+  "stageLabel": "Failed in House",
+  "currentStep": 1,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Malliotakis, Nicole (R-NY)",
+  "sponsor_bioguide": "M000317",
+  "cosponsors": 231,
+  "pages": 3,
+  "analyzed": true,
+  "demo": false,
+  "likelihood": 5,
+  "likelihoodReason": "Failed in the House on May 21, 2026 by a 204-216 vote despite 231 cosponsors. A failed floor vote ends the bill’s progress this Congress.",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2026-05-21",
+      "question": "On Passage",
+      "result": "Failed",
+      "yeas": 204,
+      "nays": 216,
+      "present": 0,
+      "notVoting": 10,
+      "crossoverCount": 6
+    },
+    {
+      "chamber": "House",
+      "date": "2026-05-21",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "yeas": 209,
+      "nays": 209,
+      "present": 0,
+      "notVoting": 12,
+      "crossoverCount": 0
+    }
+  ],
+  "billType": "amendment",
+  "analyzedAt": "2026-06-15",
+  "summary": "Allows the planned Smithsonian American Women's History Museum to be built within the protected core of the National Mall, and adjusts how its site is chosen and how it ensures a range of viewpoints.",
+  "brief": "Permits the Smithsonian American Women's History Museum on the National Mall Reserve and amends its authorizing law.",
+  "top_lines": [
+    {
+      "headline": "National Mall Site",
+      "billSection": "2",
+      "subs": [
+        "Allows the museum within the Reserve of the National Mall",
+        "Overrides the general bar on new buildings in the Reserve"
+      ]
+    },
+    {
+      "headline": "Site Transfer and Viewpoints",
+      "billSection": "2",
+      "subs": [
+        "Sets a notification and transfer process for federal sites",
+        "Requires exhibits to reflect a diversity of viewpoints",
+        "Biennial report to Congress on compliance"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “Smithsonian American Women's History Museum Act”.",
+          "detail": "Short-title section — citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Site of Smithsonian American Women's History Museum",
+      "items": [
+        {
+          "main": "Permits the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall.",
+          "detail": "Amends the museum's authorizing law (division T of the Consolidated Appropriations Act, 2021; 20 U.S.C. 80t et seq.), overriding the general restriction (40 U.S.C. 8908(c)) on locating new structures in the Mall Reserve. It sets a process for notifying and transferring jurisdiction when a chosen site is controlled by another federal agency, rewrites the requirement that the museum's council ensure a diversity of political viewpoints and authentic experiences in exhibits, and requires a report to Congress within 120 days and every two years on compliance.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [],
+  "criticisms": [],
+  "gaps": [
+    "The bill authorizes a Mall site but does not designate the specific location or provide construction funding.",
+    "It requires exhibits to reflect diverse viewpoints but does not specify how compliance is measured or enforced."
+  ],
+  "featured_quotes": [
+    {
+      "name": "Mrs. Cammack",
+      "party": "R",
+      "state": "FL",
+      "bioguideId": "C001039",
+      "text": "I appreciate my colleague from the great State of Wisconsin for his leadership on this issue. As you can see, I have my daughter, Augusta Dair, here with me today because I wanted her to be a witness to this incredible moment in our Nation's history where we stood up for all of the women who have helped build this country and told their stories. That is what this museum is. It is not a political statement. It is a promise, a promise that the women who came before us will not be erased, will not be minimized, and will not be forgotten.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "changes": {
+    "added": [],
+    "modified": [
+      "Smithsonian American Women's History Museum authorizing law (20 U.S.C. 80t et seq.) amended to allow a National Mall Reserve site, revise site-transfer rules, and require viewpoint-diversity reporting"
+    ],
+    "removed": []
+  },
+  "budget_accounts": {},
+  "likelihoodLabel": "Dead",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-02-13",
+      "url": "https://www.congress.gov/119/bills/hr1329/BILLS-119hr1329ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2026-04-23",
+      "url": "https://www.congress.gov/119/bills/hr1329/BILLS-119hr1329rh.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "Designates a specific site — the \"South Monument site\" on the National Mall, bordered by 14th Street SW, Jefferson Drive SW, Raoul Wallenberg Place SW, and Independence Avenue SW",
+      "President may designate an alternative site within 180 days of enactment",
+      "New \"Scope of Mission\": Museum dedicated to the history and experiences of \"biological women,\" and may not depict any biological male as a female",
+      "Adds building provisions — Board of Regents may plan, design, and construct, subject to approval by the Commission of Fine Arts, NCPC, and National Capital Memorial Advisory Commission, with siting/design criteria",
+      "Smithsonian must reimburse the agency's implementation costs within 60 days"
+    ],
+    "modified": [
+      "Diversity-of-viewpoints duty reworded: Council must ensure exhibits reflect \"an equal representation\" of political viewpoints, rather than \"accurately and comprehensively represent\" them",
+      "Site transfer provision simplified to a direct transfer to the Smithsonian \"as soon as practicable,\" replacing the prior multi-committee notification process"
+    ],
+    "removed": [
+      "Drops the general authorization to locate the Museum anywhere within the Reserve of the National Mall (notwithstanding 40 U.S.C. 8908(c)) — replaced by the fixed South Monument designation",
+      "Removes the requirement that agencies notify the head of another Federal agency and the named House/Senate committees before a cross-jurisdiction site is designated"
+    ],
+    "throughVersion": {
+      "type": "Reported in House",
+      "date": "2026-04-23"
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-02-13"
+    }
+  }
+}

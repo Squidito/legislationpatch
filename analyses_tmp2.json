@@ -1,0 +1,784 @@
+{
+  "id": "119-HR-1",
+  "title": "One Big Beautiful Bill Act",
+  "official_title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+  "code": "HR.1",
+  "date": "2025-07-04",
+  "version": "v1.0",
+  "stage": "signed",
+  "stageLabel": "Signed into Law",
+  "currentStep": 4,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Arrington, Jodey (R-TX)",
+  "sponsor_bioguide": "A000375",
+  "cosponsors": 0,
+  "pages": 365,
+  "analyzed": true,
+  "demo": false,
+  "summary": "The One Big Beautiful Bill permanently extends the 2017 Trump-era tax cuts, adds new deductions for tips and overtime pay, tightens eligibility for SNAP food assistance and Medicaid, funds more than $109.7B in new border security and immigration enforcement, and rescinds most of the Inflation Reduction Act's climate and clean energy spending. It also raises the federal debt ceiling by $5 trillion to finance the combined cost.",
+  "brief": "Makes the 2017 Trump tax cuts permanent, creates tip and overtime deductions, funds a $109.7B border buildup, imposes Medicaid work requirements, and terminates most IRA clean energy programs.",
+  "top_lines": [
+    {
+      "headline": "Tax Cuts Made Permanent",
+      "subs": [
+        "Individual tax rates of 10%–37% made permanent; estate tax exemption increased to $15M",
+        "Standard deduction raised to $15,750 for single filers and $31,500 for joint filers (inflation-adjusted)",
+        "Child tax credit increased to $2,200 per qualifying child; SALT deduction cap raised to $40,000 through 2029, reverting to $10,000 in 2030"
+      ],
+      "billSection": "title-VII",
+      "source": "usc-26-63"
+    },
+    {
+      "headline": "New Deductions for Workers",
+      "subs": [
+        "Up to $25,000 deduction for qualified tip income (2025–2028)",
+        "Up to $12,500 deduction for overtime compensation (2025–2028)",
+        "Up to $10,000 deduction for passenger vehicle loan interest (2025–2028)",
+        "New \"Trump accounts\" — tax-advantaged IRAs for under-18s with a one-time $1,000 government deposit for births in 2025–2028"
+      ],
+      "billSection": "title-VII"
+    },
+    {
+      "headline": "Border Security and Immigration Enforcement",
+      "subs": [
+        "$46.55B to U.S. Customs and Border Protection for physical barriers, technology, and access roads through FY2029",
+        "$45B to ICE for expanded detention capacity through FY2029",
+        "$29.85B to ICE for hiring, transportation, and removal operations through FY2029",
+        "New immigration court fees: $100 for asylum applications, $1,000 for parolees, $5,000 for individuals apprehended between ports of entry"
+      ],
+      "billSection": "title-IX"
+    },
+    {
+      "headline": "SNAP and Medicaid Changes",
+      "subs": [
+        "SNAP work requirements extended to adults up to age 65 (from 55); parents of children 14 and older must also meet requirements",
+        "States required to share 5–15% of SNAP benefit costs starting FY2028 based on payment error rate; federal admin cost share cut from 50% to 25%",
+        "Medicaid expansion enrollees must complete 80 hours per month of work or community service beginning in FY2027",
+        "Medicaid eligibility redetermined every six months for expansion population (previously annual)"
+      ],
+      "billSection": "title-I"
+    },
+    {
+      "headline": "Defense and Security Investments",
+      "subs": [
+        "$29.18B for the shipbuilding industrial base and naval shipbuilding (FY2025)",
+        "$24.41B for space-based missile intercept and ground-based missile defense (FY2025)",
+        "$25.38B for hypersonic, cruise, and anti-ship missiles (FY2025)",
+        "$14.69B for nuclear forces and production, including B-21 bomber expansion (FY2025)"
+      ],
+      "billSection": "title-II"
+    },
+    {
+      "headline": "Clean Energy Tax Credits Terminated",
+      "subs": [
+        "Consumer EV tax credit (up to $7,500) and used EV credit (up to $4,000) terminated October 1, 2025",
+        "Home energy efficiency credit (up to $3,200) and residential clean energy credit terminated 2026",
+        "Wind and solar clean electricity production and investment credits terminated for new projects after 2027",
+        "Clean hydrogen production credit terminated for projects starting construction after 2027"
+      ],
+      "billSection": "title-VII",
+      "source": "usc-26-25c"
+    },
+    {
+      "headline": "Energy Production and IRA Rescissions",
+      "subs": [
+        "Oil and gas royalty rates reduced on federal lands; onshore lease sales resumed in specified states",
+        "ANWR: at least 4 lease sales within 10 years; NPR-A: at least 5 lease sales within 10 years",
+        "$389M for the Strategic Petroleum Reserve; repeals prior SPR drawdown-and-sale mandate at PL 115-97 §20003",
+        "Rescinds unobligated IRA funds for Greenhouse Gas Reduction Fund, school air quality, climate justice grants, and dozens of other EPA climate programs"
+      ],
+      "billSection": "title-V"
+    },
+    {
+      "headline": "Student Loans and Education",
+      "subs": [
+        "Graduate PLUS loans eliminated for new loans on or after July 1, 2026",
+        "Aggregate student loan caps: $100,000 for graduate students, $200,000 for professional students, $257,500 lifetime limit",
+        "All current income-based repayment plans terminated for new loans; borrowers limited to standard plan or new Repayment Assistance Plan (RAP)",
+        "$10.5B in additional Pell Grant funding for FY2026; new Workforce Pell Grants for 150–600 clock-hour programs"
+      ],
+      "billSection": "title-VIII"
+    },
+    {
+      "headline": "Debt Limit and Other Provisions",
+      "subs": [
+        "Statutory debt limit increased by $5 trillion",
+        "$24.59B to the Coast Guard for vessels, aircraft, and shore infrastructure through FY2029",
+        "$12.52B for FAA facilities modernization including $4.75B for telecom infrastructure and $3B for radar replacement",
+        "$9.995B to NASA for Moon and Mars missions and continued International Space Station operation"
+      ],
+      "billSection": "title-IV"
+    }
+  ],
+  "likelihood": 100,
+  "likelihoodLabel": "Enacted",
+  "likelihoodReason": "Signed into law on July 4, 2025, as Public Law 119-21. The bill passed both chambers along party lines under the Senate's reconciliation procedure, which requires only a simple majority and cannot be filibustered. Republicans held the House and Senate majority and used reconciliation to bypass the Senate's 60-vote threshold.",
+  "sections": [
+    {
+      "label": "Title I — Agriculture, Nutrition, and Forestry",
+      "items": [
+        {
+          "main": "Tightens SNAP eligibility and cost structure: work requirements extended to age 65, state cost-sharing of 5–15% beginning FY2028, and federal administrative cost share cut from 50% to 25%.",
+          "detail": "SNAP state cost-sharing is calculated on a sliding scale based on the state's payment error rate — states below 6% pay nothing; states at 10% or above pay 15%. States may no longer request waivers of the three-month SNAP time limit based on insufficient job availability. SNAP-ED nutrition education grants are eliminated. SNAP eligibility is removed for certain legally present immigrants, including domestic violence and trafficking survivors.",
+          "comments": [],
+          "source": "usc-7-2015"
+        },
+        {
+          "main": "Extends farm program authorities through crop year 2031, including ARC and PLC commodity support, Dairy Margin Coverage, and crop insurance enhancements.",
+          "detail": "ARC and PLC payment limits increased to $155,000 per person (from $125,000), adjusted for inflation annually. The ARC program coverage guarantee increases from 86% to 90% of benchmark revenue; maximum payment amount increases from 10% to 12% of benchmark revenue. Crop insurance premium subsidies increase 3–5% depending on coverage level. The Supplemental Coverage Option (SCO) premium subsidy increases from 65% to 80%.",
+          "comments": [],
+          "source": "usc-7-9017"
+        }
+      ]
+    },
+    {
+      "label": "Title II — Armed Services",
+      "items": [
+        {
+          "main": "Provides $156.22B in FY2025 supplemental defense funding across shipbuilding, missile systems, space, nuclear forces, aircraft, and personnel.",
+          "detail": "$29.18B for naval shipbuilding; $24.41B for missile defense and space-based sensors; $25.38B for hypersonic and other missiles; $16.05B for unmanned aerial systems and AI integration; $14.69B for nuclear forces including B-21 bomber expansion; $8.64B for aircraft modernization and prevention of F-22 retirement; $12.66B for Indo-Pacific military exercises and satellites; $7.48B for military quality of life including basic housing allowance and child care.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title VII — Individual and Business Tax Reforms",
+      "items": [
+        {
+          "main": "Permanently extends the individual income tax rates, standard deduction, and most deduction and credit provisions of the 2017 Tax Cuts and Jobs Act.",
+          "detail": "Standard deduction set at $15,750 for single filers and $31,500 for joint filers (inflation-adjusted). Estate tax exemption increased to $15M. Child tax credit increased to $2,200 and indexed to inflation. SALT deduction cap raised to $40,000 through 2029, then reverts to $10,000. Qualified Business Income deduction made permanent with expanded phase-in range. Alternative minimum tax exemptions permanently raised.",
+          "comments": []
+        },
+        {
+          "main": "Creates new above-the-line deductions for tip income (up to $25,000), overtime compensation (up to $12,500), and passenger vehicle loan interest (up to $10,000), all available for tax years 2025–2028.",
+          "detail": "The tip and overtime deductions phase out at MAGI above $150,000 ($300,000 joint) and require the taxpayer's Social Security number on the return; the passenger vehicle loan interest deduction phases out at $100,000 ($200,000 joint) and requires the vehicle's VIN on the return. A new \"Trump account\" IRA for individuals under 18 allows up to $5,000 annually; the federal government deposits a one-time $1,000 into accounts for children born in 2025–2028.",
+          "comments": []
+        },
+        {
+          "main": "Extends 100% bonus depreciation permanently, allows immediate expensing of domestic R&D, and increases the Section 179 deduction limit to $2.5M.",
+          "detail": "Section 179 phase-out begins at $4M in asset purchases. BEAT (base erosion minimum tax) rate set permanently at 10.5% (up from 10%), repealing the scheduled increase to 12.5% for tax years after 2025. GILTI and FDII renamed Net CFC Tested Income and Foreign-Derived Deduction Eligible Income, with the foreign tax credit haircut reduced from 20% to 10%.",
+          "comments": [],
+          "source": "usc-26-59a"
+        },
+        {
+          "main": "Terminates most IRA clean energy tax credits for consumers and businesses, including EV credits, home efficiency credits, and wind and solar electricity credits.",
+          "detail": "New and used EV credits terminated for vehicles purchased on or after October 1, 2025. Home energy efficiency and residential clean energy credits terminated effective 2026. Wind and solar clean electricity production and investment credits terminated for new projects placed in service after December 31, 2027. Clean hydrogen production credit terminated for construction beginning after 2027.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title VII — Medicaid and Medicare",
+      "items": [
+        {
+          "main": "Requires Medicaid expansion enrollees to complete 80 hours per month of work, community service, or education beginning in FY2027; states must redetermine expansion enrollees' eligibility every six months.",
+          "detail": "Exemptions apply to individuals with serious medical conditions or dependent children aged 13 or younger. States may not waive the requirement, though the CMS may grant a state an implementation delay through December 31, 2028. Cost-sharing of up to $35 per service required for expansion enrollees with income above the poverty line beginning FY2029. Federal Medicaid payment suspended for one year for essential community providers with more than $800,000 in Medicaid revenue that furnish abortions outside of rape, incest, or life-threatening circumstances.",
+          "comments": []
+        },
+        {
+          "main": "Reduces the maximum provider tax states may impose to fund Medicaid matching funds, phasing down to 3.5% by FY2032 from the current 6%.",
+          "detail": "States that have not expanded Medicaid are precluded from increasing their provider tax rate. New provider taxes may not be created by states without an existing one. Medicaid and Medicare eligibility restricted to U.S. citizens, lawful permanent residents, and specified immigrant categories — excluding DACA recipients, TPS holders, asylees, and refugees beginning in FY2027 (Medicaid) and within 18 months of enactment (Medicare).",
+          "comments": []
+        },
+        {
+          "main": "$10B per fiscal year for FY2026–FY2030 for a Rural Health Transformation Program providing states with funds to improve rural health access.",
+          "detail": "50% of funds distributed equally among approved states; remaining 50% allocated at the CMS Administrator's discretion considering four factors — state population in rural census tracts, proportion of rural health facilities, situation of hospitals under §1902(a)(13)(A)(iv), and any other factors the Administrator deems appropriate — with at least one-quarter of approved states receiving funds from this discretionary tranche. States must submit rural health transformation plans; no matching funds required. $200M for FY2025 for CMS implementation.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title IX — Border Security and Homeland Security",
+      "items": [
+        {
+          "main": "Appropriates more than $109.7B through FY2029 for border barriers, CBP personnel, ICE detention, CBP surveillance equipment, and state border reimbursements.",
+          "detail": "$46.55B to CBP for physical barriers, access roads, and detection technology; $45B to ICE for detention facility expansion; $12.01B for CBP personnel, bonuses, and fleet; $6.17B for CBP inspection and surveillance equipment; $10B to reimburse states and localities for border security actions taken on or after January 20, 2021.",
+          "comments": []
+        },
+        {
+          "main": "$300M to FEMA to reimburse state and local law enforcement for costs of protecting a presidential residence; $625M for 2026 FIFA World Cup security and $1B for 2028 Olympics security.",
+          "detail": "FEMA State Homeland Security Grant Program also receives $500M for drone detection technology and $450M for Operation Stonegarden border coordination through FY2029. The Federal Employees Health Benefits program receives $66M for a mandatory eligibility audit to verify family members.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title X — Immigration, Judiciary, and Radiation Compensation",
+      "items": [
+        {
+          "main": "Establishes new or increased fees across the immigration system: $100 for asylum applications, $1,000 for parolees, $550 initial employment-authorization fee on asylum applicants, parolees, and TPS holders, and $5,000 for individuals apprehended between ports of entry or ordered removed in absentia.",
+          "detail": "$29.85B to ICE for hiring, removal operations, and detention; $3.33B to DOJ (Sec 100054) available through Sep 30, 2029 for six purposes — immigration judge hiring, drug trafficking prosecution, prosecution of immigration/gang/child-trafficking/unlawful-voting/Alien Registration Act matters, attorneys for injunctive-relief litigation against the federal government, Byrne/COPS grants, and lawsuit-settlement attorney staffing; $3.5B to reimburse states for incarcerating non-citizen criminals; $5B for the Bureau of Prisons; $1.17B for the Secret Service. $100 fee per calendar year that an asylum application remains pending.",
+          "comments": []
+        },
+        {
+          "main": "Reestablishes and expands the Radiation Exposure Compensation program through 2028, increasing compensation amounts and expanding geographic coverage to include additional areas of Idaho, New Mexico, Missouri, Tennessee, Alaska, and Kentucky.",
+          "detail": "Extends the statute of limitations for filing claims through 2027. Expands eligible groups to include additional uranium miners and individuals near Manhattan Project waste sites who developed certain cancers.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title V — Energy and Natural Resources",
+      "items": [
+        {
+          "main": "Reduces oil and gas royalty rates on federal lands, reinstates noncompetitive leasing, and mandates at least 4 ANWR lease sales and 5 NPR-A lease sales within 10 years.",
+          "detail": "Offshore royalty rates also reduced; Gulf state revenue-sharing cap raised from $500M to $650M per year for FY2025–FY2034. Methane royalties on vented or flared gas from federal lands eliminated. $389M for the Strategic Petroleum Reserve; prior SPR drawdown-and-sale mandate at PL 115-97 §20003 repealed. Forest Service must sell timber annually FY2026–FY2034 in a quantity not less than 250M board-feet greater than the previous fiscal year (cumulative year-over-year increase, subject to the applicable forest plan's maximum allowable sale quantity).",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title VIII — Student Loans and Education",
+      "items": [
+        {
+          "main": "Eliminates Grad PLUS loans for new borrowers on or after July 1, 2026, and caps federal student borrowing at $100,000 aggregate for graduate students and $257,500 lifetime across all federal loan types.",
+          "detail": "Parent PLUS loans capped at $20,000 annually and $65,000 lifetime per dependent undergraduate. All current income-based repayment plans (SAVE, PAYE, ICR) terminated for new loans; borrowers limited to a standard repayment plan or the new Repayment Assistance Plan (RAP). Economic hardship and unemployment deferments eliminated for loans originated on or after July 1, 2027.",
+          "comments": []
+        },
+        {
+          "main": "$10.5B in additional Pell Grant funding for FY2026; new Workforce Pell Grants created for programs of 150–600 clock hours in workforce training.",
+          "detail": "Low-earning outcome programs — programs where graduates earn less than high school diploma holders — lose eligibility for federal funds beginning July 1, 2026. Institutions must notify enrolled students when a program loses eligibility. Borrower defense to repayment and closed school discharge regulations delayed until July 1, 2035.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Title IV — Commerce, Transportation, and Infrastructure",
+      "items": [
+        {
+          "main": "$24.59B to the Coast Guard through FY2029 for new vessels, aircraft, and shore facilities; $12.52B to the FAA for facilities modernization including $4.75B for telecom infrastructure and $3B for radar replacement.",
+          "detail": "FCC spectrum auction authority reauthorized through September 30, 2034; FCC must auction at least 300 MHz including 100 MHz in the Upper C-Band within two years; NTIA must identify 500 MHz of additional federal spectrum for reallocation within four years. CAFE standard civil penalty set to $0, eliminating enforcement.",
+          "comments": []
+        },
+        {
+          "main": "$9.995B to NASA for Moon and Mars missions, continued International Space Station operation, and Artemis IV and V spacecraft procurement; $9.995B includes a Mars telecommunications orbiter.",
+          "detail": "NASA must identify a previously-flown crewed spacecraft to be relocated and placed on public display near a NASA field center within 18 months. Brand USA tourism promotion funding permanently reduced from $100M to $20M per year (Sec 40009 amends 22 U.S.C. 2131(d)(2)(B) — no sunset).",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 40006 (Title IV)",
+      "summary": "Sets the civil penalty for a manufacturer's violation of CAFE fuel economy standards to $0, removing NHTSA's ability to enforce those standards through monetary penalties.",
+      "why_unreported": "The section is titled and described as modifying the civil penalty amount, but the operative effect is to eliminate meaningful enforcement of federal fuel economy standards for automakers — a substantive change to federal vehicle emissions policy that is not referenced in the bill's title or stated purpose."
+    },
+    {
+      "section": "Section 70436 (Title VII)",
+      "summary": "Eliminates the $200 federal excise tax on the transfer of National Firearms Act items other than machine guns and destructive devices, effectively removing the tax on silencers, short-barreled rifles, and short-barreled shotguns.",
+      "why_unreported": "The section appears in a tax chapter primarily focused on deductions and credits for families and businesses. The NFA excise tax removal is a standalone firearms regulatory change unrelated to the chapter's stated subject matter and is not mentioned in the bill's title."
+    },
+    {
+      "section": "Section 71113 (Title VII)",
+      "summary": "Prohibits federal Medicaid payment for one year to any nonprofit health care provider with more than $800,000 in fiscal year 2023 Medicaid payments if the provider primarily furnishes family planning services and provides abortions outside of rape, incest, or life-threatening circumstances.",
+      "why_unreported": "The provision is structured as a Medicaid payment restriction on a category of providers meeting specific criteria, but its operative effect — cutting off federal Medicaid funding to qualifying Planned Parenthood affiliates — is not stated in the section title or described in the bill's stated purposes."
+    },
+    {
+      "section": "Section 70531 (Title VII)",
+      "summary": "Eliminates the $800 de minimis customs exemption effective July 1, 2027, ending duty-free treatment for small-value imports that currently allows platforms like Shein and Temu to ship directly to U.S. consumers without tariffs.",
+      "why_unreported": "The provision appears in a chapter captioned as enhancing deduction guardrails. It eliminates a longstanding customs exemption that has shaped the structure of direct-to-consumer international e-commerce, with broad implications for import pricing and retail competition not discussed in the bill's tax-focused framing."
+    }
+  ],
+  "criticisms": [],
+  "featured_quotes": [
+    {
+      "name": "Mr. Babin",
+      "party": "R",
+      "state": "TX",
+      "bioguideId": "B001291",
+      "text": "I rise today in very strong support of H.R. 1, President Trump's one big, beautiful bill. Here we are, despite months of our Democratic colleagues' best efforts to delay, fearmonger, and mislead the public about this bill, and we are ready to deliver for the American people. Here is the thing about fear-mongering. You can only say ``the sky is falling'' so many times before folks start waking up and seeing for themselves exactly what is going on. The One Big Beautiful Bill Act secures our border.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Ms. Brown",
+      "party": "D",
+      "state": "OH",
+      "bioguideId": "B001313",
+      "text": "For the first time in history, this bill would force States to pay for part of SNAP benefits, and it would require States to increase their share of administrative costs. This is an unfunded mandate, plain and simple. Let's be clear. The costs are staggering, the consequences are devastating, and the cruelty is deeply disturbing. This policy punishes those who can least afford it: seniors on a fixed income, veterans, and families already forced to choose between gas and groceries. States will be stuck in a corner.",
+      "stance": "oppose",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Langworthy",
+      "party": "R",
+      "state": "NY",
+      "bioguideId": "L000600",
+      "text": "The stakes for the American people could not be higher. We are rapidly approaching a fiscal cliff. If we do nothing, the Trump tax cuts, the most progrowth tax reforms in generations, will expire. That means higher taxes on nearly every American. That means a gutted child tax credit. That means small businesses will lose the tools they need to survive and to thrive. That means less take-home pay for working families that have already been crushed by the Biden-era inflation. This isn't some hypothetical scenario.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Thompson",
+      "party": "D",
+      "state": "CA",
+      "bioguideId": "T000460",
+      "text": "Mr. Speaker, Republicans are openly bragging about how the bill kicks children and the elderly off Medicaid, nutritional assistance, and more, all to pay for another tax break for wealthy Republican donors. My Republican colleagues are not talking about the trillions and trillions of dollars their political giveaway is going to cost. In fact, Mr. Speaker, Vice President Vance has said historic levels of Homeland Security funding in the bill sweetens the deal for the devil.",
+      "stance": "oppose",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Alford",
+      "party": "R",
+      "state": "MO",
+      "bioguideId": "A000379",
+      "text": "Today, Mr. Speaker, we face a watershed moment for the American people. This Republican majority was given a clear mandate by the American people, which is the America First agenda. This bill is our opportunity to deliver on that agenda. H.R. 1 stops the largest tax increase in U.S. history, while providing the largest tax cut for working-and middle-class families ever, with no tax on tips, no tax on overtime, and tax breaks for seniors.",
+      "stance": "support",
+      "chamber": "House"
+    }
+  ],
+  "gaps": [
+    "The bill increases the statutory debt limit by $5 trillion but includes no spending cap, enforcement trigger, or fiscal review mechanism tied to the increase.",
+    "The SNAP state cost-sharing provisions create financial liability for states beginning FY2028, but the bill provides no additional administrative resources to help states reduce payment error rates below the 6% threshold required to avoid cost-sharing.",
+    "The bill terminates consumer and commercial EV credits and most clean energy investment credits but does not include transition support for workers or businesses in those sectors.",
+    "Medicaid work requirements are established for the expansion population but the bill specifies no federal remedy or enrollment fallback for individuals who lose coverage due to reporting failures unrelated to actual eligibility."
+  ],
+  "changes": {
+    "added": [
+      "Above-the-line deduction for qualified tip income — up to $25,000 for tax years 2025–2028",
+      "Above-the-line deduction for qualified overtime compensation — up to $12,500 for tax years 2025–2028",
+      "Tax deduction for passenger vehicle loan interest — up to $10,000 for 2025–2028",
+      "\"Trump accounts\" — new tax-advantaged IRAs for individuals under 18; $1,000 one-time government deposit for births in 2025–2028",
+      "Medicaid work/community service requirements — 80 hours per month for expansion population beginning FY2027",
+      "SNAP state cost-sharing — 0–15% of benefit costs based on payment error rate, beginning FY2028",
+      "Immigration fee schedule — new fees for asylum ($100+), parole ($1,000+), employment authorization ($550+), apprehension between ports of entry ($5,000)",
+      "1% excise tax on remittance transfers paid with cash, money order, or cashier's check",
+      "Workforce Pell Grants — new Pell eligibility for 150–600 clock-hour workforce training programs",
+      "Rural Health Transformation Program — $10B per year FY2026–FY2030 for rural health access improvements",
+      "$1,700 nonrefundable tax credit for contributions to scholarship-granting organizations for K–12 school expenses"
+    ],
+    "modified": [
+      "Individual income tax rates: the current seven-bracket rate structure made permanent (was set to expire after 2025)",
+      "Standard deduction: raised to $15,750 single / $31,500 joint and made permanent (was scheduled to revert)",
+      "Child tax credit: increased to $2,200 per child (from $2,000), inflation-adjusted annually",
+      "SALT deduction cap: increased to $40,000 for 2025–2029, reverts to $10,000 in 2030 (previously $10,000 flat)",
+      "Estate tax exemption: increased to $15M (from $5M)",
+      "SNAP ABAWD work requirements: age ceiling raised to 65 (from 55); parents of children 14 and older now covered",
+      "SNAP federal administrative cost share: reduced to 25% (from 50%)",
+      "Medicaid provider tax maximum: reduced to 3.5% by FY2032 (from current 6%)",
+      "CFPB funding cap: reduced from 12% to 6.5% of the Federal Reserve System's total operating expenses",
+      "Section 179 expensing limit: increased to $2.5M with phase-out beginning at $4M",
+      "BEAT rate: reduced to 10.5% (from 12.5%) for tax years after 2025",
+      "University endowment excise tax: replaced flat 1.4% with graduated rates of 1.4%, 4%, or 8% based on endowment size",
+      "Medicaid eligibility redetermination: every 6 months for expansion population (was annual)",
+      "CAFE civil penalty for manufacturer violations: set to $0 (was previously enforceable)",
+      "Brand USA tourism promotion funding: reduced from $100M to $20M per year"
+    ],
+    "removed": [
+      "Consumer electric vehicle tax credit (up to $7,500) — terminated October 1, 2025",
+      "Previously-owned EV tax credit (up to $4,000) — terminated October 1, 2025",
+      "Home energy efficiency tax credit (up to $3,200) — terminated effective 2026",
+      "Residential clean energy credit — terminated effective 2026",
+      "Wind and solar clean electricity production and investment credits — terminated for projects after December 31, 2027",
+      "Clean hydrogen production tax credit — terminated for construction starting after 2027",
+      "Grad PLUS loans — eliminated for new loans on or after July 1, 2026",
+      "SAVE, PAYE, and ICR income-based repayment plans — terminated for new loans after July 1, 2026",
+      "Economic hardship and unemployment student loan deferments — eliminated for new loans after July 1, 2027",
+      "SNAP-ED nutrition education and obesity prevention grants",
+      "SNAP state waiver authority for high-unemployment or insufficient-job areas",
+      "SNAP eligibility for certain legally-present immigrants including domestic violence and trafficking survivors",
+      "Medicaid and Medicare eligibility for DACA recipients, TPS holders, refugees, asylees, and parolees",
+      "Greenhouse Gas Reduction Fund (rescinded unobligated IRA funds)",
+      "IRA clean vehicle school bus and heavy-duty truck grants (rescinded)",
+      "IRA school air quality grants and neighborhood access equity grants (rescinded)",
+      "IRA climate justice block grants (rescinded)",
+      "$800 de minimis customs exemption — eliminated July 1, 2027",
+      "$200 NFA excise tax on silencers, short-barreled rifles, and short-barreled shotguns"
+    ]
+  },
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2025-07-03",
+      "question": "On Motion to Concur in the Senate Amendment",
+      "result": "Passed",
+      "yeas": 218,
+      "nays": 214,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-07-01",
+      "question": "On Passage of the Bill H.R. 1",
+      "result": "Bill Passed",
+      "yeas": 50,
+      "nays": 50,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 3
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-07-01",
+      "question": "On the Motion (Warnock Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 48,
+      "nays": 51,
+      "present": 0,
+      "notVoting": 1,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-07-01",
+      "question": "On the Motion (Wyden Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-07-01",
+      "question": "On the Motion (Bennet Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Padilla Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Schiff Motion to Commit H.R. 1 to the Committee on Agriculture, Nutrition, and Forestry with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Duckworth Motion to Commit H.R. 1 to the Committee on Agriculture, Nutrition, and Forestry with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 49,
+      "nays": 51,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Hassan Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 48,
+      "nays": 52,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Gallego Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Blumenthal Motion to Commit H.R. 1 to the Committee on Armed Services with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Kaine Motion to Commit H.R. 1 to the Committee on Homeland Security and Governmental Affairs with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Blunt Rochester Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 48,
+      "nays": 52,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Reed Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 48,
+      "nays": 52,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Lujan Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 49,
+      "nays": 51,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 48,
+      "nays": 52,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Wyden Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Motion to Waive Section 425(a)(2) of the CBA re: H.R. 1)",
+      "result": "Motion Agreed to",
+      "yeas": 51,
+      "nays": 48,
+      "present": 0,
+      "notVoting": 1,
+      "crossoverCount": 1
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 49,
+      "nays": 51,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-30",
+      "question": "On the Motion (Schumer Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+      "result": "Motion Rejected",
+      "yeas": 47,
+      "nays": 53,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 0
+    },
+    {
+      "chamber": "Senate",
+      "date": "2025-06-28",
+      "question": "On the Motion to Proceed H.R. 1",
+      "result": "Motion to Proceed Agreed to",
+      "yeas": 51,
+      "nays": 49,
+      "present": 0,
+      "notVoting": 0,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "House",
+      "date": "2025-05-22",
+      "question": "On Passage",
+      "result": "Passed",
+      "yeas": 215,
+      "nays": 214,
+      "present": 1,
+      "notVoting": 2,
+      "crossoverCount": 2
+    },
+    {
+      "chamber": "House",
+      "date": "2025-05-22",
+      "question": "On Motion to Recommit",
+      "result": "Failed",
+      "yeas": 212,
+      "nays": 216,
+      "present": 0,
+      "notVoting": 4,
+      "crossoverCount": 0
+    }
+  ],
+  "stageDate": "2025-07-04",
+  "enactedDate": "2025-07-04",
+  "isOmnibus": true,
+  "divisions": [],
+  "billType": "appropriation",
+  "referencedSources": [
+    {
+      "id": "usc-26-63",
+      "kind": "statute",
+      "label": "26 U.S.C. 63",
+      "citation": "26 U.S.C. 63",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partI-sec63/htm",
+      "textFile": "data/ref-text/usc-26-63.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-26-25c",
+      "kind": "statute",
+      "label": "26 U.S.C. 25C",
+      "citation": "26 U.S.C. 25C",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partIV-subpartA-sec25C/htm",
+      "textFile": "data/ref-text/usc-26-25c.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-26-1",
+      "kind": "statute",
+      "label": "26 U.S.C. 1",
+      "citation": "26 U.S.C. 1",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partI-sec1/htm",
+      "textFile": "data/ref-text/usc-26-1.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-7-9017",
+      "kind": "statute",
+      "label": "7 U.S.C. 9017",
+      "citation": "7 U.S.C. 9017",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title7/granules/USCODE-2024-title7-chap115-subchapI-sec9017/htm",
+      "textFile": "data/ref-text/usc-7-9017.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-19-1321",
+      "kind": "statute",
+      "label": "19 U.S.C. 1321",
+      "citation": "19 U.S.C. 1321",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap4-subtitleII-partI-sec1321/htm",
+      "textFile": "data/ref-text/usc-19-1321.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-12-5497",
+      "kind": "statute",
+      "label": "12 U.S.C. 5497",
+      "citation": "12 U.S.C. 5497",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title12/granules/USCODE-2024-title12-chap53-subchapV-partA-sec5497/htm",
+      "textFile": "data/ref-text/usc-12-5497.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-26-59a",
+      "kind": "statute",
+      "label": "26 U.S.C. 59A",
+      "citation": "26 U.S.C. 59A",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapA-partVII-sec59A/htm",
+      "textFile": "data/ref-text/usc-26-59a.txt",
+      "fetchedAt": "2026-06-10"
+    },
+    {
+      "id": "usc-7-2015",
+      "kind": "statute",
+      "label": "7 U.S.C. 2015",
+      "citation": "7 U.S.C. 2015",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title7/granules/USCODE-2024-title7-chap51-sec2015/htm",
+      "textFile": "data/ref-text/usc-7-2015.txt",
+      "fetchedAt": "2026-07-20"
+    }
+  ],
+  "analyzedAt": "2026-07-24",
+  "versions": [
+    {
+      "type": "Reported in House",
+      "date": "2025-05-20",
+      "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2025-05-22",
+      "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1eh.htm"
+    },
+    {
+      "type": "Placed on Calendar Senate",
+      "date": "2025-06-28",
+      "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1pcs.htm"
+    },
+    {
+      "type": "Engrossed Amendment Senate",
+      "date": "2025-07-01",
+      "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1eas.htm"
+    },
+    {
+      "type": "Public Law",
+      "date": "2025-07-05",
+      "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm"
+    },
+    {
+      "type": "Enrolled Bill",
+      "date": null,
+      "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1enr.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "Enrolled text reorganized into 10 Senate-committee titles (TITLE I Agriculture through TITLE X Judiciary), replacing the House layout",
+      "New/renamed subtitles appear in the enrolled version, including \"Garden of Heroes,\" \"Office of Refugee Resettlement,\" \"Radiation Exposure Compensation Matters,\" \"Disaster Assistance Programs,\" and \"Crop Insurance\""
+    ],
+    "modified": [
+      "Wholesale between-chamber restructuring: House \"Reported\" text was a single TITLE XI (Committee on Ways and Means, \"The One, Big, Beautiful Bill\") with House-committee subtitles; enrolled splits content across TITLE I-X by Senate-committee jurisdiction",
+      "Tax/family/business provisions moved from House Subtitles A-C (\"Make American Families and Workers Thrive Again\" etc.) into the enrolled TITLE VII (Finance), Subtitle A--Tax",
+      "Debt-limit increase relocated from the House Ways and Means Subtitle D into enrolled TITLE VII Subtitle C"
+    ],
+    "removed": [],
+    "throughVersion": {
+      "type": "Enrolled Bill",
+      "date": null
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Reported in House",
+      "date": "2025-05-20"
+    }
+  }
+}

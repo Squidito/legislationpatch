@@ -1,0 +1,223 @@
+{
+  "id": "119-HR-2066",
+  "title": "Investing in All of America Act of 2025",
+  "official_title": "An Act to amend the Small Business Investment Act of 1958 to exclude from the limit on leverage certain amounts invested in smaller enterprises located in rural or low-income areas and small businesses in critical technology areas, and for other purposes.",
+  "code": "HR.2066",
+  "date": "2026-05-19",
+  "stageDate": "2026-05-19",
+  "version": "v1.0",
+  "stage": "signed",
+  "stageLabel": "Signed into Law",
+  "currentStep": 4,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Meuser, Daniel (R-PA-9)",
+  "sponsor_bioguide": "M001204",
+  "cosponsors": 8,
+  "pages": 2,
+  "analyzed": true,
+  "demo": false,
+  "summary": "Reduces the maximum leverage a Small Business Investment Company (SBIC) can obtain from the SBA from 300% to 200% of its private capital, while adding a new exclusion from the leverage calculation for investments in rural areas, covered technology categories, or small manufacturers — up to the lesser of 50% of private capital or $125M. Also expands what counts as private capital to include college and university endowments and foundations.",
+  "brief": "Lowers the SBIC leverage ceiling from 300% to 200% of private capital and creates a new $125M exclusion for investments in rural areas, critical technologies, and small manufacturers.",
+  "top_lines": [
+    {
+      "headline": "Leverage Cap Reduced",
+      "subs": [
+        "Individual SBIC leverage ceiling reduced from 300% to 200% of private capital",
+        "Dollar cap for quarterly/semiannual interest-paying SBICs: $250M; all other SBICs: $175M"
+      ],
+      "billSection": "2",
+      "source": "usc-15-683"
+    },
+    {
+      "headline": "Common Control Limits",
+      "subs": [
+        "Commonly controlled SBICs making quarterly/semiannual payments: $475M aggregate cap",
+        "All other commonly controlled SBICs: $350M aggregate cap"
+      ],
+      "billSection": "2"
+    },
+    {
+      "headline": "Rural and Technology Investment Exclusion",
+      "subs": [
+        "Investments in rural areas, covered technology categories (10 U.S.C. 149(e)), or small manufacturers excluded from leverage calculation",
+        "Exclusion capped at lesser of 50% of the SBIC's private capital or $125M",
+        "Only investments made after the date of enactment qualify for the exclusion"
+      ],
+      "billSection": "2"
+    },
+    {
+      "headline": "Private Capital Definition Expanded",
+      "subs": [
+        "Funds from college or university foundations, endowments, and trusts now qualify as private capital",
+        "New explicit exclusion for funds obtained directly or indirectly from government sources (with exceptions for pension plans and college/university trusts)"
+      ],
+      "billSection": "2"
+    }
+  ],
+  "likelihood": 100,
+  "likelihoodReason": "Signed into law on May 19, 2026 as Public Law 119-92. Passed the House on December 1, 2025 and the Senate on April 15, 2026.",
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “Investing in All of America Act of 2025.”",
+          "detail": "Short-title section — citation name only; no substantive effect (15 U.S.C. 661 note)."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Small Business Investment Company Maximum Leverage Exclusion",
+      "items": [
+        {
+          "main": "Reduces individual SBIC leverage ceilings and restructures dollar caps by company type.",
+          "detail": "Individual caps become 200% of private capital, not to exceed $250M for quarterly/semiannual interest payers or $175M for other companies. Commonly controlled caps become $475M or $350M respectively. A new subparagraph (C) explicitly excludes government-sourced funds from the private capital definition.",
+          "comments": [],
+          "source": "usc-15-683"
+        },
+        {
+          "main": "Creates a new exclusion from the outstanding leverage calculation for investments in rural areas, covered technology categories, or small manufacturers.",
+          "detail": "The exclusion is capped at the lesser of 50% of the SBIC's private capital or $125M. Only investments made after enactment qualify. Rural areas are defined under 7 U.S.C. 1991(a)(13); covered technology categories under 10 U.S.C. 149(e); small manufacturers under Section 501(e)(6) of the Small Business Investment Act.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 2(a)(3)",
+      "summary": "A new subparagraph (C) added to the private capital definition explicitly excludes any funds obtained directly or indirectly from any federal, state, or local government or government agency, with limited exceptions for pension plan funds and college/university trust/endowment funds.",
+      "why_unreported": "The bill expands the private-capital definition to include university endowments and foundations, but Section 2(a)(3) simultaneously adds a government-funds exclusion that could disqualify capital sources previously counted under the prior definition's silence on the issue."
+    }
+  ],
+  "criticisms": [],
+  "gaps": [
+    "The bill expands the exclusion to cover investments in \"covered technology categories\" as defined in 10 U.S.C. 149(e) but does not reproduce that definition, requiring SBICs and SBA to cross-reference a separate statute.",
+    "The bill caps the combined exclusion at the lesser of 50% of private capital or $125M but does not specify how to allocate the cap if an SBIC invests across multiple qualifying categories simultaneously.",
+    "The bill reduces the individual leverage ceiling from 300% to 200% but does not address transition treatment for SBICs currently leveraged between 200% and 300% of private capital."
+  ],
+  "featured_quotes": [
+    {
+      "name": "Mr. Cisneros",
+      "party": "D",
+      "state": "CA",
+      "bioguideId": "C001123",
+      "text": "I would like to close by once again thanking Mr. Meuser and Ms. Scholten for their leadership on this bill and their efforts to extend additional capital to rural and underserved entrepreneurs, as well as the critical technology industry. Mr. Speaker, I am pleased to support this bill and encourage all of my colleagues to do the same.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Meuser",
+      "party": "R",
+      "state": "PA",
+      "bioguideId": "M001204",
+      "text": "This legislation will incentivize greater investment from small business investment companies, SBICs, to small businesses located in rural or low-income areas, as well as small businesses in the manufacturing and national security technology sectors. SBICs are privately owned and managed investment funds that are licensed and regulated by the SBA. These companies raise private capital, which is then matched with additional leverage by the SBA, capped at $175 million.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "changes": {
+    "added": [
+      "New investment exclusion from leverage calculation for SBIC investments in rural areas, covered technology categories, or small manufacturers — up to lesser of 50% of private capital or $125M",
+      "New government-funds exclusion from private capital definition (new subparagraph C to Section 103(9))"
+    ],
+    "modified": [
+      "Individual SBIC leverage ceiling — from 300% to 200% of private capital",
+      "Commonly controlled SBIC aggregate cap — restructured from a single $350M limit to two tiers: $475M for quarterly/semiannual interest payers and $350M for all others",
+      "Private capital definition — expanded to include college/university foundation, endowment, or trust"
+    ],
+    "removed": []
+  },
+  "budget_accounts": {},
+  "votes": [
+    {
+      "chamber": "Senate",
+      "date": "2026-04-15",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Unanimous Consent"
+    },
+    {
+      "chamber": "House",
+      "date": "2025-12-01",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "billType": "amendment",
+  "referencedSources": [
+    {
+      "id": "usc-15-683",
+      "kind": "statute",
+      "label": "15 U.S.C. 683",
+      "citation": "15 U.S.C. 683",
+      "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap14B-subchapIII-partA-sec683/htm",
+      "textFile": "data/ref-text/usc-15-683.txt",
+      "fetchedAt": "2026-06-10"
+    }
+  ],
+  "analyzedAt": "2026-07-23",
+  "likelihoodLabel": "Enacted",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-03-11",
+      "url": "https://www.congress.gov/119/bills/hr2066/BILLS-119hr2066ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2025-08-15",
+      "url": "https://www.congress.gov/119/bills/hr2066/BILLS-119hr2066rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2025-12-01",
+      "url": "https://www.congress.gov/119/bills/hr2066/BILLS-119hr2066eh.htm"
+    },
+    {
+      "type": "Referred in Senate",
+      "date": "2025-12-02",
+      "url": "https://www.congress.gov/119/bills/hr2066/BILLS-119hr2066rfs.htm"
+    },
+    {
+      "type": "Public Law",
+      "date": "2026-05-20",
+      "url": "https://www.congress.gov/119/plaws/publ92/PLAW-119publ92.htm"
+    },
+    {
+      "type": "Enrolled Bill",
+      "date": null,
+      "url": "https://www.congress.gov/119/bills/hr2066/BILLS-119hr2066enr.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "New leverage cap in 303(b)(2)(A)(ii): $250,000,000 for a company making quarterly or semiannual interest payments, or $175,000,000 for any other company licensed under section 301(c)",
+      "303(b)(2)(B) cap on commonly controlled companies rewritten: $475,000,000 if they make quarterly or semiannual interest payments, otherwise $350,000,000 (replacing a flat $350,000,000 limit)"
+    ],
+    "modified": [
+      "Endowment carve-out reworded to a \"foundation, endowment, or trust of any college or university\" (introduced said \"of a college or university\")"
+    ],
+    "removed": [
+      "Dropped the new subparagraph (E) Annual Adjustment that would have indexed the leverage dollar amounts to the Consumer Price Index annually (with backdated CPI catch-ups from December 18, 2015 and June 21, 2018)",
+      "Dropped the related subparagraph (F) exclusion that exempted small business investment companies authorized to issue accrual debentures from the CPI adjustment"
+    ],
+    "throughVersion": {
+      "type": "Enrolled Bill",
+      "date": null
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-03-11"
+    }
+  }
+}

@@ -25,6 +25,8 @@ const ACRONYMS = {
   SRF:   'State Revolving Fund',
   DOD:   'Department of Defense',
   DOJ:   'Department of Justice',
+  EOIR:  'Executive Office for Immigration Review (DOJ)',
+  BIDEN: 'Bridging Immigration-related Deficits Experienced Nationwide (Reimbursement Fund, DOJ)',
   HHS:   'Department of Health and Human Services',
   EPA:   'Environmental Protection Agency',
   FCC:   'Federal Communications Commission',
@@ -209,6 +211,7 @@ const ACRONYMS = {
   // Energy / environment
   ANWR:   'Arctic National Wildlife Refuge',
   NPR:    'National Petroleum Reserve',
+  SPR:    'Strategic Petroleum Reserve',
   CAFE:   'Corporate Average Fuel Economy',
   NHTSA:  'National Highway Traffic Safety Administration',
   RVP:    'Reid Vapor Pressure (gasoline volatility measure)',

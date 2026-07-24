@@ -366,8 +366,8 @@ section('Bill text sourcing integrity');
         const fileBytes = fs.statSync(txtFile).size;
         if (fileBytes < 500) return; // trivially short — pages:0 is fine
 
-        if (b.pages === 0) {
-            fail(`${b.id}: pages:0 but data/bill-text/${b.id}.txt exists (${Math.round(fileBytes/1000)}K bytes) — analysis was written without reading the bill text. Re-fetch and reanalyze.`);
+        if (!(b.pages > 0)) { // catches 0, null, and missing alike
+            fail(`${b.id}: pages:${b.pages} but data/bill-text/${b.id}.txt exists (${Math.round(fileBytes/1000)}K bytes) — analysis was written without reading the bill text. Re-fetch and reanalyze.`);
             allOk = false;
             return;
         }
@@ -644,10 +644,11 @@ section('Sitemap');
     if (!fs.existsSync(SITEMAP_FILE)) {
         fail('sitemap.xml not found — run generate_sitemap.js');
     } else {
-        const sitemap = fs.readFileSync(SITEMAP_FILE, 'utf8');
+        // Slug URLs store bill ids lowercased — compare case-insensitively.
+        const sitemap = fs.readFileSync(SITEMAP_FILE, 'utf8').toLowerCase();
         let missing = 0;
         for (const bill of bills) {
-            if (!sitemap.includes(bill.id)) {
+            if (!sitemap.includes(bill.id.toLowerCase())) {
                 warn(`${bill.id} not in sitemap.xml`);
                 missing++;
             }
