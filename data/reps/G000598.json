@@ -5,7 +5,7 @@
   "state": "CA",
   "role": "Representative",
   "district": 42,
-  "bio": "The 2026 United States House of Representatives elections in California will be held on November 3, 2026, to elect the 52 U.S. representatives from the State of California, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The passage of Proposition 50 in 2025 significantly altered many districts. The primary elections took place on June 2, 2026.",
+  "bio": "Robert Julio Garcia is an American politician serving as the U.S. representative for California's 42nd congressional district since 2023. A member of the Democratic Party, he served as the 28th mayor of Long Beach, California, from 2014 to 2022. He was both the city's youngest and first elected openly LGBT mayor, as well as the first Latino to hold the office. He is the second person of color to be mayor of Long Beach, after Republican Eunice Sato, a Japanese American who served from 1980 to 1982. A former member of the Long Beach City Council, he was vice mayor from 2012 to 2014.",
   "comments": [
     {
       "billId": "119-HJRES-142",
@@ -37,6 +37,27 @@
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Not Voting"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
@@ -683,5 +704,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_California"
+  "bioUrl": "https://en.wikipedia.org/wiki/Robert_Garcia_(California_congressman)"
 }

@@ -5,7 +5,7 @@
   "state": "NC",
   "role": "Representative",
   "district": 9,
-  "bio": "The 2026 United States House of Representatives elections in North Carolina will be held on November 3, 2026, to elect the 14 U.S. representatives from the State of North Carolina, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on March 3, 2026, and if there was races where no candidate receives over 30% in a primary, runoff elections would take place on May 12.",
+  "bio": "Richard Lane Hudson Jr. is an American politician serving as the U.S. representative for North Carolina's 9th congressional district since 2013. A member of the Republican Party, his district covers a large part of the southern Piedmont area from Concord to Spring Lake.",
   "comments": [
     {
       "billId": "119-S-284",
@@ -16,6 +16,27 @@
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
@@ -662,5 +683,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_North_Carolina"
+  "bioUrl": "https://en.wikipedia.org/wiki/Richard_Hudson_(American_politician)"
 }

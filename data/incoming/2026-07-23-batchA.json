@@ -1,0 +1,976 @@
+[
+  {
+    "id": "119-HR-9770",
+    "code": "HR.9770",
+    "title": "Continuing Appropriations Act, 2027",
+    "official_title": "Making continuing appropriations for fiscal year 2027, and for other purposes.",
+    "date": "2026-07-18",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Cole, Tom (R-OK-4)",
+    "sponsor_bioguide": "C001053",
+    "cosponsors": 0,
+    "pages": 8,
+    "analyzed": true,
+    "demo": false,
+    "billType": "appropriation",
+    "stageDate": "2026-07-21",
+    "likelihood": 70,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Rep. Tom Cole (R-OK-4), Chair of the House Appropriations Committee's parent panel is the same jurisdictional committee this bill was referred to, with the measure cleared by the House per the latest recorded action. Short-term continuing resolutions with a hard December 4, 2026 expiration date are the standard vehicle Congress uses to avoid a shutdown when full-year appropriations are not enacted by October 1, and they typically clear both chambers under time pressure. The Indian Health Service anomaly amounts, District of Columbia local-spending authority, and survivor payments to the widow and heirs of two deceased members of Congress are the most likely points of pushback in Senate negotiations, though not enough to defeat a shutdown-avoidance measure.",
+    "referencedSources": [],
+    "summary": "A short-term continuing resolution that keeps the federal government funded at fiscal year 2026 rates and under fiscal year 2026 authorities from October 1, 2026 through December 4, 2026 for all twelve regular appropriations areas, buying Congress time to finish full-year fiscal year 2027 appropriations. It also carries a small set of program-specific anomalies, extends the National Flood Insurance Program authority, and blocks the automatic Member of Congress cost-of-living adjustment during the covered period.",
+    "brief": "Funds the federal government at fiscal year 2026 levels through December 4, 2026 and extends a handful of expiring authorities including the National Flood Insurance Program.",
+    "top_lines": [
+      {
+        "headline": "Continuing Resolution Basics",
+        "billSection": "101",
+        "subs": [
+          "Continues fiscal year 2026 rates and authorities into fiscal year 2027",
+          "Covers all 12 regular appropriations areas (Ag, CJS, DoD, E&W, FSGG, DHS, Interior, Labor-HHS-Ed, Legislative, Milcon-VA, State, T-HUD)",
+          "Expires on December 4, 2026 or upon enactment of the underlying full-year Act, whichever comes first"
+        ]
+      },
+      {
+        "headline": "Defense Restrictions",
+        "billSection": "102",
+        "subs": [
+          "No new production of items not funded for production in fiscal year 2026",
+          "No production-rate increases above those sustained with fiscal year 2026 funds",
+          "No new multi-year procurements using advance procurement funding for economic order quantity"
+        ]
+      },
+      {
+        "headline": "Program-Specific Anomalies",
+        "billSection": "123",
+        "subs": [
+          "Additional $75.77M for Indian Health Service — Indian Health Services facility staffing",
+          "Additional $8.30M for Indian Health Service — Indian Health Facilities staffing",
+          "WIC apportioned up to the rate necessary to maintain participation",
+          "SBA business loan program apportioned up to the rate necessary for increased demand",
+          "FEMA Disaster Relief Fund apportioned up to the rate necessary for response and recovery"
+        ]
+      },
+      {
+        "headline": "Expiring Authority Extensions",
+        "billSection": "121",
+        "subs": [
+          "National Flood Insurance Program (42 U.S.C. 4016(a) and 4026) extended through December 4, 2026",
+          "Livestock Mandatory Reporting Act and Agricultural Marketing Act (7 U.S.C. 1636i, 1635 note) extended through December 4, 2026",
+          "TANF and Section 1108(b) of the Social Security Act continued through December 4, 2026"
+        ]
+      },
+      {
+        "headline": "Member Compensation & Survivor Payments",
+        "billSection": "127",
+        "subs": [
+          "$174,000 survivor payment to Alfredia Scott, widow of Rep. David A. Scott (D-GA)",
+          "$174,000 payment to the heirs at law of Sen. Lindsey O. Graham (R-SC)",
+          "Blocks the Member of Congress automatic cost-of-living adjustment during the covered period"
+        ]
+      },
+      {
+        "headline": "District of Columbia Local Funds",
+        "billSection": "119",
+        "subs": [
+          "DC may expend local funds at the rate set in the Fiscal Year 2027 Local Budget Act of 2026 (Bill 26-0659)",
+          "Rate is modified as of the date of enactment of this Act"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Sections 101-110 — Continuing Appropriations Mechanism",
+        "items": [
+          {
+            "main": "Continues fiscal year 2026 appropriations rates and authorities for continuing projects across the 12 regular appropriations acts through December 4, 2026.",
+            "detail": "Section 101 lists the 12 anchor appropriations acts (Ag, CJS, DoD, E&W, FSGG, DHS, Interior, Labor-HHS-Ed, Legislative, Milcon-VA, State, T-HUD) and continues each at fiscal year 2026 rates. Section 106 sets the expiration to whichever of three events occurs first: enactment of the applicable full-year fiscal year 2027 Act, enactment of a full-year Act without a provision for the covered activity, or December 4, 2026. Section 110 requires that only the most limited funding action permitted be used to continue projects.",
+            "comments": []
+          },
+          {
+            "main": "Prohibits new starts, production increases, and new multi-year procurements at the Department of Defense during the continuing resolution period.",
+            "detail": "Section 102 bars using continuing-resolution funds for production not funded in fiscal year 2026, production-rate increases above fiscal year 2026 levels, or initiation of projects not previously funded. It also bars new multi-year procurement using advance procurement funding for economic order quantity procurement unless specifically appropriated later.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Sections 111-125 — Anomalies and Expiring Authority Extensions",
+        "items": [
+          {
+            "main": "Provides IHS staffing anomalies of $75.77M for Indian Health Services and $8.30M for Indian Health Facilities to staff and operate facilities opened, renovated, or expanded in fiscal years 2022, 2026, and 2027.",
+            "detail": "Section 123(a) provides an additional rate for operations of $75,774,000 for the Indian Health Service — Indian Health Services account. Section 123(b) provides an additional $8,296,000 for the Indian Health Service — Indian Health Facilities account. Both amounts are apportioned up to the rate for operations necessary to staff and operate the covered facilities.",
+            "comments": []
+          },
+          {
+            "main": "Extends the National Flood Insurance Program's authority through December 4, 2026 by substituting that date for the September 30, 2026 statutory expiration.",
+            "detail": "Section 121 applies sections 1309(a) and 1319 of the National Flood Insurance Act of 1968 (42 U.S.C. 4016(a) and 4026) by substituting the date specified in section 106(3) — December 4, 2026 — for \"September 30, 2026\". A retroactive-application clause treats the substitution as if it had been in effect on September 30, 2026 if this Act is enacted after that date.",
+            "comments": []
+          },
+          {
+            "main": "Continues Small Business Administration general business loan programs, FEMA Disaster Relief Fund response and recovery activities, and Wildland Fire Management wildfire suppression at the rates necessary to meet demand.",
+            "detail": "Section 118 permits the SBA Business Loans Program Account to be apportioned up to the rate for operations necessary to accommodate increased demand for 7(a), 5(g), 503, and 303(b) commitments. Section 122 permits the FEMA Disaster Relief Fund to be apportioned up to the rate necessary to carry out Stafford Act response and recovery activities. Section 125 permits Interior and Forest Service Wildland Fire Management accounts to be apportioned up to the rate necessary for wildfire suppression activities.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Sections 126-128 — Mandatory Payments, Survivor Payments, and Member COLA",
+        "items": [
+          {
+            "main": "Continues TANF and Section 1108(b) of the Social Security Act through December 4, 2026 out of any money in the Treasury not otherwise appropriated.",
+            "detail": "Section 126 continues activities authorized by part A of title IV (other than under section 403(c) or 418) and section 1108(b) of the Social Security Act at fiscal year 2026 authority and manner through the date specified in section 106(3), appropriating such sums as may be necessary.",
+            "comments": []
+          },
+          {
+            "main": "Appropriates $174,000 each to survivors of two deceased Members of Congress and blocks the Member of Congress automatic cost-of-living adjustment during the continuing resolution period.",
+            "detail": "Section 127 appropriates $174,000 for payment to Alfredia Scott, widow of David A. Scott, late a Representative from Georgia, and $174,000 for payment to the heirs at law of Lindsey O. Graham, late a Senator from South Carolina. Section 128 blocks any adjustment under section 601(a) of the Legislative Reorganization Act of 1946 (2 U.S.C. 4501) relating to cost of living adjustments for Members of Congress during the covered period.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 114 — Emergency and Disaster-Relief Designations",
+        "summary": "The bill re-designates each amount previously designated as an emergency or disaster-relief requirement under prior Balanced Budget and Emergency Deficit Control Act triggers as an emergency requirement under the fiscal year 2022 budget resolution and fiscal year 2027 House budget enforcement, and treats prior disaster-relief designations as continuing.",
+        "why_unreported": "Section is captioned to continue \"emergency\" and \"disaster-relief\" treatment of amounts referenced elsewhere, but the operative effect is to attach the fiscal year 2027 House budget enforcement designation to those amounts — a scorekeeping choice not visible from the section label."
+      },
+      {
+        "section": "Section 115 — Rescissions and Cancellations",
+        "summary": "The bill permits rescissions and cancellations of discretionary budget authority that were previously scheduled to continue by reducing the rate for operations otherwise provided by section 101 for the current applicable Treasury Appropriations Fund Symbol, capped at the lesser of the prior-Act amount or the balances available as of October 1, 2026.",
+        "why_unreported": "Section title reads \"Rescissions or cancellations of discretionary budget authority that continue pursuant to section 101\" but the mechanical effect is to allow OMB to reduce operating rates for programs receiving current appropriations to absorb previously-scheduled rescissions, with an OMB report to Appropriations Committees due November 20, 2026."
+      },
+      {
+        "section": "Section 120 — Substitutions in Section 747 of Division E of Public Law 119-75",
+        "summary": "The bill substitutes the years 2026 for 2025, 2027 for 2026, and 2028 for 2027 in Section 747 of title VII of division E of the FY2026 Financial Services and General Government Appropriations Act, and updates the underlying statutory reference.",
+        "why_unreported": "The section number and mechanical language mask what the substitution does — it advances the year references in the underlying provision by one year, but the plain text of the CR does not restate the underlying provision, so a reader cannot tell what activity the year shift affects."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill covers only 66 days (October 1 to December 4, 2026) and does not address what happens if full-year appropriations are not enacted by December 4, 2026.",
+      "The bill anomalies specifically fund the Indian Health Service for staffing new facilities but do not include a similar anomaly for staffing at other federal health facilities opened during the same period.",
+      "The bill extends the National Flood Insurance Program authority but does not increase or index the underlying $1,000,000 minimum per-transaction ceiling or the borrowing authority.",
+      "The bill continues TANF and mandatory payments through December 4, 2026 but does not address the treatment of monthly obligations due for periods after that date if the CR lapses.",
+      "The bill blocks the Member of Congress cost-of-living adjustment during the covered period but does not address civilian federal employee pay adjustments that would otherwise take effect in January 2027."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "$75.77M anomaly for Indian Health Service — Indian Health Services (Sec. 123(a))",
+        "$8.30M anomaly for Indian Health Service — Indian Health Facilities (Sec. 123(b))",
+        "$174,000 survivor payment to Alfredia Scott, widow of Rep. David A. Scott (Sec. 127(1))",
+        "$174,000 payment to the heirs at law of Sen. Lindsey O. Graham (Sec. 127(2))"
+      ],
+      "modified": [
+        "12 fiscal year 2026 appropriations acts continued at fiscal year 2026 rates through December 4, 2026 (Sec. 101)",
+        "42 U.S.C. 4016(a) and 4026 (National Flood Insurance Program) — \"September 30, 2026\" replaced with December 4, 2026 for the duration of the CR (Sec. 121)",
+        "Agricultural Marketing Act of 1946 §260 (7 U.S.C. 1636i) and Livestock Mandatory Reporting Act of 1999 §942 (7 U.S.C. 1635 note) — \"September 30, 2026\" replaced with December 4, 2026 (Sec. 117)",
+        "Section 747 of title VII of division E of Public Law 119-75 — years 2025/2026/2027 substituted with 2026/2027/2028 (Sec. 120)",
+        "Section 1701 of title VII of division B of Public Law 117-43 — \"2021 or 2022 or 2023 or 2024\" replaced with \"calendar years 2021 through 2026\" (Sec. 124)"
+      ],
+      "removed": [
+        "Member of Congress cost-of-living adjustment under 2 U.S.C. 4501 blocked during the CR period (Sec. 128)"
+      ]
+    },
+    "budget_accounts": {
+      "Indian Health Service — Indian Health Services": {
+        "agency": "075",
+        "currentAmount": 75774000,
+        "note": "Additional rate of operations for staffing and operating facilities opened, renovated, or expanded in FY2022, FY2026, and FY2027 (Sec. 123(a))"
+      },
+      "Indian Health Service — Indian Health Facilities": {
+        "agency": "075",
+        "currentAmount": 8296000,
+        "note": "Additional rate of operations for staffing and operating facilities opened, renovated, or expanded in FY2022, FY2026, and FY2027 (Sec. 123(b))"
+      }
+    },
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-2069",
+    "code": "HR.2069",
+    "title": "Stop Secret Spending Act of 2025",
+    "official_title": "To amend the Federal Funding Accountability and Transparency Act of 2006 to ensure that other transaction agreements are reported to USAspending.gov, and for other purposes.",
+    "date": "2025-03-11",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Moore, Barry (R-AL-1)",
+    "sponsor_bioguide": "M001212",
+    "cosponsors": 3,
+    "pages": 5,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-21",
+    "likelihood": 55,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Introduced by Rep. Barry Moore (R-AL-1) with 3 cosponsors including Rep. Panetta (D-CA) and Rep. Goodlander (D-NH), and referred to the House Committee on Oversight and Government Reform. The House-passed measure now moves to the Senate per the latest recorded action. Transparency additions to USAspending.gov that pull \"other transaction agreements\" — a Defense Department and civilian-agency contracting vehicle used heavily by innovation programs — into public disclosure tend to draw industry pushback from OTA recipients and agencies that use OTAs to move quickly, but the cross-aisle sponsor mix and the multi-year phase-in soften Senate opposition.",
+    "referencedSources": [
+      {
+        "id": "usc-31-6101",
+        "kind": "statute",
+        "label": "31 U.S.C. 6101 (Federal Funding Accountability and Transparency Act note)",
+        "citation": "31 U.S.C. 6101",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleV-chap61-sec6101/htm",
+        "textFile": "data/ref-text/usc-31-6101.txt",
+        "fetchedAt": "2026-07-23"
+      }
+    ],
+    "summary": "USAspending.gov is the public federal spending database created by the Federal Funding Accountability and Transparency Act of 2006 (FFATA), where federal agencies must post grants, contracts, and other awards. This bill expands the definition of covered federal awards to include \"other transaction agreements\" — a contracting vehicle used by the Defense Department and other agencies that is not currently required to be reported — and requires the Treasury Secretary to automatically transmit those data to USAspending.gov within 3 years of enactment, publish an annual report identifying federal spending not posted to the site and the reasons why, and produce a list of the Federal agencies required to post information.",
+    "brief": "Pulls \"other transaction agreements\" — a contracting vehicle used heavily by the Defense Department for innovation programs — into USAspending.gov's public reporting requirement.",
+    "top_lines": [
+      {
+        "headline": "OTAs Added to USAspending.gov",
+        "billSection": "2",
+        "subs": [
+          "Adds \"other transaction agreements\" to the FFATA definition of covered Federal award",
+          "Treasury must ensure OTA data is automatically transmitted to the website within 3 years of enactment",
+          "A centralized view of OTA data must be available on the website"
+        ]
+      },
+      {
+        "headline": "Annual Report on Unreported Federal Spending",
+        "billSection": "2",
+        "subs": [
+          "Treasury (with OMB) must post annually to USAspending.gov the total federal spending on awards not posted",
+          "Report must include the reason each item was not posted",
+          "Categories: national-security or classified, legislative or judicial branch awards, subawards below a primary subaward"
+        ]
+      },
+      {
+        "headline": "Data Quality and Agency List",
+        "billSection": "3",
+        "subs": [
+          "Treasury + OMB must establish requirements to ensure posted information is complete and accurate",
+          "Agency heads responsible for ensuring their posted data is complete and accurate",
+          "Treasury and OMB may verify the accuracy of data posted",
+          "Treasury must publish a list of Federal agencies and components required to post information"
+        ]
+      },
+      {
+        "headline": "Inspector General Reports",
+        "billSection": "3",
+        "subs": [
+          "IG reports required from CFO Act agencies (paragraphs (1) and (2) of 31 U.S.C. 901(b))",
+          "Initial IG report due within 1 year of enactment",
+          "Subsequent reports at least every 2 years for 10 years"
+        ]
+      },
+      {
+        "headline": "GAO Study on FAR",
+        "billSection": "4",
+        "subs": [
+          "GAO must recommend within 1 year updates to FAR clause 52.204-10 to reflect FFATA reporting"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Other Transaction Agreement Reporting",
+        "items": [
+          {
+            "main": "Expands the FFATA definition of covered \"Federal award\" to include other transaction agreements, and directs Treasury to automatically transmit OTA data to USAspending.gov within 3 years of enactment with a centralized view of the data.",
+            "detail": "Amends section 2(a)(4)(A) of the Federal Funding Accountability and Transparency Act of 2006 (31 U.S.C. 6101 note) to add \"(iii) includes other transaction agreements\" and technical cross-reference fixes. Amends section 4 to require Treasury to ensure that within 3 years of enactment OTA data is automatically transmitted to the website established under FFATA section 2 (or its successor) and that a centralized view is available.",
+            "comments": []
+          },
+          {
+            "main": "Requires Treasury (in consultation with OMB) to post an annual report to USAspending.gov identifying total federal spending on awards not posted and the reasons why.",
+            "detail": "Adds a new FFATA subsection (h) requiring, within 1 year of enactment and annually thereafter, a report listing the total federal spending on federal awards not posted and the reason data has not been posted — including whether the spending was national-security-related or classified, awarded by a legislative or judicial branch agency, or a subaward below a primary subaward.",
+            "comments": []
+          },
+          {
+            "main": "Adds a two-step implementation plan requiring an initial detailed OTA compilation within 1 year and a plan to Congress within 2 years if OTA data is not yet flowing to USAspending.gov.",
+            "detail": "If Treasury has not yet complied with the new OTA subsection (e) by the 1-year mark, Treasury must publish on USAspending.gov a report listing and describing in detail all OTAs entered into by relevant agencies in the preceding fiscal year. If Treasury has not complied by the 2-year mark, Treasury must submit to Congress a plan describing the current status and the actions underway and planned to ensure full incorporation of OTA data by the 3-year mark.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Other Amendments",
+        "items": [
+          {
+            "main": "Restructures FFATA Inspector General reporting to run from the CFO Act agencies described in paragraphs (1) and (2) of 31 U.S.C. 901(b), on a schedule tied to enactment.",
+            "detail": "Strikes the prior FFATA paragraph (2) and inserts a new one requiring IGs of each covered agency to submit to Congress and publicly release an initial report within 1 year of enactment and not less than once every 2 years thereafter for 10 years, on the date of submission of the agency financial report required under 31 U.S.C. 3521(f) or 9105(a)(3).",
+            "comments": []
+          },
+          {
+            "main": "Requires Treasury and OMB to establish quality-of-information requirements, verify accuracy, and publish a list of Federal agencies and components required to post information under FFATA.",
+            "detail": "Adds new FFATA subsections (c) through (e). Subsection (c) requires Treasury and OMB, in consultation with agency heads, to establish requirements for complete and accurate information; makes agency heads responsible for accuracy; and gives Treasury and OMB verification authority. Subsection (d) requires agencies to comply with display standards. Subsection (e) requires Treasury, in coordination with OMB, to determine within 1 year of enactment (and biennially thereafter) which Federal agencies and components must post information; publish the list on the FFATA website; and notify each covered head and IG.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 — GAO Report",
+        "items": [
+          {
+            "main": "Directs the Comptroller General to make, within 1 year of enactment, recommendations for updates to FAR clause 52.204-10 that incorporate FFATA reporting requirements.",
+            "detail": "The Comptroller General shall make recommendations for any updates the Comptroller General determines advisable to clause 52.204.10 of the Federal Acquisition Regulation with respect to incorporating requirements under the Federal Funding Accountability and Transparency Act of 2006 (31 U.S.C. 6101 note).",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 3(b) — Full Disclosure of Federal Funds",
+        "summary": "The bill scopes FFATA reporting to agencies and components identified on a list Treasury must publish, with the amendments to the underlying disclosure rules taking effect only when the first list is published.",
+        "why_unreported": "The section heading reads \"Full Disclosure of Federal Funds\" but the mechanical effect narrows the immediate universe of covered posters to those on the published list — an agency not yet on the list does not have the new complete-and-accurate posting obligations."
+      },
+      {
+        "section": "Section 3(a)(2) — Inspector General Sunset",
+        "summary": "The Inspector General reporting requirement runs until the date that is 10 years after the date of enactment.",
+        "why_unreported": "Section 3 is captioned \"Other Amendments\" but embedded in the IG paragraph is a 10-year sunset on the recurring IG report — a structural time limit that is not signaled by the section heading."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill mandates OTA data flow to USAspending.gov but does not define \"other transaction agreement\" or specify which OTA-issuing agencies must comply beyond \"agencies that have the authority to enter into an other transaction agreement, as determined by the Director\" of OMB.",
+      "The bill requires an annual report on unreported federal spending with three exception categories (national-security/classified, legislative/judicial, sub-awards) but does not require any breakdown by dollar amount within those categories.",
+      "The bill requires agency IG reports every 2 years for 10 years but does not identify a lead agency to consolidate the reports or synthesize government-wide findings.",
+      "The bill requires Treasury to publish a list of covered agencies but does not set a process for an agency (or the public) to appeal inclusion or exclusion from the list.",
+      "The bill directs the Comptroller General to recommend updates to FAR clause 52.204-10 but does not require the FAR Council to adopt the recommendations or set a deadline for consideration."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New FFATA section 2(a)(4)(A)(iii) — \"includes other transaction agreements\" added to the definition of a Federal award",
+        "New FFATA subsection 4(e) — Treasury must ensure OTA data is automatically transmitted to USAspending.gov and a centralized view is available",
+        "New FFATA subsection 2(h) — annual report on total Federal spending not posted, with reasons",
+        "New FFATA subsection 3(c) — Treasury and OMB requirements for complete and accurate posted information",
+        "New FFATA subsection 3(d) — Treasury display standards for posted information",
+        "New FFATA subsection 3(e) — Treasury agency reporting determination and published list of covered agencies",
+        "New two-step implementation plan (initial OTA compilation at 1 year, Congress plan at 2 years) tied to the 3-year OTA-transmission deadline",
+        "New GAO study within 1 year on updates to FAR clause 52.204-10"
+      ],
+      "modified": [
+        "FFATA section 6(a) (Inspector General reports) — scope narrowed to CFO Act agencies (paragraphs (1) and (2) of 31 U.S.C. 901(b)); IG reports required within 1 year of enactment and not less than every 2 years for 10 years",
+        "FFATA section 3(b) — posting duty tied to agencies and components on the published list"
+      ],
+      "removed": [
+        "Prior FFATA section 6(a)(2) — replaced with a new deadline structure tied to enactment of this Act"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-4348",
+    "code": "HR.4348",
+    "title": "Kay Hagan Tick Act Reauthorization",
+    "official_title": "To reauthorize the Kay Hagan Tick Act, and for other purposes.",
+    "date": "2025-07-10",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Smith, Christopher H. (R-NJ-4)",
+    "sponsor_bioguide": "S000522",
+    "cosponsors": 36,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "reauthorization",
+    "stageDate": "2026-07-21",
+    "likelihood": 70,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Rep. Christopher H. Smith (R-NJ-4) with 36 cosponsors, and passed the House per the latest recorded action after referral to the House Committee on Energy and Commerce. The measure is a short window-shift reauthorization of two Public Health Service Act authorities that expired at the end of fiscal year 2025 — the kind of bipartisan public-health reauthorization that typically clears the Senate. The introduced-clause change replacing the specific reference to the \"Tick-Borne Disease Working Group\" with \"appropriate individuals\" removes a statutorily named consultation body and could draw questions in the Senate HELP Committee, though not enough to derail a broadly cosponsored measure.",
+    "referencedSources": [],
+    "summary": "Section 317U of the Public Health Service Act (added by the 2019 Kay Hagan Tick Act) authorizes a national strategy and regional Centers of Excellence in Vector-Borne Disease at CDC to identify, report, prevent, and respond to vector-borne diseases including tick-borne illnesses; section 2822 authorizes enhanced support to help state and local health departments address vector-borne diseases. Both authorizations lapsed at the end of fiscal year 2025 — this bill reauthorizes them for fiscal years 2026 through 2030, and also replaces the requirement that CDC consult with the statutorily named \"Tick-Borne Disease Working Group\" with a broader requirement to consult with \"appropriate individuals\", and adds language requiring the national strategy to address the underlying capacity of state and local health departments to identify, report, prevent, and respond to such diseases.",
+    "brief": "Reauthorizes both authorities of the Kay Hagan Tick Act — the CDC-led National Strategy and Regional Centers of Excellence in Vector-Borne Disease, and enhanced support to health departments — for fiscal years 2026 through 2030.",
+    "top_lines": [
+      {
+        "headline": "Vector-Borne Disease Authorities Reauthorized",
+        "billSection": "1",
+        "subs": [
+          "Section 317U of the Public Health Service Act reauthorized through FY2030",
+          "Section 2822 (enhanced support for health departments) reauthorized through FY2030",
+          "Prior authorization window: FY2021-FY2025"
+        ]
+      },
+      {
+        "headline": "Consultation Language Change",
+        "billSection": "1",
+        "subs": [
+          "\"Tick-Borne Disease Working Group\" reference struck",
+          "Replaced with \"appropriate individuals\"",
+          "Broadens the pool CDC must consult in developing the national strategy"
+        ]
+      },
+      {
+        "headline": "Strategy Scope Clarified",
+        "billSection": "1",
+        "subs": [
+          "National strategy must address increasing capacity to identify, report, prevent, and respond to vector-borne diseases",
+          "Language inserted into the existing \"activities of the Centers\" list"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 1 — Reauthorization of Programs",
+        "items": [
+          {
+            "main": "Reauthorizes Section 317U of the Public Health Service Act (42 U.S.C. 247b-23) — the National Strategy and Regional Centers of Excellence in Vector-Borne Disease — for fiscal years 2026 through 2030.",
+            "detail": "Amends subsection (f) of Section 317U by striking \"2021 through 2025\" and inserting \"2026 through 2030\". Amends subsection (b) by striking the reference to the \"Tick-Borne Disease Working Group established under section 2062 of the 21st Century Cures Act (42 U.S.C. 284s) and other individuals, as appropriate\" and inserting \"appropriate individuals\". Amends subsection (c)(4) by inserting \", including by increasing capacity to identify, report, prevent, and respond to such diseases\" before the period at the end.",
+            "comments": []
+          },
+          {
+            "main": "Reauthorizes Section 2822 of the Public Health Service Act (42 U.S.C. 300hh-32) — Enhanced Support To Assist Health Departments in Addressing Vector-Borne Diseases — for fiscal years 2026 through 2030.",
+            "detail": "Amends Section 2822(c) by striking \"2021 through 2025\" and inserting \"2026 through 2030\". No dollar figure is changed; the authorization window is shifted forward by five fiscal years.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 1(a)(1) — Consultation Language",
+        "summary": "The bill strikes the specific reference to the Tick-Borne Disease Working Group (established under section 2062 of the 21st Century Cures Act, 42 U.S.C. 284s) from the CDC consultation requirement and replaces it with the general phrase \"appropriate individuals\".",
+        "why_unreported": "The section is captioned \"Reauthorization of Programs\" but this operative change removes a statutorily named consultation body — a substantive policy change unrelated to the reauthorization window."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill reauthorizes both PHS Act authorities for FY2026-FY2030 but does not set any dollar amount — reauthorization sets an authorization ceiling only in years where a subsequent appropriations act names one.",
+      "The bill strikes the requirement to consult the Tick-Borne Disease Working Group but does not address whether that Working Group itself continues to be authorized under section 2062 of the 21st Century Cures Act.",
+      "The bill adds \"increasing capacity to identify, report, prevent, and respond to such diseases\" to the CDC national strategy activities but does not specify performance metrics or reporting requirements for that capacity-building.",
+      "The bill reauthorizes enhanced support to health departments but does not specify a set-aside for tribal health departments alongside state and local departments."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "Section 317U(c)(4) — \", including by increasing capacity to identify, report, prevent, and respond to such diseases\" inserted before the period at the end"
+      ],
+      "modified": [
+        "Section 317U(f) of the Public Health Service Act (42 U.S.C. 247b-23) — authorization window shifted from FY2021-2025 to FY2026-2030",
+        "Section 2822(c) of the Public Health Service Act (42 U.S.C. 300hh-32) — authorization window shifted from FY2021-2025 to FY2026-2030",
+        "Section 317U(b) — reference to the \"Tick-Borne Disease Working Group established under section 2062 of the 21st Century Cures Act (42 U.S.C. 284s) and other individuals, as appropriate\" replaced with \"appropriate individuals\""
+      ],
+      "removed": [
+        "The named-consultation requirement for the Tick-Borne Disease Working Group in the CDC national strategy is eliminated (replaced with the generic \"appropriate individuals\" phrasing)"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-4541",
+    "code": "HR.4541",
+    "title": "EARLY Act Reauthorization of 2025",
+    "official_title": "To reauthorize the Young Women's Breast Health Education and Awareness Requires Learning Young Act of 2009.",
+    "date": "2025-07-17",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Wasserman Schultz, Debbie (D-FL-25)",
+    "sponsor_bioguide": "W000797",
+    "cosponsors": 20,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "reauthorization",
+    "stageDate": "2026-07-21",
+    "likelihood": 75,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Rep. Debbie Wasserman Schultz (D-FL-25) with 20 cosponsors and a cross-party original cosponsor group including Reps. Miller-Meeks (R-IA), Fitzpatrick (R-PA), Harshbarger (R-TN), Castor (D-FL), and Dingell (D-MI). The House-passed measure was referred to the Committee on Energy and Commerce and now moves to the Senate. Short reauthorizations of expiring CDC public-health authorizations that shift the year window without changing dollars are the profile that typically clears the Senate by unanimous consent or voice.",
+    "referencedSources": [
+      {
+        "id": "usc-42-280m",
+        "kind": "statute",
+        "label": "42 U.S.C. 280m (Section 399NN of the Public Health Service Act — EARLY Act)",
+        "citation": "42 U.S.C. 280m",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap6A-subchapII-partV-sec280m/htm",
+        "textFile": "data/ref-text/usc-42-280m.txt",
+        "fetchedAt": "2026-07-23"
+      }
+    ],
+    "summary": "The Young Women's Breast Health Education and Awareness Requires Learning Young Act of 2009 (Section 399NN of the Public Health Service Act, 42 U.S.C. 280m) directs CDC to run a national evidence-based public education campaign and a health-care-professional education campaign on breast health, symptoms, early detection, and support for young women (defined as women 15 to 44) diagnosed with breast cancer; the Act also funds prevention research and grants to organizations serving young women with breast cancer. This bill extends the program's authorization of appropriations by striking the current \"2026\" end year in subsection (h) and inserting \"2031\", extending $9,000,000-per-year authorization through fiscal year 2031.",
+    "brief": "Extends the CDC-run EARLY Act young women's breast health and support program's $9,000,000-per-year authorization through fiscal year 2031.",
+    "top_lines": [
+      {
+        "headline": "What the EARLY Act Does",
+        "billSection": "2",
+        "source": "usc-42-280m",
+        "subs": [
+          "CDC national public education campaign on breast health and early detection",
+          "Health-care-professional education campaign on symptoms, family history, referrals",
+          "Prevention research on breast cancer in younger women",
+          "Grants to organizations providing information and support to young women diagnosed with breast cancer",
+          "\"Young women\" defined as women 15 to 44 years of age"
+        ]
+      },
+      {
+        "headline": "What This Bill Changes",
+        "billSection": "2",
+        "source": "usc-42-280m",
+        "subs": [
+          "Strikes \"2026\" in Section 399NN(h) and inserts \"2031\"",
+          "Extends the $9,000,000-per-year authorization from FY2022-2026 through FY2031",
+          "No changes to the underlying program activities or eligibility"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Reauthorization of the Young Women's Breast Health Education and Awareness Requires Learning Young Act of 2009",
+        "items": [
+          {
+            "main": "Extends the EARLY Act authorization of appropriations by striking \"2026\" and inserting \"2031\" in Section 399NN(h) of the Public Health Service Act (42 U.S.C. 280m(h)).",
+            "detail": "The referenced statute currently authorizes $9,000,000 for each of fiscal years 2022 through 2026 to carry out subsections (a) (public education campaign), (b) (health-care-professional education), (c)(1) (CDC prevention research), and (d) (support for young women diagnosed with breast cancer). This bill's one operative amendment shifts the end year of that authorization from 2026 to 2031 without changing the dollar figure or the scope of the covered activities.",
+            "comments": [],
+            "source": "usc-42-280m"
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill extends the authorization through FY2031 but does not adjust the $9,000,000-per-year dollar figure — the amount has been held flat since the 2020 amendment (Public Law 116-260) and is not indexed for inflation.",
+      "The bill continues the \"young women\" statutory definition of women 15 to 44 but does not address whether the CDC campaign and research should specifically account for higher-risk populations flagged in the underlying statute (Ashkenazi Jewish populations, racial and ethnic minority groups).",
+      "The bill does not modify the Advisory Committee established under Section 399NN(a)(4) — including its membership or its reporting obligations to Congress.",
+      "The bill continues the every-3-year impact measurement requirement under Section 399NN(f) but does not require CDC to make its measurement data publicly available."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [],
+      "modified": [
+        "Section 399NN(h) of the Public Health Service Act (42 U.S.C. 280m(h)) — authorization end year shifted from \"2026\" to \"2031\", extending the $9,000,000-per-year authorization through FY2031"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-2821",
+    "code": "HR.2821",
+    "title": "FDA Modernization Act 3.0",
+    "official_title": "To require the Secretary of Health and Human Services, acting through the Commissioner of Food and Drugs, to publish a final rule relating to nonclinical testing methods.",
+    "date": "2025-04-10",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Carter, Earl L. \"Buddy\" (R-GA-1)",
+    "sponsor_bioguide": "C001103",
+    "cosponsors": 41,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-21",
+    "likelihood": 75,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Rep. Earl L. \"Buddy\" Carter (R-GA-1) with 41 cosponsors and a cross-party original cosponsor group including Reps. Barragan (D-CA), Buchanan (R-FL), DeLauro (D-CT), Harshbarger (R-TN), and Carter (R-LA). The House-passed measure directs FDA to issue an interim final rule implementing changes Congress already enacted in section 3209(a) of the Consolidated Appropriations Act, 2023 — a narrow rulemaking-forcing mechanism that is the standard vehicle for accelerating overdue regulatory alignment and typically clears the Senate on the same bipartisan footing.",
+    "referencedSources": [
+      {
+        "id": "usc-21-355",
+        "kind": "statute",
+        "label": "21 U.S.C. 355 (Federal Food, Drug, and Cosmetic Act §505)",
+        "citation": "21 U.S.C. 355",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec355/htm",
+        "textFile": "data/ref-text/usc-21-355.txt",
+        "fetchedAt": "2026-07-23"
+      }
+    ],
+    "summary": "Section 3209(a) of the Consolidated Appropriations Act, 2023 (Public Law 117-328) amended Section 505(i) of the Federal Food, Drug, and Cosmetic Act (21 U.S.C. 355) to replace \"preclinical tests (including tests on animals)\" with \"nonclinical tests\" and added a statutory definition of \"nonclinical test\" — a test conducted in vitro, in silico, or in chemico, or a nonhuman in vivo test occurring before or during clinical trials — but FDA regulations in title 21 of the Code of Federal Regulations still refer to \"animal\" tests. This bill requires the HHS Secretary, acting through the FDA Commissioner, to publish within 1 year an interim final rule replacing \"animal\" references in a listed set of 21 CFR sections with \"nonclinical\" and adding the statutory \"nonclinical test\" definition to CFR sections 312.3, 314.3, 315.2, and 601.31. The interim final rule takes effect immediately without requiring FDA to demonstrate good cause.",
+    "brief": "Requires FDA to publish within 1 year an interim final rule that replaces \"animal\" references in listed drug and biologic regulations with \"nonclinical\" to conform them to the 2023 statutory change enabling in vitro, in silico, and in chemico testing methods.",
+    "top_lines": [
+      {
+        "headline": "Rulemaking Mandate",
+        "billSection": "2",
+        "subs": [
+          "FDA must publish an interim final rule within 1 year of enactment",
+          "Rule takes effect immediately without demonstrating good cause",
+          "Rule implements 2023 statutory changes to FFDCA Section 505(i)"
+        ]
+      },
+      {
+        "headline": "Terminology Update in 21 CFR",
+        "billSection": "2",
+        "source": "usc-21-355",
+        "subs": [
+          "Replaces references to \"animal\" tests, data, studies, models, and research with \"nonclinical\"",
+          "Applies to 21 listed CFR sections covering IND, NDA, ANDA, radiopharmaceuticals, OTC, and biologic license applications",
+          "Plus \"any other section necessary to ensure regulatory consistency\""
+        ]
+      },
+      {
+        "headline": "Statutory Definition Ported to CFR",
+        "billSection": "2",
+        "source": "usc-21-355",
+        "subs": [
+          "Adds \"nonclinical test\" definition to 21 CFR 312.3, 314.3, 315.2, and 601.31",
+          "Definition from FFDCA Section 505(z): tests conducted in vitro, in silico, or in chemico, or a nonhuman in vivo test",
+          "Test may occur before or during the clinical trial phase"
+        ]
+      },
+      {
+        "headline": "Technical Amendment",
+        "billSection": "2",
+        "source": "usc-21-355",
+        "subs": [
+          "Redesignates the second Section 505(z) — clinical trial diversity action plans, added by section 3601(a) of division FF of Public Law 117-328 — as subsection (aa)",
+          "Resolves duplicate-subsection numbering in Section 505"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Regulations on Nonclinical Testing Methods",
+        "items": [
+          {
+            "main": "Requires FDA to publish an interim final rule within 1 year of enactment to conform 21 CFR references to \"animal\" tests, data, studies, models, and research to \"nonclinical\" terminology, implementing the changes to FFDCA Section 505(i) made by section 3209(a) of the Consolidated Appropriations Act, 2023 (Public Law 117-328; 136 Stat. 5821).",
+            "detail": "The interim final rule must amend 21 listed CFR sections — 312.22(c); 312.23(a)(3)(iv), (a)(5)(ii), (a)(5)(iii), (a)(8), (a)(8)(i), (a)(8)(ii), (a)(10)(i), (a)(10)(ii); 312.33(b)(6); 312.82(a); 312.88; 314.50(d)(2), (d)(2)(iv), (d)(5)(i), (d)(5)(vi)(a), (d)(5)(vi)(b); 314.93(e)(2); 315.6(d); 330.10(a)(2); 601.35(d) — and any other section necessary to ensure regulatory consistency with the 2023 statutory change.",
+            "comments": [],
+            "source": "usc-21-355"
+          },
+          {
+            "main": "Requires FDA to add the statutory definition of \"nonclinical test\" from FFDCA Section 505(z) to 21 CFR 312.3, 314.3, 315.2, and 601.31, and provides that the interim final rule becomes immediately effective without requiring FDA to demonstrate good cause.",
+            "detail": "The referenced statutory definition in 21 U.S.C. 355(z) defines a \"nonclinical test\" as \"a test conducted in vitro, in silico, or in chemico, or a nonhuman in vivo test, that occurs before or during the clinical trial phase of the investigation of the safety and effectiveness of a drug.\" Notwithstanding 5 U.S.C. 553(b)(B), the interim final rule takes effect immediately as an interim final rule without FDA having to make the traditional \"good cause\" showing.",
+            "comments": [],
+            "source": "usc-21-355"
+          },
+          {
+            "main": "Redesignates the second subsection (z) of Section 505 — the clinical trial diversity action plans provision added by section 3601(a) of division FF of Public Law 117-328 — as subsection (aa).",
+            "detail": "The Consolidated Appropriations Act, 2023 inadvertently created two subsection (z)s in FFDCA Section 505 — one defining \"nonclinical test\" and another requiring clinical trial diversity action plans. This bill's technical amendment redesignates the second (z) as (aa) so both provisions can be cited unambiguously.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a)(3) — Immediate Effectiveness of Interim Final Rule",
+        "summary": "The interim final rule becomes immediately effective without requiring FDA to demonstrate good cause, notwithstanding 5 U.S.C. 553(b)(B).",
+        "why_unreported": "The section is titled \"Regulations on Nonclinical Testing Methods\" but this paragraph waives the Administrative Procedure Act's \"good cause\" showing that normally accompanies bypassing notice-and-comment — a procedural choice not signaled by the section label."
+      },
+      {
+        "section": "Section 2(a)(2)(V) — Catch-All CFR Sections",
+        "summary": "The rule must amend \"any other section necessary to ensure regulatory consistency with the amendments to section 505(i) of the Federal Food, Drug, and Cosmetic Act (21 U.S.C. 355(i)) made by section 3209(a) of the Consolidated Appropriations Act, 2023\".",
+        "why_unreported": "The section lists 21 specific CFR sections but this catch-all clause gives FDA authority to amend additional unspecified sections — a scope-expansion mechanism embedded in an otherwise-precise list."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill sets a 1-year deadline for the interim final rule but does not require FDA to issue a subsequent final rule that would follow the ordinary notice-and-comment process.",
+      "The bill lists 21 CFR sections and a catch-all but does not address whether FDA's biologics-specific regulations at 21 CFR Part 600 (beyond 601.31 and 601.35(d)) or animal-drug regulations should be similarly updated.",
+      "The bill implements the 2023 statutory change but does not address the parallel FFDCA Section 351 (biologics licensing) which references similar preclinical/animal terminology.",
+      "The bill adds the \"nonclinical test\" definition to four CFR sections but does not require FDA to develop guidance for sponsors on which nonclinical methods (in vitro, in silico, in chemico, nonhuman in vivo) are appropriate for which drug categories."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New interim final rule requirement: FDA must publish within 1 year to conform 21 listed CFR sections to \"nonclinical\" terminology",
+        "\"Nonclinical test\" definition (from 21 U.S.C. 355(z)) must be added to 21 CFR 312.3, 314.3, 315.2, and 601.31",
+        "Waiver of 5 U.S.C. 553(b)(B) \"good cause\" showing for the interim final rule"
+      ],
+      "modified": [
+        "21 CFR references to \"animal\" tests, data, studies, models, and research replaced with \"nonclinical\" in the 21 listed CFR sections",
+        "21 U.S.C. 355 — second subsection (z) (clinical trial diversity action plans, added by section 3601(a) of division FF of Public Law 117-328) redesignated as subsection (aa)"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-5578",
+    "code": "HR.5578",
+    "title": "Expanding Whistleblower Protections for Contractors Act of 2025",
+    "official_title": "To ensure that whistleblowers, including contractors, are protected from retaliation when a Federal employee orders a reprisal, and for other purposes.",
+    "date": "2025-09-26",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Garcia, Robert (D-CA-42)",
+    "sponsor_bioguide": "G000598",
+    "cosponsors": 1,
+    "pages": 6,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-21",
+    "likelihood": 65,
+    "likelihoodLabel": "Moderate",
+    "likelihoodReason": "Introduced by Rep. Robert Garcia (D-CA-42) with one cosponsor — Rep. James Comer (R-KY-1), Chair of the House Committee on Oversight and Government Reform (the bill's committee of referral). That cross-aisle pairing of the Democratic sponsor with the Republican committee chair drove the House-passed measure per the latest recorded action. The bill extends contractor whistleblower coverage to intelligence community elements within DoD, to state, tribal, and territorial governments acting as contractors, and to personal-services contractors — the intelligence-community pieces and the anti-arbitration waiver clause are the most likely points of Senate pushback, but the sponsor-committee-chair pairing gives the measure a plausible path.",
+    "referencedSources": [
+      {
+        "id": "usc-50-3003",
+        "kind": "statute",
+        "label": "50 U.S.C. 3003 (National Security Act of 1947 — Definitions)",
+        "citation": "50 U.S.C. 3003",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap44-sec3003/htm",
+        "textFile": "data/ref-text/usc-50-3003.txt",
+        "fetchedAt": "2026-07-23"
+      }
+    ],
+    "summary": "10 U.S.C. 4701 protects Department of Defense and NASA contractor employees from being fired, demoted, or discriminated against for disclosing evidence of wrongdoing in defense contracts; 41 U.S.C. 4712 does the same for non-defense federal contractors. This bill rewrites both statutes to swap \"employee\" for a new defined term \"protected individual\" — which explicitly covers state, tribal, territorial, and personal-services contractors and intelligence-community elements within DoD — expands the covered protected activities to include refusing to obey unlawful orders and disclosing gross mismanagement or gross waste, prohibits executive branch officials from requesting a reprisal, authorizes disciplinary action against officials who do, and bars waiver of the rights, forum, and remedies by any agreement including predispute arbitration.",
+    "brief": "Rewrites the defense and non-defense federal contractor whistleblower statutes to cover a broader \"protected individual\" class including intelligence community elements within DoD and state, tribal, and territorial contractors, protects refusal to obey unlawful orders, bars retaliation ordered by executive branch officials, and bans predispute arbitration waiver of the statutory remedies.",
+    "top_lines": [
+      {
+        "headline": "New \"Protected Individual\" Class",
+        "billSection": "2",
+        "source": "usc-50-3003",
+        "subs": [
+          "Replaces \"employee\" throughout 10 U.S.C. 4701 and 41 U.S.C. 4712 with \"protected individual\"",
+          "Covers contractors, subcontractors, grantees, and subgrantees of DoD, NASA, and (in §4712) the Federal Government",
+          "Covers state, DC, tribal, Puerto Rico, Guam, American Samoa, Virgin Islands, N. Mariana Islands, and other territorial governments",
+          "Covers political subdivisions, agencies, and instrumentalities of those governments",
+          "Covers intelligence community elements within DoD (§4701) and generally (§4712) — defined by 50 U.S.C. 3003",
+          "Covers employees, former employees, and personal-services contractors of the above"
+        ]
+      },
+      {
+        "headline": "Expanded Protected Activities",
+        "billSection": "2",
+        "subs": [
+          "Refusing to obey an order that would require violating a law, rule, or regulation",
+          "Disclosing gross mismanagement of a DoD or NASA (or Federal) contract or grant",
+          "Disclosing gross waste of Department funds or a substantial and specific danger to public health or safety",
+          "Disclosing abuse of authority or violation of law related to any contract, subcontract, grant, or subgrant"
+        ]
+      },
+      {
+        "headline": "Executive Branch Reprisal-Request Ban",
+        "billSection": "2",
+        "subs": [
+          "Executive branch officials may not request that a contractor, subcontractor, grantee, or subgrantee engage in a prohibited reprisal",
+          "Agencies may propose appropriate disciplinary action against any executive branch official who does",
+          "Applies to both DoD/NASA (§4701) and non-defense (§4712) programs"
+        ]
+      },
+      {
+        "headline": "Non-Waivable Rights and Anti-Arbitration",
+        "billSection": "2",
+        "subs": [
+          "Rights, forum, and remedies may not be waived by any public or private agreement",
+          "Includes any policy, form, or condition of employment",
+          "Explicitly bars predispute arbitration agreements as a waiver mechanism"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Defense Contractor Employees: Protection From Reprisal (10 U.S.C. 4701)",
+        "items": [
+          {
+            "main": "Rewrites 10 U.S.C. 4701(a)(1) so a \"protected individual\" — rather than an \"employee\" — may not be discharged, demoted, or discriminated against for refusing to obey an unlawful order or disclosing evidence of gross mismanagement, gross waste, abuse of authority, or violation of law related to DoD or NASA contracts, subcontracts, grants, or subgrants, or a substantial and specific danger to public health or safety.",
+            "detail": "The rewrite lists three distinct protected activities: (A) refusing to obey an order that would require the protected individual to violate a law, rule, or regulation related to any contract, subcontract, grant, or subgrant; (B) disclosing to a person or body described in paragraph (2) information the protected individual reasonably believes is evidence of gross mismanagement, gross waste, abuse of authority, or violation of law related to (i) DoD contracts or (ii) NASA contracts; and (iii) a substantial and specific danger to public health or safety.",
+            "comments": [],
+            "source": "usc-50-3003"
+          },
+          {
+            "main": "Adds a new definition of \"protected individual\" that includes contractors, subcontractors, grantees, and subgrantees of DoD and NASA — including state, DC, tribal, Puerto Rico, Guam, American Samoa, Virgin Islands, N. Mariana Islands, and other territorial governments, political subdivisions of those governments, and elements of the intelligence community (as defined in 50 U.S.C. 3003) within DoD.",
+            "detail": "The definition also covers employees and former employees of those contractors, subcontractors, grantees, and subgrantees (where the protected activity occurred before termination), and persons performing personal services for DoD or NASA under contractual agreement.",
+            "comments": [],
+            "source": "usc-50-3003"
+          },
+          {
+            "main": "Prohibits executive branch officials from requesting a reprisal against a contractor, subcontractor, grantee, or subgrantee, and authorizes the head of an executive agency to propose appropriate disciplinary action against any executive branch official who does.",
+            "detail": "Amends 10 U.S.C. 4701(a)(3)(B) to add that it \"shall not be within the authority of an executive branch official to request\" a prohibited reprisal, and adds new 10 U.S.C. 4701(c)(1)(E) authorizing agency-head disciplinary action against such an official. Also bars waiver of the rights, forum, and remedies by any public or private agreement, policy, form, or condition of employment — including any predispute arbitration agreement.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Enhancement of Non-Defense Contractor Protection From Reprisal (41 U.S.C. 4712)",
+        "items": [
+          {
+            "main": "Applies the same \"protected individual\" definition, protected activities, executive-branch reprisal-request ban, disciplinary-action authority, and anti-arbitration waiver rule to the non-defense federal contractor whistleblower statute at 41 U.S.C. 4712.",
+            "detail": "The Section 3 amendments parallel Section 2's changes to 10 U.S.C. 4701, applying them to all Federal Government contractors, subcontractors, grantees, and subgrantees (not limited to DoD and NASA). The intelligence-community-element coverage under this section is defined by reference to Section 3 of the National Security Act of 1947 (50 U.S.C. 3003) without the DoD-only limitation that appears in the Section 2 amendments to 10 U.S.C. 4701.",
+            "comments": [],
+            "source": "usc-50-3003"
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(3) — Repeal of 10 U.S.C. 4701(e) and Section 3(4) — Repeal of 41 U.S.C. 4712(f)",
+        "summary": "The bill strikes subsection (e) of 10 U.S.C. 4701 and subsection (f) of 41 U.S.C. 4712 and redesignates the following subsections accordingly.",
+        "why_unreported": "The section headings describe rewrites of the reprisal-protection rules, but this operative deletion removes an existing subsection of each statute — the text of the deleted subsections is not restated in this bill, so the plain reading of this Act does not show what those subsections previously required."
+      },
+      {
+        "section": "Section 3 — Broader Intelligence-Community Reach",
+        "summary": "The non-defense \"protected individual\" definition in the amended 41 U.S.C. 4712 covers intelligence-community elements without the \"within the Department of Defense\" limitation applied in the amended 10 U.S.C. 4701.",
+        "why_unreported": "Both sections are captioned as protection-from-reprisal rewrites, but the intelligence-community coverage under Section 3 is broader than under Section 2 — a scope difference not visible from the section labels."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill bars waiver of the rights, forum, and remedies by any predispute arbitration agreement but does not address the enforceability of post-dispute arbitration or settlement agreements that release these claims.",
+      "The bill covers intelligence-community elements within DoD (in the amended 10 U.S.C. 4701) but does not address protections for intelligence-community civil employees separately covered by 50 U.S.C. 3234.",
+      "The bill authorizes agency heads to propose disciplinary action against executive branch officials who request reprisals but does not require agencies to report the number of such disciplinary proposals or their outcomes.",
+      "The bill's rewrites do not address the statute of limitations or the burden-of-proof standard for a protected individual's retaliation claim under the amended sections."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "\"Protected individual\" defined in both 10 U.S.C. 4701 and 41 U.S.C. 4712 to include contractors, subcontractors, grantees, subgrantees, state/tribal/territorial governments, political subdivisions, intelligence-community elements, employees and former employees, and personal-services contractors",
+        "New protected activity: refusing to obey an order that would require the protected individual to violate a law, rule, or regulation related to any contract, subcontract, grant, or subgrant",
+        "New 10 U.S.C. 4701(c)(1)(E) and 41 U.S.C. 4712(c)(1)(E) authority: propose appropriate disciplinary action against any executive branch official who requests a prohibited reprisal",
+        "Anti-waiver rule barring public or private agreement (including predispute arbitration) from waiving the rights, forum, and remedies"
+      ],
+      "modified": [
+        "10 U.S.C. 4701(a)(1) — rewritten to cover \"protected individual\" and to list three protected activities (unlawful-order refusal, disclosure of DoD/NASA wrongdoing, disclosure of substantial and specific public health/safety danger)",
+        "10 U.S.C. 4701(a)(3)(B) — clarified that executive branch officials have no authority to request a prohibited reprisal",
+        "41 U.S.C. 4712(a)(1) — rewritten in parallel to cover Federal Government contracts and \"protected individual\"",
+        "41 U.S.C. 4712(a)(3)(B) — parallel executive-branch reprisal-request ban",
+        "10 U.S.C. 4701(f) and 41 U.S.C. 4712(g) — as redesignated, add the \"protected individual\" definitional paragraph"
+      ],
+      "removed": [
+        "10 U.S.C. 4701(e) — struck; remaining subsections redesignated",
+        "41 U.S.C. 4712(f) — struck; remaining subsections redesignated"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-23"
+  },
+  {
+    "id": "119-HR-5160",
+    "code": "HR.5160",
+    "title": "Stem Cell Therapeutic and Research Reauthorization Act of 2025",
+    "official_title": "To reauthorize the Stem Cell Therapeutic and Research Act of 2005, and for other purposes.",
+    "date": "2025-09-04",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Smith, Christopher H. (R-NJ-4)",
+    "sponsor_bioguide": "S000522",
+    "cosponsors": 21,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "reauthorization",
+    "stageDate": "2026-07-21",
+    "likelihood": 78,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Rep. Christopher H. Smith (R-NJ-4) with 21 cosponsors and a cross-party original cosponsor group including Reps. Matsui (D-CA), Bilirakis (R-FL), Pingree (D-ME), Tenney (R-NY), and Mfume (D-MD). The House-passed measure now moves to the Senate. Short reauthorizations of the C.W. Bill Young Cell Transplantation Program have historically cleared both chambers by voice or unanimous consent — the most recent prior reauthorization (Public Law 117-15) advanced on that pattern — and the modest $2M-per-year increase in the primary authorization matches the profile that typically clears the Senate.",
+    "referencedSources": [
+      {
+        "id": "usc-42-274m",
+        "kind": "statute",
+        "label": "42 U.S.C. 274m (Section 379B of PHS Act — C.W. Bill Young Cell Transplantation Program authorization of appropriations)",
+        "citation": "42 U.S.C. 274m",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap6A-subchapII-partI-sec274m/htm",
+        "textFile": "data/ref-text/usc-42-274m.txt",
+        "fetchedAt": "2026-07-23"
+      },
+      {
+        "id": "usc-42-274k",
+        "kind": "statute",
+        "label": "42 U.S.C. 274k (Section 379 of PHS Act — C.W. Bill Young Cell Transplantation Program) and 274k note (Cord Blood Inventory, from Section 2 of Stem Cell Therapeutic and Research Act of 2005)",
+        "citation": "42 U.S.C. 274k",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap6A-subchapII-partI-sec274k/htm",
+        "textFile": "data/ref-text/usc-42-274k.txt",
+        "fetchedAt": "2026-07-23"
+      }
+    ],
+    "summary": "The C.W. Bill Young Cell Transplantation Program is a federally administered system, run by the Health Resources and Services Administration, that identifies, matches, and distributes bone marrow and cord blood units for transplantation for patients without a matched biologically related donor; the National Cord Blood Inventory (Section 2 of the Stem Cell Therapeutic and Research Act of 2005) contracts with qualified cord blood banks to build and maintain an inventory goal of at least 150,000 units of high-quality cord blood. This bill adds $33.009M of appropriations authorization for each of fiscal years 2027 through 2031 for the C.W. Bill Young Cell Transplantation Program on top of the existing $31.009M for FY2022 through FY2026, and extends the National Cord Blood Inventory authorization by striking \"2026\" and inserting \"2031\".",
+    "brief": "Extends the C.W. Bill Young Cell Transplantation Program appropriations authorization at $33.009M per year through FY2031 and extends the National Cord Blood Inventory authorization through FY2031.",
+    "top_lines": [
+      {
+        "headline": "What the Program Does",
+        "billSection": "2",
+        "source": ["usc-42-274k", "usc-42-274m"],
+        "subs": [
+          "Identifies, matches, and distributes bone marrow and cord blood units for transplantation",
+          "Runs a national single point of access for transplant physicians and patients",
+          "Runs a patient advocacy and case management office",
+          "Recruits bone marrow and cord blood donors, with priority to underrepresented populations",
+          "Contracts with qualified cord blood banks to build the National Cord Blood Inventory (goal: at least 150,000 high-quality units)"
+        ]
+      },
+      {
+        "headline": "Program Authorization Increased",
+        "billSection": "2",
+        "source": "usc-42-274m",
+        "subs": [
+          "Existing $31.009M-per-year authorization for FY2022 through FY2026 preserved",
+          "Adds $33.009M for each of fiscal years 2027 through 2031",
+          "Effectively a $2M-per-year increase over the FY2022-2026 authorization"
+        ]
+      },
+      {
+        "headline": "Cord Blood Inventory Extended",
+        "billSection": "3",
+        "source": "usc-42-274k",
+        "subs": [
+          "Amends Section 2(g) of the Stem Cell Therapeutic and Research Act of 2005",
+          "Strikes \"2026\" and inserts \"2031\"",
+          "Extends existing $23M-per-year National Cord Blood Inventory authorization through FY2031"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Reauthorization of the C.W. Bill Young Cell Transplantation Program",
+        "items": [
+          {
+            "main": "Adds a new authorization of $33,009,000 for each of fiscal years 2027 through 2031 to Section 379B of the Public Health Service Act (42 U.S.C. 274m), on top of the existing $31,009,000-per-year authorization for fiscal years 2022 through 2026.",
+            "detail": "The amendment restructures Section 379B by turning the existing single-figure authorization into paragraph (1) and adding a new paragraph (2) authorizing $33,009,000 for each of fiscal years 2027 through 2031. This is the appropriations authorization used to fund the HRSA-administered C.W. Bill Young Cell Transplantation Program described in Section 379 of the Public Health Service Act (42 U.S.C. 274k) — a $2,000,000-per-year increase over the fiscal year 2022-2026 authorization.",
+            "comments": [],
+            "source": ["usc-42-274m", "usc-42-274k"]
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Cord Blood Inventory",
+        "items": [
+          {
+            "main": "Extends the National Cord Blood Inventory authorization by striking \"2026\" and inserting \"2031\" in Section 2(g) of the Stem Cell Therapeutic and Research Act of 2005 (42 U.S.C. 274k note).",
+            "detail": "The referenced Cord Blood Inventory note currently authorizes $23,000,000 for each of fiscal years 2022 through 2026 to build and maintain an inventory goal of at least 150,000 units of high-quality cord blood through contracts with qualified cord blood banks. This bill's one operative amendment to Section 3 shifts the end year of that authorization from 2026 to 2031 without changing the dollar figure or the underlying contract, recordkeeping, or standard-of-care requirements.",
+            "comments": [],
+            "source": "usc-42-274k"
+          }
+        ]
+      }
+    ],
+    "underreported": [],
+    "criticisms": [],
+    "gaps": [
+      "The bill increases the C.W. Bill Young Cell Transplantation Program authorization by $2M per year but does not adjust the $23M-per-year National Cord Blood Inventory authorization for FY2027-2031, holding it flat.",
+      "The bill extends both authorizations through FY2031 but does not modify the 150,000-unit inventory goal set in Section 2(a) of the Stem Cell Therapeutic and Research Act of 2005, despite the intervening 20+ years of program operation.",
+      "The bill preserves the existing every-2-year state-of-the-science review under 42 U.S.C. 274k(o) but does not require any new report to Congress on new-cell-therapy inclusion tied to the FY2027-2031 authorization window.",
+      "The bill continues the underlying $30M contract-duration cap under 42 U.S.C. 274k(a) (\"one or more contracts\") but does not address the number of qualified cord blood banks required to meet the higher aggregate authorization."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New Section 379B paragraph (2) of the Public Health Service Act (42 U.S.C. 274m) — $33,009,000 authorized for each of fiscal years 2027 through 2031"
+      ],
+      "modified": [
+        "42 U.S.C. 274m — existing appropriation clause redesignated as paragraph (1) to accommodate the new paragraph (2)",
+        "Section 2(g) of the Stem Cell Therapeutic and Research Act of 2005 (42 U.S.C. 274k note) — authorization end year shifted from \"2026\" to \"2031\", extending the $23,000,000-per-year National Cord Blood Inventory authorization through FY2031"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {
+      "C.W. Bill Young Cell Transplantation Program": {
+        "agency": "075",
+        "currentAmount": 33009000,
+        "note": "Authorization added by Section 2 for each of fiscal years 2027 through 2031 (in addition to existing $31,009,000 authorization for FY2022-2026)"
+      }
+    },
+    "analyzedAt": "2026-07-23"
+  }
+]

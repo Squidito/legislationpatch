@@ -49,3 +49,9 @@ SCRIPT-CONVENTIONS.md
 
 # Internal AI-session handoff notes — never publish (Pages serves the whole repo)
 GEMINI_CONTEXT.md
+
+# QA / validate scratch output — never commit (repo root deploys via GitHub Pages)
+tmp-*
+qa-tmp/
+qa_*.txt
+validate_*.txt

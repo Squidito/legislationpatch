@@ -5,7 +5,7 @@
   "state": "TX",
   "role": "Representative",
   "district": 25,
-  "bio": "The 2026 United States House of Representatives elections in Texas will be held on November 3, 2026, to elect the thirty-eight U.S. representatives from the State of Texas, one from each of the state's thirty-eight congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on March 3, 2026, and in races where no candidate receives over 50% in a primary, runoff elections took place on May 26.",
+  "bio": "The 2024 United States House of Representatives elections in Texas were held on November 5, 2024, to elect the thirty-eight U.S. representatives from the State of Texas, one from each of the state's congressional districts. The elections coincided with the 2024 U.S. presidential election, as well as other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. The primary elections took place on March 5, 2024.",
   "comments": [
     {
       "billId": "119-HR-7401",
@@ -16,6 +16,27 @@
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
@@ -662,5 +683,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Texas"
+  "bioUrl": "https://en.wikipedia.org/wiki/2024_United_States_House_of_Representatives_elections_in_Texas"
 }

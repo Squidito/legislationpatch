@@ -1,0 +1,148 @@
+{
+  "id": "119-HR-1912",
+  "title": "Veteran Fraud Reimbursement Act of 2025",
+  "official_title": "An Act to amend title 38, United States Code, to improve the repayment by the Secretary of Veterans Affairs of benefits misused by a fiduciary, and for other purposes.",
+  "code": "HR.1912",
+  "date": "2025-12-12",
+  "stageDate": "2025-12-12",
+  "version": "v1.0",
+  "stage": "signed",
+  "stageLabel": "Signed into Law",
+  "currentStep": 4,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Connolly, Gerald E. (D-VA)",
+  "sponsor_bioguide": "C001078",
+  "cosponsors": 7,
+  "pages": 2,
+  "analyzed": true,
+  "demo": false,
+  "likelihood": 100,
+  "likelihoodReason": "Became Public Law 119-56 on December 12, 2025. Passed the House on May 5, 2025 and the Senate on November 20, 2025.",
+  "votes": [
+    {
+      "chamber": "Senate",
+      "date": "2025-11-20",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Unanimous Consent"
+    },
+    {
+      "chamber": "House",
+      "date": "2025-05-05",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "billType": "amendment",
+  "analyzedAt": "2026-06-15",
+  "summary": "Requires the VA to repay veterans the full amount of any benefits stolen or misused by their appointed fiduciary, and to try to recover the money from the fiduciary.",
+  "brief": "Requires the VA to reissue the full amount of benefits misused by a fiduciary and recoup it from the fiduciary.",
+  "top_lines": [
+    {
+      "headline": "Reimbursing Misused Veteran Benefits",
+      "billSection": "2",
+      "subs": [
+        "VA must repay the full amount a fiduciary misused",
+        "VA must seek recoupment from the fiduciary",
+        "Reissuance not delayed by a pending VA-negligence review"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “Veteran Fraud Reimbursement Act of 2025”.",
+          "detail": "Short-title section — citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Improvement to Repayment by Secretary of Veterans Affairs of Certain Misused Benefits",
+      "items": [
+        {
+          "main": "Requires the VA to pay a beneficiary (or successor fiduciary) the full amount of benefits a fiduciary misused.",
+          "detail": "Rewrites Section 6107 of title 38. When a fiduciary misuses a beneficiary's benefits, the Secretary must reissue an equal amount, make a good-faith effort to recoup it from the fiduciary, and promptly remit any recouped funds. For a beneficiary who has died, payment follows Section 5121 (but not to the fiduciary who misused the benefits). Total payments may not exceed the amount misused. The Secretary must set methods and timing for determining whether misuse resulted from VA negligence, but may not withhold reissuance pending that determination and need not make a determination for every instance.",
+          "comments": []
+        }
+      ]
+    }
+  ],
+  "underreported": [],
+  "criticisms": [],
+  "gaps": [
+    "The bill guarantees repayment of misused benefits but does not set a deadline for the VA to reissue the funds.",
+    "It requires good-faith recoupment from fiduciaries but does not specify penalties for fiduciaries who misuse benefits."
+  ],
+  "featured_quotes": [
+    {
+      "name": "Mr. Connolly",
+      "party": "D",
+      "state": "VA",
+      "bioguideId": "C001078",
+      "text": "As a Nation, we have a solemn obligation to ensure that the men and women who have served in our Armed Forces and their families receive the benefits they have rightfully earned through their sacrifice and unwavering dedication. Unfortunately, an unintended consequence of the Johnny Isakson and David P. Roe, M.D. Veterans Health Care and Benefits Improvement Act of 2020 has hindered this mission.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "changes": {
+    "added": [],
+    "modified": [
+      "VA reissuance of fiduciary-misused benefits (Section 6107 of title 38): now requires paying the full misused amount and may not be withheld pending a VA-negligence determination"
+    ],
+    "removed": []
+  },
+  "budget_accounts": {},
+  "likelihoodLabel": "Enacted",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-03-06",
+      "url": "https://www.congress.gov/119/bills/hr1912/BILLS-119hr1912ih.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2025-05-05",
+      "url": "https://www.congress.gov/119/bills/hr1912/BILLS-119hr1912eh.htm"
+    },
+    {
+      "type": "Referred in Senate",
+      "date": "2025-05-06",
+      "url": "https://www.congress.gov/119/bills/hr1912/BILLS-119hr1912rfs.htm"
+    },
+    {
+      "type": "Public Law",
+      "date": "2025-12-13",
+      "url": "https://www.congress.gov/119/plaws/publ56/PLAW-119publ56.htm"
+    },
+    {
+      "type": "Enrolled Bill",
+      "date": null,
+      "url": "https://www.congress.gov/119/bills/hr1912/BILLS-119hr1912enr.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [],
+    "modified": [],
+    "removed": [],
+    "unchanged": true,
+    "throughVersion": {
+      "type": "Enrolled Bill",
+      "date": null
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-03-06"
+    }
+  }
+}

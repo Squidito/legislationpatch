@@ -5,9 +5,40 @@
   "state": "PA",
   "role": "Representative",
   "district": 13,
-  "bio": "The 2026 United States House of Representatives elections in Pennsylvania will be held on November 3, 2026, to elect the 17 U.S. representatives from the State of Pennsylvania, one from each of the state's congressional districts. The elections will coincide with other elections to the House of Representatives, elections to the United States Senate, and various state and local elections. Primary elections will be held on May 19, 2026.",
-  "comments": [],
+  "bio": "John Patrick Joyce is an American politician and dermatologist serving as the U.S. representative for Pennsylvania's 13th congressional district since 2019. A member of the Republican Party, he was elected to succeed Bill Shuster, who chose not to seek re-election. The district, which is largely rural, includes most of South Central Pennsylvania, encompassing the city of Altoona and the boroughs of Chambersburg and Gettysburg.",
+  "comments": [
+    {
+      "billId": "119-HR-1346",
+      "billTitle": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "stance": "neutral",
+      "text": "This important piece of legislation clarifies the payment rules for manual wheelchairs under Medicare part B. The bill allows Medicare patients the choice to decide whether a titanium or a carbon-fiber wheelchair is right for them, giving patients the option to pay out of pocket for wheelchair upgrades if that is their choice. To restore this choice for Medicare patients, this bill creates two new wheelchair codes and enables upgrades within existing codes.",
+      "source": "House Floor, Jul 20, 2026",
+      "granuleTitle": null,
+      "date": "Jul 20, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-9770",
+      "billTitle": "Continuing Appropriations Act, 2027",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "chamber": "House",
+      "date": "2026-07-21",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-4541",
+      "billTitle": "EARLY Act Reauthorization of 2025",
+      "chamber": "House",
+      "date": "2026-07-20",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-8595",
       "billTitle": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
@@ -654,5 +685,5 @@
     }
   ],
   "bioSource": "wikipedia",
-  "bioUrl": "https://en.wikipedia.org/wiki/2026_United_States_House_of_Representatives_elections_in_Pennsylvania"
+  "bioUrl": "https://en.wikipedia.org/wiki/John_Joyce_(American_politician)"
 }
