@@ -291,6 +291,34 @@ function splitIntoDivisions(displayText) {
 
 // Returns { display, analysis } — display has line structure for bill-text/*.txt,
 // analysis is flat for bills_raw.json. Both are uncapped; callers decide limits.
+// Congress.gov returns textVersions NEWEST-FIRST and interleaves procedural
+// reprints (Referred in Senate / Placed on Calendar) that carry the SAME text as
+// the engrossed version. The old code took textVersions[length-1] — the OLDEST =
+// Introduced — so any bill past Introduced was analyzed against stale text.
+// Select by version-type priority per CLAUDE.md HARD RULE
+// (Enrolled > Engrossed Amendment > Engrossed > Reported > Introduced), tie-broken
+// by newest date, so we always fetch the newest APPLICABLE text.
+function textVersionPriority(vtype) {
+    const t = (vtype || '').toLowerCase();
+    if (t.includes('enrolled'))            return 100;
+    if (t.includes('public law'))          return 95;  // identical text to enrolled
+    if (t.includes('engrossed amendment')) return 90;
+    if (t.includes('engrossed'))           return 80;
+    if (t.includes('reported'))            return 60;
+    if (t.includes('placed on calendar'))  return 55;  // reprint of engrossed
+    if (t.includes('referred'))            return 50;  // reprint of engrossed
+    if (t.includes('received'))            return 45;
+    if (t.includes('introduced'))          return 20;
+    return 10;
+}
+function selectLatestTextVersion(textVersions) {
+    return [...textVersions].sort((a, b) => {
+        const pa = textVersionPriority(a.type), pb = textVersionPriority(b.type);
+        if (pb !== pa) return pb - pa;
+        return new Date(b.date || 0) - new Date(a.date || 0);
+    })[0];
+}
+
 async function fetchBillText(congress, type, number) {
     const url = `https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/text?format=json&api_key=${CONGRESS_API_KEY}`;
     await sleep(4000);
@@ -302,7 +330,7 @@ async function fetchBillText(congress, type, number) {
                 console.log(`  [text] No text versions listed on Congress.gov for ${congress}-${type}-${number}`);
                 return { display: '', analysis: '' };
             }
-            const version    = data.textVersions[data.textVersions.length - 1];
+            const version    = selectLatestTextVersion(data.textVersions);
             const textFormat = version.formats.find(f => f.type === 'Formatted Text') || version.formats[0];
             if (!textFormat) {
                 console.log(`  [text] No usable format for ${congress}-${type}-${number} (version: ${version.type})`);

@@ -374,7 +374,6 @@ function renderHeader(bill, state, num, watching) {
   return `<div class="bill-header" onclick="toggleCard('${bill.id}')">
     <div class="bill-rank-col">
       ${bill.isOmnibus ? `<span class="status-badge status-omnibus" data-tip="A large package bill bundling many measures or a full-year appropriations act into one.">OMNIBUS</span>` : ''}
-      ${bill.demo ? `<span class="status-badge status-demo">DEMO</span>` : ''}
       ${billTypeBadge(bill)}
       <div class="bill-portrait-wrap">
         <img class="sponsor-portrait" src="${sponsorSrc}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(bill.sponsor)}" />
@@ -445,7 +444,9 @@ function renderTopLines(bill, hasSpine) {
     const headlineHtml = tlSpineId
       ? `<a class="top-line-headline-link" href="#${tlSpineId}" onclick="event.preventDefault();scrollToSpineSection('${tlSpineId}')">${escHtml(item.headline || '')}</a>`
       : escHtml(item.headline || '');
-    const subs = (item.subs || []).slice(0, 3).map(s =>
+    // All subs render — no cap (James 2026-07-24: analyses may write 4-8 subs
+    // and every one is verified content; hiding the tail was silent data loss).
+    const subs = (item.subs || []).map(s =>
       `<div class="top-line-sub">${billRefHtml(s, bill.id, true)}</div>`
     ).join('');
     return `<div class="top-line-item">
@@ -1037,10 +1038,9 @@ function patchSectionAnchor(sec) {
 // stacked, colour-labelled segments. Used by both the card and the bill page. (Replaced the
 // old versionChanges diff, which existed for only ~half of bills — hence the earlier blanks.)
 function renderChangesAppStyle(bill) {
-  const ch = bill.changes;
-  if (!ch) return '';
-  const { added = [], modified = [], removed = [] } = ch;
-  if (!added.length && !modified.length && !removed.length) return '';
+  // Always renders, even when all three segments are "None" (James 2026-07-24):
+  // an explicit "nothing changed vs the introduced text" is information too.
+  const { added = [], modified = [], removed = [] } = bill.changes || {};
   const segment = (label, cls, items) => `<div class="wc-seg">
       <div class="wc-seg-label ${cls}">${label}</div>
       <div class="wc-seg-rule"></div>
@@ -1170,11 +1170,17 @@ const BILL_TYPE_TIPS = {
 function billTypeBadge(bill, inline) {
   if (!bill || !bill.billType) return '';
   if (bill.isOmnibus && !window.BILL_PAGE_ID) return '';
-  const label = BILL_TYPE_LABELS[bill.billType];
-  if (!label) return '';
-  if (inline) return `<span class="status-badge status-type">${label}</span>`;
-  const tip = BILL_TYPE_TIPS[bill.billType] || '';
-  return `<span class="status-badge status-type" data-tip="${escHtml(tip)}">${label}</span>`;
+  // billType is normally a single string, but a bill that is genuinely two
+  // structural things at once (e.g. a reconciliation act that both appropriates
+  // and amends) may carry an array of types — render one chip per type.
+  const types = Array.isArray(bill.billType) ? bill.billType : [bill.billType];
+  return types.map(bt => {
+    const label = BILL_TYPE_LABELS[bt];
+    if (!label) return '';
+    if (inline) return `<span class="status-badge status-type">${label}</span>`;
+    const tip = BILL_TYPE_TIPS[bt] || '';
+    return `<span class="status-badge status-type" data-tip="${escHtml(tip)}">${label}</span>`;
+  }).join('');
 }
 
 function badgeClass(stage) {

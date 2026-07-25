@@ -425,7 +425,7 @@ function structuredData(bill, url) {
     legislationDate: bill.date || undefined,
     url,
   };
-  if (bill.billType) legislation.legislationType = bill.billType;
+  if (bill.billType) legislation.legislationType = Array.isArray(bill.billType) ? bill.billType.join(', ') : bill.billType;
   if (bill.sponsor) {
     legislation.legislationSponsor = { '@type': 'Person', name: sponsorPersonName(bill.sponsor) };
     legislation.sponsor = { '@type': 'Person', name: sponsorPersonName(bill.sponsor) };

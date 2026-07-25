@@ -191,11 +191,6 @@
   white-space: nowrap;
   display: inline-block;
 }
-.status-demo {
-  background: var(--surface-2);
-  color: var(--text-3);
-  border: 1px solid var(--border);
-}
 .status-enacted {
   background: var(--green);
   color: #fff;
@@ -1669,9 +1664,10 @@
 }
 .underreported-why { color: var(--text-3); margin-top: 6px; }
 
-/* Positions section */
+/* Positions section — top margin matters: it renders LAST in the card body
+   (since 2026-07-14) with nothing above it supplying a gap. */
 .positions-section {
-  margin: 0 1.1rem 0.85rem;
+  margin: 0.85rem 1.1rem;
   padding: 10px 12px;
   border-radius: var(--radius-md);
   border: 1px solid rgba(26,86,160,0.15);
@@ -2708,11 +2704,6 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
   color: var(--bg);
 }
 
-[data-theme="dark"] .status-demo {
-  background: var(--surface-2);
-  color: var(--text-3);
-  border-color: var(--border);
-}
 
 [data-theme="dark"] .status-omnibus {
   background: var(--amber-border);
