@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T01:07:45.064Z",
+  "generated": "2026-07-25T02:17:46.983Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -5543,7 +5543,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-14",
+      "stageDate": "2026-07-23",
       "votes": [
         {
           "chamber": "House",
@@ -10598,7 +10598,17 @@
       ],
       "underreported": [],
       "criticisms": [],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Palmer",
+          "party": "R",
+          "state": "AL",
+          "bioguideId": "P000609",
+          "text": "I would point out that Lulu and her family are in the gallery observing the debate and will be here for the vote.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "gaps": [
         "The bill makes shark attacks eligible for wireless emergency alerts but does not specify which authorities may originate such an alert or what criteria define a qualifying shark attack.",
         "The bill sets a 180-day deadline for the FCC order but specifies no consequence or backstop if the order is not issued on time.",
@@ -12958,7 +12968,17 @@
         }
       ],
       "criticisms": [],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Grassley",
+          "party": "R",
+          "state": "IA",
+          "bioguideId": "G000386",
+          "text": "I understand that representatives of the Russian Orthodox Church are on Capitol Hill this week falsely claiming persecution by the Ukrainian Government. This is because of a law requiring churches in Ukraine to stop taking directions from the patriarch in Moscow, who was a KGB agent and reports directly to Vladimir Putin. Two years ago, I met with Ukrainian faith leaders in my office--about 30 of them--from many backgrounds, including Orthodox, Catholic, Evangelical, Jewish, and Muslim.",
+          "stance": "neutral",
+          "chamber": "Senate"
+        }
+      ],
       "gaps": [
         "The bill authorizes defense programs and policy but does not itself appropriate the money, which depends on a separate defense appropriations bill.",
         "The bill sets authorization levels through the Division D funding tables but, in this top-level pass, the overall dollar total is the sum of those tables rather than a single stated figure.",
@@ -14452,7 +14472,17 @@
         "The bill defines joint-employer status by direct control but does not name how franchise or staffing-agency relationships are treated.",
         "It sets the standard for the NLRA and FLSA only and does not address joint-employer rules under other employment laws."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mrs. Fischbach",
+          "party": "R",
+          "state": "MN",
+          "bioguideId": "F000470",
+          "text": "We are here today to debate the rule providing for consideration of H.R. 2262, the Flexibility for Workers Education Act; H.R. 2270, the Empowering Employer Child and Elder Care Solutions Act; H.R. 2312, the Tipped Employee Protection Act; H.R. 4366, the Save Local Business Act, under a closed rule; and H.R. 2988, the Protecting Prudent Investment of Retirement Savings Act, under a structured rule.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [],
         "modified": [
@@ -17455,7 +17485,7 @@
       "official_title": "To provide for the conveyance of certain Federal land in Chequamegon-Nicolet National Forest, and for other purposes.",
       "code": "HR.3937",
       "date": "2026-06-10",
-      "stageDate": "2026-06-10",
+      "stageDate": "2026-07-23",
       "version": "v1.0",
       "stage": "house",
       "stageLabel": "Passed House",
@@ -19336,7 +19366,17 @@
         "The bill does not specify what happens if the oversight committee leaders cannot agree on the 3 individuals to recommend for a vacancy.",
         "Removal of the Librarian and the GPO Director 'at any time' by a leadership majority sets no for-cause standard or fixed term of office."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Morelle",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "M001206",
+          "text": "Again, let me thank the sponsor of the bill, my friend Mr. Griffith, for his hard work.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A congressional commission and House/Senate leadership vote to appoint and remove the Librarian of Congress and the GPO Director; an Inspector General for the Copyright Office; a merit-based human capital system for the GPO"
@@ -19561,6 +19601,11 @@
           "type": "Introduced in House",
           "date": "2026-04-23",
           "url": "https://www.congress.gov/119/bills/hr8463/BILLS-119hr8463ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-06-08",
+          "url": "https://www.congress.gov/119/bills/hr8463/BILLS-119hr8463rh.htm"
         },
         {
           "type": "Engrossed in House",
@@ -27104,7 +27149,7 @@
         {
           "type": "Public Law",
           "date": "2026-07-12",
-          "url": null
+          "url": "https://www.congress.gov/119/plaws/publ101/PLAW-119publ101.htm"
         },
         {
           "type": "Enrolled Bill",
@@ -29916,7 +29961,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-03-04",
+      "stageDate": "2026-07-23",
       "likelihood": 62,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Republican sponsor with zero cosponsors, but the bill cleared the House by voice vote and the Senate Energy and Natural Resources Committee ordered it reported favorably without amendment — the metadata shows no organized opposition. A transparency mandate with no new spending attached rarely draws floor resistance; the main variable is Senate scheduling.",
@@ -36731,7 +36776,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "appropriation",
-      "stageDate": "2026-07-21",
+      "stageDate": "2026-07-22",
       "likelihood": 70,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Rep. Tom Cole (R-OK-4), Chair of the House Appropriations Committee — the committee of referral — and cleared by the House per the latest recorded action. Short-term continuing resolutions with a hard December 4, 2026 expiration date are the standard vehicle Congress uses to avoid a shutdown when full-year appropriations are not enacted by October 1, and they typically clear both chambers under time pressure. The Indian Health Service anomaly amounts, District of Columbia local-spending authority, and survivor payments to the widow and heirs of two deceased members of Congress are the most likely points of pushback in Senate negotiations, though not enough to defeat a shutdown-avoidance measure.",
@@ -36872,7 +36917,17 @@
         "The bill continues TANF and mandatory payments through December 4, 2026 but does not address the treatment of monthly obligations due for periods after that date if the CR lapses.",
         "The bill blocks the Member of Congress cost-of-living adjustment during the covered period but does not address civilian federal employee pay adjustments that would otherwise take effect in January 2027."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Womack",
+          "party": "R",
+          "state": "AR",
+          "bioguideId": "W000809",
+          "text": "Mr. Speaker, I rise to support H.R. 9770, the Continuing Appropriations Act of 2027, in hopes that it is not necessary. If we were to complete our work as the Framers had intended and outlined for us, we wouldn't be standing here today. This is an insurance policy. This ensures that, assuming we don't finish our work by the end of September, by the end of this fiscal year, our government will be held harmless. Who could argue an insurance policy that holds a government harmless when we begin a new fiscal year?",
+          "stance": "support",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "$75.77M anomaly for Indian Health Service — Indian Health Services (Sec. 123(a))",
@@ -36922,6 +36977,11 @@
           "type": "Introduced in House",
           "date": "2026-07-18",
           "url": "https://www.congress.gov/119/bills/hr9770/BILLS-119hr9770ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-21",
+          "url": "https://www.congress.gov/119/bills/hr9770/BILLS-119hr9770eh.htm"
         }
       ]
     },
@@ -37988,9 +38048,9 @@
       "official_title": "To permit the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall, and for other purposes.",
       "date": "2025-02-13",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
+      "stage": "dead",
+      "stageLabel": "Failed in House",
+      "currentStep": 1,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -38006,9 +38066,9 @@
       "demo": false,
       "billType": "amendment",
       "stageDate": "2026-05-21",
-      "likelihood": 50,
-      "likelihoodLabel": "Moderate",
-      "likelihoodReason": "The sponsor is a Republican in the Republican-majority House and the bill carries 231 cosponsors, a broad base for the underlying site designation. The added mission-scope provisions limiting the museum to biological women and barring depiction of any biological male as a female, along with the political-viewpoint representation mandate, are likely to draw Democratic opposition in the Senate, where 60 votes would be needed.",
+      "likelihood": 3,
+      "likelihoodLabel": "Dead",
+      "likelihoodReason": "The underlying museum-site designation had 231 cosponsors, but the provisions limiting the museum to biological women, barring depiction of any biological male as a female, and mandating political-viewpoint representation drew enough opposition to block the bill in the House. Advancing a version would require dropping or softening those provisions.",
       "referencedSources": [],
       "summary": "This bill sets the location of the future Smithsonian American Women's History Museum at a site on the National Mall and clears the way for the Smithsonian to build there. It also limits the museum's subject to the history of biological women and requires its exhibits to represent a range of political viewpoints.",
       "brief": "Designates a National Mall site for the Smithsonian American Women's History Museum and limits its mission to the history of biological women.",
@@ -38083,14 +38143,38 @@
           "why_unreported": "This imposes an ongoing content requirement on the museum's exhibits, an effect not implied by a bill framed around the museum's physical location."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ms. De La Cruz (R-TX)",
+          "why": "I stand proudly to support H.R. 1329, the bipartisan Smithsonian American Women's History Museum Act, as an original cosponsor. For 30 years, lawmakers on both sides of the aisle have worked together to establish a space that carries on the legacy of the American women who fought tirelessly for our rights. It is absolutely unacceptable that any Member would oppose this bill because they want a biological male, a man, to be honored in the space designed for women, biological women."
+        }
+      ],
       "gaps": [
         "The bill designates the South Monument site and authorizes constructing a building but does not identify a funding source or construction cost for the museum.",
         "The bill prohibits depicting any biological male as a female but does not define 'biological male' or 'biological female.'",
         "The bill requires exhibits to give equal representation to diverse political viewpoints but does not define how equal representation is measured.",
         "The bill mandates biennial compliance reports to Congress but specifies no consequence if the museum does not comply."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. De La Cruz",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "C001098",
+          "text": "I stand proudly to support H.R. 1329, the bipartisan Smithsonian American Women's History Museum Act, as an original cosponsor. For 30 years, lawmakers on both sides of the aisle have worked together to establish a space that carries on the legacy of the American women who fought tirelessly for our rights. It is absolutely unacceptable that any Member would oppose this bill because they want a biological male, a man, to be honored in the space designed for women, biological women.",
+          "stance": "oppose",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mrs. Cammack",
+          "party": "R",
+          "state": "FL",
+          "bioguideId": "C001039",
+          "text": "I appreciate my colleague from the great State of Wisconsin for his leadership on this issue. As you can see, I have my daughter, Augusta Dair, here with me today because I wanted her to be a witness to this incredible moment in our Nation's history where we stood up for all of the women who have helped build this country and told their stories. That is what this museum is. It is not a political statement. It is a promise, a promise that the women who came before us will not be erased, will not be minimized, and will not be forgotten.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A 'Scope of Mission' limiting the museum to the history of biological women and barring depiction of any biological male as a female",
@@ -38106,8 +38190,42 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-21",
+          "question": "On Passage",
+          "result": "Failed",
+          "yeas": 204,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 10,
+          "crossoverCount": 6
+        },
+        {
+          "chamber": "House",
+          "date": "2026-05-21",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 209,
+          "present": 0,
+          "notVoting": 12,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-02-13",
+          "url": "https://www.congress.gov/119/bills/hr1329/BILLS-119hr1329ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-04-23",
+          "url": "https://www.congress.gov/119/bills/hr1329/BILLS-119hr1329rh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-1346",
@@ -38227,14 +38345,69 @@
           "why_unreported": "This makes ordinarily confidential refinery compliance filings public, an effect not implied by a bill about the ethanol waiver."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ms. Hageman (R-WY)",
+          "why": "I rise to express my strong opposition to H.R. 1346. This bill is disastrous for Wyoming refiners and independent petroleum producers, leading to a direct loss of at least 750 jobs in my home State. Just to correct the record, it isn't the farmers who produce ethanol or E15. It is the refiners, and this bill threatens to put them out of business. In fact, it is interesting that anyone who supports this bill has not yet mentioned the fact that it is the refiners that will be forced, mandated, to meet the E15 requirement."
+        },
+        {
+          "who": "Mr. Roy (R-TX)",
+          "why": "I appreciate my colleagues on both sides of this debate and where they are coming from. I understand my friends who come from States that want support for farming. We all want to make sure that we are figuring that out. We worked through the farm bill. I just think we ought to be going about this a different way. If we need to do something to support farmers, let's have a direct conversation about it. Expanding E15 is just the wrong direction to go. It is going to harm refiners. It is going to drive up the cost of gas."
+        }
+      ],
       "gaps": [
         "The bill enables year-round sale of blends up to 15 percent ethanol but does not address blends above 15 percent ethanol.",
         "The bill cuts small refining companies' compliance requirements by 75 percent and bars reallocation of those volumes but does not state how the resulting shortfall in obligated renewable fuel is absorbed.",
         "The bill caps 2028 at-risk exemptions at 150 million gallons of biofuel-equivalent volume but does not specify how the Administrator prioritizes competing petitions if they exceed the cap.",
         "The bill requires EPA to modify E15 labeling and storage-tank rules within 18 months but sets no date by which the modified rule must take effect."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Hageman",
+          "party": "R",
+          "state": "WY",
+          "bioguideId": "H001096",
+          "text": "I rise to express my strong opposition to H.R. 1346. This bill is disastrous for Wyoming refiners and independent petroleum producers, leading to a direct loss of at least 750 jobs in my home State. Just to correct the record, it isn't the farmers who produce ethanol or E15. It is the refiners, and this bill threatens to put them out of business. In fact, it is interesting that anyone who supports this bill has not yet mentioned the fact that it is the refiners that will be forced, mandated, to meet the E15 requirement.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Roy",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "R000614",
+          "text": "I appreciate my colleagues on both sides of this debate and where they are coming from. I understand my friends who come from States that want support for farming. We all want to make sure that we are figuring that out. We worked through the farm bill. I just think we ought to be going about this a different way. If we need to do something to support farmers, let's have a direct conversation about it. Expanding E15 is just the wrong direction to go. It is going to harm refiners. It is going to drive up the cost of gas.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Budzinski",
+          "party": "D",
+          "state": "IL",
+          "bioguideId": "B001315",
+          "text": "As a lead Democrat on this bill, I have been proud to work with Congressman Adrian Smith on this issue. We both understand, like many other Members, that year-round E15 is bigger than politics. This is about American farmers. It is about American consumers, and it is about American energy. E15 is truly one of those rare issues where everyone wins. Here is why: American farmers win because it creates strong and stable markets for homegrown corn. American consumers win because E15 helps to lower prices at the pump.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mrs. Miller-Meeks",
+          "party": "R",
+          "state": "IA",
+          "bioguideId": "M001215",
+          "text": "Every single year since 2011, the EPA has issued an emergency waiver to allow E15 to be sold during the Speaker, I yield 2 minutes to the gentlewoman from Iowa (Mrs. Miller-Meeks), a valued member of the Energy and Commerce Committee.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Finstad",
+          "party": "R",
+          "state": "MN",
+          "bioguideId": "F000475",
+          "text": "As a fourth-generation corn and soybean farmer from southern Minnesota raising that fifth generation and representing 21 counties in southern Minnesota, a very strong egg-producing district, I have had many conversations with my neighbor farmers. I know by hearing what they are telling me and firsthand in my own experience as a farmer that we are facing uncertainty in our input costs and uncertainty in the global markets. We need a new domestic opportunity for our corn. E15 delivers on that.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A 'small refining company' category for producers under 75,000 barrels per day in 2025",
@@ -38252,8 +38425,47 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-05-13",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 218,
+          "nays": 203,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 185
+        },
+        {
+          "chamber": "House",
+          "date": "2026-05-13",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 112,
+          "nays": 309,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-02-13",
+          "url": "https://www.congress.gov/119/bills/hr1346/BILLS-119hr1346ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-05-13",
+          "url": "https://www.congress.gov/119/bills/hr1346/BILLS-119hr1346eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-05-14",
+          "url": "https://www.congress.gov/119/bills/hr1346/BILLS-119hr1346rfs.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-1664",
@@ -38359,7 +38571,17 @@
         "The bill directs examination of federal agencies' blockchain use but sets no standards or requirements for that use.",
         "The bill requires development of standardized terminology but does not say who resolves disputes over definitions."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mrs. Cammack",
+          "party": "R",
+          "state": "FL",
+          "bioguideId": "C001039",
+          "text": "This bill is about far more than emerging technology. It is about securing America's future, economically, strategically, and technologically, in an increasingly digital world. Blockchain technology is not a passing trend. It is a foundational innovation that is reshaping how we think about security, identity, data integrity, and commerce. From supply chains and finance to healthcare and identity management, blockchain is transforming the way our systems function. Mr. Speaker, we are at a crossroads.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "The Secretary of Commerce as the President's principal advisor on blockchain and distributed-ledger technology",
@@ -38372,8 +38594,32 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-06-23",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-02-27",
+          "url": "https://www.congress.gov/119/bills/hr1664/BILLS-119hr1664ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2025-04-24",
+          "url": "https://www.congress.gov/119/bills/hr1664/BILLS-119hr1664rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2025-06-23",
+          "url": "https://www.congress.gov/119/bills/hr1664/BILLS-119hr1664eh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-1687",
@@ -38474,7 +38720,17 @@
         "The bill requires annual and replacement lease sales but specifies no consequence if the Secretary fails to hold a required sale.",
         "The bill permits withholding parcels for a 'statutory, environmental, or administrative basis' but does not define an administrative basis."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Westerman",
+          "party": "R",
+          "state": "AR",
+          "bioguideId": "W000821",
+          "text": "Most of America's geothermal resources lie beneath Federal lands, and interest in leasing those areas continues to grow. It is imperative that we increase the frequency of geothermal lease sales from every 2 years to annually and further streamline the permitting process. Doing so will help keep energy costs low and keep America's lights on.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A requirement to hold a replacement geothermal lease sale within the same year for any canceled or delayed sale",
@@ -38488,8 +38744,37 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-02-27",
+          "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-05-20",
+          "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-06-02",
+          "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-06-03",
+          "url": "https://www.congress.gov/119/bills/hr1687/BILLS-119hr1687rfs.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-1919",
@@ -38600,7 +38885,44 @@
         "The bill bars the Board from studying a CBDC but does not address the disposition of any digital-currency research already underway.",
         "The Sense of Congress asserts the Fed lacks CBDC authority but has no binding legal effect on that question."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Steil",
+          "party": "R",
+          "state": "WI",
+          "bioguideId": "S001213",
+          "text": "He was actually one of the first in Congress to raise the alarm. Since then, the case has only grown stronger about the risks posed by U.S. CBDC. Mr. Speaker, the global economy is at a crossroads when it comes to digital payments. Jurisdictions around the world are upgrading their payment systems to be faster, to be cheaper, and cross-border. The private sector is leading the way, including payment stablecoins to enhance the payment rails. As the United States grapples with modernizing our own payment systems, we are confronted with a choice.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Lynch",
+          "party": "D",
+          "state": "MA",
+          "bioguideId": "L000562",
+          "text": "At the expense of U.S. global economic leadership, this misguided legislation would prevent the Federal Reserve from issuing a central bank digital currency, also known as a CBDC. Unfortunately, the facts surrounding the development of CBDC have been obscured by disinformation, conspiracy theories, and extreme political ideology. Republicans and the crypto industry have made unfounded claims that a CBDC will be used as a surveillance tool by the Federal Government. Let's be clear about what a CBDC is.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Meuser",
+          "party": "R",
+          "state": "PA",
+          "bioguideId": "M001204",
+          "text": "This bill is about defending our Constitution and protecting the privacy of the American people. The Constitution is unambiguous in Article I, Section 8, which grants only Congress exclusive authority to coin money, regulate the value thereof, and of foreign coin. This is a clear provision of the United States Constitution. It is a foundational element of our constitutional Republic designed to keep such important authority over our Nation's currency issuance within the hands of the people's Representatives.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Rose",
+          "party": "R",
+          "state": "TN",
+          "bioguideId": "R000612",
+          "text": "Among the many rights that we enjoy as Americans, privacy is among the most fundamental. Establishing a central bank digital currency would not only usurp consumers' privacy and individual freedoms, but it would also hinder free market innovation. Digital assets are here to stay. I agree strongly with President Trump that the United States should be a leader in this space. However, the last administration held a very different view.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A prohibition on Federal Reserve banks offering products, services, or accounts directly to individuals (Section 16(18))",
@@ -38613,8 +38935,36 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-07-17",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 219,
+          "nays": 210,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 2
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-03-06",
+          "url": "https://www.congress.gov/119/bills/hr1919/BILLS-119hr1919ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2025-05-06",
+          "url": "https://www.congress.gov/119/bills/hr1919/BILLS-119hr1919rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2025-07-17",
+          "url": "https://www.congress.gov/119/bills/hr1919/BILLS-119hr1919eh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-2189",
@@ -38713,14 +39063,82 @@
           "why_unreported": "Beyond exempting qualifying devices, this creates an ongoing federal tracking and reporting process for higher-velocity non-lethal devices, which the bill's tax-exemption purpose does not signal."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Mr. Raskin (D-MD)",
+          "why": "Mr. Speaker, this bill would rip a dangerous new loophole in the Gun Control Act by changing the definition of firearm throughout the entire criminal code to exclude from coverage certain less-than-lethal but still highly dangerous weapons, such as tasers, which have been identified as a contributing factor in more than 500 deaths throughout the United States of America. Mr. Speaker, this bill would exempt these weapons, which are currently classified as firearms, from all regulations under all Federal firearm laws."
+        },
+        {
+          "who": "Mr. Johnson (D-GA)",
+          "why": "Police already have access to less-than-lethal weapons like tasers. They don't need a change in the law. That is not an excuse for changing the law. This bill expands access to dangerous, prohibited individuals by stripping away Federal safeguards. Tasers may not shoot bullets, but they are still dangerous in the wrong hands. This bill would mean that anyone can buy them without a background check including people convicted of serious violent crimes and domestic abusers with restraining orders against them."
+        },
+        {
+          "who": "Ms. Kamlager-Dove (D-CA)",
+          "why": "Let's get honest about what this bill does and doesn't do. It does not require training. It does not set standards. It does not improve accountability, and it does not apply only to law enforcement. It does carve out a sweeping exemption in our Federal firearms laws and makes it easier for dangerous people to access dangerous weapons with fewer safeguards. Supporters keep saying that this bill is about helping law enforcement, but if that were true, the bill would mention law enforcement. It doesn't."
+        }
+      ],
       "gaps": [
         "The bill defines qualifying devices by a 500 feet-per-second projectile cap but does not exempt devices above that speed, only adds them to a monitoring list.",
         "The bill sets up separate 90-day determinations by the Attorney General under Title I and the Secretary of the Treasury under Title II but does not require the two determinations to be consistent.",
         "The bill requires an annually updated public list of qualifying devices but sets no deadline for the first list.",
         "The bill exempts shells or cartridges designed for qualifying devices but does not address ammunition that fits both a qualifying device and a conventional firearm."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Raskin",
+          "party": "D",
+          "state": "MD",
+          "bioguideId": "R000606",
+          "text": "Mr. Speaker, this bill would rip a dangerous new loophole in the Gun Control Act by changing the definition of firearm throughout the entire criminal code to exclude from coverage certain less-than-lethal but still highly dangerous weapons, such as tasers, which have been identified as a contributing factor in more than 500 deaths throughout the United States of America. Mr. Speaker, this bill would exempt these weapons, which are currently classified as firearms, from all regulations under all Federal firearm laws.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Johnson",
+          "party": "D",
+          "state": "GA",
+          "bioguideId": "J000288",
+          "text": "Police already have access to less-than-lethal weapons like tasers. They don't need a change in the law. That is not an excuse for changing the law. This bill expands access to dangerous, prohibited individuals by stripping away Federal safeguards. Tasers may not shoot bullets, but they are still dangerous in the wrong hands. This bill would mean that anyone can buy them without a background check including people convicted of serious violent crimes and domestic abusers with restraining orders against them.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Kamlager-Dove",
+          "party": "D",
+          "state": "CA",
+          "bioguideId": "K000400",
+          "text": "Let's get honest about what this bill does and doesn't do. It does not require training. It does not set standards. It does not improve accountability, and it does not apply only to law enforcement. It does carve out a sweeping exemption in our Federal firearms laws and makes it easier for dangerous people to access dangerous weapons with fewer safeguards. Supporters keep saying that this bill is about helping law enforcement, but if that were true, the bill would mention law enforcement. It doesn't.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mrs. McBath",
+          "party": "D",
+          "state": "GA",
+          "bioguideId": "M001208",
+          "text": "Democrats will continue to support law enforcement innovation and the adoption of tools that keep everyone safer, but we must oppose this misguided legislation that does not promote innovation or de-escalation and will only put our law enforcement, those experiencing domestic abuse, and others in danger.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Frost",
+          "party": "D",
+          "state": "FL",
+          "bioguideId": "F000476",
+          "text": "When I first heard about this bill, I thought it was very interesting that my Republican colleagues had this newfound conviction in helping to prevent law enforcement doing bad things to people and working to de-escalate law enforcement. I am someone who has been a victim of the abuse of law enforcement, and I just haven't heard my colleagues ever talk about it. I came at this bill skeptically when I looked at it. It turns out the bill itself was pretty much written by a corporation, Axon, that wants to sell a new type of taser.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Fitzgerald",
+          "party": "R",
+          "state": "WI",
+          "bioguideId": "F000471",
+          "text": "I will spend the time I have remaining responding to a few points made by my colleagues. First of all, the U.S. States and territories already criminalize the misuse of less-lethal devices through existing assault and battery laws, and 34 States also restrict possession by violent felons and domestic abusers. Let me repeat that. It is illegal for violent felons and domestic abusers to own or misuse less-lethal devices. Mr. Speaker, our bill does not change that.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A federal definition of 'less-than-lethal projectile device' (Title 18 Section 921(a) and Internal Revenue Code Section 4182(d))",
@@ -38736,8 +39154,36 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-02-12",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 233,
+          "nays": 185,
+          "present": 0,
+          "notVoting": 13,
+          "crossoverCount": 23
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-03-18",
+          "url": "https://www.congress.gov/119/bills/hr2189/BILLS-119hr2189ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-01-30",
+          "url": "https://www.congress.gov/119/bills/hr2189/BILLS-119hr2189rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-02-12",
+          "url": "https://www.congress.gov/119/bills/hr2189/BILLS-119hr2189eh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-2347",
@@ -38842,7 +39288,35 @@
         "The bill directs Treasury to run a public-awareness program but sets no timeline or funding for it.",
         "The bill excludes non-punitive damages for sexual acts or contact but does not specify how awards covering both sexual and non-sexual claims are allocated."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Smith",
+          "party": "R",
+          "state": "MO",
+          "bioguideId": "S001195",
+          "text": "Survivors of sexual assault face a long road to recovery without having to battle with the IRS over keeping the compensatory damages or settlements that they receive. Unfortunately, right now, the burden of proof that a sexual assault survivor would have to provide to the IRS, including medical records to prove that they deserve to have their settlement funds excluded from gross income for tax purposes, ignores the fact that such victims often do not have the same observable physical injuries that other victims of assault might have.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Smucker",
+          "party": "R",
+          "state": "PA",
+          "bioguideId": "S001199",
+          "text": "I think the chairman and Ms. Moore both have described it really well. The core problem here, first of all, we believe our current law already says that any victim of physical abuse and any victim of sexual abuse who receives a settlement does not owe tax on that settlement, which makes complete sense.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Moore",
+          "party": "D",
+          "state": "WI",
+          "bioguideId": "M001160",
+          "text": "Mr. Speaker, we hear all the time about the high-profile civil cases involving sexual abuse. I am thinking about the accounts of trusted gymnast physicians abusing star athletes and the victims of Jeffrey Epstein and many of his associates. We even hear about sexual assault that occurs within our own body, and we have to address that problem. Let's just take a moment to acknowledge that all sexual abuse does not make the headlines.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "An income-tax exclusion for non-punitive damages received on account of a sexual act or sexual contact",
@@ -38856,8 +39330,37 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-04-27",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-03-25",
+          "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-04-09",
+          "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-04-27",
+          "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr2347/BILLS-119hr2347pcs.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-2913",
@@ -39013,8 +39516,31 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-04",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 226,
+          "nays": 195,
+          "present": 0,
+          "notVoting": 9,
+          "crossoverCount": 19
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-04-14",
+          "url": "https://www.congress.gov/119/bills/hr2913/BILLS-119hr2913ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-06-04",
+          "url": "https://www.congress.gov/119/bills/hr2913/BILLS-119hr2913eh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-6955",
@@ -39147,7 +39673,62 @@
         "The bill orders studies of bank-fintech and credit-union-fintech partnerships but makes no change to the rules governing those partnerships.",
         "The bill reduces the Federal Reserve discretionary surplus fund by $425M in 2036 but does not state how the resulting funds are used."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Loudermilk",
+          "party": "R",
+          "state": "GA",
+          "bioguideId": "L000583",
+          "text": "I obviously rise in support of H.R. 6955 not only because it is a good bill, but also because I recognize the need to rightsize Federal regulations and gain more transparency into the financial regulatory process. For too long, Federal financial regulators have taken this one-size- fits-all approach. If we applied that same status to ourselves, then let's just issue every Member of Congress one suit of clothes so that we all wear the same suit of clothes.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Velazquez",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "V000081",
+          "text": "Community banks and credit unions are the foundations of our financial system. As ranking member of the House Small Business Committee, I understand better than most the role they play in our communities, offering small business loans, farm loans, and mortgages. They are critical lifelines to our rural and underserved communities that have been left behind by our biggest banks.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Huizenga",
+          "party": "R",
+          "state": "MI",
+          "bioguideId": "H001058",
+          "text": "As a small business owner, I have seen it. I have lived it. When community banks disappear, families and small businesses lose the local lenders who know their communities and their customers best. Less competition means fewer financing options, higher borrowing costs, and less investment on Main Street, not Wall Street, as some of my colleagues are trying to assert. This bill lowers unnecessary regulatory costs for community and midsize banks, not those big business center banks on Wall Street and in New York and around the world.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Garcia",
+          "party": "D",
+          "state": "TX",
+          "bioguideId": "G000587",
+          "text": "I rise against H.R. 6955. Instead of the Main Street Act, this bill, Mr. Speaker, should be called the Wall Street wins Main Street loses act. It does not help end the affordability crisis, feed hardworking Americans, or keep a roof over their heads. Instead, this bill sneaks in deregulatory measures, further weakens the Consumer Financial Protection Bureau, and weakens community reinvestment and anti- discrimination safeguards. For this reason, at the appropriate time, I will offer a motion to recommit this bill back to committee.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Moylan",
+          "party": "R",
+          "state": "GU",
+          "bioguideId": "M001219",
+          "text": "When the people of Guam set out to enterprise new business ventures, we turn to our community banks to raise capital. However, much of America's financial system is not designed with small businesses in mind. While big banks have the resources to cut through red tape, small community ventures often struggle to comply with a regulatory regime that never had them in mind.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Knott",
+          "party": "R",
+          "state": "NC",
+          "bioguideId": "K000405",
+          "text": "For the vast majority of our Nation's history, community banks were the primary artery into progress for all Americans. That reality is being threatened today by sloppy and ineffective policies that originate right here in Washington, D.C. Whether it is the Dodd-Frank regulatory structure or the millions of rules and regulations that are in existence today, community banks have been choked out by these all-encompassing regulations. With administrative costs rising every year, local banks simply cannot afford to operate.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A requirement that nine financial agencies mark their guidance as non-binding (Section 402)",
@@ -39167,8 +39748,47 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-21",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 270,
+          "nays": 155,
+          "present": 1,
+          "notVoting": 5,
+          "crossoverCount": 57
+        },
+        {
+          "chamber": "House",
+          "date": "2026-07-21",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 210,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 5,
+          "crossoverCount": 1
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2026-01-07",
+          "url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-04-20",
+          "url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-21",
+          "url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955eh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-8595",
@@ -39293,14 +39913,78 @@
           "why_unreported": "The bill claws back previously appropriated funds in addition to setting fiscal year 2027 amounts, offsetting part of the new spending."
         }
       ],
-      "criticisms": [],
+      "criticisms": [
+        {
+          "who": "Ms. Wasserman Schultz (D-FL)",
+          "why": "Mr. Chair, the State Department funding bill that we are considering here fails to meet this critical, historic moment. Our Nation is at a dangerous crossroads. We are at war, a war that Congress never voted to authorize, a war so recklessly managed that our allies increasingly see us as a threat rather than a reliable partner. Yet, amid this global chaos, Republicans have abandoned investments to make the world a safer, healthier place. Their callous neglect has caused hundreds of thousands of needless deaths along the way."
+        },
+        {
+          "who": "Mr. Meeks (D-NY)",
+          "why": "Last year, the Trump administration illegally dismantled USAID and fired over 1,300 State Department employees. It rescinded $13 billion for critical humanitarian and development programs, and now House Republicans want to approve legislation that amounts to a 20 percent cut from 2025 enacted levels, locking in those dangerous Trump cuts. It isn't penny-wise, and it certainly is pound-foolish. Case in point: When the administration cut funding for global health, it ended key disease outbreak surveillance and prevention programs."
+        }
+      ],
       "gaps": [
         "The bill provides $6.75B in Foreign Military Financing grants but does not set country allocations in the text, leaving them to notification procedures.",
         "The bill provides $5B for international humanitarian assistance but earmarks only disaster relief and Israel refugees, leaving allocation of the balance unspecified in the text.",
         "The bill funds a National Security Investment Programs account but does not define that program beyond the Foreign Assistance Act authorities it cites.",
         "The bill rescinds portions of prior-year balances but does not identify in the summary which programs those balances were originally appropriated for."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Wasserman Schultz",
+          "party": "D",
+          "state": "FL",
+          "bioguideId": "W000797",
+          "text": "Mr. Chair, the State Department funding bill that we are considering here fails to meet this critical, historic moment. Our Nation is at a dangerous crossroads. We are at war, a war that Congress never voted to authorize, a war so recklessly managed that our allies increasingly see us as a threat rather than a reliable partner. Yet, amid this global chaos, Republicans have abandoned investments to make the world a safer, healthier place. Their callous neglect has caused hundreds of thousands of needless deaths along the way.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Meeks",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "M001137",
+          "text": "Last year, the Trump administration illegally dismantled USAID and fired over 1,300 State Department employees. It rescinded $13 billion for critical humanitarian and development programs, and now House Republicans want to approve legislation that amounts to a 20 percent cut from 2025 enacted levels, locking in those dangerous Trump cuts. It isn't penny-wise, and it certainly is pound-foolish. Case in point: When the administration cut funding for global health, it ended key disease outbreak surveillance and prevention programs.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Diaz-Balart",
+          "party": "R",
+          "state": "FL",
+          "bioguideId": "D000600",
+          "text": "I am pleased to present the fiscal year 2027 National Security, Department of State, and Related Programs appropriations bill to the House for consideration and for approval. Now, let me start by noting the untimely, sad passing of our friend and colleague, Senator Lindsey Graham. As chairman of the State, Foreign Operations, and Related Programs Subcommittee in the Senate, he was my counterpart. We worked together closely on our top priority, the national security of the United States.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Hageman",
+          "party": "R",
+          "state": "WY",
+          "bioguideId": "H001096",
+          "text": "I commend Chairman Diaz-Balart for his bold leadership to reform U.S. foreign aid over the last several funding cycles. Today, we have a bill before us with additional important reforms. This bill puts forward a second consecutive year of spending cuts, counters the global climate lunacy agenda, and holds rogue U.N. agencies accountable. Specifically, this bill delivers real solutions on issues I have prioritized over the last several years.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Amo",
+          "party": "D",
+          "state": "RI",
+          "bioguideId": "A000380",
+          "text": "This disastrous bill doesn't just turn America's back on the world. It makes Americans less safe and more vulnerable to disease. An Ebola outbreak in the Democratic Republic of the Congo and Uganda has taken more than 700 lives and infected more than 1,900 people. American citizens have already been infected, and the outbreak will spread if we fail to contain it. Republicans' solution? Ban the United States from supporting the World Health Organization, the group coordinating the response to the Ebola outbreak.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Green",
+          "party": "D",
+          "state": "TX",
+          "bioguideId": "G000553",
+          "text": "I respectfully request that funding for Israel's military be considered through a standalone bill, allowing Members to vote separately on question. I first made this request in December 2025, when I opposed legislation linking funding for our military with funding for Israel's military. My position has not changed. Today, I again respectfully request that funding for the Department of State and related programs not be linked to funding for Israel's military.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [],
         "modified": [],
@@ -39310,8 +39994,37 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-15",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 217,
+          "nays": 209,
+          "present": 0,
+          "notVoting": 5,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "House",
+          "date": "2026-07-15",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 209,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 6,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Reported in House",
+          "date": "2026-04-30",
+          "url": "https://www.congress.gov/119/bills/hr8595/BILLS-119hr8595rh.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-1",
@@ -39495,7 +40208,62 @@
         "The law requires states to establish Medicaid community-engagement requirements but leaves the timing, exemptions, and verification largely to the states and the Secretary.",
         "The law appropriates $46.55B for border infrastructure and $45B for detention but does not tie those amounts to staffing or capacity targets in its own terms."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Foxx",
+          "party": "R",
+          "state": "NC",
+          "bioguideId": "F000450",
+          "text": "The question before the House is: Should the House now consider House Resolution 566? Though the resolution waives all points of order against consideration of the motion to concur in the Senate amendment to H.R. 1, the Committee on Rules is not aware of any violation of the Unfunded Mandates Reform Act, nor has the Congressional Budget Office identified any violation of the act. The reason for this motion is plain and obvious.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. McGovern",
+          "party": "D",
+          "state": "MA",
+          "bioguideId": "M000312",
+          "text": "We have a letter from the Congressional Budget Office confirming that there are unfunded mandates in this bill.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Brown",
+          "party": "D",
+          "state": "OH",
+          "bioguideId": "B001313",
+          "text": "For the first time in history, this bill would force States to pay for part of SNAP benefits, and it would require States to increase their share of administrative costs. This is an unfunded mandate, plain and simple. Let's be clear. The costs are staggering, the consequences are devastating, and the cruelty is deeply disturbing. This policy punishes those who can least afford it: seniors on a fixed income, veterans, and families already forced to choose between gas and groceries. States will be stuck in a corner.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Langworthy",
+          "party": "R",
+          "state": "NY",
+          "bioguideId": "L000600",
+          "text": "The stakes for the American people could not be higher. We are rapidly approaching a fiscal cliff. If we do nothing, the Trump tax cuts, the most progrowth tax reforms in generations, will expire. That means higher taxes on nearly every American. That means a gutted child tax credit. That means small businesses will lose the tools they need to survive and to thrive. That means less take-home pay for working families that have already been crushed by the Biden-era inflation. This isn't some hypothetical scenario.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Thompson",
+          "party": "D",
+          "state": "MS",
+          "bioguideId": "T000193",
+          "text": "Mr. Speaker, Republicans are openly bragging about how the bill kicks children and the elderly off Medicaid, nutritional assistance, and more, all to pay for another tax break for wealthy Republican donors. My Republican colleagues are not talking about the trillions and trillions of dollars their political giveaway is going to cost. In fact, Mr. Speaker, Vice President Vance has said historic levels of Homeland Security funding in the bill sweetens the deal for the devil.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Alford",
+          "party": "R",
+          "state": "MO",
+          "bioguideId": "A000379",
+          "text": "Today, Mr. Speaker, we face a watershed moment for the American people. This Republican majority was given a clear mandate by the American people, which is the America First agenda. This bill is our opportunity to deliver on that agenda. H.R. 1 stops the largest tax increase in U.S. history, while providing the largest tax cut for working-and middle-class families ever, with no tax on tips, no tax on overtime, and tax breaks for seniors.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "Temporary deductions for tips ($25,000), overtime ($12,500 or $25,000 joint), car-loan interest ($10,000), and seniors ($6,000), all ending after 2028",
@@ -39516,8 +40284,293 @@
       },
       "budget_accounts": {},
       "analyzedAt": "2026-07-24",
-      "votes": [],
-      "versions": []
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2025-07-03",
+          "question": "On Motion to Concur in the Senate Amendment",
+          "result": "Passed",
+          "yeas": 218,
+          "nays": 214,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-07-01",
+          "question": "On Passage of the Bill H.R. 1",
+          "result": "Bill Passed",
+          "yeas": 50,
+          "nays": 50,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 3
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-07-01",
+          "question": "On the Motion (Warnock Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 48,
+          "nays": 51,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-07-01",
+          "question": "On the Motion (Wyden Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-07-01",
+          "question": "On the Motion (Bennet Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Padilla Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Schiff Motion to Commit H.R. 1 to the Committee on Agriculture, Nutrition, and Forestry with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Duckworth Motion to Commit H.R. 1 to the Committee on Agriculture, Nutrition, and Forestry with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 49,
+          "nays": 51,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Hassan Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 48,
+          "nays": 52,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Gallego Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Blumenthal Motion to Commit H.R. 1 to the Committee on Armed Services with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Kaine Motion to Commit H.R. 1 to the Committee on Homeland Security and Governmental Affairs with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Blunt Rochester Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 48,
+          "nays": 52,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Reed Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 48,
+          "nays": 52,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Lujan Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 49,
+          "nays": 51,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 48,
+          "nays": 52,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Wyden Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Motion to Waive Section 425(a)(2) of the CBA re: H.R. 1)",
+          "result": "Motion Agreed to",
+          "yeas": 51,
+          "nays": 48,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 1
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 49,
+          "nays": 51,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-30",
+          "question": "On the Motion (Schumer Motion to Commit H.R. 1 to the Committee on Finance with Instructions)",
+          "result": "Motion Rejected",
+          "yeas": 47,
+          "nays": 53,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-06-28",
+          "question": "On the Motion to Proceed H.R. 1",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 51,
+          "nays": 49,
+          "present": 0,
+          "notVoting": 0,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 215,
+          "nays": 214,
+          "present": 1,
+          "notVoting": 2,
+          "crossoverCount": 2
+        },
+        {
+          "chamber": "House",
+          "date": "2025-05-22",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 212,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 4,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Reported in House",
+          "date": "2025-05-20",
+          "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2025-05-22",
+          "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2025-06-28",
+          "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1pcs.htm"
+        },
+        {
+          "type": "Engrossed Amendment Senate",
+          "date": "2025-07-01",
+          "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1eas.htm"
+        },
+        {
+          "type": "Public Law",
+          "date": "2025-07-05",
+          "url": "https://www.congress.gov/119/plaws/publ21/PLAW-119publ21.htm"
+        },
+        {
+          "type": "Enrolled Bill",
+          "date": null,
+          "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1enr.htm"
+        }
+      ]
     }
   ]
 }

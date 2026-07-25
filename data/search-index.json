@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-23T02:28:54.629Z",
+  "generatedAt": "2026-07-25T02:17:54.151Z",
   "counts": {
     "bill": 194,
     "rep": 551,
-    "quote": 465,
+    "quote": 450,
     "article": 46
   },
   "records": [
@@ -45,15 +45,6 @@
     },
     {
       "t": "bill",
-      "id": "119-HR-1664",
-      "url": "/bill/119-hr-1664-deploying-american-blockchains-act-of-2025/",
-      "title": "Deploying American Blockchains Act of 2025",
-      "sub": "HR.1664 · Passed House · Rep. Cammack",
-      "text": "To direct the Secretary of Commerce to take actions necessary and appropriate to promote the competitiveness of the United States related to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology,…",
-      "code": "hr1664"
-    },
-    {
-      "t": "bill",
       "id": "119-HR-1479",
       "url": "/bill/119-hr-1479-hotel-fees-transparency-act-of-2025/",
       "title": "Hotel Fees Transparency Act of 2025",
@@ -87,15 +78,6 @@
       "sub": "HR.4371 · Passed House · Rep. Fry",
       "text": "To amend the William Wilberforce Trafficking Victims Protection Reauthorization Act of 2008 to enhance efforts to combat the trafficking of children. Rep. Fry, Russell (R-SC) Requires secure facility placement for unaccompanied migrant children 13 and older…",
       "code": "hr4371"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-1919",
-      "url": "/bill/119-hr-1919-anti-cbdc-surveillance-state-act/",
-      "title": "Anti-CBDC Surveillance State Act",
-      "sub": "HR.1919 · Passed House · Rep. Emmer",
-      "text": "To amend the Federal Reserve Act to prohibit the Federal reserve banks from offering certain products or services directly to an individual, to prohibit the use of central bank digital currency for monetary policy, and for other purposes. Rep. Emmer, Tom…",
-      "code": "hr1919"
     },
     {
       "t": "bill",
@@ -141,15 +123,6 @@
       "sub": "HR.22 · Passed House · Rep. Roy",
       "text": "To amend the National Voter Registration Act of 1993 to require proof of United States citizenship to register an individual to vote in elections for Federal office, and for other purposes. Rep. Roy, Chip (R-TX) Requires documentary proof of U.S. citizenship…",
       "code": "hr22"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-1",
-      "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
-      "title": "One Big Beautiful Bill Act",
-      "sub": "HR.1 · Signed into Law · Rep. Arrington",
-      "text": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14. Rep. Arrington, Jodey (R-TX) Makes the 2017 Trump tax cuts permanent, creates tip and overtime deductions, funds a $109.7B border buildup, imposes Medicaid work requirements, and…",
-      "code": "hr1"
     },
     {
       "t": "bill",
@@ -315,15 +288,6 @@
     },
     {
       "t": "bill",
-      "id": "119-HR-2347",
-      "url": "/bill/119-hr-2347-survivor-justice-tax-prevention-act/",
-      "title": "Survivor Justice Tax Prevention Act",
-      "sub": "HR.2347 · Passed House · Rep. Smucker",
-      "text": "Survivor Justice Tax Prevention Act Rep. Smucker, Lloyd (R-PA) Adds a Section 104(a)(2) exclusion for sexual-assault damages, with a substantiation rule that credits the judgment/agreement's own characterization and bars a medical-records-only denial.",
-      "code": "hr2347"
-    },
-    {
-      "t": "bill",
       "id": "119-HR-8322",
       "url": "/bill/119-hr-8322-to-amend-the-fisa-amendments-act-of-2008-to-extend-the-authorities-of/",
       "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
@@ -342,15 +306,6 @@
     },
     {
       "t": "bill",
-      "id": "119-HR-6955",
-      "url": "/bill/119-hr-6955-main-street-capital-access-act/",
-      "title": "Main Street Capital Access Act",
-      "sub": "H.R.6955 · House Calendar · Rep. Hill",
-      "text": "Rep. Hill, J. French (R-AR) Raises the asset thresholds for the toughest bank regulations ($250B to $370B, among others) and indexes them to GDP, eases capital and exam rules for community and new banks, waives antitrust review for sub-$10B mergers, and…",
-      "code": "hr6955"
-    },
-    {
-      "t": "bill",
       "id": "119-S-4465",
       "url": "/bill/119-s-4465-foreign-intelligence-surveillance-act-further-extension-through-june/",
       "title": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
@@ -366,15 +321,6 @@
       "sub": "H.R.7147 · Signed into Law · Rep. Cole",
       "text": "Making further consolidated appropriations for the fiscal year ending September 30, 2026, and for other purposes. Rep. Cole, Tom (R-OK-4) Ended a 75-day partial DHS shutdown with the department's first full-year FY2026 appropriations — $11.08B for CBP,…",
       "code": "hr7147"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-1346",
-      "url": "/bill/119-hr-1346-nationwide-consumer-and-fuel-retailer-choice-act-of-2025/",
-      "title": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
-      "sub": "H.R.1346 · Passed House · Rep. Smith",
-      "text": "Nationwide Consumer and Fuel Retailer Choice Act of 2025 Rep. Smith, Adrian (R-NE-3) Allows E15 ethanol-blended gasoline to be sold year-round by extending the E10 Reid Vapor Pressure waiver to E15, removing the current summer ozone-season prohibition.",
-      "code": "hr1346"
     },
     {
       "t": "bill",
@@ -465,15 +411,6 @@
       "sub": "HR.7831 · Passed House · Rep. Kennedy",
       "text": "License to Drill Act Rep. Kennedy, Mike (R-UT) Extends the BLM oil and gas drilling-permit application fee through 2037 and routes all collected fees into the BLM Permit Processing Improvement Fund.",
       "code": "hr7831"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-1687",
-      "url": "/bill/119-hr-1687-clean-act/",
-      "title": "CLEAN Act",
-      "sub": "HR.1687 · Passed House · Rep. Fulcher",
-      "text": "CLEAN Act Rep. Fulcher, Russ (R-ID) Requires annual federal geothermal lease sales (up from every two years), mandates replacement sales for canceled ones, and imposes 30-day permit-review deadlines.",
-      "code": "hr1687"
     },
     {
       "t": "bill",
@@ -627,15 +564,6 @@
       "sub": "HR.755 · Passed House · Rep. Ciscomani",
       "text": "To amend the Energy Act of 2020 to include critical materials in the definition of critical mineral, and for other purposes. Rep. Ciscomani, Juan (R-AZ) Amends the Energy Act of 2020 to fold 'critical materials' into the definition of 'critical mineral' and…",
       "code": "hr755"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-2189",
-      "url": "/bill/119-hr-2189-law-enforcement-innovate-to-de-escalate-act/",
-      "title": "Law-Enforcement Innovate to De-Escalate Act",
-      "sub": "HR.2189 · Passed House · Rep. Fitzgerald",
-      "text": "To modernize Federal firearms laws to account for advancements in technology and less-than-lethal weapons, and for other purposes. Rep. Fitzgerald, Scott (R-WI) Amends federal firearms law to exempt 'less-than-lethal projectile devices' from regulation and…",
-      "code": "hr2189"
     },
     {
       "t": "bill",
@@ -873,15 +801,6 @@
     },
     {
       "t": "bill",
-      "id": "119-HR-1329",
-      "url": "/bill/119-hr-1329-smithsonian-american-women-s-history-museum-act/",
-      "title": "Smithsonian American Women's History Museum Act",
-      "sub": "HR.1329 · Failed in House · Rep. Malliotakis",
-      "text": "To permit the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall, and for other purposes. Rep. Malliotakis, Nicole (R-NY) Permits the Smithsonian American Women's History Museum on the National Mall Reserve and…",
-      "code": "hr1329"
-    },
-    {
-      "t": "bill",
       "id": "119-HR-5200",
       "url": "/bill/119-hr-5200-emergency-reporting-act/",
       "title": "Emergency Reporting Act",
@@ -978,15 +897,6 @@
       "sub": "HR.2483 · Signed into Law · Rep. Guthrie",
       "text": "To reauthorize certain programs that provide for opioid use disorder prevention, treatment, and recovery, and for other purposes. Rep. Guthrie, Brett (R-KY) Reauthorizes the 2018 SUPPORT Act's opioid programs through 2030 at higher funding, plus new FASD, 988…",
       "code": "hr2483"
-    },
-    {
-      "t": "bill",
-      "id": "119-HR-2913",
-      "url": "/bill/119-hr-2913-ukraine-support-act/",
-      "title": "Ukraine Support Act",
-      "sub": "HR.2913 · Passed House · Rep. Meeks",
-      "text": "To authorize support for Ukraine, and for other purposes. Rep. Meeks, Gregory W. (D-NY) Authorizes U.S. support for Ukraine and a Russia sanctions regime triggered whenever the President finds Russia is waging war or blocking peace.",
-      "code": "hr2913"
     },
     {
       "t": "bill",
@@ -1683,15 +1593,6 @@
     },
     {
       "t": "bill",
-      "id": "119-HR-8595",
-      "url": "/bill/119-hr-8595-national-security-department-of-state-and-related-programs/",
-      "title": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
-      "sub": "H.R.8595 · Passed House · Rep. Diaz-Balart",
-      "text": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes. Rep. Diaz-Balart, Mario (R-FL-26) House-passed FY2027 State/Foreign Operations appropriations —…",
-      "code": "hr8595"
-    },
-    {
-      "t": "bill",
       "id": "119-HR-9770",
       "url": "/bill/119-hr-9770-continuing-appropriations-act-2027/",
       "title": "Continuing Appropriations Act, 2027",
@@ -1752,6 +1653,105 @@
       "sub": "HR.5160 · Passed House · Rep. Smith",
       "text": "To reauthorize the Stem Cell Therapeutic and Research Act of 2005, and for other purposes. Rep. Smith, Christopher H. (R-NJ-4) Extends the C.W. Bill Young Cell Transplantation Program appropriations authorization at $33.009M per year through FY2031 and…",
       "code": "hr5160"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1329",
+      "url": "/bill/119-hr-1329-smithsonian-american-women-s-history-museum-act/",
+      "title": "Smithsonian American Women's History Museum Act",
+      "sub": "HR.1329 · Failed in House · Rep. Malliotakis",
+      "text": "To permit the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall, and for other purposes. Rep. Malliotakis, Nicole (R-NY-11) Designates a National Mall site for the Smithsonian American Women's History Museum and…",
+      "code": "hr1329"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1346",
+      "url": "/bill/119-hr-1346-nationwide-consumer-and-fuel-retailer-choice-act-of-2025/",
+      "title": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
+      "sub": "HR.1346 · Passed House · Rep. Smith",
+      "text": "To amend the Clean Air Act with respect to the ethanol waiver for Reid Vapor Pressure under that Act, and for other purposes. Rep. Smith, Adrian (R-NE-3) Allows year-round sale of 10 to 15 percent ethanol gasoline and reduces small refining companies'…",
+      "code": "hr1346"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1664",
+      "url": "/bill/119-hr-1664-deploying-american-blockchains-act-of-2025/",
+      "title": "Deploying American Blockchains Act of 2025",
+      "sub": "HR.1664 · Passed House · Rep. Cammack",
+      "text": "To direct the Secretary of Commerce to take actions necessary and appropriate to promote the competitiveness of the United States related to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology,…",
+      "code": "hr1664"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1687",
+      "url": "/bill/119-hr-1687-clean-act/",
+      "title": "CLEAN Act",
+      "sub": "HR.1687 · Passed House · Rep. Fulcher",
+      "text": "To amend the Geothermal Steam Act of 1970 to increase the frequency of lease sales, to require replacement sales, and for other purposes. Rep. Fulcher, Russ (R-ID-1) Requires annual federal geothermal lease sales, mandatory parcel offerings, and deadlines for…",
+      "code": "hr1687"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1919",
+      "url": "/bill/119-hr-1919-anti-cbdc-surveillance-state-act/",
+      "title": "Anti-CBDC Surveillance State Act",
+      "sub": "HR.1919 · Passed House · Rep. Emmer",
+      "text": "To amend the Federal Reserve Act to prohibit the Federal reserve banks from offering certain products or services directly to an individual, to prohibit the use of central bank digital currency for monetary policy, and for other purposes. Rep. Emmer, Tom…",
+      "code": "hr1919"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-2189",
+      "url": "/bill/119-hr-2189-law-enforcement-innovate-to-de-escalate-act/",
+      "title": "Law-Enforcement Innovate to De-Escalate Act",
+      "sub": "HR.2189 · Passed House · Rep. Fitzgerald",
+      "text": "To modernize Federal firearms laws to account for advancements in technology and less-than-lethal weapons, and for other purposes. Rep. Fitzgerald, Scott (R-WI-5) Exempts qualifying less-than-lethal projectile devices from federal firearms restrictions, the…",
+      "code": "hr2189"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-2347",
+      "url": "/bill/119-hr-2347-survivor-justice-tax-prevention-act/",
+      "title": "Survivor Justice Tax Prevention Act",
+      "sub": "HR.2347 · Passed House · Rep. Smucker",
+      "text": "To amend the Internal Revenue Code of 1986 to exclude from gross income any damages, other than punitive damages, received on account of any sexual acts or sexual contact. Rep. Smucker, Lloyd (R-PA-11) Excludes non-punitive damages received on account of…",
+      "code": "hr2347"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-2913",
+      "url": "/bill/119-hr-2913-ukraine-support-act/",
+      "title": "Ukraine Support Act",
+      "sub": "HR.2913 · Passed House · Rep. Meeks",
+      "text": "To authorize support for Ukraine, and for other purposes. Rep. Meeks, Gregory W. (D-NY-5) Expands U.S. security assistance for Ukraine and requires mandatory sanctions, tariffs, and asset taxes against Russia upon a presidential determination.",
+      "code": "hr2913"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-6955",
+      "url": "/bill/119-hr-6955-main-street-capital-access-act/",
+      "title": "Main Street Capital Access Act",
+      "sub": "HR.6955 · Passed House · Rep. Hill",
+      "text": "To make improvements to the Federal banking laws, and for other purposes. Rep. Hill, J. French (R-AR-2) Eases federal banking regulation for smaller institutions and exempts most bank mergers under $10B from antitrust review.",
+      "code": "hr6955"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-8595",
+      "url": "/bill/119-hr-8595-national-security-department-of-state-and-related-programs/",
+      "title": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+      "sub": "HR.8595 · Passed House · Rep. Diaz-Balart",
+      "text": "Making appropriations for national security, Department of State, and related programs for the fiscal year ending September 30, 2027, and for other purposes. Rep. Diaz-Balart, Mario (R-FL-26) Funds the Department of State and U.S. foreign operations for…",
+      "code": "hr8595"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-1",
+      "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
+      "title": "One Big Beautiful Bill Act",
+      "sub": "HR.1 · Signed into Law · Rep. Arrington",
+      "text": "To provide for reconciliation pursuant to title II of H. Con. Res. 14. Rep. Arrington, Jodey C. (R-TX-19) A budget reconciliation law that makes the 2017 tax cuts permanent, restricts Medicaid and SNAP, funds border enforcement, and raises the debt limit by…",
+      "code": "hr1"
     },
     {
       "t": "rep",
@@ -6595,15 +6595,6 @@
     },
     {
       "t": "quote",
-      "id": "K000405",
-      "url": "/bill/119-hr-5578-expanding-whistleblower-protections-for-contractors-act-of-2025/",
-      "billId": "119-HR-5578",
-      "title": "Mr. Knott",
-      "sub": "R-NC · on Expanding Whistleblower Protections for Contractors Act of…",
-      "text": "Mr. Speaker, this month we celebrate Jewish American Heritage Month. First proclaimed by President George W. Bush and by each President since, this month recognizes the contributions of the Jewish community to our country. We celebrate this month amidst a persistent increase in…"
-    },
-    {
-      "t": "quote",
       "id": "M001214",
       "url": "/bill/119-s-2393-fiscal-year-2025-veterans-affairs-major-medical-facility/",
       "billId": "119-S-2393",
@@ -6952,15 +6943,6 @@
       "title": "Mr. Lawler",
       "sub": "R-NY",
       "text": "A New Jersey native, Brett grew up in South Hackensack and earned a degree from William Paterson University in 1989. From a young age, he dreamed of owning a restaurant where people from all walks of life could gather and enjoy authentic Italian cuisine. Through his strong work…"
-    },
-    {
-      "t": "quote",
-      "id": "C001117",
-      "url": "/bill/119-hr-5578-expanding-whistleblower-protections-for-contractors-act-of-2025/",
-      "billId": "119-HR-5578",
-      "title": "Mr. Casten",
-      "sub": "D-IL · on Expanding Whistleblower Protections for Contractors Act of…",
-      "text": "What should we say to angry men in robes? What are we going to say to men in robes who are angry about the outcome of the Civil War? What are we going to say to men in robes who are angry about Reconstruction-era amendments to our Constitution that said that anyone born in…"
     },
     {
       "t": "quote",
@@ -8674,15 +8656,6 @@
     },
     {
       "t": "quote",
-      "id": "M001242",
-      "url": "/bill/119-hconres-75-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
-      "billId": "119-HCONRES-75",
-      "title": "Mr. Moreno",
-      "sub": "R-OH · on Directing the President, pursuant to section 5(c) of the…",
-      "text": "I want to urge my colleagues, at 4:30 today, to vote strongly in objection to S. Res. 616. This resolution, introduced by our Democrat colleagues, is a relic of a failed past approach to Central America, one that imposes a leftist ideology and a purity test and ties our hands,…"
-    },
-    {
-      "t": "quote",
       "id": "T000476",
       "url": "/floor.html",
       "billId": null,
@@ -9331,15 +9304,6 @@
     },
     {
       "t": "quote",
-      "id": "K000401",
-      "url": "/bill/119-hr-2483-support-for-patients-and-communities-reauthorization-act-of-2025/",
-      "billId": "119-HR-2483",
-      "title": "Mr. Kiley",
-      "sub": "R-CA · on SUPPORT for Patients and Communities Reauthorization Act of…",
-      "text": "As a cosponsor of H.R. 3104, the Ukrainian Adjustment Act, I am calling for prompt consideration and passage of this important legislation. We have Ukrainians across this country who came here following Russia's invasion on humanitarian parole. They have contributed to our…"
-    },
-    {
-      "t": "quote",
       "id": "M001223",
       "url": "/bill/119-s-222-whole-milk-for-healthy-kids-act-of-2025/",
       "billId": "119-S-222",
@@ -9827,10 +9791,10 @@
     {
       "t": "quote",
       "id": "K000401",
-      "url": "/floor.html",
-      "billId": null,
+      "url": "/bill/119-hr-1919-anti-cbdc-surveillance-state-act/",
+      "billId": "119-HR-1919",
       "title": "Mr. Kiley",
-      "sub": "R-CA",
+      "sub": "R-CA · on Anti-CBDC Surveillance State Act",
       "text": "Many Californians were shocked to learn that our legislature and Governor have just imposed what is being called the largest tax increase in State history, which is saying quite a lot in a State that already has the highest taxes in the country. Included in that is a massive new…"
     },
     {
@@ -9913,15 +9877,6 @@
       "title": "Mr. Gottheimer",
       "sub": "D-NJ · on PRO Veterans Act of 2025",
       "text": "Today, this House will come together and do something simple but important: honor a great American hero. Mr. Speaker, Tony Gallopo, as you have heard, was a brave Navy veteran, vice commander of the New Jersey Department of The American Legion, and commander of American Legion…"
-    },
-    {
-      "t": "quote",
-      "id": "L000583",
-      "url": "/bill/119-hr-224-disabled-veterans-housing-support-act/",
-      "billId": "119-HR-224",
-      "title": "Mr. Loudermilk",
-      "sub": "R-GA · on Disabled Veterans Housing Support Act",
-      "text": "As the Representative of Georgia `s 11th Congressional District and a veteran of the United States Air Force, I proudly rise today in support of H.R. 5362 to name the Department of Veterans Affairs multispecialty clinic in Marietta, Georgia, as the Colonel Michael H. Boyce…"
     },
     {
       "t": "quote",
@@ -10078,15 +10033,6 @@
     },
     {
       "t": "quote",
-      "id": "H001077",
-      "url": "/bill/119-hr-859-informing-consumers-about-smart-devices-act/",
-      "billId": "119-HR-859",
-      "title": "Mr. Higgins",
-      "sub": "R-LA · on Informing Consumers about Smart Devices Act",
-      "text": "Mr. Speaker, H.R. 2715 ensures that contaminated imports, ranging from radioactive seafood to illegal Chinese vapes, do not reach American consumers and cause harm. Initially, this legislation began as an effort to target toxin-laced foreign seafood. However, my colleague, the…"
-    },
-    {
-      "t": "quote",
       "id": "D000563",
       "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
       "billId": "119-HR-1",
@@ -10114,24 +10060,6 @@
     },
     {
       "t": "quote",
-      "id": "M001230",
-      "url": "/bill/119-hr-2262-flexibility-for-workers-education-act/",
-      "billId": "119-HR-2262",
-      "title": "Mr. Mackenzie",
-      "sub": "R-PA · on Flexibility for Workers Education Act",
-      "text": "H.R. 8823 amends the FECA program, or the Federal Employees Compensation Act, to codify the Department of Labor's ability to suspend payments to medical care providers who have been convicted of fraud with respect to this program. Each year, the FECA program provides benefits to…"
-    },
-    {
-      "t": "quote",
-      "id": "B001291",
-      "url": "/bill/119-s-3971-small-business-innovation-and-economic-security-act/",
-      "billId": "119-S-3971",
-      "title": "Mr. Babin",
-      "sub": "R-TX · on Small Business Innovation and Economic Security Act",
-      "text": "H.R. 3029 is a practical, targeted bill. It directs NIST to develop the science-based standards and best practices needed to make the screening of synthetic DNA much more reliable, helping to ensure that the very technology driving American biotechnology cannot be turned against…"
-    },
-    {
-      "t": "quote",
       "id": "L000571",
       "url": "/floor.html",
       "billId": null,
@@ -10150,30 +10078,12 @@
     },
     {
       "t": "quote",
-      "id": "S001224",
-      "url": "/bill/119-hr-5125-district-of-columbia-judicial-nominations-reform-act-of-2025/",
-      "billId": "119-HR-5125",
-      "title": "Mr. Self",
-      "sub": "R-TX · on District of Columbia Judicial Nominations Reform Act of 2025",
-      "text": "I rise today to salute our servicemembers of tomorrow, the service academy-bound students of the Third Congressional District of Texas. This district of Texas is home to some of the best and brightest young men and women, and it is always an honor to appoint stellar…"
-    },
-    {
-      "t": "quote",
       "id": "D000626",
       "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
       "billId": "119-HR-7148",
       "title": "Mr. Davidson",
       "sub": "R-OH · on Consolidated Appropriations Act, 2026",
       "text": "Last month, a small plane crashed into one of the tallest buildings in Beijing, China, during Friday rush hour. The pilot was killed, and 13 people were injured. This happened in the center of a city of more than 20 million people. Thousands of people nearby saw the plane strike…"
-    },
-    {
-      "t": "quote",
-      "id": "J000302",
-      "url": "/bill/119-hr-1346-nationwide-consumer-and-fuel-retailer-choice-act-of-2025/",
-      "billId": "119-HR-1346",
-      "title": "Mr. Joyce",
-      "sub": "R-PA · on Nationwide Consumer and Fuel Retailer Choice Act of 2025",
-      "text": "This important piece of legislation clarifies the payment rules for manual wheelchairs under Medicare part B. The bill allows Medicare patients the choice to decide whether a titanium or a carbon-fiber wheelchair is right for them, giving patients the option to pay out of pocket…"
     },
     {
       "t": "quote",
@@ -10231,24 +10141,6 @@
     },
     {
       "t": "quote",
-      "id": "L000606",
-      "url": "/bill/119-hr-1346-nationwide-consumer-and-fuel-retailer-choice-act-of-2025/",
-      "billId": "119-HR-1346",
-      "title": "Mr. Latimer",
-      "sub": "D-NY · on Nationwide Consumer and Fuel Retailer Choice Act of 2025",
-      "text": "I rise today more than 5 months since the American people were forced into a war of choice in Iran. As the President's negotiations fail, Americans are still bearing the expense every day. This is all while Russell Vought and Pete Hegseth claim the cost of the war to be roughly…"
-    },
-    {
-      "t": "quote",
-      "id": "M000312",
-      "url": "/bill/119-hr-2347-survivor-justice-tax-prevention-act/",
-      "billId": "119-HR-2347",
-      "title": "Mr. McGovern",
-      "sub": "D-MA · on Survivor Justice Tax Prevention Act",
-      "text": "I rise today to talk about United States policy toward Cuba, or rather our lack of a coherent policy and our decades-long failure to help the people of Cuba. Cuba is our neighbor. We have lived side by side for centuries. Our histories are intertwined. Our futures are, too.…"
-    },
-    {
-      "t": "quote",
       "id": "S001225",
       "url": "/bill/119-hr-8469-making-appropriations-for-military-construction-the-department-of/",
       "billId": "119-HR-8469",
@@ -10285,15 +10177,6 @@
     },
     {
       "t": "quote",
-      "id": "S001217",
-      "url": "/bill/119-hconres-40-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
-      "billId": "119-HCONRES-40",
-      "title": "Mr. Scott",
-      "sub": "R-FL · on Directing the President, pursuant to section 5(c) of the…",
-      "text": "Mr. President, at a time when we are seeing the Democrat Party embrace the hellish evils of socialism and ideologies that hate the founding ideals of America, Democrats are hoping to pass a resolution to direct this Chamber to sue the President of the United States on a very…"
-    },
-    {
-      "t": "quote",
       "id": "M001242",
       "url": "/floor.html",
       "billId": null,
@@ -10312,15 +10195,6 @@
     },
     {
       "t": "quote",
-      "id": "H000874",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Hoyer",
-      "sub": "D-MD · on PRO Veterans Act of 2025",
-      "text": "One of the proudest moments of my time in public service was sponsoring the Americans with Disabilities Act and seeing it through to enactment. I was honored to work closely with House and Senate colleagues, leaders like Bob Dole, Tom Harkin, Tony Coelho, Steve Bartlett, Orrin…"
-    },
-    {
-      "t": "quote",
       "id": "B001322",
       "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
       "billId": "119-S-423",
@@ -10336,15 +10210,6 @@
       "title": "Ms. Dexter",
       "sub": "D-OR",
       "text": "The American people need to know that their government is intentionally suffocating the nation of Cuba. There is no other way to describe what is happening. Earlier this month, I traveled to Cuba with a congressional delegation to see firsthand how U.S. policy is affecting this…"
-    },
-    {
-      "t": "quote",
-      "id": "M000871",
-      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
-      "billId": "119-HR-2444",
-      "title": "Mr. Mann",
-      "sub": "R-KS · on Promoting Resilient Supply Chains Act of 2025",
-      "text": "Just over a year ago, President Trump signed the Working Families Tax Cuts into law on July 4, 2025. One year later, the results are clear. American families are keeping more of the money they earn. Businesses are investing. Farmers and ranchers have stronger risk management…"
     },
     {
       "t": "article",
