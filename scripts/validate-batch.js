@@ -489,6 +489,39 @@ section('Stage ↔ vote consistency');
     if (bad === 0) pass('No stage/vote contradictions');
 }
 
+// ── Check: passage corroboration ──────────────────────────────────────────
+// A stage asserting chamber passage (house/senate/signed) should be backed by
+// hard evidence the bill actually passed: a passing roll-call vote, an
+// engrossed/enrolled/law text version on record, or engrossed/enrolled text on
+// disk. The trap (HR-1329, 2026-07): "Motion to reconsider laid on the table
+// Agreed to" closes out BOTH a passed and a FAILED vote, so detectStage can mark
+// a FAILED bill "Passed House". A bill that truly passes a chamber gets engrossed
+// — the absence of any passage-grade evidence is the tell, and (unlike the
+// Stage↔vote ERROR above) this fires even before votes are fetched. WARN, not
+// ERROR: voice-voted bills with no engrossed text posted are legitimate — verify
+// and adjudicate those.
+section('Passage corroboration');
+{
+    const ASSERTS_PASSAGE = new Set(['house', 'senate', 'signed']);
+    const PASSAGE_VERSION = /engrossed|enrolled|public law|became public law/i;
+    const PASSED_RESULT   = /\b(passed|agreed to)\b/i;
+    let flagged = 0;
+    for (const bill of bills) {
+        if (!ASSERTS_PASSAGE.has(bill.stage)) continue;
+        const hasPassVote    = (bill.votes || []).some(v => PASSAGE_CONTEXT.test(v.question || '') && PASSED_RESULT.test(v.result || ''));
+        const hasPassVersion = (bill.versions || []).some(v => PASSAGE_VERSION.test(v.type || ''));
+        let hasPassText = false;
+        try { hasPassText = PASSAGE_VERSION.test(fs.readFileSync(path.join(BILL_TEXT, `${bill.id}.txt`), 'utf8').slice(0, 400)); }
+        catch { /* missing text file is reported by the "Bill text files" check */ }
+        if (hasPassVote || hasPassVersion || hasPassText) continue;
+        const a = adjudication(bill.id, 'passage-corroboration', 'no-engrossed');
+        if (a) { noteAdjudicated(`${bill.id}: stage "${bill.stageLabel || bill.stage}" without passage-grade evidence`, a); continue; }
+        warn(`${bill.id}: stage "${bill.stageLabel || bill.stage}" but no passing vote, engrossed/enrolled version, or engrossed/enrolled text on disk — verify it actually passed (cf. HR-1329: marked Passed House but failed 204-216)`);
+        flagged++;
+    }
+    if (flagged === 0) pass('All passage-stage bills have passage-grade evidence');
+}
+
 // ── Check: stage ↔ prose consistency ──────────────────────────────────────
 // likelihoodReason narrates status in prose; catch the stale-stage phrasings
 // that have actually occurred ("committee-stage bill" after House passage,

@@ -1,0 +1,208 @@
+[
+  {
+    "id": "119-HR-1",
+    "code": "HR.1",
+    "title": "One Big Beautiful Bill Act",
+    "official_title": "To provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+    "date": "2025-05-20",
+    "version": "v1.0",
+    "stage": "signed",
+    "stageLabel": "Signed into Law",
+    "currentStep": 4,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Arrington, Jodey C. (R-TX-19)",
+    "sponsor_bioguide": "A000375",
+    "cosponsors": 0,
+    "pages": 398,
+    "analyzed": true,
+    "demo": false,
+    "billType": [
+      "appropriation",
+      "amendment"
+    ],
+    "stageDate": "2025-07-04",
+    "likelihood": 100,
+    "likelihoodLabel": "Enacted",
+    "likelihoodReason": "This bill was enacted as Public Law 119-21. It moved through the budget reconciliation process referenced in its title, which allowed Senate passage by a simple majority rather than the usual 60 votes.",
+    "referencedSources": [],
+    "summary": "This is a 2025 budget reconciliation law that makes the 2017 individual tax cuts permanent, adds new temporary deductions for tips, overtime, car-loan interest, and seniors, and restricts Medicaid and SNAP. It also appropriates tens of billions for border enforcement and defense, expands energy leasing, and raises the federal debt limit by $5 trillion.",
+    "brief": "A budget reconciliation law that makes the 2017 tax cuts permanent, restricts Medicaid and SNAP, funds border enforcement, and raises the debt limit by $5 trillion.",
+    "top_lines": [
+      {
+        "headline": "Permanent Individual Tax Changes",
+        "billSection": "70101",
+        "subs": [
+          "Makes the 2017 individual tax rates and standard deduction permanent",
+          "Raises the child tax credit to $2,200 per child",
+          "Raises the state and local tax (SALT) deduction cap to $40,000 through 2029"
+        ]
+      },
+      {
+        "headline": "New Temporary Deductions",
+        "billSection": "70201",
+        "subs": [
+          "No tax on up to $25,000 of tips through 2028",
+          "No tax on up to $12,500 of overtime ($25,000 joint) through 2028",
+          "New $6,000 senior deduction and a car-loan interest deduction, both through 2028"
+        ]
+      },
+      {
+        "headline": "Medicaid and SNAP Restrictions",
+        "billSection": "71119",
+        "subs": [
+          "Requires states to impose Medicaid community-engagement (work) requirements",
+          "Expands SNAP work requirements and shifts benefit costs to states",
+          "Restricts Medicaid and SNAP eligibility for certain noncitizens"
+        ]
+      },
+      {
+        "headline": "Border and Immigration Enforcement",
+        "billSection": "90001",
+        "subs": [
+          "$46.55B for border wall and infrastructure",
+          "$45B for immigration detention capacity",
+          "New immigration application, asylum, and parole fees"
+        ]
+      },
+      {
+        "headline": "Energy, Defense, and Debt Limit",
+        "billSection": "72001",
+        "subs": [
+          "Expands onshore, offshore, Alaska, and coal leasing and repeals clean-energy provisions",
+          "Adds Department of Defense resources for shipbuilding, munitions, and missile defense",
+          "Raises the federal debt limit by $5 trillion"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Title I - Agriculture, Nutrition, and Forestry",
+        "items": [
+          {
+            "main": "Expands SNAP work requirements for able-bodied adults and requires states to pay a share of benefit costs based on their payment error rate.",
+            "detail": "States with a payment error rate under 6 percent keep a 100 percent federal share, while higher error rates lower the federal share to as little as 85 percent, raising the state share to 15 percent. The title also restricts SNAP eligibility for certain noncitizens and updates commodity reference prices, crop insurance, and dairy and sugar programs.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Title II - Armed Services",
+        "items": [
+          {
+            "main": "Provides additional Department of Defense resources across shipbuilding, munitions, nuclear forces, air and missile defense, and border support.",
+            "detail": "Separate sections fund enhancements to the defense industrial base, low-cost weapons, air superiority, nuclear forces, and Department of Defense border support and counter-narcotics activities, along with authorized military construction projects.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Titles III-IV - Banking, Housing, Commerce, and Transportation",
+        "items": [
+          {
+            "main": "Caps Consumer Financial Protection Bureau funding, rescinds certain program funds, and funds transportation and space programs.",
+            "detail": "Title III caps the Consumer Financial Protection Bureau's funding and rescinds green retrofit program funds. Title IV funds Coast Guard readiness, air traffic control improvements, spectrum auctions, and Mars and Artemis missions, and rescinds certain other amounts.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Titles V-VI - Energy, Natural Resources, and Environment",
+        "items": [
+          {
+            "main": "Expands federal oil, gas, and coal leasing and repeals or rescinds clean-energy and environmental provisions.",
+            "detail": "The energy title reinstates and expands onshore, offshore, Alaska, and National Petroleum Reserve leasing, restarts coal leasing, addresses the Strategic Petroleum Reserve, and creates an Energy Dominance Financing program. It also repeals and rescinds a range of prior clean-energy and environmental appropriations.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Title VII - Finance (Tax, Health, and Debt Limit)",
+        "items": [
+          {
+            "main": "Makes the 2017 individual tax cuts permanent, adds temporary deductions for tips, overtime, car-loan interest, and seniors, and raises the SALT cap to $40,000.",
+            "detail": "The permanent changes include the reduced rates, increased standard deduction, and a $2,200 child tax credit. The tips ($25,000 cap), overtime ($12,500, or $25,000 joint), car-loan interest ($10,000 cap), and senior ($6,000) deductions all end after December 31, 2028, and the SALT cap reverts to $10,000 after 2029.",
+            "comments": []
+          },
+          {
+            "main": "Restricts Medicaid and Affordable Care Act (ACA) subsidies and raises the federal debt limit by $5 trillion.",
+            "detail": "The health subtitle requires states to establish Medicaid community-engagement requirements, limits provider taxes and state directed payments, restricts eligibility for certain noncitizens, tightens ACA premium tax credit eligibility, and creates a Rural Health Transformation Program. A separate subtitle increases the public debt limit by $5 trillion.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Title VIII - Health, Education, Labor, and Pensions (Student Aid)",
+        "items": [
+          {
+            "main": "Overhauls federal student loan limits, repayment, and Pell Grants and adds accountability based on earnings outcomes.",
+            "detail": "The title changes student loan borrowing limits and repayment terms, modifies Pell Grant rules, and makes programs ineligible for aid based on low earning outcomes of graduates.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Titles IX-X - Border Enforcement, Immigration, and Judiciary",
+        "items": [
+          {
+            "main": "Appropriates $46.55B for the border wall and infrastructure and $45B for immigration detention, and creates new immigration fees.",
+            "detail": "It also funds additional U.S. Customs and Border Protection personnel and technology and appropriates funds for U.S. Immigration and Customs Enforcement, the Department of Homeland Security, and the Department of Justice. New fees apply to asylum, parole, employment authorization, and other immigration applications, and a separate subtitle extends and expands the Radiation Exposure Compensation program.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Chapter 2 - New Middle-Class Deductions (terminations)",
+        "summary": "The new deductions for tips, overtime, car-loan interest, and seniors all terminate after December 31, 2028, while the reduced rates and standard deduction are made permanent.",
+        "why_unreported": "The most-publicized new deductions are temporary through 2028, a distinction not apparent from the headline tax-relief framing."
+      },
+      {
+        "section": "Title X, Subtitle A - Immigration Fees",
+        "summary": "Creates a broad set of new fees on immigration applications, including asylum, parole, employment authorization, temporary protected status, and visa integrity fees.",
+        "why_unreported": "Beyond enforcement spending, the law imposes a wide new fee regime across immigration applications."
+      },
+      {
+        "section": "Title X, Subtitle C - Radiation Exposure Compensation",
+        "summary": "Extends and expands the Radiation Exposure Compensation program to cover atmospheric testing, uranium mining, and Manhattan Project waste claims.",
+        "why_unreported": "A radiation-victim compensation program is carried within the judiciary title of a budget reconciliation law."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The law makes the 2017 rate cuts permanent but lets its new tips, overtime, car-loan, and senior deductions expire after 2028 without specifying what follows.",
+      "The law raises the SALT cap to $40,000 for 2025, then reverts it to $10,000 after 2029, leaving the later cliff unaddressed.",
+      "The law requires states to establish Medicaid community-engagement requirements but leaves the timing, exemptions, and verification largely to the states and the Secretary.",
+      "The law appropriates $46.55B for border infrastructure and $45B for detention but does not tie those amounts to staffing or capacity targets in its own terms."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "Temporary deductions for tips ($25,000), overtime ($12,500 or $25,000 joint), car-loan interest ($10,000), and seniors ($6,000), all ending after 2028",
+        "A Medicaid community-engagement (work) requirement and a Rural Health Transformation Program",
+        "$46.55B for border wall and infrastructure and $45B for immigration detention",
+        "New immigration application, asylum, and parole fees"
+      ],
+      "modified": [
+        "The 2017 individual tax rates and increased standard deduction made permanent",
+        "The child tax credit raised to $2,200 per child",
+        "The SALT deduction cap raised to $40,000 for 2025, reverting to $10,000 after 2029",
+        "SNAP work requirements expanded, with benefit-cost sharing shifted to states by payment error rate"
+      ],
+      "removed": [
+        "Repeals and rescissions of prior clean-energy and environmental provisions across several titles",
+        "A cap on Consumer Financial Protection Bureau funding"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]

@@ -24,9 +24,30 @@
       "source": "House Floor, Jul 21, 2026",
       "granuleTitle": null,
       "date": "Jul 21, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "We have a letter from the Congressional Budget Office confirming that there are unfunded mandates in this bill.",
+      "date": "2025-05-20"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

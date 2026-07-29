@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 7,
   "bio": "Nydia Margarita Velázquez Serrano is an American politician serving as the U.S. representative for New York's 7th congressional district since 2013. A member of the Democratic Party, she previously represented New York's 12th congressional district from 1993 to 2013, prior to redistricting. She chaired the Congressional Hispanic Caucus from 2009 to 2011. Velázquez is the first Puerto Rican woman to serve in Congress.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-6955",
+      "billTitle": "Main Street Capital Access Act",
+      "stance": "neutral",
+      "text": "Community banks and credit unions are the foundations of our financial system. As ranking member of the House Small Business Committee, I understand better than most the role they play in our communities, offering small business loans, farm loans, and mortgages. They are critical lifelines to our rural and underserved communities that have been left behind by our biggest banks.",
+      "date": "2026-01-07"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

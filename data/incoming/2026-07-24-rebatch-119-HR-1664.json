@@ -1,0 +1,122 @@
+[
+  {
+    "id": "119-HR-1664",
+    "code": "HR.1664",
+    "title": "Deploying American Blockchains Act of 2025",
+    "official_title": "To direct the Secretary of Commerce to take actions necessary and appropriate to promote the competitiveness of the United States related to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology, and for other purposes.",
+    "date": "2025-02-27",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Cammack, Kat (R-FL-3)",
+    "sponsor_bioguide": "C001039",
+    "cosponsors": 1,
+    "pages": 6,
+    "analyzed": true,
+    "demo": false,
+    "billType": "study",
+    "stageDate": "2025-06-24",
+    "likelihood": 45,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "The sponsor is a Republican in the Republican-majority House and the bill passed the House, and its rules of construction impose no obligation on private entities, limiting opposition. It carries only one cosponsor and now sits with the Senate Commerce Committee, so Senate floor time is uncertain.",
+    "referencedSources": [],
+    "summary": "This bill makes the Secretary of Commerce the federal government's lead advisor on blockchain and distributed-ledger technology and sets up a Blockchain Deployment Program to promote its use. The program develops voluntary best practices, convenes advisory committees, and reports to Congress, but requires nothing of private companies.",
+    "brief": "Directs the Commerce Department to lead a voluntary federal program promoting blockchain and distributed-ledger technology.",
+    "top_lines": [
+      {
+        "headline": "Commerce Department Blockchain Role",
+        "billSection": "3",
+        "subs": [
+          "Names the Commerce Secretary as the President's principal blockchain advisor",
+          "Creates a Blockchain Deployment Program in the Commerce Department",
+          "The program sunsets 7 years after enactment"
+        ]
+      },
+      {
+        "headline": "Blockchain Advisory Committees",
+        "billSection": "3",
+        "subs": [
+          "Advisory committees must be established within 180 days",
+          "Membership spans industry, academia, cybersecurity, and rural stakeholders"
+        ]
+      },
+      {
+        "headline": "Best Practices and Reporting",
+        "billSection": "4",
+        "subs": [
+          "Commerce develops and shares voluntary blockchain best practices",
+          "Public report to Congress within 2 years, then annually"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 3 - Department of Commerce Leadership on Blockchain",
+        "items": [
+          {
+            "main": "Designates the Secretary of Commerce as the President's principal advisor on blockchain and distributed-ledger technology and creates a Blockchain Deployment Program.",
+            "detail": "The Secretary must develop policies on issues including decentralized identity, cybersecurity, key storage, artificial intelligence, fraud reduction, and supply-chain resiliency, and examine how federal agencies use and could adopt the technology. The Blockchain Deployment Program terminates 7 years after enactment.",
+            "comments": []
+          },
+          {
+            "main": "Requires the Secretary to establish blockchain advisory committees within 180 days, with broad governmental and nongovernmental membership.",
+            "detail": "Members include federal agency representatives and nongovernmental stakeholders such as infrastructure operators, application developers, small to large businesses, think tanks and academia, cybersecurity experts, rural stakeholders, and artists and content creators. The Secretary also develops and disseminates voluntary best practices on an ongoing basis.",
+            "comments": []
+          },
+          {
+            "main": "States that nothing in the section requires a private entity to share information, seek assistance, implement recommendations, or adopt the best practices.",
+            "detail": "The rules of construction make participation and adoption voluntary for private entities. In carrying out the section the Secretary must consult stakeholders, develop standardized terminology, and support open-source infrastructure.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 - Report to Congress",
+        "items": [
+          {
+            "main": "Requires a public report to Congress within 2 years of enactment and annually thereafter on the program's activities.",
+            "detail": "The Secretary must post the report on the Commerce Department website and submit it to the House Energy and Commerce Committee and the Senate Commerce, Science, and Transportation Committee. It must describe the Secretary's activities, any recommendations for additional legislation, and emerging risks and long-term trends.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 3(e) - Rules of Construction",
+        "summary": "Bars construing the section to require any private entity to share information, request assistance, implement a recommendation, or adopt the best practices.",
+        "why_unreported": "The bill is titled around deploying blockchain, but its operative effect on the private sector is entirely voluntary rather than a mandate."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill directs Commerce to lead on blockchain competitiveness but authorizes no funding for the Blockchain Deployment Program or advisory committees.",
+      "The bill establishes advisory committees but sets no limit on their number, size, or members' terms.",
+      "The bill directs examination of federal agencies' blockchain use but sets no standards or requirements for that use.",
+      "The bill requires development of standardized terminology but does not say who resolves disputes over definitions."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "The Secretary of Commerce as the President's principal advisor on blockchain and distributed-ledger technology",
+        "A Blockchain Deployment Program in the Commerce Department that sunsets 7 years after enactment",
+        "Blockchain advisory committees, to be established within 180 days",
+        "A public report to Congress within 2 years of enactment and annually thereafter"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]

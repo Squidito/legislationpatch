@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T02:17:46.983Z",
+  "generated": "2026-07-29T20:04:59.659Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -5468,7 +5468,7 @@
       ],
       "likelihood": 65,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Strong bipartisan support with 23 cosponsors. Expanding educator tax benefits is a consistently popular, low-controversy issue in both chambers. The retroactive application to tax year 2025 creates urgency for Senate passage. The narrow, targeted nature of the change limits points of opposition.",
+      "likelihoodReason": "Strong bipartisan support with 23 cosponsors. Expanding educator tax benefits is a consistently popular, low-controversy issue in both chambers. The narrow, targeted nature of the change — adding early childhood educators to an existing deduction without raising the $250 cap — limits points of opposition, but the effective date only reaches expenses paid in taxable years beginning after December 31, 2025, so there is no retroactive-relief pressure driving Senate scheduling.",
       "sections": [
         {
           "label": "Section 1 — Short Title",
@@ -5543,7 +5543,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-23",
+      "stageDate": "2026-07-28",
       "votes": [
         {
           "chamber": "House",
@@ -5579,7 +5579,7 @@
           "fetchedAt": "2026-06-10"
         }
       ],
-      "analyzedAt": "2026-07-15",
+      "analyzedAt": "2026-07-29",
       "versions": [
         {
           "type": "Introduced in House",
@@ -17519,7 +17519,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-29",
       "summary": "Directs the Forest Service to sell about 14 acres of national forest land in Wisconsin to a local company at market value, and orders a federal review of stone, sand, and gravel permitting.",
       "brief": "Conveys about 14 acres of Chequamegon-Nicolet National Forest to a Wisconsin company at market value, plus a permitting review.",
       "top_lines": [
@@ -17557,7 +17557,7 @@
           "items": [
             {
               "main": "Directs the Forest Service to convey about 14 acres of national forest land to Tony's Wabeno Redi-Mix, LLC at market value.",
-              "detail": "If the company offers market value (set by a required appraisal) within 180 days of the appraisal's approval, the Secretary of Agriculture must convey the roughly 14-acre parcel in the Chequamegon-Nicolet National Forest in Wisconsin, including mineral rights, by quitclaim deed within 180 days. The buyer pays the purchase price plus survey, appraisal, and environmental-analysis costs. For hazardous materials, the Secretary need only meet disclosure requirements, not remediate.",
+              "detail": "If the company offers market value (set by a required appraisal) within 180 days of the appraisal's approval, the Secretary of Agriculture must convey the roughly 14-acre parcel in the Chequamegon-Nicolet National Forest in Wisconsin, including mineral rights, by quitclaim deed within 180 days. The buyer pays the purchase price plus survey, appraisal, and environmental-analysis costs.",
               "comments": []
             }
           ]
@@ -17577,7 +17577,7 @@
       "criticisms": [],
       "gaps": [
         "The bill conveys the parcel including mineral rights but does not restrict how the land may be used after sale.",
-        "It limits the government's hazardous-materials duty to disclosure, not cleanup, but does not address liability for contamination found later."
+        "The bill is silent on liability for hazardous substances, pollutants, or contaminants on the parcel — it neither imposes nor waives CERCLA cleanup obligations."
       ],
       "featured_quotes": [],
       "changes": {
@@ -17605,6 +17605,11 @@
           "type": "Referred in Senate",
           "date": "2025-07-23",
           "url": "https://www.congress.gov/119/bills/hr3937/BILLS-119hr3937rfs.htm"
+        },
+        {
+          "type": "Reported to Senate",
+          "date": "2026-07-23",
+          "url": "https://www.congress.gov/119/bills/hr3937/BILLS-119hr3937rs.htm"
         }
       ],
       "versionChanges": {
@@ -30087,7 +30092,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-07-10",
+      "analyzedAt": "2026-07-29",
       "votes": [
         {
           "chamber": "House",
@@ -30112,6 +30117,11 @@
           "type": "Referred in Senate",
           "date": "2025-01-22",
           "url": "https://www.congress.gov/119/bills/hr204/BILLS-119hr204rfs.htm"
+        },
+        {
+          "type": "Reported to Senate",
+          "date": "2026-07-23",
+          "url": "https://www.congress.gov/119/bills/hr204/BILLS-119hr204rs.htm"
         }
       ]
     },
@@ -37355,7 +37365,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "reauthorization",
-      "stageDate": "2026-07-21",
+      "stageDate": "2026-07-27",
       "likelihood": 75,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Rep. Debbie Wasserman Schultz (D-FL-25) with 20 cosponsors and a cross-party original cosponsor group including Reps. Miller-Meeks (R-IA), Fitzpatrick (R-PA), Harshbarger (R-TN), Castor (D-FL), and Dingell (D-MI). The House-passed measure was referred to the Committee on Energy and Commerce and now moves to the Senate. Short reauthorizations of expiring CDC public-health authorizations that shift the year window without changing dollars are the profile that typically clears the Senate by unanimous consent or voice.",
@@ -37454,7 +37464,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-07-23",
+      "analyzedAt": "2026-07-29",
       "votes": [
         {
           "chamber": "House",
@@ -37483,6 +37493,11 @@
           "type": "Engrossed in House",
           "date": "2026-07-20",
           "url": "https://www.congress.gov/119/bills/hr4541/BILLS-119hr4541eh.htm"
+        },
+        {
+          "type": "Received in Senate",
+          "date": "2026-07-27",
+          "url": "https://www.congress.gov/119/bills/hr4541/BILLS-119hr4541rds.htm"
         }
       ]
     },
@@ -39539,6 +39554,11 @@
           "type": "Engrossed in House",
           "date": "2026-06-04",
           "url": "https://www.congress.gov/119/bills/hr2913/BILLS-119hr2913eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-20",
+          "url": "https://www.congress.gov/119/bills/hr2913/BILLS-119hr2913pcs.htm"
         }
       ]
     },
@@ -39787,6 +39807,11 @@
           "type": "Engrossed in House",
           "date": "2026-07-21",
           "url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-22",
+          "url": "https://www.congress.gov/119/bills/hr6955/BILLS-119hr6955rfs.htm"
         }
       ]
     },
@@ -40569,6 +40594,886 @@
           "type": "Enrolled Bill",
           "date": null,
           "url": "https://www.congress.gov/119/bills/hr1/BILLS-119hr1enr.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-1722",
+      "code": "HR.1722",
+      "title": "Billion Dollar Boondoggle Act",
+      "official_title": "To require an annual report of taxpayer-funded projects that are over budget and behind schedule.",
+      "date": "2025-02-27",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Miller-Meeks, Mariannette (R-IA-1)",
+      "sponsor_bioguide": "M001215",
+      "cosponsors": 3,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "study",
+      "stageDate": "2026-07-23",
+      "analyzedAt": "2026-07-29",
+      "likelihood": 55,
+      "likelihoodLabel": "Toss-up",
+      "likelihoodReason": "Introduced by Rep. Miller-Meeks (R-IA-1) with 3 cosponsors and cleared the House on July 22, 2026 before being received in the Senate. The bill's operative content is an OMB reporting requirement on cost-overrun and schedule-slip projects, with no new spending, penalties, or rights created — the kind of transparency mandate that historically draws limited floor opposition in either chamber. The main friction points are executive-branch resistance to new reporting workload (particularly on major defense acquisition programs, which are within scope) and Senate calendar time rather than substantive opposition.",
+      "referencedSources": [],
+      "summary": "This bill requires the Office of Management and Budget (OMB) to publish an annual report identifying federal projects that are more than five years behind schedule or at least $1B over their original cost estimate. Federal agencies must submit a defined set of information on each qualifying project — descriptions, contractors, cost histories, and any bonuses paid — so OMB can compile it for Congress and post it publicly.",
+      "brief": "Creates an annual public OMB report listing federal projects that are five-plus years late or over $1B above original cost estimate, with detailed data on each.",
+      "top_lines": [
+        {
+          "headline": "What Triggers a Report",
+          "billSection": "2",
+          "subs": [
+            "Project is more than 5 years behind its original expected completion date, or",
+            "Project has spent at least $1B more than its original cost estimate",
+            "Applies to executive agencies and independent regulatory agencies"
+          ]
+        },
+        {
+          "headline": "Required Project Information",
+          "billSection": "2",
+          "subs": [
+            "Purpose, locations, contract or award number, and start year of each project",
+            "Every primary contractor, subcontractor, grant recipient, and subgrantee",
+            "Original vs. current completion date and CPI-adjusted cost estimate",
+            "Amount and rationale for every award, incentive fee, or bonus paid"
+          ]
+        },
+        {
+          "headline": "OMB Timing & Delivery",
+          "billSection": "2",
+          "subs": [
+            "OMB must issue agency-reporting guidance within 1 year of enactment",
+            "Annual report submitted to Congress and posted on the OMB website",
+            "Report is unclassified but may include a classified annex"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Annual Report",
+          "items": [
+            {
+              "main": "Defines the projects covered as those funded by executive or independent regulatory agencies that are either more than 5 years behind schedule or at least $1B over their original cost estimate.",
+              "detail": "Section 2(a) draws \"covered agency\" from the executive agency definition in 5 U.S.C. 105 plus the independent regulatory agency definition in 44 U.S.C. 3502. \"Project\" includes major acquisitions, major defense acquisition programs (using the 10 U.S.C. 4201 definition), procurements, construction projects, and remediation or clean-up efforts, but excludes direct spending as defined in 2 U.S.C. 900(c) of the Balanced Budget and Emergency Deficit Control Act of 1985.",
+              "comments": []
+            },
+            {
+              "main": "Requires OMB to issue guidance within 1 year of enactment directing covered agencies to annually submit a detailed information package on each covered project.",
+              "detail": "For each covered project, agencies must supply the purpose, every location where it is carried out, the contract or award number where applicable, the year it was initiated, the federal share of total cost, and every primary contractor, subcontractor, grant recipient, and subgrantee. Agencies must also submit any changes to the original scope, original and current completion dates, original and current cost estimates adjusted using the Consumer Price Index for All Urban Consumers, an explanation for delays or cost increases (including any impact of insufficient or delayed appropriations), and the amount of and rationale for any award, incentive fee, or bonus.",
+              "comments": []
+            },
+            {
+              "main": "Directs OMB to submit an annual report to Congress compiling the agency submissions and to post the report on the OMB website.",
+              "detail": "The report must be submitted in unclassified form but may include a classified annex, allowing sensitive defense or intelligence project details to be withheld from public view while still reaching Congress. The bill sets no explicit remedies, penalties, or funding cutoffs for projects that appear on the list — the mechanism is disclosure only.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a)(4)",
+          "summary": "The definition of \"project\" explicitly includes major defense acquisition programs (using the 10 U.S.C. 4201 definition), meaning cost-overrun defense procurements would appear on the same public list as civilian projects.",
+          "why_unreported": "The bill's short title frames it as a general government-waste measure, but the operative definition pulls in the Pentagon's largest acquisition programs, which are the projects most prone to multi-year delays and multi-billion-dollar cost growth."
+        },
+        {
+          "section": "Section 2(a)(4)",
+          "summary": "Direct-spending programs are excluded from the covered-project definition by cross-reference to 2 U.S.C. 900(c).",
+          "why_unreported": "The \"boondoggle\" framing suggests all wasteful federal spending, but mandatory-spending programs — the largest share of the federal budget — are structurally outside the report's scope."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires reporting on cost-overrun and schedule-slip projects but does not create any remedy, penalty, corrective action, or funding trigger tied to a project appearing on the list.",
+        "The bill lists what OMB must publish but does not specify a data format, machine-readability requirement, or update cadence beyond \"annual,\" leaving the utility of the disclosure to OMB discretion.",
+        "The bill requires agencies to disclose every primary contractor and subcontractor on covered projects but does not address whether contractors may claim confidential-business-information exemptions on the underlying data.",
+        "The bill excludes direct spending from the covered-project definition but does not address whether tax expenditures, credit programs, or federally guaranteed loans should be tracked separately when they exhibit similar cost or schedule slippage.",
+        "The bill applies to independent regulatory agencies as defined in 44 U.S.C. 3502 but does not address enforcement if such an agency declines to submit the required information to OMB."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mrs. Miller-Meeks",
+          "party": "R",
+          "state": "IA",
+          "bioguideId": "M001215",
+          "text": "I also offer special thanks to my fellow Iowan, Senator Joni Ernst, who is leading this bill in the Senate. She has been a true champion when it comes to exposing Washington's waste and protecting the hard- earned dollars of the American people. Madam Speaker, Washington's worst-kept secret is its prolific spending problem. Families in Iowa and all across this country have to balance their checkbooks every single month. They budget. They plan, and when money is tight, they make it work or they do without.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
+      "changes": {
+        "added": [
+          "New annual OMB report requirement covering federal projects more than 5 years behind schedule or at least $1B over original cost estimate",
+          "New agency obligation to compile and submit CPI-adjusted cost histories, contractor lists, and bonus rationales for each covered project"
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-02-27",
+          "url": "https://www.congress.gov/119/bills/hr1722/BILLS-119hr1722ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-22",
+          "url": "https://www.congress.gov/119/bills/hr1722/BILLS-119hr1722eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-23",
+          "url": "https://www.congress.gov/119/bills/hr1722/BILLS-119hr1722pcs.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-8205",
+      "code": "HR.8205",
+      "title": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+      "official_title": "To amend the Accelerating Access to Critical Therapies for ALS Act to reauthorize the provisions of such Act through fiscal year 2031, and for other purposes.",
+      "date": "2026-04-06",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Quigley, Mike (D-IL-5)",
+      "sponsor_bioguide": "Q000023",
+      "cosponsors": 103,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "reauthorization",
+      "stageDate": "2026-07-23",
+      "analyzedAt": "2026-07-29",
+      "likelihood": 75,
+      "likelihoodLabel": "Likely",
+      "likelihoodReason": "Introduced by Rep. Quigley (D-IL-5) with 103 cosponsors and cleared the House on July 22, 2026 before being placed on the Senate Legislative Calendar under General Orders (Calendar No. 466). The measure extends an existing bipartisan program authored in 2021 without expanding federal spending authority beyond the existing $100M-per-year level, and adds oversight-tightening changes (adverse-event reporting, renewal-review safety and efficacy assessments) rather than new mandates that typically draw opposition. The main friction points are Senate calendar competition and any objections to the phase 2/3 combined-trial definition or the 5-year FDA action plan report burden — none large enough to defeat a rare-disease reauthorization with triple-digit House cosponsors.",
+      "referencedSources": [
+        {
+          "id": "bill-117-hr-3537",
+          "kind": "law",
+          "label": "Accelerating Access to Critical Therapies for ALS Act (Public Law 117-79)",
+          "citation": "PL 117-79 / HR 3537 (117th Congress)",
+          "srcUrl": "https://www.congress.gov/bill/117th-congress/house-bill/3537/text",
+          "textFile": "data/ref-text/bill-117-hr-3537.txt",
+          "fetchedAt": "2026-07-29"
+        }
+      ],
+      "summary": "This bill extends the 2021 Accelerating Access to Critical Therapies for ALS Act — which authorizes HHS and FDA grants for expanded-access research on investigational drugs for amyotrophic lateral sclerosis and other rare neurodegenerative diseases — through fiscal year 2031. It also tightens the underlying grants program by requiring safety and efficacy data on renewals, mandating prompt adverse-event reporting, expanding the \"phase 3\" definition to cover phase 2/3 combined trials, and requiring FDA to publish a new 5-year rare-neurodegenerative-disease action plan and follow-up report.",
+      "brief": "Extends the ALS investigational-drug grant program and its $100M-per-year authorization through fiscal year 2031, and adds safety-reporting and renewal-review requirements.",
+      "top_lines": [
+        {
+          "headline": "What the Underlying Program Does",
+          "billSection": "2",
+          "source": "bill-117-hr-3537",
+          "subs": [
+            "HHS awards grants to small-business drug sponsors running expanded-access programs for people with ALS not eligible for clinical trials",
+            "FDA-NIH Public-Private Partnership advances rare neurodegenerative disease research",
+            "Authorized at $100M per year since fiscal year 2022"
+          ]
+        },
+        {
+          "headline": "What This Bill Extends",
+          "billSection": "2",
+          "source": "bill-117-hr-3537",
+          "subs": [
+            "Extends the $100M-per-year authorization of appropriations through fiscal year 2031",
+            "Extends the grants program sunset from September 30, 2026 to September 30, 2031"
+          ]
+        },
+        {
+          "headline": "New Grant-Program Guardrails",
+          "billSection": "3",
+          "subs": [
+            "Grant renewals must include HHS review of enrollment, safety, and any available efficacy data",
+            "Grantees must promptly report new and serious adverse events and unexpected safety information",
+            "\"Phase 3\" now includes phase 2/3 combined trials that begin enrollment within a Secretary-set timeframe"
+          ]
+        },
+        {
+          "headline": "FDA Action Plan Refresh",
+          "billSection": "4",
+          "subs": [
+            "FDA must publish a new 5-year rare-neurodegenerative-disease action plan within 18 months of enactment",
+            "FDA must publish a report on actions taken within 5 years of enactment"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Reauthorization",
+          "items": [
+            {
+              "main": "Extends the underlying Act's authorization of appropriations — $100M per year — through fiscal year 2031 by striking \"2026\" and inserting \"2031\" in Section 7 of Public Law 117-79.",
+              "detail": "Section 7 of the 2021 Act authorized $100M for each of fiscal years 2022 through 2026 to carry out the whole Act. This bill's Section 2(a) resets the terminal fiscal year to 2031, continuing the same $100M-per-year authorization ceiling for five more fiscal years without raising the annual amount.",
+              "source": "bill-117-hr-3537",
+              "comments": []
+            },
+            {
+              "main": "Extends the sunset on the ALS investigational-drug grants program from September 30, 2026 to September 30, 2031 by amending Section 2(f) of the 2021 Act (21 U.S.C. 360ee note).",
+              "detail": "Under the 2021 Act, HHS may not award new grants under the Section 2 expanded-access research program on or after September 30, 2026. This bill's Section 2(b) strikes \"2026\" and inserts \"2031\" in that sunset clause, letting the Secretary continue awarding grants for another five fiscal years.",
+              "source": "bill-117-hr-3537",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Improvements to Grant Program",
+          "items": [
+            {
+              "main": "Requires HHS to request and assess enrollment, safety, and any available efficacy data on the investigational drug when reviewing grant-renewal applications under the ALS research program.",
+              "detail": "The 2021 Act's Section 2 authorizes grants to participating entities using data from expanded access to investigational drugs for ALS. This bill adds a new paragraph (4) to Section 2(b) directing that, on renewals, the Secretary shall request from the manufacturer or sponsor — and assess — enrollment, safety, and any available efficacy data relating to the drug's use in preventing, diagnosing, mitigating, treating, or curing ALS.",
+              "source": "bill-117-hr-3537",
+              "comments": []
+            },
+            {
+              "main": "Requires grantees to promptly report new and serious adverse events and unexpected safety information from their phase 3 trial to the grant-making institution, on top of existing FDA safety-reporting rules.",
+              "detail": "This adds paragraph (4) to Section 2(c) of the 2021 Act. Grantees must report to the grant-making institution in addition to complying with the safety reporting requirements under section 312.32 of title 21, Code of Federal Regulations (or any successor regulations).",
+              "comments": []
+            },
+            {
+              "main": "Expands the definition of \"phase 3\" for participating clinical trials to include phase 2/3 combined trials that begin enrollment within a Secretary-determined timeframe.",
+              "detail": "Under the 2021 Act, participating clinical trials had to be phase 3 trials conducted pursuant to an investigational new drug exemption under section 505(i) of the Federal Food, Drug, and Cosmetic Act. This bill's Section 3(c) adds paragraph (4) to Section 2(e) so that combined phase 2/3 trials also qualify as \"phase 3\" if they begin enrollment within a timeframe the Secretary sets in the grant's terms and conditions.",
+              "source": "bill-117-hr-3537",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — FDA Rare Neurodegenerative Disease Action Plan",
+          "items": [
+            {
+              "main": "Renames the section heading and requires FDA to publish a new rare-neurodegenerative-disease action plan on the FDA website within 18 months of enactment, covering the following 5-year period.",
+              "detail": "Section 4 of the 2021 Act (21 U.S.C. 360aa note) already directed the FDA Commissioner to publish a rare-neurodegenerative-disease action plan within 6 months of that Act's December 2021 enactment. This bill renames the section heading from \"als and other rare neurodegenerative disease action plan\" to \"fda rare neurodegenerative disease action plan\" and adds subsection (c)(1), requiring a new plan within 18 months of enactment of this Reauthorization Act that describes actions FDA intends to take over the 5-year period following publication with respect to program enhancements, policy development, regulatory science initiatives, and other initiatives described in subsection (a).",
+              "source": "bill-117-hr-3537",
+              "comments": []
+            },
+            {
+              "main": "Requires FDA to publish a follow-up report on the FDA website within 5 years of enactment describing actions taken under the new action plan and the extent to which it meets the requirements.",
+              "detail": "Subsection (c)(2) sets a 5-year post-enactment deadline for the Commissioner of Food and Drugs to publish a report describing what FDA actually did under the action plan required by paragraph (1) and the extent to which that plan meets the paragraph (1) requirements. The bill sets no penalty or consequence if the plan or report is late or omits required elements.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3(c)",
+          "summary": "The bill expands \"phase 3\" for grant-eligibility purposes to include phase 2/3 combined trials, and lets the HHS Secretary set the enrollment-start timeframe through the grant's terms and conditions rather than in statute.",
+          "why_unreported": "The section is captioned as \"Clarifying Participating Clinical Trial Definition,\" but the operative effect is to broaden which drug-development stages qualify for the ALS grants program and to leave the enrollment-window boundary to Secretary discretion rather than a statutory number."
+        },
+        {
+          "section": "Section 4",
+          "summary": "The bill renames the underlying Section 4 heading from \"ALS and other rare neurodegenerative disease action plan\" to \"FDA rare neurodegenerative disease action plan,\" dropping the explicit ALS reference from the section title.",
+          "why_unreported": "The reauthorization is framed around ALS, but the retitled Section 4 shifts the framing of the FDA action plan from an ALS-anchored plan to a general rare-neurodegenerative-disease plan without changing the substantive scope."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill extends the underlying Act's $100M-per-year authorization through fiscal year 2031 but does not itself appropriate any money — the actual dollars still depend on annual appropriations.",
+        "The bill retitles Section 4 as an \"FDA rare neurodegenerative disease action plan\" but does not extend or reauthorize the Section 5 FDA Rare Neurodegenerative Disease Grant Program (21 U.S.C. 360ee-1) separately.",
+        "The bill requires grantees to promptly report serious adverse events to the grant-making institution but does not define \"promptly,\" specify a maximum reporting window, or provide penalties for non-reporting beyond the existing 21 C.F.R. § 312.32 obligations.",
+        "The bill requires an FDA action plan and 5-year report on rare neurodegenerative diseases but does not require any consultation with patient organizations, ALS advocacy groups, or the public-private partnership established in Section 3 of the 2021 Act.",
+        "The reauthorization does not address the HHS Public-Private Partnership for Rare Neurodegenerative Diseases established in Section 3 of the 2021 Act — the Partnership continues under the extended Section 7 authorization but this bill adds no new requirements or metrics for it."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mr. Quigley",
+          "party": "D",
+          "state": "IL",
+          "bioguideId": "Q000023",
+          "text": "Mr. Speaker, several years ago, a Chicagoan named Brian Wallach came to my office and shared the fact that he was just diagnosed with ALS, a devastating disease that steals a person's ability to move or speak. The average life expectancy at the time with someone diagnosed with ALS was 2 to 5 years. When Brian came to visit us in Congress, that was the reality he was facing. He cofounded an organization called I AM ALS with his wife, Sandra Abrevaya. Sandra's life changed overnight, too when she became an ALS caretaker.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Calvert",
+          "party": "R",
+          "state": "CA",
+          "bioguideId": "C000059",
+          "text": "As a Co-Chair of the bipartisan ALS Caucus, I saw first-hand the effort to get that landmark legislation across the finish line was the result of the passion and detepnination of the ALS advocacy community. The passage of the ACT for ALS Act authorized key programs to expand access to new investigational drugs and grants for research of this terrible disease. Working with my Appropriations Committee colleagues, the ALS Caucus, and ALS advocates, we have been successful at making historic investments into these programs.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
+      "changes": {
+        "added": [
+          "New requirement that HHS request and assess enrollment, safety, and any available efficacy data when reviewing renewals of ALS investigational-drug research grants",
+          "New requirement that grantees promptly report new and serious adverse events and unexpected safety information to the grant-making institution",
+          "New FDA action-plan publication requirement (18 months after enactment) covering a 5-year period, and a follow-up report requirement (5 years after enactment)"
+        ],
+        "modified": [
+          "Section 7 of the 2021 Act — authorization of appropriations terminal fiscal year 2026 → 2031",
+          "Section 2(f) of the 2021 Act — grants sunset date September 30, 2026 → September 30, 2031",
+          "Section 2(e) of the 2021 Act — \"phase 3\" definition expanded to include phase 2/3 combined trials that begin enrollment within a Secretary-determined timeframe",
+          "Section 4 heading of the 2021 Act — renamed from \"ALS and other rare neurodegenerative disease action plan\" to \"FDA rare neurodegenerative disease action plan\""
+        ],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2026-04-06",
+          "url": "https://www.congress.gov/119/bills/hr8205/BILLS-119hr8205ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-07-09",
+          "url": "https://www.congress.gov/119/bills/hr8205/BILLS-119hr8205rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-22",
+          "url": "https://www.congress.gov/119/bills/hr8205/BILLS-119hr8205eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-07-23",
+          "url": "https://www.congress.gov/119/bills/hr8205/BILLS-119hr8205pcs.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-7008",
+      "code": "HR.7008",
+      "title": "Stop Insider Trading Act",
+      "official_title": "To amend chapter 131 of title 5 to require certain restrictions on stocks for Members of Congress and their spouses and dependents, and for other purposes.",
+      "date": "2026-01-12",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Steil, Bryan (R-WI-1)",
+      "sponsor_bioguide": "S001215",
+      "cosponsors": 93,
+      "pages": 7,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-23",
+      "analyzedAt": "2026-07-29",
+      "likelihood": 25,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Introduced by Rep. Steil (R-WI-1) with 93 cosponsors and cleared the House on July 22, 2026 before being received in the Senate. The stock-trading restriction (Section 2) is the kind of proposal that has drawn broad bipartisan support in prior Congresses, but the House-passed version also contains a Section 3 photo-identification requirement for federal elections that is not part of the bill's short title or CRS summary — a rider likely to draw uniform Democratic opposition in the Senate and effectively block the 60-vote cloture threshold. The two-track structure means the insider-trading provisions are unlikely to advance unless the voter-ID section is stripped in Senate negotiation.",
+      "referencedSources": [],
+      "summary": "This bill has two operative sections. Section 2 bars Members of Congress and their spouses and dependent children from purchasing individual stocks, requires 7-to-14-day advance public notice before selling, and imposes a fee (greater of $2,000 or ten percent of transaction value, plus any net gain) for violations. Section 3 amends the Help America Vote Act to require in-person federal-election voters to present a state, federal, or Tribal photo identification, and mail voters to submit either a photo-ID copy, their last four Social Security digits with an affidavit, or a notarization.",
+      "brief": "Bans stock purchases and requires advance sale notices for Members of Congress and their spouses/dependents, and separately requires photo ID for all federal-election voting.",
+      "top_lines": [
+        {
+          "headline": "Congressional Stock-Trading Ban",
+          "billSection": "13152",
+          "subs": [
+            "Members of Congress, their spouses, and their dependent children may not purchase covered investments",
+            "Sales require public notice 7 to 14 calendar days before the sale, filed with the Clerk or Secretary and posted online",
+            "Covers securities of publicly traded companies and derivative equivalents like options and warrants"
+          ]
+        },
+        {
+          "headline": "Exemptions from the Trading Ban",
+          "billSection": "13151",
+          "subs": [
+            "Excepted investment funds (as described in section 13104(f)(8)) and comparable US-, state-, or territory-concentrated funds",
+            "Interests in small business concerns",
+            "Trusts where no covered individual has authority over the trustee, and the trustee is not a Member's spouse, child, parent, or sibling",
+            "Spouse or dependent trades made as part of a primary occupation or employer compensation, and automatic dividend reinvestments"
+          ]
+        },
+        {
+          "headline": "Enforcement",
+          "billSection": "13153",
+          "subs": [
+            "Fee equal to the greater of $2,000 or ten percent of the transaction value, plus any net gain realized",
+            "Fee cannot be paid from the Members' Representational Allowance, Senators' Official Personnel and Office Expense Account, or campaign contributions",
+            "Ethics office may refer former Members to DOJ if they resign or retire before paying"
+          ]
+        },
+        {
+          "headline": "Federal Photo-ID Voting Requirement",
+          "billSection": "303A",
+          "subs": [
+            "In-person federal-election voters must present a valid physical photo identification",
+            "Mail voters must submit a photo-ID copy, last four SSN digits with an inability affidavit, or notarization",
+            "Provisional ballot available if ID missing; ID or religious-photography-objection affidavit must be produced within 3 days"
+          ]
+        },
+        {
+          "headline": "Accepted ID Types and State Duties",
+          "billSection": "303A",
+          "subs": [
+            "State driver's license or ID card (with photo and expiration), U.S. passport, DoD or VA photo ID card, or Tribal-government ID with photo and expiration",
+            "States must provide free access to a digital imaging device (printer, copier, scanner) at courts, libraries, and police stations",
+            "States must notify voters of the ID requirement at registration and during online registration"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Restrictions on Covered Investments",
+          "items": [
+            {
+              "main": "Adds new Subchapter IV to chapter 131 of title 5, U.S. Code, prohibiting Members of Congress and their spouses and dependent children from purchasing individual securities of publicly traded companies or derivative equivalents.",
+              "detail": "New section 13152(a) bars any \"covered individual\" from purchasing a covered investment, and section 13151 defines covered individuals as Members of Congress plus spouses and dependent children, and covered investments as publicly traded company securities or comparable synthetic interests (options, warrants, other derivatives). The prohibition takes effect 180 days after enactment.",
+              "comments": []
+            },
+            {
+              "main": "Requires public advance notice 7 to 14 calendar days before any sale of a covered investment, filed with the Clerk of the House or Secretary of the Senate and posted online.",
+              "detail": "New section 13152(b) requires each Member to file a notice of intent to sell — including projected sale date, description, and number of shares — for their own or a covered spouse or dependent's sale, no less than 7 and no more than 14 calendar days before the sale. The Clerk or Secretary must publish the notice and any withdrawal on a public website, and the notice must be withdrawn if the sale is called off.",
+              "comments": []
+            },
+            {
+              "main": "Sets enforcement through a fee equal to the greater of $2,000 or ten percent of the transaction value, plus any net gain realized during the coverage period, and imposes divestiture for illegal purchases.",
+              "detail": "New section 13153 directs the supervising ethics office to impose the fee on the Member who caused the violation (or whose spouse or child did) and to require the sale of any covered investment purchased in violation of section 13152(a). Members may not pay the fee from the Members' Representational Allowance, Senators' Official Personnel and Office Expense Account, campaign contributions (as defined in section 301(8) of the Federal Election Campaign Act of 1971), or other Federal-office donations. Fees are deposited to the Treasury general fund as miscellaneous receipts. The ethics office may refer a former Member who resigns or retires before paying to the Department of Justice, with section 13106 applied the same as for a direct violation.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Photo Identification Requirements for Federal Elections",
+          "items": [
+            {
+              "main": "Adds a new section 303A to the Help America Vote Act of 2002 (52 U.S.C. 21081 et seq.) requiring in-person voters in federal elections to present a valid physical photo identification.",
+              "detail": "State or local election officials may not provide an in-person federal-election ballot without a valid physical photo ID. A voter without ID may cast a provisional ballot but the eligibility determination under HAVA section 302(a)(4) may not be made unless, within 3 days, the voter presents the required ID or an affidavit — developed and made available by the State — attesting to a religious objection to being photographed.",
+              "comments": []
+            },
+            {
+              "main": "Requires mail and other non-in-person voters to submit a photo-ID copy, the last four digits of their Social Security number plus an inability affidavit, or a notarization by a notary public.",
+              "detail": "New section 303A(a)(2) blocks acceptance of non-in-person ballots unless the voter submits (i) a copy of a valid photo identification, (ii) the last four SSN digits and a state-provided affidavit attesting to inability to obtain a copy after reasonable efforts, or (iii) a notary-attested statement that the voter personally marked the ballot. Exempted are absent uniformed services voters as defined in section 107(1) of the Uniformed and Overseas Citizens Absentee Voting Act (52 U.S.C. 20310(1)) and individuals voting under section 3(b)(2)(B)(ii) of the Voting Accessibility for the Elderly and Handicapped Act.",
+              "comments": []
+            },
+            {
+              "main": "Defines the accepted forms of valid photo identification and imposes new state duties to publicize the requirement and to provide free public access to copying equipment.",
+              "detail": "Accepted IDs are: a State-issued driver's license or motor-vehicle-authority ID card (each with photo and expiration date), a valid U.S. passport, a DoD or VA photo ID card, or a photo ID document with expiration date issued by a Tribal government. States must ensure, to the extent practicable, free public access to a digital imaging device (printer, copier, image scanner, or multifunction machine) at state and local government buildings including courts, libraries, and police stations, for making photo-ID copies. States must notify individuals of the photo-ID requirement at the time of voter registration, including before completion of online registration. Section 3 takes effect 90 days after enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3",
+          "summary": "The bill inserts a new HAVA section 303A imposing a federal photo-ID requirement on all in-person voting and a photo-ID or SSN-plus-affidavit requirement on all non-in-person voting in federal elections.",
+          "why_unreported": "The bill's short title is the \"Stop Insider Trading Act\" and the CRS summary describes only the stock-trading restrictions on Members of Congress. The photo-ID rule is a stand-alone federal election-administration mandate on all states, mechanically unrelated to the insider-trading subject in the title."
+        },
+        {
+          "section": "Section 3(c)",
+          "summary": "Section 401 of HAVA (52 U.S.C. 21111), which sets the Department of Justice enforcement scope for HAVA voting requirements, is amended so its scope reads \"subtitle A of title III\" instead of the current \"sections 301, 302, 303, and 304.\"",
+          "why_unreported": "The section is labeled \"Conforming Amendment Relating to Enforcement,\" but the change replaces four enumerated sections with a broader reference to the entire subtitle, which expands the range of HAVA provisions covered by the DOJ enforcement authority beyond the four sections currently named."
+        },
+        {
+          "section": "Section 13152(a)",
+          "summary": "The stock-purchase ban applies to a Member's spouse and dependent children as well as the Member.",
+          "why_unreported": "The public-facing framing focuses on Members' own trading; the operative rule reaches household-member portfolios, subject to the occupational and dividend-reinvestment exceptions in section 13152(c)."
+        },
+        {
+          "section": "Section 13153(b)(2)",
+          "summary": "The enforcement fee includes not just $2,000 or ten percent but also any net gain realized on the covered investment from the date the individual became a covered individual through disposition.",
+          "why_unreported": "The headline penalty is \"$2,000 or ten percent,\" but the second, uncapped component can vastly exceed the flat or percentage fee for a long-held position that appreciated during a covered individual's tenure."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill bans covered individuals from purchasing new covered investments but does not require Members already holding covered investments on the effective date to divest, nor set any deadline for disposing of pre-existing holdings.",
+        "The bill's insider-trading restrictions apply only to Members of Congress, spouses, and dependent children — the bill does not address covered financial holdings of Executive Branch officials, federal judges, or Congressional staff.",
+        "Section 3 requires a valid photo identification for federal-election voting but does not appropriate any funds to help states issue free voter-eligible ID cards or to operate the required copying devices at courts, libraries, and police stations.",
+        "Section 3 provides a religious-photography-objection affidavit path but no equivalent affidavit path for voters who lack photo identification for non-religious reasons (e.g. lost, stolen, expired, or unaffordable ID) at in-person voting.",
+        "The bill's enforcement mechanism for the insider-trading section is a fee plus divestiture — the bill does not create a criminal penalty for a Member who trades on non-public information, leaving that conduct to existing securities law."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mr. Perry",
+          "party": "R",
+          "state": "PA",
+          "bioguideId": "P000605",
+          "text": "Mr. Speaker, I am a proud original cosponsor of not only this bill but every other bipartisan bill that is not here. The record for me is clear on this. Last year alone, Members made, according to my count, over 13,000 trades, totaling over $600 million with 202 representatives and 56 senators trading, both Republican and Democrat. Every single year, at some point, somebody publishes a list of the Members that were most successful in trading.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mrs. Miller",
+          "party": "R",
+          "state": "IL",
+          "bioguideId": "M001211",
+          "text": "As Members of the United States Congress, it is our job to preserve the integrity of this institution and take seriously the responsibility placed on us by our constituents. This legislation will bring about a more transparent and accountable Congress and will be a strong measure to restore the American people's trust in this institution. While older laws have prohibited Members from using nonpublic information when trading, they did not go far enough. More robust measures should be put in place, and that is exactly what this bill does.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Krishnamoorthi",
+          "party": "D",
+          "state": "IL",
+          "bioguideId": "K000391",
+          "text": "Mr. Speaker, I have helped lead bipartisan efforts to ban stock trading by Members of Congress, and I am deeply frustrated that the majority refuses to take the issue seriously enough at this crucial time when Congress' stock is at an all-time low. We should not be playing partisan games on this. The Republican majority is pushing a bill that still allows Members of Congress to hold, sell, and even buy certain individual stocks.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Lawler",
+          "party": "R",
+          "state": "NY",
+          "bioguideId": "L000599",
+          "text": "It must be the everyday expectation of every American. For too long, the public has watched the headlines that read like a civic lesson gone wrong: elected officials buying and selling stocks in industries they regulate, profiting from information the public will never see. That is not merely unseemly, it is corrosive. It eats away at confidence in this institution, and confidence once lost is not easily rebuilt. Banning congressional stock trading is a simple proposition. If someone serves the public, they serve only the public.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
+      "changes": {
+        "added": [
+          "New Subchapter IV of chapter 131 of title 5, U.S. Code (new sections 13151, 13152, 13153) — stock-trading restrictions on Members of Congress and covered household members",
+          "New section 303A of the Help America Vote Act — federal-election photo identification requirement for in-person and non-in-person voting"
+        ],
+        "modified": [
+          "Table of contents for chapter 131 of title 5, U.S. Code — new Subchapter IV entries added",
+          "HAVA section 311(b) (52 U.S.C. 21101(b)) — new paragraph (4) directing Election Assistance Commission voluntary guidance on section 303A within 90 days of enactment",
+          "HAVA section 401 (52 U.S.C. 21111) — enforcement scope changed from \"sections 301, 302, 303, and 304\" to \"subtitle A of title III\""
+        ],
+        "removed": []
+      },
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 232,
+          "nays": 198,
+          "present": 0,
+          "notVoting": 1,
+          "crossoverCount": 13
+        },
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 211,
+          "nays": 218,
+          "present": 0,
+          "notVoting": 2,
+          "crossoverCount": 0
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2026-01-12",
+          "url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-02-03",
+          "url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-22",
+          "url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008eh.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-8800",
+      "code": "HR.8800",
+      "title": "National Defense Authorization Act for Fiscal Year 2027",
+      "official_title": "To authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+      "date": "2026-05-13",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Rogers, Mike D. [R-AL-3]",
+      "sponsor_bioguide": "R000575",
+      "cosponsors": 1,
+      "pages": 895,
+      "analyzed": true,
+      "demo": false,
+      "billType": "reauthorization",
+      "stageDate": "2026-07-22",
+      "analyzedAt": "2026-07-29",
+      "likelihood": 85,
+      "likelihoodLabel": "Very Likely",
+      "likelihoodReason": "The annual NDAA has been enacted into law every fiscal year for more than six consecutive decades. This House-passed version was introduced by House Armed Services Chairman Rogers (R-AL-3) with Ranking Member Smith (D-WA-9) as an original cosponsor, and cleared the House on July 22, 2026. Remaining variables are Senate committee markup, floor amendments in either chamber, and the conference-committee outcome on the more contested provisions — Section 1655 space-based interceptors, Section 1246 Taiwan Security Cooperation Initiative funding, Sections 1221-1223 Israel cooperation extensions, Section 1237 NATO burden-sharing reports, and Section 1247 Korean Peninsula posture funding limits. None of those disputes have historically been large enough to prevent an NDAA from being enacted before the fiscal year ends.",
+      "referencedSources": [],
+      "summary": "This is the annual defense authorization bill for fiscal year 2027, organized into four divisions covering the Department of Defense, military construction, Department of Energy defense-related programs, and the funding tables that give effect to the authorizations. Section 401 sets active-duty end strengths of 469,000 Army; 356,600 Navy; 173,700 Marine Corps; 330,400 Air Force; and 13,200 Space Force. Division B authorizes named military construction projects by service branch — Army, Navy, Air Force, Defense Agencies, and NATO Security Investment Program — plus separate Guard and Reserve construction authorizations. On the personnel side, Section 632 raises the death gratuity payable to survivors from $100,000 to $165,000 with annual Consumer Price Index adjustment beginning January 1, 2027, and Section 706 requires TRICARE to cover up to a 365-day supply of contraception on the uniform formulary. Foreign-policy items include a Section 1246 authorization of up to $1.00B for the Taiwan Security Cooperation Initiative, Section 1221 extension of the Israel war reserve stockpile authority through January 1, 2029, and Section 1237 quarterly NATO burden-sharing reports evaluating allied progress toward the 5 percent defense investment commitment agreed at the 2025 Hague Summit. Division C Section 3501 authorizes $873.5M for the U.S. Merchant Marine Academy and separately funds the Maritime Security Program ($400.5M), Tanker Security Fleet ($167.6M), Cable Security Fleet ($30M), port infrastructure ($550M), small shipyards ($105M), and other Maritime Administration programs.",
+      "brief": "The FY2027 defense authorization bill — sets DoD/DOE-defense/military construction spending ceilings, personnel end strengths, and dozens of policy provisions from Taiwan and Israel cooperation to a new AI Model Rapid Deployment Framework and a $1.97B-plus military construction program.",
+      "top_lines": [
+        {
+          "headline": "Authorizes FY2027 DoD Spending Levels and Sets Force Sizes",
+          "billSection": "101, 201, 301, 401, 421, 4001",
+          "subs": [
+            "Sections 101, 201, 301, and 421 authorize appropriations for procurement, research/development/test/evaluation, operation and maintenance, and military personnel — with the specific dollar amounts set out in the Division D funding tables (Sections 4101, 4201, 4301, 4401)",
+            "Section 401 sets active-duty end strengths as of September 30, 2027: Army 469,000; Navy 356,600; Marine Corps 173,700; Air Force 330,400; Space Force 13,200",
+            "Section 411 sets Selected Reserve strengths: Army National Guard 331,300; Army Reserve 172,000; Navy Reserve 56,500; Marine Corps Reserve 34,700; Air National Guard 107,400; Air Force Reserve 67,400; Coast Guard Reserve 8,500",
+            "Section 1001 provides $6.00B in general transfer authority letting the Secretary of Defense move funds between accounts within the authorization"
+          ]
+        },
+        {
+          "headline": "Military Construction Across the Services",
+          "billSection": "2101, 2201, 2301, 2401, 2402, 2501",
+          "subs": [
+            "Section 2101 authorizes $1.97B for Army construction and land acquisition (10 items)",
+            "Section 2201 authorizes $19.25B for Navy construction and land acquisition (18 items)",
+            "Section 2301 authorizes $9.94B for Air Force construction and land acquisition (30 items)",
+            "Section 2401 authorizes $5.24B for Defense Agencies construction and land acquisition (21 items), plus Section 2402 authorizes $694.3M for the Energy Resilience and Conservation Investment Program",
+            "Section 2501 authorizes $604.3M for NATO Security Investment Program construction projects"
+          ]
+        },
+        {
+          "headline": "Servicemember Pay, Benefits, and Family Provisions",
+          "billSection": "632, 706, 612, 615",
+          "subs": [
+            "Section 632 raises the death gratuity payable to survivors of a servicemember killed on active duty from $100,000 to $165,000, applicable to deaths on or after enactment, and adds a Consumer Price Index cost-of-living adjustment beginning January 1, 2027",
+            "Section 706 requires TRICARE to cover a supply of up to 365 days of a contraceptive on the uniform formulary — including in a single fill or refill — for members on active duty and their dependents, starting no later than 180 days after enactment",
+            "Section 612 makes permanent the Secretary concerned's authority under 37 USC 403 to authorize temporary Basic Allowance for Housing increases in areas covered by a major disaster declaration, experiencing an influx of military personnel, or where actual housing costs exceed current BAH rates by more than 20 percent, by striking the sunset subparagraphs in 37 USC 403(b)(7) and (b)(8)",
+            "Section 615 authorizes the Department to pay the cost of shipping breast milk for a servicemember mother performing duty away from her nursing child",
+            "Section 601 extends most expiring bonus, incentive-pay, and special-pay authorities from December 31, 2026 to December 31, 2027"
+          ]
+        },
+        {
+          "headline": "Foreign-Policy Provisions: Israel, Taiwan, NATO, China, Korea",
+          "billSection": "1221, 1222, 1223, 1237, 1246, 1247, 1722",
+          "subs": [
+            "Section 1246 authorizes up to $1.00B for the Taiwan Security Cooperation Initiative for fiscal year 2027",
+            "Section 1221 extends the U.S. war reserve stockpile authority for Israel from January 1, 2027 to January 1, 2029; Section 1222 renames the U.S.-Israel anti-tunnel cooperation program \"subterranean\" and extends it through 2029; Section 1223 extends U.S.-Israel counter-unmanned-systems cooperation through 2029",
+            "Section 1237 requires the U.S. European Command Commander to submit 90-day reports through January 1, 2028 on allied progress toward the 5 percent defense-investment commitment agreed at the 2025 Hague NATO Summit, and on force posture and readiness on NATO's eastern flank",
+            "Section 1247 extends existing restrictions on obligating or expending U.S. funds for changes to U.S. military posture on the Korean Peninsula to cover fiscal year 2027 amounts as well as fiscal year 2026",
+            "Section 1722 requires a classified report on Russian and Chinese intelligence penetration in Georgia, plus a 5-year State Department strategy for bilateral relations with Georgia"
+          ]
+        },
+        {
+          "headline": "Emerging Technology and Missile-Defense Provisions",
+          "billSection": "1523, 1655, 1656, 3111, 1811",
+          "subs": [
+            "Section 1523 directs the Chief Digital and Artificial Intelligence Officer to establish an AI Model Rapid Deployment Framework, with the objective of deploying artificial intelligence systems on Department enterprise AI platforms within 30 days after public availability",
+            "Section 1655 requires the Director of Cost Assessment and Program Evaluation to conduct an independent life-cycle cost estimate of the space-based interceptor program, and bars a full-rate production contract until the Secretary certifies at least one successful operationally relevant flight test",
+            "Section 1656 directs the Missile Defense Agency to develop and demonstrate a low-cost exo-atmospheric interceptor complementary to existing ballistic-missile-defense interceptors",
+            "Section 3111 rewrites 10 USC 6128(a) to require the Department of Energy to ensure the nuclear security enterprise has the capability to reliably produce no fewer than 180 war reserve plutonium pits annually by not later than 2050",
+            "Section 1811 requires annual reports through 2032 on supply-chain dependencies for biotechnology equipment and services, including a classified annex identifying any biotechnology company of concern being considered for OMB designation"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Division A — DoD Authorizations",
+          "items": [
+            {
+              "main": "Titles I through XVIII cover procurement, research-and-development, operation and maintenance, military personnel, personnel policy, compensation, health care, acquisition policy, DoD organization, general provisions, civilian personnel, foreign nations, other authorizations, cyberspace, space and strategic programs, other defense matters, and revitalization of the defense industrial base.",
+              "detail": "The dollar amounts for procurement, RDT&E, O&M, military personnel, and other authorizations are set out in the Division D funding tables under Sections 4101, 4201, 4301, 4401, and 4501, incorporated by reference under Section 4001. Section 1001 authorizes the Secretary of Defense to transfer up to $6.00B between accounts within the authorization, subject to notification requirements.",
+              "comments": []
+            },
+            {
+              "main": "Includes numerous authorities on specific weapon systems: Section 123 authorizes a multiyear procurement contract for up to 15 Arleigh Burke Flight III destroyers; Section 124 authorizes multiyear procurement for John Lewis class oilers; Section 127 authorizes multiyear procurement for E-2D Advanced Hawkeye aircraft; Section 128 authorizes incremental funding for ship-to-shore connector construction.",
+              "detail": "Section 123(e) caps modifications to the destroyer multiyear contract at 10 percent above the original target price. Section 123(d) requires that if fewer than 15 destroyers are procured through the base contracts, one or more contracts must include a prepriced option so the base plus option quantity reaches 15. Section 122 gives the Navy incremental funding authority for long-lead components on Virginia class submarines.",
+              "comments": []
+            },
+            {
+              "main": "Section 142 extends the existing statutory prohibition on retiring F-22 aircraft; Sections 143, 145, 146, and 147 impose or extend limitations on retirement or availability of E-3 AWACS, C-130, C-37, and MQ-9 Reaper aircraft.",
+              "detail": "Section 144 requires the Air Force to evaluate the potential transfer of certain A-10 aircraft. Section 141 sets minimum inventory requirements for certain fighter aircraft. These provisions constrain the services' ability to divest older platforms during FY2027.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division B — Military Construction (Titles XXI–XXVIII)",
+          "items": [
+            {
+              "main": "Authorizes named construction and land-acquisition projects at specific installations by service branch — $1.97B Army (Section 2101), $19.25B Navy (Section 2201), $9.94B Air Force (Section 2301), $5.24B Defense Agencies (Section 2401), $604.3M NATO Security Investment Program (Section 2501), plus $694.3M for the Energy Resilience and Conservation Investment Program (Section 2402).",
+              "detail": "Guard and Reserve construction is authorized separately under Sections 2601-2605: Army National Guard $225.5M, Army Reserve $178.0M, Navy Reserve and Marine Corps Reserve $47.0M, Air National Guard $531.0M, Air Force Reserve $19.5M. Sections 2511 and 2512 authorize $416.5M in Republic of Korea funded projects and $134.0M in Republic of Poland funded projects.",
+              "comments": []
+            },
+            {
+              "main": "Extends the authority to carry out named military construction projects authorized in prior fiscal years but not yet completed — Section 2108 extends fiscal-year projects with a $656.4M summed value across 11 items; Section 2205 extends Navy projects with a $2.43B summed value across 14 items; Section 2307 extends Air Force projects with a $1.31B summed value across 19 items; Section 2405 extends Defense Agencies projects with a $555.4M summed value across 12 items.",
+              "detail": "Section 2607 and Section 2608 similarly extend Guard and Reserve project authorities with summed values of $323.7M and $349.9M respectively. Section 2802 adds Tribal governments to the list of entities eligible for defense community infrastructure program grants. Section 2804 raises unspecified minor military construction dollar thresholds.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division C — DOE Defense Programs and Maritime (Titles XXXI–XXXVI)",
+          "items": [
+            {
+              "main": "Section 3101 authorizes the Department of Energy's National Nuclear Security Administration activities for fiscal year 2027 per the funding table in Section 4701, and specifically authorizes a new $88.7M Plutonium Engineering Support Building at Los Alamos National Laboratory.",
+              "detail": "Section 3102 authorizes defense environmental cleanup, Section 3103 authorizes other defense activities, and Section 3104 authorizes nuclear energy — all per the Section 4701 funding table. Section 3111 rewrites 10 USC 6128(a) to set the plutonium pit production capability requirement at 180 pits annually by not later than 2050, and shifts the pit-production report from annual to \"each odd numbered year.\" Section 3112 changes the federal cost share for accelerating replacement of cesium blood irradiation sources from 50 percent to 100 percent of the per-device cost.",
+              "comments": []
+            },
+            {
+              "main": "Section 3501 authorizes $873.5M for the U.S. Merchant Marine Academy in fiscal year 2027 — of which $129.5M is for Academy operations, $120M is for facilities and infrastructure under the Campus Modernization Plan, and $624M is for capital improvement projects.",
+              "detail": "Section 3501 also authorizes $53.4M for State maritime academies (including $9.4M for the Student Incentive Payment Program), $75M for the National Security Multi-Mission Vessel program, $105.76M for Maritime Administration operations, $6M for disposal of obsolete vessels, $400.5M for the Maritime Security Program, $30M for the Cable Security Fleet, $167.6M for the Tanker Security Fleet, $33.7M for the Federal Ship Financing Program (Title XI loan guarantees), $105M for the Small Shipyards Program, $550M for the Port Infrastructure Development Program, and $300M in maritime incentive payments to designated centers of excellence. Section 3531 requires the President to submit implementation proposals for the February 2026 White House Maritime Action Plan within 90 days of enactment.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "summary": "Section 3111 sets a 2050 target date for the Department of Energy's plutonium-pit production capability of 180 pits per year — a long-horizon commitment on a key nuclear-weapons enterprise metric that receives little coverage compared with weapon-system authorizations.",
+          "why_unreported": "Plutonium pit production capacity is a technical nuclear-enterprise milestone rather than a headline weapon system, and the bill also downshifts the associated report from annual to every other year, further reducing the frequency at which the milestone gets public attention."
+        },
+        {
+          "summary": "Section 1655 imposes hard gates on the space-based interceptor program — no full-rate production contract until the Director of Cost Assessment and Program Evaluation completes an independent life-cycle cost estimate, and no full-rate production decision until at least one successful operationally relevant flight test has occurred.",
+          "why_unreported": "The public debate over space-based interceptors focuses on whether to pursue them at all, so procedural cost-and-test gates that constrain how quickly the Missile Defense Agency can move the program to production tend to be overlooked."
+        },
+        {
+          "summary": "Section 3501 authorizes a broad slate of Maritime Administration programs — Merchant Marine Academy, State maritime academies, Maritime Security Program, Tanker Security Fleet, Cable Security Fleet, port infrastructure, small shipyards, and centers of excellence — inside a defense authorization bill rather than a transportation or maritime bill.",
+          "why_unreported": "The Maritime Administration is a Department of Transportation agency, not a DoD component, so its authorization being packaged in the NDAA as Division C, Title XXXV places substantial DOT program funding outside the visibility of most transportation-policy coverage."
+        }
+      ],
+      "changes": {
+        "new": [
+          "Section 1523 creates a new Artificial Intelligence Model Rapid Deployment Framework at the Chief Digital and Artificial Intelligence Officer, targeting a 30-day deployment window for AI systems onto Department enterprise AI platforms after public availability.",
+          "Section 1811 establishes annual reports through 2032 identifying supply-chain dependencies for biotechnology equipment and services obtained by the Department of Defense, with a classified annex identifying covered foreign entities being considered for biotechnology-company-of-concern designation.",
+          "Section 3113 creates new Other Transaction Authority for the National Nuclear Security Administration Administrator, adapting the DoD Section 4021/4022 acquisition authorities for the nuclear security enterprise.",
+          "Section 3531 requires the President to submit implementation proposals for the February 2026 White House Maritime Action Plan within 90 days of enactment."
+        ],
+        "modified": [
+          "Section 632 raises the death gratuity from $100,000 to $165,000 and adds a permanent Consumer Price Index annual adjustment beginning January 1, 2027.",
+          "Section 706 expands the TRICARE contraceptive benefit to include a single-fill or refill supply of up to 365 days at military pharmacies, retail network pharmacies, and the national mail-order pharmacy.",
+          "Section 1246 modifies the Taiwan Security Cooperation Initiative to authorize up to $1.00B of the fiscal-year-2027 DoD authorization for the initiative's purposes.",
+          "Section 1221 extends the Israel war reserve stockpile authority under Section 12001(d) of the 2005 DoD Appropriations Act from January 1, 2027 to January 1, 2029.",
+          "Section 3111 rewrites 10 USC 6128(a) to set the plutonium-pit production-capability requirement at 180 pits annually by not later than 2050, and shifts the associated congressional report from annual to every other year.",
+          "Section 3112 raises the federal cost share for replacing cesium blood irradiation sources from 50 percent to 100 percent of the per-device cost."
+        ],
+        "removed": []
+      },
+      "gaps": [
+        "The bill does not itself set the FY2027 basic-pay-raise percentage — that adjustment continues to be governed by the annual Employment Cost Index formula under 37 USC 1009 absent a specific NDAA override.",
+        "The bill authorizes appropriations but does not itself appropriate money — actual funding flows through a separate Defense Appropriations Act that must clear both chambers.",
+        "The bill contains no free-standing policy on Ukraine security assistance, and no provisions specifically addressing operations at the southern border, both of which have been contested topics in prior NDAAs."
+      ],
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 216,
+          "nays": 212,
+          "present": 0,
+          "notVoting": 3,
+          "crossoverCount": 13
+        },
+        {
+          "chamber": "House",
+          "date": "2026-07-22",
+          "question": "On Motion to Recommit",
+          "result": "Failed",
+          "yeas": 213,
+          "nays": 216,
+          "present": 0,
+          "notVoting": 2,
+          "crossoverCount": 2
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2026-05-13",
+          "url": "https://www.congress.gov/119/bills/hr8800/BILLS-119hr8800ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-06-15",
+          "url": "https://www.congress.gov/119/bills/hr8800/BILLS-119hr8800rh.htm"
+        }
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mr. Wittman",
+          "party": "R",
+          "state": "VA",
+          "bioguideId": "W000804",
+          "text": "I rise in strong support today of H.R. 8800, the National Defense Authorization Act for Fiscal Year 2027. Also, I thank our Tactical Air and Land professional staff: Michael Kirlin, Heath Bope, Caroline Kehrli, Brooke Alred, Amelia Litynski, Jay Vallario, and Andrew Smith. The FY27 NDAA takes several steps to ensure that our servicemembers operate with unmatched capabilities to deter and defeat any adversaries. This bill allows the Secretary of War to enter into multiyear procurement contracts for both the F-15EX and F-35 aircraft.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Jackson",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "J000304",
+          "text": "As chairman of the Subcommittee on Intelligence and Special Operations, I am especially proud that this bill provides our Special Operations Forces, the Defense Intelligence Enterprise, and the Security Cooperation Enterprise with the tools and resources needed to execute the Department's National Defense Strategy and counter an ever- changing threat landscape. Crucially, this bill provides an approximately $1.3 billion increase in funding for U.S. Special Operations Command to address critical needs within its programs.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Courtney",
+          "party": "D",
+          "state": "CT",
+          "bioguideId": "C001069",
+          "text": "As ranking member of the Subcommittee on Seapower and Projection Forces, I yield myself 2\\1/4\\ minutes. Mr. Chairman, I rise to endorse many provisions of the Seapower and Projections Forces mark of the 2027 NDAA, which our subcommittee crafted under the able leadership of my good friend, Chairman Trent Kelly.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Bacon",
+          "party": "R",
+          "state": "NE",
+          "bioguideId": "B001298",
+          "text": "By the way, it passed with a huge bipartisan majority in committee. As we have seen across modern battlefields, technology is evolving at a faster rate than ever before. Artificial intelligence, cyber, quantum, biotechnology, and other emerging capabilities are changing the way wars are fought and won. The United States is the gold standard for scientific innovation, and it is of the utmost importance that we remain committed to equipping our servicemembers with the most up-to-date, state-of-the-art, and mission-relevant tools available.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Houlahan",
+          "party": "D",
+          "state": "PA",
+          "bioguideId": "H001085",
+          "text": "Mr. Chair, today, I have the opportunity to speak briefly with regards to the fiscal year 2027 NDAA. The bipartisan bill that passed out of committee includes many quality-of-life provisions and priorities for our servicemembers and their families. These issues have an immeasurable impact on our recruitment and our retention efforts as well as on readiness. The bill includes a targeted pay raise in which junior servicemembers would get higher pay increases.",
+          "stance": "neutral",
+          "chamber": "House"
         }
       ]
     }

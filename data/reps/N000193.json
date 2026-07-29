@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 3,
   "bio": "Zachary Martin Nunn is an American politician and United States Air Force officer who has served as the U.S. representative for Iowa's 3rd congressional district since 2023. A member of the Republican Party, he was a member of the Iowa Senate for the 15th district from 2019 to 2023 and the Iowa House of Representatives for the 30th district from 2015 to 2019.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "stance": "support",
+      "text": "As a 20-year veteran of the U.S. Air Force and a colonel, I respect America's strength and that it starts at home. The National Defense Authorization Act of 2027 has been delivered in a bipartisan way, and I am proud to share that the NDAA passed yesterday with eight of my amendments, one of the most of any Member of Congress, and in a bipartisan fashion.",
+      "source": "House Floor, Jul 23, 2026",
+      "granuleTitle": null,
+      "date": "Jul 23, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

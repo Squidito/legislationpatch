@@ -360,6 +360,110 @@
       "path": "sections[0].items[0].detail",
       "reason": "Arithmetic delta of two explicit verbatim figures: $33,009,000 (L50) - $31,009,000 (L44) = $2,000,000",
       "verifiedAt": "2026-07-23"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$1.97B",
+      "path": "brief",
+      "reason": "Section 2101 line-item sum (10 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$19.25B",
+      "path": "top_lines[1].subs[1]",
+      "reason": "Section 2201 line-item sum (18 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$9.94B",
+      "path": "top_lines[1].subs[2]",
+      "reason": "Section 2301 line-item sum (30 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$5.24B",
+      "path": "top_lines[1].subs[3]",
+      "reason": "Section 2401 line-item sum (21 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$694.3M",
+      "path": "top_lines[1].subs[3]",
+      "reason": "Section 2402 ERCIP line-item sum (11 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$225.5M",
+      "path": "sections[1].items[0].detail",
+      "reason": "Section 2601 Army National Guard line-item sum (10 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$531.0M",
+      "path": "sections[1].items[0].detail",
+      "reason": "Section 2604 Air National Guard line-item sum (4 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$134.0M",
+      "path": "sections[1].items[0].detail",
+      "reason": "Section 2512 Poland-funded projects line-item sum (2 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$656.4M",
+      "path": "sections[1].items[1].main",
+      "reason": "Section 2108 extension line-item sum (11 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$2.43B",
+      "path": "sections[1].items[1].main",
+      "reason": "Section 2205 Navy extension line-item sum (14 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$1.31B",
+      "path": "sections[1].items[1].main",
+      "reason": "Section 2307 Air Force extension line-item sum (19 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$323.7M",
+      "path": "sections[1].items[1].detail",
+      "reason": "Section 2607 extension line-item sum (10 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-8800",
+      "kind": "$",
+      "token": "$349.9M",
+      "path": "sections[1].items[1].detail",
+      "reason": "Section 2608 extension line-item sum (16 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
+      "verifiedAt": "2026-07-29"
     }
   ],
   "validateBatch": [

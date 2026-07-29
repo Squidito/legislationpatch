@@ -5,7 +5,7 @@
   "state": "NJ",
   "role": "Representative",
   "district": 11,
-  "bio": "Analilia Mejia is an American politician and activist, serving as the U.S. representative for New Jersey's 11th congressional district since April 2026. The co-director of the nonprofit progressive advocacy group Center for Popular Democracy, she was the national political director for Bernie Sanders's 2020 presidential campaign and served in the United States Department of Labor during the Biden administration. Mejia was the Democratic nominee in the 2026 special election for New Jersey's 11th congressional district, running for Mikie Sherrill's seat and defeating Republican Randolph councilman Joe Hathaway. She is set to face Hathaway again in the November 2026 full-term elections before completing Sherrill's term on January 3, 2027.",
+  "bio": "Analilia Mejia is an American politician and activist serving as the U.S. representative for New Jersey's 11th congressional district since April 2026. The co-director of the nonprofit progressive advocacy group Center for Popular Democracy, she was the national political director for Bernie Sanders's 2020 presidential campaign and served in the United States Department of Labor during the Biden administration. Mejia was the Democratic nominee in the 2026 special election for New Jersey's 11th congressional district, running for Mikie Sherrill's seat and defeating Republican nominee Joe Hathaway, a Randolph councilman. She is set to face Hathaway again in the November 2026 elections before completing Sherrill's term on January 3, 2027.",
   "comments": [
     {
       "billId": "119-HR-7148",
@@ -27,6 +27,20 @@
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

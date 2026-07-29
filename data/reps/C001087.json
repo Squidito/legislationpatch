@@ -6,8 +6,32 @@
   "role": "Representative",
   "district": 1,
   "bio": "Eric Alan \"Rick\" Crawford is an American politician serving as the U.S. representative for Arkansas's 1st congressional district since 2011. He is a member of the Republican Party.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2444",
+      "billTitle": "Promoting Resilient Supply Chains Act of 2025",
+      "stance": "neutral",
+      "text": "First off, I want to thank Chairman Arrington and the members of the Budget Committee for producing this budget. Republican Members of Congress, working closely with President Trump, are the only ones serious in Washington about attacking wasteful Federal spending. As chairman of the Intelligence Committee, I am fighting waste, fraud, and abuse in the classified budget. HPSCI Republicans are working to force the intelligence community to achieve clean financial audits, and we are working to create a culture of accountability.",
+      "source": "House Floor, Jul 22, 2026",
+      "granuleTitle": null,
+      "date": "Jul 22, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

@@ -24,9 +24,30 @@
       "source": "House Floor, Jul 21, 2026",
       "granuleTitle": null,
       "date": "Jul 21, 2026"
+    },
+    {
+      "billId": "119-HR-1",
+      "billTitle": "One Big Beautiful Bill Act",
+      "stance": "neutral",
+      "text": "The question before the House is: Should the House now consider House Resolution 566? Though the resolution waives all points of order against consideration of the motion to concur in the Senate amendment to H.R. 1, the Committee on Rules is not aware of any violation of the Unfunded Mandates Reform Act, nor has the Congressional Budget Office identified any violation of the act. The reason for this motion is plain and obvious.",
+      "date": "2025-05-20"
     }
   ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",
