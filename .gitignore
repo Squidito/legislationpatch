@@ -55,3 +55,8 @@ tmp-*
 qa-tmp/
 qa_*.txt
 validate_*.txt
+# analysis scratch — suffix/infix "tmp" forms leak past the tmp-* prefix guard
+# (e.g. hr8800-tmp.json, analyses_tmp2.json). Repo root deploys, so these ship live.
+*-tmp.*
+*_tmp.*
+*_tmp[0-9].*
