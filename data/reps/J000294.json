@@ -5,9 +5,33 @@
   "state": "NY",
   "role": "Representative",
   "district": 8,
-  "bio": "Hakeem Sekou Jeffries is an American politician and attorney who has served as House minority leader and leader of the House Democratic Caucus since 2023. Currently in his seventh term, Jeffries has been the U.S. representative for New York's 8th congressional district since 2013 and served three terms as a member of the New York State Assembly from 2007 to 2012.",
-  "comments": [],
+  "bio": "Hakeem Sekou Jeffries is an American politician and attorney serving since 2013 as the U.S. representative for New York's 8th congressional district. From 2007 to 2012, he represented the 57th district in the New York State Assembly. A member of the Democratic Party, Jeffries has served since 2023 as the leader of the House Democratic Caucus and House minority leader.",
+  "comments": [
+    {
+      "billId": "119-S-2392",
+      "billTitle": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
+      "stance": "neutral",
+      "text": "Donald Trump's reckless and costly war of choice in Iran has skyrocketed gas prices on everyday Americans who are already suffering from the failed Republican economy and drowning in its poor management. Now, Donald Trump has made several promises to the American people upon his return to the White House, all of which it appears to me he has failed to keep. Donald Trump promised to lower the high cost of living on day one, but costs in America haven't gone down.",
+      "source": "House Floor, Jul 22, 2026",
+      "granuleTitle": null,
+      "date": "Jul 22, 2026"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

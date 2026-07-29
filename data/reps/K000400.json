@@ -6,8 +6,30 @@
   "role": "Representative",
   "district": 37,
   "bio": "Sydney Kai Kamlager-Dove is an American politician serving as the U.S. representative for California's 37th congressional district since 2023. A Democrat, she previously served in the California State Senate, representing the 30th district. She has also served in the California State Assembly and as a trustee for the Los Angeles Community College District.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-2189",
+      "billTitle": "Law-Enforcement Innovate to De-Escalate Act",
+      "stance": "oppose",
+      "text": "Let's get honest about what this bill does and doesn't do. It does not require training. It does not set standards. It does not improve accountability, and it does not apply only to law enforcement. It does carve out a sweeping exemption in our Federal firearms laws and makes it easier for dangerous people to access dangerous weapons with fewer safeguards. Supporters keep saying that this bill is about helping law enforcement, but if that were true, the bill would mention law enforcement. It doesn't.",
+      "date": "2025-03-18"
+    }
+  ],
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Nay"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

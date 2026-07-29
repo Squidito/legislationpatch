@@ -3,7 +3,7 @@
   "name": "Glenn Thompson",
   "party": "R",
   "state": "PA",
-  "bio": "Glenn William \"GT\" Thompson Jr. is an American politician serving in the U.S. House of Representatives since 2008, representing Pennslvania's 5th congressional district until 2019 and Pennslvania's 15th congressional since then. He is a member of the Republican Party.",
+  "bio": "Glenn William \"GT\" Thompson Jr. is an American politician serving in the U.S. House of Representatives since 2008, representing Pennsylvania's 5th congressional district until 2019 and Pennsylvania's 15th congressional since then. He is a member of the Republican Party.",
   "comments": [
     {
       "billId": "119-HR-7567",
@@ -50,6 +50,20 @@
   "role": "Representative",
   "district": 15,
   "voteHistory": [
+    {
+      "billId": "119-HR-8800",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2027",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
+    {
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "House",
+      "date": "2026-07-22",
+      "vote": "Yea"
+    },
     {
       "billId": "119-HR-9770",
       "billTitle": "Continuing Appropriations Act, 2027",

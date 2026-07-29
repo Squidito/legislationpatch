@@ -48,6 +48,14 @@ const ACRONYMS = {
   FEMA:  'Federal Emergency Management Agency',
   NIH:   'National Institutes of Health',
   CDC:   'Centers for Disease Control and Prevention',
+  ALS:   'Amyotrophic Lateral Sclerosis (Lou Gehrig\'s disease)',
+  NNSA:  'National Nuclear Security Administration (DOE)',
+  MARAD: 'Maritime Administration (Department of Transportation)',
+  TRICARE: 'the U.S. military health insurance program for uniformed servicemembers, retirees, and their families',
+  ICBM:  'Intercontinental Ballistic Missile',
+  UAS:   'Unmanned Aircraft System (military drone)',
+  MDA:   'Missile Defense Agency (DOD)',
+  BAH:   'Basic Allowance for Housing (military pay)',
   CISA:  'Cybersecurity and Infrastructure Security Agency',
   AMBER: 'missing-child emergency alert system (AMBER Alert)',
   COLA:  'Cost-of-Living Adjustment',
@@ -182,8 +190,12 @@ const ACRONYMS = {
   CFTC:   'Commodity Futures Trading Commission',
   CBDC:   'Central Bank Digital Currency',
   GAAP:   'Generally Accepted Accounting Principles',
+  // Environmental / liability
+  CERCLA: 'Comprehensive Environmental Response, Compensation, and Liability Act',
   // Elections / voting
   NVRA:   'National Voter Registration Act',
+  HAVA:   'Help America Vote Act of 2002',
+  SSN:    'Social Security Number',
   // Immigration law
   INA:    'Immigration and Nationality Act',
   // Infrastructure / cyber
@@ -242,6 +254,7 @@ const ACRONYMS = {
   CDBG:   'Community Development Block Grant',
   HOME:   'HOME Investment Partnerships Program',
   // Defense
+  AWACS:  'Airborne Warning and Control System (E-3 radar aircraft)',
   CVN:    'Nuclear-Powered Aircraft Carrier (Navy hull type)',
   DDG:    'Guided-Missile Destroyer (Navy hull type)',
   ISIS:   'Islamic State of Iraq and Syria',
