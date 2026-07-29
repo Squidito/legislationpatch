@@ -1,0 +1,127 @@
+[
+  {
+    "id": "119-HR-1919",
+    "code": "HR.1919",
+    "title": "Anti-CBDC Surveillance State Act",
+    "official_title": "To amend the Federal Reserve Act to prohibit the Federal reserve banks from offering certain products or services directly to an individual, to prohibit the use of central bank digital currency for monetary policy, and for other purposes.",
+    "date": "2025-03-06",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Emmer, Tom (R-MN-6)",
+    "sponsor_bioguide": "E000294",
+    "cosponsors": 135,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2025-07-17",
+    "likelihood": 45,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "The sponsor is a Republican in the Republican-majority House and the bill drew 135 cosponsors and passed the House. Because the prohibition on Federal Reserve digital-currency work is generally opposed by members who favor preserving Fed flexibility, and Senate passage would require 60 votes, its path in the Senate is uncertain.",
+    "referencedSources": [],
+    "summary": "This bill amends the Federal Reserve Act to bar the Federal Reserve from issuing a central bank digital currency (CBDC) or offering banking products and accounts directly to individuals. It also bars the Board of Governors from testing, developing, or using a CBDC and preserves privately issued, cash-like digital dollars.",
+    "brief": "Prohibits the Federal Reserve from creating or issuing a central bank digital currency or providing retail banking directly to individuals.",
+    "top_lines": [
+      {
+        "headline": "Federal Reserve Retail Banking Ban",
+        "billSection": "2",
+        "subs": [
+          "Bars Federal Reserve banks from offering products or services directly to individuals",
+          "Bars maintaining accounts on behalf of individuals"
+        ]
+      },
+      {
+        "headline": "Central Bank Digital Currency Ban",
+        "billSection": "4",
+        "subs": [
+          "Bars the Fed from issuing a CBDC directly or indirectly through intermediaries",
+          "Bars the Board from testing, studying, developing, or implementing a CBDC",
+          "Bars using a CBDC to implement monetary policy"
+        ]
+      },
+      {
+        "headline": "Privacy Exception and Sense of Congress",
+        "billSection": "4",
+        "subs": [
+          "Preserves open, permissionless, private dollar currency with cash-like privacy",
+          "States the Fed lacks CBDC authority unless Congress grants it"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Sections 2-3 - Federal Reserve Bank Prohibitions",
+        "items": [
+          {
+            "main": "Bars Federal Reserve banks from offering financial products or services directly to individuals, maintaining individual accounts, or issuing a CBDC.",
+            "detail": "Section 2 adds paragraph (18) to Section 16 of the Federal Reserve Act barring direct retail financial services, individual accounts, and issuance of a CBDC or substantially similar digital asset. Section 3 adds paragraph (19) barring a Federal reserve bank from offering a CBDC indirectly to an individual through a financial institution or other intermediary.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 - Central Bank Digital Currency Prohibition",
+        "items": [
+          {
+            "main": "Bars the Board of Governors from testing, studying, developing, creating, or implementing a CBDC, and bars the Board and the Federal Open Market Committee from using one for monetary policy.",
+            "detail": "Adds paragraph (11) to Section 10 of the Federal Reserve Act. An exception preserves any dollar-denominated currency that is open, permissionless, and private and fully preserves the privacy protections of physical U.S. currency. A CBDC is defined as digital money denominated in the national unit of account, a direct liability of the Federal Reserve System, and widely available to the general public.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 5 - Sense of Congress",
+        "items": [
+          {
+            "main": "States the sense of Congress that the Board of Governors does not currently have authority to issue a CBDC.",
+            "detail": "It further states the Board will not have such authority unless Congress grants it under its Article I, Section 8 powers. A sense of Congress carries no binding legal effect.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2 - Prohibition on Direct Retail Services and Accounts",
+        "summary": "Bars Federal Reserve banks from offering any financial products or services directly to individuals and from maintaining individual accounts, beyond the digital-currency prohibitions.",
+        "why_unreported": "The bill's title concerns a central bank digital currency, but this provision more broadly bars the Fed from all direct retail banking with individuals."
+      },
+      {
+        "section": "Section 4(C) - Exception",
+        "summary": "Preserves any dollar-denominated currency that is open, permissionless, and private and preserves cash-like privacy protections.",
+        "why_unreported": "This carve-out leaves room for privately issued digital dollars, an effect not apparent from a bill described as banning digital currency."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill bars a CBDC or any 'substantially similar' digital asset but does not define what makes an asset substantially similar, which sets the ban's scope.",
+      "The bill's exception preserves 'open, permissionless, and private' dollar currency but does not identify who determines whether a currency meets those criteria.",
+      "The bill bars the Board from studying a CBDC but does not address the disposition of any digital-currency research already underway.",
+      "The Sense of Congress asserts the Fed lacks CBDC authority but has no binding legal effect on that question."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "A prohibition on Federal Reserve banks offering products, services, or accounts directly to individuals (Section 16(18))",
+        "Prohibitions on issuing a CBDC directly (Section 16(18)) and indirectly through intermediaries (Section 16(19))",
+        "A prohibition on the Board testing, developing, or implementing a CBDC or using one for monetary policy (Section 10(11))",
+        "An exception for open, permissionless, private dollar currency and a definition of 'central bank digital currency'"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]

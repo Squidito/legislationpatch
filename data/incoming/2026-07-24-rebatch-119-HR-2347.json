@@ -1,0 +1,122 @@
+[
+  {
+    "id": "119-HR-2347",
+    "code": "HR.2347",
+    "title": "Survivor Justice Tax Prevention Act",
+    "official_title": "To amend the Internal Revenue Code of 1986 to exclude from gross income any damages, other than punitive damages, received on account of any sexual acts or sexual contact.",
+    "date": "2025-03-25",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Smucker, Lloyd (R-PA-11)",
+    "sponsor_bioguide": "S001199",
+    "cosponsors": 3,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-14",
+    "likelihood": 52,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "The sponsor is a Republican in the Republican-majority House, and the bill carries 3 cosponsors. The exclusion for non-punitive damages received on account of sexual acts or contact has cross-ideological appeal that limits opposition, though Senate passage would require 60 votes.",
+    "referencedSources": [],
+    "summary": "This bill lets people exclude from their taxable income money awarded for sexual acts or sexual contact, other than punitive damages, whether or not there are medical records or visible injuries. It also makes a written statement in a court decision or settlement enough to shift the burden of proof to the IRS and directs Treasury to publicize the tax break.",
+    "brief": "Excludes non-punitive damages received on account of sexual acts or sexual contact from federal taxable income.",
+    "top_lines": [
+      {
+        "headline": "Tax Exclusion for Abuse Damages",
+        "billSection": "2",
+        "subs": [
+          "Excludes non-punitive damages for sexual acts or sexual contact from gross income",
+          "Applies whether or not there are medical records or observable injuries"
+        ]
+      },
+      {
+        "headline": "Burden of Proof Shift",
+        "billSection": "2",
+        "subs": [
+          "A decision or agreement stating damages are for sexual acts counts as credible evidence",
+          "Treats the taxpayer as meeting the burden-of-proof requirements of Section 7491(a)"
+        ]
+      },
+      {
+        "headline": "Public Awareness Program",
+        "billSection": "2",
+        "subs": [
+          "Treasury must run a program to publicize the exclusion",
+          "Coordinated with the Justice Department's Office on Violence Against Women"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) - Exclusion From Gross Income",
+        "items": [
+          {
+            "main": "Amends Section 104(a)(2) of the Internal Revenue Code to exclude from gross income damages received on account of a sexual act or sexual contact.",
+            "detail": "The exclusion covers damages other than punitive damages and applies whether or not there are medical records or observable injuries. 'Sexual act' and 'sexual contact' are defined by reference to Section 2246 of Title 18, United States Code, as in effect on enactment.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(b) - Burden of Proof",
+        "items": [
+          {
+            "main": "Provides that a decision or agreement stating that damages are on account of a sexual act or sexual contact is treated as credible evidence of that fact.",
+            "detail": "For purposes of Section 7491(a), such a statement is treated as credible evidence and the taxpayer is treated as having met the requirements of Section 7491(a)(2) on whether the damages are on account of the act or contact.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(d)-(e) - No Inference and Public Awareness",
+        "items": [
+          {
+            "main": "Bars drawing inferences about the physical-injury exclusion and directs Treasury to promote public awareness of the new exclusion.",
+            "detail": "No inference may be drawn from the amendment about whether 'personal physical injuries or physical sickness' includes injuries without medical records or observable injuries. The Secretary of the Treasury, in consultation with the Justice Department's Office on Violence Against Women, must conduct a program to promote public awareness of the exclusion.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(b) - Burden of Proof",
+        "summary": "Treats a decision or agreement's statement that damages are on account of a sexual act or contact as credible evidence and deems the taxpayer to have met the Section 7491(a)(2) burden-of-proof requirements.",
+        "why_unreported": "Beyond creating a tax exclusion, this changes the evidentiary burden in tax disputes over whether damages qualify, an effect not signaled by the exclusion itself."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill applies the exclusion only to decisions made and agreements entered after enactment and does not address claims or agreements predating enactment.",
+      "The bill treats a decision or agreement's characterization as credible evidence but does not address damages where the decision or agreement does not state their basis.",
+      "The bill directs Treasury to run a public-awareness program but sets no timeline or funding for it.",
+      "The bill excludes non-punitive damages for sexual acts or contact but does not specify how awards covering both sexual and non-sexual claims are allocated."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "An income-tax exclusion for non-punitive damages received on account of a sexual act or sexual contact",
+        "A burden-of-proof rule treating a decision or agreement's characterization as credible evidence under Section 7491(a)",
+        "A Treasury public-awareness program conducted with the Justice Department's Office on Violence Against Women"
+      ],
+      "modified": [
+        "Section 104(a)(2) of the Internal Revenue Code amended to exclude damages for sexual acts or contact, whether or not there are medical records or observable injuries"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]

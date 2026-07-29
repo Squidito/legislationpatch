@@ -1,0 +1,118 @@
+[
+  {
+    "id": "119-HR-1687",
+    "code": "HR.1687",
+    "title": "CLEAN Act",
+    "official_title": "To amend the Geothermal Steam Act of 1970 to increase the frequency of lease sales, to require replacement sales, and for other purposes.",
+    "date": "2025-02-27",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Fulcher, Russ (R-ID-1)",
+    "sponsor_bioguide": "F000469",
+    "cosponsors": 4,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-07-15",
+    "likelihood": 45,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "The sponsor is a Republican in the Republican-majority House and the bill passed the House. The provisions forcing annual lease sales and mandatory parcel offerings, and compressing permit timelines around environmental review, may draw opposition from members favoring more agency discretion, and the bill now sits with a Senate committee where 60 votes would be needed.",
+    "referencedSources": [],
+    "summary": "This bill speeds up federal geothermal energy leasing by requiring lease sales every year instead of every 2 years and forcing the Interior Department to offer most eligible parcels for lease. It also sets short deadlines for the government to act on geothermal drilling permit applications.",
+    "brief": "Requires annual federal geothermal lease sales, mandatory parcel offerings, and deadlines for geothermal drilling permits.",
+    "top_lines": [
+      {
+        "headline": "Annual Geothermal Lease Sales",
+        "billSection": "2",
+        "subs": [
+          "Requires geothermal lease sales every year instead of every 2 years",
+          "Canceled or delayed sales must be replaced within the same year"
+        ]
+      },
+      {
+        "headline": "Mandatory Parcel Offerings",
+        "billSection": "2",
+        "subs": [
+          "Interior must offer 75 percent of nominated eligible parcels for lease",
+          "The remaining 25 percent required unless a written justification is given"
+        ]
+      },
+      {
+        "headline": "Drilling Permit Deadlines",
+        "billSection": "2",
+        "subs": [
+          "30-day notice on whether a permit application is complete",
+          "30-day deadline to issue or defer the permit",
+          "10-day decision once deferred conditions are met"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) - Annual Leasing and Parcel Offerings",
+        "items": [
+          {
+            "main": "Changes the required interval between federal geothermal lease sales from every 2 years to every year and requires replacement sales for any canceled or delayed sale.",
+            "detail": "Amends Section 4(b) of the Geothermal Steam Act of 1970. If a lease sale for a year is canceled or delayed, the Secretary of the Interior must conduct a replacement sale during the same year.",
+            "comments": []
+          },
+          {
+            "main": "Requires the Secretary to offer for lease 75 percent of nominated parcels eligible for geothermal development, plus the remaining 25 percent unless a written justification is provided.",
+            "detail": "Eligibility is based on the parcels identified under the resource management plan in effect for the State. The remaining 25 percent may be withheld only if the Secretary provides a written justification identifying a statutory, environmental, or administrative basis that prevents offering them.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(b) - Geothermal Drilling Permit Deadlines",
+        "items": [
+          {
+            "main": "Adds deadlines for the Secretary to act on geothermal drilling permit applications.",
+            "detail": "Within 30 days of receiving an application, the Secretary must notify the applicant whether it is complete. Within 30 days of a completeness notice, the Secretary must issue the permit if National Environmental Policy Act and other requirements are met, or defer with a list of steps and agency actions whose timelines may not exceed the deadlines in Section 107(g) of the National Environmental Policy Act of 1969. A deferred decision must issue within 10 days after the conditions are met.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a) - Parcel Offering Requirement (25 percent exception)",
+        "summary": "Allows the Secretary to withhold the remaining 25 percent of nominated parcels by providing a written justification identifying a statutory, environmental, or administrative basis.",
+        "why_unreported": "The bill's title emphasizes committing leases, but this exception lets the Secretary withhold a quarter of nominated parcels on an administrative basis, which the bill does not define."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill requires offering 75 percent of nominated parcels but does not define how parcels are nominated or who nominates them.",
+      "The bill compresses permit decision deadlines around National Environmental Policy Act review but does not change the underlying environmental review timelines it references.",
+      "The bill requires annual and replacement lease sales but specifies no consequence if the Secretary fails to hold a required sale.",
+      "The bill permits withholding parcels for a 'statutory, environmental, or administrative basis' but does not define an administrative basis."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "A requirement to hold a replacement geothermal lease sale within the same year for any canceled or delayed sale",
+        "Mandatory parcel-offering levels of 75 percent, plus the remaining 25 percent absent written justification",
+        "Deadlines for acting on geothermal drilling permit applications (30-day completeness notice, 30-day issue-or-defer, 10-day decision after conditions are met)"
+      ],
+      "modified": [
+        "The interval between federal geothermal lease sales changed from every 2 years to every year (Section 4(b) of the Geothermal Steam Act of 1970)"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]

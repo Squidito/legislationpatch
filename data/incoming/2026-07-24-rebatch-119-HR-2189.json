@@ -1,0 +1,125 @@
+[
+  {
+    "id": "119-HR-2189",
+    "code": "HR.2189",
+    "title": "Law-Enforcement Innovate to De-Escalate Act",
+    "official_title": "To modernize Federal firearms laws to account for advancements in technology and less-than-lethal weapons, and for other purposes.",
+    "date": "2025-03-18",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": [
+      "Introduced",
+      "Committee",
+      "Passed House",
+      "Passed Senate",
+      "Signed"
+    ],
+    "sponsor": "Rep. Fitzgerald, Scott (R-WI-5)",
+    "sponsor_bioguide": "F000471",
+    "cosponsors": 95,
+    "pages": 3,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-02-24",
+    "likelihood": 48,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "The sponsor is a Republican in the Republican-majority House, the bill drew 95 cosponsors, and it passed the House. The exemptions loosening firearms-tax and National Firearms Act treatment for a device class may draw opposition from members concerned about firearm-law carve-outs, and Senate passage would require 60 votes.",
+    "referencedSources": [],
+    "summary": "This bill creates a federal definition of 'less-than-lethal projectile device' and exempts qualifying devices from federal firearms restrictions, the National Firearms Act, and the federal firearms and ammunition excise tax. Qualifying devices are those whose projectiles do not exceed 500 feet per second and are designed not to cause death or serious injury.",
+    "brief": "Exempts qualifying less-than-lethal projectile devices from federal firearms restrictions, the National Firearms Act, and the firearms excise tax.",
+    "top_lines": [
+      {
+        "headline": "Less-Than-Lethal Device Definition",
+        "billSection": "102",
+        "subs": [
+          "Defines a 'less-than-lethal projectile device' with a 500 feet-per-second projectile cap",
+          "Attorney General must rule on classification requests within 90 days"
+        ]
+      },
+      {
+        "headline": "Firearms Law Exemptions",
+        "billSection": "102",
+        "subs": [
+          "Exempts qualifying devices from Title 18 firearm restrictions",
+          "Exempts them from the National Firearms Act"
+        ]
+      },
+      {
+        "headline": "Firearms Excise Tax Exemption",
+        "billSection": "202",
+        "subs": [
+          "Exempts qualifying devices from the federal firearms and ammunition excise tax",
+          "Treasury publishes and annually updates a list of qualifying devices",
+          "Annual report to the Ways and Means and Finance committees"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Title I - Firearms Law Definition and Exemption (Section 102)",
+        "items": [
+          {
+            "main": "Adds a definition of 'less-than-lethal projectile device' to Section 921(a) of Title 18 and treats such devices as outside the Title 18 firearm restrictions.",
+            "detail": "A qualifying device is one not designed or readily convertible to discharge handgun, rifle, or shotgun ammunition or any projectile exceeding 500 feet per second, is intended for use unlikely to cause death or serious bodily injury, and cannot readily accept ammunition feeding devices loaded through a pistol grip or used in semiautomatic firearms. On request, the Attorney General must determine whether a device qualifies within 90 days of receiving it.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Title II - Firearms and Ammunition Excise Tax Exemption (Section 202)",
+        "items": [
+          {
+            "main": "Exempts less-than-lethal projectile devices, listed devices, and their shells or cartridges from the firearms and ammunition excise tax imposed by Section 4181 of the Internal Revenue Code.",
+            "detail": "Adds subsection (d) to Section 4182 using the same device definition. On request from a manufacturer, producer, or importer, the Secretary of the Treasury must determine eligibility within 90 days. The Secretary must publish and annually update a list of qualifying devices, and separately publish and report to the Ways and Means and Finance committees a list of non-lethal devices whose projectiles exceed 500 feet per second.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Title II - National Firearms Act Exemption (Section 203)",
+        "items": [
+          {
+            "main": "Amends the National Firearms Act firearm definition to exclude less-than-lethal projectile devices.",
+            "detail": "Section 5845(a) of the Internal Revenue Code is amended by adding less-than-lethal projectile devices (as defined in Section 4182(d)(2)) and listed devices to the items, such as antique firearms, excluded from the definition.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 202 - List of Non-Lethal Devices Exceeding 500 Feet Per Second",
+        "summary": "Directs Treasury to publish and annually report to Congress a list of non-lethal devices that would qualify except that their projectiles exceed 500 feet per second.",
+        "why_unreported": "Beyond exempting qualifying devices, this creates an ongoing federal tracking and reporting process for higher-velocity non-lethal devices, which the bill's tax-exemption purpose does not signal."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill defines qualifying devices by a 500 feet-per-second projectile cap but does not exempt devices above that speed, only adds them to a monitoring list.",
+      "The bill sets up separate 90-day determinations by the Attorney General under Title I and the Secretary of the Treasury under Title II but does not require the two determinations to be consistent.",
+      "The bill requires an annually updated public list of qualifying devices but sets no deadline for the first list.",
+      "The bill exempts shells or cartridges designed for qualifying devices but does not address ammunition that fits both a qualifying device and a conventional firearm."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "A federal definition of 'less-than-lethal projectile device' (Title 18 Section 921(a) and Internal Revenue Code Section 4182(d))",
+        "An exemption from the firearms and ammunition excise tax under Section 4181 for qualifying devices, shells, and cartridges",
+        "Separate 90-day classification determinations by the Attorney General and the Secretary of the Treasury",
+        "An annual public list of qualifying devices and an annual list and report to Congress of non-lethal devices exceeding 500 feet per second"
+      ],
+      "modified": [
+        "The Title 18 Section 921(a) firearm definition amended to reference less-than-lethal projectile devices",
+        "The National Firearms Act firearm definition (Section 5845(a)) amended to exclude less-than-lethal projectile devices"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-07-24",
+    "votes": [],
+    "versions": []
+  }
+]
