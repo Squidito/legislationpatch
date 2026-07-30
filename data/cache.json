@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T20:10:07.304Z",
+  "generated": "2026-07-30T22:07:08.771Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -1761,7 +1761,7 @@
       "analyzed": true,
       "demo": false,
       "summary": "The Taiwan Non-Discrimination Act requires the U.S. representative at the International Monetary Fund to advocate for Taiwan's admission as a member of the IMF, its participation in IMF economic surveillance, employment opportunities for Taiwan nationals at the IMF, and Taiwan's access to IMF technical assistance and training. The requirement sunsets when Taiwan is admitted or after 10 years.",
-      "brief": "Directs the U.S. IMF representative to actively support Taiwan's IMF membership, surveillance participation, employment access, and technical assistance, with annual Treasury testimony required.",
+      "brief": "Directs the U.S. IMF representative to actively support Taiwan's IMF membership, surveillance participation, employment access, and technical assistance, and requires the Secretary of the Treasury to address Taiwan participation in each of the next 7 years the Secretary is required to present testimony under section 1705(b) of the International Financial Institutions Act.",
       "top_lines": [
         {
           "headline": "U.S. Must Advocate for Taiwan at IMF",
@@ -1776,7 +1776,7 @@
           "headline": "Reporting and Sunset",
           "billSection": "5",
           "subs": [
-            "Secretary of the Treasury must include Taiwan participation efforts in the next 7 annual congressional testimonies",
+            "Secretary of the Treasury must include Taiwan participation efforts in the next 7 years the Secretary is required to present testimony under section 1705(b) of the International Financial Institutions Act",
             "Section 4 requirements expire when Taiwan is admitted to the IMF or after 10 years, whichever is earlier"
           ]
         }
@@ -1829,7 +1829,7 @@
           "label": "Section 5 — Testimony Requirement",
           "items": [
             {
-              "main": "Requires that in each of the next 7 years the Secretary of the Treasury presents testimony under section 1705(b) of the International Financial Institutions Act, the Secretary include a description of U.S. efforts to support the greatest practicable Taiwan participation at each international financial institution.",
+              "main": "Requires that in each of the next 7 years in which the Secretary of the Treasury is required by section 1705(b) of the International Financial Institutions Act to present testimony, the Secretary include a description of U.S. efforts to support the greatest practicable Taiwan participation at each international financial institution.",
               "detail": "“International financial institution” defined by reference to section 1701(c)(2) of the International Financial Institutions Act."
             }
           ]
@@ -1864,7 +1864,7 @@
       "changes": {
         "added": [
           "Statutory requirement for U.S. IMF Governor to advocate for Taiwan's IMF admission, surveillance participation, employment access, and technical assistance",
-          "Annual Treasury testimony requirement covering Taiwan participation efforts for the next 7 years",
+          "Requirement that Taiwan participation efforts be included in the next 7 years of Treasury testimony under section 1705(b) of the International Financial Institutions Act",
           "U.S. policy declaration not to discourage or deter Taiwan from seeking IMF membership"
         ],
         "modified": [],
@@ -1883,7 +1883,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-30",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1990,8 +1990,8 @@
           "billSection": "11",
           "subs": [
             "In any insolvency proceeding, stablecoin holders have first priority claim on required reserve assets ahead of all other creditors",
-            "Required reserves are excluded from the bankruptcy estate and courts must begin ratable distributions to stablecoin holders within 14 days where reserves are available",
-            "Bankruptcy court automatic stay does not apply to redemptions from required reserves"
+            "Required reserves are excluded from the bankruptcy estate under 11 U.S.C. Sec. 541(b), but the automatic stay under section 362 still applies to those reserves",
+            "New Sec. 362(d)(5) directs courts to use best efforts to enter a final order beginning ratable distributions to stablecoin holders within 14 days of the required hearing where reserves are available"
           ]
         }
       ],
@@ -2363,7 +2363,7 @@
       "enactedDate": "2025-07-18",
       "budget_accounts": {},
       "billType": "framework",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-30",
       "versions": [
         {
           "type": "Placed on Calendar Senate",
@@ -4043,7 +4043,8 @@
             "December 31, 2026 filing deadline eliminated — claims may be filed at any time",
             "Six-year discovery period from the date the claimant learns of the artwork's location still applies"
           ],
-          "billSection": "2"
+          "billSection": "2",
+          "source": "bill-114-s-2763"
         }
       ],
       "likelihood": 100,
@@ -4076,7 +4077,8 @@
             {
               "main": "Removes the December 31, 2026 deadline for filing claims and replaces it with a perpetual filing window subject to a six-year discovery period.",
               "detail": "Under prior law, all claims had to be filed by December 31, 2026 regardless of when the claimant discovered the property's location. This deadline is eliminated. Claims must still be filed within six years of the claimant's discovery of the property in question.",
-              "comments": []
+              "comments": [],
+              "source": "bill-114-s-2763"
             }
           ]
         }
@@ -4167,7 +4169,18 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "referencedSources": [
+        {
+          "id": "bill-114-s-2763",
+          "kind": "bill",
+          "label": "S 2763 (114th Congress) — Holocaust Expropriated Art Recovery Act of 2016 (introduced)",
+          "citation": "S 2763 (114th)",
+          "srcUrl": "https://www.congress.gov/bill/114th-congress/senate-bill/2763/text",
+          "textFile": "data/ref-text/bill-114-s-2763.txt",
+          "fetchedAt": "2026-07-30"
+        }
+      ],
+      "analyzedAt": "2026-07-30",
       "versions": [
         {
           "type": "Introduced in Senate",
@@ -10579,17 +10592,7 @@
       ],
       "underreported": [],
       "criticisms": [],
-      "featured_quotes": [
-        {
-          "name": "Mr. Palmer",
-          "party": "R",
-          "state": "AL",
-          "bioguideId": "P000609",
-          "text": "I would point out that Lulu and her family are in the gallery observing the debate and will be here for the vote.",
-          "stance": "neutral",
-          "chamber": "House"
-        }
-      ],
+      "featured_quotes": [],
       "gaps": [
         "The bill makes shark attacks eligible for wireless emergency alerts but does not specify which authorities may originate such an alert or what criteria define a qualifying shark attack.",
         "The bill sets a 180-day deadline for the FCC order but specifies no consequence or backstop if the order is not issued on time.",
@@ -12889,7 +12892,7 @@
       ],
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
-      "likelihoodReason": "Signed into law on December 18, 2025 as Public Law 119-60. The annual National Defense Authorization Act is considered must-pass legislation and is enacted every year with bipartisan support.",
+      "likelihoodReason": "Signed into law on December 18, 2025 as Public Law 119-60. The Senate agreed to the House amendment on December 17, 2025 by a 77-20 vote.",
       "sections": [
         {
           "label": "Division A — Department of Defense Authorizations",
@@ -13037,7 +13040,7 @@
           "crossoverCount": 0
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-07-30",
       "versions": [
         {
           "type": "Introduced in Senate",
@@ -16279,8 +16282,8 @@
       "pipeline": [
         "Introduced",
         "Committee",
-        "Passed House",
         "Passed Senate",
+        "Passed House",
         "Signed"
       ],
       "sponsor": "Sen. Duckworth, Tammy (D-IL)",
@@ -16308,7 +16311,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-07-30",
       "summary": "Requires the TSA to issue guidance for the hygienic handling of breast milk, baby formula, and related items during airport security re-screening, and orders an audit of how well it is followed.",
       "brief": "Requires TSA guidance on hygienic handling of breast milk and baby formula during airport screening, plus an Inspector General audit.",
       "top_lines": [
@@ -24190,7 +24193,8 @@
             {
               "main": "Amends the Child Nutrition Act of 1966 to add a food-allergy module to the required training for local school food-service personnel.",
               "detail": "The module must include best practices to prevent, recognize, and respond to food-related allergic reactions, and personnel must receive annual certification demonstrating competence in it.",
-              "comments": []
+              "comments": [],
+              "source": "usc-42-1776"
             }
           ]
         }
@@ -24305,7 +24309,7 @@
         }
       ],
       "budget_accounts": {},
-      "analyzedAt": "2026-06-19",
+      "analyzedAt": "2026-07-30",
       "referencedSources": [
         {
           "id": "usc-42-1758",
@@ -24315,6 +24319,15 @@
           "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap13-sec1758/htm",
           "textFile": "data/ref-text/usc-42-1758.txt",
           "fetchedAt": "2026-06-29"
+        },
+        {
+          "id": "usc-42-1776",
+          "kind": "statute",
+          "label": "42 U.S.C. 1776",
+          "citation": "42 U.S.C. 1776",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap13A-sec1776/htm",
+          "textFile": "data/ref-text/usc-42-1776.txt",
+          "fetchedAt": "2026-07-30"
         }
       ],
       "versions": [
@@ -26459,7 +26472,7 @@
     {
       "id": "119-HR-915",
       "code": "HR.915",
-      "title": "Small Business Technological Act of 2025",
+      "title": "Small Business Technological Advancement Act",
       "official_title": "To authorize small business loans to finance access to modern business software, and for other purposes.",
       "date": "2026-06-24",
       "version": "v1.0",
@@ -26483,7 +26496,7 @@
       "stageDate": "2026-07-13",
       "likelihood": 55,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "Introduced by Rep. Mark Alford (R-MO) with 3 cosponsors. The bill simply clarifies that SBA 7(a) loans may finance business software and cloud services, a low-controversy expansion of permitted loan uses likely to draw bipartisan support, though small standalone SBA bills often wait to move as part of a larger package.",
+      "likelihoodReason": "Introduced by Rep. Mark Alford (R-MO) with 3 cosponsors. Passed the House on June 24, 2026 by a 414-4 vote on motion to suspend the rules; referred to the Senate on July 13, 2026. Small standalone SBA bills often wait to move as part of a larger package.",
       "summary": "Clarifies that the Small Business Administration’s main 7(a) loan program can be used to pay for business software and cloud computing services, including tools that use artificial intelligence. It confirms these are allowable uses for small business loans.",
       "brief": "Authorizes SBA 7(a) business loans to finance business software and cloud computing services, including AI tools.",
       "top_lines": [
@@ -26503,7 +26516,7 @@
           "admin": true,
           "items": [
             {
-              "main": "Names the Act the “Small Business Technological Act of 2025”.",
+              "main": "Names the Act the “Small Business Technological Advancement Act” (renamed from “Small Business Technological Act of 2025” in the Engrossed House version).",
               "detail": "Short-title section — citation name only; no substantive effect."
             }
           ]
@@ -26570,7 +26583,7 @@
           "crossoverCount": 0
         }
       ],
-      "analyzedAt": "2026-07-15",
+      "analyzedAt": "2026-07-30",
       "versions": [
         {
           "type": "Introduced in House",
@@ -36864,7 +36877,7 @@
       ],
       "criticisms": [],
       "gaps": [
-        "The bill covers only 66 days (October 1 to December 4, 2026) and does not address what happens if full-year appropriations are not enacted by December 4, 2026.",
+        "The bill covers only 65 days (October 1 through December 4, 2026) and does not address what happens if full-year appropriations are not enacted by December 4, 2026.",
         "The bill anomalies specifically fund the Indian Health Service for staffing new facilities but do not include a similar anomaly for staffing at other federal health facilities opened during the same period.",
         "The bill extends the National Flood Insurance Program authority via Section 121 but leaves the underlying program's transactional ceilings and borrowing authority unchanged.",
         "The bill continues TANF and mandatory payments through December 4, 2026 but does not address the treatment of monthly obligations due for periods after that date if the CR lapses.",
@@ -36911,7 +36924,7 @@
           "note": "Additional rate of operations for staffing and operating facilities opened, renovated, or expanded in FY2022, FY2026, and FY2027 (Sec. 123(b))"
         }
       },
-      "analyzedAt": "2026-07-23",
+      "analyzedAt": "2026-07-30",
       "votes": [
         {
           "chamber": "House",
@@ -41419,6 +41432,351 @@
           "chamber": "House"
         }
       ]
+    },
+    {
+      "id": "119-HR-5254",
+      "code": "HR.5254",
+      "title": "Gateway Partnership Act",
+      "official_title": "To authorize the Secretary of the Interior to enter into an agreement with the Gateway Arch Park Foundation to host private events in Gateway Arch National Park buildings, and for other purposes.",
+      "date": "2025-09-10",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Bell, Wesley (D-MO-1)",
+      "sponsor_bioguide": "B001324",
+      "cosponsors": 2,
+      "pages": 2,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-29",
+      "analyzedAt": "2026-07-30",
+      "likelihood": 62,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by a Democrat with 2 cosponsors, the bill cleared the House by voice vote under suspension of the rules — a path used for measures with broad, bipartisan agreement — and the Senate Energy and Natural Resources Committee ordered it reported without amendment. Its narrow scope, a one-time partnership at a single national park, draws little organized opposition, so the main obstacle is competition for limited Senate floor time rather than substantive resistance.",
+      "referencedSources": [],
+      "summary": "This bill lets the National Park Service sign a one-time agreement with the Gateway Arch Park Foundation to hold private events at Gateway Arch National Park, including inside Park buildings like the Arch Visitor Center and the Old Courthouse. The agreement can last up to five years, must include terms protecting the Park, and must charge fees that cover the government's costs.",
+      "brief": "Authorizes a one-time National Park Service agreement letting the Gateway Arch Park Foundation host private, paid events in Gateway Arch National Park buildings, for a term of no more than five years.",
+      "top_lines": [
+        {
+          "headline": "Private Events at Gateway Arch",
+          "billSection": "3",
+          "subs": [
+            "One-time National Park Service agreement with the Gateway Arch Park Foundation",
+            "Agreement term capped at five years",
+            "Covers the Arch Visitor Center, Old Courthouse, and other public Park buildings"
+          ]
+        },
+        {
+          "headline": "Cost Recovery and Safeguards",
+          "billSection": "3",
+          "subs": [
+            "Secretary must charge fees for event wear-and-tear",
+            "Government may recover all event costs, including security and personnel",
+            "Foundation must carry liability insurance naming the United States"
+          ]
+        },
+        {
+          "headline": "Limits and Sunset",
+          "billSection": "3",
+          "subs": [
+            "Authority sunsets 7 years after enactment",
+            "Events cannot disrupt public access to the Park",
+            "Report to Congress due within 4 years"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 3 — Gateway Arch National Park Partner Agreement Pilot Project",
+          "items": [
+            {
+              "main": "Authorizes a one-time agreement, for a period not to exceed five years, letting the Gateway Arch Park Foundation host private events at the Park, which may include the use of Park buildings.",
+              "detail": "The Secretary of the Interior may enter the agreement, which must include terms protecting the Park's resources — exclusive-use dates and times, a maximum number of events per month, National Park Service staffing levels, and liability insurance listing the United States as additionally insured. Events must be consistent with the Park's purposes and may not disrupt public use or access.",
+              "comments": []
+            },
+            {
+              "main": "Requires the Secretary to charge a fee covering event wear-and-tear and allows recovery of all costs incurred from the private events.",
+              "detail": "Recoverable costs include maintenance, utilities, administrative expenses, security, and personnel. Nothing in the Act prevents the National Park Service from hosting its own events or issuing permits to other parties.",
+              "comments": []
+            },
+            {
+              "main": "Sunsets the agreement authority 7 years after enactment and requires a report to Congress within 4 years.",
+              "detail": "Any existing agreement also terminates at the seven-year mark. The report to the House Committee on Natural Resources and the Senate Committee on Energy and Natural Resources must cover operational impacts on visitor access, security, staffing, and facilities, and financial results including fees collected and costs recovered.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3(b)(4)",
+          "summary": "The required agreement terms must include a provision stating the Federal Government will not be held liable for injuries or deaths from any cause resulting from the Foundation's occupancy and use of specified Park buildings.",
+          "why_unreported": "The section reads as a partnership and events authorization, but this term shifts injury-and-death liability during private events away from the United States regardless of cause."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires the agreement to set a maximum number of events per month but does not set that cap itself.",
+        "The bill limits the agreement to the Gateway Arch Park Foundation but does not address the agreement if the Foundation stops serving as the Park's philanthropic partner.",
+        "The bill requires the Secretary to recover costs and report on fees collected but does not direct where recovered funds are deposited or how they may be spent."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A one-time National Park Service authority to enter a private-events agreement with the Gateway Arch Park Foundation, sunsetting 7 years after enactment.",
+          "Authority for the Secretary to charge fees and recover all costs from the private events."
+        ],
+        "modified": [],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-5631",
+      "code": "HR.5631",
+      "title": "Geothermal Energy Advancement Act",
+      "official_title": "To promote responsible geothermal energy development on public lands, and for other purposes.",
+      "date": "2025-09-30",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hurd, Jeff (R-CO-3)",
+      "sponsor_bioguide": "H001100",
+      "cosponsors": 5,
+      "pages": 8,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-29",
+      "analyzedAt": "2026-07-30",
+      "likelihood": 68,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "A Republican-sponsored permitting bill with 5 cosponsors, it passed the House by voice vote under suspension of the rules and was ordered reported without amendment by the Senate Energy and Natural Resources Committee — signals of bipartisan backing, as geothermal development draws support across party lines. Environmental groups may object to the categorical-exclusion expansion in Section 8, but that has not slowed the bill so far; the chief remaining hurdle is Senate floor scheduling.",
+      "referencedSources": [],
+      "summary": "This bill speeds up and adds new rules for geothermal energy projects on federal public land. It sets a 60-day deadline for the Interior Department to decide certain geothermal authorizations after reviews are done, lets the government charge developers for permitting costs through 2033, creates a Geothermal Ombudsman and permitting task force, and updates geothermal royalty and environmental-review rules.",
+      "brief": "Amends the Geothermal Steam Act of 1970 to accelerate federal geothermal permitting, adding decision deadlines, cost recovery, a Geothermal Ombudsman, and updated royalty and environmental-review rules.",
+      "top_lines": [
+        {
+          "headline": "Faster Geothermal Permitting",
+          "billSection": "2",
+          "subs": [
+            "60-day decision deadline once federal reviews are complete",
+            "Deadline holds even with a pending lawsuit, unless a court blocks it",
+            "Interior may charge developers for permitting and inspection costs",
+            "Cost recovery runs through September 30, 2033"
+          ]
+        },
+        {
+          "headline": "Geothermal Ombudsman and Task Force",
+          "billSection": "6",
+          "subs": [
+            "New Bureau of Land Management Geothermal Ombudsman within 60 days",
+            "Permitting task force can assign staff across BLM offices",
+            "Retention allowances capped at 25% of basic pay"
+          ]
+        },
+        {
+          "headline": "Royalty, NEPA, and Standards Updates",
+          "billSection": "7",
+          "subs": [
+            "Reduced-royalty 10-year window tied to a facility's in-service date",
+            "Adds geothermal to NEPA categorical-exclusion streamlining",
+            "'Gold Book' operating standards updated and renamed for geothermal"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Permit Processing During Pending Litigation",
+          "items": [
+            {
+              "main": "Requires Interior to approve, issue, or deny a geothermal authorization within 60 days after completing all required federal reviews, even if a related civil action is pending.",
+              "detail": "The deadline covers geothermal drilling permits, sundry notices, notices to proceed, rights-of-way, and other authorizations under a valid existing lease, unless a federal court vacates or grants injunctive relief for the lease or authorization. Required reviews include the National Environmental Policy Act of 1969, the Endangered Species Act of 1973, and division A of subtitle III of title 54. The bill states it grants no new authority to federal courts.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Cost Recovery",
+          "items": [
+            {
+              "main": "Lets Interior require geothermal lease applicants and holders to reimburse the United States for reasonable permitting and inspection costs, from enactment through September 30, 2033.",
+              "detail": "Recoverable costs cover processing applications — operations plans, drilling permits, utilization plans, site licenses, and construction and commercial-use permits — and inspecting or monitoring exploration, drilling, and well-site work. The Secretary must consider any existing cost-share agreement and may reduce reimbursement for economic hardship or to promote greater use of geothermal resources. Reimbursements are credited as discretionary offsetting collections, available only as provided in advance in appropriations Acts.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Geothermal Ombudsman and Task Force",
+          "items": [
+            {
+              "main": "Creates a Bureau of Land Management Geothermal Ombudsman and a Geothermal Permitting Task Force within 60 days of enactment.",
+              "detail": "The Ombudsman acts as a liaison across BLM field, district, and State offices, provides dispute resolution for permit applicants, monitors permit timelines, and coordinates with the Federal Permitting Improvement Steering Council. The task force may assign personnel across offices, who must work in person, and may pay retention allowances of up to 25% of basic pay, subject to appropriations.",
+              "comments": []
+            },
+            {
+              "main": "Section 5 directs Interior to update and rename the Bureau of Land Management's 'Gold Book' operating standards for geothermal.",
+              "detail": "Interior must identify geothermal leasing and permitting standards within one year, publish an updated Gold Book within 270 days of doing so, and rename it to reflect geothermal development. The Gold Book is BLM's 'Surface Operating Standards and Guidelines for Oil and Gas Exploration and Development' (fourth edition, last revised 2007), and must be reviewed at least every five years.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 7 — Geothermal Royalties and NEPA Review",
+          "items": [
+            {
+              "main": "Changes how the reduced-royalty period for geothermal electricity is measured and defines the facility it applies to.",
+              "detail": "Royalties are computed with respect to a geothermal electric generating facility, and the reduced-royalty window shifts from the first 10 years of production under the lease to each year of the 10-year period following the facility's in-service date. The bill adds definitions of 'geothermal electric generating facility' and 'in-service date' to the Geothermal Steam Act.",
+              "comments": []
+            },
+            {
+              "main": "Section 8 adds geothermal to a NEPA streamlining provision of the Energy Policy Act of 2005.",
+              "detail": "Section 390 of the Energy Policy Act of 2005 is amended so geothermal exploration and development under the Geothermal Steam Act qualify for the same categorical-exclusion treatment previously limited to oil and gas.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 8",
+          "summary": "Extends the oil-and-gas categorical exclusion under Section 390 of the Energy Policy Act of 2005 to geothermal exploration and development.",
+          "why_unreported": "The bill's stated focus is permitting efficiency and oversight, but this provision changes the level of environmental review geothermal projects receive by adding them to an existing oil-and-gas streamlining category."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill sets a 60-day deadline to decide authorizations after reviews are complete but sets no deadline for completing those underlying reviews.",
+        "The bill authorizes cost recovery from developers but does not set fee amounts or a rate schedule, leaving them to the Secretary.",
+        "The bill creates an Ombudsman to resolve permitting disputes but gives applicants no appeal or enforcement mechanism if the 60-day deadline is missed.",
+        "The bill ends cost-recovery authority on September 30, 2033 but does not address how permitting costs are funded after that date."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A 60-day decision deadline for certain geothermal authorizations after federal reviews are complete.",
+          "A Geothermal Ombudsman and Geothermal Permitting Task Force within the Bureau of Land Management.",
+          "Interior cost-recovery authority for geothermal permitting and inspection, through September 30, 2033."
+        ],
+        "modified": [
+          "Geothermal royalty timing under the Geothermal Steam Act — the reduced-royalty 10-year window is measured from a facility's in-service date rather than the first 10 years of production under the lease.",
+          "Section 390 of the Energy Policy Act of 2005 — categorical NEPA exclusions extended from oil and gas to also cover geothermal.",
+          "The Bureau of Land Management's 'Gold Book' operating standards — updated for geothermal and renamed."
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
+    },
+    {
+      "id": "119-HR-6365",
+      "code": "HR.6365",
+      "title": "Wintergreen Emergency Egress Act",
+      "official_title": "To require the Secretary of the Interior to issue a right-of-way for an emergency exit on certain National Park Service land in the State of Virginia, and for other purposes.",
+      "date": "2025-12-02",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. McGuire, John J. (R-VA-5)",
+      "sponsor_bioguide": "M001239",
+      "cosponsors": 7,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "stageDate": "2026-07-29",
+      "analyzedAt": "2026-07-30",
+      "likelihood": 60,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by a Republican with 7 cosponsors, this narrow, local measure — a single emergency-exit right-of-way for one Virginia community — passed the House by voice vote under suspension of the rules and was ordered reported without amendment by the Senate Energy and Natural Resources Committee. Its limited scope and public-safety rationale attract little opposition, so enactment depends mainly on Senate floor time, often secured by attachment to a larger public-lands package.",
+      "referencedSources": [],
+      "summary": "This bill requires the Interior Department to grant a right-of-way through the Blue Ridge Parkway for an emergency exit serving the Wintergreen area in Virginia. Interior must first report to Congress that it has evaluated alternatives, analyzed fire risk, and completed the required environmental reviews.",
+      "brief": "Requires the Secretary of the Interior to issue a right-of-way across the Blue Ridge Parkway for an emergency exit at Wintergreen, Virginia, after completing specified studies and reviews.",
+      "top_lines": [
+        {
+          "headline": "Mandatory Emergency-Exit Right-of-Way",
+          "billSection": "2",
+          "subs": [
+            "Interior must grant a right-of-way through the Blue Ridge Parkway",
+            "For an emergency exit near Milepost 9.6 at Wintergreen, Virginia",
+            "Changes existing 'may issue' authority to 'shall issue'"
+          ]
+        },
+        {
+          "headline": "Conditions Before Issuance",
+          "billSection": "2",
+          "subs": [
+            "Interior must first evaluate alternatives that avoid Federal land",
+            "Requires a fire-ecology analysis for a fire emergency",
+            "Requires completion of NEPA and title 54 reviews"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "label": "Section 2 — Right-of-Way for Emergency Exit, Blue Ridge Parkway",
+          "items": [
+            {
+              "main": "Amends the Act of June 30, 1936 to require, rather than authorize, the Secretary of the Interior to issue a right-of-way for a designated emergency exit near Milepost 9.6.",
+              "detail": "The right-of-way follows the 'Proposed Egress' on the Interior map entitled 'Blue Ridge Parkway, Proposed Wintergreen Emergency Egress Near Milepost 9.6', numbered 601/194,694 and dated September 2024. Issuance becomes mandatory only after the Secretary reports to the House Committee on Natural Resources and the Senate Committee on Energy and Natural Resources.",
+              "comments": []
+            },
+            {
+              "main": "Requires three findings to be reported before the right-of-way is issued.",
+              "detail": "The Secretary must report that an evaluation of egress alternatives that do not cross Federal land — including whether existing trails can be converted to roads — is complete; that an analysis of expected fire ecology behavior in a fire emergency is complete; and that required reviews under the National Environmental Policy Act of 1969 and division A of subtitle III of title 54 are complete.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2",
+          "summary": "Once the Secretary reports the three findings complete, issuing the right-of-way becomes mandatory ('shall issue') rather than discretionary.",
+          "why_unreported": "The section is captioned as authorizing a right-of-way, but the operative change removes the Secretary's discretion to decline it after the required studies are reported complete."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires an evaluation of alternatives that do not cross Federal land but does not require the Secretary to adopt an alternative if a feasible one is found.",
+        "The bill requires a fire-ecology analysis but does not state what findings, if any, would prevent issuance of the right-of-way.",
+        "The bill makes issuance mandatory once the reports are complete but sets no deadline for completing those reports and reviews."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A mandatory duty for the Secretary of the Interior to issue the specified Blue Ridge Parkway right-of-way for the Wintergreen emergency exit, once the required findings are reported."
+        ],
+        "modified": [
+          "Section 2 of the Act of June 30, 1936 (16 U.S.C. 460a-3) — the Secretary's authority to issue this right-of-way changes from discretionary ('may issue') to mandatory ('shall issue'), subject to conditions."
+        ],
+        "removed": []
+      },
+      "budget_accounts": {}
     }
   ]
 }

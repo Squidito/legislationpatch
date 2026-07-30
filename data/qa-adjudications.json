@@ -464,6 +464,14 @@
       "path": "sections[1].items[1].detail",
       "reason": "Section 2608 extension line-item sum (16 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
       "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-915",
+      "kind": "yr",
+      "token": "2025",
+      "path": "sections[0].items[0].main",
+      "reason": "Reference is to the SUPERSEDED introduced-version short title. Verified in data/version-text/119-HR-915.introduced.txt L35-36: 'This Act may be cited as the \"Small Business Technological Act of 2025\"'. The engrossed text (current bill-text/) renamed it to 'Small Business Technological Advancement Act' — the rename note is the item's substance.",
+      "verifiedAt": "2026-07-30"
     }
   ],
   "validateBatch": [

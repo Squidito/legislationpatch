@@ -60,3 +60,7 @@ validate_*.txt
 *-tmp.*
 *_tmp.*
 *_tmp[0-9].*
+# full-word "temp" forms (e.g. entries_temp.json) — same leak, spelled out
+*-temp.*
+*_temp.*
+*_temp[0-9].*
