@@ -1,0 +1,261 @@
+{
+  "id": "119-HR-4238",
+  "code": "HR.4238",
+  "title": "DLARA",
+  "official_title": "To improve accountability in the disaster loan program of the Small Business Administration, and for other purposes.",
+  "date": "2026-06-24",
+  "version": "v1.0",
+  "stage": "house",
+  "stageLabel": "Passed House",
+  "currentStep": 2,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Moore, Tim (R-NC)",
+  "sponsor_bioguide": "M001236",
+  "cosponsors": 19,
+  "pages": 7,
+  "analyzed": true,
+  "demo": false,
+  "billType": "amendment",
+  "stageDate": "2026-06-24",
+  "likelihood": 60,
+  "likelihoodLabel": "Likely",
+  "likelihoodReason": "Introduced by Rep. Tim Moore (R-NC) with 19 cosponsors in the Republican-led House. The bill adds reporting and oversight requirements to the SBA disaster loan program rather than new spending, the kind of accountability measure that tends to draw bipartisan support; its main friction is the temporary authority to limit loan obligations when funding runs low, which could concern members whose districts rely on disaster lending.",
+  "summary": "Adds accountability and reporting rules to the Small Business Administration’s disaster loan program. It requires more frequent and detailed reports to Congress, new budget disclosures, GAO and Inspector General reviews, and gives the SBA a temporary tool to limit new loan obligations when disaster-loan funding runs low.",
+  "brief": "Imposes new reporting, budgeting, and oversight requirements on the SBA disaster loan program and adds a temporary low-funding loan-limitation authority.",
+  "top_lines": [
+    {
+      "headline": "Disaster Loan Reporting",
+      "billSection": "4",
+      "subs": [
+        "Monthly reports must project when funding hits 10% of the latest appropriation and when it will be depleted",
+        "Reports must detail any changes to obligation and expenditure estimates",
+        "Bars official-travel funds for the Administrator until a required report is submitted"
+      ]
+    },
+    {
+      "headline": "Budget Disclosures",
+      "billSection": "5",
+      "subs": [
+        "Budget must separately state SBA disaster loan and COVID-EIDL loan costs against a 10-year average",
+        "Same disclosure required for administrative costs"
+      ]
+    },
+    {
+      "headline": "Low-Funding Limitation Authority",
+      "billSection": "6",
+      "subs": [
+        "SBA must notify Congress within 24 hours when funding falls below 10% of the 10-year average cost",
+        "SBA may then limit new loan obligations to loans requiring collateral until more funds are appropriated",
+        "Authority sunsets 4 years after enactment"
+      ]
+    },
+    {
+      "headline": "GAO and Inspector General Reviews",
+      "billSection": "7",
+      "subs": [
+        "GAO reports on disbursement rates and on two 2023-2024 disaster-loan rule changes",
+        "SBA Inspector General reviews the disaster-loan funding shortfall flagged in October 2024"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the “Disaster Loan Accountability and Reform Act” (the “DLARA”).",
+          "detail": "Short-title section — establishes the bill’s citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Table of Contents",
+      "admin": true,
+      "items": [
+        {
+          "main": "Lists the Act’s ten sections.",
+          "detail": "Navigational table of contents — administrative text, no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 3 — Definitions",
+      "admin": true,
+      "items": [
+        {
+          "main": "Defines “Administration”/“Administrator” (the SBA and its head), the four “appropriate committees of Congress,” and “SBA disaster loan” — a section 7(b) direct loan, excluding COVID-EIDL (CARES Act §1110).",
+          "detail": "Definitions apply throughout the Act; notably the “SBA disaster loan” definition carves out COVID-era EIDL loans."
+        }
+      ]
+    },
+    {
+      "label": "Section 4 — Monthly Disaster Loan Reports",
+      "items": [
+        {
+          "main": "Amends the monthly disaster-loan reporting requirement so reports project the date funding will reach 10 percent of the most recent appropriation and the date funds will be depleted, and detail any changes to obligation and expenditure estimates.",
+          "detail": "The provision amends 15 U.S.C. 636k(a). It adds a prohibition: if the Administrator does not submit a required monthly report by the deadline, no funds may be obligated for the Administrator’s official travel until the report is submitted.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 5 — Budget Request Relating to Disaster Loans",
+      "items": [
+        {
+          "main": "Requires the President’s budget to separately state requested amounts for SBA disaster loan costs and COVID-EIDL loan costs against their 10-year averages, with an explanation of any difference.",
+          "detail": "Amends 31 U.S.C. 1105 to add the disclosures for both program costs and administrative costs, and defines \"COVID-EIDL loan\" and \"SBA disaster loan\" for those paragraphs.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 6 — Limitations on Disaster Loans",
+      "items": [
+        {
+          "main": "Requires SBA to notify Congress within 24 hours when the unobligated balance for disaster loans falls below 10 percent of the 10-year average annual cost, and allows SBA to then limit new loan obligations to loans requiring collateral until more funds are appropriated.",
+          "detail": "The new paragraph (17) of 15 U.S.C. 636(b) requires that once additional funds are appropriated, SBA disburse remaining loan amounts on a regular schedule within 14 days. The authority sunsets 4 years after enactment, and GAO must report within 1 year if the limitation authority is used.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 7 — GAO Report on SBA Disaster Loan Account",
+      "items": [
+        {
+          "main": "Directs GAO to report within 180 days on disaster-loan obligation rates and average weekly disbursements to borrowers, separated by home, business, and economic injury borrowers.",
+          "detail": "The report covers periods anchored to October 1, 2015 and July 31, 2023. SBA must respond within 90 days with an implementation plan for any recommendations.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 8 — GAO Report on Disaster Loan Changes",
+      "items": [
+        {
+          "main": "Directs GAO to report on the budget cost of two 2023–2024 rule changes to maximum and unsecured disaster-loan amounts.",
+          "detail": "Covers two final rules from 2023 and 2024 on maximum and unsecured loan amounts."
+        }
+      ]
+    },
+    {
+      "label": "Section 9 — SBA Inspector General Review",
+      "items": [
+        {
+          "main": "Directs the SBA Inspector General to review the disaster-loan funding shortfall described in October 2024 letters from the President and the Administrator.",
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "label": "Section 10 — Budget and Forecasting Report",
+      "items": [
+        {
+          "main": "Requires SBA to report within 30 days on forecasting and budget-assumption corrections, with updates every 90 days until complete.",
+          "detail": ""
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 4(3) — official-travel funding cutoff",
+      "summary": "If the Administrator misses a required monthly disaster-loan report deadline, no funds may be obligated for the Administrator’s official travel until the report is submitted.",
+      "why_unreported": "Among reporting requirements, this attaches a direct personal-travel funding consequence to a missed report deadline, an enforcement mechanism distinct from the disclosure rules themselves."
+    },
+    {
+      "section": "Section 6(b) — sunset of the limitation authority",
+      "summary": "The low-funding authority to limit loan obligations is repealed four years after enactment.",
+      "why_unreported": "The headline new power to throttle lending when funds run low is temporary and self-repealing after four years, not a permanent change to the program."
+    }
+  ],
+  "criticisms": [],
+  "gaps": [
+    "The bill lets SBA limit new loan obligations to collateral-backed loans when funding is low but does not address applicants who cannot offer collateral during that period.",
+    "The bill requires extensive reporting on the disaster-loan funding shortfall but does not itself appropriate additional funds for the program."
+  ],
+  "changes": {
+    "added": [
+      "New requirement to notify Congress within 24 hours when disaster-loan funding falls below 10% of the 10-year average cost (15 U.S.C. 636(b)(17))",
+      "New temporary authority to limit new loan obligations to collateral-backed loans during low-funding periods, sunsetting after 4 years",
+      "New GAO and SBA Inspector General reviews of disaster-loan disbursements, rule changes, and the funding shortfall",
+      "New budget disclosures of disaster-loan and COVID-EIDL costs against 10-year averages (31 U.S.C. 1105)"
+    ],
+    "modified": [
+      "Expands the monthly disaster-loan report to project funding-depletion dates and estimate changes (15 U.S.C. 636k(a))"
+    ],
+    "removed": []
+  },
+  "featured_quotes": [
+    {
+      "name": "Mr. Moore",
+      "party": "R",
+      "state": "AL",
+      "bioguideId": "M001212",
+      "text": "I will first start off with thanking my colleague on the other side of the aisle for his support on this. It is great when we can do bipartisan things, particularly on such subject matter. When Hurricane Helene struck western North Carolina and so many other States, small businesses were on the front lines of recovery. They stepped up to serve their communities and support their neighbors. They led, in a lot of ways, the response when it was needed most. When disaster hits, speed matters.",
+      "stance": "support",
+      "chamber": "House"
+    }
+  ],
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2026-06-23",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "analyzedAt": "2026-06-25",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-06-27",
+      "url": "https://www.congress.gov/119/bills/hr4238/BILLS-119hr4238ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2026-06-11",
+      "url": "https://www.congress.gov/119/bills/hr4238/BILLS-119hr4238rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2026-06-23",
+      "url": "https://www.congress.gov/119/bills/hr4238/BILLS-119hr4238eh.htm"
+    },
+    {
+      "type": "Placed on Calendar Senate",
+      "date": "2026-06-24",
+      "url": "https://www.congress.gov/119/bills/hr4238/BILLS-119hr4238pcs.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [],
+    "modified": [
+      "Travel-prohibition penalty softened: a missed monthly report now means \"no funds are authorized to be appropriated for official travel\" instead of \"no funds may be obligated for official travel\"",
+      "Low-funding paragraph (17) cut down to the 24-hour notification requirement only — the authority to limit loan obligations, the 14-day disbursement deadline, and the 4-year sunset all dropped",
+      "SBA Inspector General review of the funding shortfall (former Sec. 9) deleted; the budget/forecasting report becomes Sec. 9"
+    ],
+    "removed": [
+      "Subparagraph (17)(B) authority for the Administrator to limit loan obligations to collateral-required amounts when funding is low",
+      "Subparagraph (17)(D) requirement to obligate and disburse remaining loan amounts within 14 days of new appropriations",
+      "Sec. 6(b) 4-year sunset striking paragraph (17) and Sec. 6(c) 1-year GAO report on the impact of the obligation-limit amendments",
+      "Entire SBA Inspector General review section, including review of the Oct. 4, 2024 Biden letter and Oct. 10, 2024 Administrator letter on the funding shortfall"
+    ],
+    "throughVersion": {
+      "type": "Engrossed in House",
+      "date": "2026-06-23"
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-06-27"
+    }
+  }
+}
