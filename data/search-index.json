@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-29T20:00:08.848Z",
+  "generatedAt": "2026-08-03T00:46:04.212Z",
   "counts": {
-    "bill": 198,
+    "bill": 201,
     "rep": 551,
-    "quote": 500,
+    "quote": 443,
     "article": 46
   },
   "records": [
@@ -1090,8 +1090,8 @@
     {
       "t": "bill",
       "id": "119-HR-915",
-      "url": "/bill/119-hr-915-small-business-technological-act-of-2025/",
-      "title": "Small Business Technological Act of 2025",
+      "url": "/bill/119-hr-915-small-business-technological-advancement-act/",
+      "title": "Small Business Technological Advancement Act",
       "sub": "HR.915 · Passed House · Rep. Alford",
       "text": "To authorize small business loans to finance access to modern business software, and for other purposes. Rep. Alford, Mark (R-MO) Authorizes SBA 7(a) business loans to finance business software and cloud computing services, including AI tools.",
       "code": "hr915"
@@ -1788,6 +1788,33 @@
       "sub": "HR.8800 · Passed House · Rep. Rogers",
       "text": "To authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for…",
       "code": "hr8800"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-5254",
+      "url": "/bill/119-hr-5254-gateway-partnership-act/",
+      "title": "Gateway Partnership Act",
+      "sub": "HR.5254 · Passed House · Rep. Bell",
+      "text": "To authorize the Secretary of the Interior to enter into an agreement with the Gateway Arch Park Foundation to host private events in Gateway Arch National Park buildings, and for other purposes. Rep. Bell, Wesley (D-MO-1) Authorizes a one-time National Park…",
+      "code": "hr5254"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-5631",
+      "url": "/bill/119-hr-5631-geothermal-energy-advancement-act/",
+      "title": "Geothermal Energy Advancement Act",
+      "sub": "HR.5631 · Passed House · Rep. Hurd",
+      "text": "To promote responsible geothermal energy development on public lands, and for other purposes. Rep. Hurd, Jeff (R-CO-3) Amends the Geothermal Steam Act of 1970 to accelerate federal geothermal permitting, adding decision deadlines, cost recovery, a Geothermal…",
+      "code": "hr5631"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-6365",
+      "url": "/bill/119-hr-6365-wintergreen-emergency-egress-act/",
+      "title": "Wintergreen Emergency Egress Act",
+      "sub": "HR.6365 · Passed House · Rep. McGuire",
+      "text": "To require the Secretary of the Interior to issue a right-of-way for an emergency exit on certain National Park Service land in the State of Virginia, and for other purposes. Rep. McGuire, John J. (R-VA-5) Requires the Secretary of the Interior to issue a…",
+      "code": "hr6365"
     },
     {
       "t": "rep",
@@ -6505,15 +6532,6 @@
     },
     {
       "t": "quote",
-      "id": "S000148",
-      "url": "/bill/119-s-1884-holocaust-expropriated-art-recovery-act-of-2025/",
-      "billId": "119-S-1884",
-      "title": "Sen. Chuck Schumer",
-      "sub": "D-NY · on Holocaust Expropriated Art Recovery Act of 2025",
-      "text": "The families of the victims and the whole community in Buffalo pushed Congress to come together in a way it hadn't for decades, beating back the dark forces of the NRA and passing the first major gun safety bill in more than a quarter century. We owe it to the victims to not…"
-    },
-    {
-      "t": "quote",
       "id": "S001211",
       "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
       "billId": "119-HR-1",
@@ -6577,15 +6595,6 @@
     },
     {
       "t": "quote",
-      "id": "D000563",
-      "url": "/bill/119-hr-970-fairness-for-servicemembers-and-their-families-act-of-2025/",
-      "billId": "119-HR-970",
-      "title": "Mr. Durbin",
-      "sub": "D-IL · on Fairness for Servicemembers and their Families Act of 2025",
-      "text": "This is Police Week. We are remembering John Bartholomew and hundreds of others who lost their lives in the line of duty to protect us and their families and neighborhoods. We take them for granted until these terrible tragedies occur, and then we come to realize how much is on…"
-    },
-    {
-      "t": "quote",
       "id": "H001104",
       "url": "/bill/119-hr-1479-hotel-fees-transparency-act-of-2025/",
       "billId": "119-HR-1479",
@@ -6631,15 +6640,6 @@
     },
     {
       "t": "quote",
-      "id": "M001214",
-      "url": "/bill/119-s-2393-fiscal-year-2025-veterans-affairs-major-medical-facility/",
-      "billId": "119-S-2393",
-      "title": "Mr. Mrvan",
-      "sub": "D-IN · on Fiscal Year 2025 Veterans Affairs Major Medical Facility…",
-      "text": "I rise today in solidarity with the hardworking men and women of the United Steelworkers who have been locked out of their jobs for almost 2 months at the British Petroleum facility in Whiting, Indiana. Since day one under the administration's Project 2025, we have seen attacks…"
-    },
-    {
-      "t": "quote",
       "id": "R000584",
       "url": "/bill/119-hconres-75-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
       "billId": "119-HCONRES-75",
@@ -6655,15 +6655,6 @@
       "title": "Mr. Reed",
       "sub": "D-RI · on 21st Century ROAD to Housing Act",
       "text": "I rise today to oppose the nomination of Kevin Warsh to be the Chair of the Board of Governors of the Federal Reserve system. I want to put this nomination in some context. Donald Trump's chaos is not working for the average American. Housing is more expensive; healthcare is…"
-    },
-    {
-      "t": "quote",
-      "id": "J000295",
-      "url": "/bill/119-s-3971-small-business-innovation-and-economic-security-act/",
-      "billId": "119-S-3971",
-      "title": "Mr. Joyce",
-      "sub": "R-OH · on Small Business Innovation and Economic Security Act",
-      "text": "Organized retail crime is far beyond isolated shoplifting. It is a highly coordinated criminal enterprise that harms businesses, workers, and families in every corner of our country. Whether you are a truck driver, a small business owner, or an everyday consumer, this issue…"
     },
     {
       "t": "quote",
@@ -6758,10 +6749,10 @@
     {
       "t": "quote",
       "id": "T000250",
-      "url": "/bill/119-hr-4371-kayla-hamilton-act/",
-      "billId": "119-HR-4371",
+      "url": "/bill/119-hr-5125-district-of-columbia-judicial-nominations-reform-act-of-2025/",
+      "billId": "119-HR-5125",
       "title": "Mr. Thune",
-      "sub": "R-SD · on Kayla Hamilton Act",
+      "sub": "R-SD · on District of Columbia Judicial Nominations Reform Act of 2025",
       "text": "It doesn't seem to matter who President Trump nominates-- the Democrats blindly oppose them. Democrats aren't interested in a person's qualifications. All they care about is opposing President Trump, and it has been that way since he took office last January. President Trump is…"
     },
     {
@@ -6772,24 +6763,6 @@
       "title": "Mr. Van Hollen",
       "sub": "D-MD · on One Big Beautiful Bill Act",
       "text": "I rise today to oppose Kevin Warsh's nomination to serve as Chairman of the Federal Reserve. I am not persuaded, based on his record and his testimony at his hearing before the Senate Banking Committee, that he has demonstrated the independence or the judgment this position…"
-    },
-    {
-      "t": "quote",
-      "id": "S001184",
-      "url": "/bill/119-s-3971-small-business-innovation-and-economic-security-act/",
-      "billId": "119-S-3971",
-      "title": "Mr. Scott",
-      "sub": "R-SC · on Small Business Innovation and Economic Security Act",
-      "text": "Today, I rise to oppose the resolutions, these three CRAs. Under former Director Chopra, the Biden CFPB frequently pushed or ignored the limits of the CFPB's authority. Consistently, they ignored their own limits because power--power--was more important than doing the right…"
-    },
-    {
-      "t": "quote",
-      "id": "W000817",
-      "url": "/bill/119-s-2392-veterans-compensation-cost-of-living-adjustment-act-of-2025/",
-      "billId": "119-S-2392",
-      "title": "Ms. Warren",
-      "sub": "D-MA · on Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
-      "text": "Senate Democrats are on the floor today to fight back against President Donald Trump's actions to raise the cost of living for American families. Now, you may remember that Donald Trump promised to lower costs on day one. Instead, he is deliberately raising them. His war in Iran…"
     },
     {
       "t": "quote",
@@ -6892,24 +6865,6 @@
     },
     {
       "t": "quote",
-      "id": "S001230",
-      "url": "/bill/119-hr-970-fairness-for-servicemembers-and-their-families-act-of-2025/",
-      "billId": "119-HR-970",
-      "title": "Mr. Subramanyam",
-      "sub": "D-VA · on Fairness for Servicemembers and their Families Act of 2025",
-      "text": "This Military Appreciation Month, we honor those who have worn the uniform of the United States Armed Forces and those who continue to wear it today. We celebrate veterans and their families who carry the burden of war with them and the American servicemembers currently standing…"
-    },
-    {
-      "t": "quote",
-      "id": "W000800",
-      "url": "/bill/119-hres-1399-directing-the-committee-on-ethics-to-preserve-and-publicly-release/",
-      "billId": "119-HRES-1399",
-      "title": "Mr. Welch",
-      "sub": "D-VT · on Directing the Committee on Ethics to preserve and publicly…",
-      "text": "Multiple press articles and reports by human rights organizations, as well as United Nations human rights investigators, have documented widespread acts of horrific sexual violence against prisoners in the Middle East over many years. These articles and these reports…"
-    },
-    {
-      "t": "quote",
       "id": "M001236",
       "url": "/bill/119-hr-5625-cashless-bail-reporting-act/",
       "billId": "119-HR-5625",
@@ -6961,15 +6916,6 @@
       "title": "Mr. Thompson",
       "sub": "R-PA · on Make the District of Columbia Safe and Beautiful Act of 2025",
       "text": "Established by a joint resolution of Congress in 1962, this week serves as a solemn tribute to the men and women in blue who lost their lives in the line of duty. Since then, support for National Police Week has grown significantly. National Police Week is sponsored by the…"
-    },
-    {
-      "t": "quote",
-      "id": "K000402",
-      "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
-      "billId": "119-HR-7148",
-      "title": "Mr. Kennedy",
-      "sub": "D-NY · on Consolidated Appropriations Act, 2026",
-      "text": "As we commemorate National Police Week, I rise today on behalf of a grateful western New York community and a grateful nation to mourn the passing of Buffalo Police Inspector Daniel E. Redmond, whom we lost on March 4, 2026, at the age of 86. Inspector Redmond's life was defined…"
     },
     {
       "t": "quote",
@@ -7108,15 +7054,6 @@
     },
     {
       "t": "quote",
-      "id": "G000581",
-      "url": "/bill/119-s-3971-small-business-innovation-and-economic-security-act/",
-      "billId": "119-S-3971",
-      "title": "Mr. Vicente Gonzalez",
-      "sub": "D-TX · on Small Business Innovation and Economic Security Act",
-      "text": "I rise today on behalf of an issue threatening the Texas Gulf Coast shrimping and fishing industry, an industry that has thrived for generations but is now under threat to unfair competition from foreign countries and foreign import seafood. This is an issue that this…"
-    },
-    {
-      "t": "quote",
       "id": "I000058",
       "url": "/bill/119-s-911-chief-herbert-d-proffitt-act-of-2025/",
       "billId": "119-S-911",
@@ -7207,24 +7144,6 @@
     },
     {
       "t": "quote",
-      "id": "G000576",
-      "url": "/bill/119-hr-998-internal-revenue-service-math-and-taxpayer-help-act/",
-      "billId": "119-HR-998",
-      "title": "Mr. Grothman",
-      "sub": "R-WI · on Internal Revenue Service Math and Taxpayer Help Act",
-      "text": "Mr. Speaker, hearing the comments from a lot of my colleagues here, I will repeat a quote that has been put over and over again on the news the last couple of days. It is a Ronald Reagan quote: ``I'm from the government, and I'm here to help.'' That is never going to happen.…"
-    },
-    {
-      "t": "quote",
-      "id": "G000599",
-      "url": "/bill/119-s-216-save-our-seas-2-0-amendments-act/",
-      "billId": "119-S-216",
-      "title": "Mr. Goldman",
-      "sub": "D-NY · on Save Our Seas 2.0 Amendments Act",
-      "text": "We can never forget those we lost, and I will never forget that day myself, watching from my apartment building less than a mile away as the second plane hurled itself into the towers. Then, seeing people covered in soot walking uptown while our heroes, the NYPD, the New York…"
-    },
-    {
-      "t": "quote",
       "id": "B001281",
       "url": "/bill/119-hr-6955-main-street-capital-access-act/",
       "billId": "119-HR-6955",
@@ -7235,10 +7154,10 @@
     {
       "t": "quote",
       "id": "M001169",
-      "url": "/bill/119-hr-2913-ukraine-support-act/",
-      "billId": "119-HR-2913",
+      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
+      "billId": "119-HR-2444",
       "title": "Mr. Murphy",
-      "sub": "D-CT · on Ukraine Support Act",
+      "sub": "D-CT · on Promoting Resilient Supply Chains Act of 2025",
       "text": "I am glad to join Senator Kaine on the floor today in support of his resolution. I have admittedly lost count on how many of these resolutions we have brought before the body. This must be our seventh, eighth, or ninth. That is extraordinary, duplicative, redundant, but…"
     },
     {
@@ -7267,15 +7186,6 @@
       "title": "Mr. Thompson",
       "sub": "R-PA · on Mikaela Naylon Give Kids a Chance Act",
       "text": "I rise today to highlight the power of civic engagement and the profound impact volunteering has on all of our communities. To champion the vital work of service clubs and their volunteers, I founded the Congressional Service Organization Caucus in 2019 with my friend…"
-    },
-    {
-      "t": "quote",
-      "id": "S001185",
-      "url": "/bill/119-hres-1399-directing-the-committee-on-ethics-to-preserve-and-publicly-release/",
-      "billId": "119-HRES-1399",
-      "title": "Ms. Sewell",
-      "sub": "D-AL · on Directing the Committee on Ethics to preserve and publicly…",
-      "text": "The Taxpayer Due Process Enhancement Act will strengthen taxpayers' rights when the IRS uses a levy to collect unpaid taxes by making technical fixes to the Tax Court's jurisdiction. In the IRS Restructuring and Reform Act of 1998, language was added to give taxpayers due…"
     },
     {
       "t": "quote",
@@ -7505,10 +7415,10 @@
     {
       "t": "quote",
       "id": "T000250",
-      "url": "/bill/119-hr-5371-continuing-appropriations-agriculture-legislative-branch-military/",
-      "billId": "119-HR-5371",
+      "url": "/bill/119-hr-6019-to-repeal-certain-provisions-relating-to-notification-to-senate/",
+      "billId": "119-HR-6019",
       "title": "Mr. Thune",
-      "sub": "R-SD · on Continuing Appropriations, Agriculture, Legislative Branch,…",
+      "sub": "R-SD · on To repeal certain provisions relating to notification to…",
       "text": "I understand that there is a bill at the desk, and I ask for its first reading. The senior assistant legislative clerk read as follows: A bill (S. 4632) to provide for a period of continuing appropriations in the event of a lapse in appropriations under the normal appropriations…"
     },
     {
@@ -7540,15 +7450,6 @@
     },
     {
       "t": "quote",
-      "id": "M001223",
-      "url": "/bill/119-s-1884-holocaust-expropriated-art-recovery-act-of-2025/",
-      "billId": "119-S-1884",
-      "title": "Mr. Magaziner",
-      "sub": "D-RI · on Holocaust Expropriated Art Recovery Act of 2025",
-      "text": "Generations of Americans fought and bled for civil rights, to make the United States of America a place where everyone's voice can be heard, regardless of the color of their skin. However, in the last few weeks, at the urging of the President, the Supreme Court effectively…"
-    },
-    {
-      "t": "quote",
       "id": "N000191",
       "url": "/bill/119-hr-8364-to-amend-title-5-united-states-code-to-authorize-the-increase-of-the/",
       "billId": "119-HR-8364",
@@ -7576,30 +7477,12 @@
     },
     {
       "t": "quote",
-      "id": "S000148",
-      "url": "/bill/119-s-723-tribal-trust-land-homeownership-act-of-2025/",
-      "billId": "119-S-723",
-      "title": "Mr. Schumer",
-      "sub": "D-NY · on Tribal Trust Land Homeownership Act of 2025",
-      "text": "The press reports that Trump says he will table his $2 billion MAGA slush fund, but a promise from Trump is worthless. If Trump and Republicans are truly abandoning this corrupt scheme, they should have zero problem banning it in law. This week, Senate Democrats will push…"
-    },
-    {
-      "t": "quote",
       "id": "B001299",
       "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
       "billId": "119-HR-1",
       "title": "Mr. Banks",
       "sub": "R-IN · on One Big Beautiful Bill Act",
       "text": "23-year-old Brett Scrogham of Greenwood, IN, had a bright future ahead of him. After graduating recently as a top 100 student from the IU Kelley School of Business, Brett had plans to invest in housing properties and help his community grow and prosper. As a young child, Brett…"
-    },
-    {
-      "t": "quote",
-      "id": "D000563",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Mr. Durbin",
-      "sub": "D-IL · on Laken Riley Act",
-      "text": "The Senate will soon vote on the nomination of Kathleen Lane, President Trump's nominee to serve as a lifetime appointment and judge on the U.S. District Court for the District of Montana. There are more than 3,000 licensed attorneys in the State of Montana. You would believe…"
     },
     {
       "t": "quote",
@@ -7672,24 +7555,6 @@
       "title": "Mr. Begich",
       "sub": "R-AK · on Cape Fox Land Entitlement Finalization Act of 2025",
       "text": "This bill rights a wrong that has endured for more than 50 years. When Congress passed the Alaska Native Claims Settlement Act in 1971, it made a promise to Alaska Native people: land and the right to form their own corporations to manage that land and build their futures.…"
-    },
-    {
-      "t": "quote",
-      "id": "H001100",
-      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
-      "billId": "119-S-1020",
-      "title": "Mr. Hurd",
-      "sub": "R-CO · on A bill to require the Federal Energy Regulatory Commission…",
-      "text": "I begin by thanking my Republican colleagues Representatives Lee, Maloy, and Kennedy and my Democratic colleagues Representatives Ansari and Ocasio-Cortez for their partnership on this bipartisan legislation. At a time when Americans are often told Congress cannot work together…"
-    },
-    {
-      "t": "quote",
-      "id": "Y000064",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Young",
-      "sub": "R-IN · on GENIUS Act",
-      "text": "I cannot be the only Member of this body to notice that several words and phrases are used a lot less on the Senate floor these days. Among those words and phrases are ``open borders,'' ``illegal crossings,'' ``catch-and-release,'' and ``migration surges.'' You see, these terms…"
     },
     {
       "t": "quote",
@@ -7801,15 +7666,6 @@
     },
     {
       "t": "quote",
-      "id": "H001099",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Haridopolos",
-      "sub": "R-FL · on GENIUS Act",
-      "text": "What I did notice across the aisle here is that they didn't defend what happened. What happened? The people stole money. This isn't a theory. It is a reality. In Minnesota, a person was recently convicted and will serve now 41 years in prison because they committed fraud. These…"
-    },
-    {
-      "t": "quote",
       "id": "C001080",
       "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
       "billId": "119-HR-7148",
@@ -7874,10 +7730,10 @@
     {
       "t": "quote",
       "id": "H000273",
-      "url": "/bill/119-hr-5103-make-the-district-of-columbia-safe-and-beautiful-act-of-2025/",
-      "billId": "119-HR-5103",
+      "url": "/bill/119-hr-5140-to-lower-the-age-at-which-a-minor-may-be-tried-as-an-adult-for/",
+      "billId": "119-HR-5140",
       "title": "Mr. Hickenlooper",
-      "sub": "D-CO · on Make the District of Columbia Safe and Beautiful Act of 2025",
+      "sub": "D-CO · on To lower the age at which a minor may be tried as an adult…",
       "text": "On Monday, Tina Peters walked out of prison. The convicted felon and former county clerk is free after serving less than a quarter of her sentence, a sentence she earned when she violated her oath and tried to undermine Colorado's free and fair elections. That doesn't just make…"
     },
     {
@@ -7969,15 +7825,6 @@
       "title": "Mrs. Sykes",
       "sub": "D-OH",
       "text": "This National Gun Violence Awareness Month, I rise today thinking about families in Ohio's 13th Congressional District, families whose lives were changed forever by gun violence. One of those families is still grieving the loss of LaTeris Cook, a 27-year-old father of four who…"
-    },
-    {
-      "t": "quote",
-      "id": "L000606",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Latimer",
-      "sub": "D-NY · on GENIUS Act",
-      "text": "Under the able leadership of Maryann Nielsen in the Port Chester Senior Community Center in Village Hall, the Port Chester Seniors serves hundreds of seniors annually with a daily nutrition program at lunchtime 6 days a week, along with activities and programs to engage seniors…"
     },
     {
       "t": "quote",
@@ -8107,15 +7954,6 @@
     },
     {
       "t": "quote",
-      "id": "K000389",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Khanna",
-      "sub": "D-CA · on GENIUS Act",
-      "text": "Mr. Speaker, I appreciate the House taking up the Government Audit and Accountability of Federally Funded State-Administered Programs Act. It is a long way of saying that this is a bill to go after fraud. The bill is straightforward. It directs the Government Accountability…"
-    },
-    {
-      "t": "quote",
       "id": "S001230",
       "url": "/bill/119-hr-7959-irs-whistleblower-program-improvement-act/",
       "billId": "119-HR-7959",
@@ -8126,10 +7964,10 @@
     {
       "t": "quote",
       "id": "B001287",
-      "url": "/bill/119-hr-3633-digital-asset-market-clarity-act-of-2025/",
-      "billId": "119-HR-3633",
+      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
+      "billId": "119-S-423",
       "title": "Mr. Bera",
-      "sub": "D-CA · on Digital Asset Market Clarity Act of 2025",
+      "sub": "D-CA · on PRO Veterans Act of 2025",
       "text": "Since its establishment 28 years ago, USCIRF has served as an independent, bipartisan watchdog monitoring conditions on the ground and providing policy recommendations to Congress and the administration. Its work reinforces the principles reflected in Article 18 of the Universal…"
     },
     {
@@ -8179,15 +8017,6 @@
     },
     {
       "t": "quote",
-      "id": "S001183",
-      "url": "/bill/119-hr-5103-make-the-district-of-columbia-safe-and-beautiful-act-of-2025/",
-      "billId": "119-HR-5103",
-      "title": "Mr. Schweikert",
-      "sub": "R-AZ · on Make the District of Columbia Safe and Beautiful Act of 2025",
-      "text": "I first came up here to talk about three of the bills, which were in waste and fraud, but I will make a simple point being from a border State. The chaos that was allowed to happen in my State and other border States for functionally 4 years, millions and millions and millions…"
-    },
-    {
-      "t": "quote",
       "id": "C001103",
       "url": "/bill/119-s-2-secure-america-act/",
       "billId": "119-S-2",
@@ -8224,30 +8053,12 @@
     },
     {
       "t": "quote",
-      "id": "B001277",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Blumenthal",
-      "sub": "D-CT · on PRO Veterans Act of 2025",
-      "text": "I am here to talk about the costs of war. The United States is at war at this moment. I am here to talk about the costs of war that should include the costs of caring for our veterans because they are the ones who fight our wars and keep our Nation strong and free. We are…"
-    },
-    {
-      "t": "quote",
       "id": "F000450",
       "url": "/bill/119-hr-6955-main-street-capital-access-act/",
       "billId": "119-HR-6955",
       "title": "Ms. Foxx",
       "sub": "R-NC · on Main Street Capital Access Act",
       "text": "Horn in the West tells the story of famous frontiersman Daniel Boone and the settlers of the Blue Ridge Mountains in their struggle to preserve their freedom during the days before and during the war for independence. This drama is inspiring, Mr. Speaker. It helps tell the story…"
-    },
-    {
-      "t": "quote",
-      "id": "C001123",
-      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
-      "billId": "119-S-1020",
-      "title": "Mr. Cisneros",
-      "sub": "D-CA · on A bill to require the Federal Energy Regulatory Commission…",
-      "text": "I would like to commend the Charter Oak High School Cheer and STUNT Team for making history by becoming the first San Gabriel Valley school to win a CIF Southern Section STUNT cheer championship. Their hard work and dedication paid off. They should all be very proud of…"
     },
     {
       "t": "quote",
@@ -8266,24 +8077,6 @@
       "title": "Mr. Wilson",
       "sub": "R-SC · on One Big Beautiful Bill Act",
       "text": "President Donald Trump has overhauled workforce training, creating high-paying jobs without crushing debt. Trump means jobs. The Working Families Tax Cuts Act expanded savings for training in plumbing, electrical work, welding, and cosmetology, covering expenses for tuition and…"
-    },
-    {
-      "t": "quote",
-      "id": "M001223",
-      "url": "/bill/119-s-2878-great-lakes-fishery-research-reauthorization-act/",
-      "billId": "119-S-2878",
-      "title": "Mr. Magaziner",
-      "sub": "D-RI · on Great Lakes Fishery Research Reauthorization Act",
-      "text": "We continue to have an economy that is working great for the very rich but not for the average working person in my district or anywhere across the country. In the first quarter of this year, average wages rose by 0.8 percent. Corporate profits rose by 2.7 percent. This is not a…"
-    },
-    {
-      "t": "quote",
-      "id": "D000230",
-      "url": "/bill/119-hr-1815-va-home-loan-program-reform-act/",
-      "billId": "119-HR-1815",
-      "title": "Mr. Davis",
-      "sub": "D-NC · on VA Home Loan Program Reform Act",
-      "text": "For generations, the sound of a Harrier over eastern North Carolina meant one thing: Marines were ready. As Marine Attack Squadron 223, the Bulldogs, completed a Harrier sundown ceremony, the final operational flight of the AV-8B Harrier II, at Cherry Point on June 3, we honor…"
     },
     {
       "t": "quote",
@@ -8351,10 +8144,10 @@
     {
       "t": "quote",
       "id": "M001225",
-      "url": "/bill/119-hr-42-alaska-native-settlement-trust-eligibility-act/",
-      "billId": "119-HR-42",
+      "url": "/bill/119-hr-7008-stop-insider-trading-act/",
+      "billId": "119-HR-7008",
       "title": "Mr. Mullin",
-      "sub": "D-CA · on Alaska Native Settlement Trust Eligibility Act",
+      "sub": "D-CA · on Stop Insider Trading Act",
       "text": "Americans are fed up with this government. They are fed up with money in politics. They are fed up with not knowing who they can trust. Corporations and billionaires are spending more than ever in an effort to influence our elections, and we are seeing more and more campaigns…"
     },
     {
@@ -8539,24 +8332,6 @@
     },
     {
       "t": "quote",
-      "id": "T000250",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Thune",
-      "sub": "R-SD · on PRO Veterans Act of 2025",
-      "text": "On Thursday President Trump nominated Jay Clayton the U.S. attorney for the Southern District of New York to be the Director of National Intelligence. He has an impressive resume with experience in both the public sector and the private sector, and he has the kind of skill set…"
-    },
-    {
-      "t": "quote",
-      "id": "D000563",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Mr. Durbin",
-      "sub": "D-IL · on Laken Riley Act",
-      "text": "On a separate issue, the Senate will soon vote on the confirmation of one of the President's personal attorneys to the Federal appellate court. If it sounds familiar, it is because we have seen it before. Last summer, the Senate confirmed another of the President's personal…"
-    },
-    {
-      "t": "quote",
       "id": "B001230",
       "url": "/bill/119-hr-6644-21st-century-road-to-housing-act/",
       "billId": "119-HR-6644",
@@ -8567,10 +8342,10 @@
     {
       "t": "quote",
       "id": "G000386",
-      "url": "/bill/119-hr-5371-continuing-appropriations-agriculture-legislative-branch-military/",
-      "billId": "119-HR-5371",
+      "url": "/bill/119-hr-6019-to-repeal-certain-provisions-relating-to-notification-to-senate/",
+      "billId": "119-HR-6019",
       "title": "Mr. Grassley",
-      "sub": "R-IA · on Continuing Appropriations, Agriculture, Legislative Branch,…",
+      "sub": "R-IA · on To repeal certain provisions relating to notification to…",
       "text": "The United States-Mexico-Canada Agreement has been in force for 6 years. It is scheduled for review-- and renewal, I hope--now, and that process is going on. I have been here two or three times this year to discuss the importance of continuing the Mexico-Canada agreement with…"
     },
     {
@@ -8728,39 +8503,12 @@
     },
     {
       "t": "quote",
-      "id": "B001277",
-      "url": "/bill/119-s-2392-veterans-compensation-cost-of-living-adjustment-act-of-2025/",
-      "billId": "119-S-2392",
-      "title": "Mr. Blumenthal",
-      "sub": "D-CT · on Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
-      "text": "I am back again after Republicans have blocked my effort for a vote--a vote--on the Major Richard Star Act. Six times Republicans have blocked benefits for combat-injured veterans. Let's be very clear. Right now, a combat-injured veteran with less than 20 years, including at…"
-    },
-    {
-      "t": "quote",
       "id": "K000384",
       "url": "/bill/119-hr-4323-trafficking-survivors-relief-act/",
       "billId": "119-HR-4323",
       "title": "Mr. Kaine",
       "sub": "D-VA · on Trafficking Survivors Relief Act",
       "text": "I rise to speak upon a matter that will be brought to the floor for a vote within the next hour or so. The matter is what is called a 502B resolution filed by my colleague Senator Catherine Cortez Masto, and a 502B resolution directs the State Department to issue a human rights…"
-    },
-    {
-      "t": "quote",
-      "id": "G000386",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Grassley",
-      "sub": "R-IA · on GENIUS Act",
-      "text": "Now another short statement on something that is going on that is very important to the American people: the price of prescription drugs--something I hear quite frequently in my 99-county meetings that I hold around the State every year. Prescription drug prices come up, and…"
-    },
-    {
-      "t": "quote",
-      "id": "S000148",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Mr. Schumer",
-      "sub": "D-NY · on Laken Riley Act",
-      "text": "Trump's actions last night make it crystal clear that he is the one standing in the way of FISA. It was already clear that Trump was the one blocking FISA, but the fact that he withdrew Jay Clayton should erase anyone's doubts. Trump wants FISA to stay expired. Trump is twisting…"
     },
     {
       "t": "quote",
@@ -8872,15 +8620,6 @@
     },
     {
       "t": "quote",
-      "id": "L000575",
-      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
-      "billId": "119-S-1020",
-      "title": "Mr. Lankford",
-      "sub": "R-OK · on A bill to require the Federal Energy Regulatory Commission…",
-      "text": "I have come to this floor many times to be able to talk about a lot of serious policy issues, to be able to walk through all different kinds of tax policy, energy policy, immigration policy. We have worked through a lot of different issues on this floor, and I have had the…"
-    },
-    {
-      "t": "quote",
       "id": "Y000064",
       "url": "/bill/119-hr-5371-continuing-appropriations-agriculture-legislative-branch-military/",
       "billId": "119-HR-5371",
@@ -8914,15 +8653,6 @@
       "title": "Mr. Whitehouse",
       "sub": "D-RI · on Main Street Capital Access Act",
       "text": "I think it is virtually undisputed, among people who are not on fossil fuel's payroll, that climate change is real. Earlier this year, I came to the floor, and I asked my colleagues if they could all agree on that simple, scientific fact. Well, unfortunately, they could not. So…"
-    },
-    {
-      "t": "quote",
-      "id": "S001194",
-      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
-      "billId": "119-S-1020",
-      "title": "Mr. Schatz",
-      "sub": "D-HI · on A bill to require the Federal Energy Regulatory Commission…",
-      "text": "$600 million to build a ballroom at the White House, $100 million to build a triumphal arch, $250 million to renovate the Kennedy Center, $60 million to host a UFC fight on the south lawn of the White House--these are the things Donald Trump is putting his time and energy into…"
     },
     {
       "t": "quote",
@@ -8980,15 +8710,6 @@
     },
     {
       "t": "quote",
-      "id": "G000386",
-      "url": "/bill/119-s-4465-foreign-intelligence-surveillance-act-further-extension-through-june/",
-      "billId": "119-S-4465",
-      "title": "Mr. Grassley",
-      "sub": "R-IA · on Foreign Intelligence Surveillance Act — Further Extension…",
-      "text": "1 week in June, 4 in July, 3 in September--that is the number of weeks the Senate is in session between now and the election. A lot of people think a lot of things need to be done between now and the election, and I agree with that. But those weeks I just named add up to about…"
-    },
-    {
-      "t": "quote",
       "id": "T000250",
       "url": "/bill/119-hr-8469-making-appropriations-for-military-construction-the-department-of/",
       "billId": "119-HR-8469",
@@ -9017,10 +8738,10 @@
     {
       "t": "quote",
       "id": "S000033",
-      "url": "/bill/119-hr-4371-kayla-hamilton-act/",
-      "billId": "119-HR-4371",
+      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
+      "billId": "119-HR-2444",
       "title": "Mr. Sanders",
-      "sub": "I-VT · on Kayla Hamilton Act",
+      "sub": "I-VT · on Promoting Resilient Supply Chains Act of 2025",
       "text": "I want to say a few words about what I consider to be one of the most important issues not only facing our country but facing the world, and that is the advent of artificial intelligence, which most experts agree will almost certainly be the most transformational technology in…"
     },
     {
@@ -9115,15 +8836,6 @@
     },
     {
       "t": "quote",
-      "id": "R000305",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Ms. Ross",
-      "sub": "D-NC · on GENIUS Act",
-      "text": "From the first puck drop of the season to the final horn, the Hurricanes showed the grit and teamwork that define our State. They proved that success isn't built overnight. It is earned through discipline, perseverance, and trust in one another. Today, we celebrate the players,…"
-    },
-    {
-      "t": "quote",
       "id": "C001075",
       "url": "/bill/119-hr-6431-new-opportunities-for-business-ownership-and-self-sufficiency-act/",
       "billId": "119-HR-6431",
@@ -9143,10 +8855,10 @@
     {
       "t": "quote",
       "id": "S001230",
-      "url": "/bill/119-hr-4930-to-expand-the-sharing-of-information-with-respect-to-suspected/",
-      "billId": "119-HR-4930",
+      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
+      "billId": "119-S-423",
       "title": "Mr. Subramanyam",
-      "sub": "D-VA · on To expand the sharing of information with respect to…",
+      "sub": "D-VA · on PRO Veterans Act of 2025",
       "text": "There are a lot of reasons why we are seeing rising costs. One reason is particularly troubling, and it is called surveillance pricing. You see, it is common for businesses to track our online activity, like searches and web browsing, and to use that to decide who to target with…"
     },
     {
@@ -9214,15 +8926,6 @@
     },
     {
       "t": "quote",
-      "id": "A000380",
-      "url": "/bill/119-s-3971-small-business-innovation-and-economic-security-act/",
-      "billId": "119-S-3971",
-      "title": "Mr. Amo",
-      "sub": "D-RI · on Small Business Innovation and Economic Security Act",
-      "text": "Trump's corruption is out of control. Since taking office, he has increased his net worth by at least $4 billion, accepted a $400 million plane from a foreign country, routinely bought stock in companies doing business with the government, and wasted $14 million of taxpayer…"
-    },
-    {
-      "t": "quote",
       "id": "H001072",
       "url": "/bill/119-hr-2478-financial-exploitation-prevention-act-of-2025/",
       "billId": "119-HR-2478",
@@ -9268,30 +8971,12 @@
     },
     {
       "t": "quote",
-      "id": "B001230",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Ms. Baldwin",
-      "sub": "D-WI · on Laken Riley Act",
-      "text": "4 years ago today, women in America lost the right to control their own bodies when an activist Supreme Court overturned Roe v. Wade. For 18 months, women in Wisconsin were forced to live under a law passed in 1849 and widely viewed as a criminal abortion ban. Overturning Roe…"
-    },
-    {
-      "t": "quote",
       "id": "L000273",
       "url": "/floor.html",
       "billId": null,
       "title": "Ms. Leger Fernandez",
       "sub": "D-NM",
       "text": "Juniper was my constituent and attended the New Mexico School for the Arts High School. There, Juniper's voice filled the air with hope, delight, passion, and, yes, sometimes angst. Madam Speaker, don't we all remember wondering who we are, wondering what our lives will look…"
-    },
-    {
-      "t": "quote",
-      "id": "J000298",
-      "url": "/bill/119-hr-8800-national-defense-authorization-act-for-fiscal-year-2027/",
-      "billId": "119-HR-8800",
-      "title": "Ms. Jayapal",
-      "sub": "D-WA · on National Defense Authorization Act for Fiscal Year 2027",
-      "text": "I am so proud that Juniper Blessing was a constituent of mine as well as a college student at the University of Washington in Seattle. She was deeply loved and respected for who she was. At just 19 years old, she had already made her mark, and the tragedy of her murder leaves an…"
     },
     {
       "t": "quote",
@@ -9340,15 +9025,6 @@
     },
     {
       "t": "quote",
-      "id": "M001223",
-      "url": "/bill/119-s-222-whole-milk-for-healthy-kids-act-of-2025/",
-      "billId": "119-S-222",
-      "title": "Mr. Magaziner",
-      "sub": "D-RI · on Whole Milk for Healthy Kids Act of 2025",
-      "text": "My whole life, politicians have been sending other people's kids to fight and die in unnecessary wars in the Middle East, and we are no better off for it. In the 6 months since the unnecessary war in Iran began, over a dozen U.S. servicemembers have lost their lives. Countless…"
-    },
-    {
-      "t": "quote",
       "id": "L000606",
       "url": "/bill/119-hjres-133-requesting-the-secretary-of-the-interior-to-authorize-unique-and-one/",
       "billId": "119-HJRES-133",
@@ -9368,10 +9044,10 @@
     {
       "t": "quote",
       "id": "K000009",
-      "url": "/bill/119-hr-4549-office-of-rural-affairs-enhancement-act/",
-      "billId": "119-HR-4549",
+      "url": "/bill/119-hr-8800-national-defense-authorization-act-for-fiscal-year-2027/",
+      "billId": "119-HR-8800",
       "title": "Ms. Kaptur",
-      "sub": "D-OH · on Office of Rural Affairs Enhancement Act",
+      "sub": "D-OH · on National Defense Authorization Act for Fiscal Year 2027",
       "text": "This past weekend, former New Jersey Congressman Frank Guarini passed away at the ripe age of 101 years old, just 2 months shy of attaining his 102nd birthday. Frank was an American patriot, World War II decorated Pacific Navy veteran, successful lawyer, and business leader. His…"
     },
     {
@@ -9395,10 +9071,10 @@
     {
       "t": "quote",
       "id": "R000621",
-      "url": "/bill/119-hr-4930-to-expand-the-sharing-of-information-with-respect-to-suspected/",
-      "billId": "119-HR-4930",
+      "url": "/bill/119-s-216-save-our-seas-2-0-amendments-act/",
+      "billId": "119-S-216",
       "title": "Ms. Randall",
-      "sub": "D-WA · on To expand the sharing of information with respect to…",
+      "sub": "D-WA · on Save Our Seas 2.0 Amendments Act",
       "text": "A memorandum of understanding, the first of its kind, between the Suquamish Tribe and the U.S. Navy has finally been reached after years of good faith negotiations. This MOU sets a new standard for how our U.S. military collaborates with Tribal Governments to respect Tribal…"
     },
     {
@@ -9445,24 +9121,6 @@
       "title": "Mr. Flood",
       "sub": "R-NE · on TRIA Program Reauthorization Act of 2026",
       "text": "I will start today by thanking Chairman Hill, Ranking Member Waters, and my co-lead on this bill, Congressman Andrew Garbarino. All of us have worked together on legislative text that would reauthorize the Terrorism Risk Insurance Program while also making changes that will…"
-    },
-    {
-      "t": "quote",
-      "id": "S001224",
-      "url": "/bill/119-s-269-ending-improper-payments-to-deceased-people-act/",
-      "billId": "119-S-269",
-      "title": "Mr. Self",
-      "sub": "R-TX · on Ending Improper Payments to Deceased People Act",
-      "text": "I rise today to address a growing threat to the rule of law in my State of Texas. The rise of sharia, the law of Islam, has reached a tipping point in the Lone Star State, especially in north Texas, which I represent. Opaque sharia-compliant actions are advancing across our…"
-    },
-    {
-      "t": "quote",
-      "id": "S001230",
-      "url": "/bill/119-s-1884-holocaust-expropriated-art-recovery-act-of-2025/",
-      "billId": "119-S-1884",
-      "title": "Mr. Subramanyam",
-      "sub": "D-VA · on Holocaust Expropriated Art Recovery Act of 2025",
-      "text": "As the Senate looks to confirm or not confirm Acting Attorney General Todd Blanche, I want to point to the body a recent DOJ memo on the Supreme Court's Olmstead decision which threatens to turn back the clock decades to a time when Americans with disabilities were offered less…"
     },
     {
       "t": "quote",
@@ -9565,15 +9223,6 @@
     },
     {
       "t": "quote",
-      "id": "D000563",
-      "url": "/bill/119-s-616-foundation-of-the-federal-bar-association-charter-amendments-act-of/",
-      "billId": "119-S-616",
-      "title": "Mr. Durbin",
-      "sub": "D-IL · on Foundation of the Federal Bar Association Charter…",
-      "text": "Today, the Senate will vote to confirm Arthur Roberts Jones to the U.S. District Court for the Southern District of Texas. Mr. Jones' association with a far-right organization and refusal to disavow that organization's extreme views on firearm safety are disqualifying. Mr. Jones…"
-    },
-    {
-      "t": "quote",
       "id": "W000795",
       "url": "/floor.html",
       "billId": null,
@@ -9664,30 +9313,12 @@
     },
     {
       "t": "quote",
-      "id": "T000250",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Mr. Thune",
-      "sub": "R-SD · on Laken Riley Act",
-      "text": "I come to the floor today with a heavy heart. I look to my right, and I see a desk which we in the Senate refer to and know as the John Calhoun desk. It is covered by a black shroud, and on top of that shroud is a bowl of white roses. That is Lindsey Graham's desk. It is…"
-    },
-    {
-      "t": "quote",
       "id": "W000795",
       "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
       "billId": "119-HR-1",
       "title": "Mr. Wilson",
       "sub": "R-SC · on One Big Beautiful Bill Act",
       "text": "Delivering on promises made by President Donald Trump and House Republicans, led by Mike Johnson, this is the first anniversary of the Working Families Tax Cut Act. This big, beautiful bill cuts taxes, limits government, expands freedom, and will create jobs. Sadly, every…"
-    },
-    {
-      "t": "quote",
-      "id": "M001235",
-      "url": "/bill/119-s-5-laken-riley-act/",
-      "billId": "119-S-5",
-      "title": "Mr. Moore",
-      "sub": "R-WV · on Laken Riley Act",
-      "text": "My bill preserves two fundamental rights: the right to privacy and the right to bear arms. Americans should not be forced to disclose to payment processors when they buy firearms. The bill preserves Americans' rights by prohibiting the creation of a separate merchant category…"
     },
     {
       "t": "quote",
@@ -9745,15 +9376,6 @@
     },
     {
       "t": "quote",
-      "id": "C001133",
-      "url": "/bill/119-s-216-save-our-seas-2-0-amendments-act/",
-      "billId": "119-S-216",
-      "title": "Mr. Ciscomani",
-      "sub": "R-AZ · on Save Our Seas 2.0 Amendments Act",
-      "text": "The Hawks earned the title by defeating Yuma Catholic by a 10-0 score. This victory marks the team's first-ever championship, an accomplishment that is exciting and worth celebrating. During the championship game, Tanque Verde added their first run on the board in the third…"
-    },
-    {
-      "t": "quote",
       "id": "M001234",
       "url": "/bill/119-hconres-75-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
       "billId": "119-HCONRES-75",
@@ -9781,30 +9403,12 @@
     },
     {
       "t": "quote",
-      "id": "K000405",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Knott",
-      "sub": "R-NC · on PRO Veterans Act of 2025",
-      "text": "The Federal Government has been too big, powerful, and unaccountable to the American people for far too long. This is most clear in our Federal agencies, which have spent years acting as the investigator, prosecutor, and judge simultaneously and all without any accountability.…"
-    },
-    {
-      "t": "quote",
       "id": "V000138",
       "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
       "billId": "119-HR-7148",
       "title": "Mr. Vindman",
       "sub": "D-VA · on Consolidated Appropriations Act, 2026",
       "text": "He has been recognized as Superintendent of the Year for the Northern Virginia Region of the Commonwealth. This honor reflects Dr. Brad's outstanding accomplishments, as well as the respect he has earned throughout Culpeper County and Virginia's education community. As he marks…"
-    },
-    {
-      "t": "quote",
-      "id": "M000312",
-      "url": "/bill/119-s-222-whole-milk-for-healthy-kids-act-of-2025/",
-      "billId": "119-S-222",
-      "title": "Mr. McGovern",
-      "sub": "D-MA · on Whole Milk for Healthy Kids Act of 2025",
-      "text": "When schools are closed for the summer, far too many kids in America go hungry because they don't have access to nutritious breakfasts or lunches. That is where the incredible Summer Eats program comes in. Funded by USDA and in partnership with States, local schools, and…"
     },
     {
       "t": "quote",
@@ -9871,15 +9475,6 @@
     },
     {
       "t": "quote",
-      "id": "M001213",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Moore",
-      "sub": "R-UT · on GENIUS Act",
-      "text": "Mr. Speaker, as I was mentioning, there is no question that we have a major issue in front of us. Over the last 18 months, I have gone back home and had a chance to share a lot of the specifics as to the gains that we are making from the reductions. I want to just highlight some…"
-    },
-    {
-      "t": "quote",
       "id": "S000148",
       "url": "/floor.html",
       "billId": null,
@@ -9904,15 +9499,6 @@
       "title": "Mr. Baird",
       "sub": "R-IN · on Commerce, Justice, Science; Energy and Water Development;…",
       "text": "FFA is the largest U.S. career and technical student organization. FFA is rooted in farming and preparing youth for careers in agribusiness, science, veterinary medicine, and using hands-on learning techniques. Katie McClain from Carroll High School was elected as secretary. She…"
-    },
-    {
-      "t": "quote",
-      "id": "G000583",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Gottheimer",
-      "sub": "D-NJ · on PRO Veterans Act of 2025",
-      "text": "Today, this House will come together and do something simple but important: honor a great American hero. Mr. Speaker, Tony Gallopo, as you have heard, was a brave Navy veteran, vice commander of the New Jersey Department of The American Legion, and commander of American Legion…"
     },
     {
       "t": "quote",
@@ -10060,15 +9646,6 @@
     },
     {
       "t": "quote",
-      "id": "S001218",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Ms. Stansbury",
-      "sub": "D-NM · on PRO Veterans Act of 2025",
-      "text": "This week the administration has continued its assault on our public and sacred lands, repealing critical protections for Chaco Canyon and Bears Ears, two of our most sacred cultural landscapes. For New Mexico's Tribes and pueblos, these are not relics of the past. They are…"
-    },
-    {
-      "t": "quote",
       "id": "D000563",
       "url": "/bill/119-hr-1-one-big-beautiful-bill-act/",
       "billId": "119-HR-1",
@@ -10084,15 +9661,6 @@
       "title": "Mr. Carter",
       "sub": "R-GA · on FDA Modernization Act 3.0",
       "text": "Many of our families would feel incomplete without the pets and animals that bring unconditional love into our lives. Yet every year, millions of animals, including dogs, man's best friend, are still subjected to testing in the development of new medicines. As policymakers, we…"
-    },
-    {
-      "t": "quote",
-      "id": "Q000023",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Quigley",
-      "sub": "D-IL · on PRO Veterans Act of 2025",
-      "text": "Mr. Speaker, several years ago, a Chicagoan named Brian Wallach came to my office and shared the fact that he was just diagnosed with ALS, a devastating disease that steals a person's ability to move or speak. The average life expectancy at the time with someone diagnosed with…"
     },
     {
       "t": "quote",
@@ -10231,30 +9799,12 @@
     },
     {
       "t": "quote",
-      "id": "B001322",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Baumgartner",
-      "sub": "R-WA · on PRO Veterans Act of 2025",
-      "text": "I rise today to note the passing of a great American, a great patriot, and a friend, Mr. Wes Anderson of Spokane, Washington. Wes was known across the communities of Spokane County for his exemplary service to fellow veterans who knew him best as ``Doc.'' Wes was a lifelong…"
-    },
-    {
-      "t": "quote",
       "id": "D000635",
       "url": "/floor.html",
       "billId": null,
       "title": "Ms. Dexter",
       "sub": "D-OR",
       "text": "The American people need to know that their government is intentionally suffocating the nation of Cuba. There is no other way to describe what is happening. Earlier this month, I traveled to Cuba with a congressional delegation to see firsthand how U.S. policy is affecting this…"
-    },
-    {
-      "t": "quote",
-      "id": "D000563",
-      "url": "/bill/119-hr-2269-wippes-act/",
-      "billId": "119-HR-2269",
-      "title": "Mr. Durbin",
-      "sub": "D-IL · on WIPPES Act",
-      "text": "I would like to react to the statement of my friend and colleague from Wyoming. I am against fraud. That is it. On the record: I am against fraud. I am a Democrat, and I don't know where he reached this different conclusion, but I want to make it very clear. Having said that, I…"
     },
     {
       "t": "quote",
@@ -10276,57 +9826,12 @@
     },
     {
       "t": "quote",
-      "id": "V000136",
-      "url": "/bill/119-hr-972-sloan-canyon-conservation-and-lateral-pipeline-act/",
-      "billId": "119-HR-972",
-      "title": "Mr. Vasquez",
-      "sub": "D-NM · on Sloan Canyon Conservation and Lateral Pipeline Act",
-      "text": "In New Mexico, water is life, and it is our economy. In 1902, the Federal Government recognized this harsh reality, passing the Reclamation Act to make arid Western lands agriculturally productive. In that negotiation, they gave States like New Mexico the right to allocate and…"
-    },
-    {
-      "t": "quote",
-      "id": "J000294",
-      "url": "/bill/119-s-2392-veterans-compensation-cost-of-living-adjustment-act-of-2025/",
-      "billId": "119-S-2392",
-      "title": "Mr. Jeffries",
-      "sub": "D-NY · on Veterans’ Compensation Cost-of-Living Adjustment Act of 2025",
-      "text": "Donald Trump's reckless and costly war of choice in Iran has skyrocketed gas prices on everyday Americans who are already suffering from the failed Republican economy and drowning in its poor management. Now, Donald Trump has made several promises to the American people upon his…"
-    },
-    {
-      "t": "quote",
-      "id": "C001087",
-      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
-      "billId": "119-HR-2444",
-      "title": "Mr. Crawford",
-      "sub": "R-AR · on Promoting Resilient Supply Chains Act of 2025",
-      "text": "First off, I want to thank Chairman Arrington and the members of the Budget Committee for producing this budget. Republican Members of Congress, working closely with President Trump, are the only ones serious in Washington about attacking wasteful Federal spending. As chairman…"
-    },
-    {
-      "t": "quote",
-      "id": "S001183",
-      "url": "/bill/119-hr-5103-make-the-district-of-columbia-safe-and-beautiful-act-of-2025/",
-      "billId": "119-HR-5103",
-      "title": "Mr. Schweikert",
-      "sub": "R-AZ · on Make the District of Columbia Safe and Beautiful Act of 2025",
-      "text": "Let's try something I have never done before, but I also need to sort of lock something down. Mr. Speaker, if there is anyone from your staff watching--and we said we would make it public-- my team and myself were made a promise today that when we get back we are going to sit…"
-    },
-    {
-      "t": "quote",
       "id": "S000148",
       "url": "/floor.html",
       "billId": null,
       "title": "Mr. Schumer",
       "sub": "D-NY",
       "text": "Trump's corruption has no ceiling, and it apparently doesn't have an altitude limit either. Trump's $400 million luxury jet is the single biggest bribe an American President has ever accepted from another country in all of American history--the single biggest bribe in all of…"
-    },
-    {
-      "t": "quote",
-      "id": "M000133",
-      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
-      "billId": "119-HR-2444",
-      "title": "Mr. Markey",
-      "sub": "D-MA · on Promoting Resilient Supply Chains Act of 2025",
-      "text": "I rise today to underscore the critical importance of maintaining temporary protected status, or TPS, for Haiti. TPS allows nationals from designated countries facing ongoing armed conflict, environmental disasters, or extraordinary conditions to live and to work legally in the…"
     },
     {
       "t": "quote",
@@ -10339,75 +9844,12 @@
     },
     {
       "t": "quote",
-      "id": "L000606",
-      "url": "/bill/119-s-356-secure-rural-schools-reauthorization-act-of-2025/",
-      "billId": "119-S-356",
-      "title": "Mr. Latimer",
-      "sub": "D-NY · on Secure Rural Schools Reauthorization Act of 2025",
-      "text": "I want to salute the tremendous community contribution of The Hudson Independent, an online publication that chronicles the lives and stories of people, organizations, governments, schools, businesses, and the like, in the municipalities that border the Hudson River in…"
-    },
-    {
-      "t": "quote",
-      "id": "K000401",
-      "url": "/bill/119-hconres-40-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
-      "billId": "119-HCONRES-40",
-      "title": "Mr. Kiley",
-      "sub": "R-CA · on Directing the President, pursuant to section 5(c) of the…",
-      "text": "A new survey from the Public Policy Institute of California finds that two-thirds of Californians oppose Governor Newsom's ban on gas-powered cars. This ban was imposed by the Governor without so much as a vote in the legislature or the people of California. The good news is…"
-    },
-    {
-      "t": "quote",
-      "id": "K000403",
-      "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
-      "billId": "119-HR-7148",
-      "title": "Mr. Kennedy",
-      "sub": "R-UT · on Consolidated Appropriations Act, 2026",
-      "text": "I rise today alongside my fellow Utahns to mourn and celebrate the life and sudden passing of Captain Spencer Long of Provo Fire & Rescue; his wife, Katrina; and three sons, Reid, Thayne and Gage. They were lost on Friday, July 17, 2026, near Sunglow Campground in Wayne County,…"
-    },
-    {
-      "t": "quote",
-      "id": "R000575",
-      "url": "/bill/119-hconres-40-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
-      "billId": "119-HCONRES-40",
-      "title": "Mr. Rogers",
-      "sub": "R-AL · on Directing the President, pursuant to section 5(c) of the…",
-      "text": "This resolution unlocks $60 billion in critically needed supplemental funding to support the warfighter and ensure our military readiness. Without these funds, military training exercises will be canceled, maintenance of equipment facilities and weapon systems will be deferred,…"
-    },
-    {
-      "t": "quote",
-      "id": "D000399",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Doggett",
-      "sub": "D-TX · on PRO Veterans Act of 2025",
-      "text": "This bill should really be known as the desperation act because Republicans are so desperate to fund an endless war, so desperate to avoid angering their master at the White House, so desperate to find a way to exclude from the upcoming election many of the very voters that are…"
-    },
-    {
-      "t": "quote",
-      "id": "G000386",
-      "url": "/bill/119-hr-3486-stop-illegal-entry-act-of-2025/",
-      "billId": "119-HR-3486",
-      "title": "Mr. Grassley",
-      "sub": "R-IA · on Stop Illegal Entry Act of 2025",
-      "text": "Iowans are fed up with their taxpayers' dollars being lost every year to waste, fraud, and abuse. As a watchdog for those taxpayers, I have helped lead the charge to stop brazen criminals from stealing Americans' hard-earned dollars. So that is why I am proud to be a cosponsor…"
-    },
-    {
-      "t": "quote",
       "id": "S000148",
       "url": "/bill/119-hconres-40-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
       "billId": "119-HCONRES-40",
       "title": "Mr. Schumer",
       "sub": "D-NY · on Directing the President, pursuant to section 5(c) of the…",
       "text": "The hole Donald Trump is digging himself into in Iran has turned into a crater. Somehow Trump has convinced himself that the American people are cheering him on on this blunder rather than crying out for him to bring our troops home. Today, Democrats are going to force another…"
-    },
-    {
-      "t": "quote",
-      "id": "S000033",
-      "url": "/bill/119-hr-22-save-act/",
-      "billId": "119-HR-22",
-      "title": "Mr. Sanders",
-      "sub": "I-VT · on SAVE Act",
-      "text": "A couple of years ago, as you may recall, there was a movie--a film--that came out called ``Don't Look Up,'' starring Jennifer Lawrence and Leonardo DiCaprio. The film was about a large comet heading to Earth that would destroy the entire planet, and the astronomers who…"
     },
     {
       "t": "quote",
@@ -10429,39 +9871,12 @@
     },
     {
       "t": "quote",
-      "id": "J000307",
-      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
-      "billId": "119-HR-2444",
-      "title": "Mr. James",
-      "sub": "R-MI · on Promoting Resilient Supply Chains Act of 2025",
-      "text": "Nigeria is the deadliest place on Earth to be a Christian today. Since 2019, tens of thousands of Christians in Nigeria have been slaughtered as part of a sustained pattern of religiously motivated violence by jihadis, ignored or enabled by the Nigerian Government. Extremist…"
-    },
-    {
-      "t": "quote",
       "id": "D000626",
       "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
       "billId": "119-HR-2444",
       "title": "Mr. Davidson",
       "sub": "R-OH · on Promoting Resilient Supply Chains Act of 2025",
       "text": "As someone who owned and operated manufacturing businesses in Ohio before coming to Congress, I know firsthand that our State's greatest asset is the hardworking, resilient, and dedicated people who power Ohio's economy and build up our communities that make Ohio thrive. Ohio's…"
-    },
-    {
-      "t": "quote",
-      "id": "G000551",
-      "url": "/bill/119-hr-6644-21st-century-road-to-housing-act/",
-      "billId": "119-HR-6644",
-      "title": "Mrs. Grijalva",
-      "sub": "D-AZ · on 21st Century ROAD to Housing Act",
-      "text": "Reaching a century of life is an extraordinary milestone, and I was honored to join Mr. Villegas' family, friends, and neighbors in Nogales to celebrate this special occasion, highlighted by him taking over the dance floor with his wife at his birthday party. Mr. Villegas is a…"
-    },
-    {
-      "t": "quote",
-      "id": "S001157",
-      "url": "/bill/119-hr-3692-captain-accursio-gus-sanfilippo-young-fishermen-s-development-act/",
-      "billId": "119-HR-3692",
-      "title": "Mr. Austin Scott",
-      "sub": "D-GA · on Captain Accursio “Gus” Sanfilippo Young Fishermen's…",
-      "text": "The first thing I will do is thank Chairman Smith and his staff for working with me to get this piece of legislation to the floor. Mr. Speaker, I want Americans to know how this piece of legislation originated. I was taking a young man, a marine, hunting several years ago. That…"
     },
     {
       "t": "quote",
@@ -10492,48 +9907,12 @@
     },
     {
       "t": "quote",
-      "id": "T000481",
-      "url": "/bill/119-hr-970-fairness-for-servicemembers-and-their-families-act-of-2025/",
-      "billId": "119-HR-970",
-      "title": "Ms. Tlaib",
-      "sub": "D-MI · on Fairness for Servicemembers and their Families Act of 2025",
-      "text": "Free Ya'akub Ira Vijandre now. ICE arrested and detained him for exercising his First Amendment rights. They targeted him for speaking out against genocide and standing up for political prisoners. Ya'akub is a photojournalist who has lived in the United States for 25 years as a…"
-    },
-    {
-      "t": "quote",
-      "id": "F000476",
-      "url": "/bill/119-hr-7148-consolidated-appropriations-act-2026/",
-      "billId": "119-HR-7148",
-      "title": "Mr. Frost",
-      "sub": "D-FL · on Consolidated Appropriations Act, 2026",
-      "text": "Alphonso was a young, Black labor leader from the South who understood the struggles of working-class families and dedicated his life to advancing economic and social justice. For more than 25 years with the SEIU, including serving as president since 2010, he fought tirelessly…"
-    },
-    {
-      "t": "quote",
       "id": "A000380",
       "url": "/bill/119-hr-7567-farm-food-and-national-security-act-of-2026/",
       "billId": "119-HR-7567",
       "title": "Mr. Amo",
       "sub": "D-RI · on Farm, Food, and National Security Act of 2026",
       "text": "The data is in, and Trump's and Republicans' big, ugly law has been disastrous for Americans. We can now confirm that they have succeeded in ripping food assistance away from 4.5 million SNAP recipients, including 1.5 million children. In Rhode Island alone, that is over 16,000…"
-    },
-    {
-      "t": "quote",
-      "id": "T000250",
-      "url": "/bill/119-hr-8168-major-non-nato-ally-terror-threat-assessment-act/",
-      "billId": "119-HR-8168",
-      "title": "Mr. Thune",
-      "sub": "R-SD · on Major Non-NATO Ally Terror Threat Assessment Act",
-      "text": "This afternoon, we are going to move on the nomination of Jay Clayton to be Director of National Intelligence. Amid a heightened threat environment, having a proven leader in this role is especially important, and Jay Clayton fits this mold. During the first Trump…"
-    },
-    {
-      "t": "quote",
-      "id": "G000386",
-      "url": "/bill/119-hr-8168-major-non-nato-ally-terror-threat-assessment-act/",
-      "billId": "119-HR-8168",
-      "title": "Mr. Grassley",
-      "sub": "R-IA · on Major Non-NATO Ally Terror Threat Assessment Act",
-      "text": "All Americans--but I can't speak for all Americans. But I want to thank President Trump for his efforts to release Pastor Ezra Jin after 266 days in Chinese captivity. Pastor Jin started Zion Church in 2007 to share his love of God, to serve others, and to worship peacefully.…"
     },
     {
       "t": "quote",
@@ -10546,39 +9925,12 @@
     },
     {
       "t": "quote",
-      "id": "S000148",
-      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
-      "billId": "119-HR-2444",
-      "title": "Mr. Schumer",
-      "sub": "D-NY · on Promoting Resilient Supply Chains Act of 2025",
-      "text": "Trump going to Michigan today to tout his economic record is like an arsonist returning to the scene of the crime and asking for a pat on the back. Trump has said over and over again that ``affordability'' is a made-up word. He has said Americans' skyrocketing costs are nothing…"
-    },
-    {
-      "t": "quote",
       "id": "H001104",
       "url": "/bill/119-hr-7008-stop-insider-trading-act/",
       "billId": "119-HR-7008",
       "title": "Mr. Husted",
       "sub": "R-OH · on Stop Insider Trading Act",
       "text": "These are pretty easy-- banning members of Congress from purchasing stocks while in office and requiring a photo ID to vote. People have said that they want us to do this. I have heard it for years around here. It hasn't happened. Now it is time to happen. Tonight, we have an…"
-    },
-    {
-      "t": "quote",
-      "id": "M001244",
-      "url": "/bill/119-hjres-133-requesting-the-secretary-of-the-interior-to-authorize-unique-and-one/",
-      "billId": "119-HJRES-133",
-      "title": "Mrs. Moody",
-      "sub": "R-FL · on Requesting the Secretary of the Interior to authorize…",
-      "text": "I appreciate the words of my colleague Senator Husted, who was sworn in on the same day as I was, and we both hold very dear our responsibilities that our constituents have entrusted us with here in Washington. They did not send us up here to just listen to concerns. They didn't…"
-    },
-    {
-      "t": "quote",
-      "id": "V000128",
-      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
-      "billId": "119-S-1020",
-      "title": "Mr. Van Hollen",
-      "sub": "D-MD · on A bill to require the Federal Energy Regulatory Commission…",
-      "text": "Ms. Salkin was a leader, organizer, and friend to all, and she leaves behind a resounding tradition of unity, mentorship, and civic engagement. Ms. Salkin was a true believer in the power of community and graciously dedicated her time, her knowledge, and her boundless energy…"
     },
     {
       "t": "quote",
@@ -10600,30 +9952,12 @@
     },
     {
       "t": "quote",
-      "id": "G000386",
-      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
-      "billId": "119-S-423",
-      "title": "Mr. Grassley",
-      "sub": "R-IA · on PRO Veterans Act of 2025",
-      "text": "Today at the U.S. Capitol and the National Cathedral, at those places, we honored the life of Senator Lindsey Graham. Over the past few weeks, we have mourned Senator Graham's untimely passing. Here on the Senate floor and in committees, I and my colleagues have spent time…"
-    },
-    {
-      "t": "quote",
       "id": "B001319",
       "url": "/bill/119-hr-2913-ukraine-support-act/",
       "billId": "119-HR-2913",
       "title": "Mrs. Britt",
       "sub": "R-AL · on Ukraine Support Act",
       "text": "2 weeks ago, I stood alongside so many of my Senate colleagues from both sides of the aisle, in a press conference, to announce the Russia sanctions legislation. It was just 3 days before that that this legislation and this cause lost its champion, Senator Lindsey Graham. Today,…"
-    },
-    {
-      "t": "quote",
-      "id": "S000148",
-      "url": "/bill/119-s-1582-genius-act/",
-      "billId": "119-S-1582",
-      "title": "Mr. Schumer",
-      "sub": "D-NY · on GENIUS Act",
-      "text": "First let me thank the Senator from Alabama for her poignant and strong and much needed words. Let me thank my colleague from New Hampshire, along with Senator Blumenthal, for leading the fight in this very important issue. Now, I just got back from a beautiful service honoring…"
     },
     {
       "t": "quote",
@@ -10654,48 +9988,228 @@
     },
     {
       "t": "quote",
-      "id": "C001095",
-      "url": "/bill/119-hr-910-taiwan-non-discrimination-act-of-2025/",
-      "billId": "119-HR-910",
-      "title": "Mr. Cotton",
-      "sub": "R-AR · on Taiwan Non-Discrimination Act of 2025",
-      "text": "I speak today in support of Mr. Jay Clayton's nomination to be the next Director of National Intelligence. Earlier this month, Mr. Clayton appeared before the Senate Intelligence Committee, where he answered hundreds of written questions for the record and provided detailed…"
+      "id": "R000608",
+      "url": "/bill/119-hr-5143-district-of-columbia-policing-protection-act-of-2025/",
+      "billId": "119-HR-5143",
+      "title": "Ms. Rosen",
+      "sub": "D-NV · on District of Columbia Policing Protection Act of 2025",
+      "text": "Tomorrow, the Judiciary Committee will vote on Todd Blanche's nomination for Attorney General. There are a number of reasons the members of the committee should oppose Todd Blanche's nomination--from his willingness to enable Donald Trump's worst instinct to his role in helping…"
     },
     {
       "t": "quote",
-      "id": "W000779",
-      "url": "/bill/119-hr-3535-stop-foreign-funds-in-elections-act/",
-      "billId": "119-HR-3535",
-      "title": "Mr. Wyden",
-      "sub": "D-OR · on Stop Foreign Funds in Elections Act",
-      "text": "I speak today in opposition to the nomination of Jay Clayton to be Director of National Intelligence. He has repeated baseless conspiracy theories about American elections, refused to acknowledge who won the 2020 election, and participated in an abusive investigation of American…"
+      "id": "B001277",
+      "url": "/bill/119-hr-224-disabled-veterans-housing-support-act/",
+      "billId": "119-HR-224",
+      "title": "Mr. Blumenthal",
+      "sub": "D-CT · on Disabled Veterans Housing Support Act",
+      "text": "2 weeks ago, House Republicans failed to advance the Take Care of America's Veterans Act. That failure in the House was the latest example of broad bipartisan opposition to the Republican proposal to cut more than $50 billion--that is $50 billion--in benefits for disabled…"
     },
     {
       "t": "quote",
-      "id": "B001261",
-      "url": "/bill/119-s-1071-national-defense-authorization-act-for-fiscal-year-2026/",
-      "billId": "119-S-1071",
-      "title": "Mr. Barrasso",
-      "sub": "R-WY · on National Defense Authorization Act for Fiscal Year 2026",
-      "text": "For a century, this organization has preserved Wyoming's pioneering spirit and honored the men and women who helped shape our State. On August 13, 2026, the Wyoming Pioneer Association will celebrate its 100th anniversary at its annual conference in Douglas, WY. This milestone…"
+      "id": "M000934",
+      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
+      "billId": "119-S-423",
+      "title": "Mr. Moran",
+      "sub": "R-KS · on PRO Veterans Act of 2025",
+      "text": "The Senator from Connecticut outlined all the things that he says his amendment to this legislation would do and be supported by, but the reality is, the Senator from Connecticut has tried time and time again to pass legislation similar to that, never to succeed. Earlier this…"
     },
     {
       "t": "quote",
       "id": "P000145",
-      "url": "/bill/119-hr-6903-ensuring-children-receive-support-act/",
-      "billId": "119-HR-6903",
+      "url": "/bill/119-hr-7008-stop-insider-trading-act/",
+      "billId": "119-HR-7008",
       "title": "Mr. Padilla",
-      "sub": "D-CA · on Ensuring Children Receive Support Act",
-      "text": "Clint's influence on California politics and on the civic life of San Francisco helped shape our State for decades--and will continue to do so for generations to come. Born in Oakland and raised in San Leandro as the oldest of 10 children in a working-class Catholic family,…"
+      "sub": "D-CA · on Stop Insider Trading Act",
+      "text": "Mr. President, it is a shame that Senate Republicans seem particularly focused on scoring political points instead of passing real policies that can actually make a difference because, yes, all Americans--Democrats, Republicans, and Independents alike--are rightly concerned…"
     },
     {
       "t": "quote",
-      "id": "B001243",
-      "url": "/bill/119-hjres-142-disapproving-the-action-of-the-district-of-columbia-council-in/",
-      "billId": "119-HJRES-142",
-      "title": "Mrs. Blackburn",
-      "sub": "R-TN · on Disapproving the action of the District of Columbia Council…",
-      "text": "Before I begin my remarks, I commend each of my colleagues who has come to the floor to speak on the Russia sanctions bill and how important it is that we get this passed. This is a measure I have supported, and I am so pleased we are finally taking the vote and taking action on…"
+      "id": "G000386",
+      "url": "/bill/119-hr-42-alaska-native-settlement-trust-eligibility-act/",
+      "billId": "119-HR-42",
+      "title": "Mr. Grassley",
+      "sub": "R-IA · on Alaska Native Settlement Trust Eligibility Act",
+      "text": "I come to the floor today as a member of the Senate Finance Committee, which has jurisdiction over Social Security, and to remind everybody--because everybody knows or better know--that the Social Security primary trust fund will be depleted in just 6 years. As a result, come…"
+    },
+    {
+      "t": "quote",
+      "id": "T000250",
+      "url": "/bill/119-s-1020-a-bill-to-require-the-federal-energy-regulatory-commission-to-extend/",
+      "billId": "119-S-1020",
+      "title": "Mr. Thune",
+      "sub": "R-SD · on A bill to require the Federal Energy Regulatory Commission…",
+      "text": "Yesterday, we said goodbye to our friend and colleague Lindsey Graham. But though we said farewell, Lindsey's work continues. Last night, we began consideration of the bill to which he devoted so much of his time and energy over the last year. He had worked on it with world…"
+    },
+    {
+      "t": "quote",
+      "id": "B001261",
+      "url": "/bill/119-s-5-laken-riley-act/",
+      "billId": "119-S-5",
+      "title": "Mr. Barrasso",
+      "sub": "R-WY · on Laken Riley Act",
+      "text": "Yesterday the Senate honored the life of our dear friend Lindsey Graham. It was a remarkable gathering of people from around the world, people who came to honor a man who really has done so very much for this body, for his home State of South Carolina, and for the Nation. I…"
+    },
+    {
+      "t": "quote",
+      "id": "S001198",
+      "url": "/floor.html",
+      "billId": null,
+      "title": "Mr. Sullivan",
+      "sub": "R-AK",
+      "text": "I would like to echo and reinforce the words of my good friend Senator Barrasso, the majority whip, Senator from Wyoming, who was doing a great job yesterday and the beautiful service that we had here in the Capitol and at the National Cathedral in honor of my very good friend…"
+    },
+    {
+      "t": "quote",
+      "id": "D000563",
+      "url": "/bill/119-hconres-40-directing-the-president-pursuant-to-section-5-c-of-the-war-powers/",
+      "billId": "119-HCONRES-40",
+      "title": "Mr. Durbin",
+      "sub": "D-IL · on Directing the President, pursuant to section 5(c) of the…",
+      "text": "We start with this little document called the U.S. Constitution. Every one of us has sworn to uphold and defend this document. And we go to article I, the first article in the Constitution, section 8, and it spells out with clarity who declares war under this Constitution: The…"
+    },
+    {
+      "t": "quote",
+      "id": "L000571",
+      "url": "/bill/119-hr-3633-digital-asset-market-clarity-act-of-2025/",
+      "billId": "119-HR-3633",
+      "title": "Ms. Lummis",
+      "sub": "R-WY · on Digital Asset Market Clarity Act of 2025",
+      "text": "I rise today to speak about the Digital Asset Market Clarity Act, also known as the CLARITY Act, and about the years of work that brought us to this moment. Now, I only have a few minutes to get started, but I am just getting wound up. I am going to talk for a little while. Then…"
+    },
+    {
+      "t": "quote",
+      "id": "R000618",
+      "url": "/bill/119-hr-2444-promoting-resilient-supply-chains-act-of-2025/",
+      "billId": "119-HR-2444",
+      "title": "Mr. Ricketts",
+      "sub": "R-NE · on Promoting Resilient Supply Chains Act of 2025",
+      "text": "Integrity; integrity inspires confidence, and the reverse is true. If there is a perception of lack of integrity, it undermines confidence. We have a problem here in the Congress: 80 percent of Americans believe that we do not do a good job of separating our financial interests…"
+    },
+    {
+      "t": "quote",
+      "id": "M001242",
+      "url": "/bill/119-hr-8168-major-non-nato-ally-terror-threat-assessment-act/",
+      "billId": "119-HR-8168",
+      "title": "Mr. Moreno",
+      "sub": "R-OH · on Major Non-NATO Ally Terror Threat Assessment Act",
+      "text": "So I think it is important to clear up a couple of things in no particular order. First of all, I did not cosponsor the HONEST Act. I was the cosponsor of the PELOSI Act, which was a tribute--an honor--to the Member of the House of Representatives that made grift on this job an…"
+    },
+    {
+      "t": "quote",
+      "id": "M001153",
+      "url": "/bill/119-hr-6903-ensuring-children-receive-support-act/",
+      "billId": "119-HR-6903",
+      "title": "Ms. Murkowski",
+      "sub": "R-AK · on Ensuring Children Receive Support Act",
+      "text": "I come to the floor this evening to speak about legislation that I have recently introduced as chairman of the Indian Affairs Committee, alongside my friend Vice Chairman Schatz. The bill that we have introduced is the Native Children Commission Implementation Act."
+    },
+    {
+      "t": "quote",
+      "id": "S001217",
+      "url": "/bill/119-hr-22-save-act/",
+      "billId": "119-HR-22",
+      "title": "Mr. Scott",
+      "sub": "R-FL · on SAVE Act",
+      "text": "This bill is real simple. It is about protecting the integrity of American citizenship. It is also about our protecting children from exploitation and trafficking, and it is about closing a dangerous loophole that our foreign adversaries are using to undermine our national…"
+    },
+    {
+      "t": "quote",
+      "id": "G000386",
+      "url": "/floor.html",
+      "billId": null,
+      "title": "Mr. Grassley",
+      "sub": "R-IA",
+      "text": "In a bipartisan approach, about 5 years ago, we passed legislation to correct the wrongs in our organ transplant program. So, in my two decades spent fighting for U.S. organ donation reforms, I have heard far too many stories of patients who have lost their lives due to the…"
+    },
+    {
+      "t": "quote",
+      "id": "S000148",
+      "url": "/floor.html",
+      "billId": null,
+      "title": "Mr. Schumer",
+      "sub": "D-NY",
+      "text": "Today, the disastrous Trump economy delivered another one-two gut punch to the American people: Growth is down. Costs are up. The American people don't need government reports and economists to tell them how sluggish Trump's economy is or how high costs are. Americans see it at…"
+    },
+    {
+      "t": "quote",
+      "id": "T000250",
+      "url": "/bill/119-hr-8469-making-appropriations-for-military-construction-the-department-of/",
+      "billId": "119-HR-8469",
+      "title": "Mr. Thune",
+      "sub": "R-SD · on Making appropriations for military construction, the…",
+      "text": "Next week, our top priority will be funding the government until the November election. The American people have faced two--two--recordbreaking government shutdowns in the past 10 months. We need to ensure that they do not face a third. We owe the American people some certainty…"
+    },
+    {
+      "t": "quote",
+      "id": "B001261",
+      "url": "/floor.html",
+      "billId": null,
+      "title": "Mr. Barrasso",
+      "sub": "R-WY",
+      "text": "Today's Democrat Party is being driven by extremists, and there is actually an extreme group that is driving the party further and further to the left. It is called the Democratic Socialists of America. Its membership is growing, its radical candidates are winning, and its…"
+    },
+    {
+      "t": "quote",
+      "id": "M001111",
+      "url": "/bill/119-hr-8897-improving-travel-for-american-families-act/",
+      "billId": "119-HR-8897",
+      "title": "Mrs. Murray",
+      "sub": "D-WA · on Improving Travel for American Families Act",
+      "text": "While President Trump's top priorities are $1.5 trillion in war spending and a golden ballroom, those are not the priorities that American families are focused on. Everywhere I go, I hear from families about the crushing cost of childcare, so it is no surprise to me that 80…"
+    },
+    {
+      "t": "quote",
+      "id": "D000563",
+      "url": "/floor.html",
+      "billId": null,
+      "title": "Mr. Durbin",
+      "sub": "D-IL",
+      "text": "I have written a lot of bills and amendments. I have read even more. I am absolutely confounded by the language of this proposal, S. 3101, by my friend and colleague from Florida. There are so many issues bouncing around in this proposal of a serious nature that we would be…"
+    },
+    {
+      "t": "quote",
+      "id": "H000273",
+      "url": "/bill/119-s-160-aerial-firefighting-enhancement-act-of-2025/",
+      "billId": "119-S-160",
+      "title": "Mr. Hickenlooper",
+      "sub": "D-CO · on Aerial Firefighting Enhancement Act of 2025",
+      "text": "June 27 was one of the worst days in recent Colorado history. As the Knowles fire rolled along the Colorado- Utah border, the Rifle Helitack team put on their uniforms and rushed toward danger. While battling the blaze, one firefighter was badly injured and four others--Nick…"
+    },
+    {
+      "t": "quote",
+      "id": "L000571",
+      "url": "/bill/119-hr-3633-digital-asset-market-clarity-act-of-2025/",
+      "billId": "119-HR-3633",
+      "title": "Ms. Lummis",
+      "sub": "R-WY · on Digital Asset Market Clarity Act of 2025",
+      "text": "They are tremendously important to all of us. Digital Asset Market Clarity Act Madam President, yesterday I addressed this Chamber because we are wasting time we do not have to get the digital asset market structure bill passed, the bill called the Clarity Act. It is a strong…"
+    },
+    {
+      "t": "quote",
+      "id": "H001104",
+      "url": "/bill/119-s-146-take-it-down-act/",
+      "billId": "119-S-146",
+      "title": "Mr. Husted",
+      "sub": "R-OH · on TAKE IT DOWN Act",
+      "text": "I am going to take us back 100 years to August 5, 1926. It was in the midst of the Roaring Twenties. Calvin Coolidge was the President. Babe Ruth was ruling professional baseball. There was no television. Horses and cars shared the streets together. Life expectancy was 57 years.…"
+    },
+    {
+      "t": "quote",
+      "id": "B001288",
+      "url": "/bill/119-s-423-pro-veterans-act-of-2025/",
+      "billId": "119-S-423",
+      "title": "Mr. Booker",
+      "sub": "D-NJ · on PRO Veterans Act of 2025",
+      "text": "Before I begin my formal remarks, I just want to stand here and give a formal apology to John Merlino. I have for years maligned him. I have disrespected, disregarded him. You know how I operate sometimes. And I just want to say he is a man of honor. I have taken him off my…"
+    },
+    {
+      "t": "quote",
+      "id": "G000555",
+      "url": "/bill/119-hr-1316-maintaining-american-superiority-by-improving-export-control/",
+      "billId": "119-HR-1316",
+      "title": "Mrs. Gillibrand",
+      "sub": "D-NY · on Maintaining American Superiority by Improving Export…",
+      "text": "Pursuant to 50 U.S.C. 1546(a) and in accordance with section 601(b) of the International Security Assistance and Arms Export Control Act, I move to discharge the Committee on Foreign Relations from further consideration of S.J. Res. 181."
     },
     {
       "t": "article",

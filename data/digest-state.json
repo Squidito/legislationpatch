@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-07-29T20:00:08.677Z",
+  "lastRun": "2026-08-03T00:46:04.033Z",
   "stages": {
     "119-HCONRES-108": {
       "stage": "dead",
@@ -456,10 +456,15 @@
       "stageLabel": "Passed House",
       "stageDate": "2025-11-20"
     },
+    "119-HR-5254": {
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "stageDate": "2026-07-29"
+    },
     "119-HR-5334": {
       "stage": "house",
       "stageLabel": "Passed House",
-      "stageDate": "2026-07-28"
+      "stageDate": "2026-07-29"
     },
     "119-HR-5347": {
       "stage": "house",
@@ -491,6 +496,11 @@
       "stageLabel": "Passed House",
       "stageDate": "2026-05-18"
     },
+    "119-HR-5631": {
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "stageDate": "2026-07-29"
+    },
     "119-HR-6019": {
       "stage": "house",
       "stageLabel": "Passed House",
@@ -515,6 +525,11 @@
       "stage": "house",
       "stageLabel": "Passed House",
       "stageDate": "2026-01-26"
+    },
+    "119-HR-6365": {
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "stageDate": "2026-07-29"
     },
     "119-HR-6387": {
       "stage": "house",
@@ -639,7 +654,7 @@
     "119-HR-7831": {
       "stage": "house",
       "stageLabel": "Passed House",
-      "stageDate": "2026-07-15"
+      "stageDate": "2026-07-29"
     },
     "119-HR-7959": {
       "stage": "house",
@@ -719,7 +734,7 @@
     "119-HR-8595": {
       "stage": "house",
       "stageLabel": "Passed House",
-      "stageDate": "2026-07-15"
+      "stageDate": "2026-07-29"
     },
     "119-HR-8646": {
       "stage": "house",
@@ -993,6 +1008,15 @@
     }
   },
   "editions": [
+    {
+      "date": "2026-08-02",
+      "url": "/changelog/2026-08-02/",
+      "kind": "diff",
+      "counts": {
+        "total": 3,
+        "new": 3
+      }
+    },
     {
       "date": "2026-07-29",
       "url": "/changelog/2026-07-29/",

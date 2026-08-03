@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T22:07:08.771Z",
+  "generated": "2026-08-03T00:50:13.545Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -5556,7 +5556,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-28",
+      "stageDate": "2026-07-29",
       "votes": [
         {
           "chamber": "House",
@@ -7580,7 +7580,7 @@
           "billSection": "601",
           "subs": [
             "IRS: $3.04B taxpayer services; $5.00B enforcement; $3.16B operations support",
-            "SBA 7(a) loan guarantee ceiling: $35.5B; disaster loan ceiling: $15B",
+            "SBA 7(a) loan commitment ceiling: $35.5B; 7(a) trust certificate guarantee ceiling: $15B (Sec. 5(g) Small Business Act); disaster loan direct program: $282M",
             "Federal judiciary: $6.13B; GSA Federal Buildings Fund: $9.69B"
           ]
         },
@@ -7590,7 +7590,7 @@
           "subs": [
             "Foreign Military Financing: $6.16B — $3.3B grants-only for Israel; PEPFAR HIV/AIDS: $5.88B",
             "National Security Investment Programs (renamed Economic Support Fund): $6.77B, 15% min. for Africa; Jordan: $1.65B minimum; Egypt: $1.43B minimum",
-            "State Department operations: $9.36B; $900M permanently rescinded from prior-year funds (Sec. 7006)"
+            "State Department operations: $9.36B; $900M permanently rescinded from prior-year funds (Sec. 7072(a))"
           ]
         },
         {
@@ -7677,7 +7677,7 @@
           "items": [
             {
               "main": "Sets transfer authorities, designates $500M for Israeli cooperative missile defense programs, limits professional technical services to $2.886B, and authorizes $650M for contingency contracts.",
-              "detail": "Sec. 8021: $500M for Israeli Cooperative Programs — Arrow 3 ($173M), SRBMD ($127M), Arrow upper-tier co-production ($100M). $150M minimum for Jordan. Defense Security Cooperation Agency: $1.5B and $1.0B in separate security assistance tranches. Sec. 8001 prohibits use of funds for propaganda within the United States.",
+              "detail": "Sec. 8071: $500M for Israeli Cooperative Programs — Arrow System Improvement Program ($173M), SRBMD ($127M), Arrow 3 Upper Tier co-production ($100M). $150M minimum for Jordan. Taiwan Security Cooperation Initiative under DSCA: $1.0B (Sec. 8143). DNI transfer authority for the National Intelligence Program: $1.5B (Sec. 8089). Sec. 8001 prohibits use of funds for propaganda within the United States.",
               "comments": []
             }
           ]
@@ -7736,7 +7736,7 @@
           "label": "Title I — Department of the Treasury",
           "items": [
             {
-              "main": "Appropriates $3.04B for IRS taxpayer services, $5.00B for IRS enforcement, $3.16B for operations support, $271.2M for business systems modernization, $237.7M for terrorism and financial intelligence, and $21M for CFIUS (offset by fees).",
+              "main": "Appropriates $3.04B for IRS taxpayer services, $5.00B for IRS enforcement, $3.16B for operations support, $271.2M for the Taxpayer Advocate Service (within Taxpayer Services), $237.7M for terrorism and financial intelligence, and $21M for CFIUS (offset by fees).",
               "detail": "IRS taxpayer services: $3.04B; up to $186M remains available until September 30, 2027. IRS enforcement covers tax collection, legal support, and criminal investigation. CFIUS: $21M general fund reduced to $0 as filing fee collections are received. Treasury Office of Intelligence: $185.2M.",
               "comments": []
             }
@@ -7766,8 +7766,8 @@
           "label": "Title I — Department of State and Related Programs",
           "items": [
             {
-              "main": "Appropriates $9.36B for Administration of Foreign Affairs including Worldwide Security Protection ($3.03B), embassy operations, the Truman Building renovation ($812.8M), and international broadcasting ($3.99B).",
-              "detail": "Diplomatic policy: $1.44B. Embassy security construction: $1.2B. Educational and cultural exchange: $983.3M from consular fees. Permanent rescission of $900M in prior-year State/Foreign Ops funds in Sec. 7006. Public diplomacy and international media: $3.99B.",
+              "main": "Appropriates $9.36B for Administration of Foreign Affairs including Worldwide Security Protection ($3.03B), embassy operations, the Truman Building renovation ($812.8M), and international broadcasting ($643M).",
+              "detail": "Overseas programs: $1.44B; diplomatic policy and support: $871.6M. Embassy security construction: $1.2B. Educational and cultural exchange: $983.3M from consular fees. Permanent rescission of $900M in prior-year State/Foreign Ops funds in Sec. 7072(a). USAGM international broadcasting: $643M.",
               "comments": []
             }
           ]
@@ -7797,7 +7797,7 @@
           "items": [
             {
               "main": "Establishes the America First Opportunity Fund (up to $850M transfer authority), permanently rescinds $900M from prior-year funds, and sets conditions on aid to specific countries.",
-              "detail": "Sec. 7045: up to $850M from Peacekeeping Operations, ESF, and FMF may be redirected for 'America First' purposes. Sec. 7006: $900M permanent rescission. Country-specific conditions and certifications in Secs. 7029-7071.",
+              "detail": "Sec. 7071: up to $850M from National Security Investment Programs, International Narcotics Control and Law Enforcement, Peacekeeping Operations, and Foreign Military Financing may be redirected for 'America First' purposes. Sec. 7072(a): $900M permanent rescission. Country-specific conditions and certifications in Secs. 7029-7071.",
               "comments": []
             }
           ]
@@ -7942,17 +7942,13 @@
         {
           "section": "Division G — UNRWA Funding Prohibition",
           "summary": "Bars all U.S. funds, including from prior fiscal years, from being contributed to UNRWA through March 25, 2027 — a retroactive restriction on already-enacted spending authority for prior years.",
-          "why_unreported": "Division G is a single provision with no appropriations amounts. The retroactive application to prior-year funds makes it a clawback on previously enacted spending authority, not merely a prospective restriction — an effect not indicated by the division label 'Other Matters.'"
+          "why_unreported": "Division G is a single provision with no appropriations amounts. Paragraph (1) applies the funding bar to amounts provided in prior fiscal years and FY2026, making it a clawback on previously enacted spending authority in addition to the FY2027 prospective bar in paragraph (2) — an effect not indicated by the division label 'Other Matters.'"
         }
       ],
       "criticisms": [
         {
-          "who": "Ms. Baldwin (D-WI)",
-          "why": "This amendment would completely eliminate funding for an office that helps some of the most vulnerable in our country. This office helps shelter and care for children who are seeking safety. It makes sure that these children aren't being trafficked. It makes sure these children aren't stuck in cages in Border Patrol facilities for extended periods of time."
-        },
-        {
-          "who": "Mrs. Capito (R-WV)",
-          "why": "This amendment would eliminate HHS funding provided in the bill — which the Trump administration actually requested in their budget — that will allow the Agency to drastically improve sponsor vetting for unaccompanied children, ensuring that they are no longer released to human traffickers."
+          "who": "Mr. Calvert (R-CA)",
+          "why": "This legislation was a true bipartisan effort by all four corners of the Defense Subcommittee of the Committee on Appropriations. The world is more dangerous than ever. China continues its rapid military expansion. Russia and Iran remain persistent threats. Illicit drugs continue to harm Americans here at home. This bill answers that challenge. It provides $839.2 billion to strengthen deterrence, support the administration's America First defense agenda, and modernize our force."
         }
       ],
       "gaps": [
@@ -7960,12 +7956,49 @@
         "The DHS continuing resolution runs only through February 13, 2026, leaving border security and immigration enforcement funding unresolved within days of enactment.",
         "Division G bars UNRWA contributions but does not specify alternative humanitarian delivery mechanisms for Palestinian refugees who rely on UNRWA for food, education, and health services."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Calvert",
+          "party": "R",
+          "state": "CA",
+          "bioguideId": "C000059",
+          "text": "This legislation was a true bipartisan effort by all four corners of the Defense Subcommittee of the Committee on Appropriations. The world is more dangerous than ever. China continues its rapid military expansion. Russia and Iran remain persistent threats. Illicit drugs continue to harm Americans here at home. This bill answers that challenge. It provides $839.2 billion to strengthen deterrence, support the administration's America First defense agenda, and modernize our force.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Case",
+          "party": "D",
+          "state": "HI",
+          "bioguideId": "C001055",
+          "text": "Madam Speaker, I join the vast majority of Americans in condemning the actions of Immigration and Customs Enforcement. There is brutality and death in our streets, so-called leaders trashing victims and their grieving families, warrantless searches, and fear in our own citizens. I had a State senator in my own district tell me this last week that she was fearful of going out to talk to her constituents in her district without her passport. This is unacceptable. This is un-American, and ICE must be reformed.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Collins",
+          "party": "R",
+          "state": "GA",
+          "bioguideId": "C001129",
+          "text": "It includes full-year funding for the following bills: the Department of Defense; Financial Services and General Government; Labor, Health and Human Services, and Education; National Security; Department of Defense; Transportation, Housing and Urban Development.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Schumer",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "S000148",
+          "text": "As the Senate gavels into session, Members are working on moving forward on a deal to fund the government and working on legislation desperately needed to rein in ICE's abuses. If Republicans are serious about the very reasonable demands Democrats have put forward on ICE, then there is no good reason we can't come together very quickly to produce legislation. It should take less than 2 weeks because what we are asking for is very simple, and our Republican colleagues know that we need to make changes. Now, time is of the essence.",
+          "stance": "neutral",
+          "chamber": "Senate"
+        }
+      ],
       "changes": {
         "added": [
           "Medicare coverage for multi-cancer early detection (MCED) screening tests (Sec. 6221)",
           "Abraham Accords Office established within the Food and Drug Administration (Sec. 6611)",
-          "America First Opportunity Fund: up to $850M transfer authority from existing foreign assistance accounts (Sec. 7045)",
+          "America First Opportunity Fund: up to $850M transfer authority from existing foreign assistance accounts (Sec. 7071)",
           "FF(X)-Frigate: $242M initial procurement appropriation in Division A",
           "Medicare coverage for external infusion pumps and non-self-administrable home infusion drugs (Sec. 6222)"
         ],
@@ -7983,7 +8016,7 @@
         ],
         "removed": [
           "$11.66B in unobligated Inflation Reduction Act education funds rescinded (Sec. 528)",
-          "$900M permanently rescinded from prior-year State and Foreign Operations appropriations (Sec. 7006)",
+          "$900M permanently rescinded from prior-year State and Foreign Operations appropriations (Sec. 7072(a))",
           "Expiration date removed from sex offense special assessment (18 U.S.C. § 3014) — making it permanent (Sec. 5012)",
           "Age restrictions removed for working adults with disabilities seeking Medicaid eligibility (Sec. 6102)"
         ]
@@ -8073,7 +8106,7 @@
             {
               "headline": "Israeli Defense Cooperation",
               "subs": [
-                "$500M from O&M and RDT&E for Israeli Cooperative Programs: Arrow 3 ($173M), SRBMD ($127M), Arrow upper-tier co-production ($100M)",
+                "$500M from O&M and RDT&E for Israeli Cooperative Programs: Arrow System Improvement Program ($173M), SRBMD ($127M), Arrow 3 Upper Tier co-production ($100M)",
                 "$150M minimum for Jordan from operation and maintenance funds"
               ]
             },
@@ -8138,7 +8171,7 @@
               "items": [
                 {
                   "main": "Sets transfer authorities, designates $500M for Israeli cooperative missile defense programs, limits professional technical services to $2.886B, and authorizes $650M for contingency contracts.",
-                  "detail": "Sec. 8021: $500M for Israeli Cooperative Programs — Arrow 3 ($173M), SRBMD ($127M), Arrow upper-tier co-production ($100M). $150M minimum for Jordan. Defense Security Cooperation Agency: $1.5B and $1.0B in separate security assistance tranches. Sec. 8001 prohibits use of funds for propaganda within the United States.",
+                  "detail": "Sec. 8071: $500M for Israeli Cooperative Programs — Arrow System Improvement Program ($173M), SRBMD ($127M), Arrow 3 Upper Tier co-production ($100M). $150M minimum for Jordan. Taiwan Security Cooperation Initiative under DSCA: $1.0B (Sec. 8143). DNI transfer authority for the National Intelligence Program: $1.5B (Sec. 8089). Sec. 8001 prohibits use of funds for propaganda within the United States.",
                   "comments": []
                 }
               ]
@@ -8171,7 +8204,7 @@
           "changes": {
             "added": [
               "FF(X)-Frigate: initial $242M procurement appropriation for a new frigate class",
-              "Up to $500M additional military readiness funding in Sec. 8153"
+              "$500M for solid rocket motor industrial base investment in Sec. 8153"
             ],
             "modified": [
               "Title II O&M reduced by $2.8B through three legislated efficiency cuts",
@@ -8429,7 +8462,7 @@
             {
               "headline": "Small Business Lending",
               "subs": [
-                "SBA 7(a) loan guarantee ceiling: $35.5B; disaster loan ceiling: $15B",
+                "SBA 7(a) loan commitment ceiling: $35.5B; 7(a) trust certificate guarantee ceiling: $15B (Sec. 5(g) Small Business Act); disaster loan direct program: $282M",
                 "SBIC debenture guarantee ceiling: $6B; SBIC equity guarantee ceiling: $16.5B"
               ]
             },
@@ -8459,7 +8492,7 @@
               "label": "Title I — Department of the Treasury",
               "items": [
                 {
-                  "main": "Appropriates $3.04B for IRS taxpayer services, $5.00B for IRS enforcement, $3.16B for operations support, $271.2M for business systems modernization, $237.7M for terrorism and financial intelligence, and $21M for CFIUS (offset by fees).",
+                  "main": "Appropriates $3.04B for IRS taxpayer services, $5.00B for IRS enforcement, $3.16B for operations support, $271.2M for the Taxpayer Advocate Service (within Taxpayer Services), $237.7M for terrorism and financial intelligence, and $21M for CFIUS (offset by fees).",
                   "detail": "IRS taxpayer services: $3.04B; up to $186M remains available until September 30, 2027. IRS enforcement covers tax collection, legal support, and criminal investigation. CFIUS: $21M general fund reduced to $0 as filing fee collections are received. Treasury Office of Intelligence: $185.2M.",
                   "comments": []
                 }
@@ -8508,7 +8541,7 @@
             "added": [],
             "modified": [
               "IRS FY2026 levels: Taxpayer Services $3.04B, Enforcement $5.00B, Operations Support $3.16B",
-              "SBA 7(a) guarantee ceiling: $35.5B; disaster loan ceiling: $15B"
+              "SBA 7(a) loan commitment ceiling: $35.5B; 7(a) trust certificate guarantee ceiling: $15B (Sec. 5(g)); disaster loan direct program: $282M"
             ],
             "removed": []
           }
@@ -8523,7 +8556,7 @@
               "headline": "State Department Operations",
               "subs": [
                 "Administration of Foreign Affairs: $9.36B; Worldwide Security Protection: $3.03B",
-                "Diplomatic policy and support: $1.44B; Harry S Truman Building renovation: $812.8M",
+                "Overseas programs: $1.44B; diplomatic policy and support: $871.6M; Harry S Truman Building renovation: $812.8M",
                 "Embassy security construction: $1.2B"
               ]
             },
@@ -8565,13 +8598,13 @@
             {
               "headline": "America First Opportunity Fund",
               "subs": [
-                "Up to $850M may be redirected from Peacekeeping, Economic Support Fund, and FMF for 'America First' projects (Sec. 7045)"
+                "Up to $850M may be redirected from NSIP, INCLE, Peacekeeping Operations, and FMF for 'America First' projects (Sec. 7071)"
               ]
             },
             {
               "headline": "Permanent Rescission",
               "subs": [
-                "$900M permanently rescinded from prior-year State and Foreign Operations appropriations (Sec. 7006)"
+                "$900M permanently rescinded from prior-year State and Foreign Operations appropriations (Sec. 7072(a))"
               ]
             }
           ],
@@ -8580,8 +8613,8 @@
               "label": "Title I — Department of State and Related Programs",
               "items": [
                 {
-                  "main": "Appropriates $9.36B for Administration of Foreign Affairs including Worldwide Security Protection ($3.03B), embassy operations, the Truman Building renovation ($812.8M), and international broadcasting ($3.99B).",
-                  "detail": "Diplomatic policy: $1.44B. Embassy security construction: $1.2B. Educational and cultural exchange: $983.3M from consular fees. Permanent rescission of $900M in prior-year State/Foreign Ops funds in Sec. 7006. Public diplomacy and international media: $3.99B.",
+                  "main": "Appropriates $9.36B for Administration of Foreign Affairs including Worldwide Security Protection ($3.03B), embassy operations, the Truman Building renovation ($812.8M), and international broadcasting ($643M).",
+                  "detail": "Overseas programs: $1.44B; diplomatic policy and support: $871.6M. Embassy security construction: $1.2B. Educational and cultural exchange: $983.3M from consular fees. Permanent rescission of $900M in prior-year State/Foreign Ops funds in Sec. 7072(a). USAGM international broadcasting: $643M.",
                   "comments": []
                 }
               ]
@@ -8611,7 +8644,7 @@
               "items": [
                 {
                   "main": "Establishes the America First Opportunity Fund (up to $850M transfer authority), permanently rescinds $900M from prior-year funds, and sets conditions on aid to specific countries.",
-                  "detail": "Sec. 7045: up to $850M from Peacekeeping Operations, ESF, and FMF may be redirected for 'America First' purposes. Sec. 7006: $900M permanent rescission. Country-specific conditions and certifications in Secs. 7029-7071.",
+                  "detail": "Sec. 7071: up to $850M from National Security Investment Programs, International Narcotics Control and Law Enforcement, Peacekeeping Operations, and Foreign Military Financing may be redirected for 'America First' purposes. Sec. 7072(a): $900M permanent rescission. Country-specific conditions and certifications in Secs. 7029-7071.",
                   "comments": []
                 }
               ]
@@ -8619,12 +8652,12 @@
           ],
           "underreported": [
             {
-              "section": "Sec. 7045 — America First Opportunity Fund",
-              "summary": "Allows up to $850M from Peacekeeping Operations, Economic Support Fund, and Foreign Military Financing to be redirected for 'America First' priorities without a specified project list.",
+              "section": "Sec. 7071 — America First Opportunity Fund",
+              "summary": "Allows up to $850M from National Security Investment Programs, International Narcotics Control and Law Enforcement, Peacekeeping Operations, and Foreign Military Financing to be redirected for 'America First' priorities without a specified project list.",
               "why_unreported": "Embedded in general provisions as a transfer authority, the provision allows $850M to be moved away from its appropriated purpose without separate authorization for each reallocation or a defined criteria for 'America First' projects."
             },
             {
-              "section": "Sec. 7006 — Permanent Rescission",
+              "section": "Sec. 7072(a) — Permanent Rescission",
               "summary": "Permanently rescinds $900M from prior-year State and Foreign Operations appropriations previously enacted by Congress.",
               "why_unreported": "A rescission of previously enacted foreign assistance appears as a general provision in Title VII, reducing total foreign assistance authority by $900M beyond the headline appropriation levels without listing the specific accounts affected."
             }
@@ -8637,7 +8670,7 @@
           "featured_quotes": [],
           "changes": {
             "added": [
-              "America First Opportunity Fund: up to $850M transfer authority from Peacekeeping, ESF, and FMF (Sec. 7045)"
+              "America First Opportunity Fund: up to $850M transfer authority from NSIP, INCLE, Peacekeeping Operations, and FMF (Sec. 7071)"
             ],
             "modified": [
               "FMF Israel grants floor: $3.3B minimum out of $6.16B total",
@@ -8646,7 +8679,7 @@
               "PEPFAR: $5.88B, available until September 30, 2030"
             ],
             "removed": [
-              "$900M permanently rescinded from prior-year State/Foreign Ops (Sec. 7006)"
+              "$900M permanently rescinded from prior-year State/Foreign Ops (Sec. 7072(a))"
             ]
           }
         },
@@ -9056,7 +9089,7 @@
         }
       ],
       "billType": "appropriation",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-02",
       "versions": [
         {
           "type": "Introduced in House",
@@ -10793,7 +10826,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-15",
+      "stageDate": "2026-07-29",
       "billType": "reauthorization",
       "votes": [
         {
@@ -10804,7 +10837,7 @@
           "method": "Voice Vote"
         }
       ],
-      "analyzedAt": "2026-07-20",
+      "analyzedAt": "2026-08-02",
       "versions": [
         {
           "type": "Introduced in House",
@@ -20661,7 +20694,17 @@
       "underreported": [],
       "criticisms": [],
       "gaps": [],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Ciscomani",
+          "party": "R",
+          "state": "AZ",
+          "bioguideId": "C001133",
+          "text": "As the Representative of a district with an international airport, a border with Mexico, many Border Patrol and CBP agents, ICE, HSI, other Homeland Security personnel, and a State that gets struck by devastating wildfires every single year where FEMA is essential, as well as the vice chairman of the Appropriations Subcommittee on Homeland Security, I am proud to lead this legislation to ensure that the men and women who keep our country safe are paid for their service and that we stop putting every single American at risk by funding our",
+          "stance": "support",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [],
         "modified": [],
@@ -39795,7 +39838,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "appropriation",
-      "stageDate": "2026-07-15",
+      "stageDate": "2026-07-29",
       "likelihood": 38,
       "likelihoodLabel": "Possible",
       "likelihoodReason": "The sponsor is a Republican in the Republican-majority House and the bill passed the House with no cosponsors, as is typical for an appropriations measure. Standalone appropriations bills are generally reconciled with a Senate version or folded into a broader package before enactment, and Senate passage would require 60 votes.",
@@ -39836,7 +39879,7 @@
           "items": [
             {
               "main": "Provides $9.76B for Diplomatic Programs, the Department of State's main operating account.",
-              "detail": "Of that amount, up to $4.16B remains available until expended for overseas operations and $738.6M is for Worldwide Security Protection. The title also funds embassy security and construction, the Harry S Truman Building, and educational and cultural exchange programs.",
+              "detail": "Of that amount, up to $4.16B may remain available until expended for Worldwide Security Protection, and an additional $738.6M within the $4.00B Human Resources allocation is also designated for Worldwide Security Protection. The title also funds consular and border security programs, the Capital Investment Fund, and educational and cultural exchange programs.",
               "comments": []
             }
           ]
@@ -39974,7 +40017,7 @@
         ]
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-07-24",
+      "analyzedAt": "2026-08-02",
       "votes": [
         {
           "chamber": "House",
@@ -40004,6 +40047,11 @@
           "type": "Reported in House",
           "date": "2026-04-30",
           "url": "https://www.congress.gov/119/bills/hr8595/BILLS-119hr8595rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-15",
+          "url": "https://www.congress.gov/119/bills/hr8595/BILLS-119hr8595eh.htm"
         }
       ]
     },
@@ -41538,7 +41586,38 @@
         "modified": [],
         "removed": []
       },
-      "budget_accounts": {}
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-16",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-09-10",
+          "url": "https://www.congress.gov/119/bills/hr5254/BILLS-119hr5254ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-03-02",
+          "url": "https://www.congress.gov/119/bills/hr5254/BILLS-119hr5254rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-03-16",
+          "url": "https://www.congress.gov/119/bills/hr5254/BILLS-119hr5254eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-03-17",
+          "url": "https://www.congress.gov/119/bills/hr5254/BILLS-119hr5254rfs.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-5631",
@@ -41668,7 +41747,35 @@
         "The bill creates an Ombudsman to resolve permitting disputes but gives applicants no appeal or enforcement mechanism if the 60-day deadline is missed.",
         "The bill ends cost-recovery authority on September 30, 2033 but does not address how permitting costs are funded after that date."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Kennedy",
+          "party": "R",
+          "state": "UT",
+          "bioguideId": "K000403",
+          "text": "Today, we have an opportunity to unlock one of America's greatest untapped energy resources and invest in our Nation's future. First, I thank Representative Hurd, Chairman Westerman, and my colleagues on the Natural Resources Committee, and the staff, theirs and mine, who put the work in to build this historic geothermal package. I am proud that my own bill, the Geothermal Royalty Reform Act, is being passed as part of it, giving developers the regulatory certainty they need to build.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Hurd",
+          "party": "R",
+          "state": "CO",
+          "bioguideId": "H001100",
+          "text": "I begin by thanking my Republican colleagues Representatives Lee, Maloy, and Kennedy and my Democratic colleagues Representatives Ansari and Ocasio-Cortez for their partnership on this bipartisan legislation. At a time when Americans are often told Congress cannot work together across the aisle, this bill is proof that we still can. Geothermal energy represents one of the most promising opportunities in America's energy future.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Lee",
+          "party": "D",
+          "state": "NV",
+          "bioguideId": "L000590",
+          "text": "Particularly during a time when it too often can feel like Congress can't agree on anything, today's package is a standout in the best way. As the United States continues to face increasing energy demand here at home and rising energy costs from abroad, fully harnessing our domestic  geothermal resources is more important than ever. My home State of Nevada has been a pioneer of both conventional and next-generation geothermal energy, including as the site of the country's first enhanced geothermal plant.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A 60-day decision deadline for certain geothermal authorizations after federal reviews are complete.",
@@ -41682,7 +41789,38 @@
         ],
         "removed": []
       },
-      "budget_accounts": {}
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-06-02",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-09-30",
+          "url": "https://www.congress.gov/119/bills/hr5631/BILLS-119hr5631ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-05-20",
+          "url": "https://www.congress.gov/119/bills/hr5631/BILLS-119hr5631rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-06-02",
+          "url": "https://www.congress.gov/119/bills/hr5631/BILLS-119hr5631eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-06-03",
+          "url": "https://www.congress.gov/119/bills/hr5631/BILLS-119hr5631rfs.htm"
+        }
+      ]
     },
     {
       "id": "119-HR-6365",
@@ -41766,7 +41904,17 @@
         "The bill requires a fire-ecology analysis but does not state what findings, if any, would prevent issuance of the right-of-way.",
         "The bill makes issuance mandatory once the reports are complete but sets no deadline for completing those reports and reviews."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. McGuire",
+          "party": "R",
+          "state": "VA",
+          "bioguideId": "M001239",
+          "text": "Wintergreen, Virginia, is a popular tourist destination located in my district. Wintergreen is one of the largest planned communities in Virginia, with over 3,000 properties situated on 11,000 acres. The risk of wildfires was not top of mind when this mountaintop community was designed in the 1970s. The original developers did not reserve an emergency egress corridor before conveying a few thousand acres of unneeded land to the Appalachian Trail commission. Because of this, Wintergreen only has one entrance and one exit route.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "A mandatory duty for the Secretary of the Interior to issue the specified Blue Ridge Parkway right-of-way for the Wintergreen emergency exit, once the required findings are reported."
@@ -41776,7 +41924,38 @@
         ],
         "removed": []
       },
-      "budget_accounts": {}
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-03-03",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Voice Vote"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-12-02",
+          "url": "https://www.congress.gov/119/bills/hr6365/BILLS-119hr6365ih.htm"
+        },
+        {
+          "type": "Reported in House",
+          "date": "2026-02-23",
+          "url": "https://www.congress.gov/119/bills/hr6365/BILLS-119hr6365rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-03-03",
+          "url": "https://www.congress.gov/119/bills/hr6365/BILLS-119hr6365eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-03-04",
+          "url": "https://www.congress.gov/119/bills/hr6365/BILLS-119hr6365rfs.htm"
+        }
+      ]
     }
   ]
 }

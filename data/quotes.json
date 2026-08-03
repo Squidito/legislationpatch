@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T20:55:07.469Z",
+  "generated": "2026-08-03T00:51:19.603Z",
   "processedDates": [
     "2026-05-07",
     "2026-05-11",
@@ -44,7 +44,9 @@
     "2026-07-22",
     "2026-07-23",
     "2026-07-27",
-    "2026-07-28"
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30"
   ],
   "quotes": [
     {
@@ -775,8 +777,8 @@
       "text": "It doesn't seem to matter who President Trump nominates-- the Democrats blindly oppose them. Democrats aren't interested in a person's qualifications. All they care about is opposing President Trump, and it has been that way since he took office last January. President Trump is the only President on record who has not had a single--single--civilian nominee approved by voice vote or by unanimous consent here in the U.S. Senate--the only President in history. Democrats have dragged out the process on every single one of his nominations.",
       "source": "Senate Floor, May 13, 2026",
       "stance": "oppose",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-5125",
+      "billTitle": "District of Columbia Judicial Nominations Reform Act of 2025",
       "chamber": "Senate",
       "granuleId": "CREC-2026-05-13-pt1-PgS2250-2"
     },
@@ -1282,8 +1284,8 @@
       "text": "While I voted no on S. Res. 690, which calls for an up or down vote on 49 nominations, en bloc, I would have voted yes on the following nominations if I had the opportunity to vote on each nomination separately: 1. Cal. #615--Andrew Benson, of Maine, to be United States Attorney for the District of Maine for the term of four years. 2.",
       "source": "Senate Floor, May 18, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-5125",
+      "billTitle": "District of Columbia Judicial Nominations Reform Act of 2025",
       "chamber": "Senate",
       "granuleId": "CREC-2026-05-18-pt1-PgS2321-2"
     },
@@ -1351,19 +1353,6 @@
       "billTitle": "Main Street Capital Access Act",
       "chamber": "House",
       "granuleId": "CREC-2026-05-19-pt1-PgH3582"
-    },
-    {
-      "name": "Mr. Murphy",
-      "party": "D",
-      "state": "CT",
-      "bioguideId": "M001169",
-      "text": "I am glad to join Senator Kaine on the floor today in support of his resolution. I have admittedly lost count on how many of these resolutions we have brought before the body. This must be our seventh, eighth, or ninth. That is extraordinary, duplicative, redundant, but necessary because, at least in my time in the Senate, never before has this country engaged in such a significant, consequential, deadly, and costly military operation overseas without the consent of the people and without the consent of Congress.",
-      "source": "Senate Floor, May 19, 2026",
-      "stance": "support",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-05-19-pt1-PgS2353"
     },
     {
       "name": "Mr. Durbin",
@@ -1730,19 +1719,6 @@
       "granuleId": "CREC-2026-05-21-pt1-PgH3716-6"
     },
     {
-      "name": "Mr. Thune",
-      "party": "R",
-      "state": "SD",
-      "bioguideId": "T000250",
-      "text": "I understand that there is a bill at the desk, and I ask for its first reading. The senior assistant legislative clerk read as follows: A bill (S. 4632) to provide for a period of continuing appropriations in the event of a lapse in appropriations under the normal appropriations process, to establish procedures and consequences in the event of a failure to enact appropriations, and for other purposes.",
-      "source": "Senate Floor, May 21, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-05-21-pt1-PgS2452-5"
-    },
-    {
       "name": "Mr. Latimer",
       "party": "D",
       "state": "NY",
@@ -1754,19 +1730,6 @@
       "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
       "chamber": "House",
       "granuleId": "CREC-2026-05-21-pt1-PgH3674"
-    },
-    {
-      "name": "Mr. Ciscomani",
-      "party": "R",
-      "state": "AZ",
-      "bioguideId": "C001133",
-      "text": "The number five Willcox Cowgirls defeated the number two Mohave Accelerated in Bullhead City with a score of 5-3 to claim the championship and finish the season with an impressive 16-3 record. This victory marks the Cowgirls' first State softball title in 16 years, an accomplishment certainly to be celebrated. This championship didn't come easy, though. On their way to the game, the team's bus broke down, but the Cowgirls didn't let this setback get in the way of the most important day of the season.",
-      "source": "House Floor, May 21, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-05-21-pt1-PgH3674-2"
     },
     {
       "name": "Mr. Mann",
@@ -1964,19 +1927,6 @@
       "granuleId": "CREC-2026-06-02-pt1-PgH3749"
     },
     {
-      "name": "Mr. Cohen",
-      "party": "D",
-      "state": "TN",
-      "bioguideId": "C001068",
-      "text": "Mr. Speaker, I was the original sponsor of this bill, and I am happy that Mr. Fleischmann, whose district is much closer to it and probably encompasses part of it, accepted the proud sponsorship that has got it to this point. The Benton MacKaye Trail is a beautiful and long trail. It is the longest trail in the Great Smoky Mountain National Park. It overlaps the Appalachian Trail at six separate points and passes through three national forests.",
-      "source": "House Floor, Jun 2, 2026",
-      "stance": "support",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-02-pt1-PgH3749"
-    },
-    {
       "name": "Ms. Stansbury",
       "party": "D",
       "state": "NM",
@@ -2066,19 +2016,6 @@
       "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-03-pt1-PgS2504"
-    },
-    {
-      "name": "Mrs. Ramirez",
-      "party": "D",
-      "state": "IL",
-      "bioguideId": "R000617",
-      "text": "I rise today to join human rights defenders across the world to call for the immediate and unconditional release of Ruth Eleonora Lopez, who has been held in pretrial detention for over 1 year without any due process and without access to her family or even her lawyer. A Salvadoran lawyer and human rights defender, Ruth is a political prisoner, unjustly targeted for her tireless fight against corruption and her demands for justice, accountability, and transparency from Bukele's government in El Salvador.",
-      "source": "House Floor, Jun 3, 2026",
-      "stance": "oppose",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-03-pt1-PgH3783"
     },
     {
       "name": "Mr. Schumer",
@@ -2183,19 +2120,6 @@
       "billTitle": "Homeland Security and Further Additional Continuing Appropriations Act, 2026",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-03-pt1-PgS2503-4"
-    },
-    {
-      "name": "Mr. Hickenlooper",
-      "party": "D",
-      "state": "CO",
-      "bioguideId": "H000273",
-      "text": "On Monday, Tina Peters walked out of prison. The convicted felon and former county clerk is free after serving less than a quarter of her sentence, a sentence she earned when she violated her oath and tried to undermine Colorado's free and fair elections. That doesn't just make her a conspiracy theorist; it makes her a criminal. Tina Peters had her day in court. She was prosecuted by a Republican district attorney and convicted by a jury of her peers in a Republican stronghold. The verdict was unanimous. Tina Peters was guilty as sin.",
-      "source": "Senate Floor, Jun 3, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-03-pt1-PgS2510"
     },
     {
       "name": "Mr. Mann",
@@ -2523,19 +2447,6 @@
       "granuleId": "CREC-2026-06-08-pt1-PgH3936"
     },
     {
-      "name": "Mr. Bera",
-      "party": "D",
-      "state": "CA",
-      "bioguideId": "B001287",
-      "text": "Since its establishment 28 years ago, USCIRF has served as an independent, bipartisan watchdog monitoring conditions on the ground and providing policy recommendations to Congress and the administration. Its work reinforces the principles reflected in Article 18 of the Universal Declaration of Human Rights and helps ensure that our advocacy for religious freedom is consistent, credible, and universal. True religious liberty cannot mean protection for only a favored few. It extends to all people.",
-      "source": "House Floor, Jun 8, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-08-pt1-PgH3947"
-    },
-    {
       "name": "Mr. Thune",
       "party": "R",
       "state": "SD",
@@ -2556,8 +2467,8 @@
       "text": "Well, just about everyone in America hates Trump's slush fund, but every Senate Republican but one is culpable for allowing Trump to go forward with the slush fund. Again, people in America hate the fund. Every Senate Republican allowed Trump to go forward with the slush fund. They supported a reconciliation bill that had no restraints on Trump's corrupt slush fund even after Democrats forced vote after  vote in trying to ban the fund.",
       "source": "Senate Floor, Jun 8, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-4405",
+      "billTitle": "Epstein Files Transparency Act",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-08-pt1-PgS2657-3"
     },
@@ -2790,8 +2701,8 @@
       "text": "Americans are fed up with this government. They are fed up with money in politics. They are fed up with not knowing who they can trust. Corporations and billionaires are spending more than ever in an effort to influence our elections, and we are seeing more and more campaigns paying social media influencers to promote their candidates. Voters deserve to know who is getting paid. They deserve to know where corporations are spending their money and which billionaires are buying elections and how.",
       "source": "House Floor, Jun 10, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
       "chamber": "House",
       "granuleId": "CREC-2026-06-10-pt1-PgH4064"
     },
@@ -2881,8 +2792,8 @@
       "text": "I will make my remarks very, very brief. For those watching on TV, wondering what their government did this week, what you just witnessed on the floor of the U.S. Senate is one Democrat, at least, who is willing to have his position stated. The other ones are hiding because they know what they did today was so wrong. At the end of the day, the most important job we have is to protect the American people. And because of Democrat political posturing, they made this country less safe.",
       "source": "Senate Floor, Jun 11, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-5103",
+      "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-11-pt1-PgS2747"
     },
@@ -2926,19 +2837,6 @@
       "granuleId": "CREC-2026-06-11-pt1-PgH4088-2"
     },
     {
-      "name": "Mr. Ruiz",
-      "party": "D",
-      "state": "CA",
-      "bioguideId": "R000599",
-      "text": "I rise today with an important message for the Trump administration: The Arctic National Wildlife Refuge is not for sale. For the third time, they have tried to sell off the Arctic National Wildlife Refuge to Big Oil, and for the third time, it has flopped. Last Friday's lease sale brought in less than 1 percent of projected revenue. Not one major oil company even showed up, and for good reason. Last summer, I traveled to the Arctic National Wildlife Refuge.",
-      "source": "House Floor, Jun 11, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-11-pt1-PgH4088-4"
-    },
-    {
       "name": "Ms. Dean",
       "party": "D",
       "state": "PA",
@@ -2950,19 +2848,6 @@
       "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
       "chamber": "House",
       "granuleId": "CREC-2026-06-11-pt1-PgH4088-5"
-    },
-    {
-      "name": "Mr. Sessions",
-      "party": "R",
-      "state": "TX",
-      "bioguideId": "S000250",
-      "text": "I do want to respond to the gentleman. I do want to respond to the gentleman and tell him today is that open invitation. He and I know that this is a lot of work, work that is factually based. It is not just showing up--and I don't doubt anything he has said--but showing up with the evidence of who, how, where, why did this happen, and what is being done. I would just say that the gentleman knows that our Government Operations Subcommittee is ready and open and available--that he would have to admit here on the floor-- on a bipartisan basis.",
-      "source": "House Floor, Jun 11, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-11-pt1-PgH4089"
     },
     {
       "name": "Mr. Smith",
@@ -3067,19 +2952,6 @@
       "billTitle": "21st Century ROAD to Housing Act",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-15-pt1-PgS2781"
-    },
-    {
-      "name": "Mr. Grassley",
-      "party": "R",
-      "state": "IA",
-      "bioguideId": "G000386",
-      "text": "The United States-Mexico-Canada Agreement has been in force for 6 years. It is scheduled for review-- and renewal, I hope--now, and that process is going on. I have been here two or three times this year to discuss the importance of continuing the Mexico-Canada agreement with the United States.",
-      "source": "Senate Floor, Jun 15, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-15-pt1-PgS2773-6"
     },
     {
       "name": "Mr. Kaine",
@@ -3303,19 +3175,6 @@
       "granuleId": "CREC-2026-06-17-pt1-PgS2868-3"
     },
     {
-      "name": "Mr. Kaine",
-      "party": "D",
-      "state": "VA",
-      "bioguideId": "K000384",
-      "text": "I rise to speak upon a matter that will be brought to the floor for a vote within the next hour or so. The matter is what is called a 502B resolution filed by my colleague Senator Catherine Cortez Masto, and a 502B resolution directs  the State Department to issue a human rights report on topics voted upon by the Senate. This particular 502B resolution concerns a most serious human rights and criminal justice matter and one of the worst abuses of the Presidential pardon power in the history of the United States.",
-      "source": "Senate Floor, Jun 17, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-17-pt1-PgS2877-6"
-    },
-    {
       "name": "Mr. Barrasso",
       "party": "R",
       "state": "WY",
@@ -3479,8 +3338,8 @@
       "text": "Americans don't appear to agree on very much these days, but there is at least one thing on which the American people can agree; it is this thing that brings the American people together. Our citizens, no matter their politics, don't trust their leaders. The list of institutions that Americans have lost faith in is long. We know this. We also know that Congress is at the bottom. In fact, over 80 percent of Americans disapprove of the job we are doing in this building. The legislative branch is the foundation of representative government.",
       "source": "Senate Floor, Jun 18, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-5371",
+      "billTitle": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-18-pt1-PgS2921"
     },
@@ -3576,19 +3435,6 @@
       "granuleId": "CREC-2026-06-22-pt1-PgS2977-6"
     },
     {
-      "name": "Mr. Durbin",
-      "party": "D",
-      "state": "IL",
-      "bioguideId": "D000563",
-      "text": "There are memories you have as a child which you never, ever forget. And one of my memories was growing up, smack-dab in the Midwest, in the middle of our country, and the experience I had as a child when my mother would wake me in the middle of the night, and I would hear the tornado sirens blaring. And she would say: Get down to the basement. The basement was our shelter for the potential of a tornado hitting our home. That was part of growing up in the Midwest.",
-      "source": "Senate Floor, Jun 22, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-22-pt1-PgS2977-6"
-    },
-    {
       "name": "Mr. Scott",
       "party": "R",
       "state": "SC",
@@ -3600,19 +3446,6 @@
       "billTitle": "21st Century ROAD to Housing Act",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-22-pt1-PgS2982"
-    },
-    {
-      "name": "Mr. Thune",
-      "party": "R",
-      "state": "SD",
-      "bioguideId": "T000250",
-      "text": "We are approaching 1 year since the Working Families Tax Cut became law. For nearly a year now, the American people have been seeing the benefits of this bill, from a more secure border to a stronger military, larger paychecks and bigger refunds, support for farmers and ranchers, and a lifeline for struggling rural healthcare providers. For the past year, the story of the Working Families Tax Cut has been unfolding across the country in different ways.",
-      "source": "Senate Floor, Jun 22, 2026",
-      "stance": "support",
-      "billId": "119-HR-8469",
-      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-22-pt1-PgS2977-6"
     },
     {
       "name": "Ms. Warren",
@@ -3639,19 +3472,6 @@
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "Senate",
       "granuleId": "CREC-2026-06-22-pt1-PgS2985-2"
-    },
-    {
-      "name": "Mr. Sanders",
-      "party": "I",
-      "state": "VT",
-      "bioguideId": "S000033",
-      "text": "I want to say a few words about what I consider to be one of the most important issues not only facing our country but facing the world, and that is the advent of artificial intelligence, which most experts agree will almost certainly be the most transformational technology in the history of humanity. It will profoundly impact the lives of every man, woman, and child in our country.",
-      "source": "Senate Floor, Jun 22, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "Senate",
-      "granuleId": "CREC-2026-06-22-pt1-PgS3025-4"
     },
     {
       "name": "Mr. Risch",
@@ -3810,19 +3630,6 @@
       "granuleId": "CREC-2026-06-23-pt1-PgS3049"
     },
     {
-      "name": "Mr. Subramanyam",
-      "party": "D",
-      "state": "VA",
-      "bioguideId": "S001230",
-      "text": "There are a lot of reasons why we are seeing rising costs. One reason is particularly troubling, and it is called surveillance pricing. You see, it is common for businesses to track our online activity, like searches and web browsing, and to use that to decide who to target with ads. What if they actually used that information to charge you a higher price for something they knew you actually needed? That is surveillance pricing. It is unfortunately becoming very common.",
-      "source": "House Floor, Jun 23, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-23-pt1-PgH4134"
-    },
-    {
       "name": "Mr. Murphy",
       "party": "R",
       "state": "NC",
@@ -3899,19 +3706,6 @@
       "billTitle": "21st Century ROAD to Housing Act",
       "chamber": "House",
       "granuleId": "CREC-2026-06-24-pt1-PgH4216-2"
-    },
-    {
-      "name": "Mr. Lawler",
-      "party": "R",
-      "state": "NY",
-      "bioguideId": "L000599",
-      "text": "Chief Noble's career has been defined by commitment, sacrifice, and an unwavering sense of duty. For more than 30 years in law enforcement, including nearly a decade as chief, he led the Yorktown Police Department with professionalism and steady leadership. For Chief Noble, policing was never simply a job, it was a vocation. He described the department as a second family and fostered a culture of trust, respect, and community engagement.",
-      "source": "House Floor, Jun 24, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-24-pt1-PgH4217-2"
     },
     {
       "name": "Mr. Hill",
@@ -4083,19 +3877,6 @@
       "granuleId": "CREC-2026-06-25-pt1-PgH4253"
     },
     {
-      "name": "Ms. Kaptur",
-      "party": "D",
-      "state": "OH",
-      "bioguideId": "K000009",
-      "text": "This past weekend, former New Jersey Congressman Frank Guarini passed away at the ripe age of 101 years old, just 2 months shy of attaining his 102nd birthday. Frank was an American patriot, World War II decorated Pacific Navy veteran, successful lawyer, and business leader. His milestone life included service in this House from 1979 to 1993.",
-      "source": "House Floor, Jun 25, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-25-pt1-PgH4254"
-    },
-    {
       "name": "Mr. Raskin",
       "party": "D",
       "state": "MD",
@@ -4120,19 +3901,6 @@
       "billTitle": "Mikaela Naylon Give Kids a Chance Act",
       "chamber": "House",
       "granuleId": "CREC-2026-06-25-pt1-PgH4254-5"
-    },
-    {
-      "name": "Ms. Randall",
-      "party": "D",
-      "state": "WA",
-      "bioguideId": "R000621",
-      "text": "A memorandum of understanding, the first of its kind, between the Suquamish Tribe and the U.S. Navy has finally been reached after years of good faith negotiations. This MOU sets a new standard for how our U.S. military collaborates with Tribal Governments to respect Tribal sovereignty and to preserve treaty rights.",
-      "source": "House Floor, Jun 25, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-06-25-pt1-PgH4254-3"
     },
     {
       "name": "Ms. Tlaib",
@@ -4668,19 +4436,6 @@
       "granuleId": "CREC-2026-07-15-pt1-PgH4480"
     },
     {
-      "name": "Mr. Bell",
-      "party": "D",
-      "state": "MO",
-      "bioguideId": "B001324",
-      "text": "I rise today as the proud Representative of the largest Bosniak population outside of Bosnia and Herzegovina and to stand in solidarity with them. Over the weekend, we marked 31 years since more than 8,300 Bosniaks were murdered at Srebrenica. Today, we remember the victims and stand with the families and survivors. Srebrenica should never have happened, and yet it did--not because the world didn't know but because in too many places, the world chose to look away.",
-      "source": "House Floor, Jul 15, 2026",
-      "stance": "support",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-07-15-pt1-PgH4530"
-    },
-    {
       "name": "Mr. Kennedy",
       "party": "R",
       "state": "UT",
@@ -4883,8 +4638,8 @@
       "text": "Many of my colleagues have spoken about the affordability crisis, forcing families to figure out how to make ends meet, but let's make something clear: The affordability crisis isn't just a political buzzword like the President claims. This is a real crisis, and it is made worse by the President's decisions: a war of choice in Iran, indiscriminate tariffs, and tax cuts for billionaires, just to name a few, all this while 1 month of groceries in my home district in New York now averages over $1,200 a month.",
       "source": "House Floor, Jul 16, 2026",
       "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
+      "billId": "119-HR-5103",
+      "billTitle": "Make the District of Columbia Safe and Beautiful Act of 2025",
       "chamber": "House",
       "granuleId": "CREC-2026-07-16-pt1-PgH4615-3"
     },
@@ -4913,19 +4668,6 @@
       "billTitle": "One Big Beautiful Bill Act",
       "chamber": "House",
       "granuleId": "CREC-2026-07-16-pt1-PgH4616"
-    },
-    {
-      "name": "Mr. Stutzman",
-      "party": "R",
-      "state": "IN",
-      "bioguideId": "S001188",
-      "text": "The summer of soccer is alive and well in northeast Indiana. Fort Wayne Football Club's new state-of-the-art stadium recently celebrated its grand opening. Privately funded, Ruoff Mortgage Stadium seats over 7,000 fans and has already become a hub for soccer fans across Indiana. I had the pleasure of attending a game this past weekend and was honored to present the match ball for the Fort Wayne Football Club's USL Cup match against Detroit City.",
-      "source": "House Floor, Jul 16, 2026",
-      "stance": "neutral",
-      "billId": null,
-      "billTitle": null,
-      "chamber": "House",
-      "granuleId": "CREC-2026-07-16-pt1-PgH4616-4"
     },
     {
       "name": "Ms. Lee",
@@ -5446,6 +5188,188 @@
       "billTitle": "Ukraine Support Act",
       "chamber": "Senate",
       "granuleId": "CREC-2026-07-28-pt1-PgS4290"
+    },
+    {
+      "name": "Mr. Blumenthal",
+      "party": "D",
+      "state": "CT",
+      "bioguideId": "B001277",
+      "text": "2 weeks ago, House Republicans failed to advance the Take Care of America's Veterans Act. That failure in the House was the latest example of broad bipartisan opposition to the Republican proposal to cut more than $50 billion--that is $50 billion--in benefits for disabled veterans over the next 10 years. This controversial proposal continues to divide Congress, and it also is dividing the veteran community.",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-224",
+      "billTitle": "Disabled Veterans Housing Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4311"
+    },
+    {
+      "name": "Mr. Moran",
+      "party": "R",
+      "state": "KS",
+      "bioguideId": "M000934",
+      "text": "The Senator from Connecticut outlined all the things that he says his amendment to this legislation would do and be supported by, but the reality is, the Senator from Connecticut has tried time and time again to pass legislation similar to that, never to succeed. Earlier this year, I was on the Senate floor at my seat here, standing here telling folks that maybe for once we will quit sponsoring pieces of legislation that benefit veterans but never get to the point in which they are actually passed.",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-S-423",
+      "billTitle": "PRO Veterans Act of 2025",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4311"
+    },
+    {
+      "name": "Mr. Padilla",
+      "party": "D",
+      "state": "CA",
+      "bioguideId": "P000145",
+      "text": "Mr. President, it is a shame that Senate Republicans seem particularly focused on scoring political points instead of passing real policies that can actually make a difference because, yes, all Americans--Democrats, Republicans, and Independents alike--are rightly concerned about insider trading by government officials. But the bill before us cannot address these concerns because, just like as was the case on Monday--that is right, 48 hours ago--we were having the same discussion, the same debate. This measure contains two giant poison pills.",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-7008",
+      "billTitle": "Stop Insider Trading Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4325"
+    },
+    {
+      "name": "Mr. Durbin",
+      "party": "D",
+      "state": "IL",
+      "bioguideId": "D000563",
+      "text": "We start with this little document called the U.S. Constitution. Every one of us has sworn to uphold and defend this document. And we go to article I, the first article in the Constitution, section 8, and it spells out with clarity who declares war under this Constitution: The Congress of the United States. We are now engaged in a war in Iran. Did the Congress declare war on Iran? No. Did the President even ask Congress to declare war on Iran? No. Well, were there public hearings in Congress about this decision to invade Iran, to attack Iran?",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-HCONRES-40",
+      "billTitle": "Directing the President, pursuant to section 5(c) of the War Powers Resolution, to remove United States Armed Forces from hostilities with Iran.",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4301-8"
+    },
+    {
+      "name": "Ms. Lummis",
+      "party": "R",
+      "state": "WY",
+      "bioguideId": "L000571",
+      "text": "I rise today to speak about the Digital Asset Market Clarity Act, also known as the CLARITY Act, and about the years of work that brought us to this moment. Now, I only have a few minutes to get started, but I am just getting wound up. I am going to talk for a little while. Then I am going to be back tomorrow, and I am going to talk about this some more because I have got a lot of pent-up things to say.",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-3633",
+      "billTitle": "Digital Asset Market Clarity Act of 2025",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4309-2"
+    },
+    {
+      "name": "Ms. Murkowski",
+      "party": "R",
+      "state": "AK",
+      "bioguideId": "M001153",
+      "text": "I come to the floor this evening to speak about legislation that I have recently introduced as chairman of the Indian Affairs Committee, alongside my friend Vice Chairman Schatz. The bill that we have introduced is the Native Children Commission Implementation Act.",
+      "source": "Senate Floor, Jul 29, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-6903",
+      "billTitle": "Ensuring Children Receive Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-29-pt1-PgS4323-3"
+    },
+    {
+      "name": "Mr. Scott",
+      "party": "R",
+      "state": "FL",
+      "bioguideId": "S001217",
+      "text": "This bill is real simple. It is about protecting the integrity of American citizenship. It is also about our protecting children from exploitation and trafficking, and it is about closing a dangerous loophole that our foreign adversaries are using to undermine our national security right now. To be an American citizen is one of the greatest privileges in the world. It is a sacred covenant between an individual and our Nation. It comes with rights, privileges, and immunities that people around the world would do anything to have.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "support",
+      "billId": "119-HR-22",
+      "billTitle": "SAVE Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4357-2"
+    },
+    {
+      "name": "Mr. Grassley",
+      "party": "R",
+      "state": "IA",
+      "bioguideId": "G000386",
+      "text": "In a bipartisan approach, about 5 years ago, we passed legislation to correct the wrongs in our organ transplant program. So, in my two decades spent fighting for U.S. organ donation reforms, I have heard far too many stories of patients who have lost their lives due to the negligence and abuse of that transplant system.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null,
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4353-7"
+    },
+    {
+      "name": "Mr. Schumer",
+      "party": "D",
+      "state": "NY",
+      "bioguideId": "S000148",
+      "text": "Today, the disastrous Trump economy delivered another one-two gut punch to the American people: Growth is down. Costs are up. The American people don't need government reports and economists to tell  them how sluggish Trump's economy is or how high costs are. Americans see it at the gas pump. They see it at the grocery store. They see it whenever they pay the rent or for heating or for electricity. Trump, on the other hand, has no clue just how deep in the dumps his economy is.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null,
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4354-3"
+    },
+    {
+      "name": "Mr. Thune",
+      "party": "R",
+      "state": "SD",
+      "bioguideId": "T000250",
+      "text": "Next week, our top priority will be funding the government until the November election. The American people have faced two--two--recordbreaking government shutdowns in the past 10 months. We need to ensure that they do not face a third. We owe the American people some certainty here. They should not have to be hoping and praying that on September 30, the government will get funded and that government services will continue.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-8469",
+      "billTitle": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4353-9"
+    },
+    {
+      "name": "Mr. Barrasso",
+      "party": "R",
+      "state": "WY",
+      "bioguideId": "B001261",
+      "text": "Today's Democrat Party is being driven by extremists, and there is actually an extreme group that is driving the party further and further to the left. It is called the Democratic Socialists of America. Its membership is growing, its radical candidates are winning, and its far-left vision is spreading. You may see it happening in Michigan this coming Tuesday with their primary election. This organization has issued a manifesto. That is right--a manifesto.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null,
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4354"
+    },
+    {
+      "name": "Mr. Durbin",
+      "party": "D",
+      "state": "IL",
+      "bioguideId": "D000563",
+      "text": "I have written a lot of bills and amendments. I have read even more. I am absolutely confounded by the language of this proposal, S. 3101, by my friend and colleague from Florida. There are so many issues bouncing around in this proposal of a serious nature that we would be foolish to do this by voice vote here immediately in the Senate. This deserves a real hearing, a real investigation, because it involves a lot of elements that affect many people personally, many families personally. We are talking about reproductive rights.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": null,
+      "billTitle": null,
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4357-2"
+    },
+    {
+      "name": "Mr. Hickenlooper",
+      "party": "D",
+      "state": "CO",
+      "bioguideId": "H000273",
+      "text": "June 27 was one of the worst days in recent Colorado history. As the Knowles fire rolled along the Colorado- Utah border, the Rifle Helitack team put on their uniforms and rushed toward danger. While battling the blaze, one firefighter was badly injured and four others--Nick Hutcherson, Emily Barker, Sydney Watson, and Nathan Matthews--ultimately lost their lives. There is bravery--and then there is wildland firefighting. The word ``hero'' gets used a lot. Nick, Emily, Sydney, and Nathan embodied that word.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "neutral",
+      "billId": "119-S-160",
+      "billTitle": "Aerial Firefighting Enhancement Act of 2025",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4359"
+    },
+    {
+      "name": "Ms. Lummis",
+      "party": "R",
+      "state": "WY",
+      "bioguideId": "L000571",
+      "text": "They are tremendously important to all of us. Digital Asset Market Clarity Act Madam President, yesterday I addressed this Chamber because we are wasting time we do not have to get the digital asset market structure bill passed, the bill called the Clarity Act. It is a strong bipartisan path forward that we have, and it is the best way for us to give digital assets, especially in this country, the certainty they need and ensure the United States leads on digital asset innovation. The way to do it is through bipartisan support of this bill.",
+      "source": "Senate Floor, Jul 30, 2026",
+      "stance": "support",
+      "billId": "119-HR-3633",
+      "billTitle": "Digital Asset Market Clarity Act of 2025",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-07-30-pt1-PgS4360-3"
     }
   ]
 }

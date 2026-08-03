@@ -400,8 +400,13 @@ section('Dollar amount formatting');
             }
             const sm = obj.match(SPELLED_DOLLAR);
             if (sm) {
-                warn(`${billId} ${path}: spelled-out "${sm[0]}" — shorten to $X.XXB/$XM form (CLAUDE.md dollar rules)`);
-                spelled++;
+                const a = adjudication(billId, 'dollar-format', path);
+                if (a) {
+                    noteAdjudicated(`${billId} ${path}: spelled-out "${sm[0]}"`, a);
+                } else {
+                    warn(`${billId} ${path}: spelled-out "${sm[0]}" — shorten to $X.XXB/$XM form (CLAUDE.md dollar rules)`);
+                    spelled++;
+                }
             }
         } else if (Array.isArray(obj)) {
             obj.forEach((v, i) => walkForDollars(v, `${path}[${i}]`, billId));
