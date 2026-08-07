@@ -1,0 +1,1627 @@
+[
+  {
+    "id": "119-S-2398",
+    "code": "S.2398",
+    "title": "Kay Hagan Tick Reauthorization Act",
+    "official_title": "To reauthorize the Kay Hagan Tick Act, and for other purposes.",
+    "date": "2025-07-23",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Collins, Susan M. (R-ME)",
+    "sponsor_bioguide": "C001035",
+    "cosponsors": 23,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "reauthorization",
+    "stageDate": "2026-08-06",
+    "likelihood": 70,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Susan Collins (R-ME) with 23 cosponsors, this narrow reauthorization keeps two existing CDC vector-borne disease programs — the national tick-borne strategy and state health department cooperative agreements — running through fiscal year 2030 at their currently authorized levels. The bill passed the Senate by voice/unanimous-consent-style engrossment on August 6, 2026 and now awaits House action. Its short length, tight scope, and prior-Congress base statute (the 2019 Kay Hagan Tick Act) place it in the category of low-cost public health reauthorizations that typically move without controversy.",
+    "referencedSources": [
+      {
+        "id": "usc-42-247b-23",
+        "kind": "statute",
+        "label": "42 U.S.C. 247b-23 (PHS Act §317U — National strategy and regional centers of excellence in vector-borne diseases)",
+        "citation": "42 U.S.C. 247b-23",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap6A-subchapII-partB-sec247b-23/htm",
+        "textFile": "data/ref-text/usc-42-247b-23.txt",
+        "fetchedAt": "2026-08-07"
+      },
+      {
+        "id": "usc-42-300hh-32",
+        "kind": "statute",
+        "label": "42 U.S.C. 300hh-32 (PHS Act §2822 — Enhanced support to assist health departments in addressing vector-borne diseases)",
+        "citation": "42 U.S.C. 300hh-32",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap6A-subchapXXVI-partC-sec300hh-32/htm",
+        "textFile": "data/ref-text/usc-42-300hh-32.txt",
+        "fetchedAt": "2026-08-07"
+      }
+    ],
+    "summary": "The 2019 Kay Hagan Tick Act created two federal programs at the Centers for Disease Control and Prevention aimed at tick-borne and other vector-borne diseases: a national strategy plus regional centers of excellence (PHS Act §317U), and cooperative agreements with state, local, and tribal health departments in high-risk areas (PHS Act §2822). Both programs' authorizations of appropriations ran through fiscal year 2025. This bill extends both authorizations through fiscal year 2030, drops the requirement that HHS consult the Tick-Borne Disease Working Group when developing the national strategy, and changes CDC's role in the centers-of-excellence program from coordinating with HHS to acting through HHS.",
+    "brief": "Extends the 2019 Kay Hagan Tick Act's two CDC vector-borne disease programs through fiscal year 2030 and trims two consultation and coordination requirements from the underlying statute.",
+    "top_lines": [
+      {
+        "headline": "5-year Extension of Two Vector-borne Disease Programs",
+        "billSection": "2",
+        "source": ["usc-42-247b-23", "usc-42-300hh-32"],
+        "subs": [
+          "National strategy + centers of excellence: reauthorized fiscal years 2026 through 2030",
+          "State/local health department cooperative agreements: reauthorized fiscal years 2026 through 2030",
+          "Underlying authorized amounts ($10M and $20M per year respectively) are unchanged in this bill"
+        ]
+      },
+      {
+        "headline": "Tick-Borne Disease Working Group Dropped from Consultation List",
+        "billSection": "2(a)(1)",
+        "source": "usc-42-247b-23",
+        "subs": [
+          "Statute previously required consulting the Tick-Borne Disease Working Group established under section 2062 of the 21st Century Cures Act",
+          "Bill strikes that requirement and inserts \"appropriate individuals\"",
+          "The Working Group's authorization has otherwise lapsed"
+        ]
+      },
+      {
+        "headline": "CDC Role Language Change",
+        "billSection": "2(a)(2)",
+        "source": "usc-42-247b-23",
+        "subs": [
+          "Statute directed HHS to award centers-of-excellence grants \"in coordination with\" the CDC Director",
+          "Bill changes it to \"acting through\" the CDC Director",
+          "Signals CDC leads the grant program rather than being a coordinating partner"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Reauthorization of Programs",
+        "items": [
+          {
+            "main": "Reauthorizes PHS Act §317U (42 U.S.C. 247b-23), which underwrites HHS's national vector-borne disease strategy and regional centers of excellence.",
+            "detail": "The underlying statute (per the fetched 2024 U.S. Code text) authorizes $10,000,000 per year for fiscal years 2021 through 2025 for these activities. This bill strikes \"2021 through 2025\" and inserts \"2026 through 2030\" — a straight 5-year extension without changing the dollar level.",
+            "comments": []
+          },
+          {
+            "main": "Removes the requirement that HHS consult the Tick-Borne Disease Working Group in developing the national strategy.",
+            "detail": "The statute's consultation list (subsection (b)) previously started with \"the Tick-Borne Disease Working Group established under section 2062 of the 21st Century Cures Act (42 U.S.C. 284s) and other individuals, as appropriate.\" The bill replaces that phrase with \"appropriate individuals,\" leaving the enumerated categories that follow (epidemiologists, patient advocates, entomologists, clinicians, researchers) intact.",
+            "comments": []
+          },
+          {
+            "main": "Changes CDC's role in the centers-of-excellence grant program from \"in coordination with\" to \"acting through.\"",
+            "detail": "Under the statute as fetched, HHS awards regional centers-of-excellence grants \"in coordination with\" the CDC Director. The bill substitutes \"acting through,\" a phrase used elsewhere in public health law to indicate that CDC is the operating arm executing the Secretary's authority.",
+            "comments": []
+          },
+          {
+            "main": "Reauthorizes PHS Act §2822 (42 U.S.C. 300hh-32), which lets CDC enter cooperative agreements with state, local, and tribal health departments in high-risk areas for vector-borne disease surveillance and response.",
+            "detail": "The underlying statute (per the fetched 2024 U.S. Code text) authorizes $20,000,000 per year for fiscal years 2021 through 2025 for these cooperative agreements. This bill strikes \"2021 through 2025\" and inserts \"2026 through 2030.\"",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a)(1)",
+        "summary": "The consultation requirement removed by this bill is HHS's obligation to consult the Tick-Borne Disease Working Group when developing the national vector-borne disease strategy.",
+        "why_unreported": "The bill's short title is a straight \"reauthorization,\" but the amendment is more than a date change: it detaches the national strategy from the Working Group named for Sen. Hagan's tick-borne disease work, without explaining whether the Working Group is being replaced, sunsetted, or simply de-linked from the strategy."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill extends both authorizations of appropriations but does not itself appropriate any money — actual funding still depends on the annual Labor-HHS appropriations bill.",
+      "The bill removes the Tick-Borne Disease Working Group from HHS's consultation requirement but does not repeal, extend, or otherwise address the Working Group established under section 2062 of the 21st Century Cures Act.",
+      "The bill does not update either program's substantive requirements (eligible entities, reporting, evaluation) — the changes are limited to the authorization years and two consultation/coordination clauses.",
+      "The bill changes the CDC's role in the centers-of-excellence program from \"in coordination with\" to \"acting through\" without addressing whether existing centers-of-excellence grants must be renegotiated under the new authority."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [],
+      "modified": [
+        "PHS Act §317U(f) (42 U.S.C. 247b-23(f)) — authorization of appropriations extended from FY2021–2025 to FY2026–2030",
+        "PHS Act §317U(b) (42 U.S.C. 247b-23(b)) — Tick-Borne Disease Working Group consultation requirement replaced with \"appropriate individuals\"",
+        "PHS Act §317U(c) (42 U.S.C. 247b-23(c)) — CDC role changed from \"in coordination with\" to \"acting through\"",
+        "PHS Act §2822(c) (42 U.S.C. 300hh-32(c)) — authorization of appropriations extended from FY2021–2025 to FY2026–2030"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-434",
+    "code": "S.434",
+    "title": "Space Commerce Advisory Committee Act",
+    "official_title": "To establish the Commercial Space Activity Advisory Committee, and for other purposes.",
+    "date": "2025-02-05",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Peters, Gary C. (D-MI)",
+    "sponsor_bioguide": "P000595",
+    "cosponsors": 2,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2026-08-06",
+    "likelihood": 60,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "Introduced by Sen. Gary Peters (D-MI) with 2 cosponsors, this bill directs the Commerce Department's Office of Space Commerce to stand up a 15-member private-sector advisory committee within 180 days of enactment. The bill passed the Senate on August 6, 2026 and awaits House consideration. Advisory-committee authorizations of this narrow, non-fiscal form move often but not always — the ten-year sunset and the ban on federal-employee members are the substantive levers the House may want to revisit.",
+    "summary": "This bill creates a standing federal advisory committee inside the Commerce Department's Office of Space Commerce to advise on nongovernmental space activities. The committee is required to be stood up within 180 days of enactment, will have 15 members drawn from the commercial space industry (with a general bar on federal employees), and is to advise the Secretary and Congress on U.S. commercial space competitiveness, export controls, radio-frequency spectrum, planetary protection best practices, and international obligations. The committee is set to terminate ten years after it is established.",
+    "brief": "Creates a 15-member Commerce Department advisory committee on commercial space activities with a 180-day standup deadline and a 10-year sunset.",
+    "top_lines": [
+      {
+        "headline": "New Advisory Committee at Commerce",
+        "billSection": "3(a)",
+        "subs": [
+          "Established by the Secretary of Commerce acting through the Office of Space Commerce",
+          "Must be stood up within 180 days after enactment",
+          "Sunsets 10 years after establishment"
+        ]
+      },
+      {
+        "headline": "Membership Rules",
+        "billSection": "3(b)",
+        "subs": [
+          "15 members appointed by the Secretary",
+          "Drawn from space policy, engineering, technical, science, legal, academic, and finance fields",
+          "Generally no federal employees; sole exception is special government employees already serving on other federal advisory committees",
+          "Term limit: up to 4 years, with a 2-year cooling-off period afterward"
+        ]
+      },
+      {
+        "headline": "Advisory Scope",
+        "billSection": "3(c)",
+        "subs": [
+          "Recommendations on facilitating a competitive, safe, sustainable, innovative U.S. commercial space sector",
+          "Advise on export controls affecting commercial space, harmful interference in outer space, and access to radio-frequency spectrum",
+          "Review best practices to avoid harmful contamination of the Moon and other celestial bodies",
+          "Review best practices to avoid adverse changes in Earth's environment from extraterrestrial matter"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Definitions",
+        "items": [
+          {
+            "main": "Defines \"Secretary\" as the Secretary of Commerce acting through the Office of Space Commerce.",
+            "detail": "The bill also defines \"State\" broadly to include the District of Columbia and all U.S. territories, and \"United States entity\" as either a U.S. national (as defined in section 101(a) of the Immigration and Nationality Act) or a nongovernmental entity organized under U.S. or state law.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Commercial Space Activity Advisory Committee",
+        "items": [
+          {
+            "main": "Directs the Secretary to establish a Commercial Space Activity Advisory Committee within 180 days after enactment.",
+            "detail": "The committee will have 15 members appointed by the Secretary. Members must come from space policy, engineering, technical, science, legal, academic, or finance fields with significant experience in the commercial space industry (which may include prior government experience). Except for special government employees already serving on other federal advisory committees, the Secretary may not appoint any federal employee or official as a member.",
+            "comments": []
+          },
+          {
+            "main": "Sets a 4-year term limit with a 2-year cooling-off period.",
+            "detail": "Each member serves for up to 4 years, and during the 2-year period after that term ends may not serve again on the committee.",
+            "comments": []
+          },
+          {
+            "main": "Lists five duty areas: status of the sector, competitiveness recommendations, sector challenges, planetary-protection best practices, and other advice.",
+            "detail": "The sector-challenges brief specifically names four topics: international obligations relevant to commercial space, export controls, harmful interference with commercial space activities in outer space, and access to adequate, predictable, and reliable radio-frequency spectrum. The planetary-protection duty asks the committee to review best practices for U.S. entities to avoid harmful contamination of the Moon and other celestial bodies, and adverse changes in Earth's environment from the introduction of extraterrestrial matter.",
+            "comments": []
+          },
+          {
+            "main": "Terminates the committee 10 years after it is established.",
+            "detail": "The 10-year sunset runs from establishment rather than enactment, so the committee's end date depends on how quickly the Secretary meets the 180-day standup deadline.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 3(c)(4)",
+        "summary": "The committee is charged with reviewing planetary-protection best practices — both preventing harmful contamination of the Moon and other celestial bodies, and preventing adverse changes in Earth's environment from extraterrestrial matter.",
+        "why_unreported": "Planetary protection is a niche corner of space policy that gets little attention in the trade press. The bill's short title focuses on \"advisory committee,\" but planetary protection is one of only five explicitly enumerated duty areas."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill establishes a 15-member advisory committee but does not authorize appropriations or specify a funding source for its operations.",
+      "The bill lists five duty areas but does not require the committee to publish periodic reports or make its recommendations public.",
+      "The bill lets the Secretary appoint members without requiring geographic diversity, small-business representation, or academic-versus-industry balance.",
+      "The bill terminates the committee 10 years after establishment but does not require a review or reauthorization process before that sunset takes effect."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New Commercial Space Activity Advisory Committee at the Commerce Department's Office of Space Commerce (15 members, 4-year terms, 10-year sunset)"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-3266",
+    "code": "S.3266",
+    "title": "USMMA Athletics Act of 2026",
+    "official_title": "To support the athletic programs of the United States Merchant Marine Academy.",
+    "date": "2025-11-20",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Wicker, Roger F. (R-MS)",
+    "sponsor_bioguide": "W000437",
+    "cosponsors": 1,
+    "pages": 5,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2026-08-06",
+    "likelihood": 60,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "Introduced by Sen. Roger Wicker (R-MS), Chair of Senate Commerce, with one cosponsor, this bill authorizes the Secretary of Transportation to charter a New York nonprofit corporation to support athletics at the U.S. Merchant Marine Academy — mirroring the affiliated-foundation model used at other service academies. The bill passed the Senate on August 6, 2026 and now awaits House action. It is narrow, non-fiscal, and touches a small-population academy; the House can move it quickly if it does not attract objection over the sole-source contract authority or the transfer of nonappropriated fund instrumentality assets.",
+    "summary": "The bill lets the Secretary of Transportation set up a nonprofit corporation under New York law — with all stock held by the United States and voted by the Secretary — to support athletic programs at the U.S. Merchant Marine Academy. It sits alongside similar affiliated-corporation authorities used at other federal academies. New Section 51329 of title 46 governs the corporation's structure, its board (Transportation employees limited to one-third of directorships), the sole-source contract authority, real-property leases (up to 5 years, only when not needed by the Academy), transfers from the Department's nonappropriated fund instrumentality, and the acceptance of NCAA and conference funds. A companion amendment to 49 U.S.C. §109(h) authorizes the Secretary to license USMMA trademarks and service marks and to retain the fees for athletic programs and recruiting.",
+    "brief": "Authorizes the Transportation Secretary to charter a nonprofit corporation to support U.S. Merchant Marine Academy athletics, transfer nonappropriated-fund assets to it, and license USMMA trademarks for athletics-program revenue.",
+    "top_lines": [
+      {
+        "headline": "New Support Corporation",
+        "billSection": "2(a)",
+        "subs": [
+          "Chartered under New York law as a 501(c)(3) nonprofit",
+          "All stock owned by the United States, voted by the Secretary of Transportation",
+          "Purpose limited to charitable, educational, and civic support of USMMA athletics"
+        ]
+      },
+      {
+        "headline": "Board and Contracting",
+        "billSection": "2(c)-(d)",
+        "subs": [
+          "Board serves without compensation except reasonable travel expenses",
+          "Transportation Department employees limited to one-third of directorships and may not run day-to-day operations",
+          "Contracts and cooperative agreements may be sole-source, notwithstanding 41 U.S.C. §3105"
+        ]
+      },
+      {
+        "headline": "Real Property, Asset Transfers, and Fundraising",
+        "billSection": "2(e)-(h)",
+        "subs": [
+          "Secretary may rent or lease USMMA real property to the corporation for up to 5 years when not needed for immediate Academy use",
+          "Secretary may transfer the Transportation Department's athletics-supporting nonappropriated-fund instrumentality assets and liabilities to the corporation (real property excluded)",
+          "Secretary may accept funds, supplies, and services from the corporation, and receive fees from NCAA, athletic conferences, game guarantees, ticketing, and licensing"
+        ]
+      },
+      {
+        "headline": "USMMA Trademark Licensing",
+        "billSection": "2(c) [amending 49 U.S.C. §109(h)]",
+        "subs": [
+          "Secretary of Transportation authorized to license USMMA trademarks and service marks",
+          "Licensing fees retained by the Secretary for USMMA athletic programs and recruiting, after covering registration and licensing-program costs",
+          "Implementation guidance required within 180 days of enactment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) — Support Corporation Authority (new 46 U.S.C. §51329)",
+        "items": [
+          {
+            "main": "Authorizes the Secretary of Transportation to establish a corporation under New York law to support USMMA athletics, with all stock held by the United States and voted by the Secretary.",
+            "detail": "The corporation must operate exclusively for charitable, educational, and civic purposes, be organized as a 501(c)(3), and follow this section, the corporation's articles of incorporation, and its bylaws.",
+            "comments": []
+          },
+          {
+            "main": "Sets a compensation and independence rule for the board.",
+            "detail": "Board members serve without compensation except reasonable travel and related expenses. The Secretary may authorize Transportation Department employees to serve on the board in their official capacities for oversight and advice only — not day-to-day operations — and those employees may not hold more than one-third of the directorships. The Secretary must publish any such authorization in the Federal Register.",
+            "comments": []
+          },
+          {
+            "main": "Authorizes contracts and cooperative agreements, permits sole-source contracting, and allows the corporation to acquire property or services for the direct benefit of USMMA.",
+            "detail": "Contracts with the corporation may be sole-source notwithstanding 41 U.S.C. §3105, subject to 41 U.S.C. §3304(a). Chapter 63 of title 31 (which normally restricts using cooperative agreements to acquire property or services) is set aside so the corporation can acquire property, services, or travel for USMMA's direct benefit.",
+            "comments": []
+          },
+          {
+            "main": "Authorizes real-property leases to the corporation for up to 5 years.",
+            "detail": "The Secretary, in consultation with the GSA Administrator, may rent or lease USMMA real property to the corporation on terms deemed advisable, only for property not required for immediate Academy use, with all rental proceeds retained and used to support USMMA athletics.",
+            "comments": []
+          },
+          {
+            "main": "Allows transfer of the Transportation Department's athletics-related nonappropriated fund instrumentality to the corporation.",
+            "detail": "The Secretary may transfer all title to and ownership of the assets and liabilities of the athletics-supporting nonappropriated fund instrumentality — including bank accounts, financial reserves, equipment, supplies, and other personal property. Real property interests may not be transferred.",
+            "comments": []
+          },
+          {
+            "main": "Authorizes acceptance of NCAA, conference, and game-guarantee funds.",
+            "detail": "Notwithstanding 31 U.S.C. §1342, the Secretary may accept funds, supplies, and services from the corporation. The Secretary may also charge fees and accept money from the NCAA, athletic conferences, game guarantees from other institutions, ticketing and licensing fees, and other consideration incidental to USMMA athletics. Corporation employees are not federal employees. The Secretary must ensure these contributions do not reflect unfavorably on Transportation or compromise the integrity of any Transportation program.",
+            "comments": []
+          },
+          {
+            "main": "Authorizes licensing, marketing, and sponsorship agreements around USMMA trademarks and service marks — subject to Secretary approval and integrity limits.",
+            "detail": "Contracts under subsection (d) may, consistent with 49 U.S.C. §109(h)(2), let the corporation enter licensing, marketing, and sponsorship agreements identifying USMMA — subject to Secretary approval. The corporation cannot enter agreements that reflect unfavorably on Transportation or compromise the integrity of any Transportation program.",
+            "comments": []
+          },
+          {
+            "main": "Sets funds retention and availability rules.",
+            "detail": "Funds received by the Secretary under this section may be retained for USMMA athletic programs and remain available until expended.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(c) — USMMA Trademark and Service Mark Licensing (amending 49 U.S.C. §109(h))",
+        "items": [
+          {
+            "main": "Adds paragraph (3) to 49 U.S.C. §109(h) granting the Secretary authority to license USMMA trademarks and service marks and to retain fees.",
+            "detail": "The Secretary must designate which marks fall under the retention authority. Retained fees pay first for the costs of securing trademark registrations and operating the licensing program, then support USMMA athletic programs and recruiting to the extent licensing revenue exceeds what is needed under paragraph (1). Fees received in a fiscal year remain available until expended. Definitions of \"trademark\" and \"service mark\" cross-reference section 45 of the Trademark Act of 1946 (15 U.S.C. §1127).",
+            "comments": []
+          },
+          {
+            "main": "Requires implementation guidance within 180 days of enactment.",
+            "detail": "Not later than 180 days after the date of enactment of the USMMA Athletics Act of 2026, the Secretary must issue guidance to implement the trademark and service mark licensing program.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(g)",
+        "summary": "The bill allows the Transportation Department to transfer its athletics-supporting nonappropriated fund instrumentality — including bank accounts and financial reserves — to the new nonprofit corporation, subject to the corporation's acceptance.",
+        "why_unreported": "Nonappropriated fund instrumentalities are legal grey zones that carry substantial federal-adjacent balances outside the appropriations process. Moving those balances to a private 501(c)(3) is a structural change that gets no attention in the short title or the summary language."
+      },
+      {
+        "section": "Section 2(d)(2)",
+        "summary": "Contracts and cooperative agreements with the new corporation may be sole-source, notwithstanding 41 U.S.C. §3105.",
+        "why_unreported": "The bill's framing is athletics support, but the sole-source contracting authority is a broader procurement change that federal contracting oversight typically scrutinizes closely."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill authorizes a new nonprofit corporation to support USMMA athletics but does not authorize appropriations or require any specific fundraising target.",
+      "The bill limits Transportation Department employees to one-third of the corporation's directorships but does not specify how the other two-thirds must be nominated or vetted.",
+      "The bill permits transfer of the nonappropriated fund instrumentality's assets to the corporation but does not specify what happens if the corporation is dissolved.",
+      "The bill authorizes real-property leases of up to 5 years but does not limit total leasable acreage or address whether the leases may be renewed indefinitely."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New 46 U.S.C. §51329 — Support for athletic programs of the United States Merchant Marine Academy (authorizes support corporation, contracts, leases, NAFI transfer, funds acceptance, trademark licensing)",
+        "New 49 U.S.C. §109(h)(3) — USMMA trademark and service mark licensing authority with fee retention for athletics and recruiting"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-1838",
+    "code": "S.1838",
+    "title": "DeOndra Dixon INCLUDE Project Act of 2026",
+    "official_title": "To amend the Public Health Service Act to authorize the Secretary of Health and Human Services to carry out a program of research, training, and investigation related to Down syndrome, and for other purposes.",
+    "date": "2025-05-21",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Hickenlooper, John W. (D-CO)",
+    "sponsor_bioguide": "H000273",
+    "cosponsors": 9,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2026-08-06",
+    "likelihood": 65,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. John Hickenlooper (D-CO) with 9 cosponsors, this bill puts the NIH INCLUDE Project — currently funded through the annual Labor-HHS appropriations bill — into permanent Public Health Service Act authorization language. The bill passed the Senate on August 6, 2026 and awaits House action. Statutory authorizations for narrow NIH research programs typically clear both chambers when they draw the kind of bipartisan disability-community support this one has, but the bill does not itself authorize appropriations, so the actual funding question remains with the appropriators.",
+    "summary": "The National Institutes of Health has since 2018 run the INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE Project (the INCLUDE Project) as an initiative funded through the annual Labor-HHS appropriations bill. This bill creates a permanent statutory home for the project by adding a new section 409K to the Public Health Service Act's NIH title. The NIH Director must run a program of research, training, and investigation on Down syndrome that covers seven listed areas — including trisomy-21 biology, lifespan cohort studies, clinical-trial inclusion, biomarkers, co-occurring conditions such as Alzheimer's and autoimmunity, and quality-of-life improvement. NIH must coordinate related work across its institutes and centers, avoid duplication, consult with patient advocates and stakeholders, and submit a biennial report on the research to Congress.",
+    "brief": "Gives the NIH INCLUDE Project on Down syndrome a permanent statutory footing in the Public Health Service Act, with seven research focus areas, a coordination duty, stakeholder consultation, and biennial reports to Congress.",
+    "top_lines": [
+      {
+        "headline": "Permanent Statutory Home",
+        "billSection": "2",
+        "subs": [
+          "Adds new §409K to Part B of title IV of the Public Health Service Act (42 U.S.C. 284 et seq.)",
+          "Names the program the \"INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE Project\" or \"INCLUDE Project\"",
+          "The NIH Director must carry out the program"
+        ]
+      },
+      {
+        "headline": "Seven Research Focus Areas",
+        "billSection": "2 [new PHS §409K(b)]",
+        "subs": [
+          "High-risk, high-reward research on the effects of trisomy 21 on human development and health",
+          "Lifespan cohort studies of participants with Down syndrome",
+          "Expanded clinical trials inclusive of, or expressly for, participants with Down syndrome",
+          "Research on biological mechanisms (structural, functional, behavioral) and stunted growth",
+          "Biomarker research to improve diagnosis and treatment of co-occurring conditions",
+          "Research on co-occurring Alzheimer's/dementia and autoimmunity",
+          "Research on improving quality of life for individuals with Down syndrome and their families"
+        ]
+      },
+      {
+        "headline": "Coordination and Consultation",
+        "billSection": "2 [new PHS §409K(c)-(d)]",
+        "subs": [
+          "NIH Director must ensure institutes and centers coordinate Down syndrome and co-occurring conditions work",
+          "Coordination flows through the Office of the Director and the section 402(b)(3) priority-setting reviews",
+          "Institutes and centers must prioritize non-duplicative Down syndrome research",
+          "NIH must consult with stakeholders, including patient advocates, to the maximum extent feasible"
+        ]
+      },
+      {
+        "headline": "Biennial Reports to Congress",
+        "billSection": "2 [new PHS §409K(e)]",
+        "subs": [
+          "Reports go to House Energy and Commerce and the Labor-HHS-Ed Appropriations Subcommittee",
+          "Reports also go to Senate HELP and the Senate Labor-HHS-Ed Appropriations Subcommittee",
+          "Each report catalogs the research conducted or supported under the section",
+          "Each report identifies participating institutes/centers, notes whether the research is single- or multi-institute, and flags any resulting real-world evidence for clinical research or care"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — DeOndra Dixon INCLUDE Project",
+        "items": [
+          {
+            "main": "Adds a new §409K to Part B of title IV of the Public Health Service Act directing the NIH Director to carry out a program of research, training, and investigation related to Down syndrome, known as the INCLUDE Project.",
+            "detail": "The full name is \"INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE Project.\" The provision codifies an ongoing NIH initiative in statute rather than leaving it to annual appropriations report language.",
+            "comments": []
+          },
+          {
+            "main": "Enumerates seven required program elements.",
+            "detail": "The bill's paragraph list includes: (1) high-risk, high-reward research on the effects of trisomy 21; (2) research promoting participants with Down syndrome across the lifespan, including cohort studies; (3) expanding clinical trials inclusive of, or expressly for, participants with Down syndrome; (4) research on biological mechanisms behind structural, functional, and behavioral anomalies and stunted growth; (5) improving diagnosis and treatment of co-occurring conditions, including biomarker identification; (6) research on the increased prevalence and concurrent treatment of co-occurring Alzheimer's and related dementias and autoimmunity; and (7) research, training, and investigation on quality of life for individuals with Down syndrome and their families.",
+            "comments": []
+          },
+          {
+            "main": "Requires NIH Director-level coordination and prioritization of non-duplicative research.",
+            "detail": "The NIH Director must ensure that institute and center activities relating to Down syndrome and co-occurring conditions are coordinated through the Office of the Director and the priority-setting reviews conducted under PHS Act section 402(b)(3), and that institutes and centers prioritize non-duplicative Down syndrome research.",
+            "comments": []
+          },
+          {
+            "main": "Requires stakeholder consultation to the maximum extent feasible.",
+            "detail": "The NIH Director must, as appropriate and to the maximum extent feasible, consult with relevant stakeholders — including patient advocates — to ensure the activities take into consideration the needs of individuals with Down syndrome.",
+            "comments": []
+          },
+          {
+            "main": "Requires biennial reports to four congressional committees cataloging the research.",
+            "detail": "Reports go to Energy and Commerce and the Labor-HHS-Ed Appropriations Subcommittee in the House, and to Senate HELP and the Senate Labor-HHS-Ed Appropriations Subcommittee. Each report must identify the participating institutes and centers, state whether research is single- or multi-institute, and identify any resulting real-world evidence that is or may be used for clinical research and medical care for patients with Down syndrome.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2 [new PHS §409K(b)(6)]",
+        "summary": "One of the seven required research areas is the concurrent treatment of co-occurring Alzheimer's disease and related dementias — a link that is central to why NIH runs this project but rarely surfaces in press coverage.",
+        "why_unreported": "Down syndrome and early-onset Alzheimer's are strongly linked, and much of the INCLUDE Project's rationale comes from that dementia connection. Press coverage tends to frame the bill as \"Down syndrome research,\" which understates the Alzheimer's angle written into the statutory duty."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill creates a permanent statutory authorization but does not itself authorize appropriations — funding for the INCLUDE Project still depends on the annual Labor-HHS appropriations bill.",
+      "The bill enumerates seven research areas but does not require NIH to allocate a minimum share of program funds to any single area.",
+      "The bill requires biennial reports to Congress but does not require public posting of the reports or a public dashboard of INCLUDE-funded grants.",
+      "The bill requires consultation with patient advocates \"to the maximum extent feasible\" without setting a minimum consultation cadence or specifying how NIH must document that consultation."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New PHS Act §409K (added to Part B of title IV, 42 U.S.C. 284 et seq.) — INCLUDE Project: Down syndrome research, training, and investigation program at NIH with seven required focus areas, coordination duty, stakeholder consultation, and biennial reports to Congress"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-850",
+    "code": "S.850",
+    "title": "Northern Border Security Enhancement and Review Act",
+    "official_title": "To amend the Northern Border Security Review Act to require updates to the northern border threat analysis and northern border strategy, and for other purposes.",
+    "date": "2025-03-05",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Hassan, Margaret Wood (D-NH)",
+    "sponsor_bioguide": "H001076",
+    "cosponsors": 4,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-08-05",
+    "likelihood": 65,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Maggie Hassan (D-NH) with 4 cosponsors, this bill converts a one-time Northern Border threat analysis (last authorized in 2016) into a recurring triennial deliverable and adds a five-year strategy update. The bill passed the Senate on August 5, 2026 and awaits House action. Northern-border oversight bills of this narrow, no-cost form typically draw quick bipartisan movement in the House, particularly since Section 3 explicitly states no additional funds are authorized.",
+    "referencedSources": [
+      {
+        "id": "bill-114-s-1808",
+        "kind": "law",
+        "label": "Northern Border Security Review Act (Public Law 114-267)",
+        "citation": "Public Law 114-267",
+        "srcUrl": "https://www.congress.gov/bill/114th-congress/senate-bill/1808/text",
+        "textFile": "data/ref-text/bill-114-s-1808.txt",
+        "fetchedAt": "2026-08-07"
+      }
+    ],
+    "summary": "The 2016 Northern Border Security Review Act (Public Law 114-267) required DHS to deliver a one-time Northern Border threat analysis to congressional committees within 180 days of enactment, covering current and potential terrorism and criminal threats, port-of-entry improvements, gaps in law or cooperation, and the case for expanded preclearance and preinspection. This bill converts that one-time analysis into a recurring deliverable and adds a strategy-update requirement. Beginning 180 days after enactment and every 3 years thereafter, DHS must submit an updated Northern Border threat analysis; the update must also assess recent changes in the amount and demographics of apprehensions at the sector level. DHS must update its Northern Border strategy within 18 months of enactment and every 5 years thereafter. Within 30 days of each threat analysis, DHS must provide a classified briefing to the appropriate committees. The bill also directs Customs and Border Protection's Air and Marine Operations to develop performance measures for securing the northern border in the air and maritime environments, and states that no additional funds are authorized to carry out the Act.",
+    "brief": "Turns the 2016 Northern Border Security Review Act's one-time threat analysis into a triennial deliverable, adds a five-year strategy update requirement, mandates classified briefings, and directs new CBP Air and Marine performance measures — with no new funding.",
+    "top_lines": [
+      {
+        "headline": "Threat Analysis Becomes Recurring",
+        "billSection": "2(a)",
+        "source": "bill-114-s-1808",
+        "subs": [
+          "2016 statute required a single Northern Border threat analysis within 180 days of enactment",
+          "Bill amends it to every 3 years, starting 180 days after this bill's enactment",
+          "New paragraph requires each analysis to include an assessment of recent changes in the amount and demographics of Northern Border apprehensions at the sector level"
+        ]
+      },
+      {
+        "headline": "Northern Border Strategy Updates",
+        "billSection": "2(b)",
+        "source": "bill-114-s-1808",
+        "subs": [
+          "DHS must update its Northern Border strategy within 18 months of enactment",
+          "Strategy updates required every 5 years thereafter",
+          "Each strategy update must incorporate the results of the most recent threat analysis"
+        ]
+      },
+      {
+        "headline": "Classified Briefings",
+        "billSection": "2(c)",
+        "source": "bill-114-s-1808",
+        "subs": [
+          "Not later than 30 days after each threat analysis, DHS must provide a classified briefing",
+          "Briefing goes to the \"appropriate congressional committees\" defined in the 2016 statute (Homeland Security, Judiciary, and Appropriations in each chamber)"
+        ]
+      },
+      {
+        "headline": "Air and Marine Performance Measures",
+        "billSection": "2(d)",
+        "subs": [
+          "Within 180 days of enactment, DHS (through the CBP Executive Assistant Commissioner of Air and Marine Operations) must develop performance measures",
+          "Measures assess the effectiveness of Air and Marine Operations at securing the northern border between ports of entry",
+          "Measures cover both the air and maritime environments"
+        ]
+      },
+      {
+        "headline": "No New Funds",
+        "billSection": "3",
+        "subs": [
+          "No additional funds are authorized to be appropriated for the purpose of carrying out this Act or the amendments made by this Act"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) — Northern Border Threat Analysis (amending Sec. 3(a) of Public Law 114-267)",
+        "items": [
+          {
+            "main": "Converts the one-time 180-day threat analysis in the 2016 statute into a recurring triennial deliverable.",
+            "detail": "Section 3(a) of the 2016 Northern Border Security Review Act (per the fetched Public Law 114-267 text) required DHS to submit a Northern Border threat analysis to the appropriate congressional committees within 180 days of enactment of that Act. This bill strikes \"180 days after the date of enactment of this Act\" and inserts \"180 days after the date of the enactment of the Northern Border Security Enhancement and Review Act, and every 3 years thereafter\" — restarting the 180-day clock from this bill and adding the recurring cadence.",
+            "comments": []
+          },
+          {
+            "main": "Adds an apprehension-trends analysis to the threat analysis's required contents.",
+            "detail": "The bill inserts a new paragraph (2) requiring each analysis to include an assessment of recent changes in the amount and demographics of apprehensions at the Northern Border, including an analysis of apprehension changes at the sector level. Paragraphs previously numbered (2), (3), and (4) — port-of-entry improvements, cooperation gaps, and preclearance/preinspection assessment — are redesignated (3), (4), and (5) but not otherwise substantively changed.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(b) — Northern Border Strategy Updates (new Sec. 3(c) of Public Law 114-267)",
+        "items": [
+          {
+            "main": "Adds a new subsection (c) requiring DHS to update its Northern Border strategy within 18 months of enactment and every 5 years thereafter, incorporating the latest threat analysis.",
+            "detail": "The 2016 statute did not itself codify a Northern Border strategy update requirement (per the fetched text of Public Law 114-267). This bill directs the Secretary of Homeland Security to update the Department's Northern Border strategy within 18 months after enactment and every 5 years thereafter, and to incorporate the results of the most recent threat analysis in each update. The existing subsection (c) (classified-form provisions in the 2016 statute) is redesignated as (d).",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(c) — Classified Briefings (new Sec. 3(e))",
+        "items": [
+          {
+            "main": "Requires DHS to brief the appropriate committees, classified as needed, within 30 days after submitting each threat analysis.",
+            "detail": "The 2016 statute's \"appropriate congressional committees\" definition covers Homeland Security and Governmental Affairs, Appropriations, and Judiciary in the Senate, and Homeland Security, Appropriations, and Judiciary in the House.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(d) — CBP Air and Marine Performance Measures",
+        "items": [
+          {
+            "main": "Directs DHS, acting through the CBP Executive Assistant Commissioner of Air and Marine Operations, to develop performance measures within 180 days of enactment.",
+            "detail": "The performance measures assess the effectiveness of Air and Marine Operations at securing the northern border between ports of entry in both the air and maritime environments. The bill labels this an implementation of certain Government Accountability Office recommendations but does not identify which report.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — No Additional Funds",
+        "items": [
+          {
+            "main": "States that no additional funds are authorized to be appropriated for this Act or its amendments.",
+            "detail": "The recurring threat analysis, strategy updates, briefings, and performance-measure development must be absorbed within existing DHS and CBP resources.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a)(3) [new paragraph (2)]",
+        "summary": "The recurring threat analysis must include an assessment of apprehension trends at the sector level — a granularity requirement not present in the 2016 statute.",
+        "why_unreported": "The 2016 Northern Border Security Review Act's threat-analysis paragraph list (per the fetched Public Law 114-267 text) focused on terrorism, port-of-entry improvements, cooperation gaps, and preclearance/preinspection. The sector-level apprehension analysis is a new empirical requirement that doesn't fit the 2016 framing and rarely appears in press summaries of the bill."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill converts the threat analysis into a triennial deliverable but does not require the analyses to be made publicly available in redacted form, only that a classified briefing follow.",
+      "The bill directs CBP Air and Marine Operations to develop performance measures within 180 days but does not require public publication or an oversight-committee submission of the measures once developed.",
+      "The bill requires strategy updates every 5 years but does not specify whether Congress receives a copy of each update or only the underlying threat analysis.",
+      "The bill states no additional funds are authorized but does not identify what existing DHS/CBP activities may need to be scaled back to absorb the new recurring workload."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New Sec. 3(c) of Public Law 114-267 — Northern Border strategy update requirement (18-month initial deadline, 5-year cycle)",
+        "New Sec. 3(e) of Public Law 114-267 — Classified briefing to appropriate congressional committees within 30 days of each threat analysis",
+        "New paragraph in Sec. 3(a) of Public Law 114-267 — Assessment of sector-level apprehension trends in each threat analysis"
+      ],
+      "modified": [
+        "Sec. 3(a) of Public Law 114-267 — Threat analysis converted from one-time 180-day deliverable to recurring 180-day + every-3-years deliverable",
+        "Sec. 3(c) of Public Law 114-267 — Redesignated as Sec. 3(d) to make room for the new strategy-update subsection"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-HR-5235",
+    "code": "HR.5235",
+    "title": "Skills-Based Federal Contracting Act of 2025",
+    "official_title": "To amend title 41, United States Code, to prohibit minimum educational requirements for proposed contractor personnel in certain contract solicitations, and for other purposes.",
+    "date": "2025-09-09",
+    "version": "v1.0",
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "currentStep": 2,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Rep. Mace, Nancy (R-SC-1)",
+    "sponsor_bioguide": "M000194",
+    "cosponsors": 2,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2026-08-06",
+    "likelihood": 55,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "Introduced by Rep. Nancy Mace (R-SC) with 2 cosponsors, this bill prohibits minimum educational requirements in federal contract solicitations unless the contracting officer justifies the requirement in writing. The bill passed the House on February 23, 2026 and awaits Senate action. Federal contracting reform bills of this narrow procedural form move slowly through the Senate, and the deferred applicability (solicitations issued 15 or more months after enactment) means the Senate has time to work it — but the small cosponsor list and 6-month gap between House passage and now suggests it is not on a fast track.",
+    "summary": "This bill limits when federal contract solicitations may set a minimum educational requirement (associate, baccalaureate, graduate, or professional degree or specified coursework) for proposed contractor personnel. It adds a new Section 3313 to Chapter 33 of title 41, United States Code, providing that a solicitation may not set forth any such requirement unless the contracting officer includes a written justification explaining why the executive agency's needs cannot be met without one and clarifying how the requirement ensures those needs are met. The Director of the Office of Management and Budget must issue implementing guidance within 180 days, including instructions requiring each education requirement to be determined, justified, and reviewed, and encouraging alternatives. The prohibition applies to solicitations issued 15 or more months after enactment. The bill also repeals Section 813 of the Floyd D. Spence National Defense Authorization Act for Fiscal Year 2001 (Public Law 106-398) as implemented in Federal Acquisition Regulation subpart 39.104, effective when the OMB guidance takes effect. A GAO evaluation of agency compliance with the new section is due 3 years after enactment.",
+    "brief": "Bars minimum educational requirements in federal contract solicitations unless the contracting officer files a written justification, with 15-month deferred applicability and a repeal of Section 813 of the FY2001 NDAA once OMB implementing guidance takes effect.",
+    "top_lines": [
+      {
+        "headline": "New Prohibition on Minimum Education Requirements",
+        "billSection": "2(a) [new 41 U.S.C. §3313]",
+        "subs": [
+          "A solicitation may not set a minimum education requirement for proposed contractor personnel to be eligible for award",
+          "Exception: contracting officer must include a written justification in the solicitation",
+          "Justification must explain why the executive agency's needs cannot be met without the requirement and clarify how the requirement ensures those needs are met"
+        ]
+      },
+      {
+        "headline": "OMB Guidance in 180 Days",
+        "billSection": "2(c)",
+        "subs": [
+          "Director of OMB must issue guidance to executive agency heads within 180 days of enactment",
+          "Guidance must include instructions requiring each education requirement to be determined, justified, and reviewed",
+          "Guidance must include instructions that encourage the use of alternatives to education requirements"
+        ]
+      },
+      {
+        "headline": "Applicability and Old-Rule Repeal",
+        "billSection": "2(d)-(e)",
+        "subs": [
+          "Prohibition applies to solicitations issued on or after 15 months after enactment",
+          "Section 813 of the Floyd D. Spence NDAA for FY2001 (Public Law 106-398; 114 Stat. 1654A-214), as implemented in FAR subpart 39.104 as in effect on January 3, 2025, is repealed",
+          "Repeal takes effect when the OMB guidance becomes effective"
+        ]
+      },
+      {
+        "headline": "GAO Evaluation",
+        "billSection": "2(f)",
+        "subs": [
+          "Not later than 3 years after enactment, the Comptroller General must submit an evaluation to Congress",
+          "Evaluation covers executive agency compliance with new 41 U.S.C. §3313"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) — Flexibility in Contractor Education Requirements (new 41 U.S.C. §3313)",
+        "items": [
+          {
+            "main": "Bars solicitations from setting minimum education requirements for proposed contractor personnel unless the contracting officer includes a written justification.",
+            "detail": "The prohibition applies to any minimum education requirement that would gate a bidder's eligibility for award of a contract. The written justification must appear in the solicitation and must (i) explain why the needs of the executive agency cannot be met without any such requirement, and (ii) clarify how the requirement ensures the needs are met. \"Executive agency\" carries the meaning already given in 41 U.S.C. §133.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(c) — OMB Guidance",
+        "items": [
+          {
+            "main": "Requires OMB to issue implementing guidance within 180 days of enactment.",
+            "detail": "Guidance to executive agency heads must include: (1) instructions for contracting officers on preparing the new-section justifications, including a requirement that each use of an education requirement be determined, justified, and reviewed; and (2) instructions for contracting officers that encourage the use of alternatives to education requirements.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(d) — Applicability",
+        "items": [
+          {
+            "main": "Delays the new prohibition until solicitations issued 15 months or more after enactment.",
+            "detail": "Solicitations already outstanding, or issued in the first 15 months after enactment, are not covered by the new §3313 requirement.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(e) — Repeal",
+        "items": [
+          {
+            "main": "Repeals Section 813 of the Floyd D. Spence NDAA for Fiscal Year 2001 (Public Law 106-398), as implemented in Federal Acquisition Regulation subpart 39.104.",
+            "detail": "The repeal takes effect on the date the OMB guidance required by subsection (c) becomes effective. The bill cites Section 813 as it appears at 114 Stat. 1654A-214 and pegs the FAR subpart 39.104 language to its January 3, 2025 form.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(f) — GAO Report",
+        "items": [
+          {
+            "main": "Requires the Comptroller General to evaluate executive agency compliance with new 41 U.S.C. §3313 within 3 years of enactment.",
+            "detail": "The evaluation is submitted to Congress and is scoped specifically to compliance with the new section — not a broader review of educational requirements across federal contracting.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(g) — Definitions",
+        "items": [
+          {
+            "main": "Defines \"education,\" \"education requirement,\" and \"executive agency.\"",
+            "detail": "\"Education\" means an associate, baccalaureate, graduate, or professional degree, specified coursework, or other form of educational attainment awarded by a junior/community college, college, or university accredited as a collegiate institution by a recognized accrediting agency (or approved by the appropriate state education authority, or DC's equivalent, to grant associate or higher degrees). \"Education requirement\" includes a requirement that can be met through education alone; education or experience; or a combination of education and experience. \"Executive agency\" has the meaning given in 41 U.S.C. §133.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(g)(2)",
+        "summary": "The definition of \"education requirement\" covers not just degree-only mandates but also \"education or experience\" and \"a combination of education and experience\" phrasing — meaning even flexible-alternative language triggers the new justification requirement.",
+        "why_unreported": "Press coverage of \"skills-based hiring\" bills tends to treat the reform as targeting bright-line degree walls. Sweeping in \"education or experience\" language means the justification duty attaches to a much broader set of common solicitation templates than the short title suggests."
+      },
+      {
+        "section": "Section 2(e)",
+        "summary": "The bill repeals Section 813 of the Floyd D. Spence FY2001 NDAA — the underlying statutory basis for the current FAR subpart 39.104 IT-workforce education flexibility rule — once OMB guidance takes effect.",
+        "why_unreported": "The Section 813 repeal is tucked into subsection (e) and framed as a conforming change. In practice it removes a 25-year-old statutory authority that the FAR still cites."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill defines \"education requirement\" broadly but does not define \"experience,\" leaving the boundary between banned \"minimum education requirements\" and permitted experience-based screening to agency discretion.",
+      "The bill requires a written justification in each solicitation but does not require the justification to be made public or reviewable by prospective bidders.",
+      "The bill requires OMB guidance to encourage alternatives to education requirements but does not name the alternatives (e.g., competency assessments, skills tests, portfolio review).",
+      "The bill repeals Section 813 of the FY2001 NDAA but does not identify what happens to solicitations already using the current FAR subpart 39.104 flexibility framework during the 15-month applicability lag."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New 41 U.S.C. §3313 — Flexibility in contractor education requirements (prohibition + written-justification exception)"
+      ],
+      "modified": [
+        "Table of sections for Chapter 33 of title 41, U.S.C. — new entry for §3313"
+      ],
+      "removed": [
+        "Section 813 of the Floyd D. Spence NDAA for FY2001 (Public Law 106-398; 114 Stat. 1654A-214), as implemented in FAR subpart 39.104 as in effect January 3, 2025 — repealed when OMB guidance takes effect"
+      ]
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-494",
+    "code": "S.494",
+    "title": "National Plan for Epilepsy Act",
+    "official_title": "To establish a national plan to coordinate research on epilepsy, and for other purposes.",
+    "date": "2025-02-10",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Schmitt, Eric S. (R-MO)",
+    "sponsor_bioguide": "S001227",
+    "cosponsors": 27,
+    "pages": 2,
+    "analyzed": true,
+    "demo": false,
+    "billType": "study",
+    "stageDate": "2026-08-04",
+    "likelihood": 70,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Eric Schmitt (R-MO) with 27 cosponsors, this bill directs HHS to review and update existing federal epilepsy programs and to submit recommendations to Congress within 2 years. The bill passed the Senate on August 4, 2026 and awaits House action. Non-fiscal HHS review-and-report bills of this narrow scope tend to move well when they arrive in the House with substantial cosponsor support and no authorization of appropriations attached.",
+    "summary": "This bill directs HHS to review, and where necessary update or recommend to Congress, existing federal programs, activities, and strategic plans related to epilepsy research, prevention, early identification, diagnosis, and treatment — with the stated purpose of identifying and addressing knowledge gaps and improving health outcomes. The Secretary must convene and solicit input from other federal agencies and relevant stakeholders (including patient advocates and non-federal subject matter experts), and must submit a report on the review's findings to Senate HELP and House Energy and Commerce within 2 years of enactment. The bill does not authorize appropriations.",
+    "brief": "Directs HHS to conduct a review of federal epilepsy research, prevention, and treatment programs — with stakeholder consultation and a report to Congress within 2 years — but no new authorization of appropriations.",
+    "top_lines": [
+      {
+        "headline": "HHS Review Duty",
+        "billSection": "2(a)",
+        "subs": [
+          "HHS Secretary must review existing federal epilepsy programs, activities, and strategic plans",
+          "Where necessary and appropriate, the Secretary provides recommendations to Congress and updates the programs",
+          "Coverage: research, prevention, early identification, diagnosis, and treatment",
+          "Purpose: identify and address knowledge gaps and improve epilepsy health outcomes"
+        ]
+      },
+      {
+        "headline": "Required Review Contents",
+        "billSection": "2(b)",
+        "subs": [
+          "Findings from evidence-based research, status of federally-funded research, knowledge gaps, and population disparities",
+          "Review of federal programs including gaps and opportunities for coordination, global-health opportunities, near/long-term goals, and level of federal investment",
+          "Opportunities to improve collaboration, close knowledge gaps, improve early diagnosis and coordinated care, better prevent sudden unexpected death in epilepsy (SUDEP) and other mortalities, improve surveillance, and support new treatments and quality-of-life approaches",
+          "Review of current public health strategies and consideration of additional evidence-based strategies"
+        ]
+      },
+      {
+        "headline": "External Input and Report to Congress",
+        "billSection": "2(c)-(d)",
+        "subs": [
+          "Secretary must regularly convene and solicit input from other federal agencies (as appropriate) and relevant stakeholders including patient advocates and non-federal subject matter experts",
+          "Report due to Senate HELP and House Energy and Commerce within 2 years of enactment",
+          "Report must describe steps taken to solicit stakeholder input, summarize feedback and identified needs",
+          "Report must include recommendations to improve coordination and support of federal programs, plus proposals for implementation",
+          "Report must identify any statutory or other barriers that impede implementation of recommended changes"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Review to Improve Epilepsy Programs, Research, Prevention, and Care",
+        "items": [
+          {
+            "main": "Directs the HHS Secretary to review — and, as necessary and appropriate, update or provide recommendations to Congress regarding — existing federal programs, activities, and strategic plans related to epilepsy research, prevention, early identification, diagnosis, and treatment.",
+            "detail": "The stated purpose is to identify and address knowledge gaps and improve health outcomes related to epilepsy. The bill does not create any new federal epilepsy program — it directs HHS to review the ones already in place.",
+            "comments": []
+          },
+          {
+            "main": "Enumerates four required review content areas: research status and gaps, program review, opportunities for improvement, and public health strategies.",
+            "detail": "The program-review paragraph must specifically consider gaps in coordination among programs, opportunities to inform global efforts, near- and long-term goals, and the level of federal investment. The improvement-opportunities paragraph must specifically look at collaboration between federal agencies and stakeholders, knowledge gaps affecting individuals and caregivers, early diagnosis and coordinated care, prevention of sudden unexpected death in epilepsy (SUDEP) and other epilepsy-related mortalities, epilepsy surveillance, and support for new treatments, strategies, and quality-of-life approaches.",
+            "comments": []
+          },
+          {
+            "main": "Requires the Secretary to regularly convene and solicit input from other federal agencies and relevant stakeholders — including patient advocates and non-federal subject matter experts.",
+            "detail": "The bill uses the phrase \"as appropriate\" for the federal-agency consultation, giving the Secretary discretion over which agencies to bring in.",
+            "comments": []
+          },
+          {
+            "main": "Requires a report to Senate HELP and House Energy and Commerce within 2 years of enactment.",
+            "detail": "The report must include: a description of steps taken to solicit stakeholder input and a summary of feedback and identified needs; recommendations to improve coordination and support of federal programs to better support people with epilepsy, epilepsy research, and data collection, plus proposals for implementation; and any changes to federal programs, activities, or strategic plans recommended by the Secretary based on the review, along with any statutory or other barriers to implementation.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(b)(3)(D)",
+        "summary": "The improvement-opportunities review specifically calls out sudden unexpected death in epilepsy (SUDEP) as a prevention target.",
+        "why_unreported": "SUDEP is one of the leading causes of death in people with epilepsy but is rarely named directly in appropriations report language or general disease-review bills. Its explicit inclusion here signals a specific advocacy-community priority baked into the statutory duty."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill directs HHS to review existing federal epilepsy programs but does not authorize appropriations for the review or its implementation.",
+      "The bill requires stakeholder input but does not require public posting of the input received or the review's interim findings.",
+      "The bill requires the report to identify statutory barriers to implementing recommendations but does not create a mechanism for expedited congressional consideration of the recommended statutory changes.",
+      "The bill does not set a specific cadence for updating the review once the initial 2-year report is submitted."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New HHS duty to review federal epilepsy programs, activities, and strategic plans (research, prevention, early identification, diagnosis, and treatment)",
+        "New report to Senate HELP and House Energy and Commerce within 2 years of enactment"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-4472",
+    "code": "S.4472",
+    "title": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+    "official_title": "To amend the Accelerating Access to Critical Therapies for ALS Act to reauthorize the provisions of such Act through fiscal year 2031, and for other purposes.",
+    "date": "2026-04-30",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Murkowski, Lisa (R-AK)",
+    "sponsor_bioguide": "M001153",
+    "cosponsors": 15,
+    "pages": 4,
+    "analyzed": true,
+    "demo": false,
+    "billType": "reauthorization",
+    "stageDate": "2026-08-04",
+    "likelihood": 70,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Lisa Murkowski (R-AK) with 15 cosponsors, this bill extends the 2021 ALS Act (Public Law 117-79) — the FDA expanded-access grant program plus the FDA rare-neurodegenerative-disease action plans — through fiscal year 2031, and makes several process improvements to how expanded-access grants are administered. The bill passed the Senate on August 4, 2026 and awaits House action. Reauthorizations of rare-disease programs with this base of bipartisan cosponsorship typically move in the House without controversy.",
+    "referencedSources": [
+      {
+        "id": "bill-117-hr-3537",
+        "kind": "law",
+        "label": "Accelerating Access to Critical Therapies for ALS Act (Public Law 117-79)",
+        "citation": "Public Law 117-79",
+        "srcUrl": "https://www.congress.gov/bill/117th-congress/house-bill/3537/text",
+        "textFile": "data/ref-text/bill-117-hr-3537.txt",
+        "fetchedAt": "2026-08-07"
+      }
+    ],
+    "summary": "The 2021 Accelerating Access to Critical Therapies for ALS Act (Public Law 117-79) created an FDA expanded-access grant program for investigational drugs to prevent, diagnose, mitigate, treat, or cure amyotrophic lateral sclerosis, and directed FDA to publish an action plan on ALS and other rare neurodegenerative diseases. Its authorization of appropriations ran through fiscal year 2026 at $100 million per year, per the fetched Public Law 117-79 text. This reauthorization extends the underlying statute — both the general 5-year authorization and the expanded-access grant reservation — through fiscal year 2031, adds a safety-reporting requirement for grantees, refines the criteria FDA considers when reviewing and renewing grants, updates the FDA action-plan cadence to every 5 years (with new content requirements about prior-plan implementation and barriers), narrows the action plan's scope from \"ALS and other rare neurodegenerative diseases\" to \"FDA action plans,\" and adds a new 4-year HHS effectiveness report. Two technical fixes correct misspellings in the ALS statute.",
+    "brief": "Extends the 2021 ALS Act's FDA expanded-access grant program and rare-neurodegenerative-disease action plans through fiscal year 2031, adds safety-data reporting for grantees, refines grant criteria, sets a 5-year update cycle for FDA action plans, and adds an HHS effectiveness report.",
+    "top_lines": [
+      {
+        "headline": "5-Year Reauthorization",
+        "billSection": "2",
+        "source": "bill-117-hr-3537",
+        "subs": [
+          "General authorization of appropriations extended from \"2022 through 2026\" to \"2027 through 2031\"",
+          "Expanded-access grant reservation extended from \"2026\" to \"2031\"",
+          "Underlying $100M/year figure in Public Law 117-79 is unchanged in this bill"
+        ]
+      },
+      {
+        "headline": "Grantee Safety Reporting",
+        "billSection": "3(2)(F)",
+        "subs": [
+          "Grantees must promptly report to the Secretary available safety data from any ongoing clinical trial of the investigational drug",
+          "Reporting terms are set in the terms and conditions of the grant"
+        ]
+      },
+      {
+        "headline": "Grant Renewal Criteria",
+        "billSection": "3(3)(E)",
+        "subs": [
+          "On renewal of an expanded-access grant, the Secretary must request from the investigational new drug application sponsor — and assess — the enrollment, safety, and any available efficacy data of the drug",
+          "Data considered relates to the prevention, diagnosis, mitigation, treatment, or cure of ALS"
+        ]
+      },
+      {
+        "headline": "FDA Action Plan Cadence and Content",
+        "billSection": "4",
+        "subs": [
+          "New requirement: action plan updated not later than 1 year after enactment of this reauthorization and every 5 years thereafter",
+          "Section 4 heading narrowed from \"ALS and other\" to \"FDA\" action plans",
+          "Each new plan must describe previous actions to implement the prior plan, planned actions to implement the current plan, and any barriers to implementation (with a possible resource estimate)"
+        ]
+      },
+      {
+        "headline": "New HHS Effectiveness Report",
+        "billSection": "5",
+        "subs": [
+          "Not later than 4 years after enactment, HHS must submit a report to Senate HELP and House Energy and Commerce",
+          "Report assesses the effectiveness of activities under sections 2, 3, and 5 of Public Law 117-79",
+          "Report makes recommendations to improve those activities without duplicating the FDA action plan"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Reauthorization of Accelerating Access to Critical Therapies for ALS Act",
+        "items": [
+          {
+            "main": "Extends Section 7 of the 2021 ALS Act from \"2022 through 2026\" to \"2027 through 2031.\"",
+            "detail": "Section 7 of Public Law 117-79 is the general authorization of appropriations for the Act. Per the fetched Public Law 117-79 text, that authorization is $100,000,000 for each of fiscal years 2022 through 2026. This bill strikes \"2022 through 2026\" and inserts \"2027 through 2031,\" a straight 5-year extension without altering the dollar level.",
+            "comments": []
+          },
+          {
+            "main": "Extends the expanded-access grant reservation in Section 2(f) of the 2021 ALS Act from \"2026\" to \"2031.\"",
+            "detail": "Section 2(f) (codified at 21 U.S.C. §360ee note) is the reservation of a specified share of the annual authorized amount for expanded-access grants for individuals with ALS. Per the fetched text, that reservation runs through fiscal year 2026 at a share not less than 25% of the amount appropriated to carry out Section 2. This bill strikes \"2026\" and inserts \"2031.\"",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Improvements to Program for Grants for Research on Therapies for ALS",
+        "items": [
+          {
+            "main": "Renames the ALS Act's Section 2 grants \"expanded access grants\" and reorganizes the application and review provisions.",
+            "detail": "The renaming is done by inserting \"(referred to in this section as `expanded access grants')\" at the end of the first sentence of subsection (a). The bill restructures subsection (b) (application), redesignates paragraphs, and updates paragraph (2)'s heading/text.",
+            "comments": []
+          },
+          {
+            "main": "Adds a new grantee obligation: assurance of prompt safety-data reporting from ongoing trials.",
+            "detail": "New subsection (b)(3) requires the applicant to include an assurance that the entity will promptly report to the Secretary available safety data from any ongoing clinical trial of the investigational drug, as set forth in the terms and conditions of the grant.",
+            "comments": []
+          },
+          {
+            "main": "Adds a new Secretary duty on grant renewal: request and assess enrollment, safety, and efficacy data.",
+            "detail": "New paragraph (2) under subsection (c) directs the Secretary, in the case of a renewal, to request from the sponsor of the investigational new drug application involved — and assess — the enrollment, safety, and any available efficacy data of the drug related to the prevention, diagnosis, mitigation, treatment, or cure of ALS.",
+            "comments": []
+          },
+          {
+            "main": "Clarifies phase-3 trial coverage and enrollment timing for the definition of ongoing clinical trial.",
+            "detail": "In subsection (e)(2), the bill inserts \", and that begins enrollment within a timeframe as determined by the Secretary through the terms and conditions of the grant\" before the period at the end. A new paragraph (4) adds a definition: the term \"phase 3 clinical trial\" includes a phase 2/3 combined trial and a planned phase 3 clinical trial that is not yet enrolling participants.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 — Report on ALS and Other Rare Neurodegenerative Disease Action Plans (as amended)",
+        "items": [
+          {
+            "main": "Adds an initial 1-year update deadline and a recurring 5-year update cycle to the FDA action plan requirement.",
+            "detail": "Section 4 of the 2021 ALS Act (codified at 21 U.S.C. §360aa note) already required FDA to publish an action plan on ALS and other rare neurodegenerative diseases. The bill inserts \"and not later than 1 year after the date of enactment of the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026 and every 5 years thereafter\" into subsection (a), and adds \"develop, or update, as applicable, and\" before \"publish on.\" The section heading is also narrowed from \"ALS and other\" to \"FDA\" action plans.",
+            "comments": []
+          },
+          {
+            "main": "Adds new content requirements for post-enactment action plans.",
+            "detail": "For each action plan published after enactment, the plan must include a description of: (A) previous actions taken by FDA to implement the previous action plan; (B) any other planned actions to implement the current plan; and (C) any barriers to implementing the current plan and related recommendations, which may include an estimate of resources necessary to address those barriers. The bill also inserts \"of relevant investigational new drug applications\" after \"sponsors\" in paragraph (2)(A) and \"for the prevention, diagnosis, mitigation, treatment, or cure of rare neurodegenerative diseases\" in paragraph (2)(C).",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 5 — Reports",
+        "items": [
+          {
+            "main": "Restructures Section 6 of the 2021 ALS Act, keeping the GAO report on the ALS Reauthorization Act and adding a new HHS effectiveness report.",
+            "detail": "The section heading changes from \"GAO REPORT\" to \"REPORTS.\" The GAO report requirement is redesignated as subsection (a), and its trigger is changed from \"this Act\" to \"the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026.\" A new subsection (b) requires the HHS Secretary, within 4 years of enactment of the ALS Reauthorization Act of 2026, to submit to Senate HELP and House Energy and Commerce a report assessing the effectiveness of the activities carried out under sections 2, 3, and 5 of Public Law 117-79 and making recommendations to improve those activities. The report must not duplicate the FDA action plan.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 6 — Technical Amendments",
+        "items": [
+          {
+            "main": "Corrects two misspellings in Section 3 of the 2021 ALS Act (codified at 42 U.S.C. §280g-7b).",
+            "detail": "In subsection (a), \"amytrophic\" is corrected to \"amyotrophic\"; in subsection (b)(3)(A)(iii), the stray word \"rational\" is struck.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 4(1)",
+        "summary": "The FDA action-plan section heading is narrowed from \"ALS and other rare neurodegenerative diseases\" to \"FDA action plans,\" removing \"ALS and other\" from the heading.",
+        "why_unreported": "The bill's short title is a \"reauthorization,\" but the heading change signals a scope shift in how the FDA plan is characterized in statute. It's a small edit with a substantive framing effect that press coverage will miss."
+      },
+      {
+        "section": "Section 3(2)(F)",
+        "summary": "Grantees receiving expanded-access grants must now assure prompt safety-data reporting from any ongoing clinical trial of the investigational drug.",
+        "why_unreported": "The reauthorization framing hides a real new grantee obligation: safety-reporting terms that were previously left to grant negotiations are now a statutory application requirement."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill extends the ALS Act's authorization of appropriations through FY2031 but does not change the $100M-per-year level or require inflation adjustment.",
+      "The bill requires FDA to publish an updated action plan every 5 years but does not require public comment periods or a specific stakeholder-consultation cadence during plan development.",
+      "The bill requires an HHS effectiveness report but does not require the report to be made public.",
+      "The bill narrows the Section 4 heading to \"FDA action plans\" without addressing whether the plan's substantive scope (ALS and other rare neurodegenerative diseases) remains the same."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New grantee assurance: prompt safety-data reporting from ongoing clinical trials (Section 3, adding new (b)(3) to the 2021 ALS Act)",
+        "New Secretary duty on grant renewal: request and assess enrollment, safety, and efficacy data from the IND sponsor (Section 3, adding new (c)(2))",
+        "New definition: \"phase 3 clinical trial\" includes phase 2/3 combined trials and planned phase-3 trials not yet enrolling (Section 3, adding new (e)(4))",
+        "New 1-year and 5-year update cadence for the FDA action plan (Section 4)",
+        "New content requirements for post-enactment action plans: prior-plan implementation, planned actions, barriers, and possible resource estimates (Section 4)",
+        "New HHS effectiveness report within 4 years of enactment (Section 5, adding new Section 6(b) to the 2021 ALS Act)"
+      ],
+      "modified": [
+        "Section 7 of Public Law 117-79 — authorization of appropriations extended from FY2022–2026 to FY2027–2031",
+        "Section 2(f) of Public Law 117-79 (21 U.S.C. §360ee note) — expanded-access grant reservation extended from FY2026 to FY2031",
+        "Section 4 of Public Law 117-79 (21 U.S.C. §360aa note) — heading narrowed from \"ALS and other\" to \"FDA\" action plans",
+        "Section 6 of Public Law 117-79 — heading changed from \"GAO REPORT\" to \"REPORTS\"; GAO report trigger updated to reference the 2026 Reauthorization Act",
+        "Section 3 of Public Law 117-79 (42 U.S.C. §280g-7b) — technical corrections (\"amytrophic\"→\"amyotrophic\"; strike stray \"rational\")"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-2666",
+    "code": "S.2666",
+    "title": "Foreign Robocall Elimination Act",
+    "official_title": "To direct the Federal Communications Commission to establish a taskforce on unlawful robocalls, and for other purposes.",
+    "date": "2025-08-01",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Budd, Ted (R-NC)",
+    "sponsor_bioguide": "B001305",
+    "cosponsors": 3,
+    "pages": 7,
+    "analyzed": true,
+    "demo": false,
+    "billType": "framework",
+    "stageDate": "2026-08-03",
+    "likelihood": 65,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Ted Budd (R-NC) with 3 cosponsors, this bill establishes an FCC-led interagency taskforce on unlawful robocalls, grants trace-back immunity to the registered TRACED Act consortium, and requires an FCC Robocall Mitigation Database bond rule. The bill passed the Senate on August 3, 2026 and awaits House action. Robocall bills that combine an FCC taskforce with liability protections for the trace-back consortium are common vehicles for bipartisan telecom oversight — likely to move in the House but the bond-requirement provision may draw industry pushback.",
+    "summary": "This bill directs the FCC to establish a taskforce on unlawful robocalls, amends the Pallone-Thune TRACED Act (Public Law 116-105) to grant trace-back immunity to the registered consortium, and requires the FCC to issue rules on when providers must post a bond to file certifications in the Robocall Mitigation Database. Within 270 days of enactment, the FCC (after consulting the FTC and Attorney General) must establish an interagency taskforce comprising federal agency representatives and 7 private-sector representatives, and the taskforce must submit a report to Congress within 360 days of establishment. The bill also amends Section 13 of the TRACED Act to grant the registered consortium immunity from any cause of action for receiving, sharing, or publishing covered trace-back information; changes the FCC public-list authority so the Commission or the consortium may publish a list of voice service providers based on refusals to participate in trace-back and on other information about substantial-unlawful-robocall providers; and changes the FCC notice provision from annual to once every 3 years. Finally, the FCC must issue rules requiring providers to post a bond up to $100,000 before filing a Robocall Mitigation Database certification, if the Commission determines that a bond is necessary — with exemptions for providers meeting certain criteria including USF contribution status, state PUC registration, national securities exchange listing, and general indicia of being a bona fide provider.",
+    "brief": "Directs the FCC to stand up an interagency robocall taskforce within 270 days, grants trace-back immunity to the TRACED Act's registered consortium, and requires an FCC bond rule (up to $100,000) for providers filing certifications in the Robocall Mitigation Database.",
+    "top_lines": [
+      {
+        "headline": "FCC Interagency Taskforce",
+        "billSection": "2",
+        "subs": [
+          "FCC establishes the taskforce within 270 days of enactment, after consulting FTC and Attorney General",
+          "Composition: federal agency representatives + 7 private-sector representatives (voice service, analytics, technology experts, TRACED Act consortium, marketing, non-marketing, consumer advocate)",
+          "Report to Congress within 360 days of establishment, then the taskforce terminates 90 days later",
+          "17 specific study topics listed, including STIR/SHAKEN adequacy for foreign-originated calls, DOJ enforcement, and public disclosure of consortium trace-back results"
+        ]
+      },
+      {
+        "headline": "Trace-Back Immunity",
+        "billSection": "4(a)",
+        "subs": [
+          "New Section 13(d)(3) of the Pallone-Thune TRACED Act (Public Law 116-105)",
+          "No cause of action may be maintained against the registered consortium for receiving, sharing, or publishing covered information (or information derived from covered information)",
+          "Covered information includes call detail records, provider identity information, and calling-entity contact information tied to suspected fraudulent, abusive, or unlawful robocalls; illegally spoofed calls; and other illegal calls"
+        ]
+      },
+      {
+        "headline": "Public-List Authority Expanded",
+        "billSection": "4(b)",
+        "subs": [
+          "FCC or the registered consortium may publish a list of voice service providers based on refusals to participate in private-led trace-back efforts",
+          "List may also be based on other information the Commission or consortium collects about providers found to originate or transmit substantial amounts of unlawful robocalls",
+          "The Commission may take enforcement action based on that information"
+        ]
+      },
+      {
+        "headline": "Robocall Mitigation Database Bond",
+        "billSection": "5",
+        "subs": [
+          "FCC must issue rules requiring providers to post a bond of not more than $100,000 before filing a Robocall Mitigation Database certification, if the Commission determines a bond is necessary to preserve database integrity",
+          "Excepted providers: FCC must establish criteria to exempt providers when a bond is not necessary to deter unlawful robocall activity",
+          "Considerations for the exemption criteria: USF contribution status under 47 CFR §64.1195 and 47 U.S.C. §254(d); state PUC certificate/license/registration; national securities exchange listing; other indicia of being a bona fide, established communications service provider"
+        ]
+      },
+      {
+        "headline": "TRACED Act Notice Frequency",
+        "billSection": "3",
+        "subs": [
+          "Section 13(d)(2) of the Pallone-Thune TRACED Act: FCC notice provision changed from \"annually\" to \"once every 3 years\""
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2 — Interagency Taskforce on Unlawful Robocalls",
+        "items": [
+          {
+            "main": "Directs the FCC — after consultation with the FTC and Attorney General — to establish a taskforce on unlawful robocalls within 270 days of enactment.",
+            "detail": "\"Unlawful robocall\" means a telephone call made in violation of subsection (b) or (e) of section 227 of the Communications Act of 1934 (47 U.S.C. §227). \"Consortium\" refers to the registered consortium described in Section 13(d) of the Pallone-Thune TRACED Act (Public Law 116-105).",
+            "comments": []
+          },
+          {
+            "main": "Sets taskforce composition: federal agency representatives plus 7 private-sector members.",
+            "detail": "Federal agency representatives are chosen by the FCC Chairman in consultation with the FTC Chairman and the Attorney General, with each agency head recommending its representative. The 7 private-sector seats are jointly appointed by the three officials (with a tiebreaker giving the FCC Chairman final authority subject to Commission-vote procedure), and consist of: 3 combating-unlawful-robocalls specialists (voice service providers, analytics providers, technologists, technology experts); 1 TRACED Act consortium representative; 1 marketing-business representative; 1 non-marketing regular-caller representative (business or nonprofit); and 1 consumer advocate.",
+            "comments": []
+          },
+          {
+            "main": "Requires a report to Congress within 360 days of the taskforce being established, covering 17 enumerated study topics.",
+            "detail": "The listed topics include: comparing domestic vs. cross-border unlawful robocall volumes; identifying top foreign originating countries; measuring financial-loss and identity-theft impact from foreign-originated unlawful robocalls; caller ID authentication adoption abroad; STIR/SHAKEN adequacy for foreign-originating and foreign-intermediate providers; foreign-country incentives to cooperate with U.S. enforcement; resources needed to combat foreign-originated unlawful robocalls; whether a dedicated DOJ unlawful-robocalls office would help; increased criminal penalties tied to volume; DOJ enforcement activity and referral history from the Commission; DOJ forfeiture pursuit; input from technologists and private-sector innovators; best-practices list for identifying and blocking unlawful robocalls; the impact of publicly disclosing trace-back results (including on investigative methods, consumer/business avoidance, proprietary information, accountability, evasion, call blocking, cooperation, and fairness); and compliance with sections 6 and 7 of the Pallone-Thune TRACED Act (47 U.S.C. §227b-1, 47 U.S.C. §227 note).",
+            "comments": []
+          },
+          {
+            "main": "Sets funding, termination, and use-of-funds rules for the taskforce.",
+            "detail": "Notwithstanding 31 U.S.C. §1346, existing FCC/FTC/DOJ funds may be used for coordination with, participation in, or recommendations involving the taskforce. The taskforce terminates 90 days after the report is submitted.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — FCC Notice Provision",
+        "items": [
+          {
+            "main": "Changes Section 13(d)(2) of the Pallone-Thune TRACED Act (Public Law 116-105) from \"annually\" to \"once every 3 years.\"",
+            "detail": "This affects the frequency of an FCC notice provision tied to the registered consortium's status; the bill's amendment is a straight word-for-word substitution.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 4 — Registered Consortium Conducting Trace Back",
+        "items": [
+          {
+            "main": "Adds a new paragraph (3) to Section 13(d) of the TRACED Act granting the registered consortium trace-back immunity.",
+            "detail": "No cause of action shall lie or be maintained in any court against the registered consortium for receiving, sharing, or publishing covered information — or information derived from it. \"Covered information\" is defined to mean information regarding suspected fraudulent, abusive, or unlawful robocalls; illegally spoofed calls; and other illegal calls. It includes call detail records, the names and other identifying information of voice service providers that originated/carried/routed/transmitted those calls, and information about entities that made the calls — including any contact information provided to the originating voice service provider.",
+            "comments": []
+          },
+          {
+            "main": "Amends Section 13(e) of the TRACED Act to allow either the FCC or the consortium (in consultation with the FCC) to publish a list of voice service providers.",
+            "detail": "The list may be based on: (A) information the consortium has about voice service providers that refuse to participate in private-led trace-back efforts, and (B) other information the Commission or consortium may collect about voice service providers found to originate or transmit substantial amounts of unlawful robocalls. The Commission may take enforcement action based on the information.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 5 — Robocall Mitigation Database",
+        "items": [
+          {
+            "main": "Requires the FCC to issue rules requiring bond posting before providers file certifications in the Robocall Mitigation Database — if the Commission determines a bond is necessary to preserve database integrity.",
+            "detail": "The bond amount is capped at not more than $100,000. \"Robocall Mitigation Database\" carries the meaning given at 47 CFR §64.6300 or any successor regulation.",
+            "comments": []
+          },
+          {
+            "main": "Requires the FCC to establish criteria to exempt providers when a bond is not necessary to deter unlawful robocall activity.",
+            "detail": "Considerations in establishing exemption criteria include whether a provider: (i) is registered with the FCC under 47 CFR §64.1195 and makes contributions under 47 U.S.C. §254(d); (ii) holds a certificate of authority, license, or registration with a state public utility commission; (iii) is an issuer whose securities are listed on a national securities exchange; and (iv) otherwise presents indicia of being a bona fide, established communications service provider such that requiring a bond would impose unnecessary burdens without materially improving §227 enforcement.",
+            "comments": []
+          },
+          {
+            "main": "Sets implementation rules for the FCC — including required bond-posting for providers that do not demonstrate legitimacy, categorical exemptions, and minimization of burdens on compliant providers.",
+            "detail": "The Commission must: (1) require bond posting from providers that do not demonstrate legitimate ongoing operations, sufficient regulatory oversight for accountability, or ability to pay fines or forfeitures; (2) establish categorical exemptions for identifiable classes of legitimate providers meeting the subsection (b)(2) criteria; and (3) minimize administrative and financial burdens on compliant, established, and regulated providers while ensuring effective §227 enforcement.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(d)(2)(P)",
+        "summary": "The taskforce must evaluate whether requiring periodic public disclosure — in whole or in part — of the results of trace-backs conducted by the registered consortium would impact the integrity and effectiveness of the trace-back process.",
+        "why_unreported": "The trace-back process has operated behind the scenes since the TRACED Act took effect. Explicitly asking whether to make trace-back results public would materially shift the transparency baseline. The bill hides this study inside a 17-topic list."
+      },
+      {
+        "section": "Section 5(b)(2)(B)(iii)",
+        "summary": "One consideration for exempting a provider from the Robocall Mitigation Database bond requirement is whether the provider is an issuer whose securities are listed on a national securities exchange.",
+        "why_unreported": "The Robocall Mitigation Database certifications are a compliance touchpoint for all voice service providers. Building a de facto public-company exemption into the bond regime is a structural favor to large listed providers that isn't reflected in the bill's short title."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill directs the FCC to stand up an interagency taskforce but does not authorize appropriations or require dedicated staffing — funding is limited to existing FCC, FTC, and DOJ resources.",
+      "The bill grants the registered TRACED Act consortium trace-back immunity but does not identify remedies for parties whose call records or identifying information are shared or published in error.",
+      "The bill lets the FCC or the consortium publish a list of voice service providers but does not specify due process protections (notice, appeal, correction) for listed providers.",
+      "The bill caps the Robocall Mitigation Database bond at $100,000 but does not set a floor, leaving the effective bond amount to FCC rulemaking discretion."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New FCC interagency taskforce on unlawful robocalls (270-day standup deadline; 360-day report; taskforce terminates 90 days after report submission)",
+        "New Section 13(d)(3) of Public Law 116-105 (Pallone-Thune TRACED Act) — Trace-back immunity for the registered consortium",
+        "New FCC rules requirement: bond of up to $100,000 before filing certifications in the Robocall Mitigation Database, with an exempted-providers criteria framework"
+      ],
+      "modified": [
+        "Section 13(d)(2) of Public Law 116-105 (Pallone-Thune TRACED Act) — FCC notice provision changed from \"annually\" to \"once every 3 years\"",
+        "Section 13(e) of Public Law 116-105 (Pallone-Thune TRACED Act) — Public-list authority rewritten so FCC or consortium may publish a list based on refusal to participate in trace-back or on data about providers found to originate/transmit substantial unlawful robocalls; Commission may take enforcement action based on the information"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-3977",
+    "code": "S.3977",
+    "title": "Bankruptcy Threshold Adjustment Act of 2026",
+    "official_title": "To amend title 11, United States Code, to modify certain bankruptcy eligibility requirements, and for other purposes.",
+    "date": "2026-03-03",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Grassley, Chuck (R-IA)",
+    "sponsor_bioguide": "G000386",
+    "cosponsors": 5,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-08-03",
+    "likelihood": 65,
+    "likelihoodLabel": "Likely",
+    "likelihoodReason": "Introduced by Sen. Chuck Grassley (R-IA), Chair of Senate Judiciary, with 5 cosponsors, this bill sets new debt limits for two bankruptcy tracks: $7.5 million for Subchapter V small-business reorganization and $2.75 million for Chapter 13 individual reorganization. The bill passed the Senate on August 3, 2026 and awaits House action. Similar temporary Subchapter V threshold increases (the pandemic-era CARES Act and Bankruptcy Threshold Adjustment and Technical Corrections Act of 2022) have moved through both chambers on bipartisan Judiciary support, which favors House action here.",
+    "referencedSources": [
+      {
+        "id": "usc-11-1182",
+        "kind": "statute",
+        "label": "11 U.S.C. 1182 (Bankruptcy Code — Subchapter V debtor definitions)",
+        "citation": "11 U.S.C. 1182",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title11/granules/USCODE-2024-title11-chap11-subchapV-sec1182/htm",
+        "textFile": "data/ref-text/usc-11-1182.txt",
+        "fetchedAt": "2026-08-07"
+      },
+      {
+        "id": "usc-11-109",
+        "kind": "statute",
+        "label": "11 U.S.C. 109 (Bankruptcy Code — Who may be a debtor)",
+        "citation": "11 U.S.C. 109",
+        "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title11/granules/USCODE-2024-title11-chap1-sec109/htm",
+        "textFile": "data/ref-text/usc-11-109.txt",
+        "fetchedAt": "2026-08-07"
+      }
+    ],
+    "summary": "This bill rewrites two bankruptcy debt-limit rules in title 11 of the U.S. Code. First, it replaces the current definition of \"debtor\" in Section 1182(1) — the eligibility gate for Subchapter V small business reorganization under Chapter 11 — with a new definition covering a person engaged in commercial or business activities (with affiliates counted together and single-asset real estate excluded) that has aggregate noncontingent liquidated secured and unsecured debts of not more than $7,500,000 (excluding debt owed to affiliates or insiders), at least 50 percent of which arose from commercial or business activities. It bars public reporting companies and their affiliates from Subchapter V and disallows any group of affiliated debtors whose combined qualifying debts exceed $7,500,000. Second, it rewrites Section 109(e) so that only individuals with regular income (or such an individual and spouse, other than a stockbroker or commodity broker) with noncontingent liquidated debts under $2,750,000 may be a Chapter 13 debtor — replacing the current split limits for secured and unsecured debt. The amendments apply to cases commenced on or after enactment.",
+    "brief": "Rewrites Subchapter V small business bankruptcy eligibility to a single $7,500,000 combined-debt limit and Chapter 13 individual eligibility to a single $2,750,000 combined-debt limit, effective for cases filed on or after enactment.",
+    "top_lines": [
+      {
+        "headline": "Subchapter V Small Business Debt Limit",
+        "billSection": "2(a)",
+        "source": "usc-11-1182",
+        "subs": [
+          "New 11 U.S.C. §1182(1)(A) covers persons engaged in commercial/business activities (including affiliates that are also debtors) with aggregate noncontingent liquidated secured and unsecured debts of not more than $7,500,000 (excluding debt owed to affiliates or insiders)",
+          "At least 50 percent of the debt must have arisen from the commercial or business activities of the debtor",
+          "Excludes single-asset real estate debtors whose primary activity is owning single-asset real estate"
+        ]
+      },
+      {
+        "headline": "Subchapter V Group and Public-Company Exclusions",
+        "billSection": "2(a) [new §1182(1)(B)]",
+        "subs": [
+          "Bars any member of a group of affiliated debtors whose aggregate qualifying debts exceed $7,500,000 (excluding debt owed to affiliates or insiders)",
+          "Bars any debtor that is a corporation subject to Section 13 or 15(d) reporting under the Securities Exchange Act of 1934 (15 U.S.C. 78m, 78o(d))",
+          "Bars any debtor that is an affiliate of such a public reporting company"
+        ]
+      },
+      {
+        "headline": "Chapter 13 Individual Debt Limit",
+        "billSection": "2(b)",
+        "source": "usc-11-109",
+        "subs": [
+          "New 11 U.S.C. §109(e): only an individual with regular income (or such an individual and spouse, other than a stockbroker or commodity broker) with noncontingent, liquidated debts that aggregate less than $2,750,000 may be a Chapter 13 debtor",
+          "Replaces the current version of §109(e), which splits its debt limit into a secured-debt cap and an unsecured-debt cap"
+        ]
+      },
+      {
+        "headline": "Effective Date",
+        "billSection": "3",
+        "subs": [
+          "The amendments made by the Act apply to any case commenced under title 11, United States Code, on or after the date of enactment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) — Subchapter V Small Business Debt Limit (11 U.S.C. §1182(1))",
+        "items": [
+          {
+            "main": "Rewrites the definition of \"debtor\" for Subchapter V of Chapter 11 (Small Business Debtor Reorganization).",
+            "detail": "The new definition is set out as a two-part structure. Subparagraph (A) covers a person engaged in commercial or business activities (including any affiliate of such person that is also a debtor under title 11, and excluding a person whose primary activity is the business of owning single-asset real estate) that has aggregate noncontingent liquidated secured and unsecured debts, as of the date of the filing of the petition or the date of the order for relief, of not more than $7,500,000 (excluding debts owed to one or more affiliates or insiders), not less than 50 percent of which arose from the commercial or business activities of the debtor.",
+            "comments": []
+          },
+          {
+            "main": "Adds three Subchapter V exclusions in new §1182(1)(B).",
+            "detail": "The new subparagraph excludes: (i) any member of a group of affiliated debtors under title 11 that has aggregate noncontingent liquidated secured and unsecured debts greater than $7,500,000 (excluding debt owed to affiliates or insiders); (ii) any debtor that is a corporation subject to the reporting requirements of Section 13 or 15(d) of the Securities Exchange Act of 1934 (15 U.S.C. §78m, §78o(d)); and (iii) any debtor that is an affiliate of a corporation described in clause (ii).",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(b) — Chapter 13 Individual Debt Limit (11 U.S.C. §109(e))",
+        "items": [
+          {
+            "main": "Strikes and rewrites §109(e) so Chapter 13 eligibility is set by a single combined-debt cap.",
+            "detail": "The new §109(e) provides: only an individual with regular income that owes, on the date of the filing of the petition, noncontingent, liquidated debts that aggregate less than $2,750,000 — or an individual with regular income and such individual's spouse, except a stockbroker or commodity broker, that owe, on the date of the filing of the petition, noncontingent, liquidated debts that aggregate less than $2,750,000 — may be a debtor under Chapter 13. Per the fetched text of the current 11 U.S.C. §109, this replaces a split limit that used a secured-debt cap and an unsecured-debt cap; the bill collapses that structure into a single aggregate-debt threshold.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 3 — Effective Date",
+        "items": [
+          {
+            "main": "Applies the amendments to any case commenced under title 11 on or after the date of enactment.",
+            "detail": "Pending cases filed before enactment remain governed by prior law.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(a) [new §1182(1)(B)(i)]",
+        "summary": "The affiliated-group cap treats any member of an affiliated-debtor group whose combined qualifying debts exceed $7,500,000 as ineligible for Subchapter V — even if that member alone would qualify.",
+        "why_unreported": "Coverage of Subchapter V threshold bills tends to focus on the headline dollar limit. The affiliated-group aggregation rule is the operative provision that determines how the limit applies to holding-company structures and franchisee networks."
+      },
+      {
+        "section": "Section 2(a) [new §1182(1)(B)(ii)-(iii)]",
+        "summary": "Public reporting companies (§13 or §15(d) of the Securities Exchange Act) and their affiliates are barred from Subchapter V.",
+        "why_unreported": "The Subchapter V regime is generally understood to be for small businesses. Codifying a categorical exclusion for reporting companies and their affiliates puts a bright-line rule into statute that closes a workaround for public-company subsidiaries."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill sets a $7.5M debt cap for Subchapter V and a $2.75M debt cap for Chapter 13 but does not index either threshold to inflation, so real-terms limits will erode over time.",
+      "The bill excludes public reporting companies and their affiliates from Subchapter V but does not address privately-held companies whose beneficial owners are public reporting entities.",
+      "The bill replaces the split secured/unsecured Chapter 13 debt limit with a single aggregate cap but does not address how debts secured by a spouse's separate property are counted.",
+      "The bill applies only to cases commenced on or after enactment and does not offer transition relief for cases already dismissed on eligibility grounds under the prior thresholds."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New categorical exclusions from Subchapter V for members of affiliated-debtor groups over $7.5M, public reporting companies under §13 or §15(d) of the Securities Exchange Act of 1934, and affiliates of such reporting companies (new 11 U.S.C. §1182(1)(B))"
+      ],
+      "modified": [
+        "11 U.S.C. §1182(1) — Definition of \"debtor\" for Subchapter V rewritten to a $7,500,000 combined-debt cap with a 50%-commercial-origin requirement",
+        "11 U.S.C. §109(e) — Chapter 13 eligibility rewritten to a single $2,750,000 aggregate noncontingent-liquidated-debt cap"
+      ],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  },
+  {
+    "id": "119-S-289",
+    "code": "S.289",
+    "title": "Youth Poisoning Protection Act",
+    "official_title": "To ban the sale of products with a high concentration of sodium nitrite to individuals, and for other purposes.",
+    "date": "2025-01-29",
+    "version": "v1.0",
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "currentStep": 3,
+    "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+    "sponsor": "Sen. Duckworth, Tammy (D-IL)",
+    "sponsor_bioguide": "D000622",
+    "cosponsors": 3,
+    "pages": 1,
+    "analyzed": true,
+    "demo": false,
+    "billType": "amendment",
+    "stageDate": "2026-08-03",
+    "likelihood": 60,
+    "likelihoodLabel": "Possible",
+    "likelihoodReason": "Introduced by Sen. Tammy Duckworth (D-IL) with 3 cosponsors, this bill classifies any consumer product containing a high concentration of sodium nitrite (10 percent or more by weight) as a banned hazardous product under Section 8 of the Consumer Product Safety Act. The bill passed the Senate on August 3, 2026 and awaits House action. Narrow consumer-safety bans on youth-targeted poisonings typically clear both chambers when the sponsor coalition includes both parties — this bill's short length and the industrial/food-industry carveouts favor movement.",
+    "summary": "This bill treats any consumer product containing a high concentration of sodium nitrite (defined as 10 percent or more by weight) as a banned hazardous product under Section 8 of the Consumer Product Safety Act (15 U.S.C. §2057). A rule of construction limits the ban's reach: it does not prohibit commercial or industrial uses where high-concentration sodium nitrite is not customarily produced or distributed for consumer sale or use, and it does not apply to substances meeting the definition of a drug, device, cosmetic, or food under the Federal Food, Drug, and Cosmetic Act — including poultry and poultry products, meat and meat food products, and eggs and egg products under the Poultry Products Inspection Act, Federal Meat Inspection Act, and Egg Products Inspection Act. \"Consumer product\" carries its Section 3(a)(5) meaning. The ban takes effect 90 days after enactment.",
+    "brief": "Classifies consumer products containing 10% or more by weight of sodium nitrite as banned hazardous products under the Consumer Product Safety Act, with commercial/industrial and food/drug carveouts, effective 90 days after enactment.",
+    "top_lines": [
+      {
+        "headline": "New Consumer Ban",
+        "billSection": "2(a)",
+        "subs": [
+          "Any consumer product containing a high concentration of sodium nitrite is considered a banned hazardous product",
+          "Banning authority is Section 8 of the Consumer Product Safety Act (15 U.S.C. §2057)"
+        ]
+      },
+      {
+        "headline": "\"High Concentration\" Defined",
+        "billSection": "2(c)(2)",
+        "subs": [
+          "10 percent or more by weight of sodium nitrite"
+        ]
+      },
+      {
+        "headline": "Commercial and Food-Industry Carveouts",
+        "billSection": "2(b)",
+        "subs": [
+          "Rule of construction: does not prohibit any commercial or industrial purpose in which high-concentration sodium nitrite is not customarily produced or distributed for sale to, use by, consumption by, or enjoyment of a consumer",
+          "Does not apply to substances meeting the FD&C Act definitions of drug, device, cosmetic, or food",
+          "Food carveout expressly covers poultry and poultry products, meat and meat food products, and eggs and egg products under the Poultry Products Inspection Act, Federal Meat Inspection Act, and Egg Products Inspection Act"
+        ]
+      },
+      {
+        "headline": "Effective Date",
+        "billSection": "2(d)",
+        "subs": [
+          "Takes effect 90 days after the date of enactment"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "label": "Section 2(a) — Ban",
+        "items": [
+          {
+            "main": "Any consumer product containing a high concentration of sodium nitrite is considered a banned hazardous product under Section 8 of the Consumer Product Safety Act (15 U.S.C. §2057).",
+            "detail": "This route uses the CPSA's existing banned-hazardous-product framework rather than creating a new regulatory regime. The Consumer Product Safety Commission's enforcement authorities under the CPSA apply.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(b) — Rule of Construction (Carveouts)",
+        "items": [
+          {
+            "main": "The ban is limited to consumer-facing sales and does not reach commercial or industrial uses where high-concentration sodium nitrite is not customarily produced or distributed for consumer sale, use, consumption, or enjoyment.",
+            "detail": "This preserves industrial uses of sodium nitrite (metal treatment, laboratory reagents, corrosion inhibition, etc.) that do not touch the retail consumer channel.",
+            "comments": []
+          },
+          {
+            "main": "The ban does not apply to substances meeting the FD&C Act definitions of drug, device, cosmetic, or food.",
+            "detail": "Definitions cross-reference sections 201(g), (h), (i), and (f) of the Federal Food, Drug, and Cosmetic Act (21 U.S.C. §321(g), (h), (i), and (f)). The food carveout expressly includes poultry and poultry products (as defined in sections 4(e) and (f) of the Poultry Products Inspection Act (21 U.S.C. §453(e) and (f))), meat and meat food products (as defined in section 1(j) of the Federal Meat Inspection Act (21 U.S.C. §601(j))), and eggs and egg products (as defined in section 4 of the Egg Products Inspection Act (21 U.S.C. §1033)).",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(c) — Definitions",
+        "items": [
+          {
+            "main": "\"Consumer product\" carries its Section 3(a)(5) meaning under the Consumer Product Safety Act (15 U.S.C. §2052(a)(5)).",
+            "detail": "This anchors the ban to the existing statutory definition rather than creating a bespoke one.",
+            "comments": []
+          },
+          {
+            "main": "\"High concentration of sodium nitrite\" is defined as 10 percent or more by weight of sodium nitrite.",
+            "detail": "Products below the 10% threshold — the concentration typically found in curing salts and industrial pre-mixes — are outside the ban.",
+            "comments": []
+          }
+        ]
+      },
+      {
+        "label": "Section 2(d) — Effective Date",
+        "items": [
+          {
+            "main": "Section 2 takes effect 90 days after the date of enactment.",
+            "detail": "Retailers, distributors, and manufacturers of consumer-facing high-concentration sodium nitrite products have 90 days to clear inventory or reformulate.",
+            "comments": []
+          }
+        ]
+      }
+    ],
+    "underreported": [
+      {
+        "section": "Section 2(b)(1)",
+        "summary": "The commercial/industrial carveout preserves all uses of high-concentration sodium nitrite that are not customarily produced or distributed for consumer sale — leaving unrestricted a large industrial market for metal treatment, laboratory reagents, and corrosion inhibition.",
+        "why_unreported": "The bill's short title emphasizes youth poisoning protection, but the practical scope of the ban is set almost entirely by this carveout. Any product marketed to industrial buyers rather than end consumers stays legal, and the CPSC's enforcement calls will hinge on whether a product is \"customarily\" distributed to consumers."
+      }
+    ],
+    "criticisms": [],
+    "gaps": [
+      "The bill bans consumer products containing 10 percent or more sodium nitrite but does not address online marketplace enforcement, cross-border shipments, or reseller obligations.",
+      "The bill uses Section 8 of the Consumer Product Safety Act as the ban vehicle but does not amend Section 8 itself to reflect the addition, leaving the ban to interact with existing CPSC rulemaking timelines.",
+      "The 90-day effective date does not include a labeling or notice-to-retailers requirement to help retailers comply.",
+      "The bill excludes drugs, devices, cosmetics, and foods but does not address dual-use products where sodium nitrite is a preservative in one context and a stand-alone chemical in another."
+    ],
+    "featured_quotes": [],
+    "changes": {
+      "added": [
+        "New statutory banned-hazardous-product designation under Section 8 of the Consumer Product Safety Act (15 U.S.C. §2057) for consumer products containing 10% or more sodium nitrite by weight"
+      ],
+      "modified": [],
+      "removed": []
+    },
+    "budget_accounts": {},
+    "analyzedAt": "2026-08-07"
+  }
+]

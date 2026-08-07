@@ -10698,5 +10698,522 @@
     "priorYearBillId": null,
     "priorYearBillTitle": null,
     "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-2398",
+    "title": "Kay Hagan Tick Reauthorization Act",
+    "type": "S",
+    "number": "2398",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Voice Vote. (consideration: CR S4494-4495; text: CR S4494-4495)",
+    "actionDate": "2026-08-06",
+    "sponsor": {
+      "bioguideId": "C001035",
+      "firstName": "Susan",
+      "fullName": "Sen. Collins, Susan M. [R-ME]",
+      "isByRequest": "N",
+      "lastName": "Collins",
+      "middleName": "M.",
+      "party": "R",
+      "state": "ME",
+      "url": "https://api.congress.gov/v3/member/C001035?format=json"
+    },
+    "cosponsors": 23,
+    "introducedDate": "2025-07-23",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 2398 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 2398 _______________________________________________________________________ AN ACT To reauthorize the Kay Hagan Tick Act, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Kay Hagan Tick Reauthorization Act''. SEC. 2. REAUTHORIZATION OF PROGRAMS. (a) National Strategy and Regional Centers of Excellence in Vector- borne Diseases.--Section 317U of the Public Health Service Act (42 U.S.C. 247b-23) is amended-- (1) in subsection (b), in the matter preceding paragraph (1), by striking ``the Tick-Borne Disease Working Group established under section 2062 of the 21st Century Cures Act (42 U.S.C. 284s) and other individuals, as appropriate'' and inserting ``appropriate individuals''; (2) in subsection (c), by striking ``in coordination with'' and inserting ``acting through''; and (3) in subsection (f), by striking ``2021 through 2025'' and inserting ``2026 through 2030''. (b) Enhanced Support to Assist Health Departments in Addressing Vector-borne Diseases.--Section 2822(c) of the Public Health Service Act (42 U.S.C. 300hh-32(c)) is amended by striking ``2021 through 2025'' and inserting ``2026 through 2030''. Passed the Senate August 6, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 2398 _______________________________________________________________________ AN ACT To reauthorize the Kay Hagan Tick Act, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "statute",
+          "citation": "42 U.S.C. 247b",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"42:247b\""
+        },
+        {
+          "kind": "statute",
+          "citation": "42 U.S.C. 284s",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"42:284s\""
+        },
+        {
+          "kind": "statute",
+          "citation": "42 U.S.C. 300h",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"42:300h\""
+        },
+        {
+          "kind": "act",
+          "citation": "Kay Hagan Tick Reauthorization Act",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-S-434",
+    "title": "Space Commerce Advisory Committee Act",
+    "type": "S",
+    "number": "434",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Unanimous Consent. (text: CR S4493-4494)",
+    "actionDate": "2026-08-06",
+    "sponsor": {
+      "bioguideId": "P000595",
+      "firstName": "Gary",
+      "fullName": "Sen. Peters, Gary C. [D-MI]",
+      "isByRequest": "N",
+      "lastName": "Peters",
+      "party": "D",
+      "state": "MI",
+      "url": "https://api.congress.gov/v3/member/P000595?format=json"
+    },
+    "cosponsors": 2,
+    "introducedDate": "2025-02-05",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 434 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 434 _______________________________________________________________________ AN ACT To establish the Commercial Space Activity Advisory Committee, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Space Commerce Advisory Committee Act''. SEC. 2. DEFINITIONS. In this Act: (1) Secretary.--The term ``Secretary'' means the Secretary of Commerce, acting through the Office of Space Commerce. (2) State.--The term ``State'' means each of the several States of the United States, the District of Columbia, the Commonwealth of Puerto Rico, the United States Virgin Islands, Guam, American Samoa, the Commonwealth of the Northern Mariana Islands, and any other commonwealth, territory, or possession of the United States. (3) United states entity.--The term ``United States entity'' means-- (A) an individual who is a national of the United States (as defined in section 101(a) of the Immigration and Nationality Act (8 U.S.C. 1101(a))); and (B) a nongovernmental entity organized or existing under, and subject to, the laws of the United States or a State. SEC. 3. COMMERCIAL SPACE ACTIVITY ADVISORY COMMITTEE. (a) Establishment.--Not later than 180 days after the date of the enactment of this Act, the Secretary shall establish a Commercial Space Activity Advisory Committee (in this section referred to as the ``Committee''). (b) Membership.-- (1) In general.--The Committee shall be composed of 15 members appointed by the Secretary. (2) Qualifications.-- (A) In general.--The Committee shall be composed of representatives from a variety of space policy, engineering, technical, science, legal, academic, and finance fields who have significant experience in the commercial space industry, which may include previous Government experience. (B) Limitation.-- (i) In general.--Except as provided in clause (ii), the Secretary may not appoint as a member of the Committee any employee or official of the Federal Government. (ii) Exception.--The Secretary may appoint as a member of the Committee a special government employee (as defined in section 202(a) of title 18, United States Code) who serves on 1 or more other Federal advisory committees. (3) Term.--Each individual appointed as a member of the Committee-- (A) shall be appointed for a term of not more than 4 years; and (B) during the 2-year period beginning on the date on which such term ends, may not serve as a member of the Committee. (c) Duties.--The duties of the Committee shall be-- (1) to advise on the status and recent developments of nongovernmental space activities; (2) to provide to the Secretary and Congress recommendations on the manner in which the United States may facilitate and promote a safe, sustainable, robust, competitive, and innovative commercial sector that is investing in, developing, and conducting space activities within the jurisdiction of the Department of Commerce, including through the development and implementation of any regulatory framework applicable to the commercial space industry; (3) to identify, and provide recommendations in response to, any challenge faced by the United States commercial sector relating to-- (A) the application of international obligations of the United States relevant to commercial space sector activities in outer space; (B) export controls that affect the commercial space sector; (C) harmful interference with commercial space sector activities in outer space; and (D) access to adequate, predictable, and reliable radio frequency spectrum; (4) to review existing best practices for United States entities to avoid-- (A) the harmful contamination of the Moon and other celestial bodies; and (B) adverse changes in the environment of the Earth resulting from the introduction of extraterrestrial matter; and (5) to provide information, advice, and recommendations on matters relating to-- (A) United States commercial space sector activities in outer space; and (B) other commercial space sector activities, as the Committee considers necessary. (d) Termination.--The Committee shall terminate on the date that is 10 years after the date on which the Committee is established. Passed the Senate August 6, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 434 _______________________________________________________________________ AN ACT To establish the Commercial Space Activity Advisory Committee, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Space Commerce Advisory Committee Act This bill requires the Office of Space Commerce to establish a Commercial Space Activity Advisory Committee to provide information and recommendations on nongovernmental space activities and promoting a robust and innovative commercial space sector. Among other duties, the committee is directed to identify challenges to the U.S. commercial space sector and to review best practices for commercial space entities with respect to avoiding harmful contamination of the Moon and other celestial bodies and adverse impacts to the Earth’s environment from extraterrestrial matter. The committee must be comprised of representatives from varying fields with significant experience in the commercial space industry. The committee must terminate ten years after it is established.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-3266",
+    "title": "USMMA Athletics Act of 2026",
+    "type": "S",
+    "number": "3266",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Unanimous Consent. (consideration: CR S4492-4493; text: CR S4492-4493)",
+    "actionDate": "2026-08-06",
+    "sponsor": {
+      "bioguideId": "W000437",
+      "firstName": "Roger",
+      "fullName": "Sen. Wicker, Roger F. [R-MS]",
+      "isByRequest": "N",
+      "lastName": "Wicker",
+      "middleName": "F.",
+      "party": "R",
+      "state": "MS",
+      "url": "https://api.congress.gov/v3/member/W000437?format=json"
+    },
+    "cosponsors": 1,
+    "introducedDate": "2025-11-20",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 3266 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 3266 _______________________________________________________________________ AN ACT To support the athletic programs of the United States Merchant Marine Academy. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``USMMA Athletics Act of 2026''. SEC. 2. SUPPORT FOR ATHLETIC PROGRAMS OF THE UNITED STATES MERCHANT MARINE ACADEMY. (a) In General.--Chapter 513 of title 46, United States Code, is amended by adding at the end the following: ``Sec. 51329. Support for athletic programs of the United States Merchant Marine Academy ``(a) Corporation for Support Authorized.-- ``(1) Authority.--The Secretary of Transportation may establish, in accordance with the laws of the State of New York, a corporation (in this section referred to as the `corporation') to support the athletic programs of the United States Merchant Marine Academy. ``(2) Ownership.--All stock of the corporation shall be owned by the United States and held in the name of, and subject to be voted by, the Secretary. ``(3) Purpose.--The corporation shall operate exclusively for charitable, educational, and civic purposes to support the athletic programs of the United States Merchant Marine Academy. ``(b) Corporate Organization.--The corporation shall be organized and operated-- ``(1) as a nonprofit corporation under section 501(c)(3) of the Internal Revenue Code of 1986; ``(2) in accordance with this section; and ``(3) pursuant to the laws of the State of New York, its articles of incorporation, and its bylaws. ``(c) Corporate Board of Directors.-- ``(1) Limitation on compensation.--The members of the board of directors of the corporation shall serve without compensation as members of the board, except for reasonable travel and other related expenses for attendance at meetings of the board. ``(2) Department of transportation employee membership.-- ``(A) In general.--The Secretary may authorize employees of the Department of Transportation to serve, in their official capacities, as members of the board of directors of the corporation-- ``(i) for the sole purpose of providing oversight and advice to, and in coordination with, the corporation; and ``(ii) who may not participate in the day- to-day operations of the corporation. ``(B) Limitation.--Employees serving as a member of the board of directors pursuant to an authorization under subparagraph (A) may not hold more than one-third of the directorships. ``(C) Applicability of limitation on compensation.--An employee serving as a member of the board of directors shall be subject to the limitation on compensation under paragraph (1). ``(D) Publication in federal register.--The Secretary shall publish in the Federal Register an authorization under subparagraph (A) of an employee of the Department of Transportation to participate as a member of the board of directors. ``(d) Contracts and Cooperative Agreements.-- ``(1) In general.--The Secretary may enter the corporation into contracts and cooperative agreements for the purpose of supporting the athletic programs of the United States Merchant Marine Academy. ``(2) Sole-source contracts.--Notwithstanding section 3105 of title 41, United States Code, a contract or cooperative agreement entered into under paragraph (1) may be a sole-source contract, subject to section 3304(a) of such title. ``(3) Acquisitions.--Notwithstanding chapter 63 of title 31, United States Code, a cooperative agreement under this section may be used to acquire property, services, or travel for the direct benefit or use of the United States Merchant Marine Academy. ``(e) Leases.--For the purpose of supporting the athletic programs of the United States Merchant Marine Academy, in consultation with the Administrator of General Services, the Secretary may rent or lease to the corporation any real property located at the United States Merchant Marine Academy-- ``(1) under such terms and conditions as are deemed advisable; ``(2) for a period not exceeding 5 years; ``(3) so long as such real property is not required for immediate use by the United States Merchant Marine Academy; and ``(4) so long as all proceeds from such rental or lease be retained and expended in accordance with subsection (j). ``(f) Support Services.-- ``(1) Authority.--To the extent required by a contract or cooperative agreement under subsection (d), the Secretary may provide support services to the corporation while the corporation conducts support activities at the United States Merchant Marine Academy only if the Secretary determines that the provision of such services is essential for the support of the athletic programs of the United States Merchant Marine Academy. ``(2) No liability of the united states.--The provision of support services under paragraph (1) may not result in any liability for the United States to the corporation. ``(3) Support services defined.--In this subsection, the term `support services' includes utilities, office furnishings and equipment, communications services, records staging and archiving, audio and video support, and security systems, in conjunction with the leasing or licensing of property. ``(g) Transfers From Nonappropriated Fund Operation.-- ``(1) In general.--Except as provided in paragraph (2), the Secretary may, subject to the acceptance of the corporation, transfer to the corporation all title to and ownership of the assets and liabilities of the Department of Transportation nonappropriated fund instrumentality, the function of which includes providing support for the athletic programs of the United States Merchant Marine Academy, including bank accounts and financial reserves in the accounts of such fund instrumentality, equipment, supplies, and other personal property. ``(2) Limitation.--In making a transfer under paragraph (1), the Secretary may not transfer any interest in real property. ``(h) Acceptance of Support.-- ``(1) In general.--Notwithstanding section 1342 of title 31, United States Code, the Secretary may accept from the corporation funds, supplies, and services for the support of the athletic programs of the United States Merchant Marine Academy. ``(2) Employees of the corporation.--For purposes of this section, employees or personnel of the corporation are not employees of the United States. ``(3) Funds received from other sources.--The Secretary may charge fees for the support of athletic programs of the United States Merchant Marine Academy. To support the athletic programs of the United States Merchant Marine Academy, the Secretary may accept funds from the National Collegiate Athletic Association, funds from athletic conferences, game guarantees from other educational institutions, fees for ticketing and licensing, and any other consideration provided incidental to the execution of the athletic programs of the United States Merchant Marine Academy. ``(4) Limitation.--The Secretary shall ensure that contributions under this subsection and expenditure of funds pursuant to subsection (j) do not-- ``(A) reflect unfavorably on the ability of the Department of Transportation, or any employee of the Department of Transportation, to carry out any responsibility or duty of the Department in a fair and objective manner; or ``(B) compromise the integrity or appearance of integrity of any program of the Department of Transportation, or any individual involved in such a program. ``(i) Trademarks and Service Marks.-- ``(1) Licensing, marketing, and sponsorship agreements.-- Subject to paragraph (2), a contract or cooperative agreement under subsection (d) may, consistent with section 109(h)(2) of title 49, United States Code, include an authorization for the corporation to enter into licensing, marketing, and sponsorship agreements (subject to the approval of the Secretary) relating to trademarks and service marks identifying the United States Merchant Marine Academy. ``(2) Limitations.--The corporation may not enter into any licensing, marketing, or sponsorship agreement pursuant to authority provided under paragraph (1) that-- ``(A) may reflect unfavorably on the ability of the Department of Transportation, or any employee of the Department of Transportation, to carry out any responsibility or duty of the Department in a fair and objective manner; or ``(B) the Secretary determines involves the use of trademarks or service marks that would compromise the integrity or appearance of integrity of any program of the Department of Transportation or any individual involved in such a program. ``(j) Retention and Use of Funds.--Funds received by the Secretary under this section may be retained for use to support the athletic programs of the United States Merchant Marine Academy and shall remain available until expended.''. (b) Clerical Amendment.--The table of sections for chapter 513 of title 46, United States Code, is amended by adding at the end the following: Chapter 513 of title 46, United States Code, is amended ``51329. Support for athletic programs of United States Merchant Marine Academy.''. (c) Licensing Authority.--Section 109(h) of title 49, United States Code, is amended by adding at the end the following: ``(3) Licensing of intellectual property.-- ``(A) Authority.--The Secretary may license trademarks and service marks owned or controlled by the Secretary with respect to the United States Merchant Marine Academy and may retain and expend fees received from such licensing in accordance with this paragraph. ``(B) Designated marks.--The Secretary shall designate the trademarks and service marks with respect to which the Secretary will exercise the authority to retain licensing fees under this paragraph. ``(C) Use of fees.--The Secretary shall use fees retained under this paragraph for the following purposes: ``(i) For payment of costs incurred by the Secretary of securing trademark registrations and of operating the licensing program under this paragraph. ``(ii) For support of athletic programs and recruiting activities of the United States Merchant Marine Academy under the jurisdiction of the Secretary, to the extent (if any) that the total amount of the licensing fees available under this section for a fiscal year exceed the total amount needed for such fiscal year under paragraph (1). ``(D) Availability.--Fees received in a fiscal year and retained under this paragraph shall be available until expended. ``(E) Definitions.--In this paragraph, the terms `trademark' and `service mark' have the meanings given such terms, respectively, in section 45 of the Act of July 5, 1946 (commonly referred to as the `Trademark Act of 1946'; 15 U.S.C. 1127). ``(F) Guidance.--Not later than 180 days after the date of enactment of the USMMA Athletics Act of 2026, the Secretary shall issue guidance to implement a trademark and service mark licensing program under this paragraph.''. Passed the Senate August 6, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 3266 _______________________________________________________________________ AN ACT To support the athletic programs of the United States Merchant Marine Academy.",
+    "divisions": null,
+    "crsSummary": "",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-1838",
+    "title": "DeOndra Dixon INCLUDE Project Act of 2026",
+    "type": "S",
+    "number": "1838",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Voice Vote. (text of amendment in the nature of a substitute: CR S4495-4496)",
+    "actionDate": "2026-08-06",
+    "sponsor": {
+      "bioguideId": "H000273",
+      "firstName": "John",
+      "fullName": "Sen. Hickenlooper, John W. [D-CO]",
+      "isByRequest": "N",
+      "lastName": "Hickenlooper",
+      "middleName": "W.",
+      "party": "D",
+      "state": "CO",
+      "url": "https://api.congress.gov/v3/member/H000273?format=json"
+    },
+    "cosponsors": 9,
+    "introducedDate": "2025-05-21",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 1838 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 1838 _______________________________________________________________________ AN ACT To amend the Public Health Service Act to authorize the Secretary of Health and Human Services to carry out a program of research, training, and investigation related to Down syndrome, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``DeOndra Dixon INCLUDE Project Act of 2026''. SEC. 2. DEONDRA DIXON INCLUDE PROJECT. Part B of title IV of the Public Health Service Act (42 U.S.C. 284 et seq.) is amended by adding at the end the following: ``SEC. 409K. DOWN SYNDROME RESEARCH. ``(a) In General.--The Director of NIH shall carry out a program of research, training, and investigation related to Down syndrome to be known as the `INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE Project' or the `INCLUDE Project'. ``(b) Program Elements.--The program under subsection (a) shall include-- ``(1) high-risk, high-reward research on the effects of trisomy 21 on human development and health; ``(2) promoting research for participants with Down syndrome across the lifespan, including cohort studies to facilitate improved understanding of Down syndrome and co- occurring conditions and development of new interventions; ``(3) expanding the number of clinical trials that are inclusive of, or expressly for, participants with Down syndrome, including novel biomedical and pharmacological interventions and other therapies designed to promote or enhance activities of daily living; ``(4) research on the biological mechanisms in individuals with Down syndrome pertaining to structural, functional, and behavioral anomalies and dysfunction as well as stunted growth; ``(5) supporting research to improve diagnosis and treatment of conditions co-occurring with Down syndrome, including the identification of biomarkers related to risk factors, diagnosis, and clinical research and therapeutics; ``(6) research on the causes of increased prevalence, and concurrent treatment, of co-occurring conditions, such as Alzheimer's disease and related dementias and autoimmunity, in individuals with Down syndrome; and ``(7) research, training, and investigation on improving the quality of life of individuals with Down syndrome and their families. ``(c) Coordination; Prioritizing Nonduplicative Research.--The Director of NIH shall ensure that-- ``(1) the programs and activities of the institutes and centers of the National Institutes of Health relating to Down syndrome and co-occurring conditions are coordinated, including through the Office of the Director of NIH and priority-setting reviews conducted pursuant to section 402(b)(3); and ``(2) such institutes and centers, prioritize, as appropriate, Down syndrome research that does not duplicate existing research activities of the National Institutes of Health. ``(d) Consultation With Stakeholders.--In carrying out activities under this section, the Director of NIH shall, as appropriate and to the maximum extent feasible, consult with relevant stakeholders, including patient advocates, to ensure that such activities take into consideration the needs of individuals with Down syndrome. ``(e) Biennial Reports to Congress.-- ``(1) In general.--The Director of NIH shall submit, on a biennial basis, to the Committee on Energy and Commerce and the Subcommittee on Labor, Health and Human Services, Education, and Related Agencies of the Committee on Appropriations of the House of Representatives and the Committee on Health, Education, Labor, and Pensions and the Subcommittee on Labor, Health and Human Services, Education, and Related Agencies of the Committee on Appropriations of the Senate, a report that catalogs the research conducted or supported under this section. ``(2) Contents.--Each report under paragraph (1) shall include-- ``(A) identification of the institute or center involved; ``(B) a statement of whether the research is or was being carried out directly by such institute or center or by multiple institutes and centers; and ``(C) identification of any resulting real-world evidence that is or may be used for clinical research and medical care for patients with Down syndrome.''. Passed the Senate August 6, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 1838 _______________________________________________________________________ AN ACT To amend the Public Health Service Act to authorize the Secretary of Health and Human Services to carry out a program of research, training, and investigation related to Down syndrome, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "statute",
+          "citation": "42 U.S.C. 284",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"42:284\""
+        },
+        {
+          "kind": "act",
+          "citation": "DeOndra Dixon INCLUDE Project Act of 2026",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-S-850",
+    "title": "Northern Border Security Enhancement and Review Act",
+    "type": "S",
+    "number": "850",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with amendments by Unanimous Consent. (text: CR S4481)",
+    "actionDate": "2026-08-05",
+    "sponsor": {
+      "bioguideId": "H001076",
+      "firstName": "Maggie",
+      "fullName": "Sen. Hassan, Margaret Wood [D-NH]",
+      "isByRequest": "N",
+      "lastName": "Hassan",
+      "party": "D",
+      "state": "NH",
+      "url": "https://api.congress.gov/v3/member/H001076?format=json"
+    },
+    "cosponsors": 4,
+    "introducedDate": "2025-03-05",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 850 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 850 _______________________________________________________________________ AN ACT To amend the Northern Border Security Review Act to require updates to the northern border threat analysis and northern border strategy, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Northern Border Security Enhancement and Review Act''. SEC. 2. NORTHERN BORDER THREAT ANALYSIS AND STRATEGY. (a) Northern Border Threat Analysis.--Section 3(a) of the Northern Border Security Review Act (Public Law 114-267) is amended-- (1) in the matter preceding paragraph (1), by striking ``180 days after the date of enactment of this Act'' and inserting ``180 days after the date of the enactment of the Northern Border Security Enhancement and Review Act, and every 3 years thereafter''; (2) by redesignating paragraphs (2), (3), and (4) as paragraphs (3), (4), and (5), respectively; and (3) by inserting after paragraph (1) the following: ``(2) an assessment of recent changes in the amount and demographics of apprehensions at the Northern Border, including an analysis of apprehension changes at the sector level.''. (b) Northern Border Strategy Updates.--Section 3 of the Northern Border Security Review Act (Public Law 114-267) is amended-- (1) by redesignating subsection (c) as subsection (d); and (2) by inserting after subsection (b) the following: ``(c) Northern Border Strategy Updates.--The Secretary of Homeland Security shall update the Department of Homeland Security's Northern Border strategy not later than 18 months after the date of the enactment of the Northern Border Security Enhancement and Review Act, and every 5 years thereafter, and shall incorporate the results of the most recent threat analysis in each such update.''. (c) Classified Briefings.--Section 3 of the Northern Border Security Review Act, as amended by subsections (a) and (b), is further amended by adding at the end the following: ``(e) Classified Briefings.--Not later than 30 days after the submission of each threat analysis pursuant to subsection (a), the Secretary of Homeland Security shall provide a classified briefing regarding such analysis to the appropriate congressional committees.''. (d) Implementation of Certain Government Accountability Office Recommendations.--Not later than 180 days after the date of the enactment of this Act, the Secretary of Homeland Security, acting through the Executive Assistant Commissioner of Air and Marine Operations of U.S. Customs and Border Protection, shall develop performance measures to assess the effectiveness of Air and Marine Operations at securing the northern border between ports of entry in the air and maritime environments. SEC. 3. NO ADDITIONAL FUNDS. No additional funds are authorized to be appropriated for the purpose of carrying out this Act or the amendments made by this Act. Passed the Senate August 5, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 850 _______________________________________________________________________ AN ACT To amend the Northern Border Security Review Act to require updates to the northern border threat analysis and northern border strategy, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Northern Border Security Enhancement and Review Act This bill requires the Department of Homeland Security (DHS) to regularly perform a threat analysis of the northern U.S. border. The analysis must be performed every three years and include terroristic and criminal threats, recent changes in apprehensions, and improvements needed to prevent terrorism and reduce criminal activity. DHS must update its northern border strategy not later than September 2, 2026, and every five years thereafter, incorporating the results from the latest threat analysis. DHS must also provide a classified briefing to the appropriate congressional committees. U.S. Customs and Border Protection’s Air and Marine Operations (AMO) must develop performance metrics to assess the AMO’s effectiveness at securing the northern border between ports of entry in air and maritime environments.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "law",
+          "citation": "Public Law 114-267",
+          "suggestedFetch": null
+        },
+        {
+          "kind": "act",
+          "citation": "Northern Border Security Enhancement and Review Act",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-HR-5235",
+    "title": "Skills-Based Federal Contracting Act of 2025",
+    "type": "HR",
+    "number": "5235",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Committee on Homeland Security and Governmental Affairs. Ordered to be reported without amendment favorably.",
+    "actionDate": "2026-08-06",
+    "sponsor": {
+      "bioguideId": "M000194",
+      "district": 1,
+      "firstName": "Nancy",
+      "fullName": "Rep. Mace, Nancy [R-SC-1]",
+      "isByRequest": "N",
+      "lastName": "Mace",
+      "party": "R",
+      "state": "SC",
+      "url": "https://api.congress.gov/v3/member/M000194?format=json"
+    },
+    "cosponsors": 2,
+    "introducedDate": "2025-09-09",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 5235 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 5235 _______________________________________________________________________ AN ACT To amend title 41, United States Code, to prohibit minimum educational requirements for proposed contractor personnel in certain contract solicitations, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Skills-Based Federal Contracting Act of 2025''. SEC. 2. USE OF REQUIREMENTS REGARDING EDUCATION OF CONTRACTOR PERSONNEL. (a) Flexibility in Contractor Education Requirements.--Chapter 33 of title 41, United States Code, is amended by adding at the end the following new section: ``Sec. 3313. Flexibility in contractor education requirements ``(a) Prohibition.--A solicitation may not set forth any minimum education requirement for proposed contractor personnel in order for a bidder to be eligible for award of a contract unless the contracting officer includes in the solicitation a written justification that explains why the needs of the executive agency cannot be met without any such requirement and clarifies how the requirement ensures the needs are met. ``(b) Executive Agency Defined.--In this section, the term `executive agency' has the meaning given that term in section 133 of this title.''. (b) Technical and Conforming Amendment.--The table of sections for chapter 33 of title 41, United States Code, is amended by adding at the end the following new item: ``3313. Flexibility in contractor education requirements.''. (c) OMB Guidance.--Not later than 180 days after the date of the enactment of this Act, the Director of the Office of Management and Budget shall issue guidance to the heads of executive agencies for implementing the amendment made by subsection (a) that includes the following: (1) Instructions for contracting officers for the justifications under section 3313(a) of title 41, United States Code, as added by subsection (a), including a requirement that each use of an education requirement be determined, justified, and reviewed. (2) Instructions for contracting officers that encourages the use of alternatives to education requirements. (d) Applicability.--The amendments made by this section shall apply with respect to solicitations issued on or after the date that is 15 months after the date of the enactment of this Act. (e) Repeal.--Section 813 of the Floyd D. Spence National Defense Authorization Act for Fiscal Year 2001 (Public Law 106-398; 114 Stat. 1654A-214), as implemented in subpart 39.104 of the Federal Acquisition Regulation, as in effect on January 3, 2025, is repealed as of the date that the guidance required by subsection (c) becomes effective. (f) GAO Report.--Not later than 3 years after the date of the enactment of this Act, the Comptroller General shall submit to Congress an evaluation of executive agency compliance with section 3313 of title 41, United States Code, as added by subsection (a). (g) Definitions.--In this section: (1) Education.--The term ``education'' means an associate, baccalaureate, graduate, or professional degree, specified coursework, or other form of educational attainment awarded by a junior or community college, college, or university that is accredited as a collegiate institution by a recognized accrediting agency or approved by the appropriate State education authority under State law (or the appropriate education authority of the District of Columbia) to grant associate or higher degrees. (2) Education requirement.--The term ``education requirement'' includes a requirement that can be met either through-- (A) education alone; (B) education or experience; or (C) a combination of education and experience. (3) Executive agency.--The term ``executive agency'' has the meaning given that term in section 133 of title 41, United States Code. Passed the House of Representatives February 23, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 5235 _______________________________________________________________________ AN ACT To amend title 41, United States Code, to prohibit minimum educational requirements for proposed contractor personnel in certain contract solicitations, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Skills-Based Federal Contracting Act This bill prohibits federal contract bid solicitations for contractor personnel from including minimum educational requirements unless the contracting officer justifies the requirements. The prohibition applies to educational requirements that may be met through education alone, education or experience, or a combination of education and experience. The bill also requires the Office of Management and Budget to issue implementing guidance to federal agencies, including instructions for contracting officers that encourage using alternatives to education requirements.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "law",
+          "citation": "Public Law 106-398",
+          "suggestedFetch": null
+        },
+        {
+          "kind": "act",
+          "citation": "Based Federal Contracting Act of 2025",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-HR-2400",
+    "title": "Pit River Land Transfer Act of 2025",
+    "type": "HR",
+    "number": "2400",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Committee on Indian Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably.",
+    "actionDate": "2026-08-05",
+    "sponsor": {
+      "bioguideId": "L000578",
+      "district": 1,
+      "firstName": "Doug",
+      "fullName": "Rep. LaMalfa, Doug [R-CA-1]",
+      "isByRequest": "N",
+      "lastName": "LaMalfa",
+      "party": "R",
+      "state": "CA",
+      "url": "https://api.congress.gov/v3/member/L000578?format=json"
+    },
+    "cosponsors": 0,
+    "introducedDate": "2025-03-27",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 2400 Engrossed in House (EH)] <DOC> 119th CONGRESS 1st Session H. R. 2400 _______________________________________________________________________ AN ACT To take certain Federal land in the State of California into trust for the benefit of the Pit River Tribe. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Pit River Land Transfer Act of 2025''. SEC. 2. LAND TO BE TAKEN INTO TRUST. (a) Transfer of Four Corners Federal Land.-- (1) In general.--Subject to valid existing rights, the Four Corners Federal land is hereby taken into trust by the Secretary for the benefit of the Tribe. (2) Survey.--Not later than 180 days after the date of enactment of this Act, the Secretary of Agriculture shall provide to the Secretary a complete survey of the Four Corners Federal land. (b) Administration.--Upon being taken into trust under this section, the lands taken into trust by the Secretary for the benefit of the Tribe shall be-- (1) considered part of the Pit River Tribe Reservation; and (2) administered by the Secretary in accordance with the laws and regulations generally applicable to property held in trust by the United States for an Indian Tribe. (c) Gaming Prohibited.--Land taken into trust under this section shall not be used for any class II gaming or class III gaming under the Indian Gaming Regulatory Act (25 U.S.C. 2701 et seq.) (as those terms are defined in section 4 of that Act (25 U.S.C. 2703)). (d) Definitions.--In this Act: (1) Four corners federal land.-- (A) In general.--The term ``Four Corners Federal land'' means the approximately 583.79 acres of land managed by the Forest Service generally depicted within the ``Proposed Land Conveyance'' boundary on the Map, including improvements and appurtenances thereon. (B) Exclusion.--The term ``Four Corners Federal land'' does not include the approximately 20.03 acres of roads, highways, and public rights-of-way subject to existing easements generally depicted within the ``Proposed Land Conveyance'' boundary on the Map. (2) Map.--The term ``Map'' means the map titled ``Proposed Land Conveyance to the Pit River Tribe'' prepared by the Forest Service and dated November 6, 2024. (3) Secretary.--The term ``Secretary'' means the Secretary of the Interior. (4) Tribe.--The term ``Tribe'' means the Pit River Tribe, California (includes XL Ranch, Big Bend, Likely, Lookout, Montgomery Creek, and Roaring Creek Rancherias). Passed the House of Representatives December 15, 2025. Attest: Clerk. 119th CONGRESS 1st Session H. R. 2400 _______________________________________________________________________ AN ACT To take certain Federal land in the State of California into trust for the benefit of the Pit River Tribe.",
+    "divisions": null,
+    "crsSummary": "Pit River Land Transfer Act of 2025 This bill takes approximately 603.94 acres of specified lands in California into trust for the benefit of the Pit River Tribe. Specifically, the bill directs the Department of the Interior to take the following lands into trust for the benefit of the tribe: (1) approximately 583.79 acres of federal land managed by the Forest Service (but excluding approximately 20.03 acres of roads, highways, and public rights-of-way subject to existing easements), and (2) approximately 40.18 acres of fee land held by the tribe. These combined lands, approximately 603.94 acres, shall be part of the tribe's reservation. Further, the bill prohibits gaming on the land taken into trust.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-494",
+    "title": "National Plan for Epilepsy Act",
+    "type": "S",
+    "number": "494",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Unanimous Consent. (consideration: CR S4426-4427; text: CR S4426-4427)",
+    "actionDate": "2026-08-04",
+    "sponsor": {
+      "bioguideId": "S001227",
+      "firstName": "Eric",
+      "fullName": "Sen. Schmitt, Eric [R-MO]",
+      "isByRequest": "N",
+      "lastName": "Schmitt",
+      "middleName": "S.",
+      "party": "R",
+      "state": "MO",
+      "url": "https://api.congress.gov/v3/member/S001227?format=json"
+    },
+    "cosponsors": 27,
+    "introducedDate": "2025-02-10",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 494 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 494 _______________________________________________________________________ AN ACT To establish a national plan to coordinate research on epilepsy, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``National Plan for Epilepsy Act''. SEC. 2. REVIEW TO IMPROVE EPILEPSY PROGRAMS, RESEARCH, PREVENTION, AND CARE. (a) In General.--The Secretary of Health and Human Services (referred to in this section as the ``Secretary'') shall review and, as necessary and appropriate, provide recommendations to Congress regarding, and update existing Federal programs, activities, and strategic plans related to, epilepsy research, prevention, early identification, diagnosis, and treatment for purposes of identifying and addressing knowledge gaps and improving health outcomes related to epilepsy. (b) Content.--The review under subsection (a) shall include-- (1) a review of findings from evidence-based research on epilepsy, the status of ongoing, federally-funded research on epilepsy, knowledge gaps related to epilepsy, and disparities in populations with epilepsy; (2) a review of Federal programs related to epilepsy research, prevention, early identification, diagnosis, and treatment, which shall include consideration of-- (A) gaps in, and opportunities for, coordination among such programs; (B) opportunities to inform global efforts to prevent, diagnose, treat, and cure epilepsy, as appropriate; (C) near- and long-term goals of such programs to improve research, prevention, early identification, diagnosis, and treatment of epilepsy; and (D) the level of Federal investment in preventing, diagnosing, treating, and curing epilepsy; (3) consideration of opportunities to-- (A) improve collaboration between Federal agencies and relevant stakeholders to address gaps in programs, research, and services; (B) eliminate knowledge gaps in research on epilepsy, including a review of the impact of epilepsy on the health and well-being of individuals with epilepsy and their caregivers; (C) improve early diagnosis and coordination of the care and treatment of individuals with epilepsy; (D) better prevent sudden unexpected death in epilepsy and other epilepsy-related mortalities; (E) improve surveillance of epilepsy; and (F) support the development of new treatments, strategies, and other approaches to prevent, diagnose, treat, and cure epilepsy or to enhance functioning and improve quality of life for individuals with epilepsy and their caregivers; and (4) a review of current public health strategies, and consideration of additional evidence-based strategies, related to epilepsy. (c) External Input.--To inform the review under subsection (a), the Secretary shall regularly convene and solicit input from other Federal agencies, as appropriate, and relevant stakeholders, including patient advocates and non-Federal subject matter experts. (d) Report.--Not later than 2 years after the date of the enactment of this Act, the Secretary shall submit to the Committee on Health, Education, Labor, and Pensions of the Senate and the Committee on Energy and Commerce of the House of Representatives a report on the findings of the review conducted under subsection (a), including-- (1) a description of steps the Secretary took to solicit stakeholder input pursuant to subsection (c) and a summary of feedback received from, and needs identified by, such stakeholders; (2) recommendations to improve coordination and support of Federal programs in order to better support people with epilepsy, epilepsy research, and data collection, and proposals for implementation of such recommendations, as appropriate; and (3) any changes to Federal programs, activities, or strategic plans recommended by the Secretary based on the review, and any statutory or other barriers that impede implementation of such changes. Passed the Senate August 4, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 494 _______________________________________________________________________ AN ACT To establish a national plan to coordinate research on epilepsy, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "National Plan for Epilepsy Act This bill requires the Department of Health and Human Services (HHS) to establish a national plan, form an advisory council, and take other actions to address epilepsy. The requirements sunset on December 31, 2035. Specifically, the bill requires HHS to carry out a National Plan for Epilepsy to prevent, diagnose, treat, and cure epilepsy. In carrying out the plan, HHS must implement activities such as coordinating research and services across all federal agencies and soliciting public comments. Also, HHS must establish an Advisory Council on Epilepsy Research, Care, and Services. The advisory council must report to HHS and Congress every two years with an evaluation of federally funded efforts. Additionally, HHS must annually report to Congress with recommended actions based on its assessments of the nation’s progress on epilepsy.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-4472",
+    "title": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+    "type": "S",
+    "number": "4472",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Voice Vote. (consideration: CR S4425-4426; text: CR S4425-4426)",
+    "actionDate": "2026-08-04",
+    "sponsor": {
+      "bioguideId": "M001153",
+      "firstName": "Lisa",
+      "fullName": "Sen. Murkowski, Lisa [R-AK]",
+      "isByRequest": "N",
+      "lastName": "Murkowski",
+      "party": "R",
+      "state": "AK",
+      "url": "https://api.congress.gov/v3/member/M001153?format=json"
+    },
+    "cosponsors": 15,
+    "introducedDate": "2026-04-30",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 4472 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 4472 _______________________________________________________________________ AN ACT To amend the Accelerating Access to Critical Therapies for ALS Act to reauthorize the provisions of such Act through fiscal year 2031, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026''. SEC. 2. REAUTHORIZATION OF ACCELERATING ACCESS TO CRITICAL THERAPIES FOR ALS ACT. (a) In General.--Section 7 of the Accelerating Access to Critical Therapies for ALS Act (Public Law 117-79) is amended by striking ``2022 through 2026'' and inserting ``2027 through 2031''. (b) Grants for ALS Research.--Section 2(f) of the Accelerating Access to Critical Therapies for ALS Act (21 U.S.C. 360ee note) is amended by striking ``2026'' and inserting ``2031''. SEC. 3. IMPROVEMENTS TO PROGRAM FOR GRANTS FOR RESEARCH ON THERAPIES FOR ALS. Section 2 of the Accelerating Access to Critical Therapies for ALS Act (21 U.S.C. 360ee note) is amended-- (1) in subsection (a), by inserting ``(referred to in this section as `expanded access grants')'' before the period at the end of the first sentence; (2) in subsection (b)-- (A) by striking ``(b) Application--'' and all that follows through ``A participating'' in paragraph (1) and inserting the following: ``(b) Application.--A participating''; (B) by redesignating paragraphs (2) and (3) as paragraphs (1) and (2) respectively; (C) in the matter preceding paragraph (1), as so redesignated, by striking the period at the end and inserting ``including--''; (D) by amending paragraph (1), as so redesignated, to read as follows: ``(1) a description of how data generated through the proposed expanded access grant will be used to support research or development related to the prevention, diagnosis, mitigation, treatment, or cure of amyotrophic lateral sclerosis;''; (E) in paragraph (2), as so redesignated-- (i) by striking ``Noninterference with clinical trials--'' and all that follows through ``shall include''; (ii) by striking ``program'' and inserting ``grant''; and (iii) by striking the period at the end and inserting ``; and''; and (F) by adding at the end the following: ``(3) an assurance that such entity will promptly report to the Secretary available safety data from any ongoing clinical trial of the investigational drug as set forth in the terms and conditions of the grant.''; (3) in subsection (c)-- (A) by redesignating subparagraphs (A) and (B) of paragraph (2) as clauses (i) and (ii), respectively, and adjusting the margins accordingly; (B) by redesignating paragraphs (1) through (3) as subparagraphs (A) through (C), respectively, and adjusting the margins accordingly; (C) in subparagraph (C), as so redesignated, by striking the period at the end and inserting ``; and''; (D) in the matter preceding subparagraph (A), as so redesignated, by striking ``this section, confirm that--'' and inserting the following: ``this section-- ``(1) confirm that--''; and (E) by adding at the end the following: ``(2) in the case of a renewal of such a grant, request from the sponsor of the investigational new drug application involved, and assess, the enrollment, safety, and any available efficacy data of the drug related to the prevention, diagnosis, mitigation, treatment, or cure of amyotrophic lateral sclerosis.''; (4) in subsection (d)(1), by striking ``request described in subsection (a)'' and inserting ``grant''; and (5) in subsection (e)-- (A) in paragraph (2), by inserting ``, and that begins enrollment within a timeframe as determined by the Secretary through the terms and conditions of the grant'' before the period at the end; and (B) by adding at the end the following: ``(4) The term `phase 3 clinical trial' includes a phase 2/ 3 combined trial and a planned phase 3 clinical trial that is not yet enrolling participants.''. SEC. 4. REPORT ON ALS AND OTHER RARE NEURODEGENERATIVE DISEASE ACTION PLANS. Section 4 of the Accelerating Access to Critical Therapies for ALS Act (21 U.S.C. 360aa note) is amended-- (1) in the section heading, by striking ``als and other'' and inserting ``fda''; (2) in subsection (a), in the matter preceding paragraph (1)-- (A) by inserting ``and not later than 1 year after the date of enactment of the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026 and every 5 years thereafter,'' after ``this Act,''; and (B) by inserting ``develop, or update, as applicable, and'' before ``publish on''; (3) in subsection (b)-- (A) in the matter preceding paragraph (1), by striking ``initial''; (B) in paragraph (2)-- (i) in subparagraph (A), by inserting ``of relevant investigational new drug applications'' after ``sponsors''; (ii) in subparagraph (C) by inserting ``for the prevention, diagnosis, mitigation, treatment, or cure of rare neurodegenerative diseases'' before the semicolon; and (iii) in subparagraph (D), by striking ``; and'' and inserting a semicolon; (C) in paragraph (3), by striking the period at the end and inserting ``; and''; and (D) by adding at the end the following: ``(4) for each action plan published after the date of enactment of the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026, include a description of-- ``(A) previous actions taken by the Food and Drug Administration to implement the previous action plan published under subsection (a); ``(B) any other planned actions to implement such action plan; and ``(C) any barriers to implementing such action plan and related recommendations, which may include an estimate of resources necessary to address such barriers.''. SEC. 5. REPORTS. Section 6 of the Accelerating Access to Critical Therapies for ALS Act (Public Law 117-79) is amended-- (1) in the heading, by striking ``gao report'' and inserting ``reports''; (2) by striking ``Not later than'' and inserting the following: ``(a) GAO Report.--Not later than''; (3) in the matter preceding paragraph (1) of subsection (a), as so designated, by striking ``this Act'' and inserting ``the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026''; and (4) by adding at the end the following: ``(b) HHS Report.--Not later than 4 years after the date of enactment of the Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026, the Secretary of Health and Human Services shall, in a manner that does not duplicate the information described in the action plan published pursuant to section 4, submit to the Committee on Health, Education, Labor, and Pensions of the Senate and the Committee on Energy and Commerce of the House of Representatives a report assessing the effectiveness of the activities carried out under sections 2, 3, and 5 and making recommendations to improve such activities.''. SEC. 6. TECHNICAL AMENDMENTS. Section 3 of the Accelerating Access to Critical Therapies for ALS Act (42 U.S.C. 280g-7b) is amended-- (1) in subsection (a), in the matter preceding paragraph (1), by striking ``amytrophic'' and inserting ``amyotrophic''; and (2) in subsection (b)(3)(A)(iii), by striking ``rational''. Passed the Senate August 4, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 4472 _______________________________________________________________________ AN ACT To amend the Accelerating Access to Critical Therapies for ALS Act to reauthorize the provisions of such Act through fiscal year 2031, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026 This bill reauthorizes through FY2031 and revises programs that support research and development of drugs and other therapies to address amyotrophic lateral sclerosis (also known as ALS or Lou Gehrig's disease) and other neurodegenerative diseases. The bill reauthorizes grants from the National Institutes of Health (NIH) for scientific research on investigational drugs to prevent or treat ALS for individuals not otherwise eligible for clinical trials, grants from the Food and Drug Administration (FDA) for research and development of therapies to prevent and treat ALS and other neurodegenerative diseases, and a Public-Private Partnership including the FDA and NIH that supports development and regulatory review of treatments for neurodegenerative diseases. Also, the bill revises the NIH grants to require (1) the NIH, in considering grant renewal, to assess available information on the safety and efficacy of the investigational drugs; (2) grantees to promptly report available safety data from ongoing clinical trials; and (3) the NIH to determine the timeframe for enrollment in clinical trials for the investigational drugs. Additionally, every five years, the FDA must publish a plan describing actions it will take over a five-year period to foster development of safe and effective drugs, and facilitate access to investigational drugs, for ALS and other rare neurodegenerative diseases. Each plan must include the FDA's previous actions and recommendations for improvements. Finally, the Government Accountability Office and the Department of Health and Human Services must report on the impacts of these grants.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "statute",
+          "citation": "21 U.S.C. 360e",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"21:360e\""
+        },
+        {
+          "kind": "law",
+          "citation": "Public Law 117-79",
+          "suggestedFetch": null
+        },
+        {
+          "kind": "statute",
+          "citation": "21 U.S.C. 360a",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"21:360a\""
+        },
+        {
+          "kind": "statute",
+          "citation": "42 U.S.C. 280g",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"42:280g\""
+        },
+        {
+          "kind": "act",
+          "citation": "Access to Critical Therapies for ALS Reauthorization Act of 2026",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-S-2666",
+    "title": "Foreign Robocall Elimination Act",
+    "type": "S",
+    "number": "2666",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate with an amendment by Unanimous Consent. (consideration: CR S4412-4414; text: CR S4412-4414)",
+    "actionDate": "2026-08-03",
+    "sponsor": {
+      "bioguideId": "B001305",
+      "firstName": "Ted",
+      "fullName": "Sen. Budd, Ted [R-NC]",
+      "isByRequest": "N",
+      "lastName": "Budd",
+      "party": "R",
+      "state": "NC",
+      "url": "https://api.congress.gov/v3/member/B001305?format=json"
+    },
+    "cosponsors": 3,
+    "introducedDate": "2025-08-01",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 2666 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 2666 _______________________________________________________________________ AN ACT To direct the Federal Communications Commission to establish a taskforce on unlawful robocalls, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Foreign Robocall Elimination Act''. SEC. 2. INTERAGENCY TASKFORCE ON UNLAWFUL ROBOCALLS. (a) Definitions.--In this section: (1) Commission.--The term ``Commission'' means the Federal Communications Commission. (2) Consortium.--The term ``Consortium'' means the consortium described in section 13(d) of the Pallone-Thune TRACED Act (Public Law 116-105). (3) Federal agency.--The term ``Federal agency'' has the meaning given the term ``agency'' in section 551 of title 5, United States Code. (4) Taskforce.--The term ``taskforce'' means the taskforce on unlawful robocalls established under subsection (b). (5) Unlawful robocall.--The term ``unlawful robocall'' means a telephone call made in violation of subsection (b) or (e) of section 227 of the Communications Act of 1934 (47 U.S.C. 227). (b) Establishment.--Not later than 270 days after the date of enactment of this Act, the Commission, after consultation with the Federal Trade Commission and the Attorney General, shall establish a taskforce on unlawful robocalls. (c) Membership.-- (1) In general.--The taskforce shall be composed of the following members: (A)(i) A representative of each Federal agency that the Chairman of the Commission, in consultation with the Chairman of the Federal Trade Commission and the Attorney General, considers appropriate. (ii) With respect to each Federal agency considered under clause (i) to be appropriate, the Chairman of the Commission shall appoint a representative of that Federal agency to the taskforce based on the recommendations of the head of that Federal agency. (B) Seven representatives of private sector entities, to be appointed as described in paragraph (2)-- (i) 3 of whom shall be representatives from private sector entities with expertise in combating unlawful robocalls, including-- (I) voice service providers; (II) analytics providers; (III) technologists; and (IV) technology experts; (ii) 1 of whom shall be a representative from the Consortium; (iii) 1 of whom shall be a representative of a marketing business that communicates with consumers by telephone as part of the normal course of business of that marketing business; (iv) 1 of whom shall be a representative of a business or nonprofit organization that communicates with consumers by telephone for non-marketing purposes on a regular basis; and (v) 1 of whom shall be a representative of an organization that advocates on behalf of customers and who has relevant experience and expertise in combating unlawful robocalls. (2) Appointment of representatives of private sector entities.-- (A) In general.--Notwithstanding any provision of chapter 10 of title 5, United States Code, the members of the taskforce described in paragraph (1)(B) shall be jointly appointed by the Chairman of the Commission, the Chairman of the Federal Trade Commission, and the Attorney General. (B) Inability to reach agreement.-- (i) In general.--Subject to clauses (ii) and (iii), if the Chairman of the Commission, the Chairman of the Federal Trade Commission, and the Attorney General cannot reach agreement regarding an appointment described in subparagraph (A), as determined by the Chairman of the Commission, the Chairman of the Commission shall make that appointment. (ii) Notice of appointments.--Not later than 48 hours before appointing a member to the taskforce under clause (i), the Chairman of the Commission shall provide notice of the proposed appointment to the commissioners of the Commission. (iii) Request for vote.--If, after receiving notice under clause (ii) of a proposed appointment under clause (i), a commissioner of the Commission requests that the proposed appointment be subject to a vote of the Commission, the Chairman of the Commission may not make that appointment unless a majority of the commissioners of the Commission vote to approve the appointment. (d) Report.-- (1) In general.--The taskforce shall prepare a report on unlawful robocalls, which shall contain recommendations and advice for Federal agencies with jurisdiction relevant to combating unlawful robocalls, and for Congress, regarding the most effective ways to combat unlawful robocalls made into the United States from outside the United States. (2) Matters to be studied.--In preparing the report required under paragraph (1), the taskforce shall-- (A) compare the estimated number of suspected unlawful robocalls made within the United States with the estimated number of unlawful robocalls made into the United States from outside the United States; (B) determine which foreign countries serve as the foreign points of departure for the highest volume of unlawful robocalls made into the United States; (C) determine the magnitude of financial loss and the number of instances of stolen identity that occur within the United States each year as a result of unlawful robocalls made from outside the United States; (D) examine methods for encouraging the adoption of caller identification authentication technology in foreign countries; (E) examine and provide information on options for how countries can collaborate on solutions to authenticate and verify international calls, including relevant analytics relating to unlawful robocalls and technical options that can be used with respect to that authentication and verification; (F) examine how better implementation of technical solutions, such as traceback and caller identification authentication technology in foreign originating countries, would improve coordination between the United States and foreign countries in combating unlawful robocalls; (G) determine whether-- (i) the technical standards commonly known as ``STIR/SHAKEN'' adequately provide call authentication for unlawful robocalls from foreign originating providers or foreign intermediate providers through gateway providers in the United States; and (ii) it would be desirable to encourage other countries to adopt the standards described in clause (i); (H) examine ways to provide incentives to foreign countries to cooperate with law enforcement efforts in the United States to combat unlawful robocalls; (I) examine whether any Federal agency, or any other organization, that combats unlawful robocalls needs additional resources in order to more effectively combat unlawful robocalls made into the United States from outside the United States; (J) specifically consider whether the ability of the Attorney General to conduct enforcement activities with respect to unlawful robocalls would be increased through the establishment of an office within the Department of Justice dedicated to those enforcement activities; (K) examine how increased criminal penalties based on the volume of unlawful robocalls could help prevent unlawful robocalls made into the United States; (L) examine how many enforcement activities the Attorney General has undertaken in the year preceding the date on which the preparation of the report begins, including in response to referrals made by the Commission; (M) specifically determine how the Attorney General has pursued forfeiture amounts in enforcement activities with respect to unlawful robocalls; (N) seek input, as appropriate, from technologists and private sector innovators to find solutions for combating unlawful robocalls; (O) identify a list of best practices regarding the identification and blocking of unlawful robocalls that telephone service providers and providers of technology solutions can voluntarily implement to improve the effectiveness of mitigating unlawful robocalls made into the United States from outside the United States; (P) evaluate whether requiring periodic public disclosure, in whole or in part, of the results of trace backs conducted by the Consortium would impact the integrity and effectiveness of the trace back process of the Consortium, including by-- (i) revealing investigative methods; (ii) allowing consumers and businesses to avoid providers with a track record of making unlawful robocalls; (iii) exposing proprietary, competitively sensitive, or confidential information of legitimate providers or entities; (iv) strengthening accountability and deterrence; (v) enabling the initiators of unlawful robocalls to evade detection, adapt tactics, or exploit system vulnerabilities; (vi) improving the efforts of voice service providers to block calls that are determined to be unwanted based on reasonable analytics; (vii) impeding cooperation with future law enforcement investigations or future consumer protection efforts; or (viii) ensuring fairness in the reporting of trace back information; and (Q) examine mechanisms for improving compliance with the requirements imposed pursuant to sections 6 and 7 of the Pallone-Thune TRACED Act (47 U.S.C. 227b- 1, 227 note). (3) Report to congress.--Not later than 360 days after the date on which the taskforce is established under subsection (b), the taskforce shall submit to Congress the report prepared under this subsection. (e) Use of Funds.--Notwithstanding section 1346 of title 31, United States Code, funds made available by this or any other Act to the Commission, the Federal Trade Commission, or the Department of Justice may be used by the applicable Federal agency for coordination with, participation in, or recommendations involving the taskforce, as required under this section. (f) Termination.--The taskforce shall terminate on the date that is 90 days after the date on which the taskforce submits to Congress the report prepared under subsection (d), as required under paragraph (3) of that subsection. SEC. 3. FCC NOTICE PROVISION. Section 13(d)(2) of the Pallone-Thune TRACED Act (Public Law 116- 105) is amended by striking ``annually'' and inserting ``once every 3 years''. SEC. 4. REGISTERED CONSORTIUM CONDUCTING PRIVATE-LED EFFORTS TO TRACE BACK THE ORIGIN OF SUSPECTED UNLAWFUL ROBOCALLS. (a) Immunity for Receiving, Sharing, and Publishing Trace Back Information.--Section 13(d) of the Pallone-Thune TRACED Act (Public Law 116-105; 133 Stat. 3287) is amended by adding at the end the following: ``(3) Immunity for receiving, sharing, and publishing trace back information.-- ``(A) Definition.--In this paragraph, the term `covered information'-- ``(i) means information regarding suspected-- ``(I) fraudulent, abusive, or unlawful robocalls; ``(II) illegally spoofed calls; and ``(III) other illegal calls; and ``(ii) includes-- ``(I) call detail records of calls described in clause (i); ``(II) the names of, and other identifying information concerning, the voice service providers that originated, carried, routed, and transmitted calls described in clause (i); and ``(III) information about the entities that made calls described in clause (i), including any contact information of individuals that such an entity provided to the voice service provider that originated the call. ``(B) Trace back immunity.--No cause of action shall lie or be maintained in any court against the registered consortium for receiving, sharing, or publishing covered information or information derived from covered information.''. (b) Publication of List of Voice Service Providers.--Section 13(e) of the Pallone-Thune TRACED Act (Public Law 116-105; 133 Stat. 3287) is amended to read as follows: ``(e) List of Voice Service Providers.-- ``(1) Publication of list.--The Commission, or the registered consortium in consultation with the Commission, may publish a list of voice service providers based on-- ``(A) information obtained by the consortium about voice service providers that refuse to participate in private-led efforts to trace back the origin of suspected unlawful robocalls; and ``(B) other information the Commission or the consortium may collect about voice service providers that are found to originate or transmit substantial amounts of unlawful robocalls. ``(2) Enforcement.--The Commission may take enforcement action based on the information described in paragraph (1).''. SEC. 5. ROBOCALL MITIGATION DATABASE. (a) Definitions.--In this section: (1) Commission.--The term ``Commission'' means the Federal Communications Commission. (2) Robocall mitigation database.--The term ``Robocall Mitigation Database'' has the meaning given the term in section 64.6300 of title 47, Code of Federal Regulations, or any successor regulation. (3) Unlawful robocall.--The term ``unlawful robocall'' has the meaning given the term in section 2(a). (b) Bond Requirement.-- (1) In general.--The Commission shall issue rules to require that, subject to the other provisions of this section, before a provider may file a certification to the Robocall Mitigation Database, the provider shall post a bond in an amount that is not more than $100,000, if the Commission determines that posting such a bond is necessary to preserve the integrity of the Robocall Mitigation Database. (2) Excepted providers.-- (A) In general.--In issuing rules under paragraph (1), the Commission shall establish criteria to exempt a provider from the requirement to post a bond described in that paragraph if that requirement, as applied to the provider, is not necessary to deter unlawful robocall activity. (B) Considerations.--In establishing criteria under subparagraph (A), the Commission shall require consideration of whether a provider-- (i) is registered with the Commission under section 64.1195 of title 47, Code of Federal Regulations (or any successor regulation) and makes contributions under section 254(d) of the Communications Act of 1934 (47 U.S.C. 254(d)); (ii) holds a certificate of authority, license, or registration with a State public utility commission; (iii) is an issuer, the securities of which are listed on a national securities exchange; and (iv) otherwise presents indicia of being a bona fide, established communications service provider, such that requiring the provider to post a bond under paragraph (1) would impose unnecessary burdens without materially improving enforcement of section 227 of the Communications Act of 1934 (47 U.S.C. 227). (c) Implementation.--In implementing this section, the Commission shall-- (1) require the posting of a bond under subsection (b)(1) from providers that do not demonstrate-- (A) legitimate, ongoing operations; (B) regulatory oversight sufficient to ensure accountability; or (C) the ability to pay fines or forfeitures imposed by the Commission or other governmental enforcement authorities with respect to violations of Federal or State laws or regulations; (2) establish categorical exemptions for identifiable classes of legitimate providers that satisfy the criteria established under subsection (b)(2); and (3) minimize administrative and financial burdens on compliant, established, and regulated providers while ensuring effective enforcement of section 227 of the Communications Act of 1934 (47 U.S.C. 227). Passed the Senate August 3, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 2666 _______________________________________________________________________ AN ACT To direct the Federal Communications Commission to establish a taskforce on unlawful robocalls, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Foreign Robocall Elimination Act This bill establishes an interagency task force on unlawful robocalls to advise federal agencies and Congress on combating robocalls made from outside of the United States. The bill also increases the term applicable to the Federal Communications Commission’s designation of an industry-led consortium to trace the origin of suspected unlawful robocalls. Under current law, the commission must annually seek applications from industry groups to serve as the designated consortium; under the bill, the commission must seek applications once every three years.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-S-3977",
+    "title": "Bankruptcy Threshold Adjustment Act of 2026",
+    "type": "S",
+    "number": "3977",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate without amendment by Unanimous Consent. (consideration: CR S4412; text: CR S4412)",
+    "actionDate": "2026-08-03",
+    "sponsor": {
+      "bioguideId": "G000386",
+      "firstName": "Chuck",
+      "fullName": "Sen. Grassley, Chuck [R-IA]",
+      "isByRequest": "N",
+      "lastName": "Grassley",
+      "party": "R",
+      "state": "IA",
+      "url": "https://api.congress.gov/v3/member/G000386?format=json"
+    },
+    "cosponsors": 5,
+    "introducedDate": "2026-03-03",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 3977 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 3977 _______________________________________________________________________ AN ACT To amend title 11, United States Code, to modify certain bankruptcy eligibility requirements, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Bankruptcy Threshold Adjustment Act of 2026''. SEC. 2. DEBT LIMIT MODIFICATIONS. (a) Modification to the Small Business Bankruptcy Debt Limit.-- Section 1182(1) of title 11, United States Code, is amended to read as follows: ``(1) Debtor.--The term `debtor'-- ``(A) subject to subparagraph (B), means a person engaged in commercial or business activities (including any affiliate of such person that is also a debtor under this title and excluding a person whose primary activity is the business of owning single asset real estate) that has aggregate noncontingent liquidated secured and unsecured debts as of the date of the filing of the petition or the date of the order for relief in an amount not more than $7,500,000 (excluding debts owed to 1 or more affiliates or insiders) not less than 50 percent of which arose from the commercial or business activities of the debtor; and ``(B) does not include-- ``(i) any member of a group of affiliated debtors under this title that has aggregate noncontingent liquidated secured and unsecured debts in an amount greater than $7,500,000 (excluding debt owed to 1 or more affiliates or insiders); ``(ii) any debtor that is a corporation subject to the reporting requirements under section 13 or 15(d) of the Securities Exchange Act of 1934 (15 U.S.C. 78m, 78o(d)); or ``(iii) any debtor that is an affiliate of a corporation described in clause (ii).''. (b) Modification to the Consumer Bankruptcy Debt Limit.--Section 109 of title 11, United States Code is amended by striking subsection (e) and inserting the following: ``(e) Only an individual with regular income that owes, on the date of the filing of the petition, noncontingent, liquidated debts that aggregate less than $2,750,000 or an individual with regular income and such individual's spouse, except a stockbroker or a commodity broker, that owe, on the date of the filing of the petition, noncontingent, liquidated debts that aggregate less than $2,750,000 may be a debtor under chapter 13 of this title.''. SEC. 3. EFFECTIVE DATE. The amendments made by this Act shall apply to any case that is commenced under title 11, United States Code, on or after the date of enactment of this Act. Passed the Senate August 3, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 3977 _______________________________________________________________________ AN ACT To amend title 11, United States Code, to modify certain bankruptcy eligibility requirements, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "statute",
+          "citation": "15 U.S.C. 78m",
+          "suggestedFetch": "node scripts/fetch-reference.js --usc \"15:78m\""
+        },
+        {
+          "kind": "act",
+          "citation": "Bankruptcy Threshold Adjustment Act of 2026",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-S-289",
+    "title": "Youth Poisoning Protection Act",
+    "type": "S",
+    "number": "289",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate without amendment by Voice Vote. (consideration: CR S4411-4412; text: CR S4411-4412)",
+    "actionDate": "2026-08-03",
+    "sponsor": {
+      "bioguideId": "D000622",
+      "firstName": "Tammy",
+      "fullName": "Sen. Duckworth, Tammy [D-IL]",
+      "isByRequest": "N",
+      "lastName": "Duckworth",
+      "party": "D",
+      "state": "IL",
+      "url": "https://api.congress.gov/v3/member/D000622?format=json"
+    },
+    "cosponsors": 3,
+    "introducedDate": "2025-01-29",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [S. 289 Engrossed in Senate (ES)] <DOC> 119th CONGRESS 2d Session S. 289 _______________________________________________________________________ AN ACT To ban the sale of products with a high concentration of sodium nitrite to individuals, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Youth Poisoning Protection Act''. SEC. 2. BANNING OF PRODUCTS CONTAINING A HIGH CONCENTRATION OF SODIUM NITRITE. (a) In General.--Any consumer product containing a high concentration of sodium nitrite shall be considered to be a banned hazardous product under section 8 of the Consumer Product Safety Act (15 U.S.C. 2057). (b) Rule of Construction.--Nothing in this section shall be construed to-- (1) prohibit any commercial or industrial purpose in which high concentration sodium nitrite is not customarily produced or distributed for sale to, or use or consumption by, or enjoyment of, a consumer; and (2) apply to high concentration sodium nitrite that meets the definition of a ``drug'', ``device'', or ``cosmetic'' (as such terms are defined in sections 201(g), (h), and (i) of the Federal Food, Drug, and Cosmetic Act (21 U.S.C. 321(g), (h), and (i))), or ``food'' (as defined in section 201(f) of such Act (21 U.S.C. 321(f))), including poultry and poultry products (as such terms are defined in sections 4(e) and (f) of the Poultry Products Inspection Act (21 U.S.C. 453(e)and (f))), meat and meat food products (as such terms are defined in section 1(j) of the Federal Meat Inspection Act (21 U.S.C. 601(j))), and eggs and egg products (as such terms are defined in section 4 of the Egg Products Inspection Act (21 U.S.C. 1033)). (c) Definitions.--For purposes of this section: (1) Consumer product.--The term ``consumer product'' has the meaning given that term under section 3(a)(5) of the Consumer Product Safety Act (15 U.S.C. 2052(a)(5)). (2) High concentration of sodium nitrite.--The term ``high concentration of sodium nitrite'' means a concentration of 10 or more percent by weight of sodium nitrite. (d) Effective Date.--This section shall take effect 90 days after the date of enactment of this Act. Passed the Senate August 3, 2026. Attest: Secretary. 119th CONGRESS 2d Session S. 289 _______________________________________________________________________ AN ACT To ban the sale of products with a high concentration of sodium nitrite to individuals, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Youth Poisoning Protection Act This bill makes a consumer product with a concentration of sodium nitrite of 10% or greater a banned hazardous product. The restriction does not apply to specified drugs, medical devices, cosmetics, or food products.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
   }
 ]

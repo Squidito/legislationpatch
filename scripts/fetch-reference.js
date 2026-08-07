@@ -77,7 +77,7 @@ async function fetchReferencedBill(billId) {
 // ── Referenced U.S. CODE section (GovInfo USCODE) ───────────────────────────
 async function fetchReferencedUSC(spec) {
     if (!GOVINFO_API_KEY) { console.error('  ❌ GOVINFO_API_KEY missing in .env'); process.exit(1); }
-    const m = spec.match(/^(\d+)\s*[:\s]\s*([0-9]+[A-Za-z\-]*)$/);
+    const m = spec.match(/^(\d+)\s*[:\s]\s*([0-9]+[A-Za-z0-9\-]*)$/);
     if (!m) { console.error(`  ❌ --usc must look like "50:1881a" (title:section). Got "${spec}"`); process.exit(1); }
     const title = m[1], section = m[2];
 

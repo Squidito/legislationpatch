@@ -5,8 +5,18 @@
   "state": "ID",
   "role": "Senator",
   "district": null,
-  "bio": "Michael Dean Crapo is an American lawyer and politician serving as the United States senator from Idaho, a seat he has held since 1999. A member of the Republican Party, Crapo served from 1993 to 1999 as the U.S. representative for Idaho's 2nd congressional district.",
-  "comments": [],
+  "bio": "Michael Dean Crapo is an American lawyer and politician serving as the senior United States senator from Idaho, a seat he has held since 1999. A member of the Republican Party, Crapo served from 1993 to 1999 as the U.S. representative for Idaho's 2nd congressional district.",
+  "comments": [
+    {
+      "billId": "119-S-1071",
+      "billTitle": "National Defense Authorization Act for Fiscal Year 2026",
+      "stance": "neutral",
+      "text": "I join the POW*MIA Awareness Rally Corp. of Pocatello, ID, in acknowledging National POW/MIA Recognition Day this September 18, 2026. I am grateful for the Defense POW/MIA Accounting Agency's, DPAA, steady and often challenging work to meet its responsibility of recovering America's servicemembers. Each year, the DPAA leads the creation of a poster commemorating National POW/MIA Recognition Day, as ceremonies are held across the country to honor those who were held captive and returned, as well as those who remain missing.",
+      "source": "Senate Floor, Aug 4, 2026",
+      "granuleTitle": null,
+      "date": "Aug 4, 2026"
+    }
+  ],
   "bioSource": "wikipedia",
   "bioUrl": "https://en.wikipedia.org/wiki/Mike_Crapo",
   "voteHistory": [

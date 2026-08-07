@@ -366,6 +366,14 @@ const ACRONYMS = {
   INTEL:  'HSIN Intelligence — the intelligence-community access module of the Homeland Security Information Network',
   // CAN in "ANSI/CAN/UL" designations = joint standard endorsed by the Standards Council of Canada
   CAN:    'Standards Council of Canada (joint standard designator in ANSI/CAN/UL bicentennial standards)',
+  // 2026-08 batch additions
+  NCAA:   'National Collegiate Athletic Association',
+  USMMA:  'U.S. Merchant Marine Academy',
+  NAFI:   'Nonappropriated Fund Instrumentality (federal entity funded outside congressional appropriations)',
+  TRACED: 'Telephone Robocall Abuse Criminal Enforcement and Deterrence Act (Pallone-Thune TRACED Act, Public Law 116-105)',
+  STIR:   'Secure Telephone Identity Revisited (call authentication protocol paired with SHAKEN)',
+  SHAKEN: 'Signature-based Handling of Asserted information using toKENs (call authentication framework paired with STIR)',
+  PUC:    'Public Utility Commission (state-level utility regulator)',
 };
 
 // ---- Tooltip element (one shared instance appended to body) ----
