@@ -764,6 +764,9 @@ section('Quote quality audit');
         /\bi have no statement to make\b/i,
         /\bquestion of the privileges of the house\b/i,
         /\bthe clerk (?:will )?(?:read|designate|redesignate)\b/i,
+        // Senate passage narration (2026-08-07) — mirrored in fetch_bill_cr.js.
+        /\bwas ordered to be engrossed\b/i,
+        /\bwas read the third time\b/i,
     ];
 
     // Stance detection — same logic as fetch_bill_cr.js (keep in sync)
