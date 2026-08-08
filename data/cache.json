@@ -19534,7 +19534,7 @@
       "analyzed": true,
       "demo": false,
       "likelihood": 45,
-      "likelihoodReason": "Sponsored by Rep. Comer (R-KY) with 3 cosponsors; passed the House. Payment-integrity measures often draw bipartisan support, but the expanded Treasury access to IRS and Social Security data may draw privacy scrutiny, and Senate passage requires 60 votes.",
+      "likelihoodReason": "Sponsored by Rep. Comer (R-KY) with 3 cosponsors; passed the House. Payment-integrity measures often draw bipartisan support, but the broadened Do Not Pay data-sharing and computer-matching authority may draw privacy scrutiny, and Senate passage requires 60 votes.",
       "votes": [
         {
           "chamber": "House",
@@ -19545,9 +19545,9 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
-      "summary": "Builds new fraud checks into the federal payment process: before the Treasury pays out money, agencies would have to verify the payee, the amount, and the bank account, and the Treasury's 'Do Not Pay' screening system would gain statutory footing and broad access to tax, Social Security, and new-hire data.",
-      "brief": "Adds governmentwide pre-payment fraud checks and expands the Treasury's Do Not Pay system and its data access.",
+      "analyzedAt": "2026-08-08",
+      "summary": "Builds new fraud checks into the federal payment process: before the Treasury pays out money, agencies would have to verify the payee, the amount, and the bank account, and the Treasury's 'Do Not Pay' screening system would gain explicit statutory footing and a clarified framework for the data assets it can use to screen payments.",
+      "brief": "Adds governmentwide pre-payment fraud checks and puts the Treasury's Do Not Pay system on statutory footing.",
       "top_lines": [
         {
           "headline": "Checks Before the Government Pays",
@@ -19563,16 +19563,16 @@
           "billSection": "3",
           "subs": [
             "Gives the Treasury-run Do Not Pay system explicit statutory authority",
-            "Adds New Hires, IRS, and Social Security data to the screening pool",
-            "Up to a $5,000 fine and 5 years in prison for unlawful disclosure"
+            "Treasury must publish a System of Records Notice for each data asset before it can be disclosed",
+            "Up to a $250,000 fine and 5 years in prison for unlawful disclosure"
           ]
         },
         {
-          "headline": "First-Time Recipient Reporting & Data Access",
+          "headline": "First-Time Recipient Reporting",
           "billSection": "4",
           "subs": [
             "First-time recipients of awards of $50,000 or more file a one-time use-of-funds report",
-            "Treasury gains privacy-limited access to select tax return information",
+            "Noncompliance halts further payments to the recipient until the report is filed",
             "Most provisions take effect 180 days after enactment"
           ]
         }
@@ -19602,8 +19602,8 @@
           "label": "Section 3 — Treasury Do Not Pay System",
           "items": [
             {
-              "main": "Puts the Do Not Pay system in statute and expands the data the Treasury can use to screen payments.",
-              "detail": "Amends section 3354 of title 31 so each executive agency screens all recipients of federal awards or payments against Do Not Pay data assets before an award or payment. Notwithstanding the Internal Revenue Code, the Social Security Act, and the Personal Responsibility and Work Opportunity Reconciliation Act, the Treasury gains access to the National Directory of New Hires, certain IRS information under section 6103(i)(9)(A), and Social Security information under a new section 235. The Secretary may designate additional data assets after at least 30 days of public notice; such data comparisons are not treated as a Privacy Act 'matching program'; use is limited to improper-payment and law-enforcement purposes; and unlawful disclosure carries a fine of not more than $5,000, imprisonment of not more than 5 years, or both. State, local, judicial, and legislative entities get access, and the Treasury must file an annual report to Congress.",
+              "main": "Puts the Do Not Pay system in statute and restructures how the Treasury accesses and shares the data it uses to screen payments.",
+              "detail": "Amends section 3354 of title 31 so each executive agency screens all recipients of federal awards or payments against Do Not Pay data assets before an award or payment. The Secretary has access to the system's data assets consistent with the routine-use authority under section 552a of title 5, and must publish a System of Records Notice identifying each data asset before it may be disclosed. The Secretary may designate additional data-asset categories after at least 15 days of public notice, and at least 30 days before adding a specific asset within a category; such data comparisons are not treated as a Privacy Act 'matching program' when the query returns a binary response, results are not retained more than 30 days, and no more than 20 record requests are made at a time; use is limited to improper-payment and law-enforcement purposes; and unlawful disclosure carries a fine of not more than $250,000, imprisonment of not more than 5 years, or both. State, local, judicial, and legislative entities get access, and the Treasury must file quarterly reports to Congress plus an annual evaluation of the system's effectiveness.",
               "comments": []
             }
           ]
@@ -19619,17 +19619,7 @@
           ]
         },
         {
-          "label": "Section 5 — Treasury Data Access for Program Integrity",
-          "items": [
-            {
-              "main": "Grants the Treasury access to New Hires, IRS, and Social Security data for payment screening.",
-              "detail": "Amends section 453(j) of the Social Security Act to give the Treasury access to the National Directory of New Hires for preventing improper payments, including for the Do Not Pay system. It amends section 6103(i) of the Internal Revenue Code to allow disclosure of limited return information — taxpayer identity, filing status, adjusted gross income, Schedule C net profit or loss, bank and routing information, the fact of no return filed, the taxable year, and reported identity theft — for the Do Not Pay system, covering an applicable period of at least 3 taxable years. A new section 235 of the Social Security Act sets up name and Social Security number confirmation, with the Treasury paying the Social Security Administration's full costs.",
-              "comments": []
-            }
-          ]
-        },
-        {
-          "label": "Section 6 — Effective Date",
+          "label": "Section 5 — Effective Date",
           "items": [
             {
               "main": "Sets the effective date 180 days after enactment.",
@@ -19640,11 +19630,11 @@
         }
       ],
       "underreported": [
-        "The Treasury would gain access to IRS return information and Social Security records for payment screening, with redisclosure allowed to its agents, contractors, and entities connected to the Do Not Pay system."
+        "Agencies that adopt Treasury's standard computer-matching agreement template are deemed to satisfy the Privacy Act's matching requirements without review by a Data Integrity Board."
       ],
       "criticisms": [],
       "gaps": [
-        "Agencies may request exemptions from some or all payment-verification requirements, and the bill leaves the scope of those exemptions to Treasury guidance.",
+        "Agencies may request exemptions from some or all payment-verification requirements — subject to providing a plan and reasonable timeframe to remediate the need — and the bill leaves the detailed scope to Treasury guidance.",
         "The bill treats Do Not Pay data comparisons as outside the Privacy Act's 'matching program' protections while still requiring some privacy notices."
       ],
       "featured_quotes": [
@@ -19669,10 +19659,10 @@
       ],
       "changes": {
         "added": [
-          "A new pre-payment certification step (31 U.S.C. 3325a) with identity, amount, and bank-account checks; a one-time first-use-of-funds report for first-time recipients of awards of $50,000 or more; statutory Treasury access to New Hires, IRS, and Social Security data"
+          "A new pre-payment certification step (31 U.S.C. 3325a) with identity, amount, and bank-account checks; a one-time first-use-of-funds report for first-time recipients of awards of $50,000 or more"
         ],
         "modified": [
-          "The Do Not Pay 'Initiative' becomes a statutory Do Not Pay 'System' run by the Treasury's Fiscal Service, with expanded data assets, a use limitation, and a disclosure penalty"
+          "The Do Not Pay 'Initiative' becomes a statutory Do Not Pay 'System' run by the Treasury's Fiscal Service, with authority to designate additional data assets, a use limitation, and a disclosure penalty"
         ],
         "removed": []
       },
@@ -19726,8 +19716,7 @@
           "type": "Introduced in House",
           "date": "2026-04-23"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-8312",
