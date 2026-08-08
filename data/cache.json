@@ -15249,7 +15249,7 @@
     },
     {
       "id": "119-HR-3872",
-      "title": "MERICA Act of 2025",
+      "title": "To amend the Mineral Leasing Act for Acquired Lands to make that Act applicable to hardrock minerals.",
       "official_title": "To amend the Mineral Leasing Act for Acquired Lands to make that Act applicable to hardrock minerals.",
       "code": "HR.3872",
       "date": "2026-06-10",
@@ -15283,37 +15283,27 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
-      "summary": "Extends the federal leasing system for minerals on government-acquired lands to hardrock minerals such as base, precious, and industrial metals and gemstones.",
+      "analyzedAt": "2026-08-08",
+      "summary": "Extends the federal leasing system for minerals on government-acquired lands to hardrock minerals such as base and precious metals, industrial minerals, and gemstones.",
       "brief": "Makes the Mineral Leasing Act for Acquired Lands apply to hardrock minerals.",
       "top_lines": [
         {
           "headline": "Hardrock Minerals on Acquired Lands",
-          "billSection": "2",
+          "billSection": "1",
           "subs": [
             "Hardrock minerals added to the Mineral Leasing Act for Acquired Lands",
-            "Covers base, precious, and industrial metals and gemstones",
+            "Covers base and precious metals, industrial minerals, and gemstones",
             "Excludes coal, oil, gas, sulfur, sodium, potassium, and Materials Act minerals"
           ]
         }
       ],
       "sections": [
         {
-          "label": "Section 1 — Short Title",
-          "admin": true,
-          "items": [
-            {
-              "main": "Names the Act the “Mineral Extraction for Renewable Industry and Critical Applications Act of 2025” (the “MERICA Act of 2025”).",
-              "detail": "Short-title section — citation name only; no substantive effect."
-            }
-          ]
-        },
-        {
-          "label": "Section 2 — Application of Mineral Leasing Act for Acquired Lands to Hardrock Minerals",
+          "label": "Section 1 — Application of Mineral Leasing Act for Acquired Lands to Hardrock Minerals",
           "items": [
             {
               "main": "Makes hardrock minerals leasable under the Mineral Leasing Act for Acquired Lands (30 U.S.C. 351 et seq.).",
-              "detail": "Restructures the definitions in Section 2 (30 U.S.C. 351) and adds a definition of 'hardrock mineral' covering minerals found in sedimentary or other rocks, base metals, precious metals, industrial metals, and precious and semi-precious gemstones — but not coal, oil, oil shale, gas, sodium, potassium, sulfur, or materials under the Materials Act of 1947 (30 U.S.C. 601 et seq.). Section 3 (30 U.S.C. 352) is amended to add hardrock minerals to the minerals the Act covers.",
+              "detail": "Restructures the definitions in Section 2 (30 U.S.C. 351) and adds a definition of 'hardrock mineral' covering minerals found in sedimentary or other rocks, base metals, precious metals, industrial minerals, and precious and semi-precious gemstones — but not coal, oil, oil shale, gas, sodium, potassium, sulfur, or materials under the Materials Act of 1947 (30 U.S.C. 601 et seq.). Section 3 (30 U.S.C. 352) is amended to add hardrock minerals to the minerals the Act covers.",
               "comments": []
             }
           ]
@@ -15339,7 +15329,7 @@
       "changes": {
         "added": [],
         "modified": [
-          "Mineral Leasing Act for Acquired Lands (30 U.S.C. 351, 352) now applies to hardrock minerals (base/precious/industrial metals and gemstones), excluding coal, oil, gas, sulfur, sodium, potassium, and Materials Act minerals"
+          "Mineral Leasing Act for Acquired Lands (30 U.S.C. 351, 352) now applies to hardrock minerals (base and precious metals, industrial minerals, and gemstones), excluding coal, oil, gas, sulfur, sodium, potassium, and Materials Act minerals"
         ],
         "removed": []
       },
@@ -15384,8 +15374,7 @@
           "type": "Introduced in House",
           "date": "2025-06-10"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-517",
