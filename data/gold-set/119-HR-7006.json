@@ -4,11 +4,21 @@
   "billType": "appropriation",
   "stage": "house",
   "pages": 178,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "partial",
+  "errors": [
+    {
+      "type": "omission",
+      "field": "top_lines[2].subs[0]",
+      "claim": "Bars U.S. contributions to the UN Relief and Works Agency (UNRWA) through March 25, 2027",
+      "problem": "The 'through March 25, 2027' framing implies the entire UNRWA bar sunsets on that date. The source bars prior-year and FY2026 amounts with NO end date (indefinite); only FY2027 amounts are freed after March 25, 2027. (The Division C section detail states this correctly, so the top-line/changes.removed compression is the imprecise surface.)",
+      "sourceTruth": "funds ... may not be used for a contribution, grant, or other payment to the United Nations Relief and Works Agency ... (1) for any amounts provided in prior fiscal years or in fiscal year 2026; or (2) for amounts provided in fiscal year 2027, until March 25, 2027.",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (partial). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

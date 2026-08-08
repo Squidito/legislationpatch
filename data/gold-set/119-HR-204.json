@@ -4,11 +4,11 @@
   "billType": "study",
   "stage": "house",
   "pages": 3,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
   "errors": [],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read = CLEAN, 0 errors. Spot-check then set status=adjudicated."
 }

@@ -4,11 +4,76 @@
   "billType": "appropriation",
   "stage": "signed",
   "pages": 168,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "partial",
+  "errors": [
+    {
+      "type": "attribution",
+      "field": "divisions[2].top_lines[2].subs[0]",
+      "claim": "National Forest System management: $2.43B",
+      "problem": "Figures swapped. The $2.43B belongs to the Wildland Fire Management account, NOT National Forest System. The National Forest System account is $1.857843B (~$1.86B). The larger figure is attached to the wrong (smaller) program.",
+      "sourceTruth": "national forest system ... $1,857,843,000 ... [vs] wildland fire management ... $2,426,111,000",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "attribution",
+      "field": "divisions[2].top_lines[2].subs[1]",
+      "claim": "Wildland fire management $1.86B plus a $2.48B suppression reserve",
+      "problem": "Figures swapped. Wildland Fire Management is $2.426111B (~$2.43B), not $1.86B. The $1.86B is the National Forest System account. (The $2.48B suppression reserve is correct.)",
+      "sourceTruth": "wildland fire management ... $2,426,111,000 ... [and] wildfire suppression operations reserve fund ... $2,480,000,000",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "attribution",
+      "field": "divisions[2].sections[2].items[0].detail",
+      "claim": "The Forest Service receives $2.43B for National Forest System management and $1.86B for wildland fire management, of which $1.011B is designated for wildfire suppression",
+      "problem": "National Forest System ($1.86B) and Wildland Fire Management ($2.43B) are reversed. Compounds the error: the $1.011B suppression carve-out sits inside the $2.43B Wildland Fire Management account, so it cannot be 'of which' the $1.86B (which is actually National Forest System).",
+      "sourceTruth": "national forest system ... $1,857,843,000 ... wildland fire management ... $2,426,111,000 ... of which ... $1,011,000,000 shall be available for wildfire suppression operations",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "attribution",
+      "field": "divisions[2].underreported[1]",
+      "claim": "Of the Forest Service's $1.86B wildland fire budget, $1.011B is specifically tied to the FY2022 budget-resolution wildfire-suppression cap-adjustment mechanism, with a further $2.48B suppression reserve on top.",
+      "problem": "The wildland fire (Wildland Fire Management) budget is $2.43B, not $1.86B; $1.86B is the National Forest System account. The $1.011B suppression figure is drawn from the $2.43B account, not a $1.86B one.",
+      "sourceTruth": "wildland fire management ... $2,426,111,000 ... of which ... $1,011,000,000 shall be available for wildfire suppression operations",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "attribution",
+      "field": "top_lines[2].subs[2]",
+      "claim": "Forest Service $2.43B plus $1.86B wildland fire + $2.48B suppression reserve",
+      "problem": "Same swap at the top (non-division) layer: $1.86B is labeled 'wildland fire' but is actually the National Forest System account; the $2.43B base 'Forest Service' figure is actually the Wildland Fire Management account.",
+      "sourceTruth": "national forest system ... $1,857,843,000 ... wildland fire management ... $2,426,111,000",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "entity",
+      "field": "divisions[0].top_lines[2].subs[1]",
+      "claim": "NASA Science, Aeronautics, Space Technology and Education account: $3.0B",
+      "problem": "There is no such account. The $3.0B account is NASA's 'Safety, Security and Mission Services' (institutional/overhead). The analysis built a fake account name from the account's boilerplate purpose clause, mislabeling overhead as a science/education program line.",
+      "sourceTruth": "safety, security and mission services ... $3,000,000,000 [purpose clause reads 'in the conduct and support of science, aeronautics, space technology, exploration, space operations and education research and development activities']",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "entity",
+      "field": "divisions[0].sections[2].items[0].detail",
+      "claim": "and a combined Science/Aeronautics/Space Technology/Education account of $3.0B",
+      "problem": "Same misattribution: the $3.0B account is 'Safety, Security and Mission Services,' not a Science/Aeronautics/Space Technology/Education account.",
+      "sourceTruth": "safety, security and mission services ... $3,000,000,000",
+      "severity": "material",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (partial). 7 material + 0 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated.",
+  "resolution": "Both material issues (NASA account name; NFS/Wildland-Fire swap) CONFIRMED + FIXED across all fields 2026-08-08."
 }

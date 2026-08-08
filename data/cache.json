@@ -746,7 +746,7 @@
             },
             {
               "main": "Requires the Secretary of Defense to submit a plan within 1 year for reorganizing program executive office portfolios around Major Capability Activity Areas (MCAAs), and to designate at least 2 Pathfinder MCAAs within 90 days.",
-              "detail": "Pathfinder program executive officers may transfer funds among programs within a Pathfinder, subject to a cap of 40 percent of the total amount authorized for that Pathfinder. Transfers may not be used to initiate a new start program or terminate an existing program. DoD must report to Congress on Pathfinder effectiveness within 540 days and annually thereafter through December 31, 2029.",
+              "detail": "The Secretary of Defense, acting through a service secretary or the head of a Defense Agency, may transfer funds among programs within a Pathfinder under that Secretary's or head's jurisdiction, subject to a cap of 40 percent of the total amount authorized for that Pathfinder. Transfers may not be used to initiate a new start program or terminate an existing program. DoD must report to Congress on Pathfinder effectiveness within 540 days and annually thereafter through December 31, 2029.",
               "comments": []
             },
             {
@@ -1953,7 +1953,7 @@
           "headline": "Only Licensed Issuers May Issue Stablecoins",
           "billSection": "3",
           "subs": [
-            "Three years after enactment, it is unlawful for any unlicensed person to issue a payment stablecoin in the United States",
+            "It is unlawful for any unlicensed person to issue a payment stablecoin in the United States, effective per Sec. 20 (the earlier of 18 months after enactment or 120 days after final implementing regulations) — a separate 3-year clock applies only to digital asset service providers offering or selling non-permitted-issuer stablecoins (Sec. 3(b))",
             "Three permitted issuer categories: bank subsidiaries, federally approved nonbank issuers chartered by the Office of the Comptroller of the Currency, and state-licensed issuers with $10B or less outstanding",
             "Violations carry penalties of up to $1M per violation and/or up to 5 years in prison"
           ]
@@ -2023,8 +2023,8 @@
           "label": "Section 3 — Issuance and Treatment of Payment Stablecoins",
           "items": [
             {
-              "main": "Prohibits any entity other than a permitted payment stablecoin issuer from issuing a stablecoin in the United States, with the prohibition taking effect three years after enactment.",
-              "detail": "The three-year grace period allows existing issuers time to obtain a license or wind down operations. Digital asset service providers may not offer or sell stablecoins from unlicensed issuers to U.S. customers after the effective date. The Secretary of the Treasury may grant limited safe harbors by regulation for de minimis transaction volumes or in unusual and exigent circumstances with prior congressional notification. Peer-to-peer transfers between individuals and self-custodied wallet transactions are explicitly exempt.",
+              "main": "Prohibits any entity other than a permitted payment stablecoin issuer from issuing a stablecoin in the United States; this issuance ban takes effect per the Act's Sec. 20 effective date (the earlier of 18 months after enactment or 120 days after final implementing regulations) — the separate 3-year clock in Sec. 3(b) instead governs when digital asset service providers must stop offering or selling non-permitted-issuer stablecoins.",
+              "detail": "The issuance ban's effective date (Sec. 20 — the earlier of 18 months after enactment or 120 days after final implementing regulations) gives existing issuers time to obtain a license or wind down operations; the distinct 3-year clock in Sec. 3(b) instead applies to digital asset service providers offering or selling non-permitted-issuer stablecoins. Digital asset service providers may not offer or sell stablecoins from unlicensed issuers to U.S. customers after the effective date. The Secretary of the Treasury may grant limited safe harbors by regulation for de minimis transaction volumes or in unusual and exigent circumstances with prior congressional notification. Peer-to-peer transfers between individuals and self-custodied wallet transactions are explicitly exempt.",
               "comments": []
             }
           ]
@@ -2193,8 +2193,8 @@
       "underreported": [
         {
           "section": "Section 19 — Disclosure Relating to Payment Stablecoins",
-          "summary": "Amends federal financial disclosure law to require federal officials and employees to disclose payment stablecoin holdings only if the holdings aggregate more than $5,000, creating an exemption from the existing requirement to disclose deposits without a minimum threshold.",
-          "why_unreported": "The bill's stated purpose is to regulate stablecoin issuance. This provision separately modifies federal ethics disclosure requirements for government officials holding stablecoins, creating a de minimis reporting exemption that does not apply to ordinary bank deposits. The provision is not referenced in the bill's title or in the regulatory framework sections."
+          "summary": "Amends federal financial disclosure law (5 U.S.C. 13104(a)(3)) to add a new exclusion for payment stablecoins issued by a permitted issuer aggregating $5,000 or less held, retained alongside the pre-existing 'or any deposits' exclusion language; what the underlying deposit-disclosure requirement otherwise covers is not established in the fetched bill text.",
+          "why_unreported": "The bill's stated purpose is to regulate stablecoin issuance. This provision separately modifies federal ethics disclosure law (5 U.S.C. 13104(a)(3)) by adding a $5,000-or-less aggregate exclusion for permitted-issuer stablecoins. The provision is not referenced in the bill's title or in the regulatory framework sections. Whether this exclusion is narrower than existing deposit-disclosure treatment cannot be verified from the fetched bill text, which shows only the amendment's strike-and-insert language, not the pre-amendment statute."
         },
         {
           "section": "Section 7 — Federal Reserve Override Authority for State-Qualified Issuers",
@@ -7563,7 +7563,7 @@
           "subs": [
             "$593.82B for Medicare; $508.15B for Medicaid plus $316.51B advance for Q1 FY2027",
             "$24.62B Pell Grants; $19.13B Title I K-12 grants; $15.49B special education (IDEA)",
-            "$11.66B rescission of unobligated Inflation Reduction Act education funds (Sec. 528)"
+            "$11.66B rescission of unobligated Inflation Reduction Act funds (Sec. 528, a Division B general provision — not an education-specific account)"
           ]
         },
         {
@@ -7706,8 +7706,8 @@
           "label": "Title III — Department of Education",
           "items": [
             {
-              "main": "Appropriates $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for IDEA special education, and includes a $11.66B rescission of unobligated Inflation Reduction Act education funds (Sec. 528).",
-              "detail": "Title I: $6.46B basic grants, $5.30B targeted grants, $5.30B finance incentive grants, $862M concentration grants. Pell: $22.48B basic grants. Vocational Rehabilitation: $4.65B. Sec. 528 rescinds $11.66B from Public Law 117-169 unobligated balances.",
+              "main": "Appropriates $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for IDEA special education, and includes a $11.66B rescission of unobligated Inflation Reduction Act funds under Sec. 528, a Division B general provision — not a cut to the Education title's own accounts.",
+              "detail": "Title I: $6.46B basic grants, $5.30B targeted grants, $5.30B finance incentive grants, $862M concentration grants. Pell: $22.48B basic grants. Vocational Rehabilitation: $4.65B. Sec. 528 (a Division B general provision, not an Education title item) rescinds $11.66B from Public Law 117-169 unobligated balances.",
               "comments": []
             }
           ]
@@ -7756,7 +7756,7 @@
           "label": "Title V — Independent Agencies",
           "items": [
             {
-              "main": "Funds the SBA's loan guarantee programs ($35.5B 7(a), $15B disaster, $6B SBIC debentures), the General Services Administration, OPM, SEC, and other independent agencies.",
+              "main": "Funds the SBA's loan guarantee programs ($35.5B 7(a) general business loans, $15B 7(a) trust certificate guarantee ceiling (Sec. 5(g)), $6B SBIC debentures, $282M disaster direct loans), the General Services Administration, OPM, SEC, and other independent agencies.",
               "detail": "GSA Federal Buildings Fund: $9.69B installment purchases, $5.57B rental, $3.01B building operations. SBA administrative expenses within Title V. SEC operations primarily offset by transaction fees under the Securities Exchange Act.",
               "comments": []
             }
@@ -7930,9 +7930,9 @@
           "why_unreported": "Section 6 appears before Division A, outside any division or subject-matter title. The bill title identifies this as a government appropriations act; Sec. 6 directly appropriates a named payment to a private individual."
         },
         {
-          "section": "Sec. 528 — IRA Education Fund Rescission",
-          "summary": "Rescinds $11.66B in unobligated balances from section 10301(1)(A)(iii) of Public Law 117-169 (the Inflation Reduction Act), eliminating previously enacted education spending authority without modifying program eligibility rules.",
-          "why_unreported": "Located in Division B Title V General Provisions, labeled as a rescission provision. Reduces previously enacted education spending by $11.66B without modifying the program's eligibility rules or structure."
+          "section": "Sec. 528 — Inflation Reduction Act Rescission",
+          "summary": "Rescinds $11.66B in unobligated balances from section 10301(1)(A)(iii) of Public Law 117-169 (the Inflation Reduction Act), eliminating previously enacted Inflation Reduction Act spending authority under a Division B general provision (not an education-specific cut) without modifying any program's eligibility rules.",
+          "why_unreported": "Located in Division B Title V General Provisions, labeled as a rescission provision. Reduces previously enacted Inflation Reduction Act spending authority by $11.66B under a Title V general provision — not an education program cut — without modifying any program's eligibility rules or structure."
         },
         {
           "section": "Sec. 5021 — PAYGO Exemption for Health Extenders",
@@ -8015,7 +8015,7 @@
           "Cybersecurity authorities (NCPS, CISA, State/Local Grant) extended to September 30, 2026 (Secs. 5007-5009)"
         ],
         "removed": [
-          "$11.66B in unobligated Inflation Reduction Act education funds rescinded (Sec. 528)",
+          "$11.66B in unobligated Inflation Reduction Act funds rescinded under Sec. 528 (Division B general provision, not education-specific)",
           "$900M permanently rescinded from prior-year State and Foreign Operations appropriations (Sec. 7072(a))",
           "Expiration date removed from sex offense special assessment (18 U.S.C. § 3014) — making it permanent (Sec. 5012)",
           "Age restrictions removed for working adults with disabilities seeking Medicaid eligibility (Sec. 6102)"
@@ -8218,8 +8218,8 @@
         {
           "label": "Division B — Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2026",
           "divisionKey": "B",
-          "summary": "Division B appropriates FY2026 funds for the Departments of Labor, HHS, and Education, dominated by mandatory entitlement payments of $593.82B for Medicare and $508.15B for Medicaid, plus $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for special education, and a $11.66B rescission of unobligated Inflation Reduction Act education funds.",
-          "brief": "Medicare ($593.82B) and Medicaid ($508.15B) dominate this division, which also funds Pell Grants, Title I, IDEA, NIH research, and child care, while rescinding $11.66B in IRA education funds.",
+          "summary": "Division B appropriates FY2026 funds for the Departments of Labor, HHS, and Education, dominated by mandatory entitlement payments of $593.82B for Medicare and $508.15B for Medicaid, plus $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for special education, and a $11.66B rescission of unobligated Inflation Reduction Act funds under Sec. 528, a general provision not specific to education accounts.",
+          "brief": "Medicare ($593.82B) and Medicaid ($508.15B) dominate this division, which also funds Pell Grants, Title I, IDEA, NIH research, and child care, while rescinding $11.66B in unobligated Inflation Reduction Act funds under Sec. 528 (a general provision, not education-specific).",
           "top_lines": [
             {
               "headline": "Medicare",
@@ -8303,8 +8303,8 @@
               "label": "Title III — Department of Education",
               "items": [
                 {
-                  "main": "Appropriates $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for IDEA special education, and includes a $11.66B rescission of unobligated Inflation Reduction Act education funds (Sec. 528).",
-                  "detail": "Title I: $6.46B basic grants, $5.30B targeted grants, $5.30B finance incentive grants, $862M concentration grants. Pell: $22.48B basic grants. Vocational Rehabilitation: $4.65B. Sec. 528 rescinds $11.66B from Public Law 117-169 unobligated balances.",
+                  "main": "Appropriates $24.62B for Pell Grants, $19.13B for Title I education grants, $15.49B for IDEA special education, and includes a $11.66B rescission of unobligated Inflation Reduction Act funds under Sec. 528, a Division B general provision — not a cut to the Education title's own accounts.",
+                  "detail": "Title I: $6.46B basic grants, $5.30B targeted grants, $5.30B finance incentive grants, $862M concentration grants. Pell: $22.48B basic grants. Vocational Rehabilitation: $4.65B. Sec. 528 (a Division B general provision, not an Education title item) rescinds $11.66B from Public Law 117-169 unobligated balances.",
                   "comments": []
                 }
               ]
@@ -8312,8 +8312,8 @@
           ],
           "underreported": [
             {
-              "section": "Sec. 528 — Rescission of IRA Education Funds",
-              "summary": "Rescinds the unobligated balance of $11.66B from section 10301(1)(A)(iii) of Public Law 117-169, eliminating previously enacted education spending authority without modifying program eligibility rules.",
+              "section": "Sec. 528 — Rescission of Inflation Reduction Act Funds",
+              "summary": "Rescinds the unobligated balance of $11.66B from section 10301(1)(A)(iii) of Public Law 117-169, eliminating previously enacted Inflation Reduction Act spending authority under a Division B general provision (not an education-specific cut) without modifying any program's eligibility rules.",
               "why_unreported": "Located in Title V General Provisions, the provision permanently eliminates $11.66B in previously enacted spending authority. It is a rescission section rather than a programmatic education change."
             },
             {
@@ -8325,7 +8325,7 @@
           "criticisms": [],
           "gaps": [
             "Medicare and Medicaid are funded at open-ended levels based on program formulas; the division does not set caps, block grant amounts, or per-capita limits on either program.",
-            "The $11.66B IRA education rescission eliminates spending authority without identifying which specific activities or grantees are affected by the removed unobligated balances."
+            "The $11.66B IRA rescission under Sec. 528 (a general provision, not education-specific) eliminates spending authority without identifying which specific activities or grantees are affected by the removed unobligated balances."
           ],
           "featured_quotes": [],
           "changes": {
@@ -8335,7 +8335,7 @@
               "Title I and IDEA availability dates structured with July 1, 2026 release schedules"
             ],
             "removed": [
-              "$11.66B in unobligated Inflation Reduction Act education funds rescinded (Sec. 528)"
+              "$11.66B in unobligated Inflation Reduction Act funds rescinded under Sec. 528 (Division B general provision, not education-specific)"
             ]
           }
         },
@@ -8450,7 +8450,7 @@
           "label": "Division E — Financial Services and General Government Appropriations Act, 2026",
           "divisionKey": "E",
           "summary": "Division E appropriates FY2026 funds for the Department of the Treasury, the Judiciary, the Executive Office of the President, the District of Columbia, and independent agencies, with the IRS receiving $3.04B for taxpayer services, $5.00B for enforcement, and $3.16B for operations support, and the SBA receiving authority for $35.5B in 7(a) loan guarantees.",
-          "brief": "The IRS receives approximately $11.2B across three accounts, the SBA is authorized for $35.5B in business loan guarantees and $15B in disaster loans, and the federal judiciary receives $6.13B.",
+          "brief": "The IRS receives approximately $11.2B across three accounts, the SBA is authorized for $35.5B in 7(a) business loan guarantees, a $15B 7(a) trust certificate guarantee ceiling (Sec. 5(g)), and $282M in disaster direct loans, and the federal judiciary receives $6.13B.",
           "top_lines": [
             {
               "headline": "IRS Operations",
@@ -8512,7 +8512,7 @@
               "label": "Title V — Independent Agencies",
               "items": [
                 {
-                  "main": "Funds the SBA's loan guarantee programs ($35.5B 7(a), $15B disaster, $6B SBIC debentures), the General Services Administration, OPM, SEC, and other independent agencies.",
+                  "main": "Funds the SBA's loan guarantee programs ($35.5B 7(a) general business loans, $15B 7(a) trust certificate guarantee ceiling (Sec. 5(g)), $6B SBIC debentures, $282M disaster direct loans), the General Services Administration, OPM, SEC, and other independent agencies.",
                   "detail": "GSA Federal Buildings Fund: $9.69B installment purchases, $5.57B rental, $3.01B building operations. SBA administrative expenses within Title V. SEC operations primarily offset by transaction fees under the Securities Exchange Act.",
                   "comments": []
                 }
@@ -8534,7 +8534,7 @@
           "criticisms": [],
           "gaps": [
             "Division funds Treasury operations but does not address the statutory debt limit ceiling, which requires separate legislative action.",
-            "SBA disaster loan ceiling of $15B provides no emergency supplemental authority for declared disasters occurring after enactment."
+            "SBA disaster loan direct program, funded at $282M, provides no emergency supplemental authority for declared disasters occurring after enactment; the $15B figure is a separate 7(a) trust certificate guarantee ceiling (Sec. 5(g)), not disaster lending."
           ],
           "featured_quotes": [],
           "changes": {
@@ -9396,7 +9396,7 @@
           "headline": "HHS Interagency Review",
           "subs": [
             "Requires the Secretary of HHS to conduct an interagency review of lung cancer research, prevention, and awareness with respect to women and underserved populations",
-            "Review must assess current knowledge gaps, collaborative research opportunities, and barriers to participation in lung cancer studies"
+            "Review must assess current knowledge gaps, collaborative research opportunities, screening-access strategy opportunities, and public awareness campaign opportunities"
           ],
           "billSection": "2"
         },
@@ -9427,7 +9427,7 @@
           "items": [
             {
               "main": "Directs the Secretary of HHS to conduct a review, in coordination with relevant federal agencies, to evaluate the status of research on lung cancer in women and underserved populations.",
-              "detail": "The review must assess existing research and current knowledge gaps; identify new opportunities for collaborative research on the causes of lung cancer and to advance prevention, screening, and diagnosis; assess barriers to participation of women and underserved populations in lung cancer research; and recommend strategies to improve that participation. A report on findings and recommendations must be submitted to Congress.",
+              "detail": "The review must assess existing research and current knowledge gaps; identify new opportunities for collaborative research on the causes of lung cancer and to advance prevention, screening, and diagnosis; identify opportunities for a national lung cancer screening strategy to expand access to screenings, particularly among women and underserved populations; and identify opportunities for a national public education and awareness campaign on lung cancer and the importance of early detection. A report on findings and recommendations must be submitted to Congress.",
               "comments": []
             }
           ]
@@ -22528,7 +22528,7 @@
           "subs": [
             "EPA water-infrastructure grants $4.41B; environmental programs $3.11B",
             "National Park Service $2.88B; Indian Health Service services $4.79B",
-            "Forest Service $2.43B plus $1.86B wildland fire + $2.48B suppression reserve"
+            "Forest Service $1.86B plus $2.43B wildland fire + $2.48B suppression reserve"
           ]
         }
       ],
@@ -22637,7 +22637,7 @@
               "headline": "Science — NASA and NSF",
               "subs": [
                 "NASA Exploration $7.78B; Science $7.25B; Space Operations $4.18B",
-                "NASA Science, Aeronautics, Space Technology and Education account: $3.0B",
+                "NASA Safety, Security and Mission Services account: $3.0B",
                 "National Science Foundation research and related activities: $7.18B"
               ]
             },
@@ -22676,7 +22676,7 @@
               "items": [
                 {
                   "main": "Funds NASA and the National Science Foundation.",
-                  "detail": "NASA accounts include Exploration $7.78B, Science $7.25B, Space Operations $4.18B, and a combined Science/Aeronautics/Space Technology/Education account of $3.0B. The National Science Foundation receives $7.18B for research and related activities.",
+                  "detail": "NASA accounts include Exploration $7.78B, Science $7.25B, Space Operations $4.18B, and a Safety, Security and Mission Services account (institutional overhead) of $3.0B. The National Science Foundation receives $7.18B for research and related activities.",
                   "comments": []
                 }
               ]
@@ -22817,8 +22817,8 @@
             {
               "headline": "Forest Service, Wildfire and Indian Health",
               "subs": [
-                "National Forest System management: $2.43B",
-                "Wildland fire management $1.86B plus a $2.48B suppression reserve",
+                "National Forest System management: $1.86B",
+                "Wildland fire management $2.43B plus a $2.48B suppression reserve",
                 "Indian Health Service services: $4.79B (forward-funded for FY2027)"
               ]
             }
@@ -22849,7 +22849,7 @@
               "items": [
                 {
                   "main": "Funds the Forest Service, the Indian Health Service and other related agencies.",
-                  "detail": "The Forest Service receives $2.43B for National Forest System management and $1.86B for wildland fire management, of which $1.011B is designated for wildfire suppression; a separate wildfire suppression operations reserve is funded at $2.48B. The Indian Health Service’s services account is forward-funded at $4.79B, available beginning October 1, 2026.",
+                  "detail": "The Forest Service receives $1.86B for National Forest System management and $2.43B for wildland fire management, of which $1.011B is designated for wildfire suppression; a separate wildfire suppression operations reserve is funded at $2.48B. The Indian Health Service’s services account is forward-funded at $4.79B, available beginning October 1, 2026.",
                   "comments": []
                 }
               ]
@@ -22867,7 +22867,7 @@
           ],
           "underreported": [
             "The Indian Health Service services account is forward-funded — the $4.79B does not become available until October 1, 2026, a structure used to insulate tribal health programs from any future funding lapse.",
-            "Of the Forest Service’s $1.86B wildland fire budget, $1.011B is specifically tied to the FY2022 budget-resolution wildfire-suppression cap-adjustment mechanism, with a further $2.48B suppression reserve on top."
+            "Of the Forest Service’s $2.43B wildland fire budget, $1.011B is specifically tied to the FY2022 budget-resolution wildfire-suppression cap-adjustment mechanism, with a further $2.48B suppression reserve on top."
           ],
           "criticisms": [],
           "gaps": [
@@ -39442,7 +39442,7 @@
           "billSection": "301",
           "subs": [
             "President must decide every 90 days whether Russia is waging war or refusing peace",
-            "Triggers mandatory sanctions on 13 named Russian banks and oil, gas, and mining firms",
+            "Triggers mandatory sanctions on 3 or more of 13 named Russian banks, plus all Russian oil, gas, and mining firms",
             "Raises duties on all Russian imports to at least 500 percent"
           ]
         },
@@ -39497,13 +39497,18 @@
             },
             {
               "main": "Raises duties on all Russian imports to at least 500 percent, bans energy products refined from Russian crude, and imposes a 100 percent tax on blocked Russian and Belarusian sovereign-asset income.",
-              "detail": "The 500 percent ad valorem duty and import ban apply after an affirmative determination. The 100 percent tax falls on interest and dividends from Russian and Belarusian assets blocked under the International Emergency Economic Powers Act and applies without regard to any U.S. treaty obligation.",
+              "detail": "The 500 percent ad valorem duty applies after an affirmative determination, but the refinery import ban (added to the Ending Importation of Russian Oil Act) is a standalone prohibition with no determination trigger. The 100 percent tax falls on interest and dividends from Russian and Belarusian assets blocked under the International Emergency Economic Powers Act and applies without regard to any U.S. treaty obligation.",
               "comments": []
             },
             {
               "main": "Sets a congressional review process for lifting Russia sanctions and a termination-and-reimposition mechanism.",
               "detail": "The President may terminate sanctions, duties, and export controls on certifying that Russia has ceased its war or peace-agreement violations, and must immediately reimpose them if Russia restarts. The President may also waive individual sanctions on determining a waiver is vital to national security, with 15 days' notice to Congress.",
               "comments": []
+            },
+            {
+              "main": "Requires separate Commerce, State, and Defense strategies to stop Iran from acquiring drone technology.",
+              "detail": "Under Section 313(f)-(h), the Secretary of Commerce (within 60 days) and the Secretary of State (within 90 days) must each develop a strategy to prevent the illegal export to Iran of technologies — including microcontrollers, voltage regulators, digital signal controllers, GPS modules, and microprocessors — used in the design, development, production, or operation of Iranian unmanned aircraft systems. The Secretary of Defense (within 30 days) must separately develop a range of military options to counter or deny Iran's ability to acquire those same technologies, plus CAD software and computer numerical control machines.",
+              "comments": ""
             }
           ]
         }
@@ -41339,7 +41344,7 @@
               "comments": []
             },
             {
-              "main": "Includes numerous authorities on specific weapon systems: Section 123 authorizes a multiyear procurement contract for up to 15 Arleigh Burke Flight III destroyers; Section 124 authorizes multiyear procurement for John Lewis class oilers; Section 127 authorizes multiyear procurement for E-2D Advanced Hawkeye aircraft; Section 128 authorizes incremental funding for ship-to-shore connector construction.",
+              "main": "Includes numerous authorities on specific weapon systems: Section 123 authorizes a multiyear procurement contract for up to 15 Arleigh Burke Flight III destroyers; Section 124 authorizes multiyear procurement for John Lewis class oilers; Section 127 authorizes multiyear procurement for E-2D Advanced Hawkeye aircraft; Section 128 authorizes incremental funding for the construction of a Guided Missile Destroyer (DDG); Section 129 authorizes advance procurement of components for Ship-to-Shore Connector class craft.",
               "detail": "Section 123(e) caps modifications to the destroyer multiyear contract at 10 percent above the original target price. Section 123(d) requires that if fewer than 15 destroyers are procured through the base contracts, one or more contracts must include a prepriced option so the base plus option quantity reaches 15. Section 122 gives the Navy incremental funding authority for long-lead components on Virginia class submarines.",
               "comments": []
             },

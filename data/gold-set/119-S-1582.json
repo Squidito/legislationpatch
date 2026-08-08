@@ -4,11 +4,40 @@
   "billType": "framework",
   "stage": "signed",
   "pages": 44,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "direction-inversion",
+      "field": "top_lines[Only Licensed Issuers May Issue Stablecoins].subs[0] / sections[Section 3].items[0].main",
+      "claim": "Three years after enactment, it is unlawful for any unlicensed person to issue a payment stablecoin in the United States ... Prohibits any entity other than a permitted payment stablecoin issuer from issuing a stablecoin in the United States, with the prohibition taking effect three years after enactment.",
+      "problem": "Wrong actor + wrong timing. The 3-year post-enactment date governs DIGITAL ASSET SERVICE PROVIDERS offering or selling non-permitted stablecoins (Sec. 3(b)(1)), not issuance. The issuance ban itself (Sec. 3(a)) has no 3-year delay; its effective date is set by Sec. 20 (the earlier of 18 months after enactment or 120 days after final regulations). The analysis attaches the DASP offer/sale clock to the unlicensed-issuance prohibition.",
+      "sourceTruth": "(a) Limitation on Issuers.--It shall be unlawful for any person other than a permitted payment stablecoin issuer to issue a payment stablecoin in the United States. (b) ... beginning on the date that is 3 years after the date of enactment of this Act, it shall be unlawful for a digital asset service provider to offer or sell a payment stablecoin to a person in the United States, unless ... issued by a permitted payment stablecoin issuer. [Sec. 20] This Act ... shall take effect on the earlier of (1) ... 18 months after the date of enactment ... or (2) ... 120 days after ... final regulations",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "unsupported",
+      "field": "underreported[Section 19 - Disclosure].summary / .why_unreported",
+      "claim": "creating an exemption from the existing requirement to disclose deposits without a minimum threshold ... creating a de minimis reporting exemption that does not apply to ordinary bank deposits",
+      "problem": "Claim about the pre-amendment prior statute (5 U.S.C. 13104(a)(3)) that is not in the fetched source. The fetched text shows only the amendment striking ', or any deposits' and re-inserting it alongside the new stablecoin clause; it never states that existing law requires disclosing deposits without a minimum threshold, nor that bank deposits lack a de minimis exemption. The retained ', or any deposits' phrase sits inside an exclusion enumeration, which cuts against the analysis's premise. The 'does not apply to ordinary bank deposits' contrast is unverifiable from source.",
+      "sourceTruth": "absent from source — Section 19 reads only: 'Section 13104(a)(3) of title 5 ... is amended, in the first sentence, by striking \", or any deposits\" and inserting \", any payment stablecoins issued by a permitted payment stablecoin issuer aggregating $5,000 or less held, or any deposits\".' The pre-amendment baseline for deposit disclosure is not present in the fetched text and was not fetched as a referenced source.",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "other",
+      "field": "summary",
+      "claim": "state-licensed issuers with under $10B outstanding",
+      "problem": "Threshold boundary understatement. Source sets the state-pathway ceiling at 'not more than $10,000,000,000' ($10B or less, inclusive); 'under $10B' excludes exactly $10B. The top_line and Section 4 item correctly say '$10B or less', so the summary is the inconsistent surface.",
+      "sourceTruth": "a State qualified payment stablecoin issuer with a consolidated total outstanding issuance of not more than $10,000,000,000 may opt for regulation under a State-level regulatory regime",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 2 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated.",
+  "resolution": "3-year-clock inversion (3 fields) + Section 19 unfetched-statute claim CONFIRMED + FIXED 2026-08-08."
 }

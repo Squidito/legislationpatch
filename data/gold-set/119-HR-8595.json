@@ -4,11 +4,21 @@
   "billType": "appropriation",
   "stage": "house",
   "pages": 138,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "omission",
+      "field": "underreported[Title III Global Health].summary / sections[Title III].items[0].detail",
+      "claim": "Bars global health funds to any organization the President determines supports or manages coercive abortion or involuntary sterilization ... The global health funds carry conditions barring money to organizations that support coercive abortion or involuntary sterilization",
+      "problem": "Scope understatement. The proviso, though placed under the Global Health Programs heading, applies to ALL funds in the Act (and prior-year unobligated balances), not only global health funds. The analysis narrows an Act-wide funding bar to a single account.",
+      "sourceTruth": "none of the funds made available in this Act nor any unobligated balances from prior appropriations Acts may be made available to any organization or program which, as determined by the President of the United States, supports or participates in the management of a program of coercive abortion or involuntary sterilization",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

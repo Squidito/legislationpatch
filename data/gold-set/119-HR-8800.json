@@ -4,11 +4,31 @@
   "billType": "reauthorization",
   "stage": "house",
   "pages": 895,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate — needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "partial",
+  "errors": [
+    {
+      "type": "entity",
+      "field": "sections[0].items[1].main",
+      "claim": "Section 128 authorizes incremental funding for ship-to-shore connector construction.",
+      "problem": "Conflates two different sections and misstates the authority. Section 128 concerns a Guided Missile Destroyer (DDG), not the ship-to-shore connector. The ship-to-shore connector is Section 129, and that authority is 'advance procurement of components,' not 'incremental funding for construction.' Both the section number and the nature of the authority are wrong.",
+      "sourceTruth": "SEC. 128. AUTHORITY TO USE INCREMENTAL FUNDING FOR THE CONSTRUCTION OF A GUIDED MISSILE DESTROYER (DDG). ... to enter into an incrementally funded contract for the construction of one Guided Missile Destroyer (DDG). / SEC. 129. AUTHORITY FOR ADVANCE PROCUREMENT OF COMPONENTS FOR SHIP-TO-SHORE CONNECTOR CLASS CRAFT. ... the advance procurement of components for Ship-to-Shore Connector class craft",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "direction-inversion",
+      "field": "top_lines[2].subs[1]",
+      "claim": "Section 706 requires TRICARE to cover a supply of up to 365 days of a contraceptive ... starting no later than 180 days after enactment",
+      "problem": "Timing qualifier is inverted. Source says coverage begins 'not less than 180 days after' enactment (a floor: no earlier than 180 days out), whereas the analysis says 'no later than 180 days after' (a ceiling/deadline: within 180 days). Opposite direction.",
+      "sourceTruth": "Beginning not less than 180 days after the date of the enactment of the Act, contraceptive supplies of up to 365 days shall be covered",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (PARTIAL — full TOC + every section with specific claims, of an 895-page bill). 1 MATERIAL + 1 minor. MATERIAL: §128 vs §129 entity error (see errors[0]) — the standout catch. Minor: §706 'no later than' vs source 'not less than' 180 days (direction inversion). Everything else verified exactly (all end strengths, MilCon totals/item counts, Guard/Reserve, 12 maritime line items, DOE figures; Titles I-XVIII framing correct — Division A skips Title XIII, 17 topics map to 17 titles). -> James: adjudicate — the §128/§129 error is a real fix candidate; then set status='adjudicated'.",
+  "resolution": "Material flag CONFIRMED by cross-model (Sonnet) verify + FIXED in cache.json 2026-08-08."
 }

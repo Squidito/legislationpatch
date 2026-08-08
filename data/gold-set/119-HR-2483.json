@@ -4,11 +4,21 @@
   "billType": "reauthorization",
   "stage": "signed",
   "pages": 23,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "entity",
+      "field": "summary/top_lines[].subs/sections[].items[].main",
+      "claim": "988 Suicide & Crisis Lifeline",
+      "problem": "The source consistently names it the 'National Suicide Prevention Lifeline' (and '9-8-8 National Suicide Prevention Lifeline'). 'Suicide & Crisis Lifeline' is the real-world rebrand but is an out-of-source proper noun. The '988' number itself is supported.",
+      "sourceTruth": "the 9-8-8 National Suicide Prevention Lifeline ... National Suicide Prevention Lifeline Program ... the suicide prevention hotline",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

@@ -4,11 +4,21 @@
   "billType": "appropriation",
   "stage": "house",
   "pages": 50,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "omission",
+      "field": "top_lines[VA Medical Care].subs / sections[Veterans Health Administration].items[0].detail",
+      "claim": "$54.59B Cost of War Toxic Exposures Fund ... The Cost of War Toxic Exposures Fund is funded at $54.59B.",
+      "problem": "Understates the fund. The bill provides $54.59B available now PLUS a separate $53.72B advance appropriation for FY2028; the analysis reports only the first tranche while elsewhere labeling comparable advance accounts. Total provision to the fund is roughly double the figure given.",
+      "sourceTruth": "$54,593,000,000, to remain available until expended; and, in addition, $53,715,000,000, which shall become available on October 1, 2027, and shall remain available until September 30, 2029.",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

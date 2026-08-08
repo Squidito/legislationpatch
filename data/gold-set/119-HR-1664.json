@@ -4,11 +4,21 @@
   "billType": "study",
   "stage": "house",
   "pages": 6,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "overgeneralization",
+      "field": "summary/top_lines[].subs/sections[].items[].main",
+      "claim": "Names the Commerce Secretary as the President's principal blockchain advisor / makes the Secretary of Commerce the federal government's lead advisor on blockchain",
+      "problem": "Source says the Secretary serves as 'a principal advisor to the President' for this policy area (indefinite article — one of possibly several). The analysis renders it as 'the' principal/lead advisor, and 'the federal government's lead advisor' further broadens 'advisor to the President.'",
+      "sourceTruth": "The Secretary shall serve as a principal advisor to the President for policy pertaining to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

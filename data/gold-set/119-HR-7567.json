@@ -4,11 +4,21 @@
   "billType": "reauthorization",
   "stage": "house",
   "pages": 356,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate — needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "partial",
+  "errors": [
+    {
+      "type": "unsupported",
+      "field": "changes.added",
+      "claim": "SNAP staffing flexibility allowing states to hire contractors during backlogs, surges, or when error rates reach 6 percent",
+      "problem": "The magnitude qualifier 'surges' is not in the source; the statutory trigger is ANY increase in SNAP applications, not specifically a surge. The word narrows the trigger's actual breadth. Same qualifier recurs in sections[1].items[0].detail ('when applications surge').",
+      "sourceTruth": "``(C) the State experiences an increase in supplemental nutrition assistance program applications.''",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (PARTIAL — 356-page farm bill read strategically). 1 MINOR flag, 0 material errors. Flag: 'surges' qualifier narrows the actual statutory trigger (any increase in SNAP applications). -> James: adjudicate, then set status='adjudicated'."
 }

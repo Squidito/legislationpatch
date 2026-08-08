@@ -4,11 +4,11 @@
   "billType": "appropriation",
   "stage": "house",
   "pages": 64,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate — needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
   "errors": [],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read = CLEAN, 0 errors. Every dollar figure matched source verbatim: $101,241,955,000 SNAP, $37,900,930,000 child nutrition, $8B WIC, 267%/428% vouchers, $7,109,336,000 FDA, ARS $1,795,813,000, OIG $99,975,000, vehicle fleet cap. -> James: spot-check, then set status='adjudicated'."
 }

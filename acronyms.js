@@ -237,6 +237,8 @@ const ACRONYMS = {
   // Space / aviation / transportation
   NASA:   'National Aeronautics and Space Administration',
   ISS:    'International Space Station',
+  GPS:    'Global Positioning System',
+  CAD:    'Computer-Aided Design',
   FAA:    'Federal Aviation Administration',
   FHWA:   'Federal Highway Administration',
   FRA:    'Federal Railroad Administration',

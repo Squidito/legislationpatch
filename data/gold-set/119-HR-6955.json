@@ -4,11 +4,48 @@
   "billType": "amendment",
   "stage": "house",
   "pages": 69,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "unsupported",
+      "field": "sections[0].items[0].detail",
+      "claim": "Cuts a new-bank de novo review period from 180 to 90 days",
+      "problem": "The 180->90 day figure is correct, but the fetched bill text only amends an external statute (section 908 of the 21st Century ROAD to Housing Act) and never defines what the 180/90-day period governs. The gloss 'de novo review period' is not established by the fetched source (that Act's text was not provided; referencedSources is empty).",
+      "sourceTruth": "Section 908 of the 21st Century ROAD to Housing Act is amended-- (1) in subsection (b)(2), by striking ``180-day'' and inserting ``90-day''",
+      "severity": "minor",
+      "origin": "candidate"
+    },
+    {
+      "type": "overgeneralization",
+      "field": "top_lines[0].subs[1]",
+      "claim": "Tailors capital and reporting rules for banks under $6B in assets",
+      "problem": "The '$6B' threshold is only the Small Bank Holding Company Policy Statement asset threshold (Sec 202). The capital/reporting-tailoring provisions (Sec 201 tailoring; Sec 201(b) short-form call reports) are not tied to $6B — short-form reports key off Community Bank Leverage Ratio eligibility, and the tailoring mandate applies to all regulated institutions by risk/business model. The $6B scope is imported and overgeneralized.",
+      "sourceTruth": "Sec 201(b): reduced reporting requirement for all banks eligible for the Community Bank Leverage Ratio ... Sec 202: raise the consolidated asset threshold under that appendix to $6,000,000,000",
+      "severity": "minor",
+      "origin": "candidate"
+    },
+    {
+      "type": "overgeneralization",
+      "field": "sections[0].items[1].detail",
+      "claim": "It also requires annual Treasury testimony on the Community Development Financial Institutions Fund.",
+      "problem": "Overstates the mandate. The testimony is discretionary on the committees' side — it occurs only if the committee chairs call for it, not automatically every year.",
+      "sourceTruth": "The Secretary of the Treasury (or a designee ...) shall, at the discretion of the Chair of the Committee on Financial Services ... and the Chair of the Committee on Banking, Housing, and Urban Affairs ... annually testify",
+      "severity": "minor",
+      "origin": "candidate"
+    },
+    {
+      "type": "omission",
+      "field": "underreported[1].summary",
+      "claim": "noncompliance does not establish a violation",
+      "problem": "Drops the modifier 'conclusively.' The prescribed statement says noncompliance does not *conclusively* establish a violation (i.e., it can still be evidence, just not dispositive) — the paraphrase overstates the safe harbor.",
+      "sourceTruth": "noncompliance with this guidance does not conclusively establish a violation of applicable law",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 4 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

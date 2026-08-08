@@ -4,11 +4,21 @@
   "billType": "reauthorization",
   "stage": "signed",
   "pages": 15,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "other",
+      "field": "sections[].items[].detail",
+      "claim": "Agencies must deny applications from small businesses with a security risk connecting them to entities or individuals on any of eight federal watchlists.",
+      "problem": "Overstates modality as an automatic 'must deny.' The fetched bill text frames denial as a determination-based decision, not an automatic bar; the chapeau of paragraph (16)/(20) that would establish mandatoriness is in the unfetched base statute (15 U.S.C. 638(g)/(o)). Fetched text supports 'may deny on the basis of a determination,' not 'must deny.'",
+      "sourceTruth": "``(17) provide for-- ``(A) a process under which, upon making an award decision to deny an application on the basis of a determination under paragraph (16) ...''; and ``(F) has a security risk that the Federal agency determines warrants a denial;''",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 0 material + 1 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated."
 }

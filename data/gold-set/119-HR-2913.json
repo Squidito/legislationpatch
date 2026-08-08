@@ -4,11 +4,40 @@
   "billType": "amendment",
   "stage": "house",
   "pages": 43,
-  "status": "template",
-  "labeledBy": "",
-  "labeledAt": "",
-  "sourceReadDepth": "",
-  "errors": [],
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate - needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [
+    {
+      "type": "omission",
+      "field": "summary/sections/underreported",
+      "claim": "(entire Iran counter-UAS export-control regime is unmentioned anywhere in the analysis)",
+      "problem": "SEC 313(f)-(h) mandates three separate agency strategies — Commerce (60-day), State (90-day), and a Defense range-of-military-options (30-day) — to prevent export to Iran of drone/UAS technologies (microcontrollers, voltage regulators, GPS modules, microprocessors, etc.). This is a distinct substantive component targeting a different country than the bill's Ukraine/Russia focus, and it appears nowhere in the analysis (not even in underreported, which flags lesser items like vessel insurance).",
+      "sourceTruth": "(f) Department of Commerce Strategy.--(1) Strategy required.--Not later than 60 days after the date of the enactment of this Act, the Secretary of Commerce ... shall develop a strategy to prevent the illegal export to Iran ... of unmanned aircraft systems by Iran ... (g) Department of State Strategy ... (h) Requirement for Secretary of Defense To Develop Range of Options",
+      "severity": "material",
+      "origin": "candidate"
+    },
+    {
+      "type": "overgeneralization",
+      "field": "top_lines[].subs",
+      "claim": "Triggers mandatory sanctions on 13 named Russian banks and oil, gas, and mining firms",
+      "problem": "Implies all 13 listed banks are sanctioned. The bill requires sanctioning only 3 or more of the 13. (The section detail correctly says '3 or more of 13 named,' so only the top-line sub overstates.)",
+      "sourceTruth": "the President shall impose the sanctions described in section 317 with respect to 3 or more of the following financial institutions:",
+      "severity": "minor",
+      "origin": "candidate"
+    },
+    {
+      "type": "other",
+      "field": "sections[].items[].detail",
+      "claim": "The 500 percent ad valorem duty and import ban apply after an affirmative determination.",
+      "problem": "Conditions the refinery import ban on a section-301 affirmative determination. The 500% duty (SEC 314) is so conditioned, but the SEC 315 refinery import ban has no determination trigger — it is a flat statutory prohibition added to the Ending Importation of Russian Oil Act, effective on its own terms, not upon a section-301 determination.",
+      "sourceTruth": "SEC. 315 ... ``All products classified under chapter 27 of the Harmonized Tariff Schedule that were produced at any refinery that uses crude oil originating in the Russian Federation shall be banned from importation into the United States.'' (no 'affirmative determination under section 301' language, unlike SEC 314(a))",
+      "severity": "minor",
+      "origin": "candidate"
+    }
+  ],
   "verifiedCorrectClaims": 0,
-  "notes": ""
+  "notes": "CANDIDATE: hostile fidelity read (full). 1 material + 2 minor flag(s) - see errors[]. Adjudicate then set status=adjudicated.",
+  "resolution": "Sanctions overstatement + import-ban condition CONFIRMED + FIXED; Iran counter-drone OMISSION added as new Title III item 2026-08-08."
 }
