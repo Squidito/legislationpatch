@@ -11495,5 +11495,49 @@
     "priorYearBillId": null,
     "priorYearBillTitle": null,
     "priorYearBillText": null
+  },
+  {
+    "billId": "119-HR-6260",
+    "title": "Keeping Violent Offenders Off Our Streets Act of 2025",
+    "type": "HR",
+    "number": "6260",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+    "actionDate": "2026-05-18",
+    "sponsor": {
+      "bioguideId": "F000471",
+      "district": 5,
+      "firstName": "Scott",
+      "fullName": "Rep. Fitzgerald, Scott [R-WI-5]",
+      "isByRequest": "N",
+      "lastName": "Fitzgerald",
+      "party": "R",
+      "state": "WI",
+      "url": "https://api.congress.gov/v3/member/F000471?format=json"
+    },
+    "cosponsors": 5,
+    "introducedDate": "2025-11-21",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 6260 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 6260 _______________________________________________________________________ AN ACT To amend title 18, United States Code, to prohibit fraud in connection with posting bail. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Keeping Violent Offenders Off Our Streets Act of 2025''. SEC. 2. FRAUD IN CONNECTION WITH POSTING BAIL. Section 1033(f)(1)(A) of title 18, United States Code, is amended by inserting before the comma the following: ``(including the posting of monetary bail, criminal bail bonds, and Federal immigration bail bonds)''. Passed the House of Representatives May 14, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 6260 _______________________________________________________________________ AN ACT To amend title 18, United States Code, to prohibit fraud in connection with posting bail.",
+    "divisions": null,
+    "crsSummary": "Keeping Violent Offenders Off Our Streets Act of 2025 This bill broadens the definition of the term business of insurance , for the purposes of federal crimes related to insurance fraud, to include the posting of monetary bail, criminal bail bonds, and federal immigration bail bonds. Under the bill, entities and organizations that pay cash bond or bail for defendants (e.g., charitable bail funds) are engaged in the business of insurance under federal law and subject to federal criminal provisions related to insurance fraud, as well as state licensing requirements and regulation by state insurance commissions.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "act",
+          "citation": "Keeping Violent Offenders Off Our Streets Act of 2025",
+          "suggestedFetch": null
+        }
+      ]
+    }
   }
 ]
