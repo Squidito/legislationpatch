@@ -19181,7 +19181,7 @@
       "sponsor": "Rep. Palmer, Gary J. (R-AL)",
       "sponsor_bioguide": "P000609",
       "cosponsors": 0,
-      "pages": 8,
+      "pages": 10,
       "analyzed": true,
       "demo": false,
       "likelihood": 45,
@@ -19196,7 +19196,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-08-08",
       "summary": "Refocuses federal improper-payment law on payments that actually cause financial loss to the government — rather than all paperwork errors — and adds fraud-risk management requirements for agencies.",
       "brief": "Reforms the Payment Integrity Information Act to focus agencies on improper payments that cause real financial loss and on fraud prevention.",
       "top_lines": [
@@ -19235,7 +19235,17 @@
           "items": [
             {
               "main": "Refocuses federal improper-payment requirements on payments that result in financial loss to the government and strengthens fraud-risk management.",
-              "detail": "Amends the Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3352). It adds a definition of 'financial loss to the Government' — payments above the legally correct amount that cause a loss, excluding correct-amount payments that missed certain administrative procedures — and reorients agency estimates, reports, and reduction plans around such payments. It requires the Treasury to develop risk-assessment guidance within one year; agencies to run risk assessments and adopt fraud-risk-management practices (including the GAO 'Framework for Managing Fraud Risks in Federal Programs'); designates agency liaisons who meet with OMB, the Treasury, Inspectors General, and the Pandemic Response Accountability Committee; and changes several reviews and reports from annual to at least once every three years.",
+              "detail": "Amends the Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3352). It adds a definition of 'financial loss to the Government' — payments above the legally correct amount that cause a loss, excluding correct-amount payments that missed certain administrative procedures — and reorients agency estimates, reports, and reduction plans around such payments. It requires the Treasury to develop risk-assessment guidance within one year; agencies to run risk assessments and adopt fraud-risk-management practices (including the GAO 'Framework for Managing Fraud Risks in Federal Programs'); designates agency liaisons who meet with OMB, the Treasury, Inspectors General, and the Pandemic Response Accountability Committee; requires the OMB Director and the Treasury Secretary to convene State officials responsible for program and payment integrity at least once each fiscal year to review fraud-prevention performance and share best practices; and changes several reviews and reports from annual to at least once every three years.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Reforms to Annual Compliance Report by Inspectors General of Executive Agencies",
+          "items": [
+            {
+              "main": "Revises the Inspector General annual compliance report requirements to center on improper payments that result in financial loss to the government.",
+              "detail": "Amends 31 U.S.C. 3353(a)(3) (OMB guidance) and 3353(a)(4) (CIGIE guidance) so that both revise their existing guidance issued under that section — rather than develop and promulgate new guidance — keyed to enactment of the ZOMBIE Act, and inserts 'that result in financial loss to the Government' throughout the related Inspectors General improper-payment provisions.",
               "comments": []
             }
           ]
@@ -19272,7 +19282,7 @@
           "Definition of 'financial loss to the Government' and a Treasury risk-assessment guidance requirement within one year"
         ],
         "modified": [
-          "Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3352) refocused on improper payments that cause financial loss, with added fraud-risk-management requirements and some reviews shifted from annual to triennial"
+          "Payment Integrity Information Act of 2019 (31 U.S.C. 3351-3353) refocused on improper payments that cause financial loss, with added fraud-risk-management requirements, reforms to the Inspectors General annual compliance report, and some reviews shifted from annual to triennial"
         ],
         "removed": []
       },
@@ -19311,8 +19321,7 @@
           "type": "Introduced in House",
           "date": "2026-04-23"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-6028",
