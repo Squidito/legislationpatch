@@ -1241,14 +1241,14 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "The ROUTERS Act directs the Department of Commerce to study the national security risks posed by consumer routers, modems, and combined modem-router devices that are designed, developed, manufactured, or supplied by entities owned or controlled by China, Iran, North Korea, or Russia. Commerce must report findings to Congress within one year.",
+      "summary": "The ROUTERS Act directs the Department of Commerce to study the national security risks and cybersecurity vulnerabilities posed by consumer routers, modems, and combined modem-router devices that are designed, developed, manufactured, or supplied by entities owned or controlled by China, Iran, North Korea, or Russia. Commerce must report findings to Congress within one year.",
       "brief": "Requires a Commerce Department national security study on consumer networking equipment made by entities linked to China, Iran, North Korea, or Russia, with a congressional report due within one year.",
       "top_lines": [
         {
           "headline": "National Security Study on Foreign-Linked Routers",
           "billSection": "2",
           "subs": [
-            "Commerce must study national security risks from consumer routers, modems, and combined modem-router devices made by entities owned, controlled by, or subject to the influence of China, Iran, North Korea, or Russia",
+            "Commerce must study national security risks and cybersecurity vulnerabilities from consumer routers, modems, and combined modem-router devices made by entities owned, controlled by, or subject to the influence of China, Iran, North Korea, or Russia",
             "Report to Congress due within 1 year of enactment covering the study results"
           ]
         }
@@ -1268,11 +1268,11 @@
           ]
         },
         {
-          "label": "Section 2 — Study of National Security Risks Posed by Certain Routers and Modems",
+          "label": "Section 2 — Study of Risks Posed by Certain Routers and Modems",
           "items": [
             {
-              "main": "Directs the Secretary of Commerce, acting through the Assistant Secretary of Commerce for Communications and Information, to study national security risks from consumer routers, modems, and combined modem-router devices made by entities owned, controlled, or subject to the influence of a covered country.",
-              "detail": "The covered countries are those specified in section 4872(d)(2) of title 10, United States Code. Commerce must submit a report to the House Energy and Commerce Committee and the Senate Commerce, Science, and Transportation Committee within one year of enactment. The bill does not prescribe the contents of the study, restrict the sale of covered devices, or authorize any regulatory action.",
+              "main": "Directs the Secretary of Commerce, acting through the Assistant Secretary of Commerce for Communications and Information, to study national security risks and cybersecurity vulnerabilities from consumer routers, modems, and combined modem-router devices made by entities owned, controlled, or subject to the influence of a covered country.",
+              "detail": "The covered countries are those specified in section 4872(f)(2) of title 10, United States Code. Commerce must submit a report to the House Energy and Commerce Committee and the Senate Commerce, Science, and Transportation Committee within one year of enactment. In conducting the study, the Secretary must consult with appropriate bureaus and offices within the Department of Commerce. The bill does not prescribe the contents of the study, restrict the sale of covered devices, or authorize any regulatory action.",
               "comments": []
             }
           ]
@@ -1316,7 +1316,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "study",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1353,8 +1353,7 @@
           "type": "Introduced in House",
           "date": "2025-01-31"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-1512",
