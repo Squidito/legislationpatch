@@ -43,7 +43,16 @@ async function fetchBillText(bill) {
                 console.log(`  [text] No text versions listed on Congress.gov for ${congress}-${type}-${number}`);
                 return { text: '', isXML: false };
             }
-            const version = data.textVersions[data.textVersions.length - 1];
+            // Pick the LATEST version by type priority (Enrolled > ... > Introduced),
+            // NOT array position. Congress.gov ordering is not guaranteed, and the old
+            // [length-1] returned the OLDEST (Introduced) — silently re-introducing
+            // version drift. Mirrors selectLatestTextVersion() in fetch_bills_data.js.
+            const vrank = v => { const t = (v.type || '').toLowerCase();
+                return t.includes('enrolled') ? 100 : t.includes('public law') ? 95
+                     : t.includes('engrossed amendment') ? 90 : t.includes('engrossed') ? 80
+                     : t.includes('reported') ? 60 : t.includes('referred') ? 40
+                     : t.includes('introduced') ? 20 : 10; };
+            const version = [...data.textVersions].sort((a, b) => (vrank(b) - vrank(a)) || (new Date(b.date || 0) - new Date(a.date || 0)))[0];
             // Prefer Formatted XML for structural chunking; fall back to Formatted Text
             const xmlFormat  = version.formats.find(f => f.type === 'Formatted XML');
             const textFormat = version.formats.find(f => f.type === 'Formatted Text');

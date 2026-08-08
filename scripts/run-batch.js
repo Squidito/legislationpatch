@@ -93,19 +93,28 @@ if (!POST_ONLY) {
     run('Extract floor statements', ['scripts/extract_floor_quotes.js'], { optional: true });
 
     const unprocessed = findUnprocessed();
+    // Cached bills that advanced past the version they were analyzed against
+    // (refresh_stages sets needsReanalysis) — need latest-text re-fetch + re-analysis.
+    const needReanalysis = loadCache().bills.filter(b => b.needsReanalysis && (b.stageDate || '') > (b.analyzedAt || ''));
 
-    if (unprocessed.length > 0) {
+    if (unprocessed.length > 0 || needReanalysis.length > 0) {
         console.log('\n' + '═'.repeat(56));
         console.log('  ⏸  MANUAL ANALYSIS REQUIRED');
         console.log('═'.repeat(56));
-        console.log('\n  New bills in bills_raw.json that need Claude analysis:\n');
-        unprocessed.forEach(b => {
-            console.log(`    • ${b.billId} — ${b.title}`);
-            if (b.referenceHints?.likelyReferenceDependent) {
-                const cites = b.referenceHints.sources.map(s => s.citation).join(', ');
-                console.log(`        ↳ reference-dependent? consider fetching: ${cites}  (scripts/fetch-reference.js)`);
-            }
-        });
+        if (unprocessed.length) {
+            console.log('\n  New bills in bills_raw.json that need Claude analysis:\n');
+            unprocessed.forEach(b => {
+                console.log(`    • ${b.billId} — ${b.title}`);
+                if (b.referenceHints?.likelyReferenceDependent) {
+                    const cites = b.referenceHints.sources.map(s => s.citation).join(', ');
+                    console.log(`        ↳ reference-dependent? consider fetching: ${cites}  (scripts/fetch-reference.js)`);
+                }
+            });
+        }
+        if (needReanalysis.length) {
+            console.log('\n  Cached bills that ADVANCED and need RE-ANALYSIS against the LATEST text (version drift):\n');
+            needReanalysis.forEach(b => console.log(`    • ${b.billId} — ${b.title || ''}  [now ${b.stageLabel || b.stage}]  → node scripts/fetch_bills_data.js --bill ${b.billId}, re-derive pages, re-analyze, clear needsReanalysis`));
+        }
         console.log(`
   Instructions (per-bill checklist — see CLAUDE.md "Bill Analysis"):
   1. Open a Claude Code session in this project folder.

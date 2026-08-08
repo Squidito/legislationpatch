@@ -129,6 +129,10 @@ function cachedRank(b) {
         b.stage = p.stage; b.stageLabel = p.label; b.currentStep = p.step;
         if (newDate) b.stageDate = newDate;
         if (p.signed && !b.enactedDate) b.enactedDate = newDate;
+        // The bill advanced past the version it was analyzed against — its text on
+        // disk and its prose are now stale. Queue it for re-fetch-latest + re-analysis
+        // (surfaced by run-batch; cleared when analyzedAt is re-stamped past stageDate).
+        b.needsReanalysis = true;
       }
     } else if (newDate && newDate > (b.stageDate || '')) {
       resurfaced.push({ id: b.id, stage: b.stageLabel || b.stage, from: b.stageDate || '(none)', to: newDate });
@@ -156,9 +160,11 @@ function cachedRank(b) {
   if (advanced.length || died.length) {
     console.log(`\n${line}\n  ⚠️  RE-REVIEW NEEDED — the ${advanced.length + died.length} bill(s) above changed stage.`);
     console.log('  likelihood / likelihoodReason prose is NOT auto-edited and is now stale.');
-    console.log('  Re-read each, update the likelihood number/label/reason, re-stamp "analyzedAt",');
-    console.log('  and (for newly-enacted bills) backfill CR quotes if available.');
-    console.log('  validate-batch will also flag these via stageDate > analyzedAt until re-stamped.');
+    console.log('  The bill TEXT on disk is ALSO stale (still the older version). For each:');
+    console.log('    node scripts/fetch_bills_data.js --bill <id>   (overwrites bill-text with the LATEST version)');
+    console.log('  then re-derive pages (billText.length/2200) and re-analyze the prose against it,');
+    console.log('  re-stamp "analyzedAt", and (for newly-enacted bills) backfill CR quotes if available.');
+    console.log('  Tracked via the needsReanalysis flag + validate-batch "Version drift" / freshness warnings.');
     console.log(line);
   }
 
