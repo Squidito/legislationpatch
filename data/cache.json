@@ -3565,14 +3565,14 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "The Attorney General must publish a list of every state and local government that allows defendants charged with crimes to be released before trial without posting cash — either on personal recognizance or an unsecured appearance bond. The list must go up within 30 days of enactment and be updated every quarter.",
+      "summary": "The Attorney General must publish a list of every state and local government that allows defendants charged with a “covered offense” (a crime the Attorney General determines poses a clear threat to public safety and order) to be released before trial without posting cash — either on personal recognizance or an unsecured appearance bond. The list must go up within one year of enactment and be updated annually.",
       "brief": "Directs the Attorney General to publish and quarterly-update a public list of jurisdictions that permit pretrial release on personal recognizance or unsecured appearance bond.",
       "top_lines": [
         {
           "headline": "Attorney General Publication Requirement",
           "subs": [
-            "Published list must identify every state and local government permitting personal recognizance or unsecured bond release",
-            "Initial publication required within 30 days of enactment; updated on a quarterly basis"
+            "Published list must identify every state and local government permitting a person charged with a covered offense to be released on personal recognizance or unsecured bond",
+            "Initial publication required within one year of enactment; updated on an annual basis"
           ],
           "billSection": "2"
         }
@@ -3595,8 +3595,8 @@
           "label": "Section 2 — Publication of Cashless Bail Jurisdictions",
           "items": [
             {
-              "main": "The Attorney General must make publicly available a list of each state and unit of local government that permits pretrial release on personal recognizance or unsecured appearance bond within 30 days of enactment, updated quarterly.",
-              "detail": "The publication requirement applies to any person charged with any offense — the bill text includes no limitation by offense type, severity, or category. No format, publication platform, or enforcement mechanism for failure to update is specified in the bill text.",
+              "main": "The Attorney General must make publicly available a list of each state and unit of local government that permits pretrial release of a person charged with a covered offense on personal recognizance or unsecured appearance bond within one year of enactment, updated annually.",
+              "detail": "The list is limited to jurisdictions that permit such release for a person charged with a “covered offense” — defined in subsection (b) as a criminal offense the Attorney General determines poses a clear threat to public safety and order, including violent or sexual acts (murder, rape, sexual assault, carjacking, robbery, burglary, assault) and offenses that promote public disorder (looting, vandalism, destruction of property, rioting or inciting to riot, fleeing a law enforcement officer). No format, publication platform, or enforcement mechanism for failure to update is specified in the bill text.",
               "comments": []
             }
           ]
@@ -3641,7 +3641,7 @@
       ],
       "changes": {
         "added": [
-          "Requirement for Attorney General to publicly list all states and local governments permitting pretrial release on personal recognizance or unsecured appearance bond, published within 30 days and updated quarterly"
+          "Requirement for Attorney General to publicly list all states and local governments permitting pretrial release of persons charged with a covered offense on personal recognizance or unsecured appearance bond, published within one year and updated annually"
         ],
         "modified": [],
         "removed": []
@@ -3661,7 +3661,7 @@
       ],
       "stageDate": "2026-05-18",
       "billType": "study",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -3703,8 +3703,7 @@
           "type": "Introduced in House",
           "date": "2025-09-30"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-8365",

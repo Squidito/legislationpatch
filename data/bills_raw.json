@@ -11383,5 +11383,39 @@
     "priorYearBillId": null,
     "priorYearBillTitle": null,
     "priorYearBillText": null
+  },
+  {
+    "billId": "119-HR-5625",
+    "title": "Cashless Bail Reporting Act",
+    "type": "HR",
+    "number": "5625",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on the Judiciary.",
+    "actionDate": "2026-05-18",
+    "sponsor": {
+      "bioguideId": "H001102",
+      "district": 8,
+      "firstName": "Mark",
+      "fullName": "Rep. Harris, Mark [R-NC-8]",
+      "isByRequest": "N",
+      "lastName": "Harris",
+      "party": "R",
+      "state": "NC",
+      "url": "https://api.congress.gov/v3/member/H001102?format=json"
+    },
+    "cosponsors": 23,
+    "introducedDate": "2025-09-30",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 5625 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 5625 _______________________________________________________________________ AN ACT To direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Cashless Bail Reporting Act''. SEC. 2. PUBLICATION OF CASHLESS BAIL JURISDICTIONS. (a) In General.--Not later than one year after the date of enactment of this Act, and annually thereafter, the Attorney General shall make publicly available a list of each State and unit of local government that permits the release pending trial of a person charged with a covered offense on personal recognizance or upon execution of an unsecured appearance bond. (b) Covered Offense Defined.--In this section, the term ``covered offense'' means a criminal offense that the Attorney General determines poses a clear threat to public safety and order, including-- (1) an offense involving a violent or sexual act, such as murder, rape, sexual assault, carjacking, robbery, burglary, and assault; and (2) an offense that promotes public disorder, such as looting, vandalism, destruction of property, rioting or inciting to riot, or fleeing from a law enforcement officer. Passed the House of Representatives May 14, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 5625 _______________________________________________________________________ AN ACT To direct the Attorney General to make publicly available a list of each State and unit of local government that permits cashless bail, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Cashless Bail Reporting Act This bill requires the Department of Justice to publish annually a list of state and local governments that permit individuals who are charged with certain criminal offenses that pose a clear threat to public safety and order to be released pending trial on personal recognizance or upon execution of an unsecured appearance bond. Under the bill, the criminal offenses that pose a threat to public safety and order include criminal offenses involving a violent or sexual act (e.g., burglary, murder, or rape) and offenses that promote public disorder (e.g., looting or vandalism). On August 25, 2025, President Donald Trump issued an executive order that required the Department of Justice to submit to the Assistant to the President for Homeland Security a list of state and local jurisdictions that have substantially eliminated cash bail as a potential condition for pretrial release for crimes that pose a clear threat to public safety and order, including offenses involving violent, sexual, or indecent acts, or burglary, looting, or vandalism.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
   }
 ]
