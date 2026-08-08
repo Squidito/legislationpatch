@@ -3728,7 +3728,7 @@
       "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "Federal courts must follow new rules when appointing monitors to oversee state and local governments under consent decrees — including fee caps, a 5-year term limit, a one-monitorship-at-a-time restriction, and mandatory public notice before appointment. The Administrative Office of the U.S. Courts must issue rules within 90 days, and active monitorships already running 6 or more years must get a new monitor within 180 days and be transferred to a new judge within 1 year.",
+      "summary": "Federal courts must follow new rules when appointing monitors to oversee state and local governments under consent decrees — including fee caps, a 5-year term limit, a one-monitorship-at-a-time restriction, and mandatory public notice before appointment. The Judicial Conference of the United States must issue rules within 180 days, and active monitorships already running 6 or more years must get a new monitor within 180 days and be transferred to a new judge within 1 year.",
       "brief": "Sets term limits, fee caps, and public accountability rules for court-appointed monitors overseeing state and local governments under consent decrees.",
       "top_lines": [
         {
@@ -3743,7 +3743,7 @@
         {
           "headline": "Fee Caps and Public Accountability",
           "subs": [
-            "Fees capped at rates set by the Administrative Office of U.S. Courts; pro bono and reduced-rate services explicitly authorized",
+            "Fees capped at rates set by the Judicial Conference of the United States; pro bono and reduced-rate services explicitly authorized",
             "Annual public accounting of services, fees, and any pro bono work required from each monitor",
             "Court must provide public notice and comment opportunity before appointing any monitor"
           ],
@@ -3767,7 +3767,7 @@
           "admin": true,
           "items": [
             {
-              "main": "Names the Act the “Monitor Accountability Act of 2026”.",
+              "main": "Names the Act the “Monitor Accountability Act”.",
               "detail": "Short-title section — citation name only; no substantive effect."
             }
           ]
@@ -3776,7 +3776,7 @@
           "label": "Section 2 — Conditions on Monitor Appointments",
           "items": [
             {
-              "main": "The Administrative Office of the U.S. Courts must establish rules within 90 days imposing fee caps, a single-monitorship-at-a-time limit, a 5-year term limit with no reappointment under the same court order, and a prohibition on successive monitors sharing employers.",
+              "main": "The Judicial Conference of the United States must establish rules within 180 days imposing fee caps, a single-monitorship-at-a-time limit, a 5-year term limit with no reappointment under the same court order, and a prohibition on successive monitors sharing employers.",
               "detail": "Conditions apply to any person appointed by a district court to monitor the conduct of a state or unit of local government. Fee rules must explicitly authorize pro bono and reduced-rate services. Courts must provide public notice and an opportunity for comment before any monitor appointment.",
               "comments": []
             },
@@ -3859,7 +3859,7 @@
       ],
       "stageDate": "2026-05-18",
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -3899,8 +3899,7 @@
           "type": "Introduced in House",
           "date": "2026-04-20"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-6260",
