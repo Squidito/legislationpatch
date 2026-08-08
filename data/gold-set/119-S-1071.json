@@ -1,0 +1,14 @@
+{
+  "id": "119-S-1071",
+  "title": "National Defense Authorization Act for Fiscal Year 2026",
+  "billType": "appropriation",
+  "stage": "signed",
+  "pages": 1640,
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate — needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "partial",
+  "errors": [],
+  "verifiedCorrectClaims": 0,
+  "notes": "CANDIDATE: hostile fidelity read = CLEAN, 0 errors (PARTIAL read — 1640pp / 3.4MB; verified all anchored claims + full division/title TOC, did not read every page). Verified: Naval Station Norfolk $1,582,490,000 (->$1.58B), Portsmouth $1,042,000,000 (->$1.04B), DFC max contingent liability $205B, Equity Investment Account $5B FY2026-2031, Title LXXXV = Comprehensive Outbound Investment National Security Act, Title LXXXVII = DFC Modernization, seventeen titles in Division A (via TOC), vote 77-20 on 2025-12-17, 'Approved December 18, 2025'. Analysis is deliberately structural for a bill this size and makes no false specific claim; no material omission rises to a flag. Note: billType stored 'appropriation' but an NDAA is technically an authorization (out of fidelity scope; the summary itself correctly says 'It does not itself spend money; it authorizes'). -> James: spot-check, then set status='adjudicated' (or upgrade to a full read first, given partial)."
+}

@@ -202,6 +202,9 @@ run('Generate per-bill OG cards', ['scripts/generate_brand_assets.js', '--bills'
 // nothing when nothing changed. Runs AFTER the OG cards and BEFORE the sitemap
 // so the sitemap picks up any new changelog/ pages this run produced.
 run('Generate changelog digest', ['scripts/generate_digest.js'], { optional: true });
+// RSS 2.0 feed of the changelog editions. Runs AFTER the digest (reads the
+// editions ledger it writes); does not affect the sitemap.
+run('Generate RSS feed', ['scripts/generate_feed.js'], { optional: true });
 run('Regenerate sitemap', ['scripts/generate_sitemap.js'], { optional: true });
 run('Regenerate search index', ['scripts/generate-search-index.js'], { optional: true });
 // Advisory: flag any article whose referenced bill has moved past the article's

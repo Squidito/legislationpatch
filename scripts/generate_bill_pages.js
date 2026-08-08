@@ -43,6 +43,11 @@ function billOgImage(bill) { return `${BASE}/og/bills/${bill.id}.png`; }
 const cache = JSON.parse(fs.readFileSync(path.join(DATA, 'cache.json'), 'utf8'));
 const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bills || {});
 
+// Which explainer/tracker articles reference each bill — for the "Related guides"
+// cross-links baked into each page (crawlable internal links, bill -> article).
+const { buildArticleIndex } = require('./lib/article-index.js');
+const ARTICLES_BY_BILL = buildArticleIndex().byBill;
+
 // ── Small formatters ─────────────────────────────────────────────────────────
 
 // mm-dd-yy for compact metadata rows (mirrors util.formatDateCompact behavior;
@@ -385,6 +390,22 @@ function staticBody(bill) {
     ? `<p class="bill-static-updated">Last updated ${escHtml(dateHuman(updated))}</p>`
     : '';
 
+  // ── Related guides: explainer/tracker articles that reference this bill ──
+  // Rank most-focused first and drop broad directories (the 40-bill mega-tracker
+  // would otherwise attach to every page); cap the list so it stays a short aside.
+  const related = (ARTICLES_BY_BILL.get(bill.id) || [])
+    .filter(a => a.breadth <= 10)
+    .sort((a, b) => a.breadth - b.breadth)
+    .slice(0, 4);
+  const relatedHtml = related.length
+    ? `<section class="bp-section bp-related-block">
+      <h2 class="bp-label">Related guides</h2>
+      <ul class="bill-static-related">
+        ${related.map(a => `<li><a href="${escHtml(a.url)}">${escHtml(a.title)}</a></li>`).join('\n        ')}
+      </ul>
+    </section>`
+    : '';
+
   return `<article class="bill-static" data-server-rendered="1">
     ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
     <h1 class="bp-title">${escHtml(bill.title || bill.code || bill.id)}</h1>
@@ -394,6 +415,7 @@ function staticBody(bill) {
     ${topLinesHtml}
     ${updatedHtml}
     ${fullTextHtml}
+    ${relatedHtml}
     <noscript><p class="bill-static-note">You are viewing a condensed, text-only summary. Enable JavaScript for the full section-by-section analysis and annotated bill text.</p></noscript>
   </article>`;
 }

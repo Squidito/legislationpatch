@@ -1,0 +1,14 @@
+{
+  "id": "119-HR-5371",
+  "title": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
+  "billType": "appropriation",
+  "stage": "signed",
+  "pages": 224,
+  "status": "candidate",
+  "labeledBy": "hostile-agent (candidate — needs James adjudication)",
+  "labeledAt": "2026-08-08",
+  "sourceReadDepth": "full",
+  "errors": [],
+  "verifiedCorrectClaims": 0,
+  "notes": "CANDIDATE: hostile fidelity read = CLEAN, 0 errors. Verified appropriations figures vs source: $246.63B vet comp/pensions, $660M SSVF, $107.48B SNAP, $37.84B child nutrition, $8.2B WIC, $6.96B FDA, $852M Capitol Police (= $653.42M salaries + $198.93M expenses), $59.86B medical services, $38.7B community care. Attribution checked: $15.89B VA rescission -> Medical Services; $610M rescission -> Medical Support and Compliance (right-account). DSH delay dated Jan 31 2026 (distinct from Jan 30 general cliff); farm-bill 'later of September 30, 2026' verbatim; Sec 120 RIF void + reinstatement + back pay; PAYGO exemption of divisions E-G. Votes 217-212 / 60-40 / 222-209 match. -> James: spot-check, then set status='adjudicated'."
+}

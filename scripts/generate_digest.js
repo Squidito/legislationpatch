@@ -210,6 +210,7 @@ function head({ title, desc, canonical, structured }) {
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="Congress Patch Notes" href="/feed.xml" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${c}" />
