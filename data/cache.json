@@ -14653,7 +14653,7 @@
       "sponsor": "Rep. Schrier, Kim (D-WA)",
       "sponsor_bioguide": "S001216",
       "cosponsors": 3,
-      "pages": 1,
+      "pages": 2,
       "analyzed": true,
       "demo": false,
       "likelihood": 60,
@@ -14668,17 +14668,18 @@
         }
       ],
       "billType": "study",
-      "analyzedAt": "2026-06-15",
-      "summary": "Requires federal energy regulators to send Congress an annual report on the status of hydropower dam relicensing applications that have been pending for years.",
-      "brief": "Requires FERC to submit an annual report to Congress on the status of long-pending hydropower relicensing applications.",
+      "analyzedAt": "2026-08-08",
+      "summary": "Requires federal energy regulators to send Congress an annual report on the status of hydropower dam licensing applications that have been pending for years.",
+      "brief": "Requires FERC to submit an annual report to Congress on the status of long-pending hydropower licensing applications.",
       "top_lines": [
         {
-          "headline": "Hydropower Relicensing Reports",
+          "headline": "Hydropower Licensing Reports",
           "billSection": "2",
           "subs": [
-            "FERC must report annually on pending relicensing applications",
+            "FERC must report annually on pending licensing applications",
             "Covers licenses where notice was given 3+ years earlier",
-            "First report due within 180 days of enactment"
+            "First report due within 180 days of enactment",
+            "Also covers original licenses under section 4(e), disaggregated by license type"
           ]
         }
       ],
@@ -14688,17 +14689,17 @@
           "admin": true,
           "items": [
             {
-              "main": "Names the Act the “Hydropower Relicensing Transparency Act”.",
+              "main": "Names the Act the “Hydropower Licensing Transparency Act”.",
               "detail": "Short-title section — citation name only; no substantive effect."
             }
           ]
         },
         {
-          "label": "Section 2 — Annual Relicensing Status Report",
+          "label": "Section 2 — Annual Licensing Status Report",
           "items": [
             {
-              "main": "Requires FERC to report to Congress every year on hydropower relicensing applications that remain pending after early notice.",
-              "detail": "Adds subsection (g) to Section 15 of the Federal Power Act (16 U.S.C. 808). Within 180 days of enactment and annually after, FERC must report on each new license where the existing licensee notified the Commission (under subsection (b)(1)) at least 3 years before the report that it intended to apply, but the new license has not yet been issued. Each report must include the notice date, any docket number, whether an application was filed, the status and anticipated issue date, upcoming proceedings, and any required actions by the licensee, FERC, and fish and wildlife agencies.",
+              "main": "Requires FERC to report to Congress every year on hydropower licensing applications that remain pending after early notice.",
+              "detail": "Inserts a new section 37 into the Federal Power Act, after section 36 (16 U.S.C. 823g). Within 180 days of enactment and annually after, FERC must report on the status of the licensing process for (1) each new license, and each subsequent license for which sections 14 and 15 have been waived, where the existing licensee notified the Commission under section 15(b)(1) at least 3 years before the report that it intended to apply but the license has not yet been issued under section 15; and (2) each original license under section 4(e) for which a citizen, association, corporation, State, Indian Tribe, or municipality gave the Commission at least 3 years' prior notice but the license has not yet been issued. Each report must include the notice-of-intent date, any docket number, whether an application was filed, the status and anticipated issue date, upcoming proceedings, and any ongoing or completed actions required of the applicant, the Commission, the fish and wildlife agencies referred to in section 15(b), and any other agencies. The information must be disaggregated by whether it relates to a new or subsequent license under section 15 or an original license under section 4(e).",
               "comments": []
             }
           ]
@@ -14707,7 +14708,7 @@
       "underreported": [],
       "criticisms": [],
       "gaps": [
-        "The bill requires annual status reports on delayed relicensing but sets no deadline for FERC to actually issue the licenses.",
+        "The bill requires annual status reports on delayed licensing but sets no deadline for FERC to actually issue the licenses.",
         "It requires reporting on applications pending 3+ years after notice but does not address applications where notice was given more recently."
       ],
       "featured_quotes": [
@@ -14723,7 +14724,7 @@
       ],
       "changes": {
         "added": [
-          "Annual FERC report to Congress on the status of long-pending hydropower relicensing applications (new subsection (g) of Federal Power Act Section 15)"
+          "Annual FERC report to Congress on the status of long-pending hydropower licensing applications (new section 37 of the Federal Power Act)"
         ],
         "modified": [],
         "removed": []
@@ -14773,8 +14774,7 @@
           "type": "Introduced in House",
           "date": "2025-05-29"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-224",
