@@ -13961,7 +13961,7 @@
         }
       ],
       "billType": "reauthorization",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-08-08",
       "referencedSources": [
         {
           "id": "usc-33-1144",
@@ -13983,11 +13983,11 @@
             "A Sea Grant marine program under federal law",
             "$2M per year authorized through fiscal year 2026"
           ],
-          "billSection": "1"
+          "billSection": "2"
         },
         {
           "headline": "What This Bill Changes",
-          "billSection": "1",
+          "billSection": "2",
           "subs": [
             "Extends the funding authorization through fiscal year 2031",
             "Strikes '2026' and inserts '2031' in the program's funding section"
@@ -13996,7 +13996,17 @@
       ],
       "sections": [
         {
-          "label": "Section 1 — Young Fishermen's Development Act Reauthorization",
+          "label": "Section 1 — Short Title",
+          "admin": true,
+          "items": [
+            {
+              "main": "Names the Act the “Captain Accursio “Gus” Sanfilippo Young Fishermen's Development Act”.",
+              "detail": "Short-title section — citation name only; no substantive effect."
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Young Fishermen's Development Act Reauthorization",
           "items": [
             {
               "main": "Extends the Young Fishermen's Development program's funding authorization from fiscal year 2026 through fiscal year 2031.",
@@ -14065,8 +14075,7 @@
           "type": "Introduced in House",
           "date": "2025-06-03"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-S-4530",
