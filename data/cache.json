@@ -10986,16 +10986,16 @@
       "top_lines": [
         {
           "headline": "GAO Wildfire Study",
-          "billSection": "2",
+          "billSection": "3",
           "subs": [
             "GAO studies federal programs and rules affecting cross-boundary wildfire mitigation",
             "Examines whether changes would give agencies, states, local, and Tribal governments more funding or capacity",
-            "Reviews activities under the Healthy Forests Restoration Act of 2003"
+            "Reviews activities carried out under a covered authority to improve wildfire mitigation and forest health"
           ]
         },
         {
           "headline": "Report to Congress",
-          "billSection": "2",
+          "billSection": "3",
           "subs": [
             "GAO report due within 2 years of enactment",
             "Must include recommendations to simplify cross-boundary wildfire mitigation"
@@ -11017,16 +11017,26 @@
           ]
         },
         {
-          "label": "Section 2 — Study on Wildfire Mitigation Across Land Ownership Boundaries",
+          "label": "Section 2 — Definitions",
+          "items": [
+            {
+              "main": "Defines the terms 'covered agency' and 'covered authority' used in the study.",
+              "detail": "'Covered agency' means each federal land management agency, the Natural Resources Conservation Service, the Environmental Protection Agency, FEMA, the U.S. Fire Administration, states, Indian Tribes, and local governments. 'Covered authority' means the Healthy Forests Restoration Act of 2003, the Cooperative Forestry Assistance Act of 1978, the good neighbor authority under the Agricultural Act of 2014, the Tribal Forest Protection Act of 2004, the collaborative forest landscape restoration program under the Omnibus Public Land Management Act of 2009, and any other statutory authority that facilitates cross-boundary wildfire mitigation or forest-health improvement, as determined by the Comptroller General.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Study on Wildfire Mitigation Across Land Ownership Boundaries",
           "items": [
             {
               "main": "Requires the Comptroller General to study existing federal programs, rules, and authorities that enable or inhibit wildfire mitigation across land-ownership boundaries on federal and non-federal land.",
-              "detail": "The study must examine whether changes would give federal land management agencies, the Natural Resources Conservation Service, FEMA, the U.S. Fire Administration, states, and local and Tribal governments increased capacity or access to funding for wildfire mitigation. It must also review the activities carried out under subsection (e) of Section 103 of the Healthy Forests Restoration Act of 2003, including how to improve their efficacy and whether that subsection increased agencies' and states' access to mitigation funding.",
+              "detail": "The study must examine whether changes to any program, rule, or authority — including changes to existing statutory definitions — would give a covered agency (federal land management agencies, the Natural Resources Conservation Service, the Environmental Protection Agency, FEMA, the U.S. Fire Administration, states, Indian Tribes, and local governments) increased capacity or access to funding to mitigate wildfires or improve forest health, and would enable better community protection and prevent the loss of structures due to wildfire. It must also review the activities carried out under a covered authority, including how to improve their efficacy at mitigating wildfire and whether enacting that authority increased a covered agency's capacity or access to wildfire-mitigation funding.",
               "comments": []
             },
             {
               "main": "Requires a report to Congress within two years of enactment containing the study results and recommendations.",
-              "detail": "The report goes to the House Committee on Natural Resources and the Senate Committee on Energy and Natural Resources. It must include recommendations to simplify cross-boundary wildfire mitigation between federal land management agencies and state, local, and Tribal governments.",
+              "detail": "The report goes to the House Committees on Natural Resources and on Agriculture and the Senate Committees on Energy and Natural Resources and on Agriculture, Nutrition, and Forestry. It must include recommendations to simplify cross-boundary wildfire mitigation between federal land management agencies and state, local, and Tribal governments.",
               "comments": []
             }
           ]
@@ -11077,7 +11087,7 @@
           "method": "Voice Vote"
         }
       ],
-      "analyzedAt": "2026-07-06",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -11122,8 +11132,7 @@
           "type": "Introduced in House",
           "date": "2025-06-11"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-3831",
