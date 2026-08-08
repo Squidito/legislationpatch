@@ -23,6 +23,7 @@
 const fs   = require('fs');
 const path = require('path');
 const { PASSAGE_CONTEXT, SMART_QUOTES } = require('./lib/patterns.js');
+const { attributionFlags } = require('./lib/attribution.js');
 
 const DATA         = path.join(__dirname, '../data');
 const BILL_TEXT    = path.join(DATA, 'bill-text');
@@ -1031,6 +1032,74 @@ section('Figure sourcing (training-data guard)');
         }
     }
     if (flagged === 0) pass('All figures/cites in analyses are traceable to the bill text');
+}
+
+// ── Check: account attribution ("right number, wrong account") ─────────────
+// For each appropriations/omnibus dollar figure, compare the account LABEL the
+// analysis binds it to against the enclosing SOURCE account heading (via
+// lib/attribution.js). Zero distinctive-word overlap = a likely wrong-account
+// binding — the NASA-$3.0B / NFS↔Wildland-Fire / SBA-"$15B disaster" class that
+// figure-presence checks are structurally blind to. Advisory (warnings).
+
+// Opt-in only (`--attribution`): high-precision-ish but the program-vs-account
+// naming class makes it too false-positive-prone for the default commit gate.
+// Used as a cheap SCREEN that feeds candidates to the cross-model verify loop.
+if (process.argv.includes('--attribution')) {
+    section('Account attribution');
+    let flagged = 0;
+    for (const bill of bills) {
+        if (!bill.analyzed) continue;
+        const bt = bill.billType;
+        const isApprop = Array.isArray(bt) ? bt.includes('appropriation') : bt === 'appropriation';
+        const isOmni   = !!bill.isOmnibus || (Array.isArray(bill.divisions) && bill.divisions.length > 0);
+        if (!isApprop && !isOmni) continue; // the wrong-account class is an appropriations phenomenon
+        let hits = [];
+        try { hits = attributionFlags(bill, path.join(__dirname, '..')); } catch (e) { continue; }
+        const open = [];
+        for (const h of hits) {
+            const key = `${h.token} -> ${h.heading}`;
+            const a = adjudication(bill.id, 'account-attribution', key);
+            if (a) noteAdjudicated(`${bill.id}: ${h.token} labeled "${h.account}" vs source heading "${h.heading}"`, a);
+            else open.push(h);
+        }
+        for (const h of open.slice(0, 6)) {
+            warn(`${bill.id}: ${h.token} labeled "${h.account}" but sits under source heading "${h.heading}" [${h.tag}:${h.lineNo}] (${h.label}) — verify account binding`);
+            flagged++;
+        }
+        if (open.length > 6) { warn(`${bill.id}: …and ${open.length - 6} more possible wrong-account bindings`); flagged++; }
+    }
+    if (flagged === 0) pass('No suspected wrong-account figure attributions');
+}
+
+// ── Check: version drift (stale source text) ───────────────────────────────
+// A bill that PASSED a chamber but whose on-disk bill text is still the
+// Introduced version, AND whose versionChanges shows the passed text differs, was
+// analyzed against superseded text ("ALWAYS analyze the LATEST version" HARD RULE).
+// Deterministic and precise (no false positives). Fidelity audits CANNOT catch this
+// — the prose is faithful to the wrong-version source on disk. Fix = re-fetch the
+// latest text + re-derive the affected prose.
+
+section('Version drift (stale source)');
+{
+    const ADV = new Set(['house', 'senate', 'signed']);
+    const drift = [];
+    for (const bill of bills) {
+        if (!bill.analyzed || !ADV.has(bill.stage)) continue;
+        let head = '';
+        try { head = fs.readFileSync(path.join(BILL_TEXT, `${bill.id}.txt`), 'utf8').slice(0, 500); } catch (e) { continue; }
+        if (!/Introduced in (House|Senate)|\((?:IH|IS)\)/.test(head)) continue; // on-disk text is a later version → OK
+        const vc = bill.versionChanges || {};
+        const nch = (vc.modified || []).length + (vc.removed || []).length + (vc.added || []).length;
+        if (nch === 0) continue;                                                // passed unamended → Introduced text is accurate
+        if (adjudication(bill.id, 'version-drift', 'introduced-stale')) continue;
+        drift.push({ id: bill.id, st: bill.stageLabel || bill.stage, nch });
+    }
+    drift.sort((a, b) => b.nch - a.nch);
+    if (!drift.length) pass('No advanced bills analyzed against stale (Introduced) text');
+    else {
+        for (const d of drift.slice(0, 10)) warn(`${d.id}: ${d.st} but analyzed against INTRODUCED text (${d.nch} version change(s)) — re-fetch latest + re-derive prose`);
+        if (drift.length > 10) warn(`version-drift backlog: ${drift.length} advanced bills analyzed against stale Introduced text (${drift.length - 10} beyond those listed) — re-analyze against latest version`);
+    }
 }
 
 // ── Check: acronym audit ───────────────────────────────────────────────────

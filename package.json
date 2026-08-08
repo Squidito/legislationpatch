@@ -10,6 +10,7 @@
     "batch:post": "node scripts/run-batch.js --post",
     "batch:fetch": "node scripts/run-batch.js --fetch-only",
     "validate": "node scripts/validate-batch.js",
+    "attribution": "node scripts/validate-batch.js --attribution",
     "normalize": "node scripts/normalize-analysis.js --all",
     "quarantine": "node scripts/quarantine.js",
     "quarantine:list": "node scripts/quarantine.js --list",
