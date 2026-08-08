@@ -16091,7 +16091,7 @@
         }
       ],
       "billType": "reauthorization",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-08-08",
       "summary": "Renews and updates the federal Snow Water Supply Forecasting Program through 2031, shifting its focus toward advanced snowpack measurement and modeling technologies.",
       "brief": "Reauthorizes the Snow Water Supply Forecasting Program for fiscal years 2027-2031 and refocuses it on integrated snowpack measurement and modeling.",
       "top_lines": [
@@ -16099,7 +16099,7 @@
           "headline": "Program Reauthorization",
           "billSection": "2",
           "subs": [
-            "Reauthorizes appropriations for fiscal years 2027-2031",
+            "Reauthorizes appropriations of $3 million per year for fiscal years 2027-2031",
             "Replaces the prior aggregate fiscal year 2022-2026 authorization"
           ]
         },
@@ -16129,7 +16129,7 @@
           "items": [
             {
               "main": "Reauthorizes and updates the Snow Water Supply Forecasting Program (43 U.S.C. 1477) through fiscal year 2031.",
-              "detail": "Reauthorizes appropriations for each of fiscal years 2027 through 2031, replacing the prior aggregate authorization for fiscal years 2022 through 2026. Refocuses the program on deploying commercially available technologies that integrate snowpack measurement and modeling — including airborne laser altimetry, airborne imaging spectroscopy, and integrated physics-based snowpack and hydrologic modeling — and on real-time integration with water supply forecasts, including for interstate water management. Removes a prior interim report requirement.",
+              "detail": "Reauthorizes appropriations of $3 million for each of fiscal years 2027 through 2031, replacing the prior aggregate authorization for fiscal years 2022 through 2026. Refocuses the program on deploying technologies that provide complete integration of snowpack measurement and modeling — including airborne laser altimetry, imaging spectroscopy, and integrated physics-based snowpack and hydrologic modeling — and on real-time integration with water supply forecasts, including for interstate water management. Names the National Oceanic and Atmospheric Administration (NOAA) and the Natural Resources Conservation Service (NRCS) among the other Federal agencies referenced in the program's snowpack-data provisions. Removes a prior interim report requirement.",
               "comments": []
             }
           ]
@@ -16192,7 +16192,7 @@
         "modified": [
           "Authorized appropriation set at $3,000,000 for each of fiscal years 2027 through 2031 (introduced version named no dollar figure, only the FY2027-2031 window)",
           "Dropped \"commercially available\" qualifier — technologies now just \"technologies that provide complete integration of\" snowpack measurements and models",
-          "Snowpack technology list now reads \"imaging spectroscopy\" instead of \"airborne imaging spectroscopy\""
+          "Snowpack technology list now reads \"imaging spectroscopy\" instead of \"imaging spectroscopy\""
         ],
         "removed": [],
         "throughVersion": {
@@ -16204,8 +16204,7 @@
           "type": "Introduced in House",
           "date": "2025-06-10"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-2808",
