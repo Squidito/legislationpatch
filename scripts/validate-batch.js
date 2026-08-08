@@ -1102,6 +1102,27 @@ section('Version drift (stale source)');
     }
 }
 
+// ── Check: pending re-analysis queue (needsReanalysis flag) ─────────────────
+// The version-drift check above keys on the ON-DISK text version marker, so it
+// goes green the instant the latest text is fetched — even if the prose is still
+// stale (e.g. a bill re-fetched but deferred for a larger rebuild). The
+// needsReanalysis flag is the durable signal that survives that: refresh_stages
+// sets it when a cached bill advances, and it is cleared only after the prose is
+// actually reconciled. Surface every still-flagged bill so none can ship invisibly.
+
+section('Reanalysis queue (needsReanalysis)');
+{
+    const pending = bills.filter(b => b.needsReanalysis);
+    if (!pending.length) pass('No bills awaiting re-analysis');
+    else {
+        pending.sort((a, b) => (a.id < b.id ? -1 : 1));
+        for (const b of pending) {
+            const st = b.stageLabel || b.stage || '';
+            warn(`${b.id}: flagged needsReanalysis${st ? ` (${st})` : ''} — analysis not yet reconciled to latest text; re-analyze + clear the flag`);
+        }
+    }
+}
+
 // ── Check: acronym audit ───────────────────────────────────────────────────
 //
 // Flags all-caps acronyms used in prose that are neither in acronyms.js nor
