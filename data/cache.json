@@ -24628,8 +24628,8 @@
           "label": "Section 3 — Broadband Funding Map Modernization",
           "items": [
             {
-              "main": "Directs the FCC, in coordination with the NTIA, to collect data for the Broadband Funding Map on a reasonable and timely basis to promote efficient use of federal funds and prevent redundant overbuilding.",
-              "detail": "Within 270 days the FCC must open a notice of inquiry on the map's functionality and transparency, evaluating the adequacy and usability of submitted data, the timeliness of agency updates, whether the scope of reported data should expand, and how the map could be integrated with existing FCC mapping tools. The inquiry must be completed within 120 days of its initiation.",
+              "main": "Directs the FCC, in coordination with the NTIA, to collect data for the Broadband Funding Map on a reasonable and timely basis to promote the most efficient use of federal funds for broadband deployment and prevent inefficient use or fragmentation of federal funding for broadband infrastructure.",
+              "detail": "Within 270 days the FCC must open a notice of inquiry on the map's functionality and transparency, evaluating the adequacy and usability of submitted data, the timeliness of agency updates, whether the scope of reported data should expand, whether third-party mapping data should be incorporated to improve the map's functionality and transparency, and how the map could be integrated with existing FCC mapping tools. Before initiating the inquiry, any Commissioner may request a vote at the Commission level, and if one is requested the inquiry may not proceed unless a majority of Commissioners vote to approve it. The inquiry must be completed within 120 days of its initiation.",
               "comments": []
             }
           ]
@@ -24639,7 +24639,7 @@
           "items": [
             {
               "main": "Requires the Government Accountability Office to study and report within 180 days on the roles, responsibilities, and progress of federal agencies in maintaining the Broadband Funding Map.",
-              "detail": "The study must review each agency's data-submission compliance, the FCC's management of the map and interagency collaboration, whether the FCC has sufficient authority to collect the necessary data, the NTIA's broadband data-collection efforts under existing law, coordination among agencies that fund broadband (including USDA, HHS, Treasury, HUD, and the Institute of Museum and Library Sciences), and how broader use of the map could improve taxpayer savings.",
+              "detail": "The study must review each agency's data-submission compliance, the FCC's management of the map and interagency collaboration, whether the FCC has sufficient authority to collect the necessary data, the NTIA's broadband data-collection efforts under existing law, coordination among agencies that fund broadband (including USDA, HHS, Treasury, HUD, and the Institute of Museum and Library Services), how broader use of the map could improve taxpayer savings, and the feasibility and potential benefits of incorporating third-party mapping data into the map.",
               "comments": []
             }
           ]
@@ -24693,7 +24693,7 @@
         }
       ],
       "budget_accounts": {},
-      "analyzedAt": "2026-07-06",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in Senate",
@@ -24730,8 +24730,7 @@
           "type": "Introduced in Senate",
           "date": "2025-07-31"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-4",
