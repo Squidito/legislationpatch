@@ -168,6 +168,10 @@ run('Quarantine failed bills (resilient run)', ['scripts/quarantine.js']);
 // stageDate → moves to top) and advance the stage on confident passage markers.
 // Prints a RE-REVIEW list for any bill whose stage changed (prose is not auto-edited).
 run('Refresh cached bill stages', ['scripts/refresh_stages.js', '--apply'], { optional: true });
+// Reconcile the re-analysis queue from versionChanges — flag advanced bills whose
+// text changed and whose analysis predates the advance (and clear re-analyzed ones).
+// This makes the pipeline ACT on the version-diff data, not just warn about it.
+run('Flag version drift for re-analysis', ['scripts/flag-version-drift.js'], { optional: true });
 
 // Votes — only for bills missing them
 const needVotes = findBillsNeedingVotes();

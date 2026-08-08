@@ -31,6 +31,7 @@
     "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/normalize-analysis.js --self-test && node scripts/validate-batch.js",
     "facts": "node scripts/bill-facts.js",
     "refresh": "node scripts/refresh_stages.js",
+    "flag-drift": "node scripts/flag-version-drift.js",
     "security": "node scripts/security-check.js",
     "test:security": "node scripts/test-security-helpers.js",
     "prepare": "git config core.hooksPath scripts/hooks"
