@@ -464,6 +464,14 @@
       "path": "sections[1].items[1].detail",
       "reason": "Section 2608 extension line-item sum (16 items) — reproducible via: npm run facts -- --bill 119-HR-8800 --sums",
       "verifiedAt": "2026-07-29"
+    },
+    {
+      "billId": "119-HR-915",
+      "kind": "yr",
+      "token": "2025",
+      "path": "sections[0].items[0].main",
+      "reason": "Reference is to the SUPERSEDED introduced-version short title. Verified in data/version-text/119-HR-915.introduced.txt L35-36: 'This Act may be cited as the \"Small Business Technological Act of 2025\"'. The engrossed text (current bill-text/) renamed it to 'Small Business Technological Advancement Act' — the rename note is the item's substance.",
+      "verifiedAt": "2026-07-30"
     }
   ],
   "validateBatch": [
@@ -592,6 +600,34 @@
       "key": "Ms. Houlahan",
       "reason": "detectStance() reads \"support\" from opener praise (\"very proud of the markup\", \"honor to work so closely with Chairman Rogers\"), but the quote pivots at \"Unfortunately, the toxically amended bill that is here before us is no longer that\" — she is opposing the FLOOR version. Stored \"oppose\" reflects the substantive stance.",
       "verifiedAt": "2026-07-22"
+    },
+    {
+      "billId": "119-HR-7148",
+      "check": "quote-stance",
+      "key": "Mr. Calvert",
+      "reason": "False positive — detectStance() keyword-matched \"dangerous\", \"threats\", \"harm\" (world/adversary description, not bill criticism). Calvert (R-CA, Defense Approps Subcommittee) praises the bill: \"true bipartisan effort\", \"This bill answers that challenge\", \"support the administration's America First defense agenda\". Stored \"support\" is correct.",
+      "verifiedAt": "2026-08-02"
+    },
+    {
+      "billId": "119-HR-8595",
+      "check": "section-label",
+      "key": "Titles V-VII - Multilateral Assistance and General Prov",
+      "reason": "Title-range label spanning three titles (V, VI, VII) — same class as the adjudicated HR-6938 title-range labels. Non-omnibus bill so no divisions layer, but the label bundles the multilateral assistance titles (V, VI) with the general-provisions title (VII); no unambiguous bt-title anchor exists for the range. Intentional grouped label.",
+      "verifiedAt": "2026-08-02"
+    },
+    {
+      "billId": "119-HR-7148",
+      "check": "dollar-format",
+      "key": "criticisms[0].why",
+      "reason": "Verbatim Congressional Record floor quote from Mr. Calvert (R-CA), Defense Approps Subcommittee. criticisms[0].why matches featured_quotes[0].text character-for-character; the '$839.2 billion' phrasing is the speaker's own words on the House floor. Editing to '$839.2B' would misquote the CR. Field holds speaker-attributed verbatim speech, not authored analysis prose subject to the dollar-shortening rule.",
+      "verifiedAt": "2026-08-02"
+    },
+    {
+      "billId": "119-HR-8595",
+      "check": "dollar-format",
+      "key": "criticisms[1].why",
+      "reason": "Verbatim Congressional Record floor quote from Mr. Meeks (D-NY). criticisms[1].why matches featured_quotes text; the '$13 billion' phrasing is the speaker's own words on the House floor. Editing to '$13B' would misquote the CR. Field holds speaker-attributed verbatim speech, not authored analysis prose subject to the dollar-shortening rule.",
+      "verifiedAt": "2026-08-02"
     }
   ],
   "adjudications": []

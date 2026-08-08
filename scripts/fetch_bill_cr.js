@@ -186,6 +186,12 @@ const DISPLAY_PROCEDURAL = [
     /\bi have no statement to make\b/i,
     /\bquestion of the privileges of the house\b/i,
     /\bthe clerk (?:will )?(?:read|designate|redesignate)\b/i,
+    // Senate passage narration that CR emits between speakers (2026-08-07: S-3977
+    // "The bill (S. 3977) was ordered to be engrossed for a third reading, was
+    // read the third time, and passed as follows: S." was misattributed as a
+    // Moran quote). Narrator lines, never member speech.
+    /\bwas ordered to be engrossed\b/i,
+    /\bwas read the third time\b/i,
 ];
 
 // Filler sentence patterns — applied to every sentence in the quote, regardless of position.

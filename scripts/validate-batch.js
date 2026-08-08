@@ -52,6 +52,16 @@ const STRICT = process.argv.includes('--strict');
 let ACRONYMS = {};
 try { ACRONYMS = require('../acronyms.js').ACRONYMS || {}; } catch (e) {}
 
+// data/analysis-quarantine.json — bills pulled OUT of cache by the quarantine
+// engine because their analysis failed a content check. Like skip-listed bills,
+// a quarantined id is "not in cache but not an error" — it is held for fix, not
+// missing. Kept separate from analysis-skip.json (deliberate non-analysis).
+let QUARANTINED = new Set();
+try {
+    for (const q of JSON.parse(fs.readFileSync(path.join(__dirname, '../data/analysis-quarantine.json'), 'utf8')).quarantined || [])
+        QUARANTINED.add(q.id);
+} catch { /* no quarantine file */ }
+
 // ── Shared helpers ─────────────────────────────────────────────────────────
 
 function billText(id) {
@@ -155,10 +165,19 @@ function proseUnits(bill) {
 
 let errors = 0, warnings = 0;
 
+// Structured capture so a caller (the quarantine engine) can tell WHICH bill each
+// error belongs to. --json <path> dumps { errorList, warnList } at the end; a
+// null billId means the error is not attributable to one bill (structural — e.g.
+// a JS-source curly quote) and therefore is NOT quarantinable.
+let currentSection = '';
+const errorList = [], warnList = [];
+const BILL_ID_RE = /\b(\d{2,3}-[A-Z]+-\d+)\b/;
+const extractBillId = msg => { const m = String(msg).match(BILL_ID_RE); return m ? m[1] : null; };
+
 function pass(msg)  { console.log(`  ✅ ${msg}`); }
-function warn(msg)  { console.log(`  ⚠️  ${msg}`); warnings++; }
-function fail(msg)  { console.log(`  ❌ ${msg}`); errors++; }
-function section(label) { console.log(`\n── ${label}`); }
+function warn(msg)  { console.log(`  ⚠️  ${msg}`); warnings++; warnList.push({ message: String(msg), billId: extractBillId(msg), check: currentSection }); }
+function fail(msg)  { console.log(`  ❌ ${msg}`); errors++;   errorList.push({ message: String(msg), billId: extractBillId(msg), check: currentSection }); }
+function section(label) { console.log(`\n── ${label}`); currentSection = label; }
 
 // Adjudication ledger (data/qa-adjudications.json): warnings a QA pass has
 // individually verified against source. A matching entry downgrades the warning
@@ -191,13 +210,17 @@ section('Unprocessed bills');
     const cachedIds   = new Set(bills.map(b => b.id));
     const unprocessed = rawBills.filter(b => !cachedIds.has(b.billId));
     const skipped     = unprocessed.filter(b => SKIP.has(b.billId));
-    const blocking    = unprocessed.filter(b => !SKIP.has(b.billId));
+    const quarantined = unprocessed.filter(b => !SKIP.has(b.billId) && QUARANTINED.has(b.billId));
+    const blocking    = unprocessed.filter(b => !SKIP.has(b.billId) && !QUARANTINED.has(b.billId));
 
     blocking.forEach(b => fail(`Not yet analyzed: ${b.billId} — ${b.title}`));
     if (skipped.length) {
         const byCat = {};
         skipped.forEach(b => { const c = SKIP.get(b.billId); byCat[c] = (byCat[c] || 0) + 1; });
         console.log(`  ◦  ${skipped.length} deliberately-skipped bill(s) — ${Object.entries(byCat).map(([c, n]) => `${n} ${c}`).join(', ')} (data/analysis-skip.json)`);
+    }
+    if (quarantined.length) {
+        console.log(`  ◦  ${quarantined.length} quarantined bill(s) held for fix (data/analysis-quarantine.json)`);
     }
     if (blocking.length === 0) pass(skipped.length ? 'All non-skip-listed fetched bills have been analyzed' : 'All fetched bills have been analyzed');
 }
@@ -400,8 +423,13 @@ section('Dollar amount formatting');
             }
             const sm = obj.match(SPELLED_DOLLAR);
             if (sm) {
-                warn(`${billId} ${path}: spelled-out "${sm[0]}" — shorten to $X.XXB/$XM form (CLAUDE.md dollar rules)`);
-                spelled++;
+                const a = adjudication(billId, 'dollar-format', path);
+                if (a) {
+                    noteAdjudicated(`${billId} ${path}: spelled-out "${sm[0]}"`, a);
+                } else {
+                    warn(`${billId} ${path}: spelled-out "${sm[0]}" — shorten to $X.XXB/$XM form (CLAUDE.md dollar rules)`);
+                    spelled++;
+                }
             }
         } else if (Array.isArray(obj)) {
             obj.forEach((v, i) => walkForDollars(v, `${path}[${i}]`, billId));
@@ -736,6 +764,9 @@ section('Quote quality audit');
         /\bi have no statement to make\b/i,
         /\bquestion of the privileges of the house\b/i,
         /\bthe clerk (?:will )?(?:read|designate|redesignate)\b/i,
+        // Senate passage narration (2026-08-07) — mirrored in fetch_bill_cr.js.
+        /\bwas ordered to be engrossed\b/i,
+        /\bwas read the third time\b/i,
     ];
 
     // Stance detection — same logic as fetch_bill_cr.js (keep in sync)
@@ -1063,5 +1094,17 @@ if (errors > 0) {
     console.log('  ✅ All checks passed — clean pass.');
 }
 console.log('═'.repeat(56) + '\n');
+
+// --json <path>: machine-readable result for the quarantine engine. Written on
+// every run (clean or not) so a caller can act on the structured error list.
+const JSON_OUT = (() => {
+    const eq = process.argv.find(a => a.startsWith('--json='));
+    if (eq) return eq.split('=')[1];
+    const i = process.argv.indexOf('--json');
+    return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
+})();
+if (JSON_OUT) {
+    fs.writeFileSync(JSON_OUT, JSON.stringify({ ok: errors === 0, errors, warnings, errorList, warnList }, null, 2));
+}
 
 if (blocking) process.exit(1);

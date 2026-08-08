@@ -137,6 +137,24 @@ if (!POST_ONLY) {
 
 // ── Phase 2: Post-analysis ─────────────────────────────────────────────────
 
+// Normalize authored-analysis formatting BEFORE any page generation or the
+// validate gate: shorten raw dollar amounts ($7,500,000 -> $7.5M) and strip
+// billSection annotations ("2(c) [amending 49 U.S.C. §109(h)]" -> "2(c)") the
+// headless analysis may have written. Mechanical, idempotent, and quote-safe
+// (skips verbatim CR fields) — kills the recurring "raw dollar amount" /
+// "billSection non-ASCII" validate failures at the source instead of halting
+// the whole run over one bill's misformatting.
+run('Normalize analysis formatting', ['scripts/normalize-analysis.js', '--all'], { optional: true });
+
+// Resilient run: triage the batch and pull any NEW bill whose analysis still
+// fails a content check OUT of cache into data/analysis-quarantine.json, so one
+// bad bill does not sink the whole batch. Runs BEFORE page/sitemap/search
+// generation so those artifacts never include a quarantined bill. NOT optional:
+// a non-zero exit means the failure could not be safely isolated (structural
+// error, a live-bill regression, or too many failures) and the run must stop —
+// exactly the old behaviour, now only for the cases that truly warrant it.
+run('Quarantine failed bills (resilient run)', ['scripts/quarantine.js']);
+
 // Refresh already-cached bills: resurface any that had new activity (bump
 // stageDate → moves to top) and advance the stage on confident passage markers.
 // Prints a RE-REVIEW list for any bill whose stage changed (prose is not auto-edited).

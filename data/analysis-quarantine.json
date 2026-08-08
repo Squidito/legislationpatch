@@ -1,0 +1,4 @@
+{
+  "_comment": "Bills pulled out of cache by the quarantine engine because their analysis failed a content check. Held for fix, not missing. Restore with: node scripts/quarantine-bills.js --restore <id>.",
+  "quarantined": []
+}
