@@ -18197,7 +18197,7 @@
       "sponsor": "Rep. Comer, James (R-KY)",
       "sponsor_bioguide": "C001108",
       "cosponsors": 2,
-      "pages": 4,
+      "pages": 6,
       "analyzed": true,
       "demo": false,
       "likelihood": 55,
@@ -18227,8 +18227,8 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
-      "summary": "Lets federal agencies and the Treasury pause or split up payments that show signs of fraud, while requiring payees to be notified and given a chance to contest, with the payment due within 45 days.",
+      "analyzedAt": "2026-08-08",
+      "summary": "Lets federal agencies and the Treasury pause or split up payments that show signs of fraud, while requiring payees to be notified and given a chance to contest, with the payment due within 30 days.",
       "brief": "Authorizes agencies and the Treasury to pause or segment federal payments flagged for fraud risk, with payee notice and time limits.",
       "top_lines": [
         {
@@ -18245,7 +18245,7 @@
           "billSection": "2",
           "subs": [
             "Payee notified and given a chance to contest",
-            "Payment due within 45 days of the determination",
+            "Payment due within 30 days of the determination",
             "Routine, low-risk portions allowed to proceed"
           ]
         }
@@ -18266,7 +18266,7 @@
           "items": [
             {
               "main": "Authorizes agencies and the Treasury to pause, condition, or segment federal payments that present an elevated fraud risk.",
-              "detail": "Adds Section 3337 to title 31. Before certifying a payment voucher, an agency must temporarily delay, condition, or segment a disbursement that an official determines presents an elevated risk of fraud or improper payment, or when ordered by the Treasury. The Treasury may return a certified voucher and issue a corrective-action order based on a fraud-risk indicator or a Do Not Pay system flag. Actions must be objective, narrowly applied, and time-limited; the payee must be notified and given a process to contest; and the payment must be issued within 45 days of the determination (or 7 days after the payee contests). Routine, historically consistent payment amounts may proceed while an anomalous portion is held. Law-enforcement exemptions and good-faith liability protection apply, and the Treasury must issue implementing regulations within 180 days.",
+              "detail": "Adds Section 3337 to title 31. Before certifying a payment voucher, an agency must temporarily delay, condition, or segment a disbursement that an official determines presents an elevated risk of fraud or improper payment, or when ordered by the Treasury. The Treasury may return a certified voucher and issue a corrective-action order based on a fraud-risk indicator or a Do Not Pay system flag. Actions must be objective, narrowly applied, and time-limited; the payee must be notified and given a process to contest; and the payment must be issued within 30 days of the determination (or 7 days after the payee contests). Routine, historically consistent payment amounts may proceed while an anomalous portion is held. Law-enforcement exemptions and good-faith liability protection apply, and the Treasury must issue implementing regulations within 180 days. The Treasury must also report to Congress 18 months after enactment, and annually thereafter, on the number of orders issued, the share of paused payments ultimately paid, and total savings, and the amendments take effect 1 year after enactment.",
               "comments": []
             }
           ]
@@ -18275,7 +18275,7 @@
       "underreported": [],
       "criticisms": [],
       "gaps": [
-        "The bill sets a 45-day limit to issue a paused payment but does not specify a consequence if an agency misses it.",
+        "The bill sets a 30-day limit to issue a paused payment but does not specify a consequence if an agency misses it.",
         "It relies on 'fraud-risk indicators' and the Do Not Pay system but does not address erroneous flags that wrongly delay legitimate payments beyond the contest process."
       ],
       "featured_quotes": [
@@ -18318,7 +18318,7 @@
       ],
       "changes": {
         "added": [
-          "Authority for agencies and the Treasury to pause, condition, or segment fraud-risk federal payments, with payee notice and a 45-day limit (new Section 3337 of title 31)"
+          "Authority for agencies and the Treasury to pause, condition, or segment fraud-risk federal payments, with payee notice and a 30-day limit (new Section 3337 of title 31)"
         ],
         "modified": [
           "Relief of accountable officers (Section 3527 of title 31) extended to good-faith actions under the new pause authority"
@@ -18373,8 +18373,7 @@
           "type": "Introduced in House",
           "date": "2026-04-23"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-5103",
