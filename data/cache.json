@@ -1528,7 +1528,7 @@
     {
       "id": "119-HR-4371",
       "title": "Kayla Hamilton Act",
-      "official_title": "To amend the William Wilberforce Trafficking Victims Protection Reauthorization Act of 2008 to enhance efforts to combat the trafficking of children.",
+      "official_title": "To amend the William Wilberforce Trafficking Victims Protection Reauthorization Act of 2008 and the Homeland Security Act of 2002 to enhance efforts to combat the trafficking of children.",
       "code": "HR.4371",
       "date": "2025-07-14",
       "version": "v1.0",
@@ -1545,28 +1545,28 @@
       "sponsor": "Rep. Fry, Russell (R-SC)",
       "sponsor_bioguide": "F000478",
       "cosponsors": 2,
-      "pages": 2,
+      "pages": 5,
       "analyzed": true,
       "demo": false,
-      "summary": "The Kayla Hamilton Act tightens the placement process for unaccompanied migrant children in federal custody. It requires the Department of Health and Human Services to place children 13 and older in a secure facility if they have gang-related tattoos, markings, or an arrest record linked to gang activity in their home country. It also prohibits placing any child with a sponsor who is unlawfully present in the U.S., and requires DHS to receive detailed background information on all adult household members at any placement home.",
-      "brief": "Requires secure facility placement for unaccompanied migrant children 13 and older with gang-related indicators, bans placement with sponsors who are unlawfully present, and mandates sharing of household adult background information with DHS.",
+      "summary": "The Kayla Hamilton Act tightens the placement process for unaccompanied migrant children in federal custody. It requires the Department of Health and Human Services to place children 12 and older in a secure facility for the duration of any immigration proceedings if they are a flight risk or a danger, including if they have gang-related tattoos or markings, a conviction for a serious criminal offense or aggravated felony, or a gang-related arrest, charge, or conviction. It also prohibits placing any child with an individual who is not a U.S. citizen or lawful permanent resident, or who — or an adult in whose household — has been convicted of certain sex, trafficking, domestic-violence, child-abuse, murder, or felony offenses, and requires HHS to give DHS detailed background information on all adult household members at any placement home.",
+      "brief": "Requires secure-facility placement for unaccompanied migrant children 12 and older who are a flight risk or danger — including those with gang-related indicators or serious criminal convictions — bars placement with any individual who is not a U.S. citizen or lawful permanent resident or who has certain criminal convictions, and mandates sharing of household adult background information with DHS.",
       "top_lines": [
         {
           "headline": "Secure Facility for Gang-Affiliated Minors",
-          "billSection": "2",
+          "billSection": "3",
           "subs": [
-            "Before placing an unaccompanied child 13 or older, HHS must contact the child's home country consulate or embassy to request the child's criminal record",
+            "Before placing an unaccompanied child 12 or older, HHS must contact the child's home country consulate or embassy to request any relevant arrest records, pending charges, or conviction documents",
             "HHS must also examine the child for gang-related tattoos and markings",
-            "If the child has a gang-related tattoo, marking, or a gang-related arrest record or criminal conviction from their home country, HHS must place them in a secure facility"
+            "If the child is a flight risk or a danger — including having a gang-related tattoo or marking, a conviction for a serious criminal offense or aggravated felony, or a gang-related arrest, pending charge, or conviction — HHS must place them in a secure facility for the duration of any immigration proceedings"
           ]
         },
         {
           "headline": "Sponsor Vetting Requirements",
-          "billSection": "2",
+          "billSection": "3",
           "subs": [
-            "No child may be placed with a sponsor who is unlawfully present in the United States",
-            "Before placement, HHS must share with DHS: names, Social Security numbers, dates of birth, immigration status, contact information, and background check results for all adult residents of the placement household",
-            "Required background checks include a sex offender registry check, a public records check, and an FBI fingerprint-based criminal history check for every adult in the household"
+            "No child may be placed with any individual who is not a U.S. citizen or lawful permanent resident, or who — or an adult resident of whose household — has been convicted of certain sex, trafficking, domestic-violence, child-abuse, murder, or felony offenses",
+            "Before placement, HHS must share with DHS: names, Social Security or individual taxpayer identification numbers, dates of birth, addresses, immigration status, contact information, and background-check results for all adult residents of the placement household",
+            "Required background checks include, at a minimum, an investigation of the Dru Sjodin National Sex Offender Public Website, a public records background check, and a national criminal history background check based on fingerprints for every adult in the household"
           ]
         }
       ],
@@ -1585,16 +1585,51 @@
           ]
         },
         {
-          "label": "Section 2 — Additional Safeguards for Placement of Unaccompanied Children",
+          "label": "Section 2 — Placement Determinations for Unaccompanied Alien Children",
           "items": [
             {
-              "main": "For unaccompanied migrant children aged 13 and older, requires HHS to request a criminal record from the child's home country consulate or embassy and conduct a gang marking examination before making any placement.",
-              "detail": "If the child has a gang-related tattoo, any other gang-related marking, or a home-country arrest record, pending charge, or conviction related to gang affiliation, HHS must place the child in a secure facility. The bill exempts children aged 12 or younger from the gang-screening requirement. The Secretary is not required to review placement in a secure facility under this provision.",
+              "main": "Amends the Homeland Security Act of 2002 (6 U.S.C. 279(b)(2)) so the Office of Refugee Resettlement Director makes unaccompanied-child placement determinations in accordance with 8 U.S.C. 1232(c)(2).",
+              "detail": "Conforming amendment tying ORR's placement authority to the safe-and-secure-placement standard rewritten by Section 3.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Enhancing Efforts to Combat the Trafficking of Children",
+          "items": [
+            {
+              "main": "Before any placement, HHS must consult with the Secretary of Homeland Security and the Attorney General to help ensure the child appears at immigration hearings, is protected from smugglers, traffickers, and gangs, and to determine flight risk, danger, and criminal history; children in HHS custody are otherwise to be placed in the least restrictive setting in their best interest, and may not be released on their own recognizance.",
+              "detail": "The consultation and least-restrictive-setting rules apply to all unaccompanied children; the consulate-records request, gang examination, and secure-facility placement apply only to children 12 or older.",
               "comments": []
             },
             {
-              "main": "Prohibits placement of any unaccompanied child with a sponsor who is unlawfully present in the United States, and requires HHS to transmit detailed household information to DHS before completing any placement.",
-              "detail": "Required information includes names, Social Security numbers, dates of birth, addresses, immigration status, contact information, and background check results for all adult residents of the proposed placement household. Background checks must include a Department of Justice National Sex Offender public website check, a public records background check, and an FBI National Criminal History fingerprint-based check. The amendment also changes 'may consider' to 'shall consider' in making placement determinations, converting a discretionary consideration into a mandatory one.",
+              "main": "For unaccompanied migrant children aged 12 and older, requires HHS to request arrest records, pending charges, and conviction documents from the child's home country consulate or embassy and conduct an examination for gang-related tattoos and markings before making any placement.",
+              "detail": "A child 12 or older must be placed in a secure facility for the duration of any immigration proceedings (and, if ordered removed, until removal) if the child is a flight risk or a danger to self, others, or the community — including having a gang-related tattoo or marking, a conviction for a serious criminal offense or aggravated felony, or, for gang-related conduct, an arrest record, pending charge, other pending proceeding, or conviction. Children younger than 12 are exempt from the gang-screening and consulate-records requirements.",
+              "comments": []
+            },
+            {
+              "main": "Prohibits placement of any unaccompanied child with an individual who is not a U.S. citizen or lawful permanent resident, or who — or an adult resident of whose household — has been convicted of an enumerated offense, and requires HHS to transmit detailed household information to DHS before completing any placement.",
+              "detail": "Required information includes names, Social Security or individual taxpayer identification numbers, dates of birth, addresses, immigration status, contact information, and background-check results for all adult residents of the proposed placement household. Background checks must include, at a minimum, an investigation of the Dru Sjodin National Sex Offender Public Website, a public records background check, and a national criminal history background check based on fingerprints. The enumerated categories of prohibited individuals include those convicted of a sex offense, severe trafficking, domestic violence, child abuse, murder or manslaughter, an aggravated felony, any felony, or any crime punishable by more than 1 year, plus any other offense the Attorney General designates in the Attorney General's sole and unreviewable discretion.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Exemption from Paperwork Reduction Act and Administrative Procedure Act",
+          "items": [
+            {
+              "main": "Provides that nothing in the Act requires DHS, HHS, the State Department, or the Attorney General to comply with the Paperwork Reduction Act or to conduct APA notice-and-comment rulemaking if those officials determine compliance would impede immediate implementation.",
+              "detail": "Lets the implementing agencies bypass Paperwork Reduction Act review (chapter 35 of title 44) and APA rulemaking (subchapter II of chapter 5 of title 5) at their own determination.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 6 — Effective Date; Applicability",
+          "items": [
+            {
+              "main": "Takes effect on enactment and applies to release and custody determinations that are pending or occur on or after enactment, and to all release redeterminations.",
+              "detail": "Reaches unaccompanied-alien-child cases already in progress at enactment, not only new ones.",
               "comments": []
             }
           ]
@@ -1602,15 +1637,15 @@
       ],
       "underreported": [
         {
-          "section": "Section 2 — Change from 'May Consider' to 'Shall Consider'",
-          "summary": "Changes the HHS placement standard from permitting consideration of placement-determination factors to requiring that consideration, by striking 'may consider' and inserting 'shall consider'. This makes the assessment a mandatory step in placement determinations, rather than a discretionary one.",
-          "why_unreported": "The bill's stated purpose focuses on gang screening and sponsor vetting. This separate textual change — from 'may' to 'shall' — alters the baseline placement standard for all unaccompanied children regardless of gang affiliation, broadening the scope of the bill beyond its headline provisions."
+          "section": "Section 5 — Paperwork Reduction Act / Administrative Procedure Act Exemption",
+          "summary": "Lets DHS, HHS, the State Department, and the Attorney General skip Paperwork Reduction Act review and Administrative Procedure Act notice-and-comment rulemaking whenever those officials themselves determine that compliance would impede immediate implementation of the Act.",
+          "why_unreported": "The bill is framed around gang screening and sponsor vetting, but this separate section removes the ordinary procedural checks on how the new placement rules are implemented, at the agencies' own discretion — a structural change absent from the short title and stated purpose."
         }
       ],
       "criticisms": [],
       "gaps": [
         "The bill requires HHS to contact a child's home country consulate for a criminal record before placement, but does not establish a timeline for how long HHS may hold a child while awaiting a response, or what happens if the consulate does not respond.",
-        "The bill prohibits placement with sponsors who are unlawfully present but does not address what happens to a child if no lawful placement is available, potentially requiring indefinite secure facility detention."
+        "The bill bars placement with any individual who is not a U.S. citizen or lawful permanent resident but does not address what happens to a child if no eligible placement is available, potentially requiring prolonged secure-facility detention."
       ],
       "featured_quotes": [
         {
@@ -1652,14 +1687,18 @@
       ],
       "changes": {
         "added": [
-          "Mandatory consulate/embassy criminal record request for unaccompanied children aged 13 and older before placement",
-          "Mandatory gang tattoo and marking examination before placement for children aged 13 and older",
-          "Mandatory secure facility placement for children aged 13 and older with gang-related indicators",
-          "Prohibition on placement with sponsors who are unlawfully present in the United States",
-          "Requirement to transmit household adult background check results to DHS before each placement"
+          "Mandatory consulate/embassy arrest-record request for unaccompanied children aged 12 and older before placement",
+          "Mandatory gang tattoo and marking examination before placement for children aged 12 and older",
+          "Mandatory secure-facility placement for children aged 12 and older who are a flight risk or danger, including those with gang indicators or serious-offense/aggravated-felony convictions",
+          "Prohibition on placement with any individual who is not a U.S. citizen or lawful permanent resident, or who (or a household member) has an enumerated criminal conviction",
+          "Requirement to transmit household adult background check results to DHS before each placement",
+          "Mandatory pre-placement consultation with the Secretary of Homeland Security and the Attorney General to assess appearance at hearings, protection from traffickers and gangs, and flight risk, danger, and criminal history",
+          "Express prohibition on releasing an unaccompanied alien child on his or her own recognizance",
+          "Exemption letting DHS, HHS, State, and the Attorney General bypass the Paperwork Reduction Act and Administrative Procedure Act where compliance would impede immediate implementation",
+          "Applies to release and custody determinations pending or occurring on or after enactment, and to all release redeterminations"
         ],
         "modified": [
-          "8 U.S.C. 1232(c)(2): 'may consider' changed to 'shall consider' in making placement determinations"
+          "6 U.S.C. 279(b)(2): rewritten so ORR placement determinations for unaccompanied alien children are made in accordance with 8 U.S.C. 1232(c)(2); 8 U.S.C. 1232(c)(3)(A) amended from 'Subject to the requirements of subparagraph (B)' to 'subparagraphs (B) and (D)'"
         ],
         "removed": []
       },
@@ -1691,7 +1730,7 @@
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -1737,8 +1776,7 @@
           "type": "Introduced in House",
           "date": "2025-07-14"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-910",
