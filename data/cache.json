@@ -16859,7 +16859,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-08-08",
       "summary": "Lets the President restrict ships from entering U.S. ports if they used a port in a Western Hemisphere free-trade partner country that seized port property owned by a U.S. company.",
       "brief": "Allows the President to bar from U.S. ports vessels that used a Western Hemisphere free-trade-partner port expropriated from a U.S. owner.",
       "top_lines": [
@@ -16876,7 +16876,7 @@
           "headline": "Removal of Designation",
           "billSection": "2",
           "subs": [
-            "Designation lifted if the property is returned or compensated"
+            "Designation lifted once the country restores ownership (and terminates any seizure measures) or pays adequate compensation"
           ]
         }
       ],
@@ -16896,7 +16896,7 @@
           "items": [
             {
               "main": "Lets the President designate foreign ports that expropriated U.S.-owned port property, restricting vessels that used them from entering U.S. ports.",
-              "detail": "Amends Section 70022 of title 46. The President may designate a port, harbor, or marine terminal in a Western Hemisphere country with a U.S. free trade agreement if that country nationalized or expropriated port property owned or controlled by a U.S. person and the port is accessible only through U.S.-person-controlled land. Vessels that transited a designated port become subject to the title's port-entry restriction. The President must remove a designation if the property is returned, adequate compensation is paid, the conditions no longer apply, or the dispute is otherwise resolved. Emergencies and owner-authorized transits are excepted.",
+              "detail": "Amends Section 70022 of title 46. The President may designate a port, harbor, or marine terminal in a Western Hemisphere country with a U.S. free trade agreement if that country nationalized or expropriated port property owned or controlled by a U.S. person and the port is accessible only through U.S.-person-controlled land. Vessels that transited a designated port become subject to the title's port-entry restriction. The President must remove a designation if the country restores ownership of the property and terminates any measures that had the effect of seizing ownership or possession, adequate compensation is paid, the conditions no longer apply, or the dispute is otherwise resolved. Emergencies and owner-authorized transits are excepted.",
               "comments": []
             }
           ]
@@ -17016,8 +17016,7 @@
           "type": "Introduced in House",
           "date": "2026-01-15"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-4307",
