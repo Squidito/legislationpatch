@@ -18642,7 +18642,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-15",
+      "analyzedAt": "2026-08-08",
       "summary": "Requires judges in the District of Columbia to detain people charged with violent or dangerous crimes before trial, and to require cash bail for certain public-safety offenses.",
       "brief": "Mandates pretrial detention for violent and dangerous crimes and cash bail for certain offenses in the District of Columbia.",
       "top_lines": [
@@ -18690,7 +18690,7 @@
           "items": [
             {
               "main": "Requires a secured cash bail bond for release of people charged with 'public safety or order' crimes.",
-              "detail": "Adds a category of 'public safety or order crime' — including failure to appear, obstruction of justice, fleeing law enforcement, rioting, inciting a riot, destruction of property, stalking, and certain burglary or robbery — for which a person may be released only on a secured appearance bond (cash or surety). It defines 'secured appearance bond' and adds surety-arrest provisions. The changes apply to offenses charged 30 days after enactment.",
+              "detail": "Adds a category of 'public safety or order crime' — including failure to appear, obstruction of justice, fleeing law enforcement, rioting, inciting a riot, destruction of property, stalking, and burglary or robbery other than in the first degree or with a dangerous weapon — for which a person may be released only on a secured appearance bond (cash or surety). It defines 'secured appearance bond' and adds surety-arrest provisions. The changes apply to offenses charged 30 days after enactment.",
               "comments": []
             }
           ]
@@ -18780,8 +18780,7 @@
           "type": "Introduced in House",
           "date": "2025-09-08"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-187",
