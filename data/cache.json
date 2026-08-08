@@ -12705,7 +12705,7 @@
       "sponsor": "Rep. Thompson, Glenn (R-PA)",
       "sponsor_bioguide": "T000467",
       "cosponsors": 0,
-      "pages": 356,
+      "pages": 437,
       "analyzed": true,
       "demo": false,
       "summary": "This is a farm bill — the broad, multi-year law that reauthorizes most U.S. Department of Agriculture programs across twelve subject areas, from crop supports and conservation to food aid, farm credit, rural development, research, forestry, energy, and crop insurance. It also reauthorizes the Supplemental Nutrition Assistance Program (SNAP, formerly food stamps) and makes administrative changes to how states run it. Many existing program authorizations that lapsed are extended through 2031.",
@@ -12758,7 +12758,7 @@
           "items": [
             {
               "main": "Reauthorizes SNAP and makes administrative changes to how states operate the program.",
-              "detail": "A new declaration of policy ties SNAP to preventing diet-related chronic disease. Section 4103 lets state agencies hire contractors to handle SNAP certification and other functions when they cannot process applications timely (for reasons such as pandemics, staffing shortages, or disasters), when their payment error rate is at or above 6 percent, or when applications surge — subject to safeguards against incentives to deny eligibility. Other sections extend prohibited-fee, anti-trafficking, and program authorization provisions from 2023 to 2031, require EBT card security rulemaking within 6 months, require reporting of all identified payment errors, and make SNAP online-purchasing authority permanent. Subtitles B and C reauthorize commodity distribution, the commodity supplemental food program, and nutrition-incentive programs.",
+              "detail": "A new declaration of policy ties SNAP to preventing diet-related chronic disease. Section 4103 lets state agencies hire contractors to handle SNAP certification and other functions when they cannot process applications timely (for reasons such as pandemics, staffing shortages, or disasters), when their payment error rate is at or above 6 percent, or when applications surge — subject to safeguards against incentives to deny eligibility. Other sections make the prohibited-fee provision permanent and extend anti-trafficking and program authorization provisions from 2023 to 2031, require EBT card security rulemaking within 6 months, require reporting of all identified payment errors, and make SNAP online-purchasing authority permanent. Subtitles B and C reauthorize commodity distribution, the commodity supplemental food program, and nutrition-incentive programs.",
               "comments": []
             }
           ]
@@ -12829,11 +12829,12 @@
           "A Specialty Crop Emergency Assistance Framework (new section 196A) for producers affected by adverse events",
           "SNAP staffing flexibility allowing states to hire contractors during backlogs, surges, or when error rates reach 6 percent",
           "An optional initial-payment option under the Tree Assistance Program, sunsetting September 30, 2035",
-          "Permanent authority for SNAP online purchasing"
+          "Permanent authority for SNAP online purchasing",
+          "A directive (Section 12306) for the President to have Federal agencies promulgate rules prohibiting purchases of U.S. agricultural land by foreign adversaries, state sponsors of terrorism, and their affiliates"
         ],
         "modified": [
           "Suspension of permanent price support authority extended from 2023 to 2031",
-          "Multiple SNAP authorizations (prohibited fees, anti-trafficking, program appropriations) extended from 2023 to 2031"
+          "SNAP anti-trafficking enforcement (Sec. 4107) and program appropriations (Sec. 4106) extended from 2023 to 2031; the prohibited-fee provision (Sec. 4102) made permanent"
         ],
         "removed": []
       },
@@ -12863,7 +12864,7 @@
           "crossoverCount": 0
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-08",
       "versions": [
         {
           "type": "Introduced in House",
@@ -12912,8 +12913,7 @@
           "type": "Introduced in House",
           "date": "2026-02-13"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-S-1071",
