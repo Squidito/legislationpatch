@@ -1,0 +1,23 @@
+{
+  "id": "119-HR-3633",
+  "title": "Digital Asset Market Clarity Act of 2025",
+  "billType": "framework",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-3633.json",
+  "goldStatus": "candidate",
+  "claims": [],
+  "counts": {
+    "claims": 0,
+    "material": 0,
+    "minor": 0,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

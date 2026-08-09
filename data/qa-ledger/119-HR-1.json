@@ -1,0 +1,57 @@
+{
+  "id": "119-HR-1",
+  "title": "One Big Beautiful Bill Act",
+  "billType": [
+    "appropriation",
+    "amendment"
+  ],
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "partial",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-1.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "changes.removed[1]",
+      "claim": "A cap on Consumer Financial Protection Bureau funding",
+      "verdict": "CONTRADICTED",
+      "type": "direction",
+      "severity": "minor",
+      "sourceSpan": "Section 1017(a)(2)(A)(iii) of the Consumer Financial Protection Act of 2010 (12 U.S.C. 5497(a)(2)(A)(iii)) is amended by striking ``12'' and inserting ``6.5''.",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Listed under the 'removed' bucket, which reads that the bill removed/eliminated a CFPB funding cap. The bill does the opposite: it retains the cap and lowers it (tightening CFPB funding), not removes it. Sec 30001 amends 12 U.S.C. 5497(a)(2)(A)(iii) by reducing the cap from 12% to 6.5% of Federal Reserve operating expenses. The sections[2] field correctly says 'Caps CFPB funding,' so the analysis internally conflicts; the 'removed' phrasing, read literally, inverts the effect.",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    },
+    {
+      "field": "top_lines[0].subs[2]",
+      "claim": "Raises the state and local tax (SALT) deduction cap to $40,000 through 2029",
+      "verdict": "CONTRADICTED",
+      "type": "overgeneralization",
+      "severity": "minor",
+      "sourceSpan": "'applicable limitation amount' means-- (i) in the case of any taxable year beginning in calendar year 2025, $40,000, (ii) in the case of any taxable year beginning in calendar year 2026, $40,400, (iii) ...after calendar year 2026 and before 2030, 101 percent of the dollar amount in effect...for the preceding calendar year, and (iv) ...after calendar year 2029, $10,000.",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "The $40,000 figure is the cap for calendar year 2025 only; it is not the cap 'through 2029.' The cap rises to $40,400 in 2026 and escalates 1%/yr through 2029, then reverts to $10,000 after 2029. The changes.modified field scopes it correctly ('$40,000 for 2025'); this headline attaches the 2025-only value to the whole 2025-2029 window.",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 2,
+    "material": 0,
+    "minor": 2,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

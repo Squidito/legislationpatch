@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-8595",
+  "title": "National Security, Department of State, and Related Programs Appropriations Act, 2027",
+  "billType": "appropriation",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-8595.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "underreported[Title III Global Health].summary / sections[Title III].items[0].detail",
+      "claim": "Bars global health funds to any organization the President determines supports or manages coercive abortion or involuntary sterilization ... The global health funds carry conditions barring money to organizations that support coercive abortion or involuntary sterilization",
+      "verdict": "OMISSION",
+      "type": "omission",
+      "severity": "minor",
+      "sourceSpan": "none of the funds made available in this Act nor any unobligated balances from prior appropriations Acts may be made available to any organization or program which, as determined by the President of the United States, supports or participates in the management of a program of coercive abortion or involuntary sterilization",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Scope understatement. The proviso, though placed under the Global Health Programs heading, applies to ALL funds in the Act (and prior-year unobligated balances), not only global health funds. The analysis narrows an Act-wide funding bar to a single account.",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 1
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

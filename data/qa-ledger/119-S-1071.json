@@ -1,0 +1,23 @@
+{
+  "id": "119-S-1071",
+  "title": "National Defense Authorization Act for Fiscal Year 2026",
+  "billType": "appropriation",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "partial",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-S-1071.json",
+  "goldStatus": "candidate",
+  "claims": [],
+  "counts": {
+    "claims": 0,
+    "material": 0,
+    "minor": 0,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "119-HR-8800",
+  "title": "National Defense Authorization Act for Fiscal Year 2027",
+  "billType": "reauthorization",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "partial",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-8800.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "sections[0].items[1].main",
+      "claim": "Section 128 authorizes incremental funding for ship-to-shore connector construction.",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceSpan": "SEC. 128. AUTHORITY TO USE INCREMENTAL FUNDING FOR THE CONSTRUCTION OF A GUIDED MISSILE DESTROYER (DDG). ... to enter into an incrementally funded contract for the construction of one Guided Missile Destroyer (DDG). / SEC. 129. AUTHORITY FOR ADVANCE PROCUREMENT OF COMPONENTS FOR SHIP-TO-SHORE CONNECTOR CLASS CRAFT. ... the advance procurement of components for Ship-to-Shore Connector class craft",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Conflates two different sections and misstates the authority. Section 128 concerns a Guided Missile Destroyer (DDG), not the ship-to-shore connector. The ship-to-shore connector is Section 129, and that authority is 'advance procurement of components,' not 'incremental funding for construction.' Both the section number and the nature of the authority are wrong.",
+      "status": "fixed",
+      "verify": null,
+      "verifyModel": null
+    },
+    {
+      "field": "top_lines[2].subs[1]",
+      "claim": "Section 706 requires TRICARE to cover a supply of up to 365 days of a contraceptive ... starting no later than 180 days after enactment",
+      "verdict": "CONTRADICTED",
+      "type": "direction",
+      "severity": "minor",
+      "sourceSpan": "Beginning not less than 180 days after the date of the enactment of the Act, contraceptive supplies of up to 365 days shall be covered",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Timing qualifier is inverted. Source says coverage begins 'not less than 180 days after' enactment (a floor: no earlier than 180 days out), whereas the analysis says 'no later than 180 days after' (a ceiling/deadline: within 180 days). Opposite direction.",
+      "status": "fixed",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 2,
+    "material": 1,
+    "minor": 1,
+    "omissions": 0
+  },
+  "resolution": "Material flag CONFIRMED by cross-model (Sonnet) verify + FIXED in cache.json 2026-08-08.",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

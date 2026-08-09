@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-1664",
+  "title": "Deploying American Blockchains Act of 2025",
+  "billType": "study",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-1664.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "summary/top_lines[].subs/sections[].items[].main",
+      "claim": "Names the Commerce Secretary as the President's principal blockchain advisor / makes the Secretary of Commerce the federal government's lead advisor on blockchain",
+      "verdict": "CONTRADICTED",
+      "type": "overgeneralization",
+      "severity": "minor",
+      "sourceSpan": "The Secretary shall serve as a principal advisor to the President for policy pertaining to the deployment, use, application, and competitiveness of blockchain technology or other distributed ledger technology",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Source says the Secretary serves as 'a principal advisor to the President' for this policy area (indefinite article — one of possibly several). The analysis renders it as 'the' principal/lead advisor, and 'the federal government's lead advisor' further broadens 'advisor to the President.'",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

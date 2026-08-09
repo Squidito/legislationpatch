@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-3838",
+  "title": "SPEED Act",
+  "billType": "amendment",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-3838.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "sections[Title I - Aligning Acquisition to Warfighter Priorities].items[3].detail",
+      "claim": "Pathfinder program executive officers may transfer funds among programs within a Pathfinder, subject to a cap of 40 percent of the total amount authorized for that Pathfinder.",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceSpan": "(A) Authority.--The Secretary of Defense, acting through a Secretary of a military department or the head of a Defense Agency, may transfer amounts authorized for programs, projects, or activities that are included in a Pathfinder under the jurisdiction of such Secretary or head ... (iv) may not exceed 40 percent of the total amount authorized to carry out a Pathfinder",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Right-fact-wrong-actor. The 40% Pathfinder transfer authority is vested in the Secretary of Defense (acting through a service secretary or Defense Agency head), NOT in program executive officers. The analysis's own underreported item correctly names the Secretary of Defense, so this section item is internally inconsistent and misattributes a reprogramming-bypass authority to a much more junior official.",
+      "status": "fixed",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 1,
+    "minor": 0,
+    "omissions": 0
+  },
+  "resolution": "Material entity flag CONFIRMED + FIXED 2026-08-08.",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

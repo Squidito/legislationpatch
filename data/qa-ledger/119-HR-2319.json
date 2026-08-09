@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-2319",
+  "title": "Women and Lung Cancer Research and Preventive Services Act of 2025",
+  "billType": "study",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-2319.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "sections[].items[].detail",
+      "claim": "assess barriers to participation of women and underserved populations in lung cancer research; and recommend strategies to improve that participation",
+      "verdict": "UNSUPPORTED",
+      "type": "unsupported",
+      "severity": "material",
+      "sourceSpan": "absent from source. Nearest source text: (b)(2)(A) 'encourage innovative approaches to eliminate knowledge gaps in research on lung cancer in women'; (b)(3) 'opportunities regarding the development of a national lung cancer screening strategy to expand access to such screenings, particularly among women and underserved populations' — no 'participation'/'barriers' language anywhere",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Invented review element. The bill's mandated review (SEC 2) contains no reference to participation, barriers to participation, or enrollment in research/studies, and no directive to recommend strategies to improve participation. This reads like generic clinical-trial-diversity language supplied from outside the text. The same claim also appears in the top_line sub ('barriers to participation in lung cancer studies'). The bill's actual scope is research status/knowledge gaps, collaborative research, environmental/genomic etiology, imaging, a screening-access strategy, and a public-awareness campaign.",
+      "status": "fixed",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 1,
+    "minor": 0,
+    "omissions": 0
+  },
+  "resolution": "Material fabrication CONFIRMED + FIXED (replaced with real review scope) 2026-08-08.",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

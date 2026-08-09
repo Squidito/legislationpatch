@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-7006",
+  "title": "Financial Services and General Government and National Security, State, and Related Programs Appropriations Act, 2026",
+  "billType": "appropriation",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "partial",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-7006.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "top_lines[2].subs[0]",
+      "claim": "Bars U.S. contributions to the UN Relief and Works Agency (UNRWA) through March 25, 2027",
+      "verdict": "OMISSION",
+      "type": "omission",
+      "severity": "minor",
+      "sourceSpan": "funds ... may not be used for a contribution, grant, or other payment to the United Nations Relief and Works Agency ... (1) for any amounts provided in prior fiscal years or in fiscal year 2026; or (2) for amounts provided in fiscal year 2027, until March 25, 2027.",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "The 'through March 25, 2027' framing implies the entire UNRWA bar sunsets on that date. The source bars prior-year and FY2026 amounts with NO end date (indefinite); only FY2027 amounts are freed after March 25, 2027. (The Division C section detail states this correctly, so the top-line/changes.removed compression is the imprecise surface.)",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 1
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

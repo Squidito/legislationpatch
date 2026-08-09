@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-7567",
+  "title": "Farm, Food, and National Security Act of 2026",
+  "billType": "reauthorization",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "partial",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-7567.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "changes.added",
+      "claim": "SNAP staffing flexibility allowing states to hire contractors during backlogs, surges, or when error rates reach 6 percent",
+      "verdict": "UNSUPPORTED",
+      "type": "unsupported",
+      "severity": "minor",
+      "sourceSpan": "``(C) the State experiences an increase in supplemental nutrition assistance program applications.''",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "The magnitude qualifier 'surges' is not in the source; the statutory trigger is ANY increase in SNAP applications, not specifically a surge. The word narrows the trigger's actual breadth. Same qualifier recurs in sections[1].items[0].detail ('when applications surge').",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

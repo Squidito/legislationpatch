@@ -1,0 +1,23 @@
+{
+  "id": "119-S-331",
+  "title": "HALT Fentanyl Act",
+  "billType": "amendment",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "wave1-import",
+  "verifyModel": null,
+  "importedFrom": "memory:project-goldset-labeling (Wave-1)",
+  "goldStatus": null,
+  "claims": [],
+  "counts": {
+    "claims": 0,
+    "material": 0,
+    "minor": 0,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Wave-1 hostile audit 2026-08-08 (fixes applied where flagged; structured rows not retained). Coverage-marker only — NOT verified-clean; re-audit to capture full claims."
+}

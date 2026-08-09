@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-2483",
+  "title": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
+  "billType": "reauthorization",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-2483.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "summary/top_lines[].subs/sections[].items[].main",
+      "claim": "988 Suicide & Crisis Lifeline",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "minor",
+      "sourceSpan": "the 9-8-8 National Suicide Prevention Lifeline ... National Suicide Prevention Lifeline Program ... the suicide prevention hotline",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "The source consistently names it the 'National Suicide Prevention Lifeline' (and '9-8-8 National Suicide Prevention Lifeline'). 'Suicide & Crisis Lifeline' is the real-world rebrand but is an out-of-source proper noun. The '988' number itself is supported.",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 0
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}

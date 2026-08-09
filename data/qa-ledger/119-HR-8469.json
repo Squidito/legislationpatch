@@ -1,0 +1,39 @@
+{
+  "id": "119-HR-8469",
+  "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
+  "billType": "appropriation",
+  "auditVersion": null,
+  "status": "imported",
+  "depth": "imported",
+  "sourceReadDepth": "full",
+  "auditedAt": "2026-08-08",
+  "auditModel": "gold-set-import",
+  "verifyModel": null,
+  "importedFrom": "data/gold-set/119-HR-8469.json",
+  "goldStatus": "candidate",
+  "claims": [
+    {
+      "field": "top_lines[VA Medical Care].subs / sections[Veterans Health Administration].items[0].detail",
+      "claim": "$54.59B Cost of War Toxic Exposures Fund ... The Cost of War Toxic Exposures Fund is funded at $54.59B.",
+      "verdict": "OMISSION",
+      "type": "omission",
+      "severity": "minor",
+      "sourceSpan": "$54,593,000,000, to remain available until expended; and, in addition, $53,715,000,000, which shall become available on October 1, 2027, and shall remain available until September 30, 2029.",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": null,
+      "note": "Understates the fund. The bill provides $54.59B available now PLUS a separate $53.72B advance appropriation for FY2028; the analysis reports only the first tranche while elsewhere labeling comparable advance accounts. Total provision to the fund is roughly double the figure given.",
+      "status": "open",
+      "verify": null,
+      "verifyModel": null
+    }
+  ],
+  "counts": {
+    "claims": 1,
+    "material": 0,
+    "minor": 1,
+    "omissions": 1
+  },
+  "resolution": "",
+  "notes": "Imported historical record (gold-set candidate flags, NOT the v1 rubric). No receipts/bindings/SUPPORTED baseline. Upgrade to full-claims on re-audit."
+}
