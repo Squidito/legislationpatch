@@ -1087,7 +1087,7 @@ section('Version drift (stale source)');
         if (!bill.analyzed || !ADV.has(bill.stage)) continue;
         let head = '';
         try { head = fs.readFileSync(path.join(BILL_TEXT, `${bill.id}.txt`), 'utf8').slice(0, 500); } catch (e) { continue; }
-        if (!/Introduced in (House|Senate)|\((?:IH|IS)\)/.test(head)) continue; // on-disk text is a later version → OK
+        if (!/Introduced in (House|Senate)|\((?:IH|IS)\)|\b(?:HR|S|HRES|SRES|HJRES|SJRES|HCONRES|SCONRES)\s+\d+\s+(?:IH|IS)\b/.test(head)) continue; // on-disk text is a later version → OK
         const vc = bill.versionChanges || {};
         const nch = (vc.modified || []).length + (vc.removed || []).length + (vc.added || []).length;
         if (nch === 0) continue;                                                // passed unamended → Introduced text is accurate

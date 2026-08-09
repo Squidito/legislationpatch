@@ -34,7 +34,7 @@ function vcCount(b) {
   return (v.modified || []).length + (v.removed || []).length + (v.added || []).length;
 }
 function introducedOnDisk(id) {
-  try { return /Introduced in (House|Senate)|\((?:IH|IS)\)/.test(fs.readFileSync(path.join(BILL_TEXT, `${id}.txt`), 'utf8').slice(0, 500)); }
+  try { return /Introduced in (House|Senate)|\((?:IH|IS)\)|\b(?:HR|S|HRES|SRES|HJRES|SJRES|HCONRES|SCONRES)\s+\d+\s+(?:IH|IS)\b/.test(fs.readFileSync(path.join(BILL_TEXT, `${id}.txt`), 'utf8').slice(0, 500)); }
   catch (e) { return false; }
 }
 
