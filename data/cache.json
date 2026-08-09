@@ -6285,22 +6285,22 @@
       "pages": 3,
       "analyzed": true,
       "demo": false,
-      "summary": "Federal tax law normally requires casualty losses to exceed 10% of your income before you can deduct them — but Congress has repeatedly carved out exceptions for federally declared disaster areas, letting affected taxpayers deduct unreimbursed losses above $500 per incident even without itemizing. This bill applies those disaster-specific deduction rules to disasters with incident periods beginning after July 4, 2025 and before January 1, 2027, and extends the exclusion of wildfire relief payments from taxable income — for forest or range fires federally declared a disaster after 2014 — to payments received in tax years 2026 through 2030.",
+      "summary": "Federal tax law normally requires casualty losses to exceed 10% of your income before you can deduct them — but Congress has repeatedly carved out exceptions for federally declared disaster areas, letting affected taxpayers deduct unreimbursed losses above $500 per incident even without itemizing. This bill applies those disaster-specific deduction rules to disasters with incident periods beginning on or after December 28, 2019 and before January 1, 2027, and extends the exclusion of wildfire relief payments from taxable income — for forest or range fires federally declared a disaster after 2014 and before 2027 — to payments received in tax years 2026 and later.",
       "brief": "Extends the federal tax deduction for disaster property losses and the wildfire relief payment exclusion to disasters occurring before January 1, 2027.",
       "top_lines": [
         {
           "headline": "Disaster Loss Deductions",
           "subs": [
-            "Applies to disasters with incident periods beginning after July 4, 2025 and before January 1, 2027",
-            "Deductible without itemizing; exempt from the alternative minimum tax"
+            "Applies to disasters with incident periods beginning on or after December 28, 2019 and before January 1, 2027",
+            "Deductible without itemizing; disaster loss exempt from the 10% income floor"
           ],
           "billSection": "2"
         },
         {
           "headline": "Wildfire Relief Payments",
           "subs": [
-            "Relief payments for forest or range fires federally declared a disaster after 2014 excluded from gross income",
-            "Exclusion now covers payments received in tax years 2026 through 2030; prior law covered payments received in tax years 2020 through 2025"
+            "Relief payments for forest or range fires federally declared a disaster after 2014 and before 2027, excluded from gross income",
+            "Exclusion now covers payments received in tax years 2026 and later; prior law covered payments received in tax years 2020 through 2025"
           ],
           "billSection": "3",
           "source": "bill-118-hr-5863"
@@ -6315,7 +6315,7 @@
           "admin": true,
           "items": [
             {
-              "main": "Names the Act the “Federal Disaster Tax Relief Act of 2025”.",
+              "main": "Names the Act the \"Doug LaMalfa Federal Disaster Tax Relief Certainty Act\".",
               "detail": "Short-title section — citation name only; no substantive effect."
             }
           ]
@@ -6325,7 +6325,7 @@
           "items": [
             {
               "main": "Adds Section 165(h)(6) to the Internal Revenue Code of 1986, creating a special deduction category for qualified net disaster losses that bypasses the 10% adjusted gross income limitation.",
-              "detail": "A qualified net disaster loss is the excess of qualified disaster-related personal casualty losses over personal casualty gains. A qualified disaster area covers any area with a presidential major disaster declaration under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act where the incident period begins after July 4, 2025, and before January 1, 2027. Disaster losses may be deducted as part of the standard deduction under new Section 63(c)(1)(C) and are exempt from the alternative minimum tax under Section 56(b)(1)(D).",
+              "detail": "A qualified net disaster loss is the excess of qualified disaster-related personal casualty losses over personal casualty gains. A qualified disaster area covers any area with a presidential major disaster declaration under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act where the incident period begins on or after December 28, 2019, and before January 1, 2027. Individuals who do not itemize may deduct the loss through new Section 63(b)(8), the per-casualty floor is $500 for qualified disaster-related losses (versus $100 otherwise), and the amendments apply to taxable years beginning after December 31, 2024.",
               "comments": []
             }
           ]
@@ -6335,7 +6335,7 @@
           "items": [
             {
               "main": "Creates new Section 139M of the Internal Revenue Code, excluding qualified wildfire relief payments from gross income.",
-              "detail": "The exclusion applies to payments for forest or range fires federally declared a disaster after December 31, 2014, and covers payments received in taxable years after December 31, 2025 and before January 1, 2031. Under prior law, the exclusion applied only to qualifying payments received in taxable years after December 31, 2019 and before January 1, 2026.",
+              "detail": "The exclusion applies to payments for forest or range fires federally declared a disaster after December 31, 2014, and before January 1, 2027, and covers payments received in taxable years after December 31, 2025 with no stated end year. Under prior law, the exclusion applied only to qualifying payments received in taxable years after December 31, 2019 and before January 1, 2026.",
               "comments": [],
               "source": "bill-118-hr-5863"
             }
@@ -6344,9 +6344,9 @@
       ],
       "underreported": [
         {
-          "section": "Section 2 — Alternative Minimum Tax Exception",
-          "summary": "The bill explicitly exempts the disaster loss deduction from the alternative minimum tax by amending Section 56(b)(1)(D) of the Internal Revenue Code.",
-          "why_unreported": "The bill's headline is extension of the disaster deduction window. The AMT exception means taxpayers who would otherwise owe AMT — typically higher earners — retain the full value of the deduction, a consequence not apparent from the disaster relief framing."
+          "section": "Section 2(d) — Coordination With Superseded Provisions",
+          "summary": "Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 and section 70438 of Public Law 119-21 are made inapplicable to any taxable year beginning after December 31, 2024.",
+          "why_unreported": "The section is captioned as codification and extension of casualty-loss rules, but this subsection deactivates two prior-law disaster-loss provisions for tax years beginning after 2024, so the new rules replace rather than stack on the earlier ones."
         }
       ],
       "criticisms": [],
@@ -6395,14 +6395,16 @@
       "changes": {
         "added": [
           "Section 165(h)(6) of the Internal Revenue Code — qualified net disaster loss deduction bypassing the 10% AGI limitation",
-          "Section 63(c)(1)(C) — disaster loss deduction available as part of the standard deduction",
-          "Section 139M — exclusion from gross income for qualified wildfire relief payments for forest or range fires federally declared a disaster after December 31, 2014 (for payments received in taxable years 2026 through 2030)"
+          "Section 63(b)(8) — deduction for the qualified net disaster loss available to individuals who do not itemize",
+          "Section 139M — exclusion from gross income for qualified wildfire relief payments for forest or range fires federally declared a disaster after December 31, 2014 and before January 1, 2027 (for payments received in taxable years beginning after December 31, 2025)"
         ],
         "modified": [
-          "Section 56(b)(1)(D) of the Internal Revenue Code — disaster loss deduction exempted from the alternative minimum tax",
-          "Definition of qualified disaster area extended to incident periods beginning after July 4, 2025, and before January 1, 2027"
+          "Section 165(h)(1) per-casualty floor — $100 generally, $500 for qualified disaster-related personal casualty losses",
+          "Definition of qualified disaster area — incident periods beginning on or after December 28, 2019, and before January 1, 2027"
         ],
-        "removed": []
+        "removed": [
+          "Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 (division EE of Public Law 116-260) and section 70438 of Public Law 119-21 made inapplicable to taxable years beginning after December 31, 2024"
+        ]
       },
       "stageDate": "2026-04-28",
       "votes": [
@@ -6440,7 +6442,7 @@
           "fetchedAt": "2026-06-10"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -6486,8 +6488,7 @@
           "type": "Introduced in House",
           "date": "2025-09-15"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-227",
@@ -6512,14 +6513,14 @@
       "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "Ordained ministers and Christian Science practitioners can apply to permanently opt out of Social Security and Medicare taxes on their ministerial earnings — but that exemption is currently irrevocable. This bill creates a one-time window for those who previously opted out to reverse that decision and re-enter the Social Security system, with coverage beginning for taxable years starting after December 31, 2027. Once revoked, they cannot opt out again.",
+      "summary": "Ordained ministers and Christian Science practitioners can apply to permanently opt out of Social Security taxes on their ministerial earnings — but that exemption is currently irrevocable. This bill creates a one-time window for those who previously opted out to reverse that decision and re-enter the Social Security system, with coverage beginning for taxable years starting after December 31, 2028. Once revoked, they cannot opt out again.",
       "brief": "Creates a one-time window for clergy who opted out of Social Security to reverse that decision and begin accruing retirement benefits.",
       "top_lines": [
         {
           "headline": "One-Time Re-entry Window",
           "subs": [
-            "Clergy may revoke their Social Security exemption by filing through the deadline for their second taxable year beginning after December 31, 2027",
-            "Coverage begins for taxable years starting after December 31, 2027 — cannot opt out again after revoking"
+            "Clergy may revoke their Social Security exemption by filing through the deadline for their second taxable year beginning after December 31, 2028",
+            "Coverage begins for taxable years starting after December 31, 2028 — cannot opt out again after revoking"
           ],
           "billSection": "2"
         },
@@ -6533,7 +6534,7 @@
       ],
       "likelihood": 60,
       "likelihoodLabel": "Possible",
-      "likelihoodReason": "The bill has 21 cosponsors and bipartisan backing — sponsors include Fong (R-CA), Thompson (D-CA), and Kelly (R-PA). Providing clergy a window to undo a permanent decision is unlikely to draw opposition. The narrow scope and sympathetic affected population make Senate passage plausible, though floor scheduling is uncertain.",
+      "likelihoodReason": "With 21 cosponsors and Fong (R-CA) as sponsor, the bill offers clergy a window to undo a previously permanent election — a change unlikely to draw organized opposition. Its narrow scope and small affected population make Senate passage plausible, though floor scheduling is uncertain.",
       "sections": [
         {
           "label": "Section 1 — Short Title",
@@ -6550,7 +6551,7 @@
           "items": [
             {
               "main": "Notwithstanding Section 1402(e)(4) of the Internal Revenue Code (which makes the Social Security exemption irrevocable), clergy whose exemption is in effect for the taxable year of enactment may revoke it by filing an application with the IRS.",
-              "detail": "The application must be filed no later than the due date for the second taxable year beginning after December 31, 2027. Revocation takes effect for the first or second taxable year beginning after December 31, 2027, as specified by the applicant, and covers both chapter 2 of the IRC (self-employment tax) and title II of the Social Security Act (42 U.S.C. 401 et seq.). If the application is filed retroactively for a year already in effect, the applicant must pay in full all self-employment taxes that would have been owed for that year. After revoking, the applicant may not again file for an exemption under Section 1402(e)(1).",
+              "detail": "The application must be filed no later than the due date for the second taxable year beginning after December 31, 2028. Revocation takes effect for the first or second taxable year beginning after December 31, 2028, as specified by the applicant, and covers both chapter 2 of the IRC (self-employment tax) and title II of the Social Security Act (42 U.S.C. 401 et seq.). If the application is filed retroactively for a year already in effect, the applicant must pay in full all self-employment taxes that would have been owed for that year. After revoking, the applicant may not again file for an exemption under Section 1402(e)(1).",
               "comments": []
             }
           ]
@@ -6600,12 +6601,12 @@
         }
       ],
       "gaps": [
-        "The bill allows revocation effective for taxable years beginning after December 31, 2027 but does not address Social Security credits for prior years during which the exemption was in effect — those years generate no credits regardless of revocation.",
+        "The bill allows revocation effective for taxable years beginning after December 31, 2028 but does not address Social Security credits for prior years during which the exemption was in effect — those years generate no credits regardless of revocation.",
         "The 90-day outreach plan requirement specifies no minimum outreach activities, distribution channels, or funding, leaving the scope of IRS notification entirely to agency discretion."
       ],
       "changes": {
         "added": [
-          "One-time window for clergy and Christian Science practitioners to revoke their irrevocable Social Security exemption under Section 1402(e)(1) of the Internal Revenue Code, effective for taxable years beginning after December 31, 2027",
+          "One-time window for clergy and Christian Science practitioners to revoke their irrevocable Social Security exemption under Section 1402(e)(1) of the Internal Revenue Code, effective for taxable years beginning after December 31, 2028",
           "Requirement for the Commissioner of Internal Revenue to submit an outreach plan to inform eligible clergy within 90 days of enactment"
         ],
         "modified": [],
@@ -6626,7 +6627,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -6664,8 +6665,7 @@
           "type": "Introduced in House",
           "date": "2025-01-07"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-7971",
@@ -6895,21 +6895,21 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "When the IRS wants information about you from a third party like your employer or bank, current law requires it to notify you in advance — but not what specific information it's seeking. This bill requires the IRS to identify each specific item of information it intends to collect from the third party, and give you at least 45 days to provide it yourself, whenever the IRS hasn't already asked you for it and you could reasonably provide it. Two exceptions apply: the rule doesn't cover tax collection proceedings, and the Secretary can waive it when third-party contact is deemed necessary.",
-      "brief": "Requires the IRS to tell taxpayers exactly what information it plans to collect from third parties and give them 45 days to provide it first.",
+      "summary": "When the IRS seeks information about you from a third party, current law requires it to notify you before making contact — but not to spell out the specific information it’s seeking. This bill requires the IRS — when the information relates to determining your tax liability, has not been previously requested from you, and could reasonably be provided by you — to identify each specific item of information it intends to seek from the third party, and to give you at least 45 days to respond before it makes contact. One exception applies: this itemized-notice requirement does not apply if the Secretary determines the third-party information is necessary.",
+      "brief": "Requires the IRS to tell taxpayers exactly what information it plans to seek from third parties and give them at least 45 days to respond first.",
       "top_lines": [
         {
           "headline": "Specific Notice Required",
           "subs": [
-            "IRS must identify each item sought from a third party when the taxpayer hasn't been asked before and could provide it",
+            "IRS must itemize third-party info related to tax liability that the taxpayer wasn’t asked for and could provide",
             "Taxpayers get at least 45 days to respond — more if they request it with reasonable cause"
           ],
           "billSection": "2"
         },
         {
-          "headline": "Exceptions",
+          "headline": "Secretary Necessity Exception",
           "subs": [
-            "Specificity requirement waived for tax collection proceedings or when Secretary determines third-party contact is necessary regardless"
+            "Itemized-notice requirement waived if the Secretary determines the third-party information is necessary"
           ],
           "billSection": "2"
         }
@@ -6932,8 +6932,8 @@
           "label": "Section 2 — Specificity of Third-Party Contact Notices",
           "items": [
             {
-              "main": "Amends Section 7602(c)(1) of the Internal Revenue Code of 1986 to require the IRS to identify each specific item of information it intends to seek from a third party when that information has not been previously requested from the taxpayer and could reasonably be provided by the taxpayer.",
-              "detail": "The advance notice must provide the taxpayer with a period of not less than 45 days — or more if the taxpayer requests additional time and shows reasonable cause — to respond, including by providing the information themselves, before the IRS contacts the third party. The exception in Section 7602(c)(3)(B) provides that the specificity and waiting period requirements do not apply if the information is sought for collection of a tax liability, or if the Secretary determines the third-party information is necessary regardless of whether the taxpayer could provide it. Effective date: 12 months after enactment.",
+              "main": "Amends Section 7602(c)(1) of the Internal Revenue Code of 1986 to require the IRS to identify each specific item of information it intends to seek from a third party when that information is related to determining tax liability, has not been previously requested from the taxpayer, and could reasonably be provided by the taxpayer.",
+              "detail": "Under the amended subparagraph (C), the IRS must — except as otherwise provided by the Secretary — provide the taxpayer with reasonable opportunity and a period of not less than 45 days (or more, if the taxpayer requests additional time and shows reasonable cause) to respond before contact is made with the third party. A new exception at Section 7602(c)(3)(B) provides that the itemized-notice requirement (subparagraph (B) of paragraph (1)) does not apply to information sought from a person other than the taxpayer if the Secretary determines that such information is necessary. The amendments apply to notices provided under section 7602(c) after the date that is 12 months after enactment.",
               "comments": []
             }
           ]
@@ -6941,9 +6941,9 @@
       ],
       "underreported": [
         {
-          "section": "Section 7602(c)(3)(B) — Secretary's Necessity Exception",
-          "summary": "The bill's specificity and 45-day notice requirements do not apply whenever the Secretary determines that the third-party information is necessary, without any standard for what constitutes necessity or any procedural check on that determination.",
-          "why_unreported": "The bill is framed as expanding taxpayer notification rights. The necessity exception allows the IRS to bypass both the itemized notice and the 45-day waiting period entirely based on the Secretary's own judgment, with no defined standard, independent review, or notification to the taxpayer that the exception has been invoked."
+          "section": "Section 7602(c)(3)(B) — Secretary’s Necessity Exception",
+          "summary": "The bill’s itemized-notice requirement does not apply whenever the Secretary determines that the third-party information is necessary, with no standard stated for what makes information necessary and no procedural check on that determination.",
+          "why_unreported": "The bill is framed as expanding taxpayer notification rights, but the necessity exception lets the IRS skip the itemized-notice requirement based on the Secretary’s determination that the information is necessary, with no defined standard, independent review, or notice to the taxpayer that the exception was invoked."
         }
       ],
       "criticisms": [],
@@ -6964,10 +6964,12 @@
       ],
       "changes": {
         "added": [
-          "Section 7602(c)(1)(B) of the Internal Revenue Code — requirement for IRS to identify each specific item of information sought from a third party when not previously requested from the taxpayer",
-          "Section 7602(c)(1)(C) amendment — 45-day minimum response period before third-party contact, with extensions available on reasonable cause"
+          "Section 7602(c)(1)(B) of the Internal Revenue Code — requirement that the IRS identify each specific item of information sought from a third party when that information is related to determining tax liability, has not been previously requested from the taxpayer, and could reasonably be provided by the taxpayer",
+          "Section 7602(c)(3)(B) — exception providing that the new itemized-notice requirement does not apply to information sought from a person other than the taxpayer if the Secretary determines that such information is necessary"
         ],
-        "modified": [],
+        "modified": [
+          "Redesignated subparagraph (C) of section 7602(c)(1) amended to require, except as otherwise provided by the Secretary, a period of not less than 45 days (or more, if the taxpayer requests additional time and shows reasonable cause) to respond before third-party contact"
+        ],
         "removed": []
       },
       "stageDate": "2026-04-28",
@@ -6995,7 +6997,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -7037,8 +7039,7 @@
           "type": "Introduced in House",
           "date": "2025-12-05"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-6431",
@@ -7082,6 +7083,13 @@
           ],
           "billSection": "2",
           "source": "usc-26-3306"
+        },
+        {
+          "headline": "Federal Guidance to States",
+          "subs": [
+            "Labor Department must issue a model activity list and verification best practices"
+          ],
+          "billSection": "2"
         }
       ],
       "likelihood": 45,
@@ -7109,7 +7117,7 @@
             },
             {
               "main": "Raises the state SEA program participation cap from 5% to 10% of individuals receiving regular unemployment compensation.",
-              "detail": "The change to Section 3306(t)(4) doubles the maximum share of unemployment benefit recipients a state may enroll in its SEA program. Changes take effect 2 years after enactment; states may amend their laws before then. The Secretary of Labor must adopt implementing regulations through public notice and comment, subject to OMB approval.",
+              "detail": "The change to Section 3306(t)(4) doubles the maximum share of unemployment benefit recipients a state may enroll in its SEA program. Changes take effect 2 years after enactment; states may amend their laws before then. The Secretary of Labor must adopt implementing regulations through public notice and comment, subject to OMB approval. The Secretary of Labor must also provide guidance to state workforce agencies, including a model list of qualifying self-employment assistance activities and best practices for verifying their completion.",
               "comments": [],
               "source": "usc-26-3306"
             }
@@ -7132,7 +7140,8 @@
       "changes": {
         "added": [
           "Business plan and market feasibility study as an alternative qualifying pathway for SEA program activities under Section 3306(t)(3)",
-          "Weekly self-certification requirement for SEA program participants"
+          "Weekly self-certification requirement for SEA program participants",
+          "Secretary of Labor guidance to state workforce agencies — a model list of qualifying self-employment assistance activities and best practices for verifying completion (Section 2(g))"
         ],
         "modified": [
           "Section 3306(t)(3) of the Internal Revenue Code — eliminated the requirement that participants be identified as likely to exhaust regular unemployment compensation benefits",
@@ -7178,7 +7187,7 @@
           "fetchedAt": "2026-06-10"
         }
       ],
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -7216,8 +7225,7 @@
           "type": "Introduced in House",
           "date": "2025-12-04"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-5334",
@@ -7420,16 +7428,16 @@
       "sponsor": "Rep. Schneider, Bradley Scott (D-IL)",
       "sponsor_bioguide": "S001190",
       "cosponsors": 1,
-      "pages": 1,
+      "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "When taxpayers prepare their returns electronically but print and mail them, the IRS currently re-enters all that data by hand. This bill requires those returns to include a scannable barcode so the IRS can convert them to electronic format automatically. For returns prepared entirely by hand and for paper correspondence, the IRS must use optical character recognition software. The technology requirement can be waived if the IRS finds it slower or less reliable than manual processing — but any waiver must be reported to Congress within 30 days.",
-      "brief": "Mandates barcodes on electronically-prepared paper returns and OCR scanning for handwritten returns and correspondence, with a performance-based waiver.",
+      "summary": "When taxpayers prepare their returns electronically but print and mail them, the IRS has to transcribe that data by hand to get it into electronic format. This bill requires those returns to be formatted so they are compatible with the IRS's scanning technology, and requires the IRS to use scanning technology to convert them automatically. For returns prepared entirely by hand and for paper correspondence, the IRS must use optical character recognition technology. The requirement can be waived if the Secretary of the Treasury determines it is slower or less reliable than manual processing — but any waiver must be reported to Congress within 30 days.",
+      "brief": "Requires electronically-prepared paper tax returns to be formatted for the IRS's scanning technology, and mandates optical character recognition for handwritten returns and paper correspondence, with a performance-based waiver.",
       "top_lines": [
         {
-          "headline": "Barcode Mandate",
+          "headline": "Scanning of E-Prepared Paper Returns",
           "subs": [
-            "Electronically-prepared paper returns must include a scannable barcode — IRS must scan rather than manually re-enter the data",
+            "E-prepared paper returns must be formatted for the IRS's scanning technology",
             "Applies to individual income tax returns 180 days after enactment"
           ],
           "billSection": "2"
@@ -7437,8 +7445,8 @@
         {
           "headline": "OCR for Everything Else",
           "subs": [
-            "Hand-prepared returns and all paper IRS correspondence must be transcribed using optical character recognition",
-            "Estate and gift returns: 24 months; all other returns and correspondence: 12 months after enactment"
+            "Hand-prepared returns and paper IRS correspondence transcribed via optical character recognition",
+            "Estate and gift returns: 24 months; all other returns and correspondence: 18 months after enactment"
           ],
           "billSection": "2"
         },
@@ -7468,8 +7476,8 @@
           "label": "Section 2 — Scanning and Digitization of Tax Returns and Correspondence",
           "items": [
             {
-              "main": "Requires that any federal tax return prepared electronically and filed on paper must include a scannable code, and that the IRS must use barcode scanning technology to convert such returns to electronic format.",
-              "detail": "If the barcode data cannot be accurately converted, the IRS must use optical character recognition or functionally similar technology. For paper returns not prepared electronically and all paper correspondence (except correspondence originally received electronically), the IRS must use OCR technology to transcribe the document. Effective dates: individual income tax returns within 180 days; all other returns and correspondence within 12 months; estate and gift tax returns within 24 months of enactment.",
+              "main": "Requires that any federal tax return prepared electronically and filed on paper be formatted in a manner compatible with the IRS's scanning technology, and that the IRS use that scanning technology to convert such returns to electronic format.",
+              "detail": "If the data included in such a return cannot be accurately converted, the IRS must use optical character recognition or functionally similar technology. For paper returns not prepared electronically and all paper correspondence (except correspondence originally received electronically), the IRS must use OCR technology to transcribe the document. Effective dates key off January 1 of the first calendar year beginning more than a set period after enactment: 180 days for individual income tax returns, 18 months for all other returns and correspondence, and 24 months for estate and gift tax returns.",
               "comments": []
             },
             {
@@ -7483,8 +7491,8 @@
       "underreported": [
         {
           "section": "Section 2(c) — Self-Assessed Performance Waiver",
-          "summary": "The IRS determines whether its own technology is slower or less reliable than manual processing. If it makes that finding, it may waive the barcode and OCR requirements with no congressional approval required — only a 30-day report.",
-          "why_unreported": "The bill's mandate reads as a firm requirement. The waiver mechanism allows the IRS to indefinitely delay compliance through its own performance assessment, with a notification-only check. No minimum performance threshold, time limit on the waiver, or independent evaluation is specified."
+          "summary": "The IRS determines whether its own technology is slower or less reliable than manual processing. If it makes that finding, it may waive the scanning and OCR requirements with no congressional approval required — only a 30-day report.",
+          "why_unreported": "The bill's mandate reads as a firm requirement. The waiver mechanism allows the IRS to delay compliance through its own performance assessment, with a notification-only check. No minimum performance threshold, time limit on the waiver, or independent evaluation is specified."
         }
       ],
       "criticisms": [],
@@ -7501,12 +7509,12 @@
       ],
       "gaps": [
         "The bill requires OCR for paper correspondence but does not address accuracy standards for the OCR process or what happens when digitized data contains errors that affect tax calculations or processing.",
-        "The bill does not specify what recourse taxpayers have if their paper-filed barcode return is misread or if the OCR transcription of their correspondence contains errors that affect their tax account."
+        "The bill does not specify what recourse taxpayers have if their paper-filed return is misread by the scanning technology or if the OCR transcription of their correspondence contains errors that affect their tax account."
       ],
       "changes": {
         "added": [
-          "Requirement for scannable barcodes on electronically-prepared federal tax returns filed in paper format",
-          "Requirement for IRS to use barcode scanning technology to convert electronically-prepared paper returns to electronic format",
+          "Requirement that electronically-prepared federal tax returns filed on paper be formatted for compatibility with the IRS's scanning technology",
+          "Requirement for the IRS to use scanning technology to convert electronically-prepared paper returns to electronic format",
           "Requirement for IRS to use optical character recognition technology for hand-prepared paper returns and paper correspondence",
           "Performance-based waiver with 30-day congressional reporting requirement"
         ],
@@ -7538,7 +7546,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -7578,8 +7586,7 @@
           "type": "Introduced in House",
           "date": "2026-01-07"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-8364",
@@ -7722,22 +7729,23 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "When customs agents suspect imported goods are counterfeit or pirated, they can already ask brand owners to help identify violations — but only certain information can be shared. This bill expands that program to let CBP share nonpublic data generated by online marketplaces, freight forwarders, and shipping operators with brand owners and any other party the Commissioner determines has an interest in the merchandise. It also broadens the physical evidence that can be shared to include packing materials and shipping containers.",
+      "summary": "When customs agents suspect imported goods are counterfeit or pirated, they can already ask brand owners to help identify violations — but only certain information can be shared. This bill expands that program to let CBP share nonpublic data generated by online marketplaces, freight forwarders, and express consignment operators with brand owners and any other party the Commissioner determines has an interest in the merchandise. It also broadens the physical evidence that can be shared to include packing materials and containers, and requires CBP to notify the recipient of any nonpublic information it transmits.",
       "brief": "Expands what counterfeit-goods intelligence CBP can share with brand owners — adding marketplace and freight data, packing materials, and a broader circle of eligible recipients.",
       "top_lines": [
         {
           "headline": "Counterfeit Goods Detection",
           "subs": [
             "CBP can now share nonpublic data from online marketplaces, freight forwarders, and express consignment operators with brand owners",
-            "Packing materials and shipping containers added to physical evidence that can be shared"
+            "Packing materials and containers added to physical evidence that can be shared",
+            "CBP must notify the recipient of nonpublic information it transmits"
           ],
           "billSection": "1"
         },
         {
           "headline": "Broader Access",
           "subs": [
-            "Any party with an interest in the merchandise may receive the shared information — not just trademark or copyright owners",
-            "Sharing threshold raised from \"suspects\" to \"has a reasonable suspicion\" of a violation"
+            "Adds \"any other party with an interest in the merchandise\" as an eligible recipient, at the Commissioner's discretion",
+            "Standard for sharing changed from \"suspects\" to \"has a reasonable suspicion\""
           ],
           "billSection": "1"
         }
@@ -7751,12 +7759,12 @@
           "items": [
             {
               "main": "Amends Section 628A(a) of the Tariff Act of 1930 (19 U.S.C. 1628a) to authorize CBP to share nonpublic information generated by online marketplaces, express consignment operators, freight forwarders, and other importation-chain entities with parties requesting assistance in identifying IP violations.",
-              "detail": "CBP may provide a requesting party with nonpublic information about suspected infringing merchandise that was generated by an online marketplace or similar platform, express consignment operator, freight forwarder, or any other entity involved in the sale, importation, or facilitation of the merchandise into the United States, provided that information was provided to, shared with, or obtained by CBP. The scope of shareable physical evidence expands to include packing materials and shipping containers, in addition to the merchandise and its packaging. The threshold for initiating the sharing is raised from \"suspects\" to \"has a reasonable suspicion\" that merchandise is being imported in violation of trademark or copyright law.",
+              "detail": "CBP may provide a requesting party with nonpublic information about suspected infringing merchandise that was generated by an online marketplace or similar platform, express consignment operator, freight forwarder, or any other entity involved in the sale, importation, or facilitation of the merchandise into the United States, provided that information was provided to, shared with, or obtained by CBP. In the case of such a provision, CBP must notify the person of the information transmitted, in accordance with regulations the Secretary may prescribe. The scope of shareable physical evidence expands to include packing materials and containers, in addition to the merchandise and its packaging. The standard for initiating the sharing is changed from \"suspects\" to \"has a reasonable suspicion.\"",
               "comments": []
             },
             {
               "main": "Expands the class of parties eligible to receive CBP information to any party with an interest in the merchandise, as determined appropriate by the Commissioner.",
-              "detail": "Current law limits the program to trademark or copyright owners requesting assistance to determine whether merchandise violates their rights. The bill adds a new paragraph (5) to Section 628A(b) allowing the Commissioner to extend access to any other party with an interest in the merchandise. No statutory definition of \"interest\" or limit on the Commissioner's discretion to determine eligibility is provided.",
+              "detail": "The bill adds a new paragraph (5) to Section 628A(b) — which lists the parties eligible to receive shared information — allowing the Commissioner to extend access to any other party with an interest in the merchandise. No statutory definition of \"interest\" or limit on the Commissioner's discretion to determine eligibility is provided.",
               "comments": []
             }
           ]
@@ -7766,7 +7774,7 @@
         {
           "section": "Section 1(2)(C) — Open-Ended Recipient Class",
           "summary": "The bill extends information sharing to \"any other party with an interest in the merchandise, as determined appropriate by the Commissioner.\" No statutory definition of \"interest\" is provided, and the Commissioner's authority to determine who qualifies is unconstrained by the bill.",
-          "why_unreported": "The bill's headline purpose is expanding anti-counterfeiting tools for brand owners. The open-ended recipient provision in paragraph (5) goes beyond brand owners and trademark holders to any party the Commissioner deems interested — a category that could include competitors of the importer, brokers, or other commercial parties not directly harmed by the alleged violation."
+          "why_unreported": "The bill's stated purpose is expanding information sharing about suspected intellectual property rights violations. The open-ended recipient provision in paragraph (5) extends sharing to any party the Commissioner deems interested — a category that could include competitors of the importer, brokers, or other commercial parties not directly harmed by the alleged violation."
         }
       ],
       "criticisms": [],
@@ -7778,11 +7786,12 @@
       "changes": {
         "added": [
           "Section 628A(a)(3) of the Tariff Act of 1930 — CBP authority to share nonpublic information generated by online marketplaces, express consignment operators, freight forwarders, and other importation-chain entities with parties assisting in IP violation determinations",
+          "Section 628A(a)(4) — CBP must notify the person of nonpublic information transmitted under paragraph (3), in accordance with regulations the Secretary may prescribe",
           "Section 628A(b)(5) — Commissioner authority to share information with any other party with an interest in the merchandise"
         ],
         "modified": [
-          "Section 628A(a) of the Tariff Act of 1930 (19 U.S.C. 1628a) — sharing threshold changed from \"suspects\" to \"has a reasonable suspicion\" of a trademark or copyright violation",
-          "Section 628A(a)(1) — physical evidence shareable with requesting parties expanded to include packing materials and shipping containers"
+          "Section 628A(a) of the Tariff Act of 1930 (19 U.S.C. 1628a) — sharing threshold changed from \"suspects\" to \"has a reasonable suspicion\" of an intellectual property rights violation",
+          "Section 628A(a)(1) — physical evidence shareable with requesting parties expanded to include packing materials and containers"
         ],
         "removed": []
       },
@@ -7811,7 +7820,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -7852,8 +7861,7 @@
           "type": "Introduced in House",
           "date": "2025-08-08"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HR-7959",
@@ -7875,24 +7883,24 @@
       "sponsor": "Rep. Kelly, Mike (R-PA)",
       "sponsor_bioguide": "K000376",
       "cosponsors": 5,
-      "pages": 2,
+      "pages": 3,
       "analyzed": true,
       "demo": false,
-      "summary": "The IRS Whistleblower Program pays people who report tax fraud — but when the IRS shortchanges their award, whistleblowers currently face a stacked deck in Tax Court: judges can only overrule the IRS if it acted unreasonably. This bill replaces that with full de novo review where courts examine the evidence fresh. It also lets whistleblowers stay anonymous in court, adds interest to awards when the IRS delays notifying them, requires the IRS to publish the top 10 tax avoidance schemes reported by whistleblowers each year, and extends the attorney fee tax deduction to all whistleblower awards.",
-      "brief": "Strengthens IRS whistleblower protections: de novo court review of awards, Tax Court anonymity, interest on delayed payments, and expanded attorney fee deductions.",
+      "summary": "The IRS Whistleblower Program pays awards to whistleblowers, tied to the proceeds the IRS collects in the matters they report. This bill makes five changes to that program: the Tax Court must review IRS award determinations de novo, based on the administrative record established at the time of the original determination plus any newly discovered or previously unavailable evidence; whistleblowers may elect to proceed anonymously before the Tax Court unless the court finds a societal interest in disclosure that exceeds the potential harm to the whistleblower; awards accrue interest when the IRS does not provide a preliminary award recommendation notice before a set date; the IRS whistleblower report must include a list of up to 10 top tax avoidance schemes disclosed by whistleblowers; and the attorney's-fee deduction is broadened from section 7623(b) awards to all section 7623 awards.",
+      "brief": "Makes five changes to the IRS whistleblower award program: de novo Tax Court review of award determinations, an anonymity election before the Tax Court, interest on awards when the IRS delays the preliminary award recommendation notice, an expanded whistleblower report, and a broader attorney's-fee deduction.",
       "top_lines": [
         {
           "headline": "De Novo Court Review",
           "subs": [
-            "Tax Court must now review IRS whistleblower award decisions from scratch — not just for unreasonableness",
-            "Applies to petitions already pending on the date of enactment"
+            "Tax Court must now review IRS whistleblower award decisions de novo (from scratch)",
+            "Applies to petitions pending on or filed after enactment"
           ],
           "billSection": "2"
         },
         {
           "headline": "Anonymity and Delays",
           "subs": [
-            "Whistleblowers may proceed anonymously in Tax Court unless public interest outweighs harm to them",
+            "Whistleblowers may elect anonymity in Tax Court, subject to a societal-interest exception",
             "Interest accrues on awards when IRS misses its preliminary recommendation deadline"
           ],
           "billSection": "3"
@@ -7900,22 +7908,22 @@
         {
           "headline": "Fees and Reporting",
           "subs": [
-            "Attorney fee deduction extended to discretionary awards — currently limited to mandatory awards only",
-            "IRS annual report must list up to 10 top tax avoidance schemes disclosed by whistleblowers"
+            "Attorney fee deduction broadened from one whistleblower award category to all of them",
+            "IRS report must list up to 10 top tax avoidance schemes disclosed by whistleblowers"
           ],
           "billSection": "4"
         }
       ],
       "likelihood": 45,
       "likelihoodLabel": "Unlikely",
-      "likelihoodReason": "The bill has bipartisan sponsorship (Kelly R-PA and Thompson D-CA) and 5 cosponsors. Whistleblower protections have broad appeal, but the shift to de novo review is a significant reduction in IRS deference that the Treasury Department is likely to resist in the Senate. The combination of five substantive changes creates multiple points of potential objection.",
+      "likelihoodReason": "Sponsored by Rep. Kelly (R-PA) with 5 cosponsors. The de novo review requirement in Section 2 is the provision most likely to draw Treasury and IRS opposition, and the five separate substantive changes each add a distinct point of potential objection.",
       "sections": [
         {
           "label": "Section 1 — Short Title; Etc.",
           "admin": true,
           "items": [
             {
-              "main": "Names the Act the “IRS Whistleblower Program Improvement Act,” provides that amendments refer to the Internal Revenue Code of 1986, defines “Secretary” as the Secretary of the Treasury or delegate, and sets out the table of contents.",
+              "main": "Names the Act the \"IRS Whistleblower Program Improvement Act,\" provides that amendments refer to the Internal Revenue Code of 1986, defines \"Secretary\" as the Secretary of the Treasury or delegate, and sets out the table of contents.",
               "detail": "Short-title / definitions / table-of-contents section — citation name, code-reference convention, and navigational list; no substantive effect."
             }
           ]
@@ -7924,8 +7932,8 @@
           "label": "Section 2 — De Novo Review of Award Determinations",
           "items": [
             {
-              "main": "Amends Section 7623(b)(4) of the Internal Revenue Code of 1986 to require the Tax Court to review IRS whistleblower award determinations de novo rather than under the current abuse of discretion standard.",
-              "detail": "Under current law, Tax Court review uses an abuse of discretion standard — the court only overturns the IRS if its determination was unreasonable, giving the agency substantial deference. The amendment requires de novo review based on the administrative record established at the time of the original determination, plus any newly discovered or previously unavailable evidence. The provision heading is changed from \"Appeal\" to \"Review.\" Applies to petitions pending on or filed after enactment.",
+              "main": "Amends section 7623(b)(4) of the Internal Revenue Code of 1986 to require the Tax Court to review IRS whistleblower award determinations de novo.",
+              "detail": "The amendment requires the Tax Court's review to be de novo, based on the administrative record established at the time of the original determination plus any additional newly discovered or previously unavailable evidence. It also strikes \"appealed to\" and inserts \"reviewed by,\" and changes the paragraph (4) heading from \"Appeal\" to \"Review.\" Applies to petitions under section 7623(b)(4) that are pending on or filed after enactment.",
               "comments": []
             }
           ]
@@ -7934,8 +7942,8 @@
           "label": "Section 3 — Whistleblower Anonymity Before the Tax Court",
           "items": [
             {
-              "main": "Adds Section 7623(b)(6)(D) allowing whistleblowers to proceed anonymously in all Tax Court proceedings under the whistleblower program.",
-              "detail": "Tax Court proceedings are generally public under sections 7458 and 7461 of the Internal Revenue Code. This section overrides those provisions for whistleblower cases unless the Tax Court finds that a societal interest in disclosing the whistleblower's identity exceeds the potential harm disclosure could cause to the whistleblower. No definition of \"societal interest\" is provided. Applies to petitions pending on or filed after enactment.",
+              "main": "Adds section 7623(b)(6)(D) allowing a whistleblower to elect to proceed anonymously in all Tax Court proceedings under the whistleblower award section.",
+              "detail": "Notwithstanding sections 7458 and 7461, a whistleblower may elect to proceed anonymously before the Tax Court unless the Tax Court finds that a societal interest in disclosing the whistleblower's identity exceeds the potential harm disclosure could cause to the whistleblower. The bill does not define \"societal interest.\" Applies to petitions under section 7623(b)(4) that are pending on or filed after enactment.",
               "comments": []
             }
           ]
@@ -7944,7 +7952,7 @@
           "label": "Section 4 — Modification of IRS Whistleblower Report",
           "items": [
             {
-              "main": "Amends Section 406(c) of division A of the Tax Relief and Health Care Act of 2006 to require the IRS annual whistleblower report to include a list and descriptions of the top tax avoidance schemes, not to exceed 10, disclosed by whistleblowers during the year.",
+              "main": "Amends Section 406(c) of division A of the Tax Relief and Health Care Act of 2006 to require the IRS whistleblower report to include a list and descriptions of the top tax avoidance schemes, not to exceed 10, disclosed by whistleblowers during the year.",
               "detail": "Applies to reports for fiscal years ending after the enactment of this Act."
             }
           ]
@@ -7962,7 +7970,7 @@
           "label": "Section 6 — Correction Regarding Deductions for Attorney's Fees",
           "items": [
             {
-              "main": "Amends Section 62(a)(21)(A)(i) by striking “7623(b)” and inserting “7623,” extending the above-the-line attorney's-fee deduction to discretionary whistleblower awards (not just mandatory-program awards).",
+              "main": "Amends section 62(a)(21)(A)(i) by striking \"7623(b)\" and inserting \"7623,\" extending the attorney's-fee deduction from awards under section 7623(b) to awards under the whole of section 7623.",
               "detail": "Applies to taxable years ending after the enactment of this Act."
             }
           ]
@@ -7971,25 +7979,26 @@
       "underreported": [
         {
           "section": "Section 3 — \"Societal Interest\" Anonymity Exception",
-          "summary": "Whistleblowers may proceed anonymously unless the Tax Court finds that a \"societal interest\" in disclosure outweighs potential harm to the whistleblower. The bill does not define \"societal interest.\"",
-          "why_unreported": "The anonymity protection is presented as the default rule. The exception that overrides it — a judicial finding of \"societal interest\" — uses a term with no statutory definition, leaving the strength of the protection entirely to Tax Court discretion on a case-by-case basis. The operative limit on the anonymity guarantee is therefore undefined."
+          "summary": "A whistleblower may elect to proceed anonymously before the Tax Court unless the Tax Court finds that a \"societal interest\" in disclosure exceeds the potential harm to the whistleblower. The bill does not define \"societal interest.\"",
+          "why_unreported": "The anonymity election is the headline of Section 3, but the exception that overrides it — a Tax Court finding of \"societal interest\" — uses a term the bill leaves undefined, so the operative limit on the anonymity election is set by Tax Court discretion case by case."
         }
       ],
       "criticisms": [],
       "gaps": [
-        "The bill changes Tax Court review to de novo but does not set a deadline for Tax Court proceedings after a whistleblower petition is filed, which has historically been a significant source of delay in award resolution.",
-        "The bill extends the attorney fee deduction to discretionary awards but does not address the treatment of fees in cases where a whistleblower prevails in Tax Court review but the underlying award amount is subsequently reduced."
+        "The bill requires de novo Tax Court review of whistleblower awards but does not set any deadline for the Tax Court to decide a whistleblower petition.",
+        "The bill adds interest when the IRS does not provide a preliminary award recommendation notice before the applicable date, but does not set an affirmative deadline by which the IRS must provide that notice.",
+        "The bill broadens the attorney's-fee deduction and changes award review to de novo, but does not address how the deduction is treated when a Tax Court review changes the award amount."
       ],
       "featured_quotes": [],
       "changes": {
         "added": [
-          "Section 7623(b)(6)(D) of the Internal Revenue Code — whistleblower anonymity in Tax Court proceedings absent a finding of overriding societal interest",
-          "Section 7623(b)(7) — interest on mandatory whistleblower awards when IRS fails to provide timely preliminary award recommendation notice",
-          "Requirement for IRS annual whistleblower report to include descriptions of up to 10 top tax avoidance schemes disclosed by whistleblowers"
+          "Section 7623(b)(6)(D) of the Internal Revenue Code — a whistleblower may elect to proceed anonymously in Tax Court proceedings under the whistleblower award section, absent a Tax Court finding of an overriding societal interest in disclosure",
+          "Section 7623(b)(7) — interest (at the section 6621(a) overpayment rate) on a whistleblower award when the Secretary does not provide a preliminary award recommendation notice before the applicable date",
+          "Requirement for the IRS whistleblower report to include a list and descriptions of up to 10 top tax avoidance schemes disclosed by whistleblowers"
         ],
         "modified": [
-          "Section 7623(b)(4) of the Internal Revenue Code — Tax Court review of whistleblower award determinations changed from abuse of discretion to de novo, based on the administrative record plus newly discovered evidence",
-          "Section 62(a)(21) above-the-line attorney fee deduction extended from mandatory whistleblower awards to include discretionary whistleblower awards"
+          "Section 7623(b)(4) — Tax Court review of whistleblower award determinations is de novo, based on the administrative record established at the time of the original determination plus newly discovered or previously unavailable evidence; \"appealed to\" becomes \"reviewed by\" and the paragraph heading \"Appeal\" becomes \"Review\"",
+          "Section 62(a)(21)(A)(i) attorney's-fee deduction cross-reference changed from \"7623(b)\" to \"7623,\" broadening the deduction from section 7623(b) awards to all section 7623 awards"
         ],
         "removed": []
       },
@@ -8008,7 +8017,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -8047,8 +8056,7 @@
           "type": "Introduced in House",
           "date": "2026-03-17"
         }
-      },
-      "needsReanalysis": true
+      }
     },
     {
       "id": "119-HJRES-140",

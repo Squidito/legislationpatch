@@ -11539,5 +11539,291 @@
         }
       ]
     }
+  },
+  {
+    "billId": "119-HR-6495",
+    "title": "Taxpayer Notification and Privacy Act",
+    "type": "HR",
+    "number": "6495",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "S001214",
+      "district": 17,
+      "firstName": "W.",
+      "fullName": "Rep. Steube, W. Gregory [R-FL-17]",
+      "isByRequest": "N",
+      "lastName": "Steube",
+      "middleName": "Gregory",
+      "party": "R",
+      "state": "FL",
+      "url": "https://api.congress.gov/v3/member/S001214?format=json"
+    },
+    "cosponsors": 1,
+    "introducedDate": "2025-12-05",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 6495 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 6495 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to provide for specific taxpayer notice when information is sought from third parties. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Taxpayer Notification and Privacy Act''. SEC. 2. SPECIFICITY OF THIRD-PARTY CONTACT NOTICES. (a) In General.--Paragraph (1) of section 7602(c) of the Internal Revenue Code of 1986 is amended-- (1) by striking ``and'' at the end of subparagraph (A), (2) by redesignating subparagraph (B) as subparagraph (C), (3) by inserting after subparagraph (A) the following new subparagraph: ``(B) in any case in which the information sought to be obtained from such other persons is related to determining tax liability, has not been previously requested from the taxpayer, and could reasonably be provided by the taxpayer, identifies each specific item of information intended to be sought from such persons, and'', and (4) by amending subparagraph (C), as redesignated by paragraph (2), to read as follows: ``(C) except as otherwise provided by the Secretary, provides the taxpayer with reasonable opportunity and a period of not less than 45 days (or more, if the taxpayer requests additional time and shows reasonable cause) to respond before contact is made with such other persons.''. (b) Exception.--Section 7602(c)(3) of the Internal Revenue Code of 1986 is amended-- (1) by redesignating subparagraphs (A), (B), and (C) as clauses (i), (ii), and (iii), respectively, and by moving such clauses 2 ems to the right, (2) by striking ``Exceptions.--This subsection'' and inserting ``Exceptions.-- ``(A) In general.--This subsection'', and (3) by adding at the end the following new subparagraph: ``(B) Exception for information specificity.-- Subparagraph (B) of paragraph (1) shall not apply to information sought from a person other than the taxpayer if the Secretary determines that such information is necessary.''. (c) Effective Date.--The amendments made by this section shall apply to notices provided under section 7602(c) of the Internal Revenue Code of 1986 after the date that is 12 months after the date of the enactment of this Act. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 6495 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to provide for specific taxpayer notice when information is sought from third parties.",
+    "divisions": null,
+    "crsSummary": "Taxpayer Notification and Privacy Act This bill expands the Internal Revenue Service (IRS) notice requirements for contacting a third party (e.g., employer or bank) for information related to a taxpayer’s federal tax liability and the rights of the taxpayer in such situation. (Conditions and exceptions apply.) Currently, the IRS must notify a taxpayer at least 45 days in advance of a time period during which the IRS intends to contact a third party for information related to the taxpayer’s tax liability but is not required to specify what information is being sought. The bill requires the IRS to specify in a notice to a taxpayer each item of information sought from a third party when (1) the IRS has not previously requested such information from the taxpayer, and (2) the taxpayer can reasonably provide such information. This requirement does not apply if the IRS determines such third-party information is necessary. Further, under the bill, a taxpayer is allowed no less than 45 days (or more if requested by the taxpayer and deemed reasonable) to respond before the IRS contacts such third party.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "act",
+          "citation": "Taxpayer Notification and Privacy Act",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-HR-5366",
+    "title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+    "type": "HR",
+    "number": "5366",
+    "congress": 119,
+    "stage": "senate",
+    "stageLabel": "Passed Senate",
+    "latestAction": "Passed Senate without amendment by Unanimous Consent.",
+    "actionDate": "2026-08-07",
+    "sponsor": {
+      "bioguideId": "S001214",
+      "district": 17,
+      "firstName": "W.",
+      "fullName": "Rep. Steube, W. Gregory [R-FL-17]",
+      "isByRequest": "N",
+      "lastName": "Steube",
+      "middleName": "Gregory",
+      "party": "R",
+      "state": "FL",
+      "url": "https://api.congress.gov/v3/member/S001214?format=json"
+    },
+    "cosponsors": 14,
+    "introducedDate": "2025-09-15",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 5366 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 5366 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to codify and extend the rules for personal casualty losses arising from major disasters and the rules for the exclusion from gross income of compensation for losses or damages resulting from certain wildfires. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Doug LaMalfa Federal Disaster Tax Relief Certainty Act''. SEC. 2. CODIFICATION AND EXTENSION OF RULES FOR CASUALTY LOSSES ARISING FROM MAJOR DISASTERS. (a) In General.--Section 165(h) of the Internal Revenue Code of 1986 is amended by adding at the end the following new paragraph: ``(6) Special rule for qualified net disaster losses.-- ``(A) In general.--If an individual has a qualified net disaster loss for any taxable year, the amount determined under paragraph (2)(A)(ii) shall be the sum of-- ``(i) such qualified net disaster loss, and ``(ii) so much of the excess referred to in the matter preceding clause (i) of paragraph (2)(A) (reduced by the amount in clause (i) of this subparagraph) as exceeds 10 percent of the adjusted gross income of the individual. ``(B) Qualified net disaster loss.--For purposes of subparagraph (A), the term `qualified net disaster loss' means the excess (if any) of-- ``(i) qualified disaster-related personal casualty losses, over ``(ii) personal casualty gains reduced by the portion of such gains taken into account under paragraph (5)(B)(i). ``(C) Qualified disaster-related personal casualty losses.--For purposes of this paragraph-- ``(i) In general.--The term `qualified disaster-related personal casualty losses' means losses described in subsection (c)(3) (determined after application of paragraph (1)) which arise in a qualified disaster area on or after the first day of the incident period of the qualified disaster to which such area relates, and which are attributable to such disaster. ``(ii) Qualified disaster area.--The term `qualified disaster area' means any area with respect to which a major disaster has been declared by the President under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act if the incident period of the disaster with respect to which such declaration is made begins on or after December 28, 2019, and before January 1, 2027. ``(iii) Qualified disaster.--The term `qualified disaster' means, with respect to any qualified disaster area, the disaster by reason of which a major disaster was declared with respect to such area. ``(iv) Incident period.--The term `incident period' means, with respect to any qualified disaster, the period specified by the Federal Emergency Management Agency as the period during which such disaster occurred.''. (b) Dollar Limitation.--Section 165(h)(1) of such Code is amended by striking ``$500 ($100 for taxable years beginning after December 31, 2009)'' and inserting ``$100 ($500 in the case of any qualified disaster-related personal casualty losses (as defined in paragraph (6)(C))''. (c) Deduction Allowed to Individuals Who Do Not Elect to Itemize Deductions.--Section 63(b) of such Code is amended-- (1) by striking ``and'' at the end of paragraph (6) and inserting a comma, (2) by striking the period at the end of paragraph (7) and inserting ``, and'', and (3) by adding at the end the following new paragraph: ``(8) so much of the deduction allowed by section 165(a) as is attributable to the qualified net disaster loss (as defined in section 165(h)(6)(B)).''. (d) Effective Date.-- (1) In general.--The amendments made by this section shall apply to taxable years beginning after December 31, 2024. (2) Coordination with superceded provisions.--Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 (division EE of Public Law 116-260) and section 70438 of Public Law 119-21 shall not apply to any taxable year beginning after December 31, 2024. SEC. 3. CODIFICATION AND EXTENSION OF EXCLUSION FROM GROSS INCOME OF COMPENSATION FOR LOSSES OR DAMAGES RESULTING FROM CERTAIN WILDFIRES. (a) In General.--Part III of subchapter B of chapter 1 of the Internal Revenue Code of 1986 is amended by inserting before section 140 the following new section: ``SEC. 139M. COMPENSATION FOR LOSSES OR DAMAGES RESULTING FROM CERTAIN WILDFIRES. ``(a) In General.--Gross income shall not include any amount received by an individual as a qualified wildfire relief payment. ``(b) Qualified Wildfire Relief Payment.--For purposes of this section-- ``(1) In general.--The term `qualified wildfire relief payment' means any amount received by or on behalf of an individual as compensation for losses, expenses, or damages (including compensation for additional living expenses, lost wages (other than compensation for lost wages paid by the employer which would have otherwise paid such wages), personal injury, death, or emotional distress) incurred as a result of a qualified wildfire disaster, but only to the extent the losses, expenses, or damages compensated by such payment are not compensated for by insurance or otherwise. ``(2) Qualified wildfire disaster.--The term `qualified wildfire disaster' means any Federally declared disaster (as defined in section 165(i)(5)(A)) declared after December 31, 2014, and before January 1, 2027, as a result of any forest or range fire. ``(c) Denial of Double Benefit.--Notwithstanding any other provision of this title-- ``(1) no deduction or credit shall be allowed (to the individual for whose benefit a qualified wildfire relief payment is made) for, or by reason of, any expenditure to the extent of the amount excluded under this section with respect to such expenditure, and ``(2) no increase in the basis or adjusted basis of any property shall result from any amount excluded under this section with respect to such property.''. (b) Clerical Amendment.--The table of sections for part III of subchapter B of chapter 1 of such Code is amended by inserting before the item related to section 140 the following new item: ``Sec. 139M. Compensation for losses or damages resulting from certain wildfires.''. (c) Effective Date.--The amendments made by this section shall apply to payments received in taxable years beginning after December 31, 2025. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 5366 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to codify and extend the rules for personal casualty losses arising from major disasters and the rules for the exclusion from gross income of compensation for losses or damages resulting from certain wildfires.",
+    "divisions": null,
+    "crsSummary": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act This bill extends the federal tax deduction for qualified disaster-related personal casualty losses and the exclusion from gross income of qualified wildfire relief payments. Under current law, unreimbursed personal casualty losses arising in a qualified disaster area (qualified disaster-related personal casualty losses) are deductible (as an itemized tax deduction or as part of the standard tax deduction) if such losses exceed $500 per casualty. A qualified disaster area is an area with respect to which a major disaster has been declared during the period beginning in 2020 and ending 60 days after July 4, 2025, if the incident period begins on or after December 28, 2019, and on or before July 4, 2025. The bill extends the federal tax deduction for qualified disaster-related personal casualty losses by defining a qualified disaster area as an area with respect to which a major disaster has been declared if the incident period begins on or after December 28, 2019, and before January 1, 2027. The bill provides that the exclusion from gross income of qualified wildfire relief payments applies to such payments attributable to forest or range fires declared a federal disaster after 2014 and before 2027, regardless of when such payments are received. (Currently, qualified wildfire relief payments attributable to forest or range fires declared a federal disaster after 2014 and received after 2019 and before 2026 may be excluded from gross income.) The bill also provides statutory authority for several related tax rules.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "law",
+          "citation": "Public Law 116-260",
+          "suggestedFetch": null
+        },
+        {
+          "kind": "law",
+          "citation": "Public Law 119-21",
+          "suggestedFetch": null
+        },
+        {
+          "kind": "act",
+          "citation": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-HR-6956",
+    "title": "BARCODE Efficiency Act",
+    "type": "HR",
+    "number": "6956",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "S001190",
+      "district": 10,
+      "firstName": "Bradley",
+      "fullName": "Rep. Schneider, Bradley Scott [D-IL-10]",
+      "isByRequest": "N",
+      "lastName": "Schneider",
+      "middleName": "Scott",
+      "party": "D",
+      "state": "IL",
+      "url": "https://api.congress.gov/v3/member/S001190?format=json"
+    },
+    "cosponsors": 1,
+    "introducedDate": "2026-01-07",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 6956 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 6956 _______________________________________________________________________ AN ACT To require electronically prepared tax returns to include scannable code when submitted on paper, and to require the use of optical character recognition technology for paper documents received by the Internal Revenue Service. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Barcode Automation for Revenue Collection to Organize Disbursement and Enhance Efficiency Act'' or the ``BARCODE Efficiency Act''. SEC. 2. SCANNING AND DIGITIZATION OF TAX RETURNS AND CORRESPONDENCE. (a) Returns Prepared Electronically and Submitted on Paper.--With respect to any Federal tax return which is prepared electronically, but is printed and filed on paper-- (1) such return shall be formatted in a manner that is compatible with the scanning technology referred to in paragraph (2), and (2) subject to subsection (b)(1)(B), the Internal Revenue Service shall use scanning technology to convert the data included in such return to electronic format. (b) Optical Character Recognition Software.--With respect to-- (1) any Federal tax return which-- (A) is not prepared electronically and is printed and filed on paper, or (B) is described in subsection (a)(1) but, for any reason, the data included in such return cannot be accurately converted into electronic format, or (2) any correspondence which is received by the Internal Revenue Service in a paper form (with the exception of any such correspondence which has been received by the Internal Revenue Service in electronic format), the Internal Revenue Service shall use optical character recognition technology (or any functionally similar technology) to transcribe such return or correspondence. (c) Exception.-- (1) In general.--Subsection (a) or (b) shall not apply to the extent that the Secretary of the Treasury or the Secretary's delegate determines that the technology described in such subsection is slower or less reliable than-- (A) the process of manually transcribing returns or correspondence received in a paper form, or (B) any other process that the Internal Revenue Service is using or would otherwise use. (2) Report to congress.--Any exception to the application of subsection (a) or (b) pursuant to paragraph (1) shall not take effect unless the Secretary provides a report to the Committee on Ways and Means of the House of Representatives and the Committee on Finance of the Senate regarding the determination made under such paragraph within 30 days of such determination. (d) Effective Date.--This section shall apply to-- (1) any individual income tax return (as defined in section 6011(e)(3)(C) of the Internal Revenue Code of 1986) received on or after January 1 of the first calendar year beginning more than 180 days after the date of enactment of this Act, (2) any estate tax return (as described in section 6018 of such Code) or gift tax return (as described in section 6019 of such Code) received on or after January 1 of the first calendar year beginning more than 24 months after the date of enactment of this Act, and (3) any other return or correspondence received on or after January 1 of the first calendar year beginning more than 18 months after the date of enactment of this Act. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 6956 _______________________________________________________________________ AN ACT To require electronically prepared tax returns to include scannable code when submitted on paper, and to require the use of optical character recognition technology for paper documents received by the Internal Revenue Service.",
+    "divisions": null,
+    "crsSummary": "Barcode Automation for Revenue Collection to Organize Disbursement and Enhance Efficiency Act or the BARCODE Efficiency Act This bill requires the Internal Revenue Service (IRS) to use barcodes, barcode scanning technology, and optical character recognition (or similar) technology to digitize certain federal tax return information and correspondence, unless the technology is slower or less reliable than other IRS processes (subject to conditions). Specifically, the bill requires a scannable barcode on electronically-prepared federal tax returns that are printed and filed in paper format with the IRS. The bill also requires the IRS to use barcode scanning technology to convert data included on such returns into an electronic format. Further, the bill requires the IRS to use optical character recognition (or similar) technology to transcribe federal tax returns and correspondence received by the IRS that are not prepared electronically and are received in paper format. However, under the bill, the use of barcodes, barcode scanning technology, and optical character recognition (or similar) technology is not required if (1) such technology is slower or less reliable than manual transcription or any other IRS process, and (2) the IRS provides a report to Congress regarding the determination to not use such technology.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-HR-4930",
+    "title": "To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+    "type": "HR",
+    "number": "4930",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "M001213",
+      "district": 1,
+      "firstName": "Blake",
+      "fullName": "Rep. Moore, Blake D. [R-UT-1]",
+      "isByRequest": "N",
+      "lastName": "Moore",
+      "middleName": "D.",
+      "party": "R",
+      "state": "UT",
+      "url": "https://api.congress.gov/v3/member/M001213?format=json"
+    },
+    "cosponsors": 6,
+    "introducedDate": "2025-08-08",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 4930 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 4930 _______________________________________________________________________ AN ACT To expand the sharing of information with respect to suspected violations of intellectual property rights in trade. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHARING OF INFORMATION WITH RESPECT TO SUSPECTED VIOLATIONS OF INTELLECTUAL PROPERTY RIGHTS. Section 628A of the Tariff Act of 1930 (19 U.S.C. 1628a) is amended-- (1) in subsection (a)-- (A) in the matter preceding paragraph (1), by striking ``suspects'' and inserting ``has a reasonable suspicion''; (B) in paragraph (1)-- (i) by inserting ``, packing materials, containers,'' after ``its packaging'' the first place it appears; (ii) by striking ``and its packaging and labels'' after ``images of the merchandise'' and inserting ``, its packaging, packing materials, containers, and labels''; and (iii) by striking ``; and'' and inserting a semicolon; (C) in paragraph (2), by striking the period and inserting a semicolon; and (D) by adding at the end the following: ``(3) may provide to the person nonpublic information about the merchandise that was generated by an online marketplace or other similar market platform, express consignment operator, freight forwarder, or any other entity that plays a role in the sale or importation of merchandise, or the facilitation thereof, into the United States that has been provided to, shared with, or obtained by U.S. Customs and Border Protection; and ``(4) in the case of the provision of nonpublic information described in paragraph (3), shall provide to the person notification of the information transmitted, in accordance with such regulations as the Secretary may prescribe.''; and (2) in subsection (b)-- (A) in paragraph (3), by striking ``; and'' and inserting a semicolon; (B) in paragraph (4), by striking the period at the end and inserting ``; and''; and (C) by adding at the end the following: ``(5) any other party with an interest in the merchandise, as determined appropriate by the Commissioner.''. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 4930 _______________________________________________________________________ AN ACT To expand the sharing of information with respect to suspected violations of intellectual property rights in trade.",
+    "divisions": null,
+    "crsSummary": "This bill expands the authority of U.S. Customs and Border Protection (CBP) to provide information to certain persons (e.g., trademark or copyright owners) regarding suspected violations of intellectual property rights in trade. Under current law, if CBP suspects that merchandise is being imported in violation of certain trademark and copyright laws, it may request assistance from specified persons when determining whether the merchandise is imported in violation of these laws. To permit the party to conduct examination and testing, CBP must provide them with specified information that appears on the merchandise and its packaging and labels. This bill (1) expands the definition of person to allow CBP to request assistance from any other appropriate party with an interest in the imported merchandise, and (2) expands the scope of information that CBP is authorized to share with others to include information on and images of packing materials and containers. The bill allows CBP to request this assistance if it has a reasonable suspicion (currently, suspects) that the merchandise being imported is in violation of certain trademark and copyright laws. Additionally, CBP may provide a person with nonpublic information about the imported merchandise that was generated by an online marketplace or similar market platform, express consignment operator, freight forwarder, or any other entity that plays a role in the sale, importation, or facilitation of the merchandise into the United States and has been provided to, shared with, or obtained by CBP. CBP must provide the person with notification of the transmitted information.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-HR-7959",
+    "title": "IRS Whistleblower Program Improvement Act",
+    "type": "HR",
+    "number": "7959",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "K000376",
+      "district": 16,
+      "firstName": "Mike",
+      "fullName": "Rep. Kelly, Mike [R-PA-16]",
+      "isByRequest": "N",
+      "lastName": "Kelly",
+      "party": "R",
+      "state": "PA",
+      "url": "https://api.congress.gov/v3/member/K000376?format=json"
+    },
+    "cosponsors": 5,
+    "introducedDate": "2026-03-17",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 7959 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 7959 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to make improvements with respect to the treatment of whistleblowers, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE; ETC. (a) Short Title.--This Act may be cited as the ``IRS Whistleblower Program Improvement Act''. (b) Amendment of 1986 Code.--Except as otherwise expressly provided, whenever in this Act an amendment is expressed in terms of an amendment to a section or other provision, the reference shall be considered to be made to a section or other provision of the Internal Revenue Code of 1986. (c) References to Secretary.--For purposes of this Act, the term ``Secretary'' means the Secretary of the Treasury or the Secretary's delegate. (d) Table of Contents.--The table of contents of this Act is as follows: Sec. 1. Short title; etc. Sec. 2. Standard and scope of review of whistleblower award determinations. Sec. 3. Whistleblower privacy protections. Sec. 4. Modification of IRS whistleblower report. Sec. 5. Interest on whistleblower awards. Sec. 6. Correction regarding deductions for attorney's fees. SEC. 2. STANDARD AND SCOPE OF REVIEW OF WHISTLEBLOWER AWARD DETERMINATIONS. (a) In General.--Paragraph (4) of section 7623(b) is amended-- (1) by striking ``appealed to'' and inserting ``reviewed by'', and (2) by adding at the end the following: ``Any review by the Tax Court under the preceding sentence shall be de novo and shall be based on the administrative record established at the time of the original determination and any additional newly discovered or previously unavailable evidence.''. (b) Conforming Amendment.--The heading of paragraph (4) of section 7623(b) is amended by striking ``Appeal'' and inserting ``Review''. (c) Effective Date.--The amendments made by this section shall apply to petitions under section 7623(b)(4) of the Internal Revenue Code of 1986 which are pending on, or filed on or after, the date of the enactment of this Act. SEC. 3. WHISTLEBLOWER PRIVACY PROTECTIONS. (a) In General.--Paragraph (6) of section 7623(b) is amended by adding at the end the following new subparagraph: ``(D) Whistleblower anonymity before the tax court.--Notwithstanding sections 7458 and 7461, a whistleblower may elect to proceed anonymously before the Tax Court for all proceedings under this section absent a finding by the Tax Court that a societal interest exists for disclosing the whistleblower's identity which exceeds the potential harm disclosure could cause to the whistleblower.''. (b) Effective Date.--The amendments made by this section shall apply to petitions under section 7623(b)(4) of the Internal Revenue Code of 1986 which are pending on, or filed on or after, the date of the enactment of this Act. SEC. 4. MODIFICATION OF IRS WHISTLEBLOWER REPORT. (a) In General.--Section 406(c) of division A of the Tax Relief and Health Care Act of 2006 is amended by striking ``such use,'' in paragraph (1) and inserting ``such use (which shall include a list and descriptions of the top tax avoidance schemes, not to exceed 10, disclosed by whistleblowers during such year),''. (b) Effective Date.-- The amendments made by this section shall apply to reports for fiscal years ending after the enactment of this Act. SEC. 5. INTEREST ON WHISTLEBLOWER AWARDS. (a) In General.--Section 7623(b) is amended by adding at the end the following new paragraph: ``(7) Interest.-- ``(A) In general.--If the Secretary has not provided notice to an individual described in paragraph (1) of a preliminary award recommendation before the applicable date, the amount of any award under this subsection shall include interest from such date at the overpayment rate under section 6621(a). ``(B) Exception.--No interest shall accrue under this paragraph after the date on which the Secretary provides notice to the individual of a preliminary award recommendation. ``(C) Applicable date.--For purposes of this paragraph, the applicable date is the date that is 12 months after the first date on which-- ``(i) all of the proceeds resulting from actions subject to the award recommendation have been collected, and ``(ii) either-- ``(I) the statutory period for filing a claim or suit for refund has expired, or ``(II) the taxpayers subject to the actions and the Secretary have agreed with finality to the tax or other liabilities for the periods at issue, and either the taxpayers have waived the right to file a claim or suit for refund or any claim or suit for refund has been resolved.''. (b) Effective Date.-- (1) In general.--The amendments made by this section shall take effect 180 days after the date of the enactment of this Act. (2) Special rule.--If, as of the date described in paragraph (1)-- (A) the Secretary has not provided notice to the individual of a preliminary award recommendation as described in paragraph (7)(A) of section 7623(b) of the Internal Revenue Code of 1986, as added by this Act, and (B) the applicable date provided in paragraph (7)(C) of such section, as so added, has passed, the applicable date for purposes of such paragraph (7)(C) is the date that is 12 months after the date described in paragraph (1). SEC. 6. CORRECTION REGARDING DEDUCTIONS FOR ATTORNEY'S FEES. (a) In General.--Section 62(a)(21)(A)(i) is amended by striking ``7623(b)'' and inserting ``7623''. (b) Effective Date.--The amendment made by this section shall apply to taxable years ending after the date of the enactment of this Act. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 7959 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to make improvements with respect to the treatment of whistleblowers, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "IRS Whistleblower Program Improvement Act This bill modifies provisions of the Internal Revenue Code relating to whistleblower awards and protections. Specifically, the bill revises the standard for review of whistleblower awards in the Tax Court to require a de novo review (rather than the current abuse of discretion review) based on the administrative record established at the time of the whistleblower award determination and any new or previously unavailable evidence, allows whistleblowers anonymity in proceedings before the Tax Court (unless a societal interest in disclosing a whistleblower's identity outweighs potential harm to the whistleblower), modifies the Internal Revenue Service (IRS) whistleblower report to require inclusion of a list and description of up to 10 of the top tax avoidance schemes disclosed by whistleblowers, and requires payment of interest on mandatory whistleblower awards if the IRS fails to provide timely notice to a whistleblower of an award recommendation. The bill also allows payments of the attorney fees of whistleblowers to be deducted when calculating adjusted gross income for tax purposes regardless of whether the whistleblower award was paid through the mandatory or the discretionary whistleblower award program. (Under current law, the deduction is limited to attorney fees paid in connection with mandatory awards.)",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": [
+        {
+          "kind": "act",
+          "citation": "IRS Whistleblower Program Improvement Act",
+          "suggestedFetch": null
+        }
+      ]
+    }
+  },
+  {
+    "billId": "119-HR-227",
+    "title": "Clergy Act",
+    "type": "HR",
+    "number": "227",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "F000480",
+      "district": 20,
+      "firstName": "Vince",
+      "fullName": "Rep. Fong, Vince [R-CA-20]",
+      "isByRequest": "N",
+      "lastName": "Fong",
+      "party": "R",
+      "state": "CA",
+      "url": "https://api.congress.gov/v3/member/F000480?format=json"
+    },
+    "cosponsors": 21,
+    "introducedDate": "2025-01-07",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 227 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 227 _______________________________________________________________________ AN ACT To allow a period in which members of the clergy may revoke their exemption from Social Security coverage, and for other purposes. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``Clergy Act''. SEC. 2. REVOCATION BY MEMBERS OF THE CLERGY OF EXEMPTION FROM SOCIAL SECURITY COVERAGE. (a) In General.--Notwithstanding section 1402(e)(4) of the Internal Revenue Code of 1986, any exemption which has been received under section 1402(e)(1) of such Code by a duly ordained, commissioned, or licensed minister of a church, a member of a religious order, or a Christian Science practitioner, and which is effective for the taxable year in which this Act is enacted, may be revoked by filing an application therefor (in such form and manner, and with such official, as may be prescribed by the Commissioner of Internal Revenue), if such application is filed no later than the due date of the Federal income tax return (including any extension thereof) for the applicant's second taxable year beginning after December 31, 2028. Any such revocation shall be effective (for purposes of chapter 2 of the Internal Revenue Code of 1986 and title II of the Social Security Act (42 U.S.C. 401 et seq.)), as specified in the application, either with respect to the applicant's first taxable year beginning after December 31, 2028, or with respect to the applicant's second taxable year beginning after such date, and for all succeeding taxable years; and the applicant for any such revocation may not thereafter again file an application for an exemption under such section 1402(e)(1). If the application is filed after the due date of the applicant's Federal income tax return for a taxable year and is effective with respect to that taxable year, it shall include or be accompanied by payment in full of an amount equal to the total of the taxes that would have been imposed by section 1401 of the Internal Revenue Code of 1986 with respect to all of the applicant's income derived in that taxable year which would have constituted net earnings from self-employment for purposes of chapter 2 of such Code (notwithstanding paragraphs (4) and (5) of section 1402(c)) except for the exemption under section 1402(e)(1) of such Code. (b) Effective Date.--Subsection (a) shall apply with respect to service performed (to the extent specified in such subsection) in taxable years beginning after December 31, 2028, and with respect to monthly insurance benefits payable under title II of the Social Security Act on the basis of the wages and self-employment income of any individual for months in or after the calendar year in which such individual's application for revocation (as described in such subsection) is effective (and lump-sum death payments payable under such title on the basis of such wages and self-employment income in the case of deaths occurring in or after such calendar year). SEC. 3. REPORT TO CONGRESS. Not later than 90 days after the date of enactment of this Act, the Commissioner of Internal Revenue, in consultation with the Commissioner of Social Security, shall develop and submit to the Committee on Ways and Means of the House of Representatives and the Committee on Finance of the Senate a plan to inform duly ordained, commissioned, or licensed ministers of a church, members of a religious order, and Christian Science practitioners of their eligibility to revoke any prior election of exemption from Social Security participation. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 227 _______________________________________________________________________ AN ACT To allow a period in which members of the clergy may revoke their exemption from Social Security coverage, and for other purposes.",
+    "divisions": null,
+    "crsSummary": "Clergy Act This bill establishes a two-year window for certain members of the clergy and Christian Science practitioners to revoke their exemption from Social Security and Medicare taxes on ministerial earnings. Under current law, such individuals who object to participation in public insurance programs on religious or conscientious grounds may apply to the Internal Revenue Service (IRS) for an irrevocable exemption and will not receive Social Security or Medicare benefits in retirement unless they have qualifying credits from other employment. The IRS must develop a plan to inform members of the clergy and Christian Science practitioners of their eligibility to revoke prior exemptions, pursuant to the bill's changes.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null
+  },
+  {
+    "billId": "119-HR-6431",
+    "title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+    "type": "HR",
+    "number": "6431",
+    "congress": 119,
+    "stage": "house",
+    "stageLabel": "Passed House",
+    "latestAction": "Received in the Senate and Read twice and referred to the Committee on Finance.",
+    "actionDate": "2026-04-28",
+    "sponsor": {
+      "bioguideId": "C001126",
+      "district": 15,
+      "firstName": "Mike",
+      "fullName": "Rep. Carey, Mike [R-OH-15]",
+      "isByRequest": "N",
+      "lastName": "Carey",
+      "party": "R",
+      "state": "OH",
+      "url": "https://api.congress.gov/v3/member/C001126?format=json"
+    },
+    "cosponsors": 6,
+    "introducedDate": "2025-12-04",
+    "isOmnibus": false,
+    "billText": "[Congressional Bills 119th Congress] [From the U.S. Government Publishing Office] [H.R. 6431 Engrossed in House (EH)] <DOC> 119th CONGRESS 2d Session H. R. 6431 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to modify the rules governing the State administration of self-employment assistance programs. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, SECTION 1. SHORT TITLE. This Act may be cited as the ``New Opportunities for Business Ownership and Self-Sufficiency Act''. SEC. 2. MODIFICATION OF RULES GOVERNING STATE ADMINISTRATION OF SELF- EMPLOYMENT ASSISTANCE PROGRAMS. (a) Elimination of Requirement That Participants Are Likely to Exhaust Regular Unemployment Compensation.--Section 3306(t)(3) of the Internal Revenue Code of 1986 is amended by striking subparagraph (B) and by redesignating subparagraphs (C) and (D) as subparagraphs (B) and (C), respectively. (b) Modification of Requirement To Participate in Self-Employment Assistance Activities.--Section 3306(t)(3)(B) of such Code, as redesignated by subsection (a), is amended to read as follows: ``(B) are participating in self-employment assistance activities which are approved by the State agency and either-- ``(i) include entrepreneurial training, business counseling, and technical assistance; or ``(ii) are performed pursuant to a business plan and market feasibility study submitted by the individual and approved by the State or an agency designated by the State; and''. (c) Weekly Certification Requirement.--Section 3306(t)(3)(C) of such Code, as redesignated by subsection (a), is amended by inserting ``and are certifying such activities on at least a weekly basis to an agency designated by the State'' before the semicolon at the end. (d) Adjustment of Limitation on Number of Individuals Participating.--Section 3306(t)(4) of such Code is amended by striking ``5'' and inserting ``10''. (e) Effective Date.--The amendments made by this section shall apply beginning on the date that is 2 years after the date of enactment of this Act, except that nothing in this section shall be interpreted to prevent a State from amending its law before the end of the 2-year period beginning on the date of the enactment of this Act. (f) Issuance of Regulations.--The Secretary of Labor shall, after public notice and comment and subject to approval by the Office of Management and Budget, adopt regulations to administer this Act. (g) Issuance of Guidance.--The Secretary of Labor shall provide guidance to State workforce agencies that includes-- (1) a model list of self-employment assistance activities that fulfill requirements of the program under section 3306(t) of the Internal Revenue Code of 1986; and (2) best practices for verification of completion of such activities. Passed the House of Representatives April 27, 2026. Attest: Clerk. 119th CONGRESS 2d Session H. R. 6431 _______________________________________________________________________ AN ACT To amend the Internal Revenue Code of 1986 to modify the rules governing the State administration of self-employment assistance programs.",
+    "divisions": null,
+    "crsSummary": "New Opportunities for Business Ownership and Self-Sufficiency Act This bill increases the percentage of individuals who may participate in a Self-Employment Assistance (SEA) program, generally expands eligibility for such programs, and modifies certain SEA program requirements. As background, an SEA program provides an individual with an SEA allowance, rather than regular unemployment compensation benefits, if such individual is (1) eligible for unemployment compensation benefits and identified as likely to exhaust such benefits, (2) participating in self-employment assistance activities which include entrepreneurial training, business counseling, and technical assistance and are approved by the state, and (3) working full-time on establishing a business and becoming self-employed. Under current law, the number of individuals participating in an SEA program may not exceed 5% of the individuals receiving regular unemployment compensation benefits in the state. The bill increases the percentage of individuals who may participate in a state SEA program to 10%, eliminates the requirement that an individual be determined likely to exhaust unemployment compensation benefits (generally expanding individual eligibility for an SEA program), and requires individuals to certify (at least weekly) that they are working full-time on establishing a business and becoming self-employed. Finally, the bill allows individuals to meet the requirement to participate in state-approved self-employment assistance activities if such activities either (1) include entrepreneurial training, business counseling, and technical assistance (permitted under current law); or (2) are performed pursuant to a state-approved business plan and market feasibility study.",
+    "congressionalRecord": "",
+    "hasRecord": false,
+    "priorYearMatchStatus": "skipped",
+    "priorYearBillId": null,
+    "priorYearBillTitle": null,
+    "priorYearBillText": null,
+    "referenceHints": {
+      "likelyReferenceDependent": true,
+      "sources": []
+    }
   }
 ]
