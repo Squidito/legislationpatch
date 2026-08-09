@@ -476,9 +476,10 @@
       "sourceEnd": null,
       "section": "Passed the House",
       "note": "No party breakdown in source or votes[] (crossoverCount is 0). The specific '80+ Democrats' crossover count is derived from external caucus-size knowledge, not any registered source — breadth-of-support flag per rubric class 8.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "likelihoodReason",
