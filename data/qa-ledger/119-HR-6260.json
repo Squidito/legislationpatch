@@ -8,7 +8,7 @@
   "sourceReadDepth": "full",
   "auditedAt": "2026-08-08",
   "auditModel": "opus",
-  "verifyModel": null,
+  "verifyModel": "sonnet",
   "claims": [
     {
       "field": "summary",
@@ -36,9 +36,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"insurance\"/\"business of insurance\" never appears in the fetched source; 18 U.S.C. 1033 text was not fetched or registered as a referencedSource. Effect characterization unverifiable from available source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "summary",
@@ -51,9 +52,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "Only \"fraud\" is anchored (section heading / official title). \"charitable\", \"embezzlement\", and any criminal-penalty consequence are absent from source; effect on charitable bail funds is extrinsic.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "brief",
@@ -66,9 +68,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"business of insurance\"/\"insurance\" absent from source; statute 1033 not fetched.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "brief",
@@ -96,9 +99,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"charitable\", \"insurance\", and \"bail bond companies\" as affected entities are absent from source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].headline",
@@ -111,9 +115,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"Insurance\" framing absent from source; source frames Sec. 2 only as \"FRAUD IN CONNECTION WITH POSTING BAIL\".",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].subs[0]",
@@ -141,9 +146,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"business of insurance\" absent from source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].subs[1]",
@@ -156,9 +162,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"charitable\" and \"embezzlement\" absent from source; criminal-provisions consequence is inference from unfetched 1033.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].subs[1]",
@@ -171,9 +178,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"insurance companies\" absent from source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].billSection",
@@ -351,9 +359,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"business of insurance\" absent from source; presupposes unfetched 1033(f)(1)(A) content.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "sections[1].items[0].detail",
@@ -366,9 +375,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "Only \"fraud\" is anchored. \"business of insurance\", \"criminal penalties\", \"embezzlement\", \"false statements\" all absent from source; describes unfetched statute 1033.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "sections[1].items[0].detail",
@@ -381,9 +391,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"charitable\" absent; the criminal-liability consequence is inference from unfetched 1033.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "underreported[0].summary",
@@ -396,9 +407,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"insurance fraud criminal statute\" characterization unsupported; 1033 not fetched. The amendment-to-1033(f)(1)(A)-covering-bail-posting structure IS supported, but the insurance-fraud label is not.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "underreported[0].summary",
@@ -411,9 +423,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"officers, directors, and employees\", \"embezzlement\", \"false statements\", criminal-liability all absent from source (unfetched statute).",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "underreported[0].summary",
@@ -576,9 +589,10 @@
       "sourceEnd": null,
       "section": "SEC. 2",
       "note": "\"business of insurance\" absent from source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     }
   ],
   "counts": {

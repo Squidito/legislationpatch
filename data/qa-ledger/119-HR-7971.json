@@ -8,7 +8,7 @@
   "sourceReadDepth": "full",
   "auditedAt": "2026-08-08",
   "auditModel": "opus",
-  "verifyModel": null,
+  "verifyModel": "sonnet",
   "claims": [
     {
       "field": "summary",
@@ -291,9 +291,10 @@
       "sourceEnd": null,
       "section": "Section 2(a)(4) / Section 4(2)",
       "note": "billSection '3' is wrong: the monthly metrics are Section 2(a)(4) and the callback sense-of-Congress is Section 4. Section 3 (returns/refunds) contains neither. A reader following the section anchor lands in the wrong provision. Best single anchor = '2'.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "likelihoodReason",
@@ -771,9 +772,10 @@
       "sourceEnd": null,
       "section": "Section 3 / Section 5(a)",
       "note": "The bill DOES specify implementation timelines that expressly cover the mobile application: Section 3 sets a 'not later than January 1 ... more than 12 months after enactment' deadline for the website AND mobile application, and Section 5(a) sets an 18-month deadline for the website or mobile application. Claiming no timeline exists misinforms the reader.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "gaps[1]",

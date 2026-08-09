@@ -5283,7 +5283,7 @@
       "analyzed": true,
       "demo": false,
       "summary": "The Attorney General must publish a list of every state and local government that allows defendants charged with a “covered offense” (a crime the Attorney General determines poses a clear threat to public safety and order) to be released before trial without posting cash — either on personal recognizance or an unsecured appearance bond. The list must go up within one year of enactment and be updated annually.",
-      "brief": "Directs the Attorney General to publish and quarterly-update a public list of jurisdictions that permit pretrial release on personal recognizance or unsecured appearance bond.",
+      "brief": "Directs the Attorney General to publish and annually update a public list of jurisdictions that permit pretrial release on personal recognizance or unsecured appearance bond.",
       "top_lines": [
         {
           "headline": "Attorney General Publication Requirement",
@@ -5322,8 +5322,8 @@
       "underreported": [
         {
           "section": "Section 2",
-          "summary": "The list must cover jurisdictions that permit cashless bail for a person charged with any offense. The bill text contains no limitation to violent or serious crimes.",
-          "why_unreported": "The bill title and description reference cashless bail broadly, but the operative text applies the reporting requirement to releases for any charged offense with no category restriction — the bill covers misdemeanors and nonviolent charges as fully as violent ones."
+          "summary": "The list only covers jurisdictions that permit release for a \"covered offense\" — a term the bill leaves substantially to the Attorney General's discretion, defined as any offense the AG determines \"poses a clear threat to public safety and order.\" The enumerated crimes (murder, rape, assault, looting, rioting, etc.) are introduced by \"including,\" making the list illustrative rather than exhaustive.",
+          "why_unreported": "Because the offense list is non-exhaustive, the Attorney General has discretion to expand which offenses qualify as \"covered\" beyond the named crimes — meaning the scope of jurisdictions captured on the published list is not fixed by the statute itself but depends on the AG's ongoing determination of what poses a public-safety threat."
         }
       ],
       "criticisms": [
@@ -5353,7 +5353,7 @@
         }
       ],
       "gaps": [
-        "The bill requires quarterly publication of the list but specifies no format, accessibility standard, or enforcement mechanism for failure to publish or update.",
+        "The bill requires annual publication of the list but specifies no format, accessibility standard, or enforcement mechanism for failure to publish or update.",
         "The bill covers release on personal recognizance and unsecured appearance bonds but does not address other low- or no-cash release mechanisms — property bonds, electronic monitoring conditions, or supervised release programs — that are not captured by the reporting requirement."
       ],
       "changes": {
@@ -5378,7 +5378,7 @@
       ],
       "stageDate": "2026-05-18",
       "billType": "study",
-      "analyzedAt": "2026-08-08",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -5509,12 +5509,17 @@
         {
           "section": "Section 2(d)",
           "summary": "The retroactivity clause requires all monitorships already in effect for 6 or more years to appoint a new monitor within 180 days and transfer the case to a new judge within 1 year, regardless of whether the monitored entity is making progress toward compliance.",
-          "why_unreported": "The bill is framed around appointment conditions for future monitorships, but Section 2(d) immediately disrupts currently active consent decree oversight arrangements — including ongoing policing reform monitorships — without any compliance-status prerequisite."
+          "why_unreported": "The bill is framed around appointment conditions for future monitorships, but Section 2(d) immediately disrupts currently active monitorship arrangements without any compliance-status prerequisite."
         },
         {
           "section": "Section 2(b)",
           "summary": "Cases transfer to a new judge automatically at exactly 6 years after the court order on a time-based trigger with no assessment of case status, compliance progress, or complexity.",
           "why_unreported": "The bill purpose covers appointment conditions, but the judge-transfer provision operates as a mandatory procedural reset on a fixed schedule independent of whether the monitorship is progressing toward its stated goals."
+        },
+        {
+          "section": "Section 2(a)(5)",
+          "summary": "A court may only revise a requirement of a monitorship if the subject of the monitorship has not attained \"substantial and sustained compliance\" with that requirement, and any such revision requires a hearing (Sec. 2(a)(5)(A)-(B)). This is the bill's only compliance-based standard.",
+          "why_unreported": "The analysis elsewhere repeatedly frames the bill as having no compliance test — e.g., describing the 6-year transfer and 6-year retroactivity triggers as purely time-based — which is accurate for those specific provisions, but the bill does introduce a compliance standard, narrowly, for court revisions of individual monitorship requirements. Omitting it left readers with the impression that the bill contains no compliance concept anywhere."
         }
       ],
       "criticisms": [
@@ -5545,7 +5550,8 @@
           "Public notice and comment requirement before any monitor appointment",
           "Annual public accounting of monitor fees and services",
           "Mandatory case transfer to a new judge 6 years after the court order",
-          "Retroactivity for all monitorships already in effect for 6 or more years: new monitor within 180 days, new judge within 1 year"
+          "Retroactivity for all monitorships already in effect for 6 or more years: new monitor within 180 days, new judge within 1 year",
+          "A court may only revise a monitorship requirement through a hearing, and only where the subject of the monitorship has not attained \"substantial and sustained compliance\" with that requirement — the bill's sole compliance standard (Sec. 2(a)(5))"
         ],
         "modified": [],
         "removed": []
@@ -5576,7 +5582,7 @@
       ],
       "stageDate": "2026-05-18",
       "billType": "amendment",
-      "analyzedAt": "2026-08-08",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -5641,14 +5647,14 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "This bill adds the posting of monetary bail, criminal bail bonds, and federal immigration bail bonds to the federal definition of the \"business of insurance\" under 18 U.S.C. 1033 — making organizations that post bail, including charitable bail funds, subject to the federal criminal fraud and embezzlement provisions that apply to the business of insurance.",
-      "brief": "Expands the federal definition of \"business of insurance\" to include bail-posting activity, subjecting charitable bail funds and bail bond companies to federal insurance fraud law.",
+      "summary": "This bill inserts bail-posting activity — the posting of monetary bail, criminal bail bonds, and federal immigration bail bonds — into the federal definition of the \"business of insurance\" under 18 U.S.C. 1033(f)(1)(A). Persons and entities that fall within that definition are subject to 18 U.S.C. 1033's federal criminal fraud, false-statement, and embezzlement provisions, so bail-posting entities and their officers, directors, agents, and employees become subject to those provisions.",
+      "brief": "Inserts bail-posting activity into the federal definition of \"business of insurance\" under 18 U.S.C. 1033, subjecting bail-posting entities to federal insurance fraud and embezzlement law.",
       "top_lines": [
         {
-          "headline": "Bail Redefined as Insurance Activity",
+          "headline": "Bail-Posting Added to the Federal \"Business of Insurance\" Definition",
           "subs": [
-            "Adds posting of monetary bail, criminal bail bonds, and federal immigration bail bonds to the federal definition of \"business of insurance\"",
-            "Subjects bail-posting entities — including charitable bail organizations — to federal criminal fraud and embezzlement provisions that apply to insurance companies"
+            "Adds posting of monetary bail, criminal bail bonds, and federal immigration bail bonds to the 18 U.S.C. 1033(f)(1)(A) definition of \"business of insurance\"",
+            "Subjects bail-posting entities and their officers, directors, agents, and employees to 18 U.S.C. 1033's federal criminal fraud and embezzlement provisions"
           ],
           "billSection": "2"
         }
@@ -5672,7 +5678,7 @@
           "items": [
             {
               "main": "Amends 18 U.S.C. 1033(f)(1)(A) to add \"the posting of monetary bail, criminal bail bonds, and Federal immigration bail bonds\" to the existing definition of the business of insurance.",
-              "detail": "Under 18 U.S.C. 1033, persons engaged in the business of insurance are subject to federal criminal penalties for embezzlement, false statements, and related fraud. After this amendment, entities that post bail — including charitable bail organizations — are subject to those federal criminal provisions.",
+              "detail": "Under 18 U.S.C. 1033, persons and entities engaged in the business of insurance — including officers, directors, agents, and employees — are subject to federal criminal penalties for embezzlement, false statements to insurance regulators, and related fraud. After this amendment, bail-posting entities fall within that definition and are subject to those provisions.",
               "comments": []
             }
           ]
@@ -5681,8 +5687,8 @@
       "underreported": [
         {
           "section": "Section 2",
-          "summary": "The amendment to 18 U.S.C. 1033(f)(1)(A) extends the federal insurance fraud criminal statute to bail-posting entities. Officers, directors, and employees of organizations that post bail could face federal criminal liability for embezzlement or false statements under 1033 — not limited to bail posted for violent offenders.",
-          "why_unreported": "The bill title references violent offenders, but the operative amendment applies to all bail posting without any offense-type limitation. The mechanism operates through the insurance fraud statute, making the primary legal effect a reclassification that triggers criminal exposure rather than a direct restriction on bail practices."
+          "summary": "The amendment to 18 U.S.C. 1033(f)(1)(A) brings bail-posting entities within the federal \"business of insurance\" definition, extending 18 U.S.C. 1033's criminal fraud and embezzlement provisions to them — not limited to bail posted for violent offenders.",
+          "why_unreported": "The bill title references violent offenders, but the operative amendment applies to all bail posting without any offense-type limitation. The mechanism operates by expanding who counts as engaged in the \"business of insurance,\" making the primary legal effect a reclassification that triggers 1033's criminal exposure rather than a direct restriction on bail practices."
         }
       ],
       "criticisms": [],
@@ -5704,7 +5710,7 @@
       "changes": {
         "added": [],
         "modified": [
-          "18 U.S.C. 1033(f)(1)(A) — definition of \"business of insurance\" expanded to include the posting of monetary bail, criminal bail bonds, and federal immigration bail bonds"
+          "18 U.S.C. 1033(f)(1)(A) — definition of \"business of insurance\" expanded to include the posting of monetary bail, criminal bail bonds, and federal immigration bail bonds, extending 1033's criminal fraud and embezzlement provisions to bail-posting entities"
         ],
         "removed": []
       },
@@ -5734,7 +5740,7 @@
       ],
       "stageDate": "2026-05-18",
       "billType": "amendment",
-      "analyzedAt": "2026-08-08",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",
@@ -5772,7 +5778,18 @@
           "type": "Introduced in House",
           "date": "2025-11-21"
         }
-      }
+      },
+      "referencedSources": [
+        {
+          "id": "usc-18-1033",
+          "kind": "statute",
+          "label": "18 U.S.C. 1033",
+          "citation": "18 U.S.C. 1033",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title18/granules/USCODE-2024-title18-partI-chap47-sec1033/htm",
+          "textFile": "data/ref-text/usc-18-1033.txt",
+          "fetchedAt": "2026-08-09"
+        }
+      ]
     },
     {
       "id": "119-S-1884",
@@ -5892,8 +5909,7 @@
         }
       ],
       "gaps": [
-        "The law bars procedural defenses but does not address the evidentiary standard for establishing provenance or Nazi-era confiscation in the underlying merits of a claim.",
-        "The law covers artwork lost \"because, or as a result, of Nazi persecution\" but does not address property transferred through forced sales under economic duress rather than outright confiscation, a category that has faced definitional challenges in prior litigation."
+        "The law bars procedural defenses but does not address the evidentiary standard for establishing provenance or Nazi-era confiscation in the underlying merits of a claim."
       ],
       "changes": {
         "added": [
@@ -5960,7 +5976,7 @@
           "fetchedAt": "2026-07-30"
         }
       ],
-      "analyzedAt": "2026-07-30",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in Senate",
@@ -6715,7 +6731,7 @@
             "IRS must publish monthly averages for call length, hold time, disconnection rate, and percent of callers who got help",
             "Sense of Congress: callback offered within 5 minutes on any unanswered call by 2028"
           ],
-          "billSection": "3"
+          "billSection": "2"
         }
       ],
       "likelihood": 40,
@@ -6796,7 +6812,7 @@
       ],
       "gaps": [
         "The bill requires real-time call data but does not specify a minimum uptime requirement for the dashboard or what disclosures are required if the live data is unavailable.",
-        "The digital access requirement does not specify an implementation timeline for the mobile application option, nor minimum device or accessibility standards for the application."
+        "The digital access requirement does not specify minimum device or accessibility standards for the mobile application or website."
       ],
       "changes": {
         "added": [
@@ -6833,7 +6849,7 @@
         }
       ],
       "billType": "amendment",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-08-09",
       "versions": [
         {
           "type": "Introduced in House",

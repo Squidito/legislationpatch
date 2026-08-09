@@ -8,7 +8,7 @@
   "sourceReadDepth": "full",
   "auditedAt": "2026-08-08",
   "auditModel": "opus",
-  "verifyModel": null,
+  "verifyModel": "sonnet",
   "claims": [
     {
       "field": "summary",
@@ -981,9 +981,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)(5)(A)",
       "note": "The hearing-on-revision requirement is one of the enumerated appointment conditions the Judicial Conference must establish, yet it is entirely absent from the analysis (summary, top_lines, sections, changes). Material: a core provision a reader would need.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "changes.added",
@@ -996,9 +997,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)(5)(B)",
       "note": "This compliance-based limit on revising monitorship requirements is omitted. Especially notable because the analysis repeatedly frames the bill as having \"no assessment of compliance status\" — yet (a)(5)(B) introduces a \"substantial and sustained compliance\" standard governing revisions.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "sections",

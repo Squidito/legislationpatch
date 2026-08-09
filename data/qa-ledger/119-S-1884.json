@@ -8,7 +8,7 @@
   "sourceReadDepth": "full",
   "auditedAt": "2026-08-08",
   "auditModel": "opus",
-  "verifyModel": null,
+  "verifyModel": "sonnet",
   "claims": [
     {
       "field": "summary",
@@ -726,9 +726,10 @@
       "sourceEnd": null,
       "section": "ref S.2763 sec 4(4) definition of 'unlawfully lost'",
       "note": "Contradicted: the referenced 2016 Act (unchanged by this bill) defines 'unlawfully lost' to expressly INCLUDE 'forced sale, sale under duress.' Forced sales under duress ARE covered, so this is not a gap; the claim misleads readers into thinking such victims are excluded.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "changes / sections (omission)",

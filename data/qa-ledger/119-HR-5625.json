@@ -8,7 +8,7 @@
   "sourceReadDepth": "full",
   "auditedAt": "2026-08-08",
   "auditModel": "opus",
-  "verifyModel": null,
+  "verifyModel": "sonnet",
   "claims": [
     {
       "field": "summary",
@@ -126,9 +126,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)",
       "note": "Source mandates ANNUAL updates ('and annually thereafter'); 'quarterly' is wrong. Contradicts the analysis's own summary/top_lines/sections, which say annual.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "top_lines[0].headline",
@@ -321,9 +322,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)",
       "note": "Engrossed source restricts the requirement to a 'covered offense', NOT any offense. This claim describes the Introduced text's scope (cache's own versionChanges records the narrowing to 'covered offense'). Scope-inversion against the audited source.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "underreported[0].summary",
@@ -336,9 +338,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(b)",
       "note": "The bill DOES limit coverage to a 'covered offense' the AG determines poses a clear threat to public safety and order; the enumerated crimes are violent/sexual and public-disorder offenses.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "underreported[0].why_unreported",
@@ -351,9 +354,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)",
       "note": "Directly contradicted by the 'covered offense' restriction; also contradicts the analysis's own Section 2 detail, which correctly states the list is limited to 'covered offense' jurisdictions.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "gaps[0]",
@@ -366,9 +370,10 @@
       "sourceEnd": null,
       "section": "SEC. 2(a)",
       "note": "Source mandates ANNUAL publication; 'quarterly' is wrong (same error as brief).",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-09"
     },
     {
       "field": "gaps[0]",
