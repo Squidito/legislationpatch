@@ -2768,7 +2768,7 @@
       "pages": 5,
       "analyzed": true,
       "demo": false,
-      "summary": "The Hotel Fees Transparency Act requires hotels, short-term rentals, and booking platforms to show the total price — including all mandatory fees — whenever they display a price for lodging, from the first listing through to checkout. Taxes set by government entities and optional add-ons are not required to be bundled in but must be disclosed before the final purchase. Takes effect 450 days after enactment.",
+      "summary": "The Hotel Fees Transparency Act requires hotels, short-term rentals, and booking platforms to show the total price — including all mandatory fees — whenever they display a price for lodging, from the first listing through to checkout. Government taxes and optional add-ons are not required to be bundled into that total; government taxes, fees, and assessments must, however, still be disclosed before the final purchase. Takes effect 450 days after enactment.",
       "brief": "Requires hotels and lodging platforms to display the total price including all mandatory fees whenever any price is shown, from the first listing to checkout.",
       "top_lines": [
         {
@@ -2947,16 +2947,17 @@
       "pages": 1,
       "analyzed": true,
       "demo": false,
-      "summary": "The ROUTERS Act directs the Department of Commerce to study the national security risks and cybersecurity vulnerabilities posed by consumer routers, modems, and combined modem-router devices that are designed, developed, manufactured, or supplied by entities owned or controlled by China, Iran, North Korea, or Russia. Commerce must report findings to Congress within one year.",
-      "brief": "Requires a Commerce Department national security study on consumer networking equipment made by entities linked to China, Iran, North Korea, or Russia, with a congressional report due within one year.",
+      "summary": "The ROUTERS Act directs the Department of Commerce to study the national security risks and cybersecurity vulnerabilities posed by consumer routers, modems, and combined modem-router devices that are designed, developed, manufactured, or supplied by entities owned by, controlled by, or subject to the influence of a 'covered country' — which the bill defines by cross-reference to 10 U.S.C. 4872(f)(2) as China, Iran, North Korea, and Russia. Commerce must report findings to Congress within one year.",
+      "brief": "Requires a Commerce Department national security study on consumer networking equipment made by entities tied to a 'covered country' (defined by cross-reference to 10 U.S.C. 4872(f)(2): China, Iran, North Korea, Russia), with a congressional report due within one year.",
       "top_lines": [
         {
           "headline": "National Security Study on Foreign-Linked Routers",
           "billSection": "2",
           "subs": [
-            "Commerce must study national security risks and cybersecurity vulnerabilities from consumer routers, modems, and combined modem-router devices made by entities owned, controlled by, or subject to the influence of China, Iran, North Korea, or Russia",
+            "Commerce must study national security risks and cybersecurity vulnerabilities from consumer routers, modems, and combined modem-router devices made by entities owned by, controlled by, or subject to the influence of a 'covered country' (10 U.S.C. 4872(f)(2): China, Iran, North Korea, Russia)",
             "Report to Congress due within 1 year of enactment covering the study results"
-          ]
+          ],
+          "source": "usc-10-4872"
         }
       ],
       "likelihood": 38,
@@ -3003,7 +3004,7 @@
       ],
       "changes": {
         "added": [
-          "Requirement for Commerce Department national security study on consumer routers, modems, and combined modem-router devices from entities linked to China, Iran, North Korea, or Russia",
+          "Requirement for Commerce Department national security study on consumer routers, modems, and combined modem-router devices from entities tied to a 'covered country' (10 U.S.C. 4872(f)(2): China, Iran, North Korea, Russia)",
           "Congressional report due within one year of enactment"
         ],
         "modified": [],
@@ -3059,7 +3060,18 @@
           "type": "Introduced in House",
           "date": "2025-01-31"
         }
-      }
+      },
+      "referencedSources": [
+        {
+          "id": "usc-10-4872",
+          "kind": "statute",
+          "label": "10 U.S.C. 4872",
+          "citation": "10 U.S.C. 4872",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title10/granules/USCODE-2024-title10-subtitleA-partV-subpartI-chap385-subchapIII-sec4872/htm",
+          "textFile": "data/ref-text/usc-10-4872.txt",
+          "fetchedAt": "2026-08-09"
+        }
+      ]
     },
     {
       "id": "119-HR-1512",
