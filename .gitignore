@@ -69,3 +69,8 @@ validate_*.txt
 an_*.json
 all_quotes_review.txt
 *_analysis.json
+
+# QA Phase-3 tooling: regenerable artifacts only. The scripts + data/qa-regression-baseline.json
+# + data/qa-metrics/history.jsonl ARE tracked; fixtures and the rendered dashboard are not.
+data/qa-injection/
+data/qa-metrics/dashboard.html
