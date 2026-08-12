@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-07T18:08:31.339Z",
+  "generated": "2026-08-12T21:35:12.924Z",
   "processedDates": [
     "2026-05-07",
     "2026-05-11",
@@ -50,7 +50,9 @@
     "2026-08-03",
     "2026-08-04",
     "2026-08-05",
-    "2026-08-06"
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-10"
   ],
   "quotes": [
     {
@@ -6011,6 +6013,97 @@
       "billTitle": "Consolidated Appropriations Act, 2026",
       "chamber": "Senate",
       "granuleId": "CREC-2026-08-06-pt1-PgS4509-4"
+    },
+    {
+      "name": "Ms. Klobuchar",
+      "party": "D",
+      "state": "MN",
+      "bioguideId": "K000367",
+      "text": "I rise this evening on behalf of myself and Senator Sheehy and several others, Democrats and Republicans. I represent farmers, small businesses, brewers, and consumers in my State, and I urge my colleagues to table Senator Budd's amendment and give this body 4 more weeks to work toward legislation that supports a thriving hemp industry, ensures proper regulation, and protects kids from dangerous products.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-7757",
+      "billTitle": "KIDS Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4553-3"
+    },
+    {
+      "name": "Mrs. Britt",
+      "party": "R",
+      "state": "AL",
+      "bioguideId": "B001319",
+      "text": "The Senate has a spine. That is exactly what we are doing here today is standing with a steel spine. We are standing against Putin's aggression. You saw, this week, him actually attack innocent Ukrainians. Ballistic drones go, hit breweries. They hit innocent civilians working in warehouses. This is enough. Today, we stand together to say: We are going to cut off the flow of money to Putin.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "support",
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4538"
+    },
+    {
+      "name": "Mr. Warnock",
+      "party": "D",
+      "state": "GA",
+      "bioguideId": "W000790",
+      "text": "This letter restricts the President's tariff authority under the Lindsey O. Graham Sanctioning Russia and Iran Act. This is a small but meaningful victory for all Americans who continue to suffer under this President's reckless tariffs. Let's be clear: Putin is a war criminal, and his war machine must be stopped. But we should not have to choose between putting a check on Putin's aggression and putting a check on this President's tariff regime. That is a false choice, and it is one that I am not willing to accept.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4533"
+    },
+    {
+      "name": "Mr. Paul",
+      "party": "R",
+      "state": "KY",
+      "bioguideId": "P000603",
+      "text": "Increasing taxes on Americans will not end Putin's war in Ukraine. The drafters of this legislation, understandably, wish to punish Vladimir Putin and send Russian invaders back to where they came from, but this bill was written such that the drafters fail to see that it will not bring peace to Ukraine but rather will deliberately make American families poorer by increasing tariffs, which are nothing but a tax on imported goods.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4534"
+    },
+    {
+      "name": "Mr. Wyden",
+      "party": "D",
+      "state": "OR",
+      "bioguideId": "W000779",
+      "text": "I fully support taking tougher action against Russia. They have waged a deadly, years long war on Ukraine, and the United States must do more to tighten the screws on the Putin war machine. So I am fully in favor of strong sanctions, but this bill, despite its title, is not just a sanctions bill; it gives Donald Trump massive new tariff authority that he will use to threaten our trading partners and raise prices on the American people. I believe Senators will come to deeply regret voting to give Donald Trump this tariff authority.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "oppose",
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4534"
+    },
+    {
+      "name": "Mr. Blumenthal",
+      "party": "D",
+      "state": "CT",
+      "bioguideId": "B001277",
+      "text": "Shortly, we will vote on the Russia sanctions bill as we have come to call it. Their help has been invaluable as we reach this important moment. Last week, with President Zelenskyy watching from the Gallery, this body sent a powerful message to Vladimir Putin and all who are supporting him with funding for his vicious, bloodthirsty, illegal war against the brave, free people of Ukraine. Today, President Zelenskyy is watching from Ukraine, and Putin is watching from Moscow. I would like to think that Lindsey Graham is watching too.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "neutral",
+      "billId": "119-HR-2913",
+      "billTitle": "Ukraine Support Act",
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4534"
+    },
+    {
+      "name": "Mr. Moran",
+      "party": "R",
+      "state": "KS",
+      "bioguideId": "M000934",
+      "text": "Today--this afternoon--the Senate took a really important step to strengthen our national security and pay a final tribute to our colleague Lindsey Graham, the Senator from South Carolina. This step has been a long time coming. But by an overwhelming passage of the Lindsay O. Graham Sanctioning Russia and Iran Act, the Senate sent a clear message to our adversaries: There will be consequences for those who finance terrorism and those who wage an unprovoked war.",
+      "source": "Senate Floor, Aug 7, 2026",
+      "stance": "support",
+      "billId": null,
+      "billTitle": null,
+      "chamber": "Senate",
+      "granuleId": "CREC-2026-08-07-pt1-PgS4542-3"
     }
   ]
 }

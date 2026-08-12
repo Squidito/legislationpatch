@@ -6,7 +6,7 @@
   "status": "audited",
   "depth": "full-claims",
   "sourceReadDepth": "full",
-  "auditedAt": "2026-08-10",
+  "auditedAt": "2026-08-12",
   "auditModel": "opus",
   "verifyModel": "sonnet",
   "claims": [
@@ -997,10 +997,11 @@
       "sourceStart": null,
       "sourceEnd": null,
       "section": "SEC. 2",
-      "note": "Same extrinsic funding-vehicle assertion as summary/gaps; softened here inside likelihoodReason framing but still unsourced.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "note": "Same extrinsic funding-vehicle assertion as summary/gaps; softened here inside likelihoodReason framing but still unsourced. QA Pass 3 (2026-08-12): fixed by removing the unsourced aside \"— currently funded through the annual Labor-HHS appropriations bill —\" from likelihoodReason. Verified absent from bill text (no Labor-HHS funding-vehicle claim in source) and from empty referencedSources[].",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-12"
     },
     {
       "field": "likelihoodReason",
@@ -1065,10 +1066,10 @@
   ],
   "counts": {
     "claims": 70,
-    "material": 2,
-    "minor": 5,
+    "material": 0,
+    "minor": 4,
     "omissions": 0
   },
   "resolution": "",
-  "notes": "Source = engrossed Senate text (S.1838 ES), 4864 chars, single operative SEC. 2 adding PHS Act §409K. No referencedSources registered. Two material UNSUPPORTED rows: the assertion that the INCLUDE Project is currently funded through the annual Labor-HHS appropriations bill (summary + gaps[0]) has no anchor anywhere in source. Related extrinsic \"existing/ongoing initiative\" framing recorded minor. All operative-provision claims (7 program elements, coordination, consultation, 4 committees, biennial report contents, statutory placement) SUPPORTED verbatim. featured_quotes not audited (CR quote not present in bill-text source and outside the decompose scope)."
+  "notes": "Source = engrossed Senate text (S.1838 ES), 4864 chars, single operative SEC. 2 adding PHS Act §409K. No referencedSources registered. Two material UNSUPPORTED rows: the assertion that the INCLUDE Project is currently funded through the annual Labor-HHS appropriations bill (summary + gaps[0]) has no anchor anywhere in source. Related extrinsic \"existing/ongoing initiative\" framing recorded minor. All operative-provision claims (7 program elements, coordination, consultation, 4 committees, biennial report contents, statutory placement) SUPPORTED verbatim. featured_quotes not audited (CR quote not present in bill-text source and outside the decompose scope). QA Pass 3 (2026-08-12): 1 open minor unsupported flag on likelihoodReason (Labor-HHS funding-vehicle claim) fixed. Ledger now reflects the corrected prose."
 }

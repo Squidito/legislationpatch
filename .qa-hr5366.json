@@ -1,0 +1,234 @@
+{
+  "id": "119-HR-5366",
+  "title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+  "official_title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+  "code": "HR.5366",
+  "date": "2025-09-14",
+  "version": "v1.0",
+  "stage": "senate",
+  "stageLabel": "Passed Senate",
+  "currentStep": 3,
+  "pipeline": [
+    "Introduced",
+    "Committee",
+    "Passed House",
+    "Passed Senate",
+    "Signed"
+  ],
+  "sponsor": "Rep. Steube, W. Gregory (R-FL)",
+  "sponsor_bioguide": "S001214",
+  "cosponsors": 14,
+  "pages": 3,
+  "analyzed": true,
+  "demo": false,
+  "summary": "Federal tax law normally requires casualty losses to exceed 10% of your income before you can deduct them — but Congress has repeatedly carved out exceptions for federally declared disaster areas, letting affected taxpayers deduct unreimbursed losses above $500 per incident even without itemizing. This bill applies those disaster-specific deduction rules to disasters with incident periods beginning on or after December 28, 2019 and before January 1, 2027, and extends the exclusion of wildfire relief payments from taxable income — for forest or range fires federally declared a disaster after 2014 and before 2027 — to payments received in tax years 2026 and later.",
+  "brief": "Extends the federal tax deduction for disaster property losses and the wildfire relief payment exclusion to disasters occurring before January 1, 2027.",
+  "top_lines": [
+    {
+      "headline": "Disaster Loss Deductions",
+      "subs": [
+        "Applies to disasters with incident periods beginning on or after December 28, 2019 and before January 1, 2027",
+        "Deductible without itemizing; disaster loss exempt from the 10% income floor"
+      ],
+      "billSection": "2"
+    },
+    {
+      "headline": "Wildfire Relief Payments",
+      "subs": [
+        "Relief payments for forest or range fires federally declared a disaster after 2014 and before 2027, excluded from gross income",
+        "Exclusion now covers payments received in tax years 2026 and later; prior law covered payments received in tax years 2020 through 2025"
+      ],
+      "billSection": "3",
+      "source": "bill-118-hr-5863"
+    }
+  ],
+  "likelihood": 60,
+  "likelihoodLabel": "Possible",
+  "likelihoodReason": "Disaster tax relief has consistent bipartisan support and 14 cosponsors. Extension bills of this type routinely pass the Senate, often attached to larger tax packages. The geographic scope — covering presidentially declared disasters nationwide — limits targeted opposition.",
+  "sections": [
+    {
+      "label": "Section 1 — Short Title",
+      "admin": true,
+      "items": [
+        {
+          "main": "Names the Act the \"Doug LaMalfa Federal Disaster Tax Relief Certainty Act\".",
+          "detail": "Short-title section — citation name only; no substantive effect."
+        }
+      ]
+    },
+    {
+      "label": "Section 2 — Disaster Casualty Loss Deduction",
+      "items": [
+        {
+          "main": "Adds Section 165(h)(6) to the Internal Revenue Code of 1986, creating a special deduction category for qualified net disaster losses that bypasses the 10% adjusted gross income limitation.",
+          "detail": "A qualified net disaster loss is the excess of qualified disaster-related personal casualty losses over personal casualty gains. A qualified disaster area covers any area with a presidential major disaster declaration under section 401 of the Robert T. Stafford Disaster Relief and Emergency Assistance Act where the incident period begins on or after December 28, 2019, and before January 1, 2027. Individuals who do not itemize may deduct the loss through new Section 63(b)(8), the per-casualty floor is $500 for qualified disaster-related losses (versus $100 otherwise), and the amendments apply to taxable years beginning after December 31, 2024.",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "label": "Section 3 — Wildfire Relief Payment Exclusion",
+      "items": [
+        {
+          "main": "Creates new Section 139M of the Internal Revenue Code, excluding qualified wildfire relief payments from gross income.",
+          "detail": "The exclusion applies to payments for forest or range fires federally declared a disaster after December 31, 2014, and before January 1, 2027, and covers payments received in taxable years after December 31, 2025 with no stated end year. Under prior law, the exclusion applied only to qualifying payments received in taxable years after December 31, 2019 and before January 1, 2026.",
+          "comments": [],
+          "source": "bill-118-hr-5863"
+        }
+      ]
+    }
+  ],
+  "underreported": [
+    {
+      "section": "Section 2(d) — Coordination With Superseded Provisions",
+      "summary": "Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 and section 70438 of Public Law 119-21 are made inapplicable to any taxable year beginning after December 31, 2024.",
+      "why_unreported": "The section is captioned as codification and extension of casualty-loss rules, but this subsection deactivates two prior-law disaster-loss provisions for tax years beginning after 2024, so the new rules replace rather than stack on the earlier ones."
+    }
+  ],
+  "criticisms": [],
+  "featured_quotes": [
+    {
+      "name": "Mr. Steube",
+      "party": "R",
+      "state": "FL",
+      "bioguideId": "S001214",
+      "text": "When hurricanes, wildfires, floods, tornadoes, and other disasters strike, American families are left to rebuild their homes, their businesses, their communities, and their lives. When these moments arise, the last thing they need is the Federal Government making their recovery harder by taxing relief payments or denying fair treatment for disaster losses, nor should the government be creating uncertainty in the tax code.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Panetta",
+      "party": "D",
+      "state": "CA",
+      "bioguideId": "P000613",
+      "text": "I support the Doug LaMalfa Federal Disaster Tax Relief Certainty Act. I am a proud cosponsor, co-lead of this bill with Representatives Greg Steube and Mike Thompson, a bill that would build on the Federal Disaster Tax Relief Act which we passed last Congress, thanks to the leadership of Representative Steube, a bill that would ensure that those impacted by disasters nationwide have continued access to tax relief.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Mr. Fong",
+      "party": "R",
+      "state": "CA",
+      "bioguideId": "F000480",
+      "text": "In California, we are all too familiar with the devastation caused by wildfires. After these disasters strike in our community, survivors shouldn't have to worry about burdensome Federal taxes as they work to recover and rebuild. Today, we have an opportunity to address that while honoring my friend the late Doug LaMalfa, who was a tireless champion of rural California and an advocate for those rebuilding after wildfires.",
+      "stance": "support",
+      "chamber": "House"
+    },
+    {
+      "name": "Ms. Tokuda",
+      "party": "D",
+      "state": "HI",
+      "bioguideId": "T000487",
+      "text": "I rise today, like so many of my colleagues on both sides of the aisle, to honor our friend Doug LaMalfa. He understood that the disaster after the disaster happens when families cannot recover and return to their hometowns because the funding and resources they receive just don't stretch far enough or, worse, are taxed and taken away from people who need absolutely every single dollar to be able to rebuild. On Saturday, I stood above Lahaina, and for a moment--the briefest of moments--in the darkness, the town almost looked normal.",
+      "stance": "neutral",
+      "chamber": "House"
+    }
+  ],
+  "gaps": [
+    "The bill covers disasters with incident periods beginning before January 1, 2027, but does not address losses sustained within a qualified disaster area where the damage is discovered or claims are settled after January 1, 2027.",
+    "The wildfire relief exclusion applies only to fires paired with a federal disaster declaration and does not address relief payments from state programs for fires that did not receive a federal declaration."
+  ],
+  "changes": {
+    "added": [
+      "Section 165(h)(6) of the Internal Revenue Code — qualified net disaster loss deduction bypassing the 10% AGI limitation",
+      "Section 63(b)(8) — deduction for the qualified net disaster loss available to individuals who do not itemize",
+      "Section 139M — exclusion from gross income for qualified wildfire relief payments for forest or range fires federally declared a disaster after December 31, 2014 and before January 1, 2027 (for payments received in taxable years beginning after December 31, 2025)"
+    ],
+    "modified": [
+      "Section 165(h)(1) per-casualty floor — $100 generally, $500 for qualified disaster-related personal casualty losses",
+      "Definition of qualified disaster area — incident periods beginning on or after December 28, 2019, and before January 1, 2027"
+    ],
+    "removed": [
+      "Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 (division EE of Public Law 116-260) and section 70438 of Public Law 119-21 made inapplicable to taxable years beginning after December 31, 2024"
+    ]
+  },
+  "stageDate": "2026-08-10",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2026-04-27",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    },
+    {
+      "chamber": "House",
+      "date": "2026-04-27",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    },
+    {
+      "chamber": "House",
+      "date": "2026-04-27",
+      "question": "On Passage",
+      "result": "Passed",
+      "method": "Voice Vote"
+    }
+  ],
+  "billType": "amendment",
+  "referencedSources": [
+    {
+      "id": "bill-118-hr-5863",
+      "kind": "bill",
+      "label": "HR 5863 (118th Congress)",
+      "citation": "HR 5863",
+      "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/5863/text",
+      "textFile": "data/ref-text/bill-118-hr-5863.txt",
+      "fetchedAt": "2026-06-10"
+    }
+  ],
+  "analyzedAt": "2026-08-09",
+  "versions": [
+    {
+      "type": "Introduced in House",
+      "date": "2025-09-15",
+      "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366ih.htm"
+    },
+    {
+      "type": "Reported in House",
+      "date": "2026-04-09",
+      "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366rh.htm"
+    },
+    {
+      "type": "Engrossed in House",
+      "date": "2026-04-27",
+      "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366eh.htm"
+    },
+    {
+      "type": "Referred in Senate",
+      "date": "2026-04-28",
+      "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366rfs.htm"
+    },
+    {
+      "type": "Enrolled Bill",
+      "date": null,
+      "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366enr.htm"
+    }
+  ],
+  "versionChanges": {
+    "added": [
+      "Coordination rule added — section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 and section 70438 of Public Law 119-21 shall not apply to any taxable year beginning after December 31, 2024",
+      "Wildfire-disaster window now has an end date — \"declared after December 31, 2014, and before January 1, 2027\" (previously open-ended after Dec. 31, 2014)"
+    ],
+    "modified": [
+      "Renamed from \"Federal Disaster Tax Relief Act of 2025\" to \"Doug LaMalfa Federal Disaster Tax Relief Certainty Act\"",
+      "Qualified-disaster-area incident period broadened — now covers disasters beginning on or after December 28, 2019 (was only after July 4, 2025)",
+      "Disaster-loss benefit restructured — now an above-the-line deduction for non-itemizers under section 63(b)(8), replacing the introduced standard-deduction add-on (section 63(c)) and AMT treatment (section 56(b)(1)(D))"
+    ],
+    "removed": [
+      "Dropped the standalone \"disaster loss deduction\" definition added to section 63(c) and its alternative-minimum-tax carve-out under section 56(b)(1)(D)",
+      "Removed section 139M(d) limitation confining the wildfire exclusion to payments received in taxable years after December 31, 2025 and before January 1, 2031"
+    ],
+    "throughVersion": {
+      "type": "Engrossed in House",
+      "date": "2026-04-27"
+    },
+    "generatedAt": "2026-06-30",
+    "fromVersion": {
+      "type": "Introduced in House",
+      "date": "2025-09-15"
+    }
+  },
+  "needsReanalysis": true
+}

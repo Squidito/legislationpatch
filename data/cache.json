@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-07T23:41:24.425Z",
+  "generated": "2026-08-12T21:35:12.906Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -1420,7 +1420,62 @@
         "The bill authorizes appropriations but does not itself appropriate funds; actual spending depends on later appropriations acts.",
         "Division E bars the Federal Reserve from issuing a central bank digital currency but does not address digital-currency activity by other federal agencies or by private issuers beyond the Fed."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Houlahan",
+          "party": "D",
+          "state": "PA",
+          "bioguideId": "H001085",
+          "text": "I was very proud of the markup that passed out of the Armed Services Committee. The bill that we delivered to this floor this week was overwhelmingly bipartisan. It supported our men and women in uniform and strengthened our national defense. It was an honor to work so closely with Chairman Rogers and Ranking Member Smith on that bill. Unfortunately, the toxically amended bill that is here before us is no longer that.",
+          "stance": "oppose",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Rogers",
+          "party": "R",
+          "state": "AL",
+          "bioguideId": "R000575",
+          "text": "I echo the ranking member's comments. This is a very bipartisan product that came out of committee. It is a good product, and it deserves this Chamber's support. He has been a great partner in fashioning what we bring to the floor today.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Jackson",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "J000304",
+          "text": "The Intelligence and Special Operations Subcommittee portions of this bill, in conjunction with approximately $2.2 billion in reconciliation funding, continues to focus on providing our Special Operations Forces, the Defense Intelligence Enterprise, and the security cooperation enterprise with the tools required to ensure their capabilities can support the Department's efforts in strategic competition and in countering malign PRC actions.",
+          "stance": "support",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. McCormick",
+          "party": "R",
+          "state": "GA",
+          "bioguideId": "M001218",
+          "text": "I rise and offer my amendment No. 25 to H.R. 3838, the National Defense Authorization Act for Fiscal Year 2026. My amendment expands on language already in law, in this bill, and in the Senate NDAA to combat the indirect censorship of conservative news outlets in the Department of War.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Rose",
+          "party": "R",
+          "state": "TN",
+          "bioguideId": "R000612",
+          "text": "My amendment is intended to address the Janet Mello fraud case, the Army civilian who was indicted and pleaded guilty to stealing over $100 million that were intended for the 4-H Military Partnership Grant Program. The 4-H Military Partnership Grant Program serves 4-H clubs that are in many military installation youth centers. These programs include 4-H positive youth development programming, engaging in hands-on learning in day and overnight summer camps, including military team adventure camps.",
+          "stance": "neutral",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Stauber",
+          "party": "R",
+          "state": "MN",
+          "bioguideId": "S001212",
+          "text": "The first requires the Secretary of the Air Force and the Director of the Air National Guard to work together to modernize the Air National Guard's fighter fleet. Last year's NDAA required a similar report, but this report did not fulfill several requirements, like consultation from the Director of the Air National Guard and recapitalization plans for all fighter wings. It was entirely inadequate.",
+          "stance": "neutral",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "SPEED Act acquisition overhaul: rewrites the defense acquisition system's objectives and creates the Requirements, Acquisition, and Programming Integration Directorate (RAPID) and a Mission Engineering and Integration Activity (Title XVIII)",
@@ -4236,7 +4291,7 @@
           "headline": "DeFi Activities Exempt from Registration",
           "billSection": "title-III",
           "subs": [
-            "Operating a node, validating transactions, providing a read-only blockchain interface, developing or distributing open-source blockchain or DeFi protocol software, operating non-custodial wallets, and participating in liquidity pools are all exempt from SEC registration",
+            "Operating a node or oracle service, providing a read-only blockchain user interface, developing or distributing a blockchain system or a decentralized-finance trading protocol, operating or participating in a liquidity pool, and developing or distributing non-custodial wallet software are all exempt from SEC registration",
             "A parallel CFTC exemption under Title IV covers the same six categories of decentralized finance activity",
             "Anti-fraud and anti-manipulation authority of both the SEC and CFTC still applies to exempt decentralized finance activities"
           ]
@@ -4253,7 +4308,7 @@
       ],
       "likelihood": 35,
       "likelihoodLabel": "Uphill",
-      "likelihoodReason": "The bill passed the House 294-134 in July 2025 with bipartisan support and the Senate Banking Committee ordered a favorable substitute amendment in May 2026, but 60 votes are still needed to overcome a Senate filibuster. Democrats have raised concerns about the SEC's reduced role over tokens that may still function as securities, and the bill's Republican sponsor and cosponsor mix means several Democratic senators would need to cross over.",
+      "likelihoodReason": "Introduced by Rep. J. French Hill (R-AR-2) with 21 cosponsors, the bill passed the House 294-134 on July 17, 2025 — a spread that mechanically required cross-party votes since 294 yeas exceed the Republican conference size. A cloture motion on the motion to proceed was presented in the Senate on August 8, 2026 per the latest recorded action, meaning 60 votes are still needed to overcome a Senate filibuster on the Republican-led measure.",
       "sections": [
         {
           "label": "Title I — Definitions, Rulemaking, and Provisional Registration",
@@ -4359,8 +4414,8 @@
               "comments": []
             },
             {
-              "main": "Directs the CFTC and SEC to conduct studies and report to Congress on decentralized finance, non-fungible tokens, financial literacy among digital commodity holders, financial market infrastructure improvements, blockchain in payments, illicit use of digital assets, foreign-based centralized intermediaries, and foreign adversary participation in U.S. digital commodity markets.",
-              "detail": "The foreign adversary participation study must assess national security implications of persons domiciled in foreign adversary countries participating in U.S. digital commodity markets.",
+              "main": "Requires a series of digital-asset studies under different lead agencies: the CFTC and SEC jointly on decentralized finance (Sec. 504), financial literacy among digital commodity holders (Sec. 506), and financial market infrastructure improvements (Sec. 507); the Treasury Secretary on blockchain in payments (Sec. 508), on illicit use of digital assets (Sec. 509, in consultation with the CFTC and SEC), and on foreign adversary participation (Sec. 511(a), in consultation with the CFTC and SEC); and the Comptroller General (GAO) on non-fungible tokens (Sec. 505), on certain centralized intermediaries primarily located in foreign jurisdictions (Sec. 510, in consultation with the Treasury), on decentralized finance (a separate GAO leg in Sec. 504(d)), and on foreign adversary participation (a separate GAO leg in Sec. 511(b)).",
+              "detail": "The Treasury-led foreign adversary participation study (Sec. 511(a)) must identify digital commodity registrants owned by governments of foreign adversaries, determine whether foreign adversary governments are collecting trading data about U.S. persons in the digital commodity markets, and evaluate whether registrants' proprietary intellectual property is being misused or stolen by those governments.",
               "comments": []
             }
           ]
@@ -4378,7 +4433,7 @@
       ],
       "underreported": [
         {
-          "section": "Section 105 — Self-Custody Protection",
+          "section": "Section 105(c) — Protection of Self-Custody",
           "summary": "The bill codifies the right of U.S. individuals to maintain hardware or software wallets and to engage in direct peer-to-peer digital asset transactions for their own lawful purposes with non-financial-institution counterparties, provided the transactions do not involve sanctioned property.",
           "why_unreported": "Coverage focuses on the exchange registration and SEC-CFTC jurisdiction split. This provision limits federal agencies' ability to restrict individual self-custody and peer-to-peer transactions — a direct response to concerns about non-custodial wallet software regulation — but is embedded in the rulemaking section of Title I."
         },
@@ -4463,11 +4518,11 @@
           "crossoverCount": 0
         }
       ],
-      "stageDate": "2026-06-01",
+      "stageDate": "2026-08-08",
       "enactedDate": "",
       "budget_accounts": {},
       "billType": "framework",
-      "analyzedAt": "2026-08-08",
+      "analyzedAt": "2026-08-12",
       "versions": [
         {
           "type": "Introduced in House",
@@ -6285,9 +6340,9 @@
       "code": "HR.5366",
       "date": "2025-09-14",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -6422,7 +6477,7 @@
           "Section 304(b) of the Taxpayer Certainty and Disaster Tax Relief Act of 2020 (division EE of Public Law 116-260) and section 70438 of Public Law 119-21 made inapplicable to taxable years beginning after December 31, 2024"
         ]
       },
-      "stageDate": "2026-04-28",
+      "stageDate": "2026-08-10",
       "votes": [
         {
           "chamber": "House",
@@ -6479,6 +6534,11 @@
           "type": "Referred in Senate",
           "date": "2026-04-28",
           "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366rfs.htm"
+        },
+        {
+          "type": "Enrolled Bill",
+          "date": null,
+          "url": "https://www.congress.gov/119/bills/hr5366/BILLS-119hr5366enr.htm"
         }
       ],
       "versionChanges": {
@@ -6504,7 +6564,8 @@
           "type": "Introduced in House",
           "date": "2025-09-15"
         }
-      }
+      },
+      "needsReanalysis": true
     },
     {
       "id": "119-HR-227",
@@ -7250,9 +7311,9 @@
       "code": "HR.5334",
       "date": "2025-09-10",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -7364,7 +7425,7 @@
         ],
         "removed": []
       },
-      "stageDate": "2026-07-29",
+      "stageDate": "2026-08-10",
       "votes": [
         {
           "chamber": "House",
@@ -7421,8 +7482,14 @@
           "type": "Placed on Calendar Senate",
           "date": "2026-07-14",
           "url": "https://www.congress.gov/119/bills/hr5334/BILLS-119hr5334pcs.htm"
+        },
+        {
+          "type": "Engrossed Amendment Senate",
+          "date": "2026-08-07",
+          "url": "https://www.congress.gov/119/bills/hr5334/BILLS-119hr5334eas.htm"
         }
-      ]
+      ],
+      "needsReanalysis": true
     },
     {
       "id": "119-HR-6956",
@@ -38851,9 +38918,9 @@
       "official_title": "To amend the Federal Funding Accountability and Transparency Act of 2006 to ensure that other transaction agreements are reported to USAspending.gov, and for other purposes.",
       "date": "2025-03-11",
       "version": "v1.0",
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "currentStep": 2,
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
       "pipeline": [
         "Introduced",
         "Committee",
@@ -38868,7 +38935,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-07-21",
+      "stageDate": "2026-08-10",
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "Introduced by Rep. Barry Moore (R-AL-1) with 3 cosponsors including Rep. Panetta (D-CA) and Rep. Goodlander (D-NH), and referred to the House Committee on Oversight and Government Reform. The House-passed measure now moves to the Senate per the latest recorded action. Transparency additions to USAspending.gov that pull \"other transaction agreements\" — a Defense Department and civilian-agency contracting vehicle used heavily by innovation programs — into public disclosure tend to draw industry pushback from OTA recipients and agencies that use OTAs to move quickly, but the cross-aisle sponsor mix and the multi-year phase-in soften Senate opposition.",
@@ -38998,7 +39065,17 @@
         "The bill requires Treasury to publish a list of covered agencies but does not set a process for an agency (or the public) to appeal inclusion or exclusion from the list.",
         "The bill directs the Comptroller General to recommend updates to FAR clause 52.204-10 but does not require the FAR Council to adopt the recommendations or set a deadline for consideration."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Ernst",
+          "party": "R",
+          "state": "IA",
+          "bioguideId": "E000295",
+          "text": "Taxpayers deserve to know how the money they send to Washington is being spent. For 20 years now, the Federal Funding Accountability and Transparency Act has required unclassified government spending to be put online in a searchable public website, USAspending.gov. This allows taxpayers to review the receipts for themselves.",
+          "stance": "neutral",
+          "chamber": "Senate"
+        }
+      ],
       "changes": {
         "added": [
           "New FFATA section 2(a)(4)(A)(iii) — \"includes other transaction agreements\" added to the definition of a Federal award",
@@ -39039,8 +39116,19 @@
           "type": "Engrossed in House",
           "date": "2026-07-20",
           "url": "https://www.congress.gov/119/bills/hr2069/BILLS-119hr2069eh.htm"
+        },
+        {
+          "type": "Received in Senate",
+          "date": "2026-07-21",
+          "url": "https://www.congress.gov/119/bills/hr2069/BILLS-119hr2069rds.htm"
+        },
+        {
+          "type": "Enrolled Bill",
+          "date": null,
+          "url": "https://www.congress.gov/119/bills/hr2069/BILLS-119hr2069enr.htm"
         }
-      ]
+      ],
+      "needsReanalysis": true
     },
     {
       "id": "119-HR-4348",
@@ -43073,6 +43161,11 @@
           "type": "Engrossed in House",
           "date": "2026-07-22",
           "url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008eh.htm"
+        },
+        {
+          "type": "Placed on Calendar Senate",
+          "date": "2026-08-06",
+          "url": "https://www.congress.gov/119/bills/hr7008/BILLS-119hr7008pcs.htm"
         }
       ]
     },
@@ -43836,7 +43929,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "reauthorization",
-      "stageDate": "2026-08-06",
+      "stageDate": "2026-08-10",
       "likelihood": 70,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Sen. Susan Collins (R-ME) with 23 cosponsors, this narrow reauthorization keeps two existing CDC vector-borne disease programs — the national tick-borne strategy and state health department cooperative agreements — running through fiscal year 2030 at their currently authorized levels. The bill passed the Senate by voice/unanimous-consent-style engrossment on August 6, 2026 and now awaits House action. Its short length, tight scope, and prior-Congress base statute (the 2019 Kay Hagan Tick Act) place it in the category of low-cost public health reauthorizations that typically move without controversy.",
@@ -43972,7 +44065,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-09",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -44024,7 +44117,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-08-06",
+      "stageDate": "2026-08-10",
       "likelihood": 60,
       "likelihoodLabel": "Possible",
       "likelihoodReason": "Introduced by Sen. Gary Peters (D-MI) with 2 cosponsors, this bill directs the Commerce Department's Office of Space Commerce to stand up a 15-member private-sector advisory committee within 180 days of enactment. The bill passed the Senate on August 6, 2026 and awaits House consideration. Advisory-committee authorizations of this narrow, non-fiscal form move often but not always — the ten-year sunset and the ban on federal-employee members are the substantive levers the House may want to revisit.",
@@ -44121,7 +44214,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -44173,7 +44266,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-06",
+      "stageDate": "2026-08-10",
       "likelihood": 60,
       "likelihoodLabel": "Possible",
       "likelihoodReason": "Introduced by Sen. Roger Wicker (R-MS) with one cosponsor, this bill authorizes the Secretary of Transportation to charter a New York nonprofit corporation to support athletics at the U.S. Merchant Marine Academy. The bill passed the Senate on August 6, 2026 and now awaits House action. It is narrow and non-fiscal; potential House-side objections would center on the sole-source contract authority in new 46 U.S.C. §51329(d) or the transfer of nonappropriated-fund instrumentality assets in §51329(g).",
@@ -44239,6 +44332,11 @@
             {
               "main": "Authorizes real-property leases to the corporation for up to 5 years.",
               "detail": "The Secretary, in consultation with the GSA Administrator, may rent or lease USMMA real property to the corporation on terms deemed advisable, only for property not required for immediate Academy use, with all rental proceeds retained and used to support USMMA athletics.",
+              "comments": []
+            },
+            {
+              "main": "Authorizes DOT to provide in-kind support services to the corporation, with no U.S. liability.",
+              "detail": "To the extent required by a contract or cooperative agreement under subsection (d), the Secretary may provide support services — defined as utilities, office furnishings and equipment, communications services, records staging and archiving, audio and video support, and security systems, in conjunction with the leasing or licensing of property — while the corporation conducts support activities at USMMA, only if the Secretary determines the services are essential for the support of USMMA athletic programs. Provision of these services may not result in any liability for the United States to the corporation (new 46 U.S.C. §51329(f)).",
               "comments": []
             },
             {
@@ -44308,7 +44406,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -44360,10 +44458,10 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-06",
+      "stageDate": "2026-08-10",
       "likelihood": 65,
       "likelihoodLabel": "Likely",
-      "likelihoodReason": "Introduced by Sen. John Hickenlooper (D-CO) with 9 cosponsors, this bill puts the NIH INCLUDE Project — currently funded through the annual Labor-HHS appropriations bill — into permanent Public Health Service Act authorization language. The bill passed the Senate on August 6, 2026 by Voice Vote and awaits House action. The bill does not itself authorize appropriations, so the actual funding level remains with the appropriators; substantively it codifies existing NIH research topics and reporting rather than creating new obligations, which reduces the objection surface for House movement.",
+      "likelihoodReason": "Introduced by Sen. John Hickenlooper (D-CO) with 9 cosponsors, this bill puts the NIH INCLUDE Project into permanent Public Health Service Act authorization language. The bill passed the Senate on August 6, 2026 by Voice Vote and awaits House action. The bill does not itself authorize appropriations, so the actual funding level remains with the appropriators; substantively it codifies existing NIH research topics and reporting rather than creating new obligations, which reduces the objection surface for House movement.",
       "summary": "This bill adds a new section 409K to the Public Health Service Act, creating a permanent statutory home for the NIH's INvestigation of Co-occurring conditions across the Lifespan to Understand Down syndromE Project (the INCLUDE Project). The NIH Director must carry out the INCLUDE Project as a program of research, training, and investigation on Down syndrome that covers seven listed areas — including trisomy-21 biology, lifespan cohort studies, clinical-trial inclusion, biomarkers, co-occurring conditions such as Alzheimer's and autoimmunity, and quality-of-life improvement. NIH must coordinate related work across its institutes and centers, avoid duplication, consult with patient advocates and stakeholders, and submit a biennial report on the research to Congress.",
       "brief": "Gives the NIH INCLUDE Project on Down syndrome a permanent statutory footing in the Public Health Service Act, with seven research focus areas, a coordination duty, stakeholder consultation, and biennial reports to Congress.",
       "top_lines": [
@@ -44475,7 +44573,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-09",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -44522,7 +44620,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-05",
+      "stageDate": "2026-08-10",
       "likelihood": 65,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Sen. Maggie Hassan (D-NH) with 4 cosponsors, this bill converts a one-time Northern Border threat analysis (last authorized in 2016) into a recurring triennial deliverable and adds a five-year strategy update. The bill passed the Senate on August 5, 2026 by Unanimous Consent and awaits House action. Section 3 explicitly authorizes no additional funds, and the substantive obligations (recurring analysis, strategy updates, briefings, CBP performance measures) sit inside existing DHS/CBP authorities — a narrow no-cost profile that lowers the objection surface in the House.",
@@ -44671,7 +44769,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -44931,7 +45029,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "study",
-      "stageDate": "2026-08-04",
+      "stageDate": "2026-08-10",
       "likelihood": 70,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Sen. Eric Schmitt (R-MO) with 27 cosponsors, this bill directs HHS to review and update existing federal epilepsy programs and to submit recommendations to Congress within 2 years. The bill passed the Senate on August 4, 2026 and awaits House action. Non-fiscal HHS review-and-report bills of this narrow scope tend to move well when they arrive in the House with substantial cosponsor support and no authorization of appropriations attached.",
@@ -45021,7 +45119,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -45073,10 +45171,10 @@
       "analyzed": true,
       "demo": false,
       "billType": "reauthorization",
-      "stageDate": "2026-08-04",
+      "stageDate": "2026-08-10",
       "likelihood": 70,
       "likelihoodLabel": "Likely",
-      "likelihoodReason": "Introduced by Sen. Lisa Murkowski (R-AK) with 15 cosponsors, this bill extends the 2021 ALS Act (Public Law 117-79) — the FDA expanded-access grant program plus the FDA rare-neurodegenerative-disease action plans — through fiscal year 2031, and makes several process improvements to how expanded-access grants are administered. The bill passed the Senate on August 4, 2026 by Voice Vote and awaits House action. It is a non-fiscal reauthorization of the 2021 ALS Act with no new authorization of appropriations attached.",
+      "likelihoodReason": "Introduced by Sen. Lisa Murkowski (R-AK) with 15 cosponsors, this bill extends the 2021 ALS Act (Public Law 117-79) — the FDA expanded-access grant program plus the FDA rare-neurodegenerative-disease action plans — through fiscal year 2031, and makes several process improvements to how expanded-access grants are administered. The bill passed the Senate on August 4, 2026 by Voice Vote and awaits House action. It is a narrow reauthorization of the 2021 ALS Act, extending the existing $100M-per-year appropriations authorization through FY2031 without changing the funding level.",
       "referencedSources": [
         {
           "id": "bill-117-hr-3537",
@@ -45216,7 +45314,7 @@
       "underreported": [
         {
           "section": "Section 4(1)",
-          "summary": "The FDA action-plan section heading is narrowed from \"ALS and other rare neurodegenerative diseases\" to \"FDA action plans,\" removing \"ALS and other\" from the heading.",
+          "summary": "The Section 4 heading changes from \"ALS and Other Rare Neurodegenerative Disease Action Plans\" to \"FDA Rare Neurodegenerative Disease Action Plans\" — striking \"ALS and other\" and inserting \"FDA\".",
           "why_unreported": "The bill's short title is a \"reauthorization,\" but the heading change signals a scope shift in how the FDA plan is characterized in statute. It's a small edit with a substantive framing effect that press coverage will miss."
         },
         {
@@ -45230,7 +45328,7 @@
         "The bill extends the ALS Act's authorization of appropriations through FY2031 but does not change the $100M-per-year level or require inflation adjustment.",
         "The bill requires FDA to publish an updated action plan every 5 years but does not require public comment periods or a specific stakeholder-consultation cadence during plan development.",
         "The bill requires an HHS effectiveness report but does not require the report to be made public.",
-        "The bill narrows the Section 4 heading to \"FDA action plans\" without addressing whether the plan's substantive scope (ALS and other rare neurodegenerative diseases) remains the same."
+        "The bill changes the Section 4 heading from \"ALS and Other Rare Neurodegenerative Disease Action Plans\" to \"FDA Rare Neurodegenerative Disease Action Plans\" but does not address whether the plans' substantive coverage of ALS specifically remains the same."
       ],
       "featured_quotes": [],
       "changes": {
@@ -45252,7 +45350,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -45304,7 +45402,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-03",
+      "stageDate": "2026-08-10",
       "likelihood": 65,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Sen. Ted Budd (R-NC) with 3 cosponsors, this bill establishes an FCC-led interagency taskforce on unlawful robocalls, grants trace-back immunity to the registered TRACED Act consortium, and requires an FCC Robocall Mitigation Database bond rule. The bill passed the Senate on August 3, 2026 by Unanimous Consent and awaits House action. It is a non-fiscal telecom-oversight measure that uses existing FCC/FTC/DOJ resources (no additional funds authorized); the bond-requirement provision is capped at $100,000 with exemptions for USF-contributing, PUC-registered, and exchange-listed providers.",
@@ -45461,7 +45559,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -45513,7 +45611,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-03",
+      "stageDate": "2026-08-10",
       "likelihood": 65,
       "likelihoodLabel": "Likely",
       "likelihoodReason": "Introduced by Sen. Chuck Grassley (R-IA) with 5 cosponsors, this bill sets new debt limits for two bankruptcy tracks: $7.5M for Subchapter V small-business reorganization and $2.75M for Chapter 13 individual reorganization. The bill passed the Senate on August 3, 2026 and awaits House action. It is a narrow debt-limit adjustment within existing bankruptcy chapters (no new program authority and no appropriation) — a low-controversy structure for the House to take up.",
@@ -45644,7 +45742,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",
@@ -45691,7 +45789,7 @@
       "analyzed": true,
       "demo": false,
       "billType": "amendment",
-      "stageDate": "2026-08-03",
+      "stageDate": "2026-08-10",
       "likelihood": 60,
       "likelihoodLabel": "Possible",
       "likelihoodReason": "Introduced by Sen. Tammy Duckworth (D-IL) with 3 cosponsors, this bill classifies any consumer product containing a high concentration of sodium nitrite (10 or more percent by weight) as a banned hazardous product under Section 8 of the Consumer Product Safety Act. The bill passed the Senate on August 3, 2026 by Voice Vote and awaits House action. It is a single-substance ban with explicit carveouts for meat, poultry, and egg products already regulated under the federal inspection statutes, which narrows the affected industry and lowers the objection surface in the House.",
@@ -45805,7 +45903,7 @@
         "removed": []
       },
       "budget_accounts": {},
-      "analyzedAt": "2026-08-07",
+      "analyzedAt": "2026-08-12",
       "votes": [
         {
           "chamber": "Senate",

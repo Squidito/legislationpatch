@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-07T19:07:34.607Z",
+  "lastRun": "2026-08-12T21:31:52.491Z",
   "stages": {
     "119-HCONRES-108": {
       "stage": "dead",
@@ -142,9 +142,9 @@
       "stageDate": "2026-05-19"
     },
     "119-HR-2069": {
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "stageDate": "2026-07-21"
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "stageDate": "2026-08-10"
     },
     "119-HR-2189": {
       "stage": "house",
@@ -289,7 +289,7 @@
     "119-HR-3633": {
       "stage": "house",
       "stageLabel": "Passed House",
-      "stageDate": "2026-06-01"
+      "stageDate": "2026-08-08"
     },
     "119-HR-3657": {
       "stage": "house",
@@ -467,9 +467,9 @@
       "stageDate": "2026-07-29"
     },
     "119-HR-5334": {
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "stageDate": "2026-07-29"
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "stageDate": "2026-08-10"
     },
     "119-HR-5347": {
       "stage": "house",
@@ -477,9 +477,9 @@
       "stageDate": "2026-07-13"
     },
     "119-HR-5366": {
-      "stage": "house",
-      "stageLabel": "Passed House",
-      "stageDate": "2026-04-28"
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "stageDate": "2026-08-10"
     },
     "119-HR-5371": {
       "stage": "signed",
@@ -879,7 +879,7 @@
     "119-S-1838": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-06"
+      "stageDate": "2026-08-10"
     },
     "119-S-1884": {
       "stage": "signed",
@@ -919,7 +919,7 @@
     "119-S-2398": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-06"
+      "stageDate": "2026-08-10"
     },
     "119-S-254": {
       "stage": "signed",
@@ -939,7 +939,7 @@
     "119-S-2666": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-03"
+      "stageDate": "2026-08-10"
     },
     "119-S-269": {
       "stage": "signed",
@@ -959,12 +959,12 @@
     "119-S-289": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-03"
+      "stageDate": "2026-08-10"
     },
     "119-S-3266": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-06"
+      "stageDate": "2026-08-10"
     },
     "119-S-331": {
       "stage": "signed",
@@ -994,7 +994,7 @@
     "119-S-3977": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-03"
+      "stageDate": "2026-08-10"
     },
     "119-S-423": {
       "stage": "signed",
@@ -1004,7 +1004,7 @@
     "119-S-434": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-06"
+      "stageDate": "2026-08-10"
     },
     "119-S-4465": {
       "stage": "signed",
@@ -1014,7 +1014,7 @@
     "119-S-4472": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-04"
+      "stageDate": "2026-08-10"
     },
     "119-S-4530": {
       "stage": "signed",
@@ -1024,7 +1024,7 @@
     "119-S-494": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-04"
+      "stageDate": "2026-08-10"
     },
     "119-S-5": {
       "stage": "signed",
@@ -1049,7 +1049,7 @@
     "119-S-850": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
-      "stageDate": "2026-08-05"
+      "stageDate": "2026-08-10"
     },
     "119-S-911": {
       "stage": "senate",
@@ -1063,6 +1063,15 @@
     }
   },
   "editions": [
+    {
+      "date": "2026-08-12",
+      "url": "/changelog/2026-08-12/",
+      "kind": "diff",
+      "counts": {
+        "total": 3,
+        "advanced": 3
+      }
+    },
     {
       "date": "2026-08-07",
       "url": "/changelog/2026-08-07/",

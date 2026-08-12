@@ -6,7 +6,7 @@
   "status": "audited",
   "depth": "full-claims",
   "sourceReadDepth": "full",
-  "auditedAt": "2026-08-10",
+  "auditedAt": "2026-08-12",
   "auditModel": "opus",
   "verifyModel": null,
   "claims": [
@@ -410,10 +410,11 @@
       "sourceStart": null,
       "sourceEnd": null,
       "section": "S.4472 SEC. 2(a) / PL 117-79 SEC. 7",
-      "note": "The bill amends Section 7 (AUTHORIZATION OF APPROPRIATIONS) to strike '2022 through 2026' and insert '2027 through 2031', continuing the $100,000,000/yr authorization through FY2031 -- i.e. it does reauthorize appropriations. 'Non-fiscal / no new authorization' is defensible only as 'no new money above current-law baseline'; as stated it is loose. gaps[] correctly notes the $100M level continues.",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "note": "The bill amends Section 7 (AUTHORIZATION OF APPROPRIATIONS) to strike '2022 through 2026' and insert '2027 through 2031', continuing the $100,000,000/yr authorization through FY2031 -- i.e. it does reauthorize appropriations. 'Non-fiscal / no new authorization' is defensible only as 'no new money above current-law baseline'; as stated it is loose. gaps[] correctly notes the $100M level continues. QA Pass 3 (2026-08-12): fixed. The bill Sec 2(a) amends PL 117-79 Sec 7 authorization from \"2022 through 2026\" to \"2027 through 2031\" — a $100M/yr renewal, so \"non-fiscal\" is contradicted by the bill's own text and by gaps[0]. Reworded to \"narrow reauthorization ... extending the existing $100M-per-year appropriations authorization through FY2031 without changing the funding level.\"",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "fixedAt": "2026-08-12"
     },
     {
       "field": "top_lines[0]",
@@ -1299,14 +1300,46 @@
       "status": "open",
       "verify": null,
       "kind": "claim"
+    },
+    {
+      "field": "underreported[0].summary",
+      "claim": "The FDA action-plan section heading is narrowed from \"ALS and other rare neurodegenerative diseases\" to \"FDA action plans\"",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "minor",
+      "sourceSpan": "SEC. 4. REPORT ON ALS AND OTHER RARE NEURODEGENERATIVE DISEASE ACTION PLANS. ... (1) in the section heading, by striking als and other'' and inserting fda'';",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": "Bill SEC. 4 heading + Sec 4(1)",
+      "note": "QA Pass 3 (2026-08-12): endpoints of heading strike were mis-stated. Original heading is \"REPORT ON ALS AND OTHER RARE NEURODEGENERATIVE DISEASE ACTION PLANS\" (bill text L107); strike is \"als and other\" -> \"fda\"; new heading is \"REPORT ON FDA RARE NEURODEGENERATIVE DISEASE ACTION PLANS\". Analysis dropped \"action plans\" from the original endpoint and dropped \"rare neurodegenerative disease\" from the new endpoint. Fixed to describe the actual strike.",
+      "status": "fixed",
+      "fixedAt": "2026-08-12",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "gaps[3]",
+      "claim": "The bill narrows the Section 4 heading to \"FDA action plans\" without addressing whether the plan's substantive scope (ALS and other rare neurodegenerative diseases) remains the same.",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "minor",
+      "sourceSpan": "SEC. 4. REPORT ON ALS AND OTHER RARE NEURODEGENERATIVE DISEASE ACTION PLANS. ... (1) in the section heading, by striking als and other'' and inserting fda'';",
+      "sourceStart": null,
+      "sourceEnd": null,
+      "section": "Bill SEC. 4 heading + Sec 4(1)",
+      "note": "QA Pass 3 (2026-08-12): same heading-strike mischaracterization as underreported[0]. Rewritten to describe the actual endpoints (\"ALS and Other Rare Neurodegenerative Disease Action Plans\" -> \"FDA Rare Neurodegenerative Disease Action Plans\") and to flag substantive coverage of ALS specifically.",
+      "status": "fixed",
+      "fixedAt": "2026-08-12",
+      "verify": "CONFIRMED",
+      "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 86,
+    "claims": 88,
     "material": 0,
-    "minor": 10,
+    "minor": 9,
     "omissions": 2
   },
   "resolution": "",
-  "notes": "Hostile source-only fidelity audit against data/bill-text/119-S-4472.txt (Engrossed in Senate) + referenced PL 117-79 (data/ref-text/bill-117-hr-3537.txt). 0 material issues. Minor issues: (1) recurring 'FDA' gloss on the grant program, which PL 117-79 SEC. 2 attributes to 'the Secretary of Health and Human Services'; (2) summary's 'narrows the action plan's scope' overstates a heading-only edit (substantive scope unchanged; the section detail/top_lines/gaps frame it correctly); (3) 'two misspellings' overstates SEC. 6, whose second fix strikes the stray word 'rational' (the detail describes it correctly); (4) Section 3 item main mislabels the amended defined term as 'ongoing clinical trial' (source term is 'participating clinical trial'); (5) likelihoodReason 'non-fiscal / no new authorization' is loose given SEC. 2(a) extends the Section 7 appropriations authorization. Two minor omissions (SEC. 3(4) conforming edit; SEC. 4(3)(A) strike of 'initial'). All figures, directions, dates, committees, and statutory cites verify against source."
+  "notes": "Hostile source-only fidelity audit against data/bill-text/119-S-4472.txt (Engrossed in Senate) + referenced PL 117-79 (data/ref-text/bill-117-hr-3537.txt). 0 material issues. Minor issues: (1) recurring 'FDA' gloss on the grant program, which PL 117-79 SEC. 2 attributes to 'the Secretary of Health and Human Services'; (2) summary's 'narrows the action plan's scope' overstates a heading-only edit (substantive scope unchanged; the section detail/top_lines/gaps frame it correctly); (3) 'two misspellings' overstates SEC. 6, whose second fix strikes the stray word 'rational' (the detail describes it correctly); (4) Section 3 item main mislabels the amended defined term as 'ongoing clinical trial' (source term is 'participating clinical trial'); (5) likelihoodReason 'non-fiscal / no new authorization' is loose given SEC. 2(a) extends the Section 7 appropriations authorization. Two minor omissions (SEC. 3(4) conforming edit; SEC. 4(3)(A) strike of 'initial'). All figures, directions, dates, committees, and statutory cites verify against source. QA Pass 3 (2026-08-12): fixed 1 open minor (non-fiscal framing on likelihoodReason) + 2 minor entity errors in underreported[0].summary / gaps[3] (heading-strike endpoints)."
 }
