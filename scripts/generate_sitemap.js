@@ -70,6 +70,11 @@ entries.push(urlEntry(BASE + '/privacy.html', null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/terms.html',   null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/about.html',   null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/corrections.html', null,   'yearly',  '0.3'));
+// Trust + authorship surfaces. The author page is the canonical Person entity
+// for the whole site, so it must be crawlable for the @id references on every
+// article and bill page to resolve.
+entries.push(urlEntry(BASE + '/editorial-standards.html', null, 'yearly', '0.4'));
+entries.push(urlEntry(BASE + '/author/james-shearn', null,  'monthly', '0.4'));
 
 // Bill pages — static /bill/<slug>/ URLs (only current slugs; historical
 // redirect stubs are noindex and intentionally excluded).

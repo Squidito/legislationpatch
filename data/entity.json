@@ -1,0 +1,48 @@
+{
+  "_readme": "Single source of truth for the site's Person and Organization entities. Every page that emits author/publisher JSON-LD reads THIS file via scripts/lib/entity.js and references the @id values -- no page hardcodes an author blob. To add a new corroboration point (ORCID, Wikidata, LinkedIn, Muck Rack), append the URL to person.sameAs here and re-run `npm run pages` + `npm run articles:index`; it propagates everywhere. See _personal/ARTICLE-WRITER-SPEC.md section 6.",
+  "site": {
+    "baseUrl": "https://legislationpatch.com",
+    "name": "LegislationPatch"
+  },
+  "person": {
+    "id": "https://legislationpatch.com/author/james-shearn#person",
+    "name": "James Shearn",
+    "givenName": "James",
+    "familyName": "Shearn",
+    "jobTitle": "Editor",
+    "url": "https://legislationpatch.com/author/james-shearn",
+    "slug": "james-shearn",
+    "description": "James Shearn is the editor of LegislationPatch. He built the site's source-verification pipeline, which checks every published figure, date, and statutory citation against the official bill text before it ships, and he reviews and verifies each analysis and article before publication.",
+    "knowsAbout": [
+      "United States federal legislation",
+      "Congressional procedure",
+      "Federal appropriations",
+      "Legislative process",
+      "Roll-call voting records",
+      "The Congressional Record"
+    ],
+    "sameAs": [
+      "https://github.com/Squidito"
+    ],
+    "_sameAsTodo": "Ranked by machine-readability, best value first. (1) ORCID -- free, instant, no notability gate, persistent identifier: register at orcid.org and append the https://orcid.org/NNNN-NNNN-NNNN-NNNN URL. (2) Wikidata -- highest machine value but has a notability bar and can be deleted; the SITE is the likelier entity than the person. (3) Muck Rack -- journalist registry, domain-relevant. (4) LinkedIn / X / Bluesky -- lower machine value than commonly assumed."
+  },
+  "organization": {
+    "id": "https://legislationpatch.com/#organization",
+    "type": "NewsMediaOrganization",
+    "name": "LegislationPatch",
+    "url": "https://legislationpatch.com/",
+    "logo": "https://legislationpatch.com/og-image.png",
+    "foundingDate": "2026",
+    "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, patch-notes style. No political affiliation, no outside funding, no advertising.",
+    "publishingPrinciples": "https://legislationpatch.com/articles/methodology.html",
+    "verificationFactCheckingPolicy": "https://legislationpatch.com/articles/methodology.html",
+    "correctionsPolicy": "https://legislationpatch.com/corrections.html",
+    "actionableFeedbackPolicy": "https://legislationpatch.com/corrections.html",
+    "ownershipFundingInfo": "https://legislationpatch.com/about.html",
+    "ethicsPolicy": "https://legislationpatch.com/articles/no-editorial-spin.html",
+    "editorialStandards": "https://legislationpatch.com/editorial-standards.html",
+    "sameAs": [
+      "https://github.com/Squidito/legislationpatch"
+    ]
+  }
+}

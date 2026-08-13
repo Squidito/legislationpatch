@@ -43,7 +43,12 @@
     "flag-drift": "node scripts/flag-version-drift.js",
     "security": "node scripts/security-check.js",
     "test:security": "node scripts/test-security-helpers.js",
-    "prepare": "git config core.hooksPath scripts/hooks"
+    "prepare": "git config core.hooksPath scripts/hooks",
+    "author": "node scripts/generate_author_page.js",
+    "author:check": "node scripts/generate_author_page.js --check",
+    "news-sitemap": "node scripts/generate_news_sitemap.js",
+    "indexnow": "node scripts/indexnow-ping.js",
+    "entities": "node scripts/migrate-article-entities.js"
   },
   "repository": {
     "type": "git",

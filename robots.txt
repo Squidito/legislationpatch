@@ -3,3 +3,7 @@ Allow: /
 
 # Gemini 3.1 work: Added basic robots.txt for SEO crawlability
 Sitemap: https://legislationpatch.com/sitemap.xml
+
+# News sitemap — only carries items published in the last 48 hours, per the
+# Google News spec. Expected to be empty outside an active publishing window.
+Sitemap: https://legislationpatch.com/news-sitemap.xml

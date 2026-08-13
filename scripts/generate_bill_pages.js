@@ -46,6 +46,7 @@ const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bil
 // Which explainer/tracker articles reference each bill — for the "Related guides"
 // cross-links baked into each page (crawlable internal links, bill -> article).
 const { buildArticleIndex } = require('./lib/article-index.js');
+const entity = require('./lib/entity.js');
 const ARTICLES_BY_BILL = buildArticleIndex().byBill;
 
 // ── Small formatters ─────────────────────────────────────────────────────────
@@ -425,20 +426,20 @@ function staticBody(bill) {
 function structuredData(bill, url) {
   // Keep the schema description consistent with the visible answer passage.
   const desc = truncate(answerParagraph(bill) || bill.brief || bill.summary || '', 300);
+  // author/publisher reference the site's canonical entities (data/entity.json)
+  // rather than repeating an inline blob on all 200+ pages. The full Person node
+  // lives on the author page; the full Organization node lives on about.html.
   const article = {
     '@type': 'Article',
     headline: bill.title || bill.code || bill.id,
     description: desc,
     image: billOgImage(bill),
     url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     datePublished: bill.date || undefined,
     dateModified: bill.analyzedAt || bill.stageDate || bill.date || undefined,
-    publisher: {
-      '@type': 'Organization',
-      name: 'LegislationPatch',
-      url: BASE + '/',
-      logo: { '@type': 'ImageObject', url: OG_IMAGE },
-    },
+    author: entity.personRef(),
+    publisher: entity.organizationRef(),
   };
   const legislation = {
     '@type': 'Legislation',

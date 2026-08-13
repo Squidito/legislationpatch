@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="max-image-preview:large" />
+  <title>Editorial Standards and AI Disclosure — LegislationPatch</title>
+  <meta name="description" content="How LegislationPatch is written: what the automated research pipeline does, what a human editor does, what is never automated, and how errors are caught and corrected." />
+  <link rel="canonical" href="https://legislationpatch.com/editorial-standards.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://legislationpatch.com/editorial-standards.html" />
+  <meta property="og:title" content="Editorial Standards and AI Disclosure — LegislationPatch" />
+  <meta property="og:description" content="What the automated research pipeline does, what a human editor does, what is never automated, and how errors are caught and corrected." />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://legislationpatch.com/editorial-standards.html" />
+  <meta name="twitter:title" content="Editorial Standards and AI Disclosure — LegislationPatch" />
+  <meta name="twitter:description" content="What the pipeline does, what a human does, and what is never automated." />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://legislationpatch.com/editorial-standards.html#webpage",
+        "name": "Editorial Standards and AI Disclosure — LegislationPatch",
+        "description": "How LegislationPatch is written: what the automated research pipeline does, what a human editor does, what is never automated, and how errors are caught and corrected.",
+        "url": "https://legislationpatch.com/editorial-standards.html",
+        "isPartOf": {"@id": "https://legislationpatch.com/#website"},
+        "about": {"@id": "https://legislationpatch.com/#organization"},
+        "publisher": {"@id": "https://legislationpatch.com/#organization"}
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-shared.css" />
+  <link rel="stylesheet" href="styles-bills.css" />
+  <link rel="stylesheet" href="styles-pages.css" />
+</head>
+<body>
+
+  <!-- Apply theme before paint — dark is the default -->
+  <script>
+    (function(){
+      try { if (localStorage.getItem('lpTheme') !== 'light') document.documentElement.setAttribute('data-theme', 'dark'); }
+      catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-block" style="text-decoration:none">
+        <img src="logo.svg" alt="LegislationPatch" class="logo-img" />
+      </a>
+      <div class="header-track">
+        <a href="/search" class="header-search-link" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
+        <a href="index.html" class="back-btn">← Back to Bills</a>
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </header>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('lpTheme');
+      var tog = null;
+      function apply(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        var logo = document.querySelector('.logo-img'); if (logo) logo.src = dark ? 'logo-dark.svg' : 'logo.svg';
+        if (tog) tog.checked = dark;
+      }
+      apply(saved !== 'light');
+      document.addEventListener('DOMContentLoaded', function() {
+        tog = document.getElementById('themeToggle');
+        if (tog) {
+          tog.checked = saved !== 'light';
+          tog.addEventListener('change', function() {
+            localStorage.setItem('lpTheme', this.checked ? 'dark' : 'light');
+            apply(this.checked);
+          });
+        }
+      });
+    })();
+  </script>
+
+  <main class="main" style="max-width:720px">
+    <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.5rem">Editorial Standards and AI Disclosure</h1>
+    <p class="section-label" style="margin-bottom:2rem">Last updated: August 2026</p>
+
+    <p>LegislationPatch uses AI to read and draft. This page says exactly where, exactly how it is constrained, and exactly what a human does before anything is published. It is written to be checkable rather than reassuring — the specific gates described below either exist in the code or they do not, and the repository is <a href="https://github.com/Squidito/legislationpatch" target="_blank" rel="noopener noreferrer">public</a>.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">The one rule everything else serves</h2>
+    <p>Nothing published on this site may come from an AI model's background knowledge. Every figure, date, dollar amount, statutory citation, and section reference must appear in a source document that was actually fetched and stored — the bill's official text, a referenced statute, a roll-call record, or the Congressional Record. A model's recollection of what a bill says is not a source, even when it happens to be right. A claim that cannot be tied to a stored source line is deleted, not softened.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the automated pipeline does</h2>
+    <ul style="margin:0.4rem 0 0 1.1rem;line-height:1.7">
+      <li>Fetches the bill's official text from Congress.gov and GovInfo — always the latest applicable version, because a bill that has passed a chamber is often substantially rewritten from the version introduced.</li>
+      <li>Extracts a facts sheet: every figure, percentage, deadline, date, and heading in the text, with line numbers. Figures in the published analysis are copied from that sheet, not re-typed from memory.</li>
+      <li>Fetches referenced statutes when a bill amends or extends another law, so the numbers come from the actual referenced text.</li>
+      <li>Drafts the analysis or article against that source material under a fixed set of sourcing rules.</li>
+      <li>Runs deterministic checks that block publication: every dollar figure, percentage, and section citation must appear in the fetched text; every cited source must resolve to a stored document; a claim that a bill passed a chamber must be corroborated by a passing roll-call vote or an engrossed version.</li>
+      <li>Re-reads the draft against the source in fresh sessions that carry no memory of previous passes, working adversarially — assuming the draft is wrong and treating absence from the source as a flag.</li>
+      <li>Decomposes the draft into individual factual claims and judges each one supported, contradicted, or unsupported against a quoted span of source text, including a check for direction-of-change errors such as reading a limit as an increase.</li>
+      <li>Has a second model, from a different family than the one that drafted, verify flagged findings — correlated error between a model and itself is the failure this guards against.</li>
+      <li>Records the result as a per-page audit ledger: every claim checked, the verdict, and the source line behind it.</li>
+    </ul>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What a human does</h2>
+    <p>Every analysis and article is reviewed, verified, and edited by <a href="/author/james-shearn">James Shearn</a>, editor, before it is published. The editor adjudicates every flag the automated checks raise — confirming it, fixing it, or recording in a tracked file why it is not an error and what evidence supports that. Nothing publishes on a machine's say-so alone, and the decision to publish is always a human one.</p>
+    <p>The editor is accountable for everything on the site, including anything the pipeline got wrong.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What is never automated</h2>
+    <ul style="margin:0.4rem 0 0 1.1rem;line-height:1.7">
+      <li><strong>Quotations are never generated, paraphrased, or reconstructed.</strong> Every quoted statement is reproduced verbatim from the Congressional Record with its date and speaker attribution, or it does not appear.</li>
+      <li><strong>Positions are never invented.</strong> Where the site describes what a supporter or an opponent argues, that position must trace to a named holder and a real, retrieved document — the organization's own statement or letter, a recorded vote, a Statement of Administration Policy, or a member's own words. A position that cannot be verified is omitted rather than hedged.</li>
+      <li><strong>No AI-generated or AI-altered imagery</strong> is used to depict people, events, or documents.</li>
+      <li><strong>No editorial labels.</strong> The site does not call legislation landmark, radical, or common-sense, and does not endorse or oppose any bill. Significance is conveyed through structural facts — sponsorship, stage, recorded vote outcomes — and never through adjectives.</li>
+      <li><strong>No invented balance.</strong> Manufacturing an opposing side where none is on the record is treated as a neutrality violation equal to taking a side. A bill that passed 414&ndash;2 is described as having passed 414&ndash;2.</li>
+    </ul>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Authorship and bylines</h2>
+    <p>Articles and analyses carry the byline of the editor who reviewed and verified them, together with a note that the draft originated from the research pipeline. This is deliberate: the site does not publish under invented staff-writer names, and it does not present machine drafting as unassisted human writing. Where AI materially shaped a published page, that is disclosed on the page.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the process does not guarantee</h2>
+    <p>These checks are strongest on numbers and citations, which can be matched mechanically against source text. They are weaker on subtler failures — a claim that is technically sourced but attached to the wrong account, an omission that changes the picture, or an unsourced qualifier that slipped through. Those are the errors the adversarial re-read exists to catch, and the reason corrections are logged publicly rather than quietly edited.</p>
+    <p>The site describes what bills say. It does not predict what Congress will do, and where the likelihood of a bill advancing is discussed it is framed structurally rather than as a forecast.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Corrections</h2>
+    <p>Material factual errors are corrected promptly and logged publicly with the date, the page affected, and what changed. Routine updates that reflect new legislative activity are normal maintenance, not corrections. To report an error, use the <a href="https://github.com/Squidito/legislationpatch/issues" target="_blank" rel="noopener noreferrer">public issue tracker</a>; the full policy is on the <a href="corrections.html">corrections page</a>.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Independence</h2>
+    <p>LegislationPatch has no political affiliation, no outside funding, no advertising, and no sponsored content. It is not affiliated with any government body. See <a href="about.html">About</a> for ownership and funding.</p>
+
+    <p style="margin-top:2rem">Related: <a href="articles/methodology.html">Methodology</a> · <a href="articles/no-editorial-spin.html">Neutrality policy</a> · <a href="corrections.html">Corrections</a> · <a href="/author/james-shearn">Editor</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data directly sourced <em class="footer-only">only</em> from the <a href="https://api.congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov API</a></p>
+    <p class="footer-note">LegislationPatch is nonpartisan and does not endorse any bill or political position.</p>
+    <p class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms of Service</a> ·
+      <a href="articles/">Guides</a> ·
+      <a href="about.html">About</a> ·
+      <a href="editorial-standards.html">Editorial Standards</a> ·
+      <a href="corrections.html">Corrections</a> ·
+      <a href="changelog/">Changelog</a>
+    </p>
+  </footer>
+
+  <script src="/search-widget.js" defer></script>
+</body>
+</html>

@@ -32,14 +32,33 @@
         "name": "About — LegislationPatch",
         "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, sourced directly from official Congress.gov bill text.",
         "url": "https://legislationpatch.com/about.html",
-        "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"}
+        "isPartOf": {"@type": "WebSite", "name": "LegislationPatch", "url": "https://legislationpatch.com/"},
+        "mainEntity": {"@id": "https://legislationpatch.com/#organization"}
       },
       {
-        "@type": "Organization",
+        "@type": "NewsMediaOrganization",
+        "@id": "https://legislationpatch.com/#organization",
         "name": "LegislationPatch",
         "url": "https://legislationpatch.com/",
-        "logo": "https://legislationpatch.com/og-image.png",
-        "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, patch-notes style. No political affiliation, no outside funding, no advertising."
+        "logo": {"@type": "ImageObject", "url": "https://legislationpatch.com/og-image.png"},
+        "foundingDate": "2026",
+        "description": "An independent, nonpartisan project explaining U.S. federal legislation in plain English, patch-notes style. No political affiliation, no outside funding, no advertising.",
+        "publishingPrinciples": "https://legislationpatch.com/articles/methodology.html",
+        "verificationFactCheckingPolicy": "https://legislationpatch.com/articles/methodology.html",
+        "correctionsPolicy": "https://legislationpatch.com/corrections.html",
+        "actionableFeedbackPolicy": "https://legislationpatch.com/corrections.html",
+        "ownershipFundingInfo": "https://legislationpatch.com/about.html",
+        "ethicsPolicy": "https://legislationpatch.com/articles/no-editorial-spin.html",
+        "sameAs": ["https://github.com/Squidito/legislationpatch"],
+        "employee": {"@id": "https://legislationpatch.com/author/james-shearn#person"},
+        "founder": {"@id": "https://legislationpatch.com/author/james-shearn#person"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://legislationpatch.com/author/james-shearn#person",
+        "name": "James Shearn",
+        "jobTitle": "Editor",
+        "url": "https://legislationpatch.com/author/james-shearn"
       }
     ]
   }
@@ -114,7 +133,10 @@
 
     <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">How the analysis is produced</h2>
     <p>Every bill analysis is generated from the bill's official text as published by <a href="https://congress.gov" target="_blank" rel="noopener noreferrer">Congress.gov</a> and GovInfo, not from press releases, news coverage, or secondhand summaries. Before publication, each analysis is verified against that source text: every figure, date, and statutory citation must appear in the record, and each claim is re-checked by a separate model from the one that drafted it. When a bill amends or extends another law, the referenced statute is fetched and read directly, so the numbers come from the actual text rather than from memory. Each analysis keeps a record of the claims checked and the source line behind each one.</p>
-    <p>Two guides describe this in full: our <a href="articles/methodology.html">methodology</a>, which walks through exactly how a bill is sourced, read, and verified, and our <a href="articles/no-editorial-spin.html">neutrality policy</a>, which sets out where the line sits between neutral description and political framing.</p>
+    <p>Three documents describe this in full: our <a href="articles/methodology.html">methodology</a>, which walks through exactly how a bill is sourced, read, and verified; our <a href="articles/no-editorial-spin.html">neutrality policy</a>, which sets out where the line sits between neutral description and political framing; and our <a href="editorial-standards.html">editorial standards and AI disclosure</a>, which states precisely what the automated pipeline does, what a human editor does, and what is never automated.</p>
+
+    <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">Who runs it</h2>
+    <p>LegislationPatch is edited by <a href="/author/james-shearn">James Shearn</a>, who built the site's source-verification pipeline and reviews and verifies every analysis and article before publication. The project is independently owned and operated, with no outside funding, no advertising, and no political affiliation.</p>
 
     <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the site covers</h2>
     <p>LegislationPatch tracks federal bills and explains their contents, records how members voted on the roll calls tied to those bills, collects direct statements made on the House and Senate floor from the Congressional Record, and maintains profiles of members of Congress. Everything is drawn from official government sources and prepared ahead of time as static data — the site does not call live government APIs while you browse.</p>
