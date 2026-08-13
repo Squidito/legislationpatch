@@ -1,0 +1,335 @@
+{
+  "_readme": "Curated index for articles/index.html, lifted out of the hand-maintained page on 2026-08-13. `sections` is the editorial running order of card groups; per article, `label` is the card eyebrow and `summary` is the hand-written card blurb (deliberately NOT the meta description). `showUpdated: true` appends a live \"Updated <month year>\" derived from the article dateModified -- the date is never stored here, so it cannot go stale. Rendered by scripts/generate_articles_index.js (npm run articles:index) into articles/index.html between the article-cards markers; the surrounding page shell stays hand-maintained. An article with no entry here still appears, under UNSORTED, using its own title/description.",
+  "sections": [
+    "ABOUT & METHODOLOGY",
+    "HOW-TO GUIDES",
+    "EDUCATIONAL",
+    "BILL ROUNDUPS",
+    "LEGISLATIVE PROCESS GUIDES",
+    "HOW WE WORK"
+  ],
+  "articles": {
+    "what-is-legislationpatch.html": {
+      "order": 1,
+      "section": "ABOUT & METHODOLOGY",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "LegislationPatch tracks U.S. federal legislation and translates bill text into plain English — sourced directly from Congress.gov, GovInfo, and the Congressional Record."
+    },
+    "methodology.html": {
+      "order": 2,
+      "section": "ABOUT & METHODOLOGY",
+      "label": "Methodology",
+      "showUpdated": false,
+      "summary": "Where our data comes from, how we read a bill, the patch notes format, what we deliberately don't do, and the limits of our analysis."
+    },
+    "plain-english-government.html": {
+      "order": 3,
+      "section": "ABOUT & METHODOLOGY",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "Federal legislation is publicly available — but functionally inaccessible. The gap between availability and accessibility has real political consequences."
+    },
+    "how-to-read-a-bill.html": {
+      "order": 4,
+      "section": "HOW-TO GUIDES",
+      "label": "Guide",
+      "showUpdated": false,
+      "summary": "Federal bills follow a predictable structure. This guide explains each part — the enacting clause, section numbering, amendment language, and how to find what actually changed."
+    },
+    "how-a-bill-becomes-law.html": {
+      "order": 5,
+      "section": "EDUCATIONAL",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The textbook version leaves out most of what actually happens. The full picture — committees, holds, unanimous consent, reconciliation, and the presidential pen."
+    },
+    "what-is-a-committee.html": {
+      "order": 6,
+      "section": "EDUCATIONAL",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Most bills introduced in Congress never get a hearing, a vote, or any action. They die in committee. Here's how the committee system works and why it holds that much power."
+    },
+    "what-is-congressional-record.html": {
+      "order": 7,
+      "section": "EDUCATIONAL",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The Congressional Record is the official daily transcript of House and Senate floor proceedings. Published since 1873, it's the primary source for what members actually said — with important caveats."
+    },
+    "legislative-stages.html": {
+      "order": 8,
+      "section": "EDUCATIONAL",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "A bill's legislative stage tells you something meaningful about its odds of becoming law. Here's what each stage means — from committee referral through presidential signature."
+    },
+    "save-america-act.html": {
+      "order": 9,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "H.R. 7296 would require documentary proof of citizenship to register and photo ID to vote in federal elections. In committee as of July 2026; distinct from the SAVE Act, H.R. 22."
+    },
+    "kids-online-safety-act.html": {
+      "order": 10,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "S. 1748 would impose a duty of care on online platforms used by minors. In the Senate Commerce Committee; a predecessor package passed the Senate 91-3 in July 2024."
+    },
+    "ndaa-fy2027.html": {
+      "order": 11,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "H.R. 8800, the FY2027 defense authorization bill, was reported by committee, but the House rejected the rule to bring it to the floor 198-224 on June 30, 2026."
+    },
+    "ndaa-fy2026.html": {
+      "order": 12,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "S. 2296, the FY2026 defense authorization bill, passed the Senate 77-20 on October 9, 2025 and was held at the desk in the House. It authorizes, but does not appropriate, defense funding."
+    },
+    "safe-drugs-act.html": {
+      "order": 13,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "H.R. 6509 would tighten federal oversight of drug compounding and set new limits on compounded copies of commercially available drugs. In committee as of July 2026."
+    },
+    "fisa-surveillance-tracker.html": {
+      "order": 14,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Tracker",
+      "showUpdated": true,
+      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lapsed on June 12, 2026 — its first lapse since 2008. Complete tracker of every 2026 extension — bill text, votes, and how the authority ultimately lapsed."
+    },
+    "holocaust-art-recovery.html": {
+      "order": 15,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · Pub. L. 119-82",
+      "showUpdated": false,
+      "summary": "S. 1884, signed April 13, 2026, permanently removed the procedural defenses U.S. courts had used to dismiss Holocaust art restitution claims without reaching the merits."
+    },
+    "appropriations-act-2026.html": {
+      "order": 16,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · FY2026",
+      "showUpdated": false,
+      "summary": "H.R. 7148, signed February 3, 2026, funded the federal government through September 30, 2026. Beyond the headline dollar figures — what the bill actually contained."
+    },
+    "small-business-innovation-act.html": {
+      "order": 17,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · Pub. L. 119-83",
+      "showUpdated": false,
+      "summary": "S. 3971, signed April 13, 2026, extended SBIR and STTR grant programs through FY2031 and added mandatory screening against eight federal watchlists for foreign adversary ties."
+    },
+    "blm-land-withdrawal.html": {
+      "order": 18,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · CRA Disapproval",
+      "showUpdated": false,
+      "summary": "H.J.Res. 140, signed April 27, 2026, cancelled the BLM's 20-year mining ban on 225,504 acres of Minnesota National Forest bordering the Boundary Waters."
+    },
+    "e15-ethanol-waiver.html": {
+      "order": 19,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · In Progress",
+      "showUpdated": false,
+      "summary": "H.R. 1346 would allow year-round E15 sales by extending the E10 Reid Vapor Pressure waiver to E15, removing the current summer ozone-season prohibition."
+    },
+    "women-lung-cancer-act.html": {
+      "order": 20,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · In Progress",
+      "showUpdated": false,
+      "summary": "H.R. 2319 would direct HHS to conduct an interagency review of lung cancer research gaps for women and underserved populations and report findings to Congress."
+    },
+    "fire-act-wildfire.html": {
+      "order": 21,
+      "section": "BILL ROUNDUPS",
+      "label": "Bill Analysis · In Progress",
+      "showUpdated": false,
+      "summary": "H.R. 6387 would require EPA to create faster wildfire-smoke data exclusions from NAAQS calculations and recognize prescribed burns. Sponsors say it shields communities from air-quality penalties they attribute to wildfire smoke; opponents say it would weaken the NAAQS program."
+    },
+    "119th-congress-tracker.html": {
+      "order": 22,
+      "section": "BILL ROUNDUPS",
+      "label": "Tracker",
+      "showUpdated": true,
+      "summary": "Complete list of 119th Congress legislation in the LegislationPatch database — 6 signed laws, active bills, upcoming deadlines, and what to watch."
+    },
+    "fisa-history.html": {
+      "order": 23,
+      "section": "BILL ROUNDUPS",
+      "label": "History",
+      "showUpdated": true,
+      "summary": "Section 702 has been reauthorized or extended six times since 2008. Complete history — every major action, what changed, and what the pattern reveals about the politics of surveillance reauthorization."
+    },
+    "what-is-cbo.html": {
+      "order": 24,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The CBO is Congress's nonpartisan scorekeeper for legislation — it estimates what bills cost and how they affect the deficit. Here's how to read a CBO score."
+    },
+    "senate-filibuster.html": {
+      "order": 25,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The filibuster allows any senator to block most legislation indefinitely. Overcoming it requires 60 votes. Here's how it works, why it exists, and what can bypass it."
+    },
+    "government-shutdown.html": {
+      "order": 26,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "A government shutdown occurs when Congress fails to pass appropriations legislation before funding lapses. Here's what shuts down, what stays open, and how they end."
+    },
+    "budget-reconciliation.html": {
+      "order": 27,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Budget reconciliation allows the Senate to pass fiscal legislation with 51 votes instead of 60, bypassing the filibuster. Here's how it works and what its limits are."
+    },
+    "house-rules-committee.html": {
+      "order": 28,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The House Rules Committee controls which bills reach the floor, how long debate lasts, and what amendments are allowed. Its majority is appointed by the Speaker."
+    },
+    "presidential-veto.html": {
+      "order": 29,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The President can reject legislation by returning it with objections. Congress can override with a two-thirds majority — a threshold that's rarely achieved."
+    },
+    "continuing-resolution.html": {
+      "order": 30,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "A continuing resolution temporarily funds the government when regular appropriations haven't passed. Here's how CRs work and why they've become the default mode of federal budgeting."
+    },
+    "appropriations-process.html": {
+      "order": 31,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The federal government is funded through 12 annual appropriations bills. Congress has passed all 12 on time exactly once since 1996. Here's how the process is supposed to work."
+    },
+    "cloture-60-vote.html": {
+      "order": 32,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Cloture is the Senate's mechanism for ending unlimited debate and forcing a vote. It requires 60 senators and shapes everything that moves through the Senate."
+    },
+    "congressional-oversight.html": {
+      "order": 33,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Congressional oversight is Congress's power to investigate, subpoena, and review executive branch conduct. Here's what tools Congress has and what its limits are."
+    },
+    "signing-statements.html": {
+      "order": 34,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Signing statements explain how the President will interpret a new law and sometimes signal which provisions won't be enforced. Here's their legal status and history."
+    },
+    "unanimous-consent.html": {
+      "order": 35,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Most Senate business moves through unanimous consent agreements rather than formal votes. Here's how UC works and what one objecting senator can do."
+    },
+    "pocket-veto.html": {
+      "order": 36,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "A pocket veto occurs when the President takes no action on a bill while Congress is adjourned. Unlike a regular veto, Congress cannot override it."
+    },
+    "joint-resolution.html": {
+      "order": 37,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Not everything Congress passes is a bill. Joint resolutions, concurrent resolutions, and simple resolutions each carry different legal weight and serve different purposes."
+    },
+    "bill-numbering.html": {
+      "order": 38,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Every measure Congress numbers carries a prefix that signals its type and whether it can become law. A legend for all eight measure types and how the numbers get assigned."
+    },
+    "voice-vote-vs-roll-call.html": {
+      "order": 39,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "Most measures pass with no record of who voted for them. The difference between a voice vote and a roll call, and what \"agreed to by voice vote\" means for the public record."
+    },
+    "congressional-review-act.html": {
+      "order": 40,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The Congressional Review Act lets Congress overturn a federal agency rule through a joint resolution of disapproval, using an expedited Senate procedure that cannot be filibustered."
+    },
+    "discharge-petition.html": {
+      "order": 41,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "A discharge petition lets 218 House members force a bill out of committee and onto the floor over the objection of leadership. How the threshold works and how often it succeeds."
+    },
+    "impoundment-rescission.html": {
+      "order": 42,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "The Impoundment Control Act sets the rules for when the executive can withhold appropriated funds — rescissions, deferrals, the 45-day clock, the GAO's role, and the disputed pocket rescission."
+    },
+    "how-we-source-quotes.html": {
+      "order": 43,
+      "section": "HOW WE WORK",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "Every quote on LegislationPatch comes from a specific Congressional Record granule on GovInfo. Here's our extraction process, speaker identification method, and the revise-and-extend caveat."
+    },
+    "how-we-track-voting.html": {
+      "order": 44,
+      "section": "HOW WE WORK",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "Vote data comes directly from the House Clerk and Senate official records, cross-referenced against bioguide IDs, with crossover detection on close-margin votes."
+    },
+    "legislationpatch-and-ai.html": {
+      "order": 45,
+      "section": "HOW WE WORK",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "Why primary sourcing, structured data, and factual density make LegislationPatch citable by AI systems — and why that matters for how Congressional information reaches readers."
+    },
+    "no-editorial-spin.html": {
+      "order": 46,
+      "section": "HOW WE WORK",
+      "label": "About LegislationPatch",
+      "showUpdated": false,
+      "summary": "No editorial spin is easy to say and harder to execute. Here's what it means in practice — what we describe, what we don't, and where the line sits between neutral description and political framing."
+    }
+  }
+}

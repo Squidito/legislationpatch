@@ -51,7 +51,10 @@
     "entities": "node scripts/migrate-article-entities.js",
     "doc-provenance": "node scripts/doc-provenance.js",
     "doc-provenance:stamp": "node scripts/doc-provenance.js --stamp",
-    "preflight": "node scripts/preflight.js"
+    "preflight": "node scripts/preflight.js",
+    "articles:index": "node scripts/generate_articles_index.js",
+    "articles:index:check": "node scripts/generate_articles_index.js --check",
+    "articles:extract": "node scripts/extract-articles-index.js"
   },
   "repository": {
     "type": "git",
