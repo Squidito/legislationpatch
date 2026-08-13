@@ -2,8 +2,8 @@
 //
 // Shared Congress.gov / GovInfo fetch + HTML-clean helpers.
 //
-// NOTE: This file used to also contain a local-LLM ("LM Studio") auto-analysis
-// CLI (processBill / runBatch / callLocalLLM / verifyOutput / chunking, etc.).
+// NOTE: This file used to also contain a local-model auto-analysis CLI
+// (processBill / runBatch / verifyOutput / chunking, etc.).
 // That machine has been removed — bill analysis is done in-conversation, not by
 // a local model. What remains here is purely the network/parse helpers that the
 // live pipeline tools depend on:

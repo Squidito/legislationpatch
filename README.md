@@ -23,7 +23,8 @@ The **processing pipeline and data** are open source under MIT:
 | `scripts/qa-source-verify.js` | Source-anchored QA verifier — ties every figure in an analysis to a quoted line of the bill or statute text |
 | `scripts/fetch-reference.js` | Fetches referenced bills/statutes (Congress.gov, GovInfo USCODE) so cross-referenced claims are verified against real text, never recalled |
 | `data/cache.json` | Processed bill data — public congressional record |
-| `data/qa-adjudications.json` | QA ledger — verifier flags individually checked against source, with the evidence; exact-match keyed so edited claims re-open automatically |
+| `data/qa-adjudications.json` | QA adjudication ledger: verifier flags individually checked against source, with the evidence; exact-match keyed so edited claims re-open automatically |
+| `data/qa-ledger/` | Per-bill claim ledgers: every verified claim with the source line it was checked against, for reproducible audit and regression checks |
 | `data/ref-text/` | Fetched referenced statute/bill texts backing cross-referenced claims |
 | `data/reps-index.json` | Congressional member index by state |
 | `data/reps/` | Individual rep profile JSON files |
@@ -56,6 +57,8 @@ After the LLM produces its JSON, every factual claim is verified against source 
 
 One failure = the entire bill is rejected. No soft warnings, no thresholds.
 
+After the deterministic gate, each analysis is re-examined in an adversarial pass on a different model from the one that produced it, claim by claim, to catch the classes the pattern-checks miss: directional inversion, invented qualifiers, and misattribution. The claims checked and their source lines are recorded per bill in `data/qa-ledger/`.
+
 ### No editorial framing
 
 The prompt explicitly prohibits editorial adjectives in Zone 1 and 2 fields. Words like *quietly*, *buried*, *sweeping*, *significant*, and *hidden* are banned — not because the information isn't notable, but because **if it's in the bill text, it's on the record**. We bring light to it; we don't editorialize about how obscure it is.
@@ -67,27 +70,11 @@ The prompt explicitly prohibits editorial adjectives in Zone 1 and 2 fields. Wor
 
 ---
 
-## The LLM problem — help wanted
+## Models
 
-This is where we're still figuring things out, and **criticism of the approach is genuinely welcome.**
+Analyses are drafted by Claude Opus, with Fable used occasionally elsewhere in the pipeline. Verification is deliberately cross-model: the pass that checks an analysis runs on a different model than the one that produced it, so no model reviews its own work. That separation is what catches the errors a self-review tends to miss, such as directional inversions, invented qualifiers, and figures attributed to the wrong account.
 
-### What we've tried
-
-**Qwen3 5B (via LM Studio, port 1235)** is what the batch pipeline was built around — local, free to run, no API costs. In practice it's been inconsistent: it drifts from the zone rules, produces editorial framing that gets caught by the gate, and sometimes returns empty responses when context gets large. It's not a solved problem.
-
-**Claude Opus 4.7** (`claude-opus-4-7`) produces reliably structured, zone-disciplined output with far fewer verification failures — and is capable enough to do the full map-reduce pipeline in one pass. The catch: it requires API credits, and we don't have enough throughput to run every bill through it at scale.
-
-Right now: Opus 4.7 for careful single-bill analysis, Qwen for batch runs when we're willing to accept more rejections.
-
-### What we're working on
-
-The main open question is **how to get more reliable, less editorially-framed output from smaller local models**. Specifically:
-
-- Getting the `top_lines` topic/sub format to stick without reverting to flat sentences
-- Keeping `gaps` anchored to the bill's own framing rather than drifting into policy opinion
-- Reducing false verification failures caused by number formatting inconsistencies
-
-If you have experience with prompt engineering for structured output on smaller models, or thoughts on the zone discipline model itself, **open an issue or reach out directly.**
+Model versions are not pinned in this document; they change often. What stays fixed is the discipline: source-anchored drafting, then independent cross-model verification against the official text.
 
 ---
 
@@ -98,7 +85,7 @@ If you have experience with prompt engineering for structured output on smaller 
 - Node.js 18+
 - A Congress.gov API key (free): [api.congress.gov/sign-up](https://api.congress.gov/sign-up/)
 - A GovInfo API key (free): [api.data.gov/signup](https://api.data.gov/signup/)
-- LM Studio with Qwen3 5B loaded on port 1235 — *or* an Anthropic API key for Opus 4.7
+- An Anthropic API key for Claude (analysis and verification)
 
 ### Setup
 
