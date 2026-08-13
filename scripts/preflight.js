@@ -26,7 +26,10 @@ const ROOT = path.join(__dirname, '..');
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
 
-const SKIP_DIRS = new Set(['node_modules', '.git', '.claude', 'og', 'data', 'scripts', 'archive', '.playwright-mcp']);
+// docs/ holds rulebooks and the article template — reference material, not
+// served pages. The template's relative paths are written for articles/, so
+// checking them here would always fail.
+const SKIP_DIRS = new Set(['node_modules', '.git', '.claude', 'og', 'data', 'scripts', 'archive', '.playwright-mcp', 'docs']);
 
 let failures = 0;
 let checks = 0;

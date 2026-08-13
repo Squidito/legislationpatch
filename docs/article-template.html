@@ -1,0 +1,211 @@
+<!--
+  ARTICLE TEMPLATE — copy this to articles/<slug>.html and fill the {{...}} fields.
+
+  DELIBERATELY LIVES IN docs/, NOT articles/. Everything that scans articles/ —
+  the sitemap, the search index, the article index, the staleness checker — picks
+  up any .html file it finds there. A template sitting in articles/ would leak
+  into all of them as a real page.
+
+  Rules for what goes in the prose: docs/ARTICLE-SPEC.md
+  Positions / both-sides sections:  docs/BOTH-SIDES.md
+
+  AFTER CREATING AN ARTICLE:
+    1. node scripts/migrate-article-entities.js --apply   (byline + disclosure)
+    2. npm run articles:index                             (add the card)
+    3. npm run sitemap && npm run search-index && npm run feed
+    4. npm run validate && npm run preflight
+
+  FIELDS
+    {{SLUG}}        file name without .html, e.g. discharge-petition
+    {{TITLE}}       the question a reader would type; used as <title>, og:title, headline, h1
+    {{DESCRIPTION}} one sentence, ~155 chars, states the answer rather than teasing it
+    {{BREADCRUMB}}  short label for the breadcrumb trail
+    {{DATE_ISO}}    YYYY-MM-DD published; dateModified starts equal and moves on real edits
+    {{DATE_HUMAN}}  e.g. August 2026
+    {{READ_MIN}}    integer minutes
+
+  The author/publisher below are @id REFERENCES on purpose. The full Person node
+  lives only on /author/james-shearn and the full Organization only on about.html.
+  Never paste an inline author blob back in — preflight fails the build if you do.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- noindex ONLY because this file is the template and the repo root is served
+       by GitHub Pages. Change it to  content="max-image-preview:large"  on the
+       copy you create in articles/. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
+  <link rel="canonical" href="https://legislationpatch.com/articles/{{SLUG}}.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://legislationpatch.com/articles/{{SLUG}}.html" />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{DESCRIPTION}}" />
+  <meta property="og:image" content="https://legislationpatch.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://legislationpatch.com/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{TITLE}}",
+    "description": "{{DESCRIPTION}}",
+    "author": {"@id": "https://legislationpatch.com/author/james-shearn#person"},
+    "publisher": {"@id": "https://legislationpatch.com/#organization"},
+    "datePublished": "{{DATE_ISO}}",
+    "dateModified": "{{DATE_ISO}}",
+    "url": "https://legislationpatch.com/articles/{{SLUG}}.html",
+    "image": "https://legislationpatch.com/og-image.png",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://legislationpatch.com/articles/{{SLUG}}.html"}
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles-shared.css" />
+  <link rel="stylesheet" href="../styles-bills.css" />
+  <link rel="stylesheet" href="../styles-pages.css" />
+  <link rel="stylesheet" href="articles.css" />
+</head>
+<body>
+
+  <!-- Dark is the site default: opt OUT of dark, never opt in. -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('lpTheme');
+      if (t !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo-block" style="text-decoration:none" aria-label="Return to home">
+        <img src="../logo.svg" alt="LegislationPatch" class="logo-img" id="articleLogo" />
+      </a>
+      <a href="/search" class="header-search-link header-search-link--solo" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
+    </div>
+  </header>
+
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <div class="controls-bar">
+    <div class="controls-inner">
+      <a href="index.html" class="back-btn">&larr; Articles</a>
+      <div class="header-track">
+        <label class="theme-toggle" title="Toggle dark mode">
+          <input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" />
+          <svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <article class="article-container">
+
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="index.html">Articles</a>
+        <span class="sep">/</span>
+        {{BREADCRUMB}}
+      </nav>
+
+      <h1 class="article-title">{{TITLE}}</h1>
+
+      <div class="article-meta">
+        <span>By LegislationPatch Team</span>
+        <span>Published {{DATE_HUMAN}}</span>
+        <span>Updated {{DATE_HUMAN}}</span>
+        <span>~{{READ_MIN}} min read</span>
+      </div>
+
+      <div class="article-body">
+
+        <!-- LIVE BILL? Lead with status and an as-of date. A reader who leaves
+             after one sentence should still leave with the correct status. -->
+        <p><strong>Current status (as of {{DATE_HUMAN}}):</strong> …</p>
+
+        <!-- NUT GRAF — one or two sentences. What this is, why it matters now.
+             Longer than two and it stops doing its job. -->
+        <p>…</p>
+
+        <!-- BODY — question-shaped h2s. Reads better to a person and is directly
+             quotable by an answer engine. -->
+        <h2>What does it do?</h2>
+        <p>…</p>
+
+        <h2>Where it stands</h2>
+        <p>…</p>
+
+        <h2>What happens next</h2>
+        <p>…</p>
+
+        <!-- POSITIONS: only when opposition is genuinely ON THE RECORD, and only
+             per docs/BOTH-SIDES.md. Supporters first, always. Identical neutral
+             verbs on both sides. Every claim traces to a fetched, stored source.
+             A bill that passed 414-2 passed 414-2 — do not invent a second side.
+        <h2>Who supports it, who opposes it, and why</h2>
+        <h3>Why do supporters back it?</h3>
+        <p>…</p>
+        <h3>Why do opponents object?</h3>
+        <p>…</p>
+        -->
+
+        <!-- PRIMARY SOURCES — everything actually used. Label position sources
+             explicitly, e.g. "(opponent position)". -->
+        <div class="article-source-box">
+          <div class="article-source-box-label">Primary Sources</div>
+          <ul>
+            <li><a href="https://www.congress.gov/…" target="_blank" rel="noopener">…</a></li>
+          </ul>
+        </div>
+
+        <!-- The AI-disclosure line is inserted by
+             scripts/migrate-article-entities.js — do not hand-write it. -->
+
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (function(){
+      var isDark = localStorage.getItem('lpTheme') !== 'light';
+      var toggle = document.getElementById('themeToggle');
+      if (toggle) toggle.checked = isDark;
+      var logo = document.getElementById('articleLogo');
+      if (logo) logo.src = isDark ? '../logo-dark.svg' : '../logo.svg';
+    })();
+    function toggleTheme(isDark) {
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      localStorage.setItem('lpTheme', isDark ? 'dark' : 'light');
+      var logo = document.getElementById('articleLogo');
+      if (logo) logo.src = isDark ? '../logo-dark.svg' : '../logo.svg';
+    }
+  </script>
+
+  <script src="/search-widget.js" defer></script>
+</body>
+</html>
