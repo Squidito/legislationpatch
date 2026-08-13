@@ -582,6 +582,66 @@
     },
     {
       "field": "sections[0].items[4].main",
+      "claim": "The Secretary may provide support services to the corporation, to the extent required by a contract or cooperative agreement under subsection (d)",
+      "verdict": "SUPPORTED",
+      "type": "direction",
+      "severity": "ok",
+      "sourceSpan": "the Secretary may\nprovide support services to the corporation",
+      "sourceStart": 4593,
+      "sourceEnd": 4654,
+      "section": "46 U.S.C. §51329(f)(1)",
+      "note": "Delta-audit 2026-08-13 (fable, cross-model): receipt added for the item inserted 2026-08-12 to fix the subsection (f) omission. 'In-kind' qualifier is not a source word; entailed by the (f)(3) enumeration (all non-cash services).",
+      "status": "ok",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "sections[0].items[4].main",
+      "claim": "Provision of support services may not result in any liability for the United States to the corporation",
+      "verdict": "SUPPORTED",
+      "type": "direction",
+      "severity": "ok",
+      "sourceSpan": "may not result in any\nliability for the United States to the corporation",
+      "sourceStart": 5015,
+      "sourceEnd": 5087,
+      "section": "46 U.S.C. §51329(f)(2)",
+      "note": "Delta-audit 2026-08-13 (fable, cross-model): receipt added for the item inserted 2026-08-12 to fix the subsection (f) omission.",
+      "status": "ok",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "sections[0].items[4].detail",
+      "claim": "Support services may be provided only if the Secretary determines they are essential for the support of USMMA athletic programs",
+      "verdict": "SUPPORTED",
+      "type": "other",
+      "severity": "ok",
+      "sourceSpan": "only if the Secretary determines that\nthe provision of such services is essential",
+      "sourceStart": 4750,
+      "sourceEnd": 4831,
+      "section": "46 U.S.C. §51329(f)(1)",
+      "note": "Delta-audit 2026-08-13 (fable, cross-model): receipt added for the item inserted 2026-08-12 to fix the subsection (f) omission.",
+      "status": "ok",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "sections[0].items[4].detail",
+      "claim": "Support services include utilities, office furnishings and equipment, communications services, records staging and archiving, audio and video support, and security systems, in conjunction with the leasing or licensing of property",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "ok",
+      "sourceSpan": "includes utilities, office furnishings\nand equipment, communications services, records staging and\narchiving, audio and video support, and security systems",
+      "sourceStart": 5170,
+      "sourceEnd": 5325,
+      "section": "46 U.S.C. §51329(f)(3)",
+      "note": "Delta-audit 2026-08-13 (fable, cross-model): receipt added for the item inserted 2026-08-12 to fix the subsection (f) omission. Source says 'includes' (non-exhaustive); analysis renders it as 'defined as' — minor gloss, non-material.",
+      "status": "ok",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "sections[0].items[5].main",
       "claim": "Allows transfer of the Transportation Department athletics-related nonappropriated fund instrumentality to the corporation",
       "verdict": "SUPPORTED",
       "type": "entity",
@@ -596,7 +656,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[4].detail",
+      "field": "sections[0].items[5].detail",
       "claim": "Transfer includes bank accounts, financial reserves, equipment, supplies, and other personal property",
       "verdict": "SUPPORTED",
       "type": "entity",
@@ -611,7 +671,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[4].detail",
+      "field": "sections[0].items[5].detail",
       "claim": "Real property interests may not be transferred",
       "verdict": "SUPPORTED",
       "type": "direction",
@@ -626,7 +686,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[5].detail",
+      "field": "sections[0].items[6].detail",
       "claim": "Notwithstanding 31 U.S.C. §1342, the Secretary may accept funds, supplies, and services from the corporation",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -641,7 +701,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[5].detail",
+      "field": "sections[0].items[6].detail",
       "claim": "Secretary may charge fees and accept money from NCAA, athletic conferences, game guarantees from other institutions, ticketing and licensing fees, and other incidental consideration",
       "verdict": "SUPPORTED",
       "type": "entity",
@@ -656,7 +716,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[5].detail",
+      "field": "sections[0].items[6].detail",
       "claim": "Corporation employees are not federal employees",
       "verdict": "SUPPORTED",
       "type": "entity",
@@ -671,7 +731,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[5].detail",
+      "field": "sections[0].items[6].detail",
       "claim": "Secretary must ensure contributions do not reflect unfavorably on Transportation or compromise the integrity of any Transportation program",
       "verdict": "SUPPORTED",
       "type": "direction",
@@ -686,7 +746,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[6].detail",
+      "field": "sections[0].items[7].detail",
       "claim": "Contracts under subsection (d) may, consistent with 49 U.S.C. §109(h)(2), let the corporation enter licensing, marketing, and sponsorship agreements identifying USMMA, subject to Secretary approval",
       "verdict": "SUPPORTED",
       "type": "entity",
@@ -701,7 +761,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[6].detail",
+      "field": "sections[0].items[7].detail",
       "claim": "The corporation cannot enter agreements that reflect unfavorably on Transportation or compromise the integrity of any Transportation program",
       "verdict": "SUPPORTED",
       "type": "direction",
@@ -716,7 +776,7 @@
       "kind": "claim"
     },
     {
-      "field": "sections[0].items[7].detail",
+      "field": "sections[0].items[8].detail",
       "claim": "Funds received by the Secretary under this section may be retained for USMMA athletic programs and remain available until expended",
       "verdict": "SUPPORTED",
       "type": "direction",
@@ -1108,11 +1168,11 @@
     }
   ],
   "counts": {
-    "claims": 73,
+    "claims": 77,
     "material": 0,
     "minor": 9,
     "omissions": 1
   },
   "resolution": "",
-  "notes": "Source = Engrossed in Senate (ES). All figures (5 years, one-third, 180 days, 501(c)(3), 15 U.S.C. 1127, statutory cross-cites) verified verbatim; no direction inversions, wrong entities, or fabricated figures. Only minor items: one unsourced gloss on chapter 63 of title 31, two internal-cite label imprecisions in underreported (should be section-51329 subsections), a \"private 501(c)(3)\" framing gloss in tension with US stock ownership, metadata/speculative likelihoodReason strings, and the omission of subsection (f) Support Services. Zero material issues."
+  "notes": "Source = Engrossed in Senate (ES). All figures (5 years, one-third, 180 days, 501(c)(3), 15 U.S.C. 1127, statutory cross-cites) verified verbatim; no direction inversions, wrong entities, or fabricated figures. Only minor items: one unsourced gloss on chapter 63 of title 31, two internal-cite label imprecisions in underreported (should be section-51329 subsections), a \"private 501(c)(3)\" framing gloss in tension with US stock ownership, metadata/speculative likelihoodReason strings, and the omission of subsection (f) Support Services. Zero material issues. DELTA-AUDIT 2026-08-13 (model: fable, cross-model vs the opus audit/fix): genuine fresh read of the full ES text; the sections[0].items[4] support-services item added 2026-08-12 verifies faithful to 46 U.S.C. §51329(f) — 4 SUPPORTED receipts added so (f) content is under regression replay. Also re-keyed 10 pre-existing sections[0].items[4-7] field labels (+1) that the insert had shifted off their items. The \"omission of subsection (f)\" listed above is RESOLVED."
 }
