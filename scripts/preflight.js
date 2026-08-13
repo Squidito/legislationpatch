@@ -220,6 +220,29 @@ section('Footer trust links');
   else pass('Every footer links About, Corrections and Editorial Standards');
 }
 
+// 7b. Every indexable, non-redirect page is one click from Editorial Standards.
+// The check above only validates pages that USE the <p class="footer-links">
+// pattern -- a page with no trust footer at all (as articles/index.html once was)
+// has no such block, so `if (!m) continue` skipped it entirely and it passed.
+// Articles carry the link inline via their AI-disclosure line, not a footer block,
+// so require the editorial-standards link itself in ANY markup. noindex /
+// meta-refresh stubs (slug-change redirects, search) are legitimately exempt.
+section('Editorial Standards reachable from every indexable page');
+{
+  const bad = [];
+  for (const f of files) {
+    const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    const isStub = /<meta[^>]+name=["']robots["'][^>]*noindex/i.test(h)
+                || /http-equiv=["']refresh["']/i.test(h);
+    if (isStub) continue;
+    if (!/href="[^"]*editorial-standards/i.test(h)) {
+      bad.push(`${f}: no link to Editorial Standards (orphaned from trust surfaces)`);
+    }
+  }
+  if (bad.length) bad.slice(0, 10).forEach(b => fail(b));
+  else pass('Every indexable page links to Editorial Standards');
+}
+
 // 8. Canonical + title present ----------------------------------------------
 section('Canonical URL and title');
 {
