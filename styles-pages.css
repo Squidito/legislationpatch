@@ -1272,3 +1272,11 @@ a.vote-member:hover { background: var(--surface-2); }
   border: 1px dashed var(--border-strong); border-radius: 10px; cursor: pointer;
 }
 .sr-expand:hover { color: var(--text); border-color: var(--text-3); }
+
+/* Prose pages (about, corrections, privacy, terms, editorial standards, author).
+   These render body copy as bare <p> outside .article-body, which carries no
+   margin -- so adjacent paragraphs collided with no visual gap. Scoped to
+   .prose so the app pages (bills, floor, reps, search) are untouched. */
+.main.prose p { margin-bottom: 1rem; }
+.main.prose p:last-child { margin-bottom: 0; }
+.main.prose ul { margin-bottom: 1rem; }

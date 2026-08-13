@@ -187,7 +187,7 @@ ${JSON.stringify(graph, null, 2)}
     })();
   </script>
 
-  <main class="main" style="max-width:720px">
+  <main class="main prose" style="max-width:720px">
     <h1 style="font-size:1.6rem;font-weight:700;margin-bottom:0.35rem">${esc(p.name)}</h1>
     <p class="section-label" style="margin-bottom:1.75rem">${esc(p.jobTitle)}, ${esc(org.name)}</p>
 

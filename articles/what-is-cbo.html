@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="articles.css" />
 </head>
 <body>
-  <script>(function(){var t=localStorage.getItem('lpTheme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
+  <script>(function(){var t=localStorage.getItem('lpTheme');if(t!=='light')document.documentElement.setAttribute('data-theme','dark');})();</script>
   <header class="site-header"><div class="header-inner"><a href="../index.html" class="logo-block" style="text-decoration:none" aria-label="Return to home"><img src="../logo.svg" alt="LegislationPatch" class="logo-img" id="articleLogo" /></a><a href="/search" class="header-search-link header-search-link--solo" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a></div></header>
   <div class="trust-bar"><div class="trust-bar-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sourced directly from bill text. No editorial spin.</div></div>
   <div class="controls-bar"><div class="controls-inner"><a href="index.html" class="back-btn">&larr; Articles</a><div class="header-track"><label class="theme-toggle" title="Toggle dark mode"><input type="checkbox" id="themeToggle" onchange="toggleTheme(this.checked)" /><svg class="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="toggle-track"><span class="toggle-thumb"></span></span></label></div></div></div>
@@ -65,7 +65,7 @@
       </div>
     </article>
   </main>
-  <script>(function(){var isDark=localStorage.getItem('lpTheme')==='dark';var toggle=document.getElementById('themeToggle');if(toggle)toggle.checked=isDark;var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';})();function toggleTheme(isDark){document.documentElement.setAttribute('data-theme',isDark?'dark':'light');localStorage.setItem('lpTheme',isDark?'dark':'light');var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';}</script>
+  <script>(function(){var isDark=localStorage.getItem('lpTheme')!=='light';var toggle=document.getElementById('themeToggle');if(toggle)toggle.checked=isDark;var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';})();function toggleTheme(isDark){document.documentElement.setAttribute('data-theme',isDark?'dark':'light');localStorage.setItem('lpTheme',isDark?'dark':'light');var logo=document.getElementById('articleLogo');if(logo)logo.src=isDark?'../logo-dark.svg':'../logo.svg';}</script>
   <script src="/search-widget.js" defer></script>
 </body>
 </html>

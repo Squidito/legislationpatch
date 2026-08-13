@@ -53,7 +53,7 @@
   <script>
     (function() {
       var t = localStorage.getItem('lpTheme');
-      if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      if (t !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
     })();
   </script>
 
@@ -158,7 +158,7 @@
 
   <script>
     (function() {
-      var isDark = localStorage.getItem('lpTheme') === 'dark';
+      var isDark = localStorage.getItem('lpTheme') !== 'light';
       var toggle = document.getElementById('themeToggle');
       if (toggle) toggle.checked = isDark;
       var logo = document.getElementById('articleLogo');
