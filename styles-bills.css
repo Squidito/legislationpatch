@@ -2786,3 +2786,67 @@ a.fav-quote-speaker:hover { color: var(--purple); text-decoration: underline; }
 .bill-pager__btn:hover { color: var(--text); border-color: var(--text-3); }
 .bill-pager__btn--primary { background: var(--purple); border-color: var(--purple); color: #fff; }
 .bill-pager__btn--primary:hover { color: #fff; opacity: 0.92; }
+
+/* ── Header overflow on phones ────────────────────────────────────────────
+   The header needed ~409px (logo 195 + track 170 + padding 28 + gap 16) but a
+   375px phone gives ~360px of viewport, so EVERY page scrolled sideways by
+   ~20px, and below ~340px the logo and the back button overlapped outright.
+
+   Two tiers, following the label-hiding pattern already used above for
+   .header-cta__label:
+     <=430px  hide the back-button label, keep the arrow  (saves ~47px)
+     <=360px  additionally scale the logo down and tighten spacing
+
+   The arrow is part of the link's text node (no span to target), so the label
+   is suppressed with font-size:0 and the arrow re-added via ::before. */
+@media (max-width: 430px) {
+  .back-btn {
+    font-size: 0;
+    padding: 6px 10px;
+  }
+  .back-btn::before {
+    content: "\2190";
+    font-size: var(--fs-sm);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-inner { padding: 0 10px; gap: 8px; }
+  .header-track { gap: 6px; }
+  .logo-img { height: 50px; margin-bottom: -8px; }
+}
+
+/* App-page controls bar (index/bills/floor/reps/search).
+   .site-nav had `flex: 1` but the default `min-width: auto`, so it could never
+   shrink below its 206px content width -- the classic flex min-width trap. With
+   .header-track at ~157px the row needed ~375px inside a 292px content box, and
+   the overflow pushed the whole page sideways.
+   Let the nav scroll instead of crushing the labels, matching how
+   .bill-filter-bar already handles the category chips. */
+@media (max-width: 430px) {
+  .controls-inner { gap: 8px; }
+  .site-nav {
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .site-nav::-webkit-scrollbar { display: none; }
+  .nav-link { flex: 0 0 auto; }
+  .header-track { flex-shrink: 0; }
+}
+
+/* Search-page type chips (All / Bills / Reps / Quotes / Guides). .filter-row is
+   flex-wrap:nowrap, so on a 320px screen the last chip pushed 2px past the
+   viewport. Scroll them like the bills category chips rather than wrapping,
+   which would reflow the row. */
+@media (max-width: 430px) {
+  .filter-row.search-chips {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filter-row.search-chips::-webkit-scrollbar { display: none; }
+  .filter-row.search-chips .filter-btn { flex: 0 0 auto; }
+}
