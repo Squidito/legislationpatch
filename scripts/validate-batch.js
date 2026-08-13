@@ -1129,6 +1129,31 @@ section('Reanalysis queue (needsReanalysis)');
 // introduced inline with a parenthetical expansion — so readers never hit
 // undefined jargon. Advisory (warnings).
 
+// Self-descriptive prose (editorial standards, methodology, about, author bio)
+// drifting from the code it describes. Origin: articles/methodology.html
+// described a verification process that had already changed and nothing caught
+// it. Registry + rationale: data/doc-provenance.json.
+section('Doc provenance (self-descriptive pages)');
+{
+    try {
+        const { check: docCheck } = require('./doc-provenance.js');
+        const { drifted, brokenRefs, ok, total } = docCheck();
+
+        for (const b of brokenRefs) warn(`${b.doc}: ${b.problem}`);
+
+        for (const d of drifted) {
+            warn(`${d.doc} describes code changed since ${d.meta.reviewedAt} — re-read it, then: node scripts/doc-provenance.js --stamp --doc ${d.doc}`);
+            for (const c of (d.meta.claims || [])) console.log(`       · ${c}`);
+        }
+
+        if (!drifted.length && !brokenRefs.length) {
+            pass(`All ${total} self-descriptive page(s) match the code they describe`);
+        }
+    } catch (e) {
+        warn(`doc-provenance check unavailable: ${e.message}`);
+    }
+}
+
 section('Acronym audit');
 {
     const STOP = new Set([

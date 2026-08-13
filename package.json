@@ -48,7 +48,9 @@
     "author:check": "node scripts/generate_author_page.js --check",
     "news-sitemap": "node scripts/generate_news_sitemap.js",
     "indexnow": "node scripts/indexnow-ping.js",
-    "entities": "node scripts/migrate-article-entities.js"
+    "entities": "node scripts/migrate-article-entities.js",
+    "doc-provenance": "node scripts/doc-provenance.js",
+    "doc-provenance:stamp": "node scripts/doc-provenance.js --stamp"
   },
   "repository": {
     "type": "git",

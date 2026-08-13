@@ -1,0 +1,102 @@
+{
+  "_readme": "Registry of pages that DESCRIBE how the site works. Each entry pins the code whose behaviour the prose asserts; when that code changes, `npm run validate` flags the page for re-review and prints its claims[] as a checklist. Stamp only AFTER actually re-reading the page: `node scripts/doc-provenance.js --stamp --doc <page>`. Rationale + the stable-prose/generated-evidence rule: _personal/ARTICLE-WRITER-SPEC.md. Origin: articles/methodology.html described a verification process that had already changed, and nothing caught it.",
+  "_not_registered": "Normative rulebooks (docs/BOTH-SIDES.md, docs/QA-AUDIT-RUBRIC.md, CLAUDE.md) are deliberately absent. They DEFINE required behaviour rather than describe existing behaviour -- code drifting from them is a code bug, not a doc bug, and the QA gates already enforce that direction.",
+  "editorial-standards.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "scripts/qa-source-verify.js",
+      "docs/QA-AUDIT-RUBRIC.md",
+      "docs/QA-LOOP.md"
+    ],
+    "claims": [
+      "Nothing published comes from an AI model's background knowledge; every figure/date/citation must appear in fetched source text.",
+      "A facts sheet with line numbers is extracted, and published figures are copied from it rather than retyped.",
+      "Referenced statutes are fetched and read when a bill amends another law.",
+      "Deterministic checks BLOCK publication (figure sourcing, referenced-source resolution, passage corroboration).",
+      "QA re-reads happen in fresh sessions carrying no memory of prior passes, working adversarially.",
+      "Drafts are decomposed into atomic claims judged supported / contradicted / unsupported against a quoted span, including a direction-of-change check.",
+      "A second model from a DIFFERENT family verifies flagged findings.",
+      "A per-page audit ledger records every claim, its verdict, and its source line.",
+      "CRITICAL -- every analysis and article is reviewed by a human BEFORE publication. If the Dispatch lane ever auto-publishes with post-publish review, this page AND the disclosure line on every article become false and must be reworded first.",
+      "Quotations are never generated or paraphrased; verbatim from the Congressional Record or omitted.",
+      "Positions attributed to named organizations trace to a fetched primary source, or are omitted rather than softened.",
+      "No AI-generated or AI-altered imagery is used."
+    ],
+    "sha": "b52528eb3ed9a3bc",
+    "reviewedAt": "2026-08-13"
+  },
+  "articles/methodology.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "scripts/qa-source-verify.js",
+      "scripts/fetch_bills_data.js",
+      "scripts/fetch-reference.js",
+      "docs/QA-LOOP.md"
+    ],
+    "claims": [
+      "The described sourcing workflow matches the workflow actually run.",
+      "The list of validation gates matches what validate-batch.js actually enforces.",
+      "The latest-applicable-version fetch rule is still how bill text is retrieved.",
+      "Any count or enumeration on this page (number of checks, number of passes) still matches reality -- these are the parts that rot first."
+    ],
+    "sha": "fe6b4fe8bad1223a",
+    "reviewedAt": "2026-08-13"
+  },
+  "about.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "data/entity.json"
+    ],
+    "claims": [
+      "The 'How the analysis is produced' paragraph matches the real pipeline.",
+      "The claim that each analysis is re-checked by a separate model from the one that drafted it is still true.",
+      "Ownership, funding, and independence statements are still accurate.",
+      "The named editor matches data/entity.json."
+    ],
+    "sha": "bddd8185aac9587f",
+    "reviewedAt": "2026-08-13"
+  },
+  "articles/no-editorial-spin.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "docs/BOTH-SIDES.md"
+    ],
+    "claims": [
+      "The neutrality rules described here match the rules the drafting prompt actually enforces.",
+      "The both-sides eligibility triggers described match docs/BOTH-SIDES.md.",
+      "The stated ban on editorial labels is still enforced in the prompt."
+    ],
+    "sha": "PENDING",
+    "reviewedAt": "2026-08-13"
+  },
+  "articles/legislationpatch-and-ai.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "docs/QA-LOOP.md"
+    ],
+    "claims": [
+      "The description of where AI is and is not used matches editorial-standards.html.",
+      "No claim here contradicts the AI disclosure page."
+    ],
+    "sha": "PENDING",
+    "reviewedAt": "2026-08-13"
+  },
+  "author/james-shearn/index.html": {
+    "describes": [
+      "data/entity.json",
+      "scripts/generate_author_page.js",
+      "scripts/prompts.js"
+    ],
+    "claims": [
+      "The bio's description of the verification pipeline is still accurate.",
+      "The 'How this work is produced' section matches editorial-standards.html.",
+      "The page is regenerated (npm run author) rather than hand-edited -- hand edits will be overwritten."
+    ],
+    "sha": "3af0135f4bd00a82",
+    "reviewedAt": "2026-08-13"
+  }
+}
