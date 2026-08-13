@@ -54,7 +54,8 @@
     "preflight": "node scripts/preflight.js",
     "articles:index": "node scripts/generate_articles_index.js",
     "articles:index:check": "node scripts/generate_articles_index.js --check",
-    "articles:extract": "node scripts/extract-articles-index.js"
+    "articles:extract": "node scripts/extract-articles-index.js",
+    "verify-changelog": "node scripts/verify-changelog.js"
   },
   "repository": {
     "type": "git",

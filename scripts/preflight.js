@@ -234,6 +234,24 @@ section('Canonical URL and title');
   else pass('All non-generated pages have a title and canonical');
 }
 
+// 9. Published changelog editions still identify their bills correctly ------
+// Editions are generated once and never rebuilt, so a later bill rename leaves
+// them frozen. H.R. 5334 was published as an early-childhood education bill and
+// is now a Russia sanctions bill; the edition named the wrong subject entirely.
+section('Changelog editions vs current bill record');
+{
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.execPath, [path.join(__dirname, 'verify-changelog.js')], { stdio: 'pipe' });
+    pass('Every changelog entry matches the current bill record');
+  } catch (e) {
+    const out = String(e.stdout || '') + String(e.stderr || '');
+    const lines = out.split('\n').filter(l => l.includes('❌') && !/problem\(s\) across/.test(l));
+    if (lines.length) lines.slice(0, 8).forEach(l => fail(l.trim().replace(/^❌\s*/, '')));
+    else fail(`verify-changelog failed: ${String(e.message).slice(0, 90)}`);
+  }
+}
+
 // ---------------------------------------------------------------------------
 console.log('\n' + '═'.repeat(56));
 if (failures) {
