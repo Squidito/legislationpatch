@@ -69,20 +69,24 @@
       "The both-sides eligibility triggers described match docs/BOTH-SIDES.md.",
       "The stated ban on editorial labels is still enforced in the prompt."
     ],
-    "sha": "PENDING",
+    "sha": "4e96ce0e2edb6117",
     "reviewedAt": "2026-08-13"
   },
   "articles/legislationpatch-and-ai.html": {
     "describes": [
-      "scripts/prompts.js",
-      "scripts/validate-batch.js",
-      "docs/QA-LOOP.md"
+      "scripts/generate_bill_pages.js",
+      "scripts/lib/entity.js",
+      "data/entity.json",
+      "scripts/generate-search-index.js"
     ],
     "claims": [
-      "The description of where AI is and is not used matches editorial-standards.html.",
-      "No claim here contradicts the AI disclosure page."
+      "The schema.org types this page names are the types actually emitted. Verify against generate_bill_pages.js and lib/entity.js -- do NOT trust the prose.",
+      "Bill pages emit Legislation (not LegislativeAction). Articles use LegislativeAction only inside their about field.",
+      "Any schema type claimed here must exist somewhere in the codebase. Quotation and rep-profile Person schema were claimed but NOT implemented (caught 2026-08-13).",
+      "The canonical Person / NewsMediaOrganization entity-reference architecture is still in place.",
+      "The described bill-text version rule matches the fetch logic (newest applicable: Enrolled > Engrossed > Reported > Introduced)."
     ],
-    "sha": "PENDING",
+    "sha": "32aca1e17f0337de",
     "reviewedAt": "2026-08-13"
   },
   "author/james-shearn/index.html": {
