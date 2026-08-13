@@ -93,52 +93,99 @@ function main() {
     } catch (e) { console.warn('Warning: cache.json not loaded — bill attribution disabled'); }
     const cachedIds = new Set(Object.keys(cacheTitle));
 
-    // Attribute a bill only when the granule clearly centers on ONE cached bill:
-    // (1) exactly one cached bill referenced, (2) not a multi-bill grab-bag, and
-    // (3) the granule's TITLE substantially matches the bill's title — the debate
-    // heading IS that measure, not a different topic that cites it in passing.
-    // (3) is what rejects e.g. a "Highlighting Women's Health" granule that mentions
-    // the Ukraine Support Act once, or a quote tagged to a bill from an "S. Res. 616"
-    // granule. Procedural granule titles (rule waivers, etc.) reduce to no signal
-    // words and are correctly rejected.
+    // Attribute a standalone floor quote to a cached bill ONLY when the granule is
+    // unambiguously THAT bill's OWN floor debate. Weak signals are rejected — a
+    // wrong link is worse than no link. They mislinked the 2026-08-12 batch: a
+    // hemp-amendment quote → "KIDS Act" (119-HR-7757) on the shared word "kids",
+    // and five Russia-sanctions quotes → H.R. 2913 — a single passing mention —
+    // when the granule was really the H.R. 5334 debate (H.R. 5334 was not yet
+    // cached, so the old matcher fell back to a thematically-similar minor mention).
+    //
+    // GovInfo labels a floor-debate granule with the bill's NAME, not its number
+    // (e.g. "AGOA EXTENSION ACT--Motion to Proceed"), so we cannot require the
+    // number in the heading. Instead a link needs ONE of two strong signals:
+    //  (1) SUBJECT MATCH — the bill cited MOST in the granule body (its subject)
+    //      is cached, is cited 2+ times (not a passing reference), AND the heading
+    //      matches that bill's title on 2+ significant words. Using the dominant
+    //      bill defeats the Russia bug: the true subject out-cites the passing
+    //      mention, and when the subject isn't cached we return null rather than
+    //      fall back to a minor cached mention.
+    //  (2) EXPLICIT CITATION — the heading, or the quote's own text, cites exactly
+    //      one cached bill by number (H.R./S. + number).
     const TITLE_STOP = new Set(['act','the','and','for','resolution','bill','providing',
         'consideration','making','appropriations','related','other','purposes','fiscal',
         'year','amendment','directing','pursuant','section','requirement','clause','rule',
-        'waiving','further','additional','providing','concurrent','joint']);
+        'waiving','further','additional','concurrent','joint']);
     const sigWords = s => new Set((s || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ')
         .split(/\s+/).filter(w => w.length > 3 && !TITLE_STOP.has(w)));
+    // Heading matches a bill title only when they share 2+ significant words AND
+    // the heading covers 60%+ of the bill title's significant words. The 2-word
+    // floor kills the single-common-word matches ("kids", "russia") that short or
+    // generic titles trivially satisfied.
     function titleMatch(billTitle, granuleTitle) {
         const bt = sigWords(billTitle), gt = sigWords(granuleTitle);
-        if (!bt.size) return false;
+        if (bt.size < 2) return false;                     // title too generic to match safely
         let hit = 0; for (const w of bt) if (gt.has(w)) hit++;
-        return hit / bt.size >= 0.6;
+        return hit >= 2 && hit / bt.size >= 0.6;
+    }
+    // Frequency of each bill number cited in a block of text (billRefsInText dedups;
+    // here we need counts to find the granule's dominant SUBJECT bill).
+    function countBillRefs(text) {
+        const counts = {};
+        for (const m of (text || '').matchAll(BILL_REF_RE)) {
+            const t = REF_TYPE[m[1].toUpperCase().replace(/[^A-Z]/g, '')];
+            if (t) { const id = `${CONGRESS}-${t}-${m[2]}`; counts[id] = (counts[id] || 0) + 1; }
+        }
+        return counts;
+    }
+    // Signal (2): exactly one cached bill cited by number in `text`.
+    function soleCachedRef(text) {
+        const refs = [...new Set([...billRefsInText(text || '')].filter(id => cachedIds.has(id)))];
+        return refs.length === 1 ? { id: refs[0], title: cacheTitle[refs[0]] || null } : null;
     }
     function granuleBill(g) {
-        const refs = billRefsInText(g.text || '');
-        const cached = [...refs].filter(id => cachedIds.has(id));
-        if (cached.length === 1 && refs.size <= 4 && titleMatch(cacheTitle[cached[0]], g.granuleTitle)) {
-            return { id: cached[0], title: cacheTitle[cached[0]] || null };
-        }
-        return null;
+        // (2) explicit: the debate heading itself cites exactly one cached bill.
+        const headingRef = soleCachedRef(g.granuleTitle || '');
+        if (headingRef) return headingRef;
+        // (1) subject match: the dominant bill in the body, cited 2+ times, cached,
+        //     with a heading that matches its title.
+        const ranked = Object.entries(countBillRefs(g.text || '')).sort((a, b) => b[1] - a[1]);
+        if (!ranked.length) return null;
+        const [subjectId, subjectCount] = ranked[0];
+        if (subjectCount < 2) return null;                 // no bill is genuinely the subject
+        if (!cachedIds.has(subjectId)) return null;        // real subject isn't cached — do NOT fall back
+        if (!titleMatch(cacheTitle[subjectId], g.granuleTitle)) return null;
+        return { id: subjectId, title: cacheTitle[subjectId] || null };
     }
 
     // Gather candidates grouped by date.
     const byDate = {};
     for (const g of granules) {
+        // GUARD: every standalone quote must carry a real, dated source string
+        // ("House Floor, Aug 7, 2026"). floor.js sorts, dates, and labels quotes
+        // straight off this string, so a granule with no chamber or no parseable
+        // date can only yield sourceless, unrenderable quotes — skip it whole.
+        const source = (g.chamber && isoToDisplay(g.date))
+            ? `${g.chamber} Floor, ${isoToDisplay(g.date)}` : '';
+        if (!source) {
+            console.warn(`  ⚠️  [skip granule] ${g.granuleId || g.date || '?'}: no chamber/date — sourceless quotes dropped`);
+            continue;
+        }
         const cands = extractQuotesFromCR(g.text || '', '', '', g.chamber);   // empty bill args = general; chamber disambiguates speakers
-        const gb = granuleBill(g);                                            // one cached bill for the whole granule, or null
+        const gb = granuleBill(g);                                            // cached bill named in the debate heading, or null
         for (const q of cands) {
             const shock = computeShockScore(q);
             if (shock < MIN_SHOCK) continue;                                 // drop one-liners / procedural fragments
             if (TRIBUTE_RE.test((q.text || '').slice(0, 180))) continue;      // drop ceremonial tributes
             const key = `${q.name}|${(q.text || '').slice(0, 40)}`;
             if (seen.has(key)) continue;
+            const link = gb || soleCachedRef(q.text);                        // heading match, else the quote's own explicit citation
             (byDate[g.date] = byDate[g.date] || []).push({
                 name: q.name, party: q.party, state: q.state, bioguideId: q.bioguideId,
                 text: q.text,
-                source: `${g.chamber} Floor, ${isoToDisplay(g.date)}`,
+                source,
                 stance: q.stance,
-                billId: gb ? gb.id : null, billTitle: gb ? gb.title : null,
+                billId: link ? link.id : null, billTitle: link ? link.title : null,
                 chamber: g.chamber,
                 granuleId: g.granuleId || null,
                 _score: computeShockScore(q),

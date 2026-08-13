@@ -62,6 +62,7 @@ const lastNameKey = fullName => deaccent(
 ).toLowerCase();
 
 const repsByLastName = {};
+const chamberByBioguide = {};   // bioguideId -> "House" | "Senate" (for quote source provenance)
 try {
     const repsIndex = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/reps-index.json'), 'utf8'));
     for (const stateReps of Object.values(repsIndex)) {
@@ -69,6 +70,9 @@ try {
             const ln = lastNameKey(rep.name);
             if (!repsByLastName[ln]) repsByLastName[ln] = [];
             repsByLastName[ln].push(rep);
+            if (rep.bioguideId) {
+                chamberByBioguide[rep.bioguideId] = (rep.role || '').toLowerCase().includes('senator') ? 'Senate' : 'House';
+            }
         }
     }
 } catch (e) { console.warn('Warning: could not load reps-index.json — party/state resolution disabled'); }
@@ -562,6 +566,30 @@ function viewsSectionsToQuotes(sections) {
     return quotes;
 }
 
+// Provenance string for an auto-extracted featured floor quote: the speaker's
+// chamber + " Floor". The chamber is reliable — `fetchCRForDate` only pulls the
+// bill's own origin-chamber granules and a member speaks in their own chamber —
+// so we take it from the speaker's bioguide, falling back to the bill's origin
+// chamber. No per-quote date is recoverable from the concatenated CR text, so
+// none is invented (the web render fills provenance from chamber + bill data).
+function floorSource(q, originChamber) {
+    const chamber = chamberByBioguide[q.bioguideId] || originChamber || '';
+    return chamber ? `${chamber} Floor` : '';
+}
+
+// GUARD (docs/CR-QUOTES.md): never write a featured quote that lacks a non-empty
+// `source`. A sourceless quote can't be traced back to the Congressional Record
+// it was pulled from — exactly the unverifiable quotes wrongly added to HR-3838
+// (NDAA) in the 2026-08-12 batch and removed by review. Drop any here (logging a
+// warning) so they never reach cache.json.
+function dropSourceless(quotes, billId) {
+    return quotes.filter(q => {
+        if (q.source && String(q.source).trim()) return true;
+        console.warn(`  ⚠️  ${billId}: dropped "${q.name}" — no source (unverifiable, not written)`);
+        return false;
+    });
+}
+
 function selectQuotes(quotes) {
     // featured_quotes: all quotes, sorted oppose > support > neutral, deduped by bioguideId/name
     const sorted = [...quotes].sort((a, b) => {
@@ -619,6 +647,7 @@ async function processBillEntry(bill) {
 
     const actions  = await fetchBillActions(congress, type, number);
     const fallback = reformatStageDate(bill.enactedDate || bill.stageDate || '');
+    const originChamber = ['HR', 'HRES', 'HJRES', 'HCONRES'].includes(type.toUpperCase()) ? 'House' : 'Senate';
 
     let allQuotes = [];
 
@@ -628,6 +657,9 @@ async function processBillEntry(bill) {
         const crText = await fetchCongressionalRecord(type, number, floorDates, actions);
         if (crText) {
             const crQuotes = extractQuotesFromCR(crText, type, number);
+            // Stamp CR floor provenance so every quote is traceable (and survives
+            // the sourceless-quote guard applied below before writing to cache).
+            crQuotes.forEach(q => { q.source = floorSource(q, originChamber); });
             console.log(`  CR: ${crQuotes.length} speaker quote(s).`);
             allQuotes = allQuotes.concat(crQuotes);
         } else {
@@ -644,7 +676,12 @@ async function processBillEntry(bill) {
         if (!reportText) continue;
         const sections = extractViewsQuotes(reportText);
         console.log(`  Report ${ref.chamber}. Rept. ${ref.congress}-${ref.number}: ${sections.length} views section(s).`);
-        allQuotes = allQuotes.concat(viewsSectionsToQuotes(sections));
+        const viewsQuotes = viewsSectionsToQuotes(sections);
+        // Views quotes come from the committee report, not the floor — stamp the
+        // report citation as their source (their traceable provenance).
+        const reportSource = `${ref.chamber === 'H' ? 'House' : 'Senate'} Rept. ${ref.congress}-${ref.number}`;
+        viewsQuotes.forEach(q => { q.source = reportSource; });
+        allQuotes = allQuotes.concat(viewsQuotes);
     }
 
     if (!allQuotes.length) {
@@ -665,12 +702,13 @@ async function processBillEntry(bill) {
     );
 
     const { featured, criticisms } = selectQuotes(allQuotes);
+    const featuredWithSource = dropSourceless(featured, bill.id);
 
-    bill.featured_quotes = featured;
+    bill.featured_quotes = featuredWithSource;
     if (criticisms.length) bill.criticisms = criticisms;
 
-    console.log(`  → ${featured.length} featured quote(s), ${criticisms.length} criticism(s) saved.`);
-    reportCRQuoteAcronyms(bill.id, [...featured, ...criticisms]);
+    console.log(`  → ${featuredWithSource.length} featured quote(s), ${criticisms.length} criticism(s) saved.`);
+    reportCRQuoteAcronyms(bill.id, [...featuredWithSource, ...criticisms]);
     return true;
 }
 
@@ -876,18 +914,24 @@ async function applyQuotesMode(billId, jsonPath) {
         return;
     }
 
+    // Stamp CR floor provenance (chamber from the speaker's bioguide, else the
+    // bill's origin chamber) so the sourceless-quote guard has something to check.
+    const originChamber = ['HR', 'HRES', 'HJRES', 'HCONRES'].includes(parseBillId(billId).type.toUpperCase()) ? 'House' : 'Senate';
+    verified.forEach(q => { if (!q.source) q.source = floorSource(q, originChamber); });
+
     const { featured, criticisms } = selectQuotes(verified);
+    const featuredWithSource = dropSourceless(featured, billId);
     const cacheData = loadCache();
     const bills     = Array.isArray(cacheData.bills) ? cacheData.bills : Object.values(cacheData.bills || {});
     const bill      = bills.find(b => b.id === billId);
     if (!bill) { console.error(`Bill ${billId} not found in cache.json.`); return; }
 
-    bill.featured_quotes = featured;
+    bill.featured_quotes = featuredWithSource;
     if (criticisms.length) bill.criticisms = criticisms;
     saveCache(cacheData);
 
-    console.log(`\n✓ Saved ${featured.length} quote(s), ${criticisms.length} criticism(s) for ${billId}.`);
-    reportCRQuoteAcronyms(billId, [...featured, ...criticisms]);
+    console.log(`\n✓ Saved ${featuredWithSource.length} quote(s), ${criticisms.length} criticism(s) for ${billId}.`);
+    reportCRQuoteAcronyms(billId, [...featuredWithSource, ...criticisms]);
 }
 
 // --- Entry point ---
