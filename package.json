@@ -50,7 +50,8 @@
     "indexnow": "node scripts/indexnow-ping.js",
     "entities": "node scripts/migrate-article-entities.js",
     "doc-provenance": "node scripts/doc-provenance.js",
-    "doc-provenance:stamp": "node scripts/doc-provenance.js --stamp"
+    "doc-provenance:stamp": "node scripts/doc-provenance.js --stamp",
+    "preflight": "node scripts/preflight.js"
   },
   "repository": {
     "type": "git",

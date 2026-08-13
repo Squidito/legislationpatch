@@ -5,7 +5,7 @@
 # (done automatically by `npm install` — see the "prepare" script in package.json,
 # so the hook survives re-clones and new machines.)
 #
-# Four gates, in order of severity:
+# Five gates, in order of severity:
 #
 #   1. security-check.js   — secrets / CSP / noopener / XSS heuristic.
 #                            BLOCKS on errors. NO sanctioned bypass.
@@ -14,6 +14,11 @@
 #   3. validate-batch      — data QA (figures, stages, formatting).
 #                            BLOCKS on errors. Sanctioned bypass for data-QA-only
 #                            situations:  SKIP_VALIDATE=1 git commit ...
+#   5. preflight           — structural checks on the RENDERED PAGES (JSON-LD parses,
+#                            every entity @id resolves, no duplicate inline author
+#                            blobs, article byline+disclosure, theme default,
+#                            internal links, footer trust links, canonical/noindex).
+#                            BLOCKS on failure. Bypass: SKIP_PREFLIGHT=1 git commit ...
 #   4. qa-regression       — replays every verified QA-ledger receipt vs current
 #                            source; BLOCKS if a previously-verified claim no longer
 #                            holds (silent accuracy regression). Bypass for a
@@ -23,7 +28,7 @@
 # never use it; use SKIP_VALIDATE=1 / SKIP_REGRESSION=1 for a targeted data bypass.
 # See SECURITY.md for the invariant -> gate map.
 
-echo "[pre-commit] 1/4 security-check..."
+echo "[pre-commit] 1/5 security-check..."
 node scripts/security-check.js
 if [ $? -ne 0 ]; then
   echo ""
@@ -32,7 +37,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "[pre-commit] 2/4 security-helper tests..."
+echo "[pre-commit] 2/5 security-helper tests..."
 node scripts/test-security-helpers.js
 if [ $? -ne 0 ]; then
   echo ""
@@ -42,9 +47,9 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ "$SKIP_VALIDATE" = "1" ]; then
-  echo "[pre-commit] 3/4 validate-batch SKIPPED (SKIP_VALIDATE=1)."
+  echo "[pre-commit] 3/5 validate-batch SKIPPED (SKIP_VALIDATE=1)."
 else
-  echo "[pre-commit] 3/4 validate-batch (npm run validate)..."
+  echo "[pre-commit] 3/5 validate-batch (npm run validate)..."
   npm run --silent validate
   if [ $? -ne 0 ]; then
     echo ""
@@ -56,9 +61,9 @@ else
 fi
 
 if [ "$SKIP_REGRESSION" = "1" ]; then
-  echo "[pre-commit] 4/4 qa-regression SKIPPED (SKIP_REGRESSION=1)."
+  echo "[pre-commit] 4/5 qa-regression SKIPPED (SKIP_REGRESSION=1)."
 else
-  echo "[pre-commit] 4/4 qa-regression (npm run qa-regression)..."
+  echo "[pre-commit] 4/5 qa-regression (npm run qa-regression)..."
   npm run --silent qa-regression
   if [ $? -ne 0 ]; then
     echo ""
@@ -66,6 +71,21 @@ else
     echo "[pre-commit]   A previously-verified receipt no longer resolves against source."
     echo "[pre-commit]   Re-audit the affected bill(s), or for a deliberate source/ledger change:"
     echo "[pre-commit]     SKIP_REGRESSION=1 git commit ..."
+    exit 1
+  fi
+fi
+
+if [ "$SKIP_PREFLIGHT" = "1" ]; then
+  echo "[pre-commit] 5/5 preflight SKIPPED (SKIP_PREFLIGHT=1)."
+else
+  echo "[pre-commit] 5/5 preflight (npm run preflight)..."
+  npm run --silent preflight
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "[pre-commit] X preflight found a structural page defect — commit BLOCKED."
+    echo "[pre-commit]   See the failures above (unresolved entity @id, broken link,"
+    echo "[pre-commit]   missing byline/disclosure, inconsistent theme default, ...)."
+    echo "[pre-commit]   For a deliberate exception: SKIP_PREFLIGHT=1 git commit ..."
     exit 1
   fi
 fi

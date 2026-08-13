@@ -31,6 +31,7 @@ const fs   = require('fs');
 const path = require('path');
 
 const { escHtml } = require('../util.js');
+const entity = require('./lib/entity.js');
 
 const ROOT      = path.join(__dirname, '..');
 const DATA      = path.join(ROOT, 'data');
@@ -324,6 +325,7 @@ const FOOTER = `  <footer class="site-footer">
       <a href="/terms.html">Terms of Service</a> &middot;
       <a href="/articles/">Guides</a> &middot;
       <a href="/about.html">About</a> &middot;
+      <a href="/editorial-standards.html">Editorial Standards</a> &middot;
       <a href="/corrections.html">Corrections</a> &middot;
       <a href="/changelog/">Changelog</a>
     </p>
@@ -435,11 +437,8 @@ function renderEditionPage(edition, dateISO) {
     url: `${BASE}/changelog/${dateISO}/`,
     datePublished: dateISO,
     dateModified: dateISO,
-    author: { '@type': 'Organization', name: 'LegislationPatch', url: BASE },
-    publisher: {
-      '@type': 'Organization', name: 'LegislationPatch',
-      logo: { '@type': 'ImageObject', url: OG_IMAGE },
-    },
+    author: entity.personRef(),
+    publisher: entity.organizationRef(),
     description: `${counts.total} legislative updates recorded for ${dateHuman(dateISO)}.`,
   };
   const title = `Congress Patch Notes — ${dateHuman(dateISO)} | LegislationPatch`;

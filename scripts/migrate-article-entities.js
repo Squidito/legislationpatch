@@ -28,6 +28,8 @@ const path = require('path');
 const entity = require('./lib/entity');
 const { ARTICLES } = require('./lib/article-meta');
 
+const ROOT_DIR = path.join(__dirname, '..');
+
 const args  = process.argv.slice(2);
 const APPLY = args.includes('--apply');
 
@@ -107,17 +109,25 @@ function rewriteJsonLd(html, articleUrl) {
   return { html: out, changed };
 }
 
-function migrateOne(file) {
-  const full = path.join(ARTICLES, file);
+function migrateOne(file, opts = {}) {
+  const { baseDir = ARTICLES, urlPath = '/articles/', isArticle = true } = opts;
+  const full = path.join(baseDir, file);
   const original = fs.readFileSync(full, 'utf8');
   let html = original;
   const actions = [];
 
-  const articleUrl = `${entity.site().baseUrl}/articles/${file}`;
+  const articleUrl = `${entity.site().baseUrl}${urlPath}${file}`;
 
   // 1. JSON-LD entity references
   const ld = rewriteJsonLd(html, articleUrl);
   if (ld.changed) { html = ld.html; actions.push('schema'); }
+
+  // Byline + disclosure are article-only. Changelog editions are a machine-
+  // generated log, not authored prose, so they take the entity refs and nothing
+  // else -- a "reviewed and edited by" line there would be a false claim.
+  if (!isArticle) {
+    return { file, actions, html, changed: html !== original };
+  }
 
   // 2. Visible byline
   if (OLD_BYLINE_RE.test(html)) {
@@ -141,6 +151,15 @@ function migrateOne(file) {
   return { file, actions, html, changed: html !== original };
 }
 
+/** Changelog editions live at changelog/<date>/index.html. */
+function changelogTargets() {
+  const dir = path.join(ROOT_DIR, 'changelog');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir, { withFileTypes: true })
+    .filter(e => e.isDirectory() && fs.existsSync(path.join(dir, e.name, 'index.html')))
+    .map(e => path.join(e.name, 'index.html'));
+}
+
 function main() {
   const files = fs.readdirSync(ARTICLES)
     .filter(f => f.endsWith('.html') && !NOT_ARTICLES.has(f))
@@ -156,6 +175,16 @@ function main() {
     if (r.actions.some(a => a.includes('SKIPPED'))) skipped.push(r.file);
     console.log(`  ${APPLY ? 'wrote' : 'would change'} ${file} [${r.actions.join(', ')}]`);
     if (APPLY) fs.writeFileSync(path.join(ARTICLES, file), r.html);
+  }
+
+  // Changelog editions: entity refs only (see migrateOne).
+  const CHANGELOG = path.join(ROOT_DIR, 'changelog');
+  for (const rel of changelogTargets()) {
+    const r = migrateOne(rel, { baseDir: CHANGELOG, urlPath: '/changelog/', isArticle: false });
+    if (!r.changed) continue;
+    changedCount++;
+    console.log(`  ${APPLY ? 'wrote' : 'would change'} changelog/${rel.replace(/\\/g, '/')} [${r.actions.join(', ')}]`);
+    if (APPLY) fs.writeFileSync(path.join(CHANGELOG, rel), r.html);
   }
 
   console.log('');
