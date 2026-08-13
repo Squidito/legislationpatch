@@ -1,6 +1,7 @@
 {
   "_readme": "Single source of truth for the site's Person and Organization entities. Every page that emits author/publisher JSON-LD reads THIS file via scripts/lib/entity.js and references the @id values -- no page hardcodes an author blob. To add a new corroboration point (ORCID, Wikidata, LinkedIn, Muck Rack), append the URL to person.sameAs here and re-run `npm run pages` + `npm run articles:index`; it propagates everywhere. See _personal/ARTICLE-WRITER-SPEC.md section 6.",
   "site": {
+    "id": "https://legislationpatch.com/#website",
     "baseUrl": "https://legislationpatch.com",
     "name": "LegislationPatch"
   },

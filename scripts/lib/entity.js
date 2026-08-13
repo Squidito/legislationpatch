@@ -32,8 +32,8 @@ function load() {
   for (const key of ['site', 'person', 'organization']) {
     if (!raw[key]) throw new Error(`entity.json is missing the "${key}" block`);
   }
-  if (!raw.person.id || !raw.organization.id) {
-    throw new Error('entity.json: person.id and organization.id are required (they are the @id anchors)');
+  if (!raw.person.id || !raw.organization.id || !raw.site.id) {
+    throw new Error('entity.json: site.id, person.id and organization.id are required (they are the @id anchors)');
   }
   _cache = raw;
   return _cache;
@@ -91,6 +91,10 @@ function organizationNode() {
 /** Lightweight {"@id": ...} reference. This is what articles use for author/publisher. */
 function personRef()       { return { '@id': load().person.id }; }
 function organizationRef() { return { '@id': load().organization.id }; }
+// The WebSite node is defined once, on the homepage. Pages that emit isPartOf
+// must REFERENCE it -- an inline {"@type":"WebSite", ...} blob is another
+// unlinked duplicate of the thing this module exists to deduplicate.
+function websiteRef()      { return { '@id': load().site.id }; }
 
 /** Convenience accessors for HTML (byline text, links). */
 function person()       { return load().person; }
@@ -118,6 +122,7 @@ module.exports = {
   organizationNode,
   personRef,
   organizationRef,
+  websiteRef,
   person,
   organization,
   site,

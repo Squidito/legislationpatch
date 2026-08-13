@@ -405,12 +405,14 @@ function renderHub(edition, dateISO, earlier) {
   const structured = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
+    '@id': `${BASE}/changelog/#webpage`,
     name: 'Congress Patch Notes — LegislationPatch Changelog',
     url: `${BASE}/changelog/`,
     description: 'A running changelog of U.S. federal bills that advanced, passed, or were signed into law — release notes for Congress, sourced from the bill record.',
     datePublished: dateISO,
     dateModified: dateISO,
-    isPartOf: { '@type': 'WebSite', name: 'LegislationPatch', url: BASE },
+    isPartOf: entity.websiteRef(),
+    publisher: entity.organizationRef(),
   };
   const title = 'Congress Patch Notes — Changelog | LegislationPatch';
   const desc  = 'Release notes for Congress: a running changelog of the bills that advanced, passed a chamber, or were signed into law — every entry sourced from the bill record.';
