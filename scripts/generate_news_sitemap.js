@@ -50,17 +50,46 @@ function xmlEscape(s) {
 }
 
 /**
- * An article qualifies if its publication date falls inside the window.
+ * The interval the article could have been published in.
+ *
+ * A full timestamp pins it to an instant. A date-only value ("2026-08-13")
+ * genuinely means "some time that day", so it spans the whole UTC day --
+ * pretending it means midnight is what halved the window: an item published
+ * at 20:00 was measured as 20 hours older than it was, and dropped out of the
+ * 48-hour feed after 28 real hours.
+ */
+function publishInterval(a) {
+  const raw = a.datePublishedAt || a.datePublished;
+  if (!raw) return null;
+
+  if (/^\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}/.test(raw)) {
+    const at = new Date(raw.replace(' ', 'T'));
+    if (Number.isNaN(at.getTime())) return null;
+    return { earliest: at, latest: at, dayPrecision: false };
+  }
+
+  const earliest = new Date(`${raw}T00:00:00.000Z`);
+  const latest   = new Date(`${raw}T23:59:59.999Z`);
+  if (Number.isNaN(earliest.getTime())) return null;
+  return { earliest, latest, dayPrecision: true };
+}
+
+/**
+ * An article qualifies if its publication instant falls inside the window.
  * We use datePublished, not dateModified: Google News wants genuinely new
  * items. Re-listing a refreshed evergreen guide as "news" is the kind of
  * recycling that gets a publisher's news treatment pulled.
+ *
+ * Measured against the LATEST instant it could have been published, so a
+ * day-precision article gets the full 48 hours rather than a truncated one --
+ * under-listing costs the Top Stories crawl outright, and the crawl may be
+ * the only shot at it.
  */
 function withinWindow(a) {
-  if (!a.datePublished) return false;
-  const published = new Date(`${a.datePublished}T00:00:00Z`);
-  if (Number.isNaN(published.getTime())) return false;
-  const ageHours = (NOW - published) / 36e5;
-  return ageHours >= 0 && ageHours <= WINDOW_HOURS;
+  const w = publishInterval(a);
+  if (!w) return false;
+  if (NOW < w.earliest) return false;            // not published yet
+  return (NOW - w.latest) / 36e5 <= WINDOW_HOURS;
 }
 
 function main() {
@@ -76,7 +105,7 @@ function main() {
         <news:name>${xmlEscape(site.name)}</news:name>
         <news:language>en</news:language>
       </news:publication>
-      <news:publication_date>${xmlEscape(a.datePublished)}</news:publication_date>
+      <news:publication_date>${xmlEscape(a.datePublishedAt || a.datePublished)}</news:publication_date>
       <news:title>${xmlEscape(a.title)}</news:title>
     </news:news>
   </url>`).join('\n');
@@ -94,7 +123,14 @@ ${entries}${entries ? '\n' : ''}</urlset>
   if (!fresh.length) {
     console.log('  (empty is expected until the Dispatch lane publishes event-pegged pages)');
   }
-  for (const a of fresh) console.log(`  ${a.datePublished}  ${a.title}`);
+  for (const a of fresh) {
+    const w = publishInterval(a);
+    // Day-precision inside the window is worth saying out loud: the entry is
+    // being given the benefit of the doubt on its publish hour. Dispatches
+    // should carry a full timestamp so the window is exact.
+    const note = w && w.dayPrecision ? '  (day-precision datePublished — no time recorded)' : '';
+    console.log(`  ${a.datePublishedAt || a.datePublished}  ${a.title}${note}`);
+  }
 }
 
 main();

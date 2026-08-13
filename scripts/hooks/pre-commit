@@ -5,7 +5,7 @@
 # (done automatically by `npm install` — see the "prepare" script in package.json,
 # so the hook survives re-clones and new machines.)
 #
-# Five gates, in order of severity:
+# Six gates, in order of severity:
 #
 #   1. security-check.js   — secrets / CSP / noopener / XSS heuristic.
 #                            BLOCKS on errors. NO sanctioned bypass.
@@ -14,21 +14,31 @@
 #   3. validate-batch      — data QA (figures, stages, formatting).
 #                            BLOCKS on errors. Sanctioned bypass for data-QA-only
 #                            situations:  SKIP_VALIDATE=1 git commit ...
-#   5. preflight           — structural checks on the RENDERED PAGES (JSON-LD parses,
-#                            every entity @id resolves, no duplicate inline author
-#                            blobs, article byline+disclosure, theme default,
-#                            internal links, footer trust links, canonical/noindex).
-#                            BLOCKS on failure. Bypass: SKIP_PREFLIGHT=1 git commit ...
 #   4. qa-regression       — replays every verified QA-ledger receipt vs current
 #                            source; BLOCKS if a previously-verified claim no longer
 #                            holds (silent accuracy regression). Bypass for a
 #                            deliberate source/ledger change: SKIP_REGRESSION=1 git commit ...
+#   5. preflight           — structural checks on the RENDERED PAGES (JSON-LD parses,
+#                            no smart quotes in markup, every entity @id resolves,
+#                            no duplicate inline author/publisher/website blobs,
+#                            article byline+disclosure, pre-paint theme bootstrap,
+#                            internal links, footer trust links, canonical/noindex,
+#                            changelog editions vs bill record).
+#                            BLOCKS on failure. Bypass: SKIP_PREFLIGHT=1 git commit ...
+#   6. generated-surface freshness — articles/index.html and the author page are
+#                            GENERATED but committed. If a source change makes one
+#                            stale, the new article is orphaned from human
+#                            navigation (the gap that closing articles/index.html
+#                            was supposed to close) or the author page contradicts
+#                            data/entity.json. Both checks are sub-second and
+#                            fix-forward: run `npm run articles:index` /
+#                            `npm run author`. Bypass: SKIP_GENERATED=1 git commit ...
 #
 # `git commit --no-verify` skips EVERYTHING including the security gates —
 # never use it; use SKIP_VALIDATE=1 / SKIP_REGRESSION=1 for a targeted data bypass.
 # See SECURITY.md for the invariant -> gate map.
 
-echo "[pre-commit] 1/5 security-check..."
+echo "[pre-commit] 1/6 security-check..."
 node scripts/security-check.js
 if [ $? -ne 0 ]; then
   echo ""
@@ -37,7 +47,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "[pre-commit] 2/5 security-helper tests..."
+echo "[pre-commit] 2/6 security-helper tests..."
 node scripts/test-security-helpers.js
 if [ $? -ne 0 ]; then
   echo ""
@@ -47,9 +57,9 @@ if [ $? -ne 0 ]; then
 fi
 
 if [ "$SKIP_VALIDATE" = "1" ]; then
-  echo "[pre-commit] 3/5 validate-batch SKIPPED (SKIP_VALIDATE=1)."
+  echo "[pre-commit] 3/6 validate-batch SKIPPED (SKIP_VALIDATE=1)."
 else
-  echo "[pre-commit] 3/5 validate-batch (npm run validate)..."
+  echo "[pre-commit] 3/6 validate-batch (npm run validate)..."
   npm run --silent validate
   if [ $? -ne 0 ]; then
     echo ""
@@ -61,9 +71,9 @@ else
 fi
 
 if [ "$SKIP_REGRESSION" = "1" ]; then
-  echo "[pre-commit] 4/5 qa-regression SKIPPED (SKIP_REGRESSION=1)."
+  echo "[pre-commit] 4/6 qa-regression SKIPPED (SKIP_REGRESSION=1)."
 else
-  echo "[pre-commit] 4/5 qa-regression (npm run qa-regression)..."
+  echo "[pre-commit] 4/6 qa-regression (npm run qa-regression)..."
   npm run --silent qa-regression
   if [ $? -ne 0 ]; then
     echo ""
@@ -76,9 +86,9 @@ else
 fi
 
 if [ "$SKIP_PREFLIGHT" = "1" ]; then
-  echo "[pre-commit] 5/5 preflight SKIPPED (SKIP_PREFLIGHT=1)."
+  echo "[pre-commit] 5/6 preflight SKIPPED (SKIP_PREFLIGHT=1)."
 else
-  echo "[pre-commit] 5/5 preflight (npm run preflight)..."
+  echo "[pre-commit] 5/6 preflight (npm run preflight)..."
   npm run --silent preflight
   if [ $? -ne 0 ]; then
     echo ""
@@ -86,6 +96,31 @@ else
     echo "[pre-commit]   See the failures above (unresolved entity @id, broken link,"
     echo "[pre-commit]   missing byline/disclosure, inconsistent theme default, ...)."
     echo "[pre-commit]   For a deliberate exception: SKIP_PREFLIGHT=1 git commit ..."
+    exit 1
+  fi
+fi
+
+if [ "$SKIP_GENERATED" = "1" ]; then
+  echo "[pre-commit] 6/6 generated-surface freshness SKIPPED (SKIP_GENERATED=1)."
+else
+  echo "[pre-commit] 6/6 generated-surface freshness (articles index, author page)..."
+  npm run --silent articles:index:check
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "[pre-commit] X articles/index.html is stale — commit BLOCKED."
+    echo "[pre-commit]   A new or changed article is not reflected in the articles index,"
+    echo "[pre-commit]   so readers cannot navigate to it. Fix forward:"
+    echo "[pre-commit]     npm run articles:index"
+    echo "[pre-commit]   For a deliberate exception: SKIP_GENERATED=1 git commit ..."
+    exit 1
+  fi
+  npm run --silent author:check
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "[pre-commit] X the author page no longer matches data/entity.json — commit BLOCKED."
+    echo "[pre-commit]   The canonical Person node and the page describing it have diverged."
+    echo "[pre-commit]   Fix forward:  npm run author"
+    echo "[pre-commit]   For a deliberate exception: SKIP_GENERATED=1 git commit ..."
     exit 1
   fi
 fi

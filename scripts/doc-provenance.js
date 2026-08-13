@@ -52,6 +52,24 @@ function loadRegistry() {
   return JSON.parse(fs.readFileSync(REGISTRY, 'utf8'));
 }
 
+/**
+ * A --doc value that names nothing is an ERROR, not a no-op.
+ *
+ * `--doc <typo>` used to filter every doc out of the loop and then print the
+ * green "all N docs match" summary having checked ZERO of them -- so a
+ * mistyped path in a script or a habit ("--doc about.html" when the registry
+ * key is "about") read as a passing gate. Same silent-skip family as
+ * preflight's `if (!m) continue`.
+ */
+function assertKnownDoc(reg) {
+  if (!ONLY) return;
+  const known = Object.keys(reg).filter(k => !k.startsWith('_'));
+  if (known.includes(ONLY)) return;
+  console.error(`doc-provenance: --doc "${ONLY}" is not in the registry — nothing would be checked.`);
+  console.error(`  registered: ${known.join(', ')}`);
+  process.exit(1);
+}
+
 /** Combined hash over the described files, in registry order. Missing file = hard error. */
 function describedHash(describes) {
   const h = crypto.createHash('sha256');
@@ -71,14 +89,16 @@ function describedHash(describes) {
  */
 function check() {
   const reg = loadRegistry();
+  assertKnownDoc(reg);
   const docs = Object.entries(reg).filter(([k]) => !k.startsWith('_'));
 
   const drifted = [];
   const brokenRefs = [];
-  let ok = 0;
+  let ok = 0, checked = 0;
 
   for (const [doc, meta] of docs) {
     if (ONLY && doc !== ONLY) continue;
+    checked++;
     const docPath = path.join(ROOT, doc);
     if (!fs.existsSync(docPath)) {
       brokenRefs.push({ doc, problem: 'the documented page itself is missing' });
@@ -94,11 +114,14 @@ function check() {
       ok++;
     }
   }
-  return { drifted, brokenRefs, ok, total: docs.length };
+  // `total` is what this run actually CHECKED, not what the registry holds --
+  // otherwise `--doc X` prints "All 6 pages match" having looked at one.
+  return { drifted, brokenRefs, ok, total: checked };
 }
 
 function doStamp() {
   const reg = loadRegistry();
+  assertKnownDoc(reg);
   const today = new Date().toISOString().slice(0, 10);
   let stamped = 0;
 

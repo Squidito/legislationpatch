@@ -21,8 +21,20 @@
 
 const fs   = require('fs');
 const path = require('path');
+const entity = require('./lib/entity.js');
 
 const ROOT = path.join(__dirname, '..');
+
+// Hosts that mean "this site". A link to https://legislationpatch.com/x is an
+// INTERNAL link written the long way -- it was being skipped as "external" and
+// never resolved, so 93 absolute author links and every absolute bill link on
+// the redirect stubs were unchecked.
+const SELF_HOSTS = new Set(['legislationpatch.com', 'www.legislationpatch.com']);
+
+// U+201C / U+201D, written as escapes so this file does not itself contain the
+// character it is hunting. The Edit-tool corruption class from CLAUDE.md.
+const CURLY_CLASS = '[\\u201C\\u201D]';
+const CURLY = new RegExp(CURLY_CLASS);
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
 
@@ -69,6 +81,17 @@ function nodesOf(parsed) {
   return parsed['@graph'] || (Array.isArray(parsed) ? parsed : [parsed]);
 }
 
+/**
+ * A noindex / meta-refresh redirect stub. Slug-change redirects and the search
+ * page render no chrome and are deliberately kept out of the index, so the
+ * checks about reader-facing structure do not apply to them. Everything ELSE
+ * is checked -- "has nothing to check" must never mean "passes".
+ */
+function isStub(html) {
+  return /<meta[^>]+name=["']robots["'][^>]*noindex/i.test(html)
+      || /http-equiv=["']refresh["']/i.test(html);
+}
+
 // ---------------------------------------------------------------------------
 const files = walkHtml(ROOT).map(f => path.relative(ROOT, f).replace(/\\/g, '/'));
 console.log(`preflight: ${files.length} HTML page(s)\n`);
@@ -85,6 +108,66 @@ section('JSON-LD parses');
   }
   if (broken.length) broken.slice(0, 10).forEach(b => fail(b));
   else pass(`All JSON-LD blocks parse (${checks} block(s))`);
+}
+
+// 1b. Smart quotes must never appear in MARKUP ------------------------------
+// This is the check that protects the other checks. A curly quote where an
+// attribute delimiter belongs (id=<curly>x<curly>) means the browser no longer
+// sees that attribute -- and neither do the regexes below, so the element
+// silently drops out of checks 3, 6 and 7 while everything reports green.
+// Corruption converting checked markup into UNCHECKED markup is worse than
+// corruption that breaks loudly.
+//
+// Prose is left alone: curly quotes in body text and in human-readable
+// attribute values (descriptions, titles, og:*) are correct typography. Only
+// delimiter positions and machine-read values are flagged.
+section('No smart quotes in markup');
+{
+  const bad = [];
+  // attributes whose values are machine-read -- a curly quote in any of these
+  // is corruption, never typography
+  const STRUCTURAL_ATTR = /\b(href|src|class|id|rel|type|itemprop|property|hreflang|charset)\s*=\s*"([^"]*)"/gi;
+
+  for (const f of files) {
+    const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
+
+    // (a) a curly quote used as an attribute delimiter
+    const delim = new RegExp(`=\\s*${CURLY_CLASS}`, 'g');
+    for (const m of h.matchAll(delim)) {
+      const line = h.slice(0, m.index).split('\n').length;
+      bad.push(`${f}:${line}: smart quote used as an attribute delimiter — the attribute is invisible to browsers AND to this gate`);
+    }
+
+    // (b) a curly quote inside a structural attribute value
+    for (const m of h.matchAll(STRUCTURAL_ATTR)) {
+      if (!CURLY.test(m[2])) continue;
+      const line = h.slice(0, m.index).split('\n').length;
+      bad.push(`${f}:${line}: smart quote inside ${m[1]}="..." — machine-read value, must be ASCII`);
+    }
+
+    // (c) a curly quote in JSON-LD keys or machine-read values. Malformed
+    // blocks are check 1's job; this catches the ones that still PARSE, where
+    // a stray curly quote inside an @id silently breaks entity resolution.
+    for (const b of jsonLdBlocks(h)) {
+      let parsed; try { parsed = JSON.parse(b.raw); } catch { continue; }
+      const MACHINE_KEY = /^(@id|@type|@context|url|identifier|sameAs|logo|image|contentUrl|target|urlTemplate)$/;
+      const visit = n => {
+        if (!n || typeof n !== 'object') return;
+        if (Array.isArray(n)) return n.forEach(visit);
+        for (const [k, v] of Object.entries(n)) {
+          if (CURLY.test(k)) bad.push(`${f}: smart quote in JSON-LD key "${k}"`);
+          if (typeof v === 'string' && MACHINE_KEY.test(k) && CURLY.test(v)) {
+            bad.push(`${f}: smart quote in JSON-LD ${k} value "${v.slice(0, 60)}"`);
+          }
+          if (v && typeof v === 'object') visit(v);
+        }
+      };
+      nodesOf(parsed).forEach(visit);
+    }
+  }
+
+  if (bad.length) bad.slice(0, 10).forEach(b => fail(b));
+  else pass(`No smart quotes in markup across ${files.length} page(s)`);
 }
 
 // 2. Every @id reference must resolve to a node defined somewhere ------------
@@ -124,16 +207,40 @@ section('Entity @id references resolve');
 }
 
 // 3. No page may re-declare the shared entities inline -----------------------
-section('No duplicate inline author/publisher blobs');
+// Was a raw regex on the file text: /"(author|publisher)":\s*\{\s*"@type"/.
+// That matched exactly one serialization. It missed key order
+// ({"name":"X","@type":"Organization"}), single-quoted JSON, line breaks
+// between the brace and the first key -- and it did not look at isPartOf at
+// all, which is how five inline anonymous WebSite blobs sat in the corpus
+// after the entity migration was declared complete.
+//
+// Now it parses the JSON-LD and inspects the actual values, so serialization
+// cannot hide anything.
+section('No duplicate inline author/publisher/website blobs');
 {
+  // the three slots that must resolve to the site's canonical shared entities
+  const SHARED_SLOT = new Set(['author', 'publisher', 'isPartOf']);
   const offenders = [];
+
   for (const f of files) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
-    // an author/publisher whose value carries @type instead of a bare @id
-    if (/"(author|publisher)":\s*\{\s*"@type"/.test(h)) offenders.push(f);
+    for (const b of jsonLdBlocks(h)) {
+      let parsed; try { parsed = JSON.parse(b.raw); } catch { continue; }
+      const visit = n => {
+        if (!n || typeof n !== 'object') return;
+        if (Array.isArray(n)) return n.forEach(visit);
+        for (const [k, v] of Object.entries(n)) {
+          if (SHARED_SLOT.has(k) && v && typeof v === 'object' && !Array.isArray(v) && v['@type']) {
+            offenders.push(`${f}: ${k} is an inline ${v['@type']} blob — must be a bare {"@id": ...} reference`);
+          }
+          if (v && typeof v === 'object') visit(v);
+        }
+      };
+      nodesOf(parsed).forEach(visit);
+    }
   }
-  if (offenders.length) offenders.slice(0, 10).forEach(f => fail(`${f} carries an inline author/publisher blob — should reference the shared @id`));
-  else pass('Every author/publisher is an @id reference');
+  if (offenders.length) offenders.slice(0, 10).forEach(o => fail(o));
+  else pass('Every author, publisher and isPartOf is an @id reference');
 }
 
 // 4. Articles carry exactly one byline and one disclosure --------------------
@@ -160,48 +267,87 @@ section('Article byline + AI disclosure');
 }
 
 // 5. Theme default must be consistent (dark) --------------------------------
+// `if (!/lpTheme/.test(h)) continue` was a silent skip: a page that lost its
+// theme bootstrap entirely -- the actual defect, a flash of light on a
+// dark-default site -- passed by having nothing to check.
+//
+// The presence test is POSITIONAL, because presence alone cannot tell a
+// bootstrap from a toggle: nearly every page also carries a theme toggle that
+// mentions lpTheme and calls setAttribute('data-theme') too. A page that lost
+// its bootstrap but kept its toggle flashes light on every load and would
+// still satisfy any presence test. What makes it a bootstrap is running
+// BEFORE the first rendered element -- so that is what is checked. All 278
+// non-stub pages satisfy it today; noindex/redirect stubs render no chrome
+// and are legitimately exempt.
 section('Theme default consistency');
 {
-  const optIn = [];
+  const optIn = [], noTheme = [];
   for (const f of files) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
-    if (!/lpTheme/.test(h)) continue;
+    const setsTheme  = h.match(/setAttribute\(\s*['"]data-theme['"]/);
+    const firstPaint = h.match(/<(header|main)\b/);
+    const bootstrapped = /lpTheme/.test(h) && setsTheme && firstPaint && setsTheme.index < firstPaint.index;
+    if (!bootstrapped) {
+      if (!isStub(h)) noTheme.push(f);
+      continue;
+    }
     // opting IN to dark means the page defaults LIGHT while the rest defaults DARK
     if (/lpTheme'\)\s*===\s*'dark'/.test(h) || /lpTheme'\)==='dark'/.test(h) || /\bt\s*===\s*'dark'/.test(h) || /\bt==='dark'/.test(h)) {
       optIn.push(f);
     }
   }
   if (optIn.length) optIn.slice(0, 10).forEach(f => fail(`${f}: defaults to LIGHT (tests === 'dark'); site default is dark`));
-  else pass('Every themed page defaults to dark');
+  if (noTheme.length) noTheme.slice(0, 10).forEach(f => fail(`${f}: no pre-paint theme bootstrap — will flash light on a dark-default site`));
+  if (!optIn.length && !noTheme.length) pass('Every themed page defaults to dark');
 }
 
 // 6. Internal links resolve on disk -----------------------------------------
+// Two widenings over the original:
+//   - href='...' (single quotes) is matched, not just href="...".
+//   - https://legislationpatch.com/x is an INTERNAL link written absolutely.
+//     It was skipped by the blanket `^https?:` external test, leaving 93
+//     absolute author links and every absolute bill link on the redirect
+//     stubs -- exactly the links a slug rename breaks -- unverified.
 section('Internal links resolve');
 {
   const missing = new Map();
+  let checked = 0;
+
+  /** null = not ours (external, mailto:, ...). Otherwise a site-root path. */
+  function toSitePath(href, dir) {
+    if (/^(mailto:|tel:|data:|javascript:)/i.test(href)) return null;
+    let rest = href;
+    if (/^(https?:)?\/\//i.test(href)) {
+      let u; try { u = new URL(href, 'https://legislationpatch.com'); } catch { return null; }
+      if (!SELF_HOSTS.has(u.hostname.toLowerCase())) return null;
+      rest = u.pathname;
+    }
+    rest = rest.split('#')[0].split('?')[0];
+    if (!rest) return null;                       // pure #anchor or ?query
+    return rest.startsWith('/') ? rest : path.posix.join('/', dir === '.' ? '' : dir, rest);
+  }
+
   for (const f of files) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
     const dir = path.dirname(f);
-    for (const m of h.matchAll(/href="([^"#?][^"]*)"/g)) {
-      let href = m[1];
-      if (/^(https?:|mailto:|tel:|data:|\/\/)/.test(href)) continue;
-      href = href.split('#')[0].split('?')[0];
-      if (!href) continue;
-      const target = href.startsWith('/') ? path.join(ROOT, href) : path.join(ROOT, dir, href);
+    for (const m of h.matchAll(/href=(?:"([^"]*)"|'([^']*)')/g)) {
+      const sitePath = toSitePath(m[1] !== undefined ? m[1] : m[2], dir);
+      if (!sitePath) continue;
+      checked++;
+      const target = path.join(ROOT, sitePath);
       const ok = fs.existsSync(target)
         || fs.existsSync(target + '.html')
         || fs.existsSync(path.join(target, 'index.html'));
       if (!ok) {
-        const key = `${href}`;
-        if (!missing.has(key)) missing.set(key, []);
-        missing.get(key).push(f);
+        if (!missing.has(sitePath)) missing.set(sitePath, []);
+        missing.get(sitePath).push(f);
       }
     }
   }
   if (missing.size) {
     [...missing].slice(0, 12).forEach(([href, where]) =>
       fail(`broken link "${href}" on ${where.length} page(s), e.g. ${where[0]}`));
-  } else pass('All internal links resolve');
+  } else pass(`All internal links resolve (${checked} checked)`);
 }
 
 // 7. Trust surfaces are reachable from every footer -------------------------
@@ -232,9 +378,7 @@ section('Editorial Standards reachable from every indexable page');
   const bad = [];
   for (const f of files) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
-    const isStub = /<meta[^>]+name=["']robots["'][^>]*noindex/i.test(h)
-                || /http-equiv=["']refresh["']/i.test(h);
-    if (isStub) continue;
+    if (isStub(h)) continue;
     if (!/href="[^"]*editorial-standards/i.test(h)) {
       bad.push(`${f}: no link to Editorial Standards (orphaned from trust surfaces)`);
     }

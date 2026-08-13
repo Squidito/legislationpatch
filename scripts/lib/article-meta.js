@@ -81,6 +81,21 @@ function isoDate(v) {
 }
 
 /**
+ * The publish value at FULL precision, time included if the source carried one.
+ *
+ * isoDate() truncates to the day, which is right for display and sorting but
+ * destroys the only information the 48-hour news window can be measured from:
+ * a dispatch published at 20:00 came back as "that date", the news sitemap
+ * re-read it as 00:00Z, and the item aged out up to 24 hours early. Dispatches
+ * (ARTICLE-WRITER-SPEC Phase 1) are exactly the pages that need the window.
+ */
+function isoDateTime(v) {
+  if (!v) return null;
+  const s = String(v).trim();
+  return /^\d{4}-\d{2}-\d{2}([T ].*)?$/.test(s) ? s : null;
+}
+
+/**
  * Read one article file into a metadata record.
  * Returns null for non-article files.
  */
@@ -95,7 +110,9 @@ function readArticle(file) {
   const titleTag = html.match(/<title>([\s\S]*?)<\/title>/i);
   const h1 = html.match(/<h1[^>]*class=["'][^"']*article-title[^"']*["'][^>]*>([\s\S]*?)<\/h1>/i);
 
-  const published = isoDate(node.datePublished) || isoDate(metaContent(html, 'property', 'article:published_time'));
+  const publishedAt = isoDateTime(node.datePublished)
+                   || isoDateTime(metaContent(html, 'property', 'article:published_time'));
+  const published = isoDate(publishedAt);
   const modified  = isoDate(node.dateModified)  || isoDate(metaContent(html, 'property', 'article:modified_time')) || published;
 
   return {
@@ -107,6 +124,10 @@ function readArticle(file) {
     seoTitle: stripTags(titleTag ? titleTag[1] : ''),
     description: stripTags(node.description || metaContent(html, 'name', 'description') || ''),
     datePublished: published,
+    // Full precision, time included when the page carried one. Day-precision
+    // pages return the same value as datePublished. Only the news sitemap
+    // needs this; everything else sorts and displays by the day.
+    datePublishedAt: publishedAt,
     dateModified: modified,
     image: node.image || metaContent(html, 'property', 'og:image') || null,
     schemaType: node['@type'] || null,
