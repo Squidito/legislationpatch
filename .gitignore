@@ -66,6 +66,8 @@ validate_*.txt
 *_temp.*
 *_temp[0-9].*
 .qa-tmp/
+# QA per-bill scratch snapshots (e.g. .qa-hr5334.json) — root deploys, so ignore them
+/.qa-*.json
 an_*.json
 all_quotes_review.txt
 *_analysis.json
