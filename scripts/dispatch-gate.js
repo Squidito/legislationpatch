@@ -38,7 +38,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const { SMART_QUOTES } = require('./lib/patterns.js');
-const { loadVotes }    = require('./lib/dispatch-events.js');
+const { loadVotes, isPassageResult, isFailureResult } = require('./lib/dispatch-events.js');
 
 // ── Check-7 vocabulary ───────────────────────────────────────────────────────
 // A dispatch may name the bill, the chamber, and the sponsor as a structural
@@ -241,8 +241,12 @@ function check3Stage(ctx) {
   if (!event.vote) {
     return { ok: false, detail: `stage claim "${event.toLabel}" has no corroborating ${event.chamber} vote` };
   }
-  const passed = /^(passed|agreed to)/i.test(String(event.vote.result || ''));
-  const failed = /^(failed|rejected)/i.test(String(event.vote.result || ''));
+  // Same classifier the event detector uses -- if the gate and the detector
+  // disagreed about what "passed" means, the gate would be checking a
+  // different question than the one the page answers. Procedural results
+  // ("Motion to Proceed Agreed to") are not passage and never corroborate.
+  const passed = isPassageResult(event.vote.result);
+  const failed = isFailureResult(event.vote.result);
   const wantFailed = event.kind === 'failed-floor';
   if (wantFailed ? !failed : !passed) {
     return { ok: false, detail: `stage claims "${event.toLabel}" but the ${event.chamber} vote result is "${event.vote.result}"` };

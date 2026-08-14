@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13T23:50:13.054Z",
+  "generated": "2026-08-14T00:24:44.868Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -6428,18 +6428,11 @@
       "stageDate": "2026-08-10",
       "votes": [
         {
-          "chamber": "House",
-          "date": "2026-04-27",
+          "chamber": "Senate",
+          "date": "2026-08-07",
           "question": "On Passage",
           "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-04-27",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
+          "method": "Unanimous Consent"
         },
         {
           "chamber": "House",
@@ -7391,25 +7384,46 @@
       "stageDate": "2026-08-10",
       "votes": [
         {
-          "chamber": "House",
-          "date": "2026-04-27",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
+          "chamber": "Senate",
+          "date": "2026-08-07",
+          "question": "On Passage of the Bill H.R. 5334",
+          "result": "Bill Passed",
+          "yeas": 86,
+          "nays": 11,
+          "present": 0,
+          "notVoting": 3,
+          "rollNumber": 224,
+          "sessionNumber": 2,
+          "congress": 119,
+          "crossoverCount": 0
         },
         {
-          "chamber": "House",
-          "date": "2026-04-27",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
+          "chamber": "Senate",
+          "date": "2026-07-29",
+          "question": "On the Motion to Proceed H.R. 5334",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 84,
+          "nays": 12,
+          "present": 0,
+          "notVoting": 4,
+          "rollNumber": 213,
+          "sessionNumber": 2,
+          "congress": 119,
+          "crossoverCount": 0
         },
         {
-          "chamber": "House",
-          "date": "2026-04-27",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
+          "chamber": "Senate",
+          "date": "2026-07-28",
+          "question": "On Cloture on the Motion to Proceed H.R. 5334",
+          "result": "Cloture on the Motion to Proceed Agreed to",
+          "yeas": 86,
+          "nays": 12,
+          "present": 0,
+          "notVoting": 2,
+          "rollNumber": 212,
+          "sessionNumber": 2,
+          "congress": 119,
+          "crossoverCount": 0
         }
       ],
       "billType": "amendment",
@@ -21106,7 +21120,7 @@
       "votes": [
         {
           "chamber": "House",
-          "date": "2026-06-09",
+          "date": "2026-06-08",
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
@@ -21356,7 +21370,7 @@
       "votes": [
         {
           "chamber": "House",
-          "date": "2026-06-09",
+          "date": "2026-06-08",
           "question": "On Passage",
           "result": "Passed",
           "method": "Voice Vote"
@@ -21565,10 +21579,17 @@
       "votes": [
         {
           "chamber": "House",
-          "date": "2026-06-11",
+          "date": "2026-06-10",
           "question": "On Passage",
           "result": "Passed",
-          "method": "Voice Vote"
+          "yeas": 240,
+          "nays": 181,
+          "present": 0,
+          "notVoting": 10,
+          "rollNumber": 218,
+          "sessionNumber": 2,
+          "congress": 119,
+          "crossoverCount": 28
         }
       ],
       "billType": "amendment",
@@ -30479,12 +30500,15 @@
         {
           "chamber": "House",
           "date": "2026-06-29",
-          "question": "On Motion to Suspend the Rules and Pass",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
           "result": "Passed",
           "yeas": 267,
           "nays": 117,
           "present": 0,
           "notVoting": 47,
+          "rollNumber": 228,
+          "sessionNumber": 2,
+          "congress": 119,
           "crossoverCount": 0
         }
       ],
@@ -30688,12 +30712,15 @@
         {
           "chamber": "House",
           "date": "2026-06-29",
-          "question": "On Motion to Suspend the Rules and Pass",
+          "question": "On Motion to Suspend the Rules and Pass, as Amended",
           "result": "Passed",
           "yeas": 373,
           "nays": 15,
           "present": 0,
           "notVoting": 43,
+          "rollNumber": 229,
+          "sessionNumber": 2,
+          "congress": 119,
           "crossoverCount": 0
         }
       ],
@@ -39034,6 +39061,13 @@
       "budget_accounts": {},
       "analyzedAt": "2026-08-12",
       "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2026-08-07",
+          "question": "On Passage",
+          "result": "Passed",
+          "method": "Unanimous Consent"
+        },
         {
           "chamber": "House",
           "date": "2026-07-20",

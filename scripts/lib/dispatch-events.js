@@ -49,6 +49,40 @@ function loadVotes(billId) {
   } catch { return []; }
 }
 
+// ── Classifying a vote result ────────────────────────────────────────────────
+//
+// A PROCEDURAL vote is not passage of the measure, and conflating the two is
+// the most dangerous mistake available here. The chambers' actual vocabulary
+// (all 14 distinct result strings in data/votes) includes:
+//
+//   passage    "Passed", "Bill Passed", "Joint Resolution Passed"
+//   failure    "Failed", "Bill Defeated"
+//   PROCEDURAL "Motion to Proceed Agreed to", "Cloture Motion Agreed to",
+//              "Cloture on the Motion to Proceed Agreed to", "Motion Agreed to",
+//              "Motion to Table Agreed to", "Motion to Discharge Agreed to",
+//              "Motion Rejected", "Motion to Recommit Rejected",
+//              "Cloture on the Motion to Proceed Rejected"
+//
+// Nine of those fourteen are procedural, and several END in "Agreed to". A
+// loose /passed|agreed to/ match would let "Motion to Proceed Agreed to"
+// corroborate a claim that the Senate PASSED a bill -- publishing, without a
+// human in the loop, that a measure passed when the chamber had merely agreed
+// to take it up. So procedural language disqualifies a vote outright, and the
+// test is exclusion-first.
+const PROCEDURAL = /\b(motion|cloture|recommit|table|discharge|proceed|adjourn|quorum)\b/i;
+
+function isPassageResult(result) {
+  const r = String(result || '');
+  if (PROCEDURAL.test(r)) return false;
+  return /\b(passed|agreed to)\b/i.test(r);
+}
+
+function isFailureResult(result) {
+  const r = String(result || '');
+  if (PROCEDURAL.test(r)) return false;
+  return /\b(failed|defeated|rejected|not agreed to)\b/i.test(r);
+}
+
 /**
  * The vote that corroborates this event.
  *
@@ -63,11 +97,8 @@ function corroboratingVote(votes, ev) {
   if (!inChamber.length) return null;
 
   const wantFailed = ev.kind === 'failed-floor';
-  const matching = inChamber.filter(v => {
-    const passed = /^(passed|agreed to)/i.test(String(v.result || ''));
-    const failed = /^(failed|rejected)/i.test(String(v.result || ''));
-    return wantFailed ? failed : passed;
-  });
+  const matching = inChamber.filter(v =>
+    wantFailed ? isFailureResult(v.result) : isPassageResult(v.result));
   if (!matching.length) return null;
 
   // latest by date -- a bill can pass the same chamber more than once
@@ -157,6 +188,9 @@ function snapshotStages(bills) {
 module.exports = {
   THRESHOLD,
   SUB_THRESHOLD,
+  PROCEDURAL,
+  isPassageResult,
+  isFailureResult,
   detectEvents,
   eventFor,
   snapshotStages,
