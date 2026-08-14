@@ -347,7 +347,38 @@ function renderEntry(e) {
   if (e.tally) metaBits.push(escHtml(e.tally));
   return `      <li class="cl-entry">${codeCell} &mdash; <span class="cl-title">${escHtml(e.title)}</span>: `
        + `<span class="cl-transition">${transition}</span> `
-       + `<span class="cl-meta">(${metaBits.join(', ')})</span></li>`;
+       + `<span class="cl-meta">(${metaBits.join(', ')})</span>${dispatchLinkFor(e)}</li>`;
+}
+
+// ── The changelog side of the dispatch link (decision D3 = LINK, impl. (a)) ──
+//
+// A dispatch and a changelog entry record the SAME event at different depths.
+// They link to each other rather than duplicating or replacing one another --
+// two unlinked artifacts about one event is the near-duplicate pattern
+// ARTICLE-WRITER-SPEC §9.1 warns against.
+//
+// Written at GENERATION TIME, in this same pipeline pass: dispatch-publish.js
+// runs first and appends to data/dispatch-log.json, so by the time an edition
+// renders, the dispatch URL for each event is already known. There is
+// deliberately NO frozen-edition patcher -- a published edition is never
+// rewritten, so a late dispatch simply keeps a one-way link and says so in the
+// log.
+const dispatchByEvent = (() => {
+  const map = new Map();
+  try {
+    const log = JSON.parse(fs.readFileSync(path.join(DATA, 'dispatch-log.json'), 'utf8'));
+    for (const e of (log.entries || [])) {
+      if (e.status !== 'published') continue;
+      map.set(`${e.billId}|${e.eventDate}`, e.url);
+    }
+  } catch { /* no dispatches yet — the changelog simply carries no links */ }
+  return map;
+})();
+
+function dispatchLinkFor(entry) {
+  const url = dispatchByEvent.get(`${entry.id}|${entry.stageDate}`)
+           || dispatchByEvent.get(`${entry.id}|${entry.enactedDate}`);
+  return url ? ` <a class="cl-dispatch" href="${escHtml(url)}">dispatch</a>` : '';
 }
 
 function renderGroup(g) {

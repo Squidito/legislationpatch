@@ -96,7 +96,13 @@ function main() {
   const site = entity.site();
   const BASE = site.baseUrl;
 
-  const fresh = allArticles().filter(withinWindow).slice(0, MAX_URLS);
+  // Dispatches are the reason this file exists: event-pegged pages published
+  // within minutes of a floor vote are the only content here that is news in
+  // Google's sense. Evergreen articles stay eligible but essentially never
+  // fall inside a 48-hour window.
+  const { allDispatches } = require('./lib/dispatch-meta.js');
+  const candidates = [...allDispatches(), ...allArticles()];
+  const fresh = candidates.filter(withinWindow).slice(0, MAX_URLS);
 
   const entries = fresh.map(a => `  <url>
     <loc>${xmlEscape(`${BASE}${a.url}`)}</loc>

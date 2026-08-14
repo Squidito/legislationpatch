@@ -107,6 +107,16 @@ if (fs.existsSync(articlesIndex)) {
   }
 }
 
+// Dispatches — event-pegged pages from the Dispatch lane. Only the PUBLISHED
+// tree is read (lib/dispatch-meta.js never looks at .dispatch-staging/), so a
+// draft blocked by the deterministic gate cannot appear in the sitemap.
+const { allDispatches } = require('./lib/dispatch-meta.js');
+let dispatchCount = 0;
+for (const d of allDispatches()) {
+  entries.push(urlEntry(BASE + d.url, d.dateModified || d.datePublished, 'monthly', '0.6'));
+  dispatchCount++;
+}
+
 // Changelog ("Congress Patch Notes") — hub + one permanent page per edition.
 // Editions come from data/digest-state.json (written by generate_digest.js,
 // which runs immediately before this in the pipeline). The hub's lastmod is the
@@ -149,4 +159,7 @@ if (fs.existsSync(articlesIndex)) {
 }
 if (changelogCount) {
   console.log('  Changelog    : ' + changelogCount + ' (hub + editions)');
+}
+if (dispatchCount) {
+  console.log('  Dispatches   : ' + dispatchCount);
 }

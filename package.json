@@ -55,7 +55,12 @@
     "articles:index": "node scripts/generate_articles_index.js",
     "articles:index:check": "node scripts/generate_articles_index.js --check",
     "articles:extract": "node scripts/extract-articles-index.js",
-    "verify-changelog": "node scripts/verify-changelog.js"
+    "verify-changelog": "node scripts/verify-changelog.js",
+    "dispatch": "node scripts/dispatch-run.js",
+    "dispatch:dry": "node scripts/dispatch-run.js --dry-run",
+    "dispatch:generate": "node scripts/generate_dispatch.js",
+    "dispatch:gate": "node scripts/dispatch-gate.js",
+    "dispatch:publish": "node scripts/dispatch-publish.js"
   },
   "repository": {
     "type": "git",

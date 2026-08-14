@@ -348,6 +348,13 @@ async function processVotesForBill(bill, cacheData) {
       const parsed     = chamber === 'Senate' ? parseSenateXML(xml) : parseHouseXML(xml);
       const crossovers = detectCrossovers(parsed.members, parsed.yeas, parsed.nays);
 
+      // rollNumber/sessionNumber/congress identify the vote uniquely in the
+      // official record. They were known here (used for dedup and for building
+      // the Senate XML URL) but thrown away before writing, so nothing
+      // downstream could cite WHICH roll call a result came from. The Dispatch
+      // lane's deterministic gate requires it: a dispatch asserting "passed
+      // 217-214" must name the roll call that says so. Additive field --
+      // absent on voice votes, which have no roll number by definition.
       const voteEntry = {
         chamber,
         date:      action.actionDate || '',
@@ -357,6 +364,9 @@ async function processVotesForBill(bill, cacheData) {
         nays:      parsed.nays,
         present:   parsed.present  || 0,
         notVoting: parsed.notVoting || 0,
+        rollNumber:    rv.rollNumber != null ? Number(rv.rollNumber) : null,
+        sessionNumber: rv.sessionNumber != null ? Number(rv.sessionNumber) : null,
+        congress:      Number(rv.congress || congress),
         crossovers,
         members:   parsed.members,
       };
@@ -371,6 +381,9 @@ async function processVotesForBill(bill, cacheData) {
         nays:           voteEntry.nays,
         present:        voteEntry.present,
         notVoting:      voteEntry.notVoting,
+        rollNumber:     voteEntry.rollNumber,
+        sessionNumber:  voteEntry.sessionNumber,
+        congress:       voteEntry.congress,
         crossoverCount: crossovers.length,
       });
 

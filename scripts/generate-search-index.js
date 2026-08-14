@@ -111,13 +111,33 @@ for (const file of fs.readdirSync(articlesDir).sort()) {
   articleCount++;
 }
 
+// ---- Dispatches ----
+// Event-pegged pages from the Dispatch lane. Only PUBLISHED ones are visible
+// here: lib/dispatch-meta.js reads dispatch/ and never .dispatch-staging/, so
+// a draft that failed the deterministic gate cannot reach the search index.
+const { allDispatches } = require('./lib/dispatch-meta.js');
+let dispatchCount = 0;
+for (const d of allDispatches()) {
+  if (!d.title) { console.log(`  ⚠️ no headline in ${d.url} — skipped`); continue; }
+  records.push({
+    t: 'article',
+    id: d.slug,
+    url: d.url,
+    title: d.title,
+    sub: 'Dispatch',
+    text: trim(d.description || '', 260),
+  });
+  dispatchCount++;
+}
+
 const counts = {
   bill: records.filter(r => r.t === 'bill').length,
   rep: repCount,
   quote: records.filter(r => r.t === 'quote').length,
   article: articleCount,
+  dispatch: dispatchCount,
 };
 
 fs.writeFileSync(OUT, JSON.stringify({ generatedAt: new Date().toISOString(), counts, records }, null, 2) + '\n');
-console.log(`search-index: ${records.length} records (${counts.bill} bills, ${counts.rep} reps, ${counts.quote} quotes, ${counts.article} articles)${noSlug ? ` — ${noSlug} bills skipped (no slug)` : ''}`);
+console.log(`search-index: ${records.length} records (${counts.bill} bills, ${counts.rep} reps, ${counts.quote} quotes, ${counts.article} articles, ${counts.dispatch} dispatches)${noSlug ? ` — ${noSlug} bills skipped (no slug)` : ''}`);
 console.log(`Wrote ${path.relative(ROOT, OUT)}`);

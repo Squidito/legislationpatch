@@ -137,6 +137,24 @@ Full rules in `docs/BOTH-SIDES.md`. The non-negotiables:
 6. `npm run articles:index` so the article appears in the human-facing index.
 7. **Human review before publish.** No exceptions in this lane.
 
+### 7a. Dispatches are the one exception, and they buy it
+
+The checklist above is the **slow lane**. Dispatches auto-publish (decision D1,
+2026-08-13): no human reads one before it is live. That is only defensible
+because a dispatch is built to make almost no new claims — every substantive
+sentence is copied from the bill's already-audited `cache.json` entry or is a
+structural fact from `data/votes`. The trade is explicit:
+
+- **Pre-publish:** a deterministic gate, no LLM in the path, seven checks
+  (`scripts/dispatch-gate.js`, spec §6.1). Any failure blocks the dispatch
+  entirely. There is no publish-with-warnings.
+- **Post-publish:** review via the dispatch log and the patch-console panel.
+- **When wrong:** a logged, visible correction (`scripts/dispatch-correct.js`) —
+  never a silent edit, never a deletion.
+
+**Nothing else may use this exception.** An explainer or tracker that wants to
+skip human review is a tracker that has not been reviewed.
+
 ---
 
 ## 8. What a new article must never do

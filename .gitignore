@@ -76,3 +76,6 @@ all_quotes_review.txt
 # + data/qa-metrics/history.jsonl ARE tracked; fixtures and the rendered dashboard are not.
 data/qa-injection/
 data/qa-metrics/dashboard.html
+
+# Dispatch drafts awaiting the gate — promoted to dispatch/ only on a pass.
+.dispatch-staging/
