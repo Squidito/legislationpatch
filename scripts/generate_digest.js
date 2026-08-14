@@ -68,17 +68,9 @@ function todayISO() {
 
 // Bill id -> human bill code. Derived from the id (canonical) rather than the
 // stored `code`, which is "HR.6644"/"S.5" and occasionally mis-stored as "H.xxxx".
-const TYPE_DISPLAY = {
-  HR: 'H.R.', S: 'S.',
-  HRES: 'H.Res.', SRES: 'S.Res.',
-  HJRES: 'H.J.Res.', SJRES: 'S.J.Res.',
-  HCONRES: 'H.Con.Res.', SCONRES: 'S.Con.Res.',
-};
-function displayCode(id) {
-  const m = String(id).match(/^\d+-([A-Z]+)-(\d+\w*)$/);
-  if (!m) return String(id);
-  return `${TYPE_DISPLAY[m[1]] || m[1]} ${m[2]}`;
-}
+// Shared with the dispatch lane -- both publish bill codes to readers and must
+// render them identically. See scripts/lib/bill-code.js.
+const { displayCode } = require('./lib/bill-code.js');
 
 // Escape a value for safe embedding inside a <script type="application/ld+json">.
 function jsonLd(obj) {

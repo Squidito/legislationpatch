@@ -33,6 +33,7 @@ const path = require('path');
 
 const { escHtml } = require('../util.js');
 const entity = require('./lib/entity.js');
+const { displayCode } = require('./lib/bill-code.js');
 const { THRESHOLD, detectEvents, eventFor, snapshotStages } = require('./lib/dispatch-events.js');
 
 const ROOT  = path.join(__dirname, '..');
@@ -91,13 +92,16 @@ function dispatchSlug(bill, event) {
 // Every string below is either a fixed template or verbatim audited text.
 // There is no free-form sentence generation anywhere in this file.
 
+// Always the official display code ("H.R. 5625"), never the cache's compact
+// key ("HR.5625") -- that is a lookup key, not how a bill is written in prose,
+// and the changelog already publishes the official form.
 function headlineFor(bill, event) {
-  return `${bill.code || bill.id} ${event.verb}`;
+  return `${displayCode(bill.id)} ${event.verb}`;
 }
 
 function statusLine(bill, event) {
   const when = dateHuman(event.eventDate);
-  return `${escHtml(bill.code || bill.id)} ${escHtml(event.verb)} on ${escHtml(when)}.`;
+  return `${escHtml(displayCode(bill.id))} ${escHtml(event.verb)} on ${escHtml(when)}.`;
 }
 
 /** The vote sentence -- structural facts only, straight from data/votes. */
@@ -133,11 +137,20 @@ ${items}
 
 function sourcesBox(bill, event, changelogUrl) {
   const items = [];
-  items.push(`<li><a href="${escHtml(billUrl(bill))}">Full LegislationPatch analysis of ${escHtml(bill.code || bill.id)}</a></li>`);
+  items.push(`<li><a href="${escHtml(billUrl(bill))}">Full LegislationPatch analysis of ${escHtml(displayCode(bill.id))}</a></li>`);
   for (const v of (bill.versions || []).slice(-2)) {
     if (v && v.url) items.push(`<li><a href="${escHtml(v.url)}" target="_blank" rel="noopener">${escHtml(v.type || 'Bill text')} (Congress.gov)</a></li>`);
   }
-  if (changelogUrl) items.push(`<li><a href="${escHtml(changelogUrl)}">Congress Patch Notes edition for ${escHtml(dateHuman(event.eventDate))}</a></li>`);
+  if (changelogUrl) {
+    // Label the link by where it actually GOES. A one-way fallback points at
+    // the changelog hub, so calling it "the edition for <date>" would promise
+    // a page the reader will not land on.
+    const isEdition = /^\/changelog\/\d{4}-\d{2}-\d{2}\//.test(changelogUrl);
+    const label = isEdition
+      ? `Congress Patch Notes edition for ${escHtml(dateHuman(changelogUrl.slice(11, 21)))}`
+      : 'Congress Patch Notes (changelog)';
+    items.push(`<li><a href="${escHtml(changelogUrl)}">${label}</a></li>`);
+  }
   return `      <div class="article-source-box">
         <div class="article-source-box-label">Primary Sources</div>
         <ul>
@@ -153,7 +166,7 @@ function renderDispatch(bill, event, { publishedAt, changelogUrl }) {
   const url      = `${BASE}/dispatch/${slug}/`;
   const headline = headlineFor(bill, event);
   const title    = `${headline} — LegislationPatch`;
-  const desc     = `${bill.code || bill.id}, ${bill.title || ''} — ${event.verb} on ${dateHuman(event.eventDate)}. Source-verified record of the action.`.slice(0, 200);
+  const desc     = `${displayCode(bill.id)}, ${bill.title || ''} — ${event.verb} on ${dateHuman(event.eventDate)}. Source-verified record of the action.`.slice(0, 200);
   const ogImage  = `${BASE}/og/bills/${bill.id}.png`;
   const person   = entity.person();
 
@@ -173,14 +186,18 @@ function renderDispatch(bill, event, { publishedAt, changelogUrl }) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     about: {
       '@type': 'Legislation',
-      name: bill.title || bill.code || bill.id,
-      legislationIdentifier: bill.code || bill.id,
+      name: bill.title || displayCode(bill.id),
+      legislationIdentifier: displayCode(bill.id),
     },
   };
 
   const body = [
     `      <p><strong>${statusLine(bill, event)}</strong> ${voteLine(event)}</p>`,
-    `      <p>${escHtml(bill.code || bill.id)} is ${escHtml(bill.title || '')}. This page records the action only; the source-verified analysis of what the bill contains is on <a href="${escHtml(billUrl(bill))}">the bill's page</a>.</p>`,
+    // Em-dash apposition, not "X is <title>": bill titles vary wildly in shape
+    // ("Cashless Bail Reporting Act", "A bill to amend...", "21st Century ROAD
+    // to Housing Act") and no single article reads correctly in front of all of
+    // them. The changelog uses the same construction.
+    `      <p>${escHtml(displayCode(bill.id))} &mdash; ${escHtml(bill.title || '')}. This page records the action only; the source-verified analysis of what the bill contains is on <a href="${escHtml(billUrl(bill))}">the bill's page</a>.</p>`,
     whatItDoes(bill),
     `      <h2>Where does it stand now?</h2>
       <p>Stage: <strong>${escHtml(bill.stageLabel || bill.stage || '')}</strong>, as of ${escHtml(dateHuman(bill.stageDate || event.eventDate))}. Sponsored by ${escHtml(bill.sponsor || 'a member of Congress')}.</p>`,
@@ -262,7 +279,7 @@ function renderDispatch(bill, event, { publishedAt, changelogUrl }) {
         <span class="sep">/</span>
         <a href="/changelog/">Congress Patch Notes</a>
         <span class="sep">/</span>
-        ${escHtml(bill.code || bill.id)}
+        ${escHtml(displayCode(bill.id))}
       </nav>
 
       <h1 class="article-title">${escHtml(headline)}</h1>
