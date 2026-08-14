@@ -124,6 +124,7 @@ function buildEntry(bill, fromLabel) {
   const v = stageVote(bill);
   return {
     id: bill.id,
+    stage: bill.stage || '',          // join key for the dispatch back-link
     code: displayCode(bill.id),
     title: bill.title || bill.code || bill.id,
     url: billUrl(bill.id),
@@ -355,21 +356,35 @@ function renderEntry(e) {
 // deliberately NO frozen-edition patcher -- a published edition is never
 // rewritten, so a late dispatch simply keeps a one-way link and says so in the
 // log.
-const dispatchByEvent = (() => {
+// KEYED BY BILL + STAGE, NOT BY DATE. The first version keyed on
+// `billId|eventDate` and looked it up with the changelog entry's `stageDate` --
+// and those are different days. A dispatch dates itself by the VOTE
+// (H.R. 8312: 2026-06-10) while a changelog entry carries the bill's
+// LATEST-ACTION date (2026-06-11), so the lookup never resolved and no edition
+// ever carried a back-link. Same stageDate-vs-vote-date drift that made the
+// first dispatch draft assert a passage on the wrong day; it reappeared one
+// layer up, in the linking. Stage is the stable join key: an edition entry and
+// its dispatch describe the same bill reaching the same stage.
+const dispatchByBillStage = (() => {
   const map = new Map();
+  const KIND_TO_STAGE = {
+    'passed-house': 'house', 'passed-senate': 'senate',
+    'signed': 'signed', 'vetoed': 'vetoed', 'failed-floor': 'dead',
+  };
   try {
     const log = JSON.parse(fs.readFileSync(path.join(DATA, 'dispatch-log.json'), 'utf8'));
     for (const e of (log.entries || [])) {
-      if (e.status !== 'published') continue;
-      map.set(`${e.billId}|${e.eventDate}`, e.url);
+      if (e.status !== 'published' && e.status !== 'corrected') continue;
+      const stage = KIND_TO_STAGE[e.event];
+      if (!stage) continue;
+      map.set(`${e.billId}|${stage}`, e.url);   // later entries win = most recent
     }
   } catch { /* no dispatches yet — the changelog simply carries no links */ }
   return map;
 })();
 
 function dispatchLinkFor(entry) {
-  const url = dispatchByEvent.get(`${entry.id}|${entry.stageDate}`)
-           || dispatchByEvent.get(`${entry.id}|${entry.enactedDate}`);
+  const url = dispatchByBillStage.get(`${entry.id}|${entry.stage}`);
   return url ? ` <a class="cl-dispatch" href="${escHtml(url)}">dispatch</a>` : '';
 }
 
