@@ -102,7 +102,11 @@ function nodesOf(parsed) {
 function figuresIn(text) {
   const out = new Set();
   // dollars ($1.2B / $584.3M / $98M / $1,234)
-  for (const m of text.matchAll(/\$[\d,]+(?:\.\d+)?\s*(?:[BMK]|billion|million|thousand|trillion)?/gi)) out.add(m[0].trim());
+  // Unit suffix must end at a word boundary: without , "$120 Base statutory
+  // pay" extracted the figure "$120 B" -- the unit regex stole the next word's
+  // initial, minting a figure the audited entry never contained (real case:
+  // S-3424, "Chapter 7 trustee pay raised from $60 to $120 Base...").
+  for (const m of text.matchAll(/\$[\d,]+(?:\.\d+)?\s*(?:[BMK]|billion|million|thousand|trillion)?/gi)) out.add(m[0].trim());
   // percentages
   for (const m of text.matchAll(/\b\d+(?:\.\d+)?\s*%/g)) out.add(m[0].trim());
   // Section / title cites
@@ -110,6 +114,71 @@ function figuresIn(text) {
   // bare integers >= 4 digits, and 1-3 digit counts that are not part of a date
   for (const m of text.matchAll(/\b\d{4,}\b/g)) out.add(m[0]);
   return [...out];
+}
+
+/**
+ * Is the text AROUND a match verbatim audited material?
+ *
+ * The page is assembled from audited fragments joined by generated glue
+ * (em-dash appositions, list-item adjacency), so SENTENCE-level containment
+ * fails constantly: "H.R. 755 — Critical Mineral Consistency Act of 2025"
+ * is one rendered sentence but two provenances, and flattened list items form
+ * "sentences" that never existed anywhere. What is stable is the LOCAL
+ * neighbourhood: take the match plus ~25 chars each side, trim the partial
+ * words at the cut edges, and ask whether that whole-word window appears in
+ * the audited entry. "Access to Critical Therapies for ALS" -> audited, so
+ * "Critical" is the bill's own name; "this critical bill" -> not audited, so
+ * it is invented prose and blocks.
+ */
+function auditedWindow(text, index, matchLen, haystack, pad = 25) {
+  const clampWordStart = i => {
+    let s = Math.max(0, i);
+    while (s > 0 && s < index && /\S/.test(text[s - 1])) s++;
+    return s;
+  };
+  const clampWordEnd = i => {
+    let e = Math.min(text.length, i);
+    while (e < text.length && e > index + matchLen && /\S/.test(text[e])) e--;
+    return e;
+  };
+  // Tried BOTH-sided first; that still failed on matches that sit at the seam
+  // of audited text and generated glue -- "voice vote. H.R. 755 — Critical
+  // Mineral..." pulls the generated prefix into the window and nothing
+  // contains it. So the window is tried per side: audited material extends the
+  // match on AT LEAST one side ("Critical Mineral Consistency Act" continues
+  // rightward into the title), while an invented qualifier ("this critical
+  // bill") has generated text on both sides and matches nowhere.
+  const candidates = [
+    [index - pad, index + matchLen + pad],   // both sides
+    [index, index + matchLen + pad],         // right side only
+    [index - pad, index + matchLen],         // left side only
+  ];
+  for (const [s0, e0] of candidates) {
+    const s = clampWordStart(s0), e = clampWordEnd(e0);
+    const window = text.slice(s, e).replace(/\s+/g, ' ').trim();
+    // require real context beyond the match itself, or containment proves nothing
+    if (window.length >= matchLen + 6 && haystack.includes(window)) return true;
+  }
+  return false;
+}
+
+/**
+ * The page text split at block-element boundaries (p, li, headings, div).
+ * Quote pairing must never cross a block: an audited item that ends with a
+ * closing quote and a later element that contains one produced phantom
+ * "quoted prose" spanning the glue between them (real case: H.R. 2493 was
+ * blocked over the "quote" `" Where does it stand now? Stage: ..."`).
+ */
+function textBlocksOf(html) {
+  const body = html.replace(/^[\s\S]*?<\/head>/i, '');
+  // Split on OPENING tags as well as closing ones: a nested <li>headline<ul>
+  // <li>sub keeps headline and first sub in one chunk if only closing tags
+  // split, and a quote character at the end of one and the start of the other
+  // still pairs into a phantom.
+  return body
+    .split(/<\/?(?:p|li|h[1-6]|div|blockquote|ul|ol|td|figcaption)[^>]*>/i)
+    .map(textOf)
+    .filter(t => t.length > 0);
 }
 
 /** All prose in the audited cache entry, flattened. */
@@ -174,12 +243,27 @@ function check1Figures(ctx) {
  * blocks most valid work for a misleading reason is a gate someone switches
  * off, which is the actual danger. So a tally only counts when the sentence
  * presents it AS a vote result.
+ *
+ * SECOND REFINEMENT, same containment principle as check 4: a tally whose
+ * enclosing sentence is VERBATIM from the audited entry describes some vote in
+ * the bill's history and already passed the hostile audit -- 6 signed bills
+ * carry "passed the Senate 64-35"-style prose in their audited top_lines, and
+ * a bill that passed the House 397-28 will still say so when its SENATE
+ * dispatch fires. Comparing those against THIS event's vote false-blocks.
+ * Only tallies in GENERATED prose assert this event's result, and those must
+ * match the record exactly. Marked `audited` so the caller can tell them apart.
  */
-function assertedTallies(text) {
+function assertedTallies(text, bill) {
+  const haystack = bill ? auditedText(bill).replace(/\s+/g, ' ') : '';
   const out = [];
   const re = /\b(?:recorded vote (?:was|of)|vote (?:was|of)|voted|passed|failed|agreed to|rejected|tally of)\b[^.]{0,30}?(\d{1,3})\s*[-–]\s*(\d{1,3})\b/gi;
   for (const m of text.matchAll(re)) {
-    out.push({ raw: `${m[1]}-${m[2]}`, yeas: Number(m[1]), nays: Number(m[2]) });
+    // the sentence around the match, same segmentation as check 4
+    const start = text.lastIndexOf('.', m.index) + 1;
+    const end   = text.indexOf('.', m.index + m[0].length);
+    const sentence = text.slice(start, end === -1 ? undefined : end).replace(/\s+/g, ' ').trim();
+    const audited = sentence.length > 12 && haystack.includes(sentence);
+    out.push({ raw: `${m[1]}-${m[2]}`, yeas: Number(m[1]), nays: Number(m[2]), audited });
   }
   return out;
 }
@@ -188,12 +272,14 @@ function check2Votes(ctx) {
   const { text, event } = ctx;
   if (!event) return { ok: false, detail: 'no event supplied — cannot verify vote claims' };
 
-  // A signing has no vote; nothing to match, but the page must then assert no tally.
+  // A signing has no vote; nothing to match, but GENERATED prose must then
+  // assert no tally. Audited-entry tallies ("passed the Senate 64-35" in a
+  // signed bill's top_lines) describe the bill's history and stay.
   if (!event.chamber) {
-    const tally = assertedTallies(text)[0];
+    const tally = assertedTallies(text, ctx.bill).find(t => !t.audited);
     return tally
-      ? { ok: false, detail: `no vote applies to a "${event.kind}" event but the page states a tally (${tally.raw})` }
-      : { ok: true, detail: 'no vote applies to this event and none is claimed' };
+      ? { ok: false, detail: `no vote applies to a "${event.kind}" event but generated prose states a tally (${tally.raw})` }
+      : { ok: true, detail: 'no vote applies to this event and generated prose claims none' };
   }
 
   const vote = event.vote;
@@ -208,20 +294,24 @@ function check2Votes(ctx) {
   }
   if (!vote.chamber) return { ok: false, detail: 'vote record has no chamber' };
 
-  // Every tally the page ASSERTS must match the record exactly...
-  for (const t of assertedTallies(text)) {
+  // Every tally GENERATED prose asserts must match the record exactly.
+  // Audited-entry tallies describe other votes in the bill's history (a House
+  // tally in top_lines when the SENATE dispatch fires) and are already source-
+  // verified; comparing them against this event's vote is a category error.
+  const tallies = assertedTallies(text, ctx.bill);
+  for (const t of tallies.filter(x => !x.audited)) {
     if (!isRollCall) {
-      return { ok: false, detail: `page states a tally ${t.raw} but the record is a ${vote.method || 'non-recorded'} vote` };
+      return { ok: false, detail: `generated prose states a tally ${t.raw} but the record is a ${vote.method || 'non-recorded'} vote` };
     }
     if (t.yeas !== Number(vote.yeas) || t.nays !== Number(vote.nays)) {
       return { ok: false, detail: `tally ${t.raw} does not match data/votes (${vote.yeas}-${vote.nays})` };
     }
   }
-  // ...and when there IS a recorded vote, the page must actually state it.
-  // Without this the check only ever says "no wrong tally found", which a
+  // ...and when there IS a recorded vote, generated prose must actually state
+  // it. Without this the check only ever says "no wrong tally found", which a
   // template that silently stopped printing the tally would also satisfy.
-  if (isRollCall && !assertedTallies(text).length) {
-    return { ok: false, detail: `recorded vote ${vote.yeas}-${vote.nays} exists but the page states no tally` };
+  if (isRollCall && !tallies.some(t => !t.audited && t.yeas === Number(vote.yeas) && t.nays === Number(vote.nays))) {
+    return { ok: false, detail: `recorded vote ${vote.yeas}-${vote.nays} exists but generated prose does not state it` };
   }
   // Any roll number on the page must match too.
   for (const m of text.matchAll(/\broll(?:\s*call)?\s*(?:no\.?|number)?\s*(\d+)/gi)) {
@@ -301,14 +391,18 @@ function check4Qualifiers(ctx) {
   const haystack = auditedText(ctx.bill).replace(/\s+/g, ' ').toLowerCase();
   const bad = [];
 
-  for (const sentence of ctx.text.split(/(?<=[.!?])\s+/)) {
-    const m = sentence.match(UNSOURCED_QUALIFIERS);
-    if (!m) continue;
-    const norm = sentence.replace(/\s+/g, ' ').trim().toLowerCase();
-    // strip a trailing period so "…list." matches a cache string without one
-    const probe = norm.replace(/[.!?]$/, '');
-    if (probe.length > 12 && haystack.includes(probe)) continue;   // verbatim from the audited entry
-    bad.push(`"${m[0]}" in: ${sentence.slice(0, 70).trim()}`);
+  // WORD-WINDOW containment, not sentence containment. The page welds audited
+  // fragments together with generated glue, so the rendered "sentence" around
+  // a qualifier routinely never existed anywhere: "H.R. 755 — Critical Mineral
+  // Consistency Act of 2025" is generated code + audited title in one
+  // sentence, and the corpus simulation showed 12 bills false-blocking over
+  // qualifiers inside their own official names ("Critical Minerals", "Major
+  // Non-NATO Ally", "Common-Sense ... in DC Act"). The local word-window is
+  // provenance-stable where the sentence is not.
+  const text = ctx.text.toLowerCase();
+  for (const m of ctx.text.matchAll(new RegExp(UNSOURCED_QUALIFIERS.source, 'gi'))) {
+    if (auditedWindow(text, m.index, m[0].length, haystack)) continue;
+    bad.push(`"${m[0]}" in: ${ctx.text.slice(Math.max(0, m.index - 30), m.index + 40).replace(/\s+/g, ' ').trim()}`);
   }
 
   return bad.length
@@ -316,16 +410,37 @@ function check4Qualifiers(ctx) {
     : { ok: true, detail: 'no unsourced qualifiers outside audited text' };
 }
 
+// Machine-read JSON-LD keys, mirroring preflight's list. A curly quote in one
+// of THESE is corruption; a curly quote in headline/description/name can be
+// the bill's own official title -- H.R. 3692 is the "Captain Accursio
+// \u201CGus\u201D Sanfilippo Young Fishermen's Development Act", curly quotes
+// and all, on Congress.gov. The first version of this check scanned the whole
+// serialized block and BLOCKED that bill for having its own name. The
+// smart-quote rule exists to catch corrupted MARKUP, not to ban typography
+// the source itself uses.
+const MACHINE_LD_KEY = /^(@id|@type|@context|url|identifier|legislationIdentifier|sameAs|logo|image|contentUrl|target|urlTemplate|datePublished|dateModified)$/;
+
 function check5SmartQuotes(ctx) {
   const bad = [];
-  for (const m of ctx.html.matchAll(new RegExp('=\s*[\u201C\u201D]', 'g'))) bad.push('attribute delimiter');
+  for (const m of ctx.html.matchAll(new RegExp('=\\s*[\u201C\u201D]', 'g'))) bad.push('attribute delimiter');
   for (const block of jsonLdOf(ctx.html)) {
     if (block === null) { bad.push('unparsable JSON-LD'); continue; }
-    if (SMART_QUOTES.test(JSON.stringify(block))) bad.push('JSON-LD value');
+    const visit = n => {
+      if (!n || typeof n !== 'object') return;
+      if (Array.isArray(n)) return n.forEach(visit);
+      for (const [k, v] of Object.entries(n)) {
+        if (SMART_QUOTES.test(k)) bad.push(`JSON-LD key "${k}"`);
+        if (typeof v === 'string' && MACHINE_LD_KEY.test(k) && SMART_QUOTES.test(v)) {
+          bad.push(`JSON-LD ${k} value`);
+        }
+        if (v && typeof v === 'object') visit(v);
+      }
+    };
+    nodesOf(block).forEach(visit);
   }
   return bad.length
     ? { ok: false, detail: `smart quote in markup: ${[...new Set(bad)].join(', ')}` }
-    : { ok: true, detail: 'no smart quotes in markup' };
+    : { ok: true, detail: 'no smart quotes in machine-read markup' };
 }
 
 function check6Schema(ctx) {
@@ -346,7 +461,21 @@ function check6Schema(ctx) {
   if (!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(String(node.datePublished))) {
     return { ok: false, detail: `datePublished "${node.datePublished}" is not a full ISO 8601 timestamp` };
   }
-  return { ok: true, detail: 'NewsArticle has every required field' };
+
+  // The image must EXIST, not merely be declared. A per-bill OG card is only
+  // generated by run-batch --post, so a fast-moving bill analyzed between
+  // batches -- the exact bill dispatches exist for -- can reach here before
+  // its card does. `image` is a Top Stories requirement and the first crawl
+  // may be the only shot at it; declaring a 404 wastes that crawl. Field
+  // presence was checked above; this checks the file.
+  const img = String(node.image || '');
+  if (/^https:\/\/legislationpatch\.com\//.test(img)) {
+    const rel = img.replace('https://legislationpatch.com/', '');
+    if (!fs.existsSync(path.join(ROOT, rel))) {
+      return { ok: false, detail: `image ${rel} does not exist on disk — run npm run og (or run-batch --post) first` };
+    }
+  }
+  return { ok: true, detail: 'NewsArticle has every required field and its image exists' };
 }
 
 function check7NamedParties(ctx) {
@@ -360,17 +489,31 @@ function check7NamedParties(ctx) {
   // rather than anyone's words. Blocking those would be a false failure on
   // every appropriations dispatch, and a fail-closed gate that cries wolf is
   // a gate someone eventually switches off.
-  for (const m of text.matchAll(new RegExp(`${QUOTE_OPEN}(${NOT_QUOTE}{25,})${QUOTE_CLOSE}`, 'g'))) {
-    if (haystack.includes(m[1])) continue;
-    problems.push(`quoted prose not found in the audited entry: "${m[1].slice(0, 50)}"`);
+  //
+  // Matched PER BLOCK ELEMENT, never across the flattened page: an audited
+  // item ending in a closing quote plus a later element containing one used to
+  // pair up into phantom "quoted prose" made entirely of the glue between them
+  // (H.R. 2493 was blocked over `" Where does it stand now? Stage: ..."`,
+  // 10 bills in the corpus simulation over similar phantoms). A real quotation
+  // never spans block elements.
+  for (const block of textBlocksOf(ctx.html)) {
+    for (const m of block.matchAll(new RegExp(`${QUOTE_OPEN}(${NOT_QUOTE}{25,})${QUOTE_CLOSE}`, 'g'))) {
+      if (haystack.includes(m[1])) continue;
+      problems.push(`quoted prose not found in the audited entry: "${m[1].slice(0, 50)}"`);
+    }
   }
 
   // An attribution verb near a capitalised name or a title is the construction
   // that carries a characterisation. The sponsor's NAME may appear as a
   // structural fact, so a bare name is fine -- a name plus a verb is not.
+  // Audited-window exemption: "Also covers claims pending before the Bureau of
+  // Justice..." is source-verified prose where "claims" is a NOUN, and the
+  // name-then-verb fallback ("Justice claims") cannot tell the difference --
+  // but the hostile audit already vetted that text, so its window clears it.
   for (const m of text.matchAll(new RegExp(ATTRIBUTION_VERBS.source, 'gi'))) {
     const around = text.slice(Math.max(0, m.index - 60), m.index + 60);
     if (PERSON_TITLE.test(around) || /\b[A-Z][a-z]+\s+(?:said|says|argues|claims|warns)/.test(around)) {
+      if (auditedWindow(text, m.index, m[0].length, haystack)) continue;
       problems.push(`attribution verb "${m[0]}" near a named party`);
     }
   }

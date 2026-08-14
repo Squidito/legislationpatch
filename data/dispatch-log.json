@@ -1,4 +1,61 @@
 {
   "_readme": "Audit trail for the Dispatch lane. Every attempt, published or blocked. Appended by scripts/dispatch-publish.js; read by the patch-console review panel.",
-  "entries": []
+  "entries": [
+    {
+      "loggedAt": "2026-08-13T12:00:00Z",
+      "billId": "119-HR-3692",
+      "code": "HR.3692",
+      "event": "passed-house",
+      "eventDate": "2026-03-03",
+      "slug": "119-hr-3692-captain-accursio-gus-sanfilippo-young-fishermen-s-development-act-passed-house-2026-03-03",
+      "url": "/dispatch/119-hr-3692-captain-accursio-gus-sanfilippo-young-fishermen-s-development-act-passed-house-2026-03-03/",
+      "changelogUrl": "/changelog/",
+      "changelogLink": "one-way",
+      "vote": {
+        "chamber": "House",
+        "result": "Passed",
+        "yeas": null,
+        "nays": null,
+        "rollNumber": null
+      },
+      "gate": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "votes-match-record",
+          "ok": true,
+          "detail": "House Voice Vote: Passed — matches"
+        },
+        {
+          "check": "stage-corroborated",
+          "ok": true,
+          "detail": "stage \"Passed House\" corroborated by the House vote (Passed)"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "status": "published"
+    }
+  ]
 }
