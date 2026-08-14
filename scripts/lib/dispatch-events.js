@@ -127,7 +127,31 @@ function eventFor(bill, prev) {
   if (!moved) return null;
 
   const votes = loadVotes(bill.id);
-  const vote  = corroboratingVote(votes, t);
+
+  // A FAILED FLOOR VOTE HAPPENS IN A CHAMBER, and the table cannot know which.
+  // `dead` was given chamber:null, which made corroboratingVote() return null
+  // for every failed-floor event, which made check 3 fail every time -- the
+  // whole failed-floor path could never publish anything. The chamber is
+  // recoverable: the stage label says it ("Failed in House") and the failing
+  // vote carries it. Require the two to agree; if they cannot be resolved, the
+  // chamber stays null and the gate blocks, which is the right failure.
+  let resolved = t;
+  if (t.kind === 'failed-floor') {
+    const fromLabel = (String(bill.stageLabel || '').match(/failed in (house|senate)/i) || [])[1];
+    const failing = votes.filter(v => isFailureResult(v.result));
+    const chambers = [...new Set(failing.map(v => String(v.chamber || '')))].filter(Boolean);
+    const chamber = fromLabel
+      ? fromLabel.charAt(0).toUpperCase() + fromLabel.slice(1).toLowerCase()
+      : (chambers.length === 1 ? chambers[0] : null);
+    // If the label and the record disagree, we do not guess.
+    if (chamber && chambers.length && !chambers.includes(chamber)) {
+      resolved = { ...t, chamber: null };
+    } else {
+      resolved = { ...t, chamber, verb: chamber ? `failed on the ${chamber} floor` : t.verb };
+    }
+  }
+
+  const vote = corroboratingVote(votes, resolved);
 
   // THE EVENT DATE IS THE VOTE'S DATE, NOT stageDate.
   //
@@ -139,15 +163,22 @@ function eventFor(bill, prev) {
   // (CLAUDE.md) reappearing in a new surface: stage fields and vote records
   // are maintained by different code paths and drift apart silently.
   // Signing has no vote, so it keeps the stage date.
-  const eventDate = (vote && vote.date) || bill.stageDate || bill.date || '';
+  // Signing/veto has no vote, so it falls back to a date field. Prefer the
+  // SPECIFIC field (enactedDate) over the general one (stageDate = latest
+  // action). They are identical across all 44 signed bills that carry both
+  // today, so this changes nothing now -- it is stated explicitly because
+  // reading a general field and hoping it means the specific thing is exactly
+  // what produced the stageDate-vs-vote-date bug, twice.
+  const enacted = (t.kind === 'signed' || t.kind === 'vetoed') ? bill.enactedDate : null;
+  const eventDate = (vote && vote.date) || enacted || bill.stageDate || bill.date || '';
 
   return {
     billId:     bill.id,
     code:       bill.code || bill.id,
     title:      bill.title || '',
-    kind:       t.kind,
-    chamber:    t.chamber,
-    verb:       t.verb,
+    kind:       resolved.kind,
+    chamber:    resolved.chamber,
+    verb:       resolved.verb,
     fromStage:  prev.stage,
     fromLabel:  prev.stageLabel || prev.stage,
     toStage:    stage,

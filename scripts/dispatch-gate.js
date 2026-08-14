@@ -158,15 +158,41 @@ function check1Figures(ctx) {
     : { ok: true, detail: 'every figure traces to the audited cache entry' };
 }
 
+/**
+ * Tallies the page ASSERTS as this event's vote result.
+ *
+ * The first version matched any `\d{1,3}-\d{1,3}` anywhere in the page text,
+ * which is not a tally detector -- it is a hyphenated-number detector. On the
+ * real corpus it hits Public Law numbers ("Public Law 119-73"), statute cites
+ * and section ranges, all of which arrive verbatim inside the audited prose the
+ * dispatch quotes. Measured: 33 of 136 passage-stage bills and 67 of 68 signed
+ * bills carry such a number, so the gate would have BLOCKED roughly a quarter
+ * of passage dispatches and nearly every signing dispatch, reporting "tally
+ * does not match" about a public law number.
+ *
+ * That fails closed, so nothing false would have shipped -- but a gate that
+ * blocks most valid work for a misleading reason is a gate someone switches
+ * off, which is the actual danger. So a tally only counts when the sentence
+ * presents it AS a vote result.
+ */
+function assertedTallies(text) {
+  const out = [];
+  const re = /\b(?:recorded vote (?:was|of)|vote (?:was|of)|voted|passed|failed|agreed to|rejected|tally of)\b[^.]{0,30}?(\d{1,3})\s*[-–]\s*(\d{1,3})\b/gi;
+  for (const m of text.matchAll(re)) {
+    out.push({ raw: `${m[1]}-${m[2]}`, yeas: Number(m[1]), nays: Number(m[2]) });
+  }
+  return out;
+}
+
 function check2Votes(ctx) {
   const { text, event } = ctx;
   if (!event) return { ok: false, detail: 'no event supplied — cannot verify vote claims' };
 
   // A signing has no vote; nothing to match, but the page must then assert no tally.
   if (!event.chamber) {
-    const tally = text.match(/\b\d{1,3}\s*[-–]\s*\d{1,3}\b/);
+    const tally = assertedTallies(text)[0];
     return tally
-      ? { ok: false, detail: `no vote applies to a "${event.kind}" event but the page states a tally (${tally[0]})` }
+      ? { ok: false, detail: `no vote applies to a "${event.kind}" event but the page states a tally (${tally.raw})` }
       : { ok: true, detail: 'no vote applies to this event and none is claimed' };
   }
 
@@ -182,15 +208,20 @@ function check2Votes(ctx) {
   }
   if (!vote.chamber) return { ok: false, detail: 'vote record has no chamber' };
 
-  // Any tally on the page must match the record EXACTLY.
-  for (const m of text.matchAll(/\b(\d{1,3})\s*[-–]\s*(\d{1,3})\b/g)) {
-    const [, a, b] = m;
+  // Every tally the page ASSERTS must match the record exactly...
+  for (const t of assertedTallies(text)) {
     if (!isRollCall) {
-      return { ok: false, detail: `page states a tally ${a}-${b} but the record is a ${vote.method || 'non-recorded'} vote` };
+      return { ok: false, detail: `page states a tally ${t.raw} but the record is a ${vote.method || 'non-recorded'} vote` };
     }
-    if (Number(a) !== Number(vote.yeas) || Number(b) !== Number(vote.nays)) {
-      return { ok: false, detail: `tally ${a}-${b} does not match data/votes (${vote.yeas}-${vote.nays})` };
+    if (t.yeas !== Number(vote.yeas) || t.nays !== Number(vote.nays)) {
+      return { ok: false, detail: `tally ${t.raw} does not match data/votes (${vote.yeas}-${vote.nays})` };
     }
+  }
+  // ...and when there IS a recorded vote, the page must actually state it.
+  // Without this the check only ever says "no wrong tally found", which a
+  // template that silently stopped printing the tally would also satisfy.
+  if (isRollCall && !assertedTallies(text).length) {
+    return { ok: false, detail: `recorded vote ${vote.yeas}-${vote.nays} exists but the page states no tally` };
   }
   // Any roll number on the page must match too.
   for (const m of text.matchAll(/\broll(?:\s*call)?\s*(?:no\.?|number)?\s*(\d+)/gi)) {
