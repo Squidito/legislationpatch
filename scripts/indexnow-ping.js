@@ -85,7 +85,11 @@ async function main() {
   const since  = opt('since');
 
   if (single) {
-    urls = [single.startsWith('http') ? single : BASE + (single.startsWith('/') ? single : '/' + single)];
+    // Comma-separated paths are submitted as ONE batch. The protocol takes a
+    // urlList and engines rate-limit per request, so firing N separate POSTs
+    // for N changed pages is both slower and ruder than one call.
+    urls = single.split(',').map(s => s.trim()).filter(Boolean)
+      .map(u => u.startsWith('http') ? u : BASE + (u.startsWith('/') ? u : '/' + u));
   } else if (since) {
     urls = allArticles()
       .filter(a => a.dateModified && a.dateModified >= since)
