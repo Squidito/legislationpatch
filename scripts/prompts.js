@@ -392,8 +392,31 @@ Return ONLY a valid JSON object. No markdown, no explanation.
 }`;
 
 
+// ── Article drafting contract ────────────────────────────────────────────────
+// WHY THIS EXISTS: the first explainer (2026-08-14, Suspension of the Rules)
+// was drafted with only the RULEBOOKS in context — no codified per-draft
+// contract like SYSTEM_PROMPT above — and the drafter inserted four claims
+// from training knowledge that the hostile audit then had to catch and delete.
+// The audit is the safety net, not the license. Bill analysis learned this
+// same lesson earlier (that is what the HARD STOP block in SYSTEM_PROMPT is);
+// articles get the same contract now. Include this VERBATIM in any session or
+// prompt that drafts article prose — rulebooks in context are not a substitute.
+const ARTICLE_DRAFT_PROMPT = `You are drafting an article for LegislationPatch (an explainer or, later, a tracker). House style: docs/ARTICLE-SPEC.md.
+
+━━━ HARD STOP — NO TRAINING KNOWLEDGE ━━━
+Every factual claim you write — every rule, procedure, date, figure, citation, historical fact — must appear in a source that has been FETCHED AND STORED (data/ref-text/) BEFORE you draft. You do not complete, estimate, infer, or recall from training data. Ever. Training knowledge may do exactly one job: suggest WHERE to look, so the real text can be fetched and read.
+A claim you cannot tie to a stored source line is DELETED, not hedged, not softened. "It's well known" is not a source. What the audit will do to such a claim later, you do to it now.
+
+RULES:
+1. Fetch first, draft second. Register every source; every claim must be receipt-able against ONE named stored source (article receipts bind to a single source — pooled verification does not exist for articles).
+2. Explainers make NO bill claims, take NO positions, and never quote or characterize a named organization or person. Both-sides content is tracker-only (docs/BOTH-SIDES.md) and does not belong here.
+3. THE OPENING OBEYS THE SAME BAR (James's ruling, 2026-08-15): the "why this matters" line is built ONLY from sourced structural facts (a rule change with a date, a count from the record, a stored provision). If the sources do not support a why-it-matters, write a plain descriptive opening instead. There is NO interpretive-voice carve-out — zero open flags applies to every sentence, nut graf included.
+4. Describe, never evaluate. No "landmark/sweeping/controversial/common-sense". Significance comes from sourced structural facts. Prefer the source's own terms over any coalition's framing.
+5. Draft into drafts/ with the exact relative paths the page will have in articles/ (publishing is a move, not a rewrite). The draft then faces the hostile audit to convergence: expect it, and leave it nothing to find.`;
+
 module.exports = {
     SYSTEM_PROMPT,
     OMNIBUS_DIVISION_PROMPT,
     OMNIBUS_TOPLEVEL_PROMPT,
+    ARTICLE_DRAFT_PROMPT,
 };

@@ -42,6 +42,14 @@ Every article, in this order:
    bill stands and as-of when. A reader who bounces after one sentence should still
    leave with the correct status.
 3. **Nut graf** — one or two sentences, no more. What this is and why it matters now.
+   **The nut graf obeys the same sourcing bar as everything else (decided
+   2026-08-15): "why it matters" is built ONLY from sourced structural facts** — a
+   rule change with a date, a count from the record, a stored provision (e.g. "the
+   119th Congress dropped the last-six-days window in 2025"). There is no
+   interpretive-voice carve-out; zero-open-flags applies to every sentence,
+   nut graf included. **If the sources don't support a why-it-matters, write a
+   plain descriptive opening instead** — a duller opening is better than an
+   unsourced one.
 4. **Body in question-shaped `<h2>` sections.** "What does the bill require?" reads
    better to a person and is directly quotable by an answer engine.
 5. **Primary Sources box** at the foot — every source actually used, linked, and
@@ -60,6 +68,11 @@ not softer because this is prose rather than a bill analysis.
 
 - **Training knowledge is never a source.** Not for figures, dates, cites, or
   history. It may only tell you *where to look*.
+  **The enforced form of this rule is `ARTICLE_DRAFT_PROMPT` in
+  `scripts/prompts.js` — include it VERBATIM in any session or prompt that
+  drafts article prose.** Rulebooks sitting in context are not a substitute: the
+  first explainer was drafted with only the rulebooks loaded and the audit had
+  to delete four training-knowledge claims. The audit is the net, not the license.
 - **Every figure, date, and statutory citation must appear in a fetched, stored
   source.** A claim that cannot be tied to a source line is deleted, not hedged.
 - **Never paraphrase a quotation.** Verbatim with speaker, date, and Congressional
@@ -121,6 +134,16 @@ Full rules in `docs/BOTH-SIDES.md`. The non-negotiables:
   hand-typed labels had silently gone stale.
 - A tracker whose bill has moved is **wrong, not merely dated**. It joins the
   staleness worklist (`npm run stale`).
+
+### 6a. Cadence (RATIFIED by James, 2026-08-15)
+
+- **≤ 2 new explainers per month, ~4 refreshes per month.** Commissioned one at a
+  time — never batched. Volume is the failure mode this program is designed
+  against, and the cap is deliberately below capacity.
+- **Reviewed quarterly** (or sooner if search/AI-citation rules visibly shift —
+  the GSC data is the alarm). Rationale and sources:
+  `_personal/ARTICLE-CADENCE-MEMO.md`. Nothing enforces this in code by design;
+  it is an editorial commitment, not a gate.
 
 ---
 

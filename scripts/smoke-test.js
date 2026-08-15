@@ -14,6 +14,7 @@
 'use strict';
 const { chromium } = require('playwright');
 const { spawn } = require('child_process');
+const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
@@ -24,6 +25,17 @@ const BASE = `http://localhost:${PORT}`;
 const cache = require(path.join(ROOT, 'data/cache.json'));
 const { billSlug } = require(path.join(ROOT, 'util.js'));
 const BILLS = cache.bills.length;
+// The bill list PAGINATES (2026-07: BILL_PAGE_SIZE in app-state.js, "Show 24
+// more" pager). This test asserted `.bill-card === BILLS` (whole corpus) long
+// after that shipped, so it was permanently red -- and a permanently-red gate
+// gives no signal and gets ignored. Read the cap from the app source so the
+// assertion tracks the app instead of drifting from it again.
+const PAGE_SIZE = (() => {
+  const m = fs.readFileSync(path.join(ROOT, 'app-state.js'), 'utf8').match(/const BILL_PAGE_SIZE\s*=\s*(\d+)/);
+  if (!m) throw new Error('smoke: BILL_PAGE_SIZE not found in app-state.js');
+  return Number(m[1]);
+})();
+const FIRST_PAGE = Math.min(PAGE_SIZE, BILLS);
 // An omnibus WITH division-structured text (HR-1 is flagged omnibus but its
 // reconciliation text uses TITLEs, not DIVISION headers — no bt-div anchors).
 const omnibus = cache.bills.find(b => b.isOmnibus && (b.divisions || []).some(d => /^[A-Z]$/.test(d.divisionKey)));
@@ -73,7 +85,8 @@ async function waitForServer(url, ms = 15000) {
   // ── Home ──
   console.log('\n— index');
   await go('/');
-  check(await count('.bill-card') === BILLS, `bill cards render (== cache: ${BILLS})`);
+  check(await count('.bill-card') === FIRST_PAGE, `first page renders (${FIRST_PAGE} of ${BILLS})`);
+  check(await count('#billPagerMore') === 1, 'pager button present below the fold');
   check(await count('.rep-strip-card') > 0, 'rep strip populated');
   check(await count('.shock-quote-card') > 0, 'shock-quote carousel populated');
   check(await count('[data-main]') === 4, 'four filter tabs');
@@ -97,7 +110,7 @@ async function waitForServer(url, ms = 15000) {
   // ── Bills page ──
   console.log('— bills');
   await go('/bills.html');
-  check(await count('.bill-card') === BILLS, 'bill cards render');
+  check(await count('.bill-card') === FIRST_PAGE, `first page renders (${FIRST_PAGE} of ${BILLS})`);
   check(await count('.shock-quote-card') === 0, 'carousel suppressed on bills page');
 
   // ── Bill pages ──
@@ -152,7 +165,7 @@ async function waitForServer(url, ms = 15000) {
   console.log('— mobile 375px');
   await page.setViewportSize({ width: 375, height: 720 });
   await go('/');
-  check(await count('.bill-card') === BILLS, 'mobile: bill cards render');
+  check(await count('.bill-card') === FIRST_PAGE, `mobile: first page renders (${FIRST_PAGE} of ${BILLS})`);
   check(await page.locator('[data-main]').first().isVisible(), 'mobile: filter tabs visible');
 
   // ── Console errors ──
