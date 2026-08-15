@@ -63,7 +63,8 @@
     "dispatch:publish": "node scripts/dispatch-publish.js",
     "dispatch:prepare": "node scripts/prepare-dispatch.js",
     "dispatch:prepared": "node scripts/prepare-dispatch.js --list",
-    "dispatch:prepare:check": "node scripts/prepare-dispatch.js --check"
+    "dispatch:prepare:check": "node scripts/prepare-dispatch.js --check",
+    "dispatch:daily": "node scripts/dispatch-daily.js"
   },
   "repository": {
     "type": "git",
