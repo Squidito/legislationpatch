@@ -60,7 +60,10 @@
     "dispatch:dry": "node scripts/dispatch-run.js --dry-run",
     "dispatch:generate": "node scripts/generate_dispatch.js",
     "dispatch:gate": "node scripts/dispatch-gate.js",
-    "dispatch:publish": "node scripts/dispatch-publish.js"
+    "dispatch:publish": "node scripts/dispatch-publish.js",
+    "dispatch:prepare": "node scripts/prepare-dispatch.js",
+    "dispatch:prepared": "node scripts/prepare-dispatch.js --list",
+    "dispatch:prepare:check": "node scripts/prepare-dispatch.js --check"
   },
   "repository": {
     "type": "git",

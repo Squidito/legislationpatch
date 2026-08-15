@@ -1,0 +1,145 @@
+{
+  "_readme": "Prepared Dispatch branches (Phase 2). Written by scripts/prepare-dispatch.js, read by dispatch-publish.js at fire time. maskedSha fingerprints the QA-cleared render with the event-volatile regions masked; see scripts/lib/prepared.js.",
+  "billId": "119-HR-9770",
+  "code": "H.R. 9770",
+  "title": "Continuing Appropriations Act, 2027",
+  "preparedAt": "2026-08-15T00:14:15Z",
+  "preparedFromStage": "house",
+  "auditedFingerprint": "sha256:53ac1d753674e99ccf8c90947a0057872f68d11dd60544a2dbea989b721ab473",
+  "expires": "2026-10-05",
+  "note": "FY2027 CR; passed House 220-205 (roll 272) 2026-07-21, pending Senate action before the Sept 30 deadline",
+  "branches": {
+    "passed-senate": {
+      "verb": "passed the Senate",
+      "chamber": "Senate",
+      "maskedSha": "sha256:5b649fd58a7f5c821603488a92ebbd5151b88bd1f221b5146fb541f8a5863cfc",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:14:15Z"
+    },
+    "failed-floor": {
+      "verb": "failed on the Senate floor",
+      "chamber": "Senate",
+      "maskedSha": "sha256:651c3e015313df3acba374578ad7125d8b0364ef10c515a23e17200e22cba1ba",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:14:15Z"
+    },
+    "signed": {
+      "verb": "was signed into law",
+      "chamber": null,
+      "maskedSha": "sha256:c68962625a0d0a02e251eacbed5b140ff61d70dbe088ac2b59784ba946d4a0b7",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:14:15Z"
+    },
+    "vetoed": {
+      "verb": "was vetoed",
+      "chamber": null,
+      "maskedSha": "sha256:50a5c9bd02ac5565cb63399440f9caa2dc9ba6d8a878aeefd652feebd10fb3ec",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:14:15Z"
+    }
+  }
+}

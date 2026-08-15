@@ -38,6 +38,7 @@ const LOG  = path.join(DATA, 'dispatch-log.json');
 const { runGate } = require('./dispatch-gate.js');
 const gen = require('./generate_dispatch.js');
 const { THRESHOLD, detectEvents, eventFor, snapshotStages } = require('./lib/dispatch-events.js');
+const { loadPrepared, checkPrepared } = require('./lib/prepared.js');
 
 const args = process.argv.slice(2);
 const opt  = n => { const i = args.indexOf(`--${n}`); return i >= 0 ? args[i + 1] : null; };
@@ -123,6 +124,31 @@ function main() {
       verdict = { pass: false, results: [{ name: 'gate', ok: false, detail: `gate threw (treated as failure): ${String(e.message).slice(0, 90)}` }] };
     }
 
+    // ── Phase 2: prepared-branch checks ──────────────────────────────────────
+    // These run ALONGSIDE the seven-check gate, never inside it -- the gate is
+    // corpus-proven at 211/211 with zero false blocks and is not modified here.
+    //
+    // A bill with no prepared record returns no checks and behaves exactly as
+    // it did in Phase 1. A bill WITH one has had a specific set of outcomes
+    // drafted and cleared, so an outcome outside that set is precisely the case
+    // that must NOT auto-publish: it goes to the log as blocked, flagged for
+    // James, and stays pending until he prepares it or the data is fixed.
+    let preparedResults = [];
+    try {
+      preparedResults = checkPrepared({
+        rec: loadPrepared(ev.billId), bill, event: ev,
+        html: draft.html, today: publishedAt,
+      });
+    } catch (e) {
+      preparedResults = [{ name: 'prepared', ok: false, detail: `prepared check threw (treated as failure): ${String(e.message).slice(0, 80)}` }];
+    }
+    if (preparedResults.length) {
+      verdict = {
+        pass: verdict.pass && preparedResults.every(r => r.ok),
+        results: [...verdict.results, ...preparedResults],
+      };
+    }
+
     const entry = {
       loggedAt: publishedAt,
       billId: ev.billId,
@@ -141,6 +167,15 @@ function main() {
       gate: verdict.results.map(r => ({ check: r.name, ok: r.ok, detail: r.detail })),
       status: verdict.pass ? 'published' : 'blocked',
     };
+
+    // An event that matched no prepared branch is not a data defect to be fixed
+    // by re-running -- it is an outcome nobody drafted. Mark it so the review
+    // panel can separate "waiting on data" from "waiting on James".
+    const staleBranch = preparedResults.find(r => r.name === 'prepared-branch-matched' && !r.ok);
+    if (staleBranch) {
+      entry.needsHuman = true;
+      entry.flag = `prepared-branch-miss: ${staleBranch.detail}`;
+    }
 
     if (verdict.pass) {
       const target = path.join(gen.PUBLISHED, draft.slug);
