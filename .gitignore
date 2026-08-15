@@ -79,3 +79,11 @@ data/qa-metrics/dashboard.html
 
 # Dispatch drafts awaiting the gate — promoted to dispatch/ only on a pass.
 .dispatch-staging/
+
+# Explainer drafts awaiting James's approval. The repo root deploys, so a
+# committed draft would go live the moment dev merged to main — the draft stays
+# untracked and `npm run article:publish` is what moves it into articles/.
+# Its AUDIT is tracked: data/qa-ledger/article-*.json + data/ref-text/ + the
+# provenance sidecar are the committed record, and the receipt replay in
+# qa-regression runs off those, never off the draft file.
+drafts/

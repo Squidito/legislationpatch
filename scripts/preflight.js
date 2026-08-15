@@ -51,6 +51,17 @@ function pass(m)  { console.log(`  ✅ ${m}`); }
 function fail(m)  { console.log(`  ❌ ${m}`); failures++; }
 function warn(m)  { console.log(`  ⚠️  ${m}`); }
 
+/**
+ * A draft is an article that has not moved yet. drafts/<slug>.html is written
+ * with the exact relative paths it will have at articles/<slug>.html, so
+ * publishing is a move with no rewriting -- which means every structural check
+ * here must judge a draft AS an article, resolving its links from articles/.
+ * Checking a draft against its own directory would report broken links for
+ * paths that are correct, and would skip the byline/disclosure checks entirely.
+ */
+const isArticle = f => f.startsWith('articles/') || f.startsWith('drafts/');
+const linkBase  = f => (f.startsWith('drafts/') ? 'articles' : path.dirname(f));
+
 function walkHtml(dir, acc = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     if (e.name.startsWith('.') && e.name !== '.') continue;
@@ -246,7 +257,7 @@ section('No duplicate inline author/publisher/website blobs');
 // 4. Articles carry exactly one byline and one disclosure --------------------
 section('Article byline + AI disclosure');
 {
-  const arts = files.filter(f => f.startsWith('articles/') && !f.endsWith('/index.html'));
+  const arts = files.filter(f => isArticle(f) && !f.endsWith('/index.html'));
   const noByline = [], badDisc = [], outside = [];
   for (const f of arts) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
@@ -329,10 +340,15 @@ section('Internal links resolve');
 
   for (const f of files) {
     const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
-    const dir = path.dirname(f);
+    const dir = linkBase(f);
+    // A draft's canonical points at the articles/ URL it will occupy once
+    // James publishes it. That target is SUPPOSED to be absent -- if it already
+    // existed the draft would be overwriting a live article. Its own future
+    // path is the one link exempted; every other link on the page is checked.
+    const selfPath = f.startsWith('drafts/') ? '/' + f.replace(/^drafts\//, 'articles/') : null;
     for (const m of h.matchAll(/href=(?:"([^"]*)"|'([^']*)')/g)) {
       const sitePath = toSitePath(m[1] !== undefined ? m[1] : m[2], dir);
-      if (!sitePath) continue;
+      if (!sitePath || sitePath === selfPath) continue;
       checked++;
       const target = path.join(ROOT, sitePath);
       const ok = fs.existsSync(target)

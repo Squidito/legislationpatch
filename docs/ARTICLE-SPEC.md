@@ -137,6 +137,38 @@ Full rules in `docs/BOTH-SIDES.md`. The non-negotiables:
 6. `npm run articles:index` so the article appears in the human-facing index.
 7. **Human review before publish.** No exceptions in this lane.
 
+### 7b. How an explainer actually moves (the Phase 3 lane)
+
+```
+fetch + store source  ->  draft in drafts/  ->  hostile audit to convergence  ->  panel  ->  publish
+   fetch-reference.js      (gitignored)         patch-console article-audit.js    James   publish-article.js
+```
+
+1. **Fetch and store every source first.** `node scripts/fetch-reference.js --rule
+   "house:XV"` (chamber rules via govinfo HMAN), `--usc`, or `--bill`. It stores the text
+   in `data/ref-text/` and registers the citation in `data/ref-sources.json`. **Nothing may
+   be written from memory** — and the auditor has no web access, so an unfetched source
+   simply cannot be used.
+2. **Draft into `drafts/<slug>.html`, never `articles/`.** Everything that scans
+   `articles/` treats what it finds as live, and the repo root deploys. Write the draft
+   with the exact relative paths it will have once published — publishing is then a move
+   with no link rewriting, and `preflight` checks a draft **as** an article (byline,
+   disclosure, theme bootstrap, entity @ids, links), so it is structurally gated before it
+   is publishable rather than at the moment it goes live.
+3. **Audit to convergence, before any human reads it.** Fresh headless session per pass,
+   a different model from the drafter, zero open flags, two consecutive clean passes,
+   bail-out if it does not converge. The ledger is `data/qa-ledger/article-<slug>.json`.
+4. **Review in the patch-console panel** — rendered draft beside the claim ledger.
+5. **Publish is a human act.** `npm run article:publish -- --slug <slug> --apply` refuses
+   an unaudited draft, a ledger with open flags, an unbound receipt, or an existing article
+   at that path. It never commits, pushes, or pings IndexNow.
+
+**Quotation marks are a promise of verbatimness.** A span in quotes must appear exactly in
+a stored source, *including any inline citations the source carries*. Dropping a source's
+`(V, 6795)` to make a sentence read better is elision inside quotation marks — it is
+paraphrase, `qa-receipts` rejects it, and §3 already forbids it. When a source's own text
+cannot be quoted cleanly, report it as prose instead of quoting it.
+
 ### 7a. Dispatches are the one exception, and they buy it
 
 The checklist above is the **slow lane**. Dispatches auto-publish (decision D1,

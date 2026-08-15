@@ -12,6 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const AL = require('./lib/article-ledger');
 
 const ROOT = path.join(__dirname, '..');
 const LEDGER_DIR = path.join(ROOT, 'data', 'qa-ledger');
@@ -47,8 +48,10 @@ for (const file of fs.readdirSync(LEDGER_DIR)) {
     if (!l || !l.id) continue;
     if (billArg && l.id !== billArg) continue;
 
-    const raw = sourceFor(l.id);
-    if (!raw) continue;
+    const isArticle = AL.isArticleLedger(l);
+    const srcCache = {};
+    const raw = isArticle ? '' : sourceFor(l.id);
+    if (!isArticle && !raw) continue;
     const rawNorm = norm(raw);
     const isImported = l.depth === 'imported';   // seeds use paraphrased/elided spans — advise, don't block
     let dirty = false;
@@ -56,15 +59,37 @@ for (const file of fs.readdirSync(LEDGER_DIR)) {
     for (const c of (l.claims || [])) {
         const span = (c.sourceSpan || '').trim();
         if (!span) continue;
-        if (isElided(span)) { elided++; continue; }
+        // Elision is tolerated only on the pre-v1 imported BILL seeds it exists
+        // for. An article ledger is always a v1 audit against a source fetched
+        // this year, so an elided span there is a receipt nobody can check --
+        // exactly the hole receipts exist to close.
+        if (isElided(span)) {
+            if (!isArticle) { elided++; continue; }
+            checked++; failed++;
+            failures.push(`${l.id}  [${c.field || '?'}]  elided span (articles require a verbatim receipt): "${span.slice(0, 70)}…"`);
+            continue;
+        }
         if (!isImported) checked++;
 
+        // An ARTICLE claim is checked against the ONE source it names, never the
+        // pooled ref-text — see lib/article-ledger.js for why that matters.
+        let text = raw, textNorm = rawNorm;
+        if (isArticle) {
+            const r = AL.sourceTextForClaim(l, c, srcCache);
+            if (!r.ok) {
+                failed++;
+                failures.push(`${l.id}  [${c.field || '?'}]  ${r.reason}`);
+                continue;
+            }
+            text = r.text; textNorm = norm(text);
+        }
+
         // exact match → true char offsets; else whitespace-tolerant → ok, no offsets
-        const exactIdx = raw.indexOf(span);
+        const exactIdx = text.indexOf(span);
         if (exactIdx >= 0) {
             if (!isImported) verified++;
             if (WRITE && !isImported && (c.sourceStart == null || c.sourceEnd == null)) { c.sourceStart = exactIdx; c.sourceEnd = exactIdx + span.length; dirty = true; wrote++; }
-        } else if (rawNorm.includes(norm(span))) {
+        } else if (textNorm.includes(norm(span))) {
             if (!isImported) verified++;
         } else if (isImported) {
             importedAdvisory++;

@@ -19,6 +19,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const AL = require('./lib/article-ledger');
 
 const ROOT = path.join(__dirname, '..');
 const LEDGER_DIR = path.join(ROOT, 'data', 'qa-ledger');
@@ -58,14 +59,41 @@ const cache = loadCache();
 const baseline = readJson(BASELINE, {});
 const newBaseline = {};
 
-let checkedBills = 0, checkedSpans = 0;
+let checkedBills = 0, checkedArticles = 0, checkedSpans = 0;
 const regressions = [];   // hard: a SUPPORTED receipt no longer resolves
 const staleAudits = [];   // warn: analysis changed since baseline
+const missingProse = [];  // info: an audited article's draft is no longer on disk
 
 for (const f of fs.readdirSync(LEDGER_DIR)) {
     if (!f.endsWith('.json') || f.startsWith('_')) continue;
     const l = readJson(path.join(LEDGER_DIR, f), null);
     if (!l || !l.id || l.depth !== 'full-claims' || l.status !== 'audited') continue;  // only real audits carry a baseline
+
+    // ARTICLE ledgers: receipts replay against the ONE source each claim names.
+    // The hard guarantee runs entirely off tracked files (data/qa-ledger +
+    // data/ref-text), so it holds whether the prose is still an untracked draft
+    // or has been published into articles/.
+    if (AL.isArticleLedger(l)) {
+        checkedArticles++;
+        const srcCache = {};
+        for (const c of (l.claims || [])) {
+            if (c.verdict !== 'SUPPORTED') continue;
+            const span = (c.sourceSpan || '').trim();
+            if (!span || isElided(span)) continue;
+            checkedSpans++;
+            const r = AL.sourceTextForClaim(l, c, srcCache);
+            if (!r.ok) { regressions.push(`${l.id} [${c.field || '?'}]: ${r.reason}`); continue; }
+            if (r.text.indexOf(span) < 0 && !norm(r.text).includes(norm(span))) {
+                regressions.push(`${l.id} [${c.field || '?'}]: verified receipt no longer in ${c.sourceFile} — "${span.slice(0, 70)}${span.length > 70 ? '…' : ''}"`);
+            }
+        }
+        const ah = AL.proseHash(l);
+        if (ah === null) { missingProse.push(l.id); continue; }   // draft discarded; receipts above still enforced
+        newBaseline[l.id] = ah;
+        if (!UPDATE && baseline[l.id] !== undefined && baseline[l.id] !== ah) staleAudits.push(l.id);
+        continue;
+    }
+
     const bill = cache[l.id];
     if (!bill) { regressions.push(`${l.id}: audited bill no longer in cache (orphan ledger)`); continue; }
     checkedBills++;
@@ -95,7 +123,10 @@ if (UPDATE || Object.keys(baseline).length === 0) {
 }
 
 console.log('');
-console.log(`  QA regression gate — ${checkedBills} audited bill(s), ${checkedSpans} verified receipt(s) replayed`);
+console.log(`  QA regression gate — ${checkedBills} audited bill(s)` +
+    (checkedArticles ? ` + ${checkedArticles} audited article(s)` : '') +
+    `, ${checkedSpans} verified receipt(s) replayed`);
+if (missingProse.length) console.log(`  ℹ️  ${missingProse.length} audited article(s) have no prose file on disk (draft discarded): ${missingProse.join(', ')}`);
 if (regressions.length) {
     console.log(`\n  ❌ ${regressions.length} REGRESSION(S) — a previously-verified claim no longer holds against source:`);
     regressions.slice(0, 40).forEach(r => console.log('    ' + r));

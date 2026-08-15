@@ -13,11 +13,13 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const AL = require('./lib/article-ledger');
 
 const ROOT = path.join(__dirname, '..');
 const CACHE = path.join(ROOT, 'data', 'cache.json');
 const BILLTEXT = path.join(ROOT, 'data', 'bill-text');
 const REFTEXT = path.join(ROOT, 'data', 'ref-text');
+const LEDGER_DIR = path.join(ROOT, 'data', 'qa-ledger');
 const SIDECAR = path.join(ROOT, 'data', 'qa-provenance.json');
 
 function readJson(p, fb) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } }
@@ -65,6 +67,38 @@ for (const b of bills) {
     stamped++;
 }
 
+// ── Articles ────────────────────────────────────────────────────────────────
+// Same contract as a bill: record the source the prose was written against, so
+// a later change to that source re-triggers the audit for THAT article only.
+// An article has no bill text, so its source hashes are the registered
+// referenced sources and `proseSha` stands in for the analysis body.
+let stampedArticles = 0, changedArticles = 0;
+if (fs.existsSync(LEDGER_DIR)) {
+    for (const f of fs.readdirSync(LEDGER_DIR)) {
+        if (!f.endsWith('.json') || f.startsWith('_')) continue;
+        const l = readJson(path.join(LEDGER_DIR, f), null);
+        if (!AL.isArticleLedger(l)) continue;
+        const prev = sidecar[l.id] || {};
+        const shas = AL.sourceShas(l);
+        const proseSha = AL.proseHash(l);
+        if (prev.sourceShas && JSON.stringify(prev.sourceShas) !== JSON.stringify(shas)) changedArticles++;
+        sidecar[l.id] = {
+            kind: 'article',
+            sourceShas: shas,
+            proseSha,
+            proseFile: AL.proseFile(l),
+            promptVersion: pv,
+            genModel: prev.genModel || l.auditModel || null,
+            genAt: prev.genAt || l.auditedAt || null,
+            stampedAt,
+        };
+        stampedArticles++;
+    }
+}
+
 fs.writeFileSync(SIDECAR, JSON.stringify(sidecar, null, 2) + '\n');
-console.log(`qa-provenance: stamped ${stamped} bill(s) → data/qa-provenance.json (promptVersion ${pv || 'n/a'})` +
-    (changed ? ` · ${changed} bill(s) had a DIFFERENT prior billTextSha (source changed since last stamp)` : ''));
+console.log(`qa-provenance: stamped ${stamped} bill(s)` +
+    (stampedArticles ? ` + ${stampedArticles} article(s)` : '') +
+    ` → data/qa-provenance.json (promptVersion ${pv || 'n/a'})` +
+    (changed ? ` · ${changed} bill(s) had a DIFFERENT prior billTextSha (source changed since last stamp)` : '') +
+    (changedArticles ? ` · ${changedArticles} article(s) had DIFFERENT prior source hashes` : ''));

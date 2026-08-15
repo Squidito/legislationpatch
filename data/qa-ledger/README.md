@@ -75,6 +75,50 @@ Jobs served with zero new LLM cost: **resume/worklist** (`npm run qa-ledger`),
 - **Regression** activates once full-claims SUPPORTED rows exist (populated by the sweep);
   `scripts/qa-ledger-regression.js` (Phase 3) replays them against current cache/source.
 
+## Article ledgers (`article-<slug>.json`) — the explainer-lane variant
+
+Same schema, same rubric, one deliberate difference in how a receipt is checked.
+
+```json
+{
+  "id": "article-suspension-of-the-rules",
+  "kind": "article",                     // the discriminator (id prefix is the fallback)
+  "slug": "suspension-of-the-rules",
+  "draftFile": "drafts/suspension-of-the-rules.html",
+  "drafterModel": "opus-5 (in-conversation)",   // who WROTE it
+  "auditModel": "opus",                          // who audited it — must differ
+  "sources": [ { "id": "hman-119-rule-xv", "kind": "rule", "label": "...",
+                 "citation": "House Rule XV", "srcUrl": "...",
+                 "textFile": "data/ref-text/hman-119-rule-xv.txt", "fetchedAt": "..." } ],
+  "claims": [ { "field": "body.which-days.p2", "…": "…",
+                "sourceFile": "hman-119-rule-xv",   // ← REQUIRED: the ONE source backing this row
+                "sourceSpan": "verbatim span from THAT file" } ]
+}
+```
+
+**`sourceFile` is required and it is the whole point.** A bill's receipts are checked
+against its bill-text *plus every file in `data/ref-text/` concatenated*, because a bill
+may cite any source it registered. An article has no bill text, so that same pooling would
+let a receipt "verify" against a document the article never cites. An article claim is
+therefore checked **against the one file it names, and nothing else**. A claim with a
+receipt but no `sourceFile`, or naming a source the ledger does not register, FAILS.
+Strictly stronger than the bill path — it makes the receipt a binding, not a coincidence.
+
+**Elision is not tolerated on articles.** `…`/`...` inside a span is skipped on the pre-v1
+imported bill seeds it exists for; on an article it FAILS. An article is always a v1 audit
+against a source fetched this year, so an unquotable receipt is the hole receipts exist to
+close.
+
+**Zero open flags is the bar, and it is stricter than the bill lane.** Bills park editorial
+language as visible style debt; an article may not — every non-SUPPORTED row must end
+`status:"fixed"` or `verify:"REJECTED"` with evidence, or the article cannot be published.
+`scripts/publish-article.js` enforces this and refuses.
+
+Freshness works the same way via `lib/article-ledger.js`: `qa-regression` replays article
+receipts as a hard gate (running purely off tracked files, so it holds whether the prose is
+still an untracked draft or has been published), and hashes the rendered prose for the
+staleness warn. `qa-provenance` stamps the source hashes the article was written against.
+
 ## Provenance sidecar
 `data/qa-provenance.json` (`{ "<id>": { billTextSha, refShas, promptVersion, genModel, genAt, stampedAt } }`)
 records what produced each analysis and the source hash it was written against — stamped by
