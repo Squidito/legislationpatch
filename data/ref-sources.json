@@ -7,5 +7,32 @@
     "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg716",
     "textFile": "data/ref-text/hman-119-rule-xv.txt",
     "fetchedAt": "2026-08-15"
+  },
+  "usc-2-641": {
+    "id": "usc-2-641",
+    "kind": "statute",
+    "label": "Reconciliation (Congressional Budget Act sec. 310)",
+    "citation": "2 U.S.C. 641",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapI-sec641/htm",
+    "textFile": "data/ref-text/usc-2-641.txt",
+    "fetchedAt": "2026-08-15"
+  },
+  "usc-2-644": {
+    "id": "usc-2-644",
+    "kind": "statute",
+    "label": "Byrd rule (Congressional Budget Act sec. 313)",
+    "citation": "2 U.S.C. 644",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapI-sec644/htm",
+    "textFile": "data/ref-text/usc-2-644.txt",
+    "fetchedAt": "2026-08-15"
+  },
+  "usc-2-900": {
+    "id": "usc-2-900",
+    "kind": "statute",
+    "label": "Balanced Budget and Emergency Deficit Control Act (BBEDCA)",
+    "citation": "2 U.S.C. 900",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20-subchapI-sec900/htm",
+    "textFile": "data/ref-text/usc-2-900.txt",
+    "fetchedAt": "2026-08-15"
   }
 }
