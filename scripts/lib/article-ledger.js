@@ -97,6 +97,29 @@ function sourceTextForClaim(l, claim, cache) {
     return { ok: true, text, entry };
 }
 
+/**
+ * Is the ledger describing the prose that is on disk RIGHT NOW?
+ *
+ * The receipts prove ledger->source. Nothing proved ledger->draft, so an edit
+ * made after the audit left a ledger that still described the old text -- it
+ * carried a claim for a paragraph that had been deleted, and the pass still
+ * scored clean. A ledger that describes prose which no longer exists must never
+ * bless a publish, so the audit stamps the draft hash it read and everything
+ * downstream compares against it.
+ *
+ * Returns { ok, reason, stamped, actual }. A ledger with no stamp is NOT ok:
+ * absence of the field cannot be allowed to mean "fine" (that is the silent-skip
+ * bug class this repo keeps re-learning).
+ */
+function proseMatchesLedger(l) {
+    const actual = proseHash(l);
+    const stamped = l.proseSha || null;
+    if (!actual) return { ok: false, reason: 'no prose file on disk to compare', stamped, actual };
+    if (!stamped) return { ok: false, reason: 'ledger carries no proseSha — re-audit to stamp it', stamped, actual };
+    if (stamped !== actual) return { ok: false, reason: `prose changed since the audit (ledger ${stamped}, draft ${actual})`, stamped, actual };
+    return { ok: true, reason: 'ledger matches the prose on disk', stamped, actual };
+}
+
 /** sha256 of every registered source file, by source id (for the provenance sidecar). */
 function sourceShas(l) {
     const out = {};
@@ -109,4 +132,4 @@ function sourceShas(l) {
     return out;
 }
 
-module.exports = { isArticleLedger, slugOf, proseFile, proseHash, sourcesOf, sourceTextForClaim, sourceShas, ROOT };
+module.exports = { isArticleLedger, slugOf, proseFile, proseHash, proseMatchesLedger, sourcesOf, sourceTextForClaim, sourceShas, ROOT };

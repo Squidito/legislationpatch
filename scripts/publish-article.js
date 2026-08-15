@@ -93,6 +93,12 @@ const unbound = claims.filter(c => (c.sourceSpan || '').trim() && !c.sourceFile)
 if (unbound.length) fail(`${unbound.length} claim(s) carry a receipt with no sourceFile binding`);
 ok('every receipt names its source');
 
+// The receipts prove ledger->source. THIS proves ledger->prose: an edit made
+// after the audit would otherwise ship text that no ledger row describes.
+const match = AL.proseMatchesLedger(ledger);
+if (!match.ok) fail(`ledger does not describe the current draft — ${match.reason}. Re-run the audit.`);
+ok('ledger describes the prose on disk (proseSha matches)');
+
 // ── 2. Gates on the current tree ───────────────────────────────────────────
 console.log('\n── Gates');
 for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scripts/preflight.js', 'preflight']]) {

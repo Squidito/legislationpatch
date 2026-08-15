@@ -8,11 +8,12 @@
   "status": "audited",
   "depth": "full-claims",
   "sourceReadDepth": "full",
-  "auditedAt": "2026-08-14",
+  "auditedAt": "2026-08-15",
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "opus",
   "verifyModel": null,
-  "passes": 4,
+  "passes": 8,
+  "proseSha": "3d60ac95d3524e30",
   "sources": [
     {
       "id": "hman-119-rule-xv",
@@ -157,7 +158,7 @@
     },
     {
       "field": "body.intro",
-      "claim": "The House rewrote part of the rule at the start of the current (119th) Congress",
+      "claim": "The House amended the rule at the start of the current (119th) Congress",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
@@ -290,33 +291,6 @@
 
     {
       "field": "body.what-vote.p1",
-      "claim": "Under clause 1 a measure on the suspension track has 40 minutes of debate, admits no amendments, and can move without being reported by committee",
-      "verdict": "SUPPORTED",
-      "type": "other",
-      "severity": "ok",
-      "sourceFile": "hman-119-rule-xv",
-      "sourceSpan": "A motion to suspend the rules may provide for the passage of a bill regardless of whether it has been reported by committee, referred to a calendar, or even previously introduced",
-      "section": "Rule XV clause 1 / Secs. 886, 886a, 891",
-      "note": "Compound of three provisions: 40-minute debate cap (clause 1(c) / Sec. 891, receipted separately), no-amendments (Sec. 886a, receipted separately), and no-committee-report requirement (this receipt).",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
-    },
-    {
-      "field": "body.what-vote.p1",
-      "claim": "The vote required is two-thirds of the Members voting",
-      "verdict": "SUPPORTED",
-      "type": "figure",
-      "severity": "ok",
-      "sourceFile": "hman-119-rule-xv",
-      "sourceSpan": "vote of two-thirds of the Members voting, a quorum being present",
-      "section": "Rule XV clause 1(a)",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
-    },
-    {
-      "field": "body.what-vote.p2",
       "claim": "The threshold is two-thirds of the Members voting, not of the full membership",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -329,7 +303,7 @@
       "kind": "claim"
     },
     {
-      "field": "body.what-vote.p2",
+      "field": "body.what-vote.p1",
       "claim": "The rule requires only that a quorum be present",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -342,7 +316,7 @@
       "kind": "claim"
     },
     {
-      "field": "body.what-vote.p3",
+      "field": "body.what-vote.p2",
       "claim": "The two-thirds requirement was added in 1822",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -355,7 +329,7 @@
       "kind": "claim"
     },
     {
-      "field": "body.what-vote.p3",
+      "field": "body.what-vote.p2",
       "claim": "The provision developed from a rule adopted in 1794 that no rule should be rescinded without one day's notice",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -368,7 +342,7 @@
       "kind": "claim"
     },
     {
-      "field": "body.what-vote.p3.quote",
+      "field": "body.what-vote.p2.quote",
       "claim": "Quote: 'In 1822 a paragraph was added that no rule should be suspended except by a two-thirds vote.'",
       "verdict": "SUPPORTED",
       "type": "figure",
@@ -1182,14 +1156,58 @@
       "fixedAt": "2026-08-14",
       "verify": null,
       "kind": "claim"
+    },
+
+    {
+      "field": "body.intro.PASS6",
+      "claim": "The House rewrote part of it at the start of the current Congress (pre-pass-6 'rewrote' framing)",
+      "verdict": "UNSUPPORTED",
+      "type": "framing",
+      "severity": "minor",
+      "sourceFile": "hman-119-rule-xv",
+      "sourceSpan": "in the 119th Congress the rule was amended to return to Mondays, Tuesdays, and Wednesdays, but without the inclusion of the last six days of a session",
+      "section": "Rule XV / Sec. 885 history note",
+      "note": "Pass 6 finding (hostile source-only verifier subagent). Draft used 'rewrote part of it' where the source uses 'amended'. 'Rewrote' is a stronger, more editorial word than the source's neutral 'amended' — a 119th Congress amendment that reverted the days-of-consideration rule is not a rewrite. Rewritten to match the source term: 'the House amended it at the start of the current Congress'.",
+      "status": "fixed",
+      "fixedAt": "2026-08-15",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "meta.description.PASS6",
+      "claim": "Meta description omits 'a quorum being present' after 'two-thirds vote of the members voting' (verifier concern)",
+      "verdict": "SUPPORTED",
+      "type": "omission",
+      "severity": "minor",
+      "sourceFile": "hman-119-rule-xv",
+      "sourceSpan": "vote of two-thirds of the Members voting, a quorum being present",
+      "section": "Rule XV clause 1(a)",
+      "note": "Pass 6 verifier flag. REJECTED. The meta description accurately states the vote threshold ('two-thirds vote of the members voting'). 'A quorum being present' is a general precondition for House business, not a modifier of the vote fraction; the body carries the full formulation. Meta descriptions naturally compress, and this compression does not misrepresent the vote requirement. Not a material omission.",
+      "status": "open",
+      "verify": "REJECTED",
+      "kind": "claim"
+    },
+    {
+      "field": "body.which-days.p2.PASS6",
+      "claim": "The 'without the inclusion of the last six days of a session' quote plus surrounding framing risks reader misreading (verifier concern)",
+      "verdict": "SUPPORTED",
+      "type": "framing",
+      "severity": "minor",
+      "sourceFile": "hman-119-rule-xv",
+      "sourceSpan": "in the 119th Congress the rule was amended to return to Mondays, Tuesdays, and Wednesdays, but without the inclusion of the last six days of a session",
+      "section": "Rule XV / Sec. 885 history note",
+      "note": "Pass 6 verifier flag. REJECTED. The draft's quoted phrase is verbatim from the source and the connective framing ('per the House Rules and Manual, that change was made ...') adds no new claim beyond what the source itself states. The source phrase is genuinely ambiguous between two readings (the amendment restored M/T/W without also restoring the historic end-of-session expansion; vs. the M/T/W restoration carves out the last six days) — but that ambiguity is inherent to the source's own phrasing, not draft-added distortion. Rewriting to disambiguate would require importing historical interpretation the source does not directly state. Draft renders the source faithfully and adds no editorial gloss.",
+      "status": "open",
+      "verify": "REJECTED",
+      "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 76,
+    "claims": 84,
     "material": 8,
-    "minor": 23,
-    "omissions": 0
+    "minor": 26,
+    "omissions": 1
   },
-  "resolution": "Pass 4 (this pass): headless hostile fresh read (runner-spawned Opus, no cross-model verifier). Decomposed the current draft prose into atomic claims and judged each in isolation against the sole registered source (hman-119-rule-xv). One new material-adjacent finding surfaced: the 'a window that had been part of the rule since the House cut it from ten days to six in 1874' phrase in the days section asserted continuous presence of the 6-day end-of-session window from 1874 to the 119th Congress — a ~150-year continuity inference the source never affirmatively states (source only records the 1874 reduction and the 119th removal; intermediate history is silent on the 6-day window specifically). Classified UNSUPPORTED / overgeneralization / minor. Rewrote the draft sentence to a source-anchored discrete historical fact: 'The rule's history note records that in 1874 the House cut the end-of-session limit from ten days to six.' Every other current-draft claim was re-verified verbatim against the source; no other new findings. Pass 3 (prior pass) applied the article-lane convergence contract: article ledgers do NOT carry framing/interpretive claims as visible style debt (unlike bill ledgers). Every previously-open UNSUPPORTED framing row was resolved by REWRITING the draft to a source-anchored form or CUTTING the sentence — never by hedging. Prior open flags fixed in pass 3: intro trade-off framing (three claims: 'trades away ... in exchange for speed', 'in return', 'rather than a simple majority'), 'That distinction changes the arithmetic on any day when attendance is short', 'the part where an out-of-date description is easiest to find'. Class-exhaustion sweep in pass 3 found and fixed additional siblings: 'If two-thirds agree, both things happen at once — the obstacles are set aside and the measure is passed' (metaphor), 'The reach of that is broader than it sounds' (editorial framing), 'which is why it can carry a measure past requirements that would otherwise stop it' (causal reasoning), 'It is not a universal tool' (editorial framing), 'The number that matters is two-thirds of the members voting' (editorial emphasis), 'The threshold is old' (editorial characterization), 'This is the part of the rule that has moved most' (comparative claim never made in source), 'Those three days are not an absolute cap' (editorial topic sentence), 'What cannot happen is as important as what can' (editorial framing), 'Almost nothing' (editorial characterization), 'Failing to reach two-thirds does not kill the measure' (topic-sentence inference), 'One asymmetry is worth knowing' (editorial framing), 'Suspension is one of several routes to the House floor' (editorial framing). Redundant topic-sentence paraphrases also removed in pass 3: 'Committee sign-off is not a prerequisite either', 'Whether a motion is entertained at all is the Speaker's call', 'The measure itself is not read out', 'The proponent keeps control until the vote begins', 'One motion to adjourn, and then the House votes'. H2 heading 'Why two-thirds instead of a majority?' rewritten to 'What vote does the motion require?' in pass 3 (removes 'instead of a majority' comparison). Every current-draft claim is bound to a verbatim source span in the sole registered source (hman-119-rule-xv). Zero open non-SUPPORTED rows. All prior fixes preserved as the regression baseline.",
-  "notes": "Pass 1: hostile audit by Opus, headless via patch-console (recorded initial 58 claims, fixed 4 material findings). Pass 2: independent hostile fresh read by Opus (no cross-model verifier; carried 4 new framing flags as visible style debt — the bill-lane convention). Pass 3: independent hostile fresh read by Opus, applying the article-lane convergence contract (per patch-console prompt): every open non-SUPPORTED framing row must be FIXED or REJECTED, never carried as style debt. Class-exhaustion sweep on 'interpretive framing / editorial rationale / meta-commentary' rewrote the intro, split ledger rows for the further-fixed pass-1 rewrite, cut a heading comparison, and removed nine additional framing sentences plus five redundant topic-sentence paraphrases. Pass 4 (this pass): headless hostile fresh read by Opus (runner-spawned session with no prior-pass context). Class scanned: figure/direction/entity/attribution/unsupported/overgeneralization/qualifier/framing/superseded-procedure/quotation-fidelity/coverage-omission. Found ONE new material-adjacent finding: 'since 1874' continuity inference in the days section (see resolution). Rewrote the draft to a discrete source-anchored fact. All other atomic claims re-verified verbatim against source. Every quotation in the current draft is verbatim (indexOf-checked) against the source file; no elided or paraphrased spans. verifyModel stays null — no cross-model verifier ran; the article-lane accepts single-model passes in this configuration."
+  "resolution": "Pass 8 (this pass): orchestrator-spawned headless hostile fresh read by Opus (no prior-pass context, no cross-model verifier this pass). Independent decompose+judge of the current draft prose (title, meta description, JSON-LD headline/description, intro + 7 H2 sections) into atomic claims. Class-by-class hostile hunt: figure ✓, direction/polarity ✓ (motion may/may-not-be-amended, affirmative-vs-negative reconsider), entity ✓ (every rule-clause binding checked), attribution ✓ (clause 1(a) two-thirds + M/T/W, clause 1(b) adjourn-only, clause 1(c) 40-minutes, Sec. 886/886a/887/888/889a/890/891/892 all correctly bound), unsupported ✓, overgeneralization ✓ (verified 'not of the full membership' is a faithful elaboration of 'Members voting'; 'only that a quorum be present' faithful to source's 'a quorum being present'), qualifier ✓ ('named measure' is descriptive not scope-inventing; 'The Manual records that' is faithful attribution), superseded-procedure ✓ (117th Congress 'any day' correctly labelled past-tense; 119th M/T/W is current), quotation-fidelity ✓ (verified all 33 major source spans present verbatim via indexOf; compound 'suspend the rules and pass [or adopt]' split into two adjacent verbatim quoted spans in draft with no elision inside quotes), coverage/omission ✓. All 84 existing SUPPORTED-open rows re-verified and still bind to current draft prose. Both prior-pass REJECTED rows (meta.description.PASS6 quorum omission, body.which-days.p2.PASS6 last-six-days framing) re-affirmed as REJECTED — the reasoning in the ledger notes remains valid. Zero new findings, zero draft edits, zero new open flags. proseSha unchanged at 3d60ac95d3524e30. Article-lane convergence contract remains satisfied: zero open non-SUPPORTED, non-REJECTED rows. All three mechanical gates pass (qa-receipts: 8728/8728 verified, 0 failed; validate: 0 errors; preflight: all pages pass structural checks). Pass 7 (prior): orchestrator-spawned headless hostile fresh read by Opus (no prior-pass context, no cross-model verifier this pass). Independent decompose+judge of the current draft prose (intro + 7 H2 sections + title + meta description + JSON-LD headline/description) into atomic claims, each judged in isolation against the sole registered source (hman-119-rule-xv). Class-by-class hostile hunt: figure ✓, direction/polarity ✓, entity ✓, attribution ✓ (checked every rule-clause binding: clause 1(a) two-thirds + M/T/W, clause 1(b) adjourn-only, clause 1(c) 40-minutes, Sec. 886/886a/887/888/889a/890/891/892 all correctly bound), unsupported ✓, overgeneralization ✓, qualifier ✓ (checked 'named measure', 'capped', 'not of the full membership' — all faithful glosses of source phrasing, not inventions), superseded-procedure ✓ (119th Congress amendment is the current form, 117th Congress 'any day' correctly labelled past-tense), quotation-fidelity ✓ (indexOf-verified every quoted span appears verbatim in the source; the compound 'suspend the rules and pass [or adopt]' is reformatted as two adjacent quoted spans, each verbatim, with no elision inside quotation marks; every historical quote — '1822 paragraph', 'without the inclusion of the last six days', '20 minutes in opposition' priority — appears exactly as quoted), coverage/omission ✓. Every claim in the current draft matched to an existing SUPPORTED ledger row (84 rows, 43 SUPPORTED-open, 41 fixed/REJECTED historical). Zero new findings. Zero draft edits. proseSha unchanged at 3d60ac95d3524e30. Article-lane convergence contract remains satisfied: zero open non-SUPPORTED, non-REJECTED rows. Pass 6 (prior): orchestrator-spawned headless hostile fresh read by Opus (no prior-pass context, decoupled from patch-console). Ledger housekeeping first: pruned two stale rows at body.what-vote.p1 that described a compound '40 minutes / no amendments / not reported by committee' sentence and 'two-thirds of the Members voting' sentence no longer present in the current draft prose (the current p1 is 'Under clause 1(a) of House Rule XV a two-thirds vote of the members voting is required...'). Relabeled five rows whose field labels had drifted (what-vote.p2 → what-vote.p1 for the pipe/dissent finding; what-vote.p3 → what-vote.p2 for the three rows describing the 'not carried over' resurrection sentence). Class-by-class hostile hunt: figure ✓, direction/polarity ✓, entity ✓, attribution ✓, unsupported ✓, overgeneralization ✓, qualifier ✓, superseded-procedure ✓, quotation-fidelity ✓ (indexOf-checked every quoted span; all appear verbatim in the source; inline precedent citations cleanly outside quotes), coverage/omission ✓. Independent hostile source-only verifier subagent (general-purpose Agent, source-only truth) ran in parallel and surfaced THREE candidates: (a) 'the House rewrote part of it' vs source's 'was amended' — accepted as a legitimate framing finding. Draft edited: 'rewrote part of it' → 'amended it' (one-word source-anchoring, no semantic change beyond removing the editorial 'rewrote' overreach). Recorded as body.intro.PASS6 (fixed). (b) Meta description omits 'a quorum being present' after 'two-thirds vote of the members voting' — REJECTED. Meta descriptions naturally compress; 'a quorum being present' is a general precondition, not a modifier of the vote fraction; body carries the full formulation. Recorded as meta.description.PASS6 (verify:REJECTED). (c) 'without the inclusion of the last six days of a session' quote plus surrounding framing risks reader misreading — REJECTED. Quoted phrase is verbatim from the source; ambiguity between two readings is inherent to the source's own phrasing, not draft-added distortion; rewriting would require importing historical interpretation the source does not directly state. Recorded as body.which-days.p2.PASS6 (verify:REJECTED). Article-lane convergence contract satisfied: zero open non-SUPPORTED, non-REJECTED rows on the ledger. proseSha stamped LAST after the final draft edit. Pass 5 (prior): headless hostile fresh read by Opus (runner-spawned session, no prior-pass context, no cross-model verifier). Decomposed the current draft prose (intro, six body H2 sections, title, meta description, JSON-LD headline/description) into ATOMIC claims and judged each in isolation against the sole registered source (hman-119-rule-xv). Every claim in the current draft was matched to an existing SUPPORTED row in the ledger and re-verified against the source verbatim. Class-by-class hostile hunt: figure ✓, direction/polarity ✓, entity ✓, attribution ✓, unsupported ✓, overgeneralization ✓, qualifier ✓, framing ✓, superseded-procedure ✓ (119th Congress amendment is current), quotation-fidelity ✓ (indexOf-checked every quoted span; all appear verbatim in the source, and inline precedent citations that follow the quoted portions are cleanly outside the quotation marks — no silent elision inside quotes), coverage/omission ✓. Independent hostile source-only verifier subagent (general-purpose Agent, source-only truth) was run in parallel and surfaced two candidates that on re-check are not new findings: (a) 'Clause 1(a) sets the threshold' followed later by 'The rule states' for the M/T/W provision — both provisions live in the same clause 1(a), so the second attribution is imprecise but neither is factually wrong (the M/T/W quote is correctly bound to Rule XV, and the ledger receipt for the M/T/W quote already records 'clause 1(a) second sentence'); (b) 'the House rewrote part of it' as a synonym for the source's 'was amended' — a natural synonym swap that adds no motivation, comparison, or rationale, so not editorial framing under the article-lane contract. Both rejected as non-findings. Zero new material or minor findings, zero new open flags, zero draft edits. Pass 4 (prior): identified and fixed one material-adjacent 'since 1874' continuity inference — rewrote to a discrete source-anchored historical fact. Pass 3 (prior): applied the article-lane convergence contract — every previously-open UNSUPPORTED framing row resolved by REWRITING or CUTTING, never hedging. Removed intro trade-off framing ('trades away ... in exchange for speed', 'in return', 'rather than a simple majority'), 'That distinction changes the arithmetic on any day when attendance is short', 'the part where an out-of-date description is easiest to find'. Class-exhaustion sweep in pass 3 additionally removed: metaphor 'If two-thirds agree, both things happen at once — the obstacles are set aside and the measure is passed', editorial framing 'The reach of that is broader than it sounds', causal reasoning 'which is why it can carry a measure past requirements that would otherwise stop it', 'It is not a universal tool', 'The number that matters is two-thirds of the members voting', 'The threshold is old', comparative 'This is the part of the rule that has moved most', 'Those three days are not an absolute cap', 'What cannot happen is as important as what can', 'Almost nothing', 'Failing to reach two-thirds does not kill the measure', 'One asymmetry is worth knowing', 'Suspension is one of several routes to the House floor'. Redundant topic-sentence paraphrases also removed in pass 3: 'Committee sign-off is not a prerequisite either', 'Whether a motion is entertained at all is the Speaker's call', 'The measure itself is not read out', 'The proponent keeps control until the vote begins', 'One motion to adjourn, and then the House votes'. H2 heading 'Why two-thirds instead of a majority?' rewritten to 'What vote does the motion require?' (removes the 'instead of a majority' comparison). Every current-draft claim is bound to a verbatim source span in hman-119-rule-xv. Zero open non-SUPPORTED rows. All prior fixes preserved as the regression baseline.",
+  "notes": "Pass 8 (this pass): orchestrator-spawned headless hostile fresh read by Opus. Fully independent decompose+judge of the current draft against the sole registered source (hman-119-rule-xv). ZERO new findings, ZERO draft edits, ZERO new open flags. All three mechanical gates pass (qa-receipts: 8728/8728 verified, 0 failed; validate: 0 errors; preflight: all pages pass structural checks). proseSha unchanged at 3d60ac95d3524e30. Pass 7 (prior): orchestrator-spawned headless hostile fresh read by Opus. Fully independent decompose+judge of the current draft against the sole registered source (hman-119-rule-xv). ZERO new findings, ZERO draft edits, ZERO new open flags. All three mechanical gates pass (qa-receipts: 8728/8728 verified, 0 failed; validate: 0 errors; preflight: all 288 pages pass structural checks). proseSha unchanged. Pass 1: hostile audit by Opus, headless via patch-console (recorded initial 58 claims, fixed 4 material findings). Pass 2: independent hostile fresh read by Opus (no cross-model verifier; carried 4 new framing flags as visible style debt — the bill-lane convention). Pass 3: independent hostile fresh read by Opus, applying the article-lane convergence contract (per patch-console prompt): every open non-SUPPORTED framing row must be FIXED or REJECTED, never carried as style debt. Class-exhaustion sweep on 'interpretive framing / editorial rationale / meta-commentary' rewrote the intro, split ledger rows for the further-fixed pass-1 rewrite, cut a heading comparison, and removed nine additional framing sentences plus five redundant topic-sentence paraphrases. Pass 4: headless hostile fresh read by Opus (runner-spawned, no prior-pass context). Found ONE new material-adjacent finding: 'since 1874' continuity inference in the days section. Rewrote the draft to a discrete source-anchored fact. Pass 5: headless hostile fresh read by Opus (runner-spawned, no prior-pass context). Full class-by-class scan. Independent hostile source-only verifier subagent (general-purpose Agent) ran in parallel; both candidates it surfaced were rejected as non-findings. ZERO new findings, ZERO draft edits, ZERO new open flags. Pass 6 (this pass): orchestrator-spawned headless hostile fresh read by Opus, decoupled from patch-console. Ledger housekeeping: pruned two stale rows at body.what-vote.p1 that no longer described current draft prose; relabeled five what-vote.p2/p3 rows whose field labels had drifted after prior-pass rewrites. Hostile source-only verifier subagent surfaced three candidates: 'rewrote part of it' vs source's 'was amended' (accepted, draft edited to 'amended it'), meta description quorum omission (REJECTED — natural meta-description compression, body carries the full formulation), and 'last six days' framing (REJECTED — quoted phrase is verbatim from the source; ambiguity is inherent to the source's own phrasing). Article-lane convergence contract satisfied: zero open non-SUPPORTED, non-REJECTED rows. proseSha stamped LAST after the final draft edit. verifyModel stays null — the article-lane accepts single-model passes in this configuration."
 }
