@@ -34,6 +34,7 @@ const path = require('path');
 const { escHtml } = require('../util.js');
 const entity = require('./lib/entity.js');
 const { displayCode } = require('./lib/bill-code.js');
+const { sponsorInline } = require('./lib/sponsor.js');
 const { THRESHOLD, detectEvents, eventFor, snapshotStages } = require('./lib/dispatch-events.js');
 
 const ROOT  = path.join(__dirname, '..');
@@ -200,7 +201,7 @@ function renderDispatch(bill, event, { publishedAt, changelogUrl }) {
     `      <p>${escHtml(displayCode(bill.id))} &mdash; ${escHtml(bill.title || '')}. This page records the action only; the source-verified analysis of what the bill contains is on <a href="${escHtml(billUrl(bill))}">the bill's page</a>.</p>`,
     whatItDoes(bill),
     `      <h2>Where does it stand now?</h2>
-      <p>Stage: <strong>${escHtml(bill.stageLabel || bill.stage || '')}</strong>, as of ${escHtml(dateHuman(bill.stageDate || event.eventDate))}. Sponsored by ${escHtml(bill.sponsor || 'a member of Congress')}.</p>`,
+      <p>Stage: <strong>${escHtml(bill.stageLabel || bill.stage || '')}</strong>, as of ${escHtml(dateHuman(bill.stageDate || event.eventDate))}. Sponsored by ${escHtml(sponsorInline(bill) || 'a member of Congress')}.</p>`,
     sourcesBox(bill, event, changelogUrl),
   ].filter(Boolean).join('\n\n');
 

@@ -106,16 +106,9 @@ function congressGovUrl(bill) {
   return `https://www.congress.gov/bill/${congress}th-congress/${seg}/${num}`;
 }
 
-// "Sen. Britt, Katie Boyd (R-AL)" -> "Katie Boyd Britt" for schema.org Person.
-function sponsorPersonName(raw) {
-  let s = String(raw || '').replace(/\s*\([^)]*\)\s*$/, '')
-    .replace(/^(Sen\.|Rep\.|Dr\.|Mr\.|Ms\.)\s+/, '').trim();
-  if (s.includes(',')) {
-    const [last, first] = s.split(',').map(x => x.trim());
-    s = `${first} ${last}`.trim();
-  }
-  return s;
-}
+// Sponsor prose formatting lives in lib/sponsor.js -- shared with the Dispatch
+// lane, which rendered the raw last-name-first field until this was extracted.
+const { sponsorPersonName, sponsorInline } = require('./lib/sponsor.js');
 
 // ── v1.1 answer-layer helpers (structured-field templating only) ─────────────
 // These assemble the visible "answer" passages. HARD RULE: prose content is
@@ -156,16 +149,6 @@ function measureNoun(bill) {
   if (t === 'HCONRES' || t === 'SCONRES') return 'concurrent resolution';
   if (t === 'HRES' || t === 'SRES') return 'resolution';
   return 'bill';
-}
-
-// "Sen. Britt, Katie Boyd (R-AL)" -> "Sen. Katie Boyd Britt (R-AL)" for prose.
-function sponsorInline(bill) {
-  const raw = String(bill.sponsor || '').trim();
-  if (!raw) return '';
-  const hon = (raw.match(/^(Sen\.|Rep\.|Del\.|Com\.|Resident Commissioner)\s+/) || [])[1] || '';
-  const party = (raw.match(/\(([^)]*)\)\s*$/) || [])[1] || '';
-  const name = sponsorPersonName(raw);
-  return `${hon ? hon + ' ' : ''}${name}${party ? ` (${party})` : ''}`.trim();
 }
 
 // Short, human title for the "What does <X> do?" heading. Uses the bill's short

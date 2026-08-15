@@ -3,7 +3,7 @@
   "billId": "119-HR-9770",
   "code": "H.R. 9770",
   "title": "Continuing Appropriations Act, 2027",
-  "preparedAt": "2026-08-15T00:38:23Z",
+  "preparedAt": "2026-08-15T01:27:36Z",
   "preparedFromStage": "house",
   "auditedFingerprint": "sha256:53ac1d753674e99ccf8c90947a0057872f68d11dd60544a2dbea989b721ab473",
   "expires": "2026-10-05",
@@ -13,7 +13,7 @@
       "verb": "passed the Senate",
       "chamber": "Senate",
       "renderKind": "passed-senate",
-      "maskedSha": "sha256:5b649fd58a7f5c821603488a92ebbd5151b88bd1f221b5146fb541f8a5863cfc",
+      "maskedSha": "sha256:2943bbbe1bf5f43dd4e1c7dfe458f69ece61b63aa0658b40dd0c1e3fd1e8f2ea",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -41,13 +41,13 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     },
     "failed-floor": {
       "verb": "failed on the Senate floor",
       "chamber": "Senate",
       "renderKind": "failed-floor",
-      "maskedSha": "sha256:651c3e015313df3acba374578ad7125d8b0364ef10c515a23e17200e22cba1ba",
+      "maskedSha": "sha256:c156cfaffd171d12c3565d34e554383631f25e52446a01e326302ad0ce9d7f40",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -75,13 +75,13 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     },
     "signed": {
       "verb": "was signed into law",
       "chamber": null,
       "renderKind": "signed",
-      "maskedSha": "sha256:c68962625a0d0a02e251eacbed5b140ff61d70dbe088ac2b59784ba946d4a0b7",
+      "maskedSha": "sha256:34215de54fdf7def5e1515461e1a4ca2fc3d211ef50b8d1a6fd593735072d14d",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -109,13 +109,13 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     },
     "vetoed": {
       "verb": "was vetoed",
       "chamber": null,
       "renderKind": "vetoed",
-      "maskedSha": "sha256:50a5c9bd02ac5565cb63399440f9caa2dc9ba6d8a878aeefd652feebd10fb3ec",
+      "maskedSha": "sha256:30173cf5114867b35d00c7f045b005328342f2c13cb846a4664545ca2bdc9512",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -143,13 +143,13 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     },
     "amended": {
       "verb": "passed the Senate in amended form",
       "chamber": "Senate",
       "renderKind": "passed-senate",
-      "maskedSha": "sha256:f0274b9d022c77e3ec6e66a7d4fd5ab8eb53f1643d80ab2c5a3905b06a5363a7",
+      "maskedSha": "sha256:b7a128c7afb03d00477c15e478bf1e78b491ea569116f863e4f03820ea3a841b",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -177,13 +177,13 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     },
     "pulled": {
       "verb": "was pulled from the floor schedule",
       "chamber": null,
       "renderKind": "pulled",
-      "maskedSha": "sha256:9ac742be70f7c4e3432fd2711e52731570969baeb0025e7c1d5333a470f75cd3",
+      "maskedSha": "sha256:69ce930c97a31d9bc45a9531c441900efb428401e527bb328bfb89e6435503b0",
       "checks": [
         {
           "check": "figures-in-audited-entry",
@@ -211,7 +211,7 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:38:23Z"
+      "preparedAt": "2026-08-15T01:27:36Z"
     }
   }
 }
