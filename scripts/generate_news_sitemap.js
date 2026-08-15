@@ -98,10 +98,22 @@ function main() {
 
   // Dispatches are the reason this file exists: event-pegged pages published
   // within minutes of a floor vote are the only content here that is news in
-  // Google's sense. Evergreen articles stay eligible but essentially never
-  // fall inside a 48-hour window.
+  // Google's sense.
+  //
+  // This used to rely on evergreen articles "essentially never falling inside a
+  // 48-hour window" — true only while nothing was being published. The Phase 3
+  // explainer lane stamps datePublished at publish time, so the first explainer
+  // published landed straight in the Google News feed as breaking news. An
+  // evergreen civics guide is not news, and submitting it as news is a bad
+  // signal from a publisher whose whole pitch is accuracy.
+  //
+  // The lane is now decided by SCHEMA, which is what actually distinguishes
+  // them (spec §3: dispatch = NewsArticle, explainer = Article) rather than by
+  // an assumption about dates. An article with no readable schema is excluded:
+  // absent evidence must not mean "treat it as news".
   const { allDispatches } = require('./lib/dispatch-meta.js');
-  const candidates = [...allDispatches(), ...allArticles()];
+  const isNews = a => a.schemaType === 'NewsArticle';
+  const candidates = [...allDispatches(), ...allArticles().filter(isNews)];
   const fresh = candidates.filter(withinWindow).slice(0, MAX_URLS);
 
   const entries = fresh.map(a => `  <url>
