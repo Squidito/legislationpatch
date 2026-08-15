@@ -23,5 +23,26 @@ an event that matches no prepared branch does not publish — it is logged block
 with `needsHuman: true` and waits for James. A bill with no record here behaves
 exactly as it did in Phase 1.
 
+## The seven branch kinds
+
+Five are the D2 threshold kinds — `passed-house`, `passed-senate`, `failed-floor`,
+`signed`, `vetoed`. Two behave differently (James, 2026-08-14):
+
+- **`amended`** — auto-selectable, but not a threshold kind of its own. A bill
+  passing in amended form fires an *ordinary passage event*; what marks it is the
+  vote record's question (`"On Motion to Concur in the Senate Amendment"`). When
+  the record has an amended branch and the vote says amendment, that branch wins
+  and its verb ("passed the Senate in amended form") replaces the plain one.
+  **This is the normal path for a CR.** If the vote says amendment and no amended
+  branch was prepared, it BLOCKS — fail-closed, because the only cleared draft
+  would claim the bill passed unqualified.
+  Its `renderKind` is the passage kind, since the page's slug comes from the
+  event kind, not from our label for the branch.
+- **`pulled`** — **manual only.** A pulled bill's stage never changes, so no event
+  ever fires, and pulls are not observable from any feed found (0 of 376 scheduled
+  items across 20 session weeks carried a removal timestamp). It exists so a
+  cleared page is *ready* if a bill gets yanked. **Publishing it is a deliberate
+  human act and is deliberately not wired to anything automatic.**
+
 Re-run `dispatch:prepare:check` after any re-audit: a changed cache entry voids
 the prepared QA by design.

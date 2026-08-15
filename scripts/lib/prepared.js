@@ -46,20 +46,44 @@ const PREPARED = path.join(ROOT, 'data', 'prepared');
 /**
  * The branch kinds that can exist.
  *
- * These are the D2 threshold kinds and ONLY those, because a branch for an
- * event that can never fire is a page that can never publish. Two outcomes
- * named in the spec are deliberately absent:
+ * The first five are the D2 threshold kinds -- the outcomes the event detector
+ * can produce on its own. The last two are James's call (2026-08-14) and behave
+ * differently on purpose:
  *
- *   "amended" -- a bill amended on the floor has not crossed the D2 threshold;
- *                the passage vote that follows is what produces an event.
- *   "pulled"  -- measured 2026-08-14 against all 20 session weeks of the House
- *                floor schedule: 0 of 376 scheduled items ever carried a
- *                remove-date. A pull is not observable from any feed found, so
- *                nothing could ever select such a branch.
+ *   "amended" -- AUTO-SELECTABLE, but not a threshold kind of its own. A bill
+ *                that passes in amended form fires an ordinary passage event;
+ *                what marks it is the vote record's question ("On Motion to
+ *                Concur in the Senate Amendment"). When a record carries an
+ *                amended branch and the vote says amendment, that branch is
+ *                selected instead of the plain passage one and its verb is
+ *                used. This is the normal path for a CR, which is exactly why
+ *                it is worth having.
+ *   "pulled"  -- MANUAL ONLY. A pulled bill's stage does not change, so no
+ *                event ever fires, and pulls are not observable from any feed
+ *                found (0 of 376 scheduled items across 20 session weeks of the
+ *                House floor schedule carried a remove-date). It can be drafted
+ *                and cleared so a page is ready; publishing it is a deliberate
+ *                human act and is NOT wired to anything automatic.
  *
  * See _personal/PHASE2-SCHEDULE-RESEARCH.md §1.1 and §4.
  */
-const BRANCH_KINDS = ['passed-house', 'passed-senate', 'failed-floor', 'signed', 'vetoed'];
+const BRANCH_KINDS = ['passed-house', 'passed-senate', 'failed-floor', 'signed', 'vetoed', 'amended', 'pulled'];
+
+/** Branches nothing may ever select automatically. */
+const MANUAL_ONLY = new Set(['pulled']);
+
+/**
+ * Does this vote record describe passage in amended form?
+ *
+ * Reads the stored question, which is the chamber's own words -- across the
+ * corpus that is "On Motion to Concur in the Senate Amendment(s)". Both real
+ * shapes (a chamber amending and passing, or concurring in the other chamber's
+ * amendment) mean the same thing for the reader: what passed was not the text
+ * this chamber started with.
+ */
+function voteIndicatesAmendment(vote) {
+  return !!vote && /amendment/i.test(String(vote.question || ''));
+}
 
 /** Stage -> the kind that fires when a bill reaches it (mirrors THRESHOLD). */
 const KIND_FOR_STAGE = {
@@ -174,14 +198,30 @@ const maskedFingerprint = html => sha256(maskVolatile(html));
  */
 function selectBranch(rec, event) {
   if (!rec || !rec.branches) return { ok: false, reason: 'no prepared record' };
+
+  // A passage that the record shows was in amended form takes the amended
+  // branch, whose verb differs. Checked BEFORE the plain kind lookup, because
+  // both branches can legitimately be prepared for the same event kind.
+  if (voteIndicatesAmendment(event.vote)) {
+    const a = rec.branches.amended;
+    if (a) return { ok: true, key: 'amended', branch: a, verbOverride: a.verb };
+    // Fail closed. The vote says the text changed; the only cleared draft says
+    // it passed unqualified. That is a page a human should see first.
+    return { ok: false, reason: `the vote record says this passed in amended form ("${String(event.vote.question || '').slice(0, 48)}") and no amended branch was prepared` };
+  }
+
   const b = rec.branches[event.kind];
   if (!b) {
-    return { ok: false, reason: `event "${event.kind}" matches no prepared branch (prepared: ${Object.keys(rec.branches).join(', ') || 'none'})` };
+    const avail = Object.keys(rec.branches).filter(k => !MANUAL_ONLY.has(k));
+    return { ok: false, reason: `event "${event.kind}" matches no prepared branch (prepared: ${avail.join(', ') || 'none'})` };
+  }
+  if (MANUAL_ONLY.has(event.kind)) {
+    return { ok: false, reason: `branch "${event.kind}" is manual-only and may never be selected automatically` };
   }
   if (b.verb !== event.verb) {
     return { ok: false, reason: `branch "${event.kind}" was prepared for "${b.verb}" but the event is "${event.verb}"` };
   }
-  return { ok: true, branch: b };
+  return { ok: true, key: event.kind, branch: b };
 }
 
 /**
@@ -200,7 +240,7 @@ function checkPrepared({ rec, bill, event, html, today }) {
 
   const sel = selectBranch(rec, event);
   out.push({ name: 'prepared-branch-matched', ok: sel.ok,
-             detail: sel.ok ? `branch "${event.kind}" selected` : sel.reason });
+             detail: sel.ok ? `branch "${sel.key}" selected` : sel.reason });
 
   const day = String(today || '').slice(0, 10);
   const expired = rec.expires && day && day > rec.expires;
@@ -230,8 +270,8 @@ function checkPrepared({ rec, bill, event, html, today }) {
 }
 
 module.exports = {
-  PREPARED, BRANCH_KINDS, KIND_FOR_STAGE,
+  PREPARED, BRANCH_KINDS, KIND_FOR_STAGE, MANUAL_ONLY,
   preparedPath, loadPrepared, listPrepared, savePrepared,
   auditedFingerprint, maskVolatile, maskedFingerprint,
-  selectBranch, checkPrepared, sha256,
+  selectBranch, checkPrepared, sha256, voteIndicatesAmendment,
 };

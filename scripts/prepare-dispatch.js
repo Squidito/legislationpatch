@@ -109,6 +109,25 @@ function branchesFor(bill, requested) {
     else if (kind === 'passed-senate') out.push({ kind, chamber: 'Senate', verb: 'passed the Senate' });
     else if (kind === 'signed')   out.push({ kind, chamber: null, verb: 'was signed into law' });
     else if (kind === 'vetoed')   out.push({ kind, chamber: null, verb: 'was vetoed' });
+    // Passage in amended form. "in amended form" is true of both real shapes --
+    // a chamber amending and passing, and a chamber concurring in the other
+    // chamber's amendment -- and both mean the same thing to a reader: what
+    // passed is not the text this chamber started with.
+    else if (kind === 'amended') {
+      const ch = opt('chamber') || next;
+      if (!ch) { skipped.push([kind, 'cannot resolve which chamber would amend it -- pass --chamber']); continue; }
+      // renderKind, not kind: "amended" is OUR label for the branch, but the
+      // event that actually fires is an ordinary passage, and the page's slug
+      // and URLs are built from the event kind. Rendering the specimen as
+      // "amended" would fingerprint a slug the real page never has.
+      out.push({
+        kind, chamber: ch, verb: `passed the ${ch} in amended form`,
+        renderKind: ch === 'Senate' ? 'passed-senate' : 'passed-house',
+      });
+    }
+    // Manual only: no event ever fires for a pull, so this is a cleared draft
+    // sitting ready, not something the lane can publish by itself.
+    else if (kind === 'pulled') out.push({ kind, chamber: null, verb: 'was pulled from the floor schedule' });
     else if (kind === 'failed-floor') {
       const ch = opt('chamber') || next;
       // No chamber means no honest verb -- "failed on the floor" of WHERE? The
@@ -129,7 +148,7 @@ function specimenEvent(bill, br) {
     billId: bill.id,
     code: bill.code || bill.id,
     title: bill.title || '',
-    kind: br.kind,
+    kind: br.renderKind || br.kind,
     chamber: br.chamber,
     verb: br.verb,
     toLabel: bill.stageLabel || bill.stage || '',
@@ -182,7 +201,7 @@ function cmdCheck() {
     // The masked render must still reproduce, or the generator moved under it.
     let drift = 0;
     for (const [kind, br] of Object.entries(rec.branches || {})) {
-      const ev = specimenEvent(bill, { kind, chamber: br.chamber, verb: br.verb });
+      const ev = specimenEvent(bill, { kind, renderKind: br.renderKind, chamber: br.chamber, verb: br.verb });
       const html = gen.renderDispatch(bill, ev, {
         publishedAt: sentinelPublishedAt(bill), changelogUrl: '/changelog/',
       });
@@ -230,6 +249,7 @@ function cmdPrepare(billId) {
     prepared[br.kind] = {
       verb: br.verb,
       chamber: br.chamber,
+      renderKind: br.renderKind || br.kind,
       maskedSha: P.maskedFingerprint(html),
       checks,
       preparedAt: new Date().toISOString().replace(/\.\d+Z$/, 'Z'),
@@ -261,8 +281,14 @@ function cmdPrepare(billId) {
   }
 
   const file = P.savePrepared(rec);
+  const auto = Object.keys(prepared).filter(k => !P.MANUAL_ONLY.has(k));
+  const manual = Object.keys(prepared).filter(k => P.MANUAL_ONLY.has(k));
   console.log(`\n  wrote ${path.relative(ROOT, file)} — ${Object.keys(prepared).length} branch(es) cleared${blocked ? `, ${blocked} blocked` : ''}.`);
-  console.log('  These branches publish automatically when the matching event fires.');
+  console.log(`  Auto:   ${auto.join(', ')} — these publish when the matching event fires.`);
+  if (manual.length) {
+    console.log(`  Manual: ${manual.join(', ')} — cleared and ready, but NO event can select them.`);
+    console.log('          Publishing one is a deliberate human act and is not wired to anything.');
+  }
   console.log('  An event matching NO prepared branch will BLOCK and be flagged for review.');
 }
 

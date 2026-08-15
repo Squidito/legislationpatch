@@ -38,7 +38,7 @@ const LOG  = path.join(DATA, 'dispatch-log.json');
 const { runGate } = require('./dispatch-gate.js');
 const gen = require('./generate_dispatch.js');
 const { THRESHOLD, detectEvents, eventFor, snapshotStages } = require('./lib/dispatch-events.js');
-const { loadPrepared, checkPrepared } = require('./lib/prepared.js');
+const { loadPrepared, checkPrepared, selectBranch } = require('./lib/prepared.js');
 
 const args = process.argv.slice(2);
 const opt  = n => { const i = args.indexOf(`--${n}`); return i >= 0 ? args[i + 1] : null; };
@@ -96,8 +96,19 @@ function main() {
 
   const published = [], blocked = [];
 
-  for (const ev of events) {
+  for (let ev of events) {
     const bill = bills.find(b => b.id === ev.billId);
+
+    // A passage the vote record shows was in amended form renders with the
+    // amended branch's verb ("passed the Senate in amended form"), not the
+    // plain one. Applied ONLY when the bill has a prepared record carrying that
+    // branch, so an un-prepared bill renders exactly as it did in Phase 1 and
+    // the corpus regression bar is untouched.
+    const preparedRec = loadPrepared(ev.billId);
+    if (preparedRec) {
+      const sel = selectBranch(preparedRec, ev);
+      if (sel.ok && sel.verbOverride && sel.verbOverride !== ev.verb) ev = { ...ev, verb: sel.verbOverride };
+    }
     // D3(a): the edition is written in the same pass, so this is normally
     // two-way. A dispatch that was blocked, fixed, and published after its
     // edition froze gets a one-way link to the hub instead -- James's ruling,
@@ -136,7 +147,7 @@ function main() {
     let preparedResults = [];
     try {
       preparedResults = checkPrepared({
-        rec: loadPrepared(ev.billId), bill, event: ev,
+        rec: preparedRec, bill, event: ev,
         html: draft.html, today: publishedAt,
       });
     } catch (e) {

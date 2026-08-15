@@ -3,7 +3,7 @@
   "billId": "119-HR-9770",
   "code": "H.R. 9770",
   "title": "Continuing Appropriations Act, 2027",
-  "preparedAt": "2026-08-15T00:14:15Z",
+  "preparedAt": "2026-08-15T00:38:23Z",
   "preparedFromStage": "house",
   "auditedFingerprint": "sha256:53ac1d753674e99ccf8c90947a0057872f68d11dd60544a2dbea989b721ab473",
   "expires": "2026-10-05",
@@ -12,6 +12,7 @@
     "passed-senate": {
       "verb": "passed the Senate",
       "chamber": "Senate",
+      "renderKind": "passed-senate",
       "maskedSha": "sha256:5b649fd58a7f5c821603488a92ebbd5151b88bd1f221b5146fb541f8a5863cfc",
       "checks": [
         {
@@ -40,11 +41,12 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:14:15Z"
+      "preparedAt": "2026-08-15T00:38:23Z"
     },
     "failed-floor": {
       "verb": "failed on the Senate floor",
       "chamber": "Senate",
+      "renderKind": "failed-floor",
       "maskedSha": "sha256:651c3e015313df3acba374578ad7125d8b0364ef10c515a23e17200e22cba1ba",
       "checks": [
         {
@@ -73,11 +75,12 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:14:15Z"
+      "preparedAt": "2026-08-15T00:38:23Z"
     },
     "signed": {
       "verb": "was signed into law",
       "chamber": null,
+      "renderKind": "signed",
       "maskedSha": "sha256:c68962625a0d0a02e251eacbed5b140ff61d70dbe088ac2b59784ba946d4a0b7",
       "checks": [
         {
@@ -106,11 +109,12 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:14:15Z"
+      "preparedAt": "2026-08-15T00:38:23Z"
     },
     "vetoed": {
       "verb": "was vetoed",
       "chamber": null,
+      "renderKind": "vetoed",
       "maskedSha": "sha256:50a5c9bd02ac5565cb63399440f9caa2dc9ba6d8a878aeefd652feebd10fb3ec",
       "checks": [
         {
@@ -139,7 +143,75 @@
           "detail": "no named organisation or person quoted or characterised"
         }
       ],
-      "preparedAt": "2026-08-15T00:14:15Z"
+      "preparedAt": "2026-08-15T00:38:23Z"
+    },
+    "amended": {
+      "verb": "passed the Senate in amended form",
+      "chamber": "Senate",
+      "renderKind": "passed-senate",
+      "maskedSha": "sha256:f0274b9d022c77e3ec6e66a7d4fd5ab8eb53f1643d80ab2c5a3905b06a5363a7",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:38:23Z"
+    },
+    "pulled": {
+      "verb": "was pulled from the floor schedule",
+      "chamber": null,
+      "renderKind": "pulled",
+      "maskedSha": "sha256:9ac742be70f7c4e3432fd2711e52731570969baeb0025e7c1d5333a470f75cd3",
+      "checks": [
+        {
+          "check": "figures-in-audited-entry",
+          "ok": true,
+          "detail": "every figure traces to the audited cache entry"
+        },
+        {
+          "check": "no-unsourced-qualifiers",
+          "ok": true,
+          "detail": "no unsourced qualifiers outside audited text"
+        },
+        {
+          "check": "no-smart-quotes",
+          "ok": true,
+          "detail": "no smart quotes in machine-read markup"
+        },
+        {
+          "check": "newsarticle-fields",
+          "ok": true,
+          "detail": "NewsArticle has every required field and its image exists"
+        },
+        {
+          "check": "no-named-parties",
+          "ok": true,
+          "detail": "no named organisation or person quoted or characterised"
+        }
+      ],
+      "preparedAt": "2026-08-15T00:38:23Z"
     }
   }
 }
