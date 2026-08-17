@@ -30,7 +30,7 @@
     "@id": "https://legislationpatch.com/#organization"
   },
   "datePublished": "2026-05-08",
-  "dateModified": "2026-08-12",
+  "dateModified": "2026-08-16",
   "url": "https://legislationpatch.com/articles/methodology.html",
   "breadcrumb": {
     "@type": "BreadcrumbList",
@@ -175,6 +175,8 @@
         <p><strong>Stage 2, adversarial cross-model review.</strong> Automated validation is confined to quantities it can pattern-match; it does not detect an entity supplied from memory or a correct figure attributed to the wrong account. Each analysis is therefore re-examined in a second pass conducted by a different model than the one that produced the draft, decoupling reviewer from author to reduce correlated error. The review is claim-atomic: each proposition is classified as supported by a quoted source span, contradicted, or unsupported, and unsupported propositions are re-sourced or struck. It targets the error classes automated checks miss: directional inversion, invented qualifiers, and misattribution.</p>
 
         <p><strong>Stage 3, the claim ledger.</strong> Each analysis retains a per-bill record of the claims examined and the source line against which each was verified. The ledger makes verification reproducible: when a bill's text is amended, affected claims are re-checked against the revised source, and coverage across the corpus is auditable rather than asserted.</p>
+
+        <p><strong>Explainer articles.</strong> Standalone articles on congressional procedure are held to the same sourcing bar as bill analyses, with one addition: because an explainer has no bill text, its authority — the chamber rule, statute, or official manual it describes — is fetched and stored before a word is drafted, and every claim is bound to a verbatim span of that stored text. A model different from the one that drafted the article then audits it claim by claim, repeatedly, until two consecutive passes surface nothing; an article that does not converge is not published. Zero unresolved flags is the bar — stricter than the bill pipeline, which may carry annotated style debt. A person reviews the audited draft beside its claim ledger and makes the publication decision; no article publishes without that review.</p>
 
         <p><strong>Scope and limitations.</strong> These procedures establish faithfulness, the agreement between an analysis and its cited source. They do not establish legal interpretation, do not substitute for professional legal judgment, and cannot validate a claim about a statute that was not retrieved; such claims are sourced or omitted. Errors identified after publication are corrected and recorded on the <a href="../corrections.html">Corrections</a> page.</p>
 

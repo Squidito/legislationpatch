@@ -171,6 +171,24 @@ ok('search-index.json contains it');
 const pv = runNode('scripts/qa-provenance-stamp.js', 'qa-provenance');
 if (pv.ok) ok('qa-provenance stamped'); else note('qa-provenance stamp failed (non-blocking): ' + pv.out.slice(-200));
 
+// Register the article with the audit-freshness tripwire (qa-ledger-regression's
+// baseline), SCOPED to this one entry. A blanket `--update` here would silently
+// re-baseline every drifted bill in the same stroke — the opposite of a tripwire.
+// Doing it inside publish removes a remembered step: nobody runs --update by hand.
+const BASELINE = path.join(ROOT, 'data', 'qa-regression-baseline.json');
+const baseline = (() => { try { return JSON.parse(fs.readFileSync(BASELINE, 'utf8')); } catch (e) { return null; } })();
+if (!baseline) {
+    note('no qa-regression baseline on disk — skipped (the gate bootstraps it on its next run)');
+} else {
+    const h = AL.proseHash(ledger);
+    if (!h) fail('could not hash the published prose for the regression baseline');
+    baseline[ledger.id] = h;
+    fs.writeFileSync(BASELINE, JSON.stringify(baseline, null, 2) + '\n');
+    const back = JSON.parse(fs.readFileSync(BASELINE, 'utf8'));
+    if (back[ledger.id] !== h) fail('baseline read-back does not carry the new hash');
+    ok(`qa-regression baseline carries ${ledger.id} @ ${h} (scoped — no other entry touched)`);
+}
+
 console.log(`\n  Published locally. NOT committed, NOT pushed, NO IndexNow ping.\n`);
 console.log('  Next, when you want it live:');
 console.log(`    git add -A && git commit -m "Publish explainer: ${SLUG}"`);

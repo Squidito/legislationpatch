@@ -51,7 +51,11 @@ Every article, in this order:
    plain descriptive opening instead** — a duller opening is better than an
    unsourced one.
 4. **Body in question-shaped `<h2>` sections.** "What does the bill require?" reads
-   better to a person and is directly quotable by an answer engine.
+   better to a person and is directly quotable by an answer engine. **The first
+   sentence under each `<h2>` answers its question directly** (added 2026-08-16, with
+   the standing editorial pass in §7b) — answer engines lift the opening sentences
+   under a matching heading, so an answer that arrives after two sentences of setup
+   is an answer they never see.
 5. **Primary Sources box** at the foot — every source actually used, linked, and
    labelled where a position is involved (e.g. "opponent position").
 6. **Disclosure line** — inserted automatically; never hand-write it.
@@ -163,8 +167,9 @@ Full rules in `docs/BOTH-SIDES.md`. The non-negotiables:
 ### 7b. How an explainer actually moves (the Phase 3 lane)
 
 ```
-fetch + store source  ->  draft in drafts/  ->  hostile audit to convergence  ->  panel  ->  publish
-   fetch-reference.js      (gitignored)         patch-console article-audit.js    James   publish-article.js
+fetch + store source  ->  draft in drafts/  ->  hostile audit  ->  editorial pass  ->  re-audit  ->  panel  ->  publish
+   fetch-reference.js      (gitignored)        to convergence     (merge/cut/reorder    to convergence   James   publish-article.js
+                                               (article-audit.js)  only — no new claims)
 ```
 
 1. **Fetch and store every source first.** `node scripts/fetch-reference.js --rule
@@ -181,10 +186,27 @@ fetch + store source  ->  draft in drafts/  ->  hostile audit to convergence  ->
 3. **Audit to convergence, before any human reads it.** Fresh headless session per pass,
    a different model from the drafter, zero open flags, two consecutive clean passes,
    bail-out if it does not converge. The ledger is `data/qa-ledger/article-<slug>.json`.
-4. **Review in the patch-console panel** — rendered draft beside the claim ledger.
-5. **Publish is a human act.** `npm run article:publish -- --slug <slug> --apply` refuses
-   an unaudited draft, a ledger with open flags, an unbound receipt, or an existing article
-   at that path. It never commits, pushes, or pings IndexNow.
+4. **Editorial pass — STANDING step, ratified by James 2026-08-16.** The audit optimizes
+   for fidelity, not reading; left alone, a converged article reads like a verified-claim
+   list. After first convergence, one fidelity-preserving pass restructures the prose:
+   **merge, cut, and reorder only — never a new claim, figure, or qualifier.** It serves
+   two readers at once, and the second is why this is not optional polish:
+   - *The person:* kill repetition, order sections by what a reader asks first, tighten.
+   - *The answer engine:* structure IS the SEO surface for this site. Keep every `<h2>`
+     question-shaped; make the **first sentence under each `<h2>` answer that question
+     directly and quotably** (answer engines lift the opening sentences under a matching
+     heading — an answer buried mid-section is invisible to them); title stays the query a
+     reader would type; nothing may bury the answer below context.
+   The pass may not touch JSON-LD, entity `@id`s, the Primary Sources box, or the
+   disclosure line. **Then re-audit to convergence (step 3 again)** — the editorial pass
+   is drafting, and edited prose is unaudited prose until a fresh ledger says otherwise.
+5. **Review in the patch-console panel** — rendered draft beside the claim ledger.
+6. **Approve-and-publish is one human act** (James, 2026-08-16 — the panel button records
+   the approval, then runs the publish). `npm run article:publish -- --slug <slug> --apply`
+   refuses an unaudited draft, a ledger with open flags, an unbound receipt, or an existing
+   article at that path. On success it registers the article's prose hash in the
+   qa-regression baseline (scoped to that entry — never a blanket `--update`). It never
+   commits, pushes, or pings IndexNow.
 
 **Quotation marks are a promise of verbatimness.** A span in quotes must appear exactly in
 a stored source, *including any inline citations the source carries*. Dropping a source's
