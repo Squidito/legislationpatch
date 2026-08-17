@@ -95,6 +95,19 @@ for (const id of bioguideIds) {
   entries.push(urlEntry(BASE + '/rep.html?id=' + id, null, 'weekly', '0.7'));
 }
 
+// Topic hubs — /topics/<slug>/ pillar pages (Phase 4). Weekly: their bill lists
+// move with the corpus.
+const topicsDir = path.join(ROOT, 'topics');
+let topicCount = 0;
+if (fs.existsSync(topicsDir)) {
+  for (const e of fs.readdirSync(topicsDir, { withFileTypes: true })) {
+    if (e.isDirectory() && fs.existsSync(path.join(topicsDir, e.name, 'index.html'))) {
+      entries.push(urlEntry(BASE + '/topics/' + e.name + '/', null, 'weekly', '0.7'));
+      topicCount++;
+    }
+  }
+}
+
 // Articles — published guides/explainers (SEO). Included by default when the folder is present.
 const articlesIndex = path.join(ROOT, 'articles', 'index.html');
 if (fs.existsSync(articlesIndex)) {

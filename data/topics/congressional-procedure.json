@@ -1,0 +1,31 @@
+{
+  "_comment": "Topic hub config (Phase 4). See government-spending.json for the field contract. about sameAs URL fetch-verified 200 on 2026-08-17.",
+  "slug": "congressional-procedure",
+  "title": "How Congress Passes Laws: Procedure, Explained",
+  "breadcrumb": "Congressional Procedure",
+  "description": "The rules Congress actually plays by, in plain English: how a bill becomes law, suspension of the rules, discharge petitions, the filibuster, cloture, vetoes, and how votes are recorded.",
+  "about": [
+    { "@type": "Thing", "name": "Procedures of the United States Congress", "sameAs": "https://en.wikipedia.org/wiki/Procedures_of_the_United_States_Congress" }
+  ],
+  "intro": [],
+  "introStatus": "structural",
+  "guides": [
+    "how-a-bill-becomes-law.html",
+    "legislative-stages.html",
+    "what-is-a-committee.html",
+    "house-rules-committee.html",
+    "suspension-of-the-rules.html",
+    "discharge-petition.html",
+    "unanimous-consent.html",
+    "voice-vote-vs-roll-call.html",
+    "senate-filibuster.html",
+    "cloture-60-vote.html",
+    "joint-resolution.html",
+    "bill-numbering.html",
+    "how-to-read-a-bill.html",
+    "presidential-veto.html",
+    "pocket-veto.html"
+  ],
+  "bills": { "billTypes": [], "ids": [] },
+  "related": ["government-spending"]
+}

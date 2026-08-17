@@ -215,6 +215,11 @@ run('Generate per-bill OG cards', ['scripts/generate_brand_assets.js', '--bills'
 // nothing when nothing changed. Runs AFTER the OG cards and BEFORE the sitemap
 // so the sitemap picks up any new changelog/ pages this run produced.
 run('Generate changelog digest', ['scripts/generate_digest.js'], { optional: true });
+// Topic hubs (/topics/<slug>/) aggregate the corpus, so they re-render whenever
+// bills or articles moved. Runs AFTER bill pages (reads the slug map) and BEFORE
+// the sitemap (which lists hub URLs). Also maintains the spoke links in member
+// articles — bidirectional linking is a system, not a cleanup task.
+run('Generate topic hubs', ['scripts/generate_topic_hubs.js'], { optional: true });
 // RSS 2.0 feed of the changelog editions. Runs AFTER the digest (reads the
 // editions ledger it writes); does not affect the sitemap.
 run('Generate RSS feed', ['scripts/generate_feed.js'], { optional: true });

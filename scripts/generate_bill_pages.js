@@ -49,6 +49,22 @@ const { buildArticleIndex } = require('./lib/article-index.js');
 const entity = require('./lib/entity.js');
 const ARTICLES_BY_BILL = buildArticleIndex().byBill;
 
+// Topic hubs (Phase 4): a bill whose billType matches a hub's selector gets a
+// hub link in its Related block — the spoke->pillar direction of the maintained
+// linking system. Configs are the same files generate_topic_hubs.js renders from.
+const TOPIC_HUBS = (() => {
+  const dir = path.join(ROOT, 'data', 'topics');
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+})();
+function hubsForBill(bill) {
+  const types = (Array.isArray(bill.billType) ? bill.billType : [bill.billType]).filter(Boolean);
+  return TOPIC_HUBS.filter(h =>
+    ((h.bills && h.bills.ids) || []).includes(bill.id) ||
+    types.some(t => ((h.bills && h.bills.billTypes) || []).includes(t)));
+}
+
 // ── Small formatters ─────────────────────────────────────────────────────────
 
 // mm-dd-yy for compact metadata rows (mirrors util.formatDateCompact behavior;
@@ -381,12 +397,17 @@ function staticBody(bill) {
     .filter(a => a.breadth <= 10)
     .sort((a, b) => a.breadth - b.breadth)
     .slice(0, 4);
-  const relatedHtml = related.length
+  const hubs = hubsForBill(bill);
+  const hubLine = hubs.length
+    ? `<p class="bp-hub-link" style="font-size:.88rem;opacity:.85;margin-top:8px">Topic hub: ${hubs.map(h => `<a href="/topics/${escHtml(h.slug)}/">${escHtml(h.title)}</a>`).join(' · ')}</p>`
+    : '';
+  const relatedHtml = (related.length || hubs.length)
     ? `<section class="bp-section bp-related-block">
       <h2 class="bp-label">Related guides</h2>
-      <ul class="bill-static-related">
+      ${related.length ? `<ul class="bill-static-related">
         ${related.map(a => `<li><a href="${escHtml(a.url)}">${escHtml(a.title)}</a></li>`).join('\n        ')}
-      </ul>
+      </ul>` : ''}
+      ${hubLine}
     </section>`
     : '';
 

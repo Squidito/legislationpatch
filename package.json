@@ -66,7 +66,8 @@
     "dispatch:prepare:check": "node scripts/prepare-dispatch.js --check",
     "dispatch:daily": "node scripts/dispatch-daily.js",
     "article:publish": "node scripts/publish-article.js",
-    "og:articles": "node scripts/generate_brand_assets.js --articles"
+    "og:articles": "node scripts/generate_brand_assets.js --articles",
+    "topics": "node scripts/generate_topic_hubs.js"
   },
   "repository": {
     "type": "git",

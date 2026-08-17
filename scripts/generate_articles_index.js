@@ -96,6 +96,28 @@ function build() {
 
   const out = [];
   let rendered = 0;
+
+  // Topic hubs first (Phase 4): pillar pages get the top of the index. Rendered
+  // from the same configs the hub generator uses — counts derived, never typed.
+  const topicsDir = path.join(ROOT, 'data', 'topics');
+  if (fs.existsSync(topicsDir)) {
+    const hubs = fs.readdirSync(topicsDir).filter(f => f.endsWith('.json'))
+      .map(f => JSON.parse(fs.readFileSync(path.join(topicsDir, f), 'utf8')))
+      .filter(h => fs.existsSync(path.join(ROOT, 'topics', h.slug, 'index.html')))
+      .sort((a, b) => a.title.localeCompare(b.title));
+    if (hubs.length) {
+      out.push('      <!-- TOPIC HUBS -->');
+      for (const h of hubs) {
+        out.push('      <div class="article-card">');
+        out.push(`        <div class="article-card-label">Topic Hub &middot; ${h.guides.length} guides</div>`);
+        out.push(`        <a href="/topics/${esc(h.slug)}/" class="article-card-title">${esc(h.title)}</a>`);
+        out.push(`        <p class="article-card-summary">${esc(h.description)}</p>`);
+        out.push('      </div>');
+      }
+      out.push('');
+    }
+  }
+
   for (const section of sections) {
     const cards = (grouped.get(section) || []).sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
     if (!cards.length) continue;
