@@ -106,6 +106,22 @@ async function main() {
   // IndexNow caps a batch at 10,000 URLs.
   if (urls.length > 10000) urls = urls.slice(0, 10000);
 
+  // URL sanity guard (added 2026-08-17 after the first real ping submitted
+  // "https://legislationpatch.com/C:/Program Files/Git/articles/...": Git Bash
+  // on Windows rewrites arguments that start with "/" into Windows paths — MSYS
+  // path mangling; avoid with MSYS_NO_PATHCONV=1). This is an outward call that
+  // cannot be unsent, so a malformed URL must die HERE, not at the endpoint.
+  for (const u of urls) {
+    let parsed;
+    try { parsed = new URL(u); } catch (e) { console.error(`indexnow: REFUSED — not a URL: ${u}`); process.exit(1); }
+    if (parsed.host !== host) { console.error(`indexnow: REFUSED — wrong host: ${u}`); process.exit(1); }
+    if (/[:\\ ]/.test(parsed.pathname) || /^\/[A-Za-z]:\//.test(parsed.pathname)) {
+      console.error(`indexnow: REFUSED — path looks like a mangled filesystem path (MSYS?): ${u}`);
+      console.error('  From Git Bash, prefix the command with MSYS_NO_PATHCONV=1');
+      process.exit(1);
+    }
+  }
+
   const payload = { host, key, keyLocation: `${BASE}/${key}.txt`, urlList: urls };
 
   console.log(`indexnow: ${urls.length} URL(s) for ${host}`);
