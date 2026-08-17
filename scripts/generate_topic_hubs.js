@@ -103,11 +103,18 @@ function membersOf(cfg) {
   return { guides, hubBills };
 }
 
-function derivedModified(guides, hubBills) {
+function derivedModified(cfg, guides, hubBills) {
   const dates = [
     ...guides.map(g => g.dateModified).filter(Boolean),
     ...hubBills.map(b => b.stageDate).filter(Boolean),
-  ].sort();
+  ];
+  // Publishing or re-auditing hub prose is a real content change on this page,
+  // so the injected fragment's audit date joins the derivation.
+  if (fs.existsSync(path.join(ROOT, 'data', 'topics', `${cfg.slug}-prose.html`))) {
+    const l = (() => { try { return readJson(path.join(ROOT, 'data', 'qa-ledger', `article-topic-${cfg.slug}.json`)); } catch (e) { return null; } })();
+    if (l && l.auditedAt) dates.push(l.auditedAt);
+  }
+  dates.sort();
   return dates.length ? dates[dates.length - 1] : null;
 }
 
@@ -364,7 +371,7 @@ const hubMetaAll = [];
 for (const cfg of configs) {
   if (!/^[a-z0-9-]+$/.test(cfg.slug)) fail(`bad hub slug: ${cfg.slug}`);
   const { guides, hubBills } = membersOf(cfg);
-  const modified = derivedModified(guides, hubBills);
+  const modified = derivedModified(cfg, guides, hubBills);
   hubMetaAll.push({ cfg, guides, hubBills, modified });
   const dir = path.join(OUT_DIR, cfg.slug);
   fs.mkdirSync(dir, { recursive: true });
