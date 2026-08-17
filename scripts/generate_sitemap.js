@@ -100,6 +100,10 @@ for (const id of bioguideIds) {
 const topicsDir = path.join(ROOT, 'topics');
 let topicCount = 0;
 if (fs.existsSync(topicsDir)) {
+  if (fs.existsSync(path.join(topicsDir, 'index.html'))) {
+    entries.push(urlEntry(BASE + '/topics/', null, 'weekly', '0.7'));
+    topicCount++;
+  }
   for (const e of fs.readdirSync(topicsDir, { withFileTypes: true })) {
     if (e.isDirectory() && fs.existsSync(path.join(topicsDir, e.name, 'index.html'))) {
       entries.push(urlEntry(BASE + '/topics/' + e.name + '/', null, 'weekly', '0.7'));

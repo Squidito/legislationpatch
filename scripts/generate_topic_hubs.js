@@ -112,7 +112,7 @@ function derivedModified(guides, hubBills) {
 }
 
 // ---- Page ------------------------------------------------------------------------
-function hubJsonLd(cfg, guides, hubBills, modified) {
+function hubJsonLd(cfg, guides, hubBills, modified, ogUrl) {
   const url = `${BASE}/topics/${cfg.slug}/`;
   const items = [
     ...guides.map(g => `${BASE}/articles/${g.file}`),
@@ -127,7 +127,7 @@ function hubJsonLd(cfg, guides, hubBills, modified) {
     ...(modified ? { dateModified: modified } : {}),
     publisher: { '@id': `${BASE}/#organization` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    image: `${BASE}/og-image.png`,
+    image: ogUrl,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -158,7 +158,15 @@ function introHtml(cfg, guides, hubBills) {
 
 function buildHubHtml(cfg, guides, hubBills, modified) {
   const url = `${BASE}/topics/${cfg.slug}/`;
-  const ld = JSON.stringify(hubJsonLd(cfg, guides, hubBills, modified), null, 2);
+  // Per-hub OG card (rendered by generate_brand_assets --articles, manifest-gated
+  // under og/topics/). Warn-not-fail when absent: on a fresh clone the hub page
+  // legitimately renders before the first card batch.
+  const ogCard = `og/topics/${cfg.slug}.png`;
+  if (!fs.existsSync(path.join(ROOT, ogCard))) {
+    console.log(`  ⚠️  ${cfg.slug}: no OG card at ${ogCard} — run: node scripts/generate_brand_assets.js --articles`);
+  }
+  const ogUrl = `${BASE}/${ogCard}`;
+  const ld = JSON.stringify(hubJsonLd(cfg, guides, hubBills, modified, ogUrl), null, 2);
 
   const guideCards = guides.map(g => `
         <a class="hub-card" href="/articles/${escHtml(g.file)}" style="display:block;padding:16px 18px;border:1px solid var(--border,rgba(128,128,128,.25));border-radius:12px;text-decoration:none;color:inherit">
@@ -192,9 +200,9 @@ function buildHubHtml(cfg, guides, hubBills, modified) {
   <meta property="og:url" content="${url}" />
   <meta property="og:title" content="${escHtml(cfg.title)}" />
   <meta property="og:description" content="${escHtml(cfg.description)}" />
-  <meta property="og:image" content="${BASE}/og-image.png" />
+  <meta property="og:image" content="${ogUrl}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="${BASE}/og-image.png" />
+  <meta name="twitter:image" content="${ogUrl}" />
 
   <script type="application/ld+json">
   ${ld.replace(/\n/g, '\n  ')}
@@ -336,10 +344,12 @@ function maintainSpokeLinks() {
 
 // ---- Run -------------------------------------------------------------------------
 let pages = 0;
+const hubMetaAll = [];
 for (const cfg of configs) {
   if (!/^[a-z0-9-]+$/.test(cfg.slug)) fail(`bad hub slug: ${cfg.slug}`);
   const { guides, hubBills } = membersOf(cfg);
   const modified = derivedModified(guides, hubBills);
+  hubMetaAll.push({ cfg, guides, hubBills, modified });
   const dir = path.join(OUT_DIR, cfg.slug);
   fs.mkdirSync(dir, { recursive: true });
   const out = path.join(dir, 'index.html');
@@ -357,5 +367,149 @@ for (const cfg of configs) {
   pages++;
 }
 
+// ---- /topics/ index (hub-of-hubs) -------------------------------------------------
+// The stable footer target: individual hubs come and go; /topics/ is forever.
+function buildTopicsIndexHtml(hubMeta) {
+  const url = `${BASE}/topics/`;
+  const modified = hubMeta.map(h => h.modified).filter(Boolean).sort().pop() || null;
+  const ld = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Topic Hubs — Congress, Explained by Subject',
+    description: 'LegislationPatch topic hubs: every guide and tracked bill on a subject, gathered on one page.',
+    url,
+    ...(modified ? { dateModified: modified } : {}),
+    publisher: { '@id': `${BASE}/#organization` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    image: `${BASE}/og-image.png`,
+    breadcrumb: {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Topics' },
+      ],
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: hubMeta.length,
+      itemListElement: hubMeta.map((h, i) => ({ '@type': 'ListItem', position: i + 1, url: `${BASE}/topics/${h.cfg.slug}/` })),
+    },
+  }, null, 2);
+
+  const cards = hubMeta.map(({ cfg, guides, hubBills }) => `
+        <a class="hub-card" href="/topics/${escHtml(cfg.slug)}/" style="display:block;padding:16px 18px;border:1px solid var(--border,rgba(128,128,128,.25));border-radius:12px;text-decoration:none;color:inherit">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.5px;opacity:.65;text-transform:uppercase">Topic hub · ${guides.length} guides${hubBills.length ? ` · ${hubBills.length} bills` : ''}</div>
+          <div style="font-weight:700;margin:6px 0 4px">${escHtml(cfg.title)}</div>
+          <div style="font-size:.88rem;opacity:.8">${escHtml(cfg.description)}</div>
+        </a>`).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="max-image-preview:large" />
+  <title>Topic Hubs — Congress, Explained by Subject</title>
+  <meta name="description" content="LegislationPatch topic hubs: every guide and tracked bill on a subject, gathered on one page." />
+  <link rel="canonical" href="${url}" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="${url}" />
+  <meta property="og:title" content="Topic Hubs — Congress, Explained by Subject" />
+  <meta property="og:description" content="LegislationPatch topic hubs: every guide and tracked bill on a subject, gathered on one page." />
+  <meta property="og:image" content="${BASE}/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="${BASE}/og-image.png" />
+
+  <script type="application/ld+json">
+  ${ld.replace(/\n/g, '\n  ')}
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles-shared.css" />
+  <link rel="stylesheet" href="/styles-bills.css" />
+  <link rel="stylesheet" href="/styles-pages.css" />
+  <link rel="stylesheet" href="/articles/articles.css" />
+</head>
+<body>
+
+  <script>
+    (function() {
+      var t = localStorage.getItem('lpTheme');
+      if (t !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo-block" style="text-decoration:none" aria-label="Return to home">
+        <img src="/logo.svg" alt="LegislationPatch" class="logo-img" id="articleLogo" />
+      </a>
+      <a href="/search" class="header-search-link header-search-link--solo" aria-label="Search" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></a>
+    </div>
+  </header>
+
+  <div class="trust-bar">
+    <div class="trust-bar-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Sourced directly from bill text. No editorial spin.
+    </div>
+  </div>
+
+  <main class="main">
+    <article class="article-container">
+
+      <nav class="article-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">/</span>
+        Topics
+      </nav>
+
+      <h1 class="article-title">Topic Hubs</h1>
+
+      <div class="article-meta">
+        <span>Congress, explained by subject</span>
+        ${modified ? `<span>Updated ${escHtml(monthYear(modified))}</span>` : ''}
+      </div>
+
+      <div class="article-body">
+        <div class="hub-cards" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:14px 0 8px">
+${cards}
+        </div>
+        <p style="margin-top:1.6rem;font-size:.9rem;opacity:.85">Looking for a single guide instead? Browse <a href="/articles/">all guides &amp; explainers</a>.</p>
+        <p class="article-disclosure" style="margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border, rgba(128,128,128,0.25));font-size:0.85rem;opacity:0.8">Hub pages are generated from LegislationPatch's tracked corpus — the guides and bill analyses they link to carry their own sources. See our <a href="/editorial-standards.html">editorial standards and AI disclosure</a>.</p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (function() {
+      var isDark = localStorage.getItem('lpTheme') !== 'light';
+      var logo = document.getElementById('articleLogo');
+      if (logo) logo.src = isDark ? '/logo-dark.svg' : '/logo.svg';
+    })();
+  </script>
+
+  <script src="/search-widget.js" defer></script>
+</body>
+</html>
+`;
+}
+
+const indexOut = path.join(OUT_DIR, 'index.html');
+fs.writeFileSync(indexOut, buildTopicsIndexHtml(hubMetaAll), 'utf8');
+const idxBack = fs.readFileSync(indexOut, 'utf8');
+if (!idxBack.includes('</html>')) fail('topics/index.html write incomplete');
+for (const h of hubMetaAll) if (!idxBack.includes(`/topics/${h.cfg.slug}/`)) fail(`topics index missing hub ${h.cfg.slug}`);
+console.log(`  ✅ topics/index.html — ${hubMetaAll.length} hub(s) listed`);
+
 const touched = maintainSpokeLinks();
-console.log(`\n  topic hubs: ${pages} page(s) written · spoke links maintained in ${touched} article(s)\n`);
+console.log(`\n  topic hubs: ${pages} page(s) + index written · spoke links maintained in ${touched} article(s)\n`);

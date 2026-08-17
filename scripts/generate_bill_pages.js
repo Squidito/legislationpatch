@@ -593,6 +593,7 @@ function billPage(bill, slug) {
       <a href="/privacy.html">Privacy Policy</a> ·
       <a href="/terms.html">Terms of Service</a> ·
       <a href="/articles/">Guides</a> ·
+      <a href="/topics/">Topics</a> ·
       <a href="/about.html">About</a> ·
       <a href="/editorial-standards.html">Editorial Standards</a> ·
       <a href="/corrections.html">Corrections</a> ·

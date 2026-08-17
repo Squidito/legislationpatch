@@ -209,7 +209,7 @@ run('Generate static bill pages', ['scripts/generate_bill_pages.js'], { optional
 // Render per-bill social cards (og/bills/<id>.png). Runs AFTER the pages (which
 // reference og/bills/<id>.png) and BEFORE the sitemap (which lists no images).
 // Manifest-gated: only bills whose card inputs changed re-render.
-run('Generate per-bill OG cards', ['scripts/generate_brand_assets.js', '--bills'], { optional: true });
+run('Generate per-bill + article + hub OG cards', ['scripts/generate_brand_assets.js', '--bills', '--articles'], { optional: true });
 // "Congress Patch Notes" changelog: diff cache.json against data/digest-state.json
 // and emit a dated edition for whatever advanced / passed / was signed. Emits
 // nothing when nothing changed. Runs AFTER the OG cards and BEFORE the sitemap

@@ -608,6 +608,57 @@ async function runArticleBatch(browser, { onlyArticle = null } = {}) {
   console.log(`\nOK: all ${pngs.length} per-article cards verified 1200x630.`);
 }
 
+// Topic-hub cards — same brand system, chip = "TOPIC HUB". Rendered as part of
+// the --articles batch (skipped on single-article runs) into og/topics/ with
+// their own manifest, so hub-config edits never churn article or bill cards.
+const TOPIC_CARD_VERSION = 'topic-og-v1';
+
+async function runTopicCardBatch(browser) {
+  const cfgDir = path.join(ROOT, 'data', 'topics');
+  if (!fs.existsSync(cfgDir)) return;
+  const hubs = fs.readdirSync(cfgDir).filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(fs.readFileSync(path.join(cfgDir, f), 'utf8')));
+  if (!hubs.length) return;
+
+  const outDir = path.join(ROOT, 'og', 'topics');
+  fs.mkdirSync(outDir, { recursive: true });
+  const manifestPath = path.join(outDir, 'manifest.json');
+  let manifest = { version: TOPIC_CARD_VERSION, topics: {} };
+  try {
+    const prev = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (prev && prev.version === TOPIC_CARD_VERSION && prev.topics) manifest = prev;
+  } catch (_) { /* full render */ }
+
+  const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
+  let rendered = 0, skipped = 0;
+  const next = {};
+  for (const h of hubs) {
+    const inputs = {
+      id: h.slug, headline: h.title, chip: 'TOPIC HUB', statusLabel: '', tone: 'neutral',
+      tagline: '// PLAIN-ENGLISH GUIDE TO CONGRESS', domain: 'legislationpatch.com', v: TOPIC_CARD_VERSION,
+    };
+    const hash = articleCardHash(inputs);
+    const out = path.join(outDir, `${h.slug}.png`);
+    next[h.slug] = hash;
+    if (manifest.topics[h.slug] === hash && fs.existsSync(out)) { skipped++; continue; }
+    await renderBillCard(page, inputs, out);
+    rendered++;
+  }
+  await page.close();
+
+  const keep = new Set(Object.keys(next));
+  for (const f of fs.readdirSync(outDir)) {
+    if (f.endsWith('.png') && !keep.has(f.slice(0, -4))) fs.unlinkSync(path.join(outDir, f));
+  }
+  fs.writeFileSync(manifestPath, JSON.stringify({ version: TOPIC_CARD_VERSION, topics: next }, null, 2) + '\n');
+
+  const pngs = fs.readdirSync(outDir).filter(f => f.endsWith('.png'));
+  const bad = pngs.map(f => ({ f, d: pngSize(fs.readFileSync(path.join(outDir, f))) }))
+    .filter(x => !x.d || x.d.width !== 1200 || x.d.height !== 630);
+  if (bad.length) { console.error(`\nFAIL: ${bad.length} topic card(s) are not 1200x630.`); process.exit(1); }
+  console.log(`\nTopic-hub OG cards → og/topics/   rendered: ${rendered}   skipped: ${skipped}   on disk: ${pngs.length} (verified 1200x630)`);
+}
+
 // ---- Main ----------------------------------------------------------------------
 (async () => {
   const argv = process.argv.slice(2);
@@ -625,6 +676,7 @@ async function runArticleBatch(browser, { onlyArticle = null } = {}) {
     }
     if (ARTICLES_MODE) {
       await runArticleBatch(browser, { onlyArticle });
+      if (!onlyArticle) await runTopicCardBatch(browser);
       return;
     }
 
