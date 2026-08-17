@@ -16,13 +16,17 @@
     4. npm run validate && npm run preflight
 
   FIELDS
-    {{SLUG}}        file name without .html, e.g. discharge-petition
-    {{TITLE}}       the question a reader would type; used as <title>, og:title, headline, h1
-    {{DESCRIPTION}} one sentence, ~155 chars, states the answer rather than teasing it
-    {{BREADCRUMB}}  short label for the breadcrumb trail
-    {{DATE_ISO}}    YYYY-MM-DD published; dateModified starts equal and moves on real edits
-    {{DATE_HUMAN}}  e.g. August 2026
-    {{READ_MIN}}    integer minutes
+    {{SLUG}}          file name without .html, e.g. discharge-petition
+    {{TITLE}}         the question a reader would type; used as <title>, og:title, headline, h1
+    {{DESCRIPTION}}   one sentence, ~155 chars, states the answer rather than teasing it
+    {{BREADCRUMB}}    short label for the breadcrumb trail (visible nav AND breadcrumb schema)
+    {{DATE_ISO}}      YYYY-MM-DD published; dateModified starts equal and moves on real edits
+    {{DATE_HUMAN}}    e.g. August 2026
+    {{READ_MIN}}      integer minutes
+    {{ABOUT_NAME}}    subject entity name for the "about" schema (add entries as needed)
+    {{ABOUT_SAMEAS}}  entity URL (Wikipedia/official) — MUST be fetch-verified, 200, before use
+    {{CITATION_NAME}} the primary source's full label (lane articles: must match the QA ledger)
+    {{CITATION_URL}}  the primary source's URL
 
   The author/publisher below are @id REFERENCES on purpose. The full Person node
   lives only on /author/james-shearn and the full Organization only on about.html.
@@ -63,9 +67,35 @@
     "dateModified": "{{DATE_ISO}}",
     "url": "https://legislationpatch.com/articles/{{SLUG}}.html",
     "image": "https://legislationpatch.com/og-image.png",
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://legislationpatch.com/articles/{{SLUG}}.html"}
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://legislationpatch.com/articles/{{SLUG}}.html"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://legislationpatch.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://legislationpatch.com/articles/"},
+        {"@type": "ListItem", "position": 3, "name": "{{BREADCRUMB}}"}
+      ]
+    },
+    "about": [
+      {"@type": "Thing", "name": "{{ABOUT_NAME}}", "sameAs": "{{ABOUT_SAMEAS}}"}
+    ],
+    "citation": {
+      "@type": "CreativeWork",
+      "name": "{{CITATION_NAME}}",
+      "url": "{{CITATION_URL}}"
+    }
   }
   </script>
+  <!-- Schema rules (added 2026-08-17, from the first explainer's pre-ping scrutiny pass):
+       breadcrumb  - mirrors the visible trail; third item has no "item" (current page).
+       about       - the subject entity/entities. Every sameAs URL must be FETCH-VERIFIED
+                     (curl it, expect 200) before it goes in - an unverified URL is a
+                     training-knowledge claim in metadata form. Add more entries as needed.
+       citation    - the primary source(s) the article was drafted from; for lane articles
+                     this MUST match a source registered on the article's QA ledger.
+       publish-article.js refuses a lane article whose JSON-LD is missing breadcrumb or
+       citation, so do not strip these blocks. -->
+
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />

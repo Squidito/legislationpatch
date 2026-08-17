@@ -99,6 +99,45 @@ const match = AL.proseMatchesLedger(ledger);
 if (!match.ok) fail(`ledger does not describe the current draft — ${match.reason}. Re-run the audit.`);
 ok('ledger describes the prose on disk (proseSha matches)');
 
+// ── 1b. Publish-surface preconditions ──────────────────────────────────────
+// Added 2026-08-17 after the first explainer shipped without any of these and
+// each had to be caught by hand in the pre-ping scrutiny pass. All three are
+// deterministic, so they live here rather than in a checklist.
+
+// The curated index entry. generate_articles_index only ADVISES on a missing
+// entry (the card renders under UNSORTED) — advice printed mid-publish gets
+// missed, so a missing entry now blocks.
+const curated = (() => {
+    try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'articles-index.json'), 'utf8')); } catch (e) { return null; }
+})();
+if (!curated || !curated.articles) fail('cannot read data/articles-index.json');
+if (!curated.articles[`${SLUG}.html`]) {
+    fail(`no curated entry for ${SLUG}.html in data/articles-index.json — add section/label/summary there first (otherwise the card renders under UNSORTED)`);
+}
+ok('curated articles-index entry present');
+
+// Schema completeness. The template now carries breadcrumb + about + citation;
+// a draft missing breadcrumb or citation stripped something it should not have.
+const draftHtml = fs.readFileSync(DRAFT, 'utf8');
+const ldMatch = draftHtml.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+if (!ldMatch) fail('draft carries no JSON-LD block');
+let ld = null;
+try { ld = JSON.parse(ldMatch[1]); } catch (e) { fail('draft JSON-LD does not parse: ' + e.message); }
+if (!ld.breadcrumb) fail('draft JSON-LD has no breadcrumb (BreadcrumbList) — the template provides it; do not strip it');
+if (!ld.citation) fail('draft JSON-LD has no citation node — cite the primary source the article was drafted from');
+if (!ld.about) note('JSON-LD has no "about" entity — fine to omit, better to name the subject (verified sameAs)');
+ok('JSON-LD carries breadcrumb + citation' + (ld.about ? ' + about' : ''));
+
+// Inbound links. A new page nothing links to is invisible to crawl discovery
+// and gets no internal authority. Advisory, not blocking: the first article of
+// a genuinely new topic cluster can legitimately start unlinked.
+const linkRe = new RegExp(`href="${SLUG}\\.html"`);
+const inbound = fs.readdirSync(path.join(ROOT, 'articles'))
+    .filter(f => f.endsWith('.html') && f !== 'index.html' && f !== `${SLUG}.html`)
+    .filter(f => linkRe.test(fs.readFileSync(path.join(ROOT, 'articles', f), 'utf8')));
+if (inbound.length) ok(`${inbound.length} article(s) link to it: ${inbound.slice(0, 5).join(', ')}${inbound.length > 5 ? ', …' : ''}`);
+else note('⚠ NO other article links to this one — weave it in from related live pages (link-only edits do not bump dateModified)');
+
 // ── 2. Gates on the current tree ───────────────────────────────────────────
 console.log('\n── Gates');
 for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scripts/preflight.js', 'preflight']]) {

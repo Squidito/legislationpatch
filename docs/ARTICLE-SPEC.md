@@ -204,9 +204,17 @@ fetch + store source  ->  draft in drafts/  ->  hostile audit  ->  editorial pas
 6. **Approve-and-publish is one human act** (James, 2026-08-16 — the panel button records
    the approval, then runs the publish). `npm run article:publish -- --slug <slug> --apply`
    refuses an unaudited draft, a ledger with open flags, an unbound receipt, or an existing
-   article at that path. On success it registers the article's prose hash in the
-   qa-regression baseline (scoped to that entry — never a blanket `--update`). It never
-   commits, pushes, or pings IndexNow.
+   article at that path — and (added 2026-08-17, each caught by hand on the first explainer)
+   a missing curated entry in `data/articles-index.json`, or JSON-LD without the template's
+   `breadcrumb`/`citation` blocks. It warns on a missing `about` entity and on zero inbound
+   links. On success it registers the article's prose hash in the qa-regression baseline
+   (scoped to that entry — never a blanket `--update`). It never commits, pushes, or pings
+   IndexNow.
+7. **Weave it in.** A new page nothing links to is invisible to crawl discovery and gets
+   no internal authority. Find the related live pages that ALREADY mention the topic
+   (grep, don't guess) and link the existing mention to the new article. Link-only
+   insertions are navigational — they do not bump `dateModified`; an edit that adds a
+   factual clause does, and that clause obeys §3 sourcing like any other sentence.
 
 **Quotation marks are a promise of verbatimness.** A span in quotes must appear exactly in
 a stored source, *including any inline citations the source carries*. Dropping a source's
