@@ -59,10 +59,10 @@ function localMonthYear(d = new Date()) {
     return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 }
 
-function runNode(script, label) {
+function runNode(script, label, args = []) {
     const abs = path.join(ROOT, script);
     if (!fs.existsSync(abs)) fail(`missing script ${script}`);
-    const r = spawnSync(process.execPath, [abs], { cwd: ROOT, encoding: 'utf8', windowsHide: true, maxBuffer: 32 * 1024 * 1024 });
+    const r = spawnSync(process.execPath, [abs, ...args], { cwd: ROOT, encoding: 'utf8', windowsHide: true, maxBuffer: 32 * 1024 * 1024 });
     if (r.error) fail(`could not run ${label}: ${r.error.message}`);
     return { ok: r.status === 0, out: (r.stdout || '') + (r.stderr || '') };
 }
@@ -191,6 +191,19 @@ for (const [script, label] of [
     const r = runNode(script, label);
     if (!r.ok) { console.log(r.out.slice(-800)); fail(`${label} generation failed`); }
     ok(label + ' regenerated');
+}
+
+// Per-article OG card (added 2026-08-17): the template's og:image points at
+// og/articles/<slug>.png, so the card must exist the moment the page does — a
+// published head referencing a 404 image is the same bug class as the IndexNow
+// premature ping. The generator is manifest-gated, so re-publishing is cheap.
+const ogRun = runNode('scripts/generate_brand_assets.js', 'article OG card', ['--articles', `--article=${SLUG}`]);
+if (!ogRun.ok) { console.log(ogRun.out.slice(-800)); fail('article OG card generation failed'); }
+const ogPng = path.join(ROOT, 'og', 'articles', `${SLUG}.png`);
+if (!fs.existsSync(ogPng)) fail(`og/articles/${SLUG}.png missing after generation`);
+ok(`article OG card generated (og/articles/${SLUG}.png)`);
+if (!written.includes(`/og/articles/${SLUG}.png`)) {
+    note(`⚠ the article's og:image does not reference its own card — it will share whatever it points at instead`);
 }
 note('feed.xml carries changelog editions only — an article publish does not change it (known gap)');
 

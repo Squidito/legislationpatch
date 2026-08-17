@@ -303,7 +303,7 @@ function buildBillOgHtml(inputs) {
     </div>
   </div>
   <div class="footer">
-    <span class="tagline">// PLAIN-ENGLISH BILL SUMMARY</span>
+    <span class="tagline">${esc(inputs.tagline || '// PLAIN-ENGLISH BILL SUMMARY')}</span>
     <span class="dom">${esc(inputs.domain)}</span>
   </div>
 </body></html>`;
@@ -489,17 +489,142 @@ async function runBillBatch(browser, { onlyBill = null } = {}) {
   console.log(`\nOK: all ${pngs.length} per-bill cards verified 1200x630.`);
 }
 
+// ================================================================================
+//  PER-ARTICLE OG CARDS  (added 2026-08-17 — James's directive after the first
+//  explainer shipped sharing the generic site card)
+// ================================================================================
+//
+// Same 1200x630 brand system and render path as the bill cards, with the article's
+// h1 as the hero, the curated index label ("Explainer", "Bill Tracker", …) in the
+// mono chip, no status pill, and a guide tagline. Deliberately its OWN version
+// string, inputs, hash and manifest: sharing the bill card's hash would re-render
+// all 183 bill cards the first time an article field was added.
+
+const ARTICLE_CARD_VERSION = 'article-og-v1';
+
+function decodeEntities(s) {
+  return String(s || '')
+    .replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+}
+
+// The h1 is the card headline (the <title> tag carries an appended explainer that
+// would clamp at card sizes); curated label is the chip. Both come from what the
+// site already shows — the card invents nothing.
+function articleCardInputs(slug, html, label) {
+  const h1 = html.match(/<h1 class="article-title">([\s\S]*?)<\/h1>/);
+  const title = html.match(/<title>([\s\S]*?)<\/title>/);
+  const headline = decodeEntities((h1 ? h1[1] : title ? title[1] : slug)
+    .replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+  return {
+    id: slug,
+    headline,
+    chip: String(label || 'Guide').toUpperCase(),
+    statusLabel: '',
+    tone: 'neutral',
+    tagline: '// PLAIN-ENGLISH GUIDE TO CONGRESS',
+    domain: 'legislationpatch.com',
+    v: ARTICLE_CARD_VERSION,
+  };
+}
+
+function articleCardHash(inputs) {
+  const stable = {
+    headline: inputs.headline, chip: inputs.chip, tagline: inputs.tagline,
+    domain: inputs.domain, v: inputs.v,
+  };
+  return crypto.createHash('sha1').update(JSON.stringify(stable)).digest('hex').slice(0, 16);
+}
+
+async function runArticleBatch(browser, { onlyArticle = null } = {}) {
+  const outDir = path.join(ROOT, 'og', 'articles');
+  fs.mkdirSync(outDir, { recursive: true });
+  const manifestPath = path.join(outDir, 'manifest.json');
+
+  let manifest = { version: ARTICLE_CARD_VERSION, articles: {} };
+  try {
+    const prev = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    if (prev && prev.version === ARTICLE_CARD_VERSION && prev.articles) manifest = prev;
+  } catch (_) { /* no/invalid manifest — full render */ }
+
+  const curated = (() => {
+    try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'articles-index.json'), 'utf8')).articles || {}; }
+    catch (_) { return {}; }
+  })();
+
+  let slugs = fs.readdirSync(path.join(ROOT, 'articles'))
+    .filter(f => f.endsWith('.html') && f !== 'index.html')
+    .map(f => f.replace(/\.html$/, ''));
+  if (onlyArticle) slugs = slugs.filter(s => s === onlyArticle);
+  if (!slugs.length) { console.error(`No articles to render${onlyArticle ? ' for ' + onlyArticle : ''}.`); return; }
+
+  const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
+
+  let rendered = 0, skipped = 0;
+  const nextArticles = {};
+  const fits = [];
+  for (const slug of slugs) {
+    const html = fs.readFileSync(path.join(ROOT, 'articles', `${slug}.html`), 'utf8');
+    const label = (curated[`${slug}.html`] || {}).label;
+    const inputs = articleCardInputs(slug, html, label);
+    const hash = articleCardHash(inputs);
+    const out = path.join(outDir, `${slug}.png`);
+    nextArticles[slug] = hash;
+
+    if (manifest.articles[slug] === hash && fs.existsSync(out)) { skipped++; continue; }
+    const fit = await renderBillCard(page, inputs, out);
+    fits.push({ id: slug, fontSize: fit.fontSize, clamped: !!fit.clamped });
+    rendered++;
+  }
+  await page.close();
+
+  if (onlyArticle) {
+    manifest.articles[onlyArticle] = nextArticles[onlyArticle];
+  } else {
+    const keep = new Set(Object.keys(nextArticles));
+    for (const f of fs.readdirSync(outDir)) {
+      if (f.endsWith('.png') && !keep.has(f.slice(0, -4))) fs.unlinkSync(path.join(outDir, f));
+    }
+    manifest.articles = nextArticles;
+  }
+  manifest.version = ARTICLE_CARD_VERSION;
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+
+  const pngs = fs.readdirSync(outDir).filter(f => f.endsWith('.png'));
+  let total = 0;
+  for (const f of pngs) total += fs.statSync(path.join(outDir, f)).size;
+  const clampCount = fits.filter(f => f.clamped).length;
+  console.log(`\nPer-article OG cards → og/articles/`);
+  console.log(`  rendered: ${rendered}   skipped (unchanged): ${skipped}   on disk: ${pngs.length}`);
+  console.log(`  total size: ${(total / 1024).toFixed(1)} KB   average: ${pngs.length ? (total / pngs.length / 1024).toFixed(1) : 0} KB/card`);
+  if (fits.length) console.log(`  headline auto-fit: ${clampCount} hard-truncated; font range ${Math.min(...fits.map(f => f.fontSize))}–${Math.max(...fits.map(f => f.fontSize))}px`);
+
+  const bad = pngs.map(f => ({ f, d: pngSize(fs.readFileSync(path.join(outDir, f))) }))
+    .filter(x => !x.d || x.d.width !== 1200 || x.d.height !== 630);
+  if (bad.length) {
+    console.error(`\nFAIL: ${bad.length} per-article card(s) are not 1200x630 (e.g. ${bad[0].f}).`);
+    process.exit(1);
+  }
+  console.log(`\nOK: all ${pngs.length} per-article cards verified 1200x630.`);
+}
+
 // ---- Main ----------------------------------------------------------------------
 (async () => {
   const argv = process.argv.slice(2);
   const BILLS_MODE = argv.includes('--bills');
+  const ARTICLES_MODE = argv.includes('--articles');
   const onlyBill = (argv.find(a => a.startsWith('--bill=')) || '').split('=')[1] || null;
+  const onlyArticle = (argv.find(a => a.startsWith('--article=')) || '').split('=')[1] || null;
   const arg = (argv.find(a => a.startsWith('--only=')) || '').split('=')[1] || 'all';
 
   const browser = await chromium.launch();
   try {
     if (BILLS_MODE) {
       await runBillBatch(browser, { onlyBill });
+      if (!ARTICLES_MODE) return;
+    }
+    if (ARTICLES_MODE) {
+      await runArticleBatch(browser, { onlyArticle });
       return;
     }
 

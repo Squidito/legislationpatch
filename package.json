@@ -1,7 +1,7 @@
 {
   "name": "legislationpatch",
   "version": "1.0.0",
-  "description": "U.S. federal legislation explained in plain English — patch notes style.",
+  "description": "U.S. federal legislation explained in plain English \u00e2\u20ac\u201d patch notes style.",
   "main": "api.js",
   "scripts": {
     "add-bills": "node scripts/add-bills.js",
@@ -65,7 +65,8 @@
     "dispatch:prepared": "node scripts/prepare-dispatch.js --list",
     "dispatch:prepare:check": "node scripts/prepare-dispatch.js --check",
     "dispatch:daily": "node scripts/dispatch-daily.js",
-    "article:publish": "node scripts/publish-article.js"
+    "article:publish": "node scripts/publish-article.js",
+    "og:articles": "node scripts/generate_brand_assets.js --articles"
   },
   "repository": {
     "type": "git",

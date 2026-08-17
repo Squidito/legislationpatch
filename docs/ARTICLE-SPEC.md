@@ -208,8 +208,9 @@ fetch + store source  ->  draft in drafts/  ->  hostile audit  ->  editorial pas
    a missing curated entry in `data/articles-index.json`, or JSON-LD without the template's
    `breadcrumb`/`citation` blocks. It warns on a missing `about` entity and on zero inbound
    links. On success it registers the article's prose hash in the qa-regression baseline
-   (scoped to that entry — never a blanket `--update`). It never commits, pushes, or pings
-   IndexNow.
+   (scoped to that entry — never a blanket `--update`) and generates the article's own
+   OG card (`og/articles/<slug>.png`, `npm run og:articles`) so the head's `og:image`
+   never references a 404. It never commits, pushes, or pings IndexNow.
 7. **Weave it in.** A new page nothing links to is invisible to crawl discovery and gets
    no internal authority. Find the related live pages that ALREADY mention the topic
    (grep, don't guess) and link the existing mention to the new article. Link-only
