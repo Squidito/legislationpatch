@@ -15,12 +15,18 @@ hubs live at `/topics/<slug>/`.
    articles at build time. Nothing countable is typed into a config.
 2. **`dateModified` is derived** — max of member-article `dateModified` and
    member-bill `stageDate`. It cannot go stale.
-3. **Intro prose is gated.** `intro[]` in the config holds audited paragraphs
-   (`introStatus: "audited"`) once they clear the article lane — drafted under
-   `ARTICLE_DRAFT_PROMPT`, hostile-audited to convergence, zero open flags, the
-   same bar as an explainer. Until then the hub opens with a **structural
-   fallback** built only from generated counts. No free-text claim ships
-   unaudited.
+3. **Prose is gated through the article lane.** Hub prose is drafted as a
+   FRAGMENT at `drafts/topic-<slug>.html` (no page shell, no scripts — the
+   publish gate refuses both), audited under ledger `article-topic-<slug>` by
+   the same patch-console runner as an explainer (zero open flags, convergence,
+   `ARTICLE_DRAFT_PROMPT` verbatim), approved via the panel's one-click button
+   (routed to `scripts/publish-topic-prose.js`), and published to
+   `data/topics/<slug>-prose.html`. The generator injects it **fail-closed**: a
+   fragment with no clean, current ledger kills the run. A hub with no fragment
+   opens with a **structural fallback** built only from generated counts. No
+   free-text claim ships unaudited. Drafting brief:
+   `_personal/HUB-PROSE-HANDOFF.md`. Hub prose runs count as REFRESHES on the
+   cadence, not explainers (James, 2026-08-17).
 4. **Bidirectional linking is a maintained system.** `generate_topic_hubs.js`
    rewrites the `topic-hub-link` line in every member article each run
    (idempotent; removed when an article leaves a hub). `generate_bill_pages.js`
@@ -58,8 +64,9 @@ navigational, so it never bumps a member's `dateModified`.
 2. `npm run topics` — page + spoke links appear; `npm run articles:index`,
    `npm run sitemap`, `node scripts/generate_bill_pages.js` pick it up (or just
    run the batch post chain).
-3. Commission the intro through the article lane when wanted; paste the audited
-   paragraphs into `intro[]`, set `introStatus: "audited"`, re-run `npm run topics`.
+3. Commission the prose through the article lane when wanted: draft
+   `drafts/topic-<slug>.html`, audit with `article-audit.js --slug topic-<slug>`,
+   approve in the panel — the publish moves the fragment and regenerates.
 
 ## Open follow-ups
 

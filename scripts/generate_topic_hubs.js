@@ -19,10 +19,10 @@
 // a hub lose the line on the next run. Hub links on BILL pages are emitted by
 // generate_bill_pages.js, which reads the same configs.
 //
-// Intro prose: cfg.intro[] holds audited paragraphs once they clear the article
-// lane (cfg.introStatus === "audited"); until then the hub opens with a
-// structural line built only from generated counts. No free-text claim ships
-// unaudited.
+// Hub prose: a tracked audited fragment (data/topics/<slug>-prose.html, ledger
+// article-topic-<slug>, published there by publish-topic-prose.js) is injected
+// fail-closed; a hub with no fragment opens with a structural counts-only line.
+// No free-text claim ships unaudited.
 //
 // dateModified is DERIVED: max of member-article dateModified and member-bill
 // stageDate. Never typed, so it cannot go stale.
@@ -145,9 +145,25 @@ function hubJsonLd(cfg, guides, hubBills, modified, ogUrl) {
   };
 }
 
-function introHtml(cfg, guides, hubBills) {
-  if (cfg.introStatus === 'audited' && Array.isArray(cfg.intro) && cfg.intro.length) {
-    return cfg.intro.join('\n\n        ');
+// Audited hub prose: a tracked fragment at data/topics/<slug>-prose.html that
+// cleared the article lane (ledger article-topic-<slug>). Injection is
+// FAIL-CLOSED: a fragment on disk with no clean, current ledger kills the run —
+// silently falling back would ship a page missing prose someone audited, and
+// silently injecting would ship prose nobody audited. Structural fallback is
+// only for hubs with no fragment at all.
+const AL = require('./lib/article-ledger.js');
+function proseHtml(cfg, guides, hubBills) {
+  const fragRel = `data/topics/${cfg.slug}-prose.html`;
+  const fragAbs = path.join(ROOT, fragRel);
+  if (fs.existsSync(fragAbs)) {
+    const ledger = (() => { try { return readJson(path.join(ROOT, 'data', 'qa-ledger', `article-topic-${cfg.slug}.json`)); } catch (e) { return null; } })();
+    if (!ledger) fail(`${cfg.slug}: prose fragment exists but no ledger article-topic-${cfg.slug} — audit it or remove it`);
+    if (ledger.status !== 'audited' || ledger.depth !== 'full-claims') fail(`${cfg.slug}: prose ledger is not a completed audit`);
+    const open = (ledger.claims || []).filter(c => c.status === 'open' && c.verdict !== 'SUPPORTED' && c.verify !== 'REJECTED');
+    if (open.length) fail(`${cfg.slug}: prose ledger carries ${open.length} open flag(s)`);
+    const match = AL.proseMatchesLedger(ledger);
+    if (!match.ok) fail(`${cfg.slug}: prose fragment does not match its audit — ${match.reason}`);
+    return fs.readFileSync(fragAbs, 'utf8').trim();
   }
   // Structural fallback: generated counts only — no free-text claims.
   const billPart = hubBills.length
@@ -265,7 +281,7 @@ function buildHubHtml(cfg, guides, hubBills, modified) {
 
       <div class="article-body">
 
-        ${introHtml(cfg, guides, hubBills)}
+        ${proseHtml(cfg, guides, hubBills)}
 
         <h2>Guides</h2>
         <div class="hub-cards" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin:14px 0 8px">

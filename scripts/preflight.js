@@ -104,8 +104,13 @@ function isStub(html) {
 }
 
 // ---------------------------------------------------------------------------
-const files = walkHtml(ROOT).map(f => path.relative(ROOT, f).replace(/\\/g, '/'));
-console.log(`preflight: ${files.length} HTML page(s)\n`);
+const allHtml = walkHtml(ROOT).map(f => path.relative(ROOT, f).replace(/\\/g, '/'));
+// drafts/topic-*.html are hub-prose FRAGMENTS, not pages: no head, no byline,
+// no theme bootstrap by design. Page-shaped checks would all false-fail; their
+// content is gated by the article-lane audit + qa-receipts instead.
+const fragments = allHtml.filter(f => /^drafts\/topic-[a-z0-9-]+\.html$/.test(f));
+const files = allHtml.filter(f => !fragments.includes(f));
+console.log(`preflight: ${files.length} HTML page(s)` + (fragments.length ? ` (+${fragments.length} hub-prose fragment(s) exempt from page checks)` : '') + '\n');
 
 // 1. Every JSON-LD block must parse ------------------------------------------
 section('JSON-LD parses');

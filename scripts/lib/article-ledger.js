@@ -49,6 +49,11 @@ function proseFile(l) {
         l.draftFile || path.posix.join('drafts', slug + '.html'),
         path.posix.join('articles', slug + '.html'),
     ];
+    // Topic-hub prose (slug "topic-<hub>"): its published home is a tracked
+    // fragment injected by generate_topic_hubs.js, not a page in articles/.
+    if (/^topic-/.test(slug)) {
+        candidates.push(path.posix.join('data', 'topics', slug.replace(/^topic-/, '') + '-prose.html'));
+    }
     for (const rel of candidates) {
         if (fs.existsSync(path.join(ROOT, rel))) return rel;
     }

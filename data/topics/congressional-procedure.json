@@ -5,10 +5,12 @@
   "breadcrumb": "Congressional Procedure",
   "description": "The rules Congress actually plays by, in plain English: how a bill becomes law, suspension of the rules, discharge petitions, the filibuster, cloture, vetoes, and how votes are recorded.",
   "about": [
-    { "@type": "Thing", "name": "Procedures of the United States Congress", "sameAs": "https://en.wikipedia.org/wiki/Procedures_of_the_United_States_Congress" }
+    {
+      "@type": "Thing",
+      "name": "Procedures of the United States Congress",
+      "sameAs": "https://en.wikipedia.org/wiki/Procedures_of_the_United_States_Congress"
+    }
   ],
-  "intro": [],
-  "introStatus": "structural",
   "guides": [
     "how-a-bill-becomes-law.html",
     "legislative-stages.html",
@@ -26,6 +28,11 @@
     "presidential-veto.html",
     "pocket-veto.html"
   ],
-  "bills": { "billTypes": [], "ids": [] },
-  "related": ["government-spending"]
+  "bills": {
+    "billTypes": [],
+    "ids": []
+  },
+  "related": [
+    "government-spending"
+  ]
 }

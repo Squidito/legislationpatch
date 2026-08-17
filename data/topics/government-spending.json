@@ -1,14 +1,16 @@
 {
-  "_comment": "Topic hub config (Phase 4). Curated membership only — every rendered fact (counts, stages, dates) is generated from cache.json / articles-index.json at build time, never typed here. about sameAs URLs fetch-verified 200 on 2026-08-17. intro[] holds audited intro paragraphs once they clear the lane; empty = structural fallback (generated facts only, no free-text claims).",
+  "_comment": "Topic hub config (Phase 4). Curated membership only — every rendered fact (counts, stages, dates) is generated from cache.json / articles-index.json at build time, never typed here. about sameAs URLs fetch-verified 200 on 2026-08-17. Audited prose lives at data/topics/<slug>-prose.html once it clears the lane (ledger article-topic-<slug>); absent = structural fallback.",
   "slug": "government-spending",
   "title": "Government Spending & the Budget, Explained",
   "breadcrumb": "Government Spending",
   "description": "How Congress funds the government, in plain English: the appropriations process, continuing resolutions, shutdowns, reconciliation, and every spending bill we track — sourced from bill text.",
   "about": [
-    { "@type": "Thing", "name": "United States budget process", "sameAs": "https://en.wikipedia.org/wiki/United_States_budget_process" }
+    {
+      "@type": "Thing",
+      "name": "United States budget process",
+      "sameAs": "https://en.wikipedia.org/wiki/United_States_budget_process"
+    }
   ],
-  "intro": [],
-  "introStatus": "structural",
   "guides": [
     "appropriations-process.html",
     "continuing-resolution.html",
@@ -18,6 +20,13 @@
     "what-is-cbo.html",
     "appropriations-act-2026.html"
   ],
-  "bills": { "billTypes": ["appropriation"], "ids": [] },
-  "related": ["congressional-procedure"]
+  "bills": {
+    "billTypes": [
+      "appropriation"
+    ],
+    "ids": []
+  },
+  "related": [
+    "congressional-procedure"
+  ]
 }
