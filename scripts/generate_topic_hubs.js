@@ -132,7 +132,7 @@ function hubJsonLd(cfg, guides, hubBills, modified) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Topics', item: `${BASE}/articles/` },
+        { '@type': 'ListItem', position: 2, name: 'Articles', item: `${BASE}/articles/` },
         { '@type': 'ListItem', position: 3, name: cfg.breadcrumb },
       ],
     },
