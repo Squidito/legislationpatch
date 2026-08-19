@@ -167,6 +167,17 @@ for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scri
     ok(`${label} passed`);
 }
 
+// Tracker articles carry a both-sides section — the highest-risk content on the
+// site (Phase 5, docs/BOTH-SIDES.md, Sec 6.4). The scripted both-sides gate is
+// part of their publish path: verb-symmetry, staleness, every quoted/named
+// position resolves to a STORED source, supporters-first, and the dual-lens +
+// cross-model sign-offs recorded on the ledger. Fail-closed.
+if (ledger.isTracker) {
+    const tg = runNode('scripts/tracker-gate.js', 'tracker-gate', ['--slug', SLUG]);
+    if (!tg.ok) { console.log(tg.out.slice(-1500)); fail('tracker-gate failed — not publishing (fix or omit the unsourced position)'); }
+    ok('tracker-gate passed (both-sides section)');
+}
+
 // ── 2b. D4 date decision (refresh only) ─────────────────────────────────────
 // Decide bump-or-not BEFORE writing anything, so a dry run reports the same
 // decision an --apply would take. dateModified moves only when the audited claim

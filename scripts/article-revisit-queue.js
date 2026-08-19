@@ -106,9 +106,11 @@ function main() {
             movedBills: moved,
             movedCount: moved.length,
             score: Math.round(score * 10) / 10,
-            // Phase 5 gate: a tracker refresh needs org statements + the both-sides
-            // legal gate, so it does NOT go through the Phase 6 explainer refresh
-            // path. Surfaced here for visibility, flagged so James does not misroute it.
+            // Phase 5 is built, so this flag now ROUTES rather than blocks: a
+            // tracker refresh goes through the both-sides path (org-statement
+            // fetch/store + tracker-gate.js + dual-lens), not the Phase 6 explainer
+            // refresh. `route` names the path a picked article should take.
+            route: kind === 'tracker' ? 'tracker' : 'explainer',
             phase5Only: kind === 'tracker',
         });
     }
@@ -139,7 +141,7 @@ function main() {
     for (const r of limited) {
         const flags = [
             r.frozen ? 'FROZEN' : (r.audited ? 'audited' : 'unaudited'),
-            r.phase5Only ? 'tracker/P5' : '',
+            r.route === 'tracker' ? 'tracker→P5' : '',
         ].filter(Boolean).join(' ');
         const age = r.ageDays == null ? 'n/a' : `${r.ageDays}d`;
         console.log(`  ${String(r.score).padStart(5)}  ${String(r.movedCount).padStart(5)}  ${age.padStart(4)}  ${flags.padEnd(24)} ${r.slug}`);
@@ -149,9 +151,10 @@ function main() {
     }
     console.log('');
     console.log('  Legend: score = movedBills×100 + frozen×50 + min(age,365)×0.2 (no-date = 80).');
-    console.log('  A tracker (P5) refresh needs Phase 5 (org statements + both-sides gate), not the');
-    console.log('  Phase 6 explainer refresh path. Refresh an explainer with:');
-    console.log('    (audit to convergence) → node scripts/publish-article.js --slug <slug> --refresh --apply');
+    console.log('  Routes (both end at publish-article --slug <slug> --refresh --apply after a converged audit):');
+    console.log('    explainer → Phase 6 refresh path (full ledger audit to convergence)');
+    console.log('    tracker→P5 → Phase 5 both-sides path: fetch+store every named position');
+    console.log('                 (fetch-reference.js --org), audit, dual-lens, then tracker-gate.js.');
     console.log('');
 }
 
