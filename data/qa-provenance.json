@@ -1668,5 +1668,27 @@
     "genModel": "opus",
     "genAt": "2026-08-17",
     "stampedAt": "2026-08-19"
+  },
+  "article-save-america-act": {
+    "kind": "article",
+    "sourceShas": {
+      "bill-119-hr-7296": "d9b43c924cc31dbe1d0e57b6722b33102998ba699decdef193da63f75da9bb9a",
+      "bill-119-hr-22": "90cb9240fe3ba0db683f11af4500f85b71da3c844648c36db8bcb4962ecd287f",
+      "record-congress-hr-7296-status": "dd36dc12877f736576fd5f10b2ffe10d209180beacc2d72c02e146c00b658a9e",
+      "record-congress-hr-22-status": "951a3280aab5b441ac77840c8e93129db16ff121727c45e275aad492a16e4851",
+      "record-congress-s-1383-status": "6666479ac8cb4eaab4abfd6cc9fbfd3ee073617f62c8f8d6350a61944aca6e1e",
+      "record-house-roll-2026-069-s1383": "e6396941d014f836cdb9f5340ca1b77d5abb57bc99afb470440e07c86234b641",
+      "org-cornyn-save-america-intro": "fa7f53e78adb536eab377cd505174d8e42c368027a47c1371215f037b40880f3",
+      "org-roy-save-america-launch": "a7ff7e5af598616e3762d90e714a5f3c3d0776ca2a0f47fa545186f6373eafe0",
+      "org-brennan-center-save-registration": "eec91fbb161b8ffc4f199cab7e6d5c6b3a428659236cae9f85eda85ac8d697d3",
+      "org-brennan-center-photo-id": "0c507b7bc97d90ec5e76fc58cf917be30abe584e5aa7f93a27c7b68d3f05cc98",
+      "org-brennan-center-noncitizen-rare": "773ee3119f70aa2f9c2c53342a67238d143fd64fb90a72177a4c7f257ce3bfeb"
+    },
+    "proseSha": "d16e8dbc1c1eeab6",
+    "proseFile": "articles/save-america-act.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "opus",
+    "genAt": "2026-08-19",
+    "stampedAt": "2026-08-19"
   }
 }

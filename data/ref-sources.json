@@ -1,4 +1,22 @@
 {
+  "bill-119-hr-22": {
+    "id": "bill-119-hr-22",
+    "kind": "bill",
+    "label": "HR 22 (119th Congress)",
+    "citation": "HR 22",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22/text",
+    "textFile": "data/ref-text/bill-119-hr-22.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "bill-119-hr-7296": {
+    "id": "bill-119-hr-7296",
+    "kind": "bill",
+    "label": "HR 7296 (119th Congress)",
+    "citation": "HR 7296",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7296/text",
+    "textFile": "data/ref-text/bill-119-hr-7296.txt",
+    "fetchedAt": "2026-08-19"
+  },
   "hman-119-rule-xv": {
     "id": "hman-119-rule-xv",
     "kind": "rule",
@@ -25,6 +43,105 @@
     "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg901",
     "textFile": "data/ref-text/hman-119-rule-xxi.txt",
     "fetchedAt": "2026-08-17"
+  },
+  "org-brennan-center-noncitizen-rare": {
+    "id": "org-brennan-center-noncitizen-rare",
+    "kind": "statement",
+    "org": "Brennan Center for Justice",
+    "date": null,
+    "label": "Brennan Center: Noncitizen Voting Is Already Illegal and Vanishingly Rare",
+    "citation": "Brennan Center for Justice",
+    "srcUrl": "https://www.brennancenter.org/our-work/analysis-opinion/noncitizen-voting-already-illegal-and-vanishingly-rare",
+    "textFile": "data/ref-text/org-brennan-center-noncitizen-rare.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "org-brennan-center-photo-id": {
+    "id": "org-brennan-center-photo-id",
+    "kind": "statement",
+    "org": "Brennan Center for Justice",
+    "date": "2026-02-01",
+    "label": "Brennan Center: New SAVE Act Bills Would Still Block Millions of Americans From Voting",
+    "citation": "Brennan Center for Justice",
+    "srcUrl": "https://www.brennancenter.org/our-work/analysis-opinion/new-save-act-bills-would-still-block-millions-americans-voting",
+    "textFile": "data/ref-text/org-brennan-center-photo-id.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "org-brennan-center-save-registration": {
+    "id": "org-brennan-center-save-registration",
+    "kind": "statement",
+    "org": "Brennan Center for Justice",
+    "date": null,
+    "label": "Brennan Center: The SAVE Act Would Undermine Voter Registration for All Americans",
+    "citation": "Brennan Center for Justice",
+    "srcUrl": "https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans",
+    "textFile": "data/ref-text/org-brennan-center-save-registration.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "org-cornyn-save-america-intro": {
+    "id": "org-cornyn-save-america-intro",
+    "kind": "member-statement",
+    "org": "Office of Sen. John Cornyn",
+    "date": null,
+    "label": "Cornyn, Lee, and Roy Introduce the SAVE America Act",
+    "citation": "Office of Sen. John Cornyn",
+    "srcUrl": "https://www.cornyn.senate.gov/news/cornyn-lee-roy-introduce-the-save-america-act/",
+    "textFile": "data/ref-text/org-cornyn-save-america-intro.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "org-roy-save-america-launch": {
+    "id": "org-roy-save-america-launch",
+    "kind": "press-release",
+    "org": "Office of Rep. Chip Roy",
+    "date": null,
+    "label": "Rep. Roy, Senator Lee Launch SAVE America Act",
+    "citation": "Office of Rep. Chip Roy",
+    "srcUrl": "https://roy.house.gov/media/press-releases/rep-roy-senator-lee-launch-save-america-act-renewed-push-election-integrity",
+    "textFile": "data/ref-text/org-roy-save-america-launch.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "record-congress-hr-22-status": {
+    "id": "record-congress-hr-22-status",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2025-01-03",
+    "label": "Congress.gov record — H.R. 22 (SAVE Act) status and House passage",
+    "citation": "Congress.gov, H.R. 22 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22",
+    "textFile": "data/ref-text/record-congress-hr-22-status.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "record-congress-hr-7296-status": {
+    "id": "record-congress-hr-7296-status",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-01-30",
+    "label": "Congress.gov record — H.R. 7296 status, sponsor, cosponsors, latest action",
+    "citation": "Congress.gov, H.R. 7296 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7296",
+    "textFile": "data/ref-text/record-congress-hr-7296-status.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "record-congress-s-1383-status": {
+    "id": "record-congress-s-1383-status",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-03-26",
+    "label": "Congress.gov record — S. 1383 latest action (SAVE America Act House vehicle)",
+    "citation": "Congress.gov, S. 1383 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1383",
+    "textFile": "data/ref-text/record-congress-s-1383-status.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "record-house-roll-2026-069-s1383": {
+    "id": "record-house-roll-2026-069-s1383",
+    "kind": "record",
+    "org": "U.S. House of Representatives (Office of the Clerk)",
+    "date": "2026-02-11",
+    "label": "House Roll Call 69 (2026) — S. 1383 on passage, 218-213",
+    "citation": "U.S. House of Representatives (Office of the Clerk)",
+    "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
+    "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
+    "fetchedAt": "2026-08-19"
   },
   "usc-2-601": {
     "id": "usc-2-601",
