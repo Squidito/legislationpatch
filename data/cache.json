@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T04:29:22.316Z",
+  "generated": "2026-08-19T15:29:55.098Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -1420,7 +1420,68 @@
         "The bill authorizes appropriations but does not itself appropriate funds; actual spending depends on later appropriations acts.",
         "Division E bars the Federal Reserve from issuing a central bank digital currency but does not address digital-currency activity by other federal agencies or by private issuers beyond the Fed."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Ms. Houlahan",
+          "party": "D",
+          "state": "PA",
+          "bioguideId": "H001085",
+          "text": "I was very proud of the markup that passed out of the Armed Services Committee. The bill that we delivered to this floor this week was overwhelmingly bipartisan. It supported our men and women in uniform and strengthened our national defense. It was an honor to work so closely with Chairman Rogers and Ranking Member Smith on that bill. Unfortunately, the toxically amended bill that is here before us is no longer that.",
+          "stance": "oppose",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Rogers",
+          "party": "R",
+          "state": "AL",
+          "bioguideId": "R000575",
+          "text": "I echo the ranking member's comments. This is a very bipartisan product that came out of committee. It is a good product, and it deserves this Chamber's support. He has been a great partner in fashioning what we bring to the floor today.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Jackson",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "J000304",
+          "text": "The Intelligence and Special Operations Subcommittee portions of this bill, in conjunction with approximately $2.2 billion in reconciliation funding, continues to focus on providing our Special Operations Forces, the Defense Intelligence Enterprise, and the security cooperation enterprise with the tools required to ensure their capabilities can support the Department's efforts in strategic competition and in countering malign PRC actions.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. McCormick",
+          "party": "R",
+          "state": "GA",
+          "bioguideId": "M001218",
+          "text": "I rise and offer my amendment No. 25 to H.R. 3838, the National Defense Authorization Act for Fiscal Year 2026. My amendment expands on language already in law, in this bill, and in the Senate NDAA to combat the indirect censorship of conservative news outlets in the Department of War.",
+          "stance": "neutral",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Rose",
+          "party": "R",
+          "state": "TN",
+          "bioguideId": "R000612",
+          "text": "My amendment is intended to address the Janet Mello fraud case, the Army civilian who was indicted and pleaded guilty to stealing over $100 million that were intended for the 4-H Military Partnership Grant Program. The 4-H Military Partnership Grant Program serves 4-H clubs that are in many military installation youth centers. These programs include 4-H positive youth development programming, engaging in hands-on learning in day and overnight summer camps, including military team adventure camps.",
+          "stance": "neutral",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Stauber",
+          "party": "R",
+          "state": "MN",
+          "bioguideId": "S001212",
+          "text": "The first requires the Secretary of the Air Force and the Director of the Air National Guard to work together to modernize the Air National Guard's fighter fleet. Last year's NDAA required a similar report, but this report did not fulfill several requirements, like consultation from the Director of the Air National Guard and recapitalization plans for all fighter wings. It was entirely inadequate.",
+          "stance": "neutral",
+          "source": "House Floor",
+          "chamber": "House"
+        }
+      ],
       "changes": {
         "added": [
           "SPEED Act acquisition overhaul: rewrites the defense acquisition system's objectives and creates the Requirements, Acquisition, and Programming Integration Directorate (RAPID) and a Mission Engineering and Integration Activity (Title XVIII)",
@@ -7398,7 +7459,38 @@
         }
       ],
       "criticisms": [],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mrs. Shaheen",
+          "party": "D",
+          "state": "NH",
+          "bioguideId": "S001181",
+          "text": "Colleagues, every day that Russia earns billions from energy exports, it has more resources to finance this war. Every day that Putin has those resources, he gains more time. Every day that Putin gains more time, more Ukrainians are killed. This legislation is what President Zelenskyy asked us to do. This is what Senator Graham worked so hard to achieve. I hope we can give it an overwhelming vote. I yield the floor.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Cornyn",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "C001056",
+          "text": "Mr. Fetterman and I appreciate the work being done to advance the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026, H.R.5334, in the Senate. This bill will honor Senator Graham's legacy, help dismantle Putin's war machine, and strengthen the U.S. national security. This legislation aims to shut down various revenue streams Russia uses to continue its unprovoked war against Ukraine, and we must consider how it can be most effectively implemented.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Blumenthal",
+          "party": "D",
+          "state": "CT",
+          "bioguideId": "B001277",
+          "text": "I want to particularly thank Senator Lindsey Graham and his courageous, effective sister Darline for their immensely important, even historic contribution to this bill. Today, we say to Vladimir Putin: You will not conquer Ukraine. We stand with the brave, free people of Ukraine. We need to provide them military assistance. We can't do that today, but we are providing the economic tools that are necessary to stop the major purchases of Russian oil and gas from fueling Putin's war machine.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        }
+      ],
       "gaps": [
         "Section 113 orders tariffs on the 5 largest importers of Russian oil and gas but names none of those countries in the text.",
         "The bill requires most sanctions within 30 days of enactment but appropriates no funds for implementation.",

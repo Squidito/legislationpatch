@@ -8,6 +8,42 @@
     "textFile": "data/ref-text/hman-119-rule-xv.txt",
     "fetchedAt": "2026-08-15"
   },
+  "hman-119-rule-xx": {
+    "id": "hman-119-rule-xx",
+    "kind": "rule",
+    "label": "House Rule XX — Voting and Quorum Calls (119th Congress)",
+    "citation": "House Rule XX",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg870",
+    "textFile": "data/ref-text/hman-119-rule-xx.txt",
+    "fetchedAt": "2026-08-17"
+  },
+  "hman-119-rule-xxi": {
+    "id": "hman-119-rule-xxi",
+    "kind": "rule",
+    "label": "House Rule XXI — Restrictions on Certain Bills (119th Congress)",
+    "citation": "House Rule XXI",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg901",
+    "textFile": "data/ref-text/hman-119-rule-xxi.txt",
+    "fetchedAt": "2026-08-17"
+  },
+  "usc-2-601": {
+    "id": "usc-2-601",
+    "kind": "statute",
+    "label": "2 U.S.C. 601",
+    "citation": "2 U.S.C. 601",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17-sec601/htm",
+    "textFile": "data/ref-text/usc-2-601.txt",
+    "fetchedAt": "2026-08-17"
+  },
+  "usc-2-632": {
+    "id": "usc-2-632",
+    "kind": "statute",
+    "label": "2 U.S.C. 632",
+    "citation": "2 U.S.C. 632",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapI-sec632/htm",
+    "textFile": "data/ref-text/usc-2-632.txt",
+    "fetchedAt": "2026-08-17"
+  },
   "usc-2-641": {
     "id": "usc-2-641",
     "kind": "statute",
@@ -34,5 +70,23 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20-subchapI-sec900/htm",
     "textFile": "data/ref-text/usc-2-900.txt",
     "fetchedAt": "2026-08-15"
+  },
+  "usc-31-1341": {
+    "id": "usc-31-1341",
+    "kind": "statute",
+    "label": "31 U.S.C. 1341",
+    "citation": "31 U.S.C. 1341",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleII-chap13-subchapIII-sec1341/htm",
+    "textFile": "data/ref-text/usc-31-1341.txt",
+    "fetchedAt": "2026-08-17"
+  },
+  "usc-31-1342": {
+    "id": "usc-31-1342",
+    "kind": "statute",
+    "label": "31 U.S.C. 1342",
+    "citation": "31 U.S.C. 1342",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleII-chap13-subchapIII-sec1342/htm",
+    "textFile": "data/ref-text/usc-31-1342.txt",
+    "fetchedAt": "2026-08-17"
   }
 }

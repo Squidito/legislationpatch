@@ -196,6 +196,15 @@ const DISPLAY_PROCEDURAL = [
     // Moran quote). Narrator lines, never member speech.
     /\bwas ordered to be engrossed\b/i,
     /\bwas read the third time\b/i,
+    // Amendment call-up motions (procedural). 2026-08-19: HR-5334 "I call up
+    // amendment No. 6711 and ask that it be reported by number." — one-line
+    // procedural motion misattributed as substantive speech.
+    /\bi call up amendment no\.?\s*\d+\b/i,
+    // Passage announcement narration with bracketed cues like "(Applause)" or
+    // amendment-agreement text following the passage line. 2026-08-19: HR-5334
+    // "The bill (H.R. 5334), as amended, was passed. (Applause). Amendment
+    // No. 6712..." — clerk/narrator, never member speech.
+    /\bthe bill \([^)]+\),?\s+as amended,?\s+was passed\b/i,
 ];
 
 // Filler sentence patterns — applied to every sentence in the quote, regardless of position.
