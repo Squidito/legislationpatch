@@ -214,13 +214,169 @@ async function fetchReferencedRule(spec) {
     });
 }
 
+// ── ORG STATEMENT / letter / SAP / member statement / Congressional Record ──
+//
+// Phase 5 (both-sides module). A tracker's "who supports / who opposes" section
+// attributes each position to a NAMED organization or person, and §6.4 requires
+// that statement resolve to a FETCHED, STORED primary source — the org's own
+// press release/letter, a Statement of Administration Policy, a member's
+// statement, or the Congressional Record — never a linked-and-trusted URL. This
+// is the same provenance model as referencedSources for bills, extended to the
+// arbitrary web pages those statements live on.
+//
+// Two things the other modes do not need:
+//   • a BROWSER User-Agent. Advocacy-org and Senate/House press pages 403 the
+//     default Node UA; a real browser UA gets 200 (verified across brennancenter
+//     .org, eff.org, aclu.org, *.senate.gov, *.house.gov).
+//   • a PDF→text path. Opposition letters are frequently PDF-only. We shell out
+//     to `pdftotext` when it is on PATH (poppler; no npm dependency), and fall
+//     back to a zlib-based FlateDecode text extractor when it is not. If neither
+//     yields usable text the fetch FAILS — and a failed fetch means the position
+//     is OMITTED, never softened (enforced downstream by tracker-gate.js).
+//
+// Usage:
+//   node scripts/fetch-reference.js --org "https://www.brennancenter.org/..." \
+//        --org-name "Brennan Center for Justice" --kind statement \
+//        --slug org-brennan-center-photo-id --date 2026-02-15 \
+//        --label "Brennan Center: New SAVE Act bills would still block millions"
+//
+// --kind is one of: statement | letter | sap | member-statement | record | press-release
+const BROWSER_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+const ORG_KINDS = new Set(['statement', 'letter', 'sap', 'member-statement', 'record', 'press-release']);
+
+/** Fetch a URL with a browser UA, following redirects. Returns { buf, contentType }. */
+async function fetchBrowser(url) {
+    const r = await fetch(url, {
+        redirect: 'follow',
+        headers: {
+            'User-Agent': BROWSER_UA,
+            'Accept': 'text/html,application/xhtml+xml,application/pdf,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.9',
+        },
+    });
+    if (!r.ok) {
+        // Drain the body before throwing. An unconsumed response body keeps a
+        // libuv handle open, and a later process.exit(1) then trips an assertion
+        // on Windows ("UV_HANDLE_CLOSING") — the caller would see a crash code
+        // instead of a clean non-zero exit, breaking fail-closed detection.
+        try { await r.body?.cancel(); } catch (e) { /* already closed */ }
+        throw new Error(`HTTP ${r.status} ${r.statusText}`);
+    }
+    const buf = Buffer.from(await r.arrayBuffer());
+    return { buf, contentType: (r.headers.get('content-type') || '').toLowerCase() };
+}
+
+/** Is this response a PDF? Trust the magic bytes over the header. */
+function isPdf(buf, contentType) {
+    return buf.slice(0, 5).toString('latin1') === '%PDF-' || /application\/pdf/.test(contentType);
+}
+
+/**
+ * PDF → text. Prefer poppler's `pdftotext` (already on this machine's PATH, no
+ * npm dependency); if it is absent, fall back to a built-in zlib extractor that
+ * inflates FlateDecode content streams and pulls the text-showing operators.
+ * The fallback is best-effort (it does not handle every PDF encoding), so it is
+ * only a safety net — when it yields too little the caller treats the source as
+ * unfetchable and the position is omitted.
+ */
+function pdfToText(buf) {
+    // 1. pdftotext, if present.
+    const { spawnSync } = require('child_process');
+    const tmp = path.join(REF_DIR, `.tmp-${process.pid}.pdf`);
+    try {
+        ensureDir();
+        fs.writeFileSync(tmp, buf);
+        const res = spawnSync('pdftotext', ['-layout', '-enc', 'UTF-8', tmp, '-'], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+        if (!res.error && res.status === 0 && res.stdout && res.stdout.trim().length > 200) {
+            return res.stdout.replace(/\r\n/g, '\n');
+        }
+    } catch (e) { /* fall through to zlib */ }
+    finally { try { fs.unlinkSync(tmp); } catch (e) {} }
+
+    // 2. zlib fallback: inflate FlateDecode streams, extract (...)Tj / [..]TJ text.
+    const zlib = require('zlib');
+    const raw = buf.latin1Slice ? buf.latin1Slice(0) : buf.toString('latin1');
+    const out = [];
+    const streamRe = /stream\r?\n([\s\S]*?)\r?\nendstream/g;
+    let m;
+    while ((m = streamRe.exec(raw)) !== null) {
+        let content = null;
+        try { content = zlib.inflateSync(Buffer.from(m[1], 'latin1')).toString('latin1'); }
+        catch (e) { content = m[1]; }              // maybe an uncompressed stream
+        // (literal string) Tj   and   [ (a) -3 (b) ] TJ
+        for (const t of content.matchAll(/\(((?:\\.|[^\\()])*)\)\s*Tj/g)) out.push(unescapePdf(t[1]));
+        for (const t of content.matchAll(/\[((?:[^\][]|\\.)*)\]\s*TJ/g)) {
+            for (const s of t[1].matchAll(/\(((?:\\.|[^\\()])*)\)/g)) out.push(unescapePdf(s[1]));
+        }
+    }
+    return out.join(' ').replace(/[ \t]+/g, ' ').replace(/\s*\n\s*/g, '\n').trim();
+}
+
+function unescapePdf(s) {
+    return String(s)
+        .replace(/\\([nrtbf()\\])/g, (_, c) => ({ n: '\n', r: '\r', t: '\t', b: '\b', f: '\f', '(': '(', ')': ')', '\\': '\\' }[c]))
+        .replace(/\\(\d{1,3})/g, (_, o) => String.fromCharCode(parseInt(o, 8)));
+}
+
+async function fetchOrgStatement(url) {
+    const slug    = arg('--slug');
+    const orgName = arg('--org-name');
+    const kind    = (arg('--kind') || 'statement').toLowerCase();
+    if (!/^https?:\/\//i.test(url)) { console.error(`  ❌ --org must be an http(s) URL (got "${url}")`); process.exit(1); }
+    if (!slug)    { console.error('  ❌ --slug is required for --org (e.g. --slug org-brennan-center-photo-id)'); process.exit(1); }
+    if (!orgName) { console.error('  ❌ --org-name is required for --org (the named holder of the position)'); process.exit(1); }
+    if (!ORG_KINDS.has(kind)) { console.error(`  ❌ --kind must be one of: ${[...ORG_KINDS].join(', ')}`); process.exit(1); }
+
+    console.log(`  Fetching org statement (${orgName}) with a browser UA…`);
+    let resp;
+    try { resp = await fetchBrowser(url); }
+    catch (e) {
+        // An unfetchable source is a HARD stop here, by design: the caller must
+        // then OMIT the position, never soften-and-keep it (§6.4 / BOTH-SIDES.md).
+        // Set exitCode + return rather than process.exit() — a hard exit while
+        // Node's built-in fetch (undici) still holds a socket trips a libuv
+        // assertion on Windows and returns a crash code, defeating the very
+        // fail-closed contract this path exists to signal.
+        console.error(`  ❌ Could not fetch the source (${e.message}). Per §6.4 the position it backs must be OMITTED, not softened.`);
+        process.exitCode = 1;
+        return;
+    }
+
+    let text;
+    if (isPdf(resp.buf, resp.contentType)) {
+        console.log('  Detected PDF; extracting text…');
+        text = pdfToText(resp.buf);
+    } else {
+        text = cleanHTML(resp.buf.toString('utf8'));
+    }
+    if (!text || text.trim().length < 200) {
+        console.error(`  ❌ Extracted text is too short (${(text || '').trim().length} chars) — treat as unfetchable and OMIT the position.`);
+        process.exitCode = 1;
+        return;
+    }
+
+    const textFile = save(slug, text);
+    emitEntry({
+        id: slug,
+        kind,
+        org: orgName,
+        date: arg('--date') || null,
+        label: arg('--label') || `${orgName} — ${kind}`,
+        citation: arg('--citation') || orgName,
+        srcUrl: url,
+        textFile,
+        fetchedAt: today(),
+    });
+}
+
 (async () => {
-    const bill = arg('--bill'), usc = arg('--usc'), rule = arg('--rule');
+    const bill = arg('--bill'), usc = arg('--usc'), rule = arg('--rule'), org = arg('--org');
     if (bill)      await fetchReferencedBill(bill);
     else if (usc)  await fetchReferencedUSC(usc);
     else if (rule) await fetchReferencedRule(rule);
+    else if (org)  await fetchOrgStatement(org);
     else {
-        console.error('Usage:\n  node scripts/fetch-reference.js --bill 119-HR-1234\n  node scripts/fetch-reference.js --usc "50:1881a" [--label "FISA Section 702"]\n  node scripts/fetch-reference.js --rule "house:XV"');
+        console.error('Usage:\n  node scripts/fetch-reference.js --bill 119-HR-1234\n  node scripts/fetch-reference.js --usc "50:1881a" [--label "FISA Section 702"]\n  node scripts/fetch-reference.js --rule "house:XV"\n  node scripts/fetch-reference.js --org "<url>" --org-name "Brennan Center" --kind statement --slug org-... [--date YYYY-MM-DD] [--label "..."]');
         process.exit(1);
     }
 })();
