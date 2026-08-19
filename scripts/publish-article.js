@@ -33,9 +33,18 @@ const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf('--' + n); return i >= 0 ? args[i + 1] : null; };
 const SLUG = opt('slug');
 const APPLY = args.includes('--apply');
+// --refresh re-stamps an ALREADY-LIVE article (Phase 6 living-article loop).
+// It re-stamps dateModified ONLY, and only when the audited claim substance
+// actually changed (D4, 2026-08-19) — never datePublished. Plain publish stays
+// the first-publish path: it refuses to overwrite a live article.
+const REFRESH = args.includes('--refresh');
+// --reason correction force-bumps dateModified even when the substance hash is
+// unchanged: a logged correction is a D4 bump trigger in its own right.
+const REASON = opt('reason');
 
 if (!SLUG || !/^[a-z0-9-]+$/.test(SLUG)) {
     console.error('Usage: node scripts/publish-article.js --slug <article-slug> [--apply]');
+    console.error('       node scripts/publish-article.js --slug <slug> --refresh [--apply] [--reason correction]');
     process.exit(1);
 }
 
@@ -45,6 +54,13 @@ const LEDGER_REL = `data/qa-ledger/article-${SLUG}.json`;
 const DRAFT = path.join(ROOT, DRAFT_REL);
 const TARGET = path.join(ROOT, TARGET_REL);
 const LEDGER = path.join(ROOT, LEDGER_REL);
+// D4 date-state sidecar: slug -> { datePublished, dateModified, substanceHash,
+// refreshedAt }. The stored substanceHash is what a later refresh compares
+// against to decide bump-or-not. Not consumed by the mobile app (no parity
+// impact — it is publish-time bookkeeping, not article data).
+const DATE_STATE_REL = 'data/article-date-state.json';
+const DATE_STATE = path.join(ROOT, DATE_STATE_REL);
+const readJsonSafe = (p, fb) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch (e) { return fb; } };
 
 const fail = (m) => { console.error(`  ❌ ${m}`); process.exit(1); };
 const ok = (m) => console.log(`  ✅ ${m}`);
@@ -67,15 +83,20 @@ function runNode(script, label, args = []) {
     return { ok: r.status === 0, out: (r.stdout || '') + (r.stderr || '') };
 }
 
-console.log(`\npublish-article: ${SLUG}${APPLY ? '' : '   (DRY RUN — nothing is written; add --apply)'}\n`);
+console.log(`\npublish-article${REFRESH ? ' --refresh' : ''}: ${SLUG}${APPLY ? '' : '   (DRY RUN — nothing is written; add --apply)'}\n`);
 
 // ── 1. Preconditions ───────────────────────────────────────────────────────
 console.log('── Preconditions');
 if (!fs.existsSync(DRAFT)) fail(`no draft at ${DRAFT_REL}`);
 ok(`draft present: ${DRAFT_REL}`);
 
-if (fs.existsSync(TARGET)) fail(`${TARGET_REL} already exists — refusing to overwrite a live article. Remove or rename it deliberately first.`);
-ok(`${TARGET_REL} is free`);
+if (REFRESH) {
+    if (!fs.existsSync(TARGET)) fail(`${TARGET_REL} is not live — --refresh re-stamps an EXISTING article; use a plain publish for the first publish`);
+    ok(`${TARGET_REL} is live (refresh target — overwritten in place)`);
+} else {
+    if (fs.existsSync(TARGET)) fail(`${TARGET_REL} already exists — refusing to overwrite a live article. Use --refresh to re-stamp it, or remove/rename it deliberately first.`);
+    ok(`${TARGET_REL} is free`);
+}
 
 const ledger = (() => { try { return JSON.parse(fs.readFileSync(LEDGER, 'utf8')); } catch (e) { return null; } })();
 if (!ledger) fail(`no audit ledger at ${LEDGER_REL} — an unaudited draft is not publishable`);
@@ -146,48 +167,147 @@ for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scri
     ok(`${label} passed`);
 }
 
+// ── 2b. D4 date decision (refresh only) ─────────────────────────────────────
+// Decide bump-or-not BEFORE writing anything, so a dry run reports the same
+// decision an --apply would take. dateModified moves only when the audited claim
+// SUBSTANCE moved (or a correction is logged) — never on style / link / metadata
+// / typo edits, and datePublished never moves at all (D4, 2026-08-19).
+let refreshPlan = null;
+if (REFRESH) {
+    const newHash = AL.ledgerSubstanceHash(ledger);
+    const state = readJsonSafe(DATE_STATE, {});
+    const prior = state[SLUG] || null;
+    const liveHtml = fs.readFileSync(TARGET, 'utf8');
+    const curDM = (liveHtml.match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})"/) || [])[1] || null;
+    const curDP = (liveHtml.match(/"datePublished":\s*"(\d{4}-\d{2}-\d{2})"/) || [])[1] || null;
+    const forceCorrection = REASON === 'correction';
+    // First refresh (no stored baseline) UNFREEZES the article -> bump (D4
+    // companion ruling). A null new hash (no receipted SUPPORTED claim) cannot
+    // prove "unchanged" -> bump, the honest fail-safe. Otherwise bump iff the
+    // sourced-fact set moved.
+    const substanceChanged = !prior || !prior.substanceHash || newHash === null || newHash !== prior.substanceHash;
+    const bump = substanceChanged || forceCorrection;
+    refreshPlan = {
+        newHash, curDM, curDP, bump,
+        newDM: bump ? localDate() : (curDM || localDate()),
+        why: forceCorrection ? 'correction logged (--reason correction)'
+            : !prior ? 'first refresh — no prior baseline (unfreezes the article)'
+            : !prior.substanceHash ? 'prior baseline carries no substance hash'
+            : newHash === null ? 'ledger has no receipted SUPPORTED claim — cannot prove unchanged'
+            : newHash !== prior.substanceHash ? 'audited claim substance changed'
+            : 'audited claim substance unchanged',
+    };
+    console.log('\n── D4 date decision');
+    note(`substance hash: ${prior && prior.substanceHash ? prior.substanceHash : '(none)'} -> ${newHash || '(null)'}`);
+    console.log(`  ${bump ? '✅ BUMP dateModified -> ' + refreshPlan.newDM : '· NO BUMP — dateModified stays ' + (curDM || 'unset')}  (${refreshPlan.why})`);
+    if (curDP) note(`datePublished stays ${curDP} (never changes on refresh)`);
+}
+
 if (!APPLY) {
     console.log('\n  Dry run complete. Everything needed to publish is in place.');
-    console.log(`  Run again with --apply to move ${DRAFT_REL} -> ${TARGET_REL}.\n`);
+    const verb = REFRESH ? `re-stamp ${TARGET_REL} in place` : `move ${DRAFT_REL} -> ${TARGET_REL}`;
+    console.log(`  Run again with --apply to ${verb}.\n`);
     process.exit(0);
 }
 
 // ── 3. Move + re-stamp ─────────────────────────────────────────────────────
-// A draft can sit for days between audit and approval, so publication dates are
-// stamped HERE, not when the draft was written. Everything else moves byte-for-
-// byte: the draft was authored with articles/ relative paths on purpose, so
-// publishing rewrites no links.
 console.log('\n── Publishing');
 let html = fs.readFileSync(DRAFT, 'utf8');
+let written;
 const today = localDate();
-const monthYear = localMonthYear();
 
-const before = html;
-html = html.replace(/"datePublished":\s*"[^"]*"/, `"datePublished": "${today}"`);
-html = html.replace(/"dateModified":\s*"[^"]*"/, `"dateModified": "${today}"`);
-html = html.replace(/<span>Published [^<]*<\/span>/, `<span>Published ${monthYear}</span>`);
-if (html === before) note('no date fields matched — publishing the draft unchanged');
+if (REFRESH) {
+    // Re-stamp dateModified ONLY. datePublished and the visible "Published ..."
+    // line are LEFT ALONE (D4: datePublished never changes). The visible
+    // "Updated <Month Year>" line is set to match; a frozen pre-lane article may
+    // carry none yet, so insert one after "Published ..." when it is missing.
+    const newDM = refreshPlan.newDM;
+    const updMonthYear = localMonthYear(new Date(newDM + 'T12:00:00'));
+    const before = html;
+    html = html.replace(/"dateModified":\s*"[^"]*"/, `"dateModified": "${newDM}"`);
+    if (/<span>Updated [^<]*<\/span>/.test(html)) {
+        html = html.replace(/<span>Updated [^<]*<\/span>/, `<span>Updated ${updMonthYear}</span>`);
+    } else {
+        html = html.replace(/(<span>Published [^<]*<\/span>)/, `$1<span>Updated ${updMonthYear}</span>`);
+    }
+    if (html === before) note('no dateModified/Updated field matched — the article carried none to re-stamp');
 
-fs.writeFileSync(TARGET, html, 'utf8');
-// Read back and assert (a success log without a read-back is the known bug class).
-const written = fs.readFileSync(TARGET, 'utf8');
-if (!written.includes(`"datePublished": "${today}"`)) fail('published file does not carry the new datePublished — aborting before the draft is removed');
-if (written.length !== html.length) fail('published file does not match what was written');
-ok(`wrote ${TARGET_REL} (datePublished ${today})`);
+    fs.writeFileSync(TARGET, html, 'utf8');
+    written = fs.readFileSync(TARGET, 'utf8');
+    if (!written.includes(`"dateModified": "${newDM}"`)) fail('re-stamped file does not carry the new dateModified — aborting before the draft is removed');
+    if (written.length !== html.length) fail('re-stamped file does not match what was written');
+    // datePublished is the D4 invariant: it must survive the refresh untouched.
+    if (refreshPlan.curDP && !written.includes(`"datePublished": "${refreshPlan.curDP}"`)) {
+        fail(`datePublished changed on refresh (was ${refreshPlan.curDP}) — REFUSING; refresh must never move it`);
+    }
+    ok(`re-stamped ${TARGET_REL} (dateModified ${newDM}${refreshPlan.bump ? '' : ' — unchanged'}; datePublished ${refreshPlan.curDP || 'n/a'} untouched)`);
 
-fs.unlinkSync(DRAFT);
-if (fs.existsSync(DRAFT)) fail('draft still present after unlink');
-ok(`removed ${DRAFT_REL}`);
+    fs.unlinkSync(DRAFT);
+    if (fs.existsSync(DRAFT)) fail('draft still present after unlink');
+    ok(`removed ${DRAFT_REL}`);
+} else {
+    // A draft can sit for days between audit and approval, so publication dates
+    // are stamped HERE, not when the draft was written. Everything else moves
+    // byte-for-byte: the draft was authored with articles/ relative paths on
+    // purpose, so publishing rewrites no links.
+    const monthYear = localMonthYear();
+    const before = html;
+    html = html.replace(/"datePublished":\s*"[^"]*"/, `"datePublished": "${today}"`);
+    html = html.replace(/"dateModified":\s*"[^"]*"/, `"dateModified": "${today}"`);
+    html = html.replace(/<span>Published [^<]*<\/span>/, `<span>Published ${monthYear}</span>`);
+    if (html === before) note('no date fields matched — publishing the draft unchanged');
+
+    fs.writeFileSync(TARGET, html, 'utf8');
+    // Read back and assert (a success log without a read-back is the known bug class).
+    written = fs.readFileSync(TARGET, 'utf8');
+    if (!written.includes(`"datePublished": "${today}"`)) fail('published file does not carry the new datePublished — aborting before the draft is removed');
+    if (written.length !== html.length) fail('published file does not match what was written');
+    ok(`wrote ${TARGET_REL} (datePublished ${today})`);
+
+    fs.unlinkSync(DRAFT);
+    if (fs.existsSync(DRAFT)) fail('draft still present after unlink');
+    ok(`removed ${DRAFT_REL}`);
+}
 
 // ── 4. Regenerate every surface that must know ─────────────────────────────
 console.log('\n── Generated surfaces');
-for (const [script, label] of [
+
+// Re-promotion (refresh + bump): flip showUpdated so the article's index card
+// reads "· Updated <Month Year>". The date itself is derived from the article's
+// real dateModified at render time (generate_articles_index.js), so this is a
+// pure on/off flag — no date is ever typed. Done BEFORE the index regenerates.
+if (REFRESH && refreshPlan.bump) {
+    const idxPath = path.join(ROOT, 'data', 'articles-index.json');
+    const curated = readJsonSafe(idxPath, null);
+    if (curated && curated.articles && curated.articles[`${SLUG}.html`]) {
+        if (curated.articles[`${SLUG}.html`].showUpdated !== true) {
+            curated.articles[`${SLUG}.html`].showUpdated = true;
+            fs.writeFileSync(idxPath, JSON.stringify(curated, null, 2) + '\n');
+            const back = readJsonSafe(idxPath, null);
+            if (!back || back.articles[`${SLUG}.html`].showUpdated !== true) fail('showUpdated flag did not read back in data/articles-index.json');
+            ok('re-promotion: showUpdated flag set on the index card');
+        } else {
+            note('showUpdated already set on the index card');
+        }
+    } else {
+        note('no curated index entry to flag for re-promotion (card renders under UNSORTED)');
+    }
+}
+
+// The news sitemap is regenerated on a FIRST publish only. An evergreen
+// explainer refresh must never enter the Google News feed (ruling @901ad6da):
+// datePublished does not move, and the generator keys off NewsArticle schema +
+// datePublished anyway, so this is belt-and-suspenders — the refresh does not
+// even ask it to run.
+const surfaces = [
     ['scripts/generate_articles_index.js', 'articles index'],
     ['scripts/generate_sitemap.js', 'sitemap'],
     ['scripts/generate-search-index.js', 'search index'],
     ['scripts/generate_author_page.js', 'author page'],
-    ['scripts/generate_news_sitemap.js', 'news sitemap'],
-]) {
+];
+if (!REFRESH) surfaces.push(['scripts/generate_news_sitemap.js', 'news sitemap']);
+else note('news sitemap NOT regenerated — evergreen explainers stay out of the Google News feed (ruling @901ad6da)');
+for (const [script, label] of surfaces) {
     const r = runNode(script, label);
     if (!r.ok) { console.log(r.out.slice(-800)); fail(`${label} generation failed`); }
     ok(label + ' regenerated');
@@ -241,8 +361,33 @@ if (!baseline) {
     ok(`qa-regression baseline carries ${ledger.id} @ ${h} (scoped — no other entry touched)`);
 }
 
-console.log(`\n  Published locally. NOT committed, NOT pushed, NO IndexNow ping.\n`);
+// D4 date-state baseline. On a FIRST publish it records today's dates + the
+// substance hash so the FIRST refresh has a baseline to compare against; on a
+// refresh it records the (possibly unchanged) dateModified and the current hash,
+// so the NEXT refresh compares against this one. Read the FINAL file back rather
+// than trusting the in-memory values.
+{
+    const state = readJsonSafe(DATE_STATE, {});
+    const finalHtml = fs.readFileSync(TARGET, 'utf8');
+    const dp = (finalHtml.match(/"datePublished":\s*"(\d{4}-\d{2}-\d{2})"/) || [])[1] || null;
+    const dm = (finalHtml.match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})"/) || [])[1] || null;
+    state[SLUG] = { datePublished: dp, dateModified: dm, substanceHash: AL.ledgerSubstanceHash(ledger), refreshedAt: today };
+    const ordered = {};
+    for (const k of Object.keys(state).sort()) ordered[k] = state[k];
+    fs.writeFileSync(DATE_STATE, JSON.stringify(ordered, null, 2) + '\n');
+    const back = readJsonSafe(DATE_STATE, {});
+    if (!back[SLUG] || back[SLUG].dateModified !== dm) fail('date-state read-back does not carry this article');
+    ok(`D4 date-state recorded (${DATE_STATE_REL}): dateModified ${dm}, substanceHash ${state[SLUG].substanceHash || '(null)'}`);
+}
+
+const bumped = !REFRESH || refreshPlan.bump;
+console.log(`\n  ${REFRESH ? 'Refreshed' : 'Published'} locally. NOT committed, NOT pushed, NO IndexNow ping.\n`);
 console.log('  Next, when you want it live:');
-console.log(`    git add -A && git commit -m "Publish explainer: ${SLUG}"`);
+console.log(`    git add -A && git commit -m "${REFRESH ? 'Refresh' : 'Publish'} explainer: ${SLUG}"`);
 console.log('    (then merge dev -> main and push — your call, as always)');
-console.log(`    after it is live:  npm run indexnow -- --url https://legislationpatch.com/articles/${SLUG}.html\n`);
+if (bumped) {
+    console.log(`    after it is live:  npm run indexnow -- --url https://legislationpatch.com/articles/${SLUG}.html`);
+} else {
+    console.log('    (no IndexNow ping — dateModified did not move, so there is nothing new to announce)');
+}
+console.log('');

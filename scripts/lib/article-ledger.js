@@ -125,6 +125,44 @@ function proseMatchesLedger(l) {
     return { ok: true, reason: 'ledger matches the prose on disk', stamped, actual };
 }
 
+/**
+ * D4 SUBSTANCE FINGERPRINT — the "did the audited facts change" signal that
+ * decides whether a refresh bumps dateModified (D4, decided 2026-08-19).
+ *
+ * Deliberately FACTS-ONLY: the sorted, de-duplicated set of every live SUPPORTED
+ * claim's { sourceFile, normalized sourceSpan } — the source-bound receipts the
+ * article currently asserts. It is INSENSITIVE to prose wording, claim
+ * paraphrase, row order, field/section labels, typos, link weaving and
+ * metadata; and SENSITIVE to a fact added, corrected, removed, or a figure
+ * refreshed (each moves the receipt set). That is exactly the D4 line: bump on
+ * substance, never on style / link / metadata / typos.
+ *
+ * NOT the same primitive as patch-console's article-audit ledgerSubstanceHash():
+ * that one drives PASS CONVERGENCE and must catch any edit (it folds in proseSha,
+ * field, verdict, severity, status). This one drives the PUBLISHED-DATE decision
+ * and must ignore everything that is not a sourced fact. Two questions, two hashes.
+ *
+ * "Live" = status !== 'fixed' (a fixed row is a removed/superseded claim kept as
+ * audit history) and verdict === 'SUPPORTED' (only asserted facts count; a
+ * REJECTED flag or an open UNSUPPORTED row asserts nothing). Returns null when a
+ * ledger carries no receipted SUPPORTED claim — the caller treats null as
+ * "cannot prove unchanged" and bumps, the honest fail-safe.
+ */
+function ledgerSubstanceHash(l) {
+    if (!l || !Array.isArray(l.claims)) return null;
+    const facts = [];
+    for (const c of l.claims) {
+        if (!c || c.status === 'fixed' || c.verdict !== 'SUPPORTED') continue;
+        const span = String(c.sourceSpan || '').replace(/\s+/g, ' ').trim();
+        if (!span) continue;
+        // JSON tuple, not a delimiter join: no separator can collide with span text.
+        facts.push(JSON.stringify([c.sourceFile || '', span]));
+    }
+    if (!facts.length) return null;
+    const uniq = [...new Set(facts)].sort();
+    return crypto.createHash('sha256').update(JSON.stringify(uniq)).digest('hex').slice(0, 16);
+}
+
 /** sha256 of every registered source file, by source id (for the provenance sidecar). */
 function sourceShas(l) {
     const out = {};
@@ -137,4 +175,4 @@ function sourceShas(l) {
     return out;
 }
 
-module.exports = { isArticleLedger, slugOf, proseFile, proseHash, proseMatchesLedger, sourcesOf, sourceTextForClaim, sourceShas, ROOT };
+module.exports = { isArticleLedger, slugOf, proseFile, proseHash, proseMatchesLedger, ledgerSubstanceHash, sourcesOf, sourceTextForClaim, sourceShas, ROOT };
