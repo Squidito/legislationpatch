@@ -124,7 +124,14 @@ for (const f of tracked) {
 
 // ── E3 + E4: CSP and referrer meta on every HTML page ──────────────────────
 // Presence alone is gameable — also assert the policy hasn't been weakened.
-const htmlFiles = textFiles.filter((f) => f.endsWith('.html'));
+// Exempt: audited hub-prose FRAGMENTS (data/topics/<slug>-prose.html). They are
+// body prose only — publish-topic-prose.js refuses <html>/<head>/<body>/<script>/
+// javascript:, and generate_topic_hubs.js hash-binds each fragment to its audit
+// ledger before injecting it into a hub page that carries the full CSP itself.
+// A page-level meta tag cannot exist in a file the publisher forbids a <head> in.
+// E1 (secrets) and E5 (noopener) still scan these files like any other text file.
+const HTML_FRAGMENT = /^data\/topics\/[a-z0-9-]+-prose\.html$/;
+const htmlFiles = textFiles.filter((f) => f.endsWith('.html') && !HTML_FRAGMENT.test(f));
 
 for (const f of htmlFiles) {
   const content = read(f);
