@@ -223,14 +223,17 @@ if (REFRESH) {
     // carry none yet, so insert one after "Published ..." when it is missing.
     const newDM = refreshPlan.newDM;
     const updMonthYear = localMonthYear(new Date(newDM + 'T12:00:00'));
-    const before = html;
+    // Check FIELD presence, not whether html changed: on a NO-BUMP refresh newDM
+    // equals the current date, so the re-stamp is a no-op even though the fields
+    // are present. Only a genuinely absent dateModified is worth flagging.
+    const hadDM = /"dateModified":\s*"[^"]*"/.test(html);
     html = html.replace(/"dateModified":\s*"[^"]*"/, `"dateModified": "${newDM}"`);
     if (/<span>Updated [^<]*<\/span>/.test(html)) {
         html = html.replace(/<span>Updated [^<]*<\/span>/, `<span>Updated ${updMonthYear}</span>`);
     } else {
         html = html.replace(/(<span>Published [^<]*<\/span>)/, `$1<span>Updated ${updMonthYear}</span>`);
     }
-    if (html === before) note('no dateModified/Updated field matched — the article carried none to re-stamp');
+    if (!hadDM) note('draft carried no JSON-LD dateModified field to re-stamp');
 
     fs.writeFileSync(TARGET, html, 'utf8');
     written = fs.readFileSync(TARGET, 'utf8');

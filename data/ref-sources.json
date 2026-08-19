@@ -88,5 +88,77 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleII-chap13-subchapIII-sec1342/htm",
     "textFile": "data/ref-text/usc-31-1342.txt",
     "fetchedAt": "2026-08-17"
+  },
+  "usc-5-801": {
+    "id": "usc-5-801",
+    "kind": "statute",
+    "label": "5 U.S.C. 801",
+    "citation": "5 U.S.C. 801",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec801/htm",
+    "textFile": "data/ref-text/usc-5-801.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-802": {
+    "id": "usc-5-802",
+    "kind": "statute",
+    "label": "5 U.S.C. 802",
+    "citation": "5 U.S.C. 802",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec802/htm",
+    "textFile": "data/ref-text/usc-5-802.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-803": {
+    "id": "usc-5-803",
+    "kind": "statute",
+    "label": "5 U.S.C. 803",
+    "citation": "5 U.S.C. 803",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec803/htm",
+    "textFile": "data/ref-text/usc-5-803.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-804": {
+    "id": "usc-5-804",
+    "kind": "statute",
+    "label": "5 U.S.C. 804",
+    "citation": "5 U.S.C. 804",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec804/htm",
+    "textFile": "data/ref-text/usc-5-804.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-805": {
+    "id": "usc-5-805",
+    "kind": "statute",
+    "label": "5 U.S.C. 805",
+    "citation": "5 U.S.C. 805",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec805/htm",
+    "textFile": "data/ref-text/usc-5-805.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-806": {
+    "id": "usc-5-806",
+    "kind": "statute",
+    "label": "5 U.S.C. 806",
+    "citation": "5 U.S.C. 806",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec806/htm",
+    "textFile": "data/ref-text/usc-5-806.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-807": {
+    "id": "usc-5-807",
+    "kind": "statute",
+    "label": "5 U.S.C. 807",
+    "citation": "5 U.S.C. 807",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec807/htm",
+    "textFile": "data/ref-text/usc-5-807.txt",
+    "fetchedAt": "2026-08-19"
+  },
+  "usc-5-808": {
+    "id": "usc-5-808",
+    "kind": "statute",
+    "label": "5 U.S.C. 808",
+    "citation": "5 U.S.C. 808",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec808/htm",
+    "textFile": "data/ref-text/usc-5-808.txt",
+    "fetchedAt": "2026-08-19"
   }
 }
