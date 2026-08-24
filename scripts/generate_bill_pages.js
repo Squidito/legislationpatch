@@ -470,11 +470,22 @@ function structuredData(bill, url) {
 
 // ── Full page document ───────────────────────────────────────────────────────
 
+// Bill display names that appear on MORE than one bill (companion House/Senate
+// pairs). Populated in main() before any page is written; billPage() appends
+// the bill code to these titles so no two pages share a <title>.
+const DUP_TITLE_NAMES = new Set();
+
 const CSP = "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://bioguide.congress.gov https://clerk.house.gov; connect-src 'self' https://ipapi.co https://api.zippopotam.us https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'";
 
 function billPage(bill, slug) {
   const url    = `${BASE}/bill/${slug}/`;
-  const title  = `${bill.title || bill.code || bill.id} — Plain-English Summary | LegislationPatch`;
+  // Companion bills (House + Senate versions of the same-named bill) would
+  // otherwise emit byte-identical <title>s — a duplicate-title signal to search
+  // engines and indistinguishable SERP entries. Only collisions get the code
+  // suffix, so the other ~180 titles stay stable for anything already indexed.
+  const name   = bill.title || bill.code || bill.id;
+  const disamb = DUP_TITLE_NAMES.has(name) && bill.code ? `${name} (${bill.code.replace('.', ' ')})` : name;
+  const title  = `${disamb} — Plain-English Summary | LegislationPatch`;
   const desc   = truncate(bill.brief || bill.summary || '', 155);
   const descAttr = escHtml(desc);
   const titleAttr = escHtml(title);
@@ -687,6 +698,15 @@ function injectHomepage(records) {
 function main() {
   // 1. Compute current slug for every bill (shared billSlug — never drifts).
   const records = bills.map(bill => ({ bill, slug: billSlug(bill) }));
+
+  // Detect display-name collisions (companion bills) so billPage() can
+  // disambiguate their <title>s with the bill code.
+  const nameCount = new Map();
+  for (const { bill } of records) {
+    const name = bill.title || bill.code || bill.id;
+    nameCount.set(name, (nameCount.get(name) || 0) + 1);
+  }
+  for (const [name, n] of nameCount) if (n > 1) DUP_TITLE_NAMES.add(name);
 
   // Collision guard: ids are unique so slugs should be unique, but fail loud if not.
   const bySlug = new Map();

@@ -38,6 +38,8 @@ The canonical **pipeline** is `run-batch.js` → `fetch_bills_data` + `fetch_cr_
 | `node scripts/fetch_wiki_bios.js` | Fetch Wikipedia bios for all existing rep files |
 | `node scripts/generate_reps.js` | Update rep profiles + rebuild index |
 | `node scripts/generate_reps.js --all` | Full 119th Congress rebuild (~6 min) |
+| `node scripts/preflight.js [--verbose]` | Structural checks across every rendered HTML page: JSON-LD, smart quotes, entity @ids, bylines, theme, internal links, trust links, canonical/title, **title uniqueness, meta descriptions, sitemap↔disk both directions** |
+| `node scripts/verify-production.js [--all] [--per-group N]` (`npm run verify-prod`) | **Post-deploy check of the LIVE site vs origin/main**: robots.txt, live sitemap matches deployed sitemap, sampled pages (every path group) serve 200 with matching title/canonical/description, no redirect, no noindex. Run after any push to main; retries transient 5xx; failures right after a push may be Cloudflare cache lag (~4h) |
 
 Env vars needed: `CONGRESS_API_KEY`, `GOVINFO_API_KEY`, `CONGRESS_SESSION=119`
 

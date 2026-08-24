@@ -64,6 +64,7 @@ const entries = [];
 
 // Static pages
 entries.push(urlEntry(BASE + '/',             todayStr(), 'daily',   '1.0'));
+entries.push(urlEntry(BASE + '/bills.html',   todayStr(), 'daily',   '0.9'));
 entries.push(urlEntry(BASE + '/floor.html',   todayStr(), 'daily',   '0.8'));
 entries.push(urlEntry(BASE + '/reps.html',    todayStr(), 'monthly', '0.6'));
 entries.push(urlEntry(BASE + '/privacy.html', null,       'yearly',  '0.3'));

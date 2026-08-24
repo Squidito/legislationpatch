@@ -18,6 +18,7 @@
     "qa-verify": "node scripts/qa-source-verify.js",
     "parity": "node scripts/check-parity.js",
     "sitemap": "node scripts/generate_sitemap.js",
+    "verify-prod": "node scripts/verify-production.js",
     "search-index": "node scripts/generate-search-index.js",
     "digest": "node scripts/generate_digest.js",
     "feed": "node scripts/generate_feed.js",

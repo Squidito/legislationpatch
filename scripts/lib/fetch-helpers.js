@@ -12,12 +12,12 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 // callers still check res.ok for non-retryable 4xx. Throws only after exhausting tries.
 // This is what makes a long sequential fetch survive Congress.gov rate-limiting
 // instead of dying mid-run.
-async function fetchWithRetry(url, { tries = 5, baseDelay = 2000, label = '' } = {}) {
+async function fetchWithRetry(url, { tries = 5, baseDelay = 2000, label = '', init } = {}) {
     let lastErr;
     const tag = label || (typeof url === 'string' ? url.split('?')[0] : 'fetch');
     for (let attempt = 1; attempt <= tries; attempt++) {
         try {
-            const res = await globalThis.fetch(url);
+            const res = await globalThis.fetch(url, init);
             if (res.status === 429 || (res.status >= 500 && res.status <= 599)) {
                 const ra   = parseInt(res.headers.get('retry-after') || '', 10);
                 const wait = Number.isFinite(ra) ? ra * 1000 : baseDelay * Math.pow(2, attempt - 1);

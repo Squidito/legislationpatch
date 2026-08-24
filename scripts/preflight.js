@@ -425,6 +425,95 @@ section('Canonical URL and title');
   else pass('All non-generated pages have a title and canonical');
 }
 
+// 8b. No two indexable pages may share a <title> ----------------------------
+// Search engines treat byte-identical titles as duplicate-content signal and
+// render indistinguishable SERP entries. This is not hypothetical here:
+// companion bills (House + Senate versions of the same-named bill) generated
+// four pairs of identical titles until generate_bill_pages.js learned to
+// append the bill code. Check 8 skips bill/ pages ("checked by their
+// generator") -- but uniqueness is a CROSS-page property no per-page generator
+// can see, so every page is included here. Drafts are exempt: a draft
+// legitimately carries the title of the article it is about to become.
+section('Title uniqueness');
+{
+  const byTitle = new Map();
+  for (const f of files) {
+    if (f.startsWith('drafts/')) continue;
+    const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    if (isStub(h)) continue;
+    const t = (h.match(/<title>([^<]+)<\/title>/) || [])[1];
+    if (!t) continue; // presence is check 8's job
+    if (!byTitle.has(t)) byTitle.set(t, []);
+    byTitle.get(t).push(f);
+  }
+  const dups = [...byTitle].filter(([, v]) => v.length > 1);
+  if (dups.length) {
+    dups.slice(0, 10).forEach(([t, v]) =>
+      fail(`duplicate <title> "${t.slice(0, 70)}" on ${v.length} pages: ${v.slice(0, 3).join(', ')}`));
+  } else pass(`All ${byTitle.size} indexable page titles are unique`);
+}
+
+// 8c. Every indexable page carries a real meta description -------------------
+// The description is the SERP snippet; a missing one lets the engine pick
+// arbitrary body text. NOTE the extraction regex pairs the quote style --
+// content="..." may legitimately contain apostrophes ("Congress's"), so a
+// naive [^"']* matcher truncates at the first apostrophe and false-flags.
+section('Meta description present');
+{
+  const bad = [];
+  for (const f of files) {
+    const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    if (isStub(h)) continue;
+    const tag = (h.match(/<meta[^>]*name=["']description["'][^>]*>/) || [])[0];
+    const d = tag && ((tag.match(/content="([^"]*)"/) || tag.match(/content='([^']*)'/)) || [])[1];
+    if (!d) bad.push(`${f}: no meta description`);
+    else if (d.trim().length < 25) bad.push(`${f}: meta description too short (${d.trim().length} chars)`);
+  }
+  if (bad.length) bad.slice(0, 10).forEach(b => fail(b));
+  else pass('Every indexable page has a meta description (25+ chars)');
+}
+
+// 8d. Sitemap and disk agree, both directions --------------------------------
+// Direction A: a sitemap URL with no file behind it is a promised page that
+// 404s to crawlers. Direction B: an indexable page absent from the sitemap is
+// discoverable only by link-crawling -- bills.html sat outside the sitemap for
+// a month this way. Drafts are exempt from B (unpublished by definition).
+section('Sitemap ↔ disk');
+{
+  const smPath = path.join(ROOT, 'sitemap.xml');
+  if (!fs.existsSync(smPath)) {
+    fail('sitemap.xml missing from repo root');
+  } else {
+    const locs = [...fs.readFileSync(smPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+    const onDisk = new Set();
+    const ghost = [];
+    for (const u of locs) {
+      let rel;
+      try { rel = decodeURIComponent(new URL(u).pathname).replace(/^\//, ''); } catch { ghost.push(u); continue; }
+      if (rel === '' || rel.endsWith('/')) rel += 'index.html';
+      // extensionless URLs (/author/james-shearn) may be backed by either
+      // <rel>.html or <rel>/index.html -- and a bare <rel> that exists as a
+      // DIRECTORY must not count, or the page it contains is never credited.
+      const isFile = c => { try { return fs.statSync(path.join(ROOT, c)).isFile(); } catch { return false; } };
+      const hit = [rel, rel + '.html', rel.replace(/\.html$/, '') + '/index.html']
+        .find(isFile);
+      if (!hit) ghost.push(u);
+      else onDisk.add(hit);
+    }
+    if (ghost.length) ghost.slice(0, 10).forEach(u => fail(`sitemap URL has no file on disk: ${u}`));
+    else pass(`All ${locs.length} sitemap URLs resolve to files on disk`);
+
+    const orphan = [];
+    for (const f of files) {
+      if (f.startsWith('drafts/')) continue;
+      if (isStub(fs.readFileSync(path.join(ROOT, f), 'utf8'))) continue;
+      if (!onDisk.has(f)) orphan.push(f);
+    }
+    if (orphan.length) orphan.slice(0, 10).forEach(f => fail(`indexable page not in sitemap: ${f}`));
+    else pass('Every indexable page is in the sitemap');
+  }
+}
+
 // 9. Published changelog editions still identify their bills correctly ------
 // Editions are generated once and never rebuilt, so a later bill rename leaves
 // them frozen. H.R. 5334 was published as an early-childhood education bill and
