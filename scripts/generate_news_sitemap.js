@@ -128,10 +128,21 @@ function main() {
     </news:news>
   </url>`).join('\n');
 
+  // An empty <urlset> is legal by the sitemap spec, but Search Console flags
+  // it as an ERROR ("Missing XML tag: url" — observed on the live property
+  // 2026-08-24) and the red badge persists until the file has at least one
+  // <url>. So an empty window emits ONE placeholder entry for the changelog
+  // hub WITHOUT any <news:news> block: the validator is satisfied, and since
+  // only <news:news> entries count as news, nothing is misrepresented as news.
+  const placeholder = `  <url>
+    <loc>${xmlEscape(`${BASE}/changelog/`)}</loc>
+  </url>`;
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-${entries}${entries ? '\n' : ''}</urlset>
+${entries || placeholder}
+</urlset>
 `;
 
   const out = path.join(ROOT, 'news-sitemap.xml');
