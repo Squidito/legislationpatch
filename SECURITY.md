@@ -14,7 +14,7 @@ flowing into `innerHTML`.
 
 | # | Invariant | Why | Enforced by |
 |---|---|---|---|
-| 1 | No secret/API key in any tracked file — keys live in `.env` only | A GovInfo key was once hardcoded in scripts and shipped in a public repo; it took a full `git filter-repo` history purge + key rotation to clean up | `security-check.js` E1/E2 (pre-commit + CI); GitHub secret scanning |
+| 1 | No secret/API key in any tracked file — keys live in `.env` only | A key committed to a public repo is compromised the moment it lands; keeping secrets out of tracked files entirely is the only reliable defense | `security-check.js` E1/E2 (pre-commit + CI); GitHub secret scanning |
 | 2 | Every HTML page carries the CSP meta tag, un-weakened (no `unsafe-eval`; no external `script-src` hosts except the single allowlisted `https://static.cloudflareinsights.com` for Cloudflare Web Analytics, owner-approved 2026-07-17) | CSP is the backstop for any XSS that slips past escaping — an injected `<script src>` won't execute | `security-check.js` E3 (pre-commit + CI) |
 | 3 | Every HTML page carries `<meta name="referrer" content="no-referrer">` | Don't leak reading habits to every outbound site | `security-check.js` E4 (pre-commit + CI) |
 | 4 | Every `target="_blank"` link has `rel="noopener"` | Reverse tabnabbing — the opened page can navigate the opener | `security-check.js` E5 (pre-commit + CI) |
@@ -60,9 +60,7 @@ flowing into `innerHTML`.
 
 ## Open items
 
-- [ ] Revoke the old leaked GovInfo key (rotated 2026-07; email
-  api.data.gov@gsa.gov to fully retire it).
-- [ ] Confirm GitHub secret scanning + push protection are enabled in repo
-  settings (Settings → Code security). Free for public repos.
+None — GitHub secret scanning + push protection confirmed enabled in repo
+settings (Settings → Code security) 2026-07-10.
 
-*Last updated: 2026-07-10*
+*Last updated: 2026-08-24*
