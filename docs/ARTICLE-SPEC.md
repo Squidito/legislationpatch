@@ -139,14 +139,22 @@ Full rules in `docs/BOTH-SIDES.md`. The non-negotiables:
 - A tracker whose bill has moved is **wrong, not merely dated**. It joins the
   staleness worklist (`npm run stale`).
 
-### 6a. Cadence (RATIFIED by James, 2026-08-15)
+### 6a. Cadence (RATIFIED by James, 2026-08-15; revised 2026-08-26)
 
-- **≤ 2 new explainers per month, ~4 refreshes per month.** Commissioned one at a
-  time — never batched. Volume is the failure mode this program is designed
-  against, and the cap is deliberately below capacity.
+- **~4–6 new explainers per month, demand-driven, ~4 refreshes per month.**
+  Commissioned one at a time — never batched. An explainer still exists only
+  because demand or a gap pulled it, never because a schedule pushed it; the
+  audit-to-convergence bar is unchanged and is the real ceiling. Volume for its
+  own sake remains the failure mode this program is designed against.
+- **Revision basis (2026-08-26 review, ratified by James):** fresh research
+  confirmed Google has no publishing-velocity threshold — the prior ≤2/month
+  number was pipeline-capacity, not policy. Interim ceiling raised; the final
+  number gets set on ~6–8 weeks of GSC query data (≈ mid-Oct 2026).
+  Rationale and sources: `_personal/CADENCE-REVIEW-2026-08-26.md` (supersedes
+  the number in `_personal/ARTICLE-CADENCE-MEMO.md`; all its quality findings
+  stand).
 - **Reviewed quarterly** (or sooner if search/AI-citation rules visibly shift —
-  the GSC data is the alarm). Rationale and sources:
-  `_personal/ARTICLE-CADENCE-MEMO.md`. Nothing enforces this in code by design;
+  the GSC data is the alarm). Nothing enforces this in code by design;
   it is an editorial commitment, not a gate.
 
 ---
