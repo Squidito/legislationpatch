@@ -1722,5 +1722,31 @@
     "genModel": "sonnet (hostile full-claims, two passes)",
     "genAt": "2026-08-27",
     "stampedAt": "2026-08-27"
+  },
+  "article-119th-congress-tracker": {
+    "kind": "article",
+    "sourceShas": {
+      "record-lp-corpus-119-snapshot": "c130c077c034c9f32e18c9b7ca0f1975fd924a0eae3796e1b065617cb66775d8",
+      "record-congress-laws-119": "75efe7265fea0a1c007230398ca7f9a32fb5d1eeef413b57dd2881aaa50de0a4",
+      "record-congress-hr-9238-actions": "60a0bcd4e74f4d313401856e7ee1b30532c07f6ee256eb61f877de3cd13cba88",
+      "record-congress-hr-8800-actions": "0248452680682a4af3a5585f259655488359eb0dc748a6de2ac6cdf9f1838d28",
+      "record-congress-119-overview": "ea876376a384ae6a30276b97f6153156e35d777380d27f209ba9df0d91c24452",
+      "usc-50-1881a": "5a4ed18a719601df2f74a358211cfc269f48b096a6aaa2221b3ef40021de60f2",
+      "bill-119-s-1582": "b6137de441b8e272a2cca45f1522314c5f8b90d55784e942c8a0bb215f005417",
+      "bill-119-s-331": "918dffd3b7ca1fff2c2795ffa6b6aabd505211cdac96c1fc3f49db719a9568f6",
+      "bill-119-s-146": "3c477ab06d6fd7c202fa149fb02c113d374ab53da639b61ad47c66644ade2117",
+      "bill-119-s-5": "3fdac7f34b60a3e4656d023cae62cdcaf853532e6f2fe1a1031275fe0f5bac56",
+      "bill-119-hr-4405": "d25a65be161c9115ae3bccdf27787d181d4a5ba7d3507181607170fd366475a7",
+      "bill-119-hr-7148": "83200c08be862f9216b9d4c35698a6fb8402fff1c50e6233b6ce4d3e0ea05b58",
+      "bill-119-s-1071": "396656736a46e8f17f40f34a509150f42e68fc2be09ea26490b5410271789b9a",
+      "bill-119-hr-9770": "8558c63979ff029b02da96eb648c76f68d3f377c393216e31a9907472f4da2c7",
+      "bill-119-s-4465": "ed9cf2a6ecb835842821c75316bec89322af4f248ea38447f13ebc910f4a460d"
+    },
+    "proseSha": "0470fa5db966423c",
+    "proseFile": "articles/119th-congress-tracker.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile full-claims, two passes)",
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
   }
 }
