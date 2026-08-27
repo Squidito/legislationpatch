@@ -143,8 +143,11 @@ async function waitForServer(url, ms = 15000) {
 
   if (repId) {
     console.log(`— rep (${repId})`);
+    // Old ?id= URLs hit the rep.html redirector and land on /rep/<slug>/ —
+    // wait for the handoff, then assert the (server-rendered) profile.
     await go(`/rep?id=${repId}&ref=reps`);
-    check((await page.locator('h1, .rep-name').first().textContent() || '').trim().length > 0, 'rep name renders');
+    await page.waitForURL(/\/rep\/[a-z0-9-]+\//, { timeout: 10000 });
+    check((await page.locator('h1, .rep-name').first().textContent() || '').trim().length > 0, 'rep name renders (via redirector)');
   }
 
   console.log('— favorites');

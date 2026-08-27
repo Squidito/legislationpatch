@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', init);
 
 async function init() {
   const urlParams = new URLSearchParams(window.location.search);
-  const repId = urlParams.get('id');
+  // Static /rep/<slug>/ pages carry the id in <meta name="rep-id"> (no query
+  // string); rep.html?id= links land on the redirector and never reach here.
+  const metaRep = document.querySelector('meta[name="rep-id"]');
+  const repId = safeBioId(urlParams.get('id') || (metaRep && metaRep.content) || '');
+  const isStaticPage = !!metaRep;
 
   const loadingState = document.getElementById('loadingState');
   const errorState   = document.getElementById('errorState');
@@ -26,12 +30,13 @@ async function init() {
     const ref = urlParams.get('ref') || '';
     if (ref.startsWith('bill-')) {
       const billId = ref.slice(5);
-      backBtn.href = `./?scrollTo=${encodeURIComponent(billId)}`;
+      backBtn.href = `/?scrollTo=${encodeURIComponent(billId)}`;
       backBtn.textContent = '← Home';
     } else if (ref === 'home') {
+      backBtn.href = '/';
       backBtn.textContent = '← Home';
     } else if (ref === 'reps') {
-      backBtn.href = 'reps.html';
+      backBtn.href = '/reps.html';
       backBtn.textContent = '← Reps';
     }
   }
@@ -43,12 +48,14 @@ async function init() {
   }
 
   try {
-    const res = await fetch(`data/reps/${repId}.json`);
+    // Root-absolute: static pages live two levels deep at /rep/<slug>/, where a
+    // relative "data/…" path would 404.
+    const res = await fetch(`/data/reps/${repId}.json`);
     if (!res.ok) throw new Error('Data not found');
     const rep = await res.json();
 
     currentRep = rep;
-    renderProfile(rep);
+    renderProfile(rep, isStaticPage);
     updateStarBtn(isTracked(rep.bioguideId));
 
     loadingState.style.display = 'none';
@@ -105,17 +112,26 @@ function updateStarBtn(tracked) {
 const PARTY_FULL = { D: 'Democrat', R: 'Republican', I: 'Independent' };
 const STATE_FULL = STATE_NAMES; // (deduped into util.js 2026-07-06) — same map, kept under rep.js's local name
 
-function renderProfile(rep) {
-  var repRole = rep.role === 'Senator' ? 'Senator' : 'Representative';
-  var repParty = PARTY_FULL[(rep.party || 'I').toUpperCase()[0]] || rep.party || '';
-  var repState = STATE_FULL[rep.state] || rep.state || '';
-  var repDesc = repRole + ' ' + (rep.name || '') + ' (' + repParty + ', ' + repState + '). Voting record and floor statements on LegislationPatch.';
-  setPageMeta(
-    (rep.name || 'Representative') + ' — LegislationPatch',
-    repDesc.slice(0, 160),
-    'https://legislationpatch.com/rep.html?id=' + encodeURIComponent(rep.bioguideId || '')
-  );
-  injectRepSchema(rep);
+function renderProfile(rep, isStaticPage) {
+  // Static /rep/<slug>/ pages ship the richer server-rendered head (unique
+  // title/description/canonical + ProfilePage JSON-LD) — leave it in place.
+  if (!isStaticPage) {
+    var repRole = rep.role === 'Senator' ? 'Senator' : 'Representative';
+    var repParty = PARTY_FULL[(rep.party || 'I').toUpperCase()[0]] || rep.party || '';
+    var repState = STATE_FULL[rep.state] || rep.state || '';
+    var repDesc = repRole + ' ' + (rep.name || '') + ' (' + repParty + ', ' + repState + '). Voting record and floor statements on LegislationPatch.';
+    var slugUrl = 'https://legislationpatch.com/rep/' + repSlug(rep) + '/';
+    setPageMeta(
+      (rep.name || 'Representative') + ' — LegislationPatch',
+      repDesc.slice(0, 160),
+      slugUrl
+    );
+    injectRepSchema(rep, slugUrl);
+  }
+
+  // Static pages arrive fully server-rendered (with crawlable /bill/<slug>/
+  // links baked in) — do not rebuild their DOM; just wire the interactive bits.
+  if (isStaticPage) { hydrateStatic(rep); return; }
 
   // Portrait. SECURITY: rep.photo is from ingested rep JSON — only allow an https
   // image URL; portraitUrl() validates the bioguide id for the fallback path.
@@ -230,7 +246,7 @@ function renderProfile(rep) {
     const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
     const billLabel   = c.billTitle || formatBillId(c.billId) || chamberFallback;
     const billUrl     = c.billId
-      ? `./?fromRep=${encodeURIComponent(rep.bioguideId)}&repName=${encodeURIComponent(rep.name)}&scrollTo=${encodeURIComponent(c.billId)}`
+      ? `/?fromRep=${encodeURIComponent(rep.bioguideId)}&repName=${encodeURIComponent(rep.name)}&scrollTo=${encodeURIComponent(c.billId)}`
       : null;
     const titleEl     = billUrl
       ? `<a href="${billUrl}" class="rep-bill-link">${escHtml(billLabel)}</a>`
@@ -252,12 +268,33 @@ function renderProfile(rep) {
   renderVotingHistory(rep);
 }
 
+// ---- Static-page hydration (progressive enhancement only) ----
+
+// Server-rendered /rep/<slug>/ pages ship every statement and vote visible (so
+// the full content is readable with JS off and crawlable). Hydration collapses
+// the long lists to the same defaults the client renderer uses and wires the
+// show-more buttons + portrait fallback — nothing is re-rendered.
+function hydrateStatic(rep) {
+  var portrait = document.getElementById('repPortrait');
+  if (portrait) portrait.onerror = function () { portrait.src = FALLBACK_PORTRAIT; };
+  collapseStaticList(document.getElementById('repComments'), 3, 10);
+  collapseStaticList(document.getElementById('repVoteHistory'), 8, 15);
+}
+
+function collapseStaticList(container, defaultCount, step) {
+  if (!container) return;
+  var items = container.querySelectorAll('.rep-show-item');
+  if (items.length <= defaultCount) return;
+  for (var i = defaultCount; i < items.length; i++) items[i].style.display = 'none';
+  renderShowMoreBtn(container, defaultCount, items.length, step);
+}
+
 // ---- JSON-LD schema injector ----
 
-function injectRepSchema(rep) {
+function injectRepSchema(rep, url) {
   var el = document.getElementById('rep-schema');
   if (!el) return;
-  var url = 'https://legislationpatch.com/rep.html?id=' + encodeURIComponent(rep.bioguideId || '');
+  url = url || ('https://legislationpatch.com/rep/' + repSlug(rep) + '/');
   var chamber = rep.role === 'Senator' ? 'United States Senate' : 'United States House of Representatives';
   el.textContent = JSON.stringify({
     '@context': 'https://schema.org',
@@ -344,7 +381,7 @@ function renderVotingHistory(rep) {
     var v         = history[i];
     var billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId);
     var billIdFmt = escHtml(formatBillId(v.billId) || '');
-    var billUrl   = './?scrollTo=' + encodeURIComponent(v.billId);
+    var billUrl   = '/?scrollTo=' + encodeURIComponent(v.billId);
     var rawVote   = (v.vote || '').toLowerCase();
     var voteDisplay = rawVote.includes('yea') || rawVote.includes('yes') ? 'Yea'
                     : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'

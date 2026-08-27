@@ -3,7 +3,7 @@
 
 const fs   = require('fs');
 const path = require('path');
-const { billSlug } = require('../util.js');
+const { billSlug, repSlug } = require('../util.js');
 
 const ROOT = path.join(__dirname, '..');
 const BASE = 'https://legislationpatch.com';
@@ -48,15 +48,24 @@ const slugFor = bill => (slugMap[bill.id] && slugMap[bill.id].slug) || billSlug(
 
 const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bills || {});
 
-// Collect bioguide IDs — deduplicate
+// Collect unique members. Rep pages are static /rep/<slug>/ URLs (source of
+// truth = data/rep-slug-map.json, written by generate_rep_pages.js which runs
+// immediately before this in the pipeline). Fall back to deriving the slug via
+// the shared util.repSlug so a standalone `npm run sitemap` still emits the
+// correct URLs. Members with no static page on disk are skipped — a sitemap
+// URL that 404s is worse than an unlisted page (preflight enforces this).
+let repSlugMap = {};
+try { repSlugMap = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'rep-slug-map.json'), 'utf8')); } catch (_) {}
 const seen = new Set();
-const bioguideIds = [];
+const repSlugs = [];
 for (const stateReps of Object.values(repsIndex)) {
   for (const rep of stateReps) {
-    if (rep.bioguideId && !seen.has(rep.bioguideId)) {
-      seen.add(rep.bioguideId);
-      bioguideIds.push(rep.bioguideId);
-    }
+    if (!rep.bioguideId || seen.has(rep.bioguideId)) continue;
+    seen.add(rep.bioguideId);
+    const slug = (repSlugMap[rep.bioguideId] && repSlugMap[rep.bioguideId].slug) || repSlug(rep);
+    if (!slug) continue;
+    if (!fs.existsSync(path.join(ROOT, 'rep', slug, 'index.html'))) continue;
+    repSlugs.push(slug);
   }
 }
 
@@ -91,9 +100,9 @@ for (const bill of bills) {
   ));
 }
 
-// Rep pages
-for (const id of bioguideIds) {
-  entries.push(urlEntry(BASE + '/rep.html?id=' + id, null, 'weekly', '0.7'));
+// Rep pages — static /rep/<slug>/ URLs (rep.html is a noindex redirector now).
+for (const slug of repSlugs) {
+  entries.push(urlEntry(BASE + '/rep/' + slug + '/', null, 'weekly', '0.7'));
 }
 
 // Topic hubs — /topics/<slug>/ pillar pages (Phase 4). Weekly: their bill lists
@@ -170,7 +179,7 @@ fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 console.log('sitemap.xml written — ' + entries.length + ' URLs total');
 console.log('  Static pages : 7');
 console.log('  Bills        : ' + bills.length);
-console.log('  Reps         : ' + bioguideIds.length);
+console.log('  Reps         : ' + repSlugs.length);
 if (fs.existsSync(articlesIndex)) {
   const count = fs.readdirSync(path.join(ROOT, 'articles')).filter(f => f.endsWith('.html')).length;
   console.log('  Articles     : ' + count);

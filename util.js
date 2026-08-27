@@ -239,10 +239,22 @@ function billSlug(bill) {
   return tail ? id + '-' + tail : id;
 }
 
+// Full slug for a rep record: <lowercased bioguide id>-<slugified name>.
+// Same contract as billSlug — the bioguide prefix (e.g. "b001257") guarantees
+// uniqueness; the name tail is for humans/SEO. Static pages live at
+// /rep/<repSlug>/ ; scripts/generate_rep_pages.js and the client both derive
+// the slug through THIS function so the URL can never drift.
+function repSlug(rep) {
+  const id = safeBioId(rep && rep.bioguideId).toLowerCase();
+  if (!id) return '';
+  const tail = slugifyTitle(rep && rep.name);
+  return tail ? id + '-' + tail : id;
+}
+
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
   // Second line: web-only helpers deduped here 2026-07-06 — locked by
   // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
-                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, slugifyTitle, billSlug };
+                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, slugifyTitle, billSlug, repSlug };
 }

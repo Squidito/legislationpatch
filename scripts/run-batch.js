@@ -206,6 +206,11 @@ run('Backfill quote chamber', ['scripts/backfill_quote_chamber.js', '--apply'], 
 // Emit the per-bill static SEO pages + slug map/index and inject the crawlable
 // homepage bill list. Runs BEFORE the sitemap so the sitemap reflects the slugs.
 run('Generate static bill pages', ['scripts/generate_bill_pages.js'], { optional: true });
+// Emit the per-member static SEO pages + rep slug map/index and inject the
+// crawlable member directory into reps.html. Runs AFTER bill pages (reads
+// data/slug-index.json for the crawlable vote/statement cross-links) and
+// BEFORE the sitemap so the sitemap reflects the rep slugs.
+run('Generate static rep pages', ['scripts/generate_rep_pages.js'], { optional: true });
 // Render per-bill social cards (og/bills/<id>.png). Runs AFTER the pages (which
 // reference og/bills/<id>.png) and BEFORE the sitemap (which lists no images).
 // Manifest-gated: only bills whose card inputs changed re-render.
