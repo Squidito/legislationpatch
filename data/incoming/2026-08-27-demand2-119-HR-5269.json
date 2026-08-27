@@ -1,0 +1,200 @@
+{
+  "bills": [
+    {
+      "id": "119-HR-5269",
+      "title": "RESULTS Act",
+      "official_title": "To amend title XVIII of the Social Security Act to provide long-term stability for Medicare beneficiary access to clinical diagnostic laboratory tests by improving the accuracy of, and feasibility of data collection for, the private payor-based fee schedule payment rates applied under the Medicare program for such tests, and for other purposes.",
+      "code": "HR.5269",
+      "date": "2025-09-10",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hudson, Richard (R-NC)",
+      "sponsor_bioguide": "H001067",
+      "cosponsors": 114,
+      "pages": 11,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "stageDate": "2025-09-10",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "votes": [],
+      "summary": "Medicare pays for clinical laboratory tests at rates built from what private insurers pay for the same tests, information laboratories currently have to report to the government themselves. For the tests billed by the most providers, this bill would have Medicare buy that information from an independent nonprofit claims database under contract instead, push the next laboratory reporting round from 2026 to 2028, and change the limit on how fast rates can fall: no reductions at all through 2028, then a permanent cap of 5 percent a year.",
+      "brief": "Moves Medicare's private-payor rate data for the most widely billed lab tests from laboratory self-reporting to a contracted nonprofit claims database, delays the next reporting round to 2028, and caps annual rate cuts at 5 percent from 2029 onward.",
+      "top_lines": [
+        {
+          "headline": "How Medicare Sets Lab Rates Now",
+          "billSection": "2",
+          "subs": [
+            "Payment equals the weighted median of reported private-payor rates",
+            "Laboratories report their own private rates and volumes",
+            "Cuts capped at 10 percent for 2017-2020, then 0 percent through 2025"
+          ],
+          "source": "usc-42-1395m-1"
+        },
+        {
+          "headline": "Data Comes From a Claims Database",
+          "billSection": "2",
+          "subs": [
+            "Secretary contracts with a national nonprofit claims-data entity",
+            "Database needs 50 billion claims from more than 50 private payors",
+            "Covers tests paid to more than 100 providers and suppliers"
+          ]
+        },
+        {
+          "headline": "Rate Cut Limits and Review Rights",
+          "billSection": "2",
+          "subs": [
+            "No reductions allowed through 2028",
+            "Reductions capped at 5 percent for 2029 and each later year",
+            "Review bar lifts for rates established from 2029 onward"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House and carrying 114 cosponsors split 60 Republicans and 54 Democrats, an almost even bipartisan split and the strongest structural signal in this bill's favor. Working against it, the bill was referred to the Committee on Energy and Commerce and additionally to the Committee on Ways and Means with jurisdiction divided between them per the latest-action record, and provisions of this kind more often move attached to a larger health package than on their own. The provision most likely to draw resistance is the payment side: extending the zero-reduction band through 2028 and capping later reductions at 5 percent keeps rates above what current law schedules, which raises the bill's cost relative to current law and has to be paid for.",
+      "likelihoodLabel": "Possible",
+      "sections": [
+        {
+          "label": "Section 2(a) — Acquiring Data From an Independent Claims Database",
+          "items": [
+            {
+              "main": "Requires the Secretary to identify and contract with a qualifying independent claims data entity, and for reporting periods beginning on or after January 1, 2028 to collect and use private-payor rate information for widely available non-ADLT tests from that entity's database rather than from laboratory reports.",
+              "detail": "Under current law an applicable laboratory reports the payment rate each private payor paid for each test and the volume at each rate, and Medicare pays the weighted median of those reported rates. The new clause keeps that reporting route for other tests but routes widely available non-advanced tests through the contracted entity, covering each such test furnished during the data collection period for which final payment is made under Part B during the year in which that period occurs.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Defines the entity and the database it must hold: a national nonprofit unaffiliated with government, insurers, plans, providers, suppliers, or any other health-care-sector organization, maintaining a database of at least 50 billion private-payor claims from more than 50 private payors and claims administrators.",
+              "detail": "The database must be a statistically significant repository representative for all 50 States and the District of Columbia, contain only data validated by quality assurance processes including comprehensive statistical testing, comply with applicable Federal and State privacy and security requirements, provide version control so only claims representative of final payment amounts are submitted, and include claims data on widely available non-advanced tests. The entity must also be certified by the Secretary as a qualified entity under section 1874(e) of the Social Security Act with access to the data described in that subsection.",
+              "comments": []
+            },
+            {
+              "main": "Pushes the reporting calendar back and stretches the cycle: no reporting through December 31, 2027 instead of December 31, 2025, the next window running January 1 through March 31, 2028 instead of 2026, and every 4 years after that instead of every three.",
+              "detail": "The matching data collection period moves from January 1 through June 30, 2019 to the same dates in 2027, and for tests that are not advanced diagnostic laboratory tests each later cycle uses the 6-month period beginning January 1 of the year preceding the reporting year. The Secretary must establish parameters for data collection periods beginning on or after January 1, 2027 through notice and comment rulemaking not later than December 31, 2026. For reporting periods beginning on or after January 1, 2028, the term applicable laboratory is redefined by reference to section 414.502 of title 42, Code of Federal Regulations, as in effect on May 1, 2025, without paragraph (3) of that section.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2(b) — Turning the Data Into Payment Rates",
+          "items": [
+            {
+              "main": "Feeds the database information into the weighted-median calculation for widely available non-ADLT tests for reporting periods beginning on or after January 1, 2028, and switches the calculation to final payment rates.",
+              "detail": "A final payment rate is defined as the last payment made for a test in the relevant period and excludes denied payments, payments under appeal or under review by the private payor, payments made in error, and payments recouped by the private payor. The completeness rule that requires every distinct rate and its volume to be reported is extended to the contracted entity, and the duty to report more than one rate for the same payor and test no longer applies where those different rates relate to the same claim.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Adds two fallback rules for when the data pipeline produces nothing, plus a public explanation duty for every rate the Secretary sets.",
+              "detail": "If the Secretary cannot contract with a qualifying entity, or the database holds no information for a widely available test, payment for that test equals the previous year's payment increased by the percentage increase in the Consumer Price Index for all urban consumers, all items, United States city average, for the qualified rate period the bill defines. If no applicable information is reported for a non-widely available non-advanced test, payment is set the first year by crosswalking to the most appropriate test or, where none is comparable, by the existing gapfilling process, and in later years by carrying the previous year's amount forward. Separately, the Secretary must publish an explanation of each test's payment rate, including any supporting data necessary for a laboratory to assess the accuracy of the calculations.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2(c) — Payment-Reduction Limits and Review Rights",
+          "items": [
+            {
+              "main": "Rewrites the limit on year-over-year rate reductions: the cap applies for 2017 and each subsequent year instead of expiring after 2028, the no-reduction band runs 2021 through 2028 instead of 2021 through 2025, and the cap for 2029 and each subsequent year is 5 percent instead of the 15 percent set for 2026 through 2028.",
+              "detail": "Under current law the applicable percent is 10 percent for each of 2017 through 2020, 0 percent for each of 2021 through 2025, and 15 percent for each of 2026 through 2028, with the whole limit ending after 2028. The bill also stops treating a medicaid managed care organization as a private payor for reporting periods beginning on or after January 1, 2028, and corrects the market-rate clause so established rates apply through, rather than until, the year following the next data collection period.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Sunsets the bar on challenging Medicare laboratory payment amounts, limiting it to amounts established before January 1, 2029.",
+              "detail": "Section 1834A(h)(1) currently states that there shall be no administrative or judicial review, under the two Social Security Act review provisions it names or otherwise, of the establishment of payment amounts under the section. The bill inserts a cutoff so the bar reaches only amounts established before January 1, 2029, leaving amounts established on or after that date open to review.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a)(2)(C), new definition (E)",
+          "summary": "Which tests move to the claims database is decided by how many billers a test has, not by how often it is performed. A test is widely available if, during the first 6 months of the year immediately preceding the data collection period, the number of providers of services and suppliers receiving payments under the section, counted by the national provider identifier on the claim, exceeds 100.",
+          "why_unreported": "The term reads as a volume measure, but the operative test counts distinct billing entities; a very high-volume test performed by 100 or fewer providers stays in the laboratory self-reporting lane, and a low-volume test billed by many providers moves to the database lane."
+        },
+        {
+          "section": "Section 2(b)(2), new paragraph (b)(6)",
+          "summary": "When there is no contract with a qualifying entity or no data for a widely available test, payment is the previous year's amount increased by the percentage increase in the Consumer Price Index for all urban consumers. That is an annual inflation update inside a fee schedule whose existing text states that payment amounts are not subject to any adjustment, including any geographic adjustment, budget neutrality adjustment, annual update, or other adjustment.",
+          "why_unreported": "The paragraph is captioned as a default payment rule for periods with no contract or no data, but its mechanical effect is to introduce an inflation-indexed update where the section otherwise forbids one, triggered by the absence of data rather than by any finding about the test."
+        },
+        {
+          "section": "Section 2(a)(2)(B)(ii)",
+          "summary": "For reporting periods beginning on or after January 1, 2028, the statutory definition of applicable laboratory is replaced by a cross-reference to section 414.502 of title 42, Code of Federal Regulations, as in effect on May 1, 2025, except without application of paragraph (3) of that section.",
+          "why_unreported": "The change sits under a heading about definitions, but it moves the definition of who must report out of the statute and pins it to the text of a regulation as it stood on a fixed past date, minus one paragraph, rather than restating the rule in the law."
+        },
+        {
+          "section": "Sections 2(a)(5) and 2(a)(6)",
+          "summary": "The civil money penalty of up to $10,000 per day for a failure to report or a misrepresentation is narrowed to information required to be reported by that laboratory, while the confidentiality protection is extended to information disclosed by the contracted claims-data entity. No penalty provision is attached to the entity.",
+          "why_unreported": "The two amendments read as conforming cleanup that adds the new entity alongside laboratories, but they move in opposite directions: the entity gains the confidentiality protection without picking up the reporting penalty that applies to laboratories."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires the Secretary to identify and contract with a qualifying independent claims data entity as soon as practicable after enactment, but sets no outside deadline, no procedure for choosing among multiple qualifying entities, and no contract term or renewal rule.",
+        "The database must hold at least 50 billion claims from more than 50 private payors and be representative for all 50 States and the District of Columbia, and the entity must be certified by the Secretary as a qualified entity under section 1874(e) of the Social Security Act, but the bill attaches no verification, audit, or recertification step to the database thresholds themselves and says nothing about what happens if a contracted entity stops meeting them.",
+        "The bill requires the Secretary to publish an explanation of each test's payment rate including any supporting data necessary for a laboratory to assess the accuracy of the calculations, but sets no timeline or format and does not say how that duty fits with the existing confidentiality rule barring disclosure in a form that identifies a specific payor or laboratory or the prices paid to it.",
+        "The bill defines applicable laboratory for 2028 and later by reference to a Code of Federal Regulations section as in effect on May 1, 2025 without paragraph (3) of that section, but does not reproduce that definition in the statute or state what governs if the regulation is later revised or removed.",
+        "The bill stops counting medicaid managed care organization rates as private-payor data for reporting periods beginning on or after January 1, 2028, but does not say whether the qualifying comprehensive claims database, defined as a database of private payor claims data, may include those rates in what it reports."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A contract route under which the Secretary must identify and contract with a qualifying independent claims data entity so that, for reporting periods beginning on or after January 1, 2028, private-payor data for widely available non-ADLT tests comes from that entity's database",
+          "Definitions of qualifying independent claims data entity, qualifying comprehensive claims database, widely available non-ADLT clinical diagnostic laboratory test, and non-widely available non-ADLT clinical diagnostic laboratory test",
+          "A default rate for widely available tests when there is no contract or no data: the previous year's payment increased by the percentage increase in the Consumer Price Index for all urban consumers",
+          "A rate rule for non-widely available non-ADLT tests with no reported data: crosswalking or gapfilling the first year, then the previous year's amount",
+          "A public explanation requirement: the Secretary must publish an explanation of each test's payment rate, including any supporting data necessary for a laboratory to assess the accuracy of the calculations",
+          "A second rulemaking deadline: parameters for data collection periods beginning on or after January 1, 2027 must be set through notice and comment rulemaking not later than December 31, 2026"
+        ],
+        "modified": [
+          "42 U.S.C. 1395m-1(a)(1)(B): the reporting pause runs through December 31, 2027 instead of December 31, 2025, the next reporting window moves from January 1 through March 31, 2026 to the same dates in 2028, and the cycle after it stretches from three years to 4 years",
+          "42 U.S.C. 1395m-1(b)(3): the reduction limit applies for 2017 and each subsequent year instead of 2017 through 2028, the no-reduction band in clause (ii) extends from 2021 through 2025 to 2021 through 2028, and clause (iii) changes from 15 percent for 2026 through 2028 to 5 percent for 2029 and each subsequent year",
+          "42 U.S.C. 1395m-1(a)(4)(B): the data collection period for the delayed reporting window moves from January 1 through June 30, 2019 to the same dates in 2027, and later cycles use the 6-month period beginning January 1 of the year before the reporting period",
+          "42 U.S.C. 1395m-1(a)(3): applicable information for data collection periods beginning on or after January 1, 2027 becomes the final payment rate rather than the payment rate, defined as the last payment made and excluding denied payments, payments under appeal or under review, payments made in error, and payments recouped by the payor",
+          "42 U.S.C. 1395m-1(a)(9)(A): the civil money penalty of up to $10,000 per day is narrowed to failures and misrepresentations in reporting information required to be reported by that laboratory",
+          "42 U.S.C. 1395m-1(a)(10): the confidentiality protection extends to information disclosed by the contracted claims-data entity as well as by a laboratory",
+          "42 U.S.C. 1395m-1(a)(8)(C): a medicaid managed care organization counts as a private payor only for reporting periods beginning before January 1, 2028",
+          "42 U.S.C. 1395m-1(b)(4)(A): established market rates apply through the year following the next data collection period rather than until that year"
+        ],
+        "removed": [
+          "42 U.S.C. 1395m-1(h)(1): the bar on administrative and judicial review no longer reaches payment amounts established on or after January 1, 2029"
+        ]
+      },
+      "referencedSources": [
+        {
+          "id": "usc-42-1395m-1",
+          "kind": "statute",
+          "label": "42 U.S.C. 1395m-1 (Social Security Act section 1834A - improving Medicare policies for clinical diagnostic laboratory tests)",
+          "citation": "42 U.S.C. 1395m-1",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap7-subchapXVIII-partB-sec1395m-1/htm",
+          "textFile": "data/ref-text/usc-42-1395m-1.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-hr-5269-actions",
+          "kind": "law",
+          "label": "Congress.gov action history for H.R. 5269 (119th Congress)",
+          "citation": "Congress.gov API, bill/119/hr/5269/actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/hr/5269/actions",
+          "textFile": "data/ref-text/record-congress-hr-5269-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ]
+    }
+  ]
+}

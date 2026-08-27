@@ -161,6 +161,24 @@
     "textFile": "data/ref-text/usc-14-4904.txt",
     "fetchedAt": "2026-08-27"
   },
+  "usc-15-260a": {
+    "id": "usc-15-260a",
+    "kind": "statute",
+    "label": "15 U.S.C. 260a",
+    "citation": "15 U.S.C. 260a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec260a/htm",
+    "textFile": "data/ref-text/usc-15-260a.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "usc-15-261": {
+    "id": "usc-15-261",
+    "kind": "statute",
+    "label": "15 U.S.C. 261",
+    "citation": "15 U.S.C. 261",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec261/htm",
+    "textFile": "data/ref-text/usc-15-261.txt",
+    "fetchedAt": "2026-08-27"
+  },
   "usc-2-601": {
     "id": "usc-2-601",
     "kind": "statute",
@@ -251,6 +269,42 @@
     "textFile": "data/ref-text/usc-22-9633.txt",
     "fetchedAt": "2026-08-27"
   },
+  "usc-26-275": {
+    "id": "usc-26-275",
+    "kind": "statute",
+    "label": "26 U.S.C. 275",
+    "citation": "26 U.S.C. 275",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partIX-sec275/htm",
+    "textFile": "data/ref-text/usc-26-275.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "usc-26-6051": {
+    "id": "usc-26-6051",
+    "kind": "statute",
+    "label": "26 U.S.C. 6051",
+    "citation": "26 U.S.C. 6051",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap61-subchapA-partIII-subpartC-sec6051/htm",
+    "textFile": "data/ref-text/usc-26-6051.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "usc-26-6651": {
+    "id": "usc-26-6651",
+    "kind": "statute",
+    "label": "26 U.S.C. 6651",
+    "citation": "26 U.S.C. 6651",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap68-subchapA-partI-sec6651/htm",
+    "textFile": "data/ref-text/usc-26-6651.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "usc-26-9602": {
+    "id": "usc-26-9602",
+    "kind": "statute",
+    "label": "26 U.S.C. 9602",
+    "citation": "26 U.S.C. 9602",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleI-chap98-subchapB-sec9602/htm",
+    "textFile": "data/ref-text/usc-26-9602.txt",
+    "fetchedAt": "2026-08-27"
+  },
   "usc-31-1341": {
     "id": "usc-31-1341",
     "kind": "statute",
@@ -268,6 +322,15 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleII-chap13-subchapIII-sec1342/htm",
     "textFile": "data/ref-text/usc-31-1342.txt",
     "fetchedAt": "2026-08-17"
+  },
+  "usc-42-1395m-1": {
+    "id": "usc-42-1395m-1",
+    "kind": "statute",
+    "label": "42 U.S.C. 1395m-1",
+    "citation": "42 U.S.C. 1395m-1",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap7-subchapXVIII-partB-sec1395m-1/htm",
+    "textFile": "data/ref-text/usc-42-1395m-1.txt",
+    "fetchedAt": "2026-08-27"
   },
   "usc-5-801": {
     "id": "usc-5-801",

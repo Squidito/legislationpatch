@@ -169,6 +169,7 @@ const ACRONYMS = {
   MAGI:   'Modified Adjusted Gross Income',
   // Health agencies / programs
   CMS:    'Centers for Medicare & Medicaid Services',
+  ADLT:   'Advanced Diagnostic Laboratory Test',
   SAMHSA: 'Substance Abuse and Mental Health Services Administration',
   NCI:    'National Cancer Institute',
   NIAID:  'National Institute of Allergy and Infectious Diseases',

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-27T20:33:20.989Z",
+  "generatedAt": "2026-08-27T22:16:25.059Z",
   "counts": {
-    "bill": 216,
+    "bill": 219,
     "rep": 551,
     "quote": 468,
     "article": 47,
@@ -1951,6 +1951,33 @@
       "sub": "S.2296 · Passed Senate · Sen. Wicker",
       "text": "To authorize appropriations for fiscal year 2026 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for…",
       "code": "s2296"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-139",
+      "url": "/bill/119-hr-139-sunshine-protection-act-of-2025/",
+      "title": "Sunshine Protection Act of 2025",
+      "sub": "HR.139 · Passed House · Rep. Buchanan",
+      "text": "To make daylight savings time permanent, and for other purposes. Rep. Buchanan, Vern (R-FL) Repeals the federal seasonal one-hour clock change and permanently shifts all nine U.S. standard time zones one hour later.",
+      "code": "hr139"
+    },
+    {
+      "t": "bill",
+      "id": "119-S-2976",
+      "url": "/bill/119-s-2976-hire-act/",
+      "title": "HIRE Act",
+      "sub": "S.2976 · In Committee · Sen. Moreno",
+      "text": "To amend the Internal Revenue Code of 1986 to impose an excise tax on payments by United States taxpayers to foreign persons for services provided to United States consumers, and for other purposes. Sen. Moreno, Bernie (R-OH) Creates a 25 percent excise tax…",
+      "code": "s2976"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-5269",
+      "url": "/bill/119-hr-5269-results-act/",
+      "title": "RESULTS Act",
+      "sub": "HR.5269 · In Committee · Rep. Hudson",
+      "text": "To amend title XVIII of the Social Security Act to provide long-term stability for Medicare beneficiary access to clinical diagnostic laboratory tests by improving the accuracy of, and feasibility of data collection for, the private payor-based fee schedule…",
+      "code": "hr5269"
     },
     {
       "t": "rep",
@@ -9693,10 +9720,10 @@
     {
       "t": "quote",
       "id": "G000386",
-      "url": "/floor.html",
-      "billId": null,
+      "url": "/bill/119-hr-5269-results-act/",
+      "billId": "119-HR-5269",
       "title": "Mr. Grassley",
-      "sub": "R-IA",
+      "sub": "R-IA · on RESULTS Act",
       "text": "With recent political victories in Democrat primaries in Colorado, New York, Pennsylvania, and elsewhere by socialists, I wanted to spend some time with my colleagues sharing the failed results that we have witnessed throughout history under socialism regimes. And if any of my…"
     },
     {

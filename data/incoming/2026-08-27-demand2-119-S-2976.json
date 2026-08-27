@@ -1,0 +1,214 @@
+{
+  "bills": [
+    {
+      "id": "119-S-2976",
+      "title": "HIRE Act",
+      "official_title": "To amend the Internal Revenue Code of 1986 to impose an excise tax on payments by United States taxpayers to foreign persons for services provided to United States consumers, and for other purposes.",
+      "code": "S.2976",
+      "date": "2025-10-06",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Moreno, Bernie (R-OH)",
+      "sponsor_bioguide": "M001242",
+      "cosponsors": 0,
+      "pages": 4,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "stageDate": "2025-10-06",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "votes": [],
+      "summary": "This bill would put a new 25 percent federal excise tax on money a U.S. business pays a foreign person for labor or services whose benefit goes to customers in the United States. The same payments would also lose their income-tax deduction, the tax itself would not be deductible either, and the money collected would go into a new Domestic Workforce Fund that pays for retraining, apprenticeships, and grants to States.",
+      "brief": "Creates a 25 percent excise tax on business payments to foreign persons for labor or services benefiting U.S. consumers, denies the deduction for those payments, and routes the receipts to a new Domestic Workforce Fund.",
+      "top_lines": [
+        {
+          "headline": "New Outsourcing Excise Tax",
+          "billSection": "2",
+          "subs": [
+            "25 percent tax on covered payments to foreign persons",
+            "Applies to labor or services benefiting consumers in the United States",
+            "Mixed payments capped by the U.S.-directed share"
+          ]
+        },
+        {
+          "headline": "Deductions Denied on Both Layers",
+          "billSection": "4",
+          "subs": [
+            "No income-tax deduction allowed for any outsourcing payment",
+            "The new excise tax is itself made non-deductible",
+            "Both apply to payments made after December 31, 2025"
+          ]
+        },
+        {
+          "headline": "Penalties and the Workforce Fund",
+          "billSection": "3",
+          "subs": [
+            "Failure-to-pay addition raised and its 25 percent aggregate cap removed",
+            "Receipts routed to a new Domestic Workforce Fund",
+            "Fund spends without further appropriation on retraining and apprenticeships"
+          ]
+        }
+      ],
+      "likelihood": 10,
+      "likelihoodReason": "Introduced by a Republican in a Republican-majority Senate with zero cosponsors and referred to the Committee on Finance, per the latest-action record. The operative reach is very wide for a single-sponsor bill: the tax attaches to any payment to a person who is not a United States person where the benefit of the labor or services is directed, directly or indirectly, to consumers in the United States, which covers services imports across the economy rather than a defined industry, and the mixed-payment rule requires a taxpayer to measure the U.S.-directed share of every such payment. The bill also leaves the anti-avoidance rules entirely to Treasury regulations and carries several internal cross-references that do not match the sections they name, so Finance would have substantial drafting work before any markup.",
+      "likelihoodLabel": "Long shot",
+      "sections": [
+        {
+          "label": "Section 2 — Outsourcing Excise Tax",
+          "items": [
+            {
+              "main": "Adds a new chapter 50B to the Internal Revenue Code containing section 5000E, which imposes a tax on any United States person making an outsourcing payment equal to 25 percent of the amount of that payment.",
+              "detail": "An outsourcing payment is any premium, fee, royalty, service charge, or other payment made in the course of a trade or business, to a foreign person, with respect to labor or services the benefit of which is directed, directly or indirectly, to consumers located in the United States. A foreign person is any person who is not a United States person, except that the term does not include a corporation or partnership organized under the laws of a possession of the United States. Where labor or services are directed to consumers both inside and outside the United States, the amount treated as an outsourcing payment is capped by the payment multiplied by a fraction whose numerator is the amount of labor or services directed to consumers within the United States and whose denominator is the labor or services directed to all consumers.",
+              "comments": []
+            },
+            {
+              "main": "Makes the new excise tax itself non-deductible by adding chapter 50B to the list of taxes for which no deduction is allowed under 26 U.S.C. 275(a)(6).",
+              "detail": "That paragraph currently denies a deduction for taxes imposed by chapters 37, 41, 42, 43, 44, 45, 46, 50A, and 54; the bill inserts chapter 50B after 50A. Section 2(e) separately states that nothing in the section limits the application of the economic substance doctrine to any payment described in section 5000E(b), and section 2(d) instructs Treasury to write regulations and other guidance to prevent avoidance or abuse, including through related parties, controlled foreign corporations, other intermediaries, and transfer pricing arrangements.",
+              "source": "usc-26-275",
+              "comments": []
+            },
+            {
+              "main": "Gives Treasury discretionary authority to require returns and information returns on payments to foreign persons, and to require corporate officers to certify the character of those payments under penalty of perjury.",
+              "detail": "The Secretary may require United States persons making payments to foreign persons to file a return of the new tax or an information return covering whether the payments are outsourcing payments and any other information reasonably required for enforcement. Any return required under that paragraph is treated as an information return for purposes of part II of subchapter B of chapter 68. Section 2(d) of the bill also adds a sentence to 26 U.S.C. 6651(a) applying paragraphs (2) and (3) of that subsection to chapter 50B taxes at a substituted rate and without regard to the phrase limiting the addition to not exceeding 25 percent in the aggregate; those paragraphs otherwise add 0.5 percent of the tax per month or fraction of a month, capped at 25 percent.",
+              "source": "usc-26-6651",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Domestic Workforce Fund",
+          "items": [
+            {
+              "main": "Establishes a Domestic Workforce Fund in the Treasury as new Internal Revenue Code section 9512, appropriating to it amounts equivalent to the receipts from the new tax and from the related additions to tax and penalties.",
+              "detail": "The Fund consists of amounts appropriated, credited, or paid into it under the new section or under 26 U.S.C. 9602(b), which directs the Secretary of the Treasury to invest trust-fund balances not needed for current withdrawals in interest-bearing obligations of the United States and to credit the interest and sale proceeds back to the fund. The three receipt streams named are the tax imposed under section 5000E, the additions to tax relating to failure to pay it, and the penalties relating to the returns the bill authorizes.",
+              "source": "usc-26-9602",
+              "comments": []
+            },
+            {
+              "main": "Makes Fund amounts available without further appropriation, solely for three named purposes.",
+              "detail": "Those purposes are workforce development and retraining programs administered by the Department of Labor; apprenticeship programs and partnerships with industry to expand domestic employment in sectors impacted by outsourcing; and grants to States for workforce development initiatives targeted at communities with high levels of job displacement. The bill sets no allocation among the three, no dollar figures, no matching requirement, and no reporting requirement.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Denial of Income Tax Deduction on Outsourcing Payments",
+          "items": [
+            {
+              "main": "Adds section 280I to the Internal Revenue Code barring any deduction under chapter 1 for an outsourcing payment as defined in section 5000E(b), effective for payments made after December 31, 2025 in taxable years ending after that date.",
+              "detail": "Section 280I sits in Part IX of subchapter B of chapter 1, the part of the Code headed Items Not Deductible, alongside 26 U.S.C. 275. The result is that a covered payment loses its ordinary business deduction under section 280I, carries a 25 percent excise under section 5000E, and cannot deduct that excise either, because section 2(b) adds chapter 50B to the non-deductible list in section 275(a)(6).",
+              "source": "usc-26-275",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 5000E(b) and (c)",
+          "summary": "The tax attaches to the identity of the recipient and the destination of the benefit, not to any job movement. It applies to a payment to any person who is not a United States person, for labor or services whose benefit is directed to consumers located in the United States, and nothing in the definition requires that the work was previously performed in the United States, that an employment relationship exists, or that any position was displaced.",
+          "why_unreported": "The chapter is captioned Outsourcing and the section is captioned Outsourcing payments, but the operative test in subsection (b) is recipient-plus-destination and contains no relocation or displacement element."
+        },
+        {
+          "section": "Sections 2(b) and 4",
+          "summary": "The two deduction rules stack. Section 4 denies any chapter 1 deduction for the outsourcing payment itself, and section 2(b) adds the new chapter 50B to the taxes for which 26 U.S.C. 275(a)(6) denies a deduction, so the 25 percent excise paid on that payment is also non-deductible.",
+          "why_unreported": "The two provisions sit in different sections under separate headings, one about the tax and one about the payment, so neither heading shows that a single covered payment loses two deductions and bears a tax."
+        },
+        {
+          "section": "Section 2(d)",
+          "summary": "Beyond changing the rate stated for the failure-to-pay addition, the sentence added to 26 U.S.C. 6651(a) directs that paragraphs (2) and (3) be applied without regard to the phrase limiting the addition to not exceeding 25 percent in the aggregate, so the addition on a chapter 50B tax has no stated ceiling.",
+          "why_unreported": "The subsection is captioned Increased penalty for failure to pay tax, which describes the rate change but not the removal of the aggregate cap that otherwise stops the addition at 25 percent of the tax."
+        },
+        {
+          "section": "Section 9512(c)",
+          "summary": "Fund amounts are available without further appropriation, so once receipts arrive the three named uses are funded on a standing basis rather than through annual appropriations.",
+          "why_unreported": "The section is captioned Domestic Workforce Fund and reads as an accounting device, but the expenditure clause is a permanent spending authority."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Section 2(d) directs that paragraphs (2) and (3) of 26 U.S.C. 6651(a) be applied by substituting 50 percent for 05. percent each place it appears, but the string 05. percent appears nowhere in those paragraphs, which state the rate as 0.5 percent.",
+        "Section 3(b)(2) routes into the Fund the additions to tax under 26 U.S.C. 6051(a) that relate to failure to pay the new tax, but section 6051 is the wage-receipt provision requiring employers to furnish statements to employees and imposes no additions to tax; the failure-to-pay additions the bill itself amends are in 26 U.S.C. 6651(a).",
+        "Section 3(b)(3) routes into the Fund the penalties relating to returns described in section 2(b) of the Act, but section 2(b) is the amendment making the new tax non-deductible; the returns are described in section 2(c).",
+        "Section 2(b)(2) pro-rates a mixed payment by a fraction whose numerator is the amount of labor or services directed to consumers within the United States, but the bill does not state the unit in which that amount is measured, who determines it, or what records support it.",
+        "The tax applies to payments made after December 31, 2025, but the reporting authority in section 2(c) is discretionary and the bill sets no first filing date, no transition rule, and no deadline by which Treasury must issue the anti-avoidance guidance the tax depends on."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Internal Revenue Code chapter 50B and new section 5000E: a 25 percent excise tax on any United States person making an outsourcing payment",
+          "A mixed-payment rule capping the taxable amount by the share of labor or services directed to consumers within the United States",
+          "Internal Revenue Code section 9512: a Domestic Workforce Fund in the Treasury, fed by the new tax and its related additions and penalties and spendable without further appropriation on Department of Labor retraining, industry apprenticeship partnerships, and State workforce grants",
+          "Internal Revenue Code section 280I: a flat denial of any chapter 1 deduction for an outsourcing payment",
+          "Discretionary Treasury authority to require returns or information returns on payments to foreign persons, and to require corporate officers to certify the character of those payments under penalty of perjury",
+          "A direction that Treasury write anti-avoidance regulations covering related parties, controlled foreign corporations, other intermediaries, and transfer pricing arrangements"
+        ],
+        "modified": [
+          "26 U.S.C. 275(a)(6): the list of taxes for which no deduction is allowed, currently chapters 37, 41, 42, 43, 44, 45, 46, 50A, and 54, gains chapter 50B",
+          "26 U.S.C. 6651(a): for a failure to pay a chapter 50B tax, paragraphs (2) and (3) are applied at a substituted rate in place of the per-month rate those paragraphs otherwise state"
+        ],
+        "removed": [
+          "The not exceeding 25 percent in the aggregate ceiling on the failure-to-pay addition under 26 U.S.C. 6651(a)(2) and (3), as applied to taxes imposed under chapter 50B"
+        ]
+      },
+      "referencedSources": [
+        {
+          "id": "usc-26-275",
+          "kind": "statute",
+          "label": "26 U.S.C. 275 (certain taxes not deductible)",
+          "citation": "26 U.S.C. 275",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partIX-sec275/htm",
+          "textFile": "data/ref-text/usc-26-275.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-6651",
+          "kind": "statute",
+          "label": "26 U.S.C. 6651 (failure to file tax return or to pay tax)",
+          "citation": "26 U.S.C. 6651",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap68-subchapA-partI-sec6651/htm",
+          "textFile": "data/ref-text/usc-26-6651.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-6051",
+          "kind": "statute",
+          "label": "26 U.S.C. 6051 (receipts for employees)",
+          "citation": "26 U.S.C. 6051",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap61-subchapA-partIII-subpartC-sec6051/htm",
+          "textFile": "data/ref-text/usc-26-6051.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-9602",
+          "kind": "statute",
+          "label": "26 U.S.C. 9602 (management of trust funds)",
+          "citation": "26 U.S.C. 9602",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleI-chap98-subchapB-sec9602/htm",
+          "textFile": "data/ref-text/usc-26-9602.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-s-2976-actions",
+          "kind": "law",
+          "label": "Congress.gov action history for S. 2976 (119th Congress)",
+          "citation": "Congress.gov API, bill/119/s/2976/actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/s/2976/actions",
+          "textFile": "data/ref-text/record-congress-s-2976-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ]
+    }
+  ]
+}

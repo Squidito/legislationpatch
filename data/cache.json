@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-27T20:33:12.838Z",
+  "generated": "2026-08-27T21:56:33.636Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -47082,7 +47082,68 @@
         "The bill is organized into ten divisions covering intelligence, State Department, Coast Guard, and housing matters alongside defense, but its stated purpose is limited to authorizing appropriations for military activities, military construction, and Department of Energy defense activities and prescribing military personnel strengths.",
         "Section 3112 sets site-specific production floors of 30 pits a year at Los Alamos and 50 at the Savannah River Plutonium Processing Facility, but attaches them only to the 80-per-year rate required from 2032 onward, leaving the 2025 through 2029 milestones with no site allocation."
       ],
-      "featured_quotes": [],
+      "featured_quotes": [
+        {
+          "name": "Mr. Paul",
+          "party": "R",
+          "state": "KY",
+          "bioguideId": "P000603",
+          "text": "I call up my amendment No. 3761 and ask that it be reported by number. The bill clerk read as follows: The Senator from Kentucky [Mr. Paul] proposes an amendment numbered 3761 to amendment No. 3748.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Van Hollen",
+          "party": "D",
+          "state": "MD",
+          "bioguideId": "V000128",
+          "text": "We are considering the National Defense Authorization Act at a time when our democracy and our Constitution are under attack from a lawless President. We are also in the middle of a 9-day-long government shutdown, and we should be working to get the government open. Instead, Senate Republicans are seeking to conduct business-as-usual instead of addressing the impending spike in healthcare costs for American families and responsibly funding the government. The NDAA includes critical investments in our national defense.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Grassley",
+          "party": "R",
+          "state": "IA",
+          "bioguideId": "G000386",
+          "text": "There is a not-so-perfect storm brewing for farmers in my State of Iowa and in agricultural States generally. Many factors are coming together--and all at once--like low grain prices, high input costs, consolidation in the industry, and uncertainty from trade and tariffs. It is beginning to look more and more like the 1980s to me. One thing that concerns me is the lowering of land values in Iowa. Land value has gone down 3 percent since last year and down 5.4 percent since the same time in 2023. That is not as bad as it was in the 1980s.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Wicker",
+          "party": "R",
+          "state": "MS",
+          "bioguideId": "W000437",
+          "text": "I expect the distinguished minority leader, my friend from New York, will speak possibly after the first vote and report that we are still at an impasse on funding the government, which, of course, expires at midnight tomorrow night.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Barrasso",
+          "party": "R",
+          "state": "WY",
+          "bioguideId": "B001261",
+          "text": "2 years ago, when the government was on the brink of a shutdown, the then-majority leader, now-minority leader, Senator Schumer of New York, wrote a letter to his colleagues--I have it here--dated September 2023. It says: Dear Colleague. In his letter, Senator Schumer wrote: We cannot afford . . . brinkmanship or hostage-taking. He went on to say: The only way to avoid a shutdown is through bipartisanship.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        },
+        {
+          "name": "Mr. Schumer",
+          "party": "D",
+          "state": "NY",
+          "bioguideId": "S000148",
+          "text": "I want to be very clear about something. When Donald Trump goes on FOX News and says to Republicans ``Don't even bother to deal with Democrats,'' when he says out loud that he doesn't need or want our votes, that means Donald Trump wants a shutdown--make no mistake about it. Trump can say a million times he doesn't want a shutdown, but he is acting as if he absolutely wants one. His words say one thing, but his actions say another. He is ordering Republicans not to even bother working with Democrats.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        }
+      ],
       "changes": {
         "added": [
           "Active-duty and Selected Reserve end strengths for fiscal year 2026, including 454,000 Army, 344,600 Navy, 172,300 Marine Corps, 321,500 Air Force, and 10,400 Space Force",
@@ -47220,6 +47281,687 @@
           "type": "Engrossed in Senate",
           "date": "2025-10-09",
           "url": "https://www.congress.gov/119/bills/s2296/BILLS-119s2296es.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-139",
+      "title": "Sunshine Protection Act of 2025",
+      "official_title": "To make daylight savings time permanent, and for other purposes.",
+      "code": "HR.139",
+      "date": "2025-01-03",
+      "version": "v1.0",
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "currentStep": 2,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Buchanan, Vern (R-FL)",
+      "sponsor_bioguide": "B001260",
+      "cosponsors": 34,
+      "pages": 1,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "stageDate": "2026-07-15",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "votes": [
+        {
+          "chamber": "House",
+          "date": "2026-07-14",
+          "question": "On Passage",
+          "result": "Passed",
+          "yeas": 308,
+          "nays": 117,
+          "present": 0,
+          "notVoting": 6,
+          "rollNumber": 238,
+          "sessionNumber": 2,
+          "congress": 119,
+          "crossoverCount": 0
+        }
+      ],
+      "summary": "Under current federal law, clocks in places that observe the change are set forward one hour on the second Sunday of March and back on the first Sunday of November. This bill ends that seasonal change by repealing the law that requires it, and instead moves all nine U.S. standard time zones permanently one hour later, so the later clock setting used during that period becomes the year-round standard.",
+      "brief": "Repeals the federal seasonal one-hour clock change and permanently shifts all nine U.S. standard time zones one hour later.",
+      "top_lines": [
+        {
+          "headline": "What Federal Time Law Does Now",
+          "billSection": "2",
+          "subs": [
+            "One-hour advance runs second Sunday of March to first Sunday of November",
+            "A State lying entirely in one zone may exempt itself by law",
+            "Nine zones set as offsets from Coordinated Universal Time"
+          ]
+        },
+        {
+          "headline": "Permanent Shift to Later Clock Time",
+          "billSection": "2",
+          "subs": [
+            "Repeals the section that requires the seasonal one-hour advance",
+            "First zone moves from four to three hours behind Coordinated Universal Time",
+            "Ninth zone moves from ten to eleven hours ahead"
+          ]
+        },
+        {
+          "headline": "Choice for States Already Exempt",
+          "billSection": "2",
+          "subs": [
+            "Exempt States and areas may keep their day-before-enactment clock",
+            "Choice is made as the State considers appropriate",
+            "No deadline, form, or filing step is stated"
+          ]
+        }
+      ],
+      "likelihood": 40,
+      "likelihoodReason": "A Republican-sponsored bill with 34 cosponsors, 31 of them Republicans, that carried the House 308-117 on Roll 238 under a closed rule and now sits with the Senate Commerce, Science, and Transportation Committee per the latest-action record. The margin is far wider than the party split, which is the strongest structural signal in its favor; the Senate is Republican-majority and the sponsor's party controls the calendar. The counterweight is that the bill sets no effective date and repeals the exemption authority that States currently use, so any Senator whose State is exempt or wants a different permanent setting has a concrete drafting objection to raise rather than a purely political one.",
+      "likelihoodLabel": "Possible",
+      "sections": [
+        {
+          "label": "Section 2 — Making Daylight Savings Time Permanent",
+          "items": [
+            {
+              "main": "Section 2(a) repeals section 3 of the Uniform Time Act of 1966 (15 U.S.C. 260a) in full, ending the requirement that standard time be advanced one hour between the second Sunday of March and the first Sunday of November each year.",
+              "detail": "The repealed section is the source of three separate rules, not one. Subsection (a) sets the seasonal advance and lets a State lying entirely within one time zone exempt itself by law, but only if that law makes the entire State including all its political subdivisions observe the otherwise-applicable standard time, and lets a State split across zones exempt either the whole State on those terms or the entire area of the State lying within one zone. Subsection (b) declares the express intent of Congress to supersede State and local laws that provide for different advances in time or changeover dates. Subsection (c) lets the Secretary of Transportation apply to a United States district court to enforce the section by injunction.",
+              "source": "usc-15-260a",
+              "comments": []
+            },
+            {
+              "main": "Section 2(b)(1) rewrites the second sentence of 15 U.S.C. 261(a) zone by zone, moving each of the nine standard time zones one hour later on a permanent basis.",
+              "detail": "The first zone changes from Coordinated Universal Time retarded by 4 hours to 3 hours, the second from 5 to 4, the third from 6 to 5, the fourth from 7 to 6, the fifth from 8 to 7, the sixth from 9 to 8, the seventh from 10 to 9, and the eighth from 11 to 10. The ninth zone, which is stated as Coordinated Universal Time advanced rather than retarded, moves from advanced by 10 hours to advanced by 11 hours. The limits of each zone continue to be defined by order of the Secretary of Transportation, which the bill does not change.",
+              "source": "usc-15-261",
+              "comments": []
+            },
+            {
+              "main": "Section 2(b)(2) adds a new 15 U.S.C. 261(b) letting a State, or an area of a State, that had exempted itself from the seasonal advance as of the day before enactment choose between the new standard time and the standard time that applied the day before enactment.",
+              "detail": "The choice is stated as being made as the State considers appropriate, with no deadline, filing step, or procedure attached. The existing subsection (b), which defines Coordinated Universal Time as the scale maintained through the General Conference of Weights and Measures and interpreted or modified for the United States by the Secretary of Commerce in coordination with the Secretary of the Navy, is redesignated as subsection (c). Section 2(b)(3) then repoints the exception clause opening the second sentence of subsection (a) away from the repealed seasonal-advance section and toward the new subsection (b).",
+              "source": "usc-15-261",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a)",
+          "summary": "Repealing 15 U.S.C. 260a removes more than the seasonal clock change. It also removes subsection (b), the express statement that Congress intends to supersede any State or local law providing for different advances in time or changeover dates, and subsection (c), the Secretary of Transportation's route to a district court injunction against violations.",
+          "why_unreported": "The section is captioned Repeal of Temporary Period for Daylight Savings Time and the repeal text is a single sentence, but the section being repealed carries three subsections; the preemption declaration and the enforcement mechanism go with it."
+        },
+        {
+          "section": "Section 2(b)(2)",
+          "summary": "The new state-election right in 15 U.S.C. 261(b) reaches only a State or area that had already exempted itself under 15 U.S.C. 260a(a) as in effect the day before enactment. Because section 2(a) repeals that exemption authority, the set of States and areas eligible to make the election is fixed at the moment of enactment.",
+          "why_unreported": "The subsection reads as a general State option, but its operative trigger is a status held on a single past date under a section the same bill repeals."
+        }
+      ],
+      "criticisms": [
+        {
+          "who": "Ms. Dean (D-PA)",
+          "why": "I rise in opposition to the bill and the danger it poses to our health and safety. This bill, sadly, is being rushed to the floor as a political bargaining chip without thorough consideration of the impacts, and we have been here before. Permanent time is a national decision with implications for every aspect of our health and economy. It deserves a robust, thoughtful debate and an amendment process that allows Members to test each provision of the bill."
+        }
+      ],
+      "gaps": [
+        "The bill makes the later clock setting permanent but contains no effective-date provision, so the text does not state when the new zone offsets begin to apply.",
+        "The bill gives States and areas that were exempt the day before enactment a choice of standard time, but because it repeals the exemption authority in 15 U.S.C. 260a it provides no route for any other State to make that choice afterward.",
+        "The bill repeals the subsection declaring that Congress supersedes State and local laws providing for different advances in time or changeover dates, but does not state what happens to such State laws once that declaration is gone.",
+        "The new subsection (b) lets an exempt State pick its standard time as the State considers appropriate, but sets no deadline, no form of election, no notice to any federal officer, and no rule for changing the choice later.",
+        "Section 2(a) removes the Secretary of Transportation's district-court enforcement route for time violations without replacing it, while 15 U.S.C. 261(a) continues to leave the limits of each zone to that Secretary's order."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mr. Pallone",
+          "party": "D",
+          "state": "NJ",
+          "bioguideId": "P000034",
+          "text": "I rise today in strong support of the Sunshine Protection Act. This act addresses an issue on which many Americans actually agree, and that is stopping the biannual process of changing our clocks. Only 12 percent of Americans prefer to switch their clocks twice a year. Far more Americans recognize that the practice is inconvenient and, frankly, disruptive.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mrs. Cammack",
+          "party": "R",
+          "state": "FL",
+          "bioguideId": "C001039",
+          "text": "Mr. Speaker, today, I rise in strong support for H.R. 139, the Sunshine Protection Act, introduced by my friend and fellow Floridian, Congressman Vern Buchanan. This is one of those issues that has been highlighted here today that brings us together as Americans, regardless of party, no matter where you are. Everyone always asks the same question every year because we are all equally annoyed: Why in the heck are we still changing our clocks?",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Guthrie",
+          "party": "R",
+          "state": "KY",
+          "bioguideId": "G000558",
+          "text": "I appreciate my friend from Florida yielding. It is fun today because I have my friend from Florida controlling time. I  have another friend from Florida (Mr. Soto) speaking for the bill, and we have the sponsor from Florida. I will say also to the American people, Mr. Speaker, through you, that a very famous resident of Florida mentioned this to me in the Oval Office a few weeks ago, so I know there is strong support. It is actually called the Sunshine Protection Act, and the reason is people like the longer daylight hours.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Carter",
+          "party": "D",
+          "state": "LA",
+          "bioguideId": "C001125",
+          "text": "Twice a year, Americans lose sleep, disrupt their routines, and pay the price for a practice that has outlived its original purpose. H.R. 139, the Sunshine Protection Act, ends that twice-yearly clock change and makes daylight saving time permanent year round. Research shows that eliminating the biannual switch reduces the spike in heart attacks, strokes, and workplace accidents that follow the spring-forward transition. Ending the clock change also means fewer disruptions to sleep patterns tied to that adjustment period.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Steube",
+          "party": "R",
+          "state": "FL",
+          "bioguideId": "S001214",
+          "text": "For me, this vote has been nearly a decade in the making. In 2018, at the Braden River Barber Shop shortly after we turned back the clocks to standard time, everyone was complaining about the change. Kids are not waking up on time. Everyone is tired. There is a rise in health-related issues. Nobody is able to enjoy activities in the evening. The list went on and on. The question was: Why are we still changing the clocks? As a State senator in Florida at the time, everyone looked at me and asked if we could do something about it, so we did.",
+          "stance": "support",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Mr. Sessions",
+          "party": "R",
+          "state": "TX",
+          "bioguideId": "S000250",
+          "text": "My dear friend, the gentleman from Florida, Vern Buchanan, years ago began this process, understanding that it was more than just an issue that Congress would deal with. It is also an issue that is called spring forward, fall back. You fall back as we get to October, and that means you lose the time, the light that you had all this time.",
+          "stance": "neutral",
+          "source": "House Floor",
+          "chamber": "House"
+        },
+        {
+          "name": "Ms. Dean",
+          "party": "D",
+          "state": "PA",
+          "bioguideId": "D000631",
+          "text": "I rise in opposition to the bill and the danger it poses to our health and safety. This bill, sadly, is being rushed to the floor as a political bargaining chip without thorough consideration of the impacts, and we have been here before. Permanent time is a national decision with implications for every aspect of our health and economy. It deserves a robust, thoughtful debate and an amendment process that allows Members to test each provision of the bill.",
+          "stance": "oppose",
+          "source": "House Floor",
+          "chamber": "House"
+        }
+      ],
+      "changes": {
+        "added": [
+          "A new 15 U.S.C. 261(b) letting a State, or an exempted area of a State, that was exempt from the seasonal advance on the day before enactment choose between the new standard time and the standard time in effect that day"
+        ],
+        "modified": [
+          "15 U.S.C. 261(a): first zone moves from Coordinated Universal Time retarded by 4 hours to 3 hours, second from 5 to 4, third from 6 to 5, fourth from 7 to 6, fifth from 8 to 7, sixth from 9 to 8, seventh from 10 to 9, eighth from 11 to 10",
+          "15 U.S.C. 261(a): ninth zone moves from Coordinated Universal Time advanced by 10 hours to advanced by 11 hours",
+          "15 U.S.C. 261: the existing subsection (b) defining Coordinated Universal Time is redesignated as subsection (c)",
+          "15 U.S.C. 261(a): the exception clause opening the second sentence is repointed from the repealed seasonal-advance section to the new state-election subsection"
+        ],
+        "removed": [
+          "15 U.S.C. 260a in full: the one-hour advance from the second Sunday of March to the first Sunday of November, the State and area exemption from it, the express supersession of State and local laws providing different advances in time or changeover dates, and the Secretary of Transportation's district-court enforcement route"
+        ]
+      },
+      "referencedSources": [
+        {
+          "id": "usc-15-260a",
+          "kind": "statute",
+          "label": "15 U.S.C. 260a (Uniform Time Act of 1966 section 3 - advancement of time or changeover dates)",
+          "citation": "15 U.S.C. 260a",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec260a/htm",
+          "textFile": "data/ref-text/usc-15-260a.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-15-261",
+          "kind": "statute",
+          "label": "15 U.S.C. 261 (Calder Act section 1 - zones for standard time)",
+          "citation": "15 U.S.C. 261",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec261/htm",
+          "textFile": "data/ref-text/usc-15-261.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-hr-139-actions",
+          "kind": "law",
+          "label": "Congress.gov action history for H.R. 139 (119th Congress)",
+          "citation": "Congress.gov API, bill/119/hr/139/actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/hr/139/actions",
+          "textFile": "data/ref-text/record-congress-hr-139-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-01-03",
+          "url": "https://www.congress.gov/119/bills/hr139/BILLS-119hr139ih.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-14",
+          "url": "https://www.congress.gov/119/bills/hr139/BILLS-119hr139eh.htm"
+        },
+        {
+          "type": "Referred in Senate",
+          "date": "2026-07-15",
+          "url": "https://www.congress.gov/119/bills/hr139/BILLS-119hr139rfs.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-2976",
+      "title": "HIRE Act",
+      "official_title": "To amend the Internal Revenue Code of 1986 to impose an excise tax on payments by United States taxpayers to foreign persons for services provided to United States consumers, and for other purposes.",
+      "code": "S.2976",
+      "date": "2025-10-06",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Moreno, Bernie (R-OH)",
+      "sponsor_bioguide": "M001242",
+      "cosponsors": 0,
+      "pages": 4,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "stageDate": "2025-10-06",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "votes": [],
+      "summary": "This bill would put a new 25 percent federal excise tax on money a U.S. business pays a foreign person for labor or services whose benefit goes to customers in the United States. The same payments would also lose their income-tax deduction, the tax itself would not be deductible either, and the money collected would go into a new Domestic Workforce Fund that pays for retraining, apprenticeships, and grants to States.",
+      "brief": "Creates a 25 percent excise tax on business payments to foreign persons for labor or services benefiting U.S. consumers, denies the deduction for those payments, and routes the receipts to a new Domestic Workforce Fund.",
+      "top_lines": [
+        {
+          "headline": "New Outsourcing Excise Tax",
+          "billSection": "2",
+          "subs": [
+            "25 percent tax on covered payments to foreign persons",
+            "Applies to labor or services benefiting consumers in the United States",
+            "Mixed payments capped by the U.S.-directed share"
+          ]
+        },
+        {
+          "headline": "Deductions Denied on Both Layers",
+          "billSection": "4",
+          "subs": [
+            "No income-tax deduction allowed for any outsourcing payment",
+            "The new excise tax is itself made non-deductible",
+            "Both apply to payments made after December 31, 2025"
+          ]
+        },
+        {
+          "headline": "Penalties and the Workforce Fund",
+          "billSection": "3",
+          "subs": [
+            "Failure-to-pay addition raised and its 25 percent aggregate cap removed",
+            "Receipts routed to a new Domestic Workforce Fund",
+            "Fund spends without further appropriation on retraining and apprenticeships"
+          ]
+        }
+      ],
+      "likelihood": 10,
+      "likelihoodReason": "Introduced by a Republican in a Republican-majority Senate with zero cosponsors and referred to the Committee on Finance, per the latest-action record. The operative reach is very wide for a single-sponsor bill: the tax attaches to any payment to a person who is not a United States person where the benefit of the labor or services is directed, directly or indirectly, to consumers in the United States, which covers services imports across the economy rather than a defined industry, and the mixed-payment rule requires a taxpayer to measure the U.S.-directed share of every such payment. The bill also leaves the anti-avoidance rules entirely to Treasury regulations and carries several internal cross-references that do not match the sections they name, so Finance would have substantial drafting work before any markup.",
+      "likelihoodLabel": "Long shot",
+      "sections": [
+        {
+          "label": "Section 2 — Outsourcing Excise Tax",
+          "items": [
+            {
+              "main": "Adds a new chapter 50B to the Internal Revenue Code containing section 5000E, which imposes a tax on any United States person making an outsourcing payment equal to 25 percent of the amount of that payment.",
+              "detail": "An outsourcing payment is any premium, fee, royalty, service charge, or other payment made in the course of a trade or business, to a foreign person, with respect to labor or services the benefit of which is directed, directly or indirectly, to consumers located in the United States. A foreign person is any person who is not a United States person, except that the term does not include a corporation or partnership organized under the laws of a possession of the United States. Where labor or services are directed to consumers both inside and outside the United States, the amount treated as an outsourcing payment is capped by the payment multiplied by a fraction whose numerator is the amount of labor or services directed to consumers within the United States and whose denominator is the labor or services directed to all consumers.",
+              "comments": []
+            },
+            {
+              "main": "Makes the new excise tax itself non-deductible by adding chapter 50B to the list of taxes for which no deduction is allowed under 26 U.S.C. 275(a)(6).",
+              "detail": "That paragraph currently denies a deduction for taxes imposed by chapters 37, 41, 42, 43, 44, 45, 46, 50A, and 54; the bill inserts chapter 50B after 50A. Section 2(e) separately states that nothing in the section limits the application of the economic substance doctrine to any payment described in section 5000E(b), and section 2(d) instructs Treasury to write regulations and other guidance to prevent avoidance or abuse, including through related parties, controlled foreign corporations, other intermediaries, and transfer pricing arrangements.",
+              "source": "usc-26-275",
+              "comments": []
+            },
+            {
+              "main": "Gives Treasury discretionary authority to require returns and information returns on payments to foreign persons, and to require corporate officers to certify the character of those payments under penalty of perjury.",
+              "detail": "The Secretary may require United States persons making payments to foreign persons to file a return of the new tax or an information return covering whether the payments are outsourcing payments and any other information reasonably required for enforcement. Any return required under that paragraph is treated as an information return for purposes of part II of subchapter B of chapter 68. Section 2(d) of the bill also adds a sentence to 26 U.S.C. 6651(a) applying paragraphs (2) and (3) of that subsection to chapter 50B taxes at a substituted rate and without regard to the phrase limiting the addition to not exceeding 25 percent in the aggregate; those paragraphs otherwise add 0.5 percent of the tax per month or fraction of a month, capped at 25 percent.",
+              "source": "usc-26-6651",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Domestic Workforce Fund",
+          "items": [
+            {
+              "main": "Establishes a Domestic Workforce Fund in the Treasury as new Internal Revenue Code section 9512, appropriating to it amounts equivalent to the receipts from the new tax and from the related additions to tax and penalties.",
+              "detail": "The Fund consists of amounts appropriated, credited, or paid into it under the new section or under 26 U.S.C. 9602(b), which directs the Secretary of the Treasury to invest trust-fund balances not needed for current withdrawals in interest-bearing obligations of the United States and to credit the interest and sale proceeds back to the fund. The three receipt streams named are the tax imposed under section 5000E, the additions to tax relating to failure to pay it, and the penalties relating to the returns the bill authorizes.",
+              "source": "usc-26-9602",
+              "comments": []
+            },
+            {
+              "main": "Makes Fund amounts available without further appropriation, solely for three named purposes.",
+              "detail": "Those purposes are workforce development and retraining programs administered by the Department of Labor; apprenticeship programs and partnerships with industry to expand domestic employment in sectors impacted by outsourcing; and grants to States for workforce development initiatives targeted at communities with high levels of job displacement. The bill sets no allocation among the three, no dollar figures, no matching requirement, and no reporting requirement.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Denial of Income Tax Deduction on Outsourcing Payments",
+          "items": [
+            {
+              "main": "Adds section 280I to the Internal Revenue Code barring any deduction under chapter 1 for an outsourcing payment as defined in section 5000E(b), effective for payments made after December 31, 2025 in taxable years ending after that date.",
+              "detail": "Section 280I sits in Part IX of subchapter B of chapter 1, the part of the Code headed Items Not Deductible, alongside 26 U.S.C. 275. The result is that a covered payment loses its ordinary business deduction under section 280I, carries a 25 percent excise under section 5000E, and cannot deduct that excise either, because section 2(b) adds chapter 50B to the non-deductible list in section 275(a)(6).",
+              "source": "usc-26-275",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 5000E(b) and (c)",
+          "summary": "The tax attaches to the identity of the recipient and the destination of the benefit, not to any job movement. It applies to a payment to any person who is not a United States person, for labor or services whose benefit is directed to consumers located in the United States, and nothing in the definition requires that the work was previously performed in the United States, that an employment relationship exists, or that any position was displaced.",
+          "why_unreported": "The chapter is captioned Outsourcing and the section is captioned Outsourcing payments, but the operative test in subsection (b) is recipient-plus-destination and contains no relocation or displacement element."
+        },
+        {
+          "section": "Sections 2(b) and 4",
+          "summary": "The two deduction rules stack. Section 4 denies any chapter 1 deduction for the outsourcing payment itself, and section 2(b) adds the new chapter 50B to the taxes for which 26 U.S.C. 275(a)(6) denies a deduction, so the 25 percent excise paid on that payment is also non-deductible.",
+          "why_unreported": "The two provisions sit in different sections under separate headings, one about the tax and one about the payment, so neither heading shows that a single covered payment loses two deductions and bears a tax."
+        },
+        {
+          "section": "Section 2(d)",
+          "summary": "Beyond changing the rate stated for the failure-to-pay addition, the sentence added to 26 U.S.C. 6651(a) directs that paragraphs (2) and (3) be applied without regard to the phrase limiting the addition to not exceeding 25 percent in the aggregate, so the addition on a chapter 50B tax has no stated ceiling.",
+          "why_unreported": "The subsection is captioned Increased penalty for failure to pay tax, which describes the rate change but not the removal of the aggregate cap that otherwise stops the addition at 25 percent of the tax."
+        },
+        {
+          "section": "Section 9512(c)",
+          "summary": "Fund amounts are available without further appropriation, so once receipts arrive the three named uses are funded on a standing basis rather than through annual appropriations.",
+          "why_unreported": "The section is captioned Domestic Workforce Fund and reads as an accounting device, but the expenditure clause is a permanent spending authority."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "Section 2(d) directs that paragraphs (2) and (3) of 26 U.S.C. 6651(a) be applied by substituting 50 percent for 05. percent each place it appears, but the string 05. percent appears nowhere in those paragraphs, which state the rate as 0.5 percent.",
+        "Section 3(b)(2) routes into the Fund the additions to tax under 26 U.S.C. 6051(a) that relate to failure to pay the new tax, but section 6051 is the wage-receipt provision requiring employers to furnish statements to employees and imposes no additions to tax; the failure-to-pay additions the bill itself amends are in 26 U.S.C. 6651(a).",
+        "Section 3(b)(3) routes into the Fund the penalties relating to returns described in section 2(b) of the Act, but section 2(b) is the amendment making the new tax non-deductible; the returns are described in section 2(c).",
+        "Section 2(b)(2) pro-rates a mixed payment by a fraction whose numerator is the amount of labor or services directed to consumers within the United States, but the bill does not state the unit in which that amount is measured, who determines it, or what records support it.",
+        "The tax applies to payments made after December 31, 2025, but the reporting authority in section 2(c) is discretionary and the bill sets no first filing date, no transition rule, and no deadline by which Treasury must issue the anti-avoidance guidance the tax depends on."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Internal Revenue Code chapter 50B and new section 5000E: a 25 percent excise tax on any United States person making an outsourcing payment",
+          "A mixed-payment rule capping the taxable amount by the share of labor or services directed to consumers within the United States",
+          "Internal Revenue Code section 9512: a Domestic Workforce Fund in the Treasury, fed by the new tax and its related additions and penalties and spendable without further appropriation on Department of Labor retraining, industry apprenticeship partnerships, and State workforce grants",
+          "Internal Revenue Code section 280I: a flat denial of any chapter 1 deduction for an outsourcing payment",
+          "Discretionary Treasury authority to require returns or information returns on payments to foreign persons, and to require corporate officers to certify the character of those payments under penalty of perjury",
+          "A direction that Treasury write anti-avoidance regulations covering related parties, controlled foreign corporations, other intermediaries, and transfer pricing arrangements"
+        ],
+        "modified": [
+          "26 U.S.C. 275(a)(6): the list of taxes for which no deduction is allowed, currently chapters 37, 41, 42, 43, 44, 45, 46, 50A, and 54, gains chapter 50B",
+          "26 U.S.C. 6651(a): for a failure to pay a chapter 50B tax, paragraphs (2) and (3) are applied at a substituted rate in place of the per-month rate those paragraphs otherwise state"
+        ],
+        "removed": [
+          "The not exceeding 25 percent in the aggregate ceiling on the failure-to-pay addition under 26 U.S.C. 6651(a)(2) and (3), as applied to taxes imposed under chapter 50B"
+        ]
+      },
+      "referencedSources": [
+        {
+          "id": "usc-26-275",
+          "kind": "statute",
+          "label": "26 U.S.C. 275 (certain taxes not deductible)",
+          "citation": "26 U.S.C. 275",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleA-chap1-subchapB-partIX-sec275/htm",
+          "textFile": "data/ref-text/usc-26-275.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-6651",
+          "kind": "statute",
+          "label": "26 U.S.C. 6651 (failure to file tax return or to pay tax)",
+          "citation": "26 U.S.C. 6651",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap68-subchapA-partI-sec6651/htm",
+          "textFile": "data/ref-text/usc-26-6651.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-6051",
+          "kind": "statute",
+          "label": "26 U.S.C. 6051 (receipts for employees)",
+          "citation": "26 U.S.C. 6051",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleF-chap61-subchapA-partIII-subpartC-sec6051/htm",
+          "textFile": "data/ref-text/usc-26-6051.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-26-9602",
+          "kind": "statute",
+          "label": "26 U.S.C. 9602 (management of trust funds)",
+          "citation": "26 U.S.C. 9602",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title26/granules/USCODE-2024-title26-subtitleI-chap98-subchapB-sec9602/htm",
+          "textFile": "data/ref-text/usc-26-9602.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-s-2976-actions",
+          "kind": "law",
+          "label": "Congress.gov action history for S. 2976 (119th Congress)",
+          "citation": "Congress.gov API, bill/119/s/2976/actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/s/2976/actions",
+          "textFile": "data/ref-text/record-congress-s-2976-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in Senate",
+          "date": "2025-10-06",
+          "url": "https://www.congress.gov/119/bills/s2976/BILLS-119s2976is.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-5269",
+      "title": "RESULTS Act",
+      "official_title": "To amend title XVIII of the Social Security Act to provide long-term stability for Medicare beneficiary access to clinical diagnostic laboratory tests by improving the accuracy of, and feasibility of data collection for, the private payor-based fee schedule payment rates applied under the Medicare program for such tests, and for other purposes.",
+      "code": "HR.5269",
+      "date": "2025-09-10",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Hudson, Richard (R-NC)",
+      "sponsor_bioguide": "H001067",
+      "cosponsors": 114,
+      "pages": 11,
+      "analyzed": true,
+      "demo": false,
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "stageDate": "2025-09-10",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "votes": [],
+      "summary": "Medicare pays for clinical laboratory tests at rates built from what private insurers pay for the same tests, information laboratories currently have to report to the government themselves. For the tests billed by the most providers, this bill would have Medicare buy that information from an independent nonprofit claims database under contract instead, push the next laboratory reporting round from 2026 to 2028, and change the limit on how fast rates can fall: no reductions at all through 2028, then a permanent cap of 5 percent a year.",
+      "brief": "Moves Medicare's private-payor rate data for the most widely billed lab tests from laboratory self-reporting to a contracted nonprofit claims database, delays the next reporting round to 2028, and caps annual rate cuts at 5 percent from 2029 onward.",
+      "top_lines": [
+        {
+          "headline": "How Medicare Sets Lab Rates Now",
+          "billSection": "2",
+          "subs": [
+            "Payment equals the weighted median of reported private-payor rates",
+            "Laboratories report their own private rates and volumes",
+            "Cuts capped at 10 percent for 2017-2020, then 0 percent through 2025"
+          ],
+          "source": "usc-42-1395m-1"
+        },
+        {
+          "headline": "Data Comes From a Claims Database",
+          "billSection": "2",
+          "subs": [
+            "Secretary contracts with a national nonprofit claims-data entity",
+            "Database needs 50 billion claims from more than 50 private payors",
+            "Covers tests paid to more than 100 providers and suppliers"
+          ]
+        },
+        {
+          "headline": "Rate Cut Limits and Review Rights",
+          "billSection": "2",
+          "subs": [
+            "No reductions allowed through 2028",
+            "Reductions capped at 5 percent for 2029 and each later year",
+            "Review bar lifts for rates established from 2029 onward"
+          ]
+        }
+      ],
+      "likelihood": 50,
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House and carrying 114 cosponsors split 60 Republicans and 54 Democrats, an almost even bipartisan split and the strongest structural signal in this bill's favor. Working against it, the bill was referred to the Committee on Energy and Commerce and additionally to the Committee on Ways and Means with jurisdiction divided between them per the latest-action record, and provisions of this kind more often move attached to a larger health package than on their own. The provision most likely to draw resistance is the payment side: extending the zero-reduction band through 2028 and capping later reductions at 5 percent keeps rates above what current law schedules, which raises the bill's cost relative to current law and has to be paid for.",
+      "likelihoodLabel": "Possible",
+      "sections": [
+        {
+          "label": "Section 2(a) — Acquiring Data From an Independent Claims Database",
+          "items": [
+            {
+              "main": "Requires the Secretary to identify and contract with a qualifying independent claims data entity, and for reporting periods beginning on or after January 1, 2028 to collect and use private-payor rate information for widely available non-ADLT tests from that entity's database rather than from laboratory reports.",
+              "detail": "Under current law an applicable laboratory reports the payment rate each private payor paid for each test and the volume at each rate, and Medicare pays the weighted median of those reported rates. The new clause keeps that reporting route for other tests but routes widely available non-advanced tests through the contracted entity, covering each such test furnished during the data collection period for which final payment is made under Part B during the year in which that period occurs.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Defines the entity and the database it must hold: a national nonprofit unaffiliated with government, insurers, plans, providers, suppliers, or any other health-care-sector organization, maintaining a database of at least 50 billion private-payor claims from more than 50 private payors and claims administrators.",
+              "detail": "The database must be a statistically significant repository representative for all 50 States and the District of Columbia, contain only data validated by quality assurance processes including comprehensive statistical testing, comply with applicable Federal and State privacy and security requirements, provide version control so only claims representative of final payment amounts are submitted, and include claims data on widely available non-advanced tests. The entity must also be certified by the Secretary as a qualified entity under section 1874(e) of the Social Security Act with access to the data described in that subsection.",
+              "comments": []
+            },
+            {
+              "main": "Pushes the reporting calendar back and stretches the cycle: no reporting through December 31, 2027 instead of December 31, 2025, the next window running January 1 through March 31, 2028 instead of 2026, and every 4 years after that instead of every three.",
+              "detail": "The matching data collection period moves from January 1 through June 30, 2019 to the same dates in 2027, and for tests that are not advanced diagnostic laboratory tests each later cycle uses the 6-month period beginning January 1 of the year preceding the reporting year. The Secretary must establish parameters for data collection periods beginning on or after January 1, 2027 through notice and comment rulemaking not later than December 31, 2026. For reporting periods beginning on or after January 1, 2028, the term applicable laboratory is redefined by reference to section 414.502 of title 42, Code of Federal Regulations, as in effect on May 1, 2025, without paragraph (3) of that section.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2(b) — Turning the Data Into Payment Rates",
+          "items": [
+            {
+              "main": "Feeds the database information into the weighted-median calculation for widely available non-ADLT tests for reporting periods beginning on or after January 1, 2028, and switches the calculation to final payment rates.",
+              "detail": "A final payment rate is defined as the last payment made for a test in the relevant period and excludes denied payments, payments under appeal or under review by the private payor, payments made in error, and payments recouped by the private payor. The completeness rule that requires every distinct rate and its volume to be reported is extended to the contracted entity, and the duty to report more than one rate for the same payor and test no longer applies where those different rates relate to the same claim.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Adds two fallback rules for when the data pipeline produces nothing, plus a public explanation duty for every rate the Secretary sets.",
+              "detail": "If the Secretary cannot contract with a qualifying entity, or the database holds no information for a widely available test, payment for that test equals the previous year's payment increased by the percentage increase in the Consumer Price Index for all urban consumers, all items, United States city average, for the qualified rate period the bill defines. If no applicable information is reported for a non-widely available non-advanced test, payment is set the first year by crosswalking to the most appropriate test or, where none is comparable, by the existing gapfilling process, and in later years by carrying the previous year's amount forward. Separately, the Secretary must publish an explanation of each test's payment rate, including any supporting data necessary for a laboratory to assess the accuracy of the calculations.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2(c) — Payment-Reduction Limits and Review Rights",
+          "items": [
+            {
+              "main": "Rewrites the limit on year-over-year rate reductions: the cap applies for 2017 and each subsequent year instead of expiring after 2028, the no-reduction band runs 2021 through 2028 instead of 2021 through 2025, and the cap for 2029 and each subsequent year is 5 percent instead of the 15 percent set for 2026 through 2028.",
+              "detail": "Under current law the applicable percent is 10 percent for each of 2017 through 2020, 0 percent for each of 2021 through 2025, and 15 percent for each of 2026 through 2028, with the whole limit ending after 2028. The bill also stops treating a medicaid managed care organization as a private payor for reporting periods beginning on or after January 1, 2028, and corrects the market-rate clause so established rates apply through, rather than until, the year following the next data collection period.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            },
+            {
+              "main": "Sunsets the bar on challenging Medicare laboratory payment amounts, limiting it to amounts established before January 1, 2029.",
+              "detail": "Section 1834A(h)(1) currently states that there shall be no administrative or judicial review, under the two Social Security Act review provisions it names or otherwise, of the establishment of payment amounts under the section. The bill inserts a cutoff so the bar reaches only amounts established before January 1, 2029, leaving amounts established on or after that date open to review.",
+              "source": "usc-42-1395m-1",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 2(a)(2)(C), new definition (E)",
+          "summary": "Which tests move to the claims database is decided by how many billers a test has, not by how often it is performed. A test is widely available if, during the first 6 months of the year immediately preceding the data collection period, the number of providers of services and suppliers receiving payments under the section, counted by the national provider identifier on the claim, exceeds 100.",
+          "why_unreported": "The term reads as a volume measure, but the operative test counts distinct billing entities; a very high-volume test performed by 100 or fewer providers stays in the laboratory self-reporting lane, and a low-volume test billed by many providers moves to the database lane."
+        },
+        {
+          "section": "Section 2(b)(2), new paragraph (b)(6)",
+          "summary": "When there is no contract with a qualifying entity or no data for a widely available test, payment is the previous year's amount increased by the percentage increase in the Consumer Price Index for all urban consumers. That is an annual inflation update inside a fee schedule whose existing text states that payment amounts are not subject to any adjustment, including any geographic adjustment, budget neutrality adjustment, annual update, or other adjustment.",
+          "why_unreported": "The paragraph is captioned as a default payment rule for periods with no contract or no data, but its mechanical effect is to introduce an inflation-indexed update where the section otherwise forbids one, triggered by the absence of data rather than by any finding about the test."
+        },
+        {
+          "section": "Section 2(a)(2)(B)(ii)",
+          "summary": "For reporting periods beginning on or after January 1, 2028, the statutory definition of applicable laboratory is replaced by a cross-reference to section 414.502 of title 42, Code of Federal Regulations, as in effect on May 1, 2025, except without application of paragraph (3) of that section.",
+          "why_unreported": "The change sits under a heading about definitions, but it moves the definition of who must report out of the statute and pins it to the text of a regulation as it stood on a fixed past date, minus one paragraph, rather than restating the rule in the law."
+        },
+        {
+          "section": "Sections 2(a)(5) and 2(a)(6)",
+          "summary": "The civil money penalty of up to $10,000 per day for a failure to report or a misrepresentation is narrowed to information required to be reported by that laboratory, while the confidentiality protection is extended to information disclosed by the contracted claims-data entity. No penalty provision is attached to the entity.",
+          "why_unreported": "The two amendments read as conforming cleanup that adds the new entity alongside laboratories, but they move in opposite directions: the entity gains the confidentiality protection without picking up the reporting penalty that applies to laboratories."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires the Secretary to identify and contract with a qualifying independent claims data entity as soon as practicable after enactment, but sets no outside deadline, no procedure for choosing among multiple qualifying entities, and no contract term or renewal rule.",
+        "The database must hold at least 50 billion claims from more than 50 private payors and be representative for all 50 States and the District of Columbia, and the entity must be certified by the Secretary as a qualified entity under section 1874(e) of the Social Security Act, but the bill attaches no verification, audit, or recertification step to the database thresholds themselves and says nothing about what happens if a contracted entity stops meeting them.",
+        "The bill requires the Secretary to publish an explanation of each test's payment rate including any supporting data necessary for a laboratory to assess the accuracy of the calculations, but sets no timeline or format and does not say how that duty fits with the existing confidentiality rule barring disclosure in a form that identifies a specific payor or laboratory or the prices paid to it.",
+        "The bill defines applicable laboratory for 2028 and later by reference to a Code of Federal Regulations section as in effect on May 1, 2025 without paragraph (3) of that section, but does not reproduce that definition in the statute or state what governs if the regulation is later revised or removed.",
+        "The bill stops counting medicaid managed care organization rates as private-payor data for reporting periods beginning on or after January 1, 2028, but does not say whether the qualifying comprehensive claims database, defined as a database of private payor claims data, may include those rates in what it reports."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A contract route under which the Secretary must identify and contract with a qualifying independent claims data entity so that, for reporting periods beginning on or after January 1, 2028, private-payor data for widely available non-ADLT tests comes from that entity's database",
+          "Definitions of qualifying independent claims data entity, qualifying comprehensive claims database, widely available non-ADLT clinical diagnostic laboratory test, and non-widely available non-ADLT clinical diagnostic laboratory test",
+          "A default rate for widely available tests when there is no contract or no data: the previous year's payment increased by the percentage increase in the Consumer Price Index for all urban consumers",
+          "A rate rule for non-widely available non-ADLT tests with no reported data: crosswalking or gapfilling the first year, then the previous year's amount",
+          "A public explanation requirement: the Secretary must publish an explanation of each test's payment rate, including any supporting data necessary for a laboratory to assess the accuracy of the calculations",
+          "A second rulemaking deadline: parameters for data collection periods beginning on or after January 1, 2027 must be set through notice and comment rulemaking not later than December 31, 2026"
+        ],
+        "modified": [
+          "42 U.S.C. 1395m-1(a)(1)(B): the reporting pause runs through December 31, 2027 instead of December 31, 2025, the next reporting window moves from January 1 through March 31, 2026 to the same dates in 2028, and the cycle after it stretches from three years to 4 years",
+          "42 U.S.C. 1395m-1(b)(3): the reduction limit applies for 2017 and each subsequent year instead of 2017 through 2028, the no-reduction band in clause (ii) extends from 2021 through 2025 to 2021 through 2028, and clause (iii) changes from 15 percent for 2026 through 2028 to 5 percent for 2029 and each subsequent year",
+          "42 U.S.C. 1395m-1(a)(4)(B): the data collection period for the delayed reporting window moves from January 1 through June 30, 2019 to the same dates in 2027, and later cycles use the 6-month period beginning January 1 of the year before the reporting period",
+          "42 U.S.C. 1395m-1(a)(3): applicable information for data collection periods beginning on or after January 1, 2027 becomes the final payment rate rather than the payment rate, defined as the last payment made and excluding denied payments, payments under appeal or under review, payments made in error, and payments recouped by the payor",
+          "42 U.S.C. 1395m-1(a)(9)(A): the civil money penalty of up to $10,000 per day is narrowed to failures and misrepresentations in reporting information required to be reported by that laboratory",
+          "42 U.S.C. 1395m-1(a)(10): the confidentiality protection extends to information disclosed by the contracted claims-data entity as well as by a laboratory",
+          "42 U.S.C. 1395m-1(a)(8)(C): a medicaid managed care organization counts as a private payor only for reporting periods beginning before January 1, 2028",
+          "42 U.S.C. 1395m-1(b)(4)(A): established market rates apply through the year following the next data collection period rather than until that year"
+        ],
+        "removed": [
+          "42 U.S.C. 1395m-1(h)(1): the bar on administrative and judicial review no longer reaches payment amounts established on or after January 1, 2029"
+        ]
+      },
+      "referencedSources": [
+        {
+          "id": "usc-42-1395m-1",
+          "kind": "statute",
+          "label": "42 U.S.C. 1395m-1 (Social Security Act section 1834A - improving Medicare policies for clinical diagnostic laboratory tests)",
+          "citation": "42 U.S.C. 1395m-1",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap7-subchapXVIII-partB-sec1395m-1/htm",
+          "textFile": "data/ref-text/usc-42-1395m-1.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-hr-5269-actions",
+          "kind": "law",
+          "label": "Congress.gov action history for H.R. 5269 (119th Congress)",
+          "citation": "Congress.gov API, bill/119/hr/5269/actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/hr/5269/actions",
+          "textFile": "data/ref-text/record-congress-hr-5269-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-09-10",
+          "url": "https://www.congress.gov/119/bills/hr5269/BILLS-119hr5269ih.htm"
         }
       ]
     }

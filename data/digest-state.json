@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-27T20:28:41.349Z",
+  "lastRun": "2026-08-27T22:21:56.790Z",
   "stages": {
     "119-HCONRES-108": {
       "stage": "dead",
@@ -70,6 +70,11 @@
       "stage": "house",
       "stageLabel": "Passed House",
       "stageDate": "2026-05-14"
+    },
+    "119-HR-139": {
+      "stage": "house",
+      "stageLabel": "Passed House",
+      "stageDate": "2026-07-15"
     },
     "119-HR-1479": {
       "stage": "house",
@@ -465,6 +470,11 @@
       "stage": "house",
       "stageLabel": "Passed House",
       "stageDate": "2026-07-29"
+    },
+    "119-HR-5269": {
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "stageDate": "2025-09-10"
     },
     "119-HR-5334": {
       "stage": "senate",
@@ -981,6 +991,11 @@
       "stageLabel": "Passed Senate",
       "stageDate": "2026-08-10"
     },
+    "119-S-2976": {
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "stageDate": "2025-10-06"
+    },
     "119-S-3266": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
@@ -1088,8 +1103,8 @@
       "url": "/changelog/2026-08-27/",
       "kind": "diff",
       "counts": {
-        "total": 4,
-        "new": 4
+        "total": 7,
+        "new": 7
       }
     },
     {
