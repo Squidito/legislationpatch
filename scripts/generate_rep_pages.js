@@ -52,6 +52,15 @@ const repsIndex = JSON.parse(fs.readFileSync(path.join(DATA, 'reps-index.json'),
 let billSlugIndex = {};
 try { billSlugIndex = JSON.parse(fs.readFileSync(path.join(DATA, 'slug-index.json'), 'utf8')); } catch (_) {}
 
+// District composition (counties + places per district, whole/partial flags),
+// derived from the fetched Census CD119 relationship files by
+// scripts/fetch-district-geography.js. Missing file or missing district =
+// silently no composition block — never a build failure, never a guessed
+// fallback. Every name rendered from this data traces to data/geo-src/
+// (enforced by scripts/qa-geo-verify.js).
+let districtGeo = {};
+try { districtGeo = JSON.parse(fs.readFileSync(path.join(DATA, 'district-geography.json'), 'utf8')); } catch (_) {}
+
 const PARTY_FULL = { D: 'Democrat', R: 'Republican', I: 'Independent' };
 const STATE_NAMES = {
   AL:'Alabama', AK:'Alaska', AZ:'Arizona', AR:'Arkansas', CA:'California', CO:'Colorado',
@@ -187,6 +196,63 @@ function voteHistoryHtml(rep) {
   }).join('\n');
 }
 
+// ── District composition block (House members only) ─────────────────────────
+// "District covers all of X and part of Y, including A, B, …" built from
+// data/district-geography.json (Census CD119 relationship files, fetched +
+// committed in data/geo-src/). STRICTLY two branches per §5 of the geography
+// spec: "all of" is emitted only for whole:true entries, "part of" only for
+// whole:false — no free prose. Each name is wrapped in a marked span so
+// qa-geo-verify.js can re-derive every claim from the raw Census files.
+
+const PLACE_DISPLAY_CAP = 5;
+
+// Oxford-comma list: [a] / [a and b] / [a, b, and c].
+function joinNames(items) {
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
+}
+
+function geoSpan(kind, entry) {
+  return `<span class="geo-name" data-geo="${kind}" data-whole="${entry.whole ? '1' : '0'}">${escHtml(entry.name)}</span>`;
+}
+
+function districtBlockHtml(rep) {
+  if (rep.role === 'Senator') return '';   // senators represent the whole state
+  const key = rep.district ? `${rep.state}-${rep.district}` : `${rep.state}-AL`;
+  const d = districtGeo[key];
+  if (!d || !Array.isArray(d.counties) || !d.counties.length) return '';
+
+  const wholeCounties = d.counties.filter(c => c.whole).map(c => geoSpan('county', c));
+  const partCounties  = d.counties.filter(c => !c.whole).map(c => geoSpan('county', c));
+
+  const clauses = [];
+  if (wholeCounties.length) clauses.push(`all of ${joinNames(wholeCounties)}`);
+  if (partCounties.length)  clauses.push(`part of ${joinNames(partCounties)}`);
+  if (!clauses.length) return '';          // fits neither branch — leave the block out
+
+  let sentence = `District covers ${clauses.join(' and ')}`;
+
+  const top = (Array.isArray(d.places) ? d.places : []).slice(0, PLACE_DISPLAY_CAP);
+  const wholePlaces = top.filter(p => p.whole).map(p => geoSpan('place', p));
+  const partPlaces  = top.filter(p => !p.whole).map(p => geoSpan('place', p));
+  if (wholePlaces.length || partPlaces.length) {
+    const placeClauses = [];
+    if (wholePlaces.length) placeClauses.push(joinNames(wholePlaces));
+    if (partPlaces.length)  placeClauses.push(`part of ${joinNames(partPlaces)}`);
+    sentence += `, including ${placeClauses.join(' and ')}`;
+  }
+  sentence += '.';
+
+  // Visible vintage line — the honesty mechanism for redrawn states (§6): a
+  // reader can always see which map these facts describe.
+  return `<div class="rep-bio-block" id="repDistrictBlock">
+        <div class="rep-bio-label">District Geography</div>
+        <p class="rep-bio-text" id="repDistrictText">${sentence}</p>
+        <div class="rep-district-vintage" style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:8px">District boundaries: 119th Congress &middot; U.S. Census Bureau relationship files.</div>
+      </div>`;
+}
+
 function staticBody(rep) {
   const partyKey  = String(rep.party || 'I').toUpperCase()[0];
   const partyLow  = partyKey === 'D' ? 'd' : partyKey === 'R' ? 'r' : 'i';
@@ -258,6 +324,9 @@ function staticBody(rep) {
       <!-- Plain-language seat sentence (structural facts only) — the on-page
            match for the geographic query shapes the title targets. -->
       <p class="rep-static-intro" style="margin:0.85rem 0 0;font-size:0.95rem">${escHtml(rep.name || '')} is ${rep.role === 'Senator' ? 'a' : 'the'} ${escHtml(seatPhrase(rep))}${rep.role === 'Senator' ? '' : rep.district ? ' (' + escHtml(String(rep.state)) + '-' + rep.district + ')' : ''}.</p>
+
+      <!-- District composition (House only; sourced from data/geo-src/) -->
+      ${districtBlockHtml(rep)}
 
       <!-- Vote breakdown -->
       <div class="rep-vote-profile" id="repVoteProfile"${voteProfile ? '' : ' style="display:none;"'}>${voteProfile}</div>

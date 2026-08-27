@@ -514,6 +514,24 @@ section('Sitemap ↔ disk');
   }
 }
 
+// 8e. Rep-page district geography traces to the fetched Census files --------
+// The composition blocks assert county/place facts; qa-geo-verify.js re-derives
+// every name and whole/partial flag from the raw relationship files in
+// data/geo-src/ (the figure-sourcing-guard pattern, applied to geography).
+section('District geography sourcing');
+{
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.execPath, [path.join(__dirname, 'qa-geo-verify.js')], { stdio: 'pipe' });
+    pass('Every district composition claim traces to data/geo-src/');
+  } catch (e) {
+    const out = String(e.stdout || '') + String(e.stderr || '');
+    const lines = out.split('\n').filter(l => l.includes('❌') && !/failure\(s\)/.test(l));
+    if (lines.length) lines.slice(0, 8).forEach(l => fail(l.trim().replace(/^❌\s*/, '')));
+    else fail(`qa-geo-verify failed: ${String(e.message).slice(0, 90)}`);
+  }
+}
+
 // 9. Published changelog editions still identify their bills correctly ------
 // Editions are generated once and never rebuilt, so a later bill rename leaves
 // them frozen. H.R. 5334 was published as an early-childhood education bill and
