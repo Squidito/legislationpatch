@@ -74,16 +74,24 @@ body {
 .rep-profile-card.party-r::after { background: linear-gradient(120deg, rgba(161,64,64,0.07) 0%, transparent 55%); }
 .rep-profile-card.party-i::after { background: linear-gradient(120deg, rgba(107,107,112,0.05) 0%, transparent 55%); }
 
-/* Thick party accent left edge */
+/* Engraved-hatch party backdrop — fine 45° hatching in desaturated party ink,
+   sitting BEHIND the stat panel (right column) and fading out toward the card
+   center. Replaced the 5px left party bar in the 2026-08-26 de-AI accent pass
+   (option A on the accent sheet, James's pick). The stat cells are opaque and
+   z-index:1, so the panel reads as sitting on engraved paper, texture peeking
+   around its edges. */
 .rep-profile-card::before {
   content: '';
   position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 5px;
+  top: 0; bottom: 0; right: 0;
+  width: 46%;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to left, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 55%, transparent 100%);
 }
-.rep-profile-card.party-d::before { background: linear-gradient(to bottom, #3b82f6, #1A56A0); }
-.rep-profile-card.party-r::before { background: linear-gradient(to bottom, #ef4444, #a14040); }
-.rep-profile-card.party-i::before { background: var(--text-3); }
+.rep-profile-card.party-d::before { background: repeating-linear-gradient(45deg, rgba(93,132,180,0.34) 0 1px, transparent 1px 5px); }
+.rep-profile-card.party-r::before { background: repeating-linear-gradient(45deg, rgba(176,106,106,0.34) 0 1px, transparent 1px 5px); }
+.rep-profile-card.party-i::before { background: repeating-linear-gradient(45deg, rgba(140,140,150,0.28) 0 1px, transparent 1px 5px); }
 
 .rep-portrait-wrap { flex-shrink: 0; position: relative; z-index: 1; }
 .rep-portrait-xl {
@@ -300,6 +308,14 @@ body {
 @media (max-width: 640px) {
   .rep-profile-card       { grid-template-columns: auto 1fr; padding: 1rem 1rem 1rem 1.25rem; }
   .rep-card-stat-panel    { grid-column: 1 / -1; grid-template-columns: repeat(4, 1fr); min-width: 0; }
+  /* Stat panel wraps to a full-width bottom row here — move the hatch backdrop
+     with it (bottom band, fading upward) so it stays behind the panel, not
+     behind the name. */
+  .rep-profile-card::before {
+    top: auto; left: 0; right: 0; width: auto; height: 58%;
+    -webkit-mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 55%, transparent 100%);
+  }
   .rep-portrait-xl        { width: 60px; height: 60px; }
   .rep-card-name          { font-size: var(--fs-lg); }
 }
