@@ -72,7 +72,8 @@
     "article:publish": "node scripts/publish-article.js",
     "og:articles": "node scripts/generate_brand_assets.js --articles",
     "topics": "node scripts/generate_topic_hubs.js",
-    "tracker:gate": "node scripts/tracker-gate.js"
+    "tracker:gate": "node scripts/tracker-gate.js",
+    "tracker:gate:test": "node scripts/test-tracker-gate.js"
   },
   "repository": {
     "type": "git",

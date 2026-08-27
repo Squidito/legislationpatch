@@ -26,6 +26,12 @@
 //
 // Usage:
 //   node scripts/tracker-gate.js --slug save-america-act [--file <path>] [--json]
+//                                [--as-of YYYY-MM-DD]
+//
+// --as-of overrides the date the STALENESS check measures bill movement against.
+// publish-article passes the date it is ABOUT TO STAMP, because a --refresh whose
+// whole purpose is catching a bill advance would otherwise be judged against the
+// stale date it is replacing (fixed 2026-08-27). It can never be a future date.
 
 'use strict';
 
@@ -53,7 +59,18 @@ const ASYMMETRIC_VERBS = /\b(notes?|points?\s+out|acknowledges?|admits?|concedes
 // Curly quotes written as \u escapes so this file carries none of the characters
 // it hunts (validate-batch ERRORs on curly quotes in JS source) — same technique
 // as dispatch-gate.js.
-const QUOTE_RE = /["\u201C]([^"\u201C\u201D]{12,})["\u201D]/g;
+//
+// PAIRING RULE (fixed 2026-08-27). Quote marks pair sequentially inside a block,
+// so the scan must CONSUME every quoted span and let the length floor decide only
+// which spans get CHECKED. The old pattern baked the floor into the span itself
+// ({12,}), so a real short quoted term (MIRV, shell game) was never consumed: the
+// regex then paired that short span's CLOSING mark with the NEXT quote's OPENING
+// mark and flagged the innocent prose between them as an unsourced quote. The
+// NDAA FY2027 refresh worked around it by restyling short terms with single
+// quotes; this is the real fix.
+const QUOTE_RE      = /["\u201C]([^"\u201C\u201D]*)["\u201D]/g;  // consumes ALL spans
+const QUOTE_MARK_RE = /["\u201C\u201D]/g;
+const QUOTE_MIN     = 12;   // CHECK floor -- never a consume floor (see above)
 
 // ── Named-holder extraction inside attribution constructions ──────────────────
 const PERSON_RE = /\b(?:Sen\.|Senator|Rep\.|Representative|Congressman|Congresswoman|Gov\.|Governor|President|Secretary)\s+([A-Z][a-z]+)/g;
@@ -61,15 +78,46 @@ const ORG_RE    = /\bthe\s+((?:[A-Z][A-Za-z.&]+\s+){0,4}(?:Center|Union|Foundati
 const ACRONYM_ORG_RE = /\bthe\s+(EFF|ACLU|CDT|NAACP|APA|AAP|NRA|AARP|NCPA|APC|ASBM|GLAAD|HRC|PFLAG)\b/g;
 
 // ── Small helpers ──────────────────────────────────────────────────────────────
-function textOf(html) {
+// Entity decoding, &amp; LAST so an escaped entity (&amp;quot;) is not decoded
+// twice into a real quote mark.
+function decodeEntities(s) {
+  return s
+    .replace(/&mdash;/g, '\u2014').replace(/&ndash;/g, '\u2013')
+    .replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&');
+}
+
+function stripTags(html) {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/&mdash;/g, '—').replace(/&ndash;/g, '–').replace(/&amp;/g, '&')
-    .replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/<[^>]*>/g, ' ');
+}
+
+function textOf(html) {
+  return decodeEntities(stripTags(html)).replace(/\s+/g, ' ').trim();
+}
+
+/** The section split into BLOCKS (paragraphs, headings, list items, cells).
+ *  Quote pairing is only sound inside a block: an unclosed quote in one
+ *  paragraph must never pair with the opening mark of the next. Tags are
+ *  stripped first so HTML attribute quotes (href="...") can never be read as
+ *  prose quotes, and entities are decoded so &quot;-written quotes are seen. */
+const BLOCK_END_RE = /<\/(?:p|h[1-6]|li|blockquote|div|section|article|td|th|tr|dd|dt|figcaption)\s*>|<(?:br|hr)\s*\/?>/gi;
+function blocksOf(html) {
+  // script/style go FIRST, before the block sentinel: a </div> inside a script
+  // string would otherwise punch a fake block boundary into the text.
+  return decodeEntities(
+    stripTags(
+      html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(new RegExp(BLOCK_END_RE.source, 'gi'), '\u0000')
+    )
+  )
+    .split('\u0000')
+    .map(t => t.replace(/\s+/g, ' ').trim())
+    .filter(Boolean);
 }
 
 /** The both-sides section of the article: from the "Who Supports/Supported..." h2
@@ -79,7 +127,11 @@ function bothSidesSection(html) {
   if (h2 < 0) return { present: false };
   const endBox = html.indexOf('article-source-box', h2);
   const endArt = html.indexOf('</article>', h2);
-  const end = endBox > 0 ? endBox : (endArt > 0 ? endArt : html.length);
+  let end = endBox > 0 ? endBox : (endArt > 0 ? endArt : html.length);
+  // Cut at the START of the tag carrying the marker, never mid-attribute: slicing
+  // inside a `<div class="` left a dangling quote mark in the section and made the
+  // block quote-mark parity odd (see the balance check in quotes-stored).
+  if (endBox > 0) { const lt = html.lastIndexOf('<', endBox); if (lt > h2) end = lt; }
   const section = html.slice(h2, end);
   // Heading order: which side is asked first.
   const supIdx = section.search(/<h3[^>]*>[^<]*\b(support|back|voted for|for the bill)/i);
@@ -163,21 +215,39 @@ function checkVerbSymmetry(ctx) {
 
 function checkQuotesStored(ctx) {
   const bad = [];
-  let m;
-  const re = new RegExp(QUOTE_RE.source, 'g');
-  while ((m = re.exec(ctx.section.html)) !== null) {
-    const decoded = m[1].replace(/&mdash;/g, '—').replace(/&ndash;/g, '–').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"').trim();
-    // Strip sentence punctuation the ARTICLE adds inside the closing quote
-    // (American style: "…citizens.") that the verbatim SOURCE does not carry
-    // where the quote ends mid-sentence ("…citizens, and I'm proud…"). Matching
-    // the trimmed phrase against source is still a true verbatim check.
-    const q = decoded.replace(/^[\s.,;:]+/, '').replace(/[\s.,;:]+$/, '');
-    if (q.length < 12) continue;
-    if (!spanInSources(q, ctx.sources)) bad.push(`"${q.slice(0, 60)}${q.length > 60 ? '…' : ''}"`);
+  const shortSpans = [];
+  const unbalanced = [];
+  for (const block of blocksOf(ctx.section.html)) {
+    // Parity guard: an odd number of quote marks in a block means the gate cannot
+    // know where a quoted span ends, so it cannot verify it. Fail closed rather
+    // than guess a pairing.
+    const marks = (block.match(new RegExp(QUOTE_MARK_RE.source, 'g')) || []).length;
+    if (marks % 2 === 1) unbalanced.push(block.slice(0, 70) + (block.length > 70 ? '\u2026' : ''));
+    const re = new RegExp(QUOTE_RE.source, 'g');
+    let m;
+    while ((m = re.exec(block)) !== null) {
+      // Strip sentence punctuation the ARTICLE adds inside the closing quote
+      // (American style: "...citizens.") that the verbatim SOURCE does not carry
+      // where the quote ends mid-sentence ("...citizens, and I am proud..."). Matching
+      // the trimmed phrase against source is still a true verbatim check.
+      const q = m[1].replace(/^[\s.,;:]+/, '').replace(/[\s.,;:]+$/, '');
+      if (!q) continue;
+      // Below the floor: consumed (so the pairing stays honest) but not checked --
+      // a span this short matches almost any source, so checking it proves nothing.
+      if (q.length < QUOTE_MIN) { shortSpans.push(q); continue; }
+      if (!spanInSources(q, ctx.sources)) bad.push('"' + q.slice(0, 60) + (q.length > 60 ? '\u2026' : '') + '"');
+    }
   }
-  return bad.length
-    ? { ok: false, detail: `quoted position(s) NOT found verbatim in any stored source (misquote or unsourced -> must be omitted): ${bad.slice(0, 4).join(' | ')}` }
-    : { ok: true, detail: 'every quoted position resolves verbatim to a stored source' };
+  if (unbalanced.length) {
+    return { ok: false, detail: 'unbalanced quote mark(s) -- a block carries an odd number of double-quote marks, so no pairing can be trusted: ' + unbalanced.slice(0, 3).map(b => '...' + b + '...').join(' | ') };
+  }
+  if (bad.length) {
+    return { ok: false, detail: 'quoted position(s) NOT found verbatim in any stored source (misquote or unsourced -> must be omitted): ' + bad.slice(0, 4).join(' | ') };
+  }
+  const skipped = shortSpans.length
+    ? ' (' + shortSpans.length + ' span(s) under ' + QUOTE_MIN + ' chars consumed for pairing, not source-checked: ' + shortSpans.slice(0, 6).map(s => '"' + s + '"').join(', ') + ')'
+    : '';
+  return { ok: true, detail: 'every quoted position resolves verbatim to a stored source' + skipped };
 }
 
 function checkNamedHoldersStored(ctx) {
@@ -205,17 +275,26 @@ function checkStaleness(ctx) {
   const byId = new Map();
   for (const b of bills) byId.set(b.id, { stageLabel: b.stageLabel || b.stage || '', stageDate: b.stageDate || b.date || '' });
 
-  const adate = articleDate(ctx.html);
+  // The comparison date is the date the article WILL carry, not the one it
+  // currently carries. On a --refresh the whole point is that a bill moved, so
+  // measuring against the pre-stamp dateModified failed every refresh that was
+  // doing its job (fixed 2026-08-27). publish-article passes --as-of with the
+  // date it is about to stamp; a standalone run still defaults to the file date.
+  const fileDate = articleDate(ctx.html);
+  const adate = ctx.asOf || fileDate;
   if (!adate) return { ok: false, detail: 'no parseable article date to compare bill movement against' };
 
   const stale = [];
   for (const id of refsIn(ctx.html)) {
     const b = byId.get(id);
-    if (b && b.stageDate && b.stageDate > adate) stale.push(`${id} now "${b.stageLabel}" @ ${b.stageDate} (newer than article ${adate})`);
+    if (b && b.stageDate && b.stageDate > adate) stale.push(id + ' now "' + b.stageLabel + '" @ ' + b.stageDate + ' (newer than article ' + adate + ')');
   }
+  const asOfNote = ctx.asOf
+    ? ' [--as-of ' + ctx.asOf + (fileDate && fileDate !== ctx.asOf ? ', file carries ' + fileDate + ' pre-stamp' : '') + ']'
+    : '';
   return stale.length
-    ? { ok: false, detail: `referenced bill(s) moved past the article date: ${stale.join('; ')}` }
-    : { ok: true, detail: `no referenced cached bill has moved past the article date (${adate})` };
+    ? { ok: false, detail: 'referenced bill(s) moved past the article date: ' + stale.join('; ') + asOfNote }
+    : { ok: true, detail: 'no referenced cached bill has moved past the article date (' + adate + ')' + asOfNote };
 }
 
 function checkDualLensRecorded(ctx) {
@@ -250,13 +329,13 @@ const CHECKS = [
   ['eligibility-recorded',  checkEligibilityRecorded],
 ];
 
-function runGate({ html, ledger }) {
+function runGate({ html, ledger, asOf }) {
   const section = bothSidesSection(html);
   if (!section.present) {
     return { pass: true, na: true, results: [{ name: 'both-sides-section', ok: true, detail: 'no both-sides section (consensus bill / one-sided record) — gate N/A' }] };
   }
   const sources = storedSources(ledger);
-  const ctx = { html, ledger, section, sources };
+  const ctx = { html, ledger, section, sources, asOf: asOf || null };
   const results = CHECKS.map(([name, fn]) => {
     try { const r = fn(ctx); return { name, ok: !!r.ok, detail: r.detail }; }
     catch (e) { return { name, ok: false, detail: `check threw (treated as failure): ${String(e.message).slice(0, 90)}` }; }
@@ -281,7 +360,18 @@ function main() {
   try { ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8')); }
   catch (e) { console.error(`tracker-gate: no article ledger at ${path.relative(ROOT, ledgerPath)} — a tracker cannot publish unaudited`); process.exit(1); }
 
-  const { pass, na, results } = runGate({ html, ledger });
+  // --as-of: the date staleness is measured against. Bounded to today or earlier,
+  // so it can only ever assert currency as of a date that has actually happened --
+  // it can never be used to silence a bill advance by claiming a future date.
+  const asOf = opt('as-of');
+  if (asOf !== null) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(asOf)) { console.error(`tracker-gate: --as-of must be YYYY-MM-DD (got ${asOf})`); process.exit(2); }
+    const d = new Date();
+    const today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (asOf > today) { console.error(`tracker-gate: --as-of ${asOf} is in the future (today is ${today}) -- refusing`); process.exit(2); }
+  }
+
+  const { pass, na, results } = runGate({ html, ledger, asOf });
 
   if (flag('json')) { console.log(JSON.stringify({ slug, pass, na: !!na, results }, null, 2)); process.exit(pass ? 0 : 1); }
 
@@ -294,4 +384,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { runGate, bothSidesSection, CHECKS };
+module.exports = { runGate, bothSidesSection, blocksOf, CHECKS };

@@ -14,6 +14,9 @@
 //   - a full-claims ledger exists, status "audited", with zero open flags
 //   - every receipt still resolves (npm run qa-receipts)
 //   - the structural page gate passes (npm run preflight)
+//   - for a tracker, scripts/tracker-gate.js passes -- handed --as-of with the
+//     date this run is about to stamp, so a refresh is judged on the currency it
+//     is establishing, not the currency it is replacing
 //   - articles/<slug>.html does not already exist (never a silent overwrite)
 //
 // It does NOT commit, push, or ping IndexNow. The site serves `main` from GitHub
@@ -159,28 +162,18 @@ const inbound = fs.readdirSync(path.join(ROOT, 'articles'))
 if (inbound.length) ok(`${inbound.length} article(s) link to it: ${inbound.slice(0, 5).join(', ')}${inbound.length > 5 ? ', …' : ''}`);
 else note('⚠ NO other article links to this one — weave it in from related live pages (link-only edits do not bump dateModified)');
 
-// ── 2. Gates on the current tree ───────────────────────────────────────────
-console.log('\n── Gates');
-for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scripts/preflight.js', 'preflight']]) {
-    const r = runNode(script, label);
-    if (!r.ok) { console.log(r.out.slice(-1200)); fail(`${label} failed — not publishing`); }
-    ok(`${label} passed`);
-}
+// The publish date both paths stamp. Declared here because the tracker gate is
+// handed it (see below) before anything is written.
+const today = localDate();
 
-// Tracker articles carry a both-sides section — the highest-risk content on the
-// site (Phase 5, docs/BOTH-SIDES.md, Sec 6.4). The scripted both-sides gate is
-// part of their publish path: verb-symmetry, staleness, every quoted/named
-// position resolves to a STORED source, supporters-first, and the dual-lens +
-// cross-model sign-offs recorded on the ledger. Fail-closed.
-if (ledger.isTracker) {
-    const tg = runNode('scripts/tracker-gate.js', 'tracker-gate', ['--slug', SLUG]);
-    if (!tg.ok) { console.log(tg.out.slice(-1500)); fail('tracker-gate failed — not publishing (fix or omit the unsourced position)'); }
-    ok('tracker-gate passed (both-sides section)');
-}
-
-// ── 2b. D4 date decision (refresh only) ─────────────────────────────────────
+// ── 1c. D4 date decision (refresh only) ─────────────────────────────────────
 // Decide bump-or-not BEFORE writing anything, so a dry run reports the same
-// decision an --apply would take. dateModified moves only when the audited claim
+// decision an --apply would take. It runs BEFORE the gates because the tracker
+// gate needs the date this refresh is about to stamp: a --refresh whose whole
+// purpose is catching a bill advance was failing the staleness check against
+// the OLD dateModified it was in the middle of replacing (fixed 2026-08-27).
+//
+// dateModified moves only when the audited claim
 // SUBSTANCE moved (or a correction is logged) — never on style / link / metadata
 // / typo edits, and datePublished never moves at all (D4, 2026-08-19).
 let refreshPlan = null;
@@ -214,6 +207,31 @@ if (REFRESH) {
     if (curDP) note(`datePublished stays ${curDP} (never changes on refresh)`);
 }
 
+// ── 2. Gates on the current tree ───────────────────────────────────
+console.log('\n── Gates');
+for (const [script, label] of [['scripts/qa-receipts.js', 'qa-receipts'], ['scripts/preflight.js', 'preflight']]) {
+    const r = runNode(script, label);
+    if (!r.ok) { console.log(r.out.slice(-1200)); fail(`${label} failed — not publishing`); }
+    ok(`${label} passed`);
+}
+
+// Tracker articles carry a both-sides section — the highest-risk content on the
+// site (Phase 5, docs/BOTH-SIDES.md, Sec 6.4). The scripted both-sides gate is
+// part of their publish path: verb-symmetry, staleness, every quoted/named
+// position resolves to a STORED source, supporters-first, and the dual-lens +
+// cross-model sign-offs recorded on the ledger. Fail-closed.
+if (ledger.isTracker) {
+    // --as-of is the date the article WILL carry once this run stamps it. Without
+    // it the gate measures staleness against the date on disk, which on a refresh
+    // is exactly the stale date being replaced -- so every refresh that was doing
+    // its job failed the check it was passing. On a first publish both dates are
+    // today. The gate itself refuses any --as-of in the future.
+    const asOf = REFRESH ? refreshPlan.newDM : today;
+    const tg = runNode('scripts/tracker-gate.js', 'tracker-gate', ['--slug', SLUG, '--as-of', asOf]);
+    if (!tg.ok) { console.log(tg.out.slice(-1500)); fail('tracker-gate failed — not publishing (fix or omit the unsourced position)'); }
+    ok(`tracker-gate passed (both-sides section; staleness as of ${asOf})`);
+}
+
 if (!APPLY) {
     console.log('\n  Dry run complete. Everything needed to publish is in place.');
     const verb = REFRESH ? `re-stamp ${TARGET_REL} in place` : `move ${DRAFT_REL} -> ${TARGET_REL}`;
@@ -225,7 +243,6 @@ if (!APPLY) {
 console.log('\n── Publishing');
 let html = fs.readFileSync(DRAFT, 'utf8');
 let written;
-const today = localDate();
 
 if (REFRESH) {
     // Re-stamp dateModified ONLY. datePublished and the visible "Published ..."
