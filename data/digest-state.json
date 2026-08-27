@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-12T21:31:52.491Z",
+  "lastRun": "2026-08-27T20:28:41.349Z",
   "stages": {
     "119-HCONRES-108": {
       "stage": "dead",
@@ -551,6 +551,11 @@
       "stageLabel": "Passed House",
       "stageDate": "2026-04-28"
     },
+    "119-HR-6509": {
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "stageDate": "2025-12-09"
+    },
     "119-HR-6644": {
       "stage": "signed",
       "stageLabel": "Signed into Law",
@@ -625,6 +630,11 @@
       "stage": "house",
       "stageLabel": "Passed House",
       "stageDate": "2026-07-13"
+    },
+    "119-HR-7296": {
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "stageDate": "2026-01-30"
     },
     "119-HR-7305": {
       "stage": "house",
@@ -876,6 +886,11 @@
       "stageLabel": "Signed into Law",
       "stageDate": "2025-06-12"
     },
+    "119-S-1748": {
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "stageDate": "2026-08-05"
+    },
     "119-S-1838": {
       "stage": "senate",
       "stageLabel": "Passed Senate",
@@ -905,6 +920,11 @@
       "stage": "signed",
       "stageLabel": "Signed into Law",
       "stageDate": "2026-01-14"
+    },
+    "119-S-2296": {
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "stageDate": "2025-11-12"
     },
     "119-S-2392": {
       "stage": "signed",
@@ -1063,6 +1083,15 @@
     }
   },
   "editions": [
+    {
+      "date": "2026-08-27",
+      "url": "/changelog/2026-08-27/",
+      "kind": "diff",
+      "counts": {
+        "total": 4,
+        "new": 4
+      }
+    },
     {
       "date": "2026-08-12",
       "url": "/changelog/2026-08-12/",

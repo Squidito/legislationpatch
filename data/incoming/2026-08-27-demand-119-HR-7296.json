@@ -1,0 +1,260 @@
+{
+  "bills": [
+    {
+      "id": "119-HR-7296",
+      "title": "SAVE America Act",
+      "official_title": "To amend the National Voter Registration Act of 1993 to require proof of United States citizenship to register an individual to vote in elections for Federal office, and for other purposes.",
+      "code": "HR.7296",
+      "date": "2026-01-30",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": ["Introduced", "Committee", "Passed House", "Passed Senate", "Signed"],
+      "sponsor": "Rep. Roy, Chip (R-TX)",
+      "sponsor_bioguide": "R000614",
+      "cosponsors": 111,
+      "pages": 13,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill would require every person registering to vote in a federal election to hand over a document proving U.S. citizenship — a REAL ID-compliant card showing citizenship, a passport, a military ID with a service record showing U.S. birth, or a government photo ID paired with a birth certificate, adoption decree, consular birth report, or naturalization certificate. It also requires every voter in a federal election to show a photo ID that says on its front that the holder is a U.S. citizen, and it deletes the National Voter Registration Act exemption that has let some states out of the Act's registration procedures.",
+      "brief": "Requires documentary proof of citizenship to register, and a citizenship-marked photo ID to vote, in every federal election — and removes both the National Voter Registration Act's state exemption and the Help America Vote Act's mail-registrant ID and fail-safe provisions.",
+      "top_lines": [
+        {
+          "headline": "Documentary Proof of Citizenship to Register",
+          "billSection": "2",
+          "subs": [
+            "States may not process a federal registration without citizenship documents",
+            "Five accepted document routes, from REAL ID to paired documents",
+            "States must build a fallback process plus a signed official affidavit"
+          ]
+        },
+        {
+          "headline": "Photo ID Required to Vote",
+          "billSection": "3",
+          "subs": [
+            "ID must state on its front that the holder is a citizen",
+            "In person: tangible, not digital; absentee: copy twice, request and ballot",
+            "Six issuing authorities only, including a State DMV or election office"
+          ]
+        },
+        {
+          "headline": "Voter Roll Removal and Penalties",
+          "billSection": "2",
+          "source": ["usc-52-20507", "usc-52-20511"],
+          "subs": [
+            "Adds noncitizen evidence and State-law noncompliance as removal grounds",
+            "Federal agencies must answer citizenship queries within 24 hours",
+            "New crimes: registering an applicant without proof; aiding a noncitizen"
+          ]
+        }
+      ],
+      "likelihood": 30,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House with 111 cosponsors, all Republicans, so this is a party-line measure with no Democratic cosponsor to build from. The provisions likeliest to draw organized opposition are the deletion of the National Voter Registration Act's state exemption, the repeal of the Help America Vote Act's fail-safe provisional-ballot route for mail registrants who lack ID, the new criminal exposure for election officials who register an applicant without documentary proof, and the requirement that a voter's photo ID state citizenship on its front — a marking most current state licenses do not carry. A Senate floor path would need 60 votes, which a party-line cosponsor list does not indicate.",
+      "sections": [
+        {
+          "label": "Section 2 — Ensuring Only Citizens Are Registered To Vote in Elections for Federal Office",
+          "items": [
+            {
+              "main": "Bars a State, under any method of voter registration, from accepting and processing a federal voter registration application unless the applicant presents documentary proof of United States citizenship with the application.",
+              "detail": "The bill defines documentary proof as a REAL ID Act-compliant identification indicating citizenship, a valid U.S. passport, an official U.S. military identification card together with a service record showing a U.S. place of birth, a Federal, State or Tribal government photo ID showing a U.S. place of birth, or any other Federal, State or Tribal government photo ID presented with a qualifying certified birth certificate, hospital Record of Birth extract, final adoption decree, Consular Report of Birth Abroad, naturalization or citizenship certificate, or a Department of Homeland Security American Indian Card of a classification the bill names. The requirement takes effect on the date of enactment and applies to registration applications submitted on or after that date.",
+              "comments": []
+            },
+            {
+              "main": "Strikes the National Voter Registration Act subsection that exempts certain States from the Act and replaces it with the documentary-proof requirement, then adds a narrower special rule for States that do not require voter registration.",
+              "detail": "The struck subsection made the Act inapplicable to a State with no voter registration requirement for any federal-election voter under law in effect continuously on and after August 1, 1994, and to a State whose law, in effect continuously on and after that date, let all voters register at the polling place at the time of voting in a general federal election. The replacement special rule deems a State or jurisdiction that does not require registration to meet the Act if it establishes a system confirming citizenship before the first day of voting and provides that confirmation for each eligible voter to polling-place officials during the voting period.",
+              "source": "usc-52-20503",
+              "comments": []
+            },
+            {
+              "main": "Requires each State to establish a process for an applicant who cannot produce documentary proof, and requires federal agencies to answer a State election official's citizenship query within 24 hours at no charge.",
+              "detail": "An applicant without documents may sign an attestation under penalty of perjury and submit other evidence; a State or local official then determines whether citizenship is sufficiently established and must sign a uniform affidavit, developed by the Election Assistance Commission, explaining the basis for registering that applicant. States must also take affirmative ongoing steps to ensure only citizens are registered, including establishing an identification program within 30 days of enactment drawing on the Department of Homeland Security SAVE system, the Social Security Number Verification Service, State ID or license agencies, or other confirming databases. Where a query establishes that an alien is unlawfully registered, the Secretary of Homeland Security must investigate whether to initiate removal proceedings.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Voter Roll Removal, Enforcement, and Criminal Penalties",
+          "items": [
+            {
+              "main": "Adds two new grounds to the closed list of reasons a registrant's name may be removed from the official list of eligible voters, and adds noncitizen evidence to the general list-maintenance program.",
+              "detail": "The Act currently permits removal only at the registrant's request, by State law for criminal conviction or mental incapacity, or through the general program for death and change of residence. The bill adds removal based on documentary proof or verified information that the registrant is not a citizen, and removal where the registration otherwise fails to comply with applicable State law. It separately adds noncitizen evidence as a ground for the general removal program and requires a State to remove a noncitizen from the roll at any time on receipt of documentation or verified information.",
+              "source": "usc-52-20507",
+              "comments": []
+            },
+            {
+              "main": "Extends the Act's private right of action to cover an election official who registers an applicant that failed to present documentary proof, and adds two new criminal predicates.",
+              "detail": "A person aggrieved by a violation may already sue for declaratory or injunctive relief after notifying the chief State election official, subject to the Act's notice periods; the bill names official registration without documentary proof as such a violation. Under the criminal penalties section — a fine under title 18, imprisonment of not more than 5 years, or both — the bill inserts, as new means of knowingly and willfully depriving or defrauding a State's residents of a fair and impartially conducted election process, an executive branch officer or employee providing material assistance to a noncitizen attempting to register or vote, and registering an applicant who fails to present documentary proof.",
+              "source": ["usc-52-20510", "usc-52-20511"],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Photo Voter Identification Required for Voting in a Federal Election",
+          "items": [
+            {
+              "main": "Requires each individual voting in a federal election to present an eligible photo identification document that indicates on its front that the holder is a United States citizen.",
+              "detail": "An in-person voter must present a tangible, non-digital document at the time of voting; an absentee voter must include a copy with both the ballot request and the ballot submission. The document must come from a State drivers-license agency, a State or local election office, a Native tribal government, the Department of State, the Department of War, or a branch of the Armed Forces, and must carry a photograph plus either an identification number issued by the State drivers-license agency or the last four digits of the voter's Social Security number. A document lacking the citizenship marking still qualifies if presented with another identification document indicating citizenship, and the marking requirement is waived for voters in jurisdictions that have submitted their voter rolls to the Department of Homeland Security through the SAVE program at least quarterly since June 1, 2025 and flag verified-citizen status and its date in each voter record.",
+              "comments": []
+            },
+            {
+              "main": "Strikes everything preceding paragraph (4) of the Help America Vote Act voting-requirements section for voters who register by mail.",
+              "detail": "The struck paragraphs are the ones requiring a first-time mail registrant who has not previously voted in the State to present a photo ID or a current utility bill, bank statement, government check, paycheck, or other government document showing name and address; the fail-safe rule letting a voter who cannot meet that requirement cast a provisional ballot in person or by mail; and the inapplicability rule for registrants who already supplied identification or a matched drivers-license or Social Security number with their registration. Paragraph (4), which sets the citizenship and age questions on the mail-in registration form, is left in place. States must comply with this section for all federal elections occurring on and after the date of enactment.",
+              "source": "usc-52-21083",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3(d) — Conforming Amendment",
+          "summary": "The amendment striking all of the Help America Vote Act voting-requirements subsection that precedes paragraph (4) removes that Act's fail-safe voting rule, under which a mail registrant who could not produce the required identification could still cast a provisional ballot in person or by mail and have it counted as a provisional ballot.",
+          "why_unreported": "The subsection is captioned as a conforming amendment to the new photo ID requirement, but the struck text also carries the fail-safe provisional-ballot route and the exemption for registrants who already supplied identification with their registration.",
+          "source": "usc-52-21083"
+        },
+        {
+          "section": "Section 2(f)(1)(B) — Requirements With Respect to Administration of Voter Registration",
+          "summary": "Alongside the noncitizen removal ground, the bill adds a further ground for removing a name from the official list of eligible voters: that the registration otherwise fails to comply with applicable State law. That ground is not limited to citizenship.",
+          "why_unreported": "The subsection sits inside a section about ensuring only citizens are registered, and the list it amends has otherwise been limited to the registrant's own request, criminal conviction or mental incapacity, death, and change of residence.",
+          "source": "usc-52-20507"
+        },
+        {
+          "section": "Section 2(c)(5) and Section 2(h)(2) — Confidentiality Statements",
+          "summary": "Both the motor-vehicle registration statement and the federal mail form statement — each of which currently tells applicants the office where they registered stays confidential and is used only for voter registration purposes — gain an exception allowing use as evidence in a criminal or immigration proceeding against an applicant who makes a false eligibility declaration under penalty of perjury.",
+          "why_unreported": "The two exceptions are worded differently: the motor-vehicle version applies to an applicant who knowingly attempts to register and knowingly makes a false declaration, while the mail-form version omits the word knowingly in both places.",
+          "source": ["usc-52-20504", "usc-52-20508"]
+        },
+        {
+          "section": "Section 2(d)(3) — National Mail Voter Registration Form",
+          "summary": "The bill adds a third condition to the list a State must satisfy before it may require a first-time mail registrant to vote in person, so that authority reaches only registrants who also did not provide documentary proof of citizenship when registering.",
+          "why_unreported": "The list is conjunctive, so adding a condition narrows rather than widens the circumstances in which a State may impose in-person voting on a first-time mail registrant.",
+          "source": "usc-52-20505"
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires an eligible photo identification document to indicate on its front that the holder is a United States citizen, but does not require or fund any issuing authority to add that marking to the documents it issues.",
+        "Section 2 requires each State to build a process for applicants who cannot provide documentary proof, but sets no deadline for establishing it, no minimum evidence standard beyond what the Election Assistance Commission may adopt, and no appeal route for an applicant a State or local official declines to register.",
+        "Federal agencies must answer a State election official's citizenship request within 24 hours, including batched requests, but the bill sets no accuracy standard, no correction procedure for an erroneous response, and no notice to the voter whose status was queried.",
+        "The bill directs the Election Assistance Commission to adopt and transmit implementation guidance within 10 days of enactment while the registration requirements take effect on the date of enactment, so the requirements apply before the guidance is due.",
+        "Section 3 requires a copy of the photo identification document with both the absentee ballot request and the ballot submission, but does not address how the copy is handled or protected once it reaches the election office, and exempts the resulting voter registration materials from the Paperwork Reduction Act."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A definition of documentary proof of United States citizenship listing five accepted document routes, including a REAL ID Act-compliant identification indicating citizenship and a valid U.S. passport, the fifth being another government photo ID paired with one of six listed birth or citizenship records",
+          "A bar on a State accepting and processing a federal voter registration application under any registration method without documentary proof of citizenship",
+          "A State process for applicants who cannot provide documentary proof, requiring a perjury attestation, other evidence, an official determination, and a signed uniform affidavit developed by the Election Assistance Commission",
+          "A requirement that federal agencies supply citizenship-verification information to State election officials within 24 hours of a request, at no charge, including batched requests, with agencies directed to share information with each other",
+          "A requirement that each individual voting in a federal election present an eligible photo identification document indicating citizenship on its front, in tangible form in person and by copy with both the absentee request and the absentee ballot",
+          "New criminal predicates for an executive branch officer or employee providing material assistance to a noncitizen attempting to register or vote, and for registering an applicant who fails to present documentary proof",
+          "A duty on the Secretary of Homeland Security to notify the appropriate chief State election official when an individual becomes a naturalized citizen"
+        ],
+        "modified": [
+          "The grounds for removing a registrant from the official list of eligible voters gain documentary proof or verified information of noncitizenship, and registrations that otherwise fail to comply with applicable State law",
+          "The Act's private right of action is extended to cover an election official who registers an applicant that failed to present documentary proof of citizenship",
+          "The motor-vehicle and federal mail form confidentiality statements gain an exception for use as evidence in a criminal or immigration proceeding involving a false eligibility declaration under penalty of perjury",
+          "The mail voter registration form must add a section, for use only by a State or local election official, recording the document type presented as proof, its issuance and expiration dates, the issuing office, and any unique identification number",
+          "The federal mail voter registration form is now prescribed by the Election Assistance Commission rather than the Federal Election Commission",
+          "Voter registration agencies must ask whether the applicant is a United States citizen and, on an affirmative answer, require documentary proof before providing the registration form; Armed Forces recruitment office procedures apply to persons who are citizens of the United States"
+        ],
+        "removed": [
+          "The National Voter Registration Act subsection exempting States that had no voter registration requirement, or allowed polling-place registration on election day, continuously on and after August 1, 1994",
+          "The Help America Vote Act requirements for voters who register by mail that precede paragraph (4), including the first-time mail registrant identification requirement, the fail-safe provisional-ballot rule, and the inapplicability rule for registrants who already supplied identification"
+        ]
+      },
+      "votes": [],
+      "stageDate": "2026-01-30",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "referencedSources": [
+        {
+          "id": "usc-52-20503",
+          "kind": "statute",
+          "label": "52 U.S.C. 20503 (NVRA section 4 - national registration procedures)",
+          "citation": "52 U.S.C. 20503",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20503/htm",
+          "textFile": "data/ref-text/usc-52-20503.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20504",
+          "kind": "statute",
+          "label": "52 U.S.C. 20504 (NVRA section 5 - motor vehicle registration)",
+          "citation": "52 U.S.C. 20504",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20504/htm",
+          "textFile": "data/ref-text/usc-52-20504.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20505",
+          "kind": "statute",
+          "label": "52 U.S.C. 20505 (NVRA section 6 - mail registration)",
+          "citation": "52 U.S.C. 20505",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20505/htm",
+          "textFile": "data/ref-text/usc-52-20505.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20506",
+          "kind": "statute",
+          "label": "52 U.S.C. 20506 (NVRA section 7 - voter registration agencies)",
+          "citation": "52 U.S.C. 20506",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20506/htm",
+          "textFile": "data/ref-text/usc-52-20506.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20507",
+          "kind": "statute",
+          "label": "52 U.S.C. 20507 (NVRA section 8 - administration of voter registration)",
+          "citation": "52 U.S.C. 20507",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20507/htm",
+          "textFile": "data/ref-text/usc-52-20507.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20508",
+          "kind": "statute",
+          "label": "52 U.S.C. 20508 (NVRA section 9 - federal mail registration form)",
+          "citation": "52 U.S.C. 20508",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20508/htm",
+          "textFile": "data/ref-text/usc-52-20508.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20510",
+          "kind": "statute",
+          "label": "52 U.S.C. 20510 (NVRA section 11 - civil enforcement)",
+          "citation": "52 U.S.C. 20510",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20510/htm",
+          "textFile": "data/ref-text/usc-52-20510.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20511",
+          "kind": "statute",
+          "label": "52 U.S.C. 20511 (NVRA section 12 - criminal penalties)",
+          "citation": "52 U.S.C. 20511",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20511/htm",
+          "textFile": "data/ref-text/usc-52-20511.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-21083",
+          "kind": "statute",
+          "label": "52 U.S.C. 21083 (HAVA section 303 - registration list and mail-registrant requirements)",
+          "citation": "52 U.S.C. 21083",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap209-subchapIII-partA-sec21083/htm",
+          "textFile": "data/ref-text/usc-52-21083.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ]
+    }
+  ]
+}

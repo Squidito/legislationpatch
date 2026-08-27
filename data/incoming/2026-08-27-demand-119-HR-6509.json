@@ -1,0 +1,221 @@
+{
+  "bills": [
+    {
+      "id": "119-HR-6509",
+      "title": "SAFE Drugs Act of 2025",
+      "official_title": "To amend the Federal Food, Drug, and Cosmetic Act to further regulate compounding pharmacies and outsourcing facilities, and for other purposes.",
+      "code": "HR.6509",
+      "date": "2025-12-09",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Yakym, Rudy (R-IN)",
+      "sponsor_bioguide": "Y000067",
+      "cosponsors": 19,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "summary": "Pharmacies and doctors can mix custom versions of drugs (compounding) without FDA approval, so long as they stay inside limits on copying drugs already sold commercially. This bill turns the copying limit into a fixed number - 20 times in a single month - adds a report for compounding above that same count for out-of-State patients, and requires a first-time inspection plus a reinspection at least every two years for outsourcing facilities that compound more than 100 times a year.",
+      "brief": "Replaces the Secretary-defined \"regularly or in inordinate amounts\" ceiling on compounding copies of commercially available drugs with a fixed limit of 20 times in a single month, and adds inspection, registration, reporting, and fee changes for outsourcing facilities.",
+      "top_lines": [
+        {
+          "headline": "Limits on Compounding Drug Copies",
+          "billSection": "2",
+          "source": "usc-21-353a",
+          "subs": [
+            "Copies of commercial drugs capped at 20 times a month",
+            "Replaces the Secretary-defined \"regularly or in inordinate amounts\" standard",
+            "Copy test: shared active ingredient, no patient-specific difference"
+          ]
+        },
+        {
+          "headline": "Out-of-State Compounding Reports",
+          "billSection": "3",
+          "subs": [
+            "Report required above 20 out-of-State compounds in a month",
+            "Applies from calendar year 2025 on; due by year end",
+            "Hospital pharmacies compounding for hospital patients are excluded"
+          ]
+        },
+        {
+          "headline": "Outsourcing Facility Oversight",
+          "billSection": "4",
+          "source": [
+            "usc-21-353b",
+            "usc-21-360"
+          ],
+          "subs": [
+            "Large-scale means more than 100 compounds in a calendar year",
+            "Inspection before first compounding, then at least every two years",
+            "Outsourcing facilities lose the pharmacy registration exemption"
+          ]
+        }
+      ],
+      "likelihood": 22,
+      "likelihoodLabel": "Long shot",
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House and carrying 19 cosponsors split 14 R to 5 D, so support is not party-line. Opposition is likeliest from compounding pharmacies over the fixed 20-per-month copy count, and from outsourcing facilities over losing the section 510(g)(1) registration exemption and over replacing the statutory $15,000 establishment-fee base with an amount the Secretary sets. Energy and Commerce is the sole committee of referral named in the latest-action metadata, and the fee and inspection provisions land on a concentrated industry rather than a broad constituency.",
+      "sections": [
+        {
+          "label": "Section 2 — Definitions Relating to Compounding of Drug Products",
+          "items": [
+            {
+              "main": "Rewrites the qualifying condition in section 503A(b)(1)(D) so a pharmacist or physician keeps the compounding exemption only if they do not compound a copy of a commercially available drug product more than 20 times in a single month.",
+              "detail": "Section 503A makes sections 351(a)(2)(B), 352(f)(1), and 355 of the Federal Food, Drug, and Cosmetic Act inapplicable to a drug product compounded for an identified individual patient on a valid prescription order. Qualifying previously required that the pharmacist or physician not compound copies \"regularly or in inordinate amounts (as defined by the Secretary)\"; the bill substitutes the fixed 20-times-a-month count for that standard.",
+              "source": "usc-21-353a",
+              "comments": []
+            },
+            {
+              "main": "Replaces the definition of \"essentially a copy of a commercially available drug product\" with a two-prong test and adds a definition of \"commercially available drug product\".",
+              "detail": "A product is essentially a copy if it contains any active ingredient found in a commercially available drug product and there is no change, made for an identified individual patient, producing a significant difference for that patient as determined by the prescribing practitioner. A \"commercially available drug product\" is one sold in the U.S. commercial marketplace and manufactured in one or more facilities required to comply with section 501(a)(2)(B), and not included in the discontinued section of the list described in section 505(j)(7)(A). The prior definition stated only what the term does not include - a product changed for an identified individual patient producing a significant difference.",
+              "source": "usc-21-353a",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Reporting Requirement",
+          "items": [
+            {
+              "main": "Adds a new section 503A(d) requiring a pharmacy, facility, or physician to report to the Secretary when it compounds, more than 20 times in a single month for patients residing outside the State where the compounding occurs, any drug product containing an active ingredient found in a commercially available drug product.",
+              "detail": "The report must identify each type of drug product compounded for those patients and, for each month, the total number of times each type was compounded. It applies for calendar year 2025 and each calendar year thereafter, is due not later than the end of that calendar year, and takes whatever form and manner the Secretary prescribes. Compounding for hospital patients by a pharmacy located on the hospital premises is excluded. The bill also redesignates the existing section 503A subsections (d) and (e) - the exclusion for compounded positron emission tomography (PET) drugs and radiopharmaceuticals, and the definition of \"compounding\" - as subsections (e) and (f).",
+              "source": "usc-21-353a",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Large-Scale Outsourcing Facilities",
+          "items": [
+            {
+              "main": "Adds a section 503B(b)(6) requiring that the risk-based inspections of a large-scale outsourcing facility include an inspection before the facility compounds any drug product for the first time and a reinspection not less than biennially.",
+              "detail": "A large-scale outsourcing facility is defined as any outsourcing facility that compounds more than 100 times in a single calendar year. Section 503B(b)(4) already subjects outsourcing facilities to inspection under section 374, denies them the section 374(a)(2)(A) exemption, and directs the Secretary to inspect them on a risk-based schedule built from compliance history, recall history, the inherent risk of the drugs compounded, and inspection history; the bill layers the two fixed inspection points on top of that schedule.",
+              "source": "usc-21-353b",
+              "comments": []
+            },
+            {
+              "main": "Amends section 510(g)(1) so the registration exemption for pharmacies does not apply to any outsourcing facility as defined in section 503B(d)(4).",
+              "detail": "Section 510(g)(1) exempts pharmacies that dispense on prescriptions from licensed practitioners, and that do not compound or process drugs for sale outside the regular course of dispensing at retail, from the registration duties of section 510 - including the annual registration window running October 1 through December 31 for every person owning or operating an establishment engaged in the manufacture, preparation, propagation, compounding, or processing of drugs. Both this change and the inspection change apply beginning 6 months after the date of enactment.",
+              "source": [
+                "usc-21-360",
+                "usc-21-353b"
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Base Establishment Fee",
+          "items": [
+            {
+              "main": "Strikes the $15,000 figure in section 744K(c)(1)(A)(i) and substitutes a base amount deemed appropriate by the Secretary to fund activities to ensure the safety of compounded drug products.",
+              "detail": "Section 744K(c)(1)(A) sets an outsourcing facility's annual establishment fee as that base multiplied by an inflation adjustment factor, plus a small business adjustment factor. The bill changes only the base in clause (i); the separate reinspection fee under section 744K(c)(1)(B), which the same paragraph computes from $15,000 times the inflation adjustment factor, is not amended.",
+              "source": "usc-21-379j-62",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 4(b) — Registration and Reporting Requirement",
+          "summary": "The amendment to section 510(g)(1) removes the pharmacy registration exemption for every outsourcing facility as defined in section 503B(d)(4) - a facility at one geographic location that compounds sterile drugs and has elected to register as an outsourcing facility - not only for the large-scale ones the section defines.",
+          "why_unreported": "Section 4 is captioned for large-scale outsourcing facilities and its inspection subsection reaches only facilities compounding more than 100 times a calendar year, while subsection (b) reaches outsourcing facilities at any volume.",
+          "source": [
+            "usc-21-360",
+            "usc-21-353b"
+          ]
+        },
+        {
+          "section": "Section 2 — Definitions Relating to Compounding of Drug Products",
+          "summary": "The new definition of \"commercially available drug product\" excludes any product included in the discontinued section of the list described in section 505(j)(7)(A), so a compounded copy of a discontinued product falls outside the 20-times-a-month count.",
+          "why_unreported": "The subsection reads as a definitional change, but the exclusion determines which compounded products the new numeric limit reaches at all."
+        },
+        {
+          "section": "Section 5 — Base Establishment Fee",
+          "summary": "The section removes a dollar figure from statute rather than setting one: the annual establishment fee base moves from $15,000 to an amount the Secretary deems appropriate, while the reinspection fee base in section 744K(c)(1)(B) stays at $15,000.",
+          "why_unreported": "The caption names the base establishment fee, and the amendment reaches only clause (i) of section 744K(c)(1)(A), so the two fees set in the same paragraph now compute from different bases.",
+          "source": "usc-21-379j-62"
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The new reporting requirement applies for calendar year 2025 and each calendar year thereafter and is due by the end of the applicable calendar year, but the bill sets no effective date or transition rule for a calendar year that closed before enactment.",
+        "Section 3 requires the report to go to the Secretary but does not state what the Secretary does with it - no publication, no referral or enforcement trigger, and no consequence for not filing.",
+        "The bill replaces the section 744K(c)(1)(A)(i) fee base of $15,000 with an amount the Secretary deems appropriate but sets no floor, no ceiling, no rulemaking or notice step, and no process for challenging the amount.",
+        "Section 4 defines a large-scale outsourcing facility by a count of more than 100 compounded drug products in a calendar year but does not say who verifies that count, or how a facility that crosses the threshold partway through a year receives the required pre-compounding inspection.",
+        "The bill adds an out-of-State reporting trigger of more than 20 compounds a month while leaving in place the section 503A(b)(3)(B)(ii) limit of 5 percent of total prescription orders on out-of-State distribution for States without a memorandum of understanding, so two different out-of-State measures apply at once."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A fixed limit of 20 times in a single month on compounding a drug product that is essentially a copy of a commercially available drug product",
+          "A two-prong definition of essentially a copy of a commercially available drug product: shared active ingredient, and no patient-specific change producing a significant difference",
+          "A definition of commercially available drug product keyed to U.S. commercial sale, manufacture in facilities required to comply with section 501(a)(2)(B), and absence from the discontinued section of the section 505(j)(7)(A) list",
+          "A new section 503A(d) report to the Secretary for compounding more than 20 times a month for out-of-State patients, with a hospital-pharmacy exclusion",
+          "A definition of large-scale outsourcing facility - more than 100 compounds in a single calendar year - and a requirement that its risk-based inspections include a pre-first-compounding inspection and a reinspection not less than biennially"
+        ],
+        "modified": [
+          "Section 503A(b)(1)(D): the qualifying condition moves from not compounding copies regularly or in inordinate amounts as defined by the Secretary to not compounding a copy more than 20 times in a single month",
+          "Section 503A(b)(2): a definition stating only what the copy term does not include becomes an affirmative two-prong test plus a definition of commercially available drug product",
+          "Section 744K(c)(1)(A)(i): the annual establishment fee base changes from $15,000 to a base amount deemed appropriate by the Secretary to fund compounded-drug safety activities",
+          "Section 503A subsections (d) and (e) are redesignated (e) and (f) to make room for the new reporting subsection"
+        ],
+        "removed": [
+          "The section 510(g)(1) registration exemption, as applied to any outsourcing facility defined in section 503B(d)(4)"
+        ]
+      },
+      "votes": [],
+      "stageDate": "2025-12-09",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "referencedSources": [
+        {
+          "id": "usc-21-353a",
+          "kind": "statute",
+          "label": "21 U.S.C. 353a (FDCA section 503A - pharmacy compounding)",
+          "citation": "21 U.S.C. 353a",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec353a/htm",
+          "textFile": "data/ref-text/usc-21-353a.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-353b",
+          "kind": "statute",
+          "label": "21 U.S.C. 353b (FDCA section 503B - outsourcing facilities)",
+          "citation": "21 U.S.C. 353b",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec353b/htm",
+          "textFile": "data/ref-text/usc-21-353b.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-360",
+          "kind": "statute",
+          "label": "21 U.S.C. 360 (FDCA section 510 - registration of drug producers)",
+          "citation": "21 U.S.C. 360",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec360/htm",
+          "textFile": "data/ref-text/usc-21-360.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-379j-62",
+          "kind": "statute",
+          "label": "21 U.S.C. 379j-62 (FDCA section 744K - outsourcing facility fees)",
+          "citation": "21 U.S.C. 379j-62",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapVII-partC-subpart9-sec379j-62/htm",
+          "textFile": "data/ref-text/usc-21-379j-62.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ]
+    }
+  ]
+}

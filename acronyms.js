@@ -12,6 +12,7 @@ const ACRONYMS = {
   FHA:   'Federal Housing Administration',
   VASH:  'Veterans Affairs Supportive Housing',
   RESIDE: 'Revitalizing Empty Structures Into Desirable Environments',
+  ROAD:  'Renewing Opportunity in the American Dream',
   PRICE: 'Preservation and Reinvestment Initiative for Community Enhancement',
   VALID: 'Veterans Affairs Loan Informed Disclosure',
   FINRA: 'Financial Industry Regulatory Authority',

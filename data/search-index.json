@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-27T18:41:32.611Z",
+  "generatedAt": "2026-08-27T20:33:20.989Z",
   "counts": {
-    "bill": 212,
+    "bill": 216,
     "rep": 551,
     "quote": 468,
     "article": 47,
@@ -1915,6 +1915,42 @@
       "sub": "S.289 · Passed Senate · Sen. Duckworth",
       "text": "To ban the sale of products with a high concentration of sodium nitrite to individuals, and for other purposes. Sen. Duckworth, Tammy (D-IL) Classifies consumer products containing 10 or more percent by weight of sodium nitrite as banned hazardous products…",
       "code": "s289"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-6509",
+      "url": "/bill/119-hr-6509-safe-drugs-act-of-2025/",
+      "title": "SAFE Drugs Act of 2025",
+      "sub": "HR.6509 · In Committee · Rep. Yakym",
+      "text": "To amend the Federal Food, Drug, and Cosmetic Act to further regulate compounding pharmacies and outsourcing facilities, and for other purposes. Rep. Yakym, Rudy (R-IN) Replaces the Secretary-defined \"regularly or in inordinate amounts\" ceiling on compounding…",
+      "code": "hr6509"
+    },
+    {
+      "t": "bill",
+      "id": "119-HR-7296",
+      "url": "/bill/119-hr-7296-save-america-act/",
+      "title": "SAVE America Act",
+      "sub": "HR.7296 · In Committee · Rep. Roy",
+      "text": "To amend the National Voter Registration Act of 1993 to require proof of United States citizenship to register an individual to vote in elections for Federal office, and for other purposes. Rep. Roy, Chip (R-TX) Requires documentary proof of citizenship to…",
+      "code": "hr7296"
+    },
+    {
+      "t": "bill",
+      "id": "119-S-1748",
+      "url": "/bill/119-s-1748-kids-online-safety-act/",
+      "title": "Kids Online Safety Act",
+      "sub": "S.1748 · In Committee · Sen. Blackburn",
+      "text": "A bill to protect the safety of children on the internet. Sen. Blackburn, Marsha (R-TN) Creates a federal duty of care over how covered platforms design features that affect minors, plus default-on safeguards, parental tools, audited annual transparency…",
+      "code": "s1748"
+    },
+    {
+      "t": "bill",
+      "id": "119-S-2296",
+      "url": "/bill/119-s-2296-national-defense-authorization-act-for-fiscal-year-2026/",
+      "title": "National Defense Authorization Act for Fiscal Year 2026",
+      "sub": "S.2296 · Passed Senate · Sen. Wicker",
+      "text": "To authorize appropriations for fiscal year 2026 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for…",
+      "code": "s2296"
     },
     {
       "t": "rep",
@@ -7254,10 +7290,10 @@
     {
       "t": "quote",
       "id": "D000563",
-      "url": "/floor.html",
-      "billId": null,
+      "url": "/bill/119-hr-7296-save-america-act/",
+      "billId": "119-HR-7296",
       "title": "Mr. Durbin",
-      "sub": "D-IL",
+      "sub": "D-IL · on SAVE America Act",
       "text": "The issue is our right to vote in this democracy and in this country. For many of us, that has never been a big question. We registered. We vote regularly. We show our identification. We get our ballots, do our civic responsibility, push the ballot into the machine in my…"
     },
     {
@@ -7299,10 +7335,10 @@
     {
       "t": "quote",
       "id": "K000403",
-      "url": "/floor.html",
-      "billId": null,
+      "url": "/bill/119-s-1748-kids-online-safety-act/",
+      "billId": "119-S-1748",
       "title": "Mr. Kennedy",
-      "sub": "R-UT",
+      "sub": "R-UT · on Kids Online Safety Act",
       "text": "Mr. Speaker, it should not take an act of Congress to fly an American flag on a mountain, but here we are, as we often are, in Congress. In 2000, a constituent of mine, Scoutmaster Robert Collins, led a Scout troop on a hike to Kyhv Peak above Utah Valley in Provo to raise the…"
     },
     {
@@ -9747,10 +9783,10 @@
     {
       "t": "quote",
       "id": "S000148",
-      "url": "/floor.html",
-      "billId": null,
+      "url": "/bill/119-hr-6509-safe-drugs-act-of-2025/",
+      "billId": "119-HR-6509",
       "title": "Mr. Schumer",
-      "sub": "D-NY",
+      "sub": "D-NY · on SAFE Drugs Act of 2025",
       "text": "Trump's corruption has no ceiling, and it apparently doesn't have an altitude limit either. Trump's $400 million luxury jet is the single biggest bribe an American President has ever accepted from another country in all of American history--the single biggest bribe in all of…"
     },
     {

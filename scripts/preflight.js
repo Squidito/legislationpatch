@@ -550,6 +550,25 @@ section('Changelog editions vs current bill record');
   }
 }
 
+// 10. Article card summaries still match the articles they link to ----------
+// Card summaries are hand-written in data/articles-index.json; the articles they
+// describe are refreshed by publish-article.js. Nothing tied the two together,
+// so the refresh lane twice shipped a card frozen at figures its article had
+// moved past. The card is the first thing a reader sees on /articles/.
+section('Article card summaries vs their articles');
+{
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.execPath, [path.join(__dirname, 'verify-card-summaries.js')], { stdio: 'pipe' });
+    pass('Every card summary figure appears in the article it links to');
+  } catch (e) {
+    const out = String(e.stdout || '') + String(e.stderr || '');
+    const lines = out.split('\n').filter(l => l.includes('❌') && !/problem\(s\) across/.test(l));
+    if (lines.length) lines.slice(0, 8).forEach(l => fail(l.trim().replace(/^❌\s*/, '')));
+    else fail(`verify-card-summaries failed: ${String(e.message).slice(0, 90)}`);
+  }
+}
+
 // ---------------------------------------------------------------------------
 console.log('\n' + '═'.repeat(56));
 if (failures) {

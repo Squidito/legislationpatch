@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-24T20:48:48.066Z",
+  "generated": "2026-08-27T20:33:12.838Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -43687,6 +43687,11 @@
           "type": "Reported in House",
           "date": "2026-06-15",
           "url": "https://www.congress.gov/119/bills/hr8800/BILLS-119hr8800rh.htm"
+        },
+        {
+          "type": "Engrossed in House",
+          "date": "2026-07-22",
+          "url": "https://www.congress.gov/119/bills/hr8800/BILLS-119hr8800eh.htm"
         }
       ],
       "featured_quotes": [
@@ -46236,6 +46241,985 @@
           "type": "Engrossed in Senate",
           "date": "2026-08-03",
           "url": "https://www.congress.gov/119/bills/s289/BILLS-119s289es.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-6509",
+      "title": "SAFE Drugs Act of 2025",
+      "official_title": "To amend the Federal Food, Drug, and Cosmetic Act to further regulate compounding pharmacies and outsourcing facilities, and for other purposes.",
+      "code": "HR.6509",
+      "date": "2025-12-09",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Yakym, Rudy (R-IN)",
+      "sponsor_bioguide": "Y000067",
+      "cosponsors": 19,
+      "pages": 3,
+      "analyzed": true,
+      "demo": false,
+      "summary": "Pharmacies and doctors can mix custom versions of drugs (compounding) without FDA approval, so long as they stay inside limits on copying drugs already sold commercially. This bill turns the copying limit into a fixed number - 20 times in a single month - adds a report for compounding above that same count for out-of-State patients, and requires a first-time inspection plus a reinspection at least every two years for outsourcing facilities that compound more than 100 times a year.",
+      "brief": "Replaces the Secretary-defined \"regularly or in inordinate amounts\" ceiling on compounding copies of commercially available drugs with a fixed limit of 20 times in a single month, and adds inspection, registration, reporting, and fee changes for outsourcing facilities.",
+      "top_lines": [
+        {
+          "headline": "Limits on Compounding Drug Copies",
+          "billSection": "2",
+          "source": "usc-21-353a",
+          "subs": [
+            "Copies of commercial drugs capped at 20 times a month",
+            "Replaces the Secretary-defined \"regularly or in inordinate amounts\" standard",
+            "Copy test: shared active ingredient, no patient-specific difference"
+          ]
+        },
+        {
+          "headline": "Out-of-State Compounding Reports",
+          "billSection": "3",
+          "subs": [
+            "Report required above 20 out-of-State compounds in a month",
+            "Applies from calendar year 2025 on; due by year end",
+            "Hospital pharmacies compounding for hospital patients are excluded"
+          ]
+        },
+        {
+          "headline": "Outsourcing Facility Oversight",
+          "billSection": "4",
+          "source": [
+            "usc-21-353b",
+            "usc-21-360"
+          ],
+          "subs": [
+            "Large-scale means more than 100 compounds in a calendar year",
+            "Inspection before first compounding, then at least every two years",
+            "Outsourcing facilities lose the pharmacy registration exemption"
+          ]
+        }
+      ],
+      "likelihood": 22,
+      "likelihoodLabel": "Long shot",
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House and carrying 19 cosponsors split 14 R to 5 D, so support is not party-line. Opposition is likeliest from compounding pharmacies over the fixed 20-per-month copy count, and from outsourcing facilities over losing the section 510(g)(1) registration exemption and over replacing the statutory $15,000 establishment-fee base with an amount the Secretary sets. Energy and Commerce is the sole committee of referral named in the latest-action metadata, and the fee and inspection provisions land on a concentrated industry rather than a broad constituency.",
+      "sections": [
+        {
+          "label": "Section 2 — Definitions Relating to Compounding of Drug Products",
+          "items": [
+            {
+              "main": "Rewrites the qualifying condition in section 503A(b)(1)(D) so a pharmacist or physician keeps the compounding exemption only if they do not compound a copy of a commercially available drug product more than 20 times in a single month.",
+              "detail": "Section 503A makes sections 351(a)(2)(B), 352(f)(1), and 355 of the Federal Food, Drug, and Cosmetic Act inapplicable to a drug product compounded for an identified individual patient on a valid prescription order. Qualifying previously required that the pharmacist or physician not compound copies \"regularly or in inordinate amounts (as defined by the Secretary)\"; the bill substitutes the fixed 20-times-a-month count for that standard.",
+              "source": "usc-21-353a",
+              "comments": []
+            },
+            {
+              "main": "Replaces the definition of \"essentially a copy of a commercially available drug product\" with a two-prong test and adds a definition of \"commercially available drug product\".",
+              "detail": "A product is essentially a copy if it contains any active ingredient found in a commercially available drug product and there is no change, made for an identified individual patient, producing a significant difference for that patient as determined by the prescribing practitioner. A \"commercially available drug product\" is one sold in the U.S. commercial marketplace and manufactured in one or more facilities required to comply with section 501(a)(2)(B), and not included in the discontinued section of the list described in section 505(j)(7)(A). The prior definition stated only what the term does not include - a product changed for an identified individual patient producing a significant difference.",
+              "source": "usc-21-353a",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Reporting Requirement",
+          "items": [
+            {
+              "main": "Adds a new section 503A(d) requiring a pharmacy, facility, or physician to report to the Secretary when it compounds, more than 20 times in a single month for patients residing outside the State where the compounding occurs, any drug product containing an active ingredient found in a commercially available drug product.",
+              "detail": "The report must identify each type of drug product compounded for those patients and, for each month, the total number of times each type was compounded. It applies for calendar year 2025 and each calendar year thereafter, is due not later than the end of that calendar year, and takes whatever form and manner the Secretary prescribes. Compounding for hospital patients by a pharmacy located on the hospital premises is excluded. The bill also redesignates the existing section 503A subsections (d) and (e) - the exclusion for compounded positron emission tomography (PET) drugs and radiopharmaceuticals, and the definition of \"compounding\" - as subsections (e) and (f).",
+              "source": "usc-21-353a",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 4 — Large-Scale Outsourcing Facilities",
+          "items": [
+            {
+              "main": "Adds a section 503B(b)(6) requiring that the risk-based inspections of a large-scale outsourcing facility include an inspection before the facility compounds any drug product for the first time and a reinspection not less than biennially.",
+              "detail": "A large-scale outsourcing facility is defined as any outsourcing facility that compounds more than 100 times in a single calendar year. Section 503B(b)(4) already subjects outsourcing facilities to inspection under section 374, denies them the section 374(a)(2)(A) exemption, and directs the Secretary to inspect them on a risk-based schedule built from compliance history, recall history, the inherent risk of the drugs compounded, and inspection history; the bill layers the two fixed inspection points on top of that schedule.",
+              "source": "usc-21-353b",
+              "comments": []
+            },
+            {
+              "main": "Amends section 510(g)(1) so the registration exemption for pharmacies does not apply to any outsourcing facility as defined in section 503B(d)(4).",
+              "detail": "Section 510(g)(1) exempts pharmacies that dispense on prescriptions from licensed practitioners, and that do not compound or process drugs for sale outside the regular course of dispensing at retail, from the registration duties of section 510 - including the annual registration window running October 1 through December 31 for every person owning or operating an establishment engaged in the manufacture, preparation, propagation, compounding, or processing of drugs. Both this change and the inspection change apply beginning 6 months after the date of enactment.",
+              "source": [
+                "usc-21-360",
+                "usc-21-353b"
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 5 — Base Establishment Fee",
+          "items": [
+            {
+              "main": "Strikes the $15,000 figure in section 744K(c)(1)(A)(i) and substitutes a base amount deemed appropriate by the Secretary to fund activities to ensure the safety of compounded drug products.",
+              "detail": "Section 744K(c)(1)(A) sets an outsourcing facility's annual establishment fee as that base multiplied by an inflation adjustment factor, plus a small business adjustment factor. The bill changes only the base in clause (i); the separate reinspection fee under section 744K(c)(1)(B), which the same paragraph computes from $15,000 times the inflation adjustment factor, is not amended.",
+              "source": "usc-21-379j-62",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 4(b) — Registration and Reporting Requirement",
+          "summary": "The amendment to section 510(g)(1) removes the pharmacy registration exemption for every outsourcing facility as defined in section 503B(d)(4) - a facility at one geographic location that compounds sterile drugs and has elected to register as an outsourcing facility - not only for the large-scale ones the section defines.",
+          "why_unreported": "Section 4 is captioned for large-scale outsourcing facilities and its inspection subsection reaches only facilities compounding more than 100 times a calendar year, while subsection (b) reaches outsourcing facilities at any volume.",
+          "source": [
+            "usc-21-360",
+            "usc-21-353b"
+          ]
+        },
+        {
+          "section": "Section 2 — Definitions Relating to Compounding of Drug Products",
+          "summary": "The new definition of \"commercially available drug product\" excludes any product included in the discontinued section of the list described in section 505(j)(7)(A), so a compounded copy of a discontinued product falls outside the 20-times-a-month count.",
+          "why_unreported": "The subsection reads as a definitional change, but the exclusion determines which compounded products the new numeric limit reaches at all."
+        },
+        {
+          "section": "Section 5 — Base Establishment Fee",
+          "summary": "The section removes a dollar figure from statute rather than setting one: the annual establishment fee base moves from $15,000 to an amount the Secretary deems appropriate, while the reinspection fee base in section 744K(c)(1)(B) stays at $15,000.",
+          "why_unreported": "The caption names the base establishment fee, and the amendment reaches only clause (i) of section 744K(c)(1)(A), so the two fees set in the same paragraph now compute from different bases.",
+          "source": "usc-21-379j-62"
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The new reporting requirement applies for calendar year 2025 and each calendar year thereafter and is due by the end of the applicable calendar year, but the bill sets no effective date or transition rule for a calendar year that closed before enactment.",
+        "Section 3 requires the report to go to the Secretary but does not state what the Secretary does with it - no publication, no referral or enforcement trigger, and no consequence for not filing.",
+        "The bill replaces the section 744K(c)(1)(A)(i) fee base of $15,000 with an amount the Secretary deems appropriate but sets no floor, no ceiling, no rulemaking or notice step, and no process for challenging the amount.",
+        "Section 4 defines a large-scale outsourcing facility by a count of more than 100 compounded drug products in a calendar year but does not say who verifies that count, or how a facility that crosses the threshold partway through a year receives the required pre-compounding inspection.",
+        "The bill adds an out-of-State reporting trigger of more than 20 compounds a month while leaving in place the section 503A(b)(3)(B)(ii) limit of 5 percent of total prescription orders on out-of-State distribution for States without a memorandum of understanding, so two different out-of-State measures apply at once."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A fixed limit of 20 times in a single month on compounding a drug product that is essentially a copy of a commercially available drug product",
+          "A two-prong definition of essentially a copy of a commercially available drug product: shared active ingredient, and no patient-specific change producing a significant difference",
+          "A definition of commercially available drug product keyed to U.S. commercial sale, manufacture in facilities required to comply with section 501(a)(2)(B), and absence from the discontinued section of the section 505(j)(7)(A) list",
+          "A new section 503A(d) report to the Secretary for compounding more than 20 times a month for out-of-State patients, with a hospital-pharmacy exclusion",
+          "A definition of large-scale outsourcing facility - more than 100 compounds in a single calendar year - and a requirement that its risk-based inspections include a pre-first-compounding inspection and a reinspection not less than biennially"
+        ],
+        "modified": [
+          "Section 503A(b)(1)(D): the qualifying condition moves from not compounding copies regularly or in inordinate amounts as defined by the Secretary to not compounding a copy more than 20 times in a single month",
+          "Section 503A(b)(2): a definition stating only what the copy term does not include becomes an affirmative two-prong test plus a definition of commercially available drug product",
+          "Section 744K(c)(1)(A)(i): the annual establishment fee base changes from $15,000 to a base amount deemed appropriate by the Secretary to fund compounded-drug safety activities",
+          "Section 503A subsections (d) and (e) are redesignated (e) and (f) to make room for the new reporting subsection"
+        ],
+        "removed": [
+          "The section 510(g)(1) registration exemption, as applied to any outsourcing facility defined in section 503B(d)(4)"
+        ]
+      },
+      "votes": [],
+      "stageDate": "2025-12-09",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "referencedSources": [
+        {
+          "id": "usc-21-353a",
+          "kind": "statute",
+          "label": "21 U.S.C. 353a (FDCA section 503A - pharmacy compounding)",
+          "citation": "21 U.S.C. 353a",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec353a/htm",
+          "textFile": "data/ref-text/usc-21-353a.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-353b",
+          "kind": "statute",
+          "label": "21 U.S.C. 353b (FDCA section 503B - outsourcing facilities)",
+          "citation": "21 U.S.C. 353b",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec353b/htm",
+          "textFile": "data/ref-text/usc-21-353b.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-360",
+          "kind": "statute",
+          "label": "21 U.S.C. 360 (FDCA section 510 - registration of drug producers)",
+          "citation": "21 U.S.C. 360",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapV-partA-sec360/htm",
+          "textFile": "data/ref-text/usc-21-360.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-21-379j-62",
+          "kind": "statute",
+          "label": "21 U.S.C. 379j-62 (FDCA section 744K - outsourcing facility fees)",
+          "citation": "21 U.S.C. 379j-62",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title21/granules/USCODE-2024-title21-chap9-subchapVII-partC-subpart9-sec379j-62/htm",
+          "textFile": "data/ref-text/usc-21-379j-62.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2025-12-09",
+          "url": "https://www.congress.gov/119/bills/hr6509/BILLS-119hr6509ih.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-HR-7296",
+      "title": "SAVE America Act",
+      "official_title": "To amend the National Voter Registration Act of 1993 to require proof of United States citizenship to register an individual to vote in elections for Federal office, and for other purposes.",
+      "code": "HR.7296",
+      "date": "2026-01-30",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Rep. Roy, Chip (R-TX)",
+      "sponsor_bioguide": "R000614",
+      "cosponsors": 111,
+      "pages": 13,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This bill would require every person registering to vote in a federal election to hand over a document proving U.S. citizenship — a REAL ID-compliant card showing citizenship, a passport, a military ID with a service record showing U.S. birth, or a government photo ID paired with a birth certificate, adoption decree, consular birth report, or naturalization certificate. It also requires every voter in a federal election to show a photo ID that says on its front that the holder is a U.S. citizen, and it deletes the National Voter Registration Act exemption that has let some states out of the Act's registration procedures.",
+      "brief": "Requires documentary proof of citizenship to register, and a citizenship-marked photo ID to vote, in every federal election — and removes both the National Voter Registration Act's state exemption and the Help America Vote Act's mail-registrant ID and fail-safe provisions.",
+      "top_lines": [
+        {
+          "headline": "Documentary Proof of Citizenship to Register",
+          "billSection": "2",
+          "subs": [
+            "States may not process a federal registration without citizenship documents",
+            "Five accepted document routes, from REAL ID to paired documents",
+            "States must build a fallback process plus a signed official affidavit"
+          ]
+        },
+        {
+          "headline": "Photo ID Required to Vote",
+          "billSection": "3",
+          "subs": [
+            "ID must state on its front that the holder is a citizen",
+            "In person: tangible, not digital; absentee: copy twice, request and ballot",
+            "Six issuing authorities only, including a State DMV or election office"
+          ]
+        },
+        {
+          "headline": "Voter Roll Removal and Penalties",
+          "billSection": "2",
+          "source": [
+            "usc-52-20507",
+            "usc-52-20511"
+          ],
+          "subs": [
+            "Adds noncitizen evidence and State-law noncompliance as removal grounds",
+            "Federal agencies must answer citizenship queries within 24 hours",
+            "New crimes: registering an applicant without proof; aiding a noncitizen"
+          ]
+        }
+      ],
+      "likelihood": 30,
+      "likelihoodLabel": "Unlikely",
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority House with 111 cosponsors, all Republicans, so this is a party-line measure with no Democratic cosponsor to build from. The provisions likeliest to draw organized opposition are the deletion of the National Voter Registration Act's state exemption, the repeal of the Help America Vote Act's fail-safe provisional-ballot route for mail registrants who lack ID, the new criminal exposure for election officials who register an applicant without documentary proof, and the requirement that a voter's photo ID state citizenship on its front — a marking most current state licenses do not carry. A Senate floor path would need 60 votes, which a party-line cosponsor list does not indicate.",
+      "sections": [
+        {
+          "label": "Section 2 — Ensuring Only Citizens Are Registered To Vote in Elections for Federal Office",
+          "items": [
+            {
+              "main": "Bars a State, under any method of voter registration, from accepting and processing a federal voter registration application unless the applicant presents documentary proof of United States citizenship with the application.",
+              "detail": "The bill defines documentary proof as a REAL ID Act-compliant identification indicating citizenship, a valid U.S. passport, an official U.S. military identification card together with a service record showing a U.S. place of birth, a Federal, State or Tribal government photo ID showing a U.S. place of birth, or any other Federal, State or Tribal government photo ID presented with a qualifying certified birth certificate, hospital Record of Birth extract, final adoption decree, Consular Report of Birth Abroad, naturalization or citizenship certificate, or a Department of Homeland Security American Indian Card of a classification the bill names. The requirement takes effect on the date of enactment and applies to registration applications submitted on or after that date.",
+              "comments": []
+            },
+            {
+              "main": "Strikes the National Voter Registration Act subsection that exempts certain States from the Act and replaces it with the documentary-proof requirement, then adds a narrower special rule for States that do not require voter registration.",
+              "detail": "The struck subsection made the Act inapplicable to a State with no voter registration requirement for any federal-election voter under law in effect continuously on and after August 1, 1994, and to a State whose law, in effect continuously on and after that date, let all voters register at the polling place at the time of voting in a general federal election. The replacement special rule deems a State or jurisdiction that does not require registration to meet the Act if it establishes a system confirming citizenship before the first day of voting and provides that confirmation for each eligible voter to polling-place officials during the voting period.",
+              "source": "usc-52-20503",
+              "comments": []
+            },
+            {
+              "main": "Requires each State to establish a process for an applicant who cannot produce documentary proof, and requires federal agencies to answer a State election official's citizenship query within 24 hours at no charge.",
+              "detail": "An applicant without documents may sign an attestation under penalty of perjury and submit other evidence; a State or local official then determines whether citizenship is sufficiently established and must sign a uniform affidavit, developed by the Election Assistance Commission, explaining the basis for registering that applicant. States must also take affirmative ongoing steps to ensure only citizens are registered, including establishing an identification program within 30 days of enactment drawing on the Department of Homeland Security SAVE system, the Social Security Number Verification Service, State ID or license agencies, or other confirming databases. Where a query establishes that an alien is unlawfully registered, the Secretary of Homeland Security must investigate whether to initiate removal proceedings.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 2 — Voter Roll Removal, Enforcement, and Criminal Penalties",
+          "items": [
+            {
+              "main": "Adds two new grounds to the closed list of reasons a registrant's name may be removed from the official list of eligible voters, and adds noncitizen evidence to the general list-maintenance program.",
+              "detail": "The Act currently permits removal only at the registrant's request, by State law for criminal conviction or mental incapacity, or through the general program for death and change of residence. The bill adds removal based on documentary proof or verified information that the registrant is not a citizen, and removal where the registration otherwise fails to comply with applicable State law. It separately adds noncitizen evidence as a ground for the general removal program and requires a State to remove a noncitizen from the roll at any time on receipt of documentation or verified information.",
+              "source": "usc-52-20507",
+              "comments": []
+            },
+            {
+              "main": "Extends the Act's private right of action to cover an election official who registers an applicant that failed to present documentary proof, and adds two new criminal predicates.",
+              "detail": "A person aggrieved by a violation may already sue for declaratory or injunctive relief after notifying the chief State election official, subject to the Act's notice periods; the bill names official registration without documentary proof as such a violation. Under the criminal penalties section — a fine under title 18, imprisonment of not more than 5 years, or both — the bill inserts, as new means of knowingly and willfully depriving or defrauding a State's residents of a fair and impartially conducted election process, an executive branch officer or employee providing material assistance to a noncitizen attempting to register or vote, and registering an applicant who fails to present documentary proof.",
+              "source": [
+                "usc-52-20510",
+                "usc-52-20511"
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 3 — Photo Voter Identification Required for Voting in a Federal Election",
+          "items": [
+            {
+              "main": "Requires each individual voting in a federal election to present an eligible photo identification document that indicates on its front that the holder is a United States citizen.",
+              "detail": "An in-person voter must present a tangible, non-digital document at the time of voting; an absentee voter must include a copy with both the ballot request and the ballot submission. The document must come from a State drivers-license agency, a State or local election office, a Native tribal government, the Department of State, the Department of War, or a branch of the Armed Forces, and must carry a photograph plus either an identification number issued by the State drivers-license agency or the last four digits of the voter's Social Security number. A document lacking the citizenship marking still qualifies if presented with another identification document indicating citizenship, and the marking requirement is waived for voters in jurisdictions that have submitted their voter rolls to the Department of Homeland Security through the SAVE program at least quarterly since June 1, 2025 and flag verified-citizen status and its date in each voter record.",
+              "comments": []
+            },
+            {
+              "main": "Strikes everything preceding paragraph (4) of the Help America Vote Act voting-requirements section for voters who register by mail.",
+              "detail": "The struck paragraphs are the ones requiring a first-time mail registrant who has not previously voted in the State to present a photo ID or a current utility bill, bank statement, government check, paycheck, or other government document showing name and address; the fail-safe rule letting a voter who cannot meet that requirement cast a provisional ballot in person or by mail; and the inapplicability rule for registrants who already supplied identification or a matched drivers-license or Social Security number with their registration. Paragraph (4), which sets the citizenship and age questions on the mail-in registration form, is left in place. States must comply with this section for all federal elections occurring on and after the date of enactment.",
+              "source": "usc-52-21083",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 3(d) — Conforming Amendment",
+          "summary": "The amendment striking all of the Help America Vote Act voting-requirements subsection that precedes paragraph (4) removes that Act's fail-safe voting rule, under which a mail registrant who could not produce the required identification could still cast a provisional ballot in person or by mail and have it counted as a provisional ballot.",
+          "why_unreported": "The subsection is captioned as a conforming amendment to the new photo ID requirement, but the struck text also carries the fail-safe provisional-ballot route and the exemption for registrants who already supplied identification with their registration.",
+          "source": "usc-52-21083"
+        },
+        {
+          "section": "Section 2(f)(1)(B) — Requirements With Respect to Administration of Voter Registration",
+          "summary": "Alongside the noncitizen removal ground, the bill adds a further ground for removing a name from the official list of eligible voters: that the registration otherwise fails to comply with applicable State law. That ground is not limited to citizenship.",
+          "why_unreported": "The subsection sits inside a section about ensuring only citizens are registered, and the list it amends has otherwise been limited to the registrant's own request, criminal conviction or mental incapacity, death, and change of residence.",
+          "source": "usc-52-20507"
+        },
+        {
+          "section": "Section 2(c)(5) and Section 2(h)(2) — Confidentiality Statements",
+          "summary": "Both the motor-vehicle registration statement and the federal mail form statement — each of which currently tells applicants the office where they registered stays confidential and is used only for voter registration purposes — gain an exception allowing use as evidence in a criminal or immigration proceeding against an applicant who makes a false eligibility declaration under penalty of perjury.",
+          "why_unreported": "The two exceptions are worded differently: the motor-vehicle version applies to an applicant who knowingly attempts to register and knowingly makes a false declaration, while the mail-form version omits the word knowingly in both places.",
+          "source": [
+            "usc-52-20504",
+            "usc-52-20508"
+          ]
+        },
+        {
+          "section": "Section 2(d)(3) — National Mail Voter Registration Form",
+          "summary": "The bill adds a third condition to the list a State must satisfy before it may require a first-time mail registrant to vote in person, so that authority reaches only registrants who also did not provide documentary proof of citizenship when registering.",
+          "why_unreported": "The list is conjunctive, so adding a condition narrows rather than widens the circumstances in which a State may impose in-person voting on a first-time mail registrant.",
+          "source": "usc-52-20505"
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill requires an eligible photo identification document to indicate on its front that the holder is a United States citizen, but does not require or fund any issuing authority to add that marking to the documents it issues.",
+        "Section 2 requires each State to build a process for applicants who cannot provide documentary proof, but sets no deadline for establishing it, no minimum evidence standard beyond what the Election Assistance Commission may adopt, and no appeal route for an applicant a State or local official declines to register.",
+        "Federal agencies must answer a State election official's citizenship request within 24 hours, including batched requests, but the bill sets no accuracy standard, no correction procedure for an erroneous response, and no notice to the voter whose status was queried.",
+        "The bill directs the Election Assistance Commission to adopt and transmit implementation guidance within 10 days of enactment while the registration requirements take effect on the date of enactment, so the requirements apply before the guidance is due.",
+        "Section 3 requires a copy of the photo identification document with both the absentee ballot request and the ballot submission, but does not address how the copy is handled or protected once it reaches the election office, and exempts the resulting voter registration materials from the Paperwork Reduction Act."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "A definition of documentary proof of United States citizenship listing five accepted document routes, including a REAL ID Act-compliant identification indicating citizenship and a valid U.S. passport, the fifth being another government photo ID paired with one of six listed birth or citizenship records",
+          "A bar on a State accepting and processing a federal voter registration application under any registration method without documentary proof of citizenship",
+          "A State process for applicants who cannot provide documentary proof, requiring a perjury attestation, other evidence, an official determination, and a signed uniform affidavit developed by the Election Assistance Commission",
+          "A requirement that federal agencies supply citizenship-verification information to State election officials within 24 hours of a request, at no charge, including batched requests, with agencies directed to share information with each other",
+          "A requirement that each individual voting in a federal election present an eligible photo identification document indicating citizenship on its front, in tangible form in person and by copy with both the absentee request and the absentee ballot",
+          "New criminal predicates for an executive branch officer or employee providing material assistance to a noncitizen attempting to register or vote, and for registering an applicant who fails to present documentary proof",
+          "A duty on the Secretary of Homeland Security to notify the appropriate chief State election official when an individual becomes a naturalized citizen"
+        ],
+        "modified": [
+          "The grounds for removing a registrant from the official list of eligible voters gain documentary proof or verified information of noncitizenship, and registrations that otherwise fail to comply with applicable State law",
+          "The Act's private right of action is extended to cover an election official who registers an applicant that failed to present documentary proof of citizenship",
+          "The motor-vehicle and federal mail form confidentiality statements gain an exception for use as evidence in a criminal or immigration proceeding involving a false eligibility declaration under penalty of perjury",
+          "The mail voter registration form must add a section, for use only by a State or local election official, recording the document type presented as proof, its issuance and expiration dates, the issuing office, and any unique identification number",
+          "The federal mail voter registration form is now prescribed by the Election Assistance Commission rather than the Federal Election Commission",
+          "Voter registration agencies must ask whether the applicant is a United States citizen and, on an affirmative answer, require documentary proof before providing the registration form; Armed Forces recruitment office procedures apply to persons who are citizens of the United States"
+        ],
+        "removed": [
+          "The National Voter Registration Act subsection exempting States that had no voter registration requirement, or allowed polling-place registration on election day, continuously on and after August 1, 1994",
+          "The Help America Vote Act requirements for voters who register by mail that precede paragraph (4), including the first-time mail registrant identification requirement, the fail-safe provisional-ballot rule, and the inapplicability rule for registrants who already supplied identification"
+        ]
+      },
+      "votes": [],
+      "stageDate": "2026-01-30",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "amendment",
+      "analyzedAt": "2026-08-27",
+      "referencedSources": [
+        {
+          "id": "usc-52-20503",
+          "kind": "statute",
+          "label": "52 U.S.C. 20503 (NVRA section 4 - national registration procedures)",
+          "citation": "52 U.S.C. 20503",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20503/htm",
+          "textFile": "data/ref-text/usc-52-20503.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20504",
+          "kind": "statute",
+          "label": "52 U.S.C. 20504 (NVRA section 5 - motor vehicle registration)",
+          "citation": "52 U.S.C. 20504",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20504/htm",
+          "textFile": "data/ref-text/usc-52-20504.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20505",
+          "kind": "statute",
+          "label": "52 U.S.C. 20505 (NVRA section 6 - mail registration)",
+          "citation": "52 U.S.C. 20505",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20505/htm",
+          "textFile": "data/ref-text/usc-52-20505.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20506",
+          "kind": "statute",
+          "label": "52 U.S.C. 20506 (NVRA section 7 - voter registration agencies)",
+          "citation": "52 U.S.C. 20506",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20506/htm",
+          "textFile": "data/ref-text/usc-52-20506.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20507",
+          "kind": "statute",
+          "label": "52 U.S.C. 20507 (NVRA section 8 - administration of voter registration)",
+          "citation": "52 U.S.C. 20507",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20507/htm",
+          "textFile": "data/ref-text/usc-52-20507.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20508",
+          "kind": "statute",
+          "label": "52 U.S.C. 20508 (NVRA section 9 - federal mail registration form)",
+          "citation": "52 U.S.C. 20508",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20508/htm",
+          "textFile": "data/ref-text/usc-52-20508.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20510",
+          "kind": "statute",
+          "label": "52 U.S.C. 20510 (NVRA section 11 - civil enforcement)",
+          "citation": "52 U.S.C. 20510",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20510/htm",
+          "textFile": "data/ref-text/usc-52-20510.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-20511",
+          "kind": "statute",
+          "label": "52 U.S.C. 20511 (NVRA section 12 - criminal penalties)",
+          "citation": "52 U.S.C. 20511",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap205-sec20511/htm",
+          "textFile": "data/ref-text/usc-52-20511.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-52-21083",
+          "kind": "statute",
+          "label": "52 U.S.C. 21083 (HAVA section 303 - registration list and mail-registrant requirements)",
+          "citation": "52 U.S.C. 21083",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap209-subchapIII-partA-sec21083/htm",
+          "textFile": "data/ref-text/usc-52-21083.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Introduced in House",
+          "date": "2026-01-30",
+          "url": "https://www.congress.gov/119/bills/hr7296/BILLS-119hr7296ih.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-1748",
+      "title": "Kids Online Safety Act",
+      "official_title": "A bill to protect the safety of children on the internet.",
+      "code": "S.1748",
+      "date": "2025-05-14",
+      "version": "v1.0",
+      "stage": "committee",
+      "stageLabel": "In Committee",
+      "currentStep": 1,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Blackburn, Marsha (R-TN)",
+      "sponsor_bioguide": "B001243",
+      "cosponsors": 76,
+      "pages": 28,
+      "analyzed": true,
+      "demo": false,
+      "summary": "The Kids Online Safety Act puts a legal duty on social platforms, online video games, messaging apps, and video streaming services that minors are likely to use: they must take reasonable care in how they design features so those features do not push minors toward a listed set of harms, and they must give minors and parents built-in safety controls that start on the most protective setting. Platforms averaging more than 10,000,000 monthly U.S. users would also have to publish a yearly report based on an outside audit, and a separate title would require any online platform using a personalized ranking algorithm to let users switch to one that does not use data about them.",
+      "brief": "Creates a federal duty of care over how covered platforms design features that affect minors, plus default-on safeguards, parental tools, audited annual transparency reports for the largest platforms, and an opt-out from personalized ranking algorithms.",
+      "top_lines": [
+        {
+          "headline": "Duty of Care Over Design Features",
+          "billSection": "102",
+          "subs": [
+            "Reasonable care in creating design features to prevent seven listed harms",
+            "Covers compulsive usage, sexual exploitation, and financial harms",
+            "Does not require blocking content a minor independently searches for"
+          ]
+        },
+        {
+          "headline": "Default Safeguards and Parental Tools",
+          "billSection": "103",
+          "subs": [
+            "Safeguards default to the most protective setting for known minors",
+            "Reports on harm answered in 10 days above 10,000,000 monthly users",
+            "No advertising of drugs, tobacco, cannabis, gambling, or alcohol to minors"
+          ]
+        },
+        {
+          "headline": "Audits, Enforcement, and Algorithm Opt-Out",
+          "billSection": "105",
+          "subs": [
+            "Annual third-party audited public report for the largest platforms",
+            "FTC enforces; State attorneys general limited to sections 103 to 105",
+            "Users may switch to a ranking algorithm using no user-specific data"
+          ]
+        }
+      ],
+      "likelihood": 45,
+      "likelihoodLabel": "Possible",
+      "likelihoodReason": "Sponsored by a Republican in a Republican-majority Senate and carrying 76 cosponsors split 42 R, 33 D and 1 I — a cosponsor count above the 60-vote cloture threshold and split roughly evenly by party, which is the strongest structural signal in this bill's favor. The Commerce, Science, and Transportation Committee has ordered it reported with an amendment in the nature of a substitute, per the latest-action metadata; that substitute text is not published on Congress.gov, so this analysis describes the introduced text. Opposition is likeliest over the duty of care in section 102, which the bill answers with an express First Amendment viewpoint limit and a carve-out for content a minor independently seeks, and over the compliance cost of the annual third-party audit; the House would still have to take up a companion.",
+      "sections": [
+        {
+          "label": "Section 102 — Duty of Care",
+          "items": [
+            {
+              "main": "Requires a covered platform to exercise reasonable care in the creation and implementation of any design feature to prevent and mitigate seven categories of harm to minors, limited to harms a reasonable and prudent person would agree were reasonably foreseeable and to which the design feature is a contributing factor.",
+              "detail": "The listed harms are eating disorders, substance use disorders and suicidal behaviors; depressive and anxiety disorders with objectively verifiable and clinically diagnosable symptoms that are related to compulsive usage; patterns of use indicating compulsive usage; physical violence or online harassment severe, pervasive, or objectively offensive enough to affect a major life activity; sexual exploitation and abuse of minors; distribution, sale, or use of narcotic drugs, tobacco, cannabis, gambling, or alcohol; and financial harms from unfair or deceptive acts or practices. The duty does not require a platform to stop a minor from deliberately and independently searching for content or from reaching resources about preventing those harms, and no government entity may enforce it based on the viewpoint of users expressed through speech protected by the First Amendment.",
+              "comments": []
+            },
+            {
+              "main": "Defines the regulated class as covered platforms — online platforms, online video games, messaging applications, and video streaming services used or reasonably likely to be used by a minor — with a minor being under 17 and a child under 13.",
+              "detail": "The definition excludes common carrier services, broadband internet access service, email, teleconferencing or video conferencing meeting stated conditions, standalone wireless messaging services, non-profit organizations, schools from preschool through higher education, libraries, news or sports coverage sites where video relates to their own reporting, business-to-business software, virtual private networks, and government entities with a .gov domain. A design feature is any feature or component that will encourage or increase the frequency, time spent, or activity of minors, including infinite scrolling, auto play, notifications, badges, in-game purchases, and appearance altering filters.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 103 — Safeguards for Minors",
+          "items": [
+            {
+              "main": "Requires readily accessible safeguards for users the platform knows are minors — limiting who can contact them, restricting public access to their personal data, limiting engagement-increasing design features by default, controlling personalized recommendation systems, and restricting geolocation sharing — with the default set to the most protective level the platform offers unless a parent changes it.",
+              "detail": "Minors must get a prominently displayed option to opt out of personalized recommendation systems while still seeing content in a chronological format, an option to limit recommendation categories, and an option to limit time spent. Parental tools must let a parent view privacy and account settings, change them for a known child, restrict purchases and financial transactions, and view and restrict total time spent; those tools are enabled by default for known children, and the platform must give the minor clear and conspicuous notice when they are in effect.",
+              "comments": []
+            },
+            {
+              "main": "Requires an easy reporting route for harms to a minor with a substantive response within 10 days for platforms averaging more than 10,000,000 monthly active U.S. users, 21 days for smaller platforms, and as promptly as needed where the report involves an imminent threat.",
+              "detail": "The section also makes it unlawful to design or manipulate a user interface with the purpose or substantial effect of obscuring, subverting, or impairing user choice over these safeguards or parental tools, and bars a covered platform from facilitating advertising of narcotic drugs, cannabis products, tobacco products, gambling, or alcohol to an individual it knows is a minor. Online video games need not interrupt the natural sequence of gameplay to apply these controls, and changes made while a device is offline apply the next time it connects.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 105 — Transparency",
+          "items": [
+            {
+              "main": "Requires a covered platform that averaged more than 10,000,000 monthly active U.S. users in the most recent calendar year and predominantly provides a community forum for user-generated content to publish, at least annually, a report based on an independent third-party audit conducted with a reasonable level of assurance.",
+              "detail": "The report must assess how likely the platform is to be accessed by minors, describe the commercial interests being served by minors' use, and account for the number of known minor users, the median and mean time they spend daily, weekly and monthly, the content they access in English and the top 5 non-English languages, and the reports received through the section 103 mechanism disaggregated by those languages. It must also evaluate the efficacy of the safeguards and parental tools and describe mitigation measures taken. The platform must give the auditor all relevant information, materials, and system access, and must present data in de-identified aggregated form.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Section 202 — Requirement To Allow Users To See Unmanipulated Content on Internet Platforms",
+          "items": [
+            {
+              "main": "Makes it unlawful, beginning 1 year after enactment, to operate an online platform using an opaque algorithm unless the operator discloses how it works and lets users easily switch to an input-transparent algorithm.",
+              "detail": "An opaque algorithm ranks content based in whole or part on user-specific data the user did not expressly provide for that purpose; an input-transparent algorithm uses only data the user did supply, such as search terms, filters, saved preferences, followed accounts, and current precise or approximate geolocation — precise meaning within a range of 5 miles or less. Required notices cover the algorithm's most salient features, inputs and parameters, how user-specific data is collected or inferred, available opt-out options, and the quantities the algorithm is designed to optimize. Platforms may not deny service, change prices, or condition service on a user's choice of the input-transparent option, and need not disclose trade secrets, confidential business information, or privileged material.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Section 109(b)(6) — Enforcement by State Attorneys General",
+          "summary": "State attorneys general may bring civil actions only for violations of sections 103, 104, and 105, and a violation of the section 102 duty of care may not form the basis of liability in any action a State attorney general brings under a State law.",
+          "why_unreported": "Section 102 carries the bill's central obligation, and the enforcement section places it outside the State-level route available for the other duties, leaving it to the Federal Trade Commission."
+        },
+        {
+          "section": "Section 112(c) — Protections for Privacy",
+          "summary": "Nothing in the title, including the determination of whether a platform has knowledge fairly implied on the basis of objective circumstances, may be construed to require a platform to collect age data it is not already collecting or to implement age gating or age verification functionality.",
+          "why_unreported": "The title's duties attach to users a platform knows are minors, and this provision means the knowledge standard cannot itself be read to require the age-checking that would establish that knowledge."
+        },
+        {
+          "section": "Section 112(e) — Application to Video Streaming Services",
+          "summary": "A video streaming service is deemed in compliance with the entire title if its content is predominantly preselected by the provider rather than user-generated, any interactive functionality is incidental, and — unless it is predominantly news or sports — it can limit minors' access, limit autoplay of recommended content, offer parental settings and purchase restrictions, provide a point of contact and a notice, and avoid serving the listed advertising categories to known minors.",
+          "why_unreported": "Video streaming services are named in the covered platform definition, and this subsection sets a separate checklist under which they satisfy the title without applying sections 102 through 105 as written."
+        },
+        {
+          "section": "Section 108(c) — Limitation on Federal Trade Commission Guidance",
+          "summary": "The guidance the Commission must issue confers no rights and binds no person, State, locality, court, or the Commission itself, and an enforcement action may not be based on practices alleged only to be inconsistent with that guidance.",
+          "why_unreported": "The bill requires two guidance documents within 18 months, including one on how the Commission would apply the knowledge standard, while providing that neither can supply the basis for an enforcement action."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The definition of geolocation in section 101 takes its meaning from a Children's Online Privacy Protection Act definition described as added by section 201(a), but section 201 of the bill is a flat list of definitions for title II with no subsection (a) and makes no amendment to that Act.",
+        "Section 110 sets the Kids Online Safety Council at 11 members with a fixed allocation among the President and four congressional leaders, and separately requires 1 member from each of 9 listed categories, without stating how the appointment allocation and the category requirement are reconciled.",
+        "The bill requires safeguards, parental tools, and default settings for users a platform knows are minors, but expressly does not require any age verification or age gating and does not otherwise specify how a platform is to identify which users are minors.",
+        "The transparency reports must be based on an independent third-party audit, but the bill sets no auditor qualification, independence, accreditation, or conflict-of-interest standard, and leaves technical standards for audits to the recommendations of a Council whose final report is due 3 years after its first meeting.",
+        "The duty of care and the safeguards apply to covered platforms reasonably likely to be used by a minor, but the title takes effect 18 months after enactment while the section 108 guidance interpreting the design-feature and knowledge standards is also due at 18 months, so the guidance is not due before the duties attach."
+      ],
+      "featured_quotes": [
+        {
+          "name": "Mrs. Blackburn",
+          "party": "R",
+          "state": "TN",
+          "bioguideId": "B001243",
+          "text": "For years, I have come to this floor and I have talked about what Big Tech is doing to our children in this country. There is an entire generation of children that have become the product when they are online on some of these social media platforms. What we have learned, as we have worked in a bipartisan basis-- Senator Blumenthal and I, working for over 5 years addressing these concerns--what we have learned is that when our children are online, they are the product of these Big Tech companies and these social media sites.",
+          "stance": "neutral",
+          "source": "Senate Floor",
+          "chamber": "Senate"
+        }
+      ],
+      "changes": {
+        "added": [
+          "A duty of care requiring covered platforms to exercise reasonable care in creating and implementing design features to prevent and mitigate seven listed categories of harm to minors",
+          "Required safeguards for known minors covering communication limits, personal data visibility, engagement-increasing design features, personalized recommendation controls, geolocation sharing, and time spent, defaulting to the most protective level offered",
+          "Parental tools for known minors, enabled by default for known children, covering privacy and account settings, purchase restrictions, and time spent",
+          "A reporting mechanism for harms to a minor with substantive-response deadlines of 10 days for platforms above 10,000,000 monthly active U.S. users and 21 days below that, and as promptly as needed for imminent threats",
+          "A prohibition on facilitating advertising of narcotic drugs, cannabis products, tobacco products, gambling, or alcohol to a user the platform knows is a minor",
+          "An annual public transparency report based on an independent third-party audit for the largest community-forum platforms",
+          "A bar on market or product-focused research on a known child, and on a known minor without verifiable parental consent",
+          "An 11-member Kids Online Safety Council, appointed within 180 days of enactment, reporting to Congress 1 year and 3 years after its initial meeting and terminating within 30 days of that final report, and not subject to the Federal Advisory Committee Act",
+          "A requirement, beginning 1 year after enactment, that an online platform using an opaque algorithm give notice of how it works and let users easily switch to an input-transparent algorithm, with no differential pricing for that choice",
+          "A study by the Secretary of Commerce with the Federal Communications Commission and the Federal Trade Commission on device-level and operating-system-level age verification, reported within 1 year"
+        ],
+        "modified": [
+          "A violation of title I or of section 202 is treated as a violation of a rule defining an unfair or deceptive act or practice under section 18(a)(1)(B) of the Federal Trade Commission Act, enforced with the Commission's existing powers",
+          "State attorneys general gain parens patriae civil actions for violations of sections 103, 104, and 105, with notice to the Commission and a Commission right to intervene and remove"
+        ],
+        "removed": []
+      },
+      "votes": [],
+      "stageDate": "2026-08-05",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "framework",
+      "analyzedAt": "2026-08-27",
+      "versions": [
+        {
+          "type": "Introduced in Senate",
+          "date": "2025-05-14",
+          "url": "https://www.congress.gov/119/bills/s1748/BILLS-119s1748is.htm"
+        }
+      ]
+    },
+    {
+      "id": "119-S-2296",
+      "title": "National Defense Authorization Act for Fiscal Year 2026",
+      "official_title": "To authorize appropriations for fiscal year 2026 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
+      "code": "S.2296",
+      "date": "2025-07-15",
+      "version": "v1.0",
+      "stage": "senate",
+      "stageLabel": "Passed Senate",
+      "currentStep": 3,
+      "pipeline": [
+        "Introduced",
+        "Committee",
+        "Passed House",
+        "Passed Senate",
+        "Signed"
+      ],
+      "sponsor": "Sen. Wicker, Roger F. (R-MS)",
+      "sponsor_bioguide": "W000437",
+      "cosponsors": 0,
+      "pages": 1574,
+      "analyzed": true,
+      "demo": false,
+      "summary": "This is the Senate's own version of the annual defense authorization bill for fiscal year 2026 — the Armed Services Committee's original measure, reported by Senator Wicker with written report No. 119-39. It runs to ten divisions: Department of Defense authorizations, military construction, Department of Energy nuclear-security programs, the funding tables that give the authorizations their dollar amounts, an additional-provisions division, and five more divisions carrying an intelligence authorization, State Department matters, a State Department authorization act, a Coast Guard authorization act, and a full housing package. It is a different vehicle from the fiscal year 2026 defense authorization that became law: that was S. 1071, enacted as Public Law 119-60 on December 18, 2025.",
+      "brief": "The Senate Armed Services Committee's fiscal year 2026 defense authorization vehicle — ten divisions covering Defense, military construction, Energy nuclear programs, intelligence, the State Department, the Coast Guard, and a housing title.",
+      "top_lines": [
+        {
+          "headline": "Force Sizes and Defense Authorizations",
+          "billSection": "title-IV",
+          "subs": [
+            "Active-duty end strengths: Army 454,000; Navy 344,600; Air Force 321,500",
+            "Marine Corps 172,300 and Space Force 10,400 as of September 30, 2026",
+            "Procurement and operations amounts set in the Division D funding tables"
+          ]
+        },
+        {
+          "headline": "Nuclear Weapons Production Schedule",
+          "billSection": "title-XXXI",
+          "source": "usc-50-2538a",
+          "subs": [
+            "Plutonium pit targets slip a year: 20 in 2026, 30 in 2027",
+            "80-pit annual rate moves from 2030 to 2032, with 50 in 2029",
+            "New NNSA plant projects at Sandia, Livermore, and Los Alamos"
+          ]
+        },
+        {
+          "headline": "Non-Defense Divisions Carried in the Bill",
+          "billSection": "title-LXII",
+          "source": [
+            "usc-22-9633",
+            "usc-14-4902"
+          ],
+          "subs": [
+            "Repeals the Caesar Syria Civilian Protection Act of 2019",
+            "Development Finance Corporation liability ceiling raised to $200B",
+            "Coast Guard operation and maintenance authorized at $11.85B for FY2026"
+          ]
+        }
+      ],
+      "likelihood": 8,
+      "likelihoodLabel": "Long shot",
+      "likelihoodReason": "This is a committee-originated measure with no cosponsors, which is normal for an Armed Services original measure and says nothing about its support. The decisive structural fact is that a fiscal year 2026 defense authorization has already been enacted under a different bill number, S. 1071, so the fiscal year this text authorizes is already covered by law and there is no remaining legislative need for this vehicle. Individual divisions carried here — the Coast Guard authorization, the ROAD to Housing package, the Development Finance Corporation reauthorization — remain plausible candidates to move attached to other vehicles, but that would be a different bill.",
+      "sections": [
+        {
+          "label": "Division A — Department of Defense Authorizations",
+          "items": [
+            {
+              "main": "Sets active-duty end strengths as of September 30, 2026 at 454,000 Army, 344,600 Navy, 172,300 Marine Corps, 321,500 Air Force, and 10,400 Space Force.",
+              "detail": "Selected Reserve strengths are set at 328,000 Army National Guard, 172,000 Army Reserve, 57,500 Navy Reserve, 33,600 Marine Corps Reserve, 106,300 Air National Guard, 67,500 Air Force Reserve, and 7,000 Coast Guard Reserve, with proportional reductions for units called to active duty and increases when they are released. Reserves on full-time active duty in support of the reserves are set separately, from 30,845 for the Army National Guard down to 2,400 for the Marine Corps Reserve, and minimum dual-status military technician levels are set for the Army and Air Force reserve components.",
+              "comments": []
+            },
+            {
+              "main": "Authorizes fiscal year 2026 appropriations for procurement, research and development, operation and maintenance, and military personnel, with every dollar amount set out in the Division D funding tables rather than in the authorizing sections themselves.",
+              "detail": "Sections 101, 201, and 301 each authorize appropriations as specified in the funding tables at sections 4101, 4201, and 4301. Division A also carries the policy provisions: limits and reporting requirements on Navy medium and large unmanned surface vessels and on the amphibious warfare ship requirement; funding prohibitions that bar reducing A-10 inventory below 103 and E-3 airborne warning and control inventory below 16, each with a certification or plan exception, plus an extension of the prohibition on certain reductions to B-1 bomber squadrons; a Biotechnology Management Office and departmental biotechnology strategy; and repeals of the prohibition on Department of Defense procurement of items containing perfluorooctane sulfonate or perfluorooctanoic acid and of the temporary moratorium on incinerating perfluoroalkyl and polyfluoroalkyl substances.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division C — Department of Energy National Security Authorizations",
+          "items": [
+            {
+              "main": "Rewrites the statutory plutonium pit production schedule so the nuclear security enterprise must produce no fewer than 10 war reserve pits during 2025, 20 during 2026, 30 during 2027, 50 during 2029, and 80 during 2032 and later years.",
+              "detail": "The existing schedule in section 4219 of the Atomic Energy Defense Act required 10 pits during 2024, 20 during 2025, 30 during 2026, and 80 during 2030, so each early milestone moves back a year, the 80-per-year rate moves from 2030 to 2032, and a new 50-pit milestone is inserted at 2029; the Secretary of Energy's annual certification duty is extended from 2030 to 2032 to match. Once the 80-per-year rate applies, no fewer than 30 pits a year must come from Los Alamos National Laboratory and no fewer than 50 from the Savannah River Plutonium Processing Facility in Aiken, South Carolina. The division also authorizes new National Nuclear Security Administration plant projects — $52.2M for combined radiation environments for survivability testing and $40M for a photolithography capability at Sandia National Laboratories, $26M for an enhanced fusion yield capability and $15M for product realization infrastructure for stockpile modernization at Lawrence Livermore National Laboratory, $20M for a modernization project at Los Alamos National Laboratory, and $75M for an East Side Office Building.",
+              "source": "usc-50-2538a",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division E — Additional Provisions",
+          "items": [
+            {
+              "main": "Repeals the Caesar Syria Civilian Protection Act of 2019 and replaces it with a certification report on the Government of Syria due within 90 days of enactment and every 180 days for the following 4 years.",
+              "detail": "The report must certify whether the Government of Syria has committed to eliminating the threat from ISIS and other terrorist groups and joined the Global Coalition To Defeat ISIS, is making progress on security for and representation of religious and ethnic minorities, is refraining from unilateral unprovoked military action against neighbors including Israel, is not financing, assisting, or harboring individuals or groups harmful to U.S. national security, and has taken steps to remove foreign fighters from senior government and security roles.",
+              "comments": []
+            },
+            {
+              "main": "Raises the Development Finance Corporation's maximum contingent liability outstanding at any one time from $60B to $200B in the aggregate, and authorizes $3B for its Equity Investment Account for fiscal years 2026 through 2030.",
+              "detail": "The contingent liability figure is a ceiling on the Corporation's outstanding exposure, not an appropriation, and the replacement text applies it to all extensions of liability regardless of the authority cited. The Equity Investment Account authorization is accompanied by a requirement to collect data on the use of the account to inform the Corporation's record of returns and its reevaluation of equity investment subsidy rates.",
+              "source": "usc-22-9633",
+              "comments": []
+            },
+            {
+              "main": "Adds a new advanced integrated circuit export control section to the Export Control Reform Act of 2018 and extends the Defense Production Act's section 717(a) sunset from September 30, 2025 to September 30, 2026.",
+              "detail": "The new section requires a Commerce license for the export, reexport, or in-country transfer of an advanced integrated circuit or a product containing one, except to countries listed in Country Group A:4, A:5, or A:6 of the Export Administration Regulations. For a country of concern or a country under a comprehensive U.S. arms embargo, the license applicant must certify that U.S. persons had a right of first refusal — public notice of the intent to sell, the price and quantity, and not less than 15 business days for U.S. persons to request the same terms.",
+              "comments": []
+            }
+          ]
+        },
+        {
+          "label": "Division I — ROAD to Housing Act",
+          "items": [
+            {
+              "main": "Carries a full housing package inside the defense authorization, running eight titles from financial literacy and housing supply through manufactured housing, homeownership access, program reform, veterans housing, oversight, and interagency coordination.",
+              "detail": "Title II alone contains the Housing Supply Frameworks Act, Whole-Home Repairs Act, Community Investment and Prosperity Act, Build Now Act, BUILD Housing Act, Unlocking Housing Supply Through Streamlined and Modernized Reviews Act, an Innovation Fund, the Accelerating Home Building Act, Build More Housing Near Transit Act, RESIDE Act, and Housing Affordability Act. Later titles carry the Reforming Disaster Recovery Act, a HOME Investment Partnerships reauthorization, a Rural Housing Service Reform Act, a new Moving to Work cohort, the Choice in Affordable Housing Act, and the VA Home Loan Awareness and VALID Acts.",
+              "comments": []
+            }
+          ]
+        }
+      ],
+      "underreported": [
+        {
+          "section": "Division E, Section 6211 — Repeal of Caesar Syria Civilian Protection Act of 2019",
+          "summary": "A defense authorization bill repeals a standing sanctions statute outright, substituting a recurring certification report on the Government of Syria for the sanctions regime the repealed Act carried.",
+          "why_unreported": "The provision sits in the additional-provisions division under a subtitle on matters relating to Syria, Iraq, and Iran, and its operative effect is the removal of an existing Act rather than a defense authorization."
+        },
+        {
+          "section": "Division E, Section 1292 — Maximum Contingent Liability",
+          "summary": "The Development Finance Corporation's aggregate ceiling on outstanding contingent liability more than triples, from $60B to $200B, and the replacement text extends the ceiling to every extension of liability regardless of the authority cited.",
+          "why_unreported": "The figure is a lending-exposure ceiling rather than money appropriated, so it does not appear in the funding tables that carry the bill's authorization amounts.",
+          "source": "usc-22-9633"
+        },
+        {
+          "section": "Division I — ROAD to Housing Act",
+          "summary": "An entire domestic housing package — twenty-plus named Acts spanning housing supply, manufactured housing, rental assistance, disaster recovery, rural housing, and appraisal reform — travels as a division of the defense authorization bill.",
+          "why_unreported": "The division's subject matter has no defense nexus, and it is one of five non-defense divisions in a bill whose stated purpose is authorizing appropriations for military activities."
+        },
+        {
+          "section": "Division A, Sections 318 and 319 — Perfluoroalkyl Substances",
+          "summary": "Two sections repeal existing restrictions: the prohibition on Department of Defense procurement of items containing perfluorooctane sulfonate or perfluorooctanoic acid, and the temporary moratorium on the Department's incineration of perfluoroalkyl substances, polyfluoroalkyl substances, and aqueous film forming foam.",
+          "why_unreported": "They sit in the same energy-and-environment subtitle as provisions expanding responses to perfluoroalkyl contamination, including bottled water for affected communities and interim response authority."
+        }
+      ],
+      "criticisms": [],
+      "gaps": [
+        "The bill authorizes procurement, research and development, operation and maintenance, and military personnel appropriations by cross-reference to the Division D funding tables, so the authorizing sections themselves state no dollar amount and the totals cannot be read from the operative text.",
+        "Division F authorizes appropriations for intelligence and intelligence-related activities but specifies the amounts only in a classified Schedule of Authorizations, so no intelligence authorization figure appears in the public text.",
+        "Section 6211 repeals the Caesar Syria Civilian Protection Act of 2019 and requires recurring certification reports on the Government of Syria, but attaches no consequence to a negative certification and provides no mechanism to restore the repealed authorities.",
+        "The bill is organized into ten divisions covering intelligence, State Department, Coast Guard, and housing matters alongside defense, but its stated purpose is limited to authorizing appropriations for military activities, military construction, and Department of Energy defense activities and prescribing military personnel strengths.",
+        "Section 3112 sets site-specific production floors of 30 pits a year at Los Alamos and 50 at the Savannah River Plutonium Processing Facility, but attaches them only to the 80-per-year rate required from 2032 onward, leaving the 2025 through 2029 milestones with no site allocation."
+      ],
+      "featured_quotes": [],
+      "changes": {
+        "added": [
+          "Active-duty and Selected Reserve end strengths for fiscal year 2026, including 454,000 Army, 344,600 Navy, 172,300 Marine Corps, 321,500 Air Force, and 10,400 Space Force",
+          "A new advanced integrated circuit export control section in the Export Control Reform Act of 2018, requiring a Commerce license outside Country Groups A:4, A:5, and A:6 and a U.S.-person right-of-first-refusal certification with not less than 15 business days notice",
+          "A recurring certification report on the Government of Syria, due within 90 days of enactment and every 180 days for the following 4 years",
+          "New National Nuclear Security Administration plant projects, including $52.2M for combined radiation environments for survivability testing and $75M for an East Side Office Building",
+          "$3B for the Development Finance Corporation Equity Investment Account for fiscal years 2026 through 2030",
+          "A Biotechnology Management Office and a Department of Defense biotechnology strategy"
+        ],
+        "modified": [
+          "The plutonium pit production schedule moves to no fewer than 10 pits in 2025, 20 in 2026, 30 in 2027, 50 in 2029, and 80 in 2032 and later years, with the Secretary of Energy's annual certification requirement extended from 2030 to 2032 to match",
+          "The Development Finance Corporation's maximum aggregate contingent liability outstanding at any one time rises to $200B",
+          "Coast Guard authorizations are reset to $11.85B for operation and maintenance and $3.65B for procurement, construction, renovation, and improvement in fiscal year 2026, and average military training student loads rise to 3,000 student years for recruit and special training, 200 for flight training, 450 for professional training, and 1,300 for officer acquisition",
+          "The Defense Production Act section 717(a) sunset moves from September 30, 2025 to September 30, 2026",
+          "The North Atlantic Treaty Organization Security Investment Program receives $531.8M for the U.S. share of authorized projects"
+        ],
+        "removed": [
+          "The Caesar Syria Civilian Protection Act of 2019 is repealed",
+          "The prohibition on Department of Defense procurement of certain items containing perfluorooctane sulfonate or perfluorooctanoic acid",
+          "The temporary moratorium on Department of Defense incineration of perfluoroalkyl substances, polyfluoroalkyl substances, and aqueous film forming foam"
+        ]
+      },
+      "votes": [
+        {
+          "chamber": "Senate",
+          "date": "2025-10-09",
+          "question": "On Passage of the Bill S. 2296",
+          "result": "Bill Passed",
+          "yeas": 77,
+          "nays": 20,
+          "present": 0,
+          "notVoting": 3,
+          "rollNumber": 570,
+          "sessionNumber": 1,
+          "congress": 119,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-09-04",
+          "question": "On the Motion to Proceed S. 2296",
+          "result": "Motion to Proceed Agreed to",
+          "yeas": 83,
+          "nays": 13,
+          "present": 0,
+          "notVoting": 4,
+          "rollNumber": 503,
+          "sessionNumber": 1,
+          "congress": 119,
+          "crossoverCount": 0
+        },
+        {
+          "chamber": "Senate",
+          "date": "2025-09-02",
+          "question": "On Cloture on the Motion to Proceed S. 2296",
+          "result": "Cloture on the Motion to Proceed Agreed to",
+          "yeas": 84,
+          "nays": 14,
+          "present": 0,
+          "notVoting": 2,
+          "rollNumber": 500,
+          "sessionNumber": 1,
+          "congress": 119,
+          "crossoverCount": 0
+        }
+      ],
+      "stageDate": "2025-11-12",
+      "enactedDate": "",
+      "budget_accounts": {},
+      "billType": "reauthorization",
+      "analyzedAt": "2026-08-27",
+      "referencedSources": [
+        {
+          "id": "usc-50-2538a",
+          "kind": "statute",
+          "label": "50 U.S.C. 2538a (Atomic Energy Defense Act section 4219 - plutonium pit production)",
+          "citation": "50 U.S.C. 2538a",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap42-subchapII-partA-sec2538a/htm",
+          "textFile": "data/ref-text/usc-50-2538a.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-22-9633",
+          "kind": "statute",
+          "label": "22 U.S.C. 9633 (BUILD Act section 1433 - maximum contingent liability)",
+          "citation": "22 U.S.C. 9633",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title22/granules/USCODE-2024-title22-chap103-subchapIII-sec9633/htm",
+          "textFile": "data/ref-text/usc-22-9633.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-14-4902",
+          "kind": "statute",
+          "label": "14 U.S.C. 4902 (Coast Guard authorizations of appropriations)",
+          "citation": "14 U.S.C. 4902",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title14/granules/USCODE-2024-title14-subtitleIV-chap49-sec4902/htm",
+          "textFile": "data/ref-text/usc-14-4902.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "usc-14-4904",
+          "kind": "statute",
+          "label": "14 U.S.C. 4904 (Coast Guard military strength and training student loads)",
+          "citation": "14 U.S.C. 4904",
+          "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title14/granules/USCODE-2024-title14-subtitleIV-chap49-sec4904/htm",
+          "textFile": "data/ref-text/usc-14-4904.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-laws-119",
+          "kind": "law",
+          "label": "Congress.gov record - complete list of laws of the 119th Congress",
+          "citation": "Public Law 119-60 (S. 1071), December 18, 2025",
+          "srcUrl": "https://api.congress.gov/v3/law/119",
+          "textFile": "data/ref-text/record-congress-laws-119.txt",
+          "fetchedAt": "2026-08-27"
+        },
+        {
+          "id": "record-congress-s-2296-actions",
+          "kind": "bill",
+          "label": "Congress.gov record - S. 2296 full action history",
+          "citation": "S. 2296 (119th Congress) actions",
+          "srcUrl": "https://api.congress.gov/v3/bill/119/s/2296/actions",
+          "textFile": "data/ref-text/record-congress-s-2296-actions.txt",
+          "fetchedAt": "2026-08-27"
+        }
+      ],
+      "versions": [
+        {
+          "type": "Reported to Senate",
+          "date": "2025-07-15",
+          "url": "https://www.congress.gov/119/bills/s2296/BILLS-119s2296rs.htm"
+        },
+        {
+          "type": "Engrossed in Senate",
+          "date": "2025-10-09",
+          "url": "https://www.congress.gov/119/bills/s2296/BILLS-119s2296es.htm"
         }
       ]
     }
