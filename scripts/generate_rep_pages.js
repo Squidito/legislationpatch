@@ -234,6 +234,12 @@ function districtBlockHtml(rep) {
   let sentence = `District covers ${clauses.join(' and ')}`;
 
   const top = (Array.isArray(d.places) ? d.places : []).slice(0, PLACE_DISPLAY_CAP);
+  // Population order is a real, sourced ranking — show it as-is. Where no
+  // population joined (ranking 'area': CDP/PR/territory districts), area only
+  // SELECTS the displayed places; alphabetize them so the sentence makes no
+  // salience claim (area had put Mountain View CDP ahead of Hilo on HI-2).
+  // James ratified 2026-08-26.
+  if (d.ranking !== 'population') top.sort((a, b) => a.name.localeCompare(b.name));
   const wholePlaces = top.filter(p => p.whole).map(p => geoSpan('place', p));
   const partPlaces  = top.filter(p => !p.whole).map(p => geoSpan('place', p));
   if (wholePlaces.length || partPlaces.length) {

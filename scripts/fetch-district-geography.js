@@ -197,11 +197,18 @@ function parse(manifest) {
       if (b.pop !== null) return 1;
       return b.areaPart - a.areaPart;
     });
+    // Districts with NO population match at all (CDP/PR/territory-only place
+    // lists) keep area order HERE — it is the only sourced selection signal
+    // for which places matter — but the generator alphabetizes the displayed
+    // subset for these districts, so no fake salience ranking is ever shown
+    // (area put Mountain View CDP ahead of Hilo on HI-2). James ratified the
+    // display rule 2026-08-26; full-list alphabetization was rejected because
+    // the display cap would then show an A-names sample and drop Hilo entirely.
     const ranking = d.places.some(p => p.pop !== null) ? 'population' : 'area';
     out[key] = {
       counties: d.counties,
       places:   d.places.map(({ areaPart, ...p }) => p),
-      ranking,                              // 'area' = explicit no-population-join fallback
+      ranking,                              // 'area' = no-population-join fallback (display alphabetizes)
       ...(ranking === 'population' ? { popSource: POP_SOURCE_NOTE } : {}),
       vintage: VINTAGE,
       source: sources,
@@ -225,7 +232,7 @@ function parse(manifest) {
   console.log(`  places:   ${placeRows.length} rows (${skipped.remainder} remainder, ${skipped.waterOnlyPlace} water-only skipped)`);
   console.log(`  place population join: ${popMatched} matched, ${popMissing} without (CDPs/PR/territories — area-ranked fallback)`);
   const areaRanked = Object.entries(out).filter(([, d]) => d.ranking === 'area').map(([k]) => k);
-  if (areaRanked.length) console.log(`  area-ranked districts (no population match at all): ${areaRanked.join(', ')}`);
+  if (areaRanked.length) console.log(`  area-selected districts (no population match; display alphabetizes): ${areaRanked.join(', ')}`);
 
   // Informative cross-check: every House member in reps-index should resolve
   // to a district entry. Missing = that page silently renders no block.
