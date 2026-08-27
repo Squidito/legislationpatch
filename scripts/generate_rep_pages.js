@@ -255,6 +255,10 @@ function staticBody(rep) {
         <div class="rep-card-stat-panel" id="repStatGrid">${statCells}</div>
       </div>
 
+      <!-- Plain-language seat sentence (structural facts only) — the on-page
+           match for the geographic query shapes the title targets. -->
+      <p class="rep-static-intro" style="margin:0.85rem 0 0;font-size:0.95rem">${escHtml(rep.name || '')} is ${rep.role === 'Senator' ? 'a' : 'the'} ${escHtml(seatPhrase(rep))}${rep.role === 'Senator' ? '' : rep.district ? ' (' + escHtml(String(rep.state)) + '-' + rep.district + ')' : ''}.</p>
+
       <!-- Vote breakdown -->
       <div class="rep-vote-profile" id="repVoteProfile"${voteProfile ? '' : ' style="display:none;"'}>${voteProfile}</div>
 
@@ -275,12 +279,31 @@ function staticBody(rep) {
 
 // ── JSON-LD graph ────────────────────────────────────────────────────────────
 
+// Latest tracked activity for this member — the newest vote or floor-statement
+// date in the profile data. Used as schema dateModified: it moves only when the
+// member's record actually changed (never a fake freshness stamp).
+function latestActivity(rep) {
+  let max = '';
+  for (const v of (Array.isArray(rep.voteHistory) ? rep.voteHistory : [])) {
+    const d = String(v.date || '');
+    if (/^\d{4}-\d{2}-\d{2}/.test(d) && d > max) max = d;
+  }
+  for (const c of (Array.isArray(rep.comments) ? rep.comments : [])) {
+    const d = String(c.date || '');
+    if (/^\d{4}-\d{2}-\d{2}/.test(d) && d > max) max = d;
+  }
+  return max ? max.slice(0, 10) : '';
+}
+
 function structuredData(rep, url) {
   const chamberOrg = rep.role === 'Senator' ? 'United States Senate' : 'United States House of Representatives';
   const person = {
     '@type': 'Person',
     name: rep.name,
     jobTitle: rep.role || 'Member of Congress',
+    // Bioguide id — the stable federal identifier for the member (recommended
+    // Person property; already the site's canonical rep key).
+    identifier: rep.bioguideId,
     memberOf: {
       '@type': 'GovernmentOrganization',
       name: chamberOrg,
@@ -289,12 +312,21 @@ function structuredData(rep, url) {
     image: (typeof rep.photo === 'string' && /^https:\/\//i.test(rep.photo)) ? rep.photo : portraitUrl(rep.bioguideId),
     url,
   };
+  // Entity disambiguation: link the Person to their Wikipedia article when the
+  // ingestion recorded one (rep.bioUrl, https-validated — a stored source, not
+  // model memory). Strongest practitioner-consensus signal for entity association.
+  try {
+    const u = new URL(rep.bioUrl);
+    if (u.protocol === 'https:') person.sameAs = [u.href];
+  } catch (_) { /* no valid bio URL — omit sameAs */ }
   const profilePage = {
     '@type': 'ProfilePage',
     mainEntity: person,
     url,
     '@id': url,
   };
+  const modified = latestActivity(rep);
+  if (modified) profilePage.dateModified = modified;
   const breadcrumb = {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -313,11 +345,25 @@ function structuredData(rep, url) {
 // colliding titles only, so every <title> is unique (preflight gate 8b).
 const DUP_TITLE_NAMES = new Set();
 
+// Plain-language seat phrase, matching how people actually search ("representative
+// for florida's 12th district", "arizona senator" — the GSC-observed query shapes)
+// rather than the insider "R-FL-12" code. Also varies the title tail per page,
+// avoiding Google's "boilerplate duplication" title-rewrite trigger (2026-08-26
+// research memo). All structural facts from the rep record — no geography beyond
+// state/district is asserted (county/city composition needs Census data; banked).
+function seatPhrase(rep) {
+  const stateFull = STATE_NAMES[rep.state] || rep.state || '';
+  if (rep.role === 'Senator') return `U.S. Senator for ${stateFull}`;
+  return rep.district
+    ? `U.S. Representative for ${stateFull}'s ${ordinal(rep.district)} District`
+    : `U.S. Representative for ${stateFull}`;
+}
+
 function titleFor(rep) {
   const rolePrefix = rep.role === 'Senator' ? 'Sen.' : 'Rep.';
   const seat = rep.district ? `${rep.party}-${rep.state}-${rep.district}` : `${rep.party}-${rep.state}`;
   const disamb = DUP_TITLE_NAMES.has(`${rep.name}|${seat}`) ? ` [${rep.bioguideId}]` : '';
-  return `${rolePrefix} ${rep.name} (${seat})${disamb} — Votes & Floor Statements | LegislationPatch`;
+  return `${rolePrefix} ${rep.name} (${rep.party})${disamb} — ${seatPhrase(rep)} | LegislationPatch`;
 }
 
 function descFor(rep) {
