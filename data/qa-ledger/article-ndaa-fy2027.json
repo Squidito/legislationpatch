@@ -13,7 +13,7 @@
  "auditModel": "sonnet (hostile full-claims, two passes)",
  "verifyModel": "sonnet",
  "isTracker": true,
- "proseSha": "df522ebca93bbe4a",
+ "proseSha": "bb5f051e70a8d4af",
  "sources": [
   {
    "id": "record-congress-hr-8800-actions",
@@ -1187,13 +1187,39 @@
    "status": "fixed",
    "resolution": "Attribution widened to match the source",
    "kind": "finding"
+  },
+  {
+   "field": "status.no-senate-action",
+   "claim": "Latest recorded action remains the passage-day tabling of reconsideration; no transmission, engrossment, or Senate action appears in the H.R. 8800 record (refetched 2026-08-27, 83 actions, set-identical)",
+   "verdict": "SUPPORTED",
+   "type": "absence",
+   "severity": "ok",
+   "sourceFile": "record-congress-hr-8800-actions",
+   "sourceSpan": "Motion to reconsider laid on the table Agreed to without objection.",
+   "section": "Current status",
+   "status": "open",
+   "verify": "CONFIRMED",
+   "kind": "claim"
+  },
+  {
+   "field": "status.transmitted-overclaim",
+   "claim": "Article asserted the engrossed bill was \"transmitted to the Senate\" / \"now in the Senate's hands\" / \"now before the Senate\" — no transmission, engrossment, or Senate receipt action exists in the record, and the CRS source frames the engrossment addition prospectively",
+   "verdict": "FIXED",
+   "type": "finding",
+   "severity": "material",
+   "sourceFile": null,
+   "sourceSpan": null,
+   "section": "refresh findings",
+   "status": "fixed",
+   "resolution": "Flagged by the SAVE delta-refresh session (Opus, 2026-08-27); fixed same day in Fable's QC cycle: three sentences reworded to the prospective, record-bound form (\"is to be added… in engrossment\", \"prepared for the Senate\", \"rides with H.R. 8800 in engrossment\") and an explicit sourced absence line added (\"no Senate action yet\").",
+   "kind": "finding"
   }
  ],
  "counts": {
-  "claims": 56,
-  "findings": 22,
-  "supported": 56
+  "claims": 57,
+  "findings": 23,
+  "supported": 57
  },
  "resolution": "First refresh of a frozen 2026-07-17 tracker, taken through the full Phase-5/6 audit lane. Core update: article was frozen at the June 30 rule failure; the bill passed the House 216-212 (Roll 278) on July 22 under a second rule (H.Res. 1438, adopted 214-211) whose Sec. 11 carries the SAVE America text into engrossment -- title, status, timeline, and both-sides resolution all rewritten from 15 fetched-and-stored sources. 22 findings fixed, including 7 defects inherited from the July version (two quote-boundary misquotes, the MIRV misattribution, an unsourced \"900 amendments\" and \"$150B amendment\" pair removed per Sec 6.4, an unsourced party attribution, and an unsourced bipartisanship characterization). Convergence: hostile pass 1 (zero fabrications, 1 attribution flag) -> fixes -> hostile pass 2 (4 findings) -> fixes -> final cross-model verification CLEAN with both lens sign-offs YES.",
- "notes": "Phase 6 first refresh of a frozen 2026-07-17 tracker (pre-lane => full audit lane per D4 companion ruling). Trigger: npm run stale flagged HR-8800 Passed House 2026-07-22 vs article dateModified 2026-07-17. Verifier-scope note: the final verifier flagged the Smith joint-release clause as unsourced against its four-file scope; the claim is bound in this ledger (bs.joint-release) to the stored CRS IN12704 span, which was outside that verifier's file set. Deterministic receipts: every claim sourceSpan verified verbatim against its stored file at ledger build time (build aborts on any miss)."
+ "notes": "Phase 6 first refresh of a frozen 2026-07-17 tracker (pre-lane => full audit lane per D4 companion ruling). Trigger: npm run stale flagged HR-8800 Passed House 2026-07-22 vs article dateModified 2026-07-17. Verifier-scope note: the final verifier flagged the Smith joint-release clause as unsourced against its four-file scope; the claim is bound in this ledger (bs.joint-release) to the stored CRS IN12704 span, which was outside that verifier's file set. Deterministic receipts: every claim sourceSpan verified verbatim against its stored file at ledger build time (build aborts on any miss). QC cycle 2026-08-27: transmitted-to-Senate overclaim corrected (see status.transmitted-overclaim finding)."
 }
