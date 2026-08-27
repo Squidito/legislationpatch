@@ -1726,7 +1726,7 @@
   "article-119th-congress-tracker": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-corpus-119-snapshot": "c130c077c034c9f32e18c9b7ca0f1975fd924a0eae3796e1b065617cb66775d8",
+      "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
       "record-congress-laws-119": "75efe7265fea0a1c007230398ca7f9a32fb5d1eeef413b57dd2881aaa50de0a4",
       "record-congress-hr-9238-actions": "60a0bcd4e74f4d313401856e7ee1b30532c07f6ee256eb61f877de3cd13cba88",
       "record-congress-hr-8800-actions": "0248452680682a4af3a5585f259655488359eb0dc748a6de2ac6cdf9f1838d28",
@@ -1742,10 +1742,100 @@
       "bill-119-hr-9770": "8558c63979ff029b02da96eb648c76f68d3f377c393216e31a9907472f4da2c7",
       "bill-119-s-4465": "ed9cf2a6ecb835842821c75316bec89322af4f248ea38447f13ebc910f4a460d"
     },
-    "proseSha": "0470fa5db966423c",
+    "proseSha": "f228c89ae93a9afa",
     "proseFile": "articles/119th-congress-tracker.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, two passes)",
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-HR-6509": {
+    "billTextSha": "d9bd93b501012e79aa87ff7216f2449d809b511a7d14c779084c81c61bc9a067",
+    "refShas": {
+      "usc-21-353a": "d95ece800bd639fd6467e01e88db2de33e42d6c1edc627f0b2b34cd818688203",
+      "usc-21-353b": "6d9147af2a378010c8f42353c339b5bf66242b724bd0a69502fcef2bf0af150f",
+      "usc-21-360": "ef6c1050ae138a54a1949d862ab8da1183c789b254b8d3efe44361efa443c6e0",
+      "usc-21-379j-62": "fc7010dde6325c880f71351dd9217829ccfad7f9b89c629a516c6fd9cb02d293"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-HR-7296": {
+    "billTextSha": "222f35e7fc3cc53c9448400b95e59e8f25856216ce4490aa95b909d86770de32",
+    "refShas": {
+      "usc-52-20503": "1a5167277312fde515a77d5a233a09872c350a6aa3bede6b7dd189d7731d4694",
+      "usc-52-20504": "bc3e38408819dd54df9288370c14270dcffd0dcae4ba1664934705fe5cc45964",
+      "usc-52-20505": "40e04f671341ac337e711fb228870a4dafa6c27515ce628be2844eafa4fa8e1e",
+      "usc-52-20506": "2a2b33f4f6596d841f567a9604deb71293e7bcfd4417a9de3a2b0abbf78056c1",
+      "usc-52-20507": "8811b7da6be3d96ddddc237242d2bd5e5d0644f5bc14d372868cc11ca05a213d",
+      "usc-52-20508": "a8690a42814d65d1ec3005b54aa9d6f931c1971c9a8d6d6ac32cef85805dc16f",
+      "usc-52-20510": "e0eb4ef3f1d5d52e808d6607f09b86ce167e01ceab5a87b021e716e6acb34630",
+      "usc-52-20511": "0304f55278b9aff75605d2781201414ac5bd6c6e69ef2e7325c47ed82ef349e6",
+      "usc-52-21083": "b753dcff05bf16620ca13af624b40dd098d6948c6f4162d2cfc6e7c18dd348a7"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-S-1748": {
+    "billTextSha": "6cbd585412b48138f871f78ae6b8974c5d0bb90f353477bf6c14c928fe233820",
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-S-2296": {
+    "billTextSha": "5a74ad24cc089a1b36c080f5497f6b818fe8d87f7dd3c597bc800b032526bc70",
+    "refShas": {
+      "usc-50-2538a": "b7b031a166351d34ae2b76924f44de65c194c4678ebb1bfec675f621d7c7eb08",
+      "usc-22-9633": "e21fa49a7b17be6ca40282aee5f8d7c687dfbdb872ef7ce93fe49dfb70cf58a7",
+      "usc-14-4902": "0f1bb9c8a7d28648343cb550fd5070c0b9db88b84b44588526f380bfe08c1a63",
+      "usc-14-4904": "9a2db65142772619edba5a4f1a1b485fa50d39c56d1b21a42770a987fe798c2b",
+      "record-congress-laws-119": "75efe7265fea0a1c007230398ca7f9a32fb5d1eeef413b57dd2881aaa50de0a4",
+      "record-congress-s-2296-actions": "086fc71c8f58ef8f8f9375790b827796107bd9f8466f61a01766d4c430c5215a"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-HR-139": {
+    "billTextSha": "4ca4be6d449273d8b349d97e14b824a714620dd7eb6f337fa6e838f3331db11a",
+    "refShas": {
+      "usc-15-260a": "a8e520b7b5153eda136966811638529e3522193a6f7261059100e87693fda222",
+      "usc-15-261": "4a6a1e47563023306d61717644964163e3b6cde811a3353aa671923dde5d5aa6",
+      "record-congress-hr-139-actions": "8821e9a67944998ed56d6ee61ed951410980707b2c2c6529f613f6ace828d1b8"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-S-2976": {
+    "billTextSha": "509012d5cb0e5bd162422c8845f6b9b19ca5b351d1e0d5f505d7faec6ce01a86",
+    "refShas": {
+      "usc-26-275": "74212ed151df752bf5c5874b9aa97620f09ba6fab9350b415e390571ec741809",
+      "usc-26-6651": "f06afe5966de565b61b08836c0fa5e92cb4fd6f2d7152d50fb768027b9a2ef3f",
+      "usc-26-6051": "4804055dbc0180ff9afbbd91c03ee21dc8d26994fe88709b9b52eddfdc691cf6",
+      "usc-26-9602": "0668cb6a72b3deb073566917cd7926f87459fc5acf5c1c403ac6690f9eeacd46",
+      "record-congress-s-2976-actions": "d3cde5e4baa75bfed2fb53d5ff6a9101e55259e87b2faf627ab7cff20b5773df"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
+    "genAt": "2026-08-27",
+    "stampedAt": "2026-08-27"
+  },
+  "119-HR-5269": {
+    "billTextSha": "35d1aef916d0a115e13caf1a74a4a704f3696a976bf40fdf966dc24d4d2729c7",
+    "refShas": {
+      "usc-42-1395m-1": "7ef2f4547510e8d340e054c73ac5850815352632adaf9a95bfabd2d4a038a517",
+      "record-congress-hr-5269-actions": "c438665058afa28fc321f5e4b4b970e4b6b8ee17c0d48097d37c317af4f825b1"
+    },
+    "promptVersion": "f5761450b5860274",
+    "genModel": null,
     "genAt": "2026-08-27",
     "stampedAt": "2026-08-27"
   }

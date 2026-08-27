@@ -1,6 +1,6 @@
 LegislationPatch corpus snapshot - 119th Congress bills in data/cache.json
 Source: data/cache.json (audited corpus; per-bill ledgers in data/qa-ledger/), generated 2026-08-27 by scripts/generate-tracker-roster.js
-Total bills: 212
+Total bills: 219
 
 ## Signed into Law (68)
 119-S-629 | S.629 | Emergency Conservation Program Improvement Act of 2025 | stage: signed | stageDate: 2026-07-12 | enacted: 2026-07-12
@@ -276,7 +276,7 @@ Total bills: 212
     vote: Senate 2025-01-13 "On the Motion to Proceed S. 5" Motion to Proceed Agreed to 82-10
     vote: Senate 2025-01-09 "On Cloture on the Motion to Proceed S. 5" Cloture on the Motion to Proceed Agreed to 84-9
 
-## Passed Senate (15)
+## Passed Senate (16)
 119-HR-2069 | HR.2069 | Stop Secret Spending Act of 2025 | stage: senate | stageDate: 2026-08-10 | enacted: -
     vote: Senate 2026-08-07 "On Passage" Passed (Unanimous Consent)
     vote: House 2026-07-20 "On Passage" Passed (Voice Vote)
@@ -309,10 +309,14 @@ Total bills: 212
     vote: Senate 2026-08-05 "On Passage" Passed (Unanimous Consent)
 119-S-2585 | S.2585 | MAP for Broadband Funding Act | stage: senate | stageDate: 2026-06-23 | enacted: -
     vote: Senate 2026-06-18 "On Passage" Passed (Voice Vote)
+119-S-2296 | S.2296 | National Defense Authorization Act for Fiscal Year 2026 | stage: senate | stageDate: 2025-11-12 | enacted: -
+    vote: Senate 2025-10-09 "On Passage of the Bill S. 2296" Bill Passed 77-20 (Roll 570)
+    vote: Senate 2025-09-04 "On the Motion to Proceed S. 2296" Motion to Proceed Agreed to 83-13 (Roll 503)
+    vote: Senate 2025-09-02 "On Cloture on the Motion to Proceed S. 2296" Cloture on the Motion to Proceed Agreed to 84-14 (Roll 500)
 119-S-911 | S.911 | Chief Herbert D. Proffitt Act of 2025 | stage: senate | stageDate: 2025-08-01 | enacted: -
     vote: Senate 2025-07-29 "On Passage" Passed (Unanimous Consent)
 
-## Passed House (121)
+## Passed House (122)
 119-HR-3633 | HR.3633 | Digital Asset Market Clarity Act of 2025 | stage: house | stageDate: 2026-08-08 | enacted: -
     vote: House 2025-07-17 "On Passage" Passed 294-134 (Roll 199)
 119-HR-5235 | HR.5235 | Skills-Based Federal Contracting Act of 2025 | stage: house | stageDate: 2026-08-06 | enacted: -
@@ -359,6 +363,8 @@ Total bills: 212
     vote: House 2026-07-20 "On Passage" Passed (Voice Vote)
 119-HR-2913 | HR.2913 | Ukraine Support Act | stage: house | stageDate: 2026-07-20 | enacted: -
     vote: House 2026-06-04 "On Passage" Passed 226-195 (Roll 207)
+119-HR-139 | HR.139 | Sunshine Protection Act of 2025 | stage: house | stageDate: 2026-07-15 | enacted: -
+    vote: House 2026-07-14 "On Passage" Passed 308-117 (Roll 238)
 119-HR-1687 | HR.1687 | CLEAN Act | stage: house | stageDate: 2026-07-15 | enacted: -
     vote: House 2026-06-02 "On Passage" Passed (Voice Vote)
 119-HR-2347 | HR.2347 | Survivor Justice Tax Prevention Act | stage: house | stageDate: 2026-07-14 | enacted: -
@@ -574,6 +580,13 @@ Total bills: 212
 119-HR-28 | HR.28 | Protection of Women and Girls in Sports Act of 2025 | stage: house | stageDate: 2025-01-15 | enacted: -
     vote: House 2025-01-14 "On Passage" Passed 218-206 (Roll 12)
     vote: House 2025-01-14 "On Motion to Recommit" Failed 208-218 (Roll 11)
+
+## In Committee (5)
+119-S-1748 | S.1748 | Kids Online Safety Act | stage: committee | stageDate: 2026-08-05 | enacted: -
+119-HR-7296 | HR.7296 | SAVE America Act | stage: committee | stageDate: 2026-01-30 | enacted: -
+119-HR-6509 | HR.6509 | SAFE Drugs Act of 2025 | stage: committee | stageDate: 2025-12-09 | enacted: -
+119-S-2976 | S.2976 | HIRE Act | stage: committee | stageDate: 2025-10-06 | enacted: -
+119-HR-5269 | HR.5269 | RESULTS Act | stage: committee | stageDate: 2025-09-10 | enacted: -
 
 ## On House Calendar (1)
 119-HR-4366 | HR.4366 | Save Local Business Act | stage: committee | stageDate: 2026-01-13 | enacted: -

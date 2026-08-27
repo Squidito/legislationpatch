@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, two passes)",
   "verifyModel": "sonnet",
   "isTracker": true,
-  "proseSha": "0470fa5db966423c",
+  "proseSha": "f228c89ae93a9afa",
   "sources": [
     {
       "id": "record-lp-corpus-119-snapshot",
@@ -205,12 +205,12 @@
     },
     {
       "field": "intro.count",
-      "claim": "The LegislationPatch database tracks 212 bills of the 119th Congress",
+      "claim": "The LegislationPatch database tracks 219 bills of the 119th Congress",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "Total bills: 212",
+      "sourceSpan": "Total bills: 219",
       "section": "Intro",
       "status": "open",
       "verify": "CONFIRMED",
@@ -246,12 +246,12 @@
     },
     {
       "field": "meta.count",
-      "claim": "The meta description and og:description state the database holds 212 bills of the 119th Congress",
+      "claim": "The meta description and og:description state the database holds 219 bills of the 119th Congress",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "Total bills: 212",
+      "sourceSpan": "Total bills: 219",
       "section": "Metadata",
       "status": "open",
       "verify": "CONFIRMED",
@@ -287,12 +287,12 @@
     },
     {
       "field": "counts.senate",
-      "claim": "15 of the tracked bills have passed the Senate",
+      "claim": "16 of the tracked bills have passed the Senate",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "## Passed Senate (15)",
+      "sourceSpan": "## Passed Senate (16)",
       "section": "By the numbers",
       "status": "open",
       "verify": "CONFIRMED",
@@ -300,12 +300,25 @@
     },
     {
       "field": "counts.house",
-      "claim": "121 of the tracked bills have passed the House",
+      "claim": "122 of the tracked bills have passed the House",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "## Passed House (121)",
+      "sourceSpan": "## Passed House (122)",
+      "section": "By the numbers",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "counts.committee",
+      "claim": "5 tracked bills are in committee",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-lp-corpus-119-snapshot",
+      "sourceSpan": "## In Committee (5)",
       "section": "By the numbers",
       "status": "open",
       "verify": "CONFIRMED",
@@ -616,12 +629,12 @@
     },
     {
       "field": "moving.senateCount",
-      "claim": "Fifteen bills in the database sit at Passed Senate",
+      "claim": "Sixteen bills in the database sit at Passed Senate",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "## Passed Senate (15)",
+      "sourceSpan": "## Passed Senate (16)",
       "section": "What's moving",
       "status": "open",
       "verify": "CONFIRMED",
@@ -629,17 +642,17 @@
     },
     {
       "field": "moving.aug10",
-      "claim": "Thirteen of the fifteen Passed Senate bills saw their latest action on August 10, 2026",
+      "claim": "Thirteen of the sixteen Passed Senate bills saw their latest action on August 10, 2026",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-corpus-119-snapshot",
-      "sourceSpan": "## Passed Senate (15)",
+      "sourceSpan": "## Passed Senate (16)",
       "section": "What's moving",
       "status": "open",
       "verify": "CONFIRMED",
       "kind": "claim",
-      "note": "Computed: 13 of the 15 rows in the Passed Senate section carry \"stageDate: 2026-08-10\" (re-derivable: grep within the section). stageDate is the latest-action date."
+      "note": "Computed: 13 of the 16 rows in the Passed Senate section carry \"stageDate: 2026-08-10\" (re-derivable: grep within the section; re-verified 2026-08-27 after S-2296 joined the group at stageDate 2025-11-12). stageDate is the latest-action date."
     },
     {
       "field": "moving.hr8800.vote",
@@ -870,9 +883,9 @@
     }
   ],
   "counts": {
-    "claims": 52,
+    "claims": 53,
     "findings": 0,
-    "supported": 52
+    "supported": 53
   },
   "resolution": "First refresh of a frozen 2026-07-17 pre-lane article, taken through the full audit lane per the D4 companion ruling. Structural rewrite approved by James 2026-08-27: the May article claimed a \"complete list\" while showing 23 of the by-then-212 bills (written 2026-05-08 when the database held 23; the June-August backlog batches grew it behind the page). New form: audited narrative + a complete 212-bill roster generated from data/cache.json by scripts/generate-tracker-roster.js, receipts bound to the committed corpus snapshot. Unsourced inherited claims removed rather than kept: \"first Section 702 lapse since 2008\" (no stored source) and \"collection under certifications continues until they expire\" (replaced with the statute-bound up-to-1-year authorization span).",
   "notes": [
@@ -881,6 +894,7 @@
     "Roster apostrophe encoding mirrors cache title data faithfully: titles stored with curly apostrophes render them literally, titles stored with straight apostrophes render as &#39; via escHtml. Cosmetic inconsistency inherited from the corpus, noted by audit pass 1.",
     "HR-4366 carries stage \"committee\" with site-wide stageLabel \"On House Calendar\" — the roster heading mirrors the label, as every site surface does (taxonomy naming quirk, noted by audit pass 1).",
     "Audit pass 1 (Sonnet, hostile full-claims): 0 errors / 4 warn / 5 note. All 4 warnings were ledger-coverage or span-precision fixes (rows intro.analyzed, meta.count, meta.signed, signed.s1071.substance added; HR-7148 spans tightened); no prose changes required.",
-    "Audit pass 2 (Sonnet, fresh independent full re-derivation): CLEAN — 0 errors / 0 warn / 2 cosmetic notes (a ledger note-field wording fix applied; unescaped & in the Google Fonts URL is site-wide boilerplate, unchanged). Roster re-verified programmatically: 212/212 items, counts, order, hrefs, titles all match snapshot + slug-index."
+    "Audit pass 2 (Sonnet, fresh independent full re-derivation): CLEAN — 0 errors / 0 warn / 2 cosmetic notes (a ledger note-field wording fix applied; unescaped & in the Google Fonts URL is site-wide boilerplate, unchanged). Roster re-verified programmatically: 212/212 items, counts, order, hrefs, titles all match snapshot + slug-index.",
+    "DELTA REFRESH 2026-08-27 (same day, corpus 212 -> 219 after the two demand batches): roster + snapshot regenerated; generator now emits one section per stageLabel within stage order (resolves the mixed-label fail-close the committee group triggered); count claims updated (219 total / 16 senate incl. S-2296 / 122 house incl. HR-139 / 5 In Committee + 1 On House Calendar); no other prose changed. Delta verified by a focused cross-model pass over the changed claims."
   ]
 }

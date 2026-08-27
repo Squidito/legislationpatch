@@ -69,10 +69,16 @@ for (const arr of groups.values()) {
     arr.sort((a, b) => String(b.stageDate || '').localeCompare(String(a.stageDate || '')) || a.id.localeCompare(b.id));
 }
 
-function groupLabel(stage, arr) {
-    const labels = [...new Set(arr.map((b) => b.stageLabel))];
-    if (labels.length !== 1) fail(`stage "${stage}" has mixed stageLabels: ${labels.join(' / ')}`);
-    return labels[0];
+// One roster section per stageLabel WITHIN each stage (a stage may carry more
+// than one site label — e.g. stage "committee" holds both "In Committee" and
+// "On House Calendar"). Labels sort alphabetically for a stable order.
+function labelGroups(arr) {
+    const m = new Map();
+    for (const b of arr) {
+        if (!m.has(b.stageLabel)) m.set(b.stageLabel, []);
+        m.get(b.stageLabel).push(b);
+    }
+    return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]));
 }
 
 // ── Roster HTML ───────────────────────────────────────────────────────────────
@@ -91,12 +97,14 @@ function rosterHtml() {
     for (const stage of STAGE_ORDER) {
         const arr = groups.get(stage);
         if (!arr.length) continue;
-        parts.push(`        <h3>${escHtml(groupLabel(stage, arr))} (${arr.length})</h3>`);
-        parts.push('        <ul class="tracker-roster">');
-        for (const b of arr) {
-            parts.push(`          <li><a href="/bill/${escHtml(slugIndex[b.id])}/">${escHtml(codeDisplay(b.code))} — ${escHtml(b.title)}</a></li>`);
+        for (const [label, bills] of labelGroups(arr)) {
+            parts.push(`        <h3>${escHtml(label)} (${bills.length})</h3>`);
+            parts.push('        <ul class="tracker-roster">');
+            for (const b of bills) {
+                parts.push(`          <li><a href="/bill/${escHtml(slugIndex[b.id])}/">${escHtml(codeDisplay(b.code))} — ${escHtml(b.title)}</a></li>`);
+            }
+            parts.push('        </ul>');
         }
-        parts.push('        </ul>');
     }
     return `${START}\n${parts.join('\n')}\n        ${END}`;
 }
@@ -125,12 +133,14 @@ function snapshotText(today) {
     for (const stage of STAGE_ORDER) {
         const arr = groups.get(stage);
         if (!arr.length) continue;
-        lines.push(`## ${groupLabel(stage, arr)} (${arr.length})`);
-        for (const b of arr) {
-            lines.push(`${b.id} | ${b.code} | ${b.title} | stage: ${b.stage} | stageDate: ${b.stageDate || '-'} | enacted: ${b.enactedDate || '-'}`);
-            for (const v of uniqueVotes(b)) lines.push(`    vote: ${v}`);
+        for (const [label, bills] of labelGroups(arr)) {
+            lines.push(`## ${label} (${bills.length})`);
+            for (const b of bills) {
+                lines.push(`${b.id} | ${b.code} | ${b.title} | stage: ${b.stage} | stageDate: ${b.stageDate || '-'} | enacted: ${b.enactedDate || '-'}`);
+                for (const v of uniqueVotes(b)) lines.push(`    vote: ${v}`);
+            }
+            lines.push('');
         }
-        lines.push('');
     }
     return lines.join('\n') + '\n';
 }
