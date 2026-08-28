@@ -72,10 +72,15 @@ for (const stateReps of Object.values(repsIndex)) {
 const entries = [];
 
 // Static pages
-entries.push(urlEntry(BASE + '/',             todayStr(), 'daily',   '1.0'));
-entries.push(urlEntry(BASE + '/bills.html',   todayStr(), 'daily',   '0.9'));
-entries.push(urlEntry(BASE + '/floor.html',   todayStr(), 'daily',   '0.8'));
-entries.push(urlEntry(BASE + '/reps.html',    todayStr(), 'monthly', '0.6'));
+// No lastmod on the hub pages: stamping todayStr() on every regen asserted a
+// change whether or not one happened, and Google ignores lastmod WHOLESALE for
+// a site once its values prove inaccurate (Illyes, 2026-07-16) — which would
+// discredit the honest, substance-gated dates on bill/article entries. Omitting
+// is the documented alternative; changefreq already signals cadence.
+entries.push(urlEntry(BASE + '/',             null, 'daily',   '1.0'));
+entries.push(urlEntry(BASE + '/bills.html',   null, 'daily',   '0.9'));
+entries.push(urlEntry(BASE + '/floor.html',   null, 'daily',   '0.8'));
+entries.push(urlEntry(BASE + '/reps.html',    null, 'monthly', '0.6'));
 entries.push(urlEntry(BASE + '/privacy.html', null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/terms.html',   null,       'yearly',  '0.3'));
 entries.push(urlEntry(BASE + '/about.html',   null,       'yearly',  '0.3'));
