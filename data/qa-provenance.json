@@ -1914,5 +1914,24 @@
     "genModel": "opus-5 (in-conversation, hostile fresh read)",
     "genAt": "2026-08-28",
     "stampedAt": "2026-08-28"
+  },
+  "article-continuing-resolution": {
+    "kind": "article",
+    "sourceShas": {
+      "record-gao-budget-glossary": "e649ef13903ca5d1535797cd0e87a6160ee259dd4a9754f2814447a9b1aec004",
+      "record-crs-r47106-approps-overview": "d5e01799ac4196a1e0780589547faa2d82b48f4e48c60e7cea370c11c665f60f",
+      "record-crs-in12324-omnibus": "263a4a1cc4e08104ba4d30452a180fc9236f349eef95cd91a0f607a569192dea",
+      "bill-119-hr-9770-eh": "43988d0381c4e1965ab368de29130d9214368efe2d94d7fb994c68cb59b04b0b",
+      "bill-119-hr-7148": "83200c08be862f9216b9d4c35698a6fb8402fff1c50e6233b6ce4d3e0ea05b58",
+      "record-congress-laws-119": "75efe7265fea0a1c007230398ca7f9a32fb5d1eeef413b57dd2881aaa50de0a4",
+      "record-congress-hr-9770-actions": "c93323e7f07ad9f690d0b1f13cb0c12b5be21b4dd62f3207511000c859526124",
+      "record-congress-hr-9770-status": "8417e596ed732f87d71ec6b9c52e945e5474ccfa6f93f1a9485f0eeb17facaaf"
+    },
+    "proseSha": "aca3304caf1bc046",
+    "proseFile": "articles/continuing-resolution.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile full-claims)",
+    "genAt": "2026-08-28",
+    "stampedAt": "2026-08-28"
   }
 }
