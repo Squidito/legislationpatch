@@ -56,6 +56,11 @@ for (const b of cache.bills || []) {
 
 // ---- Representatives ----
 const repsIndex = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'reps-index.json'), 'utf8'));
+// Canonical /rep/<slug>/ URLs (the ?id= redirector stays as the fallback for
+// any rep missing from the slug index). App-parity: the mobile app navigates
+// rep results natively by id and never reads a rep record's url (search.tsx),
+// so the url VALUE is website-only; the record SHAPE is unchanged.
+const repSlugIndex = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'rep-slug-index.json'), 'utf8'));
 const repGroups = Array.isArray(repsIndex) ? repsIndex : Object.values(repsIndex);
 let repCount = 0;
 for (const group of repGroups) {
@@ -64,7 +69,7 @@ for (const group of repGroups) {
     records.push({
       t: 'rep',
       id: r.bioguideId,
-      url: `/rep?id=${encodeURIComponent(r.bioguideId)}`,
+      url: repSlugIndex[r.bioguideId] ? `/rep/${repSlugIndex[r.bioguideId]}/` : `/rep?id=${encodeURIComponent(r.bioguideId)}`,
       title: r.name,
       sub: [r.role, `${r.party}-${r.state}`, r.district != null ? `District ${r.district}` : null]
         .filter(Boolean).join(' · '),
