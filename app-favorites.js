@@ -63,7 +63,7 @@ function removeSavedQuote(key) {
 function renderSavedFloorQuote(q) {
   const key     = quoteKeyApp(q);
   const portrait = q.bioguideId ? portraitUrl(q.bioguideId) : FALLBACK_PORTRAIT;
-  const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}` : null;
+  const repHref  = q.bioguideId ? escHtml(repProfileHref(repSlugIndex, q.bioguideId, window.BILLS_PAGE ? 'bills' : 'home')) || null : null;
   const accent   = q.stance === 'oppose' ? 'accent-oppose'
                  : q.stance === 'support' ? 'accent-support' : 'accent-neutral';
   return `<div class="fav-quote-card ${accent}">
@@ -114,7 +114,7 @@ function renderRepsSection() {
   const cards = trackedReps.map(rep => {
     const color   = partyColor(rep.party);
     const imgSrc  = portraitUrl(rep.id);
-    const repHref = rep.id ? `rep?id=${escHtml(rep.id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}` : null;
+    const repHref = rep.id ? escHtml(repProfileHref(repSlugIndex, rep.id, window.BILLS_PAGE ? 'bills' : 'home')) || null : null;
 
     // Combine bill featured quotes + standalone floor quotes, newest first
     const billQuotes  = allBills.flatMap(b =>

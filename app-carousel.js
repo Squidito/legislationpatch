@@ -300,8 +300,8 @@ function renderShockQuotesSection() {
   const html = display.map((q, i) => {
     const isFeatured = i < featured.length;
     const color = partyColor(q.party);
-    const repRef   = q.billId ? `&ref=bill-${escHtml(q.billId)}` : '&ref=bills';
-    const repHref  = q.bioguideId ? `rep?id=${escHtml(q.bioguideId)}${repRef}` : null;
+    const repRefVal = q.billId ? 'bill-' + q.billId : 'bills';
+    const repHref  = q.bioguideId ? escHtml(repProfileHref(repSlugIndex, q.bioguideId, repRefVal)) || null : null;
     // Link cached bills to their static /bill/<slug>/ page (slug derived via the
     // shared util.billSlug so it can never drift from the generated URL); fall
     // back to bill-pending for a quote whose bill is not yet in cache.

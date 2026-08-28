@@ -3,6 +3,7 @@
 // (deduped into util.js 2026-07-06)
 // (deduped into util.js 2026-07-06)
 const TRACKED_KEY       = 'lpTrackedReps';
+let repSlugIndex = {};   // bioguide -> /rep/<slug>/ slug; loaded in init()
 
 // (deduped into util.js 2026-07-06) STATE_NAMES lives in util.js
 
@@ -16,9 +17,18 @@ async function init() {
   updateLogoForTheme(isDark);
 
   try {
-    const res   = await fetch('data/reps-index.json');
+    // The rep slug index rides along with the member index so every card links
+    // straight to the static /rep/<slug>/ page instead of the rep.html?id=
+    // redirector. A failed fetch leaves it {} and the links fall back.
+    const [res, repSlugRes] = await Promise.all([
+      fetch('data/reps-index.json'),
+      fetch('data/rep-slug-index.json').catch(() => null),
+    ]);
     if (!res.ok) throw new Error('fetch failed');
     const index = await res.json();
+    if (repSlugRes && repSlugRes.ok) {
+      try { repSlugIndex = await repSlugRes.json(); } catch (_) {}
+    }
 
     const countEl = document.getElementById('pageHeadCount');
     if (countEl) {
@@ -163,7 +173,7 @@ function repPageCardHtml(rep, tracked) {
   const isTr     = tracked.some(r => r.id === id);
 
   return `<div class="reps-rep-card${isTr ? ' tracked' : ''}" data-id="${escHtml(id)}">
-    <a href="rep?id=${escHtml(id)}&ref=reps" class="reps-rep-portrait-link" style="--party-color:${color};" title="View ${escHtml(name)}">
+    <a href="${escHtml(repProfileHref(repSlugIndex, id, 'reps'))}" class="reps-rep-portrait-link" style="--party-color:${color};" title="View ${escHtml(name)}">
       <div class="rep-ring"><img src="${imgSrc}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>
       <span class="rep-badge">${escHtml(state)}</span>
     </a>
@@ -282,7 +292,7 @@ function buildHoverCardHtml(rep) {
 
   return `
     <div class="rep-hc-header">
-      <a href="rep?id=${escHtml(id)}&ref=reps" class="rep-hc-portrait" style="--party-color:${color};">
+      <a href="${escHtml(repProfileHref(repSlugIndex, id, 'reps'))}" class="rep-hc-portrait" style="--party-color:${color};">
         <div class="rep-ring"><img src="${imgSrc}" alt="${escHtml(rep.name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>
       </a>
       <div class="rep-hc-info">
@@ -292,7 +302,7 @@ function buildHoverCardHtml(rep) {
     </div>
     ${bio ? `<p class="rep-hc-bio">${escHtml(bio)}</p>` : ''}
     ${voteBarHtml}
-    <a href="rep?id=${escHtml(id)}&ref=reps" class="rep-hc-link">View profile →</a>`;
+    <a href="${escHtml(repProfileHref(repSlugIndex, id, 'reps'))}" class="rep-hc-link">View profile →</a>`;
 }
 
 // ---- Carousel drag-to-scroll ----

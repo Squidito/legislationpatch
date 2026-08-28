@@ -23,7 +23,7 @@ function repCardHtml(rep, size) {
   const lastName = repLastName(name);
   const nameEl   = size === 'lg' ? `<div class="rep-name">${escHtml(lastName)}</div>` : '';
 
-  return `<a href="rep?id=${escHtml(bioguide || id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
+  return `<a href="${escHtml(repProfileHref(repSlugIndex, bioguide || id, window.BILLS_PAGE ? 'bills' : 'home'))}" class="rep-card rep-card-${size}${tracked ? ' tracked' : ''}"
                data-id="${escHtml(id)}"
                style="--party-color:${color}; text-decoration: none;"
                title="${escHtml(name)} (${escHtml(party)}-${escHtml(state)})">
@@ -84,7 +84,7 @@ function renderRepStrip() {
                  data-rep-name="${escHtml(name)}"
                  data-rep-party="${escHtml(rep.party || rep.partyCode || '')}"
                  data-rep-state="${escHtml(rep.state || rep.stateCode || '')}">
-      <a href="rep?id=${escHtml(bg || id)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
+      <a href="${escHtml(repProfileHref(repSlugIndex, bg || id, window.BILLS_PAGE ? 'bills' : 'home'))}" class="rep-strip-portrait-link${active ? ' rep-selected' : ''}" style="--party-color:${color}; text-decoration:none;" title="${escHtml(name)}">
         <div class="rep-ring"><img src="${portraitUrl(bg)}" alt="${escHtml(name)}" onerror="this.src='${FALLBACK_PORTRAIT}'" /></div>
         <span class="rep-badge">${escHtml(rep.state || rep.stateCode || '')}</span>
       </a>

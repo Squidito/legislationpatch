@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (window.FAVORITES_PAGE) {
     showLoading(true);
     try {
-      [allBills, standaloneQuotes] = await Promise.all([
+      [allBills, standaloneQuotes, repSlugIndex] = await Promise.all([
         fetchRecentBills(),
-        fetchStandaloneQuotes()
+        fetchStandaloneQuotes(),
+        fetchRepSlugs()
       ]);
     } catch(e) {
       showError(true, e.message);
@@ -25,7 +26,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  await autoDetectState();
+  // Slug index rides along with the geo lookup (which is slower), so the FIRST
+  // render of every rep link already points at the static /rep/<slug>/ page
+  // rather than the rep.html?id= redirector. On failure it stays {} and the
+  // links fall back to the redirector form.
+  await Promise.all([autoDetectState(), fetchRepSlugs().then(m => { repSlugIndex = m; })]);
   fetchStandaloneQuotes().then(q => { standaloneQuotes = q; });
   fetchRepsIndex().then(idx => { repsIndex = idx; renderRepStrip(); });
   setupRepStripDrag();
@@ -59,7 +64,7 @@ async function loadBills() {
       const banner = document.getElementById('repBackBanner');
       const link   = document.getElementById('repBackLink');
       if (banner && link) {
-        link.href        = `rep?id=${encodeURIComponent(fromRep)}&ref=${window.BILLS_PAGE ? 'bills' : 'home'}`;
+        link.href        = repProfileHref(repSlugIndex, fromRep, window.BILLS_PAGE ? 'bills' : 'home');
         link.textContent = `← ${repName}`;
         banner.style.display = 'flex';
       }

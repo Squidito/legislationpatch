@@ -85,6 +85,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   // /data/cache.json only if that 404s (e.g. a stale deploy without the split).
   // Root-absolute so both resolve from /bill/<slug>/ too. Only the bill page
   // uses this path — the homepage/app still load cache.json via api.js.
+  // The rep slug index, so the member links on this page (featured quotes,
+  // crossover voters, the roll-call list) point at the static /rep/<slug>/ pages
+  // instead of the rep.html?id= redirector. This page has its own boot path and
+  // never runs app-boot's, so it loads the index itself. Root-absolute, and
+  // failure just leaves the redirector links.
+  try { repSlugIndex = await fetchRepSlugs(); } catch (e) { /* redirector links */ }
+
   let bills;
   try {
     const res = await fetch('/data/bills/' + encodeURIComponent(billId) + '.json');

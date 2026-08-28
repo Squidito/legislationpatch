@@ -21,6 +21,20 @@ async function fetchRepsIndex() {
   } catch (e) { return {}; }
 }
 
+// bioguide -> /rep/<slug>/ , so client-rendered member links can point at the
+// static profile instead of the rep.html?id= redirector. Website-only file
+// (built for that redirector); an empty map just keeps the redirector links.
+async function fetchRepSlugs() {
+  try {
+    // Root-absolute: the generated /bill/<slug>/ pages load this set from two
+    // levels deep, where a relative 'data/...' would 404 (same reason bill.js
+    // uses /data/ paths).
+    const res = await fetchWithTimeout('/data/rep-slug-index.json');
+    if (!res.ok) return {};
+    return await res.json();
+  } catch (e) { return {}; }
+}
+
 async function fetchStandaloneQuotes() {
   try {
     const res = await fetchWithTimeout('data/quotes.json');

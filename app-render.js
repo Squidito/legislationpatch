@@ -560,7 +560,7 @@ function renderOneQuoteCard(q, bill) {
   const stanceCls   = q.stance === 'support' ? 'stance-support' : q.stance === 'oppose' ? 'stance-oppose' : '';
   const stanceLabel = q.stance === 'support' ? 'SUPPORT' : q.stance === 'oppose' ? 'OPPOSE' : '';
   const repHref     = q.bioguideId
-    ? `rep?id=${escHtml(q.bioguideId)}&ref=bill-${escHtml(bill.id)}`
+    ? escHtml(repProfileHref(repSlugIndex, q.bioguideId, 'bill-' + bill.id)) || null
     : null;
   const repInner = `
         <img class="quote-portrait" src="${portraitUrl(q.bioguideId)}"
@@ -795,7 +795,7 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
         + '<span class="crossover-name">' + escHtml(coBaseName) + (co.state ? ' (' + escHtml(co.state) + ')' : '') + '</span>'
         + '<span class="crossover-vote ' + coVoteCls + '">' + escHtml(co.vote || '') + '</span>';
       html += safeBioId(co.bioguideId)
-        ? '<a class="crossover-member" href="rep?id=' + safeBioId(co.bioguideId) + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + coInner + '</a>'
+        ? '<a class="crossover-member" href="' + escHtml(repProfileHref(repSlugIndex, co.bioguideId, window.BILLS_PAGE ? 'bills' : 'home')) + '">' + coInner + '</a>'
         : '<div class="crossover-member">' + coInner + '</div>';
     }
     html += '</div></div>';
@@ -821,7 +821,7 @@ async function expandVoteDetail(billId, voteIdx, btnEl) {
       var mInner = '<span class="vm-party party-' + mParty.toLowerCase() + '">' + escHtml(mParty) + '</span>'
         + '<span class="vm-name">' + escHtml(mBaseName) + (m.state ? ' (' + escHtml(m.state) + ')' : '') + '</span>';
       html += safeBioId(m.bioguideId)
-        ? '<a class="vote-member" href="rep?id=' + safeBioId(m.bioguideId) + '&ref=' + (window.BILLS_PAGE ? 'bills' : 'home') + '">' + mInner + '</a>'
+        ? '<a class="vote-member" href="' + escHtml(repProfileHref(repSlugIndex, m.bioguideId, window.BILLS_PAGE ? 'bills' : 'home')) + '">' + mInner + '</a>'
         : '<span class="vote-member">' + mInner + '</span>';
     }
     html += '</div></div>';

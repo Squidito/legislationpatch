@@ -1,13 +1,15 @@
 // floor.js — Floor Activity page
 
 const QUOTES_FILE       = 'data/quotes.json';
-const SLUG_INDEX_FILE   = 'data/slug-index.json';  // id -> current bill slug (generated)
+const SLUG_INDEX_FILE   = 'data/slug-index.json';      // bill id -> current bill slug (generated)
+const REP_SLUG_FILE     = 'data/rep-slug-index.json';  // bioguide -> /rep/<slug>/ slug (generated)
 // (deduped into util.js 2026-07-06) FALLBACK_PORTRAIT (was a real member's photo — now the neutral SVG from util.js)
 const FLOOR_FAVS_KEY    = 'lpFloorFavs';
 
 // id -> "/bill/<slug>/" lookup, loaded alongside the quotes so bill links point
 // at the static bill pages. Empty until loadData() resolves; links degrade to
 // bill-pending for any bill not present.
+let repSlugIndex = {};   // bioguide -> rep slug, loaded alongside the quotes
 let billSlugIndex = {};
 
 
@@ -201,14 +203,18 @@ function saveFavs() {
 // ---- Data ----
 
 async function loadData() {
-  const [res, slugRes] = await Promise.all([
+  const [res, slugRes, repSlugRes] = await Promise.all([
     fetch(QUOTES_FILE),
     fetch(SLUG_INDEX_FILE).catch(() => null),
+    fetch(REP_SLUG_FILE).catch(() => null),
   ]);
   const data = await res.json();
   allQuotes  = data.quotes || [];
   if (slugRes && slugRes.ok) {
     try { billSlugIndex = await slugRes.json(); } catch (_) {}
+  }
+  if (repSlugRes && repSlugRes.ok) {
+    try { repSlugIndex = await repSlugRes.json(); } catch (_) {}
   }
 }
 
@@ -288,7 +294,7 @@ function renderEntry(q, isFirst) {
   const stanceBadge = '<span class="floor-stance-badge stance-' + stanceLabel + '">' + stanceDisplay + '</span>';
 
   const speakerEl = q.bioguideId
-    ? '<a class="floor-entry-speaker-link" href="rep?id=' + escHtml(q.bioguideId) + '">' + escHtml(q.name) + '</a>'
+    ? '<a class="floor-entry-speaker-link" href="' + escHtml(repProfileHref(repSlugIndex, q.bioguideId, '')) + '">' + escHtml(q.name) + '</a>'
     : '<span class="floor-entry-speaker-name">' + escHtml(q.name) + '</span>';
 
   const partyBadge = ps
@@ -580,7 +586,7 @@ function renderCarousel() {
     const color = q.party === 'D' ? '#3b82f6' : q.party === 'R' ? '#ef4444' : '#6b7280';
     const portrait = portraitUrl(q.bioguideId); // SECURITY: validates id + safe src (was raw interpolation)
     const safeId = safeBioId(q.bioguideId);
-    const repHref = safeId ? `rep?id=${safeId}&ref=bills` : null;
+    const repHref = safeId ? escHtml(repProfileHref(repSlugIndex, safeId, 'bills')) : null;
     const portraitInner = `
       <img class="shock-quote-portrait" src="${escHtml(portrait)}" onerror="this.src='${FALLBACK_PORTRAIT}'" alt="${escHtml(q.name)}" style="border:2px solid ${color}"/>
       <div class="shock-quote-rep-text"><div class="shock-quote-name">${escHtml(q.name)}</div><div class="shock-quote-source">${escHtml(quoteContext(q))}</div></div>`;

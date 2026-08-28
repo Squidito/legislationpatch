@@ -171,6 +171,28 @@ function safeBioId(bioguideId) {
   return (typeof bioguideId === 'string' && /^[A-Za-z0-9]+$/.test(bioguideId)) ? bioguideId : '';
 }
 
+// Href for a member profile, preferring the STATIC page.
+//
+// Every client surface used to emit `rep?id=<bioguide>`, which works but costs a
+// hop: rep.html is a noindex redirector that looks the id up in
+// data/rep-slug-index.json and forwards to /rep/<slug>/. When the caller already
+// has that index in memory there is no reason to make the reader pay for the
+// redirect. Falls back to the redirector form whenever the index has not loaded
+// or has no entry for the id, so a failed/slow fetch degrades to today's
+// behaviour rather than to a broken link.
+//
+// `ref` drives the profile's back-button (rep.js reads ?ref=), so it is carried
+// through both forms — as the only query param on the static URL, and appended
+// to the id on the redirector URL.
+function repProfileHref(slugIndex, bioguideId, ref) {
+  const id = safeBioId(bioguideId);
+  if (!id) return '';                               // hostile/absent id: caller skips the link
+  const slug = slugIndex && slugIndex[id.toUpperCase()];
+  const q    = ref ? encodeURIComponent(ref) : '';
+  if (slug) return '/rep/' + slug + '/' + (q ? '?ref=' + q : '');
+  return 'rep?id=' + id + (q ? '&ref=' + q : '');
+}
+
 function partyColor(party) {
   const p = String(party || '').trim().toUpperCase()[0];
   if (p === 'D') return '#3b82f6';
@@ -256,5 +278,5 @@ if (typeof module !== 'undefined' && module.exports) {
   // Second line: web-only helpers deduped here 2026-07-06 — locked by
   // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
-                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, slugifyTitle, billSlug, repSlug };
+                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, repProfileHref, slugifyTitle, billSlug, repSlug };
 }

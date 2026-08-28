@@ -91,5 +91,141 @@
       "in": "X",
       "out": "data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 44 44%27%3E%3Crect width=%2744%27 height=%2744%27 fill=%27%23374151%27/%3E%3Ccircle cx=%2722%27 cy=%2716%27 r=%279%27 fill=%27%236b7280%27/%3E%3Cellipse cx=%2722%27 cy=%2740%27 rx=%2715%27 ry=%2711%27 fill=%27%236b7280%27/%3E%3C/svg%3E"
     }
+  ],
+  "repProfileHref": [
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "B001319",
+        "reps"
+      ],
+      "out": "/rep/b001319-katie-boyd-britt/?ref=reps"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "b001319",
+        "home"
+      ],
+      "out": "/rep/b001319-katie-boyd-britt/?ref=home"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "B001319",
+        ""
+      ],
+      "out": "/rep/b001319-katie-boyd-britt/"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "B001319",
+        "bill-119-HR-1"
+      ],
+      "out": "/rep/b001319-katie-boyd-britt/?ref=bill-119-HR-1"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "G000596",
+        "bills"
+      ],
+      "out": "/rep/g000596-chuck-grassley/?ref=bills"
+    },
+    {
+      "args": [
+        {},
+        "B001319",
+        "reps"
+      ],
+      "out": "rep?id=B001319&ref=reps"
+    },
+    {
+      "args": [
+        null,
+        "B001319",
+        "reps"
+      ],
+      "out": "rep?id=B001319&ref=reps"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "ZZZZ999",
+        "bills"
+      ],
+      "out": "rep?id=ZZZZ999&ref=bills"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "B001319",
+        null
+      ],
+      "out": "/rep/b001319-katie-boyd-britt/"
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "bad id",
+        "reps"
+      ],
+      "out": ""
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        "\"><script>",
+        "reps"
+      ],
+      "out": ""
+    },
+    {
+      "args": [
+        {
+          "B001319": "b001319-katie-boyd-britt",
+          "G000596": "g000596-chuck-grassley"
+        },
+        null,
+        "reps"
+      ],
+      "out": ""
+    },
+    {
+      "args": [
+        {},
+        "B001319",
+        null
+      ],
+      "out": "rep?id=B001319"
+    }
   ]
 }

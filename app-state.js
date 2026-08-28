@@ -17,6 +17,7 @@ const collapsedFavSections = new Set();
 let selectedRepIds    = new Set();
 let standaloneQuotes  = [];
 let repsIndex         = {};
+let repSlugIndex      = {};   // bioguide -> /rep/<slug>/ slug (see api.js fetchRepSlugs)
 
 // ---- Bill list pager (home + bills pages) ----
 // 24-card initial render keeps the footer reachable; "Show 24 more" pages in,

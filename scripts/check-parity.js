@@ -37,12 +37,16 @@ for (const [fnName, cases] of Object.entries(fixtures)) {
         failures++;
         continue;
     }
-    for (const { in: input, out: expected } of cases) {
+    // `args` (an explicit argument LIST) is a web-only fixture form for helpers
+    // that take more than one parameter — repProfileHref(slugIndex, id, ref).
+    // shared/parity-fixtures.json, which the mobile runner also reads, uses only
+    // the single-argument `in` form, so this stays compatible with it.
+    for (const { in: input, args, out: expected } of cases) {
         checked++;
-        const actual = fn(input);
+        const actual = Array.isArray(args) ? fn(...args) : fn(input);
         if (actual !== expected) {
             failures++;
-            console.error(`  ✗ ${fnName}(${JSON.stringify(input)}) => ${JSON.stringify(actual)}  (expected ${JSON.stringify(expected)})`);
+            console.error(`  ✗ ${fnName}(${JSON.stringify(Array.isArray(args) ? args : [input]).slice(1, -1)}) => ${JSON.stringify(actual)}  (expected ${JSON.stringify(expected)})`);
         }
     }
 }
