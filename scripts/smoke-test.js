@@ -171,6 +171,37 @@ async function waitForServer(url, ms = 15000) {
   check(await count('.bill-card') === FIRST_PAGE, `mobile: first page renders (${FIRST_PAGE} of ${BILLS})`);
   check(await page.locator('[data-main]').first().isVisible(), 'mobile: filter tabs visible');
 
+  // ── 320px: no horizontal overflow ──
+  //
+  // WHY 320 AND NOT 375: this suite only ever tested 375px, so it was BLIND to a
+  // real defect that shipped and sat live — every vote-bearing bill page overflowed
+  // a 320px viewport (`.vote-row-left` was flex-shrink: 0, and a long result badge
+  // like "Cloture on the Motion to Proceed Rejected" pushed the document to 525px
+  // against a 320px screen). 320 is the narrowest viewport in real use (iPhone SE
+  // 1st gen, Galaxy Fold cover screen) and it is where a fixed-width or unwrappable
+  // element first shows. A page that fits 320 fits everything above it.
+  //
+  // The assertion is deliberately structural — scrollWidth vs clientWidth on the
+  // documentElement — because that is exactly what a reader feels as the page
+  // sliding sideways, and it needs no per-element knowledge to stay true.
+  console.log('— narrow 320px (horizontal overflow)');
+  await page.setViewportSize({ width: 320, height: 720 });
+  const NARROW = [
+    '/', '/bills.html', '/floor.html', '/reps.html', '/favorites.html',
+    '/search.html', '/about.html', '/changelog/', '/articles/', '/topics/',
+    regular ? `/bill/${billSlug(regular)}/` : null,
+    omnibus ? `/bill/${billSlug(omnibus)}/` : null,
+  ].filter(Boolean);
+  for (const p of NARROW) {
+    await go(p);
+    const m = await page.evaluate(() => ({
+      s: document.documentElement.scrollWidth,
+      c: document.documentElement.clientWidth,
+    }));
+    check(m.s <= m.c, `320px: ${p} does not scroll horizontally (${m.s} <= ${m.c})`);
+  }
+  await page.setViewportSize({ width: 1280, height: 800 });
+
   // ── Console errors ──
   // The gate catches OUR bugs: JS exceptions, same-origin failures, and CSP
   // violations (a broken CSP surfaces as "...Content Security Policy..." — those

@@ -843,12 +843,22 @@ body {
   gap: 8px;
   flex-wrap: wrap;
 }
+/* Wraps rather than refuses to shrink. This was `flex-shrink: 0`, which made the
+   group as wide as chamber + result badge + tally always — and a long result
+   ("Cloture on the Motion to Proceed Rejected" is 253px on its own) pushed the
+   whole DOCUMENT past a 320px viewport. Every vote-bearing bill page overflowed;
+   the worst measured 525px against 320. The badges keep their own flex-shrink: 0
+   so they stay legible — they move to the next line instead of squashing. */
 .vote-row-left {
   display: flex;
   align-items: center;
   gap: 6px;
-  flex-shrink: 0;
+  flex-wrap: wrap;
+  min-width: 0;
 }
+/* A single badge longer than the row still has to wrap its own text. */
+.vote-chamber-badge,
+.vote-result-badge { max-width: 100%; }
 .vote-row-right {
   display: flex;
   align-items: center;
