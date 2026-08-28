@@ -44,6 +44,39 @@
     "textFile": "data/ref-text/hman-119-rule-xxi.txt",
     "fetchedAt": "2026-08-17"
   },
+  "org-aclu-kosa": {
+    "id": "org-aclu-kosa",
+    "kind": "statement",
+    "org": "American Civil Liberties Union",
+    "date": null,
+    "label": "ACLU: Lawmakers Renew Push to Regulate Kids Speech Online Despite Speech Protections",
+    "citation": "American Civil Liberties Union",
+    "srcUrl": "https://www.aclu.org/news/privacy-technology/lawmakers-renew-push-to-regulate-kids-speech-online-despite-speech-protections",
+    "textFile": "data/ref-text/org-aclu-kosa.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "org-apa-kosa": {
+    "id": "org-apa-kosa",
+    "kind": "statement",
+    "org": "American Psychological Association",
+    "date": null,
+    "label": "APA statement supporting the Kids Online Safety Act",
+    "citation": "American Psychological Association",
+    "srcUrl": "https://www.apaservices.org/advocacy/news/kids-online-safety-act",
+    "textFile": "data/ref-text/org-apa-kosa.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "org-blackburn-blumenthal-kids-act": {
+    "id": "org-blackburn-blumenthal-kids-act",
+    "kind": "member-statement",
+    "org": "Office of Sen. Marsha Blackburn",
+    "date": null,
+    "label": "Blackburn-Blumenthal statement on House passage of the KIDS Act",
+    "citation": "Office of Sen. Marsha Blackburn",
+    "srcUrl": "https://www.blackburn.senate.gov/2026/6/blackburn-blumenthal-statement-on-house-passage-of-the-kids-act",
+    "textFile": "data/ref-text/org-blackburn-blumenthal-kids-act.txt",
+    "fetchedAt": "2026-08-28"
+  },
   "org-brennan-center-noncitizen-rare": {
     "id": "org-brennan-center-noncitizen-rare",
     "kind": "statement",
@@ -87,6 +120,39 @@
     "srcUrl": "https://www.cornyn.senate.gov/news/cornyn-lee-roy-introduce-the-save-america-act/",
     "textFile": "data/ref-text/org-cornyn-save-america-intro.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "org-eff-kosa-2024-changes": {
+    "id": "org-eff-kosa-2024-changes",
+    "kind": "statement",
+    "org": "Electronic Frontier Foundation",
+    "date": null,
+    "label": "EFF: Don't Fall for the Latest Changes to the Dangerous Kids Online Safety Act",
+    "citation": "Electronic Frontier Foundation",
+    "srcUrl": "https://www.eff.org/deeplinks/2024/02/dont-fall-latest-changes-dangerous-kids-online-safety-act",
+    "textFile": "data/ref-text/org-eff-kosa-2024-changes.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "org-eff-kosa-2025": {
+    "id": "org-eff-kosa-2025",
+    "kind": "statement",
+    "org": "Electronic Frontier Foundation",
+    "date": "2025-05-15",
+    "label": "EFF: The Kids Online Safety Act Will Make the Internet Worse for Everyone",
+    "citation": "Electronic Frontier Foundation",
+    "srcUrl": "https://www.eff.org/deeplinks/2025/05/kids-online-safety-act-will-make-internet-worse-everyone",
+    "textFile": "data/ref-text/org-eff-kosa-2025.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "org-fftf-commerce-markup-2026": {
+    "id": "org-fftf-commerce-markup-2026",
+    "kind": "statement",
+    "org": "Fight for the Future",
+    "date": "2026-08-05",
+    "label": "Fight for the Future: Senate Commerce passes KOSA out of committee, SCREEN Act fails",
+    "citation": "Fight for the Future",
+    "srcUrl": "https://www.fightforthefuture.org/news/2026-08-05-senate-commerce-passes-censorship-bill-kosa-out-of-committee-screen-act-fails/",
+    "textFile": "data/ref-text/org-fftf-commerce-markup-2026.txt",
+    "fetchedAt": "2026-08-28"
   },
   "org-roy-save-america-launch": {
     "id": "org-roy-save-america-launch",
@@ -142,6 +208,39 @@
     "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
     "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-senate-leadership": {
+    "id": "record-senate-leadership",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": null,
+    "label": "U.S. Senate: Leadership (current Congress)",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/senators/leadership.htm",
+    "textFile": "data/ref-text/record-senate-leadership.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-senate-roll-118-2-219": {
+    "id": "record-senate-roll-118-2-219",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": "2024-07-25",
+    "label": "Senate Roll Call Vote 219 (118th Congress, 2d Session) - cloture on the motion to concur, 86-1",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00219.htm",
+    "textFile": "data/ref-text/record-senate-roll-118-2-219.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-senate-roll-118-2-221": {
+    "id": "record-senate-roll-118-2-221",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": "2024-07-30",
+    "label": "Senate Roll Call Vote 221 (118th Congress, 2d Session) - S. 2073 motion to concur, 91-3",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00221.htm",
+    "textFile": "data/ref-text/record-senate-roll-118-2-221.txt",
+    "fetchedAt": "2026-08-28"
   },
   "usc-14-4902": {
     "id": "usc-14-4902",
