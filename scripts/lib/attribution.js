@@ -69,14 +69,10 @@ function findDollar(blocks, value) {
   }
   return null;
 }
-function shortToVal(tok) {
-  const m = tok.match(/\$([0-9][0-9,.]*)\s*(B|M|K)?/i);
-  if (!m) return null;
-  let n = parseFloat(m[1].replace(/,/g, ''));
-  const u = (m[2] || '').toUpperCase();
-  if (u === 'B') n *= 1e9; else if (u === 'M') n *= 1e6; else if (u === 'K') n *= 1e3;
-  return n;
-}
+// Dollar tokenization is shared with qa-source-verify.js — this file carried an
+// independent copy of the same unit-boundary bug ("$15,000 base" valued as $15
+// trillion, "$400 monthly" as $400M). See lib/figures.js.
+const { DOLLAR_TOKEN_RE, shortToVal } = require('./figures.js');
 
 // ── Prose walker (ported from qa-source-verify.js proseSegments) ─────────────────
 function proseSegments(b) {
@@ -148,7 +144,7 @@ function attributionFlags(bill, ROOT) {
   if (!blocks.length) return [];
   const out = [], seen = new Set();
   for (const { label, s } of proseSegments(bill)) {
-    for (const raw of (s.match(/\$[0-9][0-9,.]*\s*(?:B|M|K)?/gi) || [])) {
+    for (const raw of (s.match(DOLLAR_TOKEN_RE) || [])) {
       const tok = raw.trim();
       const v = shortToVal(tok);
       if (v == null || v < 1e6) continue;                 // account-bound figures are ≥ $1M

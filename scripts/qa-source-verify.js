@@ -152,14 +152,11 @@ function findPhrase(blocks, ...variants) {
   return null;
 }
 
-function shortToVal(tok) {
-  const m = tok.match(/\$([0-9][0-9,.]*)\s*(B|M|K)?/i);
-  if (!m) return null;
-  let n = parseFloat(m[1].replace(/,/g, ''));
-  const u = (m[2] || '').toUpperCase();
-  if (u === 'B') n *= 1e9; else if (u === 'M') n *= 1e6; else if (u === 'K') n *= 1e3;
-  return n;
-}
+// Dollar tokenization lives in lib/figures.js -- shared with lib/attribution.js,
+// which carried an independent copy of the same unit-boundary bug ("$15,000 base"
+// read as $15 trillion). Read that file's header before changing any of it: the
+// token string is the QA adjudication ledger's exact match key.
+const { DOLLAR_TOKEN_RE, shortToVal } = require('./lib/figures.js');
 
 function verifyBill(b) {
   const blocks = readSource(b.id, b.referencedSources);
@@ -168,7 +165,7 @@ function verifyBill(b) {
   const seen = new Set();
   for (const { label, s } of proseSegments(b)) {
     // dollars
-    for (const tok of (s.match(/\$[0-9][0-9,.]*\s*(?:B|M|K)?/gi) || [])) {
+    for (const tok of (s.match(DOLLAR_TOKEN_RE) || [])) {
       const key = 'D' + tok.trim(); if (seen.has(key)) continue; seen.add(key);
       const v = shortToVal(tok.trim()); if (v == null || v === 0) continue; // "$0" = a net-cost characterization (fee-offset), not a sourceable appropriation line
       const ev = findDollar(blocks, v);
