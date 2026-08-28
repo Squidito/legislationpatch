@@ -310,6 +310,13 @@
       "showUpdated": false,
       "summary": "Suspension of the rules lets the House pass a bill with 40 minutes of debate, no amendments, and a two-thirds vote of the Members voting. What House Rule XV says, which days it is allowed, and what changed in the 119th Congress."
     },
+    "omnibus-vs-minibus.html": {
+      "order": 44,
+      "section": "LEGISLATIVE PROCESS GUIDES",
+      "label": "Explainer",
+      "showUpdated": false,
+      "summary": "An omnibus carries several of the twelve annual appropriations bills in one measure, a minibus carries only some of them, and a continuing resolution carries none. What the terms mean, how the divisions work, and which bills in our database are which."
+    },
     "how-we-source-quotes.html": {
       "order": 43,
       "section": "HOW WE WORK",
@@ -318,21 +325,21 @@
       "summary": "Every quote on LegislationPatch comes from a specific Congressional Record granule on GovInfo. Here's our extraction process, speaker identification method, and the revise-and-extend caveat."
     },
     "how-we-track-voting.html": {
-      "order": 44,
+      "order": 45,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,
       "summary": "Vote data comes directly from the House Clerk and Senate official records, cross-referenced against bioguide IDs, with crossover detection on close-margin votes."
     },
     "legislationpatch-and-ai.html": {
-      "order": 45,
+      "order": 46,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,
       "summary": "Why primary sourcing, structured data, and factual density make LegislationPatch citable by AI systems — and why that matters for how Congressional information reaches readers."
     },
     "no-editorial-spin.html": {
-      "order": 46,
+      "order": 47,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,

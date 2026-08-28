@@ -165,6 +165,24 @@
     "textFile": "data/ref-text/org-roy-save-america-launch.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-congress-hr-1968-actions": {
+    "id": "record-congress-hr-1968-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 1968 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 1968 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1968/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-1968-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-1968-status": {
+    "id": "record-congress-hr-1968-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 1968 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 1968 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1968",
+    "textFile": "data/ref-text/record-congress-hr-1968-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
   "record-congress-hr-22-status": {
     "id": "record-congress-hr-22-status",
     "kind": "record",
@@ -175,6 +193,96 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22",
     "textFile": "data/ref-text/record-congress-hr-22-status.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-congress-hr-5371-actions": {
+    "id": "record-congress-hr-5371-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 5371 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 5371 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5371/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-5371-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-5371-status": {
+    "id": "record-congress-hr-5371-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 5371 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 5371 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5371",
+    "textFile": "data/ref-text/record-congress-hr-5371-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-6938-actions": {
+    "id": "record-congress-hr-6938-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 6938 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 6938 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6938/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-6938-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-6938-status": {
+    "id": "record-congress-hr-6938-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 6938 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 6938 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6938",
+    "textFile": "data/ref-text/record-congress-hr-6938-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7006-actions": {
+    "id": "record-congress-hr-7006-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7006 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 7006 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7006/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-7006-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7006-status": {
+    "id": "record-congress-hr-7006-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7006 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 7006 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7006",
+    "textFile": "data/ref-text/record-congress-hr-7006-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7147-actions": {
+    "id": "record-congress-hr-7147-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7147 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 7147 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7147/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-7147-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7147-status": {
+    "id": "record-congress-hr-7147-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7147 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 7147 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7147",
+    "textFile": "data/ref-text/record-congress-hr-7147-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7148-actions": {
+    "id": "record-congress-hr-7148-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7148 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 7148 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7148/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-7148-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-7148-status": {
+    "id": "record-congress-hr-7148-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 7148 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 7148 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7148",
+    "textFile": "data/ref-text/record-congress-hr-7148-status.txt",
+    "fetchedAt": "2026-08-28"
   },
   "record-congress-hr-7296-status": {
     "id": "record-congress-hr-7296-status",
@@ -187,6 +295,42 @@
     "textFile": "data/ref-text/record-congress-hr-7296-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-congress-hr-8646-actions": {
+    "id": "record-congress-hr-8646-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 8646 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 8646 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-8646-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-8646-status": {
+    "id": "record-congress-hr-8646-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 8646 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 8646 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
+    "textFile": "data/ref-text/record-congress-hr-8646-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-9770-actions": {
+    "id": "record-congress-hr-9770-actions",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 9770 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 9770 actions (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9770/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-9770-actions.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-congress-hr-9770-status": {
+    "id": "record-congress-hr-9770-status",
+    "kind": "record",
+    "label": "Congress.gov API record — H.R. 9770 (119th Congress) status",
+    "citation": "Congress.gov, H.R. 9770 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9770",
+    "textFile": "data/ref-text/record-congress-hr-9770-status.txt",
+    "fetchedAt": "2026-08-28"
+  },
   "record-congress-s-1383-status": {
     "id": "record-congress-s-1383-status",
     "kind": "record",
@@ -197,6 +341,42 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1383",
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-crs-in12324-omnibus": {
+    "id": "record-crs-in12324-omnibus",
+    "kind": "record",
+    "label": "CRS Insight IN12324 — Omnibus Appropriations: Overview of Recent Practice (Updated August 14, 2024)",
+    "citation": "CRS Insight IN12324",
+    "srcUrl": "https://www.everycrsreport.com/reports/IN12324.html",
+    "textFile": "data/ref-text/record-crs-in12324-omnibus.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-crs-r47106-approps-overview": {
+    "id": "record-crs-r47106-approps-overview",
+    "kind": "record",
+    "label": "CRS Report R47106 — The Appropriations Process: A Brief Overview (May 17, 2023)",
+    "citation": "CRS Report R47106",
+    "srcUrl": "https://www.everycrsreport.com/reports/R47106.html",
+    "textFile": "data/ref-text/record-crs-r47106-approps-overview.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-crs-r48731-full-year-cr": {
+    "id": "record-crs-r48731-full-year-cr",
+    "kind": "record",
+    "label": "CRS Report R48731 — Full-Year Continuing Resolutions: Frequently Asked Questions (November 19, 2025)",
+    "citation": "CRS Report R48731",
+    "srcUrl": "https://www.everycrsreport.com/reports/R48731.html",
+    "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
+    "fetchedAt": "2026-08-28"
+  },
+  "record-gao-budget-glossary": {
+    "id": "record-gao-budget-glossary",
+    "kind": "record",
+    "label": "GAO-05-734SP — A Glossary of Terms Used in the Federal Budget Process (excerpt: Appropriation Act, Continuing Appropriation/Continuing Resolution, Fiscal Year)",
+    "citation": "GAO-05-734SP",
+    "srcUrl": "https://www.gao.gov/products/gao-05-734sp",
+    "textFile": "data/ref-text/record-gao-budget-glossary.txt",
+    "fetchedAt": "2026-08-28"
   },
   "record-house-roll-2026-069-s1383": {
     "id": "record-house-roll-2026-069-s1383",

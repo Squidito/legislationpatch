@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-28T19:47:33.084Z",
+  "generatedAt": "2026-08-28T21:12:41.881Z",
   "counts": {
     "bill": 219,
     "rep": 551,
     "quote": 468,
-    "article": 47,
+    "article": 48,
     "dispatch": 0
   },
   "records": [
@@ -10846,6 +10846,14 @@
       "title": "What \"No Editorial Spin\" Actually Means at LegislationPatch",
       "sub": "Guide",
       "text": "LegislationPatch doesn't take positions on legislation. Here's exactly what that means in practice — what we do describe, what we don't, and where the line sits between neutral description and political framing."
+    },
+    {
+      "t": "article",
+      "id": "omnibus-vs-minibus",
+      "url": "/articles/omnibus-vs-minibus.html",
+      "title": "Omnibus vs. Minibus vs. CR: How Congress Packages Spending Bills",
+      "sub": "Guide",
+      "text": "An omnibus carries several of the twelve annual appropriations bills in one measure; a minibus carries only some of them; a continuing resolution carries none and continues existing funding instead. What CRS and GAO say the terms mean, how the divisions work,…"
     },
     {
       "t": "article",
