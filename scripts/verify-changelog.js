@@ -30,6 +30,12 @@
 // markup was restyled would parse ZERO entries and report clean. Both closed:
 // all label forms are parsed, and zero entries parsed is now a failure.
 //
+// DROPPED ENTRIES (2026-08-27): every check above verifies a page against itself,
+// and all of them stayed green while a same-day regeneration deleted four bills
+// from that day's edition -- a shorter page is perfectly self-consistent. The
+// ledger check at the bottom compares each edition to the entries digest-state.json
+// records for it, in BOTH directions, which is the only way that loss is visible.
+//
 // Usage: node scripts/verify-changelog.js   (exit 1 if anything is off)
 
 'use strict';
@@ -45,45 +51,10 @@ const bills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bil
 const byId = {};
 for (const b of bills) byId[String(b.id).toUpperCase()] = b;
 
-function decode(s) {
-  return String(s)
-    .replace(/<[^>]*>/g, '')
-    .replace(/&mdash;/g, '—').replace(/&ndash;/g, '–').replace(/&rarr;/g, '→')
-    .replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&')
-    .replace(/&middot;/g, '·').replace(/&nbsp;/g, ' ')
-    .replace(/\s+/g, ' ').trim();
-}
-
-/** "/bill/119-hr-2069-stop-secret-spending-act-of-2025/" -> "119-HR-2069" */
-function idFromHref(href) {
-  const m = String(href).match(/\/bill\/(\d+)-([a-z]+)-(\d+)-/i);
-  return m ? `${m[1]}-${m[2].toUpperCase()}-${m[3]}` : null;
-}
-
-/** Every entry <li> in a slice of markup, parsed. */
-function parseEntries(html) {
-  const found = [];
-  for (const m of html.matchAll(/<li class="cl-entry">([\s\S]*?)<\/li>/g)) {
-    const li = m[1];
-    const hrefM  = li.match(/<a class="cl-code" href="([^"]+)"/);
-    const codeM  = li.match(/<a class="cl-code"[^>]*>([\s\S]*?)<\/a>/);
-    const titleM = li.match(/<span class="cl-title">([\s\S]*?)<\/span>/);
-    const nowM   = li.match(/<span class="cl-renamed"[^>]*>\(now:\s*([\s\S]*?)\)<\/span>/);
-    const transM = li.match(/<span class="cl-transition">([\s\S]*?)<\/span>\s*<span class="cl-meta">/);
-    if (!codeM) continue;
-    const trans = decode(transM ? transM[1] : '');
-    const parts = trans.split('→').map(s => s.trim());
-    found.push({
-      href: hrefM ? hrefM[1] : '',
-      id: hrefM ? idFromHref(hrefM[1]) : null,
-      code: decode(codeM[1]),
-      title: decode(titleM ? titleM[1] : ''),
-      to: parts.length > 1 ? parts[1] : trans,
-      nowTitle: nowM ? decode(nowM[1]) : null,
-    });
-  }
-  return found;
-}
+// Page parsing is shared with generate_digest.js, which recovers the entries of a
+// legacy edition from its published page in order to MERGE a same-day regeneration.
+// One parser, two consumers -- if the entry markup changes, both notice together.
+const { decode, parseEntries } = require('./lib/changelog-page.js');
 
 /**
  * Every count the page states about itself, cross-checked against what it lists.
@@ -202,6 +173,54 @@ function checkPage(label, file) {
   return { entries, problems };
 }
 
+/**
+ * DROPPED-ENTRY CHECK — the blind spot that let the 2026-08-27 loss through.
+ *
+ * Everything above verifies a page against itself and against the bill record.
+ * All of it stayed green while a same-day regeneration deleted four bills from
+ * that day's edition, because a shorter page is perfectly self-consistent: the
+ * group headers, the subline and the listed entries were all "4" instead of "8".
+ * Nothing compared the page to what had been PUBLISHED there before.
+ *
+ * data/digest-state.json now records each edition's entries, so that comparison
+ * exists. Checked in BOTH directions: an id in the ledger but not on the page is
+ * a dropped entry (content loss); an id on the page but not in the ledger means
+ * the page was edited outside the generator (the ledger no longer describes what
+ * readers see). Editions published before entries were recorded are skipped —
+ * with a printed note, so a silent skip can never be mistaken for a pass.
+ */
+function checkLedger(pagesByDate) {
+  let problems = 0, checked = 0, legacy = 0;
+  let state = null;
+  try { state = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'digest-state.json'), 'utf8')); } catch (_) {}
+  const editions = (state && Array.isArray(state.editions)) ? state.editions : [];
+
+  console.log('\n── Editions ledger ↔ published pages');
+  if (!editions.length) {
+    console.log('  ⚠️  data/digest-state.json records no editions — nothing to cross-check');
+    return 0;
+  }
+
+  for (const rec of editions) {
+    const file = pagesByDate.get(rec.date);
+    if (!file) { console.log(`  ❌ ${rec.date}: recorded in digest-state.json, no changelog/${rec.date}/ page on disk`); problems++; continue; }
+    if (!Array.isArray(rec.entries)) { legacy++; continue; }
+
+    checked++;
+    const onPage = new Set(parseEntries(fs.readFileSync(file, 'utf8')).map(e => e.id));
+    const recorded = new Set(rec.entries.map(e => e.id));
+    const dropped = [...recorded].filter(id => !onPage.has(id));
+    const extra   = [...onPage].filter(id => !recorded.has(id));
+
+    if (dropped.length) { console.log(`  ❌ ${rec.date}: ${dropped.length} published entr${dropped.length === 1 ? 'y' : 'ies'} MISSING from the page — ${dropped.join(', ')}`); problems += dropped.length; }
+    if (extra.length)   { console.log(`  ❌ ${rec.date}: ${extra.length} entr${extra.length === 1 ? 'y' : 'ies'} on the page but not in the ledger — ${extra.join(', ')}`); problems += extra.length; }
+    if (!dropped.length && !extra.length) console.log(`  ✅ ${rec.date} — ${recorded.size} entr${recorded.size === 1 ? 'y' : 'ies'}, ledger and page agree`);
+  }
+
+  if (legacy) console.log(`  ⚠️  ${legacy} edition(s) predate entry recording — not cross-checkable (their pages are still verified above)`);
+  return problems;
+}
+
 // ---------------------------------------------------------------------------
 const dir = path.join(ROOT, 'changelog');
 
@@ -211,10 +230,11 @@ const pages = [];
 if (fs.existsSync(path.join(dir, 'index.html'))) {
   pages.push({ label: 'index.html (hub)', file: path.join(dir, 'index.html') });
 }
+const pagesByDate = new Map();
 for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
   if (!e.isDirectory()) continue;
   const f = path.join(dir, e.name, 'index.html');
-  if (fs.existsSync(f)) pages.push({ label: e.name, file: f });
+  if (fs.existsSync(f)) { pages.push({ label: e.name, file: f }); pagesByDate.set(e.name, f); }
 }
 pages.sort((a, b) => a.label.localeCompare(b.label));
 
@@ -224,6 +244,7 @@ for (const p of pages) {
   entries  += r.entries;
   problems += r.problems;
 }
+problems += checkLedger(pagesByDate);
 
 console.log('\n' + '═'.repeat(58));
 if (!pages.length) {

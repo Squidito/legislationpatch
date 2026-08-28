@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-08-27T22:21:56.790Z",
+  "lastRun": "2026-08-28T00:34:18.975Z",
   "stages": {
     "119-HCONRES-108": {
       "stage": "dead",
@@ -1105,7 +1105,107 @@
       "counts": {
         "total": 7,
         "new": 7
-      }
+      },
+      "entries": [
+        {
+          "id": "119-S-1748",
+          "stage": "committee",
+          "code": "S. 1748",
+          "title": "Kids Online Safety Act",
+          "url": "/bill/119-s-1748-kids-online-safety-act/",
+          "fromLabel": null,
+          "toLabel": "In Committee",
+          "stageDate": "2026-08-05",
+          "enactedDate": "2026-08-05",
+          "tally": "",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-HR-139",
+          "stage": "house",
+          "code": "H.R. 139",
+          "title": "Sunshine Protection Act of 2025",
+          "url": "/bill/119-hr-139-sunshine-protection-act-of-2025/",
+          "fromLabel": null,
+          "toLabel": "Passed House",
+          "stageDate": "2026-07-15",
+          "enactedDate": "2026-07-15",
+          "tally": "308-117",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-HR-7296",
+          "stage": "committee",
+          "code": "H.R. 7296",
+          "title": "SAVE America Act",
+          "url": "/bill/119-hr-7296-save-america-act/",
+          "fromLabel": null,
+          "toLabel": "In Committee",
+          "stageDate": "2026-01-30",
+          "enactedDate": "2026-01-30",
+          "tally": "",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-HR-6509",
+          "stage": "committee",
+          "code": "H.R. 6509",
+          "title": "SAFE Drugs Act of 2025",
+          "url": "/bill/119-hr-6509-safe-drugs-act-of-2025/",
+          "fromLabel": null,
+          "toLabel": "In Committee",
+          "stageDate": "2025-12-09",
+          "enactedDate": "2025-12-09",
+          "tally": "",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-S-2296",
+          "stage": "senate",
+          "code": "S. 2296",
+          "title": "National Defense Authorization Act for Fiscal Year 2026",
+          "url": "/bill/119-s-2296-national-defense-authorization-act-for-fiscal-year-2026/",
+          "fromLabel": null,
+          "toLabel": "Passed Senate",
+          "stageDate": "2025-11-12",
+          "enactedDate": "2025-11-12",
+          "tally": "77-20",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-S-2976",
+          "stage": "committee",
+          "code": "S. 2976",
+          "title": "HIRE Act",
+          "url": "/bill/119-s-2976-hire-act/",
+          "fromLabel": null,
+          "toLabel": "In Committee",
+          "stageDate": "2025-10-06",
+          "enactedDate": "2025-10-06",
+          "tally": "",
+          "group": "new",
+          "groupTitle": "New to the site"
+        },
+        {
+          "id": "119-HR-5269",
+          "stage": "committee",
+          "code": "H.R. 5269",
+          "title": "RESULTS Act",
+          "url": "/bill/119-hr-5269-results-act/",
+          "fromLabel": null,
+          "toLabel": "In Committee",
+          "stageDate": "2025-09-10",
+          "enactedDate": "2025-09-10",
+          "tally": "",
+          "group": "new",
+          "groupTitle": "New to the site"
+        }
+      ]
     },
     {
       "date": "2026-08-12",

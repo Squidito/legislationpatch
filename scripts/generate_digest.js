@@ -72,6 +72,9 @@ function todayISO() {
 // render them identically. See scripts/lib/bill-code.js.
 const { displayCode } = require('./lib/bill-code.js');
 
+// Reading a PUBLISHED edition back (legacy entry recovery — see mergeSameDay).
+const { parseGroups } = require('./lib/changelog-page.js');
+
 // Escape a value for safe embedding inside a <script type="application/ld+json">.
 function jsonLd(obj) {
   return JSON.stringify(obj).replace(/</g, '\\u003c');
@@ -498,6 +501,115 @@ ${renderEditionBlock(edition, dateISO)}
 ` + FOOTER + '\n';
 }
 
+// ── Same-day regeneration: MERGE, never replace ────────────────────────────────
+//
+// THE DEFECT THIS CLOSES (2026-08-27). Two batches landed on one day. The second
+// `npm run digest` regenerated changelog/2026-08-27/ and silently DELETED the four
+// bills the first run had published there. Unrecoverable by re-running: buildEdition
+// diffs against state.stages, and run 1 had already recorded those bills' new stages,
+// so they never diffed again. The script's own comment promised "a published edition
+// is never rewritten" -- that guarantee only ever held ACROSS days.
+//
+// The contract now: a same-day regeneration is a UNION by bill id. An entry that was
+// published today is never dropped. A bill that appears in both the published edition
+// and the fresh diff with a DIFFERENT destination stage (it moved twice in one day) is
+// a genuine conflict -- the edition cannot state both -- and aborts loudly rather than
+// silently picking one.
+//
+// Editions record their entries in digest-state.json from this change on. An edition
+// published BEFORE that (there is exactly one such day on disk) is recovered from its
+// published page, which is the only durable record of what it said.
+
+const GROUP_ORDER = ['enacted', 'advanced', 'new'];
+
+/** edition -> flat entry list, each tagged with the group it renders in. */
+function flattenEdition(edition) {
+  const flat = [];
+  for (const g of edition.groups) for (const e of g.entries) flat.push({ ...e, group: g.key, groupTitle: g.title });
+  return flat;
+}
+
+/** flat entry list -> edition groups, canonical order, stage-date sorted. */
+function groupFlatEntries(flat) {
+  const byKey = new Map();
+  for (const e of flat) {
+    const { group, groupTitle, ...entry } = e;
+    if (!byKey.has(group)) byKey.set(group, { key: group, title: groupTitle, entries: [] });
+    byKey.get(group).entries.push(entry);
+  }
+  const groups = [];
+  for (const k of GROUP_ORDER) if (byKey.has(k)) groups.push(byKey.get(k));
+  for (const [k, g] of byKey) if (!GROUP_ORDER.includes(k)) groups.push(g);   // unknown key: keep, never drop
+  for (const g of groups) g.entries.sort(byStageDateDesc);
+  return groups;
+}
+
+/**
+ * Entries of a previously published edition. Prefers the recorded snapshot; falls
+ * back to the published page for editions written before entries were recorded.
+ * Throws rather than returning a short list — a partial recovery would drop exactly
+ * the entries this whole mechanism exists to protect.
+ */
+function publishedEntries(record, dateISO) {
+  if (Array.isArray(record.entries) && record.entries.length) return record.entries;
+
+  const page = path.join(CHANGELOG, dateISO, 'index.html');
+  if (!fs.existsSync(page)) {
+    throw new Error(
+      `digest: the ${dateISO} edition is in digest-state.json with no recorded entries and ` +
+      `changelog/${dateISO}/index.html is missing — its contents cannot be recovered, so a ` +
+      `regeneration would silently drop them. Restore the page from git, or delete the ${dateISO} ` +
+      `record from data/digest-state.json if that edition was never meant to exist.`);
+  }
+  const byId = new Map(bills.map(b => [String(b.id), b]));
+  const recovered = [];
+  for (const g of parseGroups(fs.readFileSync(page, 'utf8'))) {
+    if (!g.key) throw new Error(`digest: unrecognised group heading "${g.title}" in changelog/${dateISO}/ — cannot safely recover its entries.`);
+    for (const e of g.entries) {
+      const bill = e.id && byId.get(e.id);
+      if (!bill) throw new Error(`digest: changelog/${dateISO}/ lists ${e.id || e.code}, which is not in cache.json — cannot rebuild that entry.`);
+      recovered.push({ ...buildEntry(bill, e.from), group: g.key, groupTitle: g.title });
+    }
+  }
+  const claimed = record.counts && record.counts.total;
+  if (Number.isFinite(claimed) && recovered.length !== claimed) {
+    throw new Error(`digest: changelog/${dateISO}/ yields ${recovered.length} entries but digest-state.json records ${claimed} — refusing to regenerate on an incomplete recovery.`);
+  }
+  console.log(`  recovered ${recovered.length} entr${recovered.length === 1 ? 'y' : 'ies'} from the published ${dateISO} page (no recorded snapshot).`);
+  return recovered;
+}
+
+/** Union the published edition with the fresh diff. Fatal on a real conflict. */
+function mergeSameDay(record, freshEdition, dateISO) {
+  const prior = publishedEntries(record, dateISO);
+  const merged = new Map(prior.map(e => [e.id, e]));
+  const conflicts = [];
+  let added = 0;
+
+  for (const e of (freshEdition ? flattenEdition(freshEdition) : [])) {
+    const was = merged.get(e.id);
+    if (!was) { merged.set(e.id, e); added++; continue; }
+    if (was.stage !== e.stage || was.toLabel !== e.toLabel) {
+      conflicts.push(`${e.code}: published as "${was.toLabel}" (${was.stage}), now "${e.toLabel}" (${e.stage})`);
+    }
+    // Same destination: the published entry already says it. Keep it — it carries
+    // the original from-label, and re-deriving would lose that transition.
+  }
+
+  if (conflicts.length) {
+    throw new Error(
+      `digest: ${conflicts.length} bill(s) reached a DIFFERENT stage after the ${dateISO} edition was published:\n` +
+      conflicts.map(c => '    ' + c).join('\n') +
+      `\n  One edition cannot state both. Decide deliberately: publish the later move in tomorrow's edition\n` +
+      `  (no action needed — it will diff again), or hand-edit the ${dateISO} entry and its digest-state.json\n` +
+      `  record together. Refusing to overwrite the published edition.`);
+  }
+
+  const flat = [...merged.values()];
+  console.log(`  merging into the published ${dateISO} edition: ${prior.length} kept, ${added} added.`);
+  return { kind: record.kind || (freshEdition && freshEdition.kind) || 'diff', groups: groupFlatEntries(flat) };
+}
+
 // ── Write the current full-cache snapshot (deterministic key order) ────────────
 
 function currentSnapshot() {
@@ -511,25 +623,33 @@ function currentSnapshot() {
 // ── Main ───────────────────────────────────────────────────────────────────────
 
 function main() {
-  const edition = buildEdition();
+  const fresh   = buildEdition();
+  const dateISO = todayISO();
+  const priorEditions = (state && Array.isArray(state.editions)) ? state.editions.slice() : [];
+  const published = priorEditions.find(e => e.date === dateISO) || null;
 
-  if (!edition) {
+  // Nothing new AND nothing published today -> no edition (the "no thin pages" rule).
+  // Nothing new but an edition already exists today -> re-render it unchanged; the
+  // hub/page rebuild is idempotent and the published entries are preserved.
+  if (!fresh && !published) {
     console.log('digest: no changes, no edition.');
     return;
   }
 
-  const dateISO = todayISO();
+  // Same-day regeneration is a UNION, never a replacement — see mergeSameDay().
+  const edition = published ? mergeSameDay(published, fresh, dateISO) : fresh;
   const counts  = editionCounts(edition);
 
-  // Assemble the editions ledger (metadata only — full entries live on the page).
-  const priorEditions = (state && Array.isArray(state.editions)) ? state.editions.slice() : [];
+  // The editions ledger. `entries` is the durable record of what an edition said,
+  // so a later same-day run can merge against it instead of re-deriving from a
+  // state snapshot that has already moved past those bills.
   const record = {
     date: dateISO,
     url: `/changelog/${dateISO}/`,
     kind: edition.kind,
     counts,
+    entries: flattenEdition(edition),
   };
-  // Replace a same-day edition if this run is re-generating today.
   const editions = priorEditions.filter(e => e.date !== dateISO);
   editions.push(record);
   editions.sort((a, b) => String(b.date).localeCompare(String(a.date)));
@@ -559,4 +679,11 @@ function main() {
   console.log(`  state    : data/digest-state.json (${Object.keys(nextState.stages).length} bills tracked, ${editions.length} edition(s))`);
 }
 
-main();
+// Importable for scripts/test-digest-merge.js (teeth). Loading the module is
+// read-only; only a direct run writes pages or state.
+if (require.main === module) main();
+
+module.exports = {
+  buildEntry, buildEdition, editionCounts,
+  flattenEdition, groupFlatEntries, publishedEntries, mergeSameDay,
+};
