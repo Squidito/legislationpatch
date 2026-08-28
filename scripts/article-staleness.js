@@ -17,6 +17,7 @@
 'use strict';
 
 const fs   = require('fs');
+const { spawnSync } = require('child_process');
 const path = require('path');
 
 const ROOT     = path.join(__dirname, '..');
@@ -129,6 +130,48 @@ function main() {
     return;
   }
 
+  // ROSTER DRIFT — the tripwire that was missing.
+  //
+  // The staleness check above sees bill MOVEMENT (a referenced bill advanced past
+  // the article's date). It cannot see CORPUS GROWTH, and that is how the
+  // 119th-congress-tracker went silently stale: it was written on 2026-05-08 when
+  // the cache held 23 bills and claimed a "complete list", then the June-August
+  // backlog batches grew the corpus to 212 behind it. Not one bill it cited had
+  // moved, so nothing flagged for months.
+  //
+  // generate-tracker-roster.js --check re-derives the roster block AND the
+  // snapshot receipts sheet from the cache and diffs both against disk, which is
+  // exactly the corpus-growth signal. Run here, reported, and NEVER allowed to
+  // change the exit code: the snapshot regenerates only on that article's refresh,
+  // so between refreshes drift is the NORMAL state, and blocking a batch commit on
+  // it would be the live-fixture trap already rejected for tracker:gate:test.
+  function rosterAdvisory() {
+    const script  = path.join(__dirname, 'generate-tracker-roster.js');
+    const article = path.join(ARTICLES, '119th-congress-tracker.html');
+    console.log('─'.repeat(64));
+    console.log('  Tracker roster drift (advisory) — corpus growth vs. the published roster');
+    console.log('─'.repeat(64));
+    if (!fs.existsSync(script) || !fs.existsSync(article)) {
+      console.log('  · skipped — generate-tracker-roster.js or the tracker article is not present.');
+      console.log('');
+      return;
+    }
+    const r = spawnSync(process.execPath, [script, '--check', '--file', article],
+                        { cwd: ROOT, encoding: 'utf8' });
+    const out = ((r.stdout || '') + (r.stderr || '')).trim();
+    if (r.error) {
+      console.log(`  · could not run the roster check: ${r.error.message}`);
+    } else if (r.status === 0) {
+      console.log('  ✓ roster and snapshot match the cache — the tracker covers the current corpus.');
+    } else {
+      console.log('  ⚠  ROSTER DRIFT — articles/119th-congress-tracker.html no longer matches the cache.');
+      for (const line of out.split('\n')) if (line.trim()) console.log(`      ${line.trim()}`);
+      console.log('      Refresh it:  node scripts/generate-tracker-roster.js --apply');
+      console.log('      then re-audit and republish (npm run article:publish -- --refresh).');
+    }
+    console.log('');
+  }
+
   const flagged = [];   // { file, date, dateSource, stale:[{id, stageLabel, stageDate}], noDate }
   let refCount = 0, scanned = 0;
 
@@ -164,6 +207,7 @@ function main() {
   if (!flagged.length) {
     console.log('  ✓ No stale articles — every referenced bill is at or behind its article date.');
     console.log('');
+    rosterAdvisory();
     process.exit(0);
   }
 
@@ -184,7 +228,8 @@ function main() {
   const noDateN = flagged.filter(a => a.noDate).length;
   console.log(`  ${flagged.length} article(s) flagged: ${staleN} stale, ${noDateN} no-date. Advisory only — not blocking.`);
   console.log('');
-  process.exit(0); // always advisory
+  rosterAdvisory();
+  process.exit(0); // always advisory — including the roster check above
 }
 
 main();
