@@ -24,6 +24,7 @@
 const fs   = require('fs');
 const path = require('path');
 const { extractQuotesFromCR } = require('./fetch_bill_cr');
+const { countBillRefs: countRefs, soleCachedRef: soleRef } = require('./lib/bill-refs');
 
 const CR_RAW      = path.join(__dirname, '../data/cr_raw.json');
 const QUOTES_FILE = path.join(__dirname, '../data/quotes.json');
@@ -63,18 +64,10 @@ function isoToDisplay(iso) {
 }
 
 const CONGRESS = process.env.CONGRESS_SESSION || '119';
-// Extract bill references ("H.R. 1234", "H. Con. Res. 40", "S. 5") → normalized ids.
-// Longest forms first; a lookbehind blocks the "U.S. 50" → "S. 50" false match.
-const BILL_REF_RE = /(?<![A-Za-z]\.)\b(H\.?\s?Con\.?\s?Res\.?|S\.?\s?Con\.?\s?Res\.?|H\.?\s?J\.?\s?Res\.?|S\.?\s?J\.?\s?Res\.?|H\.?\s?Res\.?|S\.?\s?Res\.?|H\.?\s?R\.?|S\.?)\s?(\d{1,5})\b/gi;
-const REF_TYPE = { HR:'HR', HJRES:'HJRES', HCONRES:'HCONRES', HRES:'HRES', SJRES:'SJRES', SCONRES:'SCONRES', SRES:'SRES', S:'S' };
-function billRefsInText(text) {
-    const out = new Set();
-    for (const m of (text || '').matchAll(BILL_REF_RE)) {
-        const t = REF_TYPE[m[1].toUpperCase().replace(/[^A-Z]/g, '')];
-        if (t) out.add(`${CONGRESS}-${t}-${m[2]}`);
-    }
-    return out;
-}
+// Bill-reference extraction ("H.R. 1234", "H. Con. Res. 40", "S. 5") lives in
+// lib/bill-refs.js -- shared with generate_reps.js so BOTH quote linkers apply
+// the same explicit-citation rule (see that file header for why a keyword
+// scorer is never allowed to create a link).
 
 function main() {
     if (!fs.existsSync(CR_RAW)) { console.log('No data/cr_raw.json — run fetch_cr_data.js first.'); return; }
@@ -129,20 +122,10 @@ function main() {
         return hit >= 2 && hit / bt.size >= 0.6;
     }
     // Frequency of each bill number cited in a block of text (billRefsInText dedups;
-    // here we need counts to find the granule's dominant SUBJECT bill).
-    function countBillRefs(text) {
-        const counts = {};
-        for (const m of (text || '').matchAll(BILL_REF_RE)) {
-            const t = REF_TYPE[m[1].toUpperCase().replace(/[^A-Z]/g, '')];
-            if (t) { const id = `${CONGRESS}-${t}-${m[2]}`; counts[id] = (counts[id] || 0) + 1; }
-        }
-        return counts;
-    }
+    // here we need counts to find the granule dominant SUBJECT bill).
+    const countBillRefs = text => countRefs(text, CONGRESS);
     // Signal (2): exactly one cached bill cited by number in `text`.
-    function soleCachedRef(text) {
-        const refs = [...new Set([...billRefsInText(text || '')].filter(id => cachedIds.has(id)))];
-        return refs.length === 1 ? { id: refs[0], title: cacheTitle[refs[0]] || null } : null;
-    }
+    const soleCachedRef = text => soleRef(text, cachedIds, cacheTitle, CONGRESS);
     function granuleBill(g) {
         // (2) explicit: the debate heading itself cites exactly one cached bill.
         const headingRef = soleCachedRef(g.granuleTitle || '');

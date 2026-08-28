@@ -30,85 +30,17 @@ const SEED_BIOGUIDES = [
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // ---- Bill attribution pipeline ----
-// For quotes with no billId, score each bill by keyword overlap and assign if confident.
-
-const STOP_WORDS = new Set([
-  // Common English
-  'the','a','an','of','in','to','and','or','is','are','was','were','for','that','this',
-  'with','from','has','have','be','will','by','on','at','as','not','but','its','it',
-  'we','our','their','they','he','she','who','which','all','any','can','do','did','if',
-  'so','no','up','out','more','been','had','than','when','what','how','also','each',
-  'some','other','these','those','into','would','should','could','may','must','about',
-  'after','before','between','through','during','over','under','same','both','such',
-  'own','new','per','just','very','now','only','then','them','her','his','him','said',
-  'get','got','one','two','three','four','five','six','seven','eight','nine','ten',
-  // Generic political/legislative terms (appear everywhere, signal nothing)
-  'american','america','national','federal','government','congress','congressional',
-  'senate','house','senator','representative','member','members','legislation',
-  'bill','bills','act','acts','law','laws','section','title','provides','provided',
-  'united','states','people','public','policy','political','president','administration',
-  'security','services','program','programs','funding','funds','fund','million','billion',
-  'percent','under','year','years','fiscal','budget','appropriations','appropriation',
-  'department','agency','agencies','office','committee','floor','statement','vote',
-  'republican','republicans','democrat','democrats','bipartisan','majority','minority',
-]);
-
-function extractKeywords(text) {
-  if (!text) return [];
-  return text.toLowerCase()
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter(w => w.length >= 4 && !STOP_WORDS.has(w));
-}
-
-function buildBillKeywords(bill) {
-  const kw = new Map(); // term → max weight
-  const add = (text, weight) => extractKeywords(text).forEach(w => {
-    kw.set(w, Math.max(kw.get(w) || 0, weight));
-  });
-  add(bill.title, 4);
-  add(bill.summary, 2);
-  add(bill.brief, 2);
-  (bill.top_lines || []).forEach(tl => {
-    add(typeof tl === 'string' ? tl : tl.headline, 2);
-    (tl.subs || []).forEach(s => add(s, 1));
-  });
-  (bill.sections || []).forEach(s => {
-    add(s.label, 1);
-    (s.items || []).forEach(item => add(item.main, 1));
-  });
-  return kw;
-}
-
-function attributeQuotesToBills(quotes, bills) {
-  const billIndex = bills.map(b => ({ id: b.id, title: b.title, kw: buildBillKeywords(b) }));
-  let count = 0;
-  for (const q of quotes) {
-    if (q.billId) continue;
-    const words = new Set(extractKeywords(q.text));
-    let best = null, bestScore = 0;
-    for (const b of billIndex) {
-      let score = 0;
-      for (const [term, weight] of b.kw) { if (words.has(term)) score += weight; }
-      if (score > bestScore) { bestScore = score; best = b; }
-    }
-    const matchCount = best ? [...best.kw.keys()].filter(k => words.has(k)).length : 0;
-    if (bestScore >= 6 && matchCount >= 2 && best) {
-      q.billId    = best.id;
-      q.billTitle = best.title;
-      count++;
-      console.log(`  [attr] "${q.text.slice(0, 55)}..." → ${best.id} (score ${bestScore})`);
-    }
-  }
-  return count;
-}
+// HARDENED 2026-08-27: explicit-citation only, never keyword scoring. The rule,
+// the two mislinks that forced it, and why a null revert used to be undone on the
+// next run all live in lib/quote-link.js -- read that header before touching this.
+const { attributeQuotesToBills } = require('./lib/quote-link');
 
 // Run attribution on quotes.json before building comment map
 try {
   const rawBills = JSON.parse(fs.readFileSync(cachePath, 'utf8'));
   const bills    = Array.isArray(rawBills.bills) ? rawBills.bills : Object.values(rawBills.bills || {});
   const rawQuotes = JSON.parse(fs.readFileSync(quotesPath, 'utf8'));
-  const attributed = attributeQuotesToBills(rawQuotes.quotes || [], bills);
+  const attributed = attributeQuotesToBills(rawQuotes.quotes || [], bills, CONGRESS_SESSION);
   if (attributed > 0) {
     fs.writeFileSync(quotesPath, JSON.stringify(rawQuotes, null, 2));
     console.log(`Attribution: ${attributed} quote(s) matched to bills.\n`);
