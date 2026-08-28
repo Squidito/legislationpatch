@@ -6,6 +6,7 @@
 
 require('dotenv').config();
 const { sleep: libSleep, fetchWithRetry, cleanHTML, cleanBillHTML } = require('./lib/fetch-helpers.js');
+const { fetchBillActions } = require('./lib/congress-api.js');
 const fs   = require('fs');
 const path = require('path');
 
@@ -36,39 +37,13 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 // (moved to scripts/lib/fetch-helpers.js) cleanBillHTML
 
-function detectStage(latestActionText, billType) {
-    const t = (latestActionText || '').toLowerCase();
-    if (t.includes('signed by president') || t.includes('became public law') || t.includes('enacted'))
-        return { key: 'signed', label: 'Signed into Law', step: 4 };
-    // "Received in the {chamber}" is a TRANSMISSION marker, not a passage — the bill
-    // passed the OTHER chamber and was sent here. Match it BEFORE the "passed …" lines
-    // so a House bill "Received in the Senate" is read as Passed House (step 2), not
-    // Passed Senate. (This was the mislabel bug; refresh_stages.js avoids it by scanning
-    // canonical "Passed/agreed to in …" markers, but detectStage only sees the latest
-    // action, so it maps the transmission marker back to the sending chamber.)
-    if (t.includes('received in the senate'))            // a House bill cleared the House
-        return { key: 'house', label: 'Passed House', step: 2 };
-    if (t.includes('received in the house'))             // a Senate bill cleared the Senate
-        return { key: 'senate', label: 'Passed Senate', step: 3 };
-    if (t.includes('passed senate') || t.includes('senate agreed'))
-        return { key: 'senate', label: 'Passed Senate', step: 3 };
-    if (t.includes('passed house') || t.includes('passed the house') || t.includes('house agreed') || t.includes('on passage') || t.includes('motion to reconsider laid on the table agreed to'))
-        return { key: 'house', label: 'Passed House', step: 2 };
-    if (t.includes('union calendar') || t.includes('house calendar') || t.includes('senate calendar') || t.includes('placed on the calendar') || t.includes('calendar no'))
-        return { key: 'committee', label: 'On House Calendar', step: 1 };
-    if (t.includes('reported by') || t.includes('ordered to be reported') || t.includes('referred to')) {
-        // House-originated bills only receive Senate committee actions after passing the House.
-        // Senate markup actions start with the committee name ("Committee on X. Ordered to be reported..."),
-        // whereas House markup says "Ordered to be Reported by...". Detect Senate-side activity and
-        // infer the bill has already cleared the House floor.
-        const houseOrigin = billType && /^H(R|JRES|CONRES|RES)$/i.test(billType);
-        const senateSide  = t.startsWith('committee on') || (t.includes('senate') && !t.includes('referred to the house'));
-        if (houseOrigin && senateSide)
-            return { key: 'house', label: 'Passed House', step: 2 };
-        return { key: 'committee', label: 'In Committee', step: 1 };
-    }
-    return { key: 'introduced', label: 'Introduced', step: 0 };
-}
+// Stage derivation lives in lib/stage.js -- shared with refresh_stages.js, which
+// carried the CORRECT version (passage markers over the full action history) while
+// this file guessed from the latest-action STRING alone. That guess read S. 2296 as
+// "Introduced" because its latest action is the bare housekeeping line "Held at the
+// desk", months after it passed the Senate 77-20. Read that file's header before
+// touching any of it.
+const { detectStage } = require('./lib/stage.js');
 
 // ─── BILL INCLUSION CRITERIA ─────────────────────────────────────────────────
 //
@@ -89,9 +64,16 @@ function detectStage(latestActionText, billType) {
 //
 // ─────────────────────────────────────────────────────────────────────────────
 
+// NOTE — 'held at the desk' was REMOVED from this list on 2026-08-27. It is the
+// opposite of dead-on-arrival: nothing reaches the other chamber's desk without
+// having passed its own. Because this screen runs BEFORE detectStage, a bill in
+// that state was dropped from the corpus entirely — S. 2296 passed the Senate
+// 77-20 and had to be added by hand. The `step < 2` check below is what actually
+// filters out no-floor-time bills, so removing it here lets in exactly the
+// already-transmitted measures this list is not meant to skip.
 const DOA_ACTIONS = [
     'introduced in', 'read twice and referred', 'referred to the committee',
-    'referred to committee', 'held at the desk', 'referred to the subcommittee'
+    'referred to committee', 'referred to the subcommittee'
 ];
 
 const SKIP_TITLE_PATTERNS = [
@@ -573,7 +555,14 @@ async function processBillEntry(congress, type, number, title) {
     if (!billTextResult.analysis) { console.log('  No text available — skipping.'); return null; }
     const actionDate = meta?.latestAction?.actionDate || '';
     const cr = await fetchCongressionalRecord(actionDate, type, number);
-    const stage = detectStage(meta?.latestAction?.text || '', type);
+    // The full action history, so the stage comes from passage markers rather than
+    // from whichever line Congress.gov happens to report as `latestAction`. That
+    // line is often housekeeping ("Held at the desk.") and reading it alone is what
+    // filed a Senate-passed NDAA vehicle as "Introduced". One extra paced call per
+    // bill; on failure detectStage falls back to the latest-action string.
+    const actions = await fetchBillActions(congress, type, number, { pace: 1500 });
+    const stage = detectStage(meta?.latestAction?.text || '', type, actions);
+    if (actions && actions.length) console.log(`  Actions: ${actions.length} — stage derived from passage markers`);
     console.log(`  Text: ${billTextResult.analysis.length} chars | CRS: ${crs.length} chars | CR: ${cr.length > 0 ? cr.length + ' chars' : 'none'} | Stage: ${stage.label}`);
 
     // Prior-year appropriations comparison

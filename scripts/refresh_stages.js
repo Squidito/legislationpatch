@@ -30,7 +30,6 @@
 require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
-const { PASSAGE_CONTEXT } = require('./lib/patterns.js');
 const { fetchBillActions } = require('./lib/congress-api.js');
 
 const KEY   = process.env.CONGRESS_API_KEY;
@@ -44,39 +43,11 @@ const FINAL = new Set(['signed', 'vetoed', 'dead']);
 // single-page cap). Same contract: Array on success, [] on 404, null on failure.
 const fetchActions = (congress, type, number) => fetchBillActions(congress, type, number, { pace: 1500 });
 
-// Furthest milestone reached, from the full actions list. Uses Congress.gov's
-// canonical "Passed/agreed to in [Chamber]" passage markers (these carry an actual
-// passage verb, so "Received in the Senate" / "Placed on Calendar" never match).
-function deriveProgress(actions, originHouse) {
-  const signed       = actions.some(a => /became public law|signed by president/i.test(a.text || ''));
-  const passedHouse  = actions.some(a => /^passed\/agreed to in house/i.test(a.text || ''));
-  const passedSenate = actions.some(a => /^passed\/agreed to in senate/i.test(a.text || ''));
-  const onCalendar   = actions.some(a => /placed on the .*calendar|calendar no\./i.test(a.text || ''));
-
-  // failed on the floor (a passage-context action that FAILED), latest by date
-  let failed = null;
-  for (const a of actions) {
-    const t = a.text || '';
-    if (!PASSAGE_CONTEXT.test(t)) continue; // shared with validate-batch.js — scripts/lib/patterns.js
-    if (/\bfailed\b/i.test(t) && (!failed || String(a.actionDate || '') > failed.date)) {
-      failed = { date: a.actionDate || '', text: t, chamber: a.chamber || (/senate/i.test(t) ? 'Senate' : 'House') };
-    }
-  }
-
-  if (signed) return { rank: 4, stage: 'signed', label: 'Signed into Law', step: 4, signed: true, failed };
-  if (passedHouse && passedSenate) {
-    return originHouse
-      ? { rank: 3, stage: 'senate', label: 'Passed Senate', step: 3, failed }
-      : { rank: 3, stage: 'house',  label: 'Passed House',  step: 3, failed };
-  }
-  if (passedHouse || passedSenate) {
-    return passedHouse
-      ? { rank: 2, stage: 'house',  label: 'Passed House',  step: 2, failed }
-      : { rank: 2, stage: 'senate', label: 'Passed Senate', step: 2, failed };
-  }
-  if (onCalendar) return { rank: 1, stage: 'committee', label: originHouse ? 'On House Calendar' : 'On Senate Calendar', step: 1, failed };
-  return { rank: 0, stage: 'introduced', label: 'Introduced', step: 0, failed };
-}
+// Furthest milestone reached, from the full actions list. Shared with
+// fetch_bills_data.js since 2026-08-27 -- it used to guess the stage from the
+// latest-action STRING alone, which is how a Senate-passed bill whose latest
+// action is "Held at the desk." read as Introduced. See lib/stage.js.
+const { deriveProgress } = require('./lib/stage.js');
 
 const latestActionDate = actions => actions.reduce((d, a) => ((a.actionDate || '') > d ? a.actionDate : d), '');
 

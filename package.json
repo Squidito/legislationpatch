@@ -41,7 +41,7 @@
     "qa-geo": "node scripts/qa-geo-verify.js",
     "og": "node scripts/generate_brand_assets.js --bills",
     "reps": "node scripts/generate_reps.js",
-    "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/normalize-analysis.js --self-test && node scripts/test-quote-link.js && node scripts/test-digest-merge.js && node scripts/test-figures.js && node scripts/validate-batch.js",
+    "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/normalize-analysis.js --self-test && node scripts/test-quote-link.js && node scripts/test-digest-merge.js && node scripts/test-figures.js && node scripts/test-stage.js && node scripts/validate-batch.js",
     "facts": "node scripts/bill-facts.js",
     "refresh": "node scripts/refresh_stages.js",
     "flag-drift": "node scripts/flag-version-drift.js",
@@ -77,7 +77,8 @@
     "tracker:gate:test": "node scripts/test-tracker-gate.js",
     "quotes:link:test": "node scripts/test-quote-link.js",
     "digest:merge:test": "node scripts/test-digest-merge.js",
-    "figures:test": "node scripts/test-figures.js"
+    "figures:test": "node scripts/test-figures.js",
+    "stage:test": "node scripts/test-stage.js"
   },
   "repository": {
     "type": "git",
