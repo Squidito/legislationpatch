@@ -31,8 +31,27 @@ const path = require('path');
 const ROOT     = path.join(__dirname, '..');
 const INDEX    = path.join(ROOT, 'data', 'articles-index.json');
 const ARTICLES = path.join(ROOT, 'articles');
+const DRAFTS   = path.join(ROOT, 'drafts');
 
 const VERBOSE = process.argv.includes('--verbose');
+
+// A card whose article has not been published YET is a draft, not a defect.
+// publish-article.js requires the curated card entry to exist BEFORE it will
+// publish, and runs preflight (which runs this script) as a blocking gate
+// BEFORE it moves drafts/<slug>.html into articles/. Checking articles/ only
+// therefore deadlocked every FIRST publish: card-then-publish failed here, and
+// publish-then-card failed publish-article's own curated-entry check. So look
+// in drafts/ too -- the same convention preflight.js already uses (isArticle()
+// counts drafts/ as articles, because a draft is written with the exact paths
+// it will have once published) and article-ledger.js's proseFile(). A card with
+// neither a published article nor a draft is still a hard failure.
+function resolveArticle(file) {
+    const published = path.join(ARTICLES, file);
+    if (fs.existsSync(published)) return { abs: published, where: 'articles' };
+    const draft = path.join(DRAFTS, file);
+    if (fs.existsSync(draft)) return { abs: draft, where: 'drafts' };
+    return null;
+}
 
 const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july',
                 'august', 'september', 'october', 'november', 'december'];
@@ -165,14 +184,15 @@ function main() {
         const summary = meta && meta.summary;
         if (!summary) continue;
 
-        const abs = path.join(ARTICLES, file);
-        if (!fs.existsSync(abs)) {
-            console.log(`  ❌ ${file}: card summary present but the article file does not exist`);
+        const found = resolveArticle(file);
+        if (!found) {
+            console.log(`  ❌ ${file}: card summary present but the article file does not exist (looked in articles/ and drafts/)`);
             problems++;
             continue;
         }
+        if (found.where === 'drafts' && VERBOSE) console.log(`     ..  ${file}  checked against the unpublished draft`);
 
-        const hay = normalize(haystack(fs.readFileSync(abs, 'utf8')));
+        const hay = normalize(haystack(fs.readFileSync(found.abs, 'utf8')));
         const claims = extractClaims(summary);
         checkedCards++;
 
