@@ -28,20 +28,15 @@ const REPS_INDEX   = path.join(__dirname, '../data/reps-index.json');
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
-// Build lastName+state → bioguideId lookup for senators (Senate XML has no bio_id field)
+// Senate XML carries no <bio_id>, so senators are matched on surname + state.
+// The key derivation, the compound-surname/suffix/diacritic handling and the
+// same-surname tiebreak all live in lib/senator-match.js — read that header
+// before touching this; it records the five senators the previous flat lookup
+// silently failed to match on every Senate roll call.
+const senatorMatch = require('./lib/senator-match');
 function buildSenatorLookup() {
   try {
-    const index = JSON.parse(fs.readFileSync(REPS_INDEX, 'utf8'));
-    const lookup = {};
-    for (const reps of Object.values(index)) {
-      for (const rep of reps) {
-        if (rep.role === 'Senator') {
-          const lastName = rep.name.split(',')[0].split(' ').pop().toLowerCase().replace(/[^a-z]/g, '');
-          lookup[lastName + '-' + rep.state] = rep.bioguideId;
-        }
-      }
-    }
-    return lookup;
+    return senatorMatch.buildSenatorIndex(JSON.parse(fs.readFileSync(REPS_INDEX, 'utf8')));
   } catch (_) { return {}; }
 }
 const SENATOR_LOOKUP = buildSenatorLookup();
@@ -134,10 +129,13 @@ function parseSenateXML(xml) {
     const party     = ((block.match(/<party>([\s\S]*?)<\/party>/i)            || [])[1] || '').trim();
     const state     = ((block.match(/<state>([\s\S]*?)<\/state>/i)            || [])[1] || '').trim();
     const vote      = ((block.match(/<vote_cast>([\s\S]*?)<\/vote_cast>/i)    || [])[1] || '').trim();
-    // Senate XML often omits bio_id — fall back to lastName+state lookup
+    // Senate XML often omits bio_id — fall back to the surname+state matcher.
+    // An unresolved row is LEFT unresolved and logged: a wrong bioguide id on a
+    // public voting record is worse than a missing one.
     if (!bioguideId && lastName && state) {
-      const key = lastName.toLowerCase().replace(/[^a-z]/g, '') + '-' + state;
-      bioguideId = SENATOR_LOOKUP[key] || '';
+      const r = senatorMatch.resolveSenator(SENATOR_LOOKUP, { lastName, firstName, state, party });
+      bioguideId = r.bioguideId || '';
+      if (!bioguideId) console.warn(`   - unmatched senator: ${lastName}${firstName ? ', ' + firstName : ''} (${state}) — ${r.reason}`);
     }
     if (vote) {
       members.push({
@@ -437,9 +435,92 @@ async function processVotesForBill(bill, cacheData) {
   console.log('  - Updated ' + repUpdates + ' rep vote histories');
 }
 
+// ---- Offline re-match of stored votes ----
+// `node scripts/fetch_vote_data.js --rematch [--apply]`
+//
+// The stored roll calls in data/votes/ already carry every field the matcher
+// needs (name, state, party), so a matcher fix can be applied to the corpus
+// WITHOUT re-fetching anything — no API key, no network, no risk of a refetch
+// rewriting unrelated vote fields. Fills empty bioguideIds on Senate rows and
+// on their crossover entries, then rebuilds the affected members' voteHistory.
+// Never overwrites an id that is already present: a stored id came from the
+// source and outranks a derived one.
+function rematchStoredVotes(apply) {
+  if (!fs.existsSync(VOTES_DIR)) { console.log('No data/votes directory.'); return; }
+  const touched = new Map();   // bioguideId -> [{billId, billTitle, chamber, date, vote}]
+  let files = 0, filled = 0, unresolved = 0, changedFiles = 0;
+  const unresolvedNames = {};
+
+  for (const f of fs.readdirSync(VOTES_DIR)) {
+    if (!f.endsWith('.json')) continue;
+    files++;
+    const p = path.join(VOTES_DIR, f);
+    const rec = JSON.parse(fs.readFileSync(p, 'utf8'));
+    let dirty = false;
+    for (const vote of (rec.votes || [])) {
+      if (vote.chamber !== 'Senate') continue;
+      for (const list of [vote.members || [], vote.crossovers || []]) {
+        for (const m of list) {
+          if (m.bioguideId) continue;
+          // Stored rows carry "Last, First" — the shape parseSenateXML wrote.
+          const [last, first] = String(m.name || '').split(',');
+          const r = senatorMatch.resolveSenator(SENATOR_LOOKUP, { lastName: last, firstName: first, state: m.state, party: m.party });
+          if (!r.bioguideId) {
+            unresolved++;
+            unresolvedNames[`${m.name} (${m.state})`] = r.reason;
+            continue;
+          }
+          m.bioguideId = r.bioguideId;
+          filled++; dirty = true;
+          if (list === (vote.members || [])) {
+            if (!touched.has(r.bioguideId)) touched.set(r.bioguideId, []);
+            touched.get(r.bioguideId).push({
+              billId: rec.billId, billTitle: rec.title, chamber: vote.chamber, date: vote.date, vote: m.vote,
+            });
+          }
+        }
+      }
+    }
+    if (dirty) {
+      changedFiles++;
+      if (apply) fs.writeFileSync(p, JSON.stringify(rec, null, 2));
+    }
+  }
+
+  let historyAdded = 0;
+  for (const [bioguideId, entries] of touched) {
+    const repFile = path.join(REPS_DIR, bioguideId + '.json');
+    if (!fs.existsSync(repFile)) continue;
+    const rep = JSON.parse(fs.readFileSync(repFile, 'utf8'));
+    if (!Array.isArray(rep.voteHistory)) rep.voteHistory = [];
+    let added = 0;
+    for (const e of entries) {
+      if (rep.voteHistory.some(v => v.billId === e.billId && v.chamber === e.chamber)) continue;
+      rep.voteHistory.push(e);
+      added++;
+    }
+    if (!added) continue;
+    rep.voteHistory.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    historyAdded += added;
+    if (apply) fs.writeFileSync(repFile, JSON.stringify(rep, null, 2));
+  }
+
+  console.log(`\n=== SENATE RE-MATCH ${apply ? '(APPLIED)' : '(DRY RUN — add --apply)'} ===`);
+  console.log(`  vote files scanned: ${files}, changed: ${changedFiles}`);
+  console.log(`  member rows given a bioguide id: ${filled}`);
+  console.log(`  vote-history entries added: ${historyAdded} across ${touched.size} member(s)`);
+  console.log(`  rows still unresolved: ${unresolved}`);
+  for (const [who, why] of Object.entries(unresolvedNames)) console.log(`    - ${who}: ${why}`);
+}
+
 // ---- Entry point ----
 
 async function main() {
+  if (process.argv.includes('--rematch')) {
+    rematchStoredVotes(process.argv.includes('--apply'));
+    return;
+  }
+
   if (!CONGRESS_API_KEY) {
     console.error('ERROR: Missing CONGRESS_API_KEY in .env');
     process.exit(1);
