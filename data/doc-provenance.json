@@ -63,17 +63,21 @@
       "scripts/generate_bill_pages.js",
       "scripts/lib/entity.js",
       "data/entity.json",
-      "scripts/generate-search-index.js"
+      "scripts/generate-search-index.js",
+      "scripts/fetch_bill_cr.js",
+      "floor.js"
     ],
     "claims": [
       "The schema.org types this page names are the types actually emitted. Verify against generate_bill_pages.js and lib/entity.js -- do NOT trust the prose.",
-      "Bill pages emit Legislation (not LegislativeAction). Articles use LegislativeAction only inside their about field.",
-      "Any schema type claimed here must exist somewhere in the codebase. Quotation and rep-profile Person schema were claimed but NOT implemented (caught 2026-08-13).",
+      "The worked example keeps the two node types distinct: the bill page's Legislation node carries name, identifier, date, type and SPONSOR; an article's LegislativeAction node carries name, identifier and date and NO sponsor. Conflating them was the defect fixed 2026-08-30.",
+      "Any schema type claimed here must exist somewhere in the codebase.",
       "The canonical Person / NewsMediaOrganization entity-reference architecture is still in place.",
-      "The described bill-text version rule matches the fetch logic (newest applicable: Enrolled > Engrossed > Reported > Introduced)."
+      "The bill-text version rule is stated as the FETCH-TIME preference, not as a guarantee about what is currently stored.",
+      "The page makes NO claim about how any AI system, crawler or search engine ranks, trusts or cites sources. Every such assertion was removed 2026-08-30 as uncheckable; a fast-moving domain like this must never be described from training memory.",
+      "The quote-provenance figures are still right: no bill-page quote carries a granule id and no quote record anywhere carries a session field. Re-derive with generate-site-facts.js --check."
     ],
-    "sha": "c2a547fa6bc7df9f",
-    "reviewedAt": "2026-08-15"
+    "sha": "",
+    "reviewedAt": ""
   },
   "articles/methodology.html": {
     "describes": [
@@ -82,16 +86,24 @@
       "scripts/qa-source-verify.js",
       "scripts/fetch_bills_data.js",
       "scripts/fetch-reference.js",
+      "scripts/fetch_cr_data.js",
+      "scripts/publish-article.js",
+      "scripts/lib/article-ledger.js",
+      "scripts/generate-site-facts.js",
       "docs/QA-LOOP.md"
     ],
     "claims": [
-      "The described sourcing workflow matches the workflow actually run.",
-      "The list of validation gates matches what validate-batch.js actually enforces.",
+      "Bill text comes from the Congress.gov API. GovInfo supplies the Congressional Record, the U.S. Code and chamber manuals. fetch_bills_data.js contains ZERO govinfo references -- if this page names GovInfo as a bill-text source anywhere, including the meta description, the og:description, the JSON-LD description or the Primary Sources box, it is wrong. That error survived a body-only fix once already.",
+      "The validator counts are stated correctly: 27 check sections, 14 that can call fail(), 13 warn-only, and the figure-sourcing guard warn-only outside --strict. Re-derive with `node scripts/generate-site-facts.js --check`, never by re-reading the prose.",
+      "The cross-model rule is claimed ONLY where it is enforced. publish-article.js blocks an article whose ledger names the same model family as drafter and auditor; no bill ledger records a drafting model, so the page must not claim it for bill analyses, and it must not imply the gate is retroactive to articles audited before it existed.",
+      "The explainer paragraph matches ARTICLE_DRAFT_PROMPT rule 2 as amended 2026-08-28 (bill material allowed only as receipt-bound factual examples) and lib/article-ledger.js (an article receipt binds to ONE named source; pooled verification does not exist for articles).",
+      "The page states no service-level or turnaround promise. The \"24 to 48 hours\" target was removed 2026-08-30 because nothing in the repo backed it.",
+      "The bill-text staleness disclosure is still accurate: an already-analysed bill is not automatically re-fetched, so stored text can be older than the newest posted version. Re-derive the two figures with generate-site-facts.js --check before stamping.",
       "The latest-applicable-version fetch rule is still how bill text is retrieved.",
-      "Any count or enumeration on this page (number of checks, number of passes) still matches reality -- these are the parts that rot first."
+      "Any count or enumeration on this page still matches reality -- these are the parts that rot first."
     ],
-    "sha": "8c9fce0cc58110fb",
-    "reviewedAt": "2026-08-15"
+    "sha": "",
+    "reviewedAt": ""
   },
   "articles/no-editorial-spin.html": {
     "describes": [
@@ -100,11 +112,13 @@
     ],
     "claims": [
       "The neutrality rules described here match the rules the drafting prompt actually enforces.",
-      "The both-sides eligibility triggers described match docs/BOTH-SIDES.md.",
-      "The stated ban on editorial labels is still enforced in the prompt."
+      "The both-sides paragraph states the four structural eligibility triggers AND the consensus-bill exclusion from docs/BOTH-SIDES.md. Omitting the exclusion materially undersells how gated the mechanism is; that was the defect fixed 2026-08-30.",
+      "The stated ban on editorial labels is still enforced in the prompt.",
+      "THE HARD PART: this page is a promise about the published OUTPUT, so re-reading it is not enough. Before stamping, sweep articles/ for prose in the SITE'S OWN VOICE that breaches it -- motive attributed to an unnamed collective, a position attributed to nobody (\"critics argued\", \"supporters say\"), the ARTICLE-SPEC section 5 adjectives, and unsourced political inference. Three sweeps on 2026-08-30 removed about thirty such sentences across twenty articles.",
+      "The page makes no unsourced quantified claim about public opinion or media effects. It carried two until 2026-08-30."
     ],
-    "sha": "4e96ce0e2edb6117",
-    "reviewedAt": "2026-08-13"
+    "sha": "d368546bab9ec110",
+    "reviewedAt": "2026-08-30"
   },
   "articles/what-is-congressional-record.html": {
     "describes": [

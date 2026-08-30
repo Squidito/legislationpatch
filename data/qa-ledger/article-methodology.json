@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "25f457809e67b529",
+  "proseSha": "51886d51aa6e3726",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -103,6 +103,15 @@
       "citation": "LegislationPatch source, docs/QA-LOOP.md",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/docs/QA-LOOP.md",
       "textFile": "docs/QA-LOOP.md",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "code-qa-regression",
+      "kind": "code",
+      "label": "scripts/qa-ledger-regression.js — replays every verified receipt against current source",
+      "citation": "LegislationPatch source, scripts/qa-ledger-regression.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/qa-ledger-regression.js",
+      "textFile": "scripts/qa-ledger-regression.js",
       "fetchedAt": "2026-08-30"
     },
     {
@@ -361,7 +370,7 @@
     },
     {
       "field": "body",
-      "claim": "Among the blocking checks are bill-text presence, referenced-source resolution, quote quality, and stage-versus-vote consistency.",
+      "claim": "Among the blocking checks are bill-text presence, referenced-source resolution, quote attribution against the member id, and stage-versus-vote consistency.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
@@ -431,7 +440,7 @@
       "type": "process",
       "severity": "ok",
       "sourceFile": "doc-qa-loop",
-      "sourceSpan": "polarity/direction",
+      "sourceSpan": "Polarity/direction sub-check:",
       "section": "How We Verify Accuracy",
       "status": "open",
       "verify": null,
@@ -471,6 +480,19 @@
       "severity": "ok",
       "sourceFile": "doc-qa-loop",
       "sourceSpan": "write `data/qa-ledger/{id}.json` per audited bill",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "When the source changes, every previously verified claim is replayed against it rather than assumed to still hold.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-qa-regression",
+      "sourceSpan": "RECEIPT REPLAY",
       "section": "How We Verify Accuracy",
       "status": "open",
       "verify": null,
@@ -595,8 +617,8 @@
     }
   ],
   "counts": {
-    "claims": 36,
-    "supported": 36,
+    "claims": 37,
+    "supported": 37,
     "material": 0,
     "minor": 0,
     "omissions": 0,
