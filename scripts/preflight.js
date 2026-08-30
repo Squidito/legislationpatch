@@ -569,6 +569,32 @@ section('Article card summaries vs their articles');
   }
 }
 
+// 11. The trust pages' derived figures are still current --------------------
+// articles/methodology.html, what-is-legislationpatch.html, how-we-track-voting,
+// how-we-source-quotes and what-is-congressional-record publish counts about this
+// site. Every one of those numbers is derived by scripts/generate-site-facts.js
+// into data/ref-text/record-lp-site-facts.txt, which their audit ledgers quote as
+// their receipt. A bill batch, a rep refresh or a change to validate-batch.js
+// moves those numbers, and a stale sheet means a live page is now stating a
+// figure the repository no longer supports.
+//
+// WARN, not fail, and deliberately so: this sheet moves on ordinary batch work,
+// and the blocking teeth already exist one step later — qa-receipts and the
+// qa-regression pre-commit gate both fail outright the moment a ledger receipt
+// stops resolving against it. This line is the early prompt, not the gate.
+section('Trust-page derived figures (site-facts sheet)');
+{
+  const { execFileSync } = require('child_process');
+  try {
+    execFileSync(process.execPath, [path.join(__dirname, 'generate-site-facts.js'), '--check'], { stdio: 'pipe' });
+    pass('data/ref-text/record-lp-site-facts.txt matches the repository');
+  } catch (e) {
+    warn('data/ref-text/record-lp-site-facts.txt is STALE — the trust pages quote it. Re-run: node scripts/generate-site-facts.js --apply, then re-check the pages whose ledgers cite the changed lines.');
+    const out = (String(e.stdout || '') + String(e.stderr || '')).split('\n').filter(l => /line \d+/.test(l));
+    out.slice(0, 6).forEach(l => console.log('       ' + l.trim()));
+  }
+}
+
 // ---------------------------------------------------------------------------
 console.log('\n' + '═'.repeat(56));
 if (failures) {

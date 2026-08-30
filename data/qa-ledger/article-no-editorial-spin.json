@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "9d2fa18a008c330c",
+  "proseSha": "5bd480ffd54e6102",
   "sources": [
     {
       "id": "code-prompts",
@@ -138,32 +138,6 @@
     },
     {
       "field": "body",
-      "claim": "Modified provisions record the old and new values where the source has them.",
-      "verdict": "SUPPORTED",
-      "type": "process",
-      "severity": "ok",
-      "sourceFile": "code-prompts",
-      "sourceSpan": "modified = existing laws or thresholds changed (include old → new values when available)",
-      "section": "What We Do Describe",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
-    },
-    {
-      "field": "body",
-      "claim": "Removed provisions are recorded as existing requirements eliminated.",
-      "verdict": "SUPPORTED",
-      "type": "process",
-      "severity": "ok",
-      "sourceFile": "code-prompts",
-      "sourceSpan": "removed = existing requirements eliminated",
-      "section": "What We Do Describe",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
-    },
-    {
-      "field": "body",
       "claim": "How members voted is recorded from the official roll call.",
       "verdict": "SUPPORTED",
       "type": "process",
@@ -255,12 +229,12 @@
     },
     {
       "field": "body",
-      "claim": "The acceptable backing documents are the organization’s own letter or statement, a recorded vote, a member’s press release, or a Statement of Administration Policy.",
+      "claim": "The acceptable backing documents are the organization’s own statement or letter, a recorded vote, a Statement of Administration Policy, or a member’s own words.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
-      "sourceFile": "doc-both-sides",
-      "sourceSpan": "the org's own letter/statement, a recorded vote, a member's press release, an SAP",
+      "sourceFile": "doc-article-spec",
+      "sourceSpan": "a member's own words",
       "section": "What We Don't Do",
       "status": "open",
       "verify": null,
@@ -346,8 +320,8 @@
     }
   ],
   "counts": {
-    "claims": 21,
-    "supported": 21,
+    "claims": 19,
+    "supported": 19,
     "material": 0,
     "minor": 0,
     "omissions": 0,
