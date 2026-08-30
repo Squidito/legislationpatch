@@ -113,6 +113,24 @@ const open = claims.filter(c => c.status === 'open' && c.verdict !== 'SUPPORTED'
 if (open.length) fail(`${open.length} open flag(s) still on the ledger — converge the audit first`);
 ok(`ledger audited: ${claims.length} claim(s), ${claims.filter(c => c.verdict === 'SUPPORTED').length} supported, 0 open flags`);
 
+// CROSS-MODEL AUDIT (added 2026-08-30). articles/methodology.html tells readers
+// that a model different from the one that drafted an article audits it. Nothing
+// enforced that, and it drifted: 6 of the first 10 article ledgers recorded the
+// SAME model as drafter and auditor while the page claimed otherwise, and one
+// ledger's own notes admitted the lane accepted single-model passes. Detection
+// without a blocking gate does not change outcomes (the same lesson doc-provenance
+// already recorded about this exact page), so the public claim is now a
+// precondition of publishing. Fix-forward: run a hostile pass with another model
+// and record it as auditModel — never by weakening this check.
+const modelFamily = (s) => String(s || '').trim().split(/[\s(]/)[0].toLowerCase().replace(/[^a-z].*$/, '');
+if (!ledger.drafterModel || !ledger.auditModel) {
+    fail('ledger does not record both drafterModel and auditModel — articles/methodology.html claims a different model audits what drafted, and an unrecorded model cannot certify that');
+}
+if (modelFamily(ledger.drafterModel) === modelFamily(ledger.auditModel)) {
+    fail(`drafterModel and auditModel are the same model family ("${modelFamily(ledger.drafterModel)}") — articles/methodology.html states a DIFFERENT model audits the draft. Run a hostile pass with another model, record it as auditModel, and re-run.`);
+}
+ok(`cross-model audit recorded: drafted by ${modelFamily(ledger.drafterModel)}, audited by ${modelFamily(ledger.auditModel)}`);
+
 const unbound = claims.filter(c => (c.sourceSpan || '').trim() && !c.sourceFile);
 if (unbound.length) fail(`${unbound.length} claim(s) carry a receipt with no sourceFile binding`);
 ok('every receipt names its source');

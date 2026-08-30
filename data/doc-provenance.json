@@ -13,13 +13,13 @@
       "Nothing published comes from an AI model's background knowledge; every figure/date/citation must appear in fetched source text.",
       "A facts sheet with line numbers is extracted, and published figures are copied from it rather than retyped.",
       "Referenced statutes are fetched and read when a bill amends another law.",
-      "Deterministic checks BLOCK publication (figure sourcing, referenced-source resolution, passage corroboration).",
+      "The blocking/warning split is stated accurately: the section counts in validate-batch.js still match the page (27 sections, 14 that can call fail(), 13 warn-only), and the figure-sourcing guard is still warn-only outside --strict. Re-derive with `node scripts/generate-site-facts.js --check`.",
       "QA re-reads happen in fresh sessions carrying no memory of prior passes, working adversarially.",
       "Drafts are decomposed into atomic claims judged supported / contradicted / unsupported against a quoted span, including a direction-of-change check.",
-      "A second model from a DIFFERENT family verifies flagged findings.",
+      "The cross-model rule is stated ONLY where it is enforced. publish-article.js blocks an ARTICLE whose ledger names the same model family as drafter and auditor; bill ledgers record no drafting model, so the page must not claim it for bill analyses.",
       "A per-page audit ledger records every claim, its verdict, and its source line.",
       "CRITICAL -- every analysis and article is reviewed by a human BEFORE publication. If the Dispatch lane ever auto-publishes with post-publish review, this page AND the disclosure line on every article become false and must be reworded first.",
-      "Quotations are never generated or paraphrased; verbatim from the Congressional Record or omitted.",
+      "Quotations are never generated or paraphrased; verbatim from the Congressional Record with speaker attribution, or omitted. The page must NOT claim a date on every quote — only 23 of 417 bill-attached quotes store one (checked 2026-08-30).",
       "Positions attributed to named organizations trace to a fetched primary source, or are omitted rather than softened.",
       "No AI-generated or AI-altered imagery is used."
     ],
@@ -52,12 +52,13 @@
     ],
     "claims": [
       "The 'How the analysis is produced' paragraph matches the real pipeline.",
-      "The claim that each analysis is re-checked by a separate model from the one that drafted it is still true.",
+      "The verification description matches what the ledgers actually RECORD. Bill ledgers record an auditing model and NO drafting model (0 of 212 as of 2026-08-30), so no page may claim of a BILL analysis that a different model audited what drafted it. The cross-model rule is enforced only in the ARTICLE lane, by publish-article.js.",
       "Ownership, funding, and independence statements are still accurate.",
-      "The named editor matches data/entity.json."
+      "The named editor matches data/entity.json.",
+      "The static-data claim still holds: api.js fetches only same-host JSON, and the browser makes no live government API call."
     ],
-    "sha": "5313909820e73135",
-    "reviewedAt": "2026-08-13"
+    "sha": "736de116dab5ee62",
+    "reviewedAt": "2026-08-30"
   },
   "articles/no-editorial-spin.html": {
     "describes": [
