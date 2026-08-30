@@ -28,10 +28,13 @@ Senate roll-call match key collisions: 0
 ## Bill corpus (data/cache.json, data/analysis-skip.json)
 Analyzed bills in the database: 219
 Bills by stage: 122 house, 68 signed, 16 senate, 7 dead, 6 committee
-Bills whose displayed text is the enrolled version (stage signed): 68 of 219
+Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 219
 Bill-text panel label rendered by bill.js: "Full Bill Text"
+Enacted bills whose stored text is still the version as introduced: 2 (119-S-1003, 119-S-629)
+Non-enacted bills: 151; of those, 69 show the text as introduced.
+Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 73 of 151 non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.
 Top-line change counts per bill: range 1 to 9; 35 of 219 bills carry more than three.
-Plain-English summary length per bill: range 1 to 22 sentences; 47 of 219 bills run to more than three. (Sentence count = split on a sentence terminator followed by whitespace.)
+Plain-English summary length per bill: range 1 to 15 sentences; 28 of 219 bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations such as U.S., D.C., Pub. L. and decimal numbers.)
 Bills deliberately excluded from analysis in data/analysis-skip.json: 107
 Excluded bills by category: 29 ceremonial, 28 deferred-minor, 27 procedural, 23 cra-disapproval
 The cra-disapproval category covers resolutions of disapproval, which reach the floor by design; they are excluded from analysis, so coverage is not "all legislation with floor action".
@@ -41,7 +44,7 @@ Standalone floor quotes stored in data/quotes.json: 468
 Standalone floor quotes carrying a granuleId: 430 of 468
 Bill-attached quotes stored in cache.json featured_quotes: 417 across 219 bills
 Bill-attached quotes carrying a granuleId: 0 of 417
-Bill-attached quotes carrying a stored source line (chamber + floor date): 23 of 417
+Bill-attached quotes carrying a stored source string at all: 23 of 417; the stored values are "House Floor", "Senate Floor" — a chamber label with no date.
 Quote records carrying a session field, in either store: 0
 Bills with no Congressional Record quote at all: 40 of 219
 Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36
@@ -72,15 +75,16 @@ Roll calls where the margin exceeded the 30% threshold and members nonetheless v
 One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; 2 roll call(s) tie on crosser count): 119-HR-139, House 2026-07-14, "On Passage" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.
 
 ## Audit ledgers (data/qa-ledger/)
-Article claim ledgers: 15
-Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 15
-Article ledgers whose recorded auditing model differs from the drafting model: 9 of 15
+Article claim ledgers: 16
+Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 16
+Article ledgers whose recorded auditing model differs from the drafting model: 10 of 16
   119th-congress-tracker | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   congressional-review-act | drafter: opus-5 (in-conversation, pre-lane draft) | auditor: opus-5 (in-conversation) | verify: (none) | SAME MODEL
   continuing-resolution | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
   how-we-source-quotes | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   how-we-track-voting | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   kids-online-safety-act | drafter: opus-5 (in-conversation, Phase 5 retrofit) | auditor: opus-5 (source-only, full article) | verify: sonnet | SAME MODEL
+  methodology | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   ndaa-fy2027 | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   no-editorial-spin | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   omnibus-vs-minibus | drafter: opus-5 (in-conversation) | auditor: opus-5 (in-conversation, hostile fresh read) | verify: (none) | SAME MODEL

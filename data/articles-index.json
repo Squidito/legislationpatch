@@ -321,7 +321,7 @@
       "order": 43,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Every member quote is verbatim from the Congressional Record on GovInfo, or it is discarded. Here is the extraction process, the speaker-matching rules, and what provenance each of our two quote stores actually keeps."
     },
     "how-we-track-voting.html": {
@@ -336,7 +336,7 @@
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,
-      "summary": "Why primary sourcing, structured data, and factual density make LegislationPatch citable by AI systems — and why that matters for how Congressional information reaches readers."
+      "summary": "How the site is structured so any claim on it can be traced back to its source — verbatim floor quotes, schema.org markup on every page, and the bill version an analysis was actually written against."
     },
     "no-editorial-spin.html": {
       "order": 47,

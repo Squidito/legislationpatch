@@ -167,12 +167,63 @@ const topLineLens = billIds.map(id => (bills[id].top_lines || []).length);
 const tlMin = Math.min(...topLineLens), tlMax = Math.max(...topLineLens);
 const tlOver3 = topLineLens.filter(n => n > 3).length;
 
-// Sentence counting is a heuristic (terminator + whitespace), so the method is
-// printed with the number — a receipt a reader cannot re-derive is not a receipt.
-const sentences = (s) => String(s || '').split(/(?<=[.!?])\s+/).filter(x => x.trim()).length;
+// Sentence counting is a heuristic, so the method is printed with the number — a
+// receipt a reader cannot re-derive is not a receipt. The naive
+// "terminator + whitespace" rule was wrong: it split "D.C. Official Code" and
+// "U.S. Code" into separate sentences and inflated the count (a hostile pass
+// caught it, 2026-08-30). Abbreviations and decimals are masked first.
+const ABBREV = /\b(?:U\.S\.C|U\.S|D\.C|Pub\.\s?L|P\.L|Stat|Sec|No|Nos|Art|Rep|Sen|Reps|Sens|Mr|Mrs|Ms|Dr|Gov|Jr|Sr|St|Fig|Ch|Ed|Inc|Ltd|Co|Corp|approx|e\.g|i\.e|etc|vs|v|al|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|FY)\./g;
+const sentences = (s) => String(s || '')
+    .replace(ABBREV, (m) => m.replace(/\./g, '\u0001'))          // mask abbreviation dots
+    .replace(/(\d)\.(\d)/g, '$1\u0001$2')                      // mask decimals
+    .split(/(?<=[.!?])\s+(?=["\u201c(]?[A-Z0-9])/)
+    .filter(x => x.trim()).length;
 const sumLens = billIds.map(id => sentences(bills[id].summary));
 const sMin = Math.min(...sumLens), sMax = Math.max(...sumLens);
 const sOver3 = sumLens.filter(n => n > 3).length;
+
+// What version of the text is actually ON DISK for each bill, versus what the
+// bill's own versions[] says Congress.gov has posted. The pipeline PREFERS the
+// newest applicable version, but an already-cached bill that advances is not
+// automatically re-fetched, so intent and reality diverge. Measured because
+// what-is-legislationpatch.html and methodology.html both describe what a
+// reader is looking at.
+const TEXT_RANK = { enrolled: 100, 'public law': 95, 'engrossed amendment': 90, engrossed: 80, reported: 60, 'placed on calendar': 55, referred: 50, introduced: 20 };
+function rankOf(label) {
+    const l = String(label || '').toLowerCase();
+    let best = 0;
+    for (const [k, v] of Object.entries(TEXT_RANK)) if (l.includes(k) && v > best) best = v;
+    return best;
+}
+function storedTextLabel(id) {
+    const f = path.join(ROOT, 'data/bill-text', id + '.txt');
+    if (!fs.existsSync(f)) return null;
+    const head = fs.readFileSync(f, 'utf8').slice(0, 600);
+    // The GPO header opens with "[Congressional Bills 119th Congress]" and only a
+    // later bracket names the version, so take the highest-ranking bracket rather
+    // than the first (which otherwise scores 0 for every bill).
+    const brackets = head.match(/\[[^\]]*\]/g) || [];
+    let best = null, bestRank = -1;
+    for (const b of brackets) { const r = rankOf(b); if (r > bestRank) { bestRank = r; best = b; } }
+    if (best && bestRank > 0) return best;
+    if (/public law/i.test(head)) return 'Public Law';
+    return best || head.split('\n')[0].slice(0, 80);
+}
+let signedShowingIntroduced = [], staleAgainstPosted = 0, nonEnactedShowingIntroduced = 0, nonEnactedTotal = 0;
+for (const id of billIds) {
+    const b = bills[id];
+    if (!b || !b.id) continue;
+    const stored = storedTextLabel(b.id);
+    const storedRank = rankOf(stored);
+    const postedRank = Math.max(0, ...(b.versions || []).map(v => rankOf(v.type || v.name || v)));
+    if (b.stage === 'signed') {
+        if (stored && /introduced/i.test(stored)) signedShowingIntroduced.push(b.id);
+        continue;
+    }
+    nonEnactedTotal++;
+    if (stored && /introduced/i.test(stored)) nonEnactedShowingIntroduced++;
+    if (stored && postedRank > storedRank) staleAgainstPosted++;
+}
 
 const skip = readJson('data/analysis-skip.json').skip;
 if (!Array.isArray(skip)) die('data/analysis-skip.json has no skip array');
@@ -186,13 +237,14 @@ const standaloneGranule = standalone.filter(q => q.granuleId).length;
 const standaloneMaxLen = Math.max(...standalone.map(q => (q.text || '').length));
 
 let featuredCount = 0, featuredGranule = 0, featuredDated = 0, featuredMaxLen = 0, billsNoQuotes = 0;
+const featuredSources = [];
 for (const id of billIds) {
     const fq = bills[id].featured_quotes || [];
     if (!fq.length) billsNoQuotes++;
     for (const q of fq) {
         featuredCount++;
         if (q.granuleId) featuredGranule++;
-        if (q.source) featuredDated++;
+        if (q.source) { featuredDated++; featuredSources.push(String(q.source)); }
         featuredMaxLen = Math.max(featuredMaxLen, (q.text || '').length);
     }
 }
@@ -300,10 +352,13 @@ L.push('');
 L.push('## Bill corpus (data/cache.json, data/analysis-skip.json)');
 L.push(`Analyzed bills in the database: ${billIds.length}`);
 L.push(`Bills by stage: ${Object.entries(stageCounts).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ')}`);
-L.push(`Bills whose displayed text is the enrolled version (stage signed): ${stageCounts.signed || 0} of ${billIds.length}`);
+L.push(`Bills signed into law (stage signed), and so eligible to show enrolled text: ${stageCounts.signed || 0} of ${billIds.length}`);
 L.push(`Bill-text panel label rendered by bill.js: "${billTextLabel}"`);
+L.push(`Enacted bills whose stored text is still the version as introduced: ${signedShowingIntroduced.length}${signedShowingIntroduced.length ? ' (' + signedShowingIntroduced.join(', ') + ')' : ''}`);
+L.push(`Non-enacted bills: ${nonEnactedTotal}; of those, ${nonEnactedShowingIntroduced} show the text as introduced.`);
+L.push(`Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: ${staleAgainstPosted} of ${nonEnactedTotal} non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.`);
 L.push(`Top-line change counts per bill: range ${tlMin} to ${tlMax}; ${tlOver3} of ${billIds.length} bills carry more than three.`);
-L.push(`Plain-English summary length per bill: range ${sMin} to ${sMax} sentences; ${sOver3} of ${billIds.length} bills run to more than three. (Sentence count = split on a sentence terminator followed by whitespace.)`);
+L.push(`Plain-English summary length per bill: range ${sMin} to ${sMax} sentences; ${sOver3} of ${billIds.length} bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations such as U.S., D.C., Pub. L. and decimal numbers.)`);
 L.push(`Bills deliberately excluded from analysis in data/analysis-skip.json: ${skip.length}`);
 L.push(`Excluded bills by category: ${Object.entries(skipCats).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ')}`);
 L.push('The cra-disapproval category covers resolutions of disapproval, which reach the floor by design; they are excluded from analysis, so coverage is not "all legislation with floor action".');
@@ -313,7 +368,7 @@ L.push(`Standalone floor quotes stored in data/quotes.json: ${standalone.length}
 L.push(`Standalone floor quotes carrying a granuleId: ${standaloneGranule} of ${standalone.length}`);
 L.push(`Bill-attached quotes stored in cache.json featured_quotes: ${featuredCount} across ${billIds.length} bills`);
 L.push(`Bill-attached quotes carrying a granuleId: ${featuredGranule} of ${featuredCount}`);
-L.push(`Bill-attached quotes carrying a stored source line (chamber + floor date): ${featuredDated} of ${featuredCount}`);
+L.push(`Bill-attached quotes carrying a stored source string at all: ${featuredDated} of ${featuredCount}; the stored values are ${[...new Set(featuredSources)].sort().map(v => `"${v}"`).join(', ') || '(none)'} \u2014 a chamber label with no date.`);
 L.push(`Quote records carrying a session field, in either store: ${sessionFieldCount}`);
 L.push(`Bills with no Congressional Record quote at all: ${billsNoQuotes} of ${billIds.length}`);
 L.push(`Standalone floor quotes carrying a billId: ${standaloneWithBill.length} of ${standalone.length}; carrying none: ${standalone.length - standaloneWithBill.length}`);

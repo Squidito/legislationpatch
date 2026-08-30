@@ -342,6 +342,17 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-crs-98-265-cr-users-guide": {
+    "id": "record-crs-98-265-cr-users-guide",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2003-07-17",
+    "label": "CRS Report 98-265, A User's Guide to the Congressional Record (July 17, 2003)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-265GOV.html",
+    "textFile": "data/ref-text/record-crs-98-265-cr-users-guide.txt",
+    "fetchedAt": "2026-08-30"
+  },
   "record-crs-in12324-omnibus": {
     "id": "record-crs-in12324-omnibus",
     "kind": "record",
@@ -350,6 +361,17 @@
     "srcUrl": "https://www.everycrsreport.com/reports/IN12324.html",
     "textFile": "data/ref-text/record-crs-in12324-omnibus.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-crs-r45153-statutory-interpretation": {
+    "id": "record-crs-r45153-statutory-interpretation",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2018-03-10",
+    "label": "CRS Report R45153, Statutory Interpretation: Theories, Tools, and Trends",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R45153.html",
+    "textFile": "data/ref-text/record-crs-r45153-statutory-interpretation.txt",
+    "fetchedAt": "2026-08-30"
   },
   "record-crs-r47106-approps-overview": {
     "id": "record-crs-r47106-approps-overview",
@@ -377,6 +399,17 @@
     "srcUrl": "https://www.gao.gov/products/gao-05-734sp",
     "textFile": "data/ref-text/record-gao-budget-glossary.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-govinfo-crec-about": {
+    "id": "record-govinfo-crec-about",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2026-08-30",
+    "label": "GovInfo — About the Congressional Record",
+    "citation": "U.S. Government Publishing Office",
+    "srcUrl": "https://www.govinfo.gov/help/crec",
+    "textFile": "data/ref-text/record-govinfo-crec-about.txt",
+    "fetchedAt": "2026-08-30"
   },
   "record-house-roll-2026-069-s1383": {
     "id": "record-house-roll-2026-069-s1383",
@@ -457,6 +490,15 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec261/htm",
     "textFile": "data/ref-text/usc-15-261.txt",
     "fetchedAt": "2026-08-27"
+  },
+  "usc-2-2a": {
+    "id": "usc-2-2a",
+    "kind": "statute",
+    "label": "Reapportionment of Representatives",
+    "citation": "2 U.S.C. 2a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap1-sec2a/htm",
+    "textFile": "data/ref-text/usc-2-2a.txt",
+    "fetchedAt": "2026-08-30"
   },
   "usc-2-601": {
     "id": "usc-2-601",

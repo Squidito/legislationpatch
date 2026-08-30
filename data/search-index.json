@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T22:04:55.502Z",
+  "generatedAt": "2026-08-30T21:05:45.617Z",
   "counts": {
     "bill": 219,
     "rep": 551,
@@ -10765,7 +10765,7 @@
       "url": "/articles/how-we-source-quotes.html",
       "title": "How LegislationPatch Sources Congressional Quotes from the Congressional Record",
       "sub": "Guide",
-      "text": "Every quote attributed to a member of Congress on LegislationPatch comes from the Congressional Record via GovInfo. Here's exactly how we extract, verify, and display floor statements."
+      "text": "Every member quote on LegislationPatch is verbatim from the Congressional Record via GovInfo, or it is discarded. Here is the extraction process, the verification check, and what provenance each quote store actually keeps."
     },
     {
       "t": "article",
