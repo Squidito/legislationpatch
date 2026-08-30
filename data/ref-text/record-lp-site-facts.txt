@@ -8,6 +8,20 @@ Member profiles by role: 448 Representative, 103 Senator
 Per-member record files in data/reps/: 551
 Fields stored on a member record: bio, bioSource, bioUrl, bioguideId, comments, district, name, party, photo, portraitUrl, role, state, voteHistory
 No member record carries a term field: there is no term start date, term end date, term number, or years-served field in the schema.
+Biography source recorded on member records: 551 wikipedia
+Distinct House seats represented (state + district): 441; 429 carry a district number and 12 do not (at-large states and non-voting delegations are both stored with district null).
+House seats held by more than one person during the 119th Congress: 7
+  AZ-7: Adelita S. Grijalva / Raúl M. Grijalva
+  FL-6: Michael Waltz / Randy Fine
+  GA-14: Clay Fuller / Marjorie Taylor Greene
+  NJ-11: Analilia Mejia / Mikie Sherrill
+  TN-7: Mark E. Green / Matt Van Epps
+  TX-18: Christian D. Menefee / Sylvester Turner
+  VA-11: Gerald E. Connolly / James R. Walkinshaw
+States holding more than two senator profiles: 3
+  FL: Ashley Moody / Marco Rubio / Rick Scott
+  OH: Bernie Moreno / J. D. Vance / Jon Husted
+  OK: Alan Armstrong / James Lankford / Markwayne Mullin
 Senate roll-call match keys (lastName + state) in use: 103
 Senate roll-call match key collisions: 0
 
@@ -30,6 +44,9 @@ Bill-attached quotes carrying a granuleId: 0 of 417
 Bill-attached quotes carrying a stored source line (chamber + floor date): 23 of 417
 Quote records carrying a session field, in either store: 0
 Bills with no Congressional Record quote at all: 40 of 219
+Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36
+Standalone floor quotes whose text also appears in that same bill's featured_quotes (case/punctuation-normalized): 21 of 432. The two stores are built by separate extractors and mostly do not overlap.
+Sources registered in data/ref-sources.json by kind: 41 statute, 30 record, 8 statement, 3 rule, 2 bill, 2 member-statement, 1 press-release
 Excerpt cap enforced by fetch_bill_cr.js bestExcerpt(): 550 characters
 Longest stored quote, standalone store: 550 characters; bill-attached store: 550 characters
 
@@ -49,20 +66,30 @@ Primary bill text is fetched from the Congress.gov API, not from GovInfo. GovInf
 ## Vote data (scripts/fetch_vote_data.js)
 Crossover votes are surfaced only when the yea-nay margin is within 30% of total yeas plus nays.
 
+## Stored vote records (data/votes/)
+Recorded roll-call entries with a member list: 232; voice-vote or unanimous-consent entries with no member tally: 208
+Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: 75
+One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; 2 roll call(s) tie on crosser count): 119-HR-139, House 2026-07-14, "On Passage" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.
+
 ## Audit ledgers (data/qa-ledger/)
-Article claim ledgers: 10
-Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 10
-Article ledgers whose recorded auditing model differs from the drafting model: 4 of 10
+Article claim ledgers: 15
+Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 15
+Article ledgers whose recorded auditing model differs from the drafting model: 9 of 15
   119th-congress-tracker | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   congressional-review-act | drafter: opus-5 (in-conversation, pre-lane draft) | auditor: opus-5 (in-conversation) | verify: (none) | SAME MODEL
   continuing-resolution | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
+  how-we-source-quotes | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
+  how-we-track-voting | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   kids-online-safety-act | drafter: opus-5 (in-conversation, Phase 5 retrofit) | auditor: opus-5 (source-only, full article) | verify: sonnet | SAME MODEL
   ndaa-fy2027 | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
+  no-editorial-spin | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   omnibus-vs-minibus | drafter: opus-5 (in-conversation) | auditor: opus-5 (in-conversation, hostile fresh read) | verify: (none) | SAME MODEL
   save-america-act | drafter: opus-5 (in-conversation, delta refresh) | auditor: sonnet (hostile source-only, delta scope) | verify: sonnet | different model
   suspension-of-the-rules | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
   topic-congressional-procedure | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
   topic-government-spending | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
+  what-is-congressional-record | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
+  what-is-legislationpatch | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
 Bill claim ledgers: 212
 Bill ledgers recording a drafting model at all: 0 of 212
 No bill ledger records a drafting model, so no bill ledger records that a different model audited what drafted it.

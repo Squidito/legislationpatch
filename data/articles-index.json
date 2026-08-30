@@ -322,7 +322,7 @@
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,
-      "summary": "Every quote on LegislationPatch comes from a specific Congressional Record granule on GovInfo. Here's our extraction process, speaker identification method, and the revise-and-extend caveat."
+      "summary": "Every member quote is verbatim from the Congressional Record on GovInfo, or it is discarded. Here is the extraction process, the speaker-matching rules, and what provenance each of our two quote stores actually keeps."
     },
     "how-we-track-voting.html": {
       "order": 45,

@@ -170,9 +170,16 @@ function detectCrossovers(members, yeas, nays) {
     else if (v === 'nay' || v === 'no')            counts[p].Nay++;
   }
 
+  // A party that splits EXACTLY EVEN has no majority direction, so nobody in it
+  // can have voted against one. This used to default a tie to 'Yea', which put
+  // the member on the Nay side of a 1-1 split into the public "Crossed the
+  // Aisle" list — the Senate's two-member Independent caucus hit this on 18
+  // stored roll calls, all of them naming the same senator (found 2026-08-30
+  // while auditing articles/how-we-track-voting.html). null = no majority, and
+  // the loop below skips a member whose party has none.
   const partyMajority = {};
   for (const [p, c] of Object.entries(counts)) {
-    partyMajority[p] = c.Yea >= c.Nay ? 'Yea' : 'Nay';
+    partyMajority[p] = c.Yea === c.Nay ? null : (c.Yea > c.Nay ? 'Yea' : 'Nay');
   }
 
   const crossovers = [];
@@ -435,6 +442,65 @@ async function processVotesForBill(bill, cacheData) {
   console.log('  - Updated ' + repUpdates + ' rep vote histories');
 }
 
+// ---- Offline crossover recompute ----
+// `node scripts/fetch_vote_data.js --recross [--apply]`
+//
+// Re-runs detectCrossovers() over the member lists already stored in
+// data/votes/, so a fix to the crossover rule reaches the published corpus
+// without re-fetching anything. Rewrites each vote's `crossovers` array and the
+// matching `crossoverCount` on the cache.json vote summary. Same rationale as
+// --rematch: a rule fix that only applies to future fetches leaves the wrong
+// answer live on every page already published.
+function recomputeCrossovers(apply) {
+  if (!fs.existsSync(VOTES_DIR)) { console.log('No data/votes directory.'); return; }
+  const cache = loadCache();
+  const cacheBills = Array.isArray(cache.bills) ? cache.bills : Object.values(cache.bills || {});
+  let files = 0, changedFiles = 0, added = 0, removed = 0, summariesChanged = 0;
+  const removedByMember = {};
+
+  for (const f of fs.readdirSync(VOTES_DIR)) {
+    if (!f.endsWith('.json')) continue;
+    files++;
+    const p = path.join(VOTES_DIR, f);
+    const rec = JSON.parse(fs.readFileSync(p, 'utf8'));
+    const bill = cacheBills.find(b => b.id === rec.billId);
+    let dirty = false;
+    for (const vote of (rec.votes || [])) {
+      if (!Array.isArray(vote.members) || !vote.members.length) continue;
+      const before = vote.crossovers || [];
+      const after = detectCrossovers(vote.members, vote.yeas, vote.nays);
+      const key = c => (c.bioguideId || '') + '|' + (c.name || '');
+      const beforeKeys = new Set(before.map(key));
+      const afterKeys = new Set(after.map(key));
+      const gone = before.filter(c => !afterKeys.has(key(c)));
+      const gained = after.filter(c => !beforeKeys.has(key(c)));
+      if (!gone.length && !gained.length) continue;
+      removed += gone.length; added += gained.length;
+      for (const c of gone) {
+        const label = `${c.name} (${c.party || '?'}-${c.state || '?'})`;
+        removedByMember[label] = (removedByMember[label] || 0) + 1;
+      }
+      vote.crossovers = after;
+      dirty = true;
+      // Keep the cache summary's count in step; matched on the same identity
+      // fields the summary carries.
+      if (bill && Array.isArray(bill.votes)) {
+        const sum = bill.votes.find(v => v.chamber === vote.chamber && v.date === vote.date && v.question === vote.question);
+        if (sum && sum.crossoverCount !== after.length) { sum.crossoverCount = after.length; summariesChanged++; }
+      }
+    }
+    if (dirty) { changedFiles++; if (apply) fs.writeFileSync(p, JSON.stringify(rec, null, 2)); }
+  }
+  if (apply && summariesChanged) saveCache(cache);
+
+  console.log(`
+=== CROSSOVER RECOMPUTE ${apply ? '(APPLIED)' : '(DRY RUN — add --apply)'} ===`);
+  console.log(`  vote files scanned: ${files}, changed: ${changedFiles}`);
+  console.log(`  crossover entries removed: ${removed}, added: ${added}`);
+  console.log(`  cache.json vote summaries re-counted: ${summariesChanged}`);
+  for (const [who, n] of Object.entries(removedByMember)) console.log(`    - no longer listed: ${who} x${n}`);
+}
+
 // ---- Offline re-match of stored votes ----
 // `node scripts/fetch_vote_data.js --rematch [--apply]`
 //
@@ -518,6 +584,11 @@ function rematchStoredVotes(apply) {
 async function main() {
   if (process.argv.includes('--rematch')) {
     rematchStoredVotes(process.argv.includes('--apply'));
+    return;
+  }
+
+  if (process.argv.includes('--recross')) {
+    recomputeCrossovers(process.argv.includes('--apply'));
     return;
   }
 

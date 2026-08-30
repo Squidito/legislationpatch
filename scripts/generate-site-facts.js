@@ -73,6 +73,28 @@ for (const f of repFiles) {
     for (const k of Object.keys(rec)) repFieldSet.add(k);
 }
 const repFields = [...repFieldSet].sort();
+const bioSources = {};
+for (const f of repFiles) {
+    const rec = readJson(path.posix.join('data/reps', f));
+    bioSources[rec.bioSource || '(none)'] = (bioSources[rec.bioSource || '(none)'] || 0) + 1;
+}
+
+// Seats vs profiles. The database holds MORE profiles than there are seats, and
+// the reason is visible in the data itself: some seats carry two profiles.
+// Derived rather than asserted, so the trust pages never have to cite an outside
+// authority for the size of Congress.
+const houseSeats = {};
+for (const m of members) {
+    if (m.role !== 'Representative') continue;
+    const key = m.state + '-' + (m.district === null || m.district === undefined ? 'at-large/non-voting' : m.district);
+    (houseSeats[key] = houseSeats[key] || []).push(m.name);
+}
+const numberedDistricts = Object.keys(houseSeats).filter(k => !/at-large\/non-voting$/.test(k)).length;
+const nonVotingSeats = Object.keys(houseSeats).filter(k => /at-large\/non-voting$/.test(k));
+const sharedHouseSeats = Object.entries(houseSeats).filter(([, v]) => v.length > 1);
+const senatorsByState = {};
+for (const m of members) if (m.role === 'Senator') (senatorsByState[m.state] = senatorsByState[m.state] || []).push(m.name);
+const sharedSenateStates = Object.entries(senatorsByState).filter(([, v]) => v.length > 2);
 
 // Senate roll-call matching: fetch_vote_data.js keys senators on lastName+state
 // because the Senate XML omits bio_id. Report the key count and any collision.
@@ -84,6 +106,54 @@ for (const m of members) {
     (senatorKeys[key] = senatorKeys[key] || []).push(m.bioguideId);
 }
 const senatorCollisions = Object.entries(senatorKeys).filter(([, v]) => v.length > 1);
+
+// The crossover threshold suppresses real crossings. Count how often, and name
+// one deterministic example, so the article can quote a figure instead of an
+// adjective. NOT a superlative: an earlier version reported a "largest" case
+// with a silent first-wins tie-break and there was an exact tie, which made the
+// uniqueness claim false. The ordering is stated with the example.
+const VOTES_DIR = path.join(ROOT, 'data/votes');
+let rollCallEntries = 0, voiceOrUcEntries = 0, suppressedVotes = 0;
+const suppressedRanked = [];
+let suppressed = null;
+if (fs.existsSync(VOTES_DIR)) {
+    for (const f of fs.readdirSync(VOTES_DIR).sort()) {
+        if (!f.endsWith('.json')) continue;
+        const rec = readJson(path.posix.join('data/votes', f));
+        for (const v of (rec.votes || [])) {
+            if (!Array.isArray(v.members) || !v.members.length) { voiceOrUcEntries++; continue; }
+            rollCallEntries++;
+            const total = (v.yeas || 0) + (v.nays || 0);
+            if (!total) continue;
+            const marginPct = Math.abs(v.yeas - v.nays) / total * 100;
+            if (marginPct <= 30) continue;                 // inside the threshold
+            if ((v.crossovers || []).length) continue;     // already surfaced
+            // Count the members who DID vote against their party's majority.
+            const tally = {};
+            for (const m of v.members) {
+                const p = m.party || 'I';
+                const vv = String(m.vote || '').toLowerCase();
+                if (!tally[p]) tally[p] = { Yea: 0, Nay: 0 };
+                if (vv === 'yea' || vv === 'aye' || vv === 'yes') tally[p].Yea++;
+                else if (vv === 'nay' || vv === 'no') tally[p].Nay++;
+            }
+            const maj = {};
+            for (const [p, c] of Object.entries(tally)) maj[p] = c.Yea >= c.Nay ? 'Yea' : 'Nay';
+            let crossed = 0;
+            for (const m of v.members) {
+                const vv = String(m.vote || '').toLowerCase();
+                const mv = (vv === 'yea' || vv === 'aye' || vv === 'yes') ? 'Yea' : (vv === 'nay' || vv === 'no') ? 'Nay' : null;
+                if (mv && maj[m.party || 'I'] && mv !== maj[m.party || 'I']) crossed++;
+            }
+            if (!crossed) continue;
+            suppressedVotes++;
+            suppressedRanked.push({ billId: rec.billId, chamber: v.chamber, date: v.date, question: v.question, result: v.result, yeas: v.yeas, nays: v.nays, marginPct, crossed });
+        }
+    }
+    // Deterministic and stated: most crossers, then widest margin, then bill id.
+    suppressedRanked.sort((a, b) => b.crossed - a.crossed || b.marginPct - a.marginPct || a.billId.localeCompare(b.billId));
+    suppressed = suppressedRanked[0] || null;
+}
 
 // ── Bill corpus ─────────────────────────────────────────────────────────────
 const cache = readJson('data/cache.json');
@@ -126,6 +196,35 @@ for (const id of billIds) {
         featuredMaxLen = Math.max(featuredMaxLen, (q.text || '').length);
     }
 }
+// The two quote stores are separate pipelines, not one field carried through.
+// Measured because two live pages described them as if they were the same store.
+// NB: `bills` is an ARRAY, so billIds are indices — the map below MUST be keyed
+// on bill.id. Keying it on the index silently made every lookup miss and
+// reported a false "0 overlap" (caught by a hostile pass, 2026-08-30).
+const quoteKey = (t) => String(t || '')
+    .replace(/[‘’]/g, "'").replace(/[“”]/g, '"')   // smart-quotes-ok: deliberate quote normalisation
+    .replace(/[–—]/g, '-')
+    .replace(/\s+/g, ' ').trim().toLowerCase();
+const fqText = {};
+for (const id of billIds) {
+    const b = bills[id];
+    if (!b || !b.id) continue;
+    fqText[b.id] = new Set((b.featured_quotes || []).map(q => quoteKey(q.text)));
+}
+const standaloneWithBill = standalone.filter(q => q.billId);
+const standaloneAlsoOnBillPage = standaloneWithBill.filter(q => {
+    const set = fqText[q.billId];
+    return !!set && set.has(quoteKey(q.text));
+}).length;
+
+// Sources registered for tracker both-sides sections, by kind. how-we-source-quotes
+// promised sitewide that no press release is ever quoted; the tracker lane cites
+// organisation and member statements from their own published pages, which is a
+// different content type with its own gate (tracker-gate.js).
+const refSources = readJson('data/ref-sources.json');
+const orgKinds = {};
+for (const e of Object.values(refSources)) if (e && e.kind) orgKinds[e.kind] = (orgKinds[e.kind] || 0) + 1;
+
 const sessionFieldCount =
     standalone.filter(q => q.session !== undefined).length +
     billIds.reduce((n, id) => n + (bills[id].featured_quotes || []).filter(q => q.session !== undefined).length, 0);
@@ -189,6 +288,12 @@ L.push(`Member profiles by role: ${Object.entries(byRole).sort().map(([k, v]) =>
 L.push(`Per-member record files in data/reps/: ${repFiles.length}`);
 L.push(`Fields stored on a member record: ${repFields.join(', ')}`);
 L.push('No member record carries a term field: there is no term start date, term end date, term number, or years-served field in the schema.');
+L.push(`Biography source recorded on member records: ${Object.entries(bioSources).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ')}`);
+L.push(`Distinct House seats represented (state + district): ${Object.keys(houseSeats).length}; ${numberedDistricts} carry a district number and ${nonVotingSeats.length} do not (at-large states and non-voting delegations are both stored with district null).`);
+L.push(`House seats held by more than one person during the 119th Congress: ${sharedHouseSeats.length}`);
+for (const [seat, names] of sharedHouseSeats.sort()) L.push(`  ${seat}: ${names.sort().join(' / ')}`);
+L.push(`States holding more than two senator profiles: ${sharedSenateStates.length}`);
+for (const [st, names] of sharedSenateStates.sort()) L.push(`  ${st}: ${names.sort().join(' / ')}`);
 L.push(`Senate roll-call match keys (lastName + state) in use: ${Object.keys(senatorKeys).length}`);
 L.push(`Senate roll-call match key collisions: ${senatorCollisions.length}${senatorCollisions.length ? ' — ' + senatorCollisions.map(([k, v]) => `${k} (${v.join(', ')})`).join('; ') : ''}`);
 L.push('');
@@ -211,6 +316,9 @@ L.push(`Bill-attached quotes carrying a granuleId: ${featuredGranule} of ${featu
 L.push(`Bill-attached quotes carrying a stored source line (chamber + floor date): ${featuredDated} of ${featuredCount}`);
 L.push(`Quote records carrying a session field, in either store: ${sessionFieldCount}`);
 L.push(`Bills with no Congressional Record quote at all: ${billsNoQuotes} of ${billIds.length}`);
+L.push(`Standalone floor quotes carrying a billId: ${standaloneWithBill.length} of ${standalone.length}; carrying none: ${standalone.length - standaloneWithBill.length}`);
+L.push(`Standalone floor quotes whose text also appears in that same bill's featured_quotes (case/punctuation-normalized): ${standaloneAlsoOnBillPage} of ${standaloneWithBill.length}. The two stores are built by separate extractors and mostly do not overlap.`);
+L.push(`Sources registered in data/ref-sources.json by kind: ${Object.entries(orgKinds).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ')}`);
 L.push(`Excerpt cap enforced by fetch_bill_cr.js bestExcerpt(): ${excerptCap} characters`);
 L.push(`Longest stored quote, standalone store: ${standaloneMaxLen} characters; bill-attached store: ${featuredMaxLen} characters`);
 L.push('');
@@ -229,6 +337,13 @@ L.push('Primary bill text is fetched from the Congress.gov API, not from GovInfo
 L.push('');
 L.push('## Vote data (scripts/fetch_vote_data.js)');
 L.push(`Crossover votes are surfaced only when the yea-nay margin is within ${Math.round(parseFloat(crossoverMargin) * 100)}% of total yeas plus nays.`);
+L.push('');
+L.push('## Stored vote records (data/votes/)');
+L.push(`Recorded roll-call entries with a member list: ${rollCallEntries}; voice-vote or unanimous-consent entries with no member tally: ${voiceOrUcEntries}`);
+L.push(`Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: ${suppressedVotes}`);
+if (suppressed) {
+    L.push(`One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; ${suppressedRanked.filter(r => r.crossed === suppressed.crossed).length} roll call(s) tie on crosser count): ${suppressed.billId}, ${suppressed.chamber} ${suppressed.date}, "${suppressed.question}" ${suppressed.result} ${suppressed.yeas}-${suppressed.nays} — margin ${suppressed.marginPct.toFixed(1)}% of yeas plus nays, ${suppressed.crossed} member(s) voted against their party majority, 0 surfaced as crossovers.`);
+}
 L.push('');
 L.push('## Audit ledgers (data/qa-ledger/)');
 L.push(`Article claim ledgers: ${articleLedgers.length}`);
