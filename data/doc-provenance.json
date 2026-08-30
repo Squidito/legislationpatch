@@ -1,6 +1,160 @@
 {
   "_readme": "Registry of pages that DESCRIBE how the site works. Each entry pins the code whose behaviour the prose asserts; when that code changes, `npm run validate` flags the page for re-review and prints its claims[] as a checklist. Stamp only AFTER actually re-reading the page: `node scripts/doc-provenance.js --stamp --doc <page>`. Rationale + the stable-prose/generated-evidence rule: _personal/ARTICLE-WRITER-SPEC.md. Origin: articles/methodology.html described a verification process that had already changed, and nothing caught it.",
   "_not_registered": "Normative rulebooks (docs/BOTH-SIDES.md, docs/QA-AUDIT-RUBRIC.md, CLAUDE.md) are deliberately absent. They DEFINE required behaviour rather than describe existing behaviour -- code drifting from them is a code bug, not a doc bug, and the QA gates already enforce that direction.",
+  "about.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "data/entity.json"
+    ],
+    "claims": [
+      "The 'How the analysis is produced' paragraph matches the real pipeline.",
+      "The verification description matches what the ledgers actually RECORD. Bill ledgers record an auditing model and NO drafting model (0 of 212 as of 2026-08-30), so no page may claim of a BILL analysis that a different model audited what drafted it. The cross-model rule is enforced only in the ARTICLE lane, by publish-article.js.",
+      "Ownership, funding, and independence statements are still accurate.",
+      "The named editor matches data/entity.json.",
+      "The static-data claim still holds: api.js fetches only same-host JSON, and the browser makes no live government API call."
+    ],
+    "sha": "736de116dab5ee62",
+    "reviewedAt": "2026-08-30"
+  },
+  "articles/how-we-source-quotes.html": {
+    "describes": [
+      "scripts/fetch_bill_cr.js",
+      "scripts/extract_floor_quotes.js",
+      "scripts/batch_processor.js",
+      "scripts/tracker-gate.js",
+      "scripts/generate-site-facts.js",
+      "docs/BOTH-SIDES.md",
+      "floor.js"
+    ],
+    "claims": [
+      "The quote counts (468 / 430 with a granule id / 417 bill-page / 0 with a granule id / 432 with a bill id) are derived -- re-run `node scripts/generate-site-facts.js --check` before stamping.",
+      "The page must NOT claim a granule identifier on every quote, nor that any of them is rendered as a link -- no front-end file reads the field.",
+      "The verbatim promise is scoped to MEMBER QUOTES. Tracker positions are sourced to the holder's published document, which can be a press release; data/ref-sources.json registers one. A sitewide \"we do not quote press releases\" is false.",
+      "The speaker-resolution description must match resolveRepInfo, including that it takes the first remaining candidate when more than one still matches.",
+      "The excerpt description must match bestExcerpt in every branch, including the trim-to-last-word fallback."
+    ],
+    "sha": "a54f8790f5dc8381",
+    "reviewedAt": "2026-08-30"
+  },
+  "articles/how-we-track-voting.html": {
+    "describes": [
+      "scripts/fetch_vote_data.js",
+      "scripts/lib/senator-match.js",
+      "scripts/generate_reps.js",
+      "scripts/generate_rep_pages.js",
+      "scripts/generate-site-facts.js",
+      "app-render.js",
+      "util.js"
+    ],
+    "claims": [
+      "The member-profile count, the role split, the seats-with-two-profiles figure and the roll-call/voice-vote counts are all derived -- re-run `node scripts/generate-site-facts.js --check` before stamping.",
+      "The Senate matching description must match lib/senator-match.js, including that an ambiguous row is left UNMATCHED rather than guessed.",
+      "The page must NOT claim member records store term data -- no such field exists in the schema.",
+      "The crossover description must keep the tie carve-out: a party that splits exactly even has no majority direction, so nobody in it is listed. A tie silently defaulting to Yea put a named senator on the public crossover list 18 times before 2026-08-30.",
+      "Any on-page label the prose names must be the exact string the renderer emits -- it is \"Crossed the Aisle\", not \"Crossovers\".",
+      "The claim about what the browser loads must stay narrow: member portraits load from bioguide.congress.gov (util.js portraitUrl) and app-settings.js calls two geolocation APIs, so \"everything is static and same-host\" is false."
+    ],
+    "sha": "",
+    "reviewedAt": ""
+  },
+  "articles/legislationpatch-and-ai.html": {
+    "describes": [
+      "scripts/generate_bill_pages.js",
+      "scripts/lib/entity.js",
+      "data/entity.json",
+      "scripts/generate-search-index.js"
+    ],
+    "claims": [
+      "The schema.org types this page names are the types actually emitted. Verify against generate_bill_pages.js and lib/entity.js -- do NOT trust the prose.",
+      "Bill pages emit Legislation (not LegislativeAction). Articles use LegislativeAction only inside their about field.",
+      "Any schema type claimed here must exist somewhere in the codebase. Quotation and rep-profile Person schema were claimed but NOT implemented (caught 2026-08-13).",
+      "The canonical Person / NewsMediaOrganization entity-reference architecture is still in place.",
+      "The described bill-text version rule matches the fetch logic (newest applicable: Enrolled > Engrossed > Reported > Introduced)."
+    ],
+    "sha": "c2a547fa6bc7df9f",
+    "reviewedAt": "2026-08-15"
+  },
+  "articles/methodology.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "scripts/validate-batch.js",
+      "scripts/qa-source-verify.js",
+      "scripts/fetch_bills_data.js",
+      "scripts/fetch-reference.js",
+      "docs/QA-LOOP.md"
+    ],
+    "claims": [
+      "The described sourcing workflow matches the workflow actually run.",
+      "The list of validation gates matches what validate-batch.js actually enforces.",
+      "The latest-applicable-version fetch rule is still how bill text is retrieved.",
+      "Any count or enumeration on this page (number of checks, number of passes) still matches reality -- these are the parts that rot first."
+    ],
+    "sha": "8c9fce0cc58110fb",
+    "reviewedAt": "2026-08-15"
+  },
+  "articles/no-editorial-spin.html": {
+    "describes": [
+      "scripts/prompts.js",
+      "docs/BOTH-SIDES.md"
+    ],
+    "claims": [
+      "The neutrality rules described here match the rules the drafting prompt actually enforces.",
+      "The both-sides eligibility triggers described match docs/BOTH-SIDES.md.",
+      "The stated ban on editorial labels is still enforced in the prompt."
+    ],
+    "sha": "4e96ce0e2edb6117",
+    "reviewedAt": "2026-08-13"
+  },
+  "articles/what-is-congressional-record.html": {
+    "describes": [
+      "scripts/fetch_bill_cr.js",
+      "scripts/extract_floor_quotes.js",
+      "scripts/batch_processor.js",
+      "scripts/generate-site-facts.js"
+    ],
+    "claims": [
+      "The quote counts and the \"no session field anywhere\" claim are derived -- re-run `node scripts/generate-site-facts.js --check` before stamping.",
+      "The page must NOT claim the site notes the date and session of each quote, nor that bill-page quotes carry a granule id: 0 of 417 do, and no record in either store has a session field.",
+      "The bill-page extractor also pulls minority/additional/dissenting views from committee reports, a different GovInfo collection from the Congressional Record -- the page must not describe that store as Record-only.",
+      "Claims about the Record itself must trace to the stored CRS 98-265 or the stored GovInfo help page, including the Senate unanimous-consent carve-out (undelivered Senate remarks printed as if spoken)."
+    ],
+    "sha": "",
+    "reviewedAt": ""
+  },
+  "articles/what-is-legislationpatch.html": {
+    "describes": [
+      "scripts/fetch_bills_data.js",
+      "scripts/fetch_vote_data.js",
+      "scripts/fetch_bill_cr.js",
+      "scripts/generate-site-facts.js",
+      "data/analysis-skip.json",
+      "bill.js"
+    ],
+    "claims": [
+      "Every count on this page is derived: re-run `node scripts/generate-site-facts.js --check` before stamping. The bill total, the signed total, the top-line and summary distributions and the skip-list breakdown all come from that sheet.",
+      "The coverage sentence must NOT claim the site tracks all legislation with floor action -- data/analysis-skip.json deliberately excludes CRA disapproval resolutions, which reach the floor by design. That overclaim was live from May to 2026-08-30.",
+      "The bill-text paragraph must keep disclosing the version lag. The pipeline prefers the newest applicable version at FETCH time; an already-cached bill that advances is not re-fetched, so the stored text can be older than what Congress.gov lists.",
+      "The bill-text panel label rendered by bill.js is still \"Full Bill Text\" -- the page must not call it the enrolled bill.",
+      "The 30% crossover threshold still matches fetch_vote_data.js."
+    ],
+    "sha": "",
+    "reviewedAt": ""
+  },
+  "author/james-shearn/index.html": {
+    "describes": [
+      "data/entity.json",
+      "scripts/generate_author_page.js",
+      "scripts/prompts.js"
+    ],
+    "claims": [
+      "The bio's description of the verification pipeline is still accurate.",
+      "The 'How this work is produced' section matches editorial-standards.html.",
+      "The page is regenerated (npm run author) rather than hand-edited -- hand edits will be overwritten."
+    ],
+    "sha": "b99adbad33abfa94",
+    "reviewedAt": "2026-08-13"
+  },
   "editorial-standards.html": {
     "describes": [
       "scripts/prompts.js",
@@ -25,83 +179,5 @@
     ],
     "sha": "603050719ae3545a",
     "reviewedAt": "2026-08-28"
-  },
-  "articles/methodology.html": {
-    "describes": [
-      "scripts/prompts.js",
-      "scripts/validate-batch.js",
-      "scripts/qa-source-verify.js",
-      "scripts/fetch_bills_data.js",
-      "scripts/fetch-reference.js",
-      "docs/QA-LOOP.md"
-    ],
-    "claims": [
-      "The described sourcing workflow matches the workflow actually run.",
-      "The list of validation gates matches what validate-batch.js actually enforces.",
-      "The latest-applicable-version fetch rule is still how bill text is retrieved.",
-      "Any count or enumeration on this page (number of checks, number of passes) still matches reality -- these are the parts that rot first."
-    ],
-    "sha": "8c9fce0cc58110fb",
-    "reviewedAt": "2026-08-15"
-  },
-  "about.html": {
-    "describes": [
-      "scripts/prompts.js",
-      "scripts/validate-batch.js",
-      "data/entity.json"
-    ],
-    "claims": [
-      "The 'How the analysis is produced' paragraph matches the real pipeline.",
-      "The verification description matches what the ledgers actually RECORD. Bill ledgers record an auditing model and NO drafting model (0 of 212 as of 2026-08-30), so no page may claim of a BILL analysis that a different model audited what drafted it. The cross-model rule is enforced only in the ARTICLE lane, by publish-article.js.",
-      "Ownership, funding, and independence statements are still accurate.",
-      "The named editor matches data/entity.json.",
-      "The static-data claim still holds: api.js fetches only same-host JSON, and the browser makes no live government API call."
-    ],
-    "sha": "736de116dab5ee62",
-    "reviewedAt": "2026-08-30"
-  },
-  "articles/no-editorial-spin.html": {
-    "describes": [
-      "scripts/prompts.js",
-      "docs/BOTH-SIDES.md"
-    ],
-    "claims": [
-      "The neutrality rules described here match the rules the drafting prompt actually enforces.",
-      "The both-sides eligibility triggers described match docs/BOTH-SIDES.md.",
-      "The stated ban on editorial labels is still enforced in the prompt."
-    ],
-    "sha": "4e96ce0e2edb6117",
-    "reviewedAt": "2026-08-13"
-  },
-  "articles/legislationpatch-and-ai.html": {
-    "describes": [
-      "scripts/generate_bill_pages.js",
-      "scripts/lib/entity.js",
-      "data/entity.json",
-      "scripts/generate-search-index.js"
-    ],
-    "claims": [
-      "The schema.org types this page names are the types actually emitted. Verify against generate_bill_pages.js and lib/entity.js -- do NOT trust the prose.",
-      "Bill pages emit Legislation (not LegislativeAction). Articles use LegislativeAction only inside their about field.",
-      "Any schema type claimed here must exist somewhere in the codebase. Quotation and rep-profile Person schema were claimed but NOT implemented (caught 2026-08-13).",
-      "The canonical Person / NewsMediaOrganization entity-reference architecture is still in place.",
-      "The described bill-text version rule matches the fetch logic (newest applicable: Enrolled > Engrossed > Reported > Introduced)."
-    ],
-    "sha": "c2a547fa6bc7df9f",
-    "reviewedAt": "2026-08-15"
-  },
-  "author/james-shearn/index.html": {
-    "describes": [
-      "data/entity.json",
-      "scripts/generate_author_page.js",
-      "scripts/prompts.js"
-    ],
-    "claims": [
-      "The bio's description of the verification pipeline is still accurate.",
-      "The 'How this work is produced' section matches editorial-standards.html.",
-      "The page is regenerated (npm run author) rather than hand-edited -- hand edits will be overwritten."
-    ],
-    "sha": "b99adbad33abfa94",
-    "reviewedAt": "2026-08-13"
   }
 }
