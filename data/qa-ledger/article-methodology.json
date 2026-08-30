@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "c52dde8000d1b543",
+  "proseSha": "25f457809e67b529",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -179,12 +179,12 @@
     },
     {
       "field": "body",
-      "claim": "The stored text can lag: 73 of the 151 non-enacted bills show an older version than Congress.gov now lists, and 2 of the 68 enacted ones still show the text as introduced.",
+      "claim": "The stored text can lag: 69 of the 151 non-enacted bills show an older version than Congress.gov now lists, and 2 of the 68 enacted ones still show the text as introduced.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 73 of 151 non-enacted bills.",
+      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 151 non-enacted bills.",
       "section": "Where Our Data Comes From",
       "status": "open",
       "verify": null,

@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "174dcaf39dd9651f",
+  "proseSha": "48d0b3e289e790c2",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -108,12 +108,12 @@
     },
     {
       "field": "body",
-      "claim": "Summaries mostly run one to three sentences; 28 of the 219 run longer.",
+      "claim": "Summaries mostly run one to three sentences; 25 of the 219 run longer.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Plain-English summary length per bill: range 1 to 15 sentences; 28 of 219 bills run to more than three.",
+      "sourceSpan": "Plain-English summary length per bill: range 1 to 14 sentences; 25 of 219 bills run to more than three.",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -199,12 +199,12 @@
     },
     {
       "field": "body",
-      "claim": "73 of the 151 non-enacted bills are showing an older version than Congress.gov now lists.",
+      "claim": "69 of the 151 non-enacted bills are showing an older version than Congress.gov now lists.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 73 of 151 non-enacted bills.",
+      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 151 non-enacted bills.",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -313,24 +313,11 @@
       "status": "open",
       "verify": null,
       "kind": "claim"
-    },
-    {
-      "field": "body",
-      "claim": "The named defenses removed are laches, adverse possession, international comity, forum non conveniens and act of state.",
-      "verdict": "SUPPORTED",
-      "type": "fact",
-      "severity": "ok",
-      "sourceFile": "record-lp-cache",
-      "sourceSpan": "Laches, adverse possession, international comity, forum non conveniens, and act of state doctrine may no longer be used to dismiss Holocaust art claims",
-      "section": "What We're Not",
-      "status": "open",
-      "verify": null,
-      "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 19,
-    "supported": 19,
+    "claims": 18,
+    "supported": 18,
     "material": 0,
     "minor": 0,
     "omissions": 0,

@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "23ea4aa2444d0204",
+  "proseSha": "480419960d019746",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -686,12 +686,12 @@
     },
     {
       "field": "body",
-      "claim": "The threshold hides real crossings on 75 of the 232 recorded roll calls stored.",
+      "claim": "The threshold hides real crossings on 75 of the 232 roll calls that store a member list.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: 75",
+      "sourceSpan": "so no crossovers were surfaced: 75 (measured over the 232 roll calls that store a member list).",
       "section": "Crossover Vote Detection",
       "status": "open",
       "verify": null,
@@ -712,12 +712,12 @@
     },
     {
       "field": "body",
-      "claim": "Of the stored vote records, 208 are voice-vote or unanimous-consent passages with no member tally, against 232 recorded roll calls.",
+      "claim": "Of the stored vote records, 208 are voice-vote or unanimous-consent passages with no tally at all, against 233 recorded roll calls, 232 of which store the full member list.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Recorded roll-call entries with a member list: 232; voice-vote or unanimous-consent entries with no member tally: 208",
+      "sourceSpan": "Recorded roll-call entries: 233, of which 232 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 208.",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
       "verify": null,
@@ -777,7 +777,7 @@
     },
     {
       "field": "body",
-      "claim": "Member portraits are not served from this host: they load from the Library of Congress Bioguide.",
+      "claim": "Member portraits are not served from this host: they load from bioguide.congress.gov.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",

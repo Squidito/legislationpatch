@@ -113,15 +113,25 @@ const senatorCollisions = Object.entries(senatorKeys).filter(([, v]) => v.length
 // with a silent first-wins tie-break and there was an exact tie, which made the
 // uniqueness claim false. The ordering is stated with the example.
 const VOTES_DIR = path.join(ROOT, 'data/votes');
-let rollCallEntries = 0, voiceOrUcEntries = 0, suppressedVotes = 0;
+let rollCallEntries = 0, rollCallNoMembers = 0, voiceOrUcEntries = 0, suppressedVotes = 0;
 const suppressedRanked = [];
 let suppressed = null;
 if (fs.existsSync(VOTES_DIR)) {
     for (const f of fs.readdirSync(VOTES_DIR).sort()) {
         if (!f.endsWith('.json')) continue;
-        const rec = readJson(path.posix.join('data/votes', f));
+        const raw = readJson(path.posix.join('data/votes', f));
+        // One file was written as a bare array instead of the {billId,title,votes}
+        // envelope every other file uses; reading rec.votes on it silently dropped
+        // a real roll call from this count. Tolerate both shapes.
+        const rec = Array.isArray(raw) ? { billId: f.replace(/\.json$/, ''), votes: raw } : raw;
         for (const v of (rec.votes || [])) {
-            if (!Array.isArray(v.members) || !v.members.length) { voiceOrUcEntries++; continue; }
+            // A voice or UC passage has no yea/nay tally at all; a roll call whose
+            // member list was never stored still has one, and is still a roll call.
+            const hasTally = Number.isFinite(v.yeas) && Number.isFinite(v.nays) && (v.yeas + v.nays) > 0;
+            if (!Array.isArray(v.members) || !v.members.length) {
+                if (hasTally) { rollCallEntries++; rollCallNoMembers++; continue; }
+                voiceOrUcEntries++; continue;
+            }
             rollCallEntries++;
             const total = (v.yeas || 0) + (v.nays || 0);
             if (!total) continue;
@@ -172,9 +182,11 @@ const tlOver3 = topLineLens.filter(n => n > 3).length;
 // "terminator + whitespace" rule was wrong: it split "D.C. Official Code" and
 // "U.S. Code" into separate sentences and inflated the count (a hostile pass
 // caught it, 2026-08-30). Abbreviations and decimals are masked first.
-const ABBREV = /\b(?:U\.S\.C|U\.S|D\.C|Pub\.\s?L|P\.L|Stat|Sec|No|Nos|Art|Rep|Sen|Reps|Sens|Mr|Mrs|Ms|Dr|Gov|Jr|Sr|St|Fig|Ch|Ed|Inc|Ltd|Co|Corp|approx|e\.g|i\.e|etc|vs|v|al|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|FY)\./g;
+const ABBREV = /\b(?:U\.S\.C|U\.S|D\.C|Pub\.\s?L|P\.L|Stat|Sec|Secs|No|Nos|Art|Rep|Sen|Reps|Sens|Mr|Mrs|Ms|Dr|Gov|Jr|Sr|St|Fig|Ch|Ed|Inc|Ltd|Co|Corp|approx|e\.g|i\.e|etc|vs|v|al|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|FY)\./gi;
+const INITIAL = /\b([A-Z])\./g;   // "William M. (Mac) Thornberry"
 const sentences = (s) => String(s || '')
-    .replace(ABBREV, (m) => m.replace(/\./g, '\u0001'))          // mask abbreviation dots
+    .replace(ABBREV, (m) => m.replace(/\./g, '\u0001'))          // mask abbreviation dots (case-insensitive: "sec." too)
+    .replace(INITIAL, '$1\u0001')                                // mask single-letter initials
     .replace(/(\d)\.(\d)/g, '$1\u0001$2')                      // mask decimals
     .split(/(?<=[.!?])\s+(?=["\u201c(]?[A-Z0-9])/)
     .filter(x => x.trim()).length;
@@ -189,11 +201,25 @@ const sOver3 = sumLens.filter(n => n > 3).length;
 // what-is-legislationpatch.html and methodology.html both describe what a
 // reader is looking at.
 const TEXT_RANK = { enrolled: 100, 'public law': 95, 'engrossed amendment': 90, engrossed: 80, reported: 60, 'placed on calendar': 55, referred: 50, introduced: 20 };
+// GPO also writes the version as a bare code in a non-bracket header line
+// ("HR 5366 ENR: Doug LaMalfa...", "119 HR 7971 IH: Taxpayer..."). Nine stored
+// bill-text files use that form; without this map they scored 0 and every bill
+// among them looked stale against its own versions[] (caught 2026-08-30).
+const TEXT_CODE = {
+    enr: 100, pl: 95, pp: 95, eah: 90, eas: 90, eh: 80, es: 80, rh: 60, rs: 60,
+    pcs: 55, pch: 55, rfs: 50, rfh: 50, cps: 50, cph: 50, ih: 20, is: 20,
+};
 function rankOf(label) {
     const l = String(label || '').toLowerCase();
     let best = 0;
     for (const [k, v] of Object.entries(TEXT_RANK)) if (l.includes(k) && v > best) best = v;
     return best;
+}
+function rankOfCode(head) {
+    // The code sits immediately before the colon on the header line.
+    const m = String(head || '').match(/\b([A-Za-z]{2,3})\s*:/);
+    if (!m) return 0;
+    return TEXT_CODE[m[1].toLowerCase()] || 0;
 }
 function storedTextLabel(id) {
     const f = path.join(ROOT, 'data/bill-text', id + '.txt');
@@ -207,14 +233,21 @@ function storedTextLabel(id) {
     for (const b of brackets) { const r = rankOf(b); if (r > bestRank) { bestRank = r; best = b; } }
     if (best && bestRank > 0) return best;
     if (/public law/i.test(head)) return 'Public Law';
-    return best || head.split('\n')[0].slice(0, 80);
+    const firstLine = head.split('\n')[0];
+    if (rankOfCode(firstLine) > 0) return firstLine.slice(0, 80);
+    return best || firstLine.slice(0, 80);
+}
+// A stored label is ranked by keyword first, then by the bare GPO code.
+function storedRankOf(label) {
+    const r = rankOf(label);
+    return r > 0 ? r : rankOfCode(label);
 }
 let signedShowingIntroduced = [], staleAgainstPosted = 0, nonEnactedShowingIntroduced = 0, nonEnactedTotal = 0;
 for (const id of billIds) {
     const b = bills[id];
     if (!b || !b.id) continue;
     const stored = storedTextLabel(b.id);
-    const storedRank = rankOf(stored);
+    const storedRank = storedRankOf(stored);
     const postedRank = Math.max(0, ...(b.versions || []).map(v => rankOf(v.type || v.name || v)));
     if (b.stage === 'signed') {
         if (stored && /introduced/i.test(stored)) signedShowingIntroduced.push(b.id);
@@ -358,7 +391,7 @@ L.push(`Enacted bills whose stored text is still the version as introduced: ${si
 L.push(`Non-enacted bills: ${nonEnactedTotal}; of those, ${nonEnactedShowingIntroduced} show the text as introduced.`);
 L.push(`Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: ${staleAgainstPosted} of ${nonEnactedTotal} non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.`);
 L.push(`Top-line change counts per bill: range ${tlMin} to ${tlMax}; ${tlOver3} of ${billIds.length} bills carry more than three.`);
-L.push(`Plain-English summary length per bill: range ${sMin} to ${sMax} sentences; ${sOver3} of ${billIds.length} bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations such as U.S., D.C., Pub. L. and decimal numbers.)`);
+L.push(`Plain-English summary length per bill: range ${sMin} to ${sMax} sentences; ${sOver3} of ${billIds.length} bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations case-insensitively such as U.S., D.C., Pub. L. and sec., plus single-letter initials and decimal numbers.)`);
 L.push(`Bills deliberately excluded from analysis in data/analysis-skip.json: ${skip.length}`);
 L.push(`Excluded bills by category: ${Object.entries(skipCats).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ')}`);
 L.push('The cra-disapproval category covers resolutions of disapproval, which reach the floor by design; they are excluded from analysis, so coverage is not "all legislation with floor action".');
@@ -394,8 +427,8 @@ L.push('## Vote data (scripts/fetch_vote_data.js)');
 L.push(`Crossover votes are surfaced only when the yea-nay margin is within ${Math.round(parseFloat(crossoverMargin) * 100)}% of total yeas plus nays.`);
 L.push('');
 L.push('## Stored vote records (data/votes/)');
-L.push(`Recorded roll-call entries with a member list: ${rollCallEntries}; voice-vote or unanimous-consent entries with no member tally: ${voiceOrUcEntries}`);
-L.push(`Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: ${suppressedVotes}`);
+L.push(`Recorded roll-call entries: ${rollCallEntries}, of which ${rollCallEntries - rollCallNoMembers} store the full member list and ${rollCallNoMembers} store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: ${voiceOrUcEntries}.`);
+L.push(`Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: ${suppressedVotes} (measured over the ${rollCallEntries - rollCallNoMembers} roll calls that store a member list).`);
 if (suppressed) {
     L.push(`One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; ${suppressedRanked.filter(r => r.crossed === suppressed.crossed).length} roll call(s) tie on crosser count): ${suppressed.billId}, ${suppressed.chamber} ${suppressed.date}, "${suppressed.question}" ${suppressed.result} ${suppressed.yeas}-${suppressed.nays} — margin ${suppressed.marginPct.toFixed(1)}% of yeas plus nays, ${suppressed.crossed} member(s) voted against their party majority, 0 surfaced as crossovers.`);
 }

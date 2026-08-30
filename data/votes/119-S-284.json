@@ -1,13 +1,17 @@
-[
-  {
-    "chamber": "House",
-    "date": "2025-12-15",
-    "question": "On Motion to Suspend the Rules and Pass",
-    "result": "Passed",
-    "yeas": 370,
-    "nays": 22,
-    "present": 0,
-    "notVoting": 41,
-    "crossoverCount": 0
-  }
-]
+{
+  "billId": "119-S-284",
+  "title": "Congressional Award Program Reauthorization Act",
+  "votes": [
+    {
+      "chamber": "House",
+      "date": "2025-12-15",
+      "question": "On Motion to Suspend the Rules and Pass",
+      "result": "Passed",
+      "yeas": 370,
+      "nays": 22,
+      "present": 0,
+      "notVoting": 41,
+      "crossoverCount": 0
+    }
+  ]
+}
