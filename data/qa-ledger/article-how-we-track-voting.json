@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "480419960d019746",
+  "proseSha": "8710f56fb5fa8037",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -112,6 +112,15 @@
       "citation": "data/reps/V000139.json",
       "srcUrl": "https://legislationpatch.com/rep/v000139-matt-van-epps/",
       "textFile": "data/reps/V000139.json",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "record-rep-a000383-armstrong",
+      "kind": "record",
+      "label": "LegislationPatch member profile, Alan Armstrong (OK)",
+      "citation": "data/reps/A000383.json",
+      "srcUrl": "https://legislationpatch.com/rep/a000383-alan-armstrong/",
+      "textFile": "data/reps/A000383.json",
       "fetchedAt": "2026-08-30"
     },
     {
@@ -478,6 +487,19 @@
     },
     {
       "field": "body",
+      "claim": "A Senate vacancy was filled by gubernatorial appointment during the 119th Congress.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-rep-a000383-armstrong",
+      "sourceSpan": "appointed Armstrong to the Senate after Markwayne Mullin resigned",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
       "claim": "Member profiles are drawn from Congress.gov.",
       "verdict": "SUPPORTED",
       "type": "process",
@@ -790,6 +812,19 @@
     },
     {
       "field": "body",
+      "claim": "One member’s portrait is pointed at the House Clerk instead, because the bioguide photo is broken.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "code-util",
+      "sourceSpan": "'C001115': 'https://clerk.house.gov/images/members/C001115.jpg',",
+      "section": "Updating Vote Data",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
       "claim": "Re-running the per-bill fetch is what updates a stored voting record.",
       "verdict": "SUPPORTED",
       "type": "process",
@@ -803,8 +838,8 @@
     }
   ],
   "counts": {
-    "claims": 52,
-    "supported": 52,
+    "claims": 54,
+    "supported": 54,
     "material": 0,
     "minor": 0,
     "omissions": 0,

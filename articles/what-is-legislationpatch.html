@@ -30,6 +30,7 @@
       "@id": "https://legislationpatch.com/#organization"
     },
     "datePublished": "2026-05-08",
+    "dateModified": "2026-08-30",
     "url": "https://legislationpatch.com/articles/what-is-legislationpatch.html",
     "image": "https://legislationpatch.com/og/articles/what-is-legislationpatch.png",
     "mainEntityOfPage": {
@@ -157,7 +158,7 @@
 
       <div class="article-meta">
         <span>By <a href="https://legislationpatch.com/author/james-shearn" rel="author">James Shearn</a>, Editor</span>
-        <span>Published May 2026</span>
+        <span>Published May 2026</span><span>Updated August 2026</span>
       </div>
 
       <div class="article-body">
@@ -172,7 +173,7 @@
 
         <p>What section of what existing law was amended? What language was added? What protections were removed? What's the effective date? Who voted for it and who voted against it, and did any Republicans cross the aisle or vice versa?</p>
 
-        <p>To answer those questions, you'd normally need to: find the bill on <a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a>, download the enrolled bill text (often a PDF formatted for printing, not reading), cross-reference the sections it modifies against the U.S. Code, and then read the floor debate in the <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> to understand what members said about it. That process takes hours for a researcher comfortable with government documents. For most people, it's effectively inaccessible.</p>
+        <p>To answer those questions, you'd normally need to: find the bill on <a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a>, download the enrolled bill text (often a PDF formatted for printing, not reading), cross-reference the sections it modifies against the U.S. Code, and then read the floor debate in the <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> to understand what members said about it. Every step of that is public and free. It is also four separate systems, each with its own search, and the documents are formatted for printing rather than reading.</p>
 
         <p>LegislationPatch does that work so you don't have to.</p>
 
@@ -180,17 +181,17 @@
 
         <p>Each bill in the database has the same structure:</p>
 
-        <p><strong>A plain-English summary</strong> — what the bill does in one to three sentences, written without assuming you know what "USC 1861(k)" refers to or which committee handles appropriations.</p>
+        <p><strong>A plain-English summary</strong> — what the bill does, written without assuming you know what "USC 1861(k)" refers to or which committee handles appropriations. Most run one to three sentences; 25 of our 219 bills run longer, because the bill did.</p>
 
-        <p><strong>Top-line changes</strong> — the two or three most significant things the bill adds, modifies, or removes. These are the facts journalists tend to underreport because they require reading the bill text to extract.</p>
+        <p><strong>Top-line changes</strong> — the specific things the bill adds, modifies, or removes, led by the dollar amounts, thresholds and deadlines the text states. Most bills carry one to three; 35 of our 219 carry four or more, up to nine.</p>
 
-        <p><strong>Section-by-section analysis</strong> — a breakdown of each substantive section, in plain language, with expandable detail that goes deeper on provisions with meaningful legal implications.</p>
+        <p><strong>Section-by-section analysis</strong> — a breakdown of each substantive section, in plain language, with expandable detail under each item.</p>
 
         <p><strong>Congressional quotes</strong> — what the bill's sponsors and opponents actually said on the floor, pulled verbatim from the Congressional Record. Not paraphrases. Not press releases.</p>
 
         <p><strong>Voting record</strong> — the roll call result when a recorded vote occurred, with party breakdown and crossover votes flagged for close votes where the margin was within 30% of total yeas plus nays.</p>
 
-        <p><strong>Full bill text</strong> — the actual enrolled bill, displayed inline so you can read the primary source without leaving the page.</p>
+        <p><strong>Full bill text</strong> — the version of the bill our analysis was written against, displayed inline so you can read the primary source without leaving the page. When we fetch a bill we take the newest version Congress.gov has posted, preferring enrolled over engrossed over reported over introduced. What we do not do is automatically re-fetch a bill that advances after we have analysed it, because the analysis was written against the older text and replacing one without the other would leave the page describing a document it is not showing. So the text can lag the bill: 69 of the 151 bills in our database that have not been enacted are showing an older version than Congress.gov now lists, and two of the 68 that have been enacted are still showing the text as introduced. We would rather tell you that than imply the page is always current.</p>
 
         <h2>What the Patch Notes Format Means</h2>
 
@@ -202,11 +203,11 @@
 
         <p>LegislationPatch isn't designed for lawyers or policy professionals who already read bill text for a living. It's for everyone else: people who heard about a bill on the news and want to know what it actually does; people who want to know how their representative voted; people who track specific policy areas (healthcare, immigration, surveillance) and want a fast signal when something relevant moves; people who want primary source material without wading through government document formatting.</p>
 
-        <p>The site tracks all 119th Congress legislation with active floor action or significant co-sponsorship. For each bill, you can read our analysis, read the actual bill text, see the full vote record, and follow links back to the primary sources on Congress.gov.</p>
+        <p>Coverage is selective, and the selection is ours. We prioritize legislation with active floor action, high co-sponsorship, or public search interest, and we keep a list of bills we have deliberately not analyzed — 107 of them right now: 29 ceremonial, 28 minor bills deferred for later, 27 procedural, and 23 resolutions of disapproval. That last category reaches the floor by design, so "tracks everything with floor action" would not be true and we do not claim it. For each bill we do cover, you can read our analysis, read the actual bill text, see the full vote record, and follow links back to the primary sources on Congress.gov.</p>
 
         <h2>What We're Not</h2>
 
-        <p>We're not a news outlet. We don't break stories, track rumors about upcoming legislation, or cover the political strategy behind a bill's movement. That kind of coverage is available from dozens of sources.</p>
+        <p>We're not a news outlet. We don't break stories, track rumors about upcoming legislation, or cover the political strategy behind a bill's movement.</p>
 
         <p>We're not lawyers, and we're not providing legal advice. Our analysis describes what a bill says. For questions about how a law applies to a specific situation, consult a licensed attorney.</p>
 
@@ -215,8 +216,8 @@
         <div class="article-source-box">
           <div class="article-source-box-label">Where Our Data Comes From</div>
           <ul>
-            <li><a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> — official bill status, sponsors, and action history</li>
-            <li><a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a> — enrolled bill text and public laws (U.S. GPO)</li>
+            <li><a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> — bill text, status, sponsors, and action history, via its API</li>
+            <li><a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a> — the Congressional Record, the U.S. Code, and chamber manuals (U.S. GPO)</li>
             <li><a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> — floor statements and debate</li>
             <li><a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener">House Clerk</a> / <a href="https://www.senate.gov/legislative/votes_new.htm" target="_blank" rel="noopener">Senate</a> — official roll call votes</li>
           </ul>

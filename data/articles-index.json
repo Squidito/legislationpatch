@@ -13,7 +13,7 @@
       "order": 1,
       "section": "ABOUT & METHODOLOGY",
       "label": "About LegislationPatch",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "LegislationPatch tracks U.S. federal legislation and translates bill text into plain English — bill text and status from the Congress.gov API, floor statements from the Congressional Record on GovInfo, roll calls from the House Clerk and the Senate."
     },
     "methodology.html": {
@@ -342,7 +342,7 @@
       "order": 47,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "No editorial spin is easy to say and harder to execute. Here's what it means in practice — what we describe, what we don't, and where the line sits between neutral description and political framing."
     }
   }

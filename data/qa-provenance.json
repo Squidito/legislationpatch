@@ -1937,7 +1937,7 @@
   "article-how-we-source-quotes": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-extract-floor-quotes": "ac82bbffd36a3a7391c5da29275aea19f8be9458420f88f8700ba55bcbab3f34",
       "code-batch-processor": "fad77213f233849f791b86ea480cba958478ecb834679305188f90461f075657",
@@ -1961,7 +1961,7 @@
   "article-how-we-track-voting": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
       "code-senator-match": "625ae6c3a6addca73c6b36f38630ae51c791dd42f3f73032411d82b6810e6f98",
       "code-generate-reps": "4eba1de9be7216ebbe531ba58019d698240bf6daeba35f8675940f8449528df7",
@@ -1972,9 +1972,10 @@
       "record-rep-c001078-connolly": "06eb8ea460db3da04095f39fc108d3a0c2ebf3605ac48531aac46ed9c74cfc8e",
       "record-rep-g000590-green": "c8a543aff9a331ac46668981e03c112ca964d81a4f80958669ebee5c6840c14a",
       "record-rep-v000139-van-epps": "d320cdd16c5642350a9df0f7e5c6d473d60c094a45be92d6d7c2be61e67d1872",
+      "record-rep-a000383-armstrong": "894fe8374741f62a6701f4ff6c2f3c4bb655d5738c0679aff3b415b760b73053",
       "record-house-roll-2026-069-s1383": "e6396941d014f836cdb9f5340ca1b77d5abb57bc99afb470440e07c86234b641"
     },
-    "proseSha": "23ea4aa2444d0204",
+    "proseSha": "8710f56fb5fa8037",
     "proseFile": "drafts/how-we-track-voting.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -1984,7 +1985,7 @@
   "article-methodology": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-fetch-reference": "cc93a1bfc69765333bc1b4987cc8f351ebf17f88d71fb283bded922ef38f194a",
       "code-fetch-cr-data": "d07c3f7ef0e9f2648fd8cd954568e3391d426f2fcb5d22c1ccca84ddab39653b",
@@ -1997,7 +1998,7 @@
       "doc-qa-ledger-readme": "0135b0168e1273154e93d31d074de5c9b510c55980424e97eb5be82d089fce43",
       "code-article-ledger": "0aa6f3bd2cd79ebc5fd82e95b8cedd4e105beed4d48cea1b8ae1b295b6e6b99d"
     },
-    "proseSha": "9e05da5d79ced995",
+    "proseSha": "25f457809e67b529",
     "proseFile": "drafts/methodology.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -2015,7 +2016,7 @@
       "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b"
     },
     "proseSha": "5bd480ffd54e6102",
-    "proseFile": "drafts/no-editorial-spin.html",
+    "proseFile": "articles/no-editorial-spin.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
     "genAt": "2026-08-30",
@@ -2027,7 +2028,7 @@
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
       "record-crs-98-265-cr-users-guide": "94906c931f9a4830a72ac2c1f7c5dabda5dbe3a62554396082d997ac7a5b1828",
       "record-crs-r45153-statutory-interpretation": "0b0b9e124281c2d2e1b2715c9b27a23b5776056aec9e0ee50f11cf1e55338d2c",
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-extract-floor-quotes": "ac82bbffd36a3a7391c5da29275aea19f8be9458420f88f8700ba55bcbab3f34",
       "code-batch-processor": "fad77213f233849f791b86ea480cba958478ecb834679305188f90461f075657",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
@@ -2044,7 +2045,7 @@
   "article-what-is-legislationpatch": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
@@ -2052,8 +2053,8 @@
       "code-prompts": "099b5d8af3d5b5c1068a2eec569fb637216a2340cbf5bb77f692ec0a0a9fd3df",
       "record-lp-cache": "1c3f1c0b4b20dcdb933c64fb36a38f69afc2aac7580acf6d74445726b7c7cc21"
     },
-    "proseSha": "14b8a7fa17e692e5",
-    "proseFile": "drafts/what-is-legislationpatch.html",
+    "proseSha": "48d0b3e289e790c2",
+    "proseFile": "articles/what-is-legislationpatch.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
     "genAt": "2026-08-30",
@@ -2062,7 +2063,7 @@
   "article-legislationpatch-and-ai": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b92178b84d7593eaf606d8fd62f8669e356820cdd0c701ff871a7ff5a442f966",
+      "record-lp-site-facts": "5af9ab813c22cd07c7929ec2400a49edc7a100e508d59b9b9f8033129b4c9aca",
       "code-generate-bill-pages": "a26ef2c7c6a7b3ea83a97d6013825b958dc4910db2b29393fb540ee84e13f9d2",
       "code-entity-lib": "cd35f455484f2f547176bb6e14b2bf46e1b11c546bd2e60e6bed1c8ef6c1db7d",
       "record-lp-entity": "7b325d341d7b16a1c2198efc5522c74b659bb42be93290df53ac03e243e16ec2",
@@ -2072,9 +2073,11 @@
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-prompts": "099b5d8af3d5b5c1068a2eec569fb637216a2340cbf5bb77f692ec0a0a9fd3df",
       "code-floor-js": "2b9372367936e62dc832260d64f2d880221632e09430da984f56d3eacc9fed02",
+      "code-validate-batch": "71fa7385bdbdda32a3a5441d10945fa4757d0578d272b0b16860aba83d60a55f",
+      "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b",
       "record-lp-cache": "1c3f1c0b4b20dcdb933c64fb36a38f69afc2aac7580acf6d74445726b7c7cc21"
     },
-    "proseSha": "8e41bb1fb4a96cf0",
+    "proseSha": "9c279a47b7346c83",
     "proseFile": "drafts/legislationpatch-and-ai.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
