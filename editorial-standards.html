@@ -113,7 +113,7 @@
 
     <h2 style="font-size:1rem;font-weight:600;margin:1.75rem 0 0.4rem">What the automated pipeline does</h2>
     <ul style="margin:0.4rem 0 0 1.1rem;line-height:1.7">
-      <li>Fetches the bill's official text from Congress.gov and GovInfo — always the latest applicable version, because a bill that has passed a chamber is often substantially rewritten from the version introduced.</li>
+      <li>Fetches the bill's official text from the Congress.gov API — the latest applicable version at fetch time, because a bill that has passed a chamber is often substantially rewritten from the version introduced. GovInfo supplies the Congressional Record and any statute or chamber manual an analysis rests on. A bill that advances after it has been analysed is not automatically re-fetched, so the stored text can be older than the newest version posted.</li>
       <li>Extracts a facts sheet: every figure, percentage, deadline, date, and heading in the text, with line numbers. Figures in the published analysis are copied from that sheet, not re-typed from memory.</li>
       <li>Fetches referenced statutes when a bill amends or extends another law, so the numbers come from the actual referenced text.</li>
       <li>Drafts the analysis or article against that source material under a fixed set of sourcing rules.</li>

@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "8e41bb1fb4a96cf0",
+  "proseSha": "9c279a47b7346c83",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -103,6 +103,24 @@
       "citation": "LegislationPatch source, floor.js",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/floor.js",
       "textFile": "floor.js",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "code-validate-batch",
+      "kind": "code",
+      "label": "scripts/validate-batch.js — the deterministic validator",
+      "citation": "LegislationPatch source, scripts/validate-batch.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/validate-batch.js",
+      "textFile": "scripts/validate-batch.js",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "doc-qa-loop",
+      "kind": "code",
+      "label": "docs/QA-LOOP.md — the verification loop and its adjudication ledger",
+      "citation": "LegislationPatch source, docs/QA-LOOP.md",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/docs/QA-LOOP.md",
+      "textFile": "docs/QA-LOOP.md",
       "fetchedAt": "2026-08-30"
     },
     {
@@ -261,7 +279,33 @@
     },
     {
       "field": "body",
-      "claim": "It carries explicit links to the publishing principles, the fact-checking policy and the corrections policy.",
+      "claim": "It carries an explicit link to the publishing principles.",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "ok",
+      "sourceFile": "record-lp-entity",
+      "sourceSpan": "\"publishingPrinciples\":",
+      "section": "Structured Data: Telling Crawlers What the Content Is",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "It carries an explicit link to the fact-checking policy.",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "ok",
+      "sourceFile": "record-lp-entity",
+      "sourceSpan": "\"verificationFactCheckingPolicy\":",
+      "section": "Structured Data: Telling Crawlers What the Content Is",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "It carries an explicit link to the corrections policy.",
       "verdict": "SUPPORTED",
       "type": "entity",
       "severity": "ok",
@@ -319,6 +363,32 @@
       "severity": "ok",
       "sourceFile": "code-prompts",
       "sourceSpan": "If no number exists in the source, describe the mechanism instead. Never invent, estimate, or round-to-a-guess.",
+      "section": "Factual Density",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A figure the checker cannot find in the fetched text is flagged rather than silently shipped.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "Figure sourcing (training-data guard)",
+      "section": "Factual Density",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A flagged figure must be confirmed against the text, re-sourced, or recorded with the evidence before the batch ships.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "doc-qa-loop",
+      "sourceSpan": "data/qa-adjudications.json",
       "section": "Factual Density",
       "status": "open",
       "verify": null,
@@ -404,12 +474,38 @@
     },
     {
       "field": "body",
-      "claim": "Each entry renders the chamber and the date.",
+      "claim": "Each entry renders the chamber.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
       "sourceFile": "code-floor-js",
       "sourceSpan": "'<span class=\"floor-entry-chamber\">'",
+      "section": "The Floor Activity Page: A Quote Database",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Each entry renders the date the statement was recorded.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-floor-js",
+      "sourceSpan": "'<span class=\"floor-entry-date\">'",
+      "section": "The Floor Activity Page: A Quote Database",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Each entry renders the speaker's name.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-floor-js",
+      "sourceSpan": "floor-entry-portrait",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
       "verify": null,
@@ -443,8 +539,8 @@
     }
   ],
   "counts": {
-    "claims": 25,
-    "supported": 25,
+    "claims": 31,
+    "supported": 31,
     "material": 0,
     "minor": 0,
     "omissions": 0,
