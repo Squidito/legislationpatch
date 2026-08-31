@@ -428,6 +428,28 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-constitution-transcript": {
+    "id": "record-constitution-transcript",
+    "kind": "record",
+    "org": "U.S. National Archives and Records Administration",
+    "date": null,
+    "label": "Constitution of the United States — official transcript (National Archives)",
+    "citation": "U.S. Constitution",
+    "srcUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
+    "textFile": "data/ref-text/record-constitution-transcript.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-98-228-house-voting": {
+    "id": "record-crs-98-228-house-voting",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2001-02-20",
+    "label": "CRS Report 98-228, House Voting Procedures: Forms and Requirements (Feb. 20, 2001)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-228GOV.html",
+    "textFile": "data/ref-text/record-crs-98-228-house-voting.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-98-265-cr-users-guide": {
     "id": "record-crs-98-265-cr-users-guide",
     "kind": "record",
@@ -438,6 +460,17 @@
     "srcUrl": "https://www.everycrsreport.com/reports/98-265GOV.html",
     "textFile": "data/ref-text/record-crs-98-265-cr-users-guide.txt",
     "fetchedAt": "2026-08-30"
+  },
+  "record-crs-98-314-suspension": {
+    "id": "record-crs-98-314-suspension",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2025-01-06",
+    "label": "CRS Report 98-314, Suspension of the Rules in the House: Principal Features (updated Jan. 6, 2025)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-314.html",
+    "textFile": "data/ref-text/record-crs-98-314-suspension.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-crs-if10515-ndaa-process": {
     "id": "record-crs-if10515-ndaa-process",
@@ -469,6 +502,17 @@
     "srcUrl": "https://www.everycrsreport.com/reports/IN12324.html",
     "textFile": "data/ref-text/record-crs-in12324-omnibus.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-crs-r42843-legislative-process": {
+    "id": "record-crs-r42843-legislative-process",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R42843, Introduction to the Legislative Process in the U.S. Congress",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R42843.html",
+    "textFile": "data/ref-text/record-crs-r42843-legislative-process.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-crs-r45153-statutory-interpretation": {
     "id": "record-crs-r45153-statutory-interpretation",
@@ -552,6 +596,17 @@
     "textFile": "data/ref-text/record-senate-leadership.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-senate-manual-113": {
+    "id": "record-senate-manual-113",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": null,
+    "label": "Senate Manual, 113th Congress (S. Doc. 113-1 / CDOC-113sdoc18) — Standing Rules of the Senate and the Constitution",
+    "citation": "Senate Manual (S. Doc. 113-1)",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm",
+    "textFile": "data/ref-text/record-senate-manual-113.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-senate-roll-118-2-219": {
     "id": "record-senate-roll-118-2-219",
     "kind": "record",
@@ -605,6 +660,35 @@
     "citation": "United States Senate",
     "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00648.htm",
     "textFile": "data/ref-text/record-senate-rollcall-119-1-648.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-voting-procedures": {
+    "id": "record-senate-voting-procedures",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": null,
+    "label": "U.S. Senate — About Voting (Senate.gov reference page)",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/voting.htm",
+    "textFile": "data/ref-text/record-senate-voting-procedures.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-1-106": {
+    "id": "usc-1-106",
+    "kind": "statute",
+    "label": "1 U.S.C. 106",
+    "citation": "1 U.S.C. 106",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec106/htm",
+    "textFile": "data/ref-text/usc-1-106.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-1-107": {
+    "id": "usc-1-107",
+    "kind": "statute",
+    "label": "1 U.S.C. 107",
+    "citation": "1 U.S.C. 107",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec107/htm",
+    "textFile": "data/ref-text/usc-1-107.txt",
     "fetchedAt": "2026-08-31"
   },
   "usc-14-4902": {
