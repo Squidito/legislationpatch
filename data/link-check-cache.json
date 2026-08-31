@@ -83,15 +83,6 @@
       "bytes": 5845,
       "checkedAt": "2026-08-31"
     },
-    "https://www.cbo.gov": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "finalUrl": "https://www.cbo.gov/",
-      "title": "cbo.gov",
-      "bytes": 767,
-      "checkedAt": "2026-08-31"
-    },
     "https://www.cbo.gov/topics/budget/reconciliation": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
