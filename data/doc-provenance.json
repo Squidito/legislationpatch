@@ -58,8 +58,8 @@
       "The member-field enumeration is COMPLETE against the schema. It omitted photo/portraitUrl until 2026-08-30 while the next sentence made a completeness claim (no term data). Exactly two records carry a portrait override (C001115, G000553); generate_rep_pages.js reads rep.photo in preference to the computed URL.",
       "The meta description and the index card must not generalise the House-only bioguide-ID match to the Senate, which is matched on surname plus state. Both said cross-references member bioguide IDs until 2026-08-30, contradicting the body three paragraphs down."
     ],
-    "sha": "",
-    "reviewedAt": ""
+    "sha": "b95cebb6643d0ba6",
+    "reviewedAt": "2026-08-31"
   },
   "articles/legislationpatch-and-ai.html": {
     "describes": [

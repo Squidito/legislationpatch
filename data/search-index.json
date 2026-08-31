@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T04:06:49.552Z",
+  "generatedAt": "2026-08-31T04:38:45.817Z",
   "counts": {
     "bill": 219,
     "rep": 551,
@@ -10773,7 +10773,7 @@
       "url": "/articles/how-we-track-voting.html",
       "title": "How LegislationPatch Tracks Representative Voting Records",
       "sub": "Guide",
-      "text": "LegislationPatch pulls roll call vote data directly from the House Clerk and Senate websites, cross-references member bioguide IDs, and flags crossover votes on close margins. Here's how it works."
+      "text": "LegislationPatch pulls roll call vote data directly from the House Clerk and the Senate, matches each row to a member profile — by bioguide ID in the House, by surname and state in the Senate — and flags crossover votes on close margins. Here's how it works."
     },
     {
       "t": "article",

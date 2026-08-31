@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "51886d51aa6e3726",
+  "proseSha": "de5b239b5ca9aee0",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -131,12 +131,145 @@
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/lib/article-ledger.js",
       "textFile": "scripts/lib/article-ledger.js",
       "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "bill-119-s-4465",
+      "kind": "bill",
+      "label": "S. 4465 / Public Law 119-87 — FISA title VII extension through June 12, 2026",
+      "citation": "Public Law 119-87, 140 Stat. 811",
+      "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
+      "textFile": "data/bill-text/119-S-4465.txt",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "record-lp-cache",
+      "kind": "record",
+      "label": "data/cache.json — the published bill analyses",
+      "citation": "LegislationPatch bill analysis corpus",
+      "srcUrl": "https://legislationpatch.com/data/cache.json",
+      "textFile": "data/cache.json",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "usc-50-1881a",
+      "kind": "statute",
+      "label": "50 U.S.C. 1881a — Procedures for targeting certain persons outside the United States other than United States persons",
+      "citation": "50 U.S.C. 1881a (2024 edition)",
+      "srcUrl": "https://www.govinfo.gov/app/collection/uscode",
+      "textFile": "data/ref-text/usc-50-1881a.txt",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "record-govinfo-crec-about",
+      "kind": "record",
+      "label": "GovInfo — About the Congressional Record",
+      "citation": "GovInfo help page, Congressional Record collection",
+      "srcUrl": "https://www.govinfo.gov/help/crec",
+      "textFile": "data/ref-text/record-govinfo-crec-about.txt",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "code-app-render",
+      "kind": "code",
+      "label": "app-render.js — renders the bill page vote panel",
+      "citation": "LegislationPatch source, app-render.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/app-render.js",
+      "textFile": "app-render.js",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "code-article-backlog",
+      "kind": "code",
+      "label": "scripts/article-backlog.js — ranks analysed bills for a standalone explainer",
+      "citation": "LegislationPatch source, scripts/article-backlog.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/article-backlog.js",
+      "textFile": "scripts/article-backlog.js",
+      "fetchedAt": "2026-08-31"
+    },
+    {
+      "id": "code-demand-signal",
+      "kind": "code",
+      "label": "scripts/demand-signal.js — reader search-demand signal feeding batch selection",
+      "citation": "LegislationPatch source, scripts/demand-signal.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/demand-signal.js",
+      "textFile": "scripts/demand-signal.js",
+      "fetchedAt": "2026-08-31"
+    },
+    {
+      "id": "code-stage-lib",
+      "kind": "code",
+      "label": "scripts/lib/stage.js — the stage/step ladder",
+      "citation": "LegislationPatch source, scripts/lib/stage.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/lib/stage.js",
+      "textFile": "scripts/lib/stage.js",
+      "fetchedAt": "2026-08-31"
+    },
+    {
+      "id": "code-add-bills",
+      "kind": "code",
+      "label": "scripts/add-bills.js — merges analysed entries into cache.json",
+      "citation": "LegislationPatch source, scripts/add-bills.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/add-bills.js",
+      "textFile": "scripts/add-bills.js",
+      "fetchedAt": "2026-08-31"
     }
   ],
   "claims": [
     {
       "field": "body",
-      "claim": "Bill metadata — sponsor, cosponsors, committee referrals, action history — comes from the Congress.gov API.",
+      "claim": "The 2026 act extending the Section 702 authority works by amending the FISA Amendments Act of 2008.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "FISA Amendments Act of 2008 (Public Law 110-261) is amended",
+      "section": "Lede",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "It strikes a date and inserts June 12, 2026.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "June 12, 2026",
+      "section": "Lede",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The act also sets its own effective date, in a second subsection of the same section.",
+      "verdict": "SUPPORTED",
+      "type": "omission",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "(b) Effective Date.--The amendments",
+      "section": "Lede",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Nothing in the act states what the Section 702 authority is or what it permits.",
+      "verdict": "SUPPORTED",
+      "type": "omission",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "To amend the FISA Amendments Act of 2008 to extend the authorities of",
+      "section": "Lede",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Bill metadata — sponsor, cosponsors, action history — comes from the Congress.gov API.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
@@ -144,7 +277,20 @@
       "sourceSpan": "https://api.congress.gov/v3/bill/${CONGRESS_SESSION}/${type.toLowerCase()}/${number}?format=json&api_key=${CONGRESS_API_KEY}",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A committee referral appears only as text inside an action-history entry; no committee field is stored.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-bills-data",
+      "sourceSpan": "referred to the committee",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -157,7 +303,7 @@
       "sourceSpan": "https://api.congress.gov/v3/bill/${congress}/${type.toLowerCase()}/${number}/text?format=json&api_key=${CONGRESS_API_KEY}",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -170,7 +316,7 @@
       "sourceSpan": "(Enrolled > Engrossed Amendment > Engrossed > Reported > Introduced), tie-broken",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -183,12 +329,12 @@
       "sourceSpan": "Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 219",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The stored text can lag: 69 of the 151 non-enacted bills show an older version than Congress.gov now lists, and 2 of the 68 enacted ones still show the text as introduced.",
+      "claim": "69 of the 151 non-enacted bills show an older text version than Congress.gov now lists.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
@@ -196,7 +342,20 @@
       "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 151 non-enacted bills.",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "2 of the 68 enacted bills still show the text as introduced.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "Enacted bills whose stored text is still the version as introduced: 2 (119-S-1003, 119-S-629)",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -209,7 +368,7 @@
       "sourceSpan": "It saves the source text to data/ref-text/",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -222,12 +381,12 @@
       "sourceSpan": "https://api.govinfo.gov/packages/${packageId}/granules/${granuleId}/htm?api_key=${GOVINFO_API_KEY}",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The U.S. Code and chamber manuals are fetched from GovInfo too.",
+      "claim": "The House Rules and Manual is fetched from GovInfo.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
@@ -235,7 +394,20 @@
       "sourceSpan": "--rule pulls a standing chamber rule from the House Rules and Manual (govinfo HMAN)",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The U.S. Code is fetched from GovInfo.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-reference",
+      "sourceSpan": "--usc \"50:1881a\"        (50 U.S.C. 1881a)",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -248,7 +420,7 @@
       "sourceSpan": "// Every sentence of the quote must appear verbatim in the CR",
       "section": "Where Our Data Comes From",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -261,12 +433,12 @@
       "sourceSpan": "added = new programs or rights created by this bill",
       "section": "What We Actually Read",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The sponsor, party, state and cosponsor count are recorded, and whether support crossed party lines.",
+      "claim": "Sponsor party and cosponsor count are recorded and used in the likelihood reasoning.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
@@ -274,7 +446,33 @@
       "sourceSpan": "Cite: current chamber majority, sponsor party, cosponsor count",
       "section": "What We Actually Read",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The stored sponsor string carries the member name, party and state.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "record-lp-cache",
+      "sourceSpan": "\"sponsor\": \"Sen. Cornyn, John (R-TX)\"",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Whether support crossed party lines is computed from the roll call.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-vote-data",
+      "sourceSpan": "function detectCrossovers(members, yeas, nays) {",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -287,7 +485,7 @@
       "sourceSpan": "if (Math.abs(yeas - nays) / total > 0.30) return [];",
       "section": "What We Actually Read",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -300,7 +498,7 @@
       "sourceSpan": "// clerk.house.gov/evs/{year}/roll{N}.xml",
       "section": "What We Actually Read",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -313,7 +511,7 @@
       "sourceSpan": "the only zone where broader political reasoning is permitted",
       "section": "What We Actually Read",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -326,12 +524,12 @@
       "sourceSpan": "A claim you cannot tie to a stored source line is DELETED, not hedged, not softened.",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The validator runs 27 check sections.",
+      "claim": "validate-batch.js defines 27 check sections.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
@@ -339,7 +537,20 @@
       "sourceSpan": "Check sections in validate-batch.js: 27",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "One of the 27, the account-attribution screen, runs only with the opt-in --attribution flag, so 26 run in the default gate.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "if (process.argv.includes('--attribution')) {",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -352,12 +563,12 @@
       "sourceSpan": "Sections that can block a release (call fail()): 14",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "Thirteen sections only warn.",
+      "claim": "Thirteen sections only warn, twelve of them in the default gate.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
@@ -365,12 +576,12 @@
       "sourceSpan": "Sections that only warn: 13",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "Among the blocking checks are bill-text presence, referenced-source resolution, quote attribution against the member id, and stage-versus-vote consistency.",
+      "claim": "Bill text files, Referenced sources, Quote attribution and Stage-vote consistency are all blocking sections.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
@@ -378,7 +589,33 @@
       "sourceSpan": "Blocking sections: Unprocessed bills; Required fields; Bill text files;",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A quote whose surname does not match its bioguide id fails the build.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "WRONG PERSON (surname mismatch)",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A quote whose stored state disagrees with the member only warns; it does not block.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "is ${rep.state} — verify",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -391,7 +628,7 @@
       "sourceSpan": "it blocks only under the opt-in --strict flag.",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -404,7 +641,7 @@
       "sourceSpan": "const blocking = errors > 0 || (STRICT && warnings > 0);",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -417,7 +654,7 @@
       "sourceSpan": "data/qa-adjudications.json",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -430,7 +667,7 @@
       "sourceSpan": "**SUPPORTED** (quote the verbatim span — no span, it is NOT supported), **CONTRADICTED**, or **UNSUPPORTED**",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -443,7 +680,7 @@
       "sourceSpan": "Polarity/direction sub-check:",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -456,7 +693,7 @@
       "sourceSpan": "\"auditModel\": \"opus\",               // finder (or *-import for seeds)",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -469,12 +706,12 @@
       "sourceSpan": "Bill ledgers recording a drafting model at all: 0 of 212",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "Each analysis retains a per-bill record of the claims examined and the source line each was verified against.",
+      "claim": "An audited analysis retains a per-bill record of the claims examined and the source line each was verified against.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
@@ -482,7 +719,20 @@
       "sourceSpan": "write `data/qa-ledger/{id}.json` per audited bill",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "212 of the 219 analyses in the database carry a claim ledger; 7 do not.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "Bill analyses carrying a claim ledger: 212 of 219.",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -495,7 +745,7 @@
       "sourceSpan": "RECEIPT REPLAY",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -508,7 +758,7 @@
       "sourceSpan": "Fetch first, draft second.",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -521,7 +771,7 @@
       "sourceSpan": "source (`sourceFile`) and is checked against THAT FILE ONLY.",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -534,7 +784,7 @@
       "sourceSpan": "Bill material is allowed ONLY as receipt-bound factual examples",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -547,7 +797,7 @@
       "sourceSpan": "open flag(s) still on the ledger — converge the audit first",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -560,7 +810,7 @@
       "sourceSpan": "are the same model family",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -573,7 +823,7 @@
       "sourceSpan": "It does NOT commit, push, or ping IndexNow",
       "section": "How We Verify Accuracy",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -586,7 +836,7 @@
       "sourceSpan": "Bills deliberately excluded from analysis in data/analysis-skip.json: 107",
       "section": "Our Limits",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -599,7 +849,7 @@
       "sourceSpan": "Excluded bills by category: 29 ceremonial, 28 deferred-minor, 27 procedural, 23 cra-disapproval",
       "section": "Our Limits",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -612,13 +862,325 @@
       "sourceSpan": "section('Analysis freshness (analyzedAt)');",
       "section": "Our Limits",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Stage prose is written once while votes are refetched afterwards, so the two drift apart unless a check enforces agreement.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "the two drift apart silently",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "6 of the 17 article ledgers record the same model as drafter and auditor, so the publish gate is not retroactive to articles audited before it existed.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 17",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The S. 1884 entry describes the change as adding new Section 5(f) to the Holocaust Expropriated Art Recovery Act of 2016.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-lp-cache",
+      "sourceSpan": "Adds new Section 5(f) to the Holocaust Expropriated Art Recovery Act of 2016, barring all time-based defenses and all non-merits discretionary bases for dismissal against otherwise timely Holocaust art claims.",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The seven analyses without a ledger were all written on 2026-08-27, after the corpus-wide sweep.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "analysed 2026-08-27.",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Each action the API returns carries a date and a text description.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "code-fetch-vote-data",
+      "sourceSpan": "latest = { date: a.actionDate",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The opt-in account-attribution screen flags a figure that may be bound to the wrong account.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-validate-batch",
+      "sourceSpan": "a likely wrong-account",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The Section 702 targeting authority is codified at 50 U.S.C. 1881a.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "usc-50-1881a",
+      "sourceSpan": "Sec. 1881a - Procedures for targeting certain persons outside the Unit",
+      "section": "The Patch Notes Format",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "GovInfo is run by the U.S. Government Publishing Office.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-govinfo-crec-about",
+      "sourceSpan": "Government Publishing Office",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The date the act strikes is April 30, 2026.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "April 30,",
+      "section": "The Patch Notes Format",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The vote panel renders each member with a party label.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-app-render",
+      "sourceSpan": "'<span class=\"vm-party party-'",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The publishing script does not commit, push or ping anything, so publication is a human action.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-publish-article",
+      "sourceSpan": "It does NOT commit, push, or ping IndexNow.",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The discovery pass skips any bill whose latest action puts it below the passed-a-chamber step.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-bills-data",
+      "sourceSpan": "if (detectStage(b.latestAction?.text || '', b.type).step < 2) continue;",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Reader search demand feeds batch selection.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-demand-signal",
+      "sourceSpan": "It feeds batch selection (see run-batch.js / the analysis",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Co-sponsor count is used to rank already-analysed bills for a standalone explainer, not to admit a bill to the corpus.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-article-backlog",
+      "sourceSpan": "HIGH_INTEREST_COSPONSORS = 25;",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The likelihood reasoning may cite the chamber majority, sponsor party, cosponsor count, and which provisions attract opposition and from whom.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-prompts",
+      "sourceSpan": "current chamber majority, sponsor party, cosponsor count, which specific provisions will attract opposition and from whom.",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The bill-text panel is labelled Full Bill Text, never the enrolled bill.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "Bill-text panel label rendered by bill.js: \"Full Bill Text\"",
+      "section": "Where Our Data Comes From",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The act has a single numbered section.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "bill-119-s-4465",
+      "sourceSpan": "SECTION 1. EXTENSION OF AUTHORITIES OF TITLE VII OF THE FORE",
+      "section": "Lede",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Zero unresolved flags is the article bar, stricter than the bill lane, which parks editorial language as style debt.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "doc-qa-ledger-readme",
+      "sourceSpan": "Zero open flags is the bar",
+      "section": "How We Verify Accuracy",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Step 2 on the stage ladder is passage by a chamber; introduced is 0 and on-calendar is 1.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-stage-lib",
+      "sourceSpan": "label: 'Passed House',  step: 2",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Bills can also be merged into the database deliberately, outside the discovery pass.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-add-bills",
+      "sourceSpan": "merge analyzed bill entries into data/cache.json",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The database holds 6 bills still at the committee stage.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "6 committee",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The same rule bars narrating procedural status in prose, because the stage and vote fields own it and are refetched.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-prompts",
+      "sourceSpan": "Do NOT narrate procedural status in prose",
+      "section": "What We Actually Read",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The discovery pass also screens the latest action against a dead-on-arrival marker list.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-bills-data",
+      "sourceSpan": "DOA_ACTIONS.some(p => action.includes(p))",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Seven bills in the database are recorded at the dead stage, so a bill that fails on the floor is kept.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "7 dead",
+      "section": "Our Limits",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 37,
-    "supported": 37,
+    "claims": 74,
+    "supported": 74,
     "material": 0,
     "minor": 0,
     "omissions": 0,

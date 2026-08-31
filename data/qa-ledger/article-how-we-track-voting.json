@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation, trust-page audit)",
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
-  "passes": 2,
-  "proseSha": "8710f56fb5fa8037",
+  "passes": 7,
+  "proseSha": "404745b2705b2ecb",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -131,6 +131,24 @@
       "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
       "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
       "fetchedAt": "2026-08-19"
+    },
+    {
+      "id": "code-rep-js",
+      "kind": "code",
+      "label": "rep.js — hydrates the static member profile in place",
+      "citation": "LegislationPatch source, rep.js",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/rep.js",
+      "textFile": "rep.js",
+      "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "doc-ui-architecture",
+      "kind": "record",
+      "label": "docs/UI-ARCHITECTURE.md — rendering architecture notes",
+      "citation": "LegislationPatch docs, UI-ARCHITECTURE.md",
+      "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/docs/UI-ARCHITECTURE.md",
+      "textFile": "docs/UI-ARCHITECTURE.md",
+      "fetchedAt": "2026-08-30"
     }
   ],
   "claims": [
@@ -144,7 +162,7 @@
       "sourceSpan": "clerk.house.gov/evs/{year}/roll{N}.xml",
       "section": "Opening",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -157,7 +175,7 @@
       "sourceSpan": "xmlUrl = 'https://www.senate.gov/legislative/LIS/roll_call_votes/vote'",
       "section": "Opening",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -170,7 +188,7 @@
       "sourceSpan": "const blocks  = xml.match(/<recorded-vote>[\\s\\S]*?<\\/recorded-vote>/gi) || [];",
       "section": "Opening",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -183,7 +201,7 @@
       "sourceSpan": "const r = senatorMatch.resolveSenator(SENATOR_LOOKUP, { lastName, firstName, state, party });",
       "section": "Opening",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -196,7 +214,7 @@
       "sourceSpan": "if (Math.abs(yeas - nays) / total > 0.30) return [];",
       "section": "Opening",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -209,7 +227,7 @@
       "sourceSpan": "// clerk.house.gov/evs/{year}/roll{N}.xml",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -222,7 +240,7 @@
       "sourceSpan": "On Passage YEA-AND-NAY Passed 11-Feb-2026",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -232,10 +250,10 @@
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-house-roll-2026-069-s1383",
-      "sourceSpan": "Party Yeas Nays Answered “Present” Not Voting Republican 217 0 0 1",
+      "sourceSpan": "Party Yeas Nays Answered “Present” Not Voting Republican 217 0",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -248,7 +266,7 @@
       "sourceSpan": "Adams Nay Aderholt Yea Aguilar Nay Alford Yea",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -261,7 +279,7 @@
       "sourceSpan": "Passed 11-Feb-2026",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -274,7 +292,7 @@
       "sourceSpan": "// senate.gov/legislative/LIS/roll_call_votes/vote{congress}{session}/vote_{congress}_{session}_{roll5d}.xml",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -287,7 +305,7 @@
       "sourceSpan": "const yeas      = parseInt((xml.match(/<yeas>(\\d+)<\\/yeas>/i)     || [])[1] || '0');",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -300,7 +318,7 @@
       "sourceSpan": "// Senate XML often omits bio_id — fall back to the surname+state matcher.",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -313,7 +331,7 @@
       "sourceSpan": "Senate roll-call XML carries no <bio_id> for most votes, so a",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -326,7 +344,7 @@
       "sourceSpan": "A COLLISION OVERWROTE SILENTLY. Two same-state senators sharing a",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -339,7 +357,7 @@
       "sourceSpan": "Both sides derive keys through the SAME function, so they cannot diverge.",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -352,7 +370,7 @@
       "sourceSpan": "/** Fold diacritics and drop everything that is not a letter or a space. */",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -365,7 +383,7 @@
       "sourceSpan": ".filter(t => t.length > 1 && !SUFFIXES.has(t));",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -378,7 +396,7 @@
       "sourceSpan": "for (let start = 0; start < t.length; start++) keys.push(t.slice(start).join(''));",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -391,7 +409,7 @@
       "sourceSpan": "tiebreak is first name, then party.",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -404,20 +422,20 @@
       "sourceSpan": "It is never guessed:",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The rationale recorded in the code is that a wrong ID on a public voting record is worse than a missing one.",
+      "claim": "An unresolved roll-call row is left without a bioguide id and logged, never assigned on a partial match.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
       "sourceFile": "code-senator-match",
-      "sourceSpan": "a wrong attribution is worse than a missing one, and the caller logs it.",
+      "sourceSpan": "It is never guessed:",
       "section": "The Source: Official Roll Call Records",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -430,7 +448,7 @@
       "sourceSpan": "Member profiles: 551",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -443,7 +461,7 @@
       "sourceSpan": "Member profiles by role: 448 Representative, 103 Senator",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -456,7 +474,7 @@
       "sourceSpan": "until his death in 2025",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -469,7 +487,7 @@
       "sourceSpan": "until his resignation in 2025",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -482,7 +500,7 @@
       "sourceSpan": "he was elected in the 2025 special election",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -495,7 +513,7 @@
       "sourceSpan": "appointed Armstrong to the Senate after Markwayne Mullin resigned",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -508,7 +526,7 @@
       "sourceSpan": "https://api.congress.gov/v3/member/congress/${CONGRESS_SESSION}",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -521,7 +539,7 @@
       "sourceSpan": "Distinct House seats represented (state + district): 441",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -534,7 +552,7 @@
       "sourceSpan": "House seats held by more than one person during the 119th Congress: 7",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -547,7 +565,7 @@
       "sourceSpan": "States holding more than two senator profiles: 3",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -560,7 +578,7 @@
       "sourceSpan": "const filePath = path.join(repsDir, `${id}.json`);",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -573,20 +591,20 @@
       "sourceSpan": "bioguideId: leg[1].trim(),",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "The stored fields on a member record are the bioguide id, name, party, state, chamber (role), district, biography plus its source link, floor statements (comments), and voting record.",
+      "claim": "The stored fields on a member record are the bioguide id, name, party, state, role, district, biography plus its source link, floor statements (comments), voting record, and the two portrait fields. Chamber is derived from role, not stored.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "comments, district, name, party, photo, portraitUrl, role, state, voteHistory",
+      "sourceSpan": "Fields stored on a member record: bio, bioSource, bioUrl, bioguideId, comments, district, name, party, photo, portraitUrl, role, state, voteHistory",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -599,7 +617,7 @@
       "sourceSpan": "Biography source recorded on member records: 551 wikipedia",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -612,7 +630,7 @@
       "sourceSpan": "No member record carries a term field: there is no term start date, term end date, term number, or years-served field in the schema.",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -625,7 +643,7 @@
       "sourceSpan": "const alreadyHas = rep.voteHistory.some(v => v.billId === billId && v.chamber === vote.chamber);",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -638,7 +656,7 @@
       "sourceSpan": "function voteHistoryHtml(rep) {",
       "section": "The Member Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -651,7 +669,7 @@
       "sourceSpan": "Crossover votes are surfaced only when the yea-nay margin is within 30% of total yeas plus nays.",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -664,7 +682,7 @@
       "sourceSpan": "if (Math.abs(yeas - nays) / total > 0.30) return [];",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -677,7 +695,7 @@
       "sourceSpan": "if (memberVote && memberVote !== majority) {",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -690,7 +708,7 @@
       "sourceSpan": "partyMajority[p] = c.Yea === c.Nay ? null : (c.Yea > c.Nay ? 'Yea' : 'Nay');",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -703,7 +721,7 @@
       "sourceSpan": "119-HR-139, House 2026-07-14, \"On Passage\" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -716,7 +734,7 @@
       "sourceSpan": "so no crossovers were surfaced: 75 (measured over the 232 roll calls that store a member list).",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -729,7 +747,7 @@
       "sourceSpan": "html += '<div class=\"vote-crossovers-title\">Crossed the Aisle (' + crossovers.length + ')</div>';",
       "section": "Crossover Vote Detection",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -742,7 +760,7 @@
       "sourceSpan": "Recorded roll-call entries: 233, of which 232 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 208.",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -755,7 +773,7 @@
       "sourceSpan": "method:   t.includes('unanimous consent') ? 'Unanimous Consent' : 'Voice Vote',",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -768,7 +786,7 @@
       "sourceSpan": "voice/UC passage(s) — no member tally",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -781,12 +799,12 @@
       "sourceSpan": "// Save data/votes/{billId}.json",
       "section": "Updating Vote Data",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "Bill, vote, quote and member data are loaded in the browser as static JSON files from this same host.",
+      "claim": "Bill, quote and member data are loaded in the browser as static JSON files from this same host.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
@@ -794,7 +812,20 @@
       "sourceSpan": "All three fetchers hit static JSON on the same host",
       "section": "Updating Vote Data",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Vote data is loaded in the browser as a static per-bill JSON file from this same host.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-app-render",
+      "sourceSpan": "await fetch('data/votes/' + billId + '.json')",
+      "section": "Updating Vote Data",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -807,7 +838,7 @@
       "sourceSpan": "return PHOTO_OVERRIDES[id] || `https://bioguide.congress.gov/bioguide/photo/${id[0]}/${id}.jpg`;",
       "section": "Updating Vote Data",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -816,11 +847,11 @@
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
-      "sourceFile": "code-util",
-      "sourceSpan": "'C001115': 'https://clerk.house.gov/images/members/C001115.jpg',",
+      "sourceFile": "doc-ui-architecture",
+      "sourceSpan": "(Michael Cloud) — bioguide photo missing, served from",
       "section": "Updating Vote Data",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -833,18 +864,109 @@
       "sourceSpan": "node scripts/fetch_vote_data.js --bill 119-HR-227     one bill",
       "section": "Updating Vote Data",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "One member record carries a stored photo URL that the renderer uses in place of the computed bioguide image.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "code-generate-rep-pages",
+      "sourceSpan": "typeof rep.photo === 'string'",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "A second member record carries a portraitUrl field, which no code reads.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "photo, portraitUrl",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Crossovers are computed for every party group present on the roll call, keyed by the member party with independents defaulting to I.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-fetch-vote-data",
+      "sourceSpan": "const p = m.party || 'I';",
+      "section": "Crossover Vote Detection",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The profile page shows the first eight vote-history rows and hides the rest behind a show-more control.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-rep-js",
+      "sourceSpan": "var VOTE_DEFAULT = 8;",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The stored vote history itself is complete: the generator emits every row, without a slice.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-generate-rep-pages",
+      "sourceSpan": "voteHistoryHtml",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Chamber is derived from the role field at render time.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "code-generate-rep-pages",
+      "sourceSpan": "rep.role === 'Senator'",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "Every one of the 551 member records records Wikipedia as its biography source.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "Biography source recorded on member records: 551 wikipedia",
+      "section": "The Member Database",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 54,
-    "supported": 54,
+    "claims": 62,
+    "supported": 62,
     "material": 0,
     "minor": 0,
     "omissions": 0,
     "rejected": 0
   },
-  "resolution": "",
-  "notes": ""
+  "resolution": "CONVERGED: pass 7 returned PASS with zero errors and zero warnings, after zero-error passes at 4 and 6. Trust-page audit (Phase B), 2026-08-30/31, across two Opus sessions (the first was killed by a session limit; its draft survived in the gitignored drafts/ and hash-matched this ledger). Seven hostile Sonnet passes, every one adjudicated in the main Opus thread. THE SWEEP FINDINGS: the page said the database covers 552 people (it is 551), claimed a current-term-data field that does not exist in the schema, and claimed same-surname senators were resolved by additional disambiguation logic that had never been written. That last one was fixed in the CODE rather than the prose, and doing so uncovered a live data defect: five senators (Blunt Rochester, Cortez Masto, King, Lujan, Van Hollen) matched nothing on any Senate roll call and showed EMPTY voting records on their public profiles. FOUND DURING THIS AUDIT, ALSO LIVE: detectCrossovers treated an exactly-split party as having a Yea majority, which published Sanders in the Crossed the Aisle list 18 times. Both fixed and backfilled offline before this page was published, so the prose describes shipped behaviour. LATER PASSES: the meta description and index card generalised the House-only bioguide-ID match across both chambers, contradicting the body; the prose rounded 44.9% to 45% on a page about precision; the member-field enumeration read as exhaustive while omitting photo, portraitUrl and bioSource; a claim that two records carry a portrait override was half wrong, because nothing reads portraitUrl; the vote-history claim overstated DEFAULT visibility, since rep.js shows eight rows behind a show-more; and two sentences ranked outcomes rather than describing them - one of them lifted straight from a code comment, which is not an exemption.",
+  "notes": "THE CODEBASE IS THE SOURCE. Where a claim was false, the fix was chosen deliberately between correcting the prose and correcting the code: the disambiguation claim and the crossover tie were fixed in CODE (they were real defects with live consequences); the member count, the term-data field, the portrait fields, the default row count and the evaluative framing were fixed in PROSE. Nothing was softened. One receipt span had been typed with straight quotes against a stored roll-call file containing curly ones, so it did not resolve literally - repaired by slicing the span out of the file rather than retyping it, which is the general lesson for this ledger."
 }

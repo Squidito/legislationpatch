@@ -1974,10 +1974,11 @@
       "record-rep-v000139-van-epps": "d320cdd16c5642350a9df0f7e5c6d473d60c094a45be92d6d7c2be61e67d1872",
       "record-rep-a000383-armstrong": "894fe8374741f62a6701f4ff6c2f3c4bb655d5738c0679aff3b415b760b73053",
       "record-house-roll-2026-069-s1383": "e6396941d014f836cdb9f5340ca1b77d5abb57bc99afb470440e07c86234b641",
-      "code-rep-js": "9e30aeff3f99478b9ab8fe7f91e7ac1688d46a9c7eea3b2e4e666f990bb5c895"
+      "code-rep-js": "9e30aeff3f99478b9ab8fe7f91e7ac1688d46a9c7eea3b2e4e666f990bb5c895",
+      "doc-ui-architecture": "39e8d283f9518498524652014bf879838dfcaeeda7703aee77f70675e2548d13"
     },
-    "proseSha": "24c87443ade5b020",
-    "proseFile": "drafts/how-we-track-voting.html",
+    "proseSha": "404745b2705b2ecb",
+    "proseFile": "articles/how-we-track-voting.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
     "genAt": "2026-08-30",
@@ -2003,9 +2004,13 @@
       "record-lp-cache": "1c3f1c0b4b20dcdb933c64fb36a38f69afc2aac7580acf6d74445726b7c7cc21",
       "usc-50-1881a": "5a4ed18a719601df2f74a358211cfc269f48b096a6aaa2221b3ef40021de60f2",
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
-      "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f"
+      "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
+      "code-article-backlog": "e6a9f7ef2e861e08d0f478051ca917aab14c574ae095a9104a56d8197d5bd96c",
+      "code-demand-signal": "a659c79e8b216880b1c0847a2ea59e868701b5f8e73b28b33db1473e357190e5",
+      "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
+      "code-add-bills": "4afb227fdf03c64bf2b40419d5a1e7ca64b2bd785456d8575cdaacf520a8043c"
     },
-    "proseSha": "b2c98b9140933b47",
+    "proseSha": "de5b239b5ca9aee0",
     "proseFile": "drafts/methodology.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
