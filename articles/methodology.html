@@ -6,13 +6,13 @@
   <meta name="referrer" content="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>How LegislationPatch Analyzes Federal Bills — Our Methodology</title>
-  <meta name="description" content="LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law — no summaries, no press releases." />
+  <meta name="description" content="LegislationPatch pulls bill text from the Congress.gov API and floor statements from the Congressional Record on GovInfo, reads every section, and explains changes relative to existing law rather than relaying somebody else’s account of it." />
   <link rel="canonical" href="https://legislationpatch.com/articles/methodology.html" />
 
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://legislationpatch.com/articles/methodology.html" />
   <meta property="og:title" content="How LegislationPatch Analyzes Federal Bills — Our Methodology" />
-  <meta property="og:description" content="LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law." />
+  <meta property="og:description" content="LegislationPatch pulls bill text from the Congress.gov API and floor statements from the Congressional Record on GovInfo, reads every section, and explains changes relative to existing law." />
   <meta property="og:image" content="https://legislationpatch.com/og/articles/methodology.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://legislationpatch.com/og/articles/methodology.png" />
@@ -22,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "How LegislationPatch Analyzes Federal Bills: Our Methodology",
-    "description": "LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law — no summaries, no press releases.",
+    "description": "LegislationPatch pulls bill text from the Congress.gov API and floor statements from the Congressional Record on GovInfo, reads every section, and explains changes relative to existing law rather than relaying somebody else’s account of it.",
     "author": {
       "@id": "https://legislationpatch.com/author/james-shearn#person"
     },
@@ -30,7 +30,7 @@
       "@id": "https://legislationpatch.com/#organization"
     },
     "datePublished": "2026-05-08",
-    "dateModified": "2026-08-16",
+    "dateModified": "2026-08-30",
     "url": "https://legislationpatch.com/articles/methodology.html",
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -165,7 +165,7 @@
 
       <div class="article-body">
 
-        <p>Federal legislation is written in a language most Americans don't speak — not because they lack the intelligence, but because bill drafting conventions haven't meaningfully changed since the 19th century. A bill that extends a federal surveillance program by six weeks can run 40 pages of cross-references to sections of law passed in 1978. LegislationPatch exists to translate that.</p>
+        <p>Federal legislation is written in a language most Americans don't speak. A bill can be short and still be unreadable, because its operative content is an instruction to amend a statute somewhere else. <a href="../bill/119-s-4465-foreign-intelligence-surveillance-act-further-extension-through-june/">The 2026 act that extended the Section 702 surveillance authority</a> runs to one section: it amends the FISA Amendments Act of 2008 by striking one date and inserting June 12, 2026, then sets its own effective date. Nothing in it says what the authority is or what it permits. LegislationPatch exists to translate that.</p>
 
         <p>Here's exactly how we do it, where the data comes from, and what we're deliberately not doing.</p>
 
@@ -173,39 +173,39 @@
 
         <p>Every analysis begins with two official government sources: <a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> and <a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a>.</p>
 
-        <p>Congress.gov is the Library of Congress's official federal legislation database. Its public API gives us structured data about each bill: sponsor and co-sponsors, committee referrals, action history, and the chronological record of a bill's movement through the process. When a bill receives a committee vote, floor action, or presidential signature, that event is recorded in Congress.gov with a date and description.</p>
+        <p>Congress.gov's public API gives us structured data about each bill: sponsor and co-sponsors, and the action history that records a bill's movement through the process. When a bill receives a committee vote, floor action, or presidential signature, that event comes back from the API with a date and a text description. A committee referral is one of those action entries — it is text in the history, not a separate field we store.</p>
 
-        <p>GovInfo is the U.S. Government Publishing Office's official repository for federal document text. This is where the actual bill language lives. We pull enrolled bill text — the version that has passed both chambers, before or after presidential action — from GovInfo, not from news summaries or third-party aggregators. When you read our analysis, the quoted language is from the official enrolled text.</p>
+        <p>Bill text comes from that same Congress.gov API, and at fetch time we take the newest applicable version: enrolled first, then engrossed-amendment, engrossed, reported, and only then introduced. Only 68 of the 219 bills in our database have been signed into law, so for most of them the text on the page is not an enrolled bill and we do not call it one. Nor is it always current: a bill that advances after we have analysed it is not automatically re-fetched, because the analysis was written against the older text, so 69 of the 151 unenacted bills are showing an older version than Congress.gov now lists and two of the enacted ones are still showing the text as introduced. Where an analysis needs a figure from a law the bill amends rather than from the bill itself, that statute is fetched separately and stored before the figure is written.</p>
 
-        <p>For what members of Congress say on the floor, we use the <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> via GovInfo. Quotes attributed to members in our analysis appear verbatim from the Record, the official transcript of floor proceedings. We don't paraphrase floor statements and present them as quotes.</p>
+        <p>GovInfo, the U.S. Government Publishing Office's site, is where two other things come from: the <a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> for what members said on the floor, and the U.S. Code and the House Rules and Manual when an analysis or an explainer rests on one. Every sentence of a stored quote has to appear verbatim in the fetched text or the quote is discarded; we do not paraphrase a floor statement and present it as a quotation.</p>
 
         <h2>What We Actually Read</h2>
 
-        <p>A 200-page appropriations bill and a 3-page technical extension of existing law get the same treatment: we read the actual sections.</p>
+        <p>An omnibus appropriations bill and a short technical extension of existing law get the same treatment: we read the actual sections.</p>
 
         <p>Here's what we build for each bill:</p>
 
-        <p><strong>What changed relative to existing law.</strong> This is the core of the patch notes format. Every bill either modifies existing U.S. Code, creates new law, or extends existing authority. We identify what the current baseline is and describe, section by section, what the bill adds, removes, or alters. "Added: new Section 5(f) to the Holocaust Expropriated Art Recovery Act, permanently barring time-based dismissal defenses" is more useful than "the bill strengthens victim protections."</p>
+        <p><strong>What changed relative to existing law.</strong> This is the core of the patch notes format. We identify what the current baseline is and describe, section by section, what the bill adds, removes, or alters. Our entry for <a href="../bill/119-s-1884-holocaust-expropriated-art-recovery-act-of-2025/">S. 1884</a> reads: "Adds new Section 5(f) to the Holocaust Expropriated Art Recovery Act of 2016, barring all time-based defenses and all non-merits discretionary bases for dismissal against otherwise timely Holocaust art claims." It names the section added, the statute amended, and the defenses removed.</p>
 
-        <p><strong>Who's driving it.</strong> The primary sponsor and co-sponsor list tells you a lot about a bill's trajectory. A Senate bill with 40 bipartisan co-sponsors and a House companion bill has a fundamentally different path than a single-sponsor measure that hasn't moved in committee for eight months. We note the sponsor, party, and state; co-sponsor count; and whether support crossed party lines.</p>
+        <p><strong>Who's driving it.</strong> The primary sponsor and co-sponsor list tells you a lot about a bill's trajectory. We note the sponsor, party, and state; co-sponsor count; and whether support crossed party lines on a recorded vote.</p>
 
         <p><strong>Vote records.</strong> For bills with recorded roll call votes, we include the final counts, party breakdown, and — for close votes, specifically those where the margin is within 30% of total yeas plus nays — we flag members who voted against their party's majority. Vote data comes from the <a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener">House Clerk</a> and <a href="https://www.senate.gov/legislative/votes_new.htm" target="_blank" rel="noopener">Senate</a> official roll call archives.</p>
 
-        <p><strong>Passage likelihood.</strong> For bills still in progress, we include a rough likelihood estimate based on the legislative stage, committee status, and political environment. This is a judgment call, not a statistical model.</p>
+        <p><strong>Passage likelihood.</strong> For bills still in progress, we include a rough likelihood estimate. The drafting rules limit what it may cite: the current chamber majority, the sponsor's party, the co-sponsor count, and which specific provisions will attract opposition and from whom. The same rule bars it from narrating procedural status, because status belongs to the stage and vote fields, which are refetched as the bill moves while the prose is not. This is a judgment call, not a statistical model.</p>
 
         <h2>How We Verify Accuracy</h2>
 
-        <p>Every factual claim in an analysis must be traceable to a specific line in the official source text: every figure, date, statutory citation, and named entity. Training data, secondary reporting, and unsourced prior knowledge are not admissible. Verification enforces this constraint in three stages: automated validation, adversarial cross-model review, and a per-bill claim ledger.</p>
+        <p>Every factual claim in an analysis must be traceable to a specific line in the official source text: every figure, date, statutory citation, and named entity. Training data, secondary reporting, and unsourced prior knowledge are not admissible. Verification enforces this constraint in three stages: automated validation, an adversarial re-read, and a per-bill claim ledger.</p>
 
-        <p><strong>Source of record.</strong> The authoritative text is the bill version fetched from GovInfo, together with any referenced statute retrieved and stored alongside it. A claim that cannot be located in that corpus is re-sourced or removed. Analyses are drafted with AI assistance; verification is a separate step applied to the finished draft, not a self-review by the model that produced it.</p>
+        <p><strong>Source of record.</strong> The authoritative text is the bill version fetched from Congress.gov, together with any referenced statute retrieved from GovInfo and stored alongside it. A claim that cannot be located in that stored corpus is re-sourced or removed. Analyses are drafted with AI assistance; verification is a separate pass over the finished draft rather than part of writing it.</p>
 
-        <p><strong>Stage 1, automated validation.</strong> A deterministic validator runs against every analysis before publication and blocks release under any of three conditions: the source text is absent; a monetary figure, percentage, or section reference in the prose does not occur in the source; or the stated legislative status is inconsistent with the recorded roll-call result. The final condition addresses a documented drift failure. Status prose is written once, whereas vote records are re-fetched as a bill advances, so the two decouple over time unless the check enforces agreement.</p>
+        <p><strong>Stage 1, automated validation.</strong> A deterministic validator runs 26 check sections against every analysis before publication, with a 27th available on demand. Fourteen of them block a release outright — among them that no analysis exists without the bill text it was written from, that every source an item cites resolves to a stored document, that no quote is attributed to a member whose surname does not match the id it carries, and that a stated legislative status is not contradicted by the recorded roll-call result. That last one addresses a documented drift failure: status prose is written once while vote records are re-fetched as a bill advances, so the two decouple unless a check enforces agreement. The other twelve warn rather than block, including the figure-sourcing guard that flags a dollar amount, percentage, or section citation absent from the fetched text. The quote-attribution check is itself split: a surname that does not match the id blocks the release, while a stored state that disagrees with the member's only warns. The section held back from the default gate is a different one — an account-attribution screen, which flags a figure that may be bound to the wrong account, and which is too false-positive-prone to block a commit, so it runs on demand. A warning is not a pass: each one has to be fixed, re-sourced, or recorded in a tracked adjudication file with the evidence, and a strict run turns every remaining warning into a blocking error.</p>
 
-        <p><strong>Stage 2, adversarial cross-model review.</strong> Automated validation is confined to quantities it can pattern-match; it does not detect an entity supplied from memory or a correct figure attributed to the wrong account. Each analysis is therefore re-examined in a second pass conducted by a different model than the one that produced the draft, decoupling reviewer from author to reduce correlated error. The review is claim-atomic: each proposition is classified as supported by a quoted source span, contradicted, or unsupported, and unsupported propositions are re-sourced or struck. It targets the error classes automated checks miss: directional inversion, invented qualifiers, and misattribution.</p>
+        <p><strong>Stage 2, adversarial re-reading.</strong> Automated validation is confined to quantities it can pattern-match; it does not detect an entity supplied from memory or a correct figure attributed to the wrong account. Each analysis is therefore re-examined in a separate pass over the finished draft, worked adversarially against the source rather than as a self-review, and the model that performed it is recorded on the analysis's ledger. The review is claim-atomic: each proposition is classified as supported by a quoted source span, contradicted, or unsupported, and unsupported propositions are re-sourced or struck. It targets the error classes automated checks miss: directional inversion, invented qualifiers, and misattribution. Bill ledgers do not record which model drafted an analysis, so we do not claim of a bill analysis that a different model audited what wrote it. For standalone articles the rule is now enforced at publication — see below — though articles audited before that gate existed may not have met it.</p>
 
-        <p><strong>Stage 3, the claim ledger.</strong> Each analysis retains a per-bill record of the claims examined and the source line against which each was verified. The ledger makes verification reproducible: when a bill's text is amended, affected claims are re-checked against the revised source, and coverage across the corpus is auditable rather than asserted.</p>
+        <p><strong>Stage 3, the claim ledger.</strong> An audited analysis retains a per-bill record of the claims examined and the source line against which each was verified. 212 of the 219 analyses in the database carry one; the seven added most recently do not yet, because the sweep that built them across the whole corpus finished before those bills were written. The ledger makes verification reproducible: when a bill's text is amended, affected claims are re-checked against the revised source, and coverage across the corpus is auditable rather than asserted — including, as here, where the coverage stops.</p>
 
-        <p><strong>Explainer articles.</strong> Standalone articles on congressional procedure are held to the same sourcing bar as bill analyses, with one addition: because an explainer has no bill text, its authority — the chamber rule, statute, or official manual it describes — is fetched and stored before a word is drafted, and every claim is bound to a verbatim span of that stored text. A model different from the one that drafted the article then audits it claim by claim, repeatedly, until two consecutive passes surface nothing; an article that does not converge is not published. Zero unresolved flags is the bar — stricter than the bill pipeline, which may carry annotated style debt. A person reviews the audited draft beside its claim ledger and makes the publication decision; no article publishes without that review.</p>
+        <p><strong>Explainer articles.</strong> Standalone articles on congressional procedure are held to the same sourcing bar as bill analyses, with one addition: because an explainer has no bill text of its own, its authority — the chamber rule, statute, official manual, or research-service report it describes — is fetched and stored before a word is drafted, and every claim is bound to a verbatim span of one named stored source. An explainer may use a bill as a worked example, but only as receipt-bound fact: a figure, a vote, a date, each resolving to a stored source. Positions and analysis belong to bill pages and trackers, not here. The audit then runs claim by claim, hostile, and repeats until a pass surfaces nothing; an article that does not converge is not published, and zero unresolved flags is the bar — stricter than the bill pipeline, which may carry annotated style debt. Here the cross-model rule is enforced rather than asserted: the publishing script refuses to publish or refresh an article whose ledger names the same model as drafter and auditor. A person then reviews the audited draft beside its claim ledger and makes the publication decision; no article publishes without that review.</p>
 
         <p><strong>Scope and limitations.</strong> These procedures establish faithfulness, the agreement between an analysis and its cited source. They do not establish legal interpretation, do not substitute for professional legal judgment, and cannot validate a claim about a statute that was not retrieved; such claims are sourced or omitted. Errors identified after publication are corrected and recorded on the <a href="../corrections.html">Corrections</a> page.</p>
 
@@ -213,9 +213,9 @@
 
         <p>Software engineers maintain change logs — patch notes — that describe exactly what changed between versions of a program. The discipline is strict: describe only what's different, relative to what existed before. Don't repeat the entire documentation. Don't editorialize.</p>
 
-        <p>Legislation is a version control problem. The U.S. Code is a living document that gets modified by each bill that passes. When Congress extends the Foreign Intelligence Surveillance Act for another 90 days, that's a patch. The question everyone should be able to answer quickly is: what changed? What's new? What was removed?</p>
+        <p>Legislation is a version control problem. The U.S. Code is a living document that gets modified by each bill that passes. The Section 702 extension above is a patch. The question everyone should be able to answer quickly is: what changed? What's new? What was removed?</p>
 
-        <p>Applied to legislation, that discipline produces something specific: "Section 1 extends the Section 702 surveillance authority (50 U.S.C. 1881a) from April 30, 2026 to June 12, 2026" tells you what you need to know. The alternative — "Congress passed legislation extending surveillance authorities" — tells you almost nothing actionable.</p>
+        <p>Applied to legislation, that discipline produces something specific: "Section 1 extends the Section 702 surveillance authority (50 U.S.C. 1881a) from April 30, 2026 to June 12, 2026." That sentence names the section, the authority, the statutory cite and both dates, and each of those can be checked against the enrolled text.</p>
 
         <h2>What We Don't Do</h2>
 
@@ -227,17 +227,17 @@
 
         <h2>Our Limits</h2>
 
-        <p>We're not lawyers. Significant legal nuance in complex legislation — statutory construction questions, constitutional issues, how courts might interpret ambiguous provisions — may require analysis by attorneys with specialized training that our team doesn't have. We note these limits in individual analyses where we encounter them.</p>
+        <p>We're not lawyers. Legal nuance in complex legislation — statutory construction questions, constitutional issues, how courts might interpret ambiguous provisions — may require analysis by attorneys with specialized training that our team doesn't have. We note these limits in individual analyses where we encounter them.</p>
 
-        <p>Bill coverage is selective. We prioritize legislation with active floor action, high co-sponsorship, or significant public search interest. If a bill you're looking for isn't in our database, it may be in the processing queue.</p>
+        <p>Bill coverage is selective, and the first cut is mechanical rather than editorial. The pass that discovers new bills picks up only those whose latest recorded action shows they have passed a chamber, and skips anything whose action is one of the dead-on-arrival markers it screens for. A bill that has not got that far can still be added deliberately, which is why the database also holds measures sitting in committee — and a bill that is picked up and later fails on the floor stays in, which is why it holds seven that are recorded as dead. Which of the discovered bills gets analysed first is informed by what readers are searching for. Co-sponsor count comes in later still, when deciding which already-analysed bills earn a standalone explainer. We also keep an explicit list of bills we have decided not to analyse — 107 of them: ceremonial measures, procedural resolutions that run the chambers' own business, minor bills deferred for later, and resolutions of disapproval. If a bill you're looking for isn't in our database, it is either in the queue or on that list.</p>
 
-        <p>Analysis can lag. Congress passes extended periods of quiet followed by intense legislative activity. Our target is to have analysis available within 24 to 48 hours of significant floor action, but in high-volume periods — particularly at the end of fiscal years or before recess deadlines — turnaround may be longer.</p>
+        <p>Analysis can lag, and there is no schedule or turnaround promise behind it. A bill is analysed when it is analysed, and in a high-volume week — the end of a fiscal year, the run-up to a recess deadline — the queue gets longer. Each analysis records the date it was written and each article records when it was last refreshed, so how current a page is can be checked rather than taken on trust.</p>
 
         <div class="article-source-box">
           <div class="article-source-box-label">Primary Sources Referenced in This Article</div>
           <ul>
-            <li><a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> — official bill status, sponsor data, action history (Library of Congress)</li>
-            <li><a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a> — official enrolled bill text and public laws (U.S. GPO)</li>
+            <li><a href="https://www.congress.gov" target="_blank" rel="noopener">Congress.gov</a> — bill text, status, sponsor data and action history, via its API (Library of Congress)</li>
+            <li><a href="https://www.govinfo.gov" target="_blank" rel="noopener">GovInfo.gov</a> — the Congressional Record, the U.S. Code, and the House Rules and Manual (U.S. GPO)</li>
             <li><a href="https://www.govinfo.gov/app/collection/crec" target="_blank" rel="noopener">Congressional Record</a> — official floor transcripts (via GovInfo)</li>
             <li><a href="https://clerk.house.gov/Votes" target="_blank" rel="noopener">House Clerk Roll Call Votes</a></li>
             <li><a href="https://www.senate.gov/legislative/votes_new.htm" target="_blank" rel="noopener">Senate Roll Call Votes</a></li>

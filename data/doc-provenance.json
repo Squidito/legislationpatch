@@ -110,8 +110,8 @@
       "Every bill used as a worked example satisfies prompts.js ARTICLE_DRAFT_PROMPT rule 2: receipt-bound AND linking the bill own page. Both examples (S. 4465 in the lede, S. 1884 under What We Actually Read) carry a /bill/<slug>/ link. A future edit that drops the link breaks the rule even if the facts stay right.",
       "The claim-ledger sentence is SCOPED to 212 of 219 analyses. Re-derive with generate-site-facts.js --check before stamping."
     ],
-    "sha": "",
-    "reviewedAt": ""
+    "sha": "2d68cf8334b0ca49",
+    "reviewedAt": "2026-08-31"
   },
   "articles/no-editorial-spin.html": {
     "describes": [

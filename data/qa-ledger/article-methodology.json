@@ -12,7 +12,7 @@
   "drafterModel": "opus-5 (in-conversation, trust-page audit)",
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
-  "passes": 2,
+  "passes": 7,
   "proseSha": "de5b239b5ca9aee0",
   "sources": [
     {
@@ -184,7 +184,7 @@
       "citation": "LegislationPatch source, scripts/article-backlog.js",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/article-backlog.js",
       "textFile": "scripts/article-backlog.js",
-      "fetchedAt": "2026-08-31"
+      "fetchedAt": "2026-08-30"
     },
     {
       "id": "code-demand-signal",
@@ -193,7 +193,7 @@
       "citation": "LegislationPatch source, scripts/demand-signal.js",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/demand-signal.js",
       "textFile": "scripts/demand-signal.js",
-      "fetchedAt": "2026-08-31"
+      "fetchedAt": "2026-08-30"
     },
     {
       "id": "code-stage-lib",
@@ -202,7 +202,7 @@
       "citation": "LegislationPatch source, scripts/lib/stage.js",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/lib/stage.js",
       "textFile": "scripts/lib/stage.js",
-      "fetchedAt": "2026-08-31"
+      "fetchedAt": "2026-08-30"
     },
     {
       "id": "code-add-bills",
@@ -211,7 +211,7 @@
       "citation": "LegislationPatch source, scripts/add-bills.js",
       "srcUrl": "https://github.com/Squidito/legislationpatch/blob/main/scripts/add-bills.js",
       "textFile": "scripts/add-bills.js",
-      "fetchedAt": "2026-08-31"
+      "fetchedAt": "2026-08-30"
     }
   ],
   "claims": [
@@ -1186,6 +1186,6 @@
     "omissions": 0,
     "rejected": 0
   },
-  "resolution": "",
-  "notes": ""
+  "resolution": "CONVERGED: pass 7 returned PASS with zero errors, zero warnings and zero ledger defects. Trust-page audit (Phase B), 2026-08-30/31, across two Opus sessions (the first was killed by a session limit; its draft survived in the gitignored drafts/ and hash-matched this ledger). Seven hostile Sonnet passes, every one adjudicated in the main Opus thread against a fresh read. THE SWEEP FINDINGS, all fixed: the page said enrolled bill text is pulled from GovInfo, when fetch_bills_data.js contains zero govinfo references and every bill-text call is api.congress.gov - and that error was live in the body, the meta description, the og:description, the JSON-LD description AND the Primary Sources box, having survived a body-only fix once before; it described the validator as blocking under three conditions when one of the three only warns; it claimed a different model audits what drafted, which no bill ledger can support because none records a drafting model; and it promised analysis within 24 to 48 hours of floor action, a target nothing in the repo backed. WHAT THE PASSES ADDED: the lede illustrated unreadable legislation with an invented 40-page bill, on a page about sourcing - replaced with the real S. 4465, receipt-bound and linked; the validator ran 26 sections in the default gate, not 27, because the account-attribution screen is behind an opt-in flag; the quote-attribution check blocks on surname but only warns on state; the claim ledger covers 212 of 219 analyses, not all of them; the intake description assigned co-sponsorship to bill coverage when the threshold lives in article-backlog.js and governs explainer selection instead; RULE 6 does not license citing the stage a bill has reached and in fact forbids narrating status; committee referrals are action text, not a stored field; and two inherited sentences ranked one phrasing as more useful or more actionable than another, which the site own rules forbid.",
+  "notes": "THE CODEBASE IS THE SOURCE. Every fix was prose corrected to match the code; nothing here was fixed by changing the code, and nothing was softened. The GovInfo conflation is the reason this page carries a doc-provenance checklist that names the metadata explicitly: it hid there once already. Three of the last four errors were introduced by earlier fixes in this same audit - the account-attribution wording, the RULE 6 mischaracterisation, and an over-broad description of the discovery gate - which is the argument for continuing to pass after the sweep findings are closed, rather than stopping at the first clean-looking draft."
 }

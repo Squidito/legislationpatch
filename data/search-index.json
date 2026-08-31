@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T04:38:45.817Z",
+  "generatedAt": "2026-08-31T04:41:02.214Z",
   "counts": {
     "bill": 219,
     "rep": 551,
@@ -10821,7 +10821,7 @@
       "url": "/articles/methodology.html",
       "title": "How LegislationPatch Analyzes Federal Bills — Our Methodology",
       "sub": "Guide",
-      "text": "LegislationPatch pulls bill text directly from Congress.gov and GovInfo, reads every section, and explains changes relative to existing law — no summaries, no press releases."
+      "text": "LegislationPatch pulls bill text from the Congress.gov API and floor statements from the Congressional Record on GovInfo, reads every section, and explains changes relative to existing law rather than relaying somebody else’s account of it."
     },
     {
       "t": "article",
