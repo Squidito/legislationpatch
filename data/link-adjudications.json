@@ -1,0 +1,4 @@
+{
+  "_doc": "External citation URLs that scripts/qa-citation-links.js classifies as DEAD but which a human has verified are actually fine — the escape hatch that lets the gate stay BLOCKING without ever being bypassed. Keyed by the exact URL as written in the article. Each entry: { verdict: 'live', reason: '<what you checked and how>', adjudicatedAt: 'YYYY-MM-DD' }. Only a 'dead' verdict can be overridden; walls (401/403/429), 5xx and transport errors already never block, so they need no entry. Adjudicate only after opening the URL in a real browser and confirming the page serves the content the citation claims — never to silence a link you have not looked at. An entry is exact-match, so editing the URL re-opens the check.",
+  "urls": {}
+}

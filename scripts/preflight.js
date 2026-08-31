@@ -595,6 +595,41 @@ section('Trust-page derived figures (site-facts sheet)');
   }
 }
 
+// 19. External citations resolve (D5) ---------------------------------------
+// The section above this one checks 65,000 INTERNAL links. Nothing checked a
+// single EXTERNAL one, and neither did the article audit lane -- which is how
+// congressional-review-act passed the full first-refresh lane while two of its
+// "Key Sources" pointed at nothing, and how the 2026-08 sweep found 17 dead
+// citations live in trust boxes on indexed pages. FOURTEEN OF THE SEVENTEEN
+// ANSWERED HTTP 200, serving an error page in the body, so a status-code checker
+// would have passed every one of them.
+//
+// BLOCKING, and cheap: qa-citation-links.js reads a committed result cache and
+// fetches only URLs that are new, expired or previously dead, so an unchanged
+// corpus costs zero requests. It fails ONLY on positive evidence of death; bot
+// walls (403), 5xx and transport errors are reported and never block, so a flaky
+// connection cannot fail a commit.
+//
+// Offline escape hatch: PREFLIGHT_SKIP_LINKS=1 (or --skip-links) judges from the
+// cache alone. It is a skip for working on a plane, not for working around a
+// finding -- a URL the cache already knows is dead still fails.
+section('External citations resolve');
+{
+  const { execFileSync } = require('child_process');
+  const offline = process.env.PREFLIGHT_SKIP_LINKS === '1' || args.includes('--skip-links');
+  const argv = [path.join(__dirname, 'qa-citation-links.js'), '--preflight'];
+  if (offline) argv.push('--offline');
+  try {
+    const out = execFileSync(process.execPath, argv, { stdio: 'pipe', encoding: 'utf8' });
+    out.split('\n').filter(l => l.trim()).forEach(l => console.log(l.replace(/^ {2}/, '  ')));
+    if (offline) console.log('       (offline mode — cache only; run `npm run link-check` to re-verify)');
+  } catch (e) {
+    const out = String(e.stdout || '') + String(e.stderr || '');
+    out.split('\n').filter(l => l.trim()).forEach(l => console.log('  ' + l.trim()));
+    fail('external citation(s) do not resolve — see above');
+  }
+}
+
 // ---------------------------------------------------------------------------
 console.log('\n' + '═'.repeat(56));
 if (failures) {
