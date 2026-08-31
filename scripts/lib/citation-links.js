@@ -30,21 +30,41 @@
 //     the same escape hatch data/qa-adjudications.json gives the figure guard.
 //
 // NETWORK BUDGET. Results are cached in data/link-check-cache.json with a TTL, so
-// a preflight run over an unchanged corpus makes ZERO requests. Only URLs that are
-// new, expired, or previously dead are fetched -- which is what makes this cheap
-// enough to sit in a pre-commit hook.
+// a preflight run over a corpus whose citations are all cached-and-fresh makes zero
+// requests. Fetches happen for URLs that are new, TTL-expired, or previously dead
+// (a dead entry is re-checked every run so a fix clears instantly -- so "zero
+// requests" holds only while nothing is dead, which is the steady state). Adjudicated
+// URLs are exempted from that re-check, or the escape hatch would cost a request
+// forever. TTLs are JITTERED per URL: the whole cache was seeded in one day, and
+// without jitter all 150 entries would expire on the same day and dump a 150-URL
+// fetch into whichever commit came first.
 //
-// SCOPE. articles/ and drafts/ only. That is where citations live and where the
-// rot accumulated. Generated bill and rep pages emit thousands of congress.gov and
-// bioguide URLs from templates; those are one template's correctness, not 3,000
-// independent editorial claims, and fetching them would make the gate unusable.
+// THE CACHE IS TRUSTED STATE, and worth being honest about: nothing distinguishes a
+// verdict this tool wrote from one a human typed. Flipping an entry to "live" by
+// hand silences the gate for that URL's TTL, with no reason and no trace. The
+// sanctioned override is data/link-adjudications.json, which forces a reason and a
+// date; the cache is not a second escape hatch so much as an unpoliceable one, and
+// a reviewer reading a diff should treat a hand-edited cache entry as they would a
+// hand-edited test snapshot.
 //
-// No LLM. Read-only apart from the cache file.
+// SCOPE. articles/ and drafts/ only, and within them, <a href> plus JSON-LD
+// `citation` URLs. That is where citations live and where the rot accumulated.
+// Deliberately OUT of scope, so the boundary is a decision and not an oversight:
+//   - Generated bill and rep pages. They emit thousands of congress.gov and
+//     bioguide URLs from templates; that is one template's correctness, not 3,000
+//     independent editorial claims, and fetching them would make the gate unusable.
+//   - JSON-LD `sameAs` (the Wikipedia identifier on an article's `about` node, on
+//     ~10 pages). It identifies an entity for a search engine; it is not a source
+//     the article rests a claim on, and a reader is never sent there.
+//
+// No LLM. Reads articles/, drafts/, data/link-check-cache.json and
+// data/link-adjudications.json; writes only the cache.
 
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT = path.join(__dirname, '..', '..');
 const CACHE_REL = 'data/link-check-cache.json';
@@ -61,13 +81,30 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
 const SKIP_HOSTS = new Set(['fonts.googleapis.com', 'fonts.gstatic.com', 'schema.org', 'www.w3.org']);
 const SELF_HOSTS = new Set(['legislationpatch.com', 'www.legislationpatch.com']);
 
-const TTL_DAYS = { live: 30, wall: 30, unknown: 7, dead: 0 };  // dead: always re-check, so a fix clears instantly
+// dead: 0 -> never fresh, so a dead URL is re-checked every run and a fix clears
+// instantly. unknown: 7 -> a chronically-erroring host is retried weekly, not on
+// every commit. live/wall: 30 days, PLUS a per-URL jitter (see isFresh) so the
+// cache does not expire all at once.
+const TTL_DAYS = { live: 30, wall: 30, unknown: 7, dead: 0 };
+const TTL_JITTER_DAYS = 14;
 
 // ── Verdict evidence ────────────────────────────────────────────────────────
 // Every pattern below was written against a body this repo actually fetched.
 
-/** The server redirected us onto its own error page. Strongest single signal. */
-const DEAD_FINAL_URL = /(file_not_found|docnotfound|page[-_]?not[-_]?found|\/404(?:[./?]|$)|notfound)/i;
+/**
+ * The server redirected us onto its own error page. Strongest single signal --
+ * but ONLY when a redirect actually happened, which classify() enforces.
+ *
+ * A bare "/404" used to be in this list and was a live landmine: it matches
+ * https://www.congress.gov/bill/119th-congress/house-bill/404 -- a real, ordinary
+ * bill number -- so citing H.R. 404 would have blocked the commit with a "dead
+ * link" that was serving fine. Three-digit bill numbers are common; this would
+ * have fired eventually, and intermittently (congress.gov usually walls the
+ * fetcher first), which is the worst way for a blocking gate to be wrong. Dropped.
+ * A genuine soft-404 that lands on a numeric error path still gets caught by its
+ * title or body.
+ */
+const DEAD_FINAL_URL = /(file_not_found|docnotfound|page[-_]?not[-_]?found|\/not[-_]?found(?:[./?]|$))/i;
 
 /** <title> of an error page. Anchored phrases only -- a bare "404" alone is not enough. */
 const DEAD_TITLE = [
@@ -101,6 +138,13 @@ function collectCitationUrls(root = ROOT) {
     const out = new Map();
     const add = (url, file) => {
         let u;
+        url = String(url).trim();
+        // A protocol-relative //example.com/x is given a scheme rather than being
+        // dropped; everything else keeps the URL EXACTLY as the article wrote it,
+        // because that string is both the cache key and what a human has to search
+        // for when the gate names it. Normalising through URL.href would rewrite
+        // https://api.congress.gov to .../ and orphan every cached verdict.
+        if (url.startsWith('//')) url = 'https:' + url;
         try { u = new URL(url); } catch (e) { return; }
         if (!/^https?:$/.test(u.protocol)) return;
         const host = u.hostname.toLowerCase();
@@ -117,13 +161,22 @@ function collectCitationUrls(root = ROOT) {
             const rel = `${dir}/${name}`;
             const html = fs.readFileSync(path.join(abs, name), 'utf8');
 
-            for (const m of html.matchAll(/href=(?:"([^"]*)"|'([^']*)')/g)) {
+            // Case-insensitive and whitespace-tolerant: HREF= and a line-wrapped
+            // attribute are both legal HTML, and silently missing one would mean a
+            // citation this gate never checks -- the exact shape of the gap it exists
+            // to close.
+            for (const m of html.matchAll(/href\s*=\s*(?:"([^"]*)"|'([^']*)')/gi)) {
                 add(decodeEntities(m[1] !== undefined ? m[1] : m[2]), rel);
             }
             for (const block of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
                 let parsed;
                 try { parsed = JSON.parse(block[1]); } catch (e) { continue; }
-                for (const c of citationNodes(parsed)) if (c && typeof c.url === 'string') add(c.url, rel);
+                for (const c of citationNodes(parsed)) {
+                    // schema.org allows a citation to be a bare URL string as well as
+                    // a CreativeWork with a url property. Accept both.
+                    if (typeof c === 'string') add(c, rel);
+                    else if (c && typeof c.url === 'string') add(c.url, rel);
+                }
             }
         }
     }
@@ -166,8 +219,11 @@ function classify(r) {
     if (s === 404 || s === 410) return { verdict: 'dead', reason: `HTTP ${s}` };
     if (s >= 400) return { verdict: 'dead', reason: `HTTP ${s}` };
 
+    // The URL test applies ONLY to a URL we were redirected TO. Judging the URL we
+    // asked for would convict a page for its own name -- see DEAD_FINAL_URL above.
     const finalUrl = r.finalUrl || '';
-    if (finalUrl && DEAD_FINAL_URL.test(finalUrl)) {
+    const redirected = !!(finalUrl && r.requestedUrl && finalUrl !== r.requestedUrl);
+    if (redirected && DEAD_FINAL_URL.test(finalUrl)) {
         return { verdict: 'dead', reason: `HTTP ${s} but redirected to an error page: ${finalUrl}` };
     }
     const title = (r.title || '').trim();
@@ -204,7 +260,11 @@ async function fetchUrl(url, { timeoutMs = 20000, attempts = 2 } = {}) {
             });
             const ct = res.headers.get('content-type') || '';
             let bodyHead = '', bytes = 0, title = '';
-            if (/text|html|xml|json/i.test(ct)) {
+            // A MISSING Content-Type is read as text, not as binary. Some of the
+            // legacy .gov infrastructure this gate exists to catch is old enough to
+            // omit it, and falling to the byte-count branch would skip the title and
+            // body scan -- i.e. skip the only checks that catch a soft-404.
+            if (!ct.trim() || /text|html|xml|json/i.test(ct)) {
                 const text = await res.text();
                 bytes = text.length;
                 bodyHead = text.slice(0, 8192);
@@ -213,13 +273,13 @@ async function fetchUrl(url, { timeoutMs = 20000, attempts = 2 } = {}) {
             } else {
                 bytes = (await res.arrayBuffer()).byteLength;   // PDFs: status + size only
             }
-            return { status: res.status, finalUrl: res.url, title, bodyHead, bytes, contentType: ct };
+            return { status: res.status, requestedUrl: url, finalUrl: res.url, title, bodyHead, bytes, contentType: ct };
         } catch (e) {
             last = e;
             if (i + 1 < attempts) await new Promise((r) => setTimeout(r, 1200));
         }
     }
-    return { status: 0, finalUrl: '', title: '', bodyHead: '', bytes: 0, transportError: String(last && last.message || last) };
+    return { status: 0, requestedUrl: url, finalUrl: '', title: '', bodyHead: '', bytes: 0, transportError: String(last && last.message || last) };
 }
 
 // ── Cache + adjudications ───────────────────────────────────────────────────
@@ -234,11 +294,31 @@ function saveCache(cache) {
 /** url -> { verdict, reason, adjudicatedAt }. See data/link-adjudications.json's _doc. */
 function loadAdjudications() { const a = readJson(ADJ, null); return (a && a.urls) ? a.urls : {}; }
 
-/** Is a cached entry still trusted? */
-function isFresh(entry, today = new Date()) {
+/**
+ * Deterministic 0..TTL_JITTER_DAYS spread, keyed on the URL. The whole cache was
+ * seeded on one day, so a flat 30-day TTL would expire all 150 entries together and
+ * drop a 150-URL fetch into whichever commit happened to be first that morning --
+ * a monthly pre-commit stall. Keyed on the URL rather than random so the same URL
+ * always gets the same offset and re-runs stay reproducible.
+ */
+function ttlFor(url, verdict) {
+    const base = TTL_DAYS[verdict];
+    if (!base) return base;                                  // 0 / undefined: always re-check
+    if (verdict === 'unknown') return base;                  // already short; jitter would blur it
+    const h = crypto.createHash('sha256').update(String(url)).digest()[0];
+    return base + (h % (TTL_JITTER_DAYS + 1));
+}
+
+/**
+ * Is a cached entry still trusted?
+ * A `dead` verdict has TTL 0, so it is NEVER fresh and is re-checked on every
+ * non-offline run — that is what makes a fix clear immediately. Every other verdict
+ * (including `unknown`, at 7 days) IS cached for its TTL.
+ */
+function isFresh(entry, today = new Date(), url = '') {
     if (!entry || !entry.checkedAt) return false;
-    const ttl = TTL_DAYS[entry.verdict];
-    if (!ttl) return false;                     // dead (0) and unknown verdicts re-check
+    const ttl = ttlFor(url, entry.verdict);
+    if (!ttl) return false;
     const age = (today - new Date(entry.checkedAt + 'T00:00:00Z')) / 86400000;
     return age >= 0 && age < ttl;
 }

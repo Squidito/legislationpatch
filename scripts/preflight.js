@@ -687,7 +687,7 @@ section('Trust-page derived figures (site-facts sheet)');
   }
 }
 
-// 19. External citations resolve (D5) ---------------------------------------
+// 12. External citations resolve (D5) ---------------------------------------
 // The section above this one checks 65,000 INTERNAL links. Nothing checked a
 // single EXTERNAL one, and neither did the article audit lane -- which is how
 // congressional-review-act passed the full first-refresh lane while two of its
@@ -712,13 +712,21 @@ section('External citations resolve');
   const argv = [path.join(__dirname, 'qa-citation-links.js'), '--preflight'];
   if (offline) argv.push('--offline');
   try {
-    const out = execFileSync(process.execPath, argv, { stdio: 'pipe', encoding: 'utf8' });
+    // 5-minute ceiling. The child bounds each URL (2 attempts x 20s) but nothing
+    // bounded the run, so a batch of unreachable hosts could stall a commit with no
+    // upper limit.
+    const out = execFileSync(process.execPath, argv, { stdio: 'pipe', encoding: 'utf8', timeout: 300000 });
     out.split('\n').filter(l => l.trim()).forEach(l => console.log(l.replace(/^ {2}/, '  ')));
     if (offline) console.log('       (offline mode — cache only; run `npm run link-check` to re-verify)');
   } catch (e) {
     const out = String(e.stdout || '') + String(e.stderr || '');
     out.split('\n').filter(l => l.trim()).forEach(l => console.log('  ' + l.trim()));
-    fail('external citation(s) do not resolve — see above');
+    // A FINDING and a CRASH both arrive here as a non-zero exit, and reporting a
+    // crash as "your citations are broken" sends the reader to check links when the
+    // actual bug is in the checker. The child prints GATE-VERDICT only when it
+    // reached its own conclusion, so its absence means the tool fell over.
+    if (out.includes('GATE-VERDICT')) fail('external citation(s) do not resolve — see above');
+    else fail(`the external-citation checker did not complete (${e.killed ? 'timed out' : 'crashed'}) — this is a TOOLING failure, not a citation failure; fix scripts/qa-citation-links.js`);
   }
 }
 
