@@ -13,7 +13,7 @@
  "auditModel": "sonnet (hostile source-only verifier passes, full article)",
  "verifyModel": "sonnet",
  "isTracker": true,
- "proseSha": "b48f6f017488ce35",
+ "proseSha": "3f1f4327e8ae10ce",
  "sources": [
   {
    "id": "bill-119-s-2296-es",
@@ -664,7 +664,7 @@
   },
   {
    "field": "body.auth2.pdi-in-text",
-   "claim": "The Pacific Deterrence Initiative extension is section 1231 of the bill text itself, not only the summary",
+   "claim": "CORROBORATION ROW, not a prose claim: the Pacific Deterrence Initiative extension the official summary describes is section 1231 of the bill text itself, checked so the summary-derived sentence is not resting on the summary alone.",
    "verdict": "SUPPORTED",
    "type": "entity",
    "severity": "ok",
@@ -693,11 +693,11 @@
    "type": "entity",
    "severity": "ok",
    "sourceFile": "bill-119-s-2296-es",
-   "sourceSpan": "(9) Division I--ROAD to Housing Act.",
+   "sourceSpan": "This Act is organized into ten divisions as follows:",
    "section": "What the FY2026 NDAA Authorizes",
    "status": "open",
    "kind": "claim",
-   "note": "Verified by reading the bill own section 2 division list and the ten DIVISION headings in the table of contents: A Department of Defense Authorizations (L53), B Military Construction Authorizations (L1309), C Department of Energy National Security Authorizations and Other Authorizations (L1490), D Funding Tables (L1533), E Additional Provisions (L1557), F Intelligence Authorization Act for Fiscal Year 2026 (L1757), G Department of State Matters (L1951), H Coast Guard Authorization Act of 2025 (L2006), I ROAD to Housing Act (L2320), J Department of State Authorization Act for Fiscal Year 2026 (L2388). Each heading is present again in the body text."
+   "note": "Upgraded receipt. The bill states its own division count in section 2(a) and then enumerates all ten, A through J, ending \"(10) Division J--Department of State Authorization Act for Fiscal Year 2026.\" No walk of the table of contents is needed; the text says it."
   },
   {
    "field": "body.auth2.summary-gap",
@@ -1093,11 +1093,11 @@
    "type": "entity",
    "severity": "ok",
    "sourceFile": "bill-119-s-1071-pl119-60",
-   "sourceSpan": "DIVISION H--OTHER MATTERS",
+   "sourceSpan": "This Act is organized into 8 divisions as follows:",
    "section": "The vehicle",
    "status": "open",
    "kind": "claim",
-   "note": "Verified against the enacted table of contents: A Department of Defense Authorizations (L53), B Military Construction Authorizations (L1425), C Department of Energy National Security Authorizations and Other Authorizations (L1703), D Funding Tables (L1764), E Department of State Authorization Act for Fiscal Year 2026 (L1796), F Intelligence Authorization Act for Fiscal Year 2026 (L1935), G Coast Guard Authorization Act of 2025 (L2110), H Other Matters (L2402). Eight, against the Senate bill ten."
+   "note": "Upgraded receipt. The enacted law states its own division count in section 2(a) and enumerates all eight, A through H, ending \"(8) Division H--Other Matters.\" Ten against eight, each on the face of its own text."
   },
   {
    "field": "body.vehicle.road-absent",
@@ -1859,15 +1859,16 @@
   },
   {
    "field": "body.dei.enacted-113",
-   "claim": "Section 901 of the enacted law also amends the section 113 reporting requirements",
+   "claim": "Section 901 of the enacted law amends section 113 differently from the Senate bill: it strikes subsection (l) outright and changes the surviving reporting requirement from one accompanying each national defense strategy to one made on an annual basis, rather than removing the demographic breakdown",
    "verdict": "SUPPORTED",
    "type": "entity",
    "severity": "ok",
    "sourceFile": "bill-119-s-1071-pl119-60",
-   "sourceSpan": "Repeals and Modifications of Reporting Requirements on Diversity and Inclusion",
+   "sourceSpan": "by striking ``Accompanying each national defense strategy provided to the congressional defense committees in accordance with subsection (g)(1)(D)'' and inserting ``On an annual basis''",
    "section": "The Diversity, Equity, and Inclusion Provisions",
    "status": "open",
-   "kind": "claim"
+   "kind": "claim",
+   "note": "Raised by the round-2 opponent lens and verified independently: \"disaggregated by gender, race, and ethnicity\" occurs twice in S. 2296 (as text being struck) and zero times in the enacted law, so the enacted law does not carry that strike over. Section 901(a)(3) strikes subsection (l); (a)(4)-(5) redesignate and re-time the surviving report."
   },
   {
    "field": "body.dei.enacted-no-986",
@@ -2042,7 +2043,7 @@
   },
   {
    "field": "body.bs.opp.tuberville",
-   "claim": "Sen. Tommy Tuberville (R-AL) answered on the floor that military budgets are already carefully balanced and that indiscriminate cuts would undercut readiness",
+   "claim": "Sen. Tommy Tuberville (R-AL) asked the Senate to reject the amendment, saying military budgets are already carefully balanced and that indiscriminate cuts would undercut readiness",
    "verdict": "SUPPORTED",
    "type": "quote",
    "severity": "ok",
@@ -2335,20 +2336,151 @@
    "verify": "CONFIRMED",
    "kind": "finding",
    "note": "A true observation about a file the reviewer was shown mid-pipeline. Worth keeping on the ledger so a later reader does not re-raise it."
+  },
+  {
+   "field": "body.bs.opp.sanders-8pct",
+   "claim": "Sanders said Congress had cut funding for housing, education and nutrition while this bill increases military spending by over 8 percent",
+   "verdict": "SUPPORTED",
+   "type": "quote",
+   "severity": "ok",
+   "sourceFile": "record-crec-2025-10-09-sanders-sa3853",
+   "sourceSpan": "While Congress has cut funding for housing, education, nutrition, this bill increases military spending by over 8 percent.",
+   "section": "Why did 20 senators vote no",
+   "status": "open",
+   "kind": "claim"
+  },
+  {
+   "field": "body.bs.opp.tuberville-novote",
+   "claim": "Tuberville asked the Senate to reject the amendment",
+   "verdict": "SUPPORTED",
+   "type": "quote",
+   "severity": "ok",
+   "sourceFile": "record-crec-2025-10-09-sanders-sa3853",
+   "sourceSpan": "I ask for a ``no'' vote.",
+   "section": "Why did 20 senators vote no",
+   "status": "open",
+   "kind": "claim"
+  },
+  {
+   "field": "body.bs.sup.hiccup",
+   "claim": "Roll Call reported that even after the amendments deal was announced the bill faced one last hiccup",
+   "verdict": "SUPPORTED",
+   "type": "quote",
+   "severity": "ok",
+   "sourceFile": "news-rollcall-ndaa-amendments-deal",
+   "sourceSpan": "Still, even after the amendments deal was announced, the bill faced one last hiccup.",
+   "section": "Why did supporters back the bill",
+   "status": "open",
+   "kind": "claim"
+  },
+  {
+   "field": "body.dei.enacted-strike-l",
+   "claim": "Section 901 strikes subsection (l) of section 113 outright",
+   "verdict": "SUPPORTED",
+   "type": "entity",
+   "severity": "ok",
+   "sourceFile": "bill-119-s-1071-pl119-60",
+   "sourceSpan": "(3) by striking subsection (l);",
+   "section": "The Diversity, Equity, and Inclusion Provisions",
+   "status": "open",
+   "kind": "claim"
+  },
+  {
+   "field": "body.dei.disaggregated-not-carried",
+   "claim": "The demographic-breakdown strike is in the Senate bill and is not carried into the enacted law",
+   "verdict": "SUPPORTED",
+   "type": "entity",
+   "severity": "ok",
+   "sourceFile": "bill-119-s-2296-es",
+   "sourceSpan": "by striking ``, disaggregated by gender, race, and ethnicity,'' each place it appears",
+   "section": "The Diversity, Equity, and Inclusion Provisions",
+   "status": "open",
+   "kind": "claim",
+   "note": "Derived and independently re-derived: the phrase occurs twice in data/bill-text/119-S-2296.txt (both as text being struck) and zero times in data/bill-text/119-S-1071.txt. The article now says the enacted law amends section 113 \"differently\" and states how, rather than implying the same strike."
+  },
+  {
+   "field": "finding.sanders-domestic-tradeoff",
+   "claim": "ADDED, the single blocking item from the round-2 opponent lens: Sanders floor speech carries three distinct arguments and the article used two. The third -- \"While Congress has cut funding for housing, education, nutrition, this bill increases military spending by over 8 percent\" -- is the concrete at-whose-expense claim, and it sat unused in the same paragraph of the same stored granule the article already quotes twice.",
+   "verdict": "UNSUPPORTED",
+   "type": "quote",
+   "severity": "material",
+   "sourceFile": "record-crec-2025-10-09-sanders-sa3853",
+   "sourceSpan": "While Congress has cut funding for housing, education, nutrition, this bill increases military spending by over 8 percent.",
+   "section": "Why did 20 senators vote no",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "Second round in a row that a lens found a sourced argument sitting unread in a file the article already draws on. That is now the dominant defect class in this lane, not fabrication."
+  },
+  {
+   "field": "finding.sec113-imprecise",
+   "claim": "CORRECTED, from the round-2 opponent lens, which raised it AGAINST its own side and said so: the article said the enacted law \"also amends the section 113 reporting requirements\", which sat next to the Senate bill demographic-breakdown strike and invited the reading that the enacted law carried it over. It does not. The article now states what section 901 actually does to section 113.",
+   "verdict": "UNSUPPORTED",
+   "type": "entity",
+   "severity": "minor",
+   "sourceFile": "bill-119-s-1071-pl119-60",
+   "sourceSpan": "(3) by striking subsection (l);",
+   "section": "The Diversity, Equity, and Inclusion Provisions",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "The reviewer flagged this as a point in the law favour rather than the opponents and raised it anyway. Independently verified before acting."
+  },
+  {
+   "field": "finding.tuberville-verb-mirrored",
+   "claim": "CHANGED, from the round-2 supporter lens: Tuberville rebuttal was introduced with \"answered\", the one introducing verb in the section with no mirror on the other side. Reworded to what the Record shows him doing -- asking the Senate to reject the amendment -- with \"saying\" for the quotations, matching every other attribution on the page.",
+   "verdict": "UNSUPPORTED",
+   "type": "entity",
+   "severity": "minor",
+   "sourceFile": "record-crec-2025-10-09-sanders-sa3853",
+   "sourceSpan": "I ask for a ``no'' vote.",
+   "section": "Why did 20 senators vote no",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "The gate does not ban \"answered\" and the opponent lens judged it fine. Taking the stricter reading again costs one clause and removes the argument."
+  },
+  {
+   "field": "finding.own-read-round2",
+   "claim": "FIXED on my own second fresh read, none of it raised by any of the six reviewer passes: (1) the Defense Nuclear Facilities Safety Board authorisation had been dropped from the summary paragraph during the round-1 rewrite, leaving a ledger row describing text that was no longer there; (2) \"The Senate then took a week\" was a loose interval for six days, replaced with the three recorded votes themselves; (3) \"The deal did not clear the way on its own\" asserted causation in the site voice where Roll Call own words were available; (4) \"and the recorded outcomes are part of the record on both sides\" was meta-commentary.",
+   "verdict": "UNSUPPORTED",
+   "type": "entity",
+   "severity": "minor",
+   "sourceFile": "record-congress-s-2296-summary",
+   "sourceSpan": "It also authorizes the Defense Nuclear Facilities Safety Board for FY2026.",
+   "section": "What the FY2026 NDAA Authorizes",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "Item (1) is the ledger-prose drift class: an edit removed a sentence and left its ledger row behind. Caught by checking every claim row against the current prose rather than by reading either one alone."
+  },
+  {
+   "field": "omission.wicker-985-items",
+   "claim": "DECLINED WITH REASON, raised as non-blocking by the round-2 supporter lens: Wicker floor statement makes a distinct legitimacy argument the article does not carry -- \"The bill contains 985 items that were driven by Members of this body\" which \"totaled 60 more than last year and are a sign of a strong, bipartisan consensus\". Left out on proportionality: the section already carries the 26-1 committee vote, the party composition of two roll calls, and Reed joint statement, so the breadth-of-buy-in argument is made three other ways, and the supporter side already runs longer than the opponent side. The reviewer agreed it was a nice-to-have and signed off without it.",
+   "verdict": "UNSUPPORTED",
+   "type": "quote",
+   "severity": "minor",
+   "sourceFile": "record-crec-2025-09-02-wicker-s2296",
+   "sourceSpan": "The bill contains 985 items that were driven by Members of this body",
+   "section": "Why did supporters back the bill",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "Recorded rather than churned, on the KOSA residualDeclined precedent. Strongest candidate for a later cycle if the supporter side ever needs strengthening."
   }
  ],
  "counts": {
-  "claims": 166,
+  "claims": 176,
   "sources": 21,
-  "supported": 133,
-  "unsupported": 27,
+  "supported": 138,
+  "unsupported": 32,
   "contradicted": 6,
-  "findings": 33,
-  "material": 20,
-  "minor": 13,
-  "omissions": 4,
-  "verifyRounds": 1,
-  "verifyAgents": 3
+  "findings": 38,
+  "material": 21,
+  "minor": 17,
+  "omissions": 5,
+  "verifyRounds": 2,
+  "verifyAgents": 6
  },
  "resolution": "",
  "notes": ""
