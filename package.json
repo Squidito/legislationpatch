@@ -83,7 +83,8 @@
     "site-facts": "node scripts/generate-site-facts.js",
     "site-facts:check": "node scripts/generate-site-facts.js --check",
     "link-check": "node scripts/qa-citation-links.js",
-    "link-check:test": "node scripts/qa-citation-links.js --self-test"
+    "link-check:test": "node scripts/qa-citation-links.js --self-test",
+    "qa-prominence": "node scripts/qa-prominence.js"
   },
   "repository": {
     "type": "git",

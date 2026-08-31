@@ -1,0 +1,1827 @@
+{
+  "_doc": "D2 prominence worklist (handoff §3.5, ruling D2). Open UNSUPPORTED/CONTRADICTED findings that are ON, or whose flagged text is live IN, the bill's summary, brief or underreported — i.e. on the card and in the meta description, not buried in a section detail. Regenerate with: npm run qa-prominence. Each entry is BILL-LANE work: re-grade to material and fix it with a genuine fresh read of data/bill-text/<id>.txt per CLAUDE.md HARD RULES, never from this file alone. Generated, do not hand-edit.",
+  "generatedAt": "2026-08-31",
+  "rule": "open + (UNSUPPORTED|CONTRADICTED) + not already material + (filed on summary|brief|underreported OR claim text present in one of them)",
+  "ledgersScanned": 212,
+  "openFindingsScanned": 648,
+  "billsAffected": 70,
+  "findingsToRegrade": 114,
+  "bills": [
+    {
+      "billId": "119-HR-4348",
+      "title": "Kay Hagan Tick Act Reauthorization",
+      "stage": "house",
+      "count": 7,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The National Strategy / Centers of Excellence program operates 'at CDC'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "'CDC' appears nowhere in the bill text; the administering-agency identity comes from the underlying (unfetched) §317U, not this source. Plausible but unsourced."
+        },
+        {
+          "field": "summary",
+          "claim": "The enhanced support helps 'state and local' health departments.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source heading says only 'Health Departments'; the 'state and local' scope is not stated in this bill text (it is from the underlying §2822)."
+        },
+        {
+          "field": "summary",
+          "claim": "The consultation requirement binds CDC ('the requirement that CDC consult').",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "CDC is not named in the source; subsection (b)'s consulting party is in the unfetched underlying statute."
+        },
+        {
+          "field": "summary",
+          "claim": "The replacement is 'a broader requirement to consult with appropriate individuals'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The struck text already contained a general 'other individuals, as appropriate' catch-all in addition to the named Working Group; replacing both with 'appropriate individuals' removes a mandatory consultee. 'Broader' is defensible only as 'more general', not as an enlarged pool."
+        },
+        {
+          "field": "summary",
+          "claim": "The added capacity language concerns the capacity of 'state and local health departments'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The (c)(4) insertion attributes the capacity to no one ('increasing capacity ... to such diseases'); 'state and local health departments' is not in the (c)(4) text and appears to be imported from the §2822 heading."
+        },
+        {
+          "field": "brief",
+          "claim": "The National Strategy and Regional Centers of Excellence in Vector-Borne Disease is 'CDC-led'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "'CDC-led' not in source."
+        },
+        {
+          "field": "underreported[0].summary",
+          "claim": "The struck reference was part of 'the CDC consultation requirement'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "CDC not in source; the consulting party is defined in the unfetched underlying §317U(b)."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-2585",
+      "title": "MAP for Broadband Funding Act",
+      "stage": "senate",
+      "count": 5,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The FCC will seek public input on improving the map",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source directs a 'notice of inquiry concerning the optimum functionality and transparency'; it never states the inquiry seeks public input/comment. That is procedural inference about notices of inquiry, not text."
+        },
+        {
+          "field": "summary",
+          "claim": "The map tracks where federal broadband-deployment dollars go",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Bill defines the Broadband Funding Map only by cross-reference to section 60105(a) IIJA (unfetched 'Deployment Locations Map'); the source itself does not describe what the map shows."
+        },
+        {
+          "field": "summary",
+          "claim": "The map's purpose is to prevent paying twice to wire the same area",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Plain-English gloss; engrossed source says 'prevent inefficient use or fragmentation', not 'paying twice/overbuilding' (that wording was removed pre-engrossment per versionChanges)."
+        },
+        {
+          "field": "brief",
+          "claim": "Requires the FCC to seek public comment on the map",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "Source says 'notice of inquiry'; 'public comment' is not stated in the text."
+        },
+        {
+          "field": "underreported[1].section",
+          "claim": "Labels Section 3(a) as the \"overbuilding purpose\"",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Section 3(a) contains no 'overbuilding' language in the engrossed text."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-4472",
+      "title": "Accelerating Access to Critical Therapies for ALS Reauthorization Act of 2026",
+      "stage": "senate",
+      "count": 5,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The grant program is characterized as an FDA expanded-access grant program.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source attributes grant-awarding to 'the Secretary of Health and Human Services' (SEC. 2(a)) and selection/renewal duties to 'the Secretary' (SEC. 2(c)); the statute does not make FDA the grant-awarding entity. 'Expanded access' is FDA terminology so the gloss is imprecise rather than fabricated. Recurs in brief and likelihoodReason."
+        },
+        {
+          "field": "summary",
+          "claim": "Narrows the action plan's scope from 'ALS and other rare neurodegenerative diseases' to 'FDA action plans.'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source amends only the SECTION HEADING (strike 'als and other', insert 'fda'), yielding 'FDA ... RARE NEURODEGENERATIVE DISEASE ACTION PLAN' -- not 'FDA action plans'. The plan's substantive scope in subsection (a) ('amyotrophic lateral sclerosis and other rare neurodegenerative diseases') is unchanged, and SEC. 4(3)(B)(ii) re-adds 'rare neurodegenerative diseases'. 'Scope' overstates a heading edit. The analysis's own gaps[] and top_lines correctly frame it as a heading change."
+        },
+        {
+          "field": "summary",
+          "claim": "Two technical fixes correct misspellings in the ALS statute.",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Only SEC. 6(1) corrects a misspelling (amytrophic->amyotrophic). SEC. 6(2) strikes the word 'rational' from 'advancement of rational therapeutic development' -- a word deletion, not a misspelling correction. The section detail describes it correctly ('the stray word `rational' is struck'). Same overstatement recurs in Section 6 main."
+        },
+        {
+          "field": "brief",
+          "claim": "and rare-neurodegenerative-disease action plans through fiscal year 2031.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "The action-plan requirement is set to a recurring 5-year cadence, not extended 'through fiscal year 2031'. 'Through FY2031' applies to the appropriations authorization (SEC. 2(a)) and the grant sunset (SEC. 2(b)), not the action plan."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The heading change signals a scope shift in how the FDA plan is characterized in statute.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Editorial synthesis. The substantive scope (subsection (a)) is unchanged, so 'scope shift' overstates -- consistent with the summary flag. Synthesis field, low materiality."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-8365",
+      "title": "Monitor Accountability Act",
+      "stage": "house",
+      "count": 4,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "under consent decrees",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary",
+            "brief"
+          ],
+          "why": "filed on summary; text live in summary+brief",
+          "note": "Source says monitors appointed \"pursuant to a court order\"; \"consent decree\" is a narrower subtype not named anywhere in the bill. The bill covers all court-ordered state/local monitorships, not only consent decrees."
+        },
+        {
+          "field": "summary",
+          "claim": "active monitorships already running 6 or more years",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Source states the retroactivity threshold as \"has been in effect for 6 years\" — the \"6\" figure is correct, but \"or more\" is an interpretive extension not stated verbatim in source."
+        },
+        {
+          "field": "brief",
+          "claim": "under consent decrees",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief",
+            "summary"
+          ],
+          "why": "filed on brief; text live in summary+brief",
+          "note": "Same as summary: bill says \"court order\", not \"consent decree\"; scope narrowing not in source."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Section 2(d) immediately disrupts currently active consent decree oversight arrangements — including ongoing policing reform monitorships — without any compliance-status prerequisite",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "\"consent decree\" and \"policing reform monitorships\" are extrinsic characterizations; the bill says \"court order\" and \"State or unit of local government\" and names no policing context. The \"no compliance prerequisite\" half is accurate by absence."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-98",
+      "title": "Rural Broadband Protection Act of 2025",
+      "stage": "signed",
+      "count": 4,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Requires the FCC to establish within 180 days a formal vetting process.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source sets the 180-day deadline to INITIATE a rulemaking, not to establish/finalize the vetting process; the analysis's own gaps[0] concedes there is no completion deadline. 'establish within 180 days' compresses initiate-rulemaking into completed-process."
+        },
+        {
+          "field": "brief",
+          "claim": "Mandates FCC applicant vetting for rural broadband funding within 180 days",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "Same 180-day compression as summary: the 180-day clock is to INITIATE rulemaking, not to have vetting in force."
+        },
+        {
+          "field": "underreported[0].summary",
+          "claim": "...administered by other federal agencies.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Source says 'other government' programs (broader - could include state/local); analysis narrows to 'other federal agencies', a qualifier not stated in source."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "An applicant with unresolved compliance issues in another federal broadband program could be disqualified from FCC funding under this provision.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Source makes compliance history one evaluation factor; 'could be disqualified' is a plausible inference but the source does not state automatic disqualification."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6431",
+      "title": "New Opportunities for Business Ownership and Self-Sufficiency Act",
+      "stage": "house",
+      "count": 3,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "states must amend their own laws within that window to be compliant",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Engrossed (e) is PERMISSIVE: 'nothing ... shall be interpreted to prevent a State from amending its law before the end of the 2-year period.' It allows early state amendment; it imposes no mandatory 'must amend to be compliant' obligation. may->must overstatement (synthesis field). Provision unchanged from Introduced; pre-existing minor carried forward."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "the requirement for state-level legislative action",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Same may->must issue: source permits, does not require, state legislative action."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "the bill's benefits may not materialize in states that fail to update their laws in time",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Speculative synthesis resting on the may->must premise; hedged with 'may'."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-160",
+      "title": "Aerial Firefighting Enhancement Act of 2025",
+      "stage": "signed",
+      "count": 3,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The aircraft sold are surplus.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The word 'surplus' does not appear anywhere in the fetched source; the base statute (10 U.S.C. 2576 note / PL 104-307) was not fetched to confirm it. Reasonable descriptor but unsourced. Non-material."
+        },
+        {
+          "field": "summary",
+          "claim": "The buyers are companies that fight wildfires.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source names no buyer class; the closest support is the new subsection (b) limiting sold aircraft to 'provision of aircraft services for wildfire suppression purposes', which implies commercial aircraft-services providers. The specific 'companies' framing is an inference. Non-material."
+        },
+        {
+          "field": "summary",
+          "claim": "The added use is characterized as 'drop water' and framed as a clarification.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The verb 'drop' and the framing 'clarifies' are not in source; the amendment inserts 'or water' (an expansion of permitted materials). Safe inference for firefighting aircraft but not verbatim. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-3266",
+      "title": "USMMA Athletics Act of 2026",
+      "stage": "senate",
+      "count": 3,
+      "findings": [
+        {
+          "field": "underreported[0].section",
+          "claim": "Provision labeled \"Section 2(g)\"",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Internal-cite imprecision: the transfer provision is §51329(g) (added by SEC. 2(a)), not a subsection \"2(g)\" of the Act; SEC. 2 has only (a), (b), (c). Content is correct."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Moving those balances to a private 501(c)(3) is a structural change",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The corporation is a 501(c)(3) (supported), but \"private\" is an editorial gloss in tension with §51329(a)(2), which holds all stock in the United States and voted by the Secretary. Reader-facing top_lines correctly state US ownership."
+        },
+        {
+          "field": "underreported[1].section",
+          "claim": "Provision labeled \"Section 2(d)(2)\"",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Internal-cite imprecision: sole-source authority is §51329(d)(2) (added by SEC. 2(a)), not a subsection \"2(d)(2)\" of the Act. Content is correct."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-4465",
+      "title": "Foreign Intelligence Surveillance Act — Further Extension Through June 12, 2026",
+      "stage": "signed",
+      "count": 3,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The collecting agency is 'the NSA'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Neither the bill text nor the tagged statute names the NSA. 1881a(a) assigns the acquisition authorization jointly to the Attorney General and the Director of National Intelligence, and acquisition is conducted by 'elements of the intelligence community.' NSA is the real-world 702 operator but is extrinsic to the source; source-only, unverifiable. Not fabricated and not misleading, hence minor."
+        },
+        {
+          "field": "summary",
+          "claim": "This bill is the second short-term extension in as many weeks",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Neither the bill nor the statute states this is the 'second' extension or a two-week cadence; external legislative context. Partially inferable — the statutory 2-year sunset fell on Apr 20 2026 (ref-text repeal note) yet the bill strikes 'April 30, 2026', implying a prior short bridge extension — but that chain is not stated in-source."
+        },
+        {
+          "field": "brief",
+          "claim": "The authority belongs to the NSA",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "See summary NSA row: NSA is not named in bill text or the tagged statute."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-4530",
+      "title": "A bill to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police",
+      "stage": "signed",
+      "count": 3,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The board is specifically the 'Capitol Police Board'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source names only 'the Board', not 'Capitol Police Board'. Identity is contextually obvious (Capitol Police retirement provision) but not stated verbatim in the fetched source."
+        },
+        {
+          "field": "summary",
+          "claim": "The retirement age is characterized as 'mandatory'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "5 U.S.C. 8335/8425 are the mandatory-separation provisions, but the word 'mandatory' is not present in the fetched source text; it is an accurate characterization of the struck provision, not a verbatim term."
+        },
+        {
+          "field": "brief",
+          "claim": "The retirement age is 'mandatory'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "Word 'mandatory' not in fetched source; characterization of the 8335/8425 separation provisions."
+        }
+      ]
+    },
+    {
+      "billId": "119-HJRES-142",
+      "title": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025",
+      "stage": "signed",
+      "count": 2,
+      "findings": [
+        {
+          "field": "brief",
+          "claim": "blocking it from taking effect",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "Source states only that Congress 'disapproves' the DC act; the legal effect (act blocked from taking effect) follows from the section 602(c)(1) Home Rule Act disapproval mechanism but is not stated in the fetched bill text, and section 602(c)(1) was not fetched as a referenced source. Correct definitional consequence, hence minor not material."
+        },
+        {
+          "field": "sections[0].items[0].main",
+          "claim": "blocking it from taking effect",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "text live in brief",
+          "note": "Effect not stated in source; only the disapproval verb is present. Same class as the brief claim. Correct definitional consequence, hence minor."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-1722",
+      "title": "Billion Dollar Boondoggle Act",
+      "stage": "house",
+      "count": 2,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "the operative definition pulls in the Pentagon's largest acquisition programs, which are the projects most prone to multi-year delays and multi-billion-dollar cost growth",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The inclusion of major defense acquisition programs is sourced; the characterization 'Pentagon's largest ... most prone to multi-year delays and multi-billion-dollar cost growth' is extrinsic editorial framing, not in the bill text. Not material."
+        },
+        {
+          "field": "underreported[1].why_unreported",
+          "claim": "mandatory-spending programs — the largest share of the federal budget — are structurally outside the report's scope",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The direct-spending exclusion is sourced; equating it with 'mandatory-spending programs — the largest share of the federal budget' is extrinsic characterization not in the bill text. Not material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-1912",
+      "title": "Veteran Fraud Reimbursement Act of 2025",
+      "stage": "signed",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The fiduciary is characterized as 'appointed'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source describes the fiduciary only as one to whom a benefit is 'paid'; it never states the fiduciary is 'appointed'. Contextually accurate (VA fiduciaries are appointed) but not in source. Non-material."
+        },
+        {
+          "field": "summary",
+          "claim": "Benefits were 'stolen or misused'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source uses only 'misuses'; 'stolen' is an added colloquial gloss. The accurate source term 'misused' is retained via 'or misused', so non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-3937",
+      "title": "Wabeno Economic Development Act",
+      "stage": "house",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "to a local company",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Source names the buyer 'Tony's Wabeno Redi-Mix, LLC' and places the parcel in Wisconsin, but never states the company is local/nearby. 'Local' is a plausible inference (Wabeno is the WI locale) but is not in the source. Low impact."
+        },
+        {
+          "field": "brief",
+          "claim": "to a Wisconsin company",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "Source establishes the parcel is in Wisconsin, not the buyer's domicile. 'Wisconsin company' is inferred from the parcel location and the 'Wabeno' name; not stated in source. Low impact."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-7258",
+      "title": "Energy Emergency Leadership Act",
+      "stage": "house",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The Secretary of Energy may assign these functions to an Assistant Secretary.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source establishes the functions are 'assigned to Assistant Secretaries' but does NOT state the Secretary 'may' assign them (discretionary) nor name the assigner. 'may assign' describes the container statute 203(a), which is not in the bill text. Minor, non-distorting gloss."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The energy sector entities are private.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Source says 'energy sector entity' with no 'private' qualifier. The entity is distinguished from State/local/Tribal government, but 'private' is an inference, not stated. Minor."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-7971",
+      "title": "Taxpayer Experience Improvement Act",
+      "stage": "house",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Real-time data covers processing backlogs for every public phone line it operates.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Two imprecisions: (1) delay/backlog info is published the SUBSEQUENT week, not in real time; (2) backlog info attaches to 'applicable items' (document categories per 2(d)(1)), not to phone lines. Also 'every public phone line it operates' overstates the narrow 'applicable phone number extension' definition (2(d)(2)). Gloss, non-material."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Collecting this metric requires the IRS to actively ask callers before they hang up whether their issue was resolved, effectively mandating a caller survey process.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The 'before they hang up' timing and 'survey process' framing are analytical inferences; the bill states only that the number/percent who 'indicated' satisfaction must be reported. Non-material synthesis."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-8322",
+      "title": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
+      "stage": "signed",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Section 702 of the Foreign Intelligence Surveillance Act lets the NSA collect the communications of foreign targets",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Source attributes the authorization to 'the Attorney General and the Director of National Intelligence' acting jointly, carried out by elements of the intelligence community; the NSA is never named in the statute. Operationally conventional but extrinsic to the source text."
+        },
+        {
+          "field": "brief",
+          "claim": "Extends the NSA's authority to collect foreign targets' communications without a warrant",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "NSA not named in source; authorization attributed to AG + DNI."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-9391",
+      "title": "Reimbursable Screening Services Program Extension Act of 2026",
+      "stage": "house",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The \"not more than 8/14\" ceiling is a \"participation cap\".",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source states only a \"not more than\" ceiling in subsection (e); what it counts (\"participation\") is NOT stated in the bill text (subsection (e) not reproduced). \"not more than\" = ceiling is supported; \"participation\" scope is an inference. Minor: reader takeaway (a max count rising 8->14) is correct."
+        },
+        {
+          "field": "brief",
+          "claim": "The raised cap is a \"participation cap\".",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "\"participation\" scope not stated in source; see summary note. Minor."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-1838",
+      "title": "DeOndra Dixon INCLUDE Project Act of 2026",
+      "stage": "senate",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The NIH runs the INCLUDE Project as an existing initiative",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source does not state the INCLUDE Project already exists; the bill creates the program prospectively. Extrinsic."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Down syndrome and early-onset Alzheimer's are strongly linked and much of the INCLUDE Project's rationale comes from that dementia connection; press coverage understates the Alzheimer's angle",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Extrinsic editorial/context (press framing, epidemiological link) — inherent purpose of the why_unreported field; not source-checkable."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-2398",
+      "title": "Kay Hagan Tick Reauthorization Act",
+      "stage": "senate",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The two programs are at the Centers for Disease Control and Prevention",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Gloss: the national strategy is the Secretary’s (HHS-wide) with CDC coordination/acting-through; not strictly “at the CDC.” Reasonable simplification, low impact."
+        },
+        {
+          "field": "brief",
+          "claim": "The two programs are CDC vector-borne disease programs",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "Both programs involve CDC (coordination / acting-through); “CDC programs” is a defensible gloss though the national strategy is the Secretary’s."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-3977",
+      "title": "Bankruptcy Threshold Adjustment Act of 2026",
+      "stage": "senate",
+      "count": 2,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Coverage of Subchapter V threshold bills tends to focus on the headline dollar limit; the affiliated-group aggregation rule is the operative provision for holding-company/franchisee structures.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Editorial rationale about coverage tendencies; not a bill-text claim. Non-fidelity meta-commentary."
+        },
+        {
+          "field": "underreported[1].why_unreported",
+          "claim": "Subchapter V is generally understood to be for small businesses; codifying a categorical exclusion for reporting companies and affiliates closes a workaround for public-company subsidiaries.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Editorial rationale; not a bill-text claim."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-494",
+      "title": "National Plan for Epilepsy Act",
+      "stage": "senate",
+      "count": 2,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "SUDEP is one of the leading causes of death in people with epilepsy",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Epidemiological background not present in bill source; training-knowledge context in a why-it-matters field. Does not misdescribe the bill; non-material."
+        },
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "but is rarely named directly in appropriations report language or general disease-review bills. Its explicit inclusion here signals a specific advocacy-community priority baked into the statutory duty.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The fact of explicit SUDEP inclusion is source-supported (2(b)(3)(D)), but the comparative-rarity and advocacy-priority characterization is not source-verifiable. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-5",
+      "title": "Laken Riley Act",
+      "stage": "signed",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "who entered the country unlawfully or without required documents",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Source only says the alien must be \"inadmissible under paragraph (6)(A), (6)(C), or (7) of section 212(a)\"; it does not define those grounds. The gloss \"entered unlawfully or without required documents\" describes INA 212(a)(6)(A)/(7), which is not in the fetched source (no referencedSource for 212(a)), and it drops the (6)(C) fraud/misrepresentation ground. Not contradicted; standard statutory reading, but extrinsic."
+        },
+        {
+          "field": "underreported[0].summary",
+          "claim": "Courts may now issue injunctions that apply broadly, not just to individual plaintiffs, in state AG cases",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Effect inference. Bill states only that paragraph (1) \"shall not apply\" to the listed actions; it does not state that injunctions \"apply broadly\" or contrast with \"individual plaintiffs.\" Reasonable inference but extrinsic (depends on the unfetched content of 1252(f)(1))."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-629",
+      "title": "Emergency Conservation Program Improvement Act of 2025",
+      "stage": "signed",
+      "count": 2,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "more time to use the funds",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "The bill shows only the strike/insert of the numeral; the surrounding statute (16 U.S.C. 2201(b)(2)) was not fetched and no referencedSources are registered, so WHAT the 60/180-day period governs ('to use the funds') is not sourced. Direction (more time) and figures (60->180) are correct; the object is an unfetched-statute characterization. Source debt: fetch 16 U.S.C. 2201 to confirm."
+        },
+        {
+          "field": "brief",
+          "claim": "and extends the time to use the funds",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "Same source-debt as summary: 'extends the time' (60->180) is sourced, but 'to use the funds' characterizes the unfetched statutory period. Not a bill-text-supported object."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-1512",
+      "title": "Taiwan Assurance Implementation Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "brief",
+          "claim": "The prior review was a 'one-time' review that the bill converts into a recurring obligation.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "The 'one-time' baseline and 'converts' framing describe the pre-amendment Taiwan Assurance Act of 2020 Section 315, which is NOT in the fetched source (no referencedSources registered). Source only shows the bill ADDING a new subsection (d) 'Periodic Reviews'. Operative effect (recurring five-year review now required) is accurate; the prior-baseline descriptor is unverifiable and would need the underlying statute fetched. Minor because current-law effect is correct."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-1664",
+      "title": "Deploying American Blockchains Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary/top_lines[].subs/sections[].items[].main",
+          "claim": "Names the Commerce Secretary as the President's principal blockchain advisor / makes the Secretary of Commerce the federal government's lead advisor on blockchain",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source says the Secretary serves as 'a principal advisor to the President' for this policy area (indefinite article — one of possibly several). The analysis renders it as 'the' principal/lead advisor, and 'the federal government's lead advisor' further broadens 'advisor to the President.'"
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-1823",
+      "title": "VA Budget Shortfall Accountability Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "for the President's annual budget",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The bill cites 31 USC 1105(a) but its content was not fetched as a referencedSource. Characterizing it as 'the President's annual budget' (and 'annual') is an extrinsic identification of the cited statute - accurate as a statutory matter but unsourced source-only. Not material: standard identification of a cited section; does not misstate the bill's operative effect."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2066",
+      "title": "Investing in All of America Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "The government-funds exclusion has limited exceptions for pension plan funds and college/university trust/endowment funds.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Same incomplete gloss as top_lines[3]: exceptions are \"subclauses (I) through (III) of subparagraph (B)(iii)\"; (I)/(III) content unfetched. Not material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-227",
+      "title": "Clergy Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "That exemption is currently irrevocable",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Irrevocability is a reasonable inference from the 'notwithstanding' clause plus the no-refiling bar, but the Engrossed source never states that 1402(e)(4) makes the exemption irrevocable."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2347",
+      "title": "Survivor Justice Tax Prevention Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "enough to shift the burden of proof to the IRS",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "The bill deems the statement credible evidence and the taxpayer to have met the requirements of section 7491(a)(2), invoking section 7491(a). The EFFECT of 7491(a) (burden shifts to the Secretary/IRS) is not stated in the bill text, and section 7491 is not a fetched referencedSource. Directionally consistent with the subsection caption 'Burden of Proof', but 'to the IRS' is unverifiable from source alone. Not contradicted; not a demonstrable fidelity error."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2399",
+      "title": "Rural Broadband Protection Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "in rural and hard-to-serve areas",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Geographic targeting to 'rural and hard-to-serve areas' is background not stated in the operative text; source describes only 'deployment of a broadband-capable network.' 'rural' echoes the Act's title but 'hard-to-serve areas' appears nowhere."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2478",
+      "title": "Financial Exploitation Prevention Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Characterizes the affected 'registered open-end investment company' as a 'mutual fund company'",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Plain-English gloss; the term 'mutual fund' appears nowhere in the source, though it is the standard equivalent of 'registered open-end investment company'. Used throughout summary/brief/likelihoodReason/sections. Not material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2483",
+      "title": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary/top_lines[].subs/sections[].items[].main",
+          "claim": "988 Suicide & Crisis Lifeline",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "The source consistently names it the 'National Suicide Prevention Lifeline' (and '9-8-8 National Suicide Prevention Lifeline'). 'Suicide & Crisis Lifeline' is the real-world rebrand but is an out-of-source proper noun. The '988' number itself is supported."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-2550",
+      "title": "Protect America's Workforce Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "brief",
+          "claim": "The executive order excludes federal agencies from federal labor-management relations programs",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief",
+          "note": "Source titles the order \"Exclusions from Federal Labor-Management Relations Programs\" but never states that FEDERAL AGENCIES are the entities excluded; \"federal agencies\" is an inferred specification (the analysis's own gaps[0] concedes the bill does not restate what the EO covered). Direction (exclusion FROM the programs) is faithful; only the excluded-object noun is unsourced."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-3657",
+      "title": "Hydropower Licensing Transparency Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "the applications concern hydropower DAM licensing",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The word \"dam\" does not appear in the source; plain-English gloss (FPA hydropower licensing governs hydroelectric dam projects). Minor, not reader-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-42",
+      "title": "Alaska Native Settlement Trust Eligibility Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "are not counted against them when determining eligibility for need-based programs",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Core (excluded when determining program eligibility) is supported. Source says 'certain programs'; 'need-based' is an invented scope qualifier not stated in the bill text (though a reasonable gloss, since resource exclusions only bear on means-tested programs). Minor."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-4238",
+      "title": "DLARA",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "requires more frequent ... reports to Congress",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Reporting cadence remains MONTHLY before and after. \"More frequent\" is an inference from the struck clause \"during the applicable period for a major disaster\" (broadened trigger) but the prior statute is not in source, so an increase in frequency cannot be confirmed. Detail is supported; frequency is not."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-5125",
+      "title": "District of Columbia Judicial Nominations Reform Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "section 433(b) drops Commission-service credit from the judicial qualifications",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Source shows only 'striking paragraph (4)' and striking the phrase 'or of the District of Columbia Judicial Nomination Commission' from redesignated paragraph (4); the full prior text of paragraph (4)/(5) is not in the bill, so 'Commission-service credit' characterizes unfetched D.C. Code sec. 1-204.33(b) content. Low-impact: the qualifications-section context and the struck Commission reference are source-visible."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-5235",
+      "title": "Skills-Based Federal Contracting Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Press coverage of \"skills-based hiring\" bills tends to treat the reform as targeting bright-line degree walls",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Characterization of press coverage, not a claim about the bill; extrinsic. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-5366",
+      "title": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "These losses are unreimbursed. [cross-model attribution flag on the existing SUPPORTED row of this same claim]",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Cross-model catch (Sonnet verify): the existing SUPPORTED row for this claim cites sourceSpan 'not compensated for by insurance or otherwise' from Section 3 - 139M(b)(1) - but that phrase is part of the WILDFIRE relief-payment definition, a different provision from the one this claim describes (the summary sentence is entirely about the Section 2 casualty-loss / $500-per-incident deduction). Grepped data/bill-text/119-HR-5366.txt for insurance/reimburs/compensated: the only match is line 70 (139M(b)(1)); Section 2 contains no such text. Right concept, wrong-account receipt (rubric class 4) - the underlying claim is plausible as general tax-law background (26 USC 165(a)) but that statute is not a registered referencedSource for this bill, so it is not anchorable to the evidence actually on file. Does not change what a reader understands (no account name is exposed to the reader in this sentence), so kept minor rather than material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-5631",
+      "title": "Geothermal Energy Advancement Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "Extends the oil-and-gas categorical exclusion under Section 390 of the Energy Policy Act of 2005 to geothermal exploration and development.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Extension to geothermal is supported; 'categorical exclusion' label is extrinsic (42 U.S.C. 15942 not fetched)."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6028",
+      "title": "Legislative Branch Agencies Clarification Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Librarian and GPO Director would be REMOVED by congressional leaders rather than the President",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Bill ADDS a leadership-majority removal power; the source shows no prior Presidential removal authority, so 'rather than the President' is unsourced for removal (it is sourced for appointment via the advice-and-consent strike)."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6260",
+      "title": "Keeping Violent Offenders Off Our Streets Act of 2025",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The mechanism operates through the insurance fraud statute, making the primary legal effect a reclassification that triggers criminal exposure rather than a direct restriction on bail practices.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "\"insurance fraud statute\", \"reclassification\", \"criminal exposure\" unsupported; downstream of the same unfetched-1033 root."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6365",
+      "title": "Wintergreen Emergency Egress Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The section is captioned as authorizing a right-of-way",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "The caption reads \"Right-of-Way for Emergency Exit, Blue Ridge Parkway\" — neutral; it does not say \"authorizing.\" Mild analytical gloss (the underlying 1936 Act \"may issue\" is the authorizing language)."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6387",
+      "title": "FIRE Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0]",
+          "claim": "Section 319(b) exceptional events include high wind dust events and stratospheric ozone intrusions",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "The source gives only a general definition (\"a natural event\") and an exclusions list; it never enumerates \"high wind dust events\" or \"stratospheric ozone intrusions.\" These are extrinsic EPA-rule examples, not in the bill text."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-6903",
+      "title": "Ensuring Children Receive Support Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Federal law already requires the State Department to deny a new passport to a parent owing more than $2,500 in unpaid child support.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Denial-already-required is a claim about existing 452(k)(1) not shown in the fetched source; bill text covers revocation of issued passports, not the current denial mandate. No referencedSource fetched. Accurate as background but source-unsupported."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-7008",
+      "title": "Stop Insider Trading Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "the CRS summary describes only the stock-trading restrictions on Members of Congress",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Claim about the CRS summary content; CRS summary is not present in the bill-text source and no referencedSources registered. Unverifiable against source (not a claim about bill content)."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-7084",
+      "title": "Defending American Property Abroad Act of 2026",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "port property owned by a U.S. company",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "Scope narrowing: source says 'a United States person' (individual or entity), not 'company'. Real-world target is Vulcan Materials (a company) so the gloss is defensible, but narrower than the statutory term. Minor; brief uses the faithful 'U.S. owner'."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-7831",
+      "title": "License to Drill Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The drilling is on federal land.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The phrase \"federal land\" does not appear in the fetched source. Contextually accurate to the Mineral Leasing Act, but not stated in the bill text and no referencedSource was fetched, so it is extrinsic."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-8364",
+      "title": "To amend title 5, United States Code, to authorize the increase of the retirement age in the United States Capitol Police.",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "brief",
+          "claim": "maximum retirement age waiver",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "brief"
+          ],
+          "why": "filed on brief; text live in brief",
+          "note": "The word 'waiver' appears nowhere in the source. The bill changes the mandatory-retirement trigger from a fixed 60 to a Board-DETERMINED age (57-65); it does not raise a 'waiver' ceiling. 'waiver' is an extrinsic mechanism gloss. Net effect (officers may serve to 65) is correctly stated."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-915",
+      "title": "Small Business Technological Advancement Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Characterizes 7(a) as the SBA's 'main' loan program",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "'main' is an unsourced characterization; the bill text names 7(a) but never ranks it among SBA programs. Program identity (7(a)) itself is supported."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-9328",
+      "title": "Improving Travel for Military Members Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Prevent access to TSA PreCheck or other expedited lanes without an eligibility-indicating boarding pass \"under section 44901 of title 49\".",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Section 44901 in source governs the individuals \"carrying out screening functions,\" NOT the boarding-pass eligibility, which the source ties to \"eligibility for TSA PreCheck.\" Minor mis-anchoring of the cite; the accurate sections[] item renders it correctly."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-972",
+      "title": "Sloan Canyon Conservation and Lateral Pipeline Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "in Clark County, Nevada",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary; text live in summary",
+          "note": "The location 'Clark County, Nevada' does not appear anywhere in the source; extrinsic geographic detail (true in reality, but sourced from training knowledge, not the bill text)."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-973",
+      "title": "Setting Consumer Standards for Lithium-Ion Batteries Act",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The automatic-adoption default delegates ongoing rulemaking to a private standards body",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Source says only \"the organization that revised the requirements\"; the \"private standards body\" characterization (word \"private\") is not stated in the bill text. Framing in a synthesis field; not material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-983",
+      "title": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Inserts \", or chapter 1606 of title 10,\" (as quoted, with trailing comma) in paragraph (6).",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "MINOR: the summary's single quoted insert string carries a trailing comma, but paragraph (6) inserts ', or chapter 1606 of title 10' WITHOUT a trailing comma (before the period). Substance — ch.1606 added to para (6) — is correct; top_lines and Section 2 item render para (6) correctly without the comma."
+        }
+      ]
+    },
+    {
+      "billId": "119-HR-998",
+      "title": "Internal Revenue Service Math and Taxpayer Help Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "if several specific errors apply, all must be listed",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Source uses the softer modal 'should be listed'; analysis hardens it to 'must'. Modal-strength overstatement; practical import (list all applicable errors) preserved. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-HRES-878",
+      "title": "Disapproving the behavior of Representative Jesús G. Chuy García of Illinois.",
+      "stage": "house",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "His given name is Jesus (rendered 'Jesus \"Chuy\" Garcia').",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The given name 'Jesus' appears in the bill's official title metadata but NOT in the engrossed bill text, which says only 'Chuy Garcia'. Correct identity of the same person; not a fidelity error, provenance note only."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-1884",
+      "title": "Holocaust Expropriated Art Recovery Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "Courts that previously dismissed Holocaust art claims on laches or international comity grounds could have those dismissals challenged or reversed under the new law.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Analytical inference about litigation effect; applicability clause reaches pending/appealed claims but the source does not state dismissals will be reversed."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-201",
+      "title": "ACES Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The study is characterized as an 'independent scientific study'.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "'independent' is an editorial gloss on the National Academies; the word does not appear in source. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-216",
+      "title": "Save Our Seas 2.0 Amendments Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "the Marine Debris Foundation ... raises private funds",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Foundation's private-fundraising function is not stated in the fetched sources (bill text, usc-33-1951, usc-33-1952). Save Our Seas 2.0 Act Subtitle B not fetched. Plausible baseline context, not a bill-change claim."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-222",
+      "title": "Whole Milk for Healthy Kids Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Prior baseline was low-fat and fat-free milk only (\"not just low-fat and fat-free\")",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The fat-free/low-fat-only prior baseline (a USDA meal-pattern rule under 7 CFR 210.10) is not stated in the bill text or in the fetched referenced statutes; directionally consistent with the bill but unsourced."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-254",
+      "title": "ARTIST Act",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[1].why_unreported",
+          "claim": "Several states restrict ivory sales",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported; text live in underreported",
+          "note": "Real-world context (some states restrict ivory sales) not present in the bill source; extrinsic background used to explain significance. Widely true but unsourced here. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-2666",
+      "title": "Foreign Robocall Elimination Act",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Exemption criteria include USF contribution status",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "\"USF\"/\"Universal Service Fund\" label is not in the source; the bill cites contributions under 47 U.S.C. 254(d) (the universal-service contribution provision), so the shorthand is accurate but the term itself is a gloss."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-289",
+      "title": "Youth Poisoning Protection Act",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "This leaves unrestricted a large industrial market for metal treatment, laboratory reagents, and corrosion inhibition.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Specific industrial-market examples are extrinsic; not in bill text. Synthesis field; non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-3424",
+      "title": "Bankruptcy Administration Improvement Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "Chapter 7 bankruptcy trustees administer most consumer bankruptcies.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source says trustees are 'administering thousands of cases' and get $60 in 'nearly 90 percent of chapter 7 cases'; it never states chapter 7 trustees administer 'most consumer bankruptcies'. Extrinsic characterization, low reader impact."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-356",
+      "title": "Secure Rural Schools Reauthorization Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "SRS payments fund other municipal services",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Soft umbrella not stated verbatim; source names schools/roads (7101) plus Title III uses (Firewise, emergency services, wildfire plans, broadband). Defensible gloss, low impact."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-434",
+      "title": "Space Commerce Advisory Committee Act",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The committee is characterized as a 'standing' committee",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "Source establishes a committee with a 10-year sunset (SEC 3(d)); 'standing' loosely implies permanence. Non-material — the same summary states the sunset."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-723",
+      "title": "Tribal Trust Land Homeownership Act of 2025",
+      "stage": "signed",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].summary",
+          "claim": "This exempt tribe is approved for \"self-governance\" leasing.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Repeat of the unsourced \"self-governance\" gloss; source says only \"approved for leasing under subsection (h)\"."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-850",
+      "title": "Northern Border Security Enhancement and Review Act",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "underreported[0].why_unreported",
+          "claim": "The sector-level apprehension analysis rarely appears in press summaries of the bill.",
+          "verdict": "UNSUPPORTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "underreported"
+          ],
+          "why": "filed on underreported",
+          "note": "Extrinsic assertion about press coverage; not a bill claim and not anchorable to source. Non-material."
+        }
+      ]
+    },
+    {
+      "billId": "119-S-911",
+      "title": "Chief Herbert D. Proffitt Act of 2025",
+      "stage": "senate",
+      "count": 1,
+      "findings": [
+        {
+          "field": "summary",
+          "claim": "The matching disability benefit is paid 'to the families of ... public safety officers ... permanently disabled on the job.'",
+          "verdict": "CONTRADICTED",
+          "severity": "minor",
+          "surfacedIn": [
+            "summary"
+          ],
+          "why": "filed on summary",
+          "note": "The disability benefit under (b) is payable to the officer if living, not to the family; the summary sentence bundles both death and disability benefits under 'to the families.' Minor recipient imprecision in a compressed summary whose primary subject is the death benefit."
+        }
+      ]
+    }
+  ]
+}

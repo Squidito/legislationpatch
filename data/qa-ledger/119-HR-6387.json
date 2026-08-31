@@ -21,24 +21,27 @@
       "sourceEnd": 5012,
       "section": "Section 319(b) as amended",
       "note": "The bill amends the existing 319(b) petition process; the Governor-petition-to-exclude-data mechanism it revises is shown in the source.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "summary",
       "claim": "that review process can take years",
       "verdict": "UNSUPPORTED",
       "type": "unsupported",
-      "severity": "minor",
+      "severity": "material",
       "sourceSpan": "by striking March 1, 2006 and inserting 18 months after the date of enactment of the FIRE Act",
       "sourceStart": 2422,
       "sourceEnd": 2515,
       "section": "Section 319(b)(2)(A)",
       "note": "Source states no duration for the current review process; the only timeline in the bill is the 18-month deadline for EPA to issue revised regulations. \"Can take years\" is extrinsic context.",
-      "status": "open",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "prominence": "re-graded material 2026-08-31 (D2): filed on summary, which the card and the meta description render verbatim.",
+      "resolution": "Fixed 2026-08-31 from a fresh read of data/bill-text/119-HR-6387.txt. The bill sets no deadline of any kind on reviewing a petition; its only clocks are 18 months for EPA to ISSUE revised regulations (L47/L49) and 12 months to stand up the petition-status website (L64). Nothing in the text supports faster, expedited, or any duration for the current process. The claim was removed, not softened."
     },
     {
       "field": "summary",
@@ -51,9 +54,10 @@
       "sourceEnd": 5012,
       "section": "Section 319(b)(3)(B)(iv)",
       "note": "Fair rendering of the exclude-exceptional-event-data-from-violation-determinations purpose.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "summary",
@@ -66,24 +70,27 @@
       "sourceEnd": 2568,
       "section": "Section 319(b)(2)(A)",
       "note": "Bill inserts \"revisions to\" before \"regulations\" and sets an 18-month deadline.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "summary",
       "claim": "to create a faster process for wildfire-influenced data exclusions",
       "verdict": "UNSUPPORTED",
       "type": "unsupported",
-      "severity": "minor",
+      "severity": "material",
       "sourceSpan": "by striking March 1, 2006 and inserting 18 months after the date of enactment of the FIRE Act",
       "sourceStart": 2422,
       "sourceEnd": 2515,
       "section": "Section 319(b)",
       "note": "No provision makes the state-petition process faster; the only new deadline (18 months) is for EPA to promulgate the revised regulations, not for reviewing individual petitions.",
-      "status": "open",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "prominence": "re-graded material 2026-08-31 (D2): filed on summary, which the card and the meta description render verbatim.",
+      "resolution": "Fixed 2026-08-31 from a fresh read of data/bill-text/119-HR-6387.txt. The bill sets no deadline of any kind on reviewing a petition; its only clocks are 18 months for EPA to ISSUE revised regulations (L47/L49) and 12 months to stand up the petition-status website (L64). Nothing in the text supports faster, expedited, or any duration for the current process. The claim was removed, not softened."
     },
     {
       "field": "summary",
@@ -96,9 +103,10 @@
       "sourceEnd": 4502,
       "section": "Section 319(b)(3)(B)",
       "note": "New definitions plus causal-relationship criteria standardize the qualifying test.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "summary",
@@ -111,9 +119,10 @@
       "sourceEnd": 2365,
       "section": "Section 319(b)(1)(B)",
       "note": "Source defines \"action to mitigate wildfire risk\" (prescribed fire or similar measure) as a distinct-but-parallel category processed like an exceptional event; \"as qualifying exceptional events\" captures the practical effect, though the bill keeps it a separate defined term.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "brief",
@@ -126,24 +135,27 @@
       "sourceEnd": 2568,
       "section": "Section 319(b)(2)(A)",
       "note": "",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "brief",
       "claim": "to create faster wildfire smoke data exclusions",
       "verdict": "UNSUPPORTED",
       "type": "unsupported",
-      "severity": "minor",
+      "severity": "material",
       "sourceSpan": "by striking March 1, 2006 and inserting 18 months after the date of enactment of the FIRE Act",
       "sourceStart": 2422,
       "sourceEnd": 2515,
       "section": "Section 319(b)",
       "note": "Same as summary: \"faster\" has no source basis. \"Smoke\" is a lay gloss; the bill says wildfire/exceptional event, not smoke.",
-      "status": "open",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "prominence": "re-graded material 2026-08-31 (D2): filed on brief, which the card and the meta description render verbatim.",
+      "resolution": "Fixed 2026-08-31 from a fresh read of data/bill-text/119-HR-6387.txt. The bill sets no deadline of any kind on reviewing a petition; its only clocks are 18 months for EPA to ISSUE revised regulations (L47/L49) and 12 months to stand up the petition-status website (L64). Nothing in the text supports faster, expedited, or any duration for the current process. The claim was removed, not softened."
     },
     {
       "field": "brief",
@@ -156,9 +168,10 @@
       "sourceEnd": 2365,
       "section": "Section 319(b)(1)(B)",
       "note": "",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "brief",
@@ -171,9 +184,10 @@
       "sourceEnd": 5012,
       "section": "Section 319(b)(3)(B)(iv)",
       "note": "Data directly due to exceptional events or actions to mitigate wildfire risk is excluded from violation determinations.",
-      "status": "ok",
+      "status": "fixed",
       "verify": null,
-      "kind": "claim"
+      "kind": "claim",
+      "resolution": "Superseded 2026-08-31: summary and brief were rewritten wholesale to remove the unsourced speed framing, so this row describes prose that no longer exists. Kept as audit history."
     },
     {
       "field": "top_lines[0].headline",
@@ -832,5 +846,5 @@
     "omissions": 5
   },
   "resolution": "",
-  "notes": "Audited against data/bill-text/119-HR-6387.txt = H.R. 6387 Introduced in House (IH), Dec 3, 2025; cache versionChanges records the text as unchanged Introduced->Engrossed, so the IH text backs the Passed-House analysis. No referencedSources registered. MATERIAL finding: the analysis repeatedly asserts the bill establishes shorter/processing \"review timelines for state exceptional event demonstration submissions\" (top_lines[0].subs[1], sections[1].items[0].detail, changes.added[0], changes.modified[0]) -- the source contains NO petition-review timeline; the only deadline is the 18-month EPA reg-promulgation deadline, so this is a fabricated regulatory element and the \"faster process\" framing (summary/brief/gaps[1]) inherits it. Minor unsourced items: \"process can take years,\" \"wildfire smoke\" gloss, \"vegetation management\" / \"mechanical fuel reduction treatments\" / \"tribes\" examples not in the bill, and \"high wind dust events / stratospheric ozone intrusions\" (extrinsic EPA-rule examples). Notable omission: the Section 319(b)(2)(C) Regional analysis (multistate regional modeling) provision is entirely unsurfaced. likelihoodReason items are Congress.gov metadata + Zone-3 analysis, not bill-text claims. featured_quotes and criticisms are Congressional Record quotes with no CR source file in scope for this bill-text audit -- not decomposed. cache.json NOT edited per task instruction."
+  "notes": "Audited against data/bill-text/119-HR-6387.txt = H.R. 6387 Introduced in House (IH), Dec 3, 2025; cache versionChanges records the text as unchanged Introduced->Engrossed, so the IH text backs the Passed-House analysis. No referencedSources registered. MATERIAL finding: the analysis repeatedly asserts the bill establishes shorter/processing \"review timelines for state exceptional event demonstration submissions\" (top_lines[0].subs[1], sections[1].items[0].detail, changes.added[0], changes.modified[0]) -- the source contains NO petition-review timeline; the only deadline is the 18-month EPA reg-promulgation deadline, so this is a fabricated regulatory element and the \"faster process\" framing (summary/brief/gaps[1]) inherits it. Minor unsourced items: \"process can take years,\" \"wildfire smoke\" gloss, \"vegetation management\" / \"mechanical fuel reduction treatments\" / \"tribes\" examples not in the bill, and \"high wind dust events / stratospheric ozone intrusions\" (extrinsic EPA-rule examples). Notable omission: the Section 319(b)(2)(C) Regional analysis (multistate regional modeling) provision is entirely unsurfaced. likelihoodReason items are Congress.gov metadata + Zone-3 analysis, not bill-text claims. featured_quotes and criticisms are Congressional Record quotes with no CR source file in scope for this bill-text audit -- not decomposed. cache.json NOT edited per task instruction. 2026-08-31 D2 prominence pass: the summary and brief were rewritten from a fresh read of the stored bill text. Three findings (claims 1, 4, 8) were re-graded material under D2 — minor graded the claim size, but this one was the framing of the whole bill, live on the card and in the meta description — and fixed by removal. The other eight summary/brief rows are marked fixed as superseded prose, NOT as verified: THE NEW SUMMARY AND BRIEF ARE UNAUDITED and need a claim-level pass before this ledger can be called current for those two fields. Claim 33 (underreported: high wind dust events / stratospheric ozone intrusions) was independently re-confirmed UNSUPPORTED in the same read — the bill names no exceptional-event categories at all, only exclusions (L37) — but is deliberately LEFT OPEN as bill-lane work outside this pass."
 }
