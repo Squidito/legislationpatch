@@ -17,6 +17,15 @@
     "textFile": "data/ref-text/bill-119-hr-7296.txt",
     "fetchedAt": "2026-08-19"
   },
+  "hman-119-rule-x": {
+    "id": "hman-119-rule-x",
+    "kind": "rule",
+    "label": "House Rule X — Organization of Committees (119th Congress)",
+    "citation": "House Rule X",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg463",
+    "textFile": "data/ref-text/hman-119-rule-x.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "hman-119-rule-xv": {
     "id": "hman-119-rule-xv",
     "kind": "rule",

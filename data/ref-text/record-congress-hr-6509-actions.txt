@@ -1,7 +1,13 @@
-SOURCE: Congress.gov API - bill/119/hr/6509/actions (fetched 2026-08-31)
+SOURCE: Congress.gov API - bill/119/hr/6509/actions and bill/119/hr/6509/committees (fetched 2026-08-31)
 Total actions: 3
+All actions are dated 2025-12-09. There is no hearing, markup, committee report, or floor vote in the record.
 
-date | type | text
+ACTIONS (date | type | text)
 2025-12-09 | IntroReferral | Referred to the House Committee on Energy and Commerce.
 2025-12-09 | IntroReferral | Introduced in House
 2025-12-09 | IntroReferral | Introduced in House
+
+COMMITTEE ACTIVITY (committee | chamber | activity | date)
+Energy and Commerce Committee | House | Referred To | 2025-12-09T17:06:15Z
+
+The only recorded committee activity is the referral itself: no "Hearings Held", no "Markup", no "Reported by" entry exists for H.R. 6509.
