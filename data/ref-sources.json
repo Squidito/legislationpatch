@@ -251,6 +251,17 @@
     "textFile": "data/ref-text/press-carson-yakym-safe-drugs.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-congress-119-nominations": {
+    "id": "record-congress-119-nominations",
+    "kind": "record",
+    "org": "Congress.gov",
+    "date": null,
+    "label": "Congress.gov API record - all 2,077 nominations of the 119th Congress with latest action",
+    "citation": "Congress.gov",
+    "srcUrl": "https://api.congress.gov/v3/nomination/119",
+    "textFile": "data/ref-text/record-congress-119-nominations.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-congress-hr-1968-actions": {
     "id": "record-congress-hr-1968-actions",
     "kind": "record",
@@ -428,6 +439,17 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-crs-98-225-uc-agreements": {
+    "id": "record-crs-98-225-uc-agreements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-225, Unanimous Consent Agreements in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-225.html",
+    "textFile": "data/ref-text/record-crs-98-225-uc-agreements.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-98-265-cr-users-guide": {
     "id": "record-crs-98-265-cr-users-guide",
     "kind": "record",
@@ -438,6 +460,17 @@
     "srcUrl": "https://www.everycrsreport.com/reports/98-265GOV.html",
     "textFile": "data/ref-text/record-crs-98-265-cr-users-guide.txt",
     "fetchedAt": "2026-08-30"
+  },
+  "record-crs-98-425-invoking-cloture": {
+    "id": "record-crs-98-425-invoking-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-425, Invoking Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-425.html",
+    "textFile": "data/ref-text/record-crs-98-425-invoking-cloture.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-crs-if10515-ndaa-process": {
     "id": "record-crs-if10515-ndaa-process",
@@ -470,6 +503,28 @@
     "textFile": "data/ref-text/record-crs-in12324-omnibus.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-crs-r43563-senate-holds": {
+    "id": "record-crs-r43563-senate-holds",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R43563, \"Holds\" in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R43563.html",
+    "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-r44819-majority-cloture": {
+    "id": "record-crs-r44819-majority-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44819, Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44819.html",
+    "textFile": "data/ref-text/record-crs-r44819-majority-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-r45153-statutory-interpretation": {
     "id": "record-crs-r45153-statutory-interpretation",
     "kind": "record",
@@ -498,6 +553,28 @@
     "srcUrl": "https://www.everycrsreport.com/reports/R48731.html",
     "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-crs-rl30360-filibusters-cloture": {
+    "id": "record-crs-rl30360-filibusters-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30360, Filibusters and Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30360.html",
+    "textFile": "data/ref-text/record-crs-rl30360-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl32684-nuclear-option": {
+    "id": "record-crs-rl32684-nuclear-option",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL32684, Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL32684.html",
+    "textFile": "data/ref-text/record-crs-rl32684-nuclear-option.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-crs-rs22299-rule-xiv": {
     "id": "record-crs-rs22299-rule-xiv",
@@ -541,6 +618,39 @@
     "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-senate-cloture-counts": {
+    "id": "record-senate-cloture-counts",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Senate Action on Cloture Motions",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/legislative/cloture/clotureCounts.htm",
+    "textFile": "data/ref-text/record-senate-cloture-counts.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture": {
+    "id": "record-senate-filibusters-cloture",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: About Filibusters and Cloture",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture-overview": {
+    "id": "record-senate-filibusters-cloture-overview",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Filibuster and Cloture Overview",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture-overview.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-senate-leadership": {
     "id": "record-senate-leadership",
     "kind": "record",
@@ -551,6 +661,17 @@
     "srcUrl": "https://www.senate.gov/senators/leadership.htm",
     "textFile": "data/ref-text/record-senate-leadership.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-senate-manual-118": {
+    "id": "record-senate-manual-118",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "Senate Manual, 118th Congress (S. Doc. 118-1) — Standing Rules of the Senate",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm",
+    "textFile": "data/ref-text/record-senate-manual-118.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-senate-roll-118-2-219": {
     "id": "record-senate-roll-118-2-219",
@@ -642,6 +763,15 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec261/htm",
     "textFile": "data/ref-text/usc-15-261.txt",
     "fetchedAt": "2026-08-27"
+  },
+  "usc-19-2191": {
+    "id": "usc-19-2191",
+    "kind": "statute",
+    "label": "Trade implementing bills — expedited congressional procedures (19 U.S.C. 2191)",
+    "citation": "19 U.S.C. 2191",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap12-subchapI-part5-sec2191/htm",
+    "textFile": "data/ref-text/usc-19-2191.txt",
+    "fetchedAt": "2026-08-31"
   },
   "usc-2-2a": {
     "id": "usc-2-2a",
@@ -876,6 +1006,24 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec808/htm",
     "textFile": "data/ref-text/usc-5-808.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "usc-50-1546": {
+    "id": "usc-50-1546",
+    "kind": "statute",
+    "label": "War Powers Resolution — priority procedures (50 U.S.C. 1546)",
+    "citation": "50 U.S.C. 1546",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546/htm",
+    "textFile": "data/ref-text/usc-50-1546.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-50-1546a": {
+    "id": "usc-50-1546a",
+    "kind": "statute",
+    "label": "War Powers Resolution — expedited procedures for joint resolutions and bills (50 U.S.C. 1546a)",
+    "citation": "50 U.S.C. 1546a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546a/htm",
+    "textFile": "data/ref-text/usc-50-1546a.txt",
+    "fetchedAt": "2026-08-31"
   },
   "usc-50-2538a": {
     "id": "usc-50-2538a",

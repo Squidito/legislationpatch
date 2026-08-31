@@ -1,0 +1,2090 @@
+Congress.gov API — Nominations, 119th Congress
+Endpoint: https://api.congress.gov/v3/nomination/119 (limit=250, all pages)
+Fetched: 2026-08-31
+Total nomination records returned by the API: 2077
+Tally of latestAction.text by leading phrase: {
+ "confirmed": 1622,
+ "other": 95,
+ "pending-calendar": 42,
+ "pending-referred": 205,
+ "returned": 113
+}
+
+--- one line per nomination: citation | number | organization | latestAction.text ---
+PN12-33 | 12 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 52 - 43. Record Vote Number: 293.
+PN25-25 | 25 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-46 | 25 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN13-13 | 13 | Department of Education | Received message of withdrawal of nomination from the President.
+PN26-15 | 26 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 52 - 47. Record Vote Number: 390.
+PN26-44 | 26 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-2 | 25 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN129-4 | 129 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 450.
+PN129-16 | 129 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN901-9 | 901 | Department of Veterans Affairs | Committee on Veterans' Affairs. Hearings held. Hearings printed: S.Hrg. 119-442.
+PN931-7 | 931 | Department of Veterans Affairs | Committee on Veterans' Affairs. Hearings held. Hearings printed: S.Hrg. 119-442.
+PN730-2 | 730 | Federal Labor Relations Authority | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-36 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-59 | 730 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-38 | 730 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN787-2 | 787 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN786-10 | 786 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN786-5 | 786 | African Development Foundation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-18 | 730 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-23 | 730 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN730-11 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN806-7 | 806 | Consumer Product Safety Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-3 | 852 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN806-2 | 806 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN850 | 850 | National Archives and Records Administration | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-2 | 852 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN806-9 | 806 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN806-5 | 806 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN792 | 792 | National Endowment for the Humanities | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-1 | 901 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN859-5 | 859 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN859-2 | 859 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN859-1 | 859 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN859-6 | 859 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-6 | 852 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-5 | 852 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-9 | 852 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN852-11 | 852 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN930-1 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-6 | 901 | National Labor Relations Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-3 | 901 | National Transportation Safety Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-7 | 901 | National Labor Relations Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-2 | 901 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-10 | 901 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-5 | 901 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-12 | 901 | Merit Systems Protection Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN901-11 | 901 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN931-3 | 931 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN930-8 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN931-4 | 931 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN931-5 | 931 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN930-6 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN931-2 | 931 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN931-6 | 931 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN930-5 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN933 | 933 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-2 | 937 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN961-1 | 961 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-9 | 937 | Inter-American Foundation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-1 | 937 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-7 | 937 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN961-3 | 961 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN961-2 | 961 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-5 | 937 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN937-8 | 937 | Inter-American Foundation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN970-2 | 970 | Air Force | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN961-9 | 961 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN962-3 | 962 | National Credit Union Administration | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN961-7 | 961 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1012 | 1012 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-3 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN961-4 | 961 | Surface Transportation Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1011 | 1011 | Office of Special Counsel | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN962-1 | 962 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-6 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-10 | 1022 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-25 | 1022 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-7 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-8 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-22 | 1022 | Consumer Product Safety Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-31 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-15 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1022-9 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1072-2 | 1072 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1093-1 | 1093 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1061-2 | 1061 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1093-2 | 1093 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1078 | 1078 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 50 - 49. Record Vote Number: 230.
+PN1022-34 | 1022 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 225.
+PN1065-2 | 1065 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1093-3 | 1093 | The Judiciary | Cloture motion presented in Senate.
+PN1104-2 | 1104 |  | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1174 | 1174 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN1105-2 | 1105 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1104-4 | 1104 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1151-2 | 1151 | Air Force | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1104-3 | 1104 | Army | Confirmed by the Senate by Voice Vote.
+PN1255-6 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-5 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-3 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-2 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1176 | 1176 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN1255-4 | 1255 | Occupational Safety and Health Review Commission | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN1175 | 1175 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN1255-1 | 1255 | Department of Transportation | Placed on Senate Executive Calendar in the Privileged Nomination section with nominee information requested by the Committee on Commerce, Science, and Transportation, pursuant to S.Res. 116, 112th Congress.
+PN1255-9 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-11 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-7 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-15 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-13 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-8 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-14 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-10 | 1255 | Department of Health and Human Services | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN1255-12 | 1255 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-16 | 1255 | Export-Import Bank of the United States | Received in the Senate and referred to the Committee on Banking, Housing, and Urban Affairs.
+PN1257 | 1257 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1255-20 | 1255 | National Mediation Board | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN1255-19 | 1255 | United States International Development Finance Corporation | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1255-17 | 1255 | Export-Import Bank of the United States | Received in the Senate and referred to the Committee on Banking, Housing, and Urban Affairs.
+PN1256 | 1256 | Department of the Interior | Received in the Senate and referred to the Committee on Energy and Natural Resources; when reported by the Committee on Energy and Natural Resources, pursuant to an order of January 7, 2009, to be sequentially referred to the Committee on Homeland Security and Governmental Affairs for 20 calendar days.
+PN1255-18 | 1255 | Federal Communications Commission | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN1258 | 1258 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1260 | 1260 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1259 | 1259 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1261 | 1261 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1262 | 1262 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1263 | 1263 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1264 | 1264 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1265 | 1265 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1266 | 1266 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1267 | 1267 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1268 | 1268 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1269 | 1269 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1270 | 1270 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1271 | 1271 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN681-4 | 681 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN940 | 940 | Space Force | Confirmed by the Senate by Voice Vote.
+PN932 | 932 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 44. Record Vote Number: 220.
+PN1022-24 | 1022 | Department of State | Committee on Foreign Relations. Hearings held.
+PN1022-23 | 1022 | Department of State | Committee on Foreign Relations. Hearings held.
+PN1022-36 | 1022 | Department of State | Committee on Foreign Relations. Hearings held.
+PN1181-7 | 1181 | The Judiciary | Committee on the Judiciary. Hearings held.
+PN1181-2 | 1181 | United States Sentencing Commission | Committee on the Judiciary. Hearings held.
+PN1181-5 | 1181 | United States Sentencing Commission | Committee on the Judiciary. Hearings held.
+PN1181-1 | 1181 | The Judiciary | Committee on the Judiciary. Hearings held.
+PN1201-1 | 1201 | Department of Justice | Committee on the Judiciary. Hearings held.
+PN1247 | 1247 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1248 | 1248 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1249 | 1249 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1250 | 1250 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1251 | 1251 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1252 | 1252 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1253 | 1253 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1254 | 1254 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN415 | 415 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN896 | 896 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN874 | 874 | United States Agency for Global Media | Committee on Foreign Relations. Hearings held.
+PN897-1 | 897 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN899 | 899 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN937-3 | 937 | Department of Health and Human Services | Placed on Senate Executive Calendar. Calendar No. 911. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN898 | 898 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1094 | 1094 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1022-18 | 1022 | Department of State | Committee on Foreign Relations. Hearings held.
+PN1000 | 1000 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1051 | 1051 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1096 | 1096 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1095-2 | 1095 | Air Force | Placed on Senate Executive Calendar. Calendar No. 913.
+PN1095-1 | 1095 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1098-5 | 1098 | International Monetary Fund | Committee on Foreign Relations. Hearings held.
+PN1099 | 1099 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1100 | 1100 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1101 | 1101 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1102 | 1102 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1103 | 1103 | Army | Confirmed by the Senate by Voice Vote.
+PN1104-1 | 1104 | Army | Confirmed by the Senate by Voice Vote.
+PN1105-1 | 1105 | Army | Confirmed by the Senate by Voice Vote.
+PN1107 | 1107 | Navy | Confirmed by the Senate by Voice Vote.
+PN1106 | 1106 | Army | Confirmed by the Senate by Voice Vote.
+PN1109 | 1109 | Navy | Confirmed by the Senate by Voice Vote.
+PN1110 | 1110 | Navy | Confirmed by the Senate by Voice Vote.
+PN1108 | 1108 | Navy | Confirmed by the Senate by Voice Vote.
+PN1111 | 1111 | Navy | Confirmed by the Senate by Voice Vote.
+PN1112 | 1112 | Navy | Confirmed by the Senate by Voice Vote.
+PN1114 | 1114 | Navy | Confirmed by the Senate by Voice Vote.
+PN1113 | 1113 | Navy | Confirmed by the Senate by Voice Vote.
+PN1115 | 1115 | Navy | Confirmed by the Senate by Voice Vote.
+PN1116 | 1116 | Navy | Confirmed by the Senate by Voice Vote.
+PN1118 | 1118 | Navy | Confirmed by the Senate by Voice Vote.
+PN1117 | 1117 | Navy | Confirmed by the Senate by Voice Vote.
+PN1120 | 1120 | Navy | Confirmed by the Senate by Voice Vote.
+PN1119 | 1119 | Navy | Confirmed by the Senate by Voice Vote.
+PN1121 | 1121 | Navy | Confirmed by the Senate by Voice Vote.
+PN1122 | 1122 | Navy | Confirmed by the Senate by Voice Vote.
+PN1124 | 1124 | Navy | Confirmed by the Senate by Voice Vote.
+PN1125 | 1125 | Navy | Confirmed by the Senate by Voice Vote.
+PN1123 | 1123 | Navy | Confirmed by the Senate by Voice Vote.
+PN1126 | 1126 | Navy | Confirmed by the Senate by Voice Vote.
+PN1133 | 1133 | Army | Confirmed by the Senate by Voice Vote.
+PN1130 | 1130 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1129 | 1129 | Department of Labor | Placed on Senate Executive Calendar. Calendar No. 912. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN1131 | 1131 | Army | Confirmed by the Senate by Voice Vote.
+PN1136 | 1136 | Army | Confirmed by the Senate by Voice Vote.
+PN1138 | 1138 | Army | Confirmed by the Senate by Voice Vote.
+PN1139 | 1139 | Army | Confirmed by the Senate by Voice Vote.
+PN1140 | 1140 | Army | Confirmed by the Senate by Voice Vote.
+PN1134 | 1134 | Army | Confirmed by the Senate by Voice Vote.
+PN1137 | 1137 | Army | Confirmed by the Senate by Voice Vote.
+PN1143 | 1143 | Navy | Confirmed by the Senate by Voice Vote.
+PN1145 | 1145 | Navy | Confirmed by the Senate by Voice Vote.
+PN1144 | 1144 | Navy | Confirmed by the Senate by Voice Vote.
+PN1141 | 1141 | Navy | Confirmed by the Senate by Voice Vote.
+PN1147 | 1147 | Space Force | Confirmed by the Senate by Voice Vote.
+PN1146 | 1146 | Navy | Confirmed by the Senate by Voice Vote.
+PN1149 | 1149 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1150 | 1150 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1151-1 | 1151 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1154 | 1154 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1155 | 1155 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1152 | 1152 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1156 | 1156 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1157 | 1157 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1158 | 1158 | Army | Confirmed by the Senate by Voice Vote.
+PN1159 | 1159 | Army | Confirmed by the Senate by Voice Vote.
+PN1160 | 1160 | Army | Confirmed by the Senate by Voice Vote.
+PN1161 | 1161 | Army | Confirmed by the Senate by Voice Vote.
+PN1162 | 1162 | Army | Confirmed by the Senate by Voice Vote.
+PN1163 | 1163 | Navy | Confirmed by the Senate by Voice Vote.
+PN1164 | 1164 | Navy | Confirmed by the Senate by Voice Vote.
+PN1165 | 1165 | Navy | Confirmed by the Senate by Voice Vote.
+PN1169 | 1169 | Navy | Confirmed by the Senate by Voice Vote.
+PN1170 | 1170 | Navy | Confirmed by the Senate by Voice Vote.
+PN1166 | 1166 | Navy | Confirmed by the Senate by Voice Vote.
+PN1167 | 1167 | Navy | Confirmed by the Senate by Voice Vote.
+PN1168 | 1168 | Navy | Confirmed by the Senate by Voice Vote.
+PN1173 | 1173 | Space Force | Confirmed by the Senate by Voice Vote.
+PN1171 | 1171 | Navy | Confirmed by the Senate by Voice Vote.
+PN1172 | 1172 | Navy | Confirmed by the Senate by Voice Vote.
+PN1182 | 1182 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1183 | 1183 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1184 | 1184 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1186 | 1186 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1185 | 1185 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN1208 | 1208 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1212 | 1212 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1213 | 1213 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1209 | 1209 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1211 | 1211 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1210 | 1210 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1215 | 1215 | Space Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1217 | 1217 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1214 | 1214 | Space Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1219 | 1219 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1217 | 1217 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1216 | 1216 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1224 | 1224 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1222 | 1222 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1220 | 1220 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1221 | 1221 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1223 | 1223 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1228 | 1228 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1229 | 1229 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1225 | 1225 | Marine Corps | Received in the Senate and referred to the Committee on Armed Services.
+PN1227 | 1227 | Marine Corps | Received in the Senate and referred to the Committee on Armed Services.
+PN1226 | 1226 | Marine Corps | Received in the Senate and referred to the Committee on Armed Services.
+PN1230 | 1230 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1233 | 1233 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1235 | 1235 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1234 | 1234 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1231 | 1231 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1236 | 1236 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1232 | 1232 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1239 | 1239 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1241 | 1241 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1238 | 1238 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1237 | 1237 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1240 | 1240 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1242 | 1242 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1243 | 1243 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1245 | 1245 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1244 | 1244 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1246 | 1246 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1092 | 1092 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 211.
+PN730-20 | 730 | Department of Housing and Urban Development | Committee on Banking, Housing, and Urban Affairs. Hearings held.
+PN937-10 | 937 | Department of Commerce | Committee on Banking, Housing, and Urban Affairs. Hearings held.
+PN999-5 | 999 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 49 - 44. Record Vote Number: 209.
+PN999-2 | 999 | The Judiciary | Placed on Senate Executive Calendar. Calendar No. 901.
+PN999-6 | 999 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 48 - 47. Record Vote Number: 208.
+PN1079 | 1079 | Bureau of Consumer Financial Protection | Committee on Banking, Housing, and Urban Affairs. Hearings held.
+PN1022-5 | 1022 | Department of Health and Human Services | Received in the Senate and referred to the Committee on Finance.
+PN712-8 | 712 | Air Force | Placed on Senate Executive Calendar. Calendar No. 876. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN852-4 | 852 | United States Postal Service | Placed on Senate Executive Calendar. Calendar No. 839. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN852-1 | 852 | United States Postal Service | Placed on Senate Executive Calendar. Calendar No. 838. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN938-1 | 938 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 49 - 46. Record Vote Number: 202.
+PN961-5 | 961 | Department of State | Placed on Senate Executive Calendar. Calendar No. 851. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN999-3 | 999 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 62 - 36. Record Vote Number: 204.
+PN961-6 | 961 | Department of State | Placed on Senate Executive Calendar. Calendar No. 852. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN1142 | 1142 | Navy | Placed on Senate Executive Calendar. Calendar No. 893. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN851-8 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 48. Record Vote Number: 201.
+PN1201-2 | 1201 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1201-4 | 1201 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1201-5 | 1201 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1201-3 | 1201 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1201-6 | 1201 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1202 | 1202 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN1203 | 1203 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1201-7 | 1201 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1205 | 1205 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1204 | 1204 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1206 | 1206 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1207 | 1207 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1187 | 1187 | Department of Homeland Security | Received in the Senate and referred to the Committee on Homeland Security and Governmental Affairs.
+PN1188 | 1188 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1189 | 1189 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1194 | 1194 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1190 | 1190 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1191 | 1191 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1193 | 1193 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1192 | 1192 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1196 | 1196 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1195 | 1195 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1197 | 1197 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1198 | 1198 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1199 | 1199 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN1200 | 1200 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN701 | 701 | Air Force | Confirmed by the Senate by Voice Vote.
+PN593 | 593 | Army | Confirmed by the Senate by Voice Vote.
+PN770-11 | 770 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN706 | 706 | Army | Confirmed by the Senate by Voice Vote.
+PN803 | 803 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN786-1 | 786 | United States International Trade Commission | Confirmed by the Senate by Voice Vote.
+PN786-3 | 786 | United States International Trade Commission | Confirmed by the Senate by Voice Vote.
+PN939 | 939 | Air Force | Confirmed by the Senate by Voice Vote.
+PN969-2 | 969 | Air Force | Confirmed by the Senate by Voice Vote.
+PN974 | 974 | Army | Confirmed by the Senate by Voice Vote.
+PN980 | 980 | Navy | Confirmed by the Senate by Voice Vote.
+PN981 | 981 | Navy | Confirmed by the Senate by Voice Vote.
+PN982 | 982 | Navy | Confirmed by the Senate by Voice Vote.
+PN983 | 983 | Navy | Confirmed by the Senate by Voice Vote.
+PN984 | 984 | Navy | Confirmed by the Senate by Voice Vote.
+PN985 | 985 | Navy | Confirmed by the Senate by Voice Vote.
+PN986 | 986 | Navy | Confirmed by the Senate by Voice Vote.
+PN987 | 987 | Navy | Confirmed by the Senate by Voice Vote.
+PN988 | 988 | Navy | Confirmed by the Senate by Voice Vote.
+PN989 | 989 | Navy | Confirmed by the Senate by Voice Vote.
+PN990-1 | 990 | Navy | Confirmed by the Senate by Voice Vote.
+PN990-2 | 990 | Navy | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN991 | 991 | Navy | Confirmed by the Senate by Voice Vote.
+PN992 | 992 | Navy | Confirmed by the Senate by Voice Vote.
+PN993 | 993 | Navy | Confirmed by the Senate by Voice Vote.
+PN995 | 995 | Navy | Confirmed by the Senate by Voice Vote.
+PN994 | 994 | Navy | Confirmed by the Senate by Voice Vote.
+PN996 | 996 | Navy | Confirmed by the Senate by Voice Vote.
+PN999-1 | 999 | The Judiciary | Placed on Senate Executive Calendar. Calendar No. 828.
+PN998 | 998 | Navy | Confirmed by the Senate by Voice Vote.
+PN997 | 997 | Navy | Confirmed by the Senate by Voice Vote.
+PN999-4 | 999 | The Judiciary | Placed on Senate Executive Calendar. Calendar No. 830.
+PN1001 | 1001 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1002 | 1002 | Army | Confirmed by the Senate by Voice Vote.
+PN1003-1 | 1003 | Army | Confirmed by the Senate by Voice Vote.
+PN1004 | 1004 | Navy | Confirmed by the Senate by Voice Vote.
+PN1006 | 1006 | Navy | Confirmed by the Senate by Voice Vote.
+PN1007 | 1007 | Navy | Confirmed by the Senate by Voice Vote.
+PN1008 | 1008 | Navy | Confirmed by the Senate by Voice Vote.
+PN1009 | 1009 | Navy | Confirmed by the Senate by Voice Vote.
+PN1005 | 1005 | Navy | Confirmed by the Senate by Voice Vote.
+PN1013 | 1013 | Army | Confirmed by the Senate by Voice Vote.
+PN1010 | 1010 | Navy | Confirmed by the Senate by Voice Vote.
+PN1014 | 1014 | Army | Confirmed by the Senate by Voice Vote.
+PN1015-1 | 1015 | Army | Confirmed by the Senate by Voice Vote.
+PN1015-2 | 1015 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1016 | 1016 | Army | Confirmed by the Senate by Voice Vote.
+PN1017-1 | 1017 | Army | Confirmed by the Senate by Voice Vote.
+PN1018 | 1018 | Navy | Confirmed by the Senate by Voice Vote.
+PN1017-2 | 1017 | Army | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1020 | 1020 | Navy | Confirmed by the Senate by Voice Vote.
+PN1019 | 1019 | Navy | Confirmed by the Senate by Voice Vote.
+PN1022-30 | 1022 | United States International Trade Commission | Confirmed by the Senate by Voice Vote.
+PN1022-26 | 1022 | United States International Trade Commission | Confirmed by the Senate by Voice Vote.
+PN1022-35 | 1022 | United States International Trade Commission | Confirmed by the Senate by Voice Vote.
+PN1023 | 1023 | Army | Confirmed by the Senate by Voice Vote.
+PN1024 | 1024 | Army | Confirmed by the Senate by Voice Vote.
+PN1025 | 1025 | Army | Confirmed by the Senate by Voice Vote.
+PN1029-1 | 1029 | Navy | Confirmed by the Senate by Voice Vote.
+PN1026 | 1026 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN1027 | 1027 | Space Force | Confirmed by the Senate by Voice Vote.
+PN1029-2 | 1029 | Navy | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN1031 | 1031 | Navy | Confirmed by the Senate by Voice Vote.
+PN1030 | 1030 | Navy | Confirmed by the Senate by Voice Vote.
+PN1032 | 1032 | Navy | Confirmed by the Senate by Voice Vote.
+PN1034 | 1034 | Navy | Confirmed by the Senate by Voice Vote.
+PN1033 | 1033 | Navy | Confirmed by the Senate by Voice Vote.
+PN1036 | 1036 | Navy | Confirmed by the Senate by Voice Vote.
+PN1037 | 1037 | Navy | Confirmed by the Senate by Voice Vote.
+PN1038 | 1038 | Navy | Confirmed by the Senate by Voice Vote.
+PN1035 | 1035 | Navy | Confirmed by the Senate by Voice Vote.
+PN1041 | 1041 | Navy | Confirmed by the Senate by Voice Vote.
+PN1042 | 1042 | Navy | Confirmed by the Senate by Voice Vote.
+PN1039 | 1039 | Navy | Confirmed by the Senate by Voice Vote.
+PN1040 | 1040 | Navy | Confirmed by the Senate by Voice Vote.
+PN1043 | 1043 | Navy | Confirmed by the Senate by Voice Vote.
+PN1044 | 1044 | Navy | Confirmed by the Senate by Voice Vote.
+PN1048 | 1048 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1049 | 1049 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1047 | 1047 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1046 | 1046 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1045 | 1045 | Navy | Confirmed by the Senate by Voice Vote.
+PN1053 | 1053 | Navy | Confirmed by the Senate by Voice Vote.
+PN1054 | 1054 | Navy | Confirmed by the Senate by Voice Vote.
+PN1056 | 1056 | Navy | Confirmed by the Senate by Voice Vote.
+PN1050 | 1050 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1052 | 1052 | Army | Confirmed by the Senate by Voice Vote.
+PN1055 | 1055 | Navy | Confirmed by the Senate by Voice Vote.
+PN1060 | 1060 | Army | Confirmed by the Senate by Voice Vote.
+PN1057 | 1057 | Navy | Confirmed by the Senate by Voice Vote.
+PN1059 | 1059 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1058 | 1058 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1061-1 | 1061 | Army | Confirmed by the Senate by Voice Vote.
+PN1063 | 1063 | Army | Confirmed by the Senate by Voice Vote.
+PN1062 | 1062 | Army | Confirmed by the Senate by Voice Vote.
+PN1064 | 1064 | Army | Confirmed by the Senate by Voice Vote.
+PN1065-1 | 1065 | Army | Confirmed by the Senate by Voice Vote.
+PN1066 | 1066 | Army | Confirmed by the Senate by Voice Vote.
+PN1067 | 1067 | Army | Confirmed by the Senate by Voice Vote.
+PN1069 | 1069 | Army | Confirmed by the Senate by Voice Vote.
+PN1068 | 1068 | Army | Confirmed by the Senate by Voice Vote.
+PN1070 | 1070 | Army | Confirmed by the Senate by Voice Vote.
+PN1071 | 1071 | Army | Confirmed by the Senate by Voice Vote.
+PN1072-1 | 1072 | Army | Confirmed by the Senate by Voice Vote.
+PN1073 | 1073 | Navy | Confirmed by the Senate by Voice Vote.
+PN1074 | 1074 | Navy | Confirmed by the Senate by Voice Vote.
+PN1075 | 1075 | Navy | Confirmed by the Senate by Voice Vote.
+PN1076 | 1076 | Space Force | Confirmed by the Senate by Voice Vote.
+PN1080 | 1080 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1081 | 1081 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1082 | 1082 | Air Force | Confirmed by the Senate by Voice Vote.
+PN1083 | 1083 | Navy | Confirmed by the Senate by Voice Vote.
+PN1084 | 1084 | Navy | Confirmed by the Senate by Voice Vote.
+PN1085 | 1085 | Navy | Confirmed by the Senate by Voice Vote.
+PN1086 | 1086 | Navy | Confirmed by the Senate by Voice Vote.
+PN1087 | 1087 | Navy | Confirmed by the Senate by Voice Vote.
+PN1088 | 1088 | Navy | Confirmed by the Senate by Voice Vote.
+PN1089 | 1089 | Navy | Confirmed by the Senate by Voice Vote.
+PN1090 | 1090 | Navy | Confirmed by the Senate by Voice Vote.
+PN930-4 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 197.
+PN622-3 | 622 |  | Placed on Senate Executive Calendar. Calendar No. 767. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN622-4 | 622 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN622-6 | 622 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN622-7 | 622 | Coast Guard | Placed on Senate Executive Calendar. Calendar No. 819. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN658-1 | 658 |  | Placed on Senate Executive Calendar. Calendar No. 768. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN658-3 | 658 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN658-4 | 658 | Coast Guard | Placed on Senate Executive Calendar. Calendar No. 818. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN849 | 849 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN859-4 | 859 | Department of State | Received message of withdrawal of nomination from the President.
+PN908 | 908 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN876 | 876 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN848 | 848 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN938-2 | 938 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 194.
+PN937-6 | 937 | Department of Defense | Committee on Armed Services. Hearings held.
+PN909 | 909 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN1003-2 | 1003 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1022-29 | 1022 | United States International Trade Commission | Committee on Finance. Ordered to be reported favorably.
+PN1127 | 1127 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN1179 | 1179 | Department of Health and Human Services | Received in the Senate and referred to the Committee on Finance.
+PN1180-1 | 1180 | General Services Administration | Received in the Senate and referred to the Committee on Homeland Security and Governmental Affairs.
+PN1180-2 | 1180 | Export-Import Bank of the United States | Received in the Senate and referred to the Committee on Banking, Housing, and Urban Affairs.
+PN1180-3 | 1180 | Department of Health and Human Services | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN1181-3 | 1181 | The Judiciary | Received in the Senate and referred to the Committee on Veterans' Affairs.
+PN1181-4 | 1181 | The Judiciary | Received in the Senate and referred to the Committee on Veterans' Affairs.
+PN1181-6 | 1181 | The Judiciary | Received in the Senate and referred to the Committee on Veterans' Affairs.
+PN22-24 | 22 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-33 | 25 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-4 | 55 | Federal Motor Carrier Safety Administration | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN930-3 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 46 - 44. Record Vote Number: 193.
+PN937-4 | 937 | Department of Housing and Urban Development | Committee on Banking, Housing, and Urban Affairs. Hearings held.
+PN1022-27 | 1022 | Department of State | Committee on Foreign Relations. Hearings held.
+PN1128 | 1128 | United States Tax Court | Received in the Senate and referred to the Committee on Finance.
+PN1132 | 1132 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1135 | 1135 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN1148 | 1148 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN1153 | 1153 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN55-38 | 55 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN730-8 | 730 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN26-36 | 26 | Department of Transportation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN786-8 | 786 | Federal Energy Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN246-17 | 246 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN806-3 | 806 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN247 | 247 | Navy | Confirmed by the Senate by Voice Vote.
+PN11-10 | 11 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 99.
+PN271 | 271 | Air Force | Confirmed by the Senate by Voice Vote.
+PN858 | 858 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 54 - 45. Record Vote Number: 63.
+PN929 | 929 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN791-1 | 791 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN930-2 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 44. Record Vote Number: 188.
+PN845 | 845 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN930-7 | 930 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 186.
+PN1077 | 1077 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN859-3 | 859 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 67 - 30. Record Vote Number: 183.
+PN1098-1 | 1098 | Farm Credit Administration | Received in the Senate and referred to the Committee on Agriculture, Nutrition, and Forestry.
+PN1097 | 1097 | Office of Government Ethics | Received in the Senate and referred to the Committee on Homeland Security and Governmental Affairs.
+PN1098-3 | 1098 | Department of the Treasury | Received in the Senate and referred to the Committee on Finance.
+PN1098-4 | 1098 | Farm Credit Administration | Received in the Senate and referred to the Committee on Agriculture, Nutrition, and Forestry.
+PN1098-2 | 1098 | Federal Mediation and Conciliation Services | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN771-3 | 771 | Army | Confirmed by the Senate by Voice Vote.
+PN730-33 | 730 | European Bank for Reconstruction and Development | Confirmed by the Senate by Yea-Nay Vote. 48 - 39. Record Vote Number: 181.
+PN658-2 | 658 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN791-2 | 791 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN804 | 804 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN844 | 844 | Navy | Confirmed by the Senate by Voice Vote.
+PN843 | 843 | Navy | Confirmed by the Senate by Voice Vote.
+PN842 | 842 | Navy | Confirmed by the Senate by Voice Vote.
+PN903 | 903 | Army | Confirmed by the Senate by Voice Vote.
+PN883 | 883 | Army | Confirmed by the Senate by Voice Vote.
+PN919 | 919 | Army | Confirmed by the Senate by Voice Vote.
+PN941 | 941 | Army | Confirmed by the Senate by Voice Vote.
+PN943 | 943 | Army | Confirmed by the Senate by Voice Vote.
+PN944 | 944 | Army | Confirmed by the Senate by Voice Vote.
+PN942 | 942 | Army | Confirmed by the Senate by Voice Vote.
+PN946 | 946 | Army | Confirmed by the Senate by Voice Vote.
+PN945 | 945 | Army | Confirmed by the Senate by Voice Vote.
+PN953 | 953 | Navy | Confirmed by the Senate by Voice Vote.
+PN948 | 948 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN954 | 954 | Navy | Confirmed by the Senate by Voice Vote.
+PN947 | 947 | Army | Confirmed by the Senate by Voice Vote.
+PN951 | 951 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN949 | 949 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN950 | 950 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN952 | 952 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN957-1 | 957 | Air Force | Confirmed by the Senate by Voice Vote.
+PN957-2 | 957 | Army | Confirmed by the Senate by Voice Vote.
+PN958 | 958 | Army | Confirmed by the Senate by Voice Vote.
+PN959 | 959 | Navy | Confirmed by the Senate by Voice Vote.
+PN955 | 955 | Navy | Confirmed by the Senate by Voice Vote.
+PN957-3 | 957 | Navy | Confirmed by the Senate by Voice Vote.
+PN956 | 956 | Navy | Confirmed by the Senate by Voice Vote.
+PN968 | 968 | Air Force | Confirmed by the Senate by Voice Vote.
+PN969-1 | 969 | Air Force | Confirmed by the Senate by Voice Vote.
+PN970-1 | 970 | Air Force | Confirmed by the Senate by Voice Vote.
+PN971 | 971 | Air Force | Confirmed by the Senate by Voice Vote.
+PN972 | 972 | Air Force | Confirmed by the Senate by Voice Vote.
+PN979 | 979 | Army | Confirmed by the Senate by Voice Vote.
+PN973 | 973 | Air Force | Confirmed by the Senate by Voice Vote.
+PN901-8 | 901 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 55 - 39. Record Vote Number: 177.
+PN851-7 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 48 - 43. Record Vote Number: 172.
+PN901-4 | 901 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 49 - 44. Record Vote Number: 170.
+PN730-15 | 730 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN622-2 | 622 |  | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN622-1 | 622 |  | Placed on Senate Executive Calendar. Calendar No. 713. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN622-5 | 622 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN716 | 716 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN851-5 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 44. Record Vote Number: 168.
+PN769-1 | 769 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN851-4 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 166.
+PN897-2 | 897 | Foreign Service | Received in the Senate and referred to the Committee on Foreign Relations.
+PN771-2 | 771 |  | Received in the Senate and referred to the Committee on Armed Services.
+PN851-2 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 134.
+PN771-4 | 771 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN851-3 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 132.
+PN1022-2 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-1 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN12-42 | 12 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 53 - 46. Record Vote Number: 119.
+PN730-24 | 730 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN11-16 | 11 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 52 - 48. Record Vote Number: 50.
+PN1022-11 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-13 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-12 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-4 | 1022 | Department of State | Received in the Senate and referred sequentially to the Committee on Foreign Relations; when reported by the Committee on Foreign Relations, pursuant to an order of January 7, 2009, to be squentially referred to the Committee on Homeland Security and Governmental Affairs for 20 calendar days.
+PN1022-16 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-14 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-17 | 1022 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1022-21 | 1022 | Department of Veterans Affairs | Received in the Senate and referred to the Committee on Veterans' Affairs.
+PN1022-20 | 1022 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1022-19 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-32 | 1022 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1022-28 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-38 | 1022 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1022-33 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-39 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-40 | 1022 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN1022-37 | 1022 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN1028 | 1028 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN499-8 | 499 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN12-28 | 12 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 56 - 44. Record Vote Number: 143.
+PN12-2 | 12 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 141.
+PN851-6 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 47. Record Vote Number: 130.
+PN499-11 | 499 | Central Intelligence Agency | Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 2.
+PN851-1 | 851 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 38. Record Vote Number: 127.
+PN907-4 | 907 | Navy | Confirmed by the Senate by Voice Vote.
+PN726-1 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-3 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-7 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-8 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-5 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-10 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-1 | 730 | African Development Bank | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-3 | 730 | National Aeronautics and Space Administration | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-14 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN726-13 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-21 | 730 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-9 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-26 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-22 | 730 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-25 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-12 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-37 | 730 | Surface Transportation Board | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-27 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-29 | 730 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-28 | 730 | National Transportation Safety Board | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-31 | 730 | Federal Maritime Commission | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-48 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-41 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-43 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-40 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-44 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-50 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-57 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-52 | 730 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-54 | 730 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-51 | 730 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-56 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-61 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-60 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-62 | 730 | Asian Development Bank | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-58 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-67 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-66 | 730 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN806-1 | 806 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN786-11 | 786 | Nuclear Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN786-7 | 786 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN786-4 | 786 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN730-68 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN806-4 | 806 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN806-6 | 806 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN852-7 | 852 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 46 - 43. Record Vote Number: 125.
+PN855-1 | 855 | Federal Reserve System | Confirmed by the Senate by Yea-Nay Vote. 54 - 45. Record Vote Number: 120.
+PN975 | 975 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN801 | 801 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN855-2 | 855 | Federal Reserve System | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 116.
+PN877 | 877 | Air Force | Confirmed by the Senate by Voice Vote.
+PN880 | 880 | Air Force | Confirmed by the Senate by Voice Vote.
+PN878 | 878 | Air Force | Confirmed by the Senate by Voice Vote.
+PN879 | 879 | Air Force | Confirmed by the Senate by Voice Vote.
+PN881 | 881 | Army | Confirmed by the Senate by Voice Vote.
+PN882 | 882 | Army | Confirmed by the Senate by Voice Vote.
+PN884 | 884 | Army | Confirmed by the Senate by Voice Vote.
+PN885 | 885 | Navy | Confirmed by the Senate by Voice Vote.
+PN889 | 889 | Navy | Confirmed by the Senate by Voice Vote.
+PN891 | 891 | Navy | Confirmed by the Senate by Voice Vote.
+PN887 | 887 | Navy | Confirmed by the Senate by Voice Vote.
+PN888 | 888 | Navy | Confirmed by the Senate by Voice Vote.
+PN890 | 890 | Navy | Confirmed by the Senate by Voice Vote.
+PN886 | 886 | Navy | Confirmed by the Senate by Voice Vote.
+PN892 | 892 | Army | Confirmed by the Senate by Voice Vote.
+PN907-1 | 907 |  | Placed on Senate Executive Calendar. Calendar No. 724. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN904 | 904 | Army | Confirmed by the Senate by Voice Vote.
+PN905 | 905 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN906-1 | 906 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN906-2 | 906 | Army | Confirmed by the Senate by Voice Vote.
+PN907-2 | 907 | Air Force | Confirmed by the Senate by Voice Vote.
+PN907-3 | 907 | Navy | Confirmed by the Senate by Voice Vote.
+PN910 | 910 | Air Force | Confirmed by the Senate by Voice Vote.
+PN912 | 912 | Army | Confirmed by the Senate by Voice Vote.
+PN911 | 911 | Air Force | Confirmed by the Senate by Voice Vote.
+PN915 | 915 | Army | Confirmed by the Senate by Voice Vote.
+PN914 | 914 | Army | Confirmed by the Senate by Voice Vote.
+PN913 | 913 | Army | Confirmed by the Senate by Voice Vote.
+PN923 | 923 | Army | Confirmed by the Senate by Voice Vote.
+PN922 | 922 | Army | Confirmed by the Senate by Voice Vote.
+PN921 | 921 | Army | Confirmed by the Senate by Voice Vote.
+PN918 | 918 | Army | Confirmed by the Senate by Voice Vote.
+PN916 | 916 | Army | Confirmed by the Senate by Voice Vote.
+PN926 | 926 | Navy | Confirmed by the Senate by Voice Vote.
+PN917 | 917 | Army | Confirmed by the Senate by Voice Vote.
+PN920 | 920 | Army | Confirmed by the Senate by Voice Vote.
+PN924 | 924 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN935 | 935 | Army | Confirmed by the Senate by Voice Vote.
+PN928 | 928 | Navy | Confirmed by the Senate by Voice Vote.
+PN934 | 934 | Air Force | Confirmed by the Senate by Voice Vote.
+PN927 | 927 | Navy | Confirmed by the Senate by Voice Vote.
+PN976 | 976 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN977 | 977 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN978 | 978 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN445-3 | 445 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN373 | 373 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 52 - 48. Record Vote Number: 3.
+PN520-4 | 520 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 57 - 32. Record Vote Number: 634.
+PN520-1 | 520 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 625.
+PN520-2 | 520 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 60 - 39. Record Vote Number: 627.
+PN520-3 | 520 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 57 - 41. Record Vote Number: 629.
+PN615-2 | 615 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 40. Record Vote Number: 6.
+PN615-1 | 615 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 49 - 46. Record Vote Number: 638.
+PN730-47 | 730 | Public Health Service | Received message of withdrawal of nomination from the President.
+PN520-5 | 520 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 588.
+PN961-8 | 961 | National Mediation Board | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN963 | 963 | Public Health Service | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN962-2 | 962 | Department of Education | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions; when reported by the Committee on Health, Education, Labor, and Pensions, pursuant to an order of January 7, 2009, to be sequentially referred to the Committee on Homeland Security and Governmental Affairs for 20 calendar days.
+PN964 | 964 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN965 | 965 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN966 | 966 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN967 | 967 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN12-31 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 54 - 43. Record Vote Number: 254.
+PN12-1 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 50 - 35. Record Vote Number: 1.
+PN12-30 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 74 - 25. Record Vote Number: 246.
+PN22-7 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 61 - 35. Record Vote Number: 425.
+PN22-15 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 434.
+PN22-16 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 72 - 26. Record Vote Number: 287.
+PN17 | 17 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 283.
+PN12-45 | 12 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN13-6 | 13 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 53 - 41. Record Vote Number: 299.
+PN22-17 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 50 - 47. Record Vote Number: 441.
+PN22-21 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-23 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-20 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-25 | 22 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 52 - 41. Record Vote Number: 426.
+PN25-12 | 25 | Department of Energy | Received message of withdrawal of nomination from the President.
+PN25-30 | 25 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-40 | 25 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-48 | 25 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-53 | 25 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 49 - 47. Record Vote Number: 432.
+PN26-7 | 26 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-8 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-50 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 61 - 35. Record Vote Number: 323.
+PN27 | 27 | Air Force | Confirmed by the Senate by Yea-Nay Vote. 60 - 25. Record Vote Number: 213.
+PN26-38 | 26 | Department of Homeland Security | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN26-48 | 26 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-17 | 55 | Office of Surface Mining Reclamation and Enforcement | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-8 | 60 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN28 | 28 | Air Force | Confirmed by the Senate by Yea-Nay Vote. 59 - 26. Record Vote Number: 211.
+PN55-7 | 55 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-5 | 141 | Federal Labor Relations Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-2 | 141 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-25 | 141 | Small Business Administration | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-15 | 246 | Federal Energy Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-19 | 141 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN150-5 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN246-11 | 246 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-12 | 416 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN466-9 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-7 | 416 | Federal Energy Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN447 | 447 | General Services Administration | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-4 | 445 | Department of Transportation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN466-8 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN466-7 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN499-7 | 499 | Department of Transportation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-10 | 499 | Metropolitan Washington Airports Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN518-3 | 518 | Surface Transportation Board | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN518-1 | 518 | National Transportation Safety Board | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN518-5 | 518 | Surface Transportation Board | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN730-14 | 730 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 59 - 39. Record Vote Number: 109.
+PN12-16 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 59 - 40. Record Vote Number: 126.
+PN26-16 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 43. Record Vote Number: 295.
+PN12-12 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 66 - 28. Record Vote Number: 90.
+PN25-27 | 25 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 52 - 44. Record Vote Number: 452.
+PN26-27 | 26 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 424.
+PN466-4 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 47. Record Vote Number: 561.
+PN466-3 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 58 - 40. Record Vote Number: 589.
+PN466-1 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 636.
+PN466-5 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 640.
+PN466-2 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 596.
+PN466-6 | 466 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 66 - 32. Record Vote Number: 577.
+PN711 | 711 | Army | Confirmed by the Senate by Yea-Nay Vote. 71 - 29. Record Vote Number: 49.
+PN925 | 925 | Navy | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN730-10 | 730 | Department of Labor | Received message of withdrawal of nomination from the President.
+PN12-3 | 12 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 145.
+PN806-8 | 806 | Department of the Interior | Received message of withdrawal of nomination from the President.
+PN730-53 | 730 | Department of Homeland Security | Received message of withdrawal of nomination from the President.
+PN730-16 | 730 | Equal Employment Opportunity Commission | Received message of withdrawal of nomination from the President.
+PN595 | 595 | Army | Confirmed by the Senate by Voice Vote.
+PN681-2 | 681 |  | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN681-3 | 681 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN686 | 686 | Air Force | Confirmed by the Senate by Voice Vote.
+PN688 | 688 | Army | Confirmed by the Senate by Voice Vote.
+PN689 | 689 | Army | Confirmed by the Senate by Voice Vote.
+PN690 | 690 | Army | Confirmed by the Senate by Voice Vote.
+PN699 | 699 | Air Force | Confirmed by the Senate by Voice Vote.
+PN704 | 704 | Army | Confirmed by the Senate by Voice Vote.
+PN691 | 691 | Army | Confirmed by the Senate by Voice Vote.
+PN709-2 | 709 |  | Placed on Senate Executive Calendar. Calendar No. 645.
+PN709-3 | 709 | Army | Confirmed by the Senate by Voice Vote.
+PN709-4 | 709 | Army | Placed on Senate Executive Calendar. Calendar No. 717.
+PN714 | 714 | Navy | Confirmed by the Senate by Voice Vote.
+PN770-9 | 770 |  | Placed on Senate Executive Calendar. Calendar No. 706. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN770-10 | 770 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN793-2 | 793 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN847 | 847 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN853 | 853 | Army | Confirmed by the Senate by Voice Vote.
+PN854 | 854 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN860 | 860 | Air Force | Confirmed by the Senate by Voice Vote.
+PN856 | 856 | Army | Confirmed by the Senate by Voice Vote.
+PN857 | 857 | Army | Confirmed by the Senate by Voice Vote.
+PN864 | 864 | Air Force | Confirmed by the Senate by Voice Vote.
+PN862 | 862 | Air Force | Confirmed by the Senate by Voice Vote.
+PN861 | 861 | Air Force | Confirmed by the Senate by Voice Vote.
+PN863 | 863 | Air Force | Confirmed by the Senate by Voice Vote.
+PN865 | 865 | Air Force | Confirmed by the Senate by Voice Vote.
+PN866 | 866 | Army | Confirmed by the Senate by Voice Vote.
+PN867 | 867 | Army | Confirmed by the Senate by Voice Vote.
+PN868 | 868 | Army | Confirmed by the Senate by Voice Vote.
+PN869 | 869 | Army | Confirmed by the Senate by Voice Vote.
+PN870 | 870 | Army | Confirmed by the Senate by Voice Vote.
+PN893 | 893 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN872 | 872 | Navy | Confirmed by the Senate by Voice Vote.
+PN875 | 875 | Army | Confirmed by the Senate by Voice Vote.
+PN871 | 871 | Army | Confirmed by the Senate by Voice Vote.
+PN894 | 894 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN895 | 895 | Foreign Service | Confirmed by the Senate by Voice Vote.
+PN931-1 | 931 | Peace Corps | Received in the Senate and referred to the Committee on Foreign Relations.
+PN787-1 | 787 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 47 - 46. Record Vote Number: 86.
+PN787-5 | 787 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 78.
+PN787-3 | 787 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 46. Record Vote Number: 76.
+PN786-2 | 786 | Department of State | Received message of withdrawal of nomination from the President.
+PN902 | 902 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN12-9 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 54 - 45. Record Vote Number: 193.
+PN26-45 | 26 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-25 | 26 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 53 - 44. Record Vote Number: 463.
+PN141-17 | 141 | Office of the Director of National Intelligence | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-37 | 141 | Central Intelligence Agency | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN786-9 | 786 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 47. Record Vote Number: 65.
+PN12-19 | 12 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN12-17 | 12 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN12-20 | 12 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 54 - 43. Record Vote Number: 375.
+PN12-23 | 12 | National Aeronautics and Space Administration | Received message of withdrawal of nomination from the President.
+PN22-6 | 22 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN22-8 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-13 | 25 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN22-27 | 22 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN13-4 | 13 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 52 - 44. Record Vote Number: 248.
+PN24-7 | 24 | Federal Communications Commission | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 320.
+PN24-6 | 24 | Federal Communications Commission | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 317.
+PN13-10 | 13 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 54 - 40. Record Vote Number: 250.
+PN12-36 | 12 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 62 - 30. Record Vote Number: 136.
+PN22-1 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-2 | 22 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-5 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-4 | 22 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-9 | 22 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-26 | 26 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN624-1 | 624 | Commodity Futures Trading Commission | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN26-19 | 26 | Amtrak Board of Directors | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-21 | 26 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN624-2 | 624 | Commodity Futures Trading Commission | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN25-23 | 25 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN150-1 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 49 - 47. Record Vote Number: 430.
+PN150-2 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 420.
+PN150-4 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 505.
+PN150-6 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 47. Record Vote Number: 421.
+PN345-3 | 345 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN150-3 | 150 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 46 - 42. Record Vote Number: 384.
+PN787-4 | 787 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 56.
+PN730-13 | 730 | Department of State | Received message of withdrawal of nomination from the President.
+PN730-32 | 730 | Consumer Product Safety Commission | Received message of withdrawal of nomination from the President.
+PN846 | 846 | Coast Guard | Placed on Senate Executive Calendar. Calendar No. DESK. Subject to nominee's commitment to respond to requests to appear and testify before any duly constituted committee of the Senate.
+PN769-2 | 769 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN680 | 680 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN681-1 | 681 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN712-7 | 712 | Air Force | Confirmed by the Senate by Voice Vote.
+PN753 | 753 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN752 | 752 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN751 | 751 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN712-4 | 712 | Army | Confirmed by the Senate by Voice Vote.
+PN780 | 780 | Army | Confirmed by the Senate by Voice Vote.
+PN781 | 781 | Army | Confirmed by the Senate by Voice Vote.
+PN770-8 | 770 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN788 | 788 | Air Force | Confirmed by the Senate by Voice Vote.
+PN759 | 759 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN796 | 796 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN797 | 797 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN800 | 800 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN793-1 | 793 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN790 | 790 | Army | Confirmed by the Senate by Voice Vote.
+PN794 | 794 | Army | Confirmed by the Senate by Voice Vote.
+PN795 | 795 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN798 | 798 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN799 | 799 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN789 | 789 | Army | Confirmed by the Senate by Voice Vote.
+PN802 | 802 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN816 | 816 | Air Force | Confirmed by the Senate by Voice Vote.
+PN817 | 817 | Air Force | Confirmed by the Senate by Voice Vote.
+PN808 | 808 | Air Force | Confirmed by the Senate by Voice Vote.
+PN809 | 809 | Air Force | Confirmed by the Senate by Voice Vote.
+PN814 | 814 | Air Force | Confirmed by the Senate by Voice Vote.
+PN807 | 807 | Air Force | Confirmed by the Senate by Voice Vote.
+PN810 | 810 | Air Force | Confirmed by the Senate by Voice Vote.
+PN811 | 811 | Air Force | Confirmed by the Senate by Voice Vote.
+PN812 | 812 | Air Force | Confirmed by the Senate by Voice Vote.
+PN813 | 813 | Air Force | Confirmed by the Senate by Voice Vote.
+PN815 | 815 | Air Force | Confirmed by the Senate by Voice Vote.
+PN820 | 820 | Air Force | Confirmed by the Senate by Voice Vote.
+PN822 | 822 | Air Force | Confirmed by the Senate by Voice Vote.
+PN824 | 824 | Air Force | Confirmed by the Senate by Voice Vote.
+PN826 | 826 | Air Force | Confirmed by the Senate by Voice Vote.
+PN828 | 828 | Air Force | Confirmed by the Senate by Voice Vote.
+PN818 | 818 | Air Force | Confirmed by the Senate by Voice Vote.
+PN819 | 819 | Air Force | Confirmed by the Senate by Voice Vote.
+PN821 | 821 | Air Force | Confirmed by the Senate by Voice Vote.
+PN823 | 823 | Air Force | Confirmed by the Senate by Voice Vote.
+PN825 | 825 | Air Force | Confirmed by the Senate by Voice Vote.
+PN827 | 827 | Air Force | Confirmed by the Senate by Voice Vote.
+PN829 | 829 | Air Force | Confirmed by the Senate by Voice Vote.
+PN834 | 834 | Navy | Confirmed by the Senate by Voice Vote.
+PN832 | 832 | Army | Confirmed by the Senate by Voice Vote.
+PN838 | 838 | Navy | Confirmed by the Senate by Voice Vote.
+PN839 | 839 | Navy | Confirmed by the Senate by Voice Vote.
+PN837 | 837 | Navy | Confirmed by the Senate by Voice Vote.
+PN840 | 840 | Navy | Confirmed by the Senate by Voice Vote.
+PN830 | 830 | Air Force | Confirmed by the Senate by Voice Vote.
+PN831 | 831 | Air Force | Confirmed by the Senate by Voice Vote.
+PN835-1 | 835 | Navy | Confirmed by the Senate by Voice Vote.
+PN835-2 | 835 | Navy | Placed on Senate Executive Calendar. Calendar No. DESK.
+PN836 | 836 | Navy | Confirmed by the Senate by Voice Vote.
+PN841 | 841 | Navy | Confirmed by the Senate by Voice Vote.
+PN852-10 | 852 | United States Postal Service | Received in the Senate and referred to the Committee on Homeland Security and Governmental Affairs.
+PN852-8 | 852 | National Science Foundation | Received in the Senate and referred to the Committee on Health, Education, Labor, and Pensions.
+PN770-5 | 770 | Marine Corps | Received in the Senate and referred to the Committee on Armed Services.
+PN770-6 | 770 |  | Received in the Senate and referred to the Committee on Armed Services.
+PN770-7 | 770 |  | Received in the Senate and referred to the Committee on Armed Services.
+PN712-6 | 712 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN730-46 | 730 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 57 - 33. Record Vote Number: 43.
+PN730-19 | 730 | National Transportation Safety Board | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 41.
+PN11-3 | 11 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 80 - 17. Record Vote Number: 26.
+PN55-6 | 55 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 377.
+PN13-2 | 13 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 113.
+PN12-29 | 12 | Federal Trade Commission | Confirmed by the Senate by Yea-Nay Vote. 50 - 46. Record Vote Number: 209.
+PN26-12 | 26 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 56 - 40. Record Vote Number: 325.
+PN11-15 | 11 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 59 - 38. Record Vote Number: 30.
+PN13-8 | 13 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 74 - 25. Record Vote Number: 139.
+PN141-39 | 141 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-14 | 246 | Department of Agriculture | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN246-3 | 246 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN345-8 | 345 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-2 | 246 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN620 | 620 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN805 | 805 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN806-10 | 806 | Federal Election Commission | Received in the Senate and referred to the Committee on Rules and Administration.
+PN806-11 | 806 | Federal Election Commission | Received in the Senate and referred to the Committee on Rules and Administration.
+PN833 | 833 | Navy | Received in the Senate and referred to the Committee on Armed Services.
+PN726-4 | 726 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 34.
+PN697 | 697 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN698 | 698 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN675 | 675 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN646 | 646 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN682 | 682 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN677-1 | 677 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN676 | 676 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN621 | 621 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN726-11 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 47. Record Vote Number: 32.
+PN726-9 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 46. Record Vote Number: 30.
+PN726-2 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 28.
+PN726-12 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 58 - 39. Record Vote Number: 26.
+PN677-2 | 677 | Coast Guard | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN726-6 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 24.
+PN726-5 | 726 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 54 - 40. Record Vote Number: 22.
+PN702 | 702 | Air Force | Confirmed by the Senate by Voice Vote.
+PN685 | 685 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN712-3 | 712 | Army | Confirmed by the Senate by Voice Vote.
+PN703 | 703 | Air Force | Confirmed by the Senate by Voice Vote.
+PN709-1 | 709 | Army | Confirmed by the Senate by Voice Vote.
+PN710 | 710 | Army | Confirmed by the Senate by Voice Vote.
+PN720 | 720 | Army | Confirmed by the Senate by Voice Vote.
+PN715-2 | 715 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN715-1 | 715 | Navy | Confirmed by the Senate by Voice Vote.
+PN712-5 | 712 | Air Force | Confirmed by the Senate by Voice Vote.
+PN719 | 719 | Army | Confirmed by the Senate by Voice Vote.
+PN713 | 713 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN732 | 732 | Air Force | Confirmed by the Senate by Voice Vote.
+PN733 | 733 | Air Force | Confirmed by the Senate by Voice Vote.
+PN729 | 729 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN727 | 727 | Air Force | Confirmed by the Senate by Voice Vote.
+PN731 | 731 | Air Force | Confirmed by the Senate by Voice Vote.
+PN728 | 728 | Army | Confirmed by the Senate by Voice Vote.
+PN737 | 737 | Army | Confirmed by the Senate by Voice Vote.
+PN738 | 738 | Army | Confirmed by the Senate by Voice Vote.
+PN739 | 739 | Army | Confirmed by the Senate by Voice Vote.
+PN736 | 736 | Air Force | Confirmed by the Senate by Voice Vote.
+PN735 | 735 | Air Force | Confirmed by the Senate by Voice Vote.
+PN734 | 734 | Air Force | Confirmed by the Senate by Voice Vote.
+PN748 | 748 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN744 | 744 | Army | Confirmed by the Senate by Voice Vote.
+PN741 | 741 | Army | Confirmed by the Senate by Voice Vote.
+PN745 | 745 | Army | Confirmed by the Senate by Voice Vote.
+PN747 | 747 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN749 | 749 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN754 | 754 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN746 | 746 | Army | Confirmed by the Senate by Voice Vote.
+PN740 | 740 | Army | Confirmed by the Senate by Voice Vote.
+PN757 | 757 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN756 | 756 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN758 | 758 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN755 | 755 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN743 | 743 | Army | Confirmed by the Senate by Voice Vote.
+PN761 | 761 | Navy | Confirmed by the Senate by Voice Vote.
+PN760 | 760 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN762 | 762 | Navy | Confirmed by the Senate by Voice Vote.
+PN763 | 763 | Navy | Confirmed by the Senate by Voice Vote.
+PN750 | 750 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN742 | 742 | Army | Confirmed by the Senate by Voice Vote.
+PN775 | 775 | Army | Confirmed by the Senate by Voice Vote.
+PN782 | 782 | Navy | Confirmed by the Senate by Voice Vote.
+PN770-1 | 770 | Army | Confirmed by the Senate by Voice Vote.
+PN783 | 783 | Navy | Confirmed by the Senate by Voice Vote.
+PN773-2 | 773 | Navy | Confirmed by the Senate by Voice Vote.
+PN770-2 | 770 | Air Force | Confirmed by the Senate by Voice Vote.
+PN775 | 775 | Army | Confirmed by the Senate by Voice Vote.
+PN774 | 774 | Air Force | Confirmed by the Senate by Voice Vote.
+PN773-1 | 773 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN782 | 782 | Navy | Confirmed by the Senate by Voice Vote.
+PN770-1 | 770 | Army | Confirmed by the Senate by Voice Vote.
+PN765 | 765 | Navy | Confirmed by the Senate by Voice Vote.
+PN768 | 768 | Navy | Confirmed by the Senate by Voice Vote.
+PN770-2 | 770 | Air Force | Confirmed by the Senate by Voice Vote.
+PN770-4 | 770 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN771-1 | 771 | Army | Confirmed by the Senate by Voice Vote.
+PN766 | 766 | Navy | Confirmed by the Senate by Voice Vote.
+PN767 | 767 | Navy | Confirmed by the Senate by Voice Vote.
+PN773-2 | 773 | Navy | Confirmed by the Senate by Voice Vote.
+PN778 | 778 | Army | Confirmed by the Senate by Voice Vote.
+PN779 | 779 | Army | Confirmed by the Senate by Voice Vote.
+PN785 | 785 | Navy | Confirmed by the Senate by Voice Vote.
+PN605 | 605 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN712-1 | 712 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN712-2 | 712 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN770-3 | 770 | Marine Corps | Received in the Senate and referred to the Committee on Armed Services.
+PN786-6 | 786 | Tennessee Valley Authority | Received in the Senate and referred to the Committee on Environment and Public Works.
+PN12-35 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 49. Record Vote Number: 61.
+PN730-64 | 730 | African Development Foundation | Referred to the Committee on Foreign Relations as requested by Senator Booker.
+PN730-34 | 730 | Inter-American Foundation | Referred to the Committee on Foreign Relations as requested by Senator Murphy.
+PN730-55 | 730 | African Development Foundation | Referred to the Committee on Foreign Relations as requested by Senator Murphy.
+PN730-65 | 730 | Inter-American Foundation | Referred to the Committee on Foreign Relations as requested by Senator Kaine.
+PN730-6 | 730 | Tennessee Valley Authority | Received in the Senate and referred to the Committee on Environment and Public Works.
+PN730-4 | 730 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN730-7 | 730 | European Bank for Reconstruction and Development | Received in the Senate and referred to the Committee on Foreign Relations.
+PN730-17 | 730 | Department of Defense | Received in the Senate and referred to the Committee on Armed Services.
+PN730-30 | 730 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN730-42 | 730 | United States Postal Service | Received in the Senate and referred to the Committee on Homeland Security and Governmental Affairs.
+PN730-35 | 730 | Federal Agricultural Mortgage Corporation | Placed on Senate Executive Calendar in the Privileged Nomination section with nominee information requested by the Committee on Agriculture, Nutrition, and Forestry, pursuant to S.Res. 116, 112th Congress.
+PN730-39 | 730 | Department of State | Received in the Senate and referred to the Committee on Foreign Relations.
+PN730-45 | 730 | Federal Trade Commission | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN730-49 | 730 | Department of Justice | Received in the Senate and referred to the Committee on the Judiciary.
+PN730-63 | 730 | Department of Defense | Received in the Senate and referred to the Committee on Armed Services.
+PN352 | 352 | Army | Confirmed by the Senate by Voice Vote.
+PN12-26 | 12 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 78 - 17. Record Vote Number: 494.
+PN12-24 | 12 | Office of Personnel Management | Confirmed by the Senate by Yea-Nay Vote. 49 - 46. Record Vote Number: 379.
+PN12-22 | 12 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN13-1 | 13 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-37 | 26 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN13-3 | 13 | Small Business Administration | Confirmed by the Senate by Yea-Nay Vote. 49 - 45. Record Vote Number: 380.
+PN25-42 | 25 | Commodity Futures Trading Commission | Received message of withdrawal of nomination from the President.
+PN129-12 | 129 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-49 | 55 | Merit Systems Protection Board | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-10 | 129 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 49 - 46. Record Vote Number: 507.
+PN25-43 | 25 | Commodity Futures Trading Commission | Received message of withdrawal of nomination from the President.
+PN25-8 | 25 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 459.
+PN11-6 | 11 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 77 - 22. Record Vote Number: 21.
+PN11-9 | 11 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 57.
+PN11-2 | 11 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 54 - 46. Record Vote Number: 33.
+PN609 | 609 | Army | Confirmed by the Senate by Voice Vote.
+PN22-14 | 22 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-24 | 55 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN12-8 | 12 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN26-33 | 26 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN29-2 | 29 | African Development Foundation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN55-30 | 55 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN29-1 | 29 | Inter-American Foundation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN62 | 62 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN55-20 | 55 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN60-2 | 60 | National Aeronautics and Space Administration | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN29-3 | 29 | African Development Foundation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN89 | 89 | Army | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN115 | 115 | European Bank for Reconstruction and Development | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN29-4 | 29 | Inter-American Foundation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN127-4 | 127 | Coast Guard | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN132-2 | 132 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN345-7 | 345 | National Transportation Safety Board | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN345-4 | 345 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN141-15 | 141 | Department of Housing and Urban Development | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN246-10 | 246 | Public Health Service | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN246-5 | 246 | Department of Defense | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN246-8 | 246 | United States Postal Service | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN251 | 251 | Army | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN141-4 | 141 | National Aeronautics and Space Administration | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN141-29 | 141 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN379-1 | 379 | African Development Bank | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN377 | 377 | Coast Guard | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN379-23 | 379 | Asian Development Bank | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN380-1 | 380 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN380-2 | 380 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN379-25 | 379 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN346-4 | 346 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN345-17 | 345 | Department of Defense | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN345-18 | 345 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN403-2 | 403 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN379-2 | 379 | Tennessee Valley Authority | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN445-9 | 445 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN445-8 | 445 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN416-8 | 416 | Department of Agriculture | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN405-2 | 405 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN440-2 | 440 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN420 | 420 | Navy | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN433 | 433 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN431 | 431 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN411 | 411 | Navy | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN438 | 438 | Space Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN416-1 | 416 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN518-4 | 518 | Export-Import Bank of the United States | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-4 | 499 | Federal Maritime Commission | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-6 | 499 | Department of the Treasury | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-5 | 499 | European Bank for Reconstruction and Development | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN559 | 559 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN519-3 | 519 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN519-1 | 519 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN555 | 555 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN465-6 | 465 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-9 | 499 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN499-3 | 499 | Department of Commerce | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN560-1 | 560 | Federal Labor Relations Authority | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN560-2 | 560 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN589 | 589 | Navy | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-9 | 585 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-6 | 585 | Department of Commerce | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN591 | 591 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-4 | 585 | Consumer Product Safety Commission | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN560-4 | 560 | Federal Agricultural Mortgage Corporation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-3 | 585 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN560-5 | 560 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-2 | 585 | Department of Defense | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-8 | 585 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-1 | 585 | Department of Labor | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-7 | 585 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN585-5 | 585 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN586 | 586 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-10 | 616 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN652 | 652 | Bureau of Consumer Financial Protection | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-9 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-7 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-5 | 616 | Department of Transportation | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN645-1 | 645 | Department of the Interior | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN607 | 607 | Air Force | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-6 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-1 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-4 | 616 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-3 | 616 | Department of State | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-13 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-11 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-8 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-12 | 616 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN616-2 | 616 | Department of Defense | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN655-1 | 655 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN654 | 654 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN653 | 653 | Equal Employment Opportunity Commission | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN673-1 | 673 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN673-4 | 673 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN672 | 672 | Department of Justice | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN673-3 | 673 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN673-2 | 673 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN655-3 | 655 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN655-2 | 655 | The Judiciary | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN721 | 721 | Army | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN725 | 725 | Navy | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN722 | 722 | Marine Corps | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN724 | 724 | Marine Corps | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN723 | 723 | Marine Corps | Returned to the President under the provisions of Senate Rule XXXI, paragraph 6 of the Standing Rules of the Senate.
+PN22-11 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN25-29 | 25 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN26-24 | 26 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-26 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-10 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-13 | 55 | National Labor Relations Board | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN26-47 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-2 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN60-12 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN60-11 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN60-4 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN60-13 | 60 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-34 | 55 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN55-44 | 55 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN129-17 | 129 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN129-7 | 129 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN129-1 | 129 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN129-6 | 129 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-10 | 141 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-8 | 141 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN60-17 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-12 | 141 | National Endowment for the Arts | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-1 | 246 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-27 | 141 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-12 | 246 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-22 | 141 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-14 | 141 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-20 | 141 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-26 | 141 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-4 | 246 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-6 | 246 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN246-13 | 246 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN141-16 | 141 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-3 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN345-14 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN345-12 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN345-10 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-15 | 379 | Tennessee Valley Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-13 | 379 | Tennessee Valley Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-17 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-18 | 379 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-16 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN345-13 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-11 | 379 | Tennessee Valley Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-9 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-7 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-4 | 379 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-19 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-4 | 416 | Tennessee Valley Authority | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-2 | 416 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-10 | 416 | National Labor Relations Board | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-26 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-9 | 416 | National Labor Relations Board | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-22 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-21 | 379 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN379-20 | 379 | Social Security Administration | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-6 | 416 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-5 | 416 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN416-3 | 416 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN465-1 | 465 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-11 | 445 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-10 | 445 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-7 | 445 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-5 | 445 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-2 | 445 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN465-2 | 465 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN462-4 | 462 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN445-1 | 445 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN462-1 | 462 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN462-3 | 462 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN499-2 | 499 | Federal Maritime Commission | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN519-2 | 519 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN499-12 | 499 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN619 | 619 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN560-3 | 560 | Federal Deposit Insurance Corporation | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 655.
+PN291-4 | 291 | Air Force | Confirmed by the Senate by Voice Vote.
+PN473 | 473 | Navy | Confirmed by the Senate by Voice Vote.
+PN556-4 | 556 | Army | Confirmed by the Senate by Voice Vote.
+PN667 | 667 | Navy | Confirmed by the Senate by Voice Vote.
+PN674 | 674 | Army | Confirmed by the Senate by Voice Vote.
+PN657 | 657 | Army | Confirmed by the Senate by Voice Vote.
+PN664 | 664 | Navy | Confirmed by the Senate by Voice Vote.
+PN656 | 656 | Air Force | Confirmed by the Senate by Voice Vote.
+PN663 | 663 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN662 | 662 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN666 | 666 | Navy | Confirmed by the Senate by Voice Vote.
+PN645-2 | 645 | Nuclear Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 71 - 29. Record Vote Number: 652.
+PN661 | 661 | Air Force | Confirmed by the Senate by Voice Vote.
+PN668 | 668 | Navy | Confirmed by the Senate by Voice Vote.
+PN671 | 671 | Space Force | Confirmed by the Senate by Voice Vote.
+PN670 | 670 | Space Force | Confirmed by the Senate by Voice Vote.
+PN660 | 660 | Air Force | Confirmed by the Senate by Voice Vote.
+PN669 | 669 | Navy | Confirmed by the Senate by Voice Vote.
+PN665 | 665 | Navy | Confirmed by the Senate by Voice Vote.
+PN650 | 650 | National Aeronautics and Space Administration | Confirmed by the Senate by Yea-Nay Vote. 67 - 30. Record Vote Number: 650.
+PN659 | 659 | Air Force | Confirmed by the Senate by Voice Vote.
+PN684 | 684 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN692 | 692 | Army | Confirmed by the Senate by Voice Vote.
+PN694 | 694 | Navy | Confirmed by the Senate by Voice Vote.
+PN683 | 683 | Army | Confirmed by the Senate by Voice Vote.
+PN693 | 693 | Army | Confirmed by the Senate by Voice Vote.
+PN679 | 679 | Army | Confirmed by the Senate by Voice Vote.
+PN695 | 695 | Navy | Confirmed by the Senate by Voice Vote.
+PN678 | 678 | Army | Confirmed by the Senate by Voice Vote.
+PN700 | 700 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN708 | 708 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN707 | 707 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN705 | 705 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN718 | 718 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN717 | 717 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN687 | 687 | Air Force | Received in the Senate and referred to the Committee on Armed Services.
+PN696 | 696 | Space Force | Received in the Senate and referred to the Committee on Armed Services.
+PN291-2 | 291 |  | Placed on Senate Executive Calendar. Calendar No. 296.
+PN432 | 432 | Air Force | Confirmed by the Senate by Voice Vote.
+PN291-3 | 291 | Air Force | Confirmed by the Senate by Voice Vote.
+PN626 | 626 | Army | Confirmed by the Senate by Voice Vote.
+PN613 | 613 | Army | Confirmed by the Senate by Voice Vote.
+PN625 | 625 | Army | Confirmed by the Senate by Voice Vote.
+PN448 | 448 | Air Force | Confirmed by the Senate by Voice Vote.
+PN611 | 611 | Army | Confirmed by the Senate by Voice Vote.
+PN628 | 628 | Air Force | Confirmed by the Senate by Voice Vote.
+PN637 | 637 | Army | Confirmed by the Senate by Voice Vote.
+PN627 | 627 | Air Force | Confirmed by the Senate by Voice Vote.
+PN641 | 641 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN629 | 629 | Air Force | Confirmed by the Senate by Voice Vote.
+PN630 | 630 | Army | Confirmed by the Senate by Voice Vote.
+PN631 | 631 | Army | Confirmed by the Senate by Voice Vote.
+PN632 | 632 | Army | Confirmed by the Senate by Voice Vote.
+PN633 | 633 | Army | Confirmed by the Senate by Voice Vote.
+PN634 | 634 | Army | Confirmed by the Senate by Voice Vote.
+PN636 | 636 | Army | Confirmed by the Senate by Voice Vote.
+PN638 | 638 | Army | Confirmed by the Senate by Voice Vote.
+PN639 | 639 | Army | Confirmed by the Senate by Voice Vote.
+PN640 | 640 | Army | Confirmed by the Senate by Voice Vote.
+PN635 | 635 | Army | Confirmed by the Senate by Voice Vote.
+PN647 | 647 | Army | Confirmed by the Senate by Voice Vote.
+PN643 | 643 | Navy | Confirmed by the Senate by Voice Vote.
+PN642 | 642 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN644 | 644 | Space Force | Confirmed by the Senate by Voice Vote.
+PN648 | 648 | Army | Confirmed by the Senate by Voice Vote.
+PN649 | 649 | Navy | Confirmed by the Senate by Voice Vote.
+PN348 | 348 | Space Force | Confirmed by the Senate by Voice Vote.
+PN291-1 | 291 | Air Force | Confirmed by the Senate by Voice Vote.
+PN25-44 | 25 | Department of Commerce | Received message of withdrawal of nomination from the President.
+PN25-47 | 25 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN24-3 | 24 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 427.
+PN141-23 | 141 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-38 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-35 | 141 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN26-11 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 50 - 47. Record Vote Number: 419.
+PN141-31 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-3 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-18 | 55 | Department of Homeland Security | Received message of withdrawal of nomination from the President.
+PN345-15 | 345 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 492.
+PN346-3 | 346 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 509.
+PN346-6 | 346 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 47. Record Vote Number: 592.
+PN418 | 418 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN413 | 413 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN346-5 | 346 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 53 - 46. Record Vote Number: 580.
+PN379-6 | 379 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN346-2 | 346 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 49. Record Vote Number: 448.
+PN346-1 | 346 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 50 - 43. Record Vote Number: 504.
+PN419 | 419 | Navy | Confirmed by the Senate by Voice Vote.
+PN55-8 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN54-7 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-15 | 25 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 383.
+PN26-10 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 539.
+PN55-16 | 55 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN60-10 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN60-9 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN141-7 | 141 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN141-28 | 141 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN129-8 | 129 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-46 | 55 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-14 | 60 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 445.
+PN129-14 | 129 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN345-20 | 345 | Nuclear Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 50 - 39. Record Vote Number: 439.
+PN381 | 381 | Air Force | Confirmed by the Senate by Voice Vote.
+PN382 | 382 | Air Force | Confirmed by the Senate by Voice Vote.
+PN380-3 | 380 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN380-4 | 380 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN384 | 384 | Air Force | Confirmed by the Senate by Voice Vote.
+PN383 | 383 | Air Force | Confirmed by the Senate by Voice Vote.
+PN386 | 386 | Air Force | Confirmed by the Senate by Voice Vote.
+PN385 | 385 | Air Force | Confirmed by the Senate by Voice Vote.
+PN387 | 387 | Air Force | Confirmed by the Senate by Voice Vote.
+PN391 | 391 | Army | Confirmed by the Senate by Voice Vote.
+PN389 | 389 | Army | Confirmed by the Senate by Voice Vote.
+PN388 | 388 | Air Force | Confirmed by the Senate by Voice Vote.
+PN392 | 392 | Army | Confirmed by the Senate by Voice Vote.
+PN390 | 390 | Army | Confirmed by the Senate by Voice Vote.
+PN393 | 393 | Army | Confirmed by the Senate by Voice Vote.
+PN397 | 397 | Navy | Confirmed by the Senate by Voice Vote.
+PN394 | 394 | Army | Confirmed by the Senate by Voice Vote.
+PN395 | 395 | Navy | Confirmed by the Senate by Voice Vote.
+PN396 | 396 | Navy | Confirmed by the Senate by Voice Vote.
+PN398 | 398 | Navy | Confirmed by the Senate by Voice Vote.
+PN399 | 399 | Space Force | Confirmed by the Senate by Voice Vote.
+PN287 | 287 | Air Force | Confirmed by the Senate by Voice Vote.
+PN12-27 | 12 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 44. Record Vote Number: 308.
+PN55-43 | 55 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 72 - 22. Record Vote Number: 498.
+PN26-31 | 26 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN141-30 | 141 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 461.
+PN288 | 288 | Air Force | Confirmed by the Senate by Voice Vote.
+PN290 | 290 | Air Force | Confirmed by the Senate by Voice Vote.
+PN60-3 | 60 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-12 | 55 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN289 | 289 | Air Force | Confirmed by the Senate by Voice Vote.
+PN307 | 307 | Navy | Confirmed by the Senate by Voice Vote.
+PN293 | 293 | Army | Confirmed by the Senate by Voice Vote.
+PN295 | 295 | Army | Confirmed by the Senate by Voice Vote.
+PN296 | 296 | Navy | Confirmed by the Senate by Voice Vote.
+PN292 | 292 | Army | Confirmed by the Senate by Voice Vote.
+PN294 | 294 | Army | Confirmed by the Senate by Voice Vote.
+PN297 | 297 | Navy | Confirmed by the Senate by Voice Vote.
+PN298 | 298 | Navy | Confirmed by the Senate by Voice Vote.
+PN299 | 299 | Navy | Confirmed by the Senate by Voice Vote.
+PN301 | 301 | Navy | Confirmed by the Senate by Voice Vote.
+PN300 | 300 | Navy | Confirmed by the Senate by Voice Vote.
+PN302 | 302 | Navy | Confirmed by the Senate by Voice Vote.
+PN309 | 309 | Navy | Confirmed by the Senate by Voice Vote.
+PN310 | 310 | Navy | Confirmed by the Senate by Voice Vote.
+PN311 | 311 | Navy | Confirmed by the Senate by Voice Vote.
+PN303 | 303 | Navy | Confirmed by the Senate by Voice Vote.
+PN308 | 308 | Navy | Confirmed by the Senate by Voice Vote.
+PN304 | 304 | Navy | Confirmed by the Senate by Voice Vote.
+PN305 | 305 | Navy | Confirmed by the Senate by Voice Vote.
+PN306 | 306 | Navy | Confirmed by the Senate by Voice Vote.
+PN313 | 313 | Navy | Confirmed by the Senate by Voice Vote.
+PN312 | 312 | Navy | Confirmed by the Senate by Voice Vote.
+PN314 | 314 | Space Force | Confirmed by the Senate by Voice Vote.
+PN315 | 315 | Army | Confirmed by the Senate by Voice Vote.
+PN316 | 316 | Army | Confirmed by the Senate by Voice Vote.
+PN317 | 317 | Army | Confirmed by the Senate by Voice Vote.
+PN322 | 322 | Navy | Confirmed by the Senate by Voice Vote.
+PN318 | 318 | Army | Confirmed by the Senate by Voice Vote.
+PN323 | 323 | Navy | Confirmed by the Senate by Voice Vote.
+PN324 | 324 | Navy | Confirmed by the Senate by Voice Vote.
+PN320 | 320 | Navy | Confirmed by the Senate by Voice Vote.
+PN319 | 319 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN321 | 321 | Navy | Confirmed by the Senate by Voice Vote.
+PN329 | 329 | Navy | Confirmed by the Senate by Voice Vote.
+PN331 | 331 | Navy | Confirmed by the Senate by Voice Vote.
+PN326 | 326 | Navy | Confirmed by the Senate by Voice Vote.
+PN327 | 327 | Navy | Confirmed by the Senate by Voice Vote.
+PN328 | 328 | Navy | Confirmed by the Senate by Voice Vote.
+PN325 | 325 | Navy | Confirmed by the Senate by Voice Vote.
+PN330 | 330 | Navy | Confirmed by the Senate by Voice Vote.
+PN332 | 332 | Navy | Confirmed by the Senate by Voice Vote.
+PN339 | 339 | Navy | Confirmed by the Senate by Voice Vote.
+PN338 | 338 | Navy | Confirmed by the Senate by Voice Vote.
+PN340 | 340 | Navy | Confirmed by the Senate by Voice Vote.
+PN337 | 337 | Navy | Confirmed by the Senate by Voice Vote.
+PN336 | 336 | Navy | Confirmed by the Senate by Voice Vote.
+PN335 | 335 | Navy | Confirmed by the Senate by Voice Vote.
+PN334 | 334 | Navy | Confirmed by the Senate by Voice Vote.
+PN333 | 333 | Navy | Confirmed by the Senate by Voice Vote.
+PN341 | 341 | Navy | Confirmed by the Senate by Voice Vote.
+PN12-7 | 12 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 54 - 44. Record Vote Number: 447.
+PN25-3 | 25 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-54 | 25 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 436.
+PN474 | 474 | Navy | Confirmed by the Senate by Voice Vote.
+PN556-6 | 556 | Army | Confirmed by the Senate by Voice Vote.
+PN468 | 468 | Air Force | Confirmed by the Senate by Voice Vote.
+PN445-6 | 445 | Nuclear Regulatory Commission | Confirmed by the Senate by Yea-Nay Vote. 66 - 32. Record Vote Number: 620.
+PN129-9 | 129 | Department of the Treasury | Received message of withdrawal of nomination from the President.
+PN13-5 | 13 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-37 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 57 - 43. Record Vote Number: 607.
+PN400-3 | 400 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 605.
+PN400-1 | 400 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 604.
+PN556-3 | 556 |  | Placed on Senate Executive Calendar. Calendar No. 496.
+PN441-2 | 441 | Air Force | Confirmed by the Senate by Voice Vote.
+PN522 | 522 | Army | Confirmed by the Senate by Voice Vote.
+PN453 | 453 | Air Force | Confirmed by the Senate by Voice Vote.
+PN451 | 451 | Air Force | Confirmed by the Senate by Voice Vote.
+PN441-4 | 441 | Air Force | Confirmed by the Senate by Voice Vote.
+PN521 | 521 | Army | Confirmed by the Senate by Voice Vote.
+PN476-2 | 476 | Space Force | Confirmed by the Senate by Voice Vote.
+PN525 | 525 | Army | Confirmed by the Senate by Voice Vote.
+PN526 | 526 | Army | Confirmed by the Senate by Voice Vote.
+PN527 | 527 | Army | Confirmed by the Senate by Voice Vote.
+PN528 | 528 | Army | Confirmed by the Senate by Voice Vote.
+PN523 | 523 | Army | Confirmed by the Senate by Voice Vote.
+PN524 | 524 | Army | Confirmed by the Senate by Voice Vote.
+PN529 | 529 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN531 | 531 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN530 | 530 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN532 | 532 | Navy | Confirmed by the Senate by Voice Vote.
+PN536 | 536 | Navy | Confirmed by the Senate by Voice Vote.
+PN535 | 535 | Navy | Confirmed by the Senate by Voice Vote.
+PN534 | 534 | Navy | Confirmed by the Senate by Voice Vote.
+PN533 | 533 | Navy | Confirmed by the Senate by Voice Vote.
+PN538 | 538 | Navy | Confirmed by the Senate by Voice Vote.
+PN537 | 537 | Navy | Confirmed by the Senate by Voice Vote.
+PN539 | 539 | Navy | Confirmed by the Senate by Voice Vote.
+PN541 | 541 | Navy | Confirmed by the Senate by Voice Vote.
+PN543 | 543 | Navy | Confirmed by the Senate by Voice Vote.
+PN542 | 542 | Navy | Confirmed by the Senate by Voice Vote.
+PN540 | 540 | Navy | Confirmed by the Senate by Voice Vote.
+PN546 | 546 | Navy | Confirmed by the Senate by Voice Vote.
+PN545 | 545 | Navy | Confirmed by the Senate by Voice Vote.
+PN544 | 544 | Navy | Confirmed by the Senate by Voice Vote.
+PN554-1 | 554 | Air Force | Confirmed by the Senate by Voice Vote.
+PN556-5 | 556 | Army | Confirmed by the Senate by Voice Vote.
+PN554-2 | 554 | Space Force | Confirmed by the Senate by Voice Vote.
+PN553 | 553 | Air Force | Confirmed by the Senate by Voice Vote.
+PN556-2 | 556 | Navy | Confirmed by the Senate by Voice Vote.
+PN551 | 551 | Navy | Confirmed by the Senate by Voice Vote.
+PN550 | 550 | Navy | Confirmed by the Senate by Voice Vote.
+PN549 | 549 | Navy | Confirmed by the Senate by Voice Vote.
+PN548 | 548 | Navy | Confirmed by the Senate by Voice Vote.
+PN547 | 547 | Navy | Confirmed by the Senate by Voice Vote.
+PN557 | 557 | Navy | Confirmed by the Senate by Voice Vote.
+PN565 | 565 | Army | Confirmed by the Senate by Voice Vote.
+PN567 | 567 | Army | Confirmed by the Senate by Voice Vote.
+PN566 | 566 | Army | Confirmed by the Senate by Voice Vote.
+PN564 | 564 | Army | Confirmed by the Senate by Voice Vote.
+PN563 | 563 | Air Force | Confirmed by the Senate by Voice Vote.
+PN562 | 562 | Air Force | Confirmed by the Senate by Voice Vote.
+PN561 | 561 | Air Force | Confirmed by the Senate by Voice Vote.
+PN568 | 568 | Army | Confirmed by the Senate by Voice Vote.
+PN579 | 579 | Navy | Confirmed by the Senate by Voice Vote.
+PN571 | 571 | Army | Confirmed by the Senate by Voice Vote.
+PN572 | 572 | Army | Confirmed by the Senate by Voice Vote.
+PN573 | 573 | Army | Confirmed by the Senate by Voice Vote.
+PN575 | 575 | Army | Confirmed by the Senate by Voice Vote.
+PN570 | 570 | Army | Confirmed by the Senate by Voice Vote.
+PN578 | 578 | Navy | Confirmed by the Senate by Voice Vote.
+PN577 | 577 | Navy | Confirmed by the Senate by Voice Vote.
+PN569 | 569 | Army | Confirmed by the Senate by Voice Vote.
+PN576 | 576 | Navy | Confirmed by the Senate by Voice Vote.
+PN574 | 574 | Army | Confirmed by the Senate by Voice Vote.
+PN601 | 601 | Army | Confirmed by the Senate by Voice Vote.
+PN582 | 582 | Navy | Confirmed by the Senate by Voice Vote.
+PN617-3 | 617 | Navy | Confirmed by the Senate by Voice Vote.
+PN592 | 592 | Air Force | Confirmed by the Senate by Voice Vote.
+PN596 | 596 | Navy | Confirmed by the Senate by Voice Vote.
+PN599 | 599 | Air Force | Confirmed by the Senate by Voice Vote.
+PN617-2 | 617 | Air Force | Confirmed by the Senate by Voice Vote.
+PN581 | 581 | Navy | Confirmed by the Senate by Voice Vote.
+PN617-1 | 617 | Army | Confirmed by the Senate by Voice Vote.
+PN608 | 608 | Air Force | Confirmed by the Senate by Voice Vote.
+PN583 | 583 | Navy | Confirmed by the Senate by Voice Vote.
+PN580 | 580 | Navy | Confirmed by the Senate by Voice Vote.
+PN610 | 610 | Army | Confirmed by the Senate by Voice Vote.
+PN612 | 612 | Army | Confirmed by the Senate by Voice Vote.
+PN594 | 594 | Army | Confirmed by the Senate by Voice Vote.
+PN603 | 603 | Space Force | Confirmed by the Senate by Voice Vote.
+PN602 | 602 | Army | Confirmed by the Senate by Voice Vote.
+PN597 | 597 | Air Force | Confirmed by the Senate by Voice Vote.
+PN598 | 598 | Air Force | Confirmed by the Senate by Voice Vote.
+PN600 | 600 | Air Force | Confirmed by the Senate by Voice Vote.
+PN556-1 | 556 |  | Received in the Senate and referred to the Committee on Armed Services.
+PN25-45 | 25 | Department of State | Received message of withdrawal of nomination from the President.
+PN368 | 368 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 48 - 45. Record Vote Number: 586.
+PN127-2 | 127 |  | Received in the Senate and referred to the Committee on Commerce, Science, and Transportation.
+PN127-1 | 127 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN127-3 | 127 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN25-35 | 25 | Department of the Interior | Confirmed by the Senate by Yea-Nay Vote. 54 - 43. Record Vote Number: 470.
+PN26-42 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 59 - 39. Record Vote Number: 460.
+PN55-37 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-25 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-36 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 44. Record Vote Number: 482.
+PN414 | 414 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN141-18 | 141 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN371 | 371 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN400-2 | 400 | The Judiciary | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 584.
+PN367 | 367 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN22-28 | 22 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-21 | 25 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN128 | 128 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN345-9 | 345 | Office of Special Counsel | Received message of withdrawal of nomination from the President.
+PN458 | 458 | Army | Confirmed by the Senate by Voice Vote.
+PN441-1 | 441 |  | Placed on Senate Executive Calendar. Calendar No. 438.
+PN343 | 343 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 47 - 43. Record Vote Number: 530.
+PN120 | 120 | Air Force | Confirmed by the Senate by Voice Vote.
+PN354 | 354 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN342 | 342 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 54 - 45. Record Vote Number: 532.
+PN403-1 | 403 | Air Force | Confirmed by the Senate by Voice Vote.
+PN405-1 | 405 | Air Force | Confirmed by the Senate by Voice Vote.
+PN426 | 426 | Space Force | Confirmed by the Senate by Voice Vote.
+PN427 | 427 | Space Force | Confirmed by the Senate by Voice Vote.
+PN428 | 428 | Space Force | Confirmed by the Senate by Voice Vote.
+PN429 | 429 | Space Force | Confirmed by the Senate by Voice Vote.
+PN449 | 449 | Air Force | Confirmed by the Senate by Voice Vote.
+PN443 | 443 | Army | Confirmed by the Senate by Voice Vote.
+PN437 | 437 | Navy | Confirmed by the Senate by Voice Vote.
+PN436 | 436 | Navy | Confirmed by the Senate by Voice Vote.
+PN450 | 450 | Air Force | Confirmed by the Senate by Voice Vote.
+PN452 | 452 | Air Force | Confirmed by the Senate by Voice Vote.
+PN442 | 442 | Air Force | Confirmed by the Senate by Voice Vote.
+PN430 | 430 | Space Force | Confirmed by the Senate by Voice Vote.
+PN435 | 435 | Army | Confirmed by the Senate by Voice Vote.
+PN439 | 439 | Air Force | Confirmed by the Senate by Voice Vote.
+PN440-1 | 440 | Air Force | Confirmed by the Senate by Voice Vote.
+PN454 | 454 | Air Force | Confirmed by the Senate by Voice Vote.
+PN455 | 455 | Air Force | Confirmed by the Senate by Voice Vote.
+PN456 | 456 | Air Force | Confirmed by the Senate by Voice Vote.
+PN457 | 457 | Army | Confirmed by the Senate by Voice Vote.
+PN459 | 459 | Army | Confirmed by the Senate by Voice Vote.
+PN481 | 481 | Army | Confirmed by the Senate by Voice Vote.
+PN482 | 482 | Army | Confirmed by the Senate by Voice Vote.
+PN479-1 | 479 | Navy | Confirmed by the Senate by Voice Vote.
+PN480 | 480 | Army | Confirmed by the Senate by Voice Vote.
+PN479-2 | 479 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN470-2 | 470 | Air Force | Confirmed by the Senate by Voice Vote.
+PN470-1 | 470 | Army | Confirmed by the Senate by Voice Vote.
+PN477 | 477 | Air Force | Confirmed by the Senate by Voice Vote.
+PN472 | 472 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN471 | 471 | Army | Confirmed by the Senate by Voice Vote.
+PN478 | 478 | Army | Confirmed by the Senate by Voice Vote.
+PN460 | 460 | Army | Confirmed by the Senate by Voice Vote.
+PN475 | 475 | Navy | Confirmed by the Senate by Voice Vote.
+PN470-3 | 470 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN476-1 | 476 | Navy | Confirmed by the Senate by Voice Vote.
+PN467 | 467 | Air Force | Confirmed by the Senate by Voice Vote.
+PN483 | 483 | Army | Confirmed by the Senate by Voice Vote.
+PN469 | 469 | Air Force | Confirmed by the Senate by Voice Vote.
+PN486 | 486 | Navy | Confirmed by the Senate by Voice Vote.
+PN484 | 484 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN485 | 485 | Navy | Confirmed by the Senate by Voice Vote.
+PN487 | 487 | Navy | Confirmed by the Senate by Voice Vote.
+PN488 | 488 | Navy | Confirmed by the Senate by Voice Vote.
+PN489 | 489 | Navy | Confirmed by the Senate by Voice Vote.
+PN493 | 493 | Navy | Confirmed by the Senate by Voice Vote.
+PN490 | 490 | Navy | Confirmed by the Senate by Voice Vote.
+PN491 | 491 | Navy | Confirmed by the Senate by Voice Vote.
+PN492 | 492 | Navy | Confirmed by the Senate by Voice Vote.
+PN494 | 494 | Navy | Confirmed by the Senate by Voice Vote.
+PN495 | 495 | Navy | Confirmed by the Senate by Voice Vote.
+PN496 | 496 | Navy | Confirmed by the Senate by Voice Vote.
+PN500 | 500 | Air Force | Confirmed by the Senate by Voice Vote.
+PN501 | 501 | Army | Confirmed by the Senate by Voice Vote.
+PN502 | 502 | Army | Confirmed by the Senate by Voice Vote.
+PN504 | 504 | Army | Confirmed by the Senate by Voice Vote.
+PN503 | 503 | Army | Confirmed by the Senate by Voice Vote.
+PN505 | 505 | Army | Confirmed by the Senate by Voice Vote.
+PN497 | 497 | Navy | Confirmed by the Senate by Voice Vote.
+PN506 | 506 | Army | Confirmed by the Senate by Voice Vote.
+PN508 | 508 | Navy | Confirmed by the Senate by Voice Vote.
+PN507 | 507 | Navy | Confirmed by the Senate by Voice Vote.
+PN509 | 509 | Navy | Confirmed by the Senate by Voice Vote.
+PN511 | 511 | Navy | Confirmed by the Senate by Voice Vote.
+PN513 | 513 | Navy | Confirmed by the Senate by Voice Vote.
+PN510 | 510 | Navy | Confirmed by the Senate by Voice Vote.
+PN512 | 512 | Navy | Confirmed by the Senate by Voice Vote.
+PN516 | 516 | Navy | Confirmed by the Senate by Voice Vote.
+PN514 | 514 | Navy | Confirmed by the Senate by Voice Vote.
+PN515 | 515 | Navy | Confirmed by the Senate by Voice Vote.
+PN401 | 401 | Air Force | Received message of withdrawal of nomination from the President.
+PN25-36 | 25 | Department of Education | Received message of withdrawal of nomination from the President.
+PN141-9 | 141 | Department of Defense | Received message of withdrawal of nomination from the President.
+PN585-10 | 585 | Department of State | Received message of withdrawal of nomination from the President.
+PN18 | 18 | Securities and Exchange Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN12-21 | 12 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-38 | 25 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-7 | 25 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN24-1 | 24 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-10 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-4 | 25 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-5 | 25 | United States International Development Finance Corporation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-34 | 25 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-24 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-30 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-9 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-23 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-14 | 26 | Pension Benefit Guaranty Corporation | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-13 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-52 | 25 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN54-3 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN54-1 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-55 | 25 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN25-49 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-32 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN54-2 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-41 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN26-17 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-32 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-19 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-14 | 55 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-15 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-22 | 55 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-23 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-5 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-21 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-29 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-11 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN54-4 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-1 | 55 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-33 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-16 | 60 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-18 | 60 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-6 | 60 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-48 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-5 | 60 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-15 | 60 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-35 | 55 | Federal Mine Safety and Health Review Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN55-40 | 55 | Occupational Safety and Health Review Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-7 | 60 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN60-1 | 60 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-6 | 141 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-3 | 129 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-5 | 129 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-11 | 129 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-13 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-15 | 129 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-21 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN345-1 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN246-9 | 246 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-32 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-33 | 141 | Equal Employment Opportunity Commission | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-34 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN141-36 | 141 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN345-19 | 345 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN465-3 | 465 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN465-4 | 465 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN379-8 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN379-14 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN416-11 | 416 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN379-5 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN379-24 | 379 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN465-5 | 465 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
+PN129-2 | 129 | Department of State | Received message of withdrawal of nomination from the President.
+PN588 | 588 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN587 | 587 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN499-1 | 499 | Department of Labor | Received message of withdrawal of nomination from the President.
+PN345-5 | 345 | Department of the Interior | Received message of withdrawal of nomination from the President.
+PN345-6 | 345 | Department of Housing and Urban Development | Received message of withdrawal of nomination from the President.
+PN518-2 | 518 | Farm Credit Administration | Received message of withdrawal of nomination from the President.
+PN25-41 | 25 | Department of State | Received message of withdrawal of nomination from the President.
+PN441-3 | 441 | Air Force | Confirmed by the Senate by Voice Vote.
+PN22-19 | 22 | Department of Energy | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN22-3 | 22 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-22 | 26 | Export-Import Bank of the United States | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN54-6 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-34 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-35 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN26-1 | 26 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN25-28 | 25 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-41 | 55 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-45 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN55-42 | 55 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN345-16 | 345 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 526.
+PN464 | 464 | Federal Reserve System | Confirmed by the Senate by Yea-Nay Vote. 48 - 47. Record Vote Number: 519.
+PN25-17 | 25 | Department of Commerce | Received message of withdrawal of nomination from the President.
+PN11-18 | 11 | Small Business Administration | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 59.
+PN13-9 | 13 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 155.
+PN379-10 | 379 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN462-2 | 462 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN25-31 | 25 | Department of Education | Received message of withdrawal of nomination from the President.
+PN11-5 | 11 | Department of Veterans Affairs | Confirmed by the Senate by Yea-Nay Vote. 77 - 23. Record Vote Number: 32.
+PN11-11 | 11 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 59 - 34. Record Vote Number: 17.
+PN11-14 | 11 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 55 - 44. Record Vote Number: 35.
+PN11-22 | 11 | Executive Office of the President | Motion by Senator Thune to reconsider tabled in Senate by Yea-Nay Vote. 52 - 47. Record Vote Number: 38.
+PN12-14 | 12 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 108.
+PN11-19 | 11 | Central Intelligence Agency | Confirmed by the Senate by Yea-Nay Vote. 74 - 25. Record Vote Number: 13.
+PN26-46 | 26 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 256.
+PN24-2 | 24 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 59 - 35. Record Vote Number: 497.
+PN13-11 | 13 | Small Business Administration | Confirmed by the Senate by Yea-Nay Vote. 52 - 44. Record Vote Number: 469.
+PN12-43 | 12 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 51 - 44. Record Vote Number: 301.
+PN25-26 | 25 | Department of Education | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 484.
+PN26-49 | 26 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 51 - 43. Record Vote Number: 483.
+PN26-2 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 52 - 42. Record Vote Number: 496.
+PN22-18 | 22 | Department of Transportation | Confirmed by the Senate by Yea-Nay Vote. 71 - 23. Record Vote Number: 499.
+PN25-16 | 25 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 50 - 45. Record Vote Number: 495.
+PN26-5 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 49 - 44. Record Vote Number: 488.
+PN26-39 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 44. Record Vote Number: 486.
+PN26-40 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 44. Record Vote Number: 490.
+PN345-11 | 345 | United States Postal Service | Received message of withdrawal of nomination from the President.
+PN55-28 | 55 | Equal Employment Opportunity Commission | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 464.
+PN370 | 370 | Navy | Confirmed by the Senate by Voice Vote.
+PN361 | 361 | Navy | Confirmed by the Senate by Voice Vote.
+PN369 | 369 | Army | Confirmed by the Senate by Voice Vote.
+PN118 | 118 | Air Force | Confirmed by the Senate by Voice Vote.
+PN374 | 374 | Army | Confirmed by the Senate by Voice Vote.
+PN376 | 376 | Space Force | Confirmed by the Senate by Voice Vote.
+PN375 | 375 | Army | Confirmed by the Senate by Voice Vote.
+PN423 | 423 | Air Force | Confirmed by the Senate by Voice Vote.
+PN404 | 404 | Air Force | Confirmed by the Senate by Voice Vote.
+PN407 | 407 | Army | Confirmed by the Senate by Voice Vote.
+PN402 | 402 | Air Force | Confirmed by the Senate by Voice Vote.
+PN408 | 408 | Air Force | Confirmed by the Senate by Voice Vote.
+PN409 | 409 | Army | Confirmed by the Senate by Voice Vote.
+PN412 | 412 | Space Force | Confirmed by the Senate by Voice Vote.
+PN421 | 421 | Air Force | Confirmed by the Senate by Voice Vote.
+PN422 | 422 | Air Force | Confirmed by the Senate by Voice Vote.
+PN406 | 406 | Air Force | Confirmed by the Senate by Voice Vote.
+PN425 | 425 | Navy | Confirmed by the Senate by Voice Vote.
+PN410 | 410 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN424 | 424 | Army | Confirmed by the Senate by Voice Vote.
+PN434 | 434 | Air Force | Confirmed by the Senate by Voice Vote.
+PN25-9 | 25 | Department of the Treasury | Received message of withdrawal of nomination from the President.
+PN446 | 446 | Army | Received in the Senate and referred to the Committee on Armed Services.
+PN22-13 | 22 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 443.
+PN379-12 | 379 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN55-9 | 55 | Federal Reserve System | Confirmed by the Senate by Yea-Nay Vote. 48 - 46. Record Vote Number: 291.
+PN25-39 | 25 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 69 - 30. Record Vote Number: 386.
+PN22-26 | 22 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 388.
+PN345-2 | 345 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN52 | 52 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN34 | 34 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN38 | 38 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN99 | 99 | Army | Confirmed by the Senate by Voice Vote.
+PN98 | 98 | Army | Confirmed by the Senate by Voice Vote.
+PN119 | 119 | Air Force | Confirmed by the Senate by Voice Vote.
+PN103 | 103 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN101 | 101 | Army | Confirmed by the Senate by Voice Vote.
+PN100 | 100 | Army | Confirmed by the Senate by Voice Vote.
+PN130 | 130 | Air Force | Confirmed by the Senate by Voice Vote.
+PN131 | 131 | Air Force | Confirmed by the Senate by Voice Vote.
+PN133 | 133 | Air Force | Confirmed by the Senate by Voice Vote.
+PN143 | 143 | Army | Confirmed by the Senate by Voice Vote.
+PN142 | 142 | Army | Confirmed by the Senate by Voice Vote.
+PN153 | 153 | Air Force | Confirmed by the Senate by Voice Vote.
+PN145 | 145 | Army | Confirmed by the Senate by Voice Vote.
+PN144 | 144 | Army | Confirmed by the Senate by Voice Vote.
+PN155 | 155 | Air Force | Confirmed by the Senate by Voice Vote.
+PN154 | 154 | Air Force | Confirmed by the Senate by Voice Vote.
+PN156 | 156 | Air Force | Confirmed by the Senate by Voice Vote.
+PN157 | 157 | Air Force | Confirmed by the Senate by Voice Vote.
+PN158 | 158 | Air Force | Confirmed by the Senate by Voice Vote.
+PN159 | 159 | Air Force | Confirmed by the Senate by Voice Vote.
+PN160 | 160 | Air Force | Confirmed by the Senate by Voice Vote.
+PN169 | 169 | Air Force | Confirmed by the Senate by Voice Vote.
+PN168 | 168 | Air Force | Confirmed by the Senate by Voice Vote.
+PN166 | 166 | Air Force | Confirmed by the Senate by Voice Vote.
+PN165 | 165 | Air Force | Confirmed by the Senate by Voice Vote.
+PN163 | 163 | Air Force | Confirmed by the Senate by Voice Vote.
+PN164 | 164 | Air Force | Confirmed by the Senate by Voice Vote.
+PN167 | 167 | Air Force | Confirmed by the Senate by Voice Vote.
+PN162 | 162 | Army | Confirmed by the Senate by Voice Vote.
+PN161 | 161 | Air Force | Confirmed by the Senate by Voice Vote.
+PN171 | 171 | Air Force | Confirmed by the Senate by Voice Vote.
+PN182 | 182 | Army | Confirmed by the Senate by Voice Vote.
+PN170 | 170 | Air Force | Confirmed by the Senate by Voice Vote.
+PN172 | 172 | Air Force | Confirmed by the Senate by Voice Vote.
+PN179 | 179 | Air Force | Confirmed by the Senate by Voice Vote.
+PN181 | 181 | Army | Confirmed by the Senate by Voice Vote.
+PN178 | 178 | Air Force | Confirmed by the Senate by Voice Vote.
+PN177 | 177 | Air Force | Confirmed by the Senate by Voice Vote.
+PN176 | 176 | Air Force | Confirmed by the Senate by Voice Vote.
+PN175 | 175 | Air Force | Confirmed by the Senate by Voice Vote.
+PN174 | 174 | Air Force | Confirmed by the Senate by Voice Vote.
+PN173 | 173 | Air Force | Confirmed by the Senate by Voice Vote.
+PN180 | 180 | Army | Confirmed by the Senate by Voice Vote.
+PN184 | 184 | Army | Confirmed by the Senate by Voice Vote.
+PN183 | 183 | Army | Confirmed by the Senate by Voice Vote.
+PN185 | 185 | Army | Confirmed by the Senate by Voice Vote.
+PN186 | 186 | Army | Confirmed by the Senate by Voice Vote.
+PN187 | 187 | Army | Confirmed by the Senate by Voice Vote.
+PN191 | 191 | Navy | Confirmed by the Senate by Voice Vote.
+PN188 | 188 | Army | Confirmed by the Senate by Voice Vote.
+PN189 | 189 | Navy | Confirmed by the Senate by Voice Vote.
+PN193 | 193 | Navy | Confirmed by the Senate by Voice Vote.
+PN192 | 192 | Navy | Confirmed by the Senate by Voice Vote.
+PN190 | 190 | Navy | Confirmed by the Senate by Voice Vote.
+PN205 | 205 | Navy | Confirmed by the Senate by Voice Vote.
+PN204 | 204 | Navy | Confirmed by the Senate by Voice Vote.
+PN202 | 202 | Navy | Confirmed by the Senate by Voice Vote.
+PN201 | 201 | Navy | Confirmed by the Senate by Voice Vote.
+PN200 | 200 | Navy | Confirmed by the Senate by Voice Vote.
+PN198 | 198 | Navy | Confirmed by the Senate by Voice Vote.
+PN197 | 197 | Navy | Confirmed by the Senate by Voice Vote.
+PN196 | 196 | Navy | Confirmed by the Senate by Voice Vote.
+PN195 | 195 | Navy | Confirmed by the Senate by Voice Vote.
+PN194 | 194 | Navy | Confirmed by the Senate by Voice Vote.
+PN199 | 199 | Navy | Confirmed by the Senate by Voice Vote.
+PN203 | 203 | Navy | Confirmed by the Senate by Voice Vote.
+PN208 | 208 | Navy | Confirmed by the Senate by Voice Vote.
+PN210 | 210 | Navy | Confirmed by the Senate by Voice Vote.
+PN211 | 211 | Navy | Confirmed by the Senate by Voice Vote.
+PN212 | 212 | Navy | Confirmed by the Senate by Voice Vote.
+PN214 | 214 | Navy | Confirmed by the Senate by Voice Vote.
+PN213 | 213 | Navy | Confirmed by the Senate by Voice Vote.
+PN206 | 206 | Navy | Confirmed by the Senate by Voice Vote.
+PN207 | 207 | Navy | Confirmed by the Senate by Voice Vote.
+PN209 | 209 | Navy | Confirmed by the Senate by Voice Vote.
+PN217 | 217 | Navy | Confirmed by the Senate by Voice Vote.
+PN216 | 216 | Navy | Confirmed by the Senate by Voice Vote.
+PN215 | 215 | Navy | Confirmed by the Senate by Voice Vote.
+PN218 | 218 | Navy | Confirmed by the Senate by Voice Vote.
+PN219 | 219 | Navy | Confirmed by the Senate by Voice Vote.
+PN222 | 222 | Navy | Confirmed by the Senate by Voice Vote.
+PN221 | 221 | Navy | Confirmed by the Senate by Voice Vote.
+PN220 | 220 | Navy | Confirmed by the Senate by Voice Vote.
+PN232 | 232 | Navy | Confirmed by the Senate by Voice Vote.
+PN224 | 224 | Navy | Confirmed by the Senate by Voice Vote.
+PN225 | 225 | Navy | Confirmed by the Senate by Voice Vote.
+PN223 | 223 | Navy | Confirmed by the Senate by Voice Vote.
+PN230 | 230 | Navy | Confirmed by the Senate by Voice Vote.
+PN226 | 226 | Navy | Confirmed by the Senate by Voice Vote.
+PN235 | 235 | Navy | Confirmed by the Senate by Voice Vote.
+PN227 | 227 | Navy | Confirmed by the Senate by Voice Vote.
+PN228 | 228 | Navy | Confirmed by the Senate by Voice Vote.
+PN229 | 229 | Navy | Confirmed by the Senate by Voice Vote.
+PN231 | 231 | Navy | Confirmed by the Senate by Voice Vote.
+PN233 | 233 | Navy | Confirmed by the Senate by Voice Vote.
+PN234 | 234 | Navy | Confirmed by the Senate by Voice Vote.
+PN241 | 241 | Navy | Confirmed by the Senate by Voice Vote.
+PN236 | 236 | Navy | Confirmed by the Senate by Voice Vote.
+PN243 | 243 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN240 | 240 | Navy | Confirmed by the Senate by Voice Vote.
+PN239 | 239 | Navy | Confirmed by the Senate by Voice Vote.
+PN237 | 237 | Navy | Confirmed by the Senate by Voice Vote.
+PN238 | 238 | Navy | Confirmed by the Senate by Voice Vote.
+PN242 | 242 | Space Force | Confirmed by the Senate by Voice Vote.
+PN248 | 248 | Air Force | Confirmed by the Senate by Voice Vote.
+PN253 | 253 | Army | Confirmed by the Senate by Voice Vote.
+PN257 | 257 | Navy | Confirmed by the Senate by Voice Vote.
+PN261 | 261 | Navy | Confirmed by the Senate by Voice Vote.
+PN260 | 260 | Navy | Confirmed by the Senate by Voice Vote.
+PN259 | 259 | Navy | Confirmed by the Senate by Voice Vote.
+PN258 | 258 | Navy | Confirmed by the Senate by Voice Vote.
+PN256 | 256 | Navy | Confirmed by the Senate by Voice Vote.
+PN255 | 255 | Navy | Confirmed by the Senate by Voice Vote.
+PN254 | 254 | Navy | Confirmed by the Senate by Voice Vote.
+PN252 | 252 | Army | Confirmed by the Senate by Voice Vote.
+PN250 | 250 | Army | Confirmed by the Senate by Voice Vote.
+PN249 | 249 | Air Force | Confirmed by the Senate by Voice Vote.
+PN273 | 273 | Army | Confirmed by the Senate by Voice Vote.
+PN274 | 274 | Army | Confirmed by the Senate by Voice Vote.
+PN275 | 275 | Air Force | Confirmed by the Senate by Voice Vote.
+PN262 | 262 | Navy | Confirmed by the Senate by Voice Vote.
+PN263 | 263 | Navy | Confirmed by the Senate by Voice Vote.
+PN264 | 264 | Navy | Confirmed by the Senate by Voice Vote.
+PN265 | 265 | Navy | Confirmed by the Senate by Voice Vote.
+PN266 | 266 | Navy | Confirmed by the Senate by Voice Vote.
+PN267 | 267 | Navy | Confirmed by the Senate by Voice Vote.
+PN268 | 268 | Navy | Confirmed by the Senate by Voice Vote.
+PN269 | 269 | Navy | Confirmed by the Senate by Voice Vote.
+PN270 | 270 | Space Force | Confirmed by the Senate by Voice Vote.
+PN272 | 272 | Navy | Confirmed by the Senate by Voice Vote.
+PN278 | 278 | Army | Confirmed by the Senate by Voice Vote.
+PN284 | 284 | Navy | Confirmed by the Senate by Voice Vote.
+PN283 | 283 | Navy | Confirmed by the Senate by Voice Vote.
+PN282 | 282 | Navy | Confirmed by the Senate by Voice Vote.
+PN281 | 281 | Navy | Confirmed by the Senate by Voice Vote.
+PN279 | 279 | Army | Confirmed by the Senate by Voice Vote.
+PN286 | 286 | Space Force | Confirmed by the Senate by Voice Vote.
+PN277 | 277 | Army | Confirmed by the Senate by Voice Vote.
+PN276 | 276 | Air Force | Confirmed by the Senate by Voice Vote.
+PN280 | 280 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN285 | 285 | Navy | Confirmed by the Senate by Voice Vote.
+PN350 | 350 | Air Force | Confirmed by the Senate by Voice Vote.
+PN347 | 347 | Army | Confirmed by the Senate by Voice Vote.
+PN351 | 351 | Air Force | Confirmed by the Senate by Voice Vote.
+PN353 | 353 | Army | Confirmed by the Senate by Voice Vote.
+PN349 | 349 | Army | Confirmed by the Senate by Voice Vote.
+PN365 | 365 | Army | Confirmed by the Senate by Voice Vote.
+PN356 | 356 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN359 | 359 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN360 | 360 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN362 | 362 | Navy | Confirmed by the Senate by Voice Vote.
+PN358 | 358 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN355 | 355 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN357 | 357 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN366 | 366 | Army | Confirmed by the Senate by Voice Vote.
+PN363 | 363 | Army | Confirmed by the Senate by Voice Vote.
+PN364 | 364 | Army | Confirmed by the Senate by Voice Vote.
+PN11-12 | 11 | Department of Agriculture | Confirmed by the Senate by Yea-Nay Vote. 72 - 28. Record Vote Number: 53.
+PN11-4 | 11 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 67 - 32. Record Vote Number: 111.
+PN13-7 | 13 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 327.
+PN141-11 | 141 | Executive Office of the President | Received message of withdrawal of nomination from the President.
+PN12-40 | 12 | Department of Homeland Security | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 321.
+PN25-1 | 25 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 57 - 40. Record Vote Number: 316.
+PN246-16 | 246 | Department of Defense | Received message of withdrawal of nomination from the President.
+PN26-43 | 26 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 51 - 41. Record Vote Number: 297.
+PN141-24 | 141 | Department of State | Received message of withdrawal of nomination from the President.
+PN26-28 | 26 | Department of Justice | Received message of withdrawal of nomination from the President.
+PN246-7 | 246 | Department of Agriculture | Received message of withdrawal of nomination from the President.
+PN129-13 | 129 | National Indian Gaming Commission | Received message of withdrawal of nomination from the President.
+PN26-20 | 26 | Department of Housing and Urban Development | Confirmed by the Senate by Yea-Nay Vote. 51 - 43. Record Vote Number: 303.
+PN55-47 | 55 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 57 - 38. Record Vote Number: 292.
+PN25-19 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 59 - 36. Record Vote Number: 285.
+PN26-4 | 26 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN50 | 50 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN116 | 116 | Air Force | Confirmed by the Senate by Voice Vote.
+PN117 | 117 | Air Force | Confirmed by the Senate by Voice Vote.
+PN124 | 124 | Navy | Confirmed by the Senate by Voice Vote.
+PN125 | 125 | Navy | Confirmed by the Senate by Voice Vote.
+PN123 | 123 | Navy | Confirmed by the Senate by Voice Vote.
+PN126 | 126 | Space Force | Confirmed by the Senate by Voice Vote.
+PN122 | 122 | Army | Confirmed by the Senate by Voice Vote.
+PN121 | 121 | Army | Confirmed by the Senate by Voice Vote.
+PN132-1 | 132 | Air Force | Confirmed by the Senate by Voice Vote.
+PN134 | 134 | Army | Confirmed by the Senate by Voice Vote.
+PN135 | 135 | Army | Confirmed by the Senate by Voice Vote.
+PN136 | 136 | Army | Confirmed by the Senate by Voice Vote.
+PN137 | 137 | Army | Confirmed by the Senate by Voice Vote.
+PN151 | 151 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN152 | 152 | Navy | Confirmed by the Senate by Voice Vote.
+PN24-4 | 24 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 261.
+PN25-11 | 25 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 258.
+PN12-38 | 12 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 46. Record Vote Number: 252.
+PN46 | 46 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN41 | 41 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN65 | 65 | Air Force | Confirmed by the Senate by Voice Vote.
+PN66 | 66 | Air Force | Confirmed by the Senate by Voice Vote.
+PN64 | 64 | Air Force | Confirmed by the Senate by Voice Vote.
+PN63 | 63 | Air Force | Confirmed by the Senate by Voice Vote.
+PN67 | 67 | Air Force | Confirmed by the Senate by Voice Vote.
+PN68 | 68 | Air Force | Confirmed by the Senate by Voice Vote.
+PN71 | 71 | Air Force | Confirmed by the Senate by Voice Vote.
+PN69 | 69 | Air Force | Confirmed by the Senate by Voice Vote.
+PN70 | 70 | Air Force | Confirmed by the Senate by Voice Vote.
+PN75 | 75 | Air Force | Confirmed by the Senate by Voice Vote.
+PN74 | 74 | Air Force | Confirmed by the Senate by Voice Vote.
+PN73 | 73 | Air Force | Confirmed by the Senate by Voice Vote.
+PN72 | 72 | Air Force | Confirmed by the Senate by Voice Vote.
+PN76 | 76 | Air Force | Confirmed by the Senate by Voice Vote.
+PN77 | 77 | Air Force | Confirmed by the Senate by Voice Vote.
+PN78 | 78 | Air Force | Confirmed by the Senate by Voice Vote.
+PN82 | 82 | Air Force | Confirmed by the Senate by Voice Vote.
+PN80 | 80 | Air Force | Confirmed by the Senate by Voice Vote.
+PN79 | 79 | Air Force | Confirmed by the Senate by Voice Vote.
+PN81 | 81 | Air Force | Confirmed by the Senate by Voice Vote.
+PN86 | 86 | Air Force | Confirmed by the Senate by Voice Vote.
+PN87 | 87 | Air Force | Confirmed by the Senate by Voice Vote.
+PN84 | 84 | Air Force | Confirmed by the Senate by Voice Vote.
+PN85 | 85 | Air Force | Confirmed by the Senate by Voice Vote.
+PN83 | 83 | Air Force | Confirmed by the Senate by Voice Vote.
+PN96 | 96 | Army | Confirmed by the Senate by Voice Vote.
+PN105 | 105 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN97 | 97 | Army | Confirmed by the Senate by Voice Vote.
+PN94 | 94 | Army | Confirmed by the Senate by Voice Vote.
+PN107 | 107 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN88 | 88 | Air Force | Confirmed by the Senate by Voice Vote.
+PN106 | 106 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN104 | 104 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN93 | 93 | Army | Confirmed by the Senate by Voice Vote.
+PN92 | 92 | Army | Confirmed by the Senate by Voice Vote.
+PN91 | 91 | Army | Confirmed by the Senate by Voice Vote.
+PN90 | 90 | Army | Confirmed by the Senate by Voice Vote.
+PN102 | 102 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN95 | 95 | Army | Confirmed by the Senate by Voice Vote.
+PN112 | 112 | Navy | Confirmed by the Senate by Voice Vote.
+PN110 | 110 | Navy | Confirmed by the Senate by Voice Vote.
+PN113 | 113 | Navy | Confirmed by the Senate by Voice Vote.
+PN108 | 108 | Navy | Confirmed by the Senate by Voice Vote.
+PN109 | 109 | Navy | Confirmed by the Senate by Voice Vote.
+PN111 | 111 | Navy | Confirmed by the Senate by Voice Vote.
+PN114 | 114 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN25-50 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 244.
+PN22-10 | 22 | Department of Defense | Received message of withdrawal of nomination from the President.
+PN12-10 | 12 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 242.
+PN141-1 | 141 | Office of Special Counsel | Received message of withdrawal of nomination from the President.
+PN25-32 | 25 | Bureau of Consumer Financial Protection | Received message of withdrawal of nomination from the President.
+PN11-8 | 11 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 52 - 48. Record Vote Number: 52.
+PN12-32 | 12 | Public Health Service | Received message of withdrawal of nomination from the President.
+PN20 | 20 | Social Security Administration | Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 234.
+PN26-29 | 26 | Department of Veterans Affairs | Received message of withdrawal of nomination from the President.
+PN55-39 | 55 | Department of Transportation | Received message of withdrawal of nomination from the President.
+PN55-27 | 55 | Department of State | Received message of withdrawal of nomination from the President.
+PN26-18 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 83 - 14. Record Vote Number: 221.
+PN24-5 | 24 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 59 - 39. Record Vote Number: 217.
+PN54-5 | 54 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 67 - 29. Record Vote Number: 215.
+PN26-3 | 26 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 60 - 36. Record Vote Number: 219.
+PN11-13 | 11 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 99 - 0. Record Vote Number: 8.
+PN25-51 | 25 | Department of the Interior | Received message of withdrawal of nomination from the President.
+PN12-18 | 12 | Securities and Exchange Commission | Confirmed by the Senate by Yea-Nay Vote. 52 - 44. Record Vote Number: 205.
+PN25-20 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 53 - 46. Record Vote Number: 201.
+PN25-18 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 60 - 37. Record Vote Number: 202.
+PN25-22 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 49 - 46. Record Vote Number: 203.
+PN25-6 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 51 - 45. Record Vote Number: 204.
+PN25-14 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 66 - 32. Record Vote Number: 195.
+PN7 | 7 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN9 | 9 | Navy | Confirmed by the Senate by Voice Vote.
+PN2 | 2 | Army | Confirmed by the Senate by Voice Vote.
+PN4 | 4 | Army | Confirmed by the Senate by Voice Vote.
+PN3 | 3 | Army | Confirmed by the Senate by Voice Vote.
+PN8 | 8 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN1 | 1 | Air Force | Confirmed by the Senate by Voice Vote.
+PN5 | 5 | Army | Confirmed by the Senate by Voice Vote.
+PN6 | 6 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN49 | 49 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN42 | 42 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN40 | 40 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN39 | 39 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN37 | 37 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN36 | 36 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN35 | 35 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN33 | 33 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN32 | 32 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN44 | 44 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN45 | 45 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN47 | 47 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN48 | 48 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN43 | 43 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN51 | 51 | Marine Corps | Confirmed by the Senate by Voice Vote.
+PN56 | 56 | Army | Confirmed by the Senate by Voice Vote.
+PN12-34 | 12 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 53 - 45. Record Vote Number: 167.
+PN12-11 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 168.
+PN12-39 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 163.
+PN25-56 | 25 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 52 - 45. Record Vote Number: 157.
+PN55-31 | 55 | Department of State | Received message of withdrawal of nomination from the President.
+PN11-21 | 11 | Department of State | Received message of withdrawal of nomination from the President.
+PN55-3 | 55 | National Aeronautics and Space Administration | Received message of withdrawal of nomination from the President.
+PN11-20 | 11 | Department of State | Received message of withdrawal of nomination from the President.
+PN12-13 | 12 | Department of Defense | Received message of withdrawal of nomination from the President.
+PN12-15 | 12 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 53 - 43. Record Vote Number: 149.
+PN12-37 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 147.
+PN12-25 | 12 | Department of State | Confirmed by the Senate by Yea-Nay Vote. 60 - 31. Record Vote Number: 137.
+PN26-6 | 26 | United States Agency for Global Media | Received message of withdrawal of nomination from the President.
+PN21 | 21 | Department of State | Received message of withdrawal of nomination from the President.
+PN13-12 | 13 | Federal Housing Finance Agency | Confirmed by the Senate by Yea-Nay Vote. 56 - 43. Record Vote Number: 121.
+PN12-44 | 12 | Department of Health and Human Services | Received message of withdrawal of nomination from the President.
+PN22-12 | 22 | Department of Commerce | Confirmed by the Senate by Yea-Nay Vote. 54 - 45. Record Vote Number: 123.
+PN12-41 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 78 - 19. Record Vote Number: 115.
+PN19 | 19 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 53 - 46. Record Vote Number: 117.
+PN10 | 10 | Coast Guard | Confirmed by the Senate by Voice Vote.
+PN12-5 | 12 | Department of Justice | Confirmed by the Senate by Yea-Nay Vote. 52 - 46. Record Vote Number: 105.
+PN11-17 | 11 | Executive Office of the President | Confirmed by the Senate by Yea-Nay Vote. 56 - 43. Record Vote Number: 94.
+PN22-22 | 22 | Department of the Treasury | Received message of withdrawal of nomination from the President.
+PN11-23 | 11 | Environmental Protection Agency | Confirmed by the Senate by Yea-Nay Vote. 56 - 42. Record Vote Number: 24.
+PN12-4 | 12 | Social Security Administration | Received message of withdrawal of nomination from the President.
+PN12-6 | 12 | Department of State | Received message of withdrawal of nomination from the President.
+PN11-1 | 11 | Department of the Treasury | Confirmed by the Senate by Yea-Nay Vote. 68 - 29. Record Vote Number: 19.
+PN11-7 | 11 | Department of Defense | Confirmed by the Senate by Yea-Nay Vote. 51 - 50. Record Vote Number: 15.
