@@ -2118,5 +2118,37 @@
     "genModel": "sonnet (hostile source-only verifier passes, full article)",
     "genAt": "2026-08-31",
     "stampedAt": "2026-08-31"
+  },
+  "article-ndaa-fy2026": {
+    "kind": "article",
+    "sourceShas": {
+      "bill-119-s-2296-es": "5a74ad24cc089a1b36c080f5497f6b818fe8d87f7dd3c597bc800b032526bc70",
+      "bill-119-s-1071-pl119-60": "396656736a46e8f17f40f34a509150f42e68fc2be09ea26490b5410271789b9a",
+      "record-congress-s-2296-status-recheck": "7804f3714efd66cf8c7a9e9552863e9d821c9279c2d24a159dc73d392675cca5",
+      "record-congress-s-2296-actions": "086fc71c8f58ef8f8f9375790b827796107bd9f8466f61a01766d4c430c5215a",
+      "record-congress-s-2296-summary": "bca7f3349e05129485416852b24247b91ae5b1bf2251fb87b30acc65a8929d31",
+      "record-congress-s-1071-actions": "aec424d94e8a2225e382fe405c5e0dbdfebe3839925e55589dcb597072344c07",
+      "record-congress-s-1071-summary": "a706e26e275481cfa04689e3f2de86bb2b15e81b3cf6853adad4706ccf0bde28",
+      "record-senate-rollcall-119-1-500": "248e30ca41c0b8bc384390e2ce991ffd21010237c53e49c96e25a79223da3997",
+      "record-senate-rollcall-119-1-570": "027661ec8e71b36b1634be79d7c3518ec4bd6787fc614a7416f329e5fab14d52",
+      "record-senate-rollcall-119-1-648": "3eaa22f8d0e9c21e1118031e816537cf17fa18cb891666df6565fb72124815c7",
+      "record-crs-if10516-navigating-ndaa": "e891df34a02a7f7d77e257f639149391edbd076e34da3be72b141be9f419ba5e",
+      "record-crs-if10515-ndaa-process": "dae5486f89612c0914bbd0bfd8a1250603cdcfcda93b50f87c72798920a7a650",
+      "record-crs-rs22299-rule-xiv": "640d4b5f22e82f3ea0ac3b512d9640f01c5a4eb2ffb049956c19047a1674f2ec",
+      "record-crec-2025-09-02-wicker-s2296": "ca2b171a1d70a224afe355510110cdbead26e81a1314da1946900e26a97920e1",
+      "record-crec-2025-10-09-sanders-sa3853": "89ac88b4208386ddba1ed6c0fd028a8061048661cd2265498f39a0ed0e6d5506",
+      "org-sasc-wicker-reed-ndaa-final-passage": "cf477f7db9280c4f1b359f0e5e7010ac67688279c2455f5f95101d4e113f961b",
+      "member-markey-ndaa-fy2026": "40e8e53dca8fabdd1d24aab20258b0f82f5ff1549a529f8ca44f72f41a6967b2",
+      "member-six-senators-oppose-ndaa-fy2026": "c83688cfb21b8c7bbf910d7f5fd56b3117ac59344b77690e2929ca7dfa39ee86",
+      "news-rollcall-ndaa-amendments-deal": "a9e39d7e898e68b9b3eca16aa577ede264bec4bb9c76885b0dc892a61d16bb87",
+      "votes-119-s-2296": "32f346566ff38c3bb9b8fa8e562f2d796b936c929dd6602b4e26a86ed4590b58",
+      "votes-119-s-1071": "82de9873a2e7d7a2d23356a3e6086fd5b33ffe177c33ac84eb2fdee7a6418ad1"
+    },
+    "proseSha": "300d0d0369520564",
+    "proseFile": "articles/ndaa-fy2026.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only verifier passes, full article)",
+    "genAt": "2026-08-31",
+    "stampedAt": "2026-08-31"
   }
 }
