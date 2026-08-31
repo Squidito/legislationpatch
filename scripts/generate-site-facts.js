@@ -441,6 +441,17 @@ for (const row of ledgerRows) L.push('  ' + row);
 L.push(`Bill claim ledgers: ${billLedgers.length}`);
 L.push(`Bill ledgers recording a drafting model at all: ${billDrafterRecorded} of ${billLedgers.length}`);
 L.push('No bill ledger records a drafting model, so no bill ledger records that a different model audited what drafted it.');
+// LEDGER COVERAGE. about.html and editorial-standards.html both tell readers the
+// claim ledger records every analysis. The full-corpus sweep closed 2026-08-12 and
+// every bill analysed since has landed WITHOUT one, so the universal was drifting
+// false one batch at a time with nothing measuring it. Derived here so the
+// preflight staleness warning catches the next gap instead of a reader doing.
+const ledgeredIds = new Set(billLedgers.map(f => f.replace(/\.json$/, '')));
+const unledgered = bills.filter(b => !ledgeredIds.has(b.id));
+L.push(`Bill analyses carrying a claim ledger: ${bills.length - unledgered.length} of ${bills.length}.`);
+if (unledgered.length) {
+    L.push(`Analysed bills with NO claim ledger: ${unledgered.length} (${unledgered.map(b => b.id).sort().join(', ')}); analysed ${[...new Set(unledgered.map(b => b.analyzedAt || 'date unrecorded'))].sort().join(', ')}.`);
+}
 L.push('');
 
 const sheet = L.join('\n') + '\n';

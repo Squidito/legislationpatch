@@ -8,8 +8,9 @@
       "data/entity.json"
     ],
     "claims": [
-      "The 'How the analysis is produced' paragraph matches the real pipeline.",
+      "The 'How the analysis is produced' paragraph matches the real pipeline. It said bill text is published by 'Congress.gov and GovInfo' until 2026-08-30; fetch_bills_data.js contains ZERO govinfo references and every bill-text call is api.congress.gov. GovInfo supplies the Congressional Record (fetch_cr_data.js) and statutes/manuals (fetch-reference.js). This same conflation survived a fix on methodology.html once by hiding in the metadata, and it survived the first trust-page sweep here by hiding on a page outside articles/ — check the body, the meta description, og:description and the JSON-LD together.",
       "The verification description matches what the ledgers actually RECORD. Bill ledgers record an auditing model and NO drafting model (0 of 212 as of 2026-08-30), so no page may claim of a BILL analysis that a different model audited what drafted it. The cross-model rule is enforced only in the ARTICLE lane, by publish-article.js.",
+      "The claim-ledger sentence is SCOPED, not universal. It read 'Each analysis keeps a record of the claims checked' until 2026-08-30, which was false: the full-corpus ledger sweep closed 2026-08-12 and the seven bills analysed on 2026-08-27 carry no ledger. Coverage is 212 of 219. Re-derive with `node scripts/generate-site-facts.js --check` — the sheet now measures the gap, so a new batch shipping without ledgers will surface there rather than on this page.",
       "Ownership, funding, and independence statements are still accurate.",
       "The named editor matches data/entity.json.",
       "The static-data claim still holds: api.js fetches only same-host JSON, and the browser makes no live government API call."
@@ -185,7 +186,7 @@
       "QA re-reads happen in fresh sessions carrying no memory of prior passes, working adversarially.",
       "Drafts are decomposed into atomic claims judged supported / contradicted / unsupported against a quoted span, including a direction-of-change check.",
       "The cross-model rule is stated ONLY where it is enforced. publish-article.js blocks an ARTICLE whose ledger names the same model family as drafter and auditor; bill ledgers record no drafting model, so the page must not claim it for bill analyses.",
-      "A per-page audit ledger records every claim, its verdict, and its source line.",
+      "A per-page audit ledger records every claim, its verdict, and its source line — and the page states how much of the corpus that actually covers (212 of 219 bill analyses as of 2026-08-30; the seven analysed 2026-08-27 carry none, because the full-corpus sweep closed 2026-08-12 and nothing has bound a new batch to a ledger since). Re-derive with `node scripts/generate-site-facts.js --check` before trusting the figure.",
       "CRITICAL -- every analysis and article is reviewed by a human BEFORE publication. If the Dispatch lane ever auto-publishes with post-publish review, this page AND the disclosure line on every article become false and must be reworded first.",
       "Quotations are never generated or paraphrased; verbatim from the Congressional Record with speaker attribution, or omitted. The page must NOT claim a date on every quote — only 23 of 417 bill-attached quotes store one (checked 2026-08-30).",
       "Positions attributed to named organizations trace to a fetched primary source, or are omitted rather than softened.",
