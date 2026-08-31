@@ -282,6 +282,98 @@ section('Article byline + AI disclosure');
   if (!noByline.length && !badDisc.length && !outside.length) pass(`All ${arts.length} article(s) have a linked byline and one in-body disclosure`);
 }
 
+// 4b. Article bodies are tag-balanced ---------------------------------------
+// Banked 2026-08-31 from the KOSA delta refresh: a hand-inserted paragraph went
+// in with no closing </p> and ran into the next one, and BOTH preflight and
+// tracker-gate passed with the page broken -- neither checks tag balance. It was
+// caught by eye, which is not a mechanism.
+//
+// Every check above this one reads specific ATTRIBUTES and STRINGS (a byline
+// regex, a disclosure class, a JSON-LD parse). None of them cares whether the
+// surrounding markup is well-formed, so an article can satisfy all of them while
+// rendering wrong. Article bodies are the one place on this site where a human
+// (or a model) writes raw HTML by hand, so this is where that gap lives.
+//
+// Deliberately a STACK check over the article body only, not a full HTML parse:
+// no dependency, ~1ms for 48 articles, and it reports the LINE the unclosed tag
+// was opened on, which is what you actually need to fix it. It runs clean on all
+// 48 live articles today, so any future report is a real defect, not calibration
+// noise.
+//
+// PROOF OF TEETH (2026-08-31, against articles/kids-online-safety-act.html --
+// each injected, run, and reverted; preflight exits 1 on every one):
+//   delete one </p>        -> "<p> opened at line 224 is never closed
+//                             (a </div> at line 317 closed past it)"
+//   add a stray </div>     -> "</div> at line 317 closes nothing"
+//   mis-nest <em>/<strong> -> "<strong> opened at line 224 is never closed
+//                             (a </em> at line 224 closed past it)"
+//   delete one </ul>       -> "<ul> opened at line 246 is never closed"
+// and the untouched file reports nothing.
+//
+// Writing this found a bug in itself, which is the argument for injecting real
+// defects rather than trusting a clean run: the first version popped the stack
+// twice per closing tag and reported 240 imbalances across a corpus that has
+// none. A gate calibrated only against "it passes" would have shipped inverted.
+section('Article body tag balance');
+{
+  // Void elements plus the SVG leaves that legitimately self-terminate, so an
+  // inline icon does not read as an unclosed tag.
+  const VOID = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta',
+    'param', 'source', 'track', 'wbr', 'path', 'circle', 'line', 'polygon', 'polyline', 'rect', 'use', 'stop', 'ellipse']);
+  // Quoted attribute values are consumed whole, so a '>' inside title="a > b"
+  // cannot be mistaken for the end of the tag.
+  const TAG = /<(\/?)([a-zA-Z][a-zA-Z0-9-]*)((?:"[^"]*"|'[^']*'|[^>"'])*)>/g;
+
+  function imbalances(body, lineOffset) {
+    const stack = [], problems = [];
+    const clean = body
+      .replace(/<!--[\s\S]*?-->/g, m => m.replace(/[^\n]/g, ' '))
+      .replace(/<script[\s\S]*?<\/script>/gi, m => m.replace(/[^\n]/g, ' '))
+      .replace(/<style[\s\S]*?<\/style>/gi, m => m.replace(/[^\n]/g, ' '));
+    const lineAt = i => lineOffset + (clean.slice(0, i).match(/\n/g) || []).length;
+    for (const m of clean.matchAll(TAG)) {
+      const closing = m[1] === '/', tag = m[2].toLowerCase(), attrs = m[3] || '';
+      if (VOID.has(tag)) continue;
+      if (!closing && /\/\s*$/.test(attrs)) continue;               // <foo />
+      const line = lineAt(m.index);
+      if (!closing) { stack.push({ tag, line }); continue; }
+      const back = [...stack].reverse().findIndex(e => e.tag === tag);
+      if (back === -1) { problems.push(`</${tag}> at line ${line} closes nothing`); continue; }
+      // `keep` is the index of the tag being closed. Everything ABOVE it was
+      // left open and is reported; truncating to `keep` drops the match itself
+      // along with them. (An extra pop() here double-popped every well-formed
+      // tag and reported 240 imbalances across a corpus that has none.)
+      const keep = stack.length - 1 - back;
+      for (let k = stack.length - 1; k > keep; k--) {
+        problems.push(`<${stack[k].tag}> opened at line ${stack[k].line} is never closed (a </${tag}> at line ${line} closed past it)`);
+      }
+      stack.length = keep;
+    }
+    for (const e of stack) problems.push(`<${e.tag}> opened at line ${e.line} is never closed`);
+    return problems;
+  }
+
+  const arts = files.filter(f => isArticle(f) && !f.endsWith('/index.html'));
+  let bad = 0, checked = 0;
+  for (const f of arts) {
+    const h = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    const s = h.indexOf('<div class="article-body">');
+    const e = h.indexOf('</article>');
+    // No markers is not a silent pass: the byline check above already proves
+    // every file here is an article, so a missing body div is itself a defect.
+    if (s < 0 || e <= s) { fail(`${f}: no <div class="article-body"> … </article> to check`); bad++; continue; }
+    checked++;
+    const offset = 1 + (h.slice(0, s).match(/\n/g) || []).length;
+    const problems = imbalances(h.slice(s, e), offset);
+    if (problems.length) {
+      bad++;
+      problems.slice(0, 5).forEach(p => fail(`${f}: ${p}`));
+      if (problems.length > 5) console.log(`       … and ${problems.length - 5} more in this file`);
+    }
+  }
+  if (!bad) pass(`All ${checked} article bodies are tag-balanced`);
+}
+
 // 5. Theme default must be consistent (dark) --------------------------------
 // `if (!/lpTheme/.test(h)) continue` was a silent skip: a page that lost its
 // theme bootstrap entirely -- the actual defect, a flash of light on a
