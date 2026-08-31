@@ -35,8 +35,8 @@
       "The speaker-resolution description must match resolveRepInfo, including that it takes the first remaining candidate when more than one still matches.",
       "The excerpt description must match bestExcerpt in every branch, including the trim-to-last-word fallback."
     ],
-    "sha": "a54f8790f5dc8381",
-    "reviewedAt": "2026-08-30"
+    "sha": "1c4f7584657f7e95",
+    "reviewedAt": "2026-08-31"
   },
   "articles/how-we-track-voting.html": {
     "describes": [
@@ -54,7 +54,9 @@
       "The page must NOT claim member records store term data -- no such field exists in the schema.",
       "The crossover description must keep the tie carve-out: a party that splits exactly even has no majority direction, so nobody in it is listed. A tie silently defaulting to Yea put a named senator on the public crossover list 18 times before 2026-08-30.",
       "Any on-page label the prose names must be the exact string the renderer emits -- it is \"Crossed the Aisle\", not \"Crossovers\".",
-      "The claim about what the browser loads must stay narrow: member portraits load from bioguide.congress.gov (util.js portraitUrl) and app-settings.js calls two geolocation APIs, so \"everything is static and same-host\" is false."
+      "The claim about what the browser loads must stay narrow: member portraits load from bioguide.congress.gov (util.js portraitUrl) and app-settings.js calls two geolocation APIs, so \"everything is static and same-host\" is false.",
+      "The member-field enumeration is COMPLETE against the schema. It omitted photo/portraitUrl until 2026-08-30 while the next sentence made a completeness claim (no term data). Exactly two records carry a portrait override (C001115, G000553); generate_rep_pages.js reads rep.photo in preference to the computed URL.",
+      "The meta description and the index card must not generalise the House-only bioguide-ID match to the Senate, which is matched on surname plus state. Both said cross-references member bioguide IDs until 2026-08-30, contradicting the body three paragraphs down."
     ],
     "sha": "",
     "reviewedAt": ""
@@ -75,10 +77,12 @@
       "The canonical Person / NewsMediaOrganization entity-reference architecture is still in place.",
       "The bill-text version rule is stated as the FETCH-TIME preference, not as a guarantee about what is currently stored.",
       "The page makes NO claim about how any AI system, crawler or search engine ranks, trusts or cites sources. Every such assertion was removed 2026-08-30 as uncheckable; a fast-moving domain like this must never be described from training memory.",
-      "The quote-provenance figures are still right: no bill-page quote carries a granule id and no quote record anywhere carries a session field. Re-derive with generate-site-facts.js --check."
+      "The quote-provenance figures are still right: no bill-page quote carries a granule id and no quote record anywhere carries a session field. Re-derive with generate-site-facts.js --check.",
+      "Any page-coverage claim is COUNTED, not inferred from the generator. The meta description and index card said schema.org markup on every page until 2026-08-30; of 855 HTML files, 17 carry no JSON-LD, including bills, reps, search, privacy, terms and favorites. The body claim every article and bill page does hold — verify by counting emitted files, not by reading generate_bill_pages.js.",
+      "Every bill named as an example links its own bill page (prompts.js ARTICLE_DRAFT_PROMPT rule 2). S. 1884, S. 3971 and H.R. 8322 had NO links until 2026-08-30."
     ],
-    "sha": "",
-    "reviewedAt": ""
+    "sha": "798702cf67fb10c5",
+    "reviewedAt": "2026-08-31"
   },
   "articles/methodology.html": {
     "describes": [
@@ -101,7 +105,10 @@
       "The page states no service-level or turnaround promise. The \"24 to 48 hours\" target was removed 2026-08-30 because nothing in the repo backed it.",
       "The bill-text staleness disclosure is still accurate: an already-analysed bill is not automatically re-fetched, so stored text can be older than the newest posted version. Re-derive the two figures with generate-site-facts.js --check before stamping.",
       "The latest-applicable-version fetch rule is still how bill text is retrieved.",
-      "Any count or enumeration on this page still matches reality -- these are the parts that rot first."
+      "Any count or enumeration on this page still matches reality -- these are the parts that rot first.",
+      "The validator count distinguishes the DEFAULT GATE from the file. validate-batch.js defines 27 check sections, but 'Account attribution' is gated behind a process.argv check for the opt-in --attribution flag, and run-batch.js calls the validator without that flag at both call sites — so 26 run before publication, 14 blocking and 12 warn-only. The page said 27 ran against every analysis until 2026-08-30.",
+      "Every bill used as a worked example satisfies prompts.js ARTICLE_DRAFT_PROMPT rule 2: receipt-bound AND linking the bill own page. Both examples (S. 4465 in the lede, S. 1884 under What We Actually Read) carry a /bill/<slug>/ link. A future edit that drops the link breaks the rule even if the facts stay right.",
+      "The claim-ledger sentence is SCOPED to 212 of 219 analyses. Re-derive with generate-site-facts.js --check before stamping."
     ],
     "sha": "",
     "reviewedAt": ""
@@ -134,8 +141,8 @@
       "The bill-page extractor also pulls minority/additional/dissenting views from committee reports, a different GovInfo collection from the Congressional Record -- the page must not describe that store as Record-only.",
       "Claims about the Record itself must trace to the stored CRS 98-265 or the stored GovInfo help page, including the Senate unanimous-consent carve-out (undelivered Senate remarks printed as if spoken)."
     ],
-    "sha": "8fb5eb108b153f01",
-    "reviewedAt": "2026-08-30"
+    "sha": "93068afc94fa69be",
+    "reviewedAt": "2026-08-31"
   },
   "articles/what-is-legislationpatch.html": {
     "describes": [
@@ -153,8 +160,8 @@
       "The bill-text panel label rendered by bill.js is still \"Full Bill Text\" -- the page must not call it the enrolled bill.",
       "The 30% crossover threshold still matches fetch_vote_data.js."
     ],
-    "sha": "32aad48a73f61504",
-    "reviewedAt": "2026-08-30"
+    "sha": "db3af039923e47c6",
+    "reviewedAt": "2026-08-31"
   },
   "author/james-shearn/index.html": {
     "describes": [

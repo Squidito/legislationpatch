@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation, trust-page audit)",
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
-  "passes": 2,
-  "proseSha": "24c131f9d879da21",
+  "passes": 4,
+  "proseSha": "80523706ec3b4497",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -144,7 +144,7 @@
       "sourceSpan": "// Every sentence of the quote must appear verbatim in the CR",
       "section": "Primary Source Proximity",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -157,7 +157,7 @@
       "sourceSpan": "Standalone floor quotes carrying a granuleId: 430 of 468",
       "section": "Primary Source Proximity",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -170,7 +170,7 @@
       "sourceSpan": "Bill-attached quotes carrying a granuleId: 0 of 417",
       "section": "Primary Source Proximity",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -183,7 +183,7 @@
       "sourceSpan": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
       "section": "Primary Source Proximity",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -196,7 +196,7 @@
       "sourceSpan": "(Enrolled > Engrossed Amendment > Engrossed > Reported > Introduced), tie-broken",
       "section": "Primary Source Proximity",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -209,7 +209,7 @@
       "sourceSpan": "'@graph': [article, legislation, breadcrumb",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -222,7 +222,7 @@
       "sourceSpan": "\"@type\":\"Legislation\",\"name\":\"Holocaust Expropriated Art Recovery Act of 2025\",\"legislationIdentifier\":\"S.1884\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -235,12 +235,12 @@
       "sourceSpan": "sponsor\":{\"@type\":\"Person\",\"name\":\"John Cornyn\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "An article about a bill carries a LegislativeAction node with the name, identifier and date, and NO sponsor.",
+      "claim": "An article about a bill carries a LegislativeAction node with the name and identifier, and NO sponsor.",
       "verdict": "SUPPORTED",
       "type": "entity",
       "severity": "ok",
@@ -248,7 +248,7 @@
       "sourceSpan": "\"@type\": \"LegislativeAction\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -261,12 +261,12 @@
       "sourceSpan": "\"identifier\": \"S.1884\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
       "field": "body",
-      "claim": "That LegislativeAction node carries a legislationDate.",
+      "claim": "This particular article’s LegislativeAction node also carries a legislationDate, which most do not.",
       "verdict": "SUPPORTED",
       "type": "entity",
       "severity": "ok",
@@ -274,7 +274,7 @@
       "sourceSpan": "\"legislationDate\": \"2026-04-13\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -287,7 +287,7 @@
       "sourceSpan": "Everything here emits @id-referenced nodes so the whole",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -300,7 +300,7 @@
       "sourceSpan": "\"type\": \"NewsMediaOrganization\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -313,7 +313,7 @@
       "sourceSpan": "\"publishingPrinciples\":",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -326,7 +326,7 @@
       "sourceSpan": "\"verificationFactCheckingPolicy\":",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -339,7 +339,7 @@
       "sourceSpan": "\"correctionsPolicy\": \"https://legislationpatch.com/corrections.html\"",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -352,7 +352,7 @@
       "sourceSpan": "all 47 articles carried a duplicated",
       "section": "Structured Data: Telling Crawlers What the Content Is",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -365,7 +365,7 @@
       "sourceSpan": "Lead with the dollar amount, percentage, threshold, or deadline when the source has one.",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -378,7 +378,7 @@
       "sourceSpan": "never substitute a loose round number for the real one",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -391,7 +391,7 @@
       "sourceSpan": "If no number exists in the source, describe the mechanism instead. Never invent, estimate, or round-to-a-guess.",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -404,7 +404,7 @@
       "sourceSpan": "Figure sourcing (training-data guard)",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -417,7 +417,7 @@
       "sourceSpan": "Conservative — warnings, not errors.",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -430,7 +430,7 @@
       "sourceSpan": "adjudicate in `data/qa-adjudications.json` with real evidence",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -443,7 +443,7 @@
       "sourceSpan": "eight federal watchlists",
       "section": "Factual Density",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -456,7 +456,7 @@
       "sourceSpan": "Prefer the source's own terms over any coalition's framing.",
       "section": "No Editorial Spin: Why Neutrality Makes a Claim Checkable",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -469,7 +469,7 @@
       "sourceSpan": "lets the NSA collect the communications of foreign targets without a warrant",
       "section": "No Editorial Spin: Why Neutrality Makes a Claim Checkable",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -482,7 +482,7 @@
       "sourceSpan": "Standalone floor quotes stored in data/quotes.json: 468",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -495,7 +495,7 @@
       "sourceSpan": "Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -508,7 +508,7 @@
       "sourceSpan": "const ps      = party && state ? party + '-' + state : party || state;",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -521,7 +521,7 @@
       "sourceSpan": "'<span class=\"floor-entry-chamber\">'",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -534,7 +534,7 @@
       "sourceSpan": "'<span class=\"floor-entry-date\">'",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -544,10 +544,10 @@
       "type": "process",
       "severity": "ok",
       "sourceFile": "code-floor-js",
-      "sourceSpan": "floor-entry-portrait",
+      "sourceSpan": "floor-entry-speaker-name",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -560,7 +560,7 @@
       "sourceSpan": "floor-entry-bill",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
       "kind": "claim"
     },
     {
@@ -573,18 +573,44 @@
       "sourceSpan": "Quote records carrying a session field, in either store: 0",
       "section": "The Floor Activity Page: A Quote Database",
       "status": "open",
-      "verify": null,
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The publisher node links ownership and funding information.",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "ok",
+      "sourceFile": "record-lp-entity",
+      "sourceSpan": "ownershipFundingInfo",
+      "section": "Structured Data: Telling Crawlers What the Content Is",
+      "status": "open",
+      "verify": "CONFIRMED",
+      "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "An already-analysed bill is not automatically re-fetched, so stored text can be older than the newest posted version.",
+      "verdict": "SUPPORTED",
+      "type": "process",
+      "severity": "ok",
+      "sourceFile": "record-lp-site-facts",
+      "sourceSpan": "an already-cached bill that advances is not automatically re-fetched",
+      "section": "Primary Source Proximity",
+      "status": "open",
+      "verify": "CONFIRMED",
       "kind": "claim"
     }
   ],
   "counts": {
-    "claims": 34,
-    "supported": 34,
+    "claims": 36,
+    "supported": 36,
     "material": 0,
     "minor": 0,
     "omissions": 0,
     "rejected": 0
   },
-  "resolution": "",
-  "notes": ""
+  "resolution": "CONVERGED at pass 4. Trust-page audit (Phase B), 2026-08-30, across two Opus sessions (the first was killed by a session limit; its draft survived in the gitignored drafts/ and hash-matched this ledger). Four hostile Sonnet passes, adjudicated in the main Opus thread. Pass 1 BLOCK: the LegislativeAction paragraph generalised a 1-of-12 outlier (only holocaust-art-recovery carries legislationDate), evaluative framing on the one page whose subject is non-evaluative prose, the version ladder stated without its fetch-time caveat, and two receipts that were adjacent to rather than binding on their claims. Pass 2 BLOCK: the meta description and index card claimed schema.org markup on EVERY page; measured, 17 of 855 HTML files carry no JSON-LD, six of them real reader-facing pages. Pass 3: zero errors, one warning that the quotation of our own H.R. 8322 analysis dropped the source sentence full stop; on the page whose history is a FABRICATED quotation, byte-identical is the bar, so the sentence was restructured rather than the elision waved through. Pass 4: zero errors; every quote re-verified character-for-character and every coverage figure recounted from the emitted files rather than the generator. ALSO FIXED, found in the main thread rather than by a verifier: the page used S. 1884, S. 3971 and H.R. 8322 as worked examples with NO bill-page links, breaching ARTICLE_DRAFT_PROMPT rule 2; and the draft carried no JSON-LD citation node, which the publish gate rejects outright. OPEN, FLAGGED FOR JAMES, NOT A FALSE CLAIM: the title pairs AI with Built to Be Cited while the body explicitly declines to say how any AI system treats a source. The title asserts a design intent the body delivers, so nothing on the page is untrue, but the framing is a legacy of the pre-audit version and retitling an indexed page is an SEO call, not an audit call.",
+  "notes": "THE CODEBASE IS THE SOURCE for this page. Every fix was either prose corrected to match the code, or a claim scoped to what the emitted files actually show. Nothing was softened: the AI-behaviour assertions the sweep found were REMOVED as uncheckable and replaced with an explicit disclaimer that the page makes no such claim. Coverage claims are now counted across emitted files, never inferred from generator code - that distinction is what pass 1 got wrong and pass 2 caught."
 }

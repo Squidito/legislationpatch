@@ -329,14 +329,14 @@
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
       "showUpdated": false,
-      "summary": "Vote data comes directly from the House Clerk and Senate official records, cross-referenced against bioguide IDs, with crossover detection on close-margin votes."
+      "summary": "Vote data comes directly from the House Clerk and Senate official records, matched to members by bioguide ID in the House and by surname and state in the Senate, with crossover detection on close-margin votes."
     },
     "legislationpatch-and-ai.html": {
       "order": 46,
       "section": "HOW WE WORK",
       "label": "About LegislationPatch",
-      "showUpdated": false,
-      "summary": "How the site is structured so any claim on it can be traced back to its source — verbatim floor quotes, schema.org markup on every page, and the bill version an analysis was actually written against."
+      "showUpdated": true,
+      "summary": "How the site is structured so any claim on it can be traced back to its source — verbatim floor quotes, schema.org markup on every article and bill page, and the bill version an analysis was actually written against."
     },
     "no-editorial-spin.html": {
       "order": 47,
