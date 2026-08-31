@@ -53,6 +53,28 @@
     "textFile": "data/ref-text/hman-119-rule-xxi.txt",
     "fetchedAt": "2026-08-17"
   },
+  "member-markey-ndaa-fy2026": {
+    "id": "member-markey-ndaa-fy2026",
+    "kind": "member-statement",
+    "org": "Sen. Ed Markey (D-MA)",
+    "date": "2025-10-10",
+    "label": "Sen. Markey press release on his vote against the FY2026 NDAA",
+    "citation": "Sen. Ed Markey (D-MA)",
+    "srcUrl": "https://www.markey.senate.gov/news/press-releases/10/10/2025/sen-markey-opposes-bloated-wasteful-defense-funding-legislation",
+    "textFile": "data/ref-text/member-markey-ndaa-fy2026.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "news-rollcall-ndaa-amendments-deal": {
+    "id": "news-rollcall-ndaa-amendments-deal",
+    "kind": "record",
+    "org": "Roll Call (CQ Roll Call)",
+    "date": "2025-10-09",
+    "label": "Roll Call: Senate passes NDAA after securing amendments deal",
+    "citation": "Roll Call (CQ Roll Call)",
+    "srcUrl": "https://rollcall.com/2025/10/09/senate-passes-ndaa-after-securing-amendments-deal/",
+    "textFile": "data/ref-text/news-rollcall-ndaa-amendments-deal.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "org-a4pc-safe-drugs": {
     "id": "org-a4pc-safe-drugs",
     "kind": "statement",
@@ -195,6 +217,17 @@
     "srcUrl": "https://roy.house.gov/media/press-releases/rep-roy-senator-lee-launch-save-america-act-renewed-push-election-integrity",
     "textFile": "data/ref-text/org-roy-save-america-launch.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "org-sasc-wicker-reed-ndaa-final-passage": {
+    "id": "org-sasc-wicker-reed-ndaa-final-passage",
+    "kind": "press-release",
+    "org": "Senate Armed Services Committee (Chairman Wicker and Ranking Member Reed)",
+    "date": "2025-12-17",
+    "label": "SASC: Chairman Wicker and Ranking Member Reed commend final passage of the FY2026 NDAA",
+    "citation": "Senate Armed Services Committee (Chairman Wicker and Ranking Member Reed)",
+    "srcUrl": "https://www.armed-services.senate.gov/press-releases/sasc-chairman-wicker-and-ranking-member-reed-commend-final-passage-of-the-fiscal-year-2026-national-defense-authorization-act",
+    "textFile": "data/ref-text/org-sasc-wicker-reed-ndaa-final-passage.txt",
+    "fetchedAt": "2026-08-31"
   },
   "press-carson-yakym-safe-drugs": {
     "id": "press-carson-yakym-safe-drugs",
@@ -395,6 +428,28 @@
     "textFile": "data/ref-text/record-crs-98-265-cr-users-guide.txt",
     "fetchedAt": "2026-08-30"
   },
+  "record-crs-if10515-ndaa-process": {
+    "id": "record-crs-if10515-ndaa-process",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2025-12-04",
+    "label": "CRS In Focus IF10515, Defense Primer: The NDAA Process (updated December 4, 2025)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/IF10515.html",
+    "textFile": "data/ref-text/record-crs-if10515-ndaa-process.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-if10516-navigating-ndaa": {
+    "id": "record-crs-if10516-navigating-ndaa",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2025-12-04",
+    "label": "CRS In Focus IF10516, Defense Primer: Navigating the NDAA (updated December 4, 2025)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/IF10516.html",
+    "textFile": "data/ref-text/record-crs-if10516-navigating-ndaa.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-in12324-omnibus": {
     "id": "record-crs-in12324-omnibus",
     "kind": "record",
@@ -496,6 +551,28 @@
     "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00221.htm",
     "textFile": "data/ref-text/record-senate-roll-118-2-221.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-senate-rollcall-119-1-570": {
+    "id": "record-senate-rollcall-119-1-570",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": "2025-10-09",
+    "label": "Senate Roll Call Vote 570, 119th Congress 1st Session - S. 2296 passage, 77-20",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00570.htm",
+    "textFile": "data/ref-text/record-senate-rollcall-119-1-570.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-rollcall-119-1-648": {
+    "id": "record-senate-rollcall-119-1-648",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": "2025-12-17",
+    "label": "Senate Roll Call Vote 648, 119th Congress 1st Session - motion to concur in the House amendment to S. 1071, 77-20",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00648.htm",
+    "textFile": "data/ref-text/record-senate-rollcall-119-1-648.txt",
+    "fetchedAt": "2026-08-31"
   },
   "usc-14-4902": {
     "id": "usc-14-4902",
