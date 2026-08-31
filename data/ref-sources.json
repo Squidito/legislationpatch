@@ -44,6 +44,17 @@
     "textFile": "data/ref-text/hman-119-rule-xxi.txt",
     "fetchedAt": "2026-08-17"
   },
+  "org-a4pc-safe-drugs": {
+    "id": "org-a4pc-safe-drugs",
+    "kind": "statement",
+    "org": "Alliance for Pharmacy Compounding",
+    "date": null,
+    "label": "Alliance for Pharmacy Compounding: URGENT - SAFE Drugs Act is in play, risking patients (opponent position)",
+    "citation": "Alliance for Pharmacy Compounding",
+    "srcUrl": "https://a4pc.org/news/urgent-safe-drugs-act-is-in-play-risking-patients",
+    "textFile": "data/ref-text/org-a4pc-safe-drugs.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "org-aclu-kosa": {
     "id": "org-aclu-kosa",
     "kind": "statement",
@@ -65,6 +76,17 @@
     "srcUrl": "https://www.apaservices.org/advocacy/news/kids-online-safety-act",
     "textFile": "data/ref-text/org-apa-kosa.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "org-asbm-safe-drugs": {
+    "id": "org-asbm-safe-drugs",
+    "kind": "statement",
+    "org": "Alliance for Safe Biologic Medicines",
+    "date": null,
+    "label": "Alliance for Safe Biologic Medicines statement on the SAFE Drugs Act (supporter position)",
+    "citation": "Alliance for Safe Biologic Medicines",
+    "srcUrl": "https://safebiologics.org/asbm-statement-commending-senator-jim-banks-for-introducing-the-safe-drugs-act-of-2025/",
+    "textFile": "data/ref-text/org-asbm-safe-drugs.txt",
+    "fetchedAt": "2026-08-31"
   },
   "org-blackburn-blumenthal-kids-act": {
     "id": "org-blackburn-blumenthal-kids-act",
@@ -164,6 +186,17 @@
     "srcUrl": "https://roy.house.gov/media/press-releases/rep-roy-senator-lee-launch-save-america-act-renewed-push-election-integrity",
     "textFile": "data/ref-text/org-roy-save-america-launch.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "press-carson-yakym-safe-drugs": {
+    "id": "press-carson-yakym-safe-drugs",
+    "kind": "press-release",
+    "org": "Office of Rep. Andre Carson",
+    "date": null,
+    "label": "Yakym, Carson Introduce Bill to Protect Patients from Unsafe Compounded Drugs (sponsors' announcement)",
+    "citation": "Office of Rep. Andre Carson, press release",
+    "srcUrl": "https://carson.house.gov/media/press-releases/yakym-carson-introduce-bill-protect-patients-unsafe-compounded-drugs",
+    "textFile": "data/ref-text/press-carson-yakym-safe-drugs.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-congress-hr-1968-actions": {
     "id": "record-congress-hr-1968-actions",
