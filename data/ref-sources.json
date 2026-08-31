@@ -251,6 +251,28 @@
     "textFile": "data/ref-text/press-carson-yakym-safe-drugs.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-app-presidential-vetoes": {
+    "id": "record-app-presidential-vetoes",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Vetoes, 1789-present (summary table)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes",
+    "textFile": "data/ref-text/record-app-presidential-vetoes.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-app-signing-statements": {
+    "id": "record-app-signing-statements",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Signing Statements: Hoover 1929 to present (archive and counts)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929",
+    "textFile": "data/ref-text/record-app-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-congress-hr-1968-actions": {
     "id": "record-congress-hr-1968-actions",
     "kind": "record",
@@ -499,6 +521,39 @@
     "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-crs-rl30909-pocket-veto": {
+    "id": "record-crs-rl30909-pocket-veto",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30909 — The Pocket Veto: Its Current Status",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30909.html",
+    "textFile": "data/ref-text/record-crs-rl30909-pocket-veto.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl33667-signing-statements": {
+    "id": "record-crs-rl33667-signing-statements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL33667 — Presidential Signing Statements: Constitutional and Institutional Implications",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL33667.html",
+    "textFile": "data/ref-text/record-crs-rl33667-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rs22188-vetoes": {
+    "id": "record-crs-rs22188-vetoes",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RS22188 — Regular Vetoes and Pocket Vetoes: In Brief",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RS22188.html",
+    "textFile": "data/ref-text/record-crs-rs22188-vetoes.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-rs22299-rule-xiv": {
     "id": "record-crs-rs22299-rule-xiv",
     "kind": "record",
@@ -518,6 +573,17 @@
     "srcUrl": "https://www.gao.gov/products/gao-05-734sp",
     "textFile": "data/ref-text/record-gao-budget-glossary.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-govinfo-cpd": {
+    "id": "record-govinfo-cpd",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office (GovInfo)",
+    "date": null,
+    "label": "GovInfo — Compilation of Presidential Documents (collection description)",
+    "citation": "U.S. Government Publishing Office (GovInfo)",
+    "srcUrl": "https://www.govinfo.gov/help/cpd",
+    "textFile": "data/ref-text/record-govinfo-cpd.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-govinfo-crec-about": {
     "id": "record-govinfo-crec-about",
@@ -540,6 +606,39 @@
     "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
     "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-scotus-clinton-v-nyc-1998": {
+    "id": "record-scotus-clinton-v-nyc-1998",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Clinton v. City of New York, 524 U.S. 417 (1998)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
+    "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-pocket-veto-case-1929": {
+    "id": "record-scotus-pocket-veto-case-1929",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "The Pocket Veto Case, 279 U.S. 655 (1929)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/279/655",
+    "textFile": "data/ref-text/record-scotus-pocket-veto-case-1929.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-wright-v-us-1938": {
+    "id": "record-scotus-wright-v-us-1938",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Wright v. United States, 302 U.S. 583 (1938)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/302/583",
+    "textFile": "data/ref-text/record-scotus-wright-v-us-1938.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-senate-leadership": {
     "id": "record-senate-leadership",
@@ -605,6 +704,17 @@
     "citation": "United States Senate",
     "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00648.htm",
     "textFile": "data/ref-text/record-senate-rollcall-119-1-648.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-veto-counts": {
+    "id": "record-senate-veto-counts",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": null,
+    "label": "U.S. Senate — Vetoes by President, 1789 to Present (summary counts)",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/vetoes/vetoCounts.htm",
+    "textFile": "data/ref-text/record-senate-veto-counts.txt",
     "fetchedAt": "2026-08-31"
   },
   "usc-14-4902": {
