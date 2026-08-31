@@ -64,6 +64,17 @@
     "textFile": "data/ref-text/member-markey-ndaa-fy2026.txt",
     "fetchedAt": "2026-08-31"
   },
+  "member-six-senators-oppose-ndaa-fy2026": {
+    "id": "member-six-senators-oppose-ndaa-fy2026",
+    "kind": "member-statement",
+    "org": "Sens. Duckworth, Durbin, Merkley, Wyden, Padilla and Schiff",
+    "date": "2025-10-09",
+    "label": "Joint statement from six senators announcing their votes against the FY2026 NDAA",
+    "citation": "Sens. Duckworth, Durbin, Merkley, Wyden, Padilla and Schiff",
+    "srcUrl": "https://www.merkley.senate.gov/as-trump-unconstitutionally-deploys-military-into-american-cities-senators-from-illinois-oregon-california-oppose-ndaa/",
+    "textFile": "data/ref-text/member-six-senators-oppose-ndaa-fy2026.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "news-rollcall-ndaa-amendments-deal": {
     "id": "news-rollcall-ndaa-amendments-deal",
     "kind": "record",
