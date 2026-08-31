@@ -488,6 +488,17 @@
     "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-crs-rs22299-rule-xiv": {
+    "id": "record-crs-rs22299-rule-xiv",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2017-02-08",
+    "label": "CRS Report RS22299, Bypassing Senate Committees: Rule XIV and Unanimous Consent (Feb 8, 2017)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RS22299.html",
+    "textFile": "data/ref-text/record-crs-rs22299-rule-xiv.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-gao-budget-glossary": {
     "id": "record-gao-budget-glossary",
     "kind": "record",
@@ -551,6 +562,17 @@
     "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00221.htm",
     "textFile": "data/ref-text/record-senate-roll-118-2-221.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-senate-rollcall-119-1-500": {
+    "id": "record-senate-rollcall-119-1-500",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": "2025-09-02",
+    "label": "Senate Roll Call Vote 500, 119th Congress 1st Session - cloture on the motion to proceed to S. 2296, 84-14",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00500.htm",
+    "textFile": "data/ref-text/record-senate-rollcall-119-1-500.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-senate-rollcall-119-1-570": {
     "id": "record-senate-rollcall-119-1-570",
