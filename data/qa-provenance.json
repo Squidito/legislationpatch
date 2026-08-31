@@ -2095,5 +2095,28 @@
     "genModel": "sonnet (hostile full-claims, code-as-source)",
     "genAt": "2026-08-30",
     "stampedAt": "2026-08-31"
+  },
+  "article-safe-drugs-act": {
+    "kind": "article",
+    "sourceShas": {
+      "119-HR-6509": "d9bd93b501012e79aa87ff7216f2449d809b511a7d14c779084c81c61bc9a067",
+      "record-congress-hr-6509-status": "27c055323e4f1be46c6285f9838ead543c2d3a394fa68b82d5c04060c6b61373",
+      "record-congress-hr-6509-actions": "98281cec742e328b540720f6e5443026f260e000a2434b50212b3909877a8219",
+      "record-congress-hr-6509-cosponsors": "2b2ecb2973bc8c2b25db1c03075f4830589ce2185c9c8d5a9783aafc0633c229",
+      "record-congress-hr-6509-summary": "9531ebd00408487289680d8e4957dbbb0a68258ae8bbd4d313974612dd8b05ca",
+      "record-congress-hr-6509-relatedbills": "446842d83830b29597f11464c3246dcddf74189f1bc216673a7ffb07addcdcb2",
+      "record-congress-hr-6509-textversions": "7f97733e01024af0d0d2217f6b2656bb04b3cf6d445823edce44cc96f2eb0fe5",
+      "usc-21-353a": "d95ece800bd639fd6467e01e88db2de33e42d6c1edc627f0b2b34cd818688203",
+      "hman-119-rule-x": "56975c8c5497c9984d30e1abfb341d9d28cd5ecc2c9c463de483fada9c94c516",
+      "press-carson-yakym-safe-drugs": "d20654376333a086635f7bbd5991ed50f320ae479113a8e12fd5c63923cd30ad",
+      "org-asbm-safe-drugs": "6607d3a630ed8def1834d62ff8f6f4fedcf2ee1b10698128d0cf2bcea882ca92",
+      "org-a4pc-safe-drugs": "9537b677bdffa8195845d106f6b610559e848ed9352dcb90359c8f0cc337832e"
+    },
+    "proseSha": "c0c33777efffb5b1",
+    "proseFile": "articles/safe-drugs-act.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only verifier passes, full article)",
+    "genAt": "2026-08-31",
+    "stampedAt": "2026-08-31"
   }
 }

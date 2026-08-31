@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile source-only verifier passes, full article)",
   "verifyModel": "sonnet",
   "isTracker": true,
-  "proseSha": null,
+  "proseSha": "c0c33777efffb5b1",
   "sources": [
     {
       "id": "119-HR-6509",
@@ -154,8 +154,21 @@
     "verbSymmetry": "PASS. Verified mechanically against scripts/tracker-gate.js own ASYMMETRIC_VERBS regex over the extracted section: 0 hits across two independent runs. Verbs in use -- supporters: says, supports, argues, says. Opponents: wrote, says, puts...at, argues, illustrates. Both sides get the same neutral says/argues pairing the rulebook prescribes; neither side gets a validating verb set against a doubting one for the other. Confirmed by a second-round Sonnet reviewer independently of the script.",
     "stripTest": "PASS, reviewed sentence by sentence twice. Every argumentative clause is grammatically subordinate to a named holder -- the sponsors joint announcement, Rita Kalyani of the ADA, ASBM, APC. The only sentences in the site own voice are structural record facts (no recorded vote; the committee ordered S. 3794 reported), never contested characterisations. Two framing words were deliberately kept OUT of the site voice during this audit: \"FDA-approved\" as a synonym for \"commercially available\" (ASBM vocabulary, not the statute) and any restatement of APC allegation about who wrote the bill.",
     "vehicleBill": "HUMAN-VERIFIED 2026-08-31 (Opus, in-conversation, in the main thread), across every vehicle the stored Congress.gov record discloses, asserting nothing from memory. (1) H.R. 6509 own record: three actions, all dated 2025-12-09, referral to Energy and Commerce and nothing since; one text version; one committee activity, the referral; no floor action; not law. (2) relatedbills for H.R. 6509 returns EXACTLY ONE bill -- S. 3794, SAFE Drugs Act of 2026, CRS-identified as a Related bill. (3) The link is reciprocal: S. 3794 own relatedbills returns exactly one bill, H.R. 6509. There is no third vehicle anywhere in the record. (4) THE FINDING THIS CHECK EXISTS FOR: the policy has moved, just not under the tracked number. Senate HELP ordered S. 3794 reported favorably with an amendment in the nature of a substitute on 2026-07-22; Sen. Cassidy reported it without a written report on 2026-07-27; it went onto the Senate Legislative Calendar under General Orders as Calendar No. 524 the same day. All three actions post-date the article 2026-07-17 publication, and the frozen article mentioned the Senate nowhere at all. (5) Unlike KOSA, the substitute text IS published -- S. 3794 carries two text versions, Introduced in Senate and Reported to Senate. The article says so and is explicit that it describes H.R. 6509 as introduced, the only version the House bill has; it does NOT describe the substitute contents, which were not read for this audit. (6) Neither bill has become law. LIMIT OF THE CHECK, stated honestly: relatedbills in both directions is what the stored record can show. It would not reveal SAFE Drugs language riding an appropriations bill or a user-fee reauthorisation under a number Congress.gov does not link, and no stored source was available to test that.",
-    "supporterLens": {},
-    "opponentLens": {}
+    "supporterLens": {
+      "signOff": true,
+      "model": "sonnet (independent round-2 reviewer, supporter lens, sources read in full)",
+      "reviewedAt": "2026-08-31",
+      "verdict": "As a supporter-lens reviewer, I SIGN OFF: the strongest supporter case -- the bipartisan sponsorship, the sponsors own patient-safety rationale, and two independently-sourced advocacy voices (ADA/Kalyani, ASBM) -- is fairly represented, though the omitted OAC/PSM statements and the FDA adverse-event count would have made the evidentiary case stronger still.",
+      "round1": "REFUSED. Round 1 would not sign off while the American Diabetes Association statement was absent, calling it the single most concrete and most authoritative piece of supporter evidence in the record. The ADA position was restored sourced in response (see omission.ada-position); the Obesity Action Coalition and Partnership for Safe Medicines statements were deliberately not added, on proportionality (see omission.oac-psm-not-added), and round 2 accepted that trade explicitly."
+    },
+    "opponentLens": {
+      "signOff": true,
+      "model": "sonnet (independent round-2 reviewer, opponent lens, sources read in full)",
+      "reviewedAt": "2026-08-31",
+      "verdict": "As an opponent-lens reviewer, I SIGN OFF: APC substantive case against the bill -- the shortage-list restriction, the 20 per month figure, the by design cripples legitimate pharmacies charge, and the patient-harm illustration -- is fully and fairly represented; the Eli Lilly line is the one omission, and it is a rhetorical attack on the bill provenance rather than an argument about the bill effects.",
+      "round1": "REFUSED. Round 1 would not sign off without APC allegation that the bill was written by Eli Lilly, and separately flagged the dropped \"by design\" intentional-harm framing, the missing patient-harm illustration and the flattened campaign apparatus. The last three were added. The Eli Lilly allegation was NOT added -- see finding.eli-lilly-excluded -- and round 2, told the reasoning and asked to judge it, endorsed the exclusion in terms: it is \"a rhetorical attack on the bill provenance rather than an argument about the bill effects\", the rulebook attribution rule \"does not mandate including every attributable line\", and the reputational exposure to a non-party with no right of reply is \"a distinct harm class the rulebook does not explicitly cover but that responsible sourcing practice correctly treats as out of bounds\". FLAGGED FOR JAMES anyway: it is his call to overrule."
+    },
+    "convergence": "Two rounds of paired hostile Sonnet passes (source-only verifier + dual-lens reviewer), every flag adjudicated in the main thread against the stored files rather than accepted on the agent word, per the CLAUDE.md GENUINE-READ RULE. Round 1: 4 source flags + 6 dual-lens flags, both lenses REFUSED. Round 2 on the corrected draft: 4 source flags + 6 dual-lens flags, both lenses SIGNED OFF and all six scripted QC checks passed. Round 2 source flags were all real and all fixed (the prescribing-practitioner misattribution, three further summary-omitted provisions, the truncated ADA quote, the compounded-copy term drift). Two of the round-2 dual-lens flags described text already corrected before that agent read it, and are recorded as stale rather than as defects. Four defects across the session were caught by my own fresh read and by neither agent: the sponsor-quote personification, the ADA concessive-clause truncation, the out-of-source outsourcing-facilities qualifier, and the unsourced same-policy characterisation of S. 3794."
   },
   "claims": [
     {
@@ -556,10 +569,22 @@
     },
     {
       "field": "body.changes.li1.b",
-      "claim": "The bill text says the significant difference is as determined by the prescribing practitioner",
+      "claim": "Current law states the term NEGATIVELY, as a carve-out, and already assigns the significant-difference judgment to the prescribing practitioner",
       "verdict": "SUPPORTED",
       "type": "entity",
-      "severity": "ok",
+      "severity": "material",
+      "sourceFile": "usc-21-353a",
+      "sourceSpan": "does not include a drug product in which there is a change, made for an identified individual patient, which produces for that patient a significant difference, as determined by the prescribing practitioner",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.li1.d",
+      "claim": "The bill restates the carve-out as an affirmative two-part test and keeps the prescribing-practitioner judgment",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "material",
       "sourceFile": "119-HR-6509",
       "sourceSpan": "as determined by the prescribing practitioner",
       "section": "What the Bill Would Change",
@@ -688,12 +713,84 @@
     },
     {
       "field": "body.changes.p2.c",
-      "claim": "The official summary does not mention the Section 5 fee change",
+      "claim": "The official summary mentions none of the four provisions - it ends at the outsourcing-facility inspection point",
       "verdict": "SUPPORTED",
       "type": "entity",
       "severity": "ok",
       "sourceFile": "record-congress-hr-6509-summary",
       "sourceSpan": "Further, the bill subjects certain large-scale outsourcing facilities",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.d",
+      "claim": "Section 2 adds a definition of commercially available drug product, a term current law leaves undefined",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "For purposes of subparagraph (A), the term",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.e",
+      "claim": "That definition requires the product be sold in the commercial marketplace in the United States and manufactured at a facility required to comply with section 501(a)(2)(B)",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "is sold in the commercial marketplace\nin the United States and manufactured in one or\nmore facilities required to comply with section\n501(a)(2)(B)",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.f",
+      "claim": "That definition excludes products in the discontinued section of the list at section 505(j)(7)(A)",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "ok",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "is not included in the discontinued\nsection of the list of products described in\nsection 505(j)(7)(A)",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.g",
+      "claim": "Current law contains no definition of commercially available drug product",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceFile": "usc-21-353a",
+      "sourceSpan": "(2) Definition For purposes of paragraph (1)(D)",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.h",
+      "claim": "Section 4(b) strips outsourcing facilities of a registration exemption in 21 U.S.C. 360(g)(1)",
+      "verdict": "SUPPORTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "Section 510(g)(1) of\nsuch Act (21 U.S.C. 360(g)(1)) is amended by inserting before the\nsemicolon at the end the following: ``, except that the exemption in\nthis paragraph shall not apply to any outsourcing facility",
+      "section": "What the Bill Would Change",
+      "status": "open",
+      "kind": "claim"
+    },
+    {
+      "field": "body.changes.p2.i",
+      "claim": "Section 4(c) delays both Section 4 amendments until 6 months after the date of enactment of this Act",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "apply beginning 6 months after the date of enactment of this\nAct",
       "section": "What the Bill Would Change",
       "status": "open",
       "kind": "claim"
@@ -760,7 +857,7 @@
     },
     {
       "field": "body.bothsides.sup.p1.c",
-      "claim": "The same announcement says the bill codifies the definition of a compounded copy to prevent illegal mass compounding of unapproved versions of FDA-approved drugs",
+      "claim": "The same announcement says the bill codifies the definition of essentially a copy so as to prevent illegal mass compounding of unapproved versions of FDA-approved drugs",
       "verdict": "SUPPORTED",
       "type": "quote",
       "severity": "material",
@@ -796,12 +893,12 @@
     },
     {
       "field": "body.bothsides.sup.p15.c",
-      "claim": "Kalyani says additional FDA oversight is needed regarding these compounding practices for these medication classes and entities manufacturing them",
+      "claim": "Kalyani says additional FDA oversight is needed regarding these compounding practices for these medication classes and entities manufacturing them to protect patients with diabetes and obesity",
       "verdict": "SUPPORTED",
       "type": "quote",
       "severity": "material",
       "sourceFile": "press-carson-yakym-safe-drugs",
-      "sourceSpan": "Additional FDA oversight is needed regarding these compounding practices for these medication classes and entities manufacturing them",
+      "sourceSpan": "Additional FDA oversight is needed regarding these compounding practices for these medication classes and entities manufacturing them to protect patients with diabetes and obesity",
       "section": "Why do supporters back the bill?",
       "status": "open",
       "kind": "claim"
@@ -837,7 +934,7 @@
       "type": "quote",
       "severity": "material",
       "sourceFile": "org-asbm-safe-drugs",
-      "sourceSpan": "compounded drugs that closely replicate commercially available, FDA-approved products, but often do so without the rigorous FDA review and inspection standards that safeguard public health",
+      "sourceSpan": "recent years have seen the expansion of large-scale production and interstate distribution of compounded drugs that closely replicate commercially available, FDA-approved products, but often do so without the rigorous FDA review and inspection standards that safeguard public health",
       "section": "Why do supporters back the bill?",
       "status": "open",
       "kind": "claim"
@@ -904,7 +1001,7 @@
     },
     {
       "field": "body.bothsides.opp.p1.b3",
-      "claim": "APC wrote that it needs Senate HELP Committee members to hear clearly that gutting shortage drug compounding will not make patients safer",
+      "claim": "APC wrote that it needs Senate HELP Committee members to hear clearly that gutting shortage drug compounding will not make patients safer and that the bill will leave them with fewer options when commercial drugs are in shortage",
       "verdict": "SUPPORTED",
       "type": "quote",
       "severity": "material",
@@ -1291,9 +1388,91 @@
       "verify": "CONFIRMED",
       "kind": "finding",
       "note": "Out-of-source qualifier class, the one CLAUDE.md names as structurally invisible to the figure guards. Self-caught on the fresh read before either verifier round saw it."
+    },
+    {
+      "field": "finding.prescribing-practitioner-misattributed",
+      "claim": "CORRECTED (round 2): the draft said \"The bill text adds that the significant difference is as determined by the prescribing practitioner.\" The bill adds no such thing. 21 U.S.C. 353a(b)(2) ALREADY carries that exact qualifier - current law states the term as a negative carve-out and already assigns the judgment to the prescribing practitioner. What the bill changes is the SHAPE of the test, from a carve-out to an affirmative two-part definition, not who decides. Rewritten to show the current-law text first and say plainly that the practitioner judgment is carried over.",
+      "verdict": "CONTRADICTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceFile": "usc-21-353a",
+      "sourceSpan": "does not include a drug product in which there is a change, made for an identified individual patient, which produces for that patient a significant difference, as determined by the prescribing practitioner",
+      "section": "What the Bill Would Change",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "finding",
+      "note": "The direction-of-change class CLAUDE.md names: an unchanged provision presented as a new one. Both the bill text and the statute contain the phrase, so every span check passed it. Only reading the two side by side exposes it. Found by the round-2 hostile Sonnet pass and re-derived independently in the main thread before the fix."
+    },
+    {
+      "field": "finding.three-more-provisions-omitted",
+      "claim": "ADDED (round 2): the Section 5 fix in round 1 turned out to be one of FOUR provisions the CRS summary omits and the article had therefore missed. Also absent: Section 2(2)(B), which adds a definition of \"commercially available drug product\" that current law does not define at all; Section 4(b), which strips outsourcing facilities of a registration exemption in 21 U.S.C. 360(g)(1); and Section 4(c), which delays both Section 4 amendments by six months. The paragraph said \"One further change\" - itself wrong once they are counted - and now says four and names each.",
+      "verdict": "UNSUPPORTED",
+      "type": "entity",
+      "severity": "material",
+      "sourceFile": "119-HR-6509",
+      "sourceSpan": "For purposes of subparagraph (A), the term",
+      "section": "What the Bill Would Change",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "finding",
+      "note": "ROOT CAUSE worth carrying to the next tracker session: the changes section was built from the official summary alone, so every gap in the summary became a gap in the article. A summary-derived section needs a walk of the bill text to close it. Neither the sweep nor round 1 caught this; the round-2 verifier found it by walking all five sections."
+    },
+    {
+      "field": "finding.unmarked-verbatim-source-prose",
+      "claim": "CORRECTED (round 2): two clauses were near-verbatim source wording presented as the article own paraphrase - ASBM \"recent years have seen the expansion of large-scale production and interstate distribution of\" and APC \"even when the manufactured drugs are on the FDA shortage list\". Both were attributed by verb so both passed the strip test, but borrowing an advocacy group phrasing unquoted puts its wording in the site voice. The ASBM clause is now inside the quotation; the APC clause is now a genuine paraphrase.",
+      "verdict": "CONTRADICTED",
+      "type": "quote",
+      "severity": "minor",
+      "sourceFile": "org-asbm-safe-drugs",
+      "sourceSpan": "recent years have seen the expansion of large-scale production and interstate distribution of",
+      "section": "Why do supporters back the bill?",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "finding",
+      "note": "Citation-hygiene class flagged by the round-2 dual-lens reviewer. Not a misquote - the opposite, unmarked accurate quotation."
+    },
+    {
+      "field": "finding.term-drift-compounded-copy",
+      "claim": "CORRECTED (round 2): the supporters paragraph paraphrased the announcement \"Codifies the definition of essentially a copy\" as \"the definition of a compounded copy\" - a term that appears in no source and nowhere else in the article, which otherwise uses the statutory term throughout. Replaced with the quoted statutory term.",
+      "verdict": "UNSUPPORTED",
+      "type": "entity",
+      "severity": "minor",
+      "sourceFile": "press-carson-yakym-safe-drugs",
+      "sourceSpan": "essentially a copy",
+      "section": "Why do supporters back the bill?",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "finding",
+      "note": "Minor, but it is the invented-vocabulary class: a term of art quietly restated in words no source uses."
+    },
+    {
+      "field": "finding.apc-quote-shortened",
+      "claim": "EXTENDED (round 2): APC call-to-action quote had been cut at \"will not make patients safer\", dropping the clause that says what APC thinks the harm actually is - \"it will leave them with fewer options when commercial drugs are in shortage\". The opponent-lens reviewer noted the fuller quote is stronger evidence for APC own case. Extended.",
+      "verdict": "UNSUPPORTED",
+      "type": "quote",
+      "severity": "minor",
+      "sourceFile": "org-a4pc-safe-drugs",
+      "sourceSpan": "it will leave them with fewer options when commercial drugs are in shortage",
+      "section": "Why do opponents object?",
+      "status": "fixed",
+      "verify": "CONFIRMED",
+      "kind": "finding",
+      "note": "Trimming an opponent quote at the point where it stops being rhetorical and starts being substantive is a fairness defect even when the trimmed span is verbatim."
     }
   ],
-  "counts": {},
-  "resolution": "",
-  "notes": ""
+  "counts": {
+    "claims": 103,
+    "sources": 12,
+    "supported": 77,
+    "unsupported": 16,
+    "contradicted": 10,
+    "findings": 26,
+    "material": 52,
+    "minor": 10,
+    "omissions": 5,
+    "verifyRounds": 2,
+    "verifyAgents": 4
+  },
+  "resolution": "Phase B batch B1 of the article audit sweep: the first full audit-lane pass over a pre-lane both-sides tracker published 2026-07-17 with its sources LINKED BUT NOT STORED and no claim ledger.\n\nTHE SWEEP WAS WRONG ABOUT WHY THIS PAGE WAS BAD. Phase A graded five of this article sources UNFETCHABLE and concluded the page was a rewrite candidate partly because its sources looked unreachable. Every one of them resolved on the first try -- the Carson press release and the Congress.gov summary with scripts/fetch-reference.js browser UA, the status, cosponsor, action, summary and related-bill records through the authenticated Congress.gov API. The walls were the sweep own tooling (HANDOFF-AUDIT-SWEEP-PHASE-B 2.1). Twelve sources are now stored.\n\nTHE BIGGEST DEFECT WAS NOT ON THE SWEEP LIST AT ALL. The Senate companion, S. 3794, was ordered reported by Senate HELP with an amendment in the nature of a substitute on 2026-07-22, reported by Sen. Cassidy on 2026-07-27, and put on the Senate Legislative Calendar as Calendar No. 524 the same day. All three actions post-date publication, and the frozen article did not mention the Senate at all -- it told readers a bill was going nowhere while the policy it carries was moving in the other chamber. This is exactly the docs/BOTH-SIDES.md vehicle-bill class, and no automated staleness check can catch it: article-staleness reports clean because S. 3794 is not in cache.json.\n\nTHE SECOND ROOT CAUSE was structural: the What the Bill Would Change section had been written entirely from the CRS summary, so every gap in the summary was a gap in the article. Walking the bill text found four provisions the summary omits -- the new definition of commercially available drug product, the outsourcing-facility registration exemption, the six-month delayed applicability, and the strike of the $15,000 base establishment fee. All four are now in the article, in a paragraph that says the summary does not carry them.\n\nSOURCING. 12 sources fetched and STORED: the bill text; six Congress.gov records (status, actions, cosponsors, CRS summary, text versions, and a related-bills record that carries the full S. 3794 history); 21 U.S.C. 353a; House Rule X, fetched this session to source the committee jurisdiction; the sponsors announcement; and the two org statements the sweep asked for, org-asbm-safe-drugs and org-a4pc-safe-drugs.\n\nCORRECTIONS-BORDERLINE, FLAGGED NOT LOGGED (James deferred all entries, PHASE-B 9.1 D1): the A4PC reporting-requirements argument, the A4PC alternative-bill ask and the NCPA position -- three named-organisation positions their own cited sources do not contain. All three were already deleted by the 2026-08-30 emergency strike; this audit re-confirmed each against the now-stored page rather than taking the strike word for it, and the A4PC page positively evidences two of them (the alternative-bill ask exists only as a related-posts teaser).",
+  "notes": "FOR THE NEXT CYCLE ON THIS ARTICLE, in priority order:\n1. S. 3794 is not in data/cache.json. It is reported out of committee and on the Senate calendar and the site has no record of it -- the same DB-completeness gap as 119-HR-9238 in PHASE-B 4. Backfilling it would also let the tracker-gate staleness check actually see this bill move; right now it passes because the bill it should be watching is absent.\n2. TWO DECISIONS FOR JAMES, both recorded on findings rather than taken silently. (a) The American Diabetes Association position, deleted by the 08-30 strike as unsourced, was RESTORED here because the source turned up and the supporter lens would not sign off without it. (b) APC allegation that the bill was written by Eli Lilly was EXCLUDED over the opponent lens round-1 objection. Either is one edit plus a delta refresh to reverse.\n3. Two further sourceable supporter positions are on the shelf -- the Obesity Action Coalition and the Partnership for Safe Medicines, both named in the stored announcement, plus its figure of more than 1,000 FDA adverse-event reports linked to compounded GLP-1 drugs. Left out on proportionality against a one-organisation opposition record. If APC gains company on the opposition side, add them.\n4. The S. 3794 substitute text as reported IS published (unlike KOSA). Nobody has read it. The article is careful to describe only H.R. 6509 as introduced, but the reported substitute is the version that would actually move.\n\nPROCESS NOTE FOR THE SWEEP AS A WHOLE: every Phase B session adds an article ledger, which moves the Article claim ledgers counts in data/ref-text/record-lp-site-facts.txt, which the trust-page ledgers cite. It is stale at lines 52 and 78-80 and 92-93 as of this session. Regenerating it now would break article-methodology.json receipt (its span reads 6 of 17) and fail the qa-regression pre-commit gate. No live page states the number, so nothing published is wrong -- but this needs one regeneration plus a trust-page re-check, done once at the end of the sweep rather than per session."
 }
