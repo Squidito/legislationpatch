@@ -1177,6 +1177,68 @@
       "status": 200,
       "bytes": 108740,
       "checkedAt": "2026-08-31"
+    },
+    "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141955 bytes",
+      "status": 200,
+      "bytes": 141955,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RS22188.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 82782 bytes — \"Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com",
+      "bytes": 82782,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RL30909.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 84577 bytes — \"The Pocket Veto: Its Current Status - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "The Pocket Veto: Its Current Status - EveryCRSReport.com",
+      "bytes": 84577,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/279/655": {
+      "verdict": "live",
+      "reason": "HTTP 200, 78853 bytes",
+      "status": 200,
+      "bytes": 78853,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/302/583": {
+      "verdict": "live",
+      "reason": "HTTP 200, 86831 bytes — \"WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Inform\"",
+      "status": 200,
+      "title": "WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 86831,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/524/417": {
+      "verdict": "live",
+      "reason": "HTTP 200, 253335 bytes — \"William J. CLINTON, President of the United States, et al., Appellants\"",
+      "status": 200,
+      "title": "William J. CLINTON, President of the United States, et al., Appellants, v. CITY OF NEW YORK et al. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 253335,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.govinfo.gov/help/cpd": {
+      "verdict": "live",
+      "reason": "HTTP 200, 83186 bytes — \"Compilation of Presidential Documents | GovInfo\"",
+      "status": 200,
+      "title": "Compilation of Presidential Documents | GovInfo",
+      "bytes": 83186,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RL33667.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 187255 bytes — \"Presidential Signing Statements: Constitutional and Institutional Impl\"",
+      "status": 200,
+      "title": "Presidential Signing Statements: Constitutional and Institutional Implications - EveryCRSReport.com",
+      "bytes": 187255,
+      "checkedAt": "2026-08-31"
     }
   }
 }
