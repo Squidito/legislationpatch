@@ -13,7 +13,7 @@
  "auditModel": "sonnet (hostile source-only verifier passes, full article)",
  "verifyModel": "sonnet",
  "isTracker": true,
- "proseSha": "3f1f4327e8ae10ce",
+ "proseSha": "0c61343650004d37",
  "sources": [
   {
    "id": "bill-119-s-2296-es",
@@ -1188,15 +1188,16 @@
   },
   {
    "field": "body.bs.sup.announced",
-   "claim": "On the morning of October 9 Wicker announced that Republicans and Democrats had agreed on an amendments package",
+   "claim": "Roll Call reported that on the morning of October 9 Wicker announced that Republicans and Democrats had agreed on an amendments package",
    "verdict": "SUPPORTED",
-   "type": "quote",
+   "type": "entity",
    "severity": "ok",
    "sourceFile": "news-rollcall-ndaa-amendments-deal",
    "sourceSpan": "But on Thursday morning, Senate Armed Services Chairman Roger Wicker, R-Miss., announced that Republicans and Democrats had agreed on an amendments package.",
    "section": "Why did supporters back the bill",
    "status": "open",
-   "kind": "claim"
+   "kind": "claim",
+   "note": "Attributed to Roll Call as the reporter of the fact, NOT quoted as Wicker words. See finding.quotation-boundary-rollcall."
   },
   {
    "field": "body.bs.sup.17-48",
@@ -2467,17 +2468,45 @@
    "verify": "CONFIRMED",
    "kind": "finding",
    "note": "Recorded rather than churned, on the KOSA residualDeclined precedent. Strongest candidate for a later cycle if the supporter side ever needs strengthening."
+  },
+  {
+   "field": "finding.quotation-boundary-rollcall",
+   "claim": "CORRECTED, the only finding of the round-2 hostile source pass: the article read Wicker \"announced that Republicans and Democrats had agreed on an amendments package\" -- Roll Call reporter third-person narration, inside quotation marks, with Wicker as grammatical subject, two clauses away from a real Wicker quotation. A reader could not tell where the reporter stopped and the senator started. The quotation marks are gone and the fact is attributed to Roll Call. The underlying fact was never in doubt.",
+   "verdict": "UNSUPPORTED",
+   "type": "quote",
+   "severity": "material",
+   "sourceFile": "news-rollcall-ndaa-amendments-deal",
+   "sourceSpan": "But on Thursday morning, Senate Armed Services Chairman Roger Wicker, R-Miss., announced that Republicans and Democrats had agreed on an amendments package.",
+   "section": "Why did supporters back the bill",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "Exactly the class the KOSA retrofit found (a press office third-person lead-in presented as the senators own words) and the class the emergency strike found on this very page (a headline word presented as something Markey said). Three instances now, in three different source types: press office, newspaper, headline. No scripted gate can catch it -- the phrase IS in the right file, attributed to the right subject; only the speaker boundary is wrong."
+  },
+  {
+   "field": "finding.concurrent-edit-hazard",
+   "claim": "PROCESS NOTE, raised by the round-2 hostile verifier itself: the draft was being edited while that reviewer was reading it, and it caught the file mid-change twice. It re-read and reported against a stable final read, and said so. The round-3 reviewers were run against a frozen file with no concurrent edits.",
+   "verdict": "UNSUPPORTED",
+   "type": "entity",
+   "severity": "minor",
+   "sourceFile": null,
+   "sourceSpan": "",
+   "section": "head",
+   "status": "fixed",
+   "verify": "CONFIRMED",
+   "kind": "finding",
+   "note": "Worth banking for the lane: applying fixes while a verifier is mid-read can produce findings against text that no longer exists, or hide text that does. Freeze the draft for the sign-off round."
   }
  ],
  "counts": {
-  "claims": 176,
+  "claims": 178,
   "sources": 21,
   "supported": 138,
-  "unsupported": 32,
+  "unsupported": 34,
   "contradicted": 6,
-  "findings": 38,
-  "material": 21,
-  "minor": 17,
+  "findings": 40,
+  "material": 22,
+  "minor": 18,
   "omissions": 5,
   "verifyRounds": 2,
   "verifyAgents": 6
