@@ -42,15 +42,6 @@
       "bytes": 1762,
       "checkedAt": "2026-08-31"
     },
-    "https://appropriations.house.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 173493 bytes — \"House Committee on Appropriations - Republicans |\"",
-      "status": 200,
-      "finalUrl": "https://appropriations.house.gov/",
-      "title": "House Committee on Appropriations - Republicans |",
-      "bytes": 173493,
-      "checkedAt": "2026-08-31"
-    },
     "https://www.congress.gov/bill/119th-congress/house-bill/1": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
@@ -89,15 +80,6 @@
       "status": 403,
       "title": "cbo.gov",
       "bytes": 767,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.appropriations.senate.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 38118 bytes — \"Home | United States Senate Committee on Appropriations\"",
-      "status": 200,
-      "finalUrl": "https://www.appropriations.senate.gov/",
-      "title": "Home | United States Senate Committee on Appropriations",
-      "bytes": 38118,
       "checkedAt": "2026-08-31"
     },
     "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm": {

@@ -2184,5 +2184,26 @@
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",
     "stampedAt": "2026-08-31"
+  },
+  "article-appropriations-process": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r47106-approps-overview": "d5e01799ac4196a1e0780589547faa2d82b48f4e48c60e7cea370c11c665f60f",
+      "record-crs-r48731-full-year-cr": "fe29222650199cefb776d2dda02140613a2dd9dcfbd3f0b696d55d7304e749c9",
+      "record-crs-in12324-omnibus": "263a4a1cc4e08104ba4d30452a180fc9236f349eef95cd91a0f607a569192dea",
+      "record-gao-budget-glossary": "e649ef13903ca5d1535797cd0e87a6160ee259dd4a9754f2814447a9b1aec004",
+      "bill-119-hr-9770": "43988d0381c4e1965ab368de29130d9214368efe2d94d7fb994c68cb59b04b0b",
+      "bill-119-hr-7148": "83200c08be862f9216b9d4c35698a6fb8402fff1c50e6233b6ce4d3e0ea05b58",
+      "bill-119-hr-7147": "19ef483e52b08dddf54f1a0203c3c0a7c093503d397b1b7f6efa9975492b99ad",
+      "bill-119-hr-5371": "19ef8e7d2299d752a82671a26727266d7ee0f5dd404591d43a9b27992ce4e060",
+      "bill-119-hr-6938": "e1b83de314a0d8ec36ce8ee63126faeafec37e4b40fd979fad24bb52d99c2df2",
+      "record-congress-119-public-laws": "2a1a8c2656d3ebea41d6b6fdfb57eaf0c9c8e016b5a95a58f47778e93fa2f8e8"
+    },
+    "proseSha": "f5386bb049116fe8",
+    "proseFile": "articles/appropriations-process.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-08-31",
+    "stampedAt": "2026-08-31"
   }
 }
