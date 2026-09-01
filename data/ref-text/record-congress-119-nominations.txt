@@ -10,6 +10,15 @@ Tally of latestAction.text by leading phrase: {
  "returned": 113
 }
 
+
+Confirmation method, counted from the latestAction text of every record whose
+action begins "Confirmed by the Senate" (1622 records in all):
+  Confirmed by Voice Vote: 1034
+  Confirmed by Yea-Nay Vote: 588
+  Confirmed by Unanimous Consent: 0
+No 119th Congress nomination record carries a latest action of confirmation by
+unanimous consent; every confirmation is recorded as a voice vote or a yea-nay vote.
+
 --- one line per nomination: citation | number | organization | latestAction.text ---
 PN12-33 | 12 | Department of Health and Human Services | Confirmed by the Senate by Yea-Nay Vote. 52 - 43. Record Vote Number: 293.
 PN25-25 | 25 | Department of Labor | Confirmed by the Senate by Yea-Nay Vote. 51 - 47. Record Vote Number: 547.
