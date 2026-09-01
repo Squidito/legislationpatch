@@ -1,0 +1,84 @@
+Congress.gov API record - H.J.Res. 140 (119th Congress) bill status
+Source: https://api.congress.gov/v3/bill/119/hjres/140 (fetched 2026-09-01)
+
+{
+  "bill": {
+    "actions": {
+      "count": 30,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/actions?format=json"
+    },
+    "committees": {
+      "count": 1,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/committees?format=json"
+    },
+    "congress": 119,
+    "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 172, Number 8 (Monday, January 12, 2026)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. STAUBER:\nH.J. Res. 140.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8 of the U.S. Constitution\n[Page H656]\n</pre>",
+    "cosponsors": {
+      "count": 4,
+      "countIncludingWithdrawnCosponsors": 4,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/cosponsors?format=json"
+    },
+    "introducedDate": "2026-01-12",
+    "latestAction": {
+      "actionDate": "2026-04-27",
+      "text": "Became Public Law No: 119-85."
+    },
+    "laws": [
+      {
+        "number": "119-85",
+        "type": "Public Law"
+      }
+    ],
+    "legislationUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140",
+    "number": "140",
+    "originChamber": "House",
+    "originChamberCode": "H",
+    "policyArea": {
+      "name": "Public Lands and Natural Resources"
+    },
+    "relatedBills": {
+      "count": 2,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/relatedbills?format=json"
+    },
+    "sponsors": [
+      {
+        "bioguideId": "S001212",
+        "district": 8,
+        "firstName": "Pete",
+        "fullName": "Rep. Stauber, Pete [R-MN-8]",
+        "isByRequest": "N",
+        "lastName": "Stauber",
+        "party": "R",
+        "state": "MN",
+        "url": "https://api.congress.gov/v3/member/S001212?format=json"
+      }
+    ],
+    "subjects": {
+      "count": 9,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/subjects?format=json"
+    },
+    "summaries": {
+      "count": 2,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/summaries?format=json"
+    },
+    "textVersions": {
+      "count": 5,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/text?format=json"
+    },
+    "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
+    "titles": {
+      "count": 3,
+      "url": "https://api.congress.gov/v3/bill/119/hjres/140/titles?format=json"
+    },
+    "type": "HJRES",
+    "updateDate": "2026-07-17T23:33:55Z",
+    "updateDateIncludingText": "2026-07-17T23:33:55Z"
+  },
+  "request": {
+    "billNumber": "140",
+    "billType": "hjres",
+    "congress": "119",
+    "contentType": "application/json",
+    "format": "json"
+  }
+}
