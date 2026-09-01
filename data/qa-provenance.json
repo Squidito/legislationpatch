@@ -2429,5 +2429,83 @@
     "genModel": "sonnet (hostile full-claims, code-as-source)",
     "genAt": "2026-08-30",
     "stampedAt": "2026-09-01"
+  },
+  "article-budget-reconciliation": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r48444-reconciliation-faq": "36a54d8cc1901ca453c470f0e89d7f9f335a9400749a606d9650646ef24e08b4",
+      "record-crs-rl30862-byrd-rule": "ba4d817fba2887b7e0fc9830c7a00e498b80d19b614a8d790d429cb740010900",
+      "usc-2-641": "b55e73dcf1bdc3e4376cf82cbff287b3247f8863c80a331218f05db19f24ab7d",
+      "usc-2-644": "e53601d276113ae22fba46acb8c6dc38f0b9f95173f8749f74ad797ff09ccfbf",
+      "record-crs-rl30360-filibusters-cloture": "d80c6309224c1de2b08fb2ef72103f5ce9e45fba75f160129ef38d157c080eba",
+      "record-constitution-transcript": "8e51936c866b1eb48b8e44658fb721d567d750e288e454d32933fe9d36516739",
+      "record-congress-119-public-laws": "2a1a8c2656d3ebea41d6b6fdfb57eaf0c9c8e016b5a95a58f47778e93fa2f8e8"
+    },
+    "proseSha": "3c7c168c40d16031",
+    "proseFile": "articles/budget-reconciliation.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-government-shutdown": {
+    "kind": "article",
+    "sourceShas": {
+      "usc-31-1341": "6b02b59855d75a165ce2fe3df1935640c8a3955a67e63fef2effcab178f7b050",
+      "usc-31-1342": "166324042a4d781f8f24ad22ccc58d2ceb7b3c46bc28dc1dc98929183c258bc8",
+      "record-omb-a11-s124": "afab31087ab9c2700c0b8ab487b9c0c03053012a07f253cae96f7ff75cc5e1a3",
+      "record-crs-rs20348-funding-gaps": "646d8d88b8ade30435806b189d65fa2299b202b8a7b17ce1eec32c2bd4010a65",
+      "record-crs-rl34680-shutdown": "97cc04c1de8a77f3699aed1045215e5671665563acb5a74d792b1a0f54c62382",
+      "record-crs-r47106-approps-overview": "d5e01799ac4196a1e0780589547faa2d82b48f4e48c60e7cea370c11c665f60f"
+    },
+    "proseSha": "13ae64e2501e80c4",
+    "proseFile": "articles/government-shutdown.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-impoundment-rescission": {
+    "kind": "article",
+    "sourceShas": {
+      "record-gao-impoundment-control-act": "df30111ab510d1e24751bd66d956849ca82e989978d6a6fdce98b04e66bd5ec5",
+      "record-crs-r48432-ica": "dbc1a2a7ea7beae0a5c6cbdf8828fb34e3aaf681c7ce01808c95c4e5435b79ca",
+      "record-crs-lsb11374-pocket-rescissions": "4cb3c3faa0faa0480fa3d4e5befeb5a638be7a8e0ad430f742fd15109a3a257c",
+      "usc-2-682": "46a00dada1262db66400b476ef6d6e91ec1ebea156db1d2e80a11807a9bc32ae",
+      "usc-2-683": "2e5ee0ef37a1a4199e3adfb5c267709509bb8036e73890d444d0196a78d27d9f",
+      "usc-2-684": "d5f59ea8da31be920d8a5084c3e6bd79f4fd1bee41979353e60d4d87463a9aad",
+      "usc-2-685": "d44938136651805a4abc635bff7efb1f13f021d9490a741d5a75932fd30b8907",
+      "usc-2-686": "d8a7a677d02904e34710c93ddf205887adfb192f998873fd7d804d21dcea0c93",
+      "usc-2-687": "16d13663e0f255dfbea74a100de2d15281d6da5394ef8f8a61dc423e18e09efe",
+      "usc-2-688": "3664716a08761d141aa5bc1d882ca2cde2c83e4b8cf0fcd37e381dcaaab46dcf",
+      "record-crs-r46240-budget-process": "c20d2cafe16e4db8b8e86087d35d3b0bd5d0585359346a16149b032e2b4a2315"
+    },
+    "proseSha": "b8b3df34641538c1",
+    "proseFile": "articles/impoundment-rescission.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-what-is-cbo": {
+    "kind": "article",
+    "sourceShas": {
+      "usc-2-601": "ad7e23c498494d12c217d8594d802a58b46393cc54a82ad611d8cf8a0a7d5f67",
+      "usc-2-602": "107db0024e401bee2082360de817b6d1ca4f3877ba4f855e24a7adee0b801495",
+      "usc-2-653": "1057eb7314e02e02f31d4000fa452ee9d31194b82075f9f82fc357bcfc8c58d9",
+      "usc-2-658": "609ccf62d21069bbcf5e98f822b90f4f68ad8a14610439eddf913711b5c4a11b",
+      "usc-2-658c": "ca436cae73cf9b402a45f09418ef9c3ab4427193f403f2b58d55f6f74543d921",
+      "usc-2-900": "6b457194815eb204394cb61401df53dfe436be4fe3fa8636ee2ec4e1d2c6d1df",
+      "record-crs-98-560-baselines": "e515c4678b4ad787f1cbf1583d4b3d62ffa78d0c0f8d777b63a47bec5dd71dd4",
+      "record-crs-r46233-dynamic-scoring": "bf495db46b47451cf509f2bf037961313c9f05f500f5f137975ddd892fc40cfe",
+      "record-crs-r46240-budget-process": "c20d2cafe16e4db8b8e86087d35d3b0bd5d0585359346a16149b032e2b4a2315",
+      "record-crs-r48444-reconciliation-faq": "36a54d8cc1901ca453c470f0e89d7f9f335a9400749a606d9650646ef24e08b4"
+    },
+    "proseSha": "b2ad5315ddff4ac5",
+    "proseFile": "articles/what-is-cbo.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
   }
 }

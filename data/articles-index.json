@@ -174,8 +174,8 @@
       "order": 24,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "The CBO is Congress's nonpartisan scorekeeper for legislation — it estimates what bills cost and how they affect the deficit. Here's how to read a CBO score."
+      "showUpdated": true,
+      "summary": "The Congressional Budget Act tells the CBO exactly what a cost estimate must contain, over what horizon, and against what baseline. What the statute requires, and what CBO does and does not price."
     },
     "senate-filibuster.html": {
       "order": 25,
@@ -188,15 +188,15 @@
       "order": 26,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "A government shutdown occurs when Congress fails to pass appropriations legislation before funding lapses. Here's what shuts down, what stays open, and how they end."
+      "showUpdated": true,
+      "summary": "A government shutdown follows a funding gap. What the Antideficiency Act requires, which functions are excepted rather than essential, who decides what stops, and how long the gaps have actually lasted."
     },
     "budget-reconciliation.html": {
       "order": 27,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "Budget reconciliation allows the Senate to pass fiscal legislation with 51 votes instead of 60, bypassing the filibuster. Here's how it works and what its limits are."
+      "showUpdated": true,
+      "summary": "Reconciliation limits Senate debate time, so cloture is never needed to reach a final vote. How the directives work, what the Byrd rule bars, and which laws lost their short titles to it."
     },
     "house-rules-committee.html": {
       "order": 28,
@@ -300,7 +300,7 @@
       "order": 42,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "The Impoundment Control Act sets the rules for when the executive can withhold appropriated funds — rescissions, deferrals, the 45-day clock, the GAO's role, and the disputed pocket rescission."
     },
     "suspension-of-the-rules.html": {
