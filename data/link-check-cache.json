@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-01",
   "urls": {
     "https://www.congress.gov/bill/119th-congress/house-bill/7148": {
       "verdict": "wall",
@@ -976,15 +976,6 @@
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5898,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.federalregister.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 52009 bytes — \"Federal Register :: Home - Monday, August 31st\"",
-      "status": 200,
-      "finalUrl": "https://www.federalregister.gov/",
-      "title": "Federal Register :: Home - Monday, August 31st",
-      "bytes": 52009,
       "checkedAt": "2026-08-31"
     },
     "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg716": {
