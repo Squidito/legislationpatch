@@ -12,7 +12,7 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 4,
+  "passes": 5,
   "proseSha": "d00a48cf3bcd9b50",
   "sources": [
     {
@@ -1298,6 +1298,19 @@
     {
       "field": "verify.round4",
       "claim": "ROUND 4, FINAL CONFIRMATION (independent Sonnet hostile source-only subagent, 2026-09-01, no edits made during the round): 0 BLOCKING, 4 ADVISORY, 0 LEDGER FAILURES. It re-ran all three negative claims by exhaustive search across nine files, re-verified the Census district claim from the raw relationship file, re-checked every agency attribution across the four Federal Register documents, and confirmed both round-3 quote re-cuts as verbatim from the source capital with nothing elided. TWO ADVISORIES UPHELD AND FIXED: (1) the same silent-lowercase class survived in the point-of-order paragraph, where two Congress.gov action entries beginning \"Point of order\" and \"Motion to table\" were lowercased to fit the sentence - both are now quoted whole, from the capital, with the record vote number, and the paragraph no longer asserts an intra-day ordering the stored file does not establish (its lines are in API order within a date, not chronological order). (2) A WHO-DID-WHAT compression: the page said the Forest Service \"filed the withdrawal application, which segregated the lands\", but the 2024 notice attaches the segregation to the BLM's published notice of receipt (86 FR 58299), not to the filing. The passage is now quoted whole from the notice, which keeps the two agencies' acts apart, and the CFR citation for the lease rejection is restored. TWO ADVISORIES ACCEPTED WITHOUT CHANGE: a trailing period swapped for a comma at the close of the \"214 - 208 (Roll no. 38)\" quote (ordinary editorial punctuation, no wording change), and the title, already recorded as flagged-not-changed.",
+      "verdict": "SUPPORTED",
+      "type": "verification",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": "",
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "verify.round5",
+      "claim": "ROUND 5, CLEAN (independent Sonnet hostile source-only subagent, 2026-09-01, no edits made during the round): 0 BLOCKING, 0 LEDGER FAILURES, 2 ADVISORY, both already adjudicated (the title, flagged for James; and the one trailing period rendered as a comma inside the House-passage quote, accepted as editorial punctuation). It re-ran all three negative searches across nine files, re-grepped the Census file line by line for the three county FIPS codes, re-confirmed both round-3 and both round-4 quote re-cuts as verbatim and contiguous with their source capitals preserved, checked every claim row's span, and independently confirmed that every claim family the removed.* notes say was taken out is in fact absent from the live HTML. This is the converging pass: a fresh independent read of the sources over prose that was not touched during it.",
       "verdict": "SUPPORTED",
       "type": "verification",
       "severity": "ok",
