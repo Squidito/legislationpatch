@@ -251,6 +251,61 @@
     "textFile": "data/ref-text/press-carson-yakym-safe-drugs.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-app-presidential-vetoes": {
+    "id": "record-app-presidential-vetoes",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Vetoes Washington - Trump II (data through January 8, 2026)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes",
+    "textFile": "data/ref-text/record-app-presidential-vetoes.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-app-signing-statements": {
+    "id": "record-app-signing-statements",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Signing Statements: Hoover 1929 to present (archive and counts)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929",
+    "textFile": "data/ref-text/record-app-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-cdc-lung-cancer-statistics": {
+    "id": "record-cdc-lung-cancer-statistics",
+    "kind": "record",
+    "org": "U.S. Centers for Disease Control and Prevention",
+    "date": null,
+    "label": "CDC — Lung Cancer Statistics",
+    "citation": "U.S. Centers for Disease Control and Prevention",
+    "srcUrl": "https://www.cdc.gov/lung-cancer/statistics/index.html",
+    "textFile": "data/ref-text/record-cdc-lung-cancer-statistics.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-119-nominations": {
+    "id": "record-congress-119-nominations",
+    "kind": "record",
+    "org": "Congress.gov",
+    "date": null,
+    "label": "Congress.gov API record - all 2,077 nominations of the 119th Congress with latest action",
+    "citation": "Congress.gov",
+    "srcUrl": "https://api.congress.gov/v3/nomination/119",
+    "textFile": "data/ref-text/record-congress-119-nominations.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-congress-hr-1346": {
+    "id": "record-congress-hr-1346",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-05-14",
+    "label": "Congress.gov record — H.R. 1346 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 1346 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
+    "textFile": "data/ref-text/record-congress-hr-1346.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "record-congress-hr-1968-actions": {
     "id": "record-congress-hr-1968-actions",
     "kind": "record",
@@ -279,6 +334,17 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22",
     "textFile": "data/ref-text/record-congress-hr-22-status.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-congress-hr-2319": {
+    "id": "record-congress-hr-2319",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-22",
+    "label": "Congress.gov record — H.R. 2319 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 2319 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2319",
+    "textFile": "data/ref-text/record-congress-hr-2319.txt",
+    "fetchedAt": "2026-09-01"
   },
   "record-congress-hr-5371-actions": {
     "id": "record-congress-hr-5371-actions",
@@ -428,6 +494,17 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-congress-s-1884": {
+    "id": "record-congress-s-1884",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-13",
+    "label": "Congress.gov record — S. 1884 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, S. 1884 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
+    "textFile": "data/ref-text/record-congress-s-1884.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "record-constitution-amendments-11-27": {
     "id": "record-constitution-amendments-11-27",
     "kind": "record",
@@ -448,6 +525,17 @@
     "citation": "U.S. Constitution",
     "srcUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
     "textFile": "data/ref-text/record-constitution-transcript.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-98-225-uc-agreements": {
+    "id": "record-crs-98-225-uc-agreements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-225, Unanimous Consent Agreements in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-225.html",
+    "textFile": "data/ref-text/record-crs-98-225-uc-agreements.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-98-228-house-voting": {
@@ -481,6 +569,17 @@
     "citation": "Congressional Research Service",
     "srcUrl": "https://www.everycrsreport.com/reports/98-314.html",
     "textFile": "data/ref-text/record-crs-98-314-suspension.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-98-425-invoking-cloture": {
+    "id": "record-crs-98-425-invoking-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-425, Invoking Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-425.html",
+    "textFile": "data/ref-text/record-crs-98-425-invoking-cloture.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-if10515-ndaa-process": {
@@ -525,6 +624,28 @@
     "textFile": "data/ref-text/record-crs-r42843-legislative-process.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-crs-r43563-senate-holds": {
+    "id": "record-crs-r43563-senate-holds",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R43563, \"Holds\" in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R43563.html",
+    "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-r44819-majority-cloture": {
+    "id": "record-crs-r44819-majority-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44819, Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44819.html",
+    "textFile": "data/ref-text/record-crs-r44819-majority-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-r45153-statutory-interpretation": {
     "id": "record-crs-r45153-statutory-interpretation",
     "kind": "record",
@@ -565,6 +686,17 @@
     "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-crs-rl30360-filibusters-cloture": {
+    "id": "record-crs-rl30360-filibusters-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30360, Filibusters and Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30360.html",
+    "textFile": "data/ref-text/record-crs-rl30360-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-crs-rl30909-pocket-veto": {
     "id": "record-crs-rl30909-pocket-veto",
     "kind": "record",
@@ -574,6 +706,39 @@
     "citation": "Congressional Research Service",
     "srcUrl": "https://www.everycrsreport.com/reports/RL30909.html",
     "textFile": "data/ref-text/record-crs-rl30909-pocket-veto.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl32684-nuclear-option": {
+    "id": "record-crs-rl32684-nuclear-option",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL32684, Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL32684.html",
+    "textFile": "data/ref-text/record-crs-rl32684-nuclear-option.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl33667-signing-statements": {
+    "id": "record-crs-rl33667-signing-statements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2012-01-04",
+    "label": "CRS Report RL33667 — Presidential Signing Statements: Constitutional and Institutional Implications (updated January 4, 2012)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL33667.html",
+    "textFile": "data/ref-text/record-crs-rl33667-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rs22188-vetoes": {
+    "id": "record-crs-rs22188-vetoes",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2019-07-18",
+    "label": "CRS Report RS22188 — Regular Vetoes and Pocket Vetoes: In Brief (updated July 18, 2019)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RS22188.html",
+    "textFile": "data/ref-text/record-crs-rs22188-vetoes.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-rs22299-rule-xiv": {
@@ -587,6 +752,28 @@
     "textFile": "data/ref-text/record-crs-rs22299-rule-xiv.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-epa-fuel-waivers": {
+    "id": "record-epa-fuel-waivers",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Fuel Waivers (emergency fuel-standard waivers, including summer E15 waivers)",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/fuel-waivers",
+    "textFile": "data/ref-text/record-epa-fuel-waivers.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-epa-gasoline-rvp": {
+    "id": "record-epa-gasoline-rvp",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Gasoline Reid Vapor Pressure",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure",
+    "textFile": "data/ref-text/record-epa-gasoline-rvp.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "record-gao-budget-glossary": {
     "id": "record-gao-budget-glossary",
     "kind": "record",
@@ -595,6 +782,17 @@
     "srcUrl": "https://www.gao.gov/products/gao-05-734sp",
     "textFile": "data/ref-text/record-gao-budget-glossary.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-govinfo-cpd": {
+    "id": "record-govinfo-cpd",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office (GovInfo)",
+    "date": null,
+    "label": "GovInfo — Compilation of Presidential Documents (collection description)",
+    "citation": "U.S. Government Publishing Office (GovInfo)",
+    "srcUrl": "https://www.govinfo.gov/help/cpd",
+    "textFile": "data/ref-text/record-govinfo-cpd.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-govinfo-crec-about": {
     "id": "record-govinfo-crec-about",
@@ -607,6 +805,17 @@
     "textFile": "data/ref-text/record-govinfo-crec-about.txt",
     "fetchedAt": "2026-08-30"
   },
+  "record-house-report-119-382": {
+    "id": "record-house-report-119-382",
+    "kind": "record",
+    "org": "U.S. House Committee on Energy and Commerce",
+    "date": "2025-11-18",
+    "label": "H. Rept. 119-382 — Women and Lung Cancer Research and Preventive Services Act of 2025 (House Energy and Commerce Committee report on H.R. 2319)",
+    "citation": "H. Rept. 119-382",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm",
+    "textFile": "data/ref-text/record-house-report-119-382.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "record-house-roll-2026-069-s1383": {
     "id": "record-house-roll-2026-069-s1383",
     "kind": "record",
@@ -617,6 +826,105 @@
     "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
     "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "record-nci-lung-cancer-overview": {
+    "id": "record-nci-lung-cancer-overview",
+    "kind": "record",
+    "org": "National Cancer Institute",
+    "date": null,
+    "label": "NCI — Lung Cancer (patient information overview)",
+    "citation": "National Cancer Institute",
+    "srcUrl": "https://www.cancer.gov/types/lung",
+    "textFile": "data/ref-text/record-nci-lung-cancer-overview.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-nci-seer-lung-statfacts": {
+    "id": "record-nci-seer-lung-statfacts",
+    "kind": "record",
+    "org": "National Cancer Institute (SEER Program)",
+    "date": null,
+    "label": "NCI SEER Cancer Stat Facts: Lung and Bronchus Cancer",
+    "citation": "National Cancer Institute, SEER Program",
+    "srcUrl": "https://seer.cancer.gov/statfacts/html/lungb.html",
+    "textFile": "data/ref-text/record-nci-seer-lung-statfacts.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-plaw-114-308-hear-act": {
+    "id": "record-plaw-114-308-hear-act",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2016-12-16",
+    "label": "Public Law 114-308 — Holocaust Expropriated Art Recovery Act of 2016 (enacted text)",
+    "citation": "Pub. L. No. 114-308",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm",
+    "textFile": "data/ref-text/record-plaw-114-308-hear-act.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-scotus-clinton-v-nyc-1998": {
+    "id": "record-scotus-clinton-v-nyc-1998",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Clinton v. City of New York, 524 U.S. 417 (1998)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
+    "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-pocket-veto-case-1929": {
+    "id": "record-scotus-pocket-veto-case-1929",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "The Pocket Veto Case, 279 U.S. 655 (1929)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/279/655",
+    "textFile": "data/ref-text/record-scotus-pocket-veto-case-1929.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-wright-v-us-1938": {
+    "id": "record-scotus-wright-v-us-1938",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Wright v. United States, 302 U.S. 583 (1938)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/302/583",
+    "textFile": "data/ref-text/record-scotus-wright-v-us-1938.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-cloture-counts": {
+    "id": "record-senate-cloture-counts",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Senate Action on Cloture Motions",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/legislative/cloture/clotureCounts.htm",
+    "textFile": "data/ref-text/record-senate-cloture-counts.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture": {
+    "id": "record-senate-filibusters-cloture",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: About Filibusters and Cloture",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture-overview": {
+    "id": "record-senate-filibusters-cloture-overview",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Filibuster and Cloture Overview",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture-overview.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-senate-leadership": {
     "id": "record-senate-leadership",
@@ -638,6 +946,17 @@
     "citation": "Senate Manual (S. Doc. 113-1)",
     "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm",
     "textFile": "data/ref-text/record-senate-manual-113.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-manual-118": {
+    "id": "record-senate-manual-118",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "Senate Manual, 118th Congress (S. Doc. 118-1) — Standing Rules of the Senate",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm",
+    "textFile": "data/ref-text/record-senate-manual-118.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-senate-roll-118-2-219": {
@@ -695,6 +1014,17 @@
     "textFile": "data/ref-text/record-senate-rollcall-119-1-648.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-senate-veto-counts": {
+    "id": "record-senate-veto-counts",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": null,
+    "label": "U.S. Senate — Vetoes by President, 1789 to Present (summary counts)",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/vetoes/vetoCounts.htm",
+    "textFile": "data/ref-text/record-senate-veto-counts.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-senate-voting-procedures": {
     "id": "record-senate-voting-procedures",
     "kind": "record",
@@ -705,6 +1035,17 @@
     "srcUrl": "https://www.senate.gov/about/powers-procedures/voting.htm",
     "textFile": "data/ref-text/record-senate-voting-procedures.txt",
     "fetchedAt": "2026-08-31"
+  },
+  "record-uspstf-lung-cancer-screening": {
+    "id": "record-uspstf-lung-cancer-screening",
+    "kind": "record",
+    "org": "U.S. Preventive Services Task Force",
+    "date": null,
+    "label": "USPSTF Final Recommendation Statement: Lung Cancer — Screening",
+    "citation": "U.S. Preventive Services Task Force",
+    "srcUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+    "textFile": "data/ref-text/record-uspstf-lung-cancer-screening.txt",
+    "fetchedAt": "2026-09-01"
   },
   "usc-1-106": {
     "id": "usc-1-106",
@@ -759,6 +1100,15 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap6-subchapIX-sec261/htm",
     "textFile": "data/ref-text/usc-15-261.txt",
     "fetchedAt": "2026-08-27"
+  },
+  "usc-19-2191": {
+    "id": "usc-19-2191",
+    "kind": "statute",
+    "label": "Trade implementing bills — expedited congressional procedures (19 U.S.C. 2191)",
+    "citation": "19 U.S.C. 2191",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap12-subchapI-part5-sec2191/htm",
+    "textFile": "data/ref-text/usc-19-2191.txt",
+    "fetchedAt": "2026-08-31"
   },
   "usc-2-2a": {
     "id": "usc-2-2a",
@@ -922,6 +1272,15 @@
     "textFile": "data/ref-text/usc-42-1395m-1.txt",
     "fetchedAt": "2026-08-27"
   },
+  "usc-42-7545": {
+    "id": "usc-42-7545",
+    "kind": "statute",
+    "label": "42 U.S.C. 7545 (Clean Air Act Sec. 211) — Regulation of fuels",
+    "citation": "42 U.S.C. 7545",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapII-partA-sec7545/htm",
+    "textFile": "data/ref-text/usc-42-7545.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "usc-5-801": {
     "id": "usc-5-801",
     "kind": "statute",
@@ -993,6 +1352,24 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec808/htm",
     "textFile": "data/ref-text/usc-5-808.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "usc-50-1546": {
+    "id": "usc-50-1546",
+    "kind": "statute",
+    "label": "War Powers Resolution — priority procedures (50 U.S.C. 1546)",
+    "citation": "50 U.S.C. 1546",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546/htm",
+    "textFile": "data/ref-text/usc-50-1546.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-50-1546a": {
+    "id": "usc-50-1546a",
+    "kind": "statute",
+    "label": "War Powers Resolution — expedited procedures for joint resolutions and bills (50 U.S.C. 1546a)",
+    "citation": "50 U.S.C. 1546a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546a/htm",
+    "textFile": "data/ref-text/usc-50-1546a.txt",
+    "fetchedAt": "2026-08-31"
   },
   "usc-50-2538a": {
     "id": "usc-50-2538a",
@@ -1092,263 +1469,5 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title52/granules/USCODE-2024-title52-subtitleII-chap209-subchapIII-partA-sec21083/htm",
     "textFile": "data/ref-text/usc-52-21083.txt",
     "fetchedAt": "2026-08-27"
-  },
-  "record-congress-119-nominations": {
-    "id": "record-congress-119-nominations",
-    "kind": "record",
-    "org": "Congress.gov",
-    "date": null,
-    "label": "Congress.gov API record - all 2,077 nominations of the 119th Congress with latest action",
-    "citation": "Congress.gov",
-    "srcUrl": "https://api.congress.gov/v3/nomination/119",
-    "textFile": "data/ref-text/record-congress-119-nominations.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-98-225-uc-agreements": {
-    "id": "record-crs-98-225-uc-agreements",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report 98-225, Unanimous Consent Agreements in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/98-225.html",
-    "textFile": "data/ref-text/record-crs-98-225-uc-agreements.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-98-425-invoking-cloture": {
-    "id": "record-crs-98-425-invoking-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report 98-425, Invoking Cloture in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/98-425.html",
-    "textFile": "data/ref-text/record-crs-98-425-invoking-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-r43563-senate-holds": {
-    "id": "record-crs-r43563-senate-holds",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R43563, \"Holds\" in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R43563.html",
-    "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-r44819-majority-cloture": {
-    "id": "record-crs-r44819-majority-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R44819, Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R44819.html",
-    "textFile": "data/ref-text/record-crs-r44819-majority-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl30360-filibusters-cloture": {
-    "id": "record-crs-rl30360-filibusters-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL30360, Filibusters and Cloture in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL30360.html",
-    "textFile": "data/ref-text/record-crs-rl30360-filibusters-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl32684-nuclear-option": {
-    "id": "record-crs-rl32684-nuclear-option",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL32684, Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL32684.html",
-    "textFile": "data/ref-text/record-crs-rl32684-nuclear-option.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-cloture-counts": {
-    "id": "record-senate-cloture-counts",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: Senate Action on Cloture Motions",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/legislative/cloture/clotureCounts.htm",
-    "textFile": "data/ref-text/record-senate-cloture-counts.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-filibusters-cloture": {
-    "id": "record-senate-filibusters-cloture",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: About Filibusters and Cloture",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm",
-    "textFile": "data/ref-text/record-senate-filibusters-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-filibusters-cloture-overview": {
-    "id": "record-senate-filibusters-cloture-overview",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: Filibuster and Cloture Overview",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm",
-    "textFile": "data/ref-text/record-senate-filibusters-cloture-overview.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-manual-118": {
-    "id": "record-senate-manual-118",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "Senate Manual, 118th Congress (S. Doc. 118-1) — Standing Rules of the Senate",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm",
-    "textFile": "data/ref-text/record-senate-manual-118.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "usc-19-2191": {
-    "id": "usc-19-2191",
-    "kind": "statute",
-    "label": "Trade implementing bills — expedited congressional procedures (19 U.S.C. 2191)",
-    "citation": "19 U.S.C. 2191",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap12-subchapI-part5-sec2191/htm",
-    "textFile": "data/ref-text/usc-19-2191.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "usc-50-1546": {
-    "id": "usc-50-1546",
-    "kind": "statute",
-    "label": "War Powers Resolution — priority procedures (50 U.S.C. 1546)",
-    "citation": "50 U.S.C. 1546",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546/htm",
-    "textFile": "data/ref-text/usc-50-1546.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "usc-50-1546a": {
-    "id": "usc-50-1546a",
-    "kind": "statute",
-    "label": "War Powers Resolution — expedited procedures for joint resolutions and bills (50 U.S.C. 1546a)",
-    "citation": "50 U.S.C. 1546a",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546a/htm",
-    "textFile": "data/ref-text/usc-50-1546a.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-app-presidential-vetoes": {
-    "id": "record-app-presidential-vetoes",
-    "kind": "record",
-    "org": "American Presidency Project (UC Santa Barbara)",
-    "date": null,
-    "label": "American Presidency Project — Presidential Vetoes Washington - Trump II (data through January 8, 2026)",
-    "citation": "American Presidency Project (UC Santa Barbara)",
-    "srcUrl": "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes",
-    "textFile": "data/ref-text/record-app-presidential-vetoes.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-app-signing-statements": {
-    "id": "record-app-signing-statements",
-    "kind": "record",
-    "org": "American Presidency Project (UC Santa Barbara)",
-    "date": null,
-    "label": "American Presidency Project — Presidential Signing Statements: Hoover 1929 to present (archive and counts)",
-    "citation": "American Presidency Project (UC Santa Barbara)",
-    "srcUrl": "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929",
-    "textFile": "data/ref-text/record-app-signing-statements.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl30909-pocket-veto": {
-    "id": "record-crs-rl30909-pocket-veto",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": "2001-03-30",
-    "label": "CRS Report RL30909 — The Pocket Veto: Its Current Status (March 30, 2001)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL30909.html",
-    "textFile": "data/ref-text/record-crs-rl30909-pocket-veto.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl33667-signing-statements": {
-    "id": "record-crs-rl33667-signing-statements",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": "2012-01-04",
-    "label": "CRS Report RL33667 — Presidential Signing Statements: Constitutional and Institutional Implications (updated January 4, 2012)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL33667.html",
-    "textFile": "data/ref-text/record-crs-rl33667-signing-statements.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rs22188-vetoes": {
-    "id": "record-crs-rs22188-vetoes",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": "2019-07-18",
-    "label": "CRS Report RS22188 — Regular Vetoes and Pocket Vetoes: In Brief (updated July 18, 2019)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RS22188.html",
-    "textFile": "data/ref-text/record-crs-rs22188-vetoes.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-govinfo-cpd": {
-    "id": "record-govinfo-cpd",
-    "kind": "record",
-    "org": "U.S. Government Publishing Office (GovInfo)",
-    "date": null,
-    "label": "GovInfo — Compilation of Presidential Documents (collection description)",
-    "citation": "U.S. Government Publishing Office (GovInfo)",
-    "srcUrl": "https://www.govinfo.gov/help/cpd",
-    "textFile": "data/ref-text/record-govinfo-cpd.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-scotus-clinton-v-nyc-1998": {
-    "id": "record-scotus-clinton-v-nyc-1998",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "Clinton v. City of New York, 524 U.S. 417 (1998)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
-    "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-scotus-pocket-veto-case-1929": {
-    "id": "record-scotus-pocket-veto-case-1929",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "The Pocket Veto Case, 279 U.S. 655 (1929)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/279/655",
-    "textFile": "data/ref-text/record-scotus-pocket-veto-case-1929.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-scotus-wright-v-us-1938": {
-    "id": "record-scotus-wright-v-us-1938",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "Wright v. United States, 302 U.S. 583 (1938)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/302/583",
-    "textFile": "data/ref-text/record-scotus-wright-v-us-1938.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-veto-counts": {
-    "id": "record-senate-veto-counts",
-    "kind": "record",
-    "org": "United States Senate",
-    "date": null,
-    "label": "U.S. Senate — Vetoes by President, 1789 to Present (summary counts)",
-    "citation": "United States Senate",
-    "srcUrl": "https://www.senate.gov/legislative/vetoes/vetoCounts.htm",
-    "textFile": "data/ref-text/record-senate-veto-counts.txt",
-    "fetchedAt": "2026-08-31"
   }
 }
