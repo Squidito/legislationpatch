@@ -89,6 +89,18 @@
     "substanceHash": "295acaad8af5cf91",
     "refreshedAt": "2026-08-28"
   },
+  "pocket-veto": {
+    "datePublished": "2026-05-08",
+    "dateModified": "2026-08-31",
+    "substanceHash": "c5ca7a094f65ad52",
+    "refreshedAt": "2026-08-31"
+  },
+  "presidential-veto": {
+    "datePublished": "2026-05-08",
+    "dateModified": "2026-08-31",
+    "substanceHash": "02952788d692a3c0",
+    "refreshedAt": "2026-08-31"
+  },
   "safe-drugs-act": {
     "datePublished": "2026-07-17",
     "dateModified": "2026-08-31",
@@ -101,6 +113,7 @@
     "substanceHash": "c9ea9e62d8fd8c17",
     "refreshedAt": "2026-08-27"
   },
+<<<<<<< HEAD
   "senate-filibuster": {
     "datePublished": "2026-05-08",
     "dateModified": "2026-09-01",
@@ -112,6 +125,13 @@
     "dateModified": "2026-09-01",
     "substanceHash": "34d15b819f7e3a01",
     "refreshedAt": "2026-09-01"
+=======
+  "signing-statements": {
+    "datePublished": "2026-05-08",
+    "dateModified": "2026-08-31",
+    "substanceHash": "b9f4df43f3381662",
+    "refreshedAt": "2026-08-31"
+>>>>>>> audit/veto-cluster
   },
   "what-is-congressional-record": {
     "datePublished": "2026-05-08",

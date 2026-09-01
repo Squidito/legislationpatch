@@ -2206,6 +2206,7 @@
     "genAt": "2026-08-31",
     "stampedAt": "2026-09-01"
   },
+<<<<<<< HEAD
   "article-cloture-60-vote": {
     "kind": "article",
     "sourceShas": {
@@ -2223,11 +2224,26 @@
     },
     "proseSha": "2d319f5edfbd3302",
     "proseFile": "articles/cloture-60-vote.html",
+=======
+  "article-pocket-veto": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-rs22188-vetoes": "344abbeb83932e982079ed86ef5eaf9f399650b554f29b2dfb36a5943f7d1782",
+      "record-crs-rl30909-pocket-veto": "5aaf559e0bcac75a452cdcccca69bba15421f206dd1a91978db3f70ae9fd76b7",
+      "record-scotus-pocket-veto-case-1929": "6612320e44160c5e8f53c12aeb4dfcf599dd9797fbe8441701272c48f38e70e0",
+      "record-scotus-wright-v-us-1938": "0599e3650f98f424af50a6247861bade37540bfe05ee4027090dcdc9d5fe4f21",
+      "record-senate-veto-counts": "53df457710d8be292a427c7900de23e9c5eabb6799555540a555b001f85fea34",
+      "record-app-presidential-vetoes": "91224a33f47788633127f8c1cac0921ef8fccc1f40f6063bd2d530b288a7ac88"
+    },
+    "proseSha": "a9a690ec9f322175",
+    "proseFile": "articles/pocket-veto.html",
+>>>>>>> audit/veto-cluster
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",
     "stampedAt": "2026-09-01"
   },
+<<<<<<< HEAD
   "article-senate-filibuster": {
     "kind": "article",
     "sourceShas": {
@@ -2248,11 +2264,25 @@
     },
     "proseSha": "9f08e4a897931b3e",
     "proseFile": "articles/senate-filibuster.html",
+=======
+  "article-presidential-veto": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-rs22188-vetoes": "344abbeb83932e982079ed86ef5eaf9f399650b554f29b2dfb36a5943f7d1782",
+      "record-senate-veto-counts": "53df457710d8be292a427c7900de23e9c5eabb6799555540a555b001f85fea34",
+      "record-app-presidential-vetoes": "91224a33f47788633127f8c1cac0921ef8fccc1f40f6063bd2d530b288a7ac88",
+      "record-scotus-wright-v-us-1938": "0599e3650f98f424af50a6247861bade37540bfe05ee4027090dcdc9d5fe4f21",
+      "record-scotus-clinton-v-nyc-1998": "07b3a6d635b08238fcd408a6ac5bd65a8c6ed91ab356c5007249db1c09eaa986"
+    },
+    "proseSha": "efe3d4620b292b1f",
+    "proseFile": "articles/presidential-veto.html",
+>>>>>>> audit/veto-cluster
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",
     "stampedAt": "2026-09-01"
   },
+<<<<<<< HEAD
   "article-unanimous-consent": {
     "kind": "article",
     "sourceShas": {
@@ -2266,6 +2296,17 @@
     },
     "proseSha": "48cbd2bed2fe1249",
     "proseFile": "articles/unanimous-consent.html",
+=======
+  "article-signing-statements": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-rl33667-signing-statements": "3708b2f84578e7582f4803698d07aa5de25dd46a1159dbff819a18c24b8aa0c9",
+      "record-app-signing-statements": "7500c18298341391352ba2a9b91ff49a3a9274e0b2b398d12b3e6a0b3aae221c",
+      "record-govinfo-cpd": "e45916fa83ca2bb068d0cf5fa9370358daa0cb62c3693fd93b397729b2240969"
+    },
+    "proseSha": "3d688abb589c0a3b",
+    "proseFile": "articles/signing-statements.html",
+>>>>>>> audit/veto-cluster
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",

@@ -978,15 +978,6 @@
       "bytes": 5898,
       "checkedAt": "2026-08-31"
     },
-    "https://www.federalregister.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 52009 bytes — \"Federal Register :: Home - Monday, August 31st\"",
-      "status": 200,
-      "finalUrl": "https://www.federalregister.gov/",
-      "title": "Federal Register :: Home - Monday, August 31st",
-      "bytes": 52009,
-      "checkedAt": "2026-08-31"
-    },
     "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg716": {
       "verdict": "live",
       "reason": "HTTP 200, 39744 bytes — \"H. Doc. 118-187 - Rule XV: Business in Order on Special Days - HMAN-11\"",
@@ -1178,6 +1169,7 @@
       "bytes": 108740,
       "checkedAt": "2026-08-31"
     },
+<<<<<<< HEAD
     "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm": {
       "verdict": "live",
       "reason": "HTTP 200, 35831 bytes — \"U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Over\"",
@@ -1272,6 +1264,69 @@
       "title": "2 USC 641: Reconciliation",
       "bytes": 168096,
       "checkedAt": "2026-09-01"
+=======
+    "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141955 bytes",
+      "status": 200,
+      "bytes": 141955,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RS22188.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 82782 bytes — \"Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com",
+      "bytes": 82782,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RL30909.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 84577 bytes — \"The Pocket Veto: Its Current Status - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "The Pocket Veto: Its Current Status - EveryCRSReport.com",
+      "bytes": 84577,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/279/655": {
+      "verdict": "live",
+      "reason": "HTTP 200, 78853 bytes",
+      "status": 200,
+      "bytes": 78853,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/302/583": {
+      "verdict": "live",
+      "reason": "HTTP 200, 86831 bytes — \"WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Inform\"",
+      "status": 200,
+      "title": "WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 86831,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/524/417": {
+      "verdict": "live",
+      "reason": "HTTP 200, 253335 bytes — \"William J. CLINTON, President of the United States, et al., Appellants\"",
+      "status": 200,
+      "title": "William J. CLINTON, President of the United States, et al., Appellants, v. CITY OF NEW YORK et al. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 253335,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.govinfo.gov/help/cpd": {
+      "verdict": "live",
+      "reason": "HTTP 200, 83186 bytes — \"Compilation of Presidential Documents | GovInfo\"",
+      "status": 200,
+      "title": "Compilation of Presidential Documents | GovInfo",
+      "bytes": 83186,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.everycrsreport.com/reports/RL33667.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 187255 bytes — \"Presidential Signing Statements: Constitutional and Institutional Impl\"",
+      "status": 200,
+      "title": "Presidential Signing Statements: Constitutional and Institutional Implications - EveryCRSReport.com",
+      "bytes": 187255,
+      "checkedAt": "2026-08-31"
+>>>>>>> audit/veto-cluster
     }
   }
 }
