@@ -620,6 +620,13 @@
       "key": "criticisms[1].why",
       "reason": "Verbatim Congressional Record floor quote from Mr. Meeks (D-NY). criticisms[1].why matches featured_quotes text; the '$13 billion' phrasing is the speaker's own words on the House floor. Editing to '$13B' would misquote the CR. Field holds speaker-attributed verbatim speech, not authored analysis prose subject to the dollar-shortening rule.",
       "verifiedAt": "2026-08-02"
+    },
+    {
+      "billId": "119-S-3794",
+      "check": "figure-sourcing",
+      "key": "5%",
+      "reason": "Bill text L198-199: \"out of the State in which the compounding occurs, more than 5\" / \"percent of the total annual amount of drug products compounded\" - line-broken across lines. The same 5 percent figure also appears unbroken in the tagged referenced source usc-21-353a at 353a(b)(3)(B)(ii): \"in quantities that do not exceed 5 percent of the total prescription orders dispensed or distributed by such pharmacy or physician\" - a DIFFERENT base, which the analysis states explicitly.",
+      "verifiedAt": "2026-09-01"
     }
   ],
   "adjudications": []
