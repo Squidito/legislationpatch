@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 1,
-  "proseSha": "c36fc1bcaed76b7a",
+  "passes": 2,
+  "proseSha": "930a03c0215704af",
   "sources": [
     {
       "id": "usc-2-601",
@@ -388,7 +388,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r46240-budget-process",
       "sourceSpan": "In recent practice, budget resolutions have often covered a 10-year period.",
-      "section": "The Budget Resolution",
+      "section": "The Congressional Budget Process (introduction, ahead of the Budget Resolution subheading)",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -544,7 +544,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48444-reconciliation-faq",
       "sourceSpan": "It does not produce a change in outlays or revenues, including changes resulting from a change in the \"terms and conditions\" under which outlays are made or revenues are collected",
-      "section": "Q6",
+      "section": "6. What is the Byrd rule?",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -557,7 +557,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48444-reconciliation-faq",
       "sourceSpan": "It produces a change in outlays or revenues that is merely incidental to the non-budgetary components of the provision.",
-      "section": "Q6",
+      "section": "6. What is the Byrd rule?",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -929,6 +929,19 @@
     {
       "field": "removed.verify.round1-adjudication",
       "claim": "ROUND 1 hostile Sonnet confirmation pass on frozen text (2026-09-01, fresh agent after the prior session died mid-round; the earlier unreported round does not count under the GENUINE-READ rule): 0 BLOCKING, 6 ADVISORY. The agent read nine of the ten registered sources end-to-end and grep-confirmed every span it did not read in place. It independently re-derived both known prior error classes on this page and found them correctly fixed: the statutory estimating horizon is 2 U.S.C. 653(1)'s \"the fiscal year in which it is to become effective and in each of the 4 fiscal years following\" (year of effect plus four, NOT ten), and 2 U.S.C. 658c(b)(1) does require the Director to price Federal private-sector mandates at or above 00,000,000 including costs arising \"(or in any necessary implementing regulation)\", so the removed \"CBO does not score regulatory effects\" claim is contradicted by statute. It also grep-confirmed that none of the previously removed fabrications — including the invented CBO score quotation — has crept back. ADJUDICATION by the resuming Opus session, each item re-derived from source: (1) ACCEPTED and FIXED — the direct-cost span sits in 2 U.S.C. 658 paragraph (3)(B) (\"Direct costs\"), not (2) (\"Amount\", an unrelated grant/loan definition); section repointed. (2) ACCEPTED and FIXED IN PROSE — the 658(7) quotation stopped after \"upon the private sector\" and substituted a comma for the statute's \"except&mdash;\", which made a truncated definition read as a complete one. The quotation now runs the full paragraph (7) including both exceptions and prong (B), and the framing reads \"defined broadly, with two carve-outs\"; the ledger span was extended to match. (3) ACCEPTED and FIXED — R46240 carries no \"Statutory PAYGO\" heading; the scorecard sentence sits under the \"Sequestration\" heading, which the section pointer now says. (4) ACCEPTED and FIXED IN PROSE — \"the two behave differently in a score and differently during a funding lapse\" was synthesis: no registered source says direct spending keeps paying out during a lapse, and the government-shutdown article in this same batch REMOVED a flat mandatory-programs claim as an error, so asserting it here would have put two live pages in contradiction. Replaced with a sourced statement that delay on the regular appropriations acts is what opens the funding gap behind a shutdown, receipted to R46240's Continuing Resolutions section, with the sibling link preserved. (5) DISMISSED — \"Cost estimates are published on cbo.gov\" is wayfinding about a website, not a claim of law or figure; the URL is carried in Key Sources and npm run link-check resolves it (bot-walled, live for humans). (6) ACCEPTED and FIXED IN PROSE — \"across the periods it examines\" (plural) overstated R46233, whose Summary treats it as one span (\"During this period\"). The sentence now quotes CRS's own \"In most years since 1997, congressional rules have existed...\" to supply the antecedent and reads \"during that period\", and that quote is ledgered. ALSO ADJUDICATED AND DELIBERATELY NOT CHANGED: the two statutory quotations render the source files' &mdash; entities as a spaced em-dash (\"means — (A)\"). That is the published house style (senate-filibuster, already live, is spaced throughout), it is uniform across this article and its batch siblings, and it changes no word of the statute — a rendering choice for an entity-encoded dash, not an altered quotation. Distinguish this from budget-reconciliation, where the source carries a LITERAL unspaced em-dash in running CRS prose and the article was internally inconsistent about it; that one was fixed toward the source.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.verify.round2-adjudication",
+      "claim": "ROUND 2 hostile Sonnet confirmation pass on the post-adjudication text (2026-09-01, fresh agent): 0 BLOCKING, 6 ADVISORY, and all four edited passages returned CLEAN individually — the completed 2 U.S.C. 658(7) quotation verified word-for-word with nothing dropped or reordered, the dynamic-estimates antecedent now matching CRS's own referent for During this period, the rewritten Mandatory/Discretionary sentence verified against R46240's Continuing Resolutions passage, and both repointed sections (658(3)(B) Direct costs, and the Sequestration heading that actually carries the PAYGO scorecard sentence) confirmed against the files' real structure. The agent also searched the whole page and confirmed no assertion anywhere that direct or mandatory spending keeps paying out during a lapse — the class the sibling government-shutdown article removed as an error. ADJUDICATION by the Opus session: (1) ACCEPTED and FIXED — the JSON-LD citation array listed 2 U.S.C. 658 but the reader-facing Key Sources box did not, although the article quotes 658(7) and 658(3)(B) at length; a Key Sources entry was added so the two lists agree. This adds no new URL to link-check: the same uscode.house.gov 658 URL, carrying edition=prelim, was already in the JSON-LD and already resolving. (2) DISMISSED — one quotation renders Congress's with a straight apostrophe where CRS uses a curly one. Straight quotes are house style and this repo treats curly-quote corruption as a bug class; one character, no wording change. (3) ACCEPTED and FIXED — the 10-year budget-resolution sentence sits in R46240's introduction to The Congressional Budget Process, ahead of the Budget Resolution subheading; pointer corrected. (4) ACCEPTED and FIXED — R48444 numbers its questions rather than labelling them Q6; both pointers now read 6. What is the Byrd rule?. (5) ACCEPTED and FIXED IN PROSE — the unquoted paraphrase of 2 U.S.C. 602(a)(1) dropped authorizing or and said appropriations bills where the statute says appropriation bills; both restored so the paraphrase tracks the statute exactly. (6) CHECKED, no action — the unledgered lines the agent listed are framing or direct consequences of adjacent receipted spans, and it marked every one VERIFIABLE.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

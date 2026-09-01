@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 2,
-  "proseSha": "f642d554864c12d0",
+  "passes": 3,
+  "proseSha": "a965a7404d43d1ee",
   "sources": [
     {
       "id": "record-gao-impoundment-control-act",
@@ -103,6 +103,17 @@
       "citation": "2 U.S.C. 688",
       "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec688/htm",
       "textFile": "data/ref-text/usc-2-688.txt",
+      "fetchedAt": "2026-09-01"
+    },
+    {
+      "id": "record-crs-r46240-budget-process",
+      "kind": "record",
+      "org": "Congressional Research Service",
+      "date": null,
+      "label": "CRS Report R46240 — Introduction to the Federal Budget Process",
+      "citation": "Congressional Research Service",
+      "srcUrl": "https://www.everycrsreport.com/reports/R46240.html",
+      "textFile": "data/ref-text/record-crs-r46240-budget-process.txt",
       "fetchedAt": "2026-09-01"
     }
   ],
@@ -700,7 +711,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48432-ica",
       "sourceSpan": "in 2018 when H.R. 3 (115 th Cong.), Spending Cuts to Expired and Unnecessary Programs, was considered under the terms of H.Res. 923",
-      "section": "Consideration of Rescissions Under Section 1017 of the ICA",
+      "section": "Consideration of Rescissions Under Section 1017 of the ICA — 2018",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -739,7 +750,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48432-ica",
       "sourceSpan": "This was the case in the two most recent instances in which the House considered rescission bills pursuant to presidential special messages",
-      "section": "Consideration of Rescissions Under Section 1017 of the ICA",
+      "section": "Consideration of Rescissions Under Section 1017 of the ICA — 2018",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -817,7 +828,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "All of the funds that the President proposes to rescind expire at the end of FY2025 (i.e., on October 1, 2025).",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -830,7 +841,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "Fewer than 45 calendar days separate August 28 and October 1.",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -843,7 +854,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "the White House has said it intends to withhold the funds from obligation through their expiration unless, in the meantime, Congress rescinds the funds",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1038,7 +1049,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "In March 2025, the D.C. district court entered a preliminary injunction barring executive branch actors \" from unlawfully impounding congressionally appropriated foreign aid funds \" and ordering them to \"make available for obligation the full amount of funds that Congress appropriated for foreign assistance programs in the Further Consolidated Appropriations Act of 2024.\"",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1051,7 +1062,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "The D.C. district court held that the plaintiffs were likely to prevail on claims that the withholding violated the separation of powers and was final agency action that was contrary to law , within the meaning of the Administrative Procedure Act (APA) because the President had not then transmitted a special message under the ICA proposing either a rescission or deferral of the withheld funds.",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1064,7 +1075,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "On August 28, 2025, the U.S. Court of Appeals for the D.C. Circuit (D.C. Circuit) vacated the preliminary injunction in part .",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1090,7 +1101,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "On September 3, the D.C. district court entered a new preliminary injunction requiring defendants to obligate the $10 billion in foreign assistance appropriations that are set to expire at the end of September, including funds proposed for rescission in the August 2025 special message. The decision contains the only judicial construction of Section 1012(b) to date.",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1103,7 +1114,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "On September 9, Chief Justice John Roberts granted an administrative stay of the preliminary injunction to the extent it concerned the appropriations that were included in the August 28, 2025, special message.",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1116,7 +1127,7 @@
       "severity": "material",
       "sourceFile": "record-crs-lsb11374-pocket-rescissions",
       "sourceSpan": "The Court has not yet decided the application.",
-      "section": "The August 2025 Special Message",
+      "section": "The August 2025 Special Message: Old and New Questions",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1169,6 +1180,32 @@
       "sourceFile": "record-gao-impoundment-control-act",
       "sourceSpan": "GAO’s Responsibilities Under the Impoundment Control Act The Comptroller General is required to review each special message and report the findings to Congress as soon as practicable.",
       "section": "GAO’s Responsibilities Under the Impoundment Control Act",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "How this connects to the rest of the budget process",
+      "claim": "When action on the regular appropriations acts is delayed the government runs on a continuing resolution or faces a shutdown",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "material",
+      "sourceFile": "record-crs-r46240-budget-process",
+      "sourceSpan": "When action on the regular appropriations acts is delayed, however, one or more continuing appropriations acts (also referred to as a continuing resolution, or CR) may be used to provide interim budget authority in order to prevent a funding gap or the need for a shutdown of government activities.",
+      "section": "Continuing Resolutions",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "How a rescission bill moves",
+      "claim": "CRS calls the ICA Senate debate limit analogous to Title III of the Budget Act, which sets similar limits for budget resolutions and reconciliation bills",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "record-crs-r48432-ica",
+      "sourceSpan": "This language is analogous to the language in Title III of the Budget Act, which establishes similar debate limits for budget resolutions and reconciliation bills.",
+      "section": "Consideration of Rescissions Under Section 1017 of the ICA",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1332,6 +1369,19 @@
     {
       "field": "removed.verify.round2-adjudication",
       "claim": "ROUND 2 hostile Sonnet confirmation pass on frozen text (2026-09-01, fresh agent after the prior session died mid-round; the earlier unreported round does not count under the GENUINE-READ rule): 0 BLOCKING, 7 ADVISORY. All 81 claim sourceSpans re-grepped by the agent and resolved character-for-character, including entity-preserved spans. The agent independently re-derived, without reading the ledger notes first, the two highest-stakes prior fixes and reached the same conclusion on both: the September 3, 2025 injunction (not the March one) is the first judicial construction of ICA Section 1012(b), and the Roberts administrative stay of September 9 attached to that September 3 injunction. It also confirmed 2 U.S.C. 688 is a debate-time limit and that the article makes no simple-majority / filibuster / cloture-threshold claim, the error class that was removed. ADJUDICATION by the resuming Opus session, each item re-derived from source: (1) ACCEPTED and FIXED IN PROSE — \"the Comptroller General, who heads the Government Accountability Office\" is true but appears nowhere in the ten registered sources. Rewritten to the GAO page's own verbatim heading, \"GAO's Responsibilities Under the Impoundment Control Act\", and ledgered. Removed-or-sourced, not softened. (2) ACCEPTED and FIXED — five rows pointed at an LSB11374 \"Introduction\" heading the scraped page does not have; the text sits in the unheaded lead, which the pointers now say. (3) ACCEPTED and FIXED — R48432's heading is \"Consideration of Rescissions Under Section 1017 of the ICA\"; five truncated pointers extended. (4) ACCEPTED and FIXED — the deferral-accordance clause is 2 U.S.C. 685(b)(2)(B), not 685(b)(2); repointed. (5) DISMISSED — the GAO two-types-of-impoundment row quotes GAO where the prose quotes CRS for the same fact. An article claim may carry a receipt from a registered source other than the one quoted in the prose; that is corroboration, not a defect. (6) NOTED, no action — dateModified is stamped by publish-article.js --refresh, never hand-edited. (7) CHECKED, no action — the agent listed twelve unledgered connectives; ten are restatements or direct consequences of already-receipted spans, and the two it rated highest-stakes (the first-judicial-construction point and which injunction the stay attached to) are in fact already ledgered as separate rows citing LSB11374's August 2025 Special Message section, which I confirmed by direct row inspection.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.verify.round3-adjudication",
+      "claim": "ROUND 3 hostile Sonnet confirmation pass on the post-adjudication text (2026-09-01, fresh agent): 0 BLOCKING, 5 ADVISORY. The agent grep-confirmed that the who-heads-the-GAO claim is gone with nothing equivalent surviving, verified the GAO heading quotation verbatim, and independently re-derived all three pointer corrections (LSB11374 has no Introduction heading and the first heading is Does the ICA Authorize Pocket Rescissions?; R48432 heading is Consideration of Rescissions Under Section 1017 of the ICA; the deferral-accordance clause is 685(b)(2)(B)). It also re-derived the full litigation chronology and re-confirmed that the article makes no filibuster, cloture, simple-majority or vote-threshold claim anywhere. ADJUDICATION by the Opus session: (1) DISMISSED — the GAO heading is quoted with a straight apostrophe where the page uses a curly one. Straight quotes are house style and this repo treats curly-quote corruption as a bug class; one character, no wording change. (2) ACCEPTED and FIXED IN PROSE — It is the same design the Budget Act uses overstated R48432, which says only analogous to and similar debate limits. Replaced with CRS's own sentence, quoted and ledgered. Removed-or-sourced, not softened. (3) ACCEPTED and FIXED — two of the five Section 1017 rows sit under that section's 2018 sub-heading; pointers now say so. (4) ACCEPTED and FIXED — the August 2025 pointer dropped the source's full heading, The August 2025 Special Message: Old and New Questions; restored. (5) ACCEPTED and FIXED BY SOURCING — the continuing-resolution / shutdown connective was true but supported by none of the ten registered sources. Rather than delete a correct sentence, CRS R46240 (already stored, already link-checked, and the source the sibling what-is-cbo article uses for the identical point) is now registered as an eleventh source, the sentence carries a receipt from its Continuing Resolutions section, and R46240 was added to both the JSON-LD citation array and the reader-facing Key Sources box so all three lists still agree.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

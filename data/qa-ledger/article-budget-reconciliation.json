@@ -12,7 +12,7 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
+  "passes": 6,
   "proseSha": "3c7c168c40d16031",
   "sources": [
     {
@@ -166,7 +166,7 @@
       "severity": "material",
       "sourceFile": "record-crs-rl30360-filibusters-cloture",
       "sourceSpan": "The votes of only a majority of Senators present and voting are needed to pass a bill on the floor.",
-      "section": "Filibusters and Cloture in the Senate, body text on passage thresholds",
+      "section": "Consensus (under The Impact of Filibusters)",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1110,6 +1110,19 @@
     {
       "field": "removed.verify.round5-adjudication",
       "claim": "ROUND 5 hostile Sonnet pass (reported before the prior session died): 0 BLOCKING, 5 ADVISORY. All five re-derived from source and ADJUDICATED IN-THREAD by the resuming Opus session on 2026-09-01, each against a fresh read of the stored file. (1) ACCEPTED: three rows labelled their RL30862 source section \"Legislative History of the Byrd Rule\"; the exact spans quoted (the 1985/1986 sentence carrying \"on a temporary basis\", and the 1990 Section 313 sentence) occur ONLY in RL30862's Summary at char 2056 and 2297 — the body occurrence at 9451 omits \"on a temporary basis\" and the 1990 sentence has no body occurrence. Section pointers repointed to \"Summary\". Prose unaffected: the quotations are verbatim either way. (2) ACCEPTED: the vote-arama quotation rendered CRS's unspaced em-dash (\"consideration—usually\") as a spaced one. Quotation fidelity restored to the source form; the same article already preserves the unspaced form in the \"A fourth instruction—to change the deficit—\" quote from the same report, so this was an internal inconsistency. Typographic only — no fact, figure or receipt changed. (3) ACCEPTED: \"The first is not part of the Byrd rule at all\" now carries two receipts from R48444 Q5, which lists Section 310(g) in the group of points of order applying in both chambers and Section 313/the Byrd rule in the group introduced by \"These points of order apply in the Senate only\". (4) ACCEPTED: the \"floor event, not a pre-floor ruling\" framing now carries the RL30862 Table 4 entry-22 span, which files the Sanders Amendment No. 972 point of order under category \"b. To Bar Consideration of Amendment(s)\" — independently re-derived here from the linearised table, including the waiver vote Rejected, 42-58 (March 5, 2021) and the disposition Sustained; amendment fell. (5) ACCEPTED as a DUAL-CITE rather than a repoint: the Congress.gov row remains (the prose attributes the date to that record), and R48444 Appendix Table A-1 is added alongside it, where 7/4/2025 sits under a column headed \"Date Enacted or Vetoed\". Adjudication also included an independent verbatim re-check of all 49 quoted spans in the article body against the seven registered sources: 49 of 49 resolve, the only non-literal matches being PDF-linearisation artefacts (a space before a closing parenthesis, a hyphenated line-break in \"non- budgetary\") and one marked \"...\" elision.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.verify.round6-adjudication",
+      "claim": "ROUND 6 hostile Sonnet confirmation pass on the post-adjudication text (2026-09-01, fresh agent): 0 BLOCKING, 5 ADVISORY. The agent extracted all 49 quoted spans programmatically and matched 49 of 49 in substance against the seven registered sources; it re-derived the 29-considered/24-enacted arithmetic from Table A-1 line items rather than trusting the summary sentence, re-derived the Table 4 entry-22 minimum-wage row from raw byte offsets, and byte-checked with cat -A that both em-dash quotations now render unspaced exactly as CRS does. It independently confirmed the three known prior error classes are absent: no 10-hours-per-chamber-in-conference, no 51-vote framing, no categorical Byrd-rule Social Security bar, and no one-bill-per-resolution claim. It also independently re-derived the two items I had just changed: that the 1985/1986 on-a-temporary-basis sentence and the 1990 Section 313 sentence exist ONLY in RL30862 Summary (offsets 2102-2297) while the Introduction-body near-duplicate omits on a temporary basis and has no 1990 sentence at all; and that R48444 Appendix Table A-1 heads its date column Date Enacted or Vetoed. ADJUDICATION by the Opus session: (1) DISMISSED — five quotations end with a comma where the source ends with a period, because each is grammatically fused into a longer sentence. No word is altered; this is ordinary quotation practice, not a fidelity defect. (2) DISMISSED — two quotations begin mid-clause with the dropped referent supplied immediately outside the quotation marks (reconciliation has been used...; each shall promptly make...). Same reasoning. (3) DISMISSED — the 641(g) quotation drops a trailing bracketed U.S. Code editors cross-reference, and already carries an explicit ... elision, so the reader is on notice. (4) ACCEPTED and FIXED — the RL30360 majority-of-Senators row pointed at body text on passage thresholds; the sentence sits in the report Consensus subsection under The Impact of Filibusters, which the pointer now says. (5) CHECKED, no change — one in that group kept its name is not an inference from absence: the very next sentence carries the receipt, and ledger row 59 records that CRS lists the Health Care and Education Reconciliation Act of 2010 (P.L. 111-152) by its short title in Table 1, which is an affirmative fact rather than a silence.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",
