@@ -7,7 +7,15 @@
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5917,
-      "checkedAt": "2026-08-31"
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R47106": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
     },
     "https://www.congress.gov": {
       "verdict": "wall",
@@ -16,778 +24,7 @@
       "finalUrl": "https://www.congress.gov/",
       "title": "Just a moment...",
       "bytes": 5770,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/help/legislative-glossary": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5887,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cbo.gov/topics/budget/discretionary-spending": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "cbo.gov",
-      "bytes": 767,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/collection/PLAW": {
-      "verdict": "live",
-      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
-      "status": 200,
-      "title": "Govinfo",
-      "bytes": 1762,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/1": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5908,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions": {
-      "verdict": "live",
-      "reason": "HTTP 200, 27281 bytes — \"Bills &amp; Resolutions | house.gov\"",
-      "status": 200,
-      "title": "Bills &amp; Resolutions | house.gov",
-      "bytes": 27281,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5972,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R48444": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cbo.gov/topics/budget/reconciliation": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "cbo.gov",
-      "bytes": 767,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 33146 bytes — \"U.S. Senate: About Filibusters and Cloture\"",
-      "status": 200,
-      "title": "U.S. Senate: About Filibusters and Cloture",
-      "bytes": 33146,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.gao.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 133532 bytes — \"U.S. Government Accountability Office (U.S. GAO)\"",
-      "status": 200,
-      "finalUrl": "https://www.gao.gov/",
-      "title": "U.S. Government Accountability Office (U.S. GAO)",
-      "bytes": 133532,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section802&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 148158 bytes — \"5 USC 802: Congressional disapproval procedure\"",
-      "status": 200,
-      "title": "5 USC 802: Congressional disapproval procedure",
-      "bytes": 148158,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R43992": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/IF10023": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5848,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/HowTo/how_to_numbers.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 28032 bytes — \"U.S. Senate: How to Find Bill Numbers\"",
-      "status": 200,
-      "title": "U.S. Senate: How to Find Bill Numbers",
-      "bytes": 28032,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section644&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 164454 bytes — \"2 USC 644: Extraneous matter in reconciliation legislation\"",
-      "status": 200,
-      "title": "2 USC 644: Extraneous matter in reconciliation legislation",
-      "bytes": 164454,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R45920": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section801&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 167080 bytes — \"5 USC 801: Congressional review\"",
-      "status": 200,
-      "title": "5 USC 801: Congressional review",
-      "bytes": 167080,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/content/pkg/GPO-HPRACTICE-108/html/GPO-HPRACTICE-108-20.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 19875 bytes — \"House Practice: A Guide to the Rules, Precedents and Procedures of the\"",
-      "status": 200,
-      "title": "House Practice: A Guide to the Rules, Precedents and Procedures of the House - Chapter 19. Discharging Measures From Committees",
-      "bytes": 19875,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/1346": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/6387": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.epa.gov/air-quality-analysis/treatment-air-quality-monitoring-data-influenced-exceptional-events": {
-      "verdict": "live",
-      "reason": "HTTP 200, 63999 bytes — \"Treatment of Air Quality Monitoring Data Influenced by Exceptional Eve\"",
-      "status": 200,
-      "title": "Treatment of Air Quality Monitoring Data Influenced by Exceptional Events | US EPA",
-      "bytes": 63999,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/97-856.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 303232 bytes — \"The Discharge Rule in the House: Recent Use in Historical Context - Ev\"",
-      "status": 200,
-      "title": "The Discharge Rule in the House: Recent Use in Historical Context - EveryCRSReport.com",
-      "bytes": 303232,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/118th-congress/house-bill/7888": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.whitehouse.gov/omb/budget/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 246021 bytes — \"President’s Budget &#8211; OMB &#8211; The White House\"",
-      "status": 200,
-      "finalUrl": "https://www.whitehouse.gov/omb/information-resources/budget/",
-      "title": "President’s Budget &#8211; OMB &#8211; The White House",
-      "bytes": 246021,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/4465": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1884": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5898,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section7545&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 356892 bytes — \"42 USC 7545: Regulation of fuels\"",
-      "status": 200,
-      "title": "42 USC 7545: Regulation of fuels",
-      "bytes": 356892,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/content/pkg/PLAW-119publ82/pdf/PLAW-119publ82.pdf": {
-      "verdict": "live",
-      "reason": "HTTP 200, 205365 bytes",
-      "status": 200,
-      "bytes": 205365,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.ignet.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 55506 bytes — \"IGNET | Council of the Inspectors General on Integrity and Efficiency;\"",
-      "status": 200,
-      "finalUrl": "https://www.ignet.gov/",
-      "title": "IGNET | Council of the Inspectors General on Integrity and Efficiency; IGnet",
-      "bytes": 55506,
-      "checkedAt": "2026-08-31"
-    },
-    "https://rules.house.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 49873 bytes — \"House of Representatives Committee on Rules |\"",
-      "status": 200,
-      "finalUrl": "https://rules.house.gov/",
-      "title": "House of Representatives Committee on Rules |",
-      "bytes": 49873,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/details/HMAN-119": {
-      "verdict": "live",
-      "reason": "HTTP 200, 37614 bytes — \"Constitution, Jefferson&#39;s Manual, and the Rules of the House of Re\"",
-      "status": 200,
-      "title": "Constitution, Jefferson&#39;s Manual, and the Rules of the House of Representatives, 119th Congress - HMAN-119 | Content Details | GovInfo",
-      "bytes": 37614,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 65695 bytes — \"GovInfo | U.S. Government Publishing Office\"",
-      "status": 200,
-      "finalUrl": "https://www.govinfo.gov/",
-      "title": "GovInfo | U.S. Government Publishing Office",
-      "bytes": 65695,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 77987 bytes",
-      "status": 200,
-      "finalUrl": "https://uscode.house.gov/",
-      "bytes": 77987,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/collection/crec": {
-      "verdict": "live",
-      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
-      "status": 200,
-      "title": "Govinfo",
-      "bytes": 1762,
-      "checkedAt": "2026-08-31"
-    },
-    "https://clerk.house.gov/Votes": {
-      "verdict": "live",
-      "reason": "HTTP 200, 254013 bytes",
-      "status": 200,
-      "bytes": 254013,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/cloture/clotureCounts.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 42640 bytes — \"U.S. Senate: Cloture Motions\"",
-      "status": 200,
-      "title": "U.S. Senate: Cloture Motions",
-      "bytes": 42640,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/98-265GOV.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 16310 bytes — \"A User's Guide to the Congressional Record - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "A User's Guide to the Congressional Record - EveryCRSReport.com",
-      "bytes": 16310,
-      "checkedAt": "2026-08-31"
-    },
-    "https://bioguide.congress.gov": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "finalUrl": "https://bioguide.congress.gov/",
-      "title": "Just a moment...",
-      "bytes": 5775,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R48432": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5823,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/LSB11374": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5829,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.gao.gov/legal/appropriations-law/impoundment-control-act": {
-      "verdict": "live",
-      "reason": "HTTP 200, 104972 bytes — \"Impoundment Control Act | U.S. GAO\"",
-      "status": 200,
-      "title": "Impoundment Control Act | U.S. GAO",
-      "bytes": 104972,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section683&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 146034 bytes — \"2 USC 683: Rescission of budget authority\"",
-      "status": 200,
-      "title": "2 USC 683: Rescission of budget authority",
-      "bytes": 146034,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/votes_new.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 38821 bytes — \"U.S. Senate: Votes\"",
-      "status": 200,
-      "title": "U.S. Senate: Votes",
-      "bytes": 38821,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.google.com/preferences/source?q=legislationpatch.com": {
-      "verdict": "live",
-      "reason": "HTTP 200, 50019 bytes",
-      "status": 200,
-      "bytes": 50019,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/help/legislative-glossary#glossary_jointresolution": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "finalUrl": "https://www.congress.gov/help/legislative-glossary",
-      "title": "Just a moment...",
-      "bytes": 5887,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1748": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://api.congress.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 174997 bytes — \"Congress.gov API\"",
-      "status": 200,
-      "finalUrl": "https://api.congress.gov/",
-      "title": "Congress.gov API",
-      "bytes": 174997,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1748/text": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5957,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1748/cosponsors": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5975,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/118th-congress/senate-bill/1409": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5898,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/118th-congress/senate-bill/2073": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1881a&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 245307 bytes — \"50 USC 1881a: Procedures for targeting certain persons outside the Uni\"",
-      "status": 200,
-      "title": "50 USC 1881a: Procedures for targeting certain persons outside the United States other than United States persons",
-      "bytes": 245307,
-      "checkedAt": "2026-08-31"
-    },
-    "https://api.govinfo.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 2029 bytes — \"GovInfo API | GovInfo\"",
-      "status": 200,
-      "finalUrl": "https://api.govinfo.gov/docs/",
-      "title": "GovInfo API | GovInfo",
-      "bytes": 2029,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/7757": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/senators/leadership.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53548 bytes — \"U.S. Senate: Leadership &amp; Officers\"",
-      "status": 200,
-      "title": "U.S. Senate: Leadership &amp; Officers",
-      "bytes": 53548,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section1341&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 151840 bytes — \"31 USC 1341: Limitations on expending and obligating amounts\"",
-      "status": 200,
-      "title": "31 USC 1341: Limitations on expending and obligating amounts",
-      "bytes": 151840,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.apaservices.org/advocacy/news/kids-online-safety-act": {
-      "verdict": "live",
-      "reason": "HTTP 200, 51456 bytes — \"Kids Online Safety Act advances unanimously from the Senate Commerce C\"",
-      "status": 200,
-      "title": "Kids Online Safety Act advances unanimously from the Senate Commerce Committee",
-      "bytes": 51456,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00219.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53712 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session\"",
-      "status": 200,
-      "title": "U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session",
-      "bytes": 53712,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00221.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53571 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session\"",
-      "status": 200,
-      "title": "U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session",
-      "bytes": 53571,
-      "checkedAt": "2026-08-31"
-    },
-    "https://cdt.org/insights/congress-should-protect-children-online-without-sacrificing-privacy-and-free-expression/": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Attention Required! | Cloudflare",
-      "bytes": 5474,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.eff.org/deeplinks/2025/05/kids-online-safety-act-will-make-internet-worse-everyone": {
-      "verdict": "live",
-      "reason": "HTTP 200, 57249 bytes — \"The Kids Online Safety Act Will Make the Internet Worse for Everyone |\"",
-      "status": 200,
-      "title": "The Kids Online Safety Act Will Make the Internet Worse for Everyone | Electronic Frontier Foundation",
-      "bytes": 57249,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.fightforthefuture.org/news/2026-08-05-senate-commerce-passes-censorship-bill-kosa-out-of-committee-screen-act-fails/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 18106 bytes — \"Senate Commerce passes censorship bill KOSA out of committee, SCREEN A\"",
-      "status": 200,
-      "title": "Senate Commerce passes censorship bill KOSA out of committee, SCREEN Act fails",
-      "bytes": 18106,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/2296": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/2296/text": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5935,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1071": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.blackburn.senate.gov/2026/6/blackburn-blumenthal-statement-on-house-passage-of-the-kids-act": {
-      "verdict": "live",
-      "reason": "HTTP 200, 51600 bytes — \"Blackburn &amp; Blumenthal Statement on House Passage of the KIDS Act \"",
-      "status": 200,
-      "title": "Blackburn &amp; Blumenthal Statement on House Passage of the KIDS Act - U.S. Senator...",
-      "bytes": 51600,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.eff.org/deeplinks/2024/02/dont-fall-latest-changes-dangerous-kids-online-safety-act": {
-      "verdict": "live",
-      "reason": "HTTP 200, 69489 bytes — \"Don’t Fall for the Latest Changes to the Dangerous Kids Online Safety \"",
-      "status": 200,
-      "title": "Don’t Fall for the Latest Changes to the Dangerous Kids Online Safety Act | Electronic Frontier Foundation",
-      "bytes": 69489,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/119/plaws/publ60/PLAW-119publ60.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 4609410 bytes",
-      "status": 200,
-      "bytes": 4609410,
-      "checkedAt": "2026-08-31"
-    },
-    "https://github.com/Squidito/legislationpatch/blob/main/scripts/generate_bill_pages.js": {
-      "verdict": "live",
-      "reason": "HTTP 200, 870512 bytes",
-      "status": 200,
-      "bytes": 870512,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/details/CREC-2025-09-02": {
-      "verdict": "live",
-      "reason": "HTTP 200, 2616 bytes — \"GovInfo\"",
-      "status": 200,
-      "title": "GovInfo",
-      "bytes": 2616,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/details/CREC-2025-10-09": {
-      "verdict": "live",
-      "reason": "HTTP 200, 2616 bytes — \"GovInfo\"",
-      "status": 200,
-      "title": "GovInfo",
-      "bytes": 2616,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.aclu.org/news/privacy-technology/lawmakers-renew-push-to-regulate-kids-speech-online-despite-speech-protections": {
-      "verdict": "live",
-      "reason": "HTTP 200, 68306 bytes — \"Lawmakers Renew Push to Regulate Kids’ Speech Online Despite Speech Pr\"",
-      "status": 200,
-      "title": "Lawmakers Renew Push to Regulate Kids’ Speech Online Despite Speech Protections | American Civil Liberties Union",
-      "bytes": 68306,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00500.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53693 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
-      "status": 200,
-      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
-      "bytes": 53693,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00570.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53626 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
-      "status": 200,
-      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
-      "bytes": 53626,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.markey.senate.gov/news/press-releases/10/10/2025/sen-markey-opposes-bloated-wasteful-defense-funding-legislation": {
-      "verdict": "live",
-      "reason": "HTTP 200, 54839 bytes — \"Sen. Markey Opposes Bloated, Wasteful Defense Funding Legislation\"",
-      "status": 200,
-      "title": "Sen. Markey Opposes Bloated, Wasteful Defense Funding Legislation",
-      "bytes": 54839,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.armed-services.senate.gov/press-releases/sasc-chairman-wicker-and-ranking-member-reed-commend-final-passage-of-the-fiscal-year-2026-national-defense-authorization-act": {
-      "verdict": "live",
-      "reason": "HTTP 200, 97656 bytes — \"SASC Chairman Wicker and Ranking Member ... | U.S. Senate Committee on\"",
-      "status": 200,
-      "title": "SASC Chairman Wicker and Ranking Member ... | U.S. Senate Committee on Armed Services",
-      "bytes": 97656,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/IF10516.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 24221 bytes — \"Defense Primer: Navigating the NDAA - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "Defense Primer: Navigating the NDAA - EveryCRSReport.com",
-      "bytes": 24221,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.merkley.senate.gov/as-trump-unconstitutionally-deploys-military-into-american-cities-senators-from-illinois-oregon-california-oppose-ndaa/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 86360 bytes — \"As Trump Unconstitutionally Deploys Military into American Cities, Sen\"",
-      "status": 200,
-      "title": "As Trump Unconstitutionally Deploys Military into American Cities, Senators from Illinois, Oregon &amp; California Oppose NDAA - Merkley",
-      "bytes": 86360,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/8800": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5895,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/RS22299.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 76980 bytes — \"Bypassing Senate Committees: Rule XIV and Unanimous Consent - EveryCRS\"",
-      "status": 200,
-      "title": "Bypassing Senate Committees: Rule XIV and Unanimous Consent - EveryCRSReport.com",
-      "bytes": 76980,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/8800/text": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5954,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/IF10515.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 25946 bytes — \"Defense Primer: The NDAA Process - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "Defense Primer: The NDAA Process - EveryCRSReport.com",
-      "bytes": 25946,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-resolution/1438/text": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5972,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-resolution/1398/all-actions": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5993,
-      "checkedAt": "2026-08-31"
-    },
-    "https://rollcall.com/2025/10/09/senate-passes-ndaa-after-securing-amendments-deal/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 187863 bytes — \"Senate passes NDAA after securing amendments deal &#8211; Roll Call\"",
-      "status": 200,
-      "title": "Senate passes NDAA after securing amendments deal &#8211; Roll Call",
-      "bytes": 187863,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/committee-report/119th-congress/house-report/698/1": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5962,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govtrack.us/congress/votes/119-2026/h278": {
-      "verdict": "live",
-      "reason": "HTTP 200, 736304 bytes — \"H.R. 8800: National Defense Authorization Act for Fiscal Year 2027 -- \"",
-      "status": 200,
-      "title": "H.R. 8800: National Defense Authorization Act for Fiscal Year 2027 -- GovTrack.us",
-      "bytes": 736304,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00648.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 53537 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
-      "status": 200,
-      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
-      "bytes": 53537,
-      "checkedAt": "2026-08-31"
-    },
-    "https://armedservices.house.gov/news/documentsingle.aspx?DocumentID=6713": {
-      "verdict": "live",
-      "reason": "HTTP 200, 34424 bytes — \"Rogers Praises Committee Passage of the FY27 NDAA | House Armed Servic\"",
-      "status": 200,
-      "title": "Rogers Praises Committee Passage of the FY27 NDAA | House Armed Services Committee",
-      "bytes": 34424,
-      "checkedAt": "2026-08-31"
-    },
-    "https://x.com/RepLuna/status/2071998000331722940": {
-      "verdict": "live",
-      "reason": "HTTP 200, 190079 bytes",
-      "status": 200,
-      "bytes": 190079,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.ibtimes.co.uk/republican-revolt-sinks-voter-id-bill-defence-package-1806080": {
-      "verdict": "live",
-      "reason": "HTTP 200, 283756 bytes — \"Full List of 13 House Republicans Who Tanked Trump's Voter ID Defense \"",
-      "status": 200,
-      "title": "Full List of 13 House Republicans Who Tanked Trump's Voter ID Defense Bill Rule | IBTimes UK",
-      "bytes": 283756,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.washingtonexaminer.com/news/house/4629875/mike-johnson-save-america-act-defense-bill/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 299159 bytes — \"Johnson unveils plan to tie SAVE America Act to annual defense bill\"",
-      "status": 200,
-      "finalUrl": "https://www.washingtonexaminer.com/news/4629875/mike-johnson-save-america-act-defense-bill/",
-      "title": "Johnson unveils plan to tie SAVE America Act to annual defense bill",
-      "bytes": 299159,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.notus.org/congress/johnson-ndaa-save-act-house": {
-      "verdict": "live",
-      "reason": "HTTP 200, 375159 bytes — \"Johnson’s Defense Bill Gamble Collapses - NOTUS — News of the United S\"",
-      "status": 200,
-      "title": "Johnson’s Defense Bill Gamble Collapses - NOTUS — News of the United States",
-      "bytes": 375159,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/IN12324": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5826,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R47106": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://github.com/Squidito/legislationpatch/blob/main/docs/ARTICLE-SPEC.md": {
-      "verdict": "live",
-      "reason": "HTTP 200, 327390 bytes",
-      "status": 200,
-      "bytes": 327390,
-      "checkedAt": "2026-08-31"
+      "checkedAt": "2026-09-01"
     },
     "https://www.congress.gov/crs-product/R48731": {
       "verdict": "wall",
@@ -795,380 +32,86 @@
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5845,
-      "checkedAt": "2026-08-31"
+      "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/bill/111th-congress/house-bill/946": {
+    "https://www.congress.gov/crs-product/IN12324": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
-      "bytes": 5914,
-      "checkedAt": "2026-08-31"
+      "bytes": 5848,
+      "checkedAt": "2026-09-01"
     },
-    "https://constitution.congress.gov/constitution/article-1/#article-1-section-7": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "finalUrl": "https://constitution.congress.gov/constitution/article-1/",
-      "title": "Just a moment...",
-      "bytes": 5890,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/legislative/vetoes/vetoCounts.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 43176 bytes — \"U.S. Senate: Vetoes, 1789 to Present\"",
-      "status": 200,
-      "title": "U.S. Senate: Vetoes, 1789 to Present",
-      "bytes": 43176,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/6509": {
+    "https://www.congress.gov/help/legislative-glossary": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
+      "bytes": 5887,
+      "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/bill/119th-congress/house-bill/6509/text": {
+    "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
-      "bytes": 5954,
-      "checkedAt": "2026-08-31"
+      "bytes": 5972,
+      "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/3794": {
+    "https://www.congress.gov/bill/119th-congress/house-bill/1": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
+      "bytes": 5908,
+      "checkedAt": "2026-09-01"
     },
-    "https://github.com/Squidito/legislationpatch/blob/main/docs/BOTH-SIDES.md": {
+    "https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions": {
       "verdict": "live",
-      "reason": "HTTP 200, 270422 bytes",
+      "reason": "HTTP 200, 27238 bytes — \"Bills &amp; Resolutions | house.gov\"",
       "status": 200,
-      "bytes": 270422,
-      "checkedAt": "2026-08-31"
+      "title": "Bills &amp; Resolutions | house.gov",
+      "bytes": 27238,
+      "checkedAt": "2026-09-01"
     },
-    "https://www.govtrack.us/congress/votes/119-2026/h231": {
-      "verdict": "live",
-      "reason": "HTTP 200, 732996 bytes",
-      "status": 200,
-      "bytes": 732996,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govtrack.us/congress/votes/119-2026/h254": {
-      "verdict": "live",
-      "reason": "HTTP 200, 730833 bytes",
-      "status": 200,
-      "bytes": 730833,
-      "checkedAt": "2026-08-31"
-    },
-    "https://carson.house.gov/media/press-releases/yakym-carson-introduce-bill-protect-patients-unsafe-compounded-drugs": {
-      "verdict": "live",
-      "reason": "HTTP 200, 59672 bytes — \"Yakym, Carson Introduce Bill to Protect Patients from Unsafe Compounde\"",
-      "status": 200,
-      "title": "Yakym, Carson Introduce Bill to Protect Patients from Unsafe Compounded Drugs | Congressman Andre Carson",
-      "bytes": 59672,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/7296": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/7296/text": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5932,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/22": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5911,
-      "checkedAt": "2026-08-31"
-    },
-    "https://a4pc.org/news/urgent-safe-drugs-act-is-in-play-risking-patients": {
-      "verdict": "live",
-      "reason": "HTTP 200, 76946 bytes — \"URGENT: SAFE Drugs Act is in play, risking patients\"",
-      "status": 200,
-      "title": "URGENT: SAFE Drugs Act is in play, risking patients",
-      "bytes": 76946,
-      "checkedAt": "2026-08-31"
-    },
-    "https://safebiologics.org/asbm-statement-commending-senator-jim-banks-for-introducing-the-safe-drugs-act-of-2025/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 45833 bytes — \"ASBM Statement Commending Senator Jim Banks for Introducing the SAFE D\"",
-      "status": 200,
-      "title": "ASBM Statement Commending Senator Jim Banks for Introducing the SAFE Drugs Act of 2025 &#8211; Safe Biologics",
-      "bytes": 45833,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/1383": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-resolution/1438": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5957,
-      "checkedAt": "2026-08-31"
-    },
-    "https://roy.house.gov/media/press-releases/rep-roy-senator-lee-launch-save-america-act-renewed-push-election-integrity": {
-      "verdict": "live",
-      "reason": "HTTP 200, 42612 bytes — \"Rep. Roy, Senator Lee Launch the “SAVE America Act” in Renewed Push fo\"",
-      "status": 200,
-      "title": "Rep. Roy, Senator Lee Launch the “SAVE America Act” in Renewed Push for Election Integrity | Representative Chip Roy",
-      "bytes": 42612,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.gao.gov/products/gao-05-734sp": {
-      "verdict": "live",
-      "reason": "HTTP 200, 86999 bytes — \"A Glossary of Terms Used in the Federal Budget Process (Supersedes AFM\"",
-      "status": 200,
-      "title": "A Glossary of Terms Used in the Federal Budget Process (Supersedes AFMD-2.1.1) | U.S. GAO",
-      "bytes": 86999,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.brennancenter.org/our-work/analysis-opinion/new-save-act-bills-would-still-block-millions-americans-voting": {
-      "verdict": "live",
-      "reason": "HTTP 200, 133170 bytes — \"New SAVE Act Bills Would Still Block Millions of Americans from Voting\"",
-      "status": 200,
-      "title": "New SAVE Act Bills Would Still Block Millions of Americans from Voting | Brennan Center for Justice",
-      "bytes": 133170,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929": {
-      "verdict": "live",
-      "reason": "HTTP 200, 70664 bytes",
-      "status": 200,
-      "bytes": 70664,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans": {
-      "verdict": "live",
-      "reason": "HTTP 200, 124630 bytes — \"SAVE Act Would Undermine Voter Registration for All Americans | Brenna\"",
-      "status": 200,
-      "title": "SAVE Act Would Undermine Voter Registration for All Americans | Brennan Center for Justice",
-      "bytes": 124630,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/3971": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5898,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg716": {
-      "verdict": "live",
-      "reason": "HTTP 200, 39744 bytes — \"H. Doc. 118-187 - Rule XV: Business in Order on Special Days - HMAN-11\"",
-      "status": 200,
-      "title": "H. Doc. 118-187 - Rule XV: Business in Order on Special Days - HMAN-119-pg716 | Content Details | GovInfo",
-      "bytes": 39744,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/98-225.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 63399 bytes — \"Unanimous Consent Agreements in the Senate - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "Unanimous Consent Agreements in the Senate - EveryCRSReport.com",
-      "bytes": 63399,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.brennancenter.org/our-work/analysis-opinion/noncitizen-voting-already-illegal-and-vanishingly-rare": {
-      "verdict": "live",
-      "reason": "HTTP 200, 129255 bytes — \"Noncitizen Voting Is Already Illegal — and Vanishingly Rare | Brennan \"",
-      "status": 200,
-      "title": "Noncitizen Voting Is Already Illegal — and Vanishingly Rare | Brennan Center for Justice",
-      "bytes": 129255,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/about/powers-procedures/voting.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 34750 bytes — \"U.S. Senate: About Voting\"",
-      "status": 200,
-      "title": "U.S. Senate: About Voting",
-      "bytes": 34750,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.sbir.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 41588 bytes — \"| SBIR\"",
-      "status": 200,
-      "finalUrl": "https://www.sbir.gov/",
-      "title": "| SBIR",
-      "bytes": 41588,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/98-228": {
+    "https://www.congress.gov/crs-product/R48444": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5845,
-      "checkedAt": "2026-08-31"
+      "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/crs-product/98-314": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5823,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/committees": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5821,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.house.gov/committees": {
+    "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm": {
       "verdict": "live",
-      "reason": "HTTP 200, 23746 bytes — \"Committees | house.gov\"",
+      "reason": "HTTP 200, 33146 bytes — \"U.S. Senate: About Filibusters and Cloture\"",
       "status": 200,
-      "title": "Committees | house.gov",
-      "bytes": 23746,
-      "checkedAt": "2026-08-31"
+      "title": "U.S. Senate: About Filibusters and Cloture",
+      "bytes": 33146,
+      "checkedAt": "2026-09-01"
     },
-    "https://www.govinfo.gov/app/collection/CHRG": {
-      "verdict": "live",
-      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
-      "status": 200,
-      "title": "Govinfo",
-      "bytes": 1762,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.senate.gov/committees/committees_home.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 91 bytes",
-      "status": 200,
-      "bytes": 91,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/93rd-congress/house-bill/7130": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5914,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cbo.gov/cost-estimates": {
+    "https://www.cbo.gov/topics/budget/reconciliation": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "cbo.gov",
       "bytes": 767,
-      "checkedAt": "2026-08-31"
+      "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/congressional-record": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5851,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cbo.gov/about/overview": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "cbo.gov",
-      "bytes": 767,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/bill/119th-congress/house-bill/2319": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5917,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/R45153.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 405249 bytes — \"Statutory Interpretation: Theories, Tools, and Trends - EveryCRSReport\"",
-      "status": 200,
-      "title": "Statutory Interpretation: Theories, Tools, and Trends - EveryCRSReport.com",
-      "bytes": 405249,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cancer.gov/types/lung": {
-      "verdict": "live",
-      "reason": "HTTP 200, 34729 bytes — \"Lung Cancer—Patient Version - NCI\"",
-      "status": 200,
-      "title": "Lung Cancer—Patient Version - NCI",
-      "bytes": 34729,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section353a&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 155605 bytes — \"21 USC 353a: Pharmacy compounding\"",
-      "status": 200,
-      "title": "21 USC 353a: Pharmacy compounding",
-      "bytes": 155605,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.cornyn.senate.gov/news/cornyn-lee-roy-introduce-the-save-america-act/": {
-      "verdict": "live",
-      "reason": "HTTP 200, 97687 bytes — \"Cornyn, Lee, Roy Introduce the SAVE America Act - Senator Cornyn\"",
-      "status": 200,
-      "title": "Cornyn, Lee, Roy Introduce the SAVE America Act - Senator Cornyn",
-      "bytes": 97687,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section684&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 147466 bytes — \"2 USC 684: Proposed deferrals of budget authority\"",
-      "status": 200,
-      "title": "2 USC 684: Proposed deferrals of budget authority",
-      "bytes": 147466,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section192&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 143088 bytes — \"2 USC 192: Refusal of witness to testify or produce papers\"",
-      "status": 200,
-      "title": "2 USC 192: Refusal of witness to testify or produce papers",
-      "bytes": 143088,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.whitehouse.gov/wp-content/uploads/2025/08/s124.pdf": {
-      "verdict": "live",
-      "reason": "HTTP 200, 108740 bytes",
-      "status": 200,
-      "bytes": 108740,
-      "checkedAt": "2026-08-31"
-    },
-<<<<<<< HEAD
-<<<<<<< HEAD
     "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm": {
       "verdict": "live",
       "reason": "HTTP 200, 35831 bytes — \"U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Over\"",
       "status": 200,
       "title": "U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Overview",
       "bytes": 35831,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/cloture/clotureCounts.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 42640 bytes — \"U.S. Senate: Cloture Motions\"",
+      "status": 200,
+      "title": "U.S. Senate: Cloture Motions",
+      "bytes": 42640,
       "checkedAt": "2026-09-01"
     },
     "https://www.everycrsreport.com/reports/98-425.html": {
@@ -1179,6 +122,14 @@
       "bytes": 24996,
       "checkedAt": "2026-09-01"
     },
+    "https://www.everycrsreport.com/reports/RL30360.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 122921 bytes — \"Filibusters and Cloture in the Senate - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Filibusters and Cloture in the Senate - EveryCRSReport.com",
+      "bytes": 122921,
+      "checkedAt": "2026-09-01"
+    },
     "https://www.everycrsreport.com/reports/R44819.html": {
       "verdict": "live",
       "reason": "HTTP 200, 28564 bytes — \"Senate Proceedings Establishing Majority Cloture for Supreme Court Nom\"",
@@ -1187,16 +138,1016 @@
       "bytes": 28564,
       "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/nominations": {
-=======
-    "https://www.congress.gov/crs-product/R42843": {
->>>>>>> audit/house-procedure
+    "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 3331646 bytes",
+      "status": 200,
+      "bytes": 3331646,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section644&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 164374 bytes — \"2 USC 644: Extraneous matter in reconciliation legislation\"",
+      "status": 200,
+      "title": "2 USC 644: Extraneous matter in reconciliation legislation",
+      "bytes": 164374,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/HowTo/how_to_numbers.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 28032 bytes — \"U.S. Senate: How to Find Bill Numbers\"",
+      "status": 200,
+      "title": "U.S. Senate: How to Find Bill Numbers",
+      "bytes": 28032,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.gao.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 133427 bytes — \"U.S. Government Accountability Office (U.S. GAO)\"",
+      "status": 200,
+      "finalUrl": "https://www.gao.gov/",
+      "title": "U.S. Government Accountability Office (U.S. GAO)",
+      "bytes": 133427,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.gao.gov/products/gao-05-734sp": {
+      "verdict": "live",
+      "reason": "HTTP 200, 86999 bytes — \"A Glossary of Terms Used in the Federal Budget Process (Supersedes AFM\"",
+      "status": 200,
+      "title": "A Glossary of Terms Used in the Federal Budget Process (Supersedes AFMD-2.1.1) | U.S. GAO",
+      "bytes": 86999,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R43992": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
-<<<<<<< HEAD
-      "bytes": 5824,
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/IF10023": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5848,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section801&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 167080 bytes — \"5 USC 801: Congressional review\"",
+      "status": 200,
+      "title": "5 USC 801: Congressional review",
+      "bytes": 167080,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.cbo.gov/topics/budget/discretionary-spending": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "cbo.gov",
+      "bytes": 767,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.whitehouse.gov/omb/budget/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 246021 bytes — \"President’s Budget &#8211; OMB &#8211; The White House\"",
+      "status": 200,
+      "finalUrl": "https://www.whitehouse.gov/omb/information-resources/budget/",
+      "title": "President’s Budget &#8211; OMB &#8211; The White House",
+      "bytes": 246021,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R45920": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 168036 bytes — \"2 USC 641: Reconciliation\"",
+      "status": 200,
+      "title": "2 USC 641: Reconciliation",
+      "bytes": 168036,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/GPO-HPRACTICE-108/html/GPO-HPRACTICE-108-20.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 19875 bytes — \"House Practice: A Guide to the Rules, Precedents and Procedures of the\"",
+      "status": 200,
+      "title": "House Practice: A Guide to the Rules, Precedents and Procedures of the House - Chapter 19. Discharging Measures From Committees",
+      "bytes": 19875,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/1346": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/97-856.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 303232 bytes — \"The Discharge Rule in the House: Recent Use in Historical Context - Ev\"",
+      "status": 200,
+      "title": "The Discharge Rule in the House: Recent Use in Historical Context - EveryCRSReport.com",
+      "bytes": 303232,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/6387": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.epa.gov/air-quality-analysis/treatment-air-quality-monitoring-data-influenced-exceptional-events": {
+      "verdict": "live",
+      "reason": "HTTP 200, 63999 bytes — \"Treatment of Air Quality Monitoring Data Influenced by Exceptional Eve\"",
+      "status": 200,
+      "title": "Treatment of Air Quality Monitoring Data Influenced by Exceptional Events | US EPA",
+      "bytes": 63999,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.ignet.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 55506 bytes — \"IGNET | Council of the Inspectors General on Integrity and Efficiency;\"",
+      "status": 200,
+      "finalUrl": "https://www.ignet.gov/",
+      "title": "IGNET | Council of the Inspectors General on Integrity and Efficiency; IGnet",
+      "bytes": 55506,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/118th-congress/house-bill/7888": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/4465": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5898,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/collection/PLAW": {
+      "verdict": "live",
+      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
+      "status": 200,
+      "title": "Govinfo",
+      "bytes": 1762,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1881a&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 245187 bytes — \"50 USC 1881a: Procedures for targeting certain persons outside the Uni\"",
+      "status": 200,
+      "title": "50 USC 1881a: Procedures for targeting certain persons outside the United States other than United States persons",
+      "bytes": 245187,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.whitehouse.gov/wp-content/uploads/2025/08/s124.pdf": {
+      "verdict": "live",
+      "reason": "HTTP 200, 108740 bytes",
+      "status": 200,
+      "bytes": 108740,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1884": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section7545&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 356932 bytes — \"42 USC 7545: Regulation of fuels\"",
+      "status": 200,
+      "title": "42 USC 7545: Regulation of fuels",
+      "bytes": 356932,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-119publ82/pdf/PLAW-119publ82.pdf": {
+      "verdict": "live",
+      "reason": "HTTP 200, 205365 bytes",
+      "status": 200,
+      "bytes": 205365,
+      "checkedAt": "2026-09-01"
+    },
+    "https://rules.house.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 48442 bytes — \"House of Representatives Committee on Rules |\"",
+      "status": 200,
+      "finalUrl": "https://rules.house.gov/",
+      "title": "House of Representatives Committee on Rules |",
+      "bytes": 48442,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R42843": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/details/HMAN-119": {
+      "verdict": "live",
+      "reason": "HTTP 200, 37614 bytes — \"Constitution, Jefferson&#39;s Manual, and the Rules of the House of Re\"",
+      "status": 200,
+      "title": "Constitution, Jefferson&#39;s Manual, and the Rules of the House of Representatives, 119th Congress - HMAN-119 | Content Details | GovInfo",
+      "bytes": 37614,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.archives.gov/founding-docs/constitution-transcript": {
+      "verdict": "live",
+      "reason": "HTTP 200, 70347 bytes — \"The Constitution of the United States: A Transcription | National Arch\"",
+      "status": 200,
+      "title": "The Constitution of the United States: A Transcription | National Archives",
+      "bytes": 70347,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section107&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141070 bytes — \"1 USC 107: Parchment or paper for printing enrolled bills or resolutio\"",
+      "status": 200,
+      "title": "1 USC 107: Parchment or paper for printing enrolled bills or resolutions",
+      "bytes": 141070,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 313018 bytes",
+      "status": 200,
+      "bytes": 313018,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/about/powers-procedures/voting.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 34750 bytes — \"U.S. Senate: About Voting\"",
+      "status": 200,
+      "title": "U.S. Senate: About Voting",
+      "bytes": 34750,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/98-314": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R45153": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/RL30909": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5848,
+      "checkedAt": "2026-09-01"
+    },
+    "https://clerk.house.gov/Votes": {
+      "verdict": "live",
+      "reason": "HTTP 200, 254022 bytes",
+      "status": 200,
+      "bytes": 254022,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section106&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 190934 bytes — \"1 USC 106: Printing bills and joint resolutions\"",
+      "status": 200,
+      "title": "1 USC 106: Printing bills and joint resolutions",
+      "bytes": 190934,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 65695 bytes — \"GovInfo | U.S. Government Publishing Office\"",
+      "status": 200,
+      "finalUrl": "https://www.govinfo.gov/",
+      "title": "GovInfo | U.S. Government Publishing Office",
+      "bytes": 65695,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 77868 bytes",
+      "status": 200,
+      "finalUrl": "https://uscode.house.gov/",
+      "bytes": 77868,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/collection/crec": {
+      "verdict": "live",
+      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
+      "status": 200,
+      "title": "Govinfo",
+      "bytes": 1762,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section802&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 148118 bytes — \"5 USC 802: Congressional disapproval procedure\"",
+      "status": 200,
+      "title": "5 USC 802: Congressional disapproval procedure",
+      "bytes": 148118,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/98-265GOV.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 16310 bytes — \"A User's Guide to the Congressional Record - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "A User's Guide to the Congressional Record - EveryCRSReport.com",
+      "bytes": 16310,
+      "checkedAt": "2026-09-01"
+    },
+    "https://bioguide.congress.gov": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "finalUrl": "https://bioguide.congress.gov/",
+      "title": "Just a moment...",
+      "bytes": 5775,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/votes_new.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 38821 bytes — \"U.S. Senate: Votes\"",
+      "status": 200,
+      "title": "U.S. Senate: Votes",
+      "bytes": 38821,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/R48432": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/crs-product/LSB11374": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5851,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.gao.gov/legal/appropriations-law/impoundment-control-act": {
+      "verdict": "live",
+      "reason": "HTTP 200, 104972 bytes — \"Impoundment Control Act | U.S. GAO\"",
+      "status": 200,
+      "title": "Impoundment Control Act | U.S. GAO",
+      "bytes": 104972,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section192&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 143068 bytes — \"2 USC 192: Refusal of witness to testify or produce papers\"",
+      "status": 200,
+      "title": "2 USC 192: Refusal of witness to testify or produce papers",
+      "bytes": 143068,
+      "checkedAt": "2026-09-01"
+    },
+    "https://api.govinfo.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 2029 bytes — \"GovInfo API | GovInfo\"",
+      "status": 200,
+      "finalUrl": "https://api.govinfo.gov/docs/",
+      "title": "GovInfo API | GovInfo",
+      "bytes": 2029,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section684&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 147366 bytes — \"2 USC 684: Proposed deferrals of budget authority\"",
+      "status": 200,
+      "title": "2 USC 684: Proposed deferrals of budget authority",
+      "bytes": 147366,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/help/legislative-glossary#glossary_jointresolution": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "finalUrl": "https://www.congress.gov/help/legislative-glossary",
+      "title": "Just a moment...",
+      "bytes": 5887,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1748": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.google.com/preferences/source?q=legislationpatch.com": {
+      "verdict": "live",
+      "reason": "HTTP 200, 50105 bytes",
+      "status": 200,
+      "bytes": 50105,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1748/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5957,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1748/cosponsors": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5975,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/118th-congress/senate-bill/1409": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/118th-congress/senate-bill/2073": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://api.congress.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 174997 bytes — \"Congress.gov API\"",
+      "status": 200,
+      "finalUrl": "https://api.congress.gov/",
+      "title": "Congress.gov API",
+      "bytes": 174997,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/7757": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5895,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/senators/leadership.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53548 bytes — \"U.S. Senate: Leadership &amp; Officers\"",
+      "status": 200,
+      "title": "U.S. Senate: Leadership &amp; Officers",
+      "bytes": 53548,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.blackburn.senate.gov/2026/6/blackburn-blumenthal-statement-on-house-passage-of-the-kids-act": {
+      "verdict": "live",
+      "reason": "HTTP 200, 51600 bytes — \"Blackburn &amp; Blumenthal Statement on House Passage of the KIDS Act \"",
+      "status": 200,
+      "title": "Blackburn &amp; Blumenthal Statement on House Passage of the KIDS Act - U.S. Senator...",
+      "bytes": 51600,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section683&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 146034 bytes — \"2 USC 683: Rescission of budget authority\"",
+      "status": 200,
+      "title": "2 USC 683: Rescission of budget authority",
+      "bytes": 146034,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00221.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53571 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session\"",
+      "status": 200,
+      "title": "U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session",
+      "bytes": 53571,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.apaservices.org/advocacy/news/kids-online-safety-act": {
+      "verdict": "live",
+      "reason": "HTTP 200, 51457 bytes — \"Kids Online Safety Act advances unanimously from the Senate Commerce C\"",
+      "status": 200,
+      "title": "Kids Online Safety Act advances unanimously from the Senate Commerce Committee",
+      "bytes": 51457,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section1341&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 151860 bytes — \"31 USC 1341: Limitations on expending and obligating amounts\"",
+      "status": 200,
+      "title": "31 USC 1341: Limitations on expending and obligating amounts",
+      "bytes": 151860,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.eff.org/deeplinks/2025/05/kids-online-safety-act-will-make-internet-worse-everyone": {
+      "verdict": "live",
+      "reason": "HTTP 200, 57138 bytes — \"The Kids Online Safety Act Will Make the Internet Worse for Everyone |\"",
+      "status": 200,
+      "title": "The Kids Online Safety Act Will Make the Internet Worse for Everyone | Electronic Frontier Foundation",
+      "bytes": 57138,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.eff.org/deeplinks/2024/02/dont-fall-latest-changes-dangerous-kids-online-safety-act": {
+      "verdict": "live",
+      "reason": "HTTP 200, 69373 bytes — \"Don’t Fall for the Latest Changes to the Dangerous Kids Online Safety \"",
+      "status": 200,
+      "title": "Don’t Fall for the Latest Changes to the Dangerous Kids Online Safety Act | Electronic Frontier Foundation",
+      "bytes": 69373,
+      "checkedAt": "2026-09-01"
+    },
+    "https://cdt.org/insights/congress-should-protect-children-online-without-sacrificing-privacy-and-free-expression/": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Attention Required! | Cloudflare",
+      "bytes": 5473,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.archives.gov/founding-docs/amendments-11-27": {
+      "verdict": "live",
+      "reason": "HTTP 200, 57654 bytes — \"The Constitution: Amendments 11-27 | National Archives\"",
+      "status": 200,
+      "title": "The Constitution: Amendments 11-27 | National Archives",
+      "bytes": 57654,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/2296": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1182/vote_118_2_00219.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53712 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session\"",
+      "status": 200,
+      "title": "U.S. Senate: U.S. Senate Roll Call Votes 118th Congress - 2nd Session",
+      "bytes": 53712,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.fightforthefuture.org/news/2026-08-05-senate-commerce-passes-censorship-bill-kosa-out-of-committee-screen-act-fails/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 18106 bytes — \"Senate Commerce passes censorship bill KOSA out of committee, SCREEN A\"",
+      "status": 200,
+      "title": "Senate Commerce passes censorship bill KOSA out of committee, SCREEN Act fails",
+      "bytes": 18106,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/2296/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5957,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.aclu.org/news/privacy-technology/lawmakers-renew-push-to-regulate-kids-speech-online-despite-speech-protections": {
+      "verdict": "live",
+      "reason": "HTTP 200, 68306 bytes — \"Lawmakers Renew Push to Regulate Kids’ Speech Online Despite Speech Pr\"",
+      "status": 200,
+      "title": "Lawmakers Renew Push to Regulate Kids’ Speech Online Despite Speech Protections | American Civil Liberties Union",
+      "bytes": 68306,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1071": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://github.com/Squidito/legislationpatch/blob/main/scripts/generate_bill_pages.js": {
+      "verdict": "live",
+      "reason": "HTTP 200, 870903 bytes",
+      "status": 200,
+      "bytes": 870903,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/119/plaws/publ60/PLAW-119publ60.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 4609410 bytes",
+      "status": 200,
+      "bytes": 4609410,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/details/CREC-2025-10-09": {
+      "verdict": "live",
+      "reason": "HTTP 200, 2616 bytes — \"GovInfo\"",
+      "status": 200,
+      "title": "GovInfo",
+      "bytes": 2616,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/details/CREC-2025-09-02": {
+      "verdict": "live",
+      "reason": "HTTP 200, 2616 bytes — \"GovInfo\"",
+      "status": 200,
+      "title": "GovInfo",
+      "bytes": 2616,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00500.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53693 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
+      "status": 200,
+      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
+      "bytes": 53693,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00570.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53626 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
+      "status": 200,
+      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
+      "bytes": 53626,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.markey.senate.gov/news/press-releases/10/10/2025/sen-markey-opposes-bloated-wasteful-defense-funding-legislation": {
+      "verdict": "live",
+      "reason": "HTTP 200, 54839 bytes — \"Sen. Markey Opposes Bloated, Wasteful Defense Funding Legislation\"",
+      "status": 200,
+      "title": "Sen. Markey Opposes Bloated, Wasteful Defense Funding Legislation",
+      "bytes": 54839,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.armed-services.senate.gov/press-releases/sasc-chairman-wicker-and-ranking-member-reed-commend-final-passage-of-the-fiscal-year-2026-national-defense-authorization-act": {
+      "verdict": "live",
+      "reason": "HTTP 200, 97656 bytes — \"SASC Chairman Wicker and Ranking Member ... | U.S. Senate Committee on\"",
+      "status": 200,
+      "title": "SASC Chairman Wicker and Ranking Member ... | U.S. Senate Committee on Armed Services",
+      "bytes": 97656,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.merkley.senate.gov/as-trump-unconstitutionally-deploys-military-into-american-cities-senators-from-illinois-oregon-california-oppose-ndaa/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 86360 bytes — \"As Trump Unconstitutionally Deploys Military into American Cities, Sen\"",
+      "status": 200,
+      "title": "As Trump Unconstitutionally Deploys Military into American Cities, Senators from Illinois, Oregon &amp; California Oppose NDAA - Merkley",
+      "bytes": 86360,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/IF10516.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 24221 bytes — \"Defense Primer: Navigating the NDAA - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Defense Primer: Navigating the NDAA - EveryCRSReport.com",
+      "bytes": 24221,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/8800": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00648.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 53537 bytes — \"U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session\"",
+      "status": 200,
+      "title": "U.S. Senate: U.S. Senate Roll Call Votes 119th Congress - 1st Session",
+      "bytes": 53537,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RS22299.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 76980 bytes — \"Bypassing Senate Committees: Rule XIV and Unanimous Consent - EveryCRS\"",
+      "status": 200,
+      "title": "Bypassing Senate Committees: Rule XIV and Unanimous Consent - EveryCRSReport.com",
+      "bytes": 76980,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/8800/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5932,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-resolution/1438/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5972,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/IF10515.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 25946 bytes — \"Defense Primer: The NDAA Process - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Defense Primer: The NDAA Process - EveryCRSReport.com",
+      "bytes": 25946,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-resolution/1398/all-actions": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5993,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/committee-report/119th-congress/house-report/698/1": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5962,
+      "checkedAt": "2026-09-01"
+    },
+    "https://rollcall.com/2025/10/09/senate-passes-ndaa-after-securing-amendments-deal/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 188001 bytes — \"Senate passes NDAA after securing amendments deal &#8211; Roll Call\"",
+      "status": 200,
+      "title": "Senate passes NDAA after securing amendments deal &#8211; Roll Call",
+      "bytes": 188001,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.washingtonexaminer.com/news/house/4629875/mike-johnson-save-america-act-defense-bill/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 299159 bytes — \"Johnson unveils plan to tie SAVE America Act to annual defense bill\"",
+      "status": 200,
+      "finalUrl": "https://www.washingtonexaminer.com/news/4629875/mike-johnson-save-america-act-defense-bill/",
+      "title": "Johnson unveils plan to tie SAVE America Act to annual defense bill",
+      "bytes": 299159,
+      "checkedAt": "2026-09-01"
+    },
+    "https://armedservices.house.gov/news/documentsingle.aspx?DocumentID=6713": {
+      "verdict": "live",
+      "reason": "HTTP 200, 34424 bytes — \"Rogers Praises Committee Passage of the FY27 NDAA | House Armed Servic\"",
+      "status": 200,
+      "title": "Rogers Praises Committee Passage of the FY27 NDAA | House Armed Services Committee",
+      "bytes": 34424,
+      "checkedAt": "2026-09-01"
+    },
+    "https://x.com/RepLuna/status/2071998000331722940": {
+      "verdict": "live",
+      "reason": "HTTP 200, 182541 bytes",
+      "status": 200,
+      "bytes": 182541,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.ibtimes.co.uk/republican-revolt-sinks-voter-id-bill-defence-package-1806080": {
+      "verdict": "live",
+      "reason": "HTTP 200, 283700 bytes — \"Full List of 13 House Republicans Who Tanked Trump's Voter ID Defense \"",
+      "status": 200,
+      "title": "Full List of 13 House Republicans Who Tanked Trump's Voter ID Defense Bill Rule | IBTimes UK",
+      "bytes": 283700,
+      "checkedAt": "2026-09-01"
+    },
+    "https://github.com/Squidito/legislationpatch/blob/main/docs/ARTICLE-SPEC.md": {
+      "verdict": "live",
+      "reason": "HTTP 200, 327425 bytes",
+      "status": 200,
+      "bytes": 327425,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.notus.org/congress/johnson-ndaa-save-act-house": {
+      "verdict": "live",
+      "reason": "HTTP 200, 375417 bytes — \"Johnson’s Defense Bill Gamble Collapses - NOTUS — News of the United S\"",
+      "status": 200,
+      "title": "Johnson’s Defense Bill Gamble Collapses - NOTUS — News of the United States",
+      "bytes": 375417,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/111th-congress/house-bill/946": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5914,
+      "checkedAt": "2026-09-01"
+    },
+    "https://github.com/Squidito/legislationpatch/blob/main/docs/BOTH-SIDES.md": {
+      "verdict": "live",
+      "reason": "HTTP 200, 270451 bytes",
+      "status": 200,
+      "bytes": 270451,
+      "checkedAt": "2026-09-01"
+    },
+    "https://constitution.congress.gov/constitution/article-1/#article-1-section-7": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "finalUrl": "https://constitution.congress.gov/constitution/article-1/",
+      "title": "Just a moment...",
+      "bytes": 5890,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section2191&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 166986 bytes — \"19 USC 2191: Bills implementing trade agreements on nontariff barriers\"",
+      "status": 200,
+      "title": "19 USC 2191: Bills implementing trade agreements on nontariff barriers and resolutions approving commercial agreements with Communist countries",
+      "bytes": 166986,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL30909.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 84577 bytes — \"The Pocket Veto: Its Current Status - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "The Pocket Veto: Its Current Status - EveryCRSReport.com",
+      "bytes": 84577,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RS22188.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 82782 bytes — \"Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com",
+      "bytes": 82782,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/legislative/vetoes/vetoCounts.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 43176 bytes — \"U.S. Senate: Vetoes, 1789 to Present\"",
+      "status": 200,
+      "title": "U.S. Senate: Vetoes, 1789 to Present",
+      "bytes": 43176,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141955 bytes",
+      "status": 200,
+      "bytes": 141955,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/279/655": {
+      "verdict": "live",
+      "reason": "HTTP 200, 78853 bytes",
+      "status": 200,
+      "bytes": 78853,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/302/583": {
+      "verdict": "live",
+      "reason": "HTTP 200, 86831 bytes — \"WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Inform\"",
+      "status": 200,
+      "title": "WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 86831,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/6509": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/6509/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5954,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/3794": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govtrack.us/congress/votes/119-2026/h254": {
+      "verdict": "live",
+      "reason": "HTTP 200, 730729 bytes",
+      "status": 200,
+      "bytes": 730729,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govtrack.us/congress/votes/119-2026/h231": {
+      "verdict": "live",
+      "reason": "HTTP 200, 732892 bytes",
+      "status": 200,
+      "bytes": 732892,
+      "checkedAt": "2026-09-01"
+    },
+    "https://carson.house.gov/media/press-releases/yakym-carson-introduce-bill-protect-patients-unsafe-compounded-drugs": {
+      "verdict": "live",
+      "reason": "HTTP 200, 59674 bytes — \"Yakym, Carson Introduce Bill to Protect Patients from Unsafe Compounde\"",
+      "status": 200,
+      "title": "Yakym, Carson Introduce Bill to Protect Patients from Unsafe Compounded Drugs | Congressman Andre Carson",
+      "bytes": 59674,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/524/417": {
+      "verdict": "live",
+      "reason": "HTTP 200, 253335 bytes — \"William J. CLINTON, President of the United States, et al., Appellants\"",
+      "status": 200,
+      "title": "William J. CLINTON, President of the United States, et al., Appellants, v. CITY OF NEW YORK et al. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 253335,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govtrack.us/congress/votes/119-2026/h278": {
+      "verdict": "live",
+      "reason": "HTTP 200, 736200 bytes — \"H.R. 8800: National Defense Authorization Act for Fiscal Year 2027 -- \"",
+      "status": 200,
+      "title": "H.R. 8800: National Defense Authorization Act for Fiscal Year 2027 -- GovTrack.us",
+      "bytes": 736200,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/7296": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/7296/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5954,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/22": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5911,
+      "checkedAt": "2026-09-01"
+    },
+    "https://roy.house.gov/media/press-releases/rep-roy-senator-lee-launch-save-america-act-renewed-push-election-integrity": {
+      "verdict": "live",
+      "reason": "HTTP 200, 42613 bytes — \"Rep. Roy, Senator Lee Launch the “SAVE America Act” in Renewed Push fo\"",
+      "status": 200,
+      "title": "Rep. Roy, Senator Lee Launch the “SAVE America Act” in Renewed Push for Election Integrity | Representative Chip Roy",
+      "bytes": 42613,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/1383": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5898,
+      "checkedAt": "2026-09-01"
+    },
+    "https://safebiologics.org/asbm-statement-commending-senator-jim-banks-for-introducing-the-safe-drugs-act-of-2025/": {
+      "verdict": "live",
+      "reason": "HTTP 200, 45833 bytes — \"ASBM Statement Commending Senator Jim Banks for Introducing the SAFE D\"",
+      "status": 200,
+      "title": "ASBM Statement Commending Senator Jim Banks for Introducing the SAFE Drugs Act of 2025 &#8211; Safe Biologics",
+      "bytes": 45833,
+      "checkedAt": "2026-09-01"
+    },
+    "https://a4pc.org/news/urgent-safe-drugs-act-is-in-play-risking-patients": {
+      "verdict": "live",
+      "reason": "HTTP 200, 76946 bytes — \"URGENT: SAFE Drugs Act is in play, risking patients\"",
+      "status": 200,
+      "title": "URGENT: SAFE Drugs Act is in play, risking patients",
+      "bytes": 76946,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-resolution/1438": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5957,
       "checkedAt": "2026-09-01"
     },
     "https://www.everycrsreport.com/reports/RL32684.html": {
@@ -1207,12 +1158,100 @@
       "bytes": 57641,
       "checkedAt": "2026-09-01"
     },
-    "https://www.everycrsreport.com/reports/RL30360.html": {
+    "https://www.cornyn.senate.gov/news/cornyn-lee-roy-introduce-the-save-america-act/": {
       "verdict": "live",
-      "reason": "HTTP 200, 122921 bytes — \"Filibusters and Cloture in the Senate - EveryCRSReport.com\"",
+      "reason": "HTTP 200, 97856 bytes — \"Cornyn, Lee, Roy Introduce the SAVE America Act - Senator Cornyn\"",
       "status": 200,
-      "title": "Filibusters and Cloture in the Senate - EveryCRSReport.com",
-      "bytes": 122921,
+      "title": "Cornyn, Lee, Roy Introduce the SAVE America Act - Senator Cornyn",
+      "bytes": 97856,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.brennancenter.org/our-work/analysis-opinion/noncitizen-voting-already-illegal-and-vanishingly-rare": {
+      "verdict": "live",
+      "reason": "HTTP 200, 129253 bytes — \"Noncitizen Voting Is Already Illegal — and Vanishingly Rare | Brennan \"",
+      "status": 200,
+      "title": "Noncitizen Voting Is Already Illegal — and Vanishingly Rare | Brennan Center for Justice",
+      "bytes": 129253,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL33667.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 187255 bytes — \"Presidential Signing Statements: Constitutional and Institutional Impl\"",
+      "status": 200,
+      "title": "Presidential Signing Statements: Constitutional and Institutional Implications - EveryCRSReport.com",
+      "bytes": 187255,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929": {
+      "verdict": "live",
+      "reason": "HTTP 200, 70665 bytes",
+      "status": 200,
+      "bytes": 70665,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/help/cpd": {
+      "verdict": "live",
+      "reason": "HTTP 200, 83186 bytes — \"Compilation of Presidential Documents | GovInfo\"",
+      "status": 200,
+      "title": "Compilation of Presidential Documents | GovInfo",
+      "bytes": 83186,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/senate-bill/3971": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5920,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.brennancenter.org/our-work/analysis-opinion/save-act-would-undermine-voter-registration-all-americans": {
+      "verdict": "live",
+      "reason": "HTTP 200, 123634 bytes — \"SAVE Act Would Undermine Voter Registration for All Americans | Brenna\"",
+      "status": 200,
+      "title": "SAVE Act Would Undermine Voter Registration for All Americans | Brennan Center for Justice",
+      "bytes": 123634,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg716": {
+      "verdict": "live",
+      "reason": "HTTP 200, 39744 bytes — \"H. Doc. 118-187 - Rule XV: Business in Order on Special Days - HMAN-11\"",
+      "status": 200,
+      "title": "H. Doc. 118-187 - Rule XV: Business in Order on Special Days - HMAN-119-pg716 | Content Details | GovInfo",
+      "bytes": 39744,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/98-225.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 63399 bytes — \"Unanimous Consent Agreements in the Senate - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Unanimous Consent Agreements in the Senate - EveryCRSReport.com",
+      "bytes": 63399,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.brennancenter.org/our-work/analysis-opinion/new-save-act-bills-would-still-block-millions-americans-voting": {
+      "verdict": "live",
+      "reason": "HTTP 200, 133058 bytes — \"New SAVE Act Bills Would Still Block Millions of Americans from Voting\"",
+      "status": 200,
+      "title": "New SAVE Act Bills Would Still Block Millions of Americans from Voting | Brennan Center for Justice",
+      "bytes": 133058,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/nominations": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5824,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.sbir.gov": {
+      "verdict": "live",
+      "reason": "HTTP 200, 41588 bytes — \"| SBIR\"",
+      "status": 200,
+      "finalUrl": "https://www.sbir.gov/",
+      "title": "| SBIR",
+      "bytes": 41588,
       "checkedAt": "2026-09-01"
     },
     "https://www.everycrsreport.com/reports/R43563.html": {
@@ -1223,27 +1262,122 @@
       "bytes": 48241,
       "checkedAt": "2026-09-01"
     },
-    "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 3331646 bytes",
-      "status": 200,
-      "bytes": 3331646,
+    "https://www.congress.gov/crs-product/98-228": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
       "checkedAt": "2026-09-01"
     },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section2191&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 167006 bytes — \"19 USC 2191: Bills implementing trade agreements on nontariff barriers\"",
-      "status": 200,
-      "title": "19 USC 2191: Bills implementing trade agreements on nontariff barriers and resolutions approving commercial agreements with Communist countries",
-      "bytes": 167006,
+    "https://www.congress.gov/committees": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5821,
       "checkedAt": "2026-09-01"
     },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1546a&num=0&edition=prelim": {
+    "https://www.govinfo.gov/app/collection/CHRG": {
       "verdict": "live",
-      "reason": "HTTP 200, 143255 bytes — \"50 USC 1546a: Expedited procedures for certain joint resolutions and b\"",
+      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
       "status": 200,
-      "title": "50 USC 1546a: Expedited procedures for certain joint resolutions and bills",
-      "bytes": 143255,
+      "title": "Govinfo",
+      "bytes": 1762,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.cbo.gov/cost-estimates": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "cbo.gov",
+      "bytes": 767,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.cbo.gov/about/overview": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "cbo.gov",
+      "bytes": 767,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/93rd-congress/house-bill/7130": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5914,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/congressional-record": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5851,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.senate.gov/committees/committees_home.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 91 bytes",
+      "status": 200,
+      "bytes": 91,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.house.gov/committees": {
+      "verdict": "live",
+      "reason": "HTTP 200, 23789 bytes — \"Committees | house.gov\"",
+      "status": 200,
+      "title": "Committees | house.gov",
+      "bytes": 23789,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/2319": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure": {
+      "verdict": "live",
+      "reason": "HTTP 200, 67674 bytes — \"Gasoline Reid Vapor Pressure | US EPA\"",
+      "status": 200,
+      "title": "Gasoline Reid Vapor Pressure | US EPA",
+      "bytes": 67674,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.epa.gov/gasoline-standards/fuel-waivers": {
+      "verdict": "live",
+      "reason": "HTTP 200, 185273 bytes — \"Fuel Waivers | US EPA\"",
+      "status": 200,
+      "title": "Fuel Waivers | US EPA",
+      "bytes": 185273,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R45153.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 405249 bytes — \"Statutory Interpretation: Theories, Tools, and Trends - EveryCRSReport\"",
+      "status": 200,
+      "title": "Statutory Interpretation: Theories, Tools, and Trends - EveryCRSReport.com",
+      "bytes": 405249,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 13195 bytes",
+      "status": 200,
+      "bytes": 13195,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 13705 bytes — \"House Report 119-382 - WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE S\"",
+      "status": 200,
+      "title": "House Report 119-382 - WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE S ERVICES ACT OF 2025",
+      "bytes": 13705,
       "checkedAt": "2026-09-01"
     },
     "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1546&num=0&edition=prelim": {
@@ -1254,143 +1388,53 @@
       "bytes": 143582,
       "checkedAt": "2026-09-01"
     },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
+    "https://www.cancer.gov/types/lung": {
       "verdict": "live",
-      "reason": "HTTP 200, 168096 bytes — \"2 USC 641: Reconciliation\"",
+      "reason": "HTTP 200, 34729 bytes — \"Lung Cancer—Patient Version - NCI\"",
       "status": 200,
-      "title": "2 USC 641: Reconciliation",
-      "bytes": 168096,
+      "title": "Lung Cancer—Patient Version - NCI",
+      "bytes": 34729,
       "checkedAt": "2026-09-01"
-=======
-    "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes": {
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1546a&num=0&edition=prelim": {
       "verdict": "live",
-      "reason": "HTTP 200, 141955 bytes",
+      "reason": "HTTP 200, 143255 bytes — \"50 USC 1546a: Expedited procedures for certain joint resolutions and b\"",
       "status": 200,
-      "bytes": 141955,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/RS22188.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 82782 bytes — \"Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "Regular Vetoes and Pocket Vetoes: In Brief - EveryCRSReport.com",
-      "bytes": 82782,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/RL30909.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 84577 bytes — \"The Pocket Veto: Its Current Status - EveryCRSReport.com\"",
-      "status": 200,
-      "title": "The Pocket Veto: Its Current Status - EveryCRSReport.com",
-      "bytes": 84577,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.law.cornell.edu/supremecourt/text/279/655": {
-      "verdict": "live",
-      "reason": "HTTP 200, 78853 bytes",
-      "status": 200,
-      "bytes": 78853,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.law.cornell.edu/supremecourt/text/302/583": {
-      "verdict": "live",
-      "reason": "HTTP 200, 86831 bytes — \"WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Inform\"",
-      "status": 200,
-      "title": "WRIGHT v. UNITED STATES. | Supreme Court | US Law | LII / Legal Information Institute",
-      "bytes": 86831,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.law.cornell.edu/supremecourt/text/524/417": {
-      "verdict": "live",
-      "reason": "HTTP 200, 253335 bytes — \"William J. CLINTON, President of the United States, et al., Appellants\"",
-      "status": 200,
-      "title": "William J. CLINTON, President of the United States, et al., Appellants, v. CITY OF NEW YORK et al. | Supreme Court | US Law | LII / Legal Information Institute",
-      "bytes": 253335,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/help/cpd": {
-      "verdict": "live",
-      "reason": "HTTP 200, 83186 bytes — \"Compilation of Presidential Documents | GovInfo\"",
-      "status": 200,
-      "title": "Compilation of Presidential Documents | GovInfo",
-      "bytes": 83186,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.everycrsreport.com/reports/RL33667.html": {
-      "verdict": "live",
-      "reason": "HTTP 200, 187255 bytes — \"Presidential Signing Statements: Constitutional and Institutional Impl\"",
-      "status": 200,
-      "title": "Presidential Signing Statements: Constitutional and Institutional Implications - EveryCRSReport.com",
-      "bytes": 187255,
-      "checkedAt": "2026-08-31"
->>>>>>> audit/veto-cluster
-=======
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.archives.gov/founding-docs/constitution-transcript": {
-      "verdict": "live",
-      "reason": "HTTP 200, 70347 bytes — \"The Constitution of the United States: A Transcription | National Arch\"",
-      "status": 200,
-      "title": "The Constitution of the United States: A Transcription | National Archives",
-      "bytes": 70347,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section107&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 141030 bytes — \"1 USC 107: Parchment or paper for printing enrolled bills or resolutio\"",
-      "status": 200,
-      "title": "1 USC 107: Parchment or paper for printing enrolled bills or resolutions",
-      "bytes": 141030,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section106&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 190934 bytes — \"1 USC 106: Printing bills and joint resolutions\"",
-      "status": 200,
-      "title": "1 USC 106: Printing bills and joint resolutions",
-      "bytes": 190934,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 313018 bytes",
-      "status": 200,
-      "bytes": 313018,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.archives.gov/founding-docs/amendments-11-27": {
-      "verdict": "live",
-      "reason": "HTTP 200, 57654 bytes — \"The Constitution: Amendments 11-27 | National Archives\"",
-      "status": 200,
-      "title": "The Constitution: Amendments 11-27 | National Archives",
-      "bytes": 57654,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/R45153": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-08-31"
-    },
-    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
-      "verdict": "live",
-      "reason": "HTTP 200, 168076 bytes — \"2 USC 641: Reconciliation\"",
-      "status": 200,
-      "title": "2 USC 641: Reconciliation",
-      "bytes": 168076,
-      "checkedAt": "2026-08-31"
-    },
-    "https://www.congress.gov/crs-product/RL30909": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5848,
+      "title": "50 USC 1546a: Expedited procedures for certain joint resolutions and bills",
+      "bytes": 143255,
       "checkedAt": "2026-09-01"
->>>>>>> audit/house-procedure
+    },
+    "https://seer.cancer.gov/statfacts/html/lungb.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 87245 bytes — \"Lung and Bronchus Cancer &mdash; Cancer Stat Facts\"",
+      "status": 200,
+      "title": "Lung and Bronchus Cancer &mdash; Cancer Stat Facts",
+      "bytes": 87245,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening": {
+      "verdict": "live",
+      "reason": "HTTP 200, 146874 bytes — \"Recommendation: Lung Cancer: Screening | United States Preventive Serv\"",
+      "status": 200,
+      "title": "Recommendation: Lung Cancer: Screening | United States Preventive Services Taskforce",
+      "bytes": 146874,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.cdc.gov/lung-cancer/statistics/index.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 49702 bytes — \"Lung Cancer Statistics | Lung Cancer | CDC\"",
+      "status": 200,
+      "title": "Lung Cancer Statistics | Lung Cancer | CDC",
+      "bytes": 49702,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section353a&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 155645 bytes — \"21 USC 353a: Pharmacy compounding\"",
+      "status": 200,
+      "title": "21 USC 353a: Pharmacy compounding",
+      "bytes": 155645,
+      "checkedAt": "2026-09-01"
     }
   }
 }
