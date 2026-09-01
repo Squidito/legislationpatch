@@ -1840,8 +1840,8 @@
       "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
       "bill-119-s-1884": "ded7b91ccdb2d0570629d99e64225376b5b05970a2477d3d7245cb3372174a33"
     },
-    "proseSha": "0dce2729036ad548",
-    "proseFile": "drafts/holocaust-art-recovery.html",
+    "proseSha": "3259611f32264738",
+    "proseFile": "articles/holocaust-art-recovery.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-09-01",
@@ -1973,7 +1973,7 @@
       "code-generate-bill-pages": "a26ef2c7c6a7b3ea83a97d6013825b958dc4910db2b29393fb540ee84e13f9d2",
       "code-entity-lib": "cd35f455484f2f547176bb6e14b2bf46e1b11c546bd2e60e6bed1c8ef6c1db7d",
       "record-lp-entity": "7b325d341d7b16a1c2198efc5522c74b659bb42be93290df53ac03e243e16ec2",
-      "record-article-holocaust": "ec45967c9eb7f10c7d9f8e304a0663cbdd069bb876a597c1a8e03da734dadcba",
+      "record-article-holocaust": "33cb2ed91173f3d41df3cca935576c064c66b25f787d61668a83de55a3664805",
       "record-bill-page-s1884": "616846d86bb841766a53c4de14b91ce4a5be945e46d96aa9aa9b6ad96448e3dc",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
@@ -2418,6 +2418,22 @@
     },
     "proseSha": "4bf4e05b8f9efe72",
     "proseFile": "articles/women-lung-cancer-act.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-e15-ethanol-waiver": {
+    "kind": "article",
+    "sourceShas": {
+      "record-congress-hr-1346": "af0da94b30b1d6ddaaa1261c3059b8a25abb9d62f65c23f1f730fc3c1196ce2f",
+      "usc-42-7545": "5f08aa9b5789fcaa81f6e4085974c776ac6469a8cbe40e6d4c2aae1d2e3e022e",
+      "record-epa-gasoline-rvp": "26f610a7738d9a0e07899a1382326667882c403ba9f1f71e32ec48c338dd60bf",
+      "record-epa-fuel-waivers": "73d78bf5edc8be28c1f0a692caddd4847acfc197b2b3cba46b6b7051f7fde1e6",
+      "bill-119-hr-1346": "256f68be6675c96fd75f84b90035f806563ef4e20e46daeabe7aa3a45b61c8b5"
+    },
+    "proseSha": "7675fb258f2d912b",
+    "proseFile": "drafts/e15-ethanol-waiver.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-09-01",
