@@ -1027,14 +1027,6 @@
       "bytes": 5845,
       "checkedAt": "2026-08-31"
     },
-    "https://constitution.congress.gov/browse/article-1/section-5/": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5902,
-      "checkedAt": "2026-08-31"
-    },
     "https://www.congress.gov/crs-product/98-314": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
@@ -1170,6 +1162,7 @@
       "checkedAt": "2026-08-31"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm": {
       "verdict": "live",
       "reason": "HTTP 200, 35831 bytes — \"U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Over\"",
@@ -1195,10 +1188,14 @@
       "checkedAt": "2026-09-01"
     },
     "https://www.congress.gov/nominations": {
+=======
+    "https://www.congress.gov/crs-product/R42843": {
+>>>>>>> audit/house-procedure
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
+<<<<<<< HEAD
       "bytes": 5824,
       "checkedAt": "2026-09-01"
     },
@@ -1327,6 +1324,73 @@
       "bytes": 187255,
       "checkedAt": "2026-08-31"
 >>>>>>> audit/veto-cluster
+=======
+      "bytes": 5845,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.archives.gov/founding-docs/constitution-transcript": {
+      "verdict": "live",
+      "reason": "HTTP 200, 70347 bytes — \"The Constitution of the United States: A Transcription | National Arch\"",
+      "status": 200,
+      "title": "The Constitution of the United States: A Transcription | National Archives",
+      "bytes": 70347,
+      "checkedAt": "2026-08-31"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section107&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141030 bytes — \"1 USC 107: Parchment or paper for printing enrolled bills or resolutio\"",
+      "status": 200,
+      "title": "1 USC 107: Parchment or paper for printing enrolled bills or resolutions",
+      "bytes": 141030,
+      "checkedAt": "2026-08-31"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section106&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 190934 bytes — \"1 USC 106: Printing bills and joint resolutions\"",
+      "status": 200,
+      "title": "1 USC 106: Printing bills and joint resolutions",
+      "bytes": 190934,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 313018 bytes",
+      "status": 200,
+      "bytes": 313018,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.archives.gov/founding-docs/amendments-11-27": {
+      "verdict": "live",
+      "reason": "HTTP 200, 57654 bytes — \"The Constitution: Amendments 11-27 | National Archives\"",
+      "status": 200,
+      "title": "The Constitution: Amendments 11-27 | National Archives",
+      "bytes": 57654,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.congress.gov/crs-product/R45153": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5845,
+      "checkedAt": "2026-08-31"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 168076 bytes — \"2 USC 641: Reconciliation\"",
+      "status": 200,
+      "title": "2 USC 641: Reconciliation",
+      "bytes": 168076,
+      "checkedAt": "2026-08-31"
+    },
+    "https://www.congress.gov/crs-product/RL30909": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5848,
+      "checkedAt": "2026-09-01"
+>>>>>>> audit/house-procedure
     }
   }
 }

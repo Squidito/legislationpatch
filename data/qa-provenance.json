@@ -2207,6 +2207,7 @@
     "stampedAt": "2026-09-01"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "article-cloture-60-vote": {
     "kind": "article",
     "sourceShas": {
@@ -2277,11 +2278,39 @@
     "proseSha": "efe3d4620b292b1f",
     "proseFile": "articles/presidential-veto.html",
 >>>>>>> audit/veto-cluster
+=======
+  "article-how-a-bill-becomes-law": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r42843-legislative-process": "9059b431045b312a00dbad433df1b90782f12e2f06123ecd46dcf2ccc6826d3d",
+      "record-crs-r48444-reconciliation-faq": "36a54d8cc1901ca453c470f0e89d7f9f335a9400749a606d9650646ef24e08b4",
+      "record-crs-r45153-statutory-interpretation": "0b0b9e124281c2d2e1b2715c9b27a23b5776056aec9e0ee50f11cf1e55338d2c",
+      "record-crs-98-314-suspension": "015c9604c85064b1d57803c1e4691b88d3c661298ff80b4eeea75a314ee59950",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "hman-119-rule-xx": "1e67ff33cd3365ff91b4dbafb1c1a974df30af03ed94ab63687309075c86051b",
+      "record-senate-manual-113": "cf40f6f40633515e6f8f08b8b060037ae6e6cbd12c459731b051a7643ef4bc4c",
+      "record-senate-voting-procedures": "fe3b2739f8a5891a73c29f8c5d120afbe792493bdbea2cef55f889a37dcf5ae1",
+      "record-constitution-transcript": "8e51936c866b1eb48b8e44658fb721d567d750e288e454d32933fe9d36516739",
+      "usc-1-106": "fd35ce9855de441a89f82d12983e50bd090cdd899f5f05b5d99c134931ee6373",
+      "usc-1-107": "894c72185e4c1c78b322e60fcdf15f66e64b45110d799e6d0c6083c4c3edc0b4",
+      "usc-2-641": "b55e73dcf1bdc3e4376cf82cbff287b3247f8863c80a331218f05db19f24ab7d",
+      "usc-2-644": "e53601d276113ae22fba46acb8c6dc38f0b9f95173f8749f74ad797ff09ccfbf",
+      "record-congress-119-public-laws": "2a1a8c2656d3ebea41d6b6fdfb57eaf0c9c8e016b5a95a58f47778e93fa2f8e8",
+      "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
+      "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
+      "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
+      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "record-crs-rl30909-pocket-veto": "5aaf559e0bcac75a452cdcccca69bba15421f206dd1a91978db3f70ae9fd76b7"
+    },
+    "proseSha": "0c6733b8d4a98150",
+    "proseFile": "articles/how-a-bill-becomes-law.html",
+>>>>>>> audit/house-procedure
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",
     "stampedAt": "2026-09-01"
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   "article-unanimous-consent": {
     "kind": "article",
@@ -2307,6 +2336,47 @@
     "proseSha": "3d688abb589c0a3b",
     "proseFile": "articles/signing-statements.html",
 >>>>>>> audit/veto-cluster
+=======
+  "article-legislative-stages": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r42843-legislative-process": "9059b431045b312a00dbad433df1b90782f12e2f06123ecd46dcf2ccc6826d3d",
+      "record-crs-98-314-suspension": "015c9604c85064b1d57803c1e4691b88d3c661298ff80b4eeea75a314ee59950",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "usc-1-106": "fd35ce9855de441a89f82d12983e50bd090cdd899f5f05b5d99c134931ee6373",
+      "usc-1-107": "894c72185e4c1c78b322e60fcdf15f66e64b45110d799e6d0c6083c4c3edc0b4",
+      "record-constitution-transcript": "8e51936c866b1eb48b8e44658fb721d567d750e288e454d32933fe9d36516739",
+      "record-constitution-amendments-11-27": "6ac28b3a70fec6aae57ef157b8735f9dfe070dc1d8c3112f15093be019b70035",
+      "record-congress-119-public-laws": "2a1a8c2656d3ebea41d6b6fdfb57eaf0c9c8e016b5a95a58f47778e93fa2f8e8",
+      "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
+      "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
+      "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
+      "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
+      "doc-methodology": "b3503b0efcf81598e9b68530a92bd0467f057f6ddbd82815d5f7a38c98cbb9b6"
+    },
+    "proseSha": "aad2cfc062d5ee7a",
+    "proseFile": "articles/legislative-stages.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-08-31",
+    "stampedAt": "2026-09-01"
+  },
+  "article-voice-vote-vs-roll-call": {
+    "kind": "article",
+    "sourceShas": {
+      "hman-119-rule-xx": "1e67ff33cd3365ff91b4dbafb1c1a974df30af03ed94ab63687309075c86051b",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "record-crs-98-228-house-voting": "5644afe72146621d2459f0a1a8d6187a8cdb9b03a4e6d6e37cf42bf2f4405ca4",
+      "record-crs-98-314-suspension": "015c9604c85064b1d57803c1e4691b88d3c661298ff80b4eeea75a314ee59950",
+      "record-senate-voting-procedures": "fe3b2739f8a5891a73c29f8c5d120afbe792493bdbea2cef55f889a37dcf5ae1",
+      "record-senate-manual-113": "cf40f6f40633515e6f8f08b8b060037ae6e6cbd12c459731b051a7643ef4bc4c",
+      "record-constitution-transcript": "8e51936c866b1eb48b8e44658fb721d567d750e288e454d32933fe9d36516739",
+      "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
+      "record-crs-r42843-legislative-process": "9059b431045b312a00dbad433df1b90782f12e2f06123ecd46dcf2ccc6826d3d"
+    },
+    "proseSha": "f9a7dad3c6dc135f",
+    "proseFile": "articles/voice-vote-vs-roll-call.html",
+>>>>>>> audit/house-procedure
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",
