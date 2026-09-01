@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
-  "proseSha": "a965a7404d43d1ee",
+  "passes": 5,
+  "proseSha": "b8b3df34641538c1",
   "sources": [
     {
       "id": "record-gao-impoundment-control-act",
@@ -711,7 +711,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48432-ica",
       "sourceSpan": "in 2018 when H.R. 3 (115 th Cong.), Spending Cuts to Expired and Unnecessary Programs, was considered under the terms of H.Res. 923",
-      "section": "Consideration of Rescissions Under Section 1017 of the ICA — 2018",
+      "section": "Consideration of Rescissions Under Section 1017 of the ICA",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -750,7 +750,7 @@
       "severity": "material",
       "sourceFile": "record-crs-r48432-ica",
       "sourceSpan": "This was the case in the two most recent instances in which the House considered rescission bills pursuant to presidential special messages",
-      "section": "Consideration of Rescissions Under Section 1017 of the ICA — 2018",
+      "section": "Consideration of Rescissions Under Section 1017 of the ICA",
       "status": "open",
       "verify": null,
       "kind": "claim"
@@ -1211,6 +1211,45 @@
       "kind": "claim"
     },
     {
+      "field": "How a rescission bill moves",
+      "claim": "Days lost to an adjournment of more than three days are excluded from the 45-day computation",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "material",
+      "sourceFile": "usc-2-682",
+      "sourceSpan": "continuity of a session of the Congress shall be considered as broken only by an adjournment of the Congress sine die, and the days on which either House is not in session because of an adjournment of more than 3 days to a day certain shall be excluded in the computation of the 45-day period",
+      "section": "2 U.S.C. 682(5)",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "How a rescission bill moves",
+      "claim": "The 45-day window runs in calendar days of continuous session from receipt of the President’s message",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "material",
+      "sourceFile": "usc-2-682",
+      "sourceSpan": "the first period of 45 calendar days of continuous session of the Congress after the date on which the President's message is received by the Congress",
+      "section": "2 U.S.C. 682(3)",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "What role does the GAO play?",
+      "claim": "An unreported-impoundment report by the Comptroller General is treated as if it were the President’s own special message",
+      "verdict": "SUPPORTED",
+      "type": "fact",
+      "severity": "material",
+      "sourceFile": "usc-2-686",
+      "sourceSpan": "shall apply with respect to such reserve or deferral in the same manner and with the same effect as if such report of the Comptroller General were a special message transmitted by the President under section 683 or 684 of this title",
+      "section": "2 U.S.C. 686(a)",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
       "field": "removed.march-2025-first-court-ruling",
       "claim": "REMOVED, F-FAIL (sweep, independently re-confirmed against CRS LSB11374): the dated-example box said the March 2025 preliminary injunction was \"the first time a federal court addressed whether the executive may rely on the Impoundment Control Act's rescission-withholding provision to hold funds from obligation.\" It was not. CRS records that the March ruling rested on separation of powers and the APA \"because the President had not then transmitted a special message under the ICA\" - there was no rescission message to construe. The first judicial construction of Section 1012(b) is the SEPTEMBER 3, 2025 injunction, which CRS calls \"the only judicial construction of Section 1012(b) to date.\"",
       "verdict": "SUPPORTED",
@@ -1382,6 +1421,45 @@
     {
       "field": "removed.verify.round3-adjudication",
       "claim": "ROUND 3 hostile Sonnet confirmation pass on the post-adjudication text (2026-09-01, fresh agent): 0 BLOCKING, 5 ADVISORY. The agent grep-confirmed that the who-heads-the-GAO claim is gone with nothing equivalent surviving, verified the GAO heading quotation verbatim, and independently re-derived all three pointer corrections (LSB11374 has no Introduction heading and the first heading is Does the ICA Authorize Pocket Rescissions?; R48432 heading is Consideration of Rescissions Under Section 1017 of the ICA; the deferral-accordance clause is 685(b)(2)(B)). It also re-derived the full litigation chronology and re-confirmed that the article makes no filibuster, cloture, simple-majority or vote-threshold claim anywhere. ADJUDICATION by the Opus session: (1) DISMISSED — the GAO heading is quoted with a straight apostrophe where the page uses a curly one. Straight quotes are house style and this repo treats curly-quote corruption as a bug class; one character, no wording change. (2) ACCEPTED and FIXED IN PROSE — It is the same design the Budget Act uses overstated R48432, which says only analogous to and similar debate limits. Replaced with CRS's own sentence, quoted and ledgered. Removed-or-sourced, not softened. (3) ACCEPTED and FIXED — two of the five Section 1017 rows sit under that section's 2018 sub-heading; pointers now say so. (4) ACCEPTED and FIXED — the August 2025 pointer dropped the source's full heading, The August 2025 Special Message: Old and New Questions; restored. (5) ACCEPTED and FIXED BY SOURCING — the continuing-resolution / shutdown connective was true but supported by none of the ten registered sources. Rather than delete a correct sentence, CRS R46240 (already stored, already link-checked, and the source the sibling what-is-cbo article uses for the identical point) is now registered as an eleventh source, the sentence carries a receipt from its Continuing Resolutions section, and R46240 was added to both the JSON-LD citation array and the reader-facing Key Sources box so all three lists still agree.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.same-pattern-as-reconciliation",
+      "claim": "REMOVED, overclaim (round 4 BLOCKING, independently re-verified): \"the Senate debate limit on a rescission bill is built on the same pattern as the one used for budget reconciliation\". R48432 says only that the ICA language \"is analogous to the language in Title III of the Budget Act, which establishes similar debate limits for budget resolutions and reconciliation bills\" — analogy and similarity, never identity of design. The same overclaim had already been removed from the \"What is a rescission bill?\" section in round 3; this second instance in \"How this connects to the rest of the budget process\" survived that fix and asserted the stronger claim in the article's own voice immediately before the correctly-hedged CRS quotation, which made the page contradict its own standard one paragraph apart. The independent clause is deleted and the CRS quotation now carries the comparison alone; the internal link to budget-reconciliation.html is preserved inside the quoted phrase \"reconciliation bills\".",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "material",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.verify.round4-adjudication",
+      "claim": "ROUND 4 hostile Sonnet confirmation pass (2026-09-01, fresh agent, on the text as edited after round 3): 1 BLOCKING, 2 ADVISORY. The agent read all 84 claim rows and all eleven source files in full and resolved every span. It confirmed change (a) verbatim, confirmed the R46240 receipt genuinely supports the continuing-resolution sentence, and confirmed all three lists (ledger sources, JSON-LD citation array, Key Sources box) now agree at eleven. ADJUDICATION by the Opus session: the BLOCKING finding is CORRECT and was independently re-verified against R48432 before the fix — see the removed.same-pattern-as-reconciliation row. This is the value of running the round: round 3 fixed one instance of an overclaim and left a second, and only a fresh hostile read caught it. ADVISORY 1 ACCEPTED and REVERTED — I had over-specified two pointers as \"... of the ICA — 2018\"; re-reading R48432 myself confirms the two-most-recent-instances sentence sits in the section's main body at char 38637, after the Section 1017(c) privilege discussion. [CORRECTED 2026-09-01 after round 5 caught an error in this note: my original wording claimed R48432 has no 1992 or 2018 sub-heading at all. That is FALSE — the report's table of contents lists 1992 (p.9) and 2018 (p.10) as sub-headings under Consideration of Rescissions Under Section 1017 of the ICA, and the body 1992 heading sits at char 45308. The pointer reversion is still correct, but for the right reason: the two spans sit at char ~38637, BEFORE the 1992 sub-heading begins, so they belong to the section's own body text and not to either dated sub-narrative. Re-verified by direct offset comparison.] Both pointers reverted to the plain section heading. ADVISORY 2 ACCEPTED and FIXED — meta description and the JSON-LD description quoted \"pocket rescission\" with &quot; entities while og:description used single quotes; og:description normalized to match the other two. Head metadata only, outside the hashed prose region.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "removed.verify.round5-adjudication",
+      "claim": "ROUND 5 hostile Sonnet confirmation pass (2026-09-01, fresh agent, on the text as corrected after round 4’s BLOCKING finding): 0 BLOCKING, 4 ADVISORY. CONVERGED. At my instruction the agent ran a full hedge sweep rather than only re-checking the fixed sentence, and tabulated every same / identical / built on / first / only / most / always / never statement in the article against its source: all thirteen returned CLEAN, and it confirmed no trace of built on, identical, template or design as a comparative overclaim survives anywhere. It re-read 2 U.S.C. 688 in full and re-confirmed no filibuster, cloture, simple-majority or vote-threshold claim exists on the page, re-derived the whole litigation chronology date by date and court by court, and confirmed all three source lists (ledger sources, JSON-LD citation array, Key Sources box) agree at eleven. ADJUDICATION by the Opus session: (1) ACCEPTED and the AUDIT TRAIL CORRECTED IN PLACE — the agent caught a factual error in MY OWN round-4 note, which claimed R48432 has no 1992 or 2018 sub-heading. It does: the table of contents lists both (pp. 9 and 10) and the body 1992 heading sits at char 45308. I re-verified this directly rather than taking the agent’s word for it, and rewrote the round-4 note with the correction marked. The pointer reversion itself remains correct, for the corrected reason that the two spans sit at char ~38637, before the 1992 sub-heading begins. A ledger note that misstates a source is exactly the defect class this programme exists to remove, so it is fixed rather than left standing. (2) DISMISSED — the article quotes GAO up to “transmitting a” and then writes special message unquoted where GAO puts it in quotation marks; the quote boundary is the ledger row’s own span boundary and no meaning changes. (3) ACCEPTED and FIXED — three true sub-clauses now carry receipts: the more-than-three-days adjournment exclusion and the 45-calendar-days-of-continuous-session definition, both from 2 U.S.C. 682, and the 686(a) rule that a Comptroller General report on an unreported impoundment is treated as if it were the President’s own special message. (4) NOTED, no action — dateModified is stamped by publish-article.js --refresh. All four are ledger-metadata, a note correction, or a dismissal; NO PROSE CHANGED in this adjudication, so round 5 stands as this article’s clean converging pass.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",
