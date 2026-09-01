@@ -428,6 +428,17 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
+  "record-constitution-amendments-11-27": {
+    "id": "record-constitution-amendments-11-27",
+    "kind": "record",
+    "org": "U.S. National Archives and Records Administration",
+    "date": null,
+    "label": "Constitution of the United States, Amendments 11-27 — official transcript (National Archives)",
+    "citation": "U.S. Constitution",
+    "srcUrl": "https://www.archives.gov/founding-docs/amendments-11-27",
+    "textFile": "data/ref-text/record-constitution-amendments-11-27.txt",
+    "fetchedAt": "2026-08-31"
+  },
   "record-constitution-transcript": {
     "id": "record-constitution-transcript",
     "kind": "record",
@@ -533,6 +544,17 @@
     "srcUrl": "https://www.everycrsreport.com/reports/R47106.html",
     "textFile": "data/ref-text/record-crs-r47106-approps-overview.txt",
     "fetchedAt": "2026-08-28"
+  },
+  "record-crs-r48444-reconciliation-faq": {
+    "id": "record-crs-r48444-reconciliation-faq",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R48444, The Reconciliation Process: Frequently Asked Questions",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R48444.html",
+    "textFile": "data/ref-text/record-crs-r48444-reconciliation-faq.txt",
+    "fetchedAt": "2026-08-31"
   },
   "record-crs-r48731-full-year-cr": {
     "id": "record-crs-r48731-full-year-cr",
