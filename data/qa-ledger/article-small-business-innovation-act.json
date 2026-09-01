@@ -12,7 +12,7 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
+  "passes": 4,
   "proseSha": "59d57e008cc8fe84",
   "sources": [
     {
@@ -2202,6 +2202,19 @@
     {
       "field": "verify.round3",
       "claim": "ROUND 3, CONFIRMATION (independent Sonnet hostile source-only subagent, 2026-09-01, no edits made during the round): 0 BLOCKING, 2 ADVISORY, 0 LEDGER FAILURES over all 92 claim rows. It re-derived the nominations tally by counting every \"Confirmed by the Senate\" record in the stored file itself rather than trusting that file's own header (1622 / 1034 / 588 / 0, 1034+588=1622), independently counted the seven subparagraphs of 638(g)(13) and diffed the article's list against them clause by clause, re-extracted all eleven agency budgets and both funding ranges and rank-ordered them itself, and confirmed that none of the twelve removed claim families reappears anywhere in the live HTML. The main thread re-derived the same nominations tally and the same subparagraph count independently, from the raw per-nomination lines and by regex-enumerating (A) through (G). Both advisories were UPHELD and fixed. (1) The Phase I range \"$50,000 to $300,000\" silently treated HHS's open-ended \"$275,000+\" as if it were bounded; the page now says so explicitly. (2) The nominations record carried a load-bearing quoted figure but appeared in neither the Key Sources box nor the JSON-LD citation array - the same reader-facing sourcing gap the senate-procedure batch closed on three pages. Added to both surfaces, following that batch's precedent of citing Congress.gov's nominations index and naming the stored record and its fetch date.",
+      "verdict": "SUPPORTED",
+      "type": "verification",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": "",
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "verify.round4",
+      "claim": "ROUND 4, CLEAN (independent Sonnet hostile source-only subagent, 2026-09-01, no edits made during the round): 0 BLOCKING, 0 ADVISORY, 0 LEDGER FAILURES. It re-derived the whole page, confirmed HHS is the only one of the eleven agencies whose Phase I figure is open-ended (so the stated $50,000-$300,000 range and the new HHS caveat both hold), re-ranked all eleven agency budgets itself, re-counted section 10's twelve subsections, re-read the pre-Act two-prong test clause by clause, verified the new nominations citation against the stored record's own total and fetch date, and scanned the live HTML for each of the twelve removed claim families - none reappears. This is the converging pass: a fresh independent read of the sources over prose that was not touched during it. Recorded here after the fact; the article had already been published when this row was added, and the row changes no prose and no receipt.",
       "verdict": "SUPPORTED",
       "type": "verification",
       "severity": "ok",
