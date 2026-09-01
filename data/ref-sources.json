@@ -1707,5 +1707,135 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20A-sec933/htm",
     "textFile": "data/ref-text/usc-2-933.txt",
     "fetchedAt": "2026-09-01"
+  },
+  "record-cdc-lung-cancer-statistics": {
+    "id": "record-cdc-lung-cancer-statistics",
+    "kind": "record",
+    "org": "U.S. Centers for Disease Control and Prevention",
+    "date": null,
+    "label": "CDC — Lung Cancer Statistics",
+    "citation": "U.S. Centers for Disease Control and Prevention",
+    "srcUrl": "https://www.cdc.gov/lung-cancer/statistics/index.html",
+    "textFile": "data/ref-text/record-cdc-lung-cancer-statistics.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-1346": {
+    "id": "record-congress-hr-1346",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-05-14",
+    "label": "Congress.gov record — H.R. 1346 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 1346 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
+    "textFile": "data/ref-text/record-congress-hr-1346.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-2319": {
+    "id": "record-congress-hr-2319",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-22",
+    "label": "Congress.gov record — H.R. 2319 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 2319 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2319",
+    "textFile": "data/ref-text/record-congress-hr-2319.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-s-1884": {
+    "id": "record-congress-s-1884",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-13",
+    "label": "Congress.gov record — S. 1884 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, S. 1884 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
+    "textFile": "data/ref-text/record-congress-s-1884.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-epa-fuel-waivers": {
+    "id": "record-epa-fuel-waivers",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Fuel Waivers (emergency fuel-standard waivers, including summer E15 waivers)",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/fuel-waivers",
+    "textFile": "data/ref-text/record-epa-fuel-waivers.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-epa-gasoline-rvp": {
+    "id": "record-epa-gasoline-rvp",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Gasoline Reid Vapor Pressure",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure",
+    "textFile": "data/ref-text/record-epa-gasoline-rvp.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-house-report-119-382": {
+    "id": "record-house-report-119-382",
+    "kind": "record",
+    "org": "U.S. House Committee on Energy and Commerce",
+    "date": "2025-11-18",
+    "label": "H. Rept. 119-382 — Women and Lung Cancer Research and Preventive Services Act of 2025 (House Energy and Commerce Committee report on H.R. 2319)",
+    "citation": "H. Rept. 119-382",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm",
+    "textFile": "data/ref-text/record-house-report-119-382.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-nci-lung-cancer-overview": {
+    "id": "record-nci-lung-cancer-overview",
+    "kind": "record",
+    "org": "National Cancer Institute",
+    "date": null,
+    "label": "NCI — Lung Cancer (patient information overview)",
+    "citation": "National Cancer Institute",
+    "srcUrl": "https://www.cancer.gov/types/lung",
+    "textFile": "data/ref-text/record-nci-lung-cancer-overview.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-nci-seer-lung-statfacts": {
+    "id": "record-nci-seer-lung-statfacts",
+    "kind": "record",
+    "org": "National Cancer Institute (SEER Program)",
+    "date": null,
+    "label": "NCI SEER Cancer Stat Facts: Lung and Bronchus Cancer",
+    "citation": "National Cancer Institute, SEER Program",
+    "srcUrl": "https://seer.cancer.gov/statfacts/html/lungb.html",
+    "textFile": "data/ref-text/record-nci-seer-lung-statfacts.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-plaw-114-308-hear-act": {
+    "id": "record-plaw-114-308-hear-act",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2016-12-16",
+    "label": "Public Law 114-308 — Holocaust Expropriated Art Recovery Act of 2016 (enacted text)",
+    "citation": "Pub. L. No. 114-308",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm",
+    "textFile": "data/ref-text/record-plaw-114-308-hear-act.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-uspstf-lung-cancer-screening": {
+    "id": "record-uspstf-lung-cancer-screening",
+    "kind": "record",
+    "org": "U.S. Preventive Services Task Force",
+    "date": null,
+    "label": "USPSTF Final Recommendation Statement: Lung Cancer — Screening",
+    "citation": "U.S. Preventive Services Task Force",
+    "srcUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+    "textFile": "data/ref-text/record-uspstf-lung-cancer-screening.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-42-7545": {
+    "id": "usc-42-7545",
+    "kind": "statute",
+    "label": "42 U.S.C. 7545 (Clean Air Act Sec. 211) — Regulation of fuels",
+    "citation": "42 U.S.C. 7545",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapII-partA-sec7545/htm",
+    "textFile": "data/ref-text/usc-42-7545.txt",
+    "fetchedAt": "2026-09-01"
   }
 }

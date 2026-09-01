@@ -2507,5 +2507,55 @@
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-09-01",
     "stampedAt": "2026-09-01"
+  },
+  "article-holocaust-art-recovery": {
+    "kind": "article",
+    "sourceShas": {
+      "record-congress-s-1884": "5524347185beabe25ff3646277f4f4f26d662535be48521da182c9dc4e10752a",
+      "record-plaw-114-308-hear-act": "d66bae7472e2731bcf1a296fc1e3e0b995a84aa9ef2ea0c53417cace97af4537",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "bill-119-s-1884": "ded7b91ccdb2d0570629d99e64225376b5b05970a2477d3d7245cb3372174a33"
+    },
+    "proseSha": "3259611f32264738",
+    "proseFile": "articles/holocaust-art-recovery.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-women-lung-cancer-act": {
+    "kind": "article",
+    "sourceShas": {
+      "record-congress-hr-2319": "04605ce6c6357048b819a37d1c02280068e3864d4e69bd85cb6ee7a71ca25d6f",
+      "record-house-report-119-382": "a3dc396d2ffd3bedb34908be2a652ecfcaf5706033e06d6e6775e0bc96ba6d0d",
+      "record-nci-seer-lung-statfacts": "81fef35d028f2f70cdc862e0042ced50d15806e3871d3914676ac1dff0ef0421",
+      "record-cdc-lung-cancer-statistics": "124a0cba155c83cbb4f38b6e8d8dede0fc9cf1fea5a0e9f9d5cd3659bae7dc3b",
+      "record-uspstf-lung-cancer-screening": "0c0c1389b6d0d9bb96295758671caa0bce3f557db8fa6a202c1b819372c81d76",
+      "record-nci-lung-cancer-overview": "adf540ba8ce0cfd33b44e30cf0433f028b7ca20e14c4dfb5f0e74cb64b3b62f4",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "bill-119-hr-2319": "718b29d5f6b550e179ee9e12fbbd93e3c8aeea1ea72168bd32a97b431c00e4ec"
+    },
+    "proseSha": "4bf4e05b8f9efe72",
+    "proseFile": "articles/women-lung-cancer-act.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
+  },
+  "article-e15-ethanol-waiver": {
+    "kind": "article",
+    "sourceShas": {
+      "record-congress-hr-1346": "af0da94b30b1d6ddaaa1261c3059b8a25abb9d62f65c23f1f730fc3c1196ce2f",
+      "usc-42-7545": "5f08aa9b5789fcaa81f6e4085974c776ac6469a8cbe40e6d4c2aae1d2e3e022e",
+      "record-epa-gasoline-rvp": "26f610a7738d9a0e07899a1382326667882c403ba9f1f71e32ec48c338dd60bf",
+      "record-epa-fuel-waivers": "73d78bf5edc8be28c1f0a692caddd4847acfc197b2b3cba46b6b7051f7fde1e6",
+      "bill-119-hr-1346": "256f68be6675c96fd75f84b90035f806563ef4e20e46daeabe7aa3a45b61c8b5"
+    },
+    "proseSha": "5871cfc669c56d0f",
+    "proseFile": "articles/e15-ethanol-waiver.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-01",
+    "stampedAt": "2026-09-01"
   }
 }
