@@ -2226,9 +2226,10 @@
       "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
       "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b"
+      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "record-crs-rl30909-pocket-veto": "5aaf559e0bcac75a452cdcccca69bba15421f206dd1a91978db3f70ae9fd76b7"
     },
-    "proseSha": "65b040eb55d27527",
+    "proseSha": "0c6733b8d4a98150",
     "proseFile": "drafts/how-a-bill-becomes-law.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
@@ -2252,8 +2253,8 @@
       "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
       "doc-methodology": "b3503b0efcf81598e9b68530a92bd0467f057f6ddbd82815d5f7a38c98cbb9b6"
     },
-    "proseSha": "eecbad3ba2d6d03b",
-    "proseFile": "drafts/legislative-stages.html",
+    "proseSha": "aad2cfc062d5ee7a",
+    "proseFile": "articles/legislative-stages.html",
     "promptVersion": "f5761450b5860274",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-08-31",

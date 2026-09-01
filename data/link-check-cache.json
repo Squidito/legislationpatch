@@ -1232,6 +1232,14 @@
       "title": "2 USC 641: Reconciliation",
       "bytes": 168076,
       "checkedAt": "2026-08-31"
+    },
+    "https://www.congress.gov/crs-product/RL30909": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5848,
+      "checkedAt": "2026-09-01"
     }
   }
 }
