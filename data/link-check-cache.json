@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31",
+  "updatedAt": "2026-09-01",
   "urls": {
     "https://www.congress.gov/bill/119th-congress/house-bill/7148": {
       "verdict": "wall",
@@ -1177,6 +1177,101 @@
       "status": 200,
       "bytes": 108740,
       "checkedAt": "2026-08-31"
+    },
+    "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 35831 bytes — \"U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Over\"",
+      "status": 200,
+      "title": "U.S. Senate: About Filibusters and Cloture&nbsp;|&nbsp;Historical Overview",
+      "bytes": 35831,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/98-425.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 24996 bytes — \"Invoking Cloture in the Senate - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Invoking Cloture in the Senate - EveryCRSReport.com",
+      "bytes": 24996,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R44819.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 28564 bytes — \"Senate Proceedings Establishing Majority Cloture for Supreme Court Nom\"",
+      "status": 200,
+      "title": "Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief - EveryCRSReport.com",
+      "bytes": 28564,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/nominations": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5824,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL32684.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 57641 bytes — \"Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\"\"",
+      "status": 200,
+      "title": "Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option - EveryCRSReport.com",
+      "bytes": 57641,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL30360.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 122921 bytes — \"Filibusters and Cloture in the Senate - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Filibusters and Cloture in the Senate - EveryCRSReport.com",
+      "bytes": 122921,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R43563.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 48241 bytes — \"“Holds” in the Senate - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "“Holds” in the Senate - EveryCRSReport.com",
+      "bytes": 48241,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 3331646 bytes",
+      "status": 200,
+      "bytes": 3331646,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title19-section2191&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 167006 bytes — \"19 USC 2191: Bills implementing trade agreements on nontariff barriers\"",
+      "status": 200,
+      "title": "19 USC 2191: Bills implementing trade agreements on nontariff barriers and resolutions approving commercial agreements with Communist countries",
+      "bytes": 167006,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1546a&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 143255 bytes — \"50 USC 1546a: Expedited procedures for certain joint resolutions and b\"",
+      "status": 200,
+      "title": "50 USC 1546a: Expedited procedures for certain joint resolutions and bills",
+      "bytes": 143255,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1546&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 143582 bytes — \"50 USC 1546: Congressional priority procedures for concurrent resoluti\"",
+      "status": 200,
+      "title": "50 USC 1546: Congressional priority procedures for concurrent resolution",
+      "bytes": 143582,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 168096 bytes — \"2 USC 641: Reconciliation\"",
+      "status": 200,
+      "title": "2 USC 641: Reconciliation",
+      "bytes": 168096,
+      "checkedAt": "2026-09-01"
     }
   }
 }
