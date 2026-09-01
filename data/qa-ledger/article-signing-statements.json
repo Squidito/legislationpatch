@@ -12,7 +12,7 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet (4 independent hostile passes; round 4 run on the frozen file this session)",
-  "passes": 4,
+  "passes": 5,
   "proseSha": "3d688abb589c0a3b",
   "sources": [
     {
@@ -1191,6 +1191,19 @@
     {
       "field": "added.round4",
       "claim": "ROUND 4 (this session, independent hostile Sonnet pass on the frozen file): REFUSED on one blocking item, fixed, plus four non-blocking. BLOCKING: the lead silently lowercased CRS's sentence-initial \"There is no explicit constitutional provision...\" to splice it into the page's own sentence, with no bracket - the same silent-capitalisation class this cluster was blocked on twice. Re-quoted as a full sentence with the source's capital T. NON-BLOCKING, all acted on: (1) THE TWO STORED SOURCES DISAGREE ABOUT THE ABA REPORT and the page had silently picked one - CRS dates it August 2006 and quotes \"contrary to the rule of law and our constitutional separation of powers\", while APP dates it July 2006, insists the body was a \"Blue Ribbon Task Force\" and not \"The ABA\", and renders the finding as \"undermine the rule of law and our constitutional system of separation of powers\". Both renderings are now on the page, attributed, with the bare month dropped from the page's own voice; the condition, which is what the original misquote dropped, is identical in both. (2) The CRS report's January 2012 edition is now named at first mention and again in the courts section, so its findings are not read as current fact. (3) \"the argument has often run them together\" - \"often\" was the page's own unreceipted generalisation from one documented instance; removed. (4) The Stevens holding was three quoted fragments jammed together; it is now one continuous CRS sentence, same words. Also tightened: Bush issued fewer statements than ALL THREE predecessors listed, not just two of them.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": "",
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "added.round5",
+      "claim": "ROUND 5 (this session, second independent hostile Sonnet pass, run on the frozen file after the round-4 fixes): SIGN OFF, zero blocking. It re-derived ~40 quotations character by character and ~20 figures, re-checked all five speaker-boundary sites, searched both stored files again for the string 1,200 (zero hits in either), and confirmed the page asserts no unsourceable negative about publication venue. Its four non-blocking items were adjudicated and left as they are: the McCain quotation stops before CRS's own bracketed continuation, which alters nothing it quotes; the meta and og descriptions attribute the judicial-reliance finding to CRS by name but cannot also carry the January 2012 date inside the character budget; the 1986 date covering the Meese/West agreement is correct though not restated in its own clause; and the ABA paragraph names the body from CRS footnote 3 before giving APP's narrower framing, which is an ordering choice rather than a suppression since APP's framing is given in full.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

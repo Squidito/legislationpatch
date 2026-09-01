@@ -11,8 +11,8 @@
   "auditedAt": "2026-08-31",
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
-  "verifyModel": "sonnet (5 independent hostile passes; rounds 4 and 5 run on the frozen file this session)",
-  "passes": 5,
+  "verifyModel": "sonnet (6 independent hostile passes; rounds 4, 5 and 6 run on the frozen file this session)",
+  "passes": 6,
   "proseSha": "a9a690ec9f322175",
   "sources": [
     {
@@ -1302,6 +1302,32 @@
       "sourceFile": null,
       "sourceSpan": "",
       "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "added.round6",
+      "claim": "ROUND 6 (this session, third independent hostile Sonnet pass, run on the frozen file after the round-5 tightenings): SIGN OFF, zero blocking. It re-derived the Senate table by hand for the third independent time - 47 rows, 15 zero-pocket, 32 non-zero, columns summing to 1,533 / 1,066 / 2,599, FDR 263 the maximum and Cleveland's second term 128 the next - and confirmed all four round-5 changes verbatim, including that the whole file now contains zero instances of never settled / unsettled / unresolved. Both of its non-blocking items are left standing by deliberate adjudication, recorded in the next two rows.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": "",
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "adjudicated.still-disputed",
+      "claim": "ADJUDICATED, LEFT AS WRITTEN: round 6 observed that \"is still disputed\" - on the lead, the meta description, the og description and the index card - is a present-tense claim resting on a July 2019 receipt rather than a 2026 one, the same shape as the unbounded claim round 5 removed. Left standing, for three reasons, and the verifier itself said it would not refuse over it. First, it is an absence-of-resolution claim about a structural ambiguity, not a figure that goes stale. Second, RS22188 Table 1 note a is the most recent stored source that speaks to the question at all and it says recent Presidents and Congresses disagree about what constitutes a pocket veto; no stored source shows the question resolved since. Third, the claim it replaced was materially worse - \"the courts have never settled\" asserted a 25-year-old negative as current fact, where this asserts continuing disagreement recorded seven years ago. The body bounds every RL30909 status claim to March 2001 explicitly; a meta description cannot carry that apparatus inside its character budget.",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "record-crs-rs22188-vetoes",
+      "sourceSpan": "Recent Presidents and Congresses disagree about what constitutes a pocket veto.",
+      "section": "Table 1, note a",
       "status": "open",
       "verify": null,
       "kind": "note"
