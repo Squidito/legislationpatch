@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
-  "proseSha": "fdeb53b423d9608e",
+  "passes": 4,
+  "proseSha": "7e7f18624571ab6e",
   "sources": [
     {
       "id": "hman-119-rule-x",
@@ -1475,6 +1475,32 @@
     {
       "field": "round4.ledger-type-tags-3",
       "claim": "ROUND 4 FIX (hostile Sonnet pass 3, NOTE x3): three further rows tagged type \"quote\" describe prose that paraphrases rather than quotes - the inherent-contempt multistep process, the McGrain limiting-principle lead-in, and the 31 U.S.C. 717(b) three-prong list (only the third prong is quoted on the page). Retagged \"fact\". Receipts unchanged and still verbatim. The pass found 0 BLOCKING and 0 NON-BLOCKING on the prose itself.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.quote-boundary-punctuation",
+      "claim": "BATCH-WIDE SWEEP (2026-09-02), the systemic defect of this batch: 104 instances across all seven articles where a comma, period, semicolon or colon sat INSIDE a closing quotation mark although the source has no such character at that point. American typographic convention puts them there; this site rule does not allow it, because a span in quotation marks is a promise of verbatimness and invented punctuation inside the marks breaks that promise for a reader checking the source. Two hostile passes had each flagged one or two instances individually, which produced iterative one-at-a-time fixes and, on one span, three successive wrong repairs. The class was instead resolved MECHANICALLY: a scanner extracted every quoted span on every page, tested it against the concatenated registered sources for that article, and where the span matched only after stripping one trailing punctuation character, moved that character outside the closing quote. Per-article counts: what-is-a-committee 32, discharge-petition 22, house-rules-committee 19, bill-numbering 12, congressional-oversight 8, how-to-read-a-bill 7, joint-resolution 4. A re-scan after the sweep returns zero. No word in any quotation changed; only the position of punctuation relative to the closing mark.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.residual-nomatch-adjudicated",
+      "claim": "SWEEP FOLLOW-UP, adjudicated not fixed: after the punctuation sweep the scanner still flags a handful of spans per page. Every one was inspected. They fall into three groups, none a defect. (1) Nested-quote renderings, where the source own internal quotation marks arrive as HTML entities or as double-backtick/double-apostrophe pairs and the page renders them as single quotes so they can sit inside a double-quoted span - already adjudicated per-article in earlier rounds. (2) Scanner pairing artefacts, where an odd number of quote characters in a paragraph makes the scanner slice across a boundary and produce a span that was never on the page. (3) The literal string article-body, which is the class attribute the scanner picks up when it strips tags. Recorded so a future audit running the same scanner does not re-open them.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

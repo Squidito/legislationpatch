@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
-  "proseSha": "135dead1adf507b3",
+  "passes": 5,
+  "proseSha": "3565ad598c15be21",
   "sources": [
     {
       "id": "hman-119-rule-xv",
@@ -1254,6 +1254,32 @@
       "kind": "claim"
     },
     {
+      "field": "body.record",
+      "claim": "CRS: H.R. 5863 came to the floor under suspension",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "record-crs-r45920-discharge-procedure",
+      "sourceSpan": "came to the floor under suspension",
+      "section": "R45920, Recent Use",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
+      "field": "body.record",
+      "claim": "CRS: H.R. 82 also passed under suspension",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "record-crs-r45920-discharge-procedure",
+      "sourceSpan": "also passed under suspension",
+      "section": "R45920, Recent Use",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
       "field": "removed.435-members",
       "claim": "REMOVED, F-UNSOURCED (sweep): \"218 signatures - a majority of the House's 435 members.\" The 435 figure appears in no stored source (grepped across all of data/ref-text/). The page now gives the rule's own phrase, \"a majority of the total membership of the House,\" and the Manual annotation construing it as 218 Members with the date and Congressional Record page.",
       "verdict": "SUPPORTED",
@@ -1672,6 +1698,58 @@
     {
       "field": "round4.ledger-span-and-orphan",
       "claim": "ROUND 4 FIX (hostile Sonnet pass 4, NOTE x2): the mootness-fallback receipt was recorded truncated mid-phrase (\"...one day\") though the page quote was complete, and the \"three public laws\" sentence had no ledger row. The receipt is unchanged (it still resolves) and the counting sentence has been rewritten and re-receipted against fn.20 rather than left as an unledgered computation.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.quote-boundary-punctuation",
+      "claim": "BATCH-WIDE SWEEP (2026-09-02), the systemic defect of this batch: 104 instances across all seven articles where a comma, period, semicolon or colon sat INSIDE a closing quotation mark although the source has no such character at that point. Resolved mechanically by a scanner that tested every quoted span against the concatenated registered sources and moved the punctuation outside the closing mark where the span matched only once it was stripped. discharge-petition carried 22 of the 104. Re-scan after the sweep returns zero. No word in any quotation changed.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.residual-nomatch-adjudicated",
+      "claim": "SWEEP FOLLOW-UP, adjudicated not fixed: three residual scanner flags on this page were inspected. Two are nested-quote renderings already adjudicated (the germaneness span, and the R45920 parenthetical citations). The third is the literal class attribute string the scanner picks up when it strips tags. None is a defect.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "round5.discharge-credit-miscount",
+      "claim": "ROUND 5 FIX (hostile Sonnet pass 5, BLOCKING, adjudicated against record-crs-r45920-discharge-procedure.txt and CONFIRMED): the closing sentence of the recent-use section read that of the six efforts, two produced law by discharge-adjacent routes and one produced law through an unrelated vehicle after the rule it targeted was killed. That sentence was un-receipted and it drew a distinction the source does not support. All THREE public laws in the cluster - P.L. 118-148, P.L. 118-273 and P.L. 119-38 - reached enactment the same way: the rule the petition targeted was tabled or adversely disposed of, and the underlying measure passed under SUSPENSION of the rules. CRS says so for each (came to the floor under suspension; also passed under suspension; passed by the House under suspension). This is the same error the round-4 H.Res. 581 note had already identified and corrected for the 119th-Congress case, left uncorrected for the 118th-Congress pair, and then re-introduced in the summary sentence. The section is rewritten around the distinction the source does draw - the two efforts actually called up under the discharge rule versus the four that were not - and the closing sentence now states the shared suspension pathway explicitly instead of implying discharge produced the laws.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "round5.parenthetical-spacing",
+      "claim": "ROUND 5 FIX (residual scanner flags, NON-BLOCKING): three quoted spans in the recent-use passage closed up spacing the stored R45920 capture has inside its parenthetical citations (( H.Res. 294 ), ( H.R. 2550 , ...)), an extraction artefact of the italic runs in the source HTML. Rather than reproduce the artefact inside quotation marks or silently normalise it, the resolution and bill numbers are now given outside the quoted spans, in the same style already used for the adjournment sine die case on joint-resolution.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

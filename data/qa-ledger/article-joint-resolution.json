@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 3,
-  "proseSha": "5fa509b4206669d8",
+  "passes": 4,
+  "proseSha": "6a90335f7245bf8c",
   "sources": [
     {
       "id": "record-crs-r46603-forms-of-measures",
@@ -1248,6 +1248,19 @@
       "kind": "claim"
     },
     {
+      "field": "body.simpleres",
+      "claim": "Blue slip resolutions carry the (House) chamber tag, matching the format of its sibling items",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "record-crs-r46603-forms-of-measures",
+      "sourceSpan": "\"blue slip resolutions\" (House)",
+      "section": "R46603, Simple Resolutions",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
       "field": "removed.continuing-appropriations-currency",
       "claim": "CORRECTED, the sweep worst finding (F-FAIL): \"joint resolutions are typically used for ... continuing appropriations\" was presented as current practice. Both halves are now on the page and labelled: CRS R46603 (updated 2025-08-27) does list \"continuing resolutions\" among the uses of joint resolutions, and CRS R47106 footnote 24 supplies the currency note - \"Historically, continuing appropriations acts took the form of joint resolutions. In recent practice, it is more common for them to be included in measures that include other legislative provisions in addition to continuing appropriations.\" The page now says a modern stopgap is as likely to be an ordinary bill as an H.J.Res.",
       "verdict": "SUPPORTED",
@@ -1614,6 +1627,45 @@
     {
       "field": "round3.special-rule-orphan",
       "claim": "ROUND 3, ACCEPTED (hostile Sonnet pass 2, NOTE): the sentence saying a special rule is itself a simple resolution reported by the Rules Committee is supported by CRS R42843 (\"Special rules are reported by the House Rules Committee\") but had no dedicated ledger row. It is navigational rather than a new factual assertion - the underlying fact is carried by the quoted simple-resolutions use-list item - and the sentence links the article that sources it in full.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.quote-boundary-punctuation",
+      "claim": "BATCH-WIDE SWEEP (2026-09-02), the systemic defect of this batch: 104 instances across all seven articles where a comma, period, semicolon or colon sat INSIDE a closing quotation mark although the source has no such character at that point. American typographic convention puts them there; this site rule does not allow it, because a span in quotation marks is a promise of verbatimness and invented punctuation inside the marks breaks that promise for a reader checking the source. Two hostile passes had each flagged one or two instances individually, which produced iterative one-at-a-time fixes and, on one span, three successive wrong repairs. The class was instead resolved MECHANICALLY: a scanner extracted every quoted span on every page, tested it against the concatenated registered sources for that article, and where the span matched only after stripping one trailing punctuation character, moved that character outside the closing quote. Per-article counts: what-is-a-committee 32, discharge-petition 22, house-rules-committee 19, bill-numbering 12, congressional-oversight 8, how-to-read-a-bill 7, joint-resolution 4. A re-scan after the sweep returns zero. No word in any quotation changed; only the position of punctuation relative to the closing mark.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.residual-nomatch-adjudicated",
+      "claim": "SWEEP FOLLOW-UP, adjudicated not fixed: after the punctuation sweep the scanner still flags a handful of spans per page. Every one was inspected. They fall into three groups, none a defect. (1) Nested-quote renderings, where the source own internal quotation marks arrive as HTML entities or as double-backtick/double-apostrophe pairs and the page renders them as single quotes so they can sit inside a double-quoted span - already adjudicated per-article in earlier rounds. (2) Scanner pairing artefacts, where an odd number of quote characters in a paragraph makes the scanner slice across a boundary and produce a span that was never on the page. (3) The literal string article-body, which is the class attribute the scanner picks up when it strips tags. Recorded so a future audit running the same scanner does not re-open them.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "round4.blue-slip-format",
+      "claim": "ROUND 4 FIX (hostile Sonnet pass 4, NON-BLOCKING, adjudicated and CONFIRMED): the round-3 note claimed the (House) qualifier had been Restored to the blue-slip item, but the page rendered it as prose (in the House) while its three sibling items in the same sentence kept the CRS parenthetical form. That note overstated what had been done. The item now carries (House) inside the quoted span exactly as the source has it, consistent with its siblings.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",

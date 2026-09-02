@@ -12,8 +12,8 @@
   "drafterModel": "opus-5 (in-conversation)",
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
-  "passes": 2,
-  "proseSha": "7468d856a0c5e602",
+  "passes": 3,
+  "proseSha": "72b453410e7b6bc8",
   "sources": [
     {
       "id": "usc-1-101",
@@ -140,7 +140,7 @@
     },
     {
       "field": "meta.description",
-      "claim": "The page covers the enacting clause and why it is statutory",
+      "claim": "The page covers where the enacting clause is prescribed",
       "verdict": "SUPPORTED",
       "type": "definition",
       "severity": "material",
@@ -257,7 +257,7 @@
     },
     {
       "field": "body.enacting",
-      "claim": "The requirement traces to an ordinary act of Congress of July 30, 1947, not to the Constitution",
+      "claim": "The prescribed enacting-clause wording was enacted by an ordinary act of Congress, July 30, 1947, ch. 388, 61 Stat. 634 - the section source note, quoted on the page without any comparative claim about the Constitution",
       "verdict": "SUPPORTED",
       "type": "cite",
       "severity": "material",
@@ -685,6 +685,19 @@
       "kind": "claim"
     },
     {
+      "field": "body.amendment",
+      "claim": "The text inserted by the adding-at-the-end instruction runs past the heading into the operative words",
+      "verdict": "SUPPORTED",
+      "type": "quote",
+      "severity": "material",
+      "sourceFile": "bill-119-hr-1",
+      "sourceSpan": "(E) Restrictions on internet expenses.--Any service fee",
+      "section": "H.R. 1",
+      "status": "open",
+      "verify": null,
+      "kind": "claim"
+    },
+    {
       "field": "corrected.enacting-clause-constitutional",
       "claim": "CORRECTED, the sweep WORST finding (F-FAIL, independently re-confirmed): the article called the enacting clause \"a constitutional requirement that appears at the beginning of every federal law.\" It is STATUTORY. 1 U.S.C. 101 prescribes the wording and its own source note traces the requirement to an ordinary act of Congress - \"(July 30, 1947, ch. 388, 61 Stat. 634.)\". The page now quotes the section, quotes the source note, and states that the requirement is statutory rather than constitutional. The wording itself was already correct and is preserved. The 1 U.S.C. 102 resolving clause for joint resolutions is added alongside it.",
       "verdict": "SUPPORTED",
@@ -985,7 +998,7 @@
     },
     {
       "field": "round3.enacting-clause-negative-claim",
-      "claim": "ROUND 3 FIX (hostile Sonnet pass 2, BLOCKING, adjudicated and CONFIRMED): the round-2 rewording swapped \"statutory requirement rather than a constitutional one\" for \"a creature of the U.S. Code, not of a constitutional text\" - the same unsupported NEGATIVE comparison in different words. The 1947 source note establishes where the wording was enacted; it says nothing about the Constitution, and no constitutional text is among this ledger's sources. The negative is now gone entirely: the page says the requirement is written in the U.S. Code, quotes the section and its source note, and stops there. The meta description no longer promises \"why it is statutory\". The sweep's underlying correction - that the article was wrong to call the enacting clause a constitutional requirement - stands on the positive evidence alone.",
+      "claim": "The page covers where the enacting clause is prescribed",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",
@@ -1012,6 +1025,58 @@
     {
       "field": "round3.trailing-dash-convention",
       "claim": "ROUND 3, ACCEPTED AS IS (hostile Sonnet pass 2, NOTE): two H.R. 1 quotes drop the bill-drafting trailing \"--\" while a third keeps it. No word is altered in any of them and the \"--\" is a formatting convention rather than text; the inconsistency is cosmetic and the quotes remain verbatim substrings.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.quote-boundary-punctuation",
+      "claim": "BATCH-WIDE SWEEP (2026-09-02), the systemic defect of this batch: 104 instances across all seven articles where a comma, period, semicolon or colon sat INSIDE a closing quotation mark although the source has no such character at that point. American typographic convention puts them there; this site rule does not allow it, because a span in quotation marks is a promise of verbatimness and invented punctuation inside the marks breaks that promise for a reader checking the source. Two hostile passes had each flagged one or two instances individually, which produced iterative one-at-a-time fixes and, on one span, three successive wrong repairs. The class was instead resolved MECHANICALLY: a scanner extracted every quoted span on every page, tested it against the concatenated registered sources for that article, and where the span matched only after stripping one trailing punctuation character, moved that character outside the closing quote. Per-article counts: what-is-a-committee 32, discharge-petition 22, house-rules-committee 19, bill-numbering 12, congressional-oversight 8, how-to-read-a-bill 7, joint-resolution 4. A re-scan after the sweep returns zero. No word in any quotation changed; only the position of punctuation relative to the closing mark.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "sweep.residual-nomatch-adjudicated",
+      "claim": "SWEEP FOLLOW-UP, adjudicated not fixed: after the punctuation sweep the scanner still flags a handful of spans per page. Every one was inspected. They fall into three groups, none a defect. (1) Nested-quote renderings, where the source own internal quotation marks arrive as HTML entities or as double-backtick/double-apostrophe pairs and the page renders them as single quotes so they can sit inside a double-quoted span - already adjudicated per-article in earlier rounds. (2) Scanner pairing artefacts, where an odd number of quote characters in a paragraph makes the scanner slice across a boundary and produce a span that was never on the page. (3) The literal string article-body, which is the class attribute the scanner picks up when it strips tags. Recorded so a future audit running the same scanner does not re-open them.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "round3.adding-at-end-heading-only",
+      "claim": "ROUND 3 FIX (hostile Sonnet pass 3, NON-BLOCKING, adjudicated against data/bill-text/119-HR-1.txt and CONFIRMED): the adding-at-the-end example quoted only the heading of the inserted subparagraph, so it showed the formula without showing that anything operative followed - the same defect the inserting-after example had been fixed for in round 2, left in place on its neighbour. Extended into the operative words.",
+      "verdict": "SUPPORTED",
+      "type": "removal",
+      "severity": "ok",
+      "sourceFile": null,
+      "sourceSpan": null,
+      "section": "audit action",
+      "status": "open",
+      "verify": null,
+      "kind": "note"
+    },
+    {
+      "field": "round3.definitions-gloss",
+      "claim": "ROUND 3 FIX (hostile Sonnet pass 3, NON-BLOCKING): the clause saying a definitions section is worth reading before the operative sections was a residual reading-advice claim of the kind removed elsewhere on this page. Replaced with the structural reason a definitions section matters - its terms govern the operative sections that follow - which is what the quoted H.R. 165 span (In this Act:) actually establishes.",
       "verdict": "SUPPORTED",
       "type": "removal",
       "severity": "ok",
