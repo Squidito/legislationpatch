@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-02",
   "urls": {
     "https://www.congress.gov": {
       "verdict": "wall",
@@ -120,14 +120,6 @@
       "status": 200,
       "title": "U.S. Senate: About Filibusters and Cloture",
       "bytes": 33146,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.cbo.gov/topics/budget/reconciliation": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "cbo.gov",
-      "bytes": 767,
       "checkedAt": "2026-09-01"
     },
     "https://www.everycrsreport.com/reports/R44819.html": {
@@ -290,14 +282,6 @@
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5917,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/bill/119th-congress/senate-bill/4465": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5920,
       "checkedAt": "2026-09-01"
     },
     "https://www.govinfo.gov/app/collection/PLAW": {
@@ -497,22 +481,6 @@
       "status": 200,
       "title": "Impoundment Control Act | U.S. GAO",
       "bytes": 104972,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/crs-product/R48432": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/crs-product/LSB11374": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5851,
       "checkedAt": "2026-09-01"
     },
     "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section106&num=0&edition=prelim": {
@@ -1316,22 +1284,6 @@
       "bytes": 767,
       "checkedAt": "2026-09-01"
     },
-    "https://www.cbo.gov/about/overview": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "cbo.gov",
-      "bytes": 767,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/bill/93rd-congress/house-bill/7130": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5914,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.congress.gov/congressional-record": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
@@ -1465,6 +1417,293 @@
       "title": "16 USC 1132: Extent of System",
       "bytes": 695376,
       "checkedAt": "2026-09-01"
+    },
+    "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure": {
+      "verdict": "live",
+      "reason": "HTTP 200, 67795 bytes — \"Gasoline Reid Vapor Pressure | US EPA\"",
+      "status": 200,
+      "title": "Gasoline Reid Vapor Pressure | US EPA",
+      "bytes": 67795,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.epa.gov/gasoline-standards/fuel-waivers": {
+      "verdict": "live",
+      "reason": "HTTP 200, 185394 bytes — \"Fuel Waivers | US EPA\"",
+      "status": 200,
+      "title": "Fuel Waivers | US EPA",
+      "bytes": 185394,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RS20348.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 77696 bytes — \"Federal Funding Gaps: A Brief Overview - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Federal Funding Gaps: A Brief Overview - EveryCRSReport.com",
+      "bytes": 77696,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R48444.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 100209 bytes — \"The Reconciliation Process: Frequently Asked Questions - EveryCRSRepor\"",
+      "status": 200,
+      "title": "The Reconciliation Process: Frequently Asked Questions - EveryCRSReport.com",
+      "bytes": 100209,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R47106.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 61921 bytes — \"The Appropriations Process: A Brief Overview - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "The Appropriations Process: A Brief Overview - EveryCRSReport.com",
+      "bytes": 61921,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL30862.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 287798 bytes — \"The Budget Reconciliation Process: The Senate’s “Byrd Rule” - EveryCRS\"",
+      "status": 200,
+      "title": "The Budget Reconciliation Process: The Senate’s “Byrd Rule” - EveryCRSReport.com",
+      "bytes": 287798,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/LSB11374.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 32575 bytes — \"Pocket Rescissions and the Impoundment Control Act: Legal Authority an\"",
+      "status": 200,
+      "title": "Pocket Rescissions and the Impoundment Control Act: Legal Authority and Options for Congress - EveryCRSReport.com",
+      "bytes": 32575,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/RL34680.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 277576 bytes — \"Shutdown of the Federal Government: Causes, Processes, and Effects - E\"",
+      "status": 200,
+      "title": "Shutdown of the Federal Government: Causes, Processes, and Effects - EveryCRSReport.com",
+      "bytes": 277576,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 13195 bytes",
+      "status": 200,
+      "bytes": 13195,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R48432.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 247019 bytes — \"The Impoundment Control Act of 1974: Background and Congressional Cons\"",
+      "status": 200,
+      "title": "The Impoundment Control Act of 1974: Background and Congressional Consideration of Rescissions - EveryCRSReport.com",
+      "bytes": 247019,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R46240.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 937757 bytes — \"Introduction to the Federal Budget Process - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Introduction to the Federal Budget Process - EveryCRSReport.com",
+      "bytes": 937757,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section686&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 146829 bytes — \"2 USC 686: Reports by Comptroller General\"",
+      "status": 200,
+      "title": "2 USC 686: Reports by Comptroller General",
+      "bytes": 146829,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section687&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 147040 bytes — \"2 USC 687: Suits by Comptroller General\"",
+      "status": 200,
+      "title": "2 USC 687: Suits by Comptroller General",
+      "bytes": 147040,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section688&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 151849 bytes — \"2 USC 688: Procedure in House of Representatives and Senate\"",
+      "status": 200,
+      "title": "2 USC 688: Procedure in House of Representatives and Senate",
+      "bytes": 151849,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section653&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 156469 bytes — \"2 USC 653: Analysis by Congressional Budget Office\"",
+      "status": 200,
+      "title": "2 USC 653: Analysis by Congressional Budget Office",
+      "bytes": 156469,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section602&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 161220 bytes — \"2 USC 602: Duties and functions\"",
+      "status": 200,
+      "title": "2 USC 602: Duties and functions",
+      "bytes": 161220,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section658&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 158047 bytes — \"2 USC 658: Definitions\"",
+      "status": 200,
+      "title": "2 USC 658: Definitions",
+      "bytes": 158047,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section658c&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 152449 bytes — \"2 USC 658c: Duties of Director; statements on bills and joint resoluti\"",
+      "status": 200,
+      "title": "2 USC 658c: Duties of Director; statements on bills and joint resolutions other than appropriations bills and joint resolutions",
+      "bytes": 152449,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/98-560.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 22006 bytes — \"Baselines and Scorekeeping in the Federal Budget Process - EveryCRSRep\"",
+      "status": 200,
+      "title": "Baselines and Scorekeeping in the Federal Budget Process - EveryCRSReport.com",
+      "bytes": 22006,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.everycrsreport.com/reports/R46233.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 90921 bytes — \"Dynamic Scoring in the Congressional Budget Process - EveryCRSReport.c\"",
+      "status": 200,
+      "title": "Dynamic Scoring in the Congressional Budget Process - EveryCRSReport.com",
+      "bytes": 90921,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 13705 bytes — \"House Report 119-382 - WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE S\"",
+      "status": 200,
+      "title": "House Report 119-382 - WOMEN AND LUNG CANCER RESEARCH AND PREVENTIVE S ERVICES ACT OF 2025",
+      "bytes": 13705,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section900&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 253678 bytes — \"2 USC 900: Statement of budget enforcement through sequestration; defi\"",
+      "status": 200,
+      "title": "2 USC 900: Statement of budget enforcement through sequestration; definitions",
+      "bytes": 253678,
+      "checkedAt": "2026-09-01"
+    },
+    "https://seer.cancer.gov/statfacts/html/lungb.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 87245 bytes — \"Lung and Bronchus Cancer &mdash; Cancer Stat Facts\"",
+      "status": 200,
+      "title": "Lung and Bronchus Cancer &mdash; Cancer Stat Facts",
+      "bytes": 87245,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening": {
+      "verdict": "live",
+      "reason": "HTTP 200, 146874 bytes — \"Recommendation: Lung Cancer: Screening | United States Preventive Serv\"",
+      "status": 200,
+      "title": "Recommendation: Lung Cancer: Screening | United States Preventive Services Taskforce",
+      "bytes": 146874,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.cdc.gov/lung-cancer/statistics/index.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 49702 bytes — \"Lung Cancer Statistics | Lung Cancer | CDC\"",
+      "status": 200,
+      "title": "Lung Cancer Statistics | Lung Cancer | CDC",
+      "bytes": 49702,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section1342&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 147973 bytes — \"31 USC 1342: Limitation on voluntary services\"",
+      "status": 200,
+      "title": "31 USC 1342: Limitation on voluntary services",
+      "bytes": 147973,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section682&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 146793 bytes — \"2 USC 682: Definitions\"",
+      "status": 200,
+      "title": "2 USC 682: Definitions",
+      "bytes": 146793,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section601&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 166411 bytes — \"2 USC 601: Establishment\"",
+      "status": 200,
+      "title": "2 USC 601: Establishment",
+      "bytes": 166411,
+      "checkedAt": "2026-09-01"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section685&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 151378 bytes — \"2 USC 685: Transmission of messages; publication\"",
+      "status": 200,
+      "title": "2 USC 685: Transmission of messages; publication",
+      "bytes": 151378,
+      "checkedAt": "2026-09-01"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/8035": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/9238": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/110th-congress/house-bill/6304": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/112th-congress/house-bill/5949": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/115th-congress/senate-bill/139": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5917,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1801&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 225062 bytes — \"50 USC 1801: Definitions\"",
+      "status": 200,
+      "title": "50 USC 1801: Definitions",
+      "bytes": 225062,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title50-section1881&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 163909 bytes — \"50 USC 1881: Definitions\"",
+      "status": 200,
+      "title": "50 USC 1881: Definitions",
+      "bytes": 163909,
+      "checkedAt": "2026-09-02"
     }
   }
 }
