@@ -423,6 +423,15 @@
     "textFile": "data/ref-text/record-congress-119-nominations.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-congress-119-overview": {
+    "id": "record-congress-119-overview",
+    "kind": "record",
+    "label": "Congress.gov API record - 119th Congress overview (session dates)",
+    "citation": "Congress.gov (Library of Congress)",
+    "srcUrl": "https://api.congress.gov/v3/congress/119",
+    "textFile": "data/ref-text/record-congress-119-overview.txt",
+    "fetchedAt": "2026-08-27"
+  },
   "record-congress-hjres-140-actions": {
     "id": "record-congress-hjres-140-actions",
     "kind": "record",
