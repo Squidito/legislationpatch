@@ -2654,5 +2654,146 @@
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-09-02",
     "stampedAt": "2026-09-02"
+  },
+  "article-bill-numbering": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r46603-forms-of-measures": "0218520bc643c657a377bf8e9a1eee568b66b9c0e34e4c3db21cca4360052d63",
+      "record-crs-r42843-legislative-process": "9059b431045b312a00dbad433df1b90782f12e2f06123ecd46dcf2ccc6826d3d",
+      "record-crs-r44001-introducing-house-bill": "254b7cc3552b28bb17d280d59b68bf2880f82bd288f2e625b76316f34c9c8138",
+      "record-crs-r47106-approps-overview": "d5e01799ac4196a1e0780589547faa2d82b48f4e48c60e7cea370c11c665f60f",
+      "hman-119-rule-xii": "b5b1b3c20b18feac1f59a241e4b496b82c1945ea99cff8846422343d88d896e7",
+      "record-congress-119-measure-counts": "a46810e60f7e4ab008e10753dba6ea3613c0ef1cc02a271f6bfcfa242ddb4cf0",
+      "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
+      "record-congress-laws-119": "75efe7265fea0a1c007230398ca7f9a32fb5d1eeef413b57dd2881aaa50de0a4",
+      "record-congress-hjres-140-actions": "9ce257fd03a785ad3ac071893d028f51c80dc88bbe380bac5abf5cf23b07e8fa",
+      "bill-119-hjres-140": "283241ee80596abd4b5da8491672117c765d12ea377715ea7de0c4d010ef8171",
+      "usc-1-106a": "31852f2683ee6dce3daa758b55d7ea7777efafe9a47d38f40c6c5a45be10c26d",
+      "usc-1-112": "8943ad162690a5439abe4af846a5d249ccd5afd9eb34dd974963aed7d6f2a0fd"
+    },
+    "proseSha": "b74e87e9cf71b9c5",
+    "proseFile": "articles/bill-numbering.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-congressional-oversight": {
+    "kind": "article",
+    "sourceShas": {
+      "hman-119-rule-x": "56975c8c5497c9984d30e1abfb341d9d28cd5ecc2c9c463de483fada9c94c516",
+      "hman-119-rule-xi": "75692b79f79e77d887b3805689db5ef61e852e6624d9053a139c37670887d955",
+      "record-crs-rl30240-oversight-manual": "48246941fc79e7c4a0528ca91205d98925743c26b5f1d8b208a99462b9647d93",
+      "record-scotus-mcgrain-v-daugherty-1927": "3baf556a44786ce49abe6a341d57f54f1dfeb942988a2c71ebf8d622302c045e",
+      "usc-2-192": "bb4b129fea0f6d98cc6da95ac1cc77855f31968c8afae9dd0ccf2c2ef09cb065",
+      "usc-5-403": "40d526a22815c3d0b39cc9c76107429852389a9b5ff14e42582add507152c024",
+      "usc-5-404": "b60b8b5a499cb1f481139a57b56bdb58035e8334b994fc752ba791fb531255dd",
+      "usc-5-405": "aeaa1f8f85476b7a7598b72bbb924199cd01c701c195a4639e70b34f4a0eabdc",
+      "usc-31-712": "3856bee0fe413a6c30e4c5c493b05ddd98b20dada5a136686fffb63f8bc481f7",
+      "usc-31-717": "09c42f0b8290598754058a70d4ed50c44d80b780d17557c23fbf4c2b5071d94e"
+    },
+    "proseSha": "7e7f18624571ab6e",
+    "proseFile": "articles/congressional-oversight.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-discharge-petition": {
+    "kind": "article",
+    "sourceShas": {
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "record-crs-r45920-discharge-procedure": "dedf408217136a79dffd5acc47801c7c4ffc0a6bd237326299a6eb4385e3fe74",
+      "record-crs-97-856-discharge-rule": "881ad0cb71c976dee8630b3a4f5d9437cd705218ce29f01bd4e8ced85ed16902"
+    },
+    "proseSha": "1cb003a3647f5242",
+    "proseFile": "articles/discharge-petition.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-house-rules-committee": {
+    "kind": "article",
+    "sourceShas": {
+      "hman-119-rule-x": "56975c8c5497c9984d30e1abfb341d9d28cd5ecc2c9c463de483fada9c94c516",
+      "hman-119-rule-xiii": "d9dc5688e6399b86f9929914ac9d78108095944a9b92f6447d470abfa472d37f",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "record-crs-r48308-special-rules": "efb74ae07248f3865b7ea266c38dacb935d61a7c564e68a62fef049e7e05d877",
+      "record-house-rules-special-rule-types": "9a433c30bd0e6e816fe8153b895608df9e1c85603840ced5accfbb2f46061cac",
+      "record-crs-98-225-uc-agreements": "dc0a5071e2a67991e9f2f2a96cb99959290861562dd18e99cb077b1ba73ea490"
+    },
+    "proseSha": "ab59cc618939b168",
+    "proseFile": "articles/house-rules-committee.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-how-to-read-a-bill": {
+    "kind": "article",
+    "sourceShas": {
+      "usc-1-101": "94304be1055d3a360b5238bb7dee6b3ff53a5a45d69975d626df1ced845667a6",
+      "usc-1-102": "078e9e09ccc6d15ed3c006fcace28130b6d7c2ee740960421122117ad9630c51",
+      "usc-1-106a": "31852f2683ee6dce3daa758b55d7ea7777efafe9a47d38f40c6c5a45be10c26d",
+      "usc-1-112": "8943ad162690a5439abe4af846a5d249ccd5afd9eb34dd974963aed7d6f2a0fd",
+      "hman-119-rule-xii": "b5b1b3c20b18feac1f59a241e4b496b82c1945ea99cff8846422343d88d896e7",
+      "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
+      "record-crs-98-265-cr-users-guide": "94906c931f9a4830a72ac2c1f7c5dabda5dbe3a62554396082d997ac7a5b1828",
+      "bill-119-hr-1": "f4a6b68ea4974c5d18049b902cf3fbfb9ddf231d94dda745a48e723b77135c86",
+      "bill-119-hr-1011": "2ecd6ca3f726ab4f3d0e3c3f91f85d60d35c4006d169fe3e904374a5fb5f59c4",
+      "bill-119-hr-165": "fc7164969cf43a483323eb2cd7db6d4e847fb10527700234c7d1310774cccf7d",
+      "bill-119-hr-1993": "22b78dde2940b7914c4b04dec6afc59c63aaef060596a5a128da73efc53b9deb",
+      "bill-119-hr-4371": "dcf7575dfd9d4e0c5252ee03d6def2d7f4c89035d04eae989e00345523411929"
+    },
+    "proseSha": "bcbda59d931dc8ef",
+    "proseFile": "articles/how-to-read-a-bill.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-joint-resolution": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-r46603-forms-of-measures": "0218520bc643c657a377bf8e9a1eee568b66b9c0e34e4c3db21cca4360052d63",
+      "record-crs-r42843-legislative-process": "9059b431045b312a00dbad433df1b90782f12e2f06123ecd46dcf2ccc6826d3d",
+      "usc-1-101": "94304be1055d3a360b5238bb7dee6b3ff53a5a45d69975d626df1ced845667a6",
+      "usc-1-102": "078e9e09ccc6d15ed3c006fcace28130b6d7c2ee740960421122117ad9630c51",
+      "record-constitution-transcript": "8e51936c866b1eb48b8e44658fb721d567d750e288e454d32933fe9d36516739",
+      "usc-5-801": "48ce19a85222ea3937b775c9de20bbe53377773f49c32393b3c1388f52871ce7",
+      "usc-5-802": "1e4396f9c78e5128f0325fcb13feb89de86053e7ac924287454a8ca5f33afdc3",
+      "record-crs-r47106-approps-overview": "d5e01799ac4196a1e0780589547faa2d82b48f4e48c60e7cea370c11c665f60f",
+      "record-congress-119-measure-counts": "a46810e60f7e4ab008e10753dba6ea3613c0ef1cc02a271f6bfcfa242ddb4cf0",
+      "record-congress-hjres-140-actions": "9ce257fd03a785ad3ac071893d028f51c80dc88bbe380bac5abf5cf23b07e8fa",
+      "bill-119-hjres-140": "283241ee80596abd4b5da8491672117c765d12ea377715ea7de0c4d010ef8171"
+    },
+    "proseSha": "8fcda98ba512387b",
+    "proseFile": "articles/joint-resolution.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
+  },
+  "article-what-is-a-committee": {
+    "kind": "article",
+    "sourceShas": {
+      "record-crs-98-241-committee-types": "bfea29263f046d5457f3afd85666436993aa7a26c8ff9534a59db99598280112",
+      "hman-119-rule-x": "56975c8c5497c9984d30e1abfb341d9d28cd5ecc2c9c463de483fada9c94c516",
+      "hman-119-rule-xi": "75692b79f79e77d887b3805689db5ef61e852e6624d9053a139c37670887d955",
+      "hman-119-rule-xii": "b5b1b3c20b18feac1f59a241e4b496b82c1945ea99cff8846422343d88d896e7",
+      "hman-119-rule-xiii": "d9dc5688e6399b86f9929914ac9d78108095944a9b92f6447d470abfa472d37f",
+      "hman-119-rule-xv": "c8625441f246ec4ef207bcb912f24b41067484c6bf9757fc30c92f54b8473f88",
+      "record-crs-rs22299-rule-xiv": "640d4b5f22e82f3ea0ac3b512d9640f01c5a4eb2ffb049956c19047a1674f2ec",
+      "record-congress-119-measure-counts": "a46810e60f7e4ab008e10753dba6ea3613c0ef1cc02a271f6bfcfa242ddb4cf0",
+      "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
+      "record-congress-119-overview": "ea876376a384ae6a30276b97f6153156e35d777380d27f209ba9df0d91c24452"
+    },
+    "proseSha": "9502b02808e95244",
+    "proseFile": "articles/what-is-a-committee.html",
+    "promptVersion": "f5761450b5860274",
+    "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
+    "genAt": "2026-09-02",
+    "stampedAt": "2026-09-02"
   }
 }

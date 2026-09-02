@@ -1,0 +1,28 @@
+Congress.gov API record - measure and law counts for the 119th Congress
+Source: https://api.congress.gov/v3/bill/119 and https://api.congress.gov/v3/law/119 (format=json, limit=1;
+the figure recorded is the pagination.count the API returns for each endpoint). Fetched 2026-09-01.
+
+## Measures introduced in the 119th Congress, by measure type
+
+ALL measures: 18500
+House bills (H.R.): 10202
+Senate bills (S.): 5367
+House joint resolutions (H.J.Res.): 214
+Senate joint resolutions (S.J.Res.): 212
+House concurrent resolutions (H.Con.Res.): 114
+Senate concurrent resolutions (S.Con.Res.): 39
+House simple resolutions (H.Res.): 1503
+Senate simple resolutions (S.Res.): 849
+
+The eight measure-type counts sum to 18500, which equals the all-measures count returned by
+https://api.congress.gov/v3/bill/119. That is an arithmetic check over the recorded figures, not an inference.
+
+## Laws of the 119th Congress
+
+Laws (public and private): 104
+Public laws: 102
+Private laws: 2
+
+NOTE ON SCOPE: the 119th Congress is still in session (session 2 began 2026-01-03, per
+data/ref-text/record-congress-119-overview.txt), so every figure above is a count as of the fetch date,
+not a final total for the Congress.

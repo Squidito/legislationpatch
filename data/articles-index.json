@@ -34,7 +34,7 @@
       "order": 4,
       "section": "HOW-TO GUIDES",
       "label": "Guide",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Federal bills follow a predictable structure. This guide explains each part — the enacting clause, section numbering, amendment language, and how to find what actually changed."
     },
     "how-a-bill-becomes-law.html": {
@@ -48,8 +48,8 @@
       "order": 6,
       "section": "EDUCATIONAL",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "Most bills introduced in Congress never get a hearing, a vote, or any action. They die in committee. Here's how the committee system works and why it holds that much power."
+      "showUpdated": true,
+      "summary": "Congress divides its work among more than 200 committees and subcommittees, and almost every measure stops at one. What a committee is, the four types, and how a bill moves through one."
     },
     "what-is-congressional-record.html": {
       "order": 7,
@@ -202,8 +202,8 @@
       "order": 28,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "The House Rules Committee controls which bills reach the floor, how long debate lasts, and what amendments are allowed. Its majority is appointed by the Speaker."
+      "showUpdated": true,
+      "summary": "The House Rules Committee writes the resolution that sets how long a bill is debated and which amendments may be offered. Its majority members are nominated by the Speaker."
     },
     "presidential-veto.html": {
       "order": 29,
@@ -237,7 +237,7 @@
       "order": 33,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Congressional oversight is Congress's power to investigate, subpoena, and review executive branch conduct. Here's what tools Congress has and what its limits are."
     },
     "signing-statements.html": {
@@ -265,14 +265,14 @@
       "order": 37,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Not everything Congress passes is a bill. Joint resolutions, concurrent resolutions, and simple resolutions each carry different legal weight and serve different purposes."
     },
     "bill-numbering.html": {
       "order": 38,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Every measure Congress numbers carries a prefix that signals its type and whether it can become law. A legend for all eight measure types and how the numbers get assigned."
     },
     "voice-vote-vs-roll-call.html": {
@@ -293,8 +293,8 @@
       "order": 41,
       "section": "LEGISLATIVE PROCESS GUIDES",
       "label": "Explainer",
-      "showUpdated": false,
-      "summary": "A discharge petition lets 218 House members force a bill out of committee and onto the floor over the objection of leadership. How the threshold works and how often it succeeds."
+      "showUpdated": true,
+      "summary": "A discharge petition lets 218 House members force a bill out of committee and onto the floor without the committee or the leadership agreeing. How the threshold works and how often it succeeds."
     },
     "impoundment-rescission.html": {
       "order": 42,

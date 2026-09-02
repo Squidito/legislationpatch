@@ -1,58 +1,4 @@
 {
-  "bill-110-hr-6304": {
-    "id": "bill-110-hr-6304",
-    "kind": "bill",
-    "label": "HR 6304 (110th Congress)",
-    "citation": "HR 6304",
-    "srcUrl": "https://www.congress.gov/bill/110th-congress/house-bill/6304/text",
-    "textFile": "data/ref-text/bill-110-hr-6304.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "bill-112-hr-5949": {
-    "id": "bill-112-hr-5949",
-    "kind": "bill",
-    "label": "HR 5949 (112th Congress)",
-    "citation": "HR 5949",
-    "srcUrl": "https://www.congress.gov/bill/112th-congress/house-bill/5949/text",
-    "textFile": "data/ref-text/bill-112-hr-5949.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "bill-115-hr-1370": {
-    "id": "bill-115-hr-1370",
-    "kind": "bill",
-    "label": "HR 1370 (115th Congress)",
-    "citation": "HR 1370",
-    "srcUrl": "https://www.congress.gov/bill/115th-congress/house-bill/1370/text",
-    "textFile": "data/ref-text/bill-115-hr-1370.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "bill-115-s-139": {
-    "id": "bill-115-s-139",
-    "kind": "bill",
-    "label": "S 139 (115th Congress)",
-    "citation": "S 139",
-    "srcUrl": "https://www.congress.gov/bill/115th-congress/senate-bill/139/text",
-    "textFile": "data/ref-text/bill-115-s-139.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "bill-118-hr-2670": {
-    "id": "bill-118-hr-2670",
-    "kind": "bill",
-    "label": "HR 2670 (118th Congress)",
-    "citation": "HR 2670",
-    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/2670/text",
-    "textFile": "data/ref-text/bill-118-hr-2670.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "bill-118-hr-7888": {
-    "id": "bill-118-hr-7888",
-    "kind": "bill",
-    "label": "HR 7888 (118th Congress)",
-    "citation": "HR 7888",
-    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/7888/text",
-    "textFile": "data/ref-text/bill-118-hr-7888.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "bill-119-hr-22": {
     "id": "bill-119-hr-22",
     "kind": "bill",
@@ -70,33 +16,6 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7296/text",
     "textFile": "data/ref-text/bill-119-hr-7296.txt",
     "fetchedAt": "2026-08-19"
-  },
-  "fr-2021-22958": {
-    "id": "fr-2021-22958",
-    "kind": "record",
-    "label": "Federal Register — Notice of Application for Withdrawal and Segregation of Federal Lands; Cook, Lake, and Saint Louis Counties, Minnesota",
-    "citation": "86 FR 58299 (2021-10-21)",
-    "srcUrl": "https://www.federalregister.gov/documents/2021/10/21/2021-22958/notice-of-application-for-withdrawal-and-segregation-of-federal-lands-cook-lake-and-saint-louis",
-    "textFile": "data/ref-text/fr-2021-22958.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "fr-2022-15589": {
-    "id": "fr-2022-15589",
-    "kind": "record",
-    "label": "Federal Register — Superior National Forest; Minnesota; Rainy River Withdrawal Environmental Assessment",
-    "citation": "87 FR 43494 (2022-07-21)",
-    "srcUrl": "https://www.federalregister.gov/documents/2022/07/21/2022-15589/superior-national-forest-minnesota-rainy-river-withdrawal-environmental-assessment",
-    "textFile": "data/ref-text/fr-2022-15589.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "fr-2024-31215": {
-    "id": "fr-2024-31215",
-    "kind": "record",
-    "label": "Federal Register — Notice of Termination of the Environmental Impact Statement for the Twin Metals Project in the Superior National Forest, Lake and St. Louis Counties, Minnesota",
-    "citation": "89 FR 106561 (2024-12-30)",
-    "srcUrl": "https://www.federalregister.gov/documents/2024/12/30/2024-31215/notice-of-termination-of-the-environmental-impact-statement-for-the-twin-metals-project-in-the",
-    "textFile": "data/ref-text/fr-2024-31215.txt",
-    "fetchedAt": "2026-09-01"
   },
   "hman-119-rule-x": {
     "id": "hman-119-rule-x",
@@ -332,79 +251,6 @@
     "textFile": "data/ref-text/press-carson-yakym-safe-drugs.txt",
     "fetchedAt": "2026-08-31"
   },
-  "record-app-presidential-vetoes": {
-    "id": "record-app-presidential-vetoes",
-    "kind": "record",
-    "org": "American Presidency Project (UC Santa Barbara)",
-    "date": null,
-    "label": "American Presidency Project — Presidential Vetoes Washington - Trump II (data through January 8, 2026)",
-    "citation": "American Presidency Project (UC Santa Barbara)",
-    "srcUrl": "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes",
-    "textFile": "data/ref-text/record-app-presidential-vetoes.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-app-signing-statements": {
-    "id": "record-app-signing-statements",
-    "kind": "record",
-    "org": "American Presidency Project (UC Santa Barbara)",
-    "date": null,
-    "label": "American Presidency Project — Presidential Signing Statements: Hoover 1929 to present (archive and counts)",
-    "citation": "American Presidency Project (UC Santa Barbara)",
-    "srcUrl": "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929",
-    "textFile": "data/ref-text/record-app-signing-statements.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-cdc-lung-cancer-statistics": {
-    "id": "record-cdc-lung-cancer-statistics",
-    "kind": "record",
-    "org": "U.S. Centers for Disease Control and Prevention",
-    "date": null,
-    "label": "CDC — Lung Cancer Statistics",
-    "citation": "U.S. Centers for Disease Control and Prevention",
-    "srcUrl": "https://www.cdc.gov/lung-cancer/statistics/index.html",
-    "textFile": "data/ref-text/record-cdc-lung-cancer-statistics.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-119-nominations": {
-    "id": "record-congress-119-nominations",
-    "kind": "record",
-    "org": "Congress.gov",
-    "date": null,
-    "label": "Congress.gov API record - all 2,077 nominations of the 119th Congress with latest action",
-    "citation": "Congress.gov",
-    "srcUrl": "https://api.congress.gov/v3/nomination/119",
-    "textFile": "data/ref-text/record-congress-119-nominations.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-congress-hjres-140-actions": {
-    "id": "record-congress-hjres-140-actions",
-    "kind": "record",
-    "label": "Congress.gov API record - H.J.Res. 140 (119th Congress) full action history",
-    "citation": "Congress.gov, H.J.Res. 140 (119th Congress) actions",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140/all-actions",
-    "textFile": "data/ref-text/record-congress-hjres-140-actions.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-hjres-140-status": {
-    "id": "record-congress-hjres-140-status",
-    "kind": "record",
-    "label": "Congress.gov API record - H.J.Res. 140 (119th Congress) status",
-    "citation": "Congress.gov, H.J.Res. 140 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140",
-    "textFile": "data/ref-text/record-congress-hjres-140-status.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-hr-1346": {
-    "id": "record-congress-hr-1346",
-    "kind": "record",
-    "org": "Congress.gov (Library of Congress)",
-    "date": "2026-05-14",
-    "label": "Congress.gov record — H.R. 1346 (119th Congress): status, sponsor, cosponsors, full action history",
-    "citation": "Congress.gov, H.R. 1346 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
-    "textFile": "data/ref-text/record-congress-hr-1346.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-congress-hr-1968-actions": {
     "id": "record-congress-hr-1968-actions",
     "kind": "record",
@@ -433,17 +279,6 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22",
     "textFile": "data/ref-text/record-congress-hr-22-status.txt",
     "fetchedAt": "2026-08-19"
-  },
-  "record-congress-hr-2319": {
-    "id": "record-congress-hr-2319",
-    "kind": "record",
-    "org": "Congress.gov (Library of Congress)",
-    "date": "2026-04-22",
-    "label": "Congress.gov record — H.R. 2319 (119th Congress): status, sponsor, cosponsors, full action history",
-    "citation": "Congress.gov, H.R. 2319 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2319",
-    "textFile": "data/ref-text/record-congress-hr-2319.txt",
-    "fetchedAt": "2026-09-01"
   },
   "record-congress-hr-5371-actions": {
     "id": "record-congress-hr-5371-actions",
@@ -546,15 +381,6 @@
     "textFile": "data/ref-text/record-congress-hr-7296-status.txt",
     "fetchedAt": "2026-08-19"
   },
-  "record-congress-hr-8035-actions": {
-    "id": "record-congress-hr-8035-actions",
-    "kind": "record",
-    "label": "Congress.gov record - H.R. 8035 (119th Congress) status and action history, with the rule resolution H. Res. 1175",
-    "citation": "Congress.gov, H.R. 8035 and H. Res. 1175 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8035/all-actions",
-    "textFile": "data/ref-text/record-congress-hr-8035-actions.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-congress-hr-8646-actions": {
     "id": "record-congress-hr-8646-actions",
     "kind": "record",
@@ -572,15 +398,6 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
     "textFile": "data/ref-text/record-congress-hr-8646-status.txt",
     "fetchedAt": "2026-08-28"
-  },
-  "record-congress-hr-9238-actions": {
-    "id": "record-congress-hr-9238-actions",
-    "kind": "record",
-    "label": "Congress.gov record - H.R. 9238 (119th Congress) full action history",
-    "citation": "Congress.gov, H.R. 9238 (119th Congress) actions",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9238/all-actions",
-    "textFile": "data/ref-text/record-congress-hr-9238-actions.txt",
-    "fetchedAt": "2026-08-27"
   },
   "record-congress-hr-9770-actions": {
     "id": "record-congress-hr-9770-actions",
@@ -611,44 +428,6 @@
     "textFile": "data/ref-text/record-congress-s-1383-status.txt",
     "fetchedAt": "2026-08-19"
   },
-  "record-congress-s-1884": {
-    "id": "record-congress-s-1884",
-    "kind": "record",
-    "org": "Congress.gov (Library of Congress)",
-    "date": "2026-04-13",
-    "label": "Congress.gov record — S. 1884 (119th Congress): status, sponsor, cosponsors, full action history",
-    "citation": "Congress.gov, S. 1884 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
-    "textFile": "data/ref-text/record-congress-s-1884.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-s-3794": {
-    "id": "record-congress-s-3794",
-    "kind": "record",
-    "label": "Congress.gov record - S. 3794 (119th Congress) status, sponsor, cosponsors, action history",
-    "citation": "Congress.gov, S. 3794 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3794/all-actions",
-    "textFile": "data/ref-text/record-congress-s-3794.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-s-3971-actions": {
-    "id": "record-congress-s-3971-actions",
-    "kind": "record",
-    "label": "Congress.gov API record - S. 3971 (119th Congress) full action history",
-    "citation": "Congress.gov, S. 3971 (119th Congress) actions",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3971/all-actions",
-    "textFile": "data/ref-text/record-congress-s-3971-actions.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-congress-s-3971-status": {
-    "id": "record-congress-s-3971-status",
-    "kind": "record",
-    "label": "Congress.gov API record - S. 3971 (119th Congress) status",
-    "citation": "Congress.gov, S. 3971 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3971",
-    "textFile": "data/ref-text/record-congress-s-3971-status.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-constitution-amendments-11-27": {
     "id": "record-constitution-amendments-11-27",
     "kind": "record",
@@ -669,17 +448,6 @@
     "citation": "U.S. Constitution",
     "srcUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
     "textFile": "data/ref-text/record-constitution-transcript.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-98-225-uc-agreements": {
-    "id": "record-crs-98-225-uc-agreements",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report 98-225, Unanimous Consent Agreements in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/98-225.html",
-    "textFile": "data/ref-text/record-crs-98-225-uc-agreements.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-98-228-house-voting": {
@@ -715,28 +483,6 @@
     "textFile": "data/ref-text/record-crs-98-314-suspension.txt",
     "fetchedAt": "2026-08-31"
   },
-  "record-crs-98-425-invoking-cloture": {
-    "id": "record-crs-98-425-invoking-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report 98-425, Invoking Cloture in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/98-425.html",
-    "textFile": "data/ref-text/record-crs-98-425-invoking-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-98-560-baselines": {
-    "id": "record-crs-98-560-baselines",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report 98-560 — Baselines and Scorekeeping in the Federal Budget Process",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/98-560.html",
-    "textFile": "data/ref-text/record-crs-98-560-baselines.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-crs-if10515-ndaa-process": {
     "id": "record-crs-if10515-ndaa-process",
     "kind": "record",
@@ -768,17 +514,6 @@
     "textFile": "data/ref-text/record-crs-in12324-omnibus.txt",
     "fetchedAt": "2026-08-28"
   },
-  "record-crs-lsb11374-pocket-rescissions": {
-    "id": "record-crs-lsb11374-pocket-rescissions",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Legal Sidebar LSB11374 — Pocket Rescissions and the Impoundment Control Act",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/LSB11374.html",
-    "textFile": "data/ref-text/record-crs-lsb11374-pocket-rescissions.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-crs-r42843-legislative-process": {
     "id": "record-crs-r42843-legislative-process",
     "kind": "record",
@@ -788,39 +523,6 @@
     "citation": "Congressional Research Service",
     "srcUrl": "https://www.everycrsreport.com/reports/R42843.html",
     "textFile": "data/ref-text/record-crs-r42843-legislative-process.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-r43563-senate-holds": {
-    "id": "record-crs-r43563-senate-holds",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R43563, \"Holds\" in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R43563.html",
-    "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-r44058-reconciliation-stages": {
-    "id": "record-crs-r44058-reconciliation-stages",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R44058 — The Budget Reconciliation Process: Stages of Consideration",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R44058.html",
-    "textFile": "data/ref-text/record-crs-r44058-reconciliation-stages.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-crs-r44819-majority-cloture": {
-    "id": "record-crs-r44819-majority-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R44819, Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R44819.html",
-    "textFile": "data/ref-text/record-crs-r44819-majority-cloture.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-r45153-statutory-interpretation": {
@@ -834,28 +536,6 @@
     "textFile": "data/ref-text/record-crs-r45153-statutory-interpretation.txt",
     "fetchedAt": "2026-08-30"
   },
-  "record-crs-r46233-dynamic-scoring": {
-    "id": "record-crs-r46233-dynamic-scoring",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R46233 — Dynamic Scoring in the Congressional Budget Process",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R46233.html",
-    "textFile": "data/ref-text/record-crs-r46233-dynamic-scoring.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-crs-r46240-budget-process": {
-    "id": "record-crs-r46240-budget-process",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R46240 — Introduction to the Federal Budget Process",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R46240.html",
-    "textFile": "data/ref-text/record-crs-r46240-budget-process.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-crs-r47106-approps-overview": {
     "id": "record-crs-r47106-approps-overview",
     "kind": "record",
@@ -864,17 +544,6 @@
     "srcUrl": "https://www.everycrsreport.com/reports/R47106.html",
     "textFile": "data/ref-text/record-crs-r47106-approps-overview.txt",
     "fetchedAt": "2026-08-28"
-  },
-  "record-crs-r48432-ica": {
-    "id": "record-crs-r48432-ica",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report R48432 — The Impoundment Control Act of 1974: Background and Congressional Consideration of Rescissions",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/R48432.html",
-    "textFile": "data/ref-text/record-crs-r48432-ica.txt",
-    "fetchedAt": "2026-09-01"
   },
   "record-crs-r48444-reconciliation-faq": {
     "id": "record-crs-r48444-reconciliation-faq",
@@ -896,28 +565,6 @@
     "textFile": "data/ref-text/record-crs-r48731-full-year-cr.txt",
     "fetchedAt": "2026-08-28"
   },
-  "record-crs-rl30360-filibusters-cloture": {
-    "id": "record-crs-rl30360-filibusters-cloture",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL30360, Filibusters and Cloture in the Senate",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL30360.html",
-    "textFile": "data/ref-text/record-crs-rl30360-filibusters-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl30862-byrd-rule": {
-    "id": "record-crs-rl30862-byrd-rule",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL30862 — The Budget Reconciliation Process: The Senate's \"Byrd Rule\"",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL30862.html",
-    "textFile": "data/ref-text/record-crs-rl30862-byrd-rule.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-crs-rl30909-pocket-veto": {
     "id": "record-crs-rl30909-pocket-veto",
     "kind": "record",
@@ -927,61 +574,6 @@
     "citation": "Congressional Research Service",
     "srcUrl": "https://www.everycrsreport.com/reports/RL30909.html",
     "textFile": "data/ref-text/record-crs-rl30909-pocket-veto.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl32684-nuclear-option": {
-    "id": "record-crs-rl32684-nuclear-option",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL32684, Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL32684.html",
-    "textFile": "data/ref-text/record-crs-rl32684-nuclear-option.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl33667-signing-statements": {
-    "id": "record-crs-rl33667-signing-statements",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": "2012-01-04",
-    "label": "CRS Report RL33667 — Presidential Signing Statements: Constitutional and Institutional Implications (updated January 4, 2012)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL33667.html",
-    "textFile": "data/ref-text/record-crs-rl33667-signing-statements.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-crs-rl34680-shutdown": {
-    "id": "record-crs-rl34680-shutdown",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RL34680 — Shutdown of the Federal Government: Causes, Processes, and Effects",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RL34680.html",
-    "textFile": "data/ref-text/record-crs-rl34680-shutdown.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-crs-rs20348-funding-gaps": {
-    "id": "record-crs-rs20348-funding-gaps",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": null,
-    "label": "CRS Report RS20348 — Federal Funding Gaps: A Brief Overview (updated May 26, 2026)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RS20348.html",
-    "textFile": "data/ref-text/record-crs-rs20348-funding-gaps.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-crs-rs22188-vetoes": {
-    "id": "record-crs-rs22188-vetoes",
-    "kind": "record",
-    "org": "Congressional Research Service",
-    "date": "2019-07-18",
-    "label": "CRS Report RS22188 — Regular Vetoes and Pocket Vetoes: In Brief (updated July 18, 2019)",
-    "citation": "Congressional Research Service",
-    "srcUrl": "https://www.everycrsreport.com/reports/RS22188.html",
-    "textFile": "data/ref-text/record-crs-rs22188-vetoes.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-crs-rs22299-rule-xiv": {
@@ -995,28 +587,6 @@
     "textFile": "data/ref-text/record-crs-rs22299-rule-xiv.txt",
     "fetchedAt": "2026-08-31"
   },
-  "record-epa-fuel-waivers": {
-    "id": "record-epa-fuel-waivers",
-    "kind": "record",
-    "org": "U.S. Environmental Protection Agency",
-    "date": null,
-    "label": "EPA — Fuel Waivers (emergency fuel-standard waivers, including summer E15 waivers)",
-    "citation": "U.S. Environmental Protection Agency",
-    "srcUrl": "https://www.epa.gov/gasoline-standards/fuel-waivers",
-    "textFile": "data/ref-text/record-epa-fuel-waivers.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-epa-gasoline-rvp": {
-    "id": "record-epa-gasoline-rvp",
-    "kind": "record",
-    "org": "U.S. Environmental Protection Agency",
-    "date": null,
-    "label": "EPA — Gasoline Reid Vapor Pressure",
-    "citation": "U.S. Environmental Protection Agency",
-    "srcUrl": "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure",
-    "textFile": "data/ref-text/record-epa-gasoline-rvp.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-gao-budget-glossary": {
     "id": "record-gao-budget-glossary",
     "kind": "record",
@@ -1025,28 +595,6 @@
     "srcUrl": "https://www.gao.gov/products/gao-05-734sp",
     "textFile": "data/ref-text/record-gao-budget-glossary.txt",
     "fetchedAt": "2026-08-28"
-  },
-  "record-gao-impoundment-control-act": {
-    "id": "record-gao-impoundment-control-act",
-    "kind": "record",
-    "org": "U.S. Government Accountability Office",
-    "date": null,
-    "label": "GAO: Impoundment Control Act",
-    "citation": "U.S. Government Accountability Office",
-    "srcUrl": "https://www.gao.gov/legal/appropriations-law/impoundment-control-act",
-    "textFile": "data/ref-text/record-gao-impoundment-control-act.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-govinfo-cpd": {
-    "id": "record-govinfo-cpd",
-    "kind": "record",
-    "org": "U.S. Government Publishing Office (GovInfo)",
-    "date": null,
-    "label": "GovInfo — Compilation of Presidential Documents (collection description)",
-    "citation": "U.S. Government Publishing Office (GovInfo)",
-    "srcUrl": "https://www.govinfo.gov/help/cpd",
-    "textFile": "data/ref-text/record-govinfo-cpd.txt",
-    "fetchedAt": "2026-08-31"
   },
   "record-govinfo-crec-about": {
     "id": "record-govinfo-crec-about",
@@ -1059,17 +607,6 @@
     "textFile": "data/ref-text/record-govinfo-crec-about.txt",
     "fetchedAt": "2026-08-30"
   },
-  "record-house-report-119-382": {
-    "id": "record-house-report-119-382",
-    "kind": "record",
-    "org": "U.S. House Committee on Energy and Commerce",
-    "date": "2025-11-18",
-    "label": "H. Rept. 119-382 — Women and Lung Cancer Research and Preventive Services Act of 2025 (House Energy and Commerce Committee report on H.R. 2319)",
-    "citation": "H. Rept. 119-382",
-    "srcUrl": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm",
-    "textFile": "data/ref-text/record-house-report-119-382.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "record-house-roll-2026-069-s1383": {
     "id": "record-house-roll-2026-069-s1383",
     "kind": "record",
@@ -1080,138 +617,6 @@
     "srcUrl": "https://clerk.house.gov/evs/2026/roll069.xml",
     "textFile": "data/ref-text/record-house-roll-2026-069-s1383.txt",
     "fetchedAt": "2026-08-19"
-  },
-  "record-nci-lung-cancer-overview": {
-    "id": "record-nci-lung-cancer-overview",
-    "kind": "record",
-    "org": "National Cancer Institute",
-    "date": null,
-    "label": "NCI — Lung Cancer (patient information overview)",
-    "citation": "National Cancer Institute",
-    "srcUrl": "https://www.cancer.gov/types/lung",
-    "textFile": "data/ref-text/record-nci-lung-cancer-overview.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-nci-seer-lung-statfacts": {
-    "id": "record-nci-seer-lung-statfacts",
-    "kind": "record",
-    "org": "National Cancer Institute (SEER Program)",
-    "date": null,
-    "label": "NCI SEER Cancer Stat Facts: Lung and Bronchus Cancer",
-    "citation": "National Cancer Institute, SEER Program",
-    "srcUrl": "https://seer.cancer.gov/statfacts/html/lungb.html",
-    "textFile": "data/ref-text/record-nci-seer-lung-statfacts.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-omb-a11-s124": {
-    "id": "record-omb-a11-s124",
-    "kind": "record",
-    "org": "Office of Management and Budget",
-    "date": null,
-    "label": "OMB Circular A-11 Section 124 — Agency Operations in the Absence of Appropriations",
-    "citation": "Office of Management and Budget",
-    "srcUrl": "https://www.whitehouse.gov/wp-content/uploads/2025/08/s124.pdf",
-    "textFile": "data/ref-text/record-omb-a11-s124.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-plaw-114-308-hear-act": {
-    "id": "record-plaw-114-308-hear-act",
-    "kind": "record",
-    "org": "U.S. Government Publishing Office",
-    "date": "2016-12-16",
-    "label": "Public Law 114-308 — Holocaust Expropriated Art Recovery Act of 2016 (enacted text)",
-    "citation": "Pub. L. No. 114-308",
-    "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm",
-    "textFile": "data/ref-text/record-plaw-114-308-hear-act.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-sbir-gov-about": {
-    "id": "record-sbir-gov-about",
-    "kind": "record",
-    "org": "U.S. Small Business Administration (SBIR.gov)",
-    "date": null,
-    "label": "SBIR.gov — About the SBIR and STTR programs",
-    "citation": "U.S. Small Business Administration (SBIR.gov)",
-    "srcUrl": "https://www.sbir.gov/about",
-    "textFile": "data/ref-text/record-sbir-gov-about.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-sbir-gov-agencies": {
-    "id": "record-sbir-gov-agencies",
-    "kind": "record",
-    "org": "U.S. Small Business Administration (SBIR.gov)",
-    "date": null,
-    "label": "SBIR.gov — Participating agencies",
-    "citation": "U.S. Small Business Administration (SBIR.gov)",
-    "srcUrl": "https://www.sbir.gov/participating-agencies",
-    "textFile": "data/ref-text/record-sbir-gov-agencies.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "record-scotus-clinton-v-nyc-1998": {
-    "id": "record-scotus-clinton-v-nyc-1998",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "Clinton v. City of New York, 524 U.S. 417 (1998)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
-    "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-scotus-pocket-veto-case-1929": {
-    "id": "record-scotus-pocket-veto-case-1929",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "The Pocket Veto Case, 279 U.S. 655 (1929)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/279/655",
-    "textFile": "data/ref-text/record-scotus-pocket-veto-case-1929.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-scotus-wright-v-us-1938": {
-    "id": "record-scotus-wright-v-us-1938",
-    "kind": "record",
-    "org": "Legal Information Institute, Cornell Law School",
-    "date": null,
-    "label": "Wright v. United States, 302 U.S. 583 (1938)",
-    "citation": "Legal Information Institute, Cornell Law School",
-    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/302/583",
-    "textFile": "data/ref-text/record-scotus-wright-v-us-1938.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-cloture-counts": {
-    "id": "record-senate-cloture-counts",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: Senate Action on Cloture Motions",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/legislative/cloture/clotureCounts.htm",
-    "textFile": "data/ref-text/record-senate-cloture-counts.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-filibusters-cloture": {
-    "id": "record-senate-filibusters-cloture",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: About Filibusters and Cloture",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm",
-    "textFile": "data/ref-text/record-senate-filibusters-cloture.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-filibusters-cloture-overview": {
-    "id": "record-senate-filibusters-cloture-overview",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "U.S. Senate: Filibuster and Cloture Overview",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm",
-    "textFile": "data/ref-text/record-senate-filibusters-cloture-overview.txt",
-    "fetchedAt": "2026-08-31"
   },
   "record-senate-leadership": {
     "id": "record-senate-leadership",
@@ -1233,17 +638,6 @@
     "citation": "Senate Manual (S. Doc. 113-1)",
     "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-113sdoc18/html/CDOC-113sdoc18.htm",
     "textFile": "data/ref-text/record-senate-manual-113.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "record-senate-manual-118": {
-    "id": "record-senate-manual-118",
-    "kind": "record",
-    "org": "U.S. Senate",
-    "date": null,
-    "label": "Senate Manual, 118th Congress (S. Doc. 118-1) — Standing Rules of the Senate",
-    "citation": "U.S. Senate",
-    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm",
-    "textFile": "data/ref-text/record-senate-manual-118.txt",
     "fetchedAt": "2026-08-31"
   },
   "record-senate-roll-118-2-219": {
@@ -1301,17 +695,6 @@
     "textFile": "data/ref-text/record-senate-rollcall-119-1-648.txt",
     "fetchedAt": "2026-08-31"
   },
-  "record-senate-veto-counts": {
-    "id": "record-senate-veto-counts",
-    "kind": "record",
-    "org": "United States Senate",
-    "date": null,
-    "label": "U.S. Senate — Vetoes by President, 1789 to Present (summary counts)",
-    "citation": "United States Senate",
-    "srcUrl": "https://www.senate.gov/legislative/vetoes/vetoCounts.htm",
-    "textFile": "data/ref-text/record-senate-veto-counts.txt",
-    "fetchedAt": "2026-08-31"
-  },
   "record-senate-voting-procedures": {
     "id": "record-senate-voting-procedures",
     "kind": "record",
@@ -1322,17 +705,6 @@
     "srcUrl": "https://www.senate.gov/about/powers-procedures/voting.htm",
     "textFile": "data/ref-text/record-senate-voting-procedures.txt",
     "fetchedAt": "2026-08-31"
-  },
-  "record-uspstf-lung-cancer-screening": {
-    "id": "record-uspstf-lung-cancer-screening",
-    "kind": "record",
-    "org": "U.S. Preventive Services Task Force",
-    "date": null,
-    "label": "USPSTF Final Recommendation Statement: Lung Cancer — Screening",
-    "citation": "U.S. Preventive Services Task Force",
-    "srcUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
-    "textFile": "data/ref-text/record-uspstf-lung-cancer-screening.txt",
-    "fetchedAt": "2026-09-01"
   },
   "usc-1-106": {
     "id": "usc-1-106",
@@ -1388,42 +760,6 @@
     "textFile": "data/ref-text/usc-15-261.txt",
     "fetchedAt": "2026-08-27"
   },
-  "usc-15-638": {
-    "id": "usc-15-638",
-    "kind": "statute",
-    "label": "Small Business Act Section 9 (SBIR/STTR)",
-    "citation": "15 U.S.C. 638",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap14A-sec638/htm",
-    "textFile": "data/ref-text/usc-15-638.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-16-1132": {
-    "id": "usc-16-1132",
-    "kind": "statute",
-    "label": "16 U.S.C. 1132 — extension of wilderness system",
-    "citation": "16 U.S.C. 1132",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap23-sec1132/htm",
-    "textFile": "data/ref-text/usc-16-1132.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-18-2511": {
-    "id": "usc-18-2511",
-    "kind": "statute",
-    "label": "Federal wiretap statute, provider assistance clause (18 U.S.C. 2511)",
-    "citation": "18 U.S.C. 2511",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title18/granules/USCODE-2024-title18-partI-chap119-sec2511/htm",
-    "textFile": "data/ref-text/usc-18-2511.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-19-2191": {
-    "id": "usc-19-2191",
-    "kind": "statute",
-    "label": "Trade implementing bills — expedited congressional procedures (19 U.S.C. 2191)",
-    "citation": "19 U.S.C. 2191",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap12-subchapI-part5-sec2191/htm",
-    "textFile": "data/ref-text/usc-19-2191.txt",
-    "fetchedAt": "2026-08-31"
-  },
   "usc-2-2a": {
     "id": "usc-2-2a",
     "kind": "statute",
@@ -1441,33 +777,6 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17-sec601/htm",
     "textFile": "data/ref-text/usc-2-601.txt",
     "fetchedAt": "2026-08-17"
-  },
-  "usc-2-602": {
-    "id": "usc-2-602",
-    "kind": "statute",
-    "label": "2 U.S.C. 602",
-    "citation": "2 U.S.C. 602",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17-sec602/htm",
-    "textFile": "data/ref-text/usc-2-602.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-621": {
-    "id": "usc-2-621",
-    "kind": "statute",
-    "label": "2 U.S.C. 621",
-    "citation": "2 U.S.C. 621",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-sec621/htm",
-    "textFile": "data/ref-text/usc-2-621.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-622": {
-    "id": "usc-2-622",
-    "kind": "statute",
-    "label": "2 U.S.C. 622",
-    "citation": "2 U.S.C. 622",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-sec622/htm",
-    "textFile": "data/ref-text/usc-2-622.txt",
-    "fetchedAt": "2026-09-01"
   },
   "usc-2-632": {
     "id": "usc-2-632",
@@ -1496,105 +805,6 @@
     "textFile": "data/ref-text/usc-2-644.txt",
     "fetchedAt": "2026-08-15"
   },
-  "usc-2-653": {
-    "id": "usc-2-653",
-    "kind": "statute",
-    "label": "2 U.S.C. 653",
-    "citation": "2 U.S.C. 653",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partA-sec653/htm",
-    "textFile": "data/ref-text/usc-2-653.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-658": {
-    "id": "usc-2-658",
-    "kind": "statute",
-    "label": "2 U.S.C. 658",
-    "citation": "2 U.S.C. 658",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partB-sec658/htm",
-    "textFile": "data/ref-text/usc-2-658.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-658c": {
-    "id": "usc-2-658c",
-    "kind": "statute",
-    "label": "2 U.S.C. 658c",
-    "citation": "2 U.S.C. 658c",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partB-sec658c/htm",
-    "textFile": "data/ref-text/usc-2-658c.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-681": {
-    "id": "usc-2-681",
-    "kind": "statute",
-    "label": "2 U.S.C. 681",
-    "citation": "2 U.S.C. 681",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapI-sec681/htm",
-    "textFile": "data/ref-text/usc-2-681.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-682": {
-    "id": "usc-2-682",
-    "kind": "statute",
-    "label": "2 U.S.C. 682",
-    "citation": "2 U.S.C. 682",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec682/htm",
-    "textFile": "data/ref-text/usc-2-682.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-683": {
-    "id": "usc-2-683",
-    "kind": "statute",
-    "label": "2 U.S.C. 683",
-    "citation": "2 U.S.C. 683",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec683/htm",
-    "textFile": "data/ref-text/usc-2-683.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-684": {
-    "id": "usc-2-684",
-    "kind": "statute",
-    "label": "2 U.S.C. 684",
-    "citation": "2 U.S.C. 684",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec684/htm",
-    "textFile": "data/ref-text/usc-2-684.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-685": {
-    "id": "usc-2-685",
-    "kind": "statute",
-    "label": "2 U.S.C. 685",
-    "citation": "2 U.S.C. 685",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec685/htm",
-    "textFile": "data/ref-text/usc-2-685.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-686": {
-    "id": "usc-2-686",
-    "kind": "statute",
-    "label": "2 U.S.C. 686",
-    "citation": "2 U.S.C. 686",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec686/htm",
-    "textFile": "data/ref-text/usc-2-686.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-687": {
-    "id": "usc-2-687",
-    "kind": "statute",
-    "label": "2 U.S.C. 687",
-    "citation": "2 U.S.C. 687",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec687/htm",
-    "textFile": "data/ref-text/usc-2-687.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-688": {
-    "id": "usc-2-688",
-    "kind": "statute",
-    "label": "2 U.S.C. 688",
-    "citation": "2 U.S.C. 688",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec688/htm",
-    "textFile": "data/ref-text/usc-2-688.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "usc-2-900": {
     "id": "usc-2-900",
     "kind": "statute",
@@ -1603,24 +813,6 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20-subchapI-sec900/htm",
     "textFile": "data/ref-text/usc-2-900.txt",
     "fetchedAt": "2026-08-15"
-  },
-  "usc-2-931": {
-    "id": "usc-2-931",
-    "kind": "statute",
-    "label": "2 U.S.C. 931",
-    "citation": "2 U.S.C. 931",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20A-sec931/htm",
-    "textFile": "data/ref-text/usc-2-931.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-2-933": {
-    "id": "usc-2-933",
-    "kind": "statute",
-    "label": "2 U.S.C. 933",
-    "citation": "2 U.S.C. 933",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20A-sec933/htm",
-    "textFile": "data/ref-text/usc-2-933.txt",
-    "fetchedAt": "2026-09-01"
   },
   "usc-21-353a": {
     "id": "usc-21-353a",
@@ -1730,15 +922,6 @@
     "textFile": "data/ref-text/usc-42-1395m-1.txt",
     "fetchedAt": "2026-08-27"
   },
-  "usc-42-7545": {
-    "id": "usc-42-7545",
-    "kind": "statute",
-    "label": "42 U.S.C. 7545 (Clean Air Act Sec. 211) — Regulation of fuels",
-    "citation": "42 U.S.C. 7545",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapII-partA-sec7545/htm",
-    "textFile": "data/ref-text/usc-42-7545.txt",
-    "fetchedAt": "2026-09-01"
-  },
   "usc-5-801": {
     "id": "usc-5-801",
     "kind": "statute",
@@ -1810,42 +993,6 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap8-sec808/htm",
     "textFile": "data/ref-text/usc-5-808.txt",
     "fetchedAt": "2026-08-19"
-  },
-  "usc-50-1546": {
-    "id": "usc-50-1546",
-    "kind": "statute",
-    "label": "War Powers Resolution — priority procedures (50 U.S.C. 1546)",
-    "citation": "50 U.S.C. 1546",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546/htm",
-    "textFile": "data/ref-text/usc-50-1546.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "usc-50-1546a": {
-    "id": "usc-50-1546a",
-    "kind": "statute",
-    "label": "War Powers Resolution — expedited procedures for joint resolutions and bills (50 U.S.C. 1546a)",
-    "citation": "50 U.S.C. 1546a",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546a/htm",
-    "textFile": "data/ref-text/usc-50-1546a.txt",
-    "fetchedAt": "2026-08-31"
-  },
-  "usc-50-1801": {
-    "id": "usc-50-1801",
-    "kind": "statute",
-    "label": "FISA definitions and the section 404 Transition Procedures note (50 U.S.C. 1801)",
-    "citation": "50 U.S.C. 1801",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap36-subchapI-sec1801/htm",
-    "textFile": "data/ref-text/usc-50-1801.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "usc-50-1881": {
-    "id": "usc-50-1881",
-    "kind": "statute",
-    "label": "FISA Title VII definitions and sunset note (50 U.S.C. 1881)",
-    "citation": "50 U.S.C. 1881",
-    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap36-subchapVI-sec1881/htm",
-    "textFile": "data/ref-text/usc-50-1881.txt",
-    "fetchedAt": "2026-09-01"
   },
   "usc-50-2538a": {
     "id": "usc-50-2538a",
@@ -1946,6 +1093,859 @@
     "textFile": "data/ref-text/usc-52-21083.txt",
     "fetchedAt": "2026-08-27"
   },
+  "record-congress-119-nominations": {
+    "id": "record-congress-119-nominations",
+    "kind": "record",
+    "org": "Congress.gov",
+    "date": null,
+    "label": "Congress.gov API record - all 2,077 nominations of the 119th Congress with latest action",
+    "citation": "Congress.gov",
+    "srcUrl": "https://api.congress.gov/v3/nomination/119",
+    "textFile": "data/ref-text/record-congress-119-nominations.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-98-225-uc-agreements": {
+    "id": "record-crs-98-225-uc-agreements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-225, Unanimous Consent Agreements in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-225.html",
+    "textFile": "data/ref-text/record-crs-98-225-uc-agreements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-98-425-invoking-cloture": {
+    "id": "record-crs-98-425-invoking-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-425, Invoking Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-425.html",
+    "textFile": "data/ref-text/record-crs-98-425-invoking-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-r43563-senate-holds": {
+    "id": "record-crs-r43563-senate-holds",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R43563, \"Holds\" in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R43563.html",
+    "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-r44819-majority-cloture": {
+    "id": "record-crs-r44819-majority-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44819, Senate Proceedings Establishing Majority Cloture for Supreme Court Nominations: In Brief",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44819.html",
+    "textFile": "data/ref-text/record-crs-r44819-majority-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl30360-filibusters-cloture": {
+    "id": "record-crs-rl30360-filibusters-cloture",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30360, Filibusters and Cloture in the Senate",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30360.html",
+    "textFile": "data/ref-text/record-crs-rl30360-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl32684-nuclear-option": {
+    "id": "record-crs-rl32684-nuclear-option",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL32684, Changing Senate Rules or Procedures: The \"Constitutional\" or \"Nuclear\" Option",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL32684.html",
+    "textFile": "data/ref-text/record-crs-rl32684-nuclear-option.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-cloture-counts": {
+    "id": "record-senate-cloture-counts",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Senate Action on Cloture Motions",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/legislative/cloture/clotureCounts.htm",
+    "textFile": "data/ref-text/record-senate-cloture-counts.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture": {
+    "id": "record-senate-filibusters-cloture",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: About Filibusters and Cloture",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-filibusters-cloture-overview": {
+    "id": "record-senate-filibusters-cloture-overview",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "U.S. Senate: Filibuster and Cloture Overview",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm",
+    "textFile": "data/ref-text/record-senate-filibusters-cloture-overview.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-manual-118": {
+    "id": "record-senate-manual-118",
+    "kind": "record",
+    "org": "U.S. Senate",
+    "date": null,
+    "label": "Senate Manual, 118th Congress (S. Doc. 118-1) — Standing Rules of the Senate",
+    "citation": "U.S. Senate",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CDOC-118sdoc1/html/CDOC-118sdoc1.htm",
+    "textFile": "data/ref-text/record-senate-manual-118.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-19-2191": {
+    "id": "usc-19-2191",
+    "kind": "statute",
+    "label": "Trade implementing bills — expedited congressional procedures (19 U.S.C. 2191)",
+    "citation": "19 U.S.C. 2191",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title19/granules/USCODE-2024-title19-chap12-subchapI-part5-sec2191/htm",
+    "textFile": "data/ref-text/usc-19-2191.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-50-1546": {
+    "id": "usc-50-1546",
+    "kind": "statute",
+    "label": "War Powers Resolution — priority procedures (50 U.S.C. 1546)",
+    "citation": "50 U.S.C. 1546",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546/htm",
+    "textFile": "data/ref-text/usc-50-1546.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "usc-50-1546a": {
+    "id": "usc-50-1546a",
+    "kind": "statute",
+    "label": "War Powers Resolution — expedited procedures for joint resolutions and bills (50 U.S.C. 1546a)",
+    "citation": "50 U.S.C. 1546a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap33-sec1546a/htm",
+    "textFile": "data/ref-text/usc-50-1546a.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-app-presidential-vetoes": {
+    "id": "record-app-presidential-vetoes",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Vetoes Washington - Trump II (data through January 8, 2026)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/statistics/data/presidential-vetoes",
+    "textFile": "data/ref-text/record-app-presidential-vetoes.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-app-signing-statements": {
+    "id": "record-app-signing-statements",
+    "kind": "record",
+    "org": "American Presidency Project (UC Santa Barbara)",
+    "date": null,
+    "label": "American Presidency Project — Presidential Signing Statements: Hoover 1929 to present (archive and counts)",
+    "citation": "American Presidency Project (UC Santa Barbara)",
+    "srcUrl": "https://www.presidency.ucsb.edu/documents/presidential-documents-archive-guidebook/presidential-signing-statements-hoover-1929",
+    "textFile": "data/ref-text/record-app-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rl33667-signing-statements": {
+    "id": "record-crs-rl33667-signing-statements",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2012-01-04",
+    "label": "CRS Report RL33667 — Presidential Signing Statements: Constitutional and Institutional Implications (updated January 4, 2012)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL33667.html",
+    "textFile": "data/ref-text/record-crs-rl33667-signing-statements.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-crs-rs22188-vetoes": {
+    "id": "record-crs-rs22188-vetoes",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": "2019-07-18",
+    "label": "CRS Report RS22188 — Regular Vetoes and Pocket Vetoes: In Brief (updated July 18, 2019)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RS22188.html",
+    "textFile": "data/ref-text/record-crs-rs22188-vetoes.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-govinfo-cpd": {
+    "id": "record-govinfo-cpd",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office (GovInfo)",
+    "date": null,
+    "label": "GovInfo — Compilation of Presidential Documents (collection description)",
+    "citation": "U.S. Government Publishing Office (GovInfo)",
+    "srcUrl": "https://www.govinfo.gov/help/cpd",
+    "textFile": "data/ref-text/record-govinfo-cpd.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-clinton-v-nyc-1998": {
+    "id": "record-scotus-clinton-v-nyc-1998",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Clinton v. City of New York, 524 U.S. 417 (1998)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
+    "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-pocket-veto-case-1929": {
+    "id": "record-scotus-pocket-veto-case-1929",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "The Pocket Veto Case, 279 U.S. 655 (1929)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/279/655",
+    "textFile": "data/ref-text/record-scotus-pocket-veto-case-1929.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-wright-v-us-1938": {
+    "id": "record-scotus-wright-v-us-1938",
+    "kind": "record",
+    "org": "Legal Information Institute, Cornell Law School",
+    "date": null,
+    "label": "Wright v. United States, 302 U.S. 583 (1938)",
+    "citation": "Legal Information Institute, Cornell Law School",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/302/583",
+    "textFile": "data/ref-text/record-scotus-wright-v-us-1938.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "record-senate-veto-counts": {
+    "id": "record-senate-veto-counts",
+    "kind": "record",
+    "org": "United States Senate",
+    "date": null,
+    "label": "U.S. Senate — Vetoes by President, 1789 to Present (summary counts)",
+    "citation": "United States Senate",
+    "srcUrl": "https://www.senate.gov/legislative/vetoes/vetoCounts.htm",
+    "textFile": "data/ref-text/record-senate-veto-counts.txt",
+    "fetchedAt": "2026-08-31"
+  },
+  "fr-2021-22958": {
+    "id": "fr-2021-22958",
+    "kind": "record",
+    "label": "Federal Register — Notice of Application for Withdrawal and Segregation of Federal Lands; Cook, Lake, and Saint Louis Counties, Minnesota",
+    "citation": "86 FR 58299 (2021-10-21)",
+    "srcUrl": "https://www.federalregister.gov/documents/2021/10/21/2021-22958/notice-of-application-for-withdrawal-and-segregation-of-federal-lands-cook-lake-and-saint-louis",
+    "textFile": "data/ref-text/fr-2021-22958.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "fr-2022-15589": {
+    "id": "fr-2022-15589",
+    "kind": "record",
+    "label": "Federal Register — Superior National Forest; Minnesota; Rainy River Withdrawal Environmental Assessment",
+    "citation": "87 FR 43494 (2022-07-21)",
+    "srcUrl": "https://www.federalregister.gov/documents/2022/07/21/2022-15589/superior-national-forest-minnesota-rainy-river-withdrawal-environmental-assessment",
+    "textFile": "data/ref-text/fr-2022-15589.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "fr-2024-31215": {
+    "id": "fr-2024-31215",
+    "kind": "record",
+    "label": "Federal Register — Notice of Termination of the Environmental Impact Statement for the Twin Metals Project in the Superior National Forest, Lake and St. Louis Counties, Minnesota",
+    "citation": "89 FR 106561 (2024-12-30)",
+    "srcUrl": "https://www.federalregister.gov/documents/2024/12/30/2024-31215/notice-of-termination-of-the-environmental-impact-statement-for-the-twin-metals-project-in-the",
+    "textFile": "data/ref-text/fr-2024-31215.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hjres-140-actions": {
+    "id": "record-congress-hjres-140-actions",
+    "kind": "record",
+    "label": "Congress.gov API record - H.J.Res. 140 (119th Congress) full action history",
+    "citation": "Congress.gov, H.J.Res. 140 (119th Congress) actions",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140/all-actions",
+    "textFile": "data/ref-text/record-congress-hjres-140-actions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hjres-140-status": {
+    "id": "record-congress-hjres-140-status",
+    "kind": "record",
+    "label": "Congress.gov API record - H.J.Res. 140 (119th Congress) status",
+    "citation": "Congress.gov, H.J.Res. 140 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140",
+    "textFile": "data/ref-text/record-congress-hjres-140-status.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-s-3971-actions": {
+    "id": "record-congress-s-3971-actions",
+    "kind": "record",
+    "label": "Congress.gov API record - S. 3971 (119th Congress) full action history",
+    "citation": "Congress.gov, S. 3971 (119th Congress) actions",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3971/all-actions",
+    "textFile": "data/ref-text/record-congress-s-3971-actions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-s-3971-status": {
+    "id": "record-congress-s-3971-status",
+    "kind": "record",
+    "label": "Congress.gov API record - S. 3971 (119th Congress) status",
+    "citation": "Congress.gov, S. 3971 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3971",
+    "textFile": "data/ref-text/record-congress-s-3971-status.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-sbir-gov-about": {
+    "id": "record-sbir-gov-about",
+    "kind": "record",
+    "org": "U.S. Small Business Administration (SBIR.gov)",
+    "date": null,
+    "label": "SBIR.gov — About the SBIR and STTR programs",
+    "citation": "U.S. Small Business Administration (SBIR.gov)",
+    "srcUrl": "https://www.sbir.gov/about",
+    "textFile": "data/ref-text/record-sbir-gov-about.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-sbir-gov-agencies": {
+    "id": "record-sbir-gov-agencies",
+    "kind": "record",
+    "org": "U.S. Small Business Administration (SBIR.gov)",
+    "date": null,
+    "label": "SBIR.gov — Participating agencies",
+    "citation": "U.S. Small Business Administration (SBIR.gov)",
+    "srcUrl": "https://www.sbir.gov/participating-agencies",
+    "textFile": "data/ref-text/record-sbir-gov-agencies.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-15-638": {
+    "id": "usc-15-638",
+    "kind": "statute",
+    "label": "Small Business Act Section 9 (SBIR/STTR)",
+    "citation": "15 U.S.C. 638",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title15/granules/USCODE-2024-title15-chap14A-sec638/htm",
+    "textFile": "data/ref-text/usc-15-638.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-16-1132": {
+    "id": "usc-16-1132",
+    "kind": "statute",
+    "label": "16 U.S.C. 1132 — extension of wilderness system",
+    "citation": "16 U.S.C. 1132",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title16/granules/USCODE-2024-title16-chap23-sec1132/htm",
+    "textFile": "data/ref-text/usc-16-1132.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-98-560-baselines": {
+    "id": "record-crs-98-560-baselines",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-560 — Baselines and Scorekeeping in the Federal Budget Process",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-560.html",
+    "textFile": "data/ref-text/record-crs-98-560-baselines.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-lsb11374-pocket-rescissions": {
+    "id": "record-crs-lsb11374-pocket-rescissions",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Legal Sidebar LSB11374 — Pocket Rescissions and the Impoundment Control Act",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/LSB11374.html",
+    "textFile": "data/ref-text/record-crs-lsb11374-pocket-rescissions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r44058-reconciliation-stages": {
+    "id": "record-crs-r44058-reconciliation-stages",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44058 — The Budget Reconciliation Process: Stages of Consideration",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44058.html",
+    "textFile": "data/ref-text/record-crs-r44058-reconciliation-stages.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r46233-dynamic-scoring": {
+    "id": "record-crs-r46233-dynamic-scoring",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R46233 — Dynamic Scoring in the Congressional Budget Process",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R46233.html",
+    "textFile": "data/ref-text/record-crs-r46233-dynamic-scoring.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r46240-budget-process": {
+    "id": "record-crs-r46240-budget-process",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R46240 — Introduction to the Federal Budget Process",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R46240.html",
+    "textFile": "data/ref-text/record-crs-r46240-budget-process.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r48432-ica": {
+    "id": "record-crs-r48432-ica",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R48432 — The Impoundment Control Act of 1974: Background and Congressional Consideration of Rescissions",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R48432.html",
+    "textFile": "data/ref-text/record-crs-r48432-ica.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-rl30862-byrd-rule": {
+    "id": "record-crs-rl30862-byrd-rule",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30862 — The Budget Reconciliation Process: The Senate's \"Byrd Rule\"",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30862.html",
+    "textFile": "data/ref-text/record-crs-rl30862-byrd-rule.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-rl34680-shutdown": {
+    "id": "record-crs-rl34680-shutdown",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL34680 — Shutdown of the Federal Government: Causes, Processes, and Effects",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL34680.html",
+    "textFile": "data/ref-text/record-crs-rl34680-shutdown.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-rs20348-funding-gaps": {
+    "id": "record-crs-rs20348-funding-gaps",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RS20348 — Federal Funding Gaps: A Brief Overview (updated May 26, 2026)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RS20348.html",
+    "textFile": "data/ref-text/record-crs-rs20348-funding-gaps.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-gao-impoundment-control-act": {
+    "id": "record-gao-impoundment-control-act",
+    "kind": "record",
+    "org": "U.S. Government Accountability Office",
+    "date": null,
+    "label": "GAO: Impoundment Control Act",
+    "citation": "U.S. Government Accountability Office",
+    "srcUrl": "https://www.gao.gov/legal/appropriations-law/impoundment-control-act",
+    "textFile": "data/ref-text/record-gao-impoundment-control-act.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-omb-a11-s124": {
+    "id": "record-omb-a11-s124",
+    "kind": "record",
+    "org": "Office of Management and Budget",
+    "date": null,
+    "label": "OMB Circular A-11 Section 124 — Agency Operations in the Absence of Appropriations",
+    "citation": "Office of Management and Budget",
+    "srcUrl": "https://www.whitehouse.gov/wp-content/uploads/2025/08/s124.pdf",
+    "textFile": "data/ref-text/record-omb-a11-s124.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-602": {
+    "id": "usc-2-602",
+    "kind": "statute",
+    "label": "2 U.S.C. 602",
+    "citation": "2 U.S.C. 602",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17-sec602/htm",
+    "textFile": "data/ref-text/usc-2-602.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-621": {
+    "id": "usc-2-621",
+    "kind": "statute",
+    "label": "2 U.S.C. 621",
+    "citation": "2 U.S.C. 621",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-sec621/htm",
+    "textFile": "data/ref-text/usc-2-621.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-622": {
+    "id": "usc-2-622",
+    "kind": "statute",
+    "label": "2 U.S.C. 622",
+    "citation": "2 U.S.C. 622",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-sec622/htm",
+    "textFile": "data/ref-text/usc-2-622.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-653": {
+    "id": "usc-2-653",
+    "kind": "statute",
+    "label": "2 U.S.C. 653",
+    "citation": "2 U.S.C. 653",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partA-sec653/htm",
+    "textFile": "data/ref-text/usc-2-653.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-658": {
+    "id": "usc-2-658",
+    "kind": "statute",
+    "label": "2 U.S.C. 658",
+    "citation": "2 U.S.C. 658",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partB-sec658/htm",
+    "textFile": "data/ref-text/usc-2-658.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-658c": {
+    "id": "usc-2-658c",
+    "kind": "statute",
+    "label": "2 U.S.C. 658c",
+    "citation": "2 U.S.C. 658c",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17A-subchapII-partB-sec658c/htm",
+    "textFile": "data/ref-text/usc-2-658c.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-681": {
+    "id": "usc-2-681",
+    "kind": "statute",
+    "label": "2 U.S.C. 681",
+    "citation": "2 U.S.C. 681",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapI-sec681/htm",
+    "textFile": "data/ref-text/usc-2-681.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-682": {
+    "id": "usc-2-682",
+    "kind": "statute",
+    "label": "2 U.S.C. 682",
+    "citation": "2 U.S.C. 682",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec682/htm",
+    "textFile": "data/ref-text/usc-2-682.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-683": {
+    "id": "usc-2-683",
+    "kind": "statute",
+    "label": "2 U.S.C. 683",
+    "citation": "2 U.S.C. 683",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec683/htm",
+    "textFile": "data/ref-text/usc-2-683.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-684": {
+    "id": "usc-2-684",
+    "kind": "statute",
+    "label": "2 U.S.C. 684",
+    "citation": "2 U.S.C. 684",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec684/htm",
+    "textFile": "data/ref-text/usc-2-684.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-685": {
+    "id": "usc-2-685",
+    "kind": "statute",
+    "label": "2 U.S.C. 685",
+    "citation": "2 U.S.C. 685",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec685/htm",
+    "textFile": "data/ref-text/usc-2-685.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-686": {
+    "id": "usc-2-686",
+    "kind": "statute",
+    "label": "2 U.S.C. 686",
+    "citation": "2 U.S.C. 686",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec686/htm",
+    "textFile": "data/ref-text/usc-2-686.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-687": {
+    "id": "usc-2-687",
+    "kind": "statute",
+    "label": "2 U.S.C. 687",
+    "citation": "2 U.S.C. 687",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec687/htm",
+    "textFile": "data/ref-text/usc-2-687.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-688": {
+    "id": "usc-2-688",
+    "kind": "statute",
+    "label": "2 U.S.C. 688",
+    "citation": "2 U.S.C. 688",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap17B-subchapII-sec688/htm",
+    "textFile": "data/ref-text/usc-2-688.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-931": {
+    "id": "usc-2-931",
+    "kind": "statute",
+    "label": "2 U.S.C. 931",
+    "citation": "2 U.S.C. 931",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20A-sec931/htm",
+    "textFile": "data/ref-text/usc-2-931.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-933": {
+    "id": "usc-2-933",
+    "kind": "statute",
+    "label": "2 U.S.C. 933",
+    "citation": "2 U.S.C. 933",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap20A-sec933/htm",
+    "textFile": "data/ref-text/usc-2-933.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-cdc-lung-cancer-statistics": {
+    "id": "record-cdc-lung-cancer-statistics",
+    "kind": "record",
+    "org": "U.S. Centers for Disease Control and Prevention",
+    "date": null,
+    "label": "CDC — Lung Cancer Statistics",
+    "citation": "U.S. Centers for Disease Control and Prevention",
+    "srcUrl": "https://www.cdc.gov/lung-cancer/statistics/index.html",
+    "textFile": "data/ref-text/record-cdc-lung-cancer-statistics.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-1346": {
+    "id": "record-congress-hr-1346",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-05-14",
+    "label": "Congress.gov record — H.R. 1346 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 1346 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
+    "textFile": "data/ref-text/record-congress-hr-1346.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-2319": {
+    "id": "record-congress-hr-2319",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-22",
+    "label": "Congress.gov record — H.R. 2319 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, H.R. 2319 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2319",
+    "textFile": "data/ref-text/record-congress-hr-2319.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-s-1884": {
+    "id": "record-congress-s-1884",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-04-13",
+    "label": "Congress.gov record — S. 1884 (119th Congress): status, sponsor, cosponsors, full action history",
+    "citation": "Congress.gov, S. 1884 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
+    "textFile": "data/ref-text/record-congress-s-1884.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-epa-fuel-waivers": {
+    "id": "record-epa-fuel-waivers",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Fuel Waivers (emergency fuel-standard waivers, including summer E15 waivers)",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/fuel-waivers",
+    "textFile": "data/ref-text/record-epa-fuel-waivers.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-epa-gasoline-rvp": {
+    "id": "record-epa-gasoline-rvp",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": null,
+    "label": "EPA — Gasoline Reid Vapor Pressure",
+    "citation": "U.S. Environmental Protection Agency",
+    "srcUrl": "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure",
+    "textFile": "data/ref-text/record-epa-gasoline-rvp.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-house-report-119-382": {
+    "id": "record-house-report-119-382",
+    "kind": "record",
+    "org": "U.S. House Committee on Energy and Commerce",
+    "date": "2025-11-18",
+    "label": "H. Rept. 119-382 — Women and Lung Cancer Research and Preventive Services Act of 2025 (House Energy and Commerce Committee report on H.R. 2319)",
+    "citation": "H. Rept. 119-382",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/CRPT-119hrpt382/html/CRPT-119hrpt382.htm",
+    "textFile": "data/ref-text/record-house-report-119-382.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-nci-lung-cancer-overview": {
+    "id": "record-nci-lung-cancer-overview",
+    "kind": "record",
+    "org": "National Cancer Institute",
+    "date": null,
+    "label": "NCI — Lung Cancer (patient information overview)",
+    "citation": "National Cancer Institute",
+    "srcUrl": "https://www.cancer.gov/types/lung",
+    "textFile": "data/ref-text/record-nci-lung-cancer-overview.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-nci-seer-lung-statfacts": {
+    "id": "record-nci-seer-lung-statfacts",
+    "kind": "record",
+    "org": "National Cancer Institute (SEER Program)",
+    "date": null,
+    "label": "NCI SEER Cancer Stat Facts: Lung and Bronchus Cancer",
+    "citation": "National Cancer Institute, SEER Program",
+    "srcUrl": "https://seer.cancer.gov/statfacts/html/lungb.html",
+    "textFile": "data/ref-text/record-nci-seer-lung-statfacts.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-plaw-114-308-hear-act": {
+    "id": "record-plaw-114-308-hear-act",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2016-12-16",
+    "label": "Public Law 114-308 — Holocaust Expropriated Art Recovery Act of 2016 (enacted text)",
+    "citation": "Pub. L. No. 114-308",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm",
+    "textFile": "data/ref-text/record-plaw-114-308-hear-act.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-uspstf-lung-cancer-screening": {
+    "id": "record-uspstf-lung-cancer-screening",
+    "kind": "record",
+    "org": "U.S. Preventive Services Task Force",
+    "date": null,
+    "label": "USPSTF Final Recommendation Statement: Lung Cancer — Screening",
+    "citation": "U.S. Preventive Services Task Force",
+    "srcUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+    "textFile": "data/ref-text/record-uspstf-lung-cancer-screening.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-42-7545": {
+    "id": "usc-42-7545",
+    "kind": "statute",
+    "label": "42 U.S.C. 7545 (Clean Air Act Sec. 211) — Regulation of fuels",
+    "citation": "42 U.S.C. 7545",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapII-partA-sec7545/htm",
+    "textFile": "data/ref-text/usc-42-7545.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-110-hr-6304": {
+    "id": "bill-110-hr-6304",
+    "kind": "bill",
+    "label": "HR 6304 (110th Congress)",
+    "citation": "HR 6304",
+    "srcUrl": "https://www.congress.gov/bill/110th-congress/house-bill/6304/text",
+    "textFile": "data/ref-text/bill-110-hr-6304.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-112-hr-5949": {
+    "id": "bill-112-hr-5949",
+    "kind": "bill",
+    "label": "HR 5949 (112th Congress)",
+    "citation": "HR 5949",
+    "srcUrl": "https://www.congress.gov/bill/112th-congress/house-bill/5949/text",
+    "textFile": "data/ref-text/bill-112-hr-5949.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-115-hr-1370": {
+    "id": "bill-115-hr-1370",
+    "kind": "bill",
+    "label": "HR 1370 (115th Congress)",
+    "citation": "HR 1370",
+    "srcUrl": "https://www.congress.gov/bill/115th-congress/house-bill/1370/text",
+    "textFile": "data/ref-text/bill-115-hr-1370.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-115-s-139": {
+    "id": "bill-115-s-139",
+    "kind": "bill",
+    "label": "S 139 (115th Congress)",
+    "citation": "S 139",
+    "srcUrl": "https://www.congress.gov/bill/115th-congress/senate-bill/139/text",
+    "textFile": "data/ref-text/bill-115-s-139.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-118-hr-2670": {
+    "id": "bill-118-hr-2670",
+    "kind": "bill",
+    "label": "HR 2670 (118th Congress)",
+    "citation": "HR 2670",
+    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/2670/text",
+    "textFile": "data/ref-text/bill-118-hr-2670.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-118-hr-7888": {
+    "id": "bill-118-hr-7888",
+    "kind": "bill",
+    "label": "HR 7888 (118th Congress)",
+    "citation": "HR 7888",
+    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/7888/text",
+    "textFile": "data/ref-text/bill-118-hr-7888.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-8035-actions": {
+    "id": "record-congress-hr-8035-actions",
+    "kind": "record",
+    "label": "Congress.gov record - H.R. 8035 (119th Congress) status and action history, with the rule resolution H. Res. 1175",
+    "citation": "Congress.gov, H.R. 8035 and H. Res. 1175 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8035/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-8035-actions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-9238-actions": {
+    "id": "record-congress-hr-9238-actions",
+    "kind": "record",
+    "label": "Congress.gov record - H.R. 9238 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 9238 (119th Congress) actions",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9238/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-9238-actions.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "record-congress-s-3794": {
+    "id": "record-congress-s-3794",
+    "kind": "record",
+    "label": "Congress.gov record - S. 3794 (119th Congress) status, sponsor, cosponsors, action history",
+    "citation": "Congress.gov, S. 3794 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3794/all-actions",
+    "textFile": "data/ref-text/record-congress-s-3794.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-18-2511": {
+    "id": "usc-18-2511",
+    "kind": "statute",
+    "label": "Federal wiretap statute, provider assistance clause (18 U.S.C. 2511)",
+    "citation": "18 U.S.C. 2511",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title18/granules/USCODE-2024-title18-partI-chap119-sec2511/htm",
+    "textFile": "data/ref-text/usc-18-2511.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-50-1801": {
+    "id": "usc-50-1801",
+    "kind": "statute",
+    "label": "FISA definitions and the section 404 Transition Procedures note (50 U.S.C. 1801)",
+    "citation": "50 U.S.C. 1801",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap36-subchapI-sec1801/htm",
+    "textFile": "data/ref-text/usc-50-1801.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-50-1881": {
+    "id": "usc-50-1881",
+    "kind": "statute",
+    "label": "FISA Title VII definitions and sunset note (50 U.S.C. 1881)",
+    "citation": "50 U.S.C. 1881",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap36-subchapVI-sec1881/htm",
+    "textFile": "data/ref-text/usc-50-1881.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "usc-50-1881a": {
     "id": "usc-50-1881a",
     "kind": "statute",
@@ -2034,6 +2034,380 @@
     "citation": "Congress.gov, Laws of the 119th Congress",
     "srcUrl": "https://www.congress.gov/public-laws/119th-congress",
     "textFile": "data/ref-text/record-congress-laws-119.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hjres-140": {
+    "id": "bill-119-hjres-140",
+    "kind": "law",
+    "label": "H.J. Res. 140 (119th Congress) - CRA disapproval of BLM Public Land Order 7917, enrolled as Public Law 119-85",
+    "citation": "Public Law 119-85, 140 Stat. 772",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140/text",
+    "textFile": "data/bill-text/119-HJRES-140.txt",
+    "fetchedAt": "2026-05-06"
+  },
+  "bill-119-hr-1": {
+    "id": "bill-119-hr-1",
+    "kind": "bill",
+    "label": "H.R. 1 (119th Congress) - One Big Beautiful Bill Act, enrolled text",
+    "citation": "H.R. 1, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1/text",
+    "textFile": "data/bill-text/119-HR-1.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-1011": {
+    "id": "bill-119-hr-1011",
+    "kind": "bill",
+    "label": "H.R. 1011 (119th Congress) - Emergency Conservation Program Improvement Act of 2025, enrolled text",
+    "citation": "H.R. 1011, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1011/text",
+    "textFile": "data/bill-text/119-HR-1011.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-165": {
+    "id": "bill-119-hr-165",
+    "kind": "bill",
+    "label": "H.R. 165 (119th Congress) - bill text",
+    "citation": "H.R. 165, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/165/text",
+    "textFile": "data/bill-text/119-HR-165.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-1993": {
+    "id": "bill-119-hr-1993",
+    "kind": "bill",
+    "label": "H.R. 1993 (119th Congress) - bill text",
+    "citation": "H.R. 1993, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1993/text",
+    "textFile": "data/bill-text/119-HR-1993.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-4371": {
+    "id": "bill-119-hr-4371",
+    "kind": "bill",
+    "label": "H.R. 4371 (119th Congress) - bill text",
+    "citation": "H.R. 4371, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4371/text",
+    "textFile": "data/bill-text/119-HR-4371.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "hman-119-rule-xi": {
+    "id": "hman-119-rule-xi",
+    "kind": "rule",
+    "label": "House Rule XI — Procedures of Committees and Unfinished Business (119th Congress)",
+    "citation": "House Rule XI",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg577",
+    "textFile": "data/ref-text/hman-119-rule-xi.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "hman-119-rule-xii": {
+    "id": "hman-119-rule-xii",
+    "kind": "rule",
+    "label": "House Rule XII — Receipt and Referral of Measures and Matters (119th Congress)",
+    "citation": "House Rule XII",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg651",
+    "textFile": "data/ref-text/hman-119-rule-xii.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "hman-119-rule-xiii": {
+    "id": "hman-119-rule-xiii",
+    "kind": "rule",
+    "label": "House Rule XIII — Calendars and Committee Reports (119th Congress)",
+    "citation": "House Rule XIII",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg667",
+    "textFile": "data/ref-text/hman-119-rule-xiii.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "hman-119-rule-xiv": {
+    "id": "hman-119-rule-xiv",
+    "kind": "rule",
+    "label": "House Rule XIV — Order and Priority of Business (119th Congress)",
+    "citation": "House Rule XIV",
+    "srcUrl": "https://www.govinfo.gov/app/details/HMAN-119/HMAN-119-pg705",
+    "textFile": "data/ref-text/hman-119-rule-xiv.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-119-measure-counts": {
+    "id": "record-congress-119-measure-counts",
+    "kind": "record",
+    "org": "Congress.gov",
+    "date": null,
+    "label": "Congress.gov API - measure and law counts for the 119th Congress",
+    "citation": "Congress.gov (Library of Congress)",
+    "srcUrl": "https://api.congress.gov/v3/bill/119",
+    "textFile": "data/ref-text/record-congress-119-measure-counts.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-119-overview": {
+    "id": "record-congress-119-overview",
+    "kind": "record",
+    "label": "Congress.gov API record - 119th Congress overview (session dates)",
+    "citation": "Congress.gov (Library of Congress)",
+    "srcUrl": "https://api.congress.gov/v3/congress/119",
+    "textFile": "data/ref-text/record-congress-119-overview.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "record-crs-97-856-discharge-rule": {
+    "id": "record-crs-97-856-discharge-rule",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 97-856 - The Discharge Rule in the House: Recent Use in Historical Context",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/97-856.html",
+    "textFile": "data/ref-text/record-crs-97-856-discharge-rule.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-98-241-committee-types": {
+    "id": "record-crs-98-241-committee-types",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-241 - Committee Types and Roles",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-241.html",
+    "textFile": "data/ref-text/record-crs-98-241-committee-types.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-98-706-bills-and-resolutions": {
+    "id": "record-crs-98-706-bills-and-resolutions",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-706 - Bills and Resolutions: Examples of How Each Kind Is Used",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-706.html",
+    "textFile": "data/ref-text/record-crs-98-706-bills-and-resolutions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-98-825-sense-of-resolutions": {
+    "id": "record-crs-98-825-sense-of-resolutions",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report 98-825 - Sense of Resolutions and Provisions",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/98-825.html",
+    "textFile": "data/ref-text/record-crs-98-825-sense-of-resolutions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r44001-introducing-house-bill": {
+    "id": "record-crs-r44001-introducing-house-bill",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44001 - Introducing a House Bill or Resolution",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44001.html",
+    "textFile": "data/ref-text/record-crs-r44001-introducing-house-bill.txt",
+    "fetchedAt": "2026-09-02"
+  },
+  "record-crs-r44247-committee-subpoenas": {
+    "id": "record-crs-r44247-committee-subpoenas",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44247 - A Survey of House and Senate Committee Rules on Subpoenas",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44247.html",
+    "textFile": "data/ref-text/record-crs-r44247-committee-subpoenas.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r45442-congress-control-agencies": {
+    "id": "record-crs-r45442-congress-control-agencies",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R45442 - Congress's Authority to Influence and Control Executive Branch Agencies",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R45442.html",
+    "textFile": "data/ref-text/record-crs-r45442-congress-control-agencies.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r45920-discharge-procedure": {
+    "id": "record-crs-r45920-discharge-procedure",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R45920 - Discharge Procedure in the House",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R45920.html",
+    "textFile": "data/ref-text/record-crs-r45920-discharge-procedure.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r46603-forms-of-measures": {
+    "id": "record-crs-r46603-forms-of-measures",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R46603 - Bills, Resolutions, Nominations, and Treaties: Characteristics and Examples of Use",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R46603.html",
+    "textFile": "data/ref-text/record-crs-r46603-forms-of-measures.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r48308-special-rules": {
+    "id": "record-crs-r48308-special-rules",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R48308 - Special Rules in the House of Representatives: Purpose and Content",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R48308.html",
+    "textFile": "data/ref-text/record-crs-r48308-special-rules.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r48449-house-rules-changes-119": {
+    "id": "record-crs-r48449-house-rules-changes-119",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R48449 - House Rules Changes Affecting Floor Proceedings in the 119th Congress (2025-2026)",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R48449.html",
+    "textFile": "data/ref-text/record-crs-r48449-house-rules-changes-119.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-rl30240-oversight-manual": {
+    "id": "record-crs-rl30240-oversight-manual",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report RL30240 - Congressional Oversight Manual",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/RL30240.html",
+    "textFile": "data/ref-text/record-crs-rl30240-oversight-manual.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-house-rules-special-rule-types": {
+    "id": "record-house-rules-special-rule-types",
+    "kind": "record",
+    "org": "House Committee on Rules",
+    "date": null,
+    "label": "House Committee on Rules - Special Rule Types",
+    "citation": "House Committee on Rules",
+    "srcUrl": "https://rules.house.gov/about/special-rule-types",
+    "textFile": "data/ref-text/record-house-rules-special-rule-types.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-lp-corpus-119-snapshot": {
+    "id": "record-lp-corpus-119-snapshot",
+    "kind": "record",
+    "label": "Corpus snapshot — 119th-Congress bills in data/cache.json (stage, dates, votes)",
+    "citation": "LegislationPatch database snapshot, generated from data/cache.json",
+    "srcUrl": "https://legislationpatch.com/",
+    "textFile": "data/ref-text/record-lp-corpus-119-snapshot.txt",
+    "fetchedAt": "2026-08-27"
+  },
+  "record-scotus-mcgrain-v-daugherty-1927": {
+    "id": "record-scotus-mcgrain-v-daugherty-1927",
+    "kind": "record",
+    "org": "Supreme Court of the United States",
+    "date": null,
+    "label": "McGrain v. Daugherty, 273 U.S. 135 (1927)",
+    "citation": "Supreme Court of the United States",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/273/135",
+    "textFile": "data/ref-text/record-scotus-mcgrain-v-daugherty-1927.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "tmp-rules-about": {
+    "id": "tmp-rules-about",
+    "kind": "record",
+    "org": "House Committee on Rules",
+    "date": null,
+    "label": "tmp",
+    "citation": "House Committee on Rules",
+    "srcUrl": "https://rules.house.gov/about",
+    "textFile": "data/ref-text/tmp-rules-about.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-1-101": {
+    "id": "usc-1-101",
+    "kind": "statute",
+    "label": "1 U.S.C. 101",
+    "citation": "1 U.S.C. 101",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec101/htm",
+    "textFile": "data/ref-text/usc-1-101.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-1-102": {
+    "id": "usc-1-102",
+    "kind": "statute",
+    "label": "1 U.S.C. 102",
+    "citation": "1 U.S.C. 102",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec102/htm",
+    "textFile": "data/ref-text/usc-1-102.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-1-106a": {
+    "id": "usc-1-106a",
+    "kind": "statute",
+    "label": "1 U.S.C. 106a",
+    "citation": "1 U.S.C. 106a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec106a/htm",
+    "textFile": "data/ref-text/usc-1-106a.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-1-112": {
+    "id": "usc-1-112",
+    "kind": "statute",
+    "label": "1 U.S.C. 112",
+    "citation": "1 U.S.C. 112",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title1/granules/USCODE-2024-title1-chap2-sec112/htm",
+    "textFile": "data/ref-text/usc-1-112.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-2-192": {
+    "id": "usc-2-192",
+    "kind": "statute",
+    "label": "2 U.S.C. 192",
+    "citation": "2 U.S.C. 192",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title2/granules/USCODE-2024-title2-chap6-sec192/htm",
+    "textFile": "data/ref-text/usc-2-192.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-31-712": {
+    "id": "usc-31-712",
+    "kind": "statute",
+    "label": "31 U.S.C. 712",
+    "citation": "31 U.S.C. 712",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleI-chap7-subchapII-sec712/htm",
+    "textFile": "data/ref-text/usc-31-712.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-31-717": {
+    "id": "usc-31-717",
+    "kind": "statute",
+    "label": "31 U.S.C. 717",
+    "citation": "31 U.S.C. 717",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title31/granules/USCODE-2024-title31-subtitleI-chap7-subchapII-sec717/htm",
+    "textFile": "data/ref-text/usc-31-717.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-5-403": {
+    "id": "usc-5-403",
+    "kind": "statute",
+    "label": "5 U.S.C. 403",
+    "citation": "5 U.S.C. 403",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap4-sec403/htm",
+    "textFile": "data/ref-text/usc-5-403.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-5-404": {
+    "id": "usc-5-404",
+    "kind": "statute",
+    "label": "5 U.S.C. 404",
+    "citation": "5 U.S.C. 404",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap4-sec404/htm",
+    "textFile": "data/ref-text/usc-5-404.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "usc-5-405": {
+    "id": "usc-5-405",
+    "kind": "statute",
+    "label": "5 U.S.C. 405",
+    "citation": "5 U.S.C. 405",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap4-sec405/htm",
+    "textFile": "data/ref-text/usc-5-405.txt",
     "fetchedAt": "2026-09-01"
   }
 }
