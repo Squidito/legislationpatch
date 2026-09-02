@@ -1,4 +1,58 @@
 {
+  "bill-110-hr-6304": {
+    "id": "bill-110-hr-6304",
+    "kind": "bill",
+    "label": "HR 6304 (110th Congress)",
+    "citation": "HR 6304",
+    "srcUrl": "https://www.congress.gov/bill/110th-congress/house-bill/6304/text",
+    "textFile": "data/ref-text/bill-110-hr-6304.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-112-hr-5949": {
+    "id": "bill-112-hr-5949",
+    "kind": "bill",
+    "label": "HR 5949 (112th Congress)",
+    "citation": "HR 5949",
+    "srcUrl": "https://www.congress.gov/bill/112th-congress/house-bill/5949/text",
+    "textFile": "data/ref-text/bill-112-hr-5949.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-115-hr-1370": {
+    "id": "bill-115-hr-1370",
+    "kind": "bill",
+    "label": "HR 1370 (115th Congress)",
+    "citation": "HR 1370",
+    "srcUrl": "https://www.congress.gov/bill/115th-congress/house-bill/1370/text",
+    "textFile": "data/ref-text/bill-115-hr-1370.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-115-s-139": {
+    "id": "bill-115-s-139",
+    "kind": "bill",
+    "label": "S 139 (115th Congress)",
+    "citation": "S 139",
+    "srcUrl": "https://www.congress.gov/bill/115th-congress/senate-bill/139/text",
+    "textFile": "data/ref-text/bill-115-s-139.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-118-hr-2670": {
+    "id": "bill-118-hr-2670",
+    "kind": "bill",
+    "label": "HR 2670 (118th Congress)",
+    "citation": "HR 2670",
+    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/2670/text",
+    "textFile": "data/ref-text/bill-118-hr-2670.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-118-hr-7888": {
+    "id": "bill-118-hr-7888",
+    "kind": "bill",
+    "label": "HR 7888 (118th Congress)",
+    "citation": "HR 7888",
+    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/7888/text",
+    "textFile": "data/ref-text/bill-118-hr-7888.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "bill-119-hr-22": {
     "id": "bill-119-hr-22",
     "kind": "bill",
@@ -519,6 +573,15 @@
     "textFile": "data/ref-text/record-congress-hr-8646-status.txt",
     "fetchedAt": "2026-08-28"
   },
+  "record-congress-hr-9238-actions": {
+    "id": "record-congress-hr-9238-actions",
+    "kind": "record",
+    "label": "Congress.gov record - H.R. 9238 (119th Congress) full action history",
+    "citation": "Congress.gov, H.R. 9238 (119th Congress) actions",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9238/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-9238-actions.txt",
+    "fetchedAt": "2026-08-27"
+  },
   "record-congress-hr-9770-actions": {
     "id": "record-congress-hr-9770-actions",
     "kind": "record",
@@ -557,6 +620,15 @@
     "citation": "Congress.gov, S. 1884 (119th Congress)",
     "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1884",
     "textFile": "data/ref-text/record-congress-s-1884.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-s-3794": {
+    "id": "record-congress-s-3794",
+    "kind": "record",
+    "label": "Congress.gov record - S. 3794 (119th Congress) status, sponsor, cosponsors, action history",
+    "citation": "Congress.gov, S. 3794 (119th Congress)",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3794/all-actions",
+    "textFile": "data/ref-text/record-congress-s-3794.txt",
     "fetchedAt": "2026-09-01"
   },
   "record-congress-s-3971-actions": {
@@ -1874,22 +1946,94 @@
     "textFile": "data/ref-text/usc-52-21083.txt",
     "fetchedAt": "2026-08-27"
   },
-  "record-congress-hr-9238-actions": {
-    "id": "record-congress-hr-9238-actions",
-    "kind": "record",
-    "label": "Congress.gov record - H.R. 9238 (119th Congress) full action history",
-    "citation": "Congress.gov, H.R. 9238 (119th Congress) actions",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9238/all-actions",
-    "textFile": "data/ref-text/record-congress-hr-9238-actions.txt",
-    "fetchedAt": "2026-08-27"
+  "usc-50-1881a": {
+    "id": "usc-50-1881a",
+    "kind": "statute",
+    "label": "FISA Section 702 (50 U.S.C. 1881a)",
+    "citation": "50 U.S.C. 1881a",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title50/granules/USCODE-2024-title50-chap36-subchapVI-sec1881a/htm",
+    "textFile": "data/ref-text/usc-50-1881a.txt",
+    "fetchedAt": "2026-06-03"
   },
-  "record-congress-s-3794": {
-    "id": "record-congress-s-3794",
+  "record-congress-hr-5949-112-actions": {
+    "id": "record-congress-hr-5949-112-actions",
     "kind": "record",
-    "label": "Congress.gov record - S. 3794 (119th Congress) status, sponsor, cosponsors, action history",
-    "citation": "Congress.gov, S. 3794 (119th Congress)",
-    "srcUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/3794/all-actions",
-    "textFile": "data/ref-text/record-congress-s-3794.txt",
+    "label": "Congress.gov record - H.R. 5949 (112th Congress) action history",
+    "citation": "Congress.gov, H.R. 5949 actions",
+    "srcUrl": "https://www.congress.gov/bill/112th-congress/house-bill/5949/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-5949-112-actions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-hr-7888-118-actions": {
+    "id": "record-congress-hr-7888-118-actions",
+    "kind": "record",
+    "label": "Congress.gov record - H.R. 7888 (118th Congress) action history",
+    "citation": "Congress.gov, H.R. 7888 actions",
+    "srcUrl": "https://www.congress.gov/bill/118th-congress/house-bill/7888/all-actions",
+    "textFile": "data/ref-text/record-congress-hr-7888-118-actions.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "billtext-119-hr-8322": {
+    "id": "billtext-119-hr-8322",
+    "kind": "law",
+    "label": "Public Law 119-84 (H.R. 8322) enacted text",
+    "citation": "Pub. L. 119-84",
+    "srcUrl": "https://www.congress.gov/119/plaws/publ84/PLAW-119publ84.htm",
+    "textFile": "data/bill-text/119-HR-8322.txt",
+    "fetchedAt": "2026-06-10"
+  },
+  "billtext-119-s-4465": {
+    "id": "billtext-119-s-4465",
+    "kind": "law",
+    "label": "Public Law 119-87 (S. 4465) enacted text",
+    "citation": "Pub. L. 119-87",
+    "srcUrl": "https://www.congress.gov/119/plaws/publ87/PLAW-119publ87.htm",
+    "textFile": "data/bill-text/119-S-4465.txt",
+    "fetchedAt": "2026-06-10"
+  },
+  "billtext-119-hr-9238": {
+    "id": "billtext-119-hr-9238",
+    "kind": "bill",
+    "label": "H.R. 9238 (119th Congress), Committee Discharged House text",
+    "citation": "H.R. 9238, 119th Congress",
+    "srcUrl": "https://www.congress.gov/119/bills/hr9238/BILLS-119hr9238cdh.htm",
+    "textFile": "data/bill-text/119-HR-9238.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "billtext-119-hr-8035": {
+    "id": "billtext-119-hr-8035",
+    "kind": "bill",
+    "label": "H.R. 8035 (119th Congress), Introduced in House text",
+    "citation": "H.R. 8035, 119th Congress",
+    "srcUrl": "https://www.congress.gov/119/bills/hr8035/BILLS-119hr8035ih.htm",
+    "textFile": "data/bill-text/119-HR-8035.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-laws-119-2026-09-01": {
+    "id": "record-congress-laws-119-2026-09-01",
+    "kind": "record",
+    "label": "Congress.gov record - laws of the 119th Congress, refetched 2026-09-01",
+    "citation": "Congress.gov, Laws of the 119th Congress",
+    "srcUrl": "https://www.congress.gov/public-laws/119th-congress",
+    "textFile": "data/ref-text/record-congress-laws-119-2026-09-01.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "votes-119-hr-9238": {
+    "id": "votes-119-hr-9238",
+    "kind": "record",
+    "label": "House roll call 221 on H.R. 9238 (LegislationPatch vote record)",
+    "citation": "House Roll no. 221, 2026-06-11",
+    "srcUrl": "https://clerk.house.gov/Votes/2026221",
+    "textFile": "data/votes/119-HR-9238.json",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-congress-laws-119": {
+    "id": "record-congress-laws-119",
+    "kind": "record",
+    "label": "Congress.gov record - public laws of the 119th Congress",
+    "citation": "Congress.gov, Laws of the 119th Congress",
+    "srcUrl": "https://www.congress.gov/public-laws/119th-congress",
+    "textFile": "data/ref-text/record-congress-laws-119.txt",
     "fetchedAt": "2026-09-01"
   }
 }
