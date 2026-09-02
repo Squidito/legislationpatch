@@ -50,44 +50,12 @@
       "bytes": 86999,
       "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/bill/119th-congress/house-bill/1": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5908,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
       "status": 403,
       "title": "Just a moment...",
       "bytes": 5972,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/help/legislative-glossary": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5887,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions": {
-      "verdict": "live",
-      "reason": "HTTP 200, 27280 bytes — \"Bills &amp; Resolutions | house.gov\"",
-      "status": 200,
-      "title": "Bills &amp; Resolutions | house.gov",
-      "bytes": 27280,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.senate.gov/legislative/HowTo/how_to_numbers.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 28032 bytes — \"U.S. Senate: How to Find Bill Numbers\"",
-      "status": 200,
-      "title": "U.S. Senate: How to Find Bill Numbers",
-      "bytes": 28032,
       "checkedAt": "2026-09-01"
     },
     "https://www.senate.gov/about/powers-procedures/filibusters-cloture/overview.htm": {
@@ -153,15 +121,6 @@
       "bytes": 3331646,
       "checkedAt": "2026-09-01"
     },
-    "https://www.gao.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 133427 bytes — \"U.S. Government Accountability Office (U.S. GAO)\"",
-      "status": 200,
-      "finalUrl": "https://www.gao.gov/",
-      "title": "U.S. Government Accountability Office (U.S. GAO)",
-      "bytes": 133427,
-      "checkedAt": "2026-09-01"
-    },
     "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title2-section641&num=0&edition=prelim": {
       "verdict": "live",
       "reason": "HTTP 200, 168076 bytes — \"2 USC 641: Reconciliation\"",
@@ -186,15 +145,6 @@
       "bytes": 5848,
       "checkedAt": "2026-09-01"
     },
-    "https://www.ignet.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 55506 bytes — \"IGNET | Council of the Inspectors General on Integrity and Efficiency;\"",
-      "status": 200,
-      "finalUrl": "https://www.ignet.gov/",
-      "title": "IGNET | Council of the Inspectors General on Integrity and Efficiency; IGnet",
-      "bytes": 55506,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.cbo.gov/topics/budget/discretionary-spending": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
@@ -209,14 +159,6 @@
       "status": 200,
       "title": "5 USC 801: Congressional review",
       "bytes": 167040,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/crs-product/R45920": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5845,
       "checkedAt": "2026-09-01"
     },
     "https://www.whitehouse.gov/omb/budget/": {
@@ -234,14 +176,6 @@
       "status": 200,
       "title": "The Discharge Rule in the House: Recent Use in Historical Context - EveryCRSReport.com",
       "bytes": 303232,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.govinfo.gov/content/pkg/GPO-HPRACTICE-108/html/GPO-HPRACTICE-108-20.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 19875 bytes — \"House Practice: A Guide to the Rules, Precedents and Procedures of the\"",
-      "status": 200,
-      "title": "House Practice: A Guide to the Rules, Precedents and Procedures of the House - Chapter 19. Discharging Measures From Committees",
-      "bytes": 19875,
       "checkedAt": "2026-09-01"
     },
     "https://www.congress.gov/bill/119th-congress/house-bill/1346": {
@@ -321,15 +255,6 @@
       "status": 200,
       "title": "42 USC 7545: Regulation of fuels",
       "bytes": 356932,
-      "checkedAt": "2026-09-01"
-    },
-    "https://rules.house.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 48442 bytes — \"House of Representatives Committee on Rules |\"",
-      "status": 200,
-      "finalUrl": "https://rules.house.gov/",
-      "title": "House of Representatives Committee on Rules |",
-      "bytes": 48442,
       "checkedAt": "2026-09-01"
     },
     "https://www.govinfo.gov/app/details/HMAN-119": {
@@ -450,14 +375,6 @@
       "bytes": 1762,
       "checkedAt": "2026-09-01"
     },
-    "https://uscode.house.gov": {
-      "verdict": "live",
-      "reason": "HTTP 200, 78008 bytes",
-      "status": 200,
-      "finalUrl": "https://uscode.house.gov/",
-      "bytes": 78008,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.everycrsreport.com/reports/98-265GOV.html": {
       "verdict": "live",
       "reason": "HTTP 200, 16310 bytes — \"A User's Guide to the Congressional Record - EveryCRSReport.com\"",
@@ -520,15 +437,6 @@
       "status": 200,
       "title": "2 USC 683: Rescission of budget authority",
       "bytes": 146074,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.congress.gov/help/legislative-glossary#glossary_jointresolution": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "finalUrl": "https://www.congress.gov/help/legislative-glossary",
-      "title": "Just a moment...",
-      "bytes": 5887,
       "checkedAt": "2026-09-01"
     },
     "https://www.congress.gov/bill/119th-congress/senate-bill/1748": {
@@ -1245,37 +1153,6 @@
       "bytes": 5845,
       "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/committees": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5821,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.senate.gov/committees/committees_home.htm": {
-      "verdict": "live",
-      "reason": "HTTP 200, 91 bytes",
-      "status": 200,
-      "bytes": 91,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.house.gov/committees": {
-      "verdict": "live",
-      "reason": "HTTP 200, 23789 bytes — \"Committees | house.gov\"",
-      "status": 200,
-      "title": "Committees | house.gov",
-      "bytes": 23789,
-      "checkedAt": "2026-09-01"
-    },
-    "https://www.govinfo.gov/app/collection/CHRG": {
-      "verdict": "live",
-      "reason": "HTTP 200, 1762 bytes — \"Govinfo\"",
-      "status": 200,
-      "title": "Govinfo",
-      "bytes": 1762,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.cbo.gov/cost-estimates": {
       "verdict": "wall",
       "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
@@ -1703,6 +1580,165 @@
       "status": 200,
       "title": "50 USC 1881: Definitions",
       "bytes": 163909,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/R44001.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 63359 bytes — \"Introducing a House Bill or Resolution - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Introducing a House Bill or Resolution - EveryCRSReport.com",
+      "bytes": 63359,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/R42843.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 83815 bytes — \"Introduction to the Legislative Process in the U.S. Congress - EveryCR\"",
+      "status": 200,
+      "title": "Introduction to the Legislative Process in the U.S. Congress - EveryCRSReport.com",
+      "bytes": 83815,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/R46603.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 54289 bytes — \"Bills, Resolutions, Nominations, and Treaties: Characteristics and Exa\"",
+      "status": 200,
+      "title": "Bills, Resolutions, Nominations, and Treaties: Characteristics and Examples of Use - EveryCRSReport.com",
+      "bytes": 54289,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/RL30240.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 639134 bytes — \"Congressional Oversight Manual - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Congressional Oversight Manual - EveryCRSReport.com",
+      "bytes": 639134,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/R45920.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 36462 bytes — \"Discharge Procedure in the House - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Discharge Procedure in the House - EveryCRSReport.com",
+      "bytes": 36462,
+      "checkedAt": "2026-09-02"
+    },
+    "https://api.congress.gov/v3/bill/119": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "bytes": 138,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.law.cornell.edu/supremecourt/text/273/135": {
+      "verdict": "live",
+      "reason": "HTTP 200, 110562 bytes — \"McGRAIN, Deputy Sergent at Arms of the United States Senate, v. DAUGHE\"",
+      "status": 200,
+      "title": "McGRAIN, Deputy Sergent at Arms of the United States Senate, v. DAUGHERTY. | Supreme Court | US Law | LII / Legal Information Institute",
+      "bytes": 110562,
+      "checkedAt": "2026-09-02"
+    },
+    "https://rules.house.gov/about/special-rule-types": {
+      "verdict": "live",
+      "reason": "HTTP 200, 31593 bytes — \"Special Rule Types | House of Representatives Committee on Rules\"",
+      "status": 200,
+      "title": "Special Rule Types | House of Representatives Committee on Rules",
+      "bytes": 31593,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/1/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5923,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/R48308.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 775110 bytes — \"Special Rules in the House of Representatives: Purpose and Content - E\"",
+      "status": 200,
+      "title": "Special Rules in the House of Representatives: Purpose and Content - EveryCRSReport.com",
+      "bytes": 775110,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/1011/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5954,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section403&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 181045 bytes — \"5 USC 403: Appointments\"",
+      "status": 200,
+      "title": "5 USC 403: Appointments",
+      "bytes": 181045,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/1993/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5954,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/165/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5929,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-bill/4371/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5954,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140/text": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5987,
+      "checkedAt": "2026-09-02"
+    },
+    "https://www.everycrsreport.com/reports/98-241.html": {
+      "verdict": "live",
+      "reason": "HTTP 200, 27875 bytes — \"Committee Types and Roles - EveryCRSReport.com\"",
+      "status": 200,
+      "title": "Committee Types and Roles - EveryCRSReport.com",
+      "bytes": 27875,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section112&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 161035 bytes — \"1 USC 112: Statutes at Large; contents; admissibility in evidence\"",
+      "status": 200,
+      "title": "1 USC 112: Statutes at Large; contents; admissibility in evidence",
+      "bytes": 161035,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title31-section712&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 154976 bytes — \"31 USC 712: Investigating the use of public money\"",
+      "status": 200,
+      "title": "31 USC 712: Investigating the use of public money",
+      "bytes": 154976,
+      "checkedAt": "2026-09-02"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title1-section101&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 140927 bytes — \"1 USC 101: Enacting clause\"",
+      "status": 200,
+      "title": "1 USC 101: Enacting clause",
+      "bytes": 140927,
       "checkedAt": "2026-09-02"
     }
   }
