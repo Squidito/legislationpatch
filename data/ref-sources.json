@@ -1,4 +1,49 @@
 {
+  "bill-119-hjres-140": {
+    "id": "bill-119-hjres-140",
+    "kind": "law",
+    "label": "H.J. Res. 140 (119th Congress) - CRA disapproval of BLM Public Land Order 7917, enrolled as Public Law 119-85",
+    "citation": "Public Law 119-85, 140 Stat. 772",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/140/text",
+    "textFile": "data/bill-text/119-HJRES-140.txt",
+    "fetchedAt": "2026-05-06"
+  },
+  "bill-119-hr-1": {
+    "id": "bill-119-hr-1",
+    "kind": "bill",
+    "label": "H.R. 1 (119th Congress) - One Big Beautiful Bill Act, enrolled text",
+    "citation": "H.R. 1, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1/text",
+    "textFile": "data/bill-text/119-HR-1.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-1011": {
+    "id": "bill-119-hr-1011",
+    "kind": "bill",
+    "label": "H.R. 1011 (119th Congress) - Emergency Conservation Program Improvement Act of 2025, enrolled text",
+    "citation": "H.R. 1011, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1011/text",
+    "textFile": "data/bill-text/119-HR-1011.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-165": {
+    "id": "bill-119-hr-165",
+    "kind": "bill",
+    "label": "H.R. 165 (119th Congress) - bill text",
+    "citation": "H.R. 165, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/165/text",
+    "textFile": "data/bill-text/119-HR-165.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "bill-119-hr-1993": {
+    "id": "bill-119-hr-1993",
+    "kind": "bill",
+    "label": "H.R. 1993 (119th Congress) - bill text",
+    "citation": "H.R. 1993, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1993/text",
+    "textFile": "data/bill-text/119-HR-1993.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "bill-119-hr-22": {
     "id": "bill-119-hr-22",
     "kind": "bill",
@@ -7,6 +52,15 @@
     "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/22/text",
     "textFile": "data/ref-text/bill-119-hr-22.txt",
     "fetchedAt": "2026-08-19"
+  },
+  "bill-119-hr-4371": {
+    "id": "bill-119-hr-4371",
+    "kind": "bill",
+    "label": "H.R. 4371 (119th Congress) - bill text",
+    "citation": "H.R. 4371, 119th Congress",
+    "srcUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4371/text",
+    "textFile": "data/bill-text/119-HR-4371.txt",
+    "fetchedAt": "2026-09-01"
   },
   "bill-119-hr-7296": {
     "id": "bill-119-hr-7296",
@@ -811,6 +865,17 @@
     "textFile": "data/ref-text/record-crs-r43563-senate-holds.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-crs-r44001-introducing-house-bill": {
+    "id": "record-crs-r44001-introducing-house-bill",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R44001 - Introducing a House Bill or Resolution",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R44001.html",
+    "textFile": "data/ref-text/record-crs-r44001-introducing-house-bill.txt",
+    "fetchedAt": "2026-09-02"
+  },
   "record-crs-r44058-reconciliation-stages": {
     "id": "record-crs-r44058-reconciliation-stages",
     "kind": "record",
@@ -866,6 +931,17 @@
     "textFile": "data/ref-text/record-crs-r45442-congress-control-agencies.txt",
     "fetchedAt": "2026-09-01"
   },
+  "record-crs-r45920-discharge-procedure": {
+    "id": "record-crs-r45920-discharge-procedure",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R45920 - Discharge Procedure in the House",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R45920.html",
+    "textFile": "data/ref-text/record-crs-r45920-discharge-procedure.txt",
+    "fetchedAt": "2026-09-01"
+  },
   "record-crs-r46233-dynamic-scoring": {
     "id": "record-crs-r46233-dynamic-scoring",
     "kind": "record",
@@ -886,6 +962,17 @@
     "citation": "Congressional Research Service",
     "srcUrl": "https://www.everycrsreport.com/reports/R46240.html",
     "textFile": "data/ref-text/record-crs-r46240-budget-process.txt",
+    "fetchedAt": "2026-09-01"
+  },
+  "record-crs-r46603-forms-of-measures": {
+    "id": "record-crs-r46603-forms-of-measures",
+    "kind": "record",
+    "org": "Congressional Research Service",
+    "date": null,
+    "label": "CRS Report R46603 - Bills, Resolutions, Nominations, and Treaties: Characteristics and Examples of Use",
+    "citation": "Congressional Research Service",
+    "srcUrl": "https://www.everycrsreport.com/reports/R46603.html",
+    "textFile": "data/ref-text/record-crs-r46603-forms-of-measures.txt",
     "fetchedAt": "2026-09-01"
   },
   "record-crs-r47106-approps-overview": {
@@ -1157,6 +1244,15 @@
     "textFile": "data/ref-text/record-house-rules-special-rule-types.txt",
     "fetchedAt": "2026-09-01"
   },
+  "record-lp-corpus-119-snapshot": {
+    "id": "record-lp-corpus-119-snapshot",
+    "kind": "record",
+    "label": "Corpus snapshot — 119th-Congress bills in data/cache.json (stage, dates, votes)",
+    "citation": "LegislationPatch database snapshot, generated from data/cache.json",
+    "srcUrl": "https://legislationpatch.com/",
+    "textFile": "data/ref-text/record-lp-corpus-119-snapshot.txt",
+    "fetchedAt": "2026-08-27"
+  },
   "record-nci-lung-cancer-overview": {
     "id": "record-nci-lung-cancer-overview",
     "kind": "record",
@@ -1233,6 +1329,17 @@
     "srcUrl": "https://www.law.cornell.edu/supremecourt/text/524/417",
     "textFile": "data/ref-text/record-scotus-clinton-v-nyc-1998.txt",
     "fetchedAt": "2026-08-31"
+  },
+  "record-scotus-mcgrain-v-daugherty-1927": {
+    "id": "record-scotus-mcgrain-v-daugherty-1927",
+    "kind": "record",
+    "org": "Supreme Court of the United States",
+    "date": null,
+    "label": "McGrain v. Daugherty, 273 U.S. 135 (1927)",
+    "citation": "Supreme Court of the United States",
+    "srcUrl": "https://www.law.cornell.edu/supremecourt/text/273/135",
+    "textFile": "data/ref-text/record-scotus-mcgrain-v-daugherty-1927.txt",
+    "fetchedAt": "2026-09-01"
   },
   "record-scotus-pocket-veto-case-1929": {
     "id": "record-scotus-pocket-veto-case-1929",
@@ -1408,17 +1515,6 @@
     "citation": "U.S. Preventive Services Task Force",
     "srcUrl": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
     "textFile": "data/ref-text/record-uspstf-lung-cancer-screening.txt",
-    "fetchedAt": "2026-09-01"
-  },
-  "tmp-probe": {
-    "id": "tmp-probe",
-    "kind": "record",
-    "org": "House Committee on Rules",
-    "date": null,
-    "label": "tmp",
-    "citation": "x",
-    "srcUrl": "https://rules.house.gov/about/special-rule-process",
-    "textFile": "data/ref-text/tmp-probe.txt",
     "fetchedAt": "2026-09-01"
   },
   "tmp-rules-about": {
