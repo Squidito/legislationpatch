@@ -41,7 +41,12 @@ const VERBOSE = args.includes('--verbose');
 // docs/ holds rulebooks and the article template — reference material, not
 // served pages. The template's relative paths are written for articles/, so
 // checking them here would always fail.
-const SKIP_DIRS = new Set(['node_modules', '.git', '.claude', 'og', 'data', 'scripts', 'archive', '.playwright-mcp', 'docs']);
+// _worktrees/ holds git worktrees checked out INSIDE the repo (the orchestrated-batch
+// pattern). Every page in one is a byte-identical copy of a real page, so scanning it
+// reported every article as a duplicate <title> and as an indexable page missing from
+// the sitemap — 20 failures on 2026-09-03, none of them real. Worktrees are gitignored
+// and never deploy; they are not a site surface.
+const SKIP_DIRS = new Set(['node_modules', '.git', '.claude', 'og', 'data', 'scripts', 'archive', '.playwright-mcp', 'docs', '_worktrees']);
 
 let failures = 0;
 let checks = 0;

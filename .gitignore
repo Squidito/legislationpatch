@@ -87,3 +87,7 @@ data/qa-metrics/dashboard.html
 # provenance sidecar are the committed record, and the receipt replay in
 # qa-regression runs off those, never off the draft file.
 drafts/
+
+# Git worktrees checked out inside the repo (orchestrated batches). The repo root
+# deploys, so a committed worktree would ship a duplicate copy of the whole site.
+_worktrees/
