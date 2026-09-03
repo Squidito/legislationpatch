@@ -8662,14 +8662,17 @@
       "pages": 2,
       "analyzed": true,
       "demo": false,
-      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the NSA collect the communications of foreign targets without a warrant — and when those targets contact Americans, those conversations are swept up too. The FBI can then search that database for information about U.S. persons without getting a separate warrant. This bill extends that authority through April 30, 2026 with no new limits, oversight requirements, or reforms added.",
-      "brief": "Extends the NSA's authority to collect foreign targets' communications without a warrant — including Americans' conversations when they contact those targets — through April 30, 2026, with no reforms attached.",
+      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the Attorney General and the Director of National Intelligence jointly authorize, for up to one year at a time, the targeting of persons reasonably believed to be located outside the United States to acquire foreign intelligence information. They may do that on an order issued under subsection (j)(3), or on their own determination that exigent circumstances exist, and nothing in subchapter I of FISA requires an application for a court order for an acquisition targeted that way. The prohibitions the statute writes are specific rather than general: no intentional targeting of anyone known to be located in the United States, no targeting a person outside the United States in order to reach a particular known person here, no intentionally acquiring communications that contain a reference to, but are not to or from, a target, no intentionally acquiring a communication where the sender and all intended recipients are known to be in the United States, and the acquisition must be conducted consistent with the Fourth Amendment. FBI personnel may query what was collected using a U.S. person query term after prior approval from an FBI supervisor or attorney, unless they have a reasonable belief the query could assist in mitigating or eliminating a threat to life or serious bodily harm. This bill extends that authority through April 30, 2026 with no new limits, oversight requirements, or reforms added.",
+      "brief": "Extends Section 702 of FISA — the Attorney General and the Director of National Intelligence jointly authorizing the targeting of people reasonably believed to be located outside the United States, with no application for a court order required for such an acquisition — through April 30, 2026, with no reforms attached.",
       "top_lines": [
         {
           "headline": "What Section 702 Does",
           "subs": [
-            "Allows the NSA to compel U.S. tech companies to hand over communications of designated foreign targets without a warrant",
-            "When those targets communicate with Americans, those conversations are collected — the FBI can then search that database for U.S. person data without a separate warrant"
+            "The Attorney General and the Director of National Intelligence authorize jointly, for up to one year at a time, the targeting of persons reasonably believed to be located outside the United States to acquire foreign intelligence information — on an order issued under subsection (j)(3), or on their own determination that exigent circumstances exist",
+            "Nothing in subchapter I of FISA is to be construed to require an application for a court order for an acquisition targeted at a person reasonably believed to be located outside the United States",
+            "The same two officials may direct an electronic communication service provider, in writing, to immediately provide the Government with all information, facilities, or assistance necessary to accomplish the acquisition, in a manner that will protect the secrecy of the acquisition and produce a minimum of interference with the services the provider is providing to the target",
+            "The acquisition may not intentionally target anyone known to be located in the United States, may not target a person outside the United States in order to reach a particular known person here, may not intentionally acquire communications that contain a reference to, but are not to or from, a target, may not intentionally acquire a communication where the sender and all intended recipients are known to be in the United States, and must be conducted consistent with the Fourth Amendment",
+            "FBI personnel must obtain prior approval from an FBI supervisor or attorney before a query of what was collected using a U.S. person query term, unless they have a reasonable belief the query could assist in mitigating or eliminating a threat to life or serious bodily harm; the Foreign Intelligence Surveillance Court reviews those querying procedures under subsection (j)"
           ],
           "billSection": "1",
           "source": "usc-50-1881a"
@@ -8678,14 +8681,14 @@
           "headline": "What This Bill Changes",
           "subs": [
             "Extended through April 30, 2026 — no new limits or reforms",
-            "Introduced and signed into law in 48 hours"
+            "Considered and passed the House April 16, the Senate April 17, approved April 18, 2026"
           ],
           "billSection": "1"
         }
       ],
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
-      "likelihoodReason": "Signed into law by the President on April 18, 2026 as Public Law 119-84.",
+      "likelihoodReason": "Approved April 18, 2026 as Public Law 119-84.",
       "referencedSources": [
         {
           "id": "usc-50-1881a",
@@ -8702,15 +8705,17 @@
           "label": "Section 1 — Extension of Title VII Authorities",
           "items": [
             {
-              "main": "Title VII of FISA (Section 702) authorizes the NSA to surveil foreign targets abroad without a warrant. This bill extends that authority through April 30, 2026 with no new conditions attached.",
-              "detail": "Amends Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) to set a fixed April 30, 2026 repeal date for Title VII, replacing a rolling deadline tied to the enactment of the Reforming Intelligence and Securing America Act. The amendment takes effect on the earlier of the date of enactment or April 19, 2026. No new minimization requirements, no new oversight mechanisms, and no restrictions on FBI queries of the collected data are included.",
+              "main": "Section 702 was added to title VII of the Foreign Intelligence Surveillance Act by the FISA Amendments Act of 2008 (Public Law 110-261), the Act this bill amends, so extending title VII extends Section 702. The extension runs through April 30, 2026 with no new conditions attached.",
+              "detail": "Amends Section 403(b) of the FISA Amendments Act of 2008 (Public Law 110-261) in both of its paragraphs. Paragraph (1), the 50 U.S.C. 1881 note, has \"effective two years after\" and everything following it through the end of the sentence struck, replaced by \"effective April 30, 2026, title VII of the Foreign Intelligence Surveillance Act of 1978 (50 U.S.C. 1881 et seq.) is repealed.\" Paragraph (2), the 18 U.S.C. 2511 note, has \"Effective two years after the date of enactment of the Reforming Intelligence and Securing America Act--\" replaced by \"Effective April 30, 2026--\". Section 1(b) separately amends Section 404(b), rewriting the transition-procedure heading and replacing its cross-references with a direct citation to (50 U.S.C. 1881 et seq.). The amendments take effect on the earlier of the date of enactment or April 19, 2026. No new minimization requirements, no new oversight mechanisms, and no restrictions on FBI queries of the collected data are included.",
               "comments": [],
               "source": "usc-50-1881a"
             }
           ]
         }
       ],
-      "underreported": [],
+      "underreported": [
+        "Section 1(b) also rewrites Section 404(b) of the FISA Amendments Act of 2008, the transition procedures: the heading loses its reference to the Reforming Intelligence and Securing America Act, and the cross-references to that Act, to the FISA Amendments Reauthorization Act of 2017 and to section 101(a) become a direct citation to (50 U.S.C. 1881 et seq.). The bill's title mentions only the extension."
+      ],
       "criticisms": [],
       "gaps": [
         "The bill extends Title VII surveillance authorities through April 30, 2026 but sets no reporting requirement on how those authorities are used during the extension period.",
@@ -8720,7 +8725,9 @@
       "changes": {
         "added": [],
         "modified": [
-          "Section 403(b)(1) of the FISA Amendments Act of 2008 (Public Law 110-261) — Title VII repeal date changed from two years after enactment of the Reforming Intelligence and Securing America Act to April 30, 2026"
+          "Section 403(b), paragraph (1), of the FISA Amendments Act of 2008 (Public Law 110-261), the 50 U.S.C. 1881 note — the repeal trigger beginning \"effective two years after\" replaced by \"effective April 30, 2026\"",
+          "Section 403(b), paragraph (2), the 18 U.S.C. 2511 note — \"Effective two years after the date of enactment of the Reforming Intelligence and Securing America Act--\" replaced by \"Effective April 30, 2026--\"",
+          "Section 404(b) of the FISA Amendments Act of 2008 — transition-procedure heading and cross-references rewritten to cite title VII directly as (50 U.S.C. 1881 et seq.)"
         ],
         "removed": []
       },
@@ -8735,27 +8742,6 @@
           "method": "Voice Vote"
         },
         {
-          "chamber": "Senate",
-          "date": "2026-04-17",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-04-17",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
-          "chamber": "House",
-          "date": "2026-04-17",
-          "question": "On Passage",
-          "result": "Passed",
-          "method": "Voice Vote"
-        },
-        {
           "chamber": "House",
           "date": "2026-04-17",
           "question": "On Passage",
@@ -8764,7 +8750,7 @@
         }
       ],
       "billType": "reauthorization",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-09-02",
       "versions": [
         {
           "type": "Engrossed in House",
@@ -8965,15 +8951,18 @@
       "analyzed": true,
       "demo": false,
       "enactedDate": "2026-04-30",
-      "summary": "Section 702 of FISA lets the NSA collect the communications of foreign targets without a warrant — including conversations involving Americans. This bill is the second short-term extension in as many weeks, stretching that authority from its April 30, 2026 expiration to June 12, 2026 with no new limits or reforms added.",
-      "brief": "Extends NSA warrantless surveillance authority under FISA Section 702 by six more weeks, to June 12, 2026, with no changes to oversight or limitations.",
+      "summary": "Section 702 of the Foreign Intelligence Surveillance Act lets the Attorney General and the Director of National Intelligence jointly authorize, for up to one year at a time, the targeting of persons reasonably believed to be located outside the United States to acquire foreign intelligence information. They may do that on an order issued under subsection (j)(3), or on their own determination that exigent circumstances exist, and nothing in subchapter I of FISA requires an application for a court order for an acquisition targeted that way. The prohibitions the statute writes are specific rather than general: no intentional targeting of anyone known to be located in the United States, no targeting a person outside the United States in order to reach a particular known person here, no intentionally acquiring communications that contain a reference to, but are not to or from, a target, no intentionally acquiring a communication where the sender and all intended recipients are known to be in the United States, and the acquisition must be conducted consistent with the Fourth Amendment. FBI personnel may query what was collected using a U.S. person query term after prior approval from an FBI supervisor or attorney, unless they have a reasonable belief the query could assist in mitigating or eliminating a threat to life or serious bodily harm. This bill moves the repeal date for those authorities from April 30, 2026 to June 12, 2026 with no new limits or reforms added, and it was considered and passed by both chambers on April 30, 2026, the date they were otherwise set to lapse.",
+      "brief": "Moves the repeal date for title VII of FISA, which contains Section 702, from April 30, 2026 to June 12, 2026, with no changes to oversight or limitations.",
       "top_lines": [
         {
           "headline": "What Section 702 Allows",
           "billSection": "1",
           "subs": [
-            "NSA can compel U.S. tech companies to hand over communications of designated foreign targets without an individual warrant",
-            "When foreign targets communicate with Americans, those conversations are collected — FBI can then query that data for U.S. persons without a separate warrant"
+            "The Attorney General and the Director of National Intelligence authorize jointly, for up to one year at a time, the targeting of persons reasonably believed to be located outside the United States to acquire foreign intelligence information — on an order issued under subsection (j)(3), or on their own determination that exigent circumstances exist",
+            "Nothing in subchapter I of FISA is to be construed to require an application for a court order for an acquisition targeted at a person reasonably believed to be located outside the United States",
+            "The same two officials may direct an electronic communication service provider, in writing, to immediately provide the Government with all information, facilities, or assistance necessary to accomplish the acquisition, in a manner that will protect the secrecy of the acquisition and produce a minimum of interference with the services the provider is providing to the target",
+            "The acquisition may not intentionally target anyone known to be located in the United States, may not target a person outside the United States in order to reach a particular known person here, may not intentionally acquire communications that contain a reference to, but are not to or from, a target, may not intentionally acquire a communication where the sender and all intended recipients are known to be in the United States, and must be conducted consistent with the Fourth Amendment",
+            "FBI personnel must obtain prior approval from an FBI supervisor or attorney before a query of what was collected using a U.S. person query term, unless they have a reasonable belief the query could assist in mitigating or eliminating a threat to life or serious bodily harm; the Foreign Intelligence Surveillance Court reviews those querying procedures under subsection (j)"
           ],
           "source": "usc-50-1881a"
         },
@@ -8982,13 +8971,13 @@
           "billSection": "1",
           "subs": [
             "Repeal date moved from April 30, 2026 to June 12, 2026 — no new oversight requirements or limits added",
-            "Second short-term extension in two weeks; Congress has not passed a long-term reauthorization"
+            "Considered and passed by the Senate and the House on April 30, 2026 and approved the same day"
           ]
         }
       ],
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
-      "likelihoodReason": "Signed into law by the President on April 30, 2026 as Public Law 119-87.",
+      "likelihoodReason": "Approved April 30, 2026 as Public Law 119-87.",
       "referencedSources": [
         {
           "id": "usc-50-1881a",
@@ -9006,14 +8995,16 @@
           "items": [
             {
               "main": "Amends Section 403(b) of the FISA Amendments Act of 2008 to change the repeal date of Title VII authorities from April 30, 2026 to June 12, 2026.",
-              "detail": "The bill amends both the main repeal date and a cross-reference in the sunset clause, ensuring the extension applies to all Title VII provisions including Section 702.",
+              "detail": "The same strike-and-insert is made twice: in paragraph (1) of Section 403(b), the 50 U.S.C. 1881 note, and in paragraph (2), the 18 U.S.C. 2511 note. Section 702 sits in title VII, added there by the same 2008 Act, so moving the title VII repeal date moves Section 702's with it. The amendments take effect on the earlier of the date of enactment or April 29, 2026.",
               "comments": [],
               "source": "usc-50-1881a"
             }
           ]
         }
       ],
-      "underreported": [],
+      "underreported": [
+        "The effective-date clause runs to the earlier of enactment or April 29, 2026 — a day before the April 30, 2026 deadline it replaces, so the new date is in force before the old one arrives."
+      ],
       "criticisms": [
         {
           "who": "Mr. Roy (R-TX)",
@@ -9064,7 +9055,8 @@
       "changes": {
         "added": [],
         "modified": [
-          "Section 403(b)(1) of the FISA Amendments Act of 2008 — Title VII repeal date changed from April 30, 2026 to June 12, 2026"
+          "Section 403(b), paragraph (1), of the FISA Amendments Act of 2008, the 50 U.S.C. 1881 note — Title VII repeal date changed from April 30, 2026 to June 12, 2026",
+          "Section 403(b), paragraph (2), the 18 U.S.C. 2511 note — the same date changed from April 30, 2026 to June 12, 2026"
         ],
         "removed": []
       },
@@ -9083,7 +9075,7 @@
         }
       ],
       "billType": "reauthorization",
-      "analyzedAt": "2026-06-10",
+      "analyzedAt": "2026-09-02",
       "versions": [
         {
           "type": "Considered and Passed Senate",

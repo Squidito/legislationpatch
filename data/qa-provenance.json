@@ -1875,7 +1875,7 @@
       "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
       "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "record-crs-rl30909-pocket-veto": "5aaf559e0bcac75a452cdcccca69bba15421f206dd1a91978db3f70ae9fd76b7"
     },
     "proseSha": "0c6733b8d4a98150",
@@ -1913,7 +1913,7 @@
     "kind": "article",
     "sourceShas": {
       "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "code-senator-match": "625ae6c3a6addca73c6b36f38630ae51c791dd42f3f73032411d82b6810e6f98",
       "code-generate-reps": "4eba1de9be7216ebbe531ba58019d698240bf6daeba35f8675940f8449528df7",
       "code-generate-rep-pages": "3f46b55c966c2b28950eb6f2395efa8947f9ebd9a26199926107f543ed0acebd",
@@ -1989,9 +1989,10 @@
       "code-floor-js": "2b9372367936e62dc832260d64f2d880221632e09430da984f56d3eacc9fed02",
       "code-validate-batch": "71fa7385bdbdda32a3a5441d10945fa4757d0578d272b0b16860aba83d60a55f",
       "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b",
-      "record-lp-cache": "9aabe7df6290ad1c9db5a364b1fd63b88e65458fa76fc82318bf81e1c3a2ba57"
+      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34",
+      "record-article-sbir": "db81dfcae457293ac868515f43793224e9eeb56ccdcae55bcce74d7b8be213c1"
     },
-    "proseSha": "80523706ec3b4497",
+    "proseSha": "1f47c625174fe220",
     "proseFile": "articles/legislationpatch-and-ai.html",
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -2030,7 +2031,7 @@
       "code-fetch-reference": "cc93a1bfc69765333bc1b4987cc8f351ebf17f88d71fb283bded922ef38f194a",
       "code-fetch-cr-data": "d07c3f7ef0e9f2648fd8cd954568e3391d426f2fcb5d22c1ccca84ddab39653b",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "code-validate-batch": "71fa7385bdbdda32a3a5441d10945fa4757d0578d272b0b16860aba83d60a55f",
       "code-publish-article": "18872363bc9119564a2f1b9a49cf8c848900ae7a5d9637f56eb977e28f1efdb9",
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
@@ -2039,7 +2040,7 @@
       "doc-qa-ledger-readme": "0135b0168e1273154e93d31d074de5c9b510c55980424e97eb5be82d089fce43",
       "code-article-ledger": "0aa6f3bd2cd79ebc5fd82e95b8cedd4e105beed4d48cea1b8ae1b295b6e6b99d",
       "bill-119-s-4465": "ed9cf2a6ecb835842821c75316bec89322af4f248ea38447f13ebc910f4a460d",
-      "record-lp-cache": "9aabe7df6290ad1c9db5a364b1fd63b88e65458fa76fc82318bf81e1c3a2ba57",
+      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34",
       "usc-50-1881a": "5a4ed18a719601df2f74a358211cfc269f48b096a6aaa2221b3ef40021de60f2",
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
       "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
@@ -2119,7 +2120,7 @@
       "doc-article-spec": "fb9d6971aa5623706034d01410c6083967a422d95136da95ddcf061503da2593",
       "doc-both-sides": "6cc4c5cd0815d18186dbb74ff439244cc6312d0b725c8c683035c78f7cc721d8",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b"
     },
     "proseSha": "5bd480ffd54e6102",
@@ -2416,12 +2417,12 @@
     "kind": "article",
     "sourceShas": {
       "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
-      "code-fetch-vote-data": "e6916a42c2d12037b0bbcce1bc9628344a1d1ea57bc40dd1c5a7f3e3709fb11b",
+      "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-bill-js": "f2b61241af9140b958a1e7783075f48480bad8d9a327e30cc7661c7a3ecf699c",
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
-      "record-lp-cache": "9aabe7df6290ad1c9db5a364b1fd63b88e65458fa76fc82318bf81e1c3a2ba57"
+      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34"
     },
     "proseSha": "0869a4c1bbec229a",
     "proseFile": "articles/what-is-legislationpatch.html",

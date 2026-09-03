@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 4,
-  "proseSha": "80523706ec3b4497",
+  "proseSha": "1f47c625174fe220",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -131,6 +131,15 @@
       "srcUrl": "https://legislationpatch.com/data/cache.json",
       "textFile": "data/cache.json",
       "fetchedAt": "2026-08-30"
+    },
+    {
+      "id": "record-article-sbir",
+      "kind": "record",
+      "label": "LegislationPatch explainer: Small Business Innovation and Economic Security Act (audited 2026-09-01)",
+      "citation": "legislationpatch.com/articles/small-business-innovation-act.html",
+      "srcUrl": "https://legislationpatch.com/articles/small-business-innovation-act.html",
+      "textFile": "articles/small-business-innovation-act.html",
+      "fetchedAt": "2026-09-02"
     }
   ],
   "claims": [
@@ -435,16 +444,17 @@
     },
     {
       "field": "body",
-      "claim": "The S.3971 example is a real published analysis: SBIR and STTR extended through FY2031 with screening against eight federal watchlists.",
+      "claim": "The S. 3971 example is a real published analysis: a connection to any of eight named federal watchlists is a ground on which an agency must deny an application.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
-      "sourceFile": "record-lp-cache",
-      "sourceSpan": "eight federal watchlists",
+      "sourceFile": "record-article-sbir",
+      "sourceSpan": "Section 2 makes a connection to any of eight named federal watchlists a ground on which an agency must deny an application",
       "section": "Factual Density",
-      "status": "open",
+      "status": "ok",
       "verify": "CONFIRMED",
-      "kind": "claim"
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up] Re-cut. The old example said S. 3971 \"requires screening against eight federal watchlists for foreign adversary ties\" and was bound to data/cache.json. The bill-analysis-B audit established that the Act never uses the phrase \"foreign adversary\" (the statutory term is \"foreign country of concern\", 15 U.S.C. 638(e)(17), and it governs the due-diligence provisions, not the eight-list ground), and that the watchlist naming was wrong three ways. Re-bound to the AUDITED explainer rather than to the cache entry, which still carries the disproved framing and is flagged for its own bill-lane re-audit."
     },
     {
       "field": "body",
@@ -466,11 +476,12 @@
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-cache",
-      "sourceSpan": "lets the NSA collect the communications of foreign targets without a warrant",
+      "sourceSpan": "Section 702 of the Foreign Intelligence Surveillance Act lets the Attorney General and the Director of National Intelligence jointly authorize, for up to one year at a time, the targeting of persons reasonably believed to be located outside the United States to acquire foreign intelligence information.",
       "section": "No Editorial Spin: Why Neutrality Makes a Claim Checkable",
-      "status": "open",
+      "status": "ok",
       "verify": "CONFIRMED",
-      "kind": "claim"
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up] Re-cut verbatim from the CORRECTED 119-HR-8322 summary. The previous quotation (\"lets the NSA collect the communications of foreign targets without a warrant\") was accurate as a quotation of the site at the time, but the thing it quoted was wrong: 50 U.S.C. 1881a names the NSA zero times. Quoting the site's own analysis as an example of mechanical description only works if the analysis is right, so the bill was re-audited first and the quotation re-cut from the result."
     },
     {
       "field": "body",
@@ -601,6 +612,33 @@
       "status": "open",
       "verify": "CONFIRMED",
       "kind": "claim"
+    },
+    {
+      "field": "body",
+      "claim": "The S. 3971 example gives the SBIR and STTR expiry dates moving from September 30, 2025 to September 30, 2031.",
+      "verdict": "SUPPORTED",
+      "type": "figure",
+      "severity": "ok",
+      "sourceFile": "record-article-sbir",
+      "sourceSpan": "push the expiry dates of the Small Business Innovation Research (SBIR) and Small Business Technology Transfer (STTR) grant programs from September 30, 2025 to September 30, 2031",
+      "section": "What Verifiable Actually Means",
+      "status": "ok",
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "note": "Added 2026-09-02 with the re-cut example: the dates replaced the old \"through FY2031\" shorthand."
+    },
+    {
+      "field": "body",
+      "claim": "S. 3971 was signed April 13, 2026.",
+      "verdict": "SUPPORTED",
+      "type": "date",
+      "severity": "ok",
+      "sourceFile": "record-article-sbir",
+      "sourceSpan": "became Public Law 119-83 on April 13, 2026",
+      "section": "What Verifiable Actually Means",
+      "status": "ok",
+      "verify": "CONFIRMED",
+      "kind": "claim"
     }
   ],
   "counts": {
@@ -612,5 +650,5 @@
     "rejected": 0
   },
   "resolution": "CONVERGED at pass 4. Trust-page audit (Phase B), 2026-08-30, across two Opus sessions (the first was killed by a session limit; its draft survived in the gitignored drafts/ and hash-matched this ledger). Four hostile Sonnet passes, adjudicated in the main Opus thread. Pass 1 BLOCK: the LegislativeAction paragraph generalised a 1-of-12 outlier (only holocaust-art-recovery carries legislationDate), evaluative framing on the one page whose subject is non-evaluative prose, the version ladder stated without its fetch-time caveat, and two receipts that were adjacent to rather than binding on their claims. Pass 2 BLOCK: the meta description and index card claimed schema.org markup on EVERY page; measured, 17 of 855 HTML files carry no JSON-LD, six of them real reader-facing pages. Pass 3: zero errors, one warning that the quotation of our own H.R. 8322 analysis dropped the source sentence full stop; on the page whose history is a FABRICATED quotation, byte-identical is the bar, so the sentence was restructured rather than the elision waved through. Pass 4: zero errors; every quote re-verified character-for-character and every coverage figure recounted from the emitted files rather than the generator. ALSO FIXED, found in the main thread rather than by a verifier: the page used S. 1884, S. 3971 and H.R. 8322 as worked examples with NO bill-page links, breaching ARTICLE_DRAFT_PROMPT rule 2; and the draft carried no JSON-LD citation node, which the publish gate rejects outright. OPEN, FLAGGED FOR JAMES, NOT A FALSE CLAIM: the title pairs AI with Built to Be Cited while the body explicitly declines to say how any AI system treats a source. The title asserts a design intent the body delivers, so nothing on the page is untrue, but the framing is a legacy of the pre-audit version and retitling an indexed page is an SEO call, not an audit call.",
-  "notes": "THE CODEBASE IS THE SOURCE for this page. Every fix was either prose corrected to match the code, or a claim scoped to what the emitted files actually show. Nothing was softened: the AI-behaviour assertions the sweep found were REMOVED as uncheckable and replaced with an explicit disclaimer that the page makes no such claim. Coverage claims are now counted across emitted files, never inferred from generator code - that distinction is what pass 1 got wrong and pass 2 caught."
+  "notes": "THE CODEBASE IS THE SOURCE for this page. Every fix was either prose corrected to match the code, or a claim scoped to what the emitted files actually show. Nothing was softened: the AI-behaviour assertions the sweep found were REMOVED as uncheckable and replaced with an explicit disclaimer that the page makes no such claim. Coverage claims are now counted across emitted files, never inferred from generator code - that distinction is what pass 1 got wrong and pass 2 caught.\n\n2026-09-02 WRAP-UP DELTA. Two examples on this page quoted things that were themselves wrong, which is the specific hazard of a page whose subject is verifiability. (1) The \"our analysis\" FISA quotation was put here by the 2026-08-30 fabrication strike, replacing an invented quotation with a real one from cache.json 119-HR-8322 — but that summary said Section 702 \"lets the NSA collect\", and 50 U.S.C. 1881a names the NSA zero times. The bill was re-audited first (and 119-S-4465 with it) and the quotation re-cut verbatim from the corrected summary. (2) The S. 3971 example repeated the \"eight federal watchlists for foreign adversary ties\" framing that the bill-analysis-B audit had already disproved on the explainer; it is re-cut and re-bound to that audited explainer rather than to the cache entry, which still carries the framing and needs its own bill-lane pass."
 }
