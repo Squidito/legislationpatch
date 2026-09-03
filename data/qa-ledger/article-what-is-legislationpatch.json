@@ -303,16 +303,17 @@
     },
     {
       "field": "body",
-      "claim": "The Holocaust art example is a real published analysis: the bill removes procedural defenses in Holocaust art restitution cases.",
+      "claim": "The Holocaust art example is a real published analysis: the bill bars time-based and non-merits defenses in Holocaust art restitution cases.",
       "verdict": "SUPPORTED",
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-cache",
-      "sourceSpan": "It prohibits courts from dismissing Holocaust art claims based on the passage of time or other procedural defenses",
+      "sourceSpan": "on such a claim it bars all defenses or substantive doctrines based on the passage of time and all non-merits discretionary bases for dismissal",
       "section": "What We're Not",
       "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up] Re-cut: the 119-S-1884 cache entry this example quotes was re-derived from the enrolled text in the same pass (its summary had opened on a courts-dismissed-their-cases framing the audited explainer had already removed as unattributed)."
     }
   ],
   "counts": {

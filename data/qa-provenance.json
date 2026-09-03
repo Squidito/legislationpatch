@@ -127,7 +127,8 @@
   "119-S-1884": {
     "billTextSha": "ded7b91ccdb2d0570629d99e64225376b5b05970a2477d3d7245cb3372174a33",
     "refShas": {
-      "bill-114-s-2763": "9939d3677220020276f4abd64ad83868068e0f31f28a7c9e0e986a9ed969ccbf"
+      "bill-114-s-2763": "9939d3677220020276f4abd64ad83868068e0f31f28a7c9e0e986a9ed969ccbf",
+      "record-plaw-114-308-hear-act": "d66bae7472e2731bcf1a296fc1e3e0b995a84aa9ef2ea0c53417cace97af4537"
     },
     "promptVersion": "07b6a1640cc330cb",
     "genModel": null,
@@ -1395,6 +1396,9 @@
   },
   "119-HR-1346": {
     "billTextSha": "256f68be6675c96fd75f84b90035f806563ef4e20e46daeabe7aa3a45b61c8b5",
+    "refShas": {
+      "record-crec-2026-05-13-hr1346": "8fa8ac9379a47528b4673d0f3b01d7b6d4e5dc67384997f367008f58498730c8"
+    },
     "promptVersion": "07b6a1640cc330cb",
     "genModel": null,
     "genAt": "2026-07-24",
@@ -1982,14 +1986,14 @@
       "code-entity-lib": "cd35f455484f2f547176bb6e14b2bf46e1b11c546bd2e60e6bed1c8ef6c1db7d",
       "record-lp-entity": "7b325d341d7b16a1c2198efc5522c74b659bb42be93290df53ac03e243e16ec2",
       "record-article-holocaust": "33cb2ed91173f3d41df3cca935576c064c66b25f787d61668a83de55a3664805",
-      "record-bill-page-s1884": "7f782a5109db6267b226d1539f40f7f13567b1a5048d749994fa3fcc65c087f6",
+      "record-bill-page-s1884": "722eeef971eff498301e6b3bfbc72c095742f0500517cf9a24fed9b9ea747d2e",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
       "code-floor-js": "2b9372367936e62dc832260d64f2d880221632e09430da984f56d3eacc9fed02",
       "code-validate-batch": "71fa7385bdbdda32a3a5441d10945fa4757d0578d272b0b16860aba83d60a55f",
       "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b",
-      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34",
+      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2",
       "record-article-sbir": "db81dfcae457293ac868515f43793224e9eeb56ccdcae55bcce74d7b8be213c1"
     },
     "proseSha": "1f47c625174fe220",
@@ -2014,7 +2018,7 @@
       "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
       "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
       "code-refresh-stages": "96ec835ce8b9076507ffe347cb695a78acc1b5ef1acdf74e0f74be309fd7ff5a",
-      "doc-methodology": "057bec7a4fefba59d9a06c7b7566dfad21751cfd709c9afa534c1e69f7771a73"
+      "doc-methodology": "470476c2de58013da2901784ff2d9a18cc92206a4a548871bf944f2939f2c1f5"
     },
     "proseSha": "aad2cfc062d5ee7a",
     "proseFile": "articles/legislative-stages.html",
@@ -2040,7 +2044,7 @@
       "doc-qa-ledger-readme": "0135b0168e1273154e93d31d074de5c9b510c55980424e97eb5be82d089fce43",
       "code-article-ledger": "0aa6f3bd2cd79ebc5fd82e95b8cedd4e105beed4d48cea1b8ae1b295b6e6b99d",
       "bill-119-s-4465": "ed9cf2a6ecb835842821c75316bec89322af4f248ea38447f13ebc910f4a460d",
-      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34",
+      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2",
       "usc-50-1881a": "5a4ed18a719601df2f74a358211cfc269f48b096a6aaa2221b3ef40021de60f2",
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
       "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
@@ -2049,7 +2053,7 @@
       "code-stage-lib": "d6601aa13b931f00220d1442567ab66e5643a8c28df44bdde82e82f051f922a6",
       "code-add-bills": "4afb227fdf03c64bf2b40419d5a1e7ca64b2bd785456d8575cdaacf520a8043c"
     },
-    "proseSha": "e2e49b34d1ea5b2c",
+    "proseSha": "6845b3ca649f9378",
     "proseFile": "articles/methodology.html",
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -2422,7 +2426,7 @@
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-bill-js": "f2b61241af9140b958a1e7783075f48480bad8d9a327e30cc7661c7a3ecf699c",
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
-      "record-lp-cache": "a2f0c66197a05046c63fc3b245aa6b9ab06221a803527c23115dc065a9becf34"
+      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2"
     },
     "proseSha": "0869a4c1bbec229a",
     "proseFile": "articles/what-is-legislationpatch.html",

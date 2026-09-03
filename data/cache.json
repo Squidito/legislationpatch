@@ -5912,38 +5912,38 @@
       "pages": 3,
       "analyzed": true,
       "demo": false,
-      "summary": "For decades, families of Holocaust victims have tried to recover artwork stolen by Nazi Germany, only to have American courts dismiss their cases on procedural grounds — time delays, deference to foreign governments, or doctrines unrelated to who actually owned the art. This law permanently removes those barriers. It prohibits courts from dismissing Holocaust art claims based on the passage of time or other procedural defenses, strips foreign governments of a key immunity argument regardless of the victim's nationality, removes the December 31, 2026 filing deadline entirely, and applies all of those changes retroactively to cases currently in court.",
-      "brief": "Permanently bars courts from dismissing Nazi-looted art claims on procedural grounds, overriding multiple appellate and Supreme Court rulings that had blocked recovery.",
+      "summary": "This law amends the Holocaust Expropriated Art Recovery Act of 2016. Its central provision, a new subsection 5(f), says that for any claim that is otherwise timely under that Act, all defenses or substantive doctrines based on the passage of time — laches, adverse possession, acquisitive prescription and usucapion — may not be applied, and neither may any non-merits discretionary basis for dismissal, including the act of state doctrine, international comity, forum non conveniens, prudential exhaustion and similar doctrines unrelated to the merits. Congress states its reason in a finding this law inserts into the 2016 Act: some courts, it says, have frustrated that Act's intent by dismissing recovery lawsuits in reliance on those defenses, and it names Zuckerman, Cassirer and Von Saher as its examples. A new subsection 5(b) deems a covered claim to be an action in which rights in violation of international law are in issue for purposes of section 1605(a)(3) of title 28, without regard to the nationality or citizenship of the alleged victim. The 2016 Act's own sunset is struck, its closed filing window ending December 31, 2026 is replaced by claims filed on or after that Act's enactment, and every change applies to claims already pending in any court, including on appeal.",
+      "brief": "Bars time-based and non-merits defenses against otherwise-timely Nazi-looted art claims, lets them proceed without regard to the victim's nationality notwithstanding the domestic-takings rule of Federal Republic of Germany v. Philipp, strikes the 2016 Act's sunset, and reaches cases already pending.",
       "top_lines": [
         {
           "headline": "Procedural Defenses Eliminated",
           "subs": [
-            "Laches, adverse possession, international comity, forum non conveniens, and act of state doctrine may no longer be used to dismiss Holocaust art claims",
-            "Applies retroactively to cases currently pending, including those on appeal"
+            "For any claim that is otherwise timely under the 2016 Act, laches, adverse possession, acquisitive prescription and usucapion may not be applied — nor may the act of state doctrine, international comity, forum non conveniens, prudential exhaustion or similar doctrines unrelated to the merits",
+            "Applies to any claim pending in any court on the date of enactment, including one pending on appeal or for which the time to file an appeal has not expired"
           ],
           "billSection": "2"
         },
         {
-          "headline": "Foreign Sovereign Immunity Overridden",
+          "headline": "Relation to Foreign State Immunities",
           "subs": [
-            "Claims against foreign governments proceed regardless of victim nationality — overrides the 2021 Supreme Court ruling in Federal Republic of Germany v. Philipp",
-            "Nationwide service of process added, allowing courts to reach defendants in any U.S. district"
+            "A covered claim is deemed an action in which rights in violation of international law are in issue for purposes of section 1605(a)(3) of title 28, without regard to the nationality or citizenship of the alleged victim — the finding names the domestic-takings rule under Federal Republic of Germany v. Philipp as what this displaces",
+            "Nationwide service of process added: process may be served in the district where the case is brought or any other district of the United States where the defendant may be found, resides, has an agent, or transacts business"
           ],
           "billSection": "2"
         },
         {
-          "headline": "Filing Deadline Removed",
+          "headline": "Sunset and Filing Window Removed",
           "subs": [
-            "December 31, 2026 filing deadline eliminated — claims may be filed at any time",
-            "Six-year discovery period from the date the claimant learns of the artwork's location still applies"
+            "The 2016 Act's sunset, under which the whole Act would have ceased to have effect on January 1, 2027, is struck outright",
+            "The closed filing window ending December 31, 2026 is replaced by claims filed on or after the 2016 Act's enactment; that Act's six-year actual-discovery rule is left in place"
           ],
           "billSection": "2",
-          "source": "bill-114-s-2763"
+          "source": "record-plaw-114-308-hear-act"
         }
       ],
       "likelihood": 100,
       "likelihoodLabel": "Enacted",
-      "likelihoodReason": "Signed into law by the President on April 13, 2026 as Public Law 119-82.",
+      "likelihoodReason": "Approved April 13, 2026 as Public Law 119-82.",
       "sections": [
         {
           "label": "Section 1 — Short Title",
@@ -5959,7 +5959,7 @@
           "label": "Section 2 — Prohibited Defenses",
           "items": [
             {
-              "main": "Adds new Section 5(f) to the Holocaust Expropriated Art Recovery Act of 2016, barring all time-based defenses and all non-merits discretionary bases for dismissal against otherwise timely Holocaust art claims.",
+              "main": "Adds a new subsection 5(f) to the Holocaust Expropriated Art Recovery Act of 2016. It operates only on a claim that is otherwise timely under that Act, and on such a claim it bars all defenses or substantive doctrines based on the passage of time and all non-merits discretionary bases for dismissal.",
               "detail": "Prohibited time-based defenses include laches, adverse possession, acquisitive prescription, and usucapion. Prohibited non-merits defenses include the act of state doctrine, international comity, forum non conveniens, and prudential exhaustion. The bill adds findings naming specific court decisions that frustrated the original Act's intent, including Zuckerman v. Metropolitan Museum of Art (2d Cir. 2019), Cassirer v. Thyssen-Bornemisza Foundation (9th Cir. 2024), and Von Saher v. Norton Simon Museum of Art (9th Cir. 2018).",
               "comments": []
             },
@@ -5969,10 +5969,13 @@
               "comments": []
             },
             {
-              "main": "Removes the December 31, 2026 deadline for filing claims and replaces it with a perpetual filing window subject to a six-year discovery period.",
-              "detail": "Under prior law, all claims had to be filed by December 31, 2026 regardless of when the claimant discovered the property's location. This deadline is eliminated. Claims must still be filed within six years of the claimant's discovery of the property in question.",
+              "main": "Strikes the 2016 Act's sunset subsection outright and replaces its closed filing window, which ended December 31, 2026, with claims filed on or after that Act's enactment.",
+              "detail": "The 2016 Act carried two separate time limits. Its sunset provided that the Act \"shall cease to have effect on January 1, 2027\", subject to an exception for claims already pending on that date; S. 1884 strikes that subsection. Separately, its applicability provision reached claims filed \"during the period\" ending December 31, 2026; that phrase is struck and replaced with \"on or after the date of enactment of this Act\" — and because the replacement is inserted into the 2016 Act, the enactment it points at is the 2016 one. The six-year actual-discovery rule in that Act is not touched.",
               "comments": [],
-              "source": "bill-114-s-2763"
+              "source": [
+                "bill-114-s-2763",
+                "record-plaw-114-308-hear-act"
+              ]
             }
           ]
         }
@@ -5982,6 +5985,11 @@
           "section": "Retroactive Application to Pending Appeals",
           "summary": "The law applies to any civil claim pending in any court on the date of enactment, including claims pending on appeal and claims for which the time to file an appeal has not yet expired.",
           "why_unreported": "The bill's headline is the permanent removal of procedural barriers to future claims. The retroactive reach to cases already dismissed and currently on appeal means courts that previously dismissed Holocaust art claims on laches or international comity grounds could have those dismissals challenged or reversed under the new law, affecting outcomes in litigation already underway."
+        },
+        {
+          "section": "The 2016 Act's Own Confidence in Private Settlement, Downgraded",
+          "summary": "The law also rewrites one of the 2016 Act's findings about alternative dispute resolution, striking \"will yield just and fair resolutions in a more efficient and predictable manner\" and inserting \"may, in some circumstances, yield just and fair resolutions as well\".",
+          "why_unreported": "It is a one-clause edit inside a findings section, so it carries no operative force on its own — but it is Congress stepping back from its own 2016 assessment that negotiated settlement outside court was the better route, in the same law that removes the defenses which had been pushing claimants toward that route."
         }
       ],
       "criticisms": [],
@@ -6020,7 +6028,8 @@
           "HEAR Act Section 3(2) — definition of covered defenses expanded to include \"other non-merits defenses\" alongside statutes of limitation"
         ],
         "removed": [
-          "December 31, 2026 filing deadline for Holocaust art recovery claims"
+          "December 31, 2026 filing deadline for Holocaust art recovery claims",
+          "Section 5(g) of the Holocaust Expropriated Art Recovery Act of 2016 — the sunset providing that the Act would cease to have effect on January 1, 2027"
         ]
       },
       "stageDate": "2026-04-13",
@@ -6050,9 +6059,18 @@
           "srcUrl": "https://www.congress.gov/bill/114th-congress/senate-bill/2763/text",
           "textFile": "data/ref-text/bill-114-s-2763.txt",
           "fetchedAt": "2026-07-30"
+        },
+        {
+          "id": "record-plaw-114-308-hear-act",
+          "kind": "law",
+          "label": "Public Law 114-308 — Holocaust Expropriated Art Recovery Act of 2016 (enacted text)",
+          "citation": "Pub. L. No. 114-308",
+          "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-114publ308/html/PLAW-114publ308.htm",
+          "textFile": "data/ref-text/record-plaw-114-308-hear-act.txt",
+          "fetchedAt": "2026-09-01"
         }
       ],
-      "analyzedAt": "2026-08-09",
+      "analyzedAt": "2026-09-02",
       "versions": [
         {
           "type": "Introduced in Senate",
