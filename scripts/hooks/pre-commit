@@ -5,8 +5,19 @@
 # (done automatically by `npm install` — see the "prepare" script in package.json,
 # so the hook survives re-clones and new machines.)
 #
-# Six gates, in order of severity:
+# Seven gates, in order of severity:
 #
+#   0. check-conflict-markers.js — literal "<<<<<<< HEAD" / "=======" /
+#                            ">>>>>>> branch" lines in the STAGED content.
+#                            BLOCKS. NO bypass. Runs first because it is the
+#                            cheapest and because every gate after it reads
+#                            files that a marker silently corrupts: on
+#                            2026-09-01 a merge left markers in three committed
+#                            JSON sidecars (article-date-state, link-check-cache,
+#                            qa-provenance) and all six other gates read straight
+#                            past them, because every JSON reader in this repo
+#                            catches a parse error and falls back to an empty
+#                            object.
 #   1. security-check.js   — secrets / CSP / noopener / XSS heuristic.
 #                            BLOCKS on errors. NO sanctioned bypass.
 #   2. test-security-helpers.js — hostile payloads through escHtml/portraitUrl/
@@ -37,6 +48,15 @@
 # `git commit --no-verify` skips EVERYTHING including the security gates —
 # never use it; use SKIP_VALIDATE=1 / SKIP_REGRESSION=1 for a targeted data bypass.
 # See SECURITY.md for the invariant -> gate map.
+
+echo "[pre-commit] 0/6 merge-conflict markers..."
+node scripts/check-conflict-markers.js
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "[pre-commit] X unresolved merge-conflict markers in the staged content — commit BLOCKED."
+  echo "[pre-commit]   No bypass. Finish the merge (see the file:line list above)."
+  exit 1
+fi
 
 echo "[pre-commit] 1/6 security-check..."
 node scripts/security-check.js

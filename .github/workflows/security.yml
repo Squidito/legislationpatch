@@ -25,6 +25,11 @@ jobs:
           node-version: 20
 
       # Dependency-free gates first — these must pass even if npm install breaks.
+      # --tree, not the staged-content mode: CI has no index to inspect, and a
+      # marker that reached a branch is exactly what this layer is for.
+      - name: merge-conflict markers (whole tracked tree)
+        run: node scripts/check-conflict-markers.js --tree
+
       - name: security-check (secrets / CSP / noopener / XSS heuristic)
         run: node scripts/security-check.js
 

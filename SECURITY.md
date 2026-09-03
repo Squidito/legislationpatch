@@ -20,6 +20,7 @@ flowing into `innerHTML`.
 | 4 | Every `target="_blank"` link has `rel="noopener"` | Reverse tabnabbing — the opened page can navigate the opener | `security-check.js` E5 (pre-commit + CI) |
 | 5 | `escHtml`, `portraitUrl`, `safeBioId` in `util.js` neutralize hostile input | Every `innerHTML` sink in the app assumes these three work; weakening one silently breaks all sinks at once | `test-security-helpers.js` — 91 hostile-payload assertions (pre-commit + CI + `npm test`) |
 | 6 | Dynamic values reaching `innerHTML` pass through a sanitizer | Ingested data is the XSS vector here | `security-check.js` W1 (warning-level heuristic; template literals only) + invariant 5 + invariant 2 as blocking backstops |
+| 7 | No tracked file carries an unresolved merge-conflict marker (`<<<<<<< `, `=======`, `>>>>>>> `, `\|\|\|\|\|\|\| `) | A marker inside a JSON sidecar does not throw — every reader in this repo catches the parse error and falls back to an empty object, so the data silently disappears instead of failing loudly. Three committed sidecars carried markers for three commits in Sept 2026 before anyone noticed | `check-conflict-markers.js` — staged content pre-commit, whole tree in CI; self-test in `npm test`. **No bypass** |
 
 ## Where the gates run
 

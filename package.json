@@ -41,7 +41,7 @@
     "qa-geo": "node scripts/qa-geo-verify.js",
     "og": "node scripts/generate_brand_assets.js --bills",
     "reps": "node scripts/generate_reps.js",
-    "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/normalize-analysis.js --self-test && node scripts/test-quote-link.js && node scripts/test-digest-merge.js && node scripts/test-figures.js && node scripts/test-stage.js && node scripts/test-senator-match.js && node scripts/qa-citation-links.js --self-test && node scripts/test-card-summaries.js && node scripts/validate-batch.js",
+    "test": "node scripts/security-check.js && node scripts/test-security-helpers.js && node scripts/normalize-analysis.js --self-test && node scripts/test-quote-link.js && node scripts/test-digest-merge.js && node scripts/test-figures.js && node scripts/test-stage.js && node scripts/test-senator-match.js && node scripts/qa-citation-links.js --self-test && node scripts/test-card-summaries.js && node scripts/check-conflict-markers.js --self-test && node scripts/validate-batch.js",
     "facts": "node scripts/bill-facts.js",
     "refresh": "node scripts/refresh_stages.js",
     "flag-drift": "node scripts/flag-version-drift.js",
@@ -85,6 +85,9 @@
     "link-check": "node scripts/qa-citation-links.js",
     "link-check:test": "node scripts/qa-citation-links.js --self-test",
     "cards:test": "node scripts/test-card-summaries.js",
+    "conflict-markers": "node scripts/check-conflict-markers.js",
+    "conflict-markers:tree": "node scripts/check-conflict-markers.js --tree",
+    "conflict-markers:test": "node scripts/check-conflict-markers.js --self-test",
     "qa-prominence": "node scripts/qa-prominence.js"
   },
   "repository": {
