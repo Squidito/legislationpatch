@@ -49,7 +49,7 @@ Quote records carrying a session field, in either store: 0
 Bills with no Congressional Record quote at all: 43 of 222
 Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36
 Standalone floor quotes whose text also appears in that same bill's featured_quotes (case/punctuation-normalized): 21 of 432. The two stores are built by separate extractors and mostly do not overlap.
-Sources registered in data/ref-sources.json by kind: 124 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 law, 3 press-release
+Sources registered in data/ref-sources.json by kind: 132 record, 82 statute, 16 bill, 10 statement, 8 rule, 4 member-statement, 3 law, 3 press-release
 Excerpt cap enforced by fetch_bill_cr.js bestExcerpt(): 550 characters
 Longest stored quote, standalone store: 550 characters; bill-attached store: 550 characters
 
@@ -75,9 +75,9 @@ Roll calls where the margin exceeded the 30% threshold and members nonetheless v
 One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; 2 roll call(s) tie on crosser count): 119-HR-139, House 2026-07-14, "On Passage" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.
 
 ## Audit ledgers (data/qa-ledger/)
-Article claim ledgers: 48
-Article ledgers whose recorded auditing model is the same model that drafted the article: 5 of 48
-Article ledgers whose recorded auditing model differs from the drafting model: 43 of 48
+Article claim ledgers: 50
+Article ledgers whose recorded auditing model is the same model that drafted the article: 5 of 50
+Article ledgers whose recorded auditing model differs from the drafting model: 45 of 50
   119th-congress-tracker | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   appropriations-act-2026 | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   appropriations-process | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
@@ -90,6 +90,7 @@ Article ledgers whose recorded auditing model differs from the drafting model: 4
   continuing-resolution | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
   discharge-petition | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   e15-ethanol-waiver | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  fire-act-wildfire | drafter: opus-5 (in-conversation, Phase B audit-lane first refresh) | auditor: sonnet (hostile source-only verifier subagents, full article) | verify: sonnet | different model
   fisa-history | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   fisa-surveillance-tracker | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   government-shutdown | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
@@ -109,6 +110,7 @@ Article ledgers whose recorded auditing model differs from the drafting model: 4
   ndaa-fy2027 | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   no-editorial-spin | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   omnibus-vs-minibus | drafter: opus-5 (in-conversation) | auditor: opus-5 (in-conversation, hostile fresh read) | verify: (none) | SAME MODEL
+  plain-english-government | drafter: opus-5 (in-conversation, Phase B audit-lane first refresh) | auditor: sonnet (hostile source-only verifier subagents, full article) | verify: sonnet | different model
   pocket-veto | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet (6 independent hostile passes; rounds 4, 5 and 6 run on the frozen file this session) | different model
   presidential-veto | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   safe-drugs-act | drafter: opus-5 (in-conversation, Phase B audit-lane retrofit) | auditor: sonnet (hostile source-only verifier passes, full article) | verify: sonnet | different model
