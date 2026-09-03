@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "48d0b3e289e790c2",
+  "proseSha": "0869a4c1bbec229a",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -95,12 +95,12 @@
     },
     {
       "field": "body",
-      "claim": "The database holds 219 analyzed bills.",
+      "claim": "The database holds 222 analyzed bills.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Analyzed bills in the database: 219",
+      "sourceSpan": "Analyzed bills in the database: 222",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -108,12 +108,12 @@
     },
     {
       "field": "body",
-      "claim": "Summaries mostly run one to three sentences; 25 of the 219 run longer.",
+      "claim": "Summaries mostly run one to three sentences; 25 of the 222 run longer.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Plain-English summary length per bill: range 1 to 14 sentences; 25 of 219 bills run to more than three.",
+      "sourceSpan": "Plain-English summary length per bill: range 1 to 14 sentences; 25 of 222 bills run to more than three.",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -121,12 +121,12 @@
     },
     {
       "field": "body",
-      "claim": "Top-line counts run one to nine, with 35 of the 219 bills carrying four or more.",
+      "claim": "Top-line counts run one to nine, with 37 of the 222 bills carrying four or more.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Top-line change counts per bill: range 1 to 9; 35 of 219 bills carry more than three.",
+      "sourceSpan": "Top-line change counts per bill: range 1 to 9; 37 of 222 bills carry more than three.",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -186,12 +186,12 @@
     },
     {
       "field": "body",
-      "claim": "68 of the 219 bills have been signed into law, so only those are eligible to show enrolled text.",
+      "claim": "68 of the 222 bills have been signed into law, so only those are eligible to show enrolled text.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 219",
+      "sourceSpan": "Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 222",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -199,12 +199,12 @@
     },
     {
       "field": "body",
-      "claim": "69 of the 151 non-enacted bills are showing an older version than Congress.gov now lists.",
+      "claim": "69 of the 154 non-enacted bills are showing an older version than Congress.gov now lists.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 151 non-enacted bills.",
+      "sourceSpan": "Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 154 non-enacted bills.",
       "section": "What the Site Actually Shows You",
       "status": "open",
       "verify": null,
@@ -324,5 +324,5 @@
     "rejected": 0
   },
   "resolution": "CONVERGED at pass 3. Trust-page audit (Phase B), 2026-08-30. Drafted and fixed in an Opus session; each hostile pass an independent Sonnet subagent told to re-derive every number itself rather than trust the generated site-facts sheet. PASS 1 BLOCK: three errors, all checkable in a minute against the corpus. Two of the 68 enacted bills show the text as introduced rather than enrolled; the claim that a non-enacted bill shows 'whatever the newest posted version is' is false for a large share of them; and the long-summary count was an artefact of a naive sentence splitter that read 'D.C. Official Code' as five sentence ends. PASS 2 BLOCK: the staleness figure was still overstated (73 where the answer is 69) because the generator could not read a version code out of a non-bracket GPO header, and the summary count was off by one because the abbreviation mask was case-sensitive and missed 'sec.'. Both were generator bugs and both are fixed; the ledger also carried a row auditing five named legal defenses the draft does not name. PASS 3 PASS: no errors. The verifier re-implemented the bill-text header parser from scratch, reproduced 69 of 151 and 2 of 68 exactly including the affected bill ids, and independently re-derived every other figure. Two cosmetic ledger defects fixed after that pass: a registered source no claim cited, and a title field that had drifted from the page's own <title>.",
-  "notes": "WHAT CHANGED FROM THE LIVE PAGE. The coverage overclaim - 'the site tracks all 119th Congress legislation with active floor action or significant co-sponsorship' - was contradicted by the site's own analysis-skip list, which excludes 23 CRA disapproval resolutions that reach the floor by design, and by methodology.html, which said the opposite in the site's own voice. Two live pages disagreeing about the site's own coverage. The replacement names the contradicting category rather than hedging. 'Full bill text - the actual enrolled bill' was true of 68 of 219 bills; the page now says which, says what the other 151 show, and discloses that stored text can lag the newest posted version because an already-analysed bill is not automatically re-fetched - re-fetching it without re-analysing would leave the prose describing a document the page is not showing. 'The two or three most significant things' (real range 1 to 9, and 'significant' is a word the drafting rules ban) and 'one to three sentences' (real range 1 to 14) are now the measured distributions. Three unsourced characterisations removed: that the manual research process is 'effectively inaccessible', that top lines are 'the facts journalists tend to underreport', and that political-strategy coverage is 'available from dozens of sources'. OPEN, FLAGGED FOR JAMES: the version lag itself. 69 of 151 non-enacted bills and 2 of 68 enacted ones are showing older text than Congress.gov now lists. That is the banked flag-version-drift hole, and closing it means re-fetching AND re-analysing those bills, not just re-fetching."
+  "notes": "WHAT CHANGED FROM THE LIVE PAGE. The coverage overclaim - 'the site tracks all 119th Congress legislation with active floor action or significant co-sponsorship' - was contradicted by the site's own analysis-skip list, which excludes 23 CRA disapproval resolutions that reach the floor by design, and by methodology.html, which said the opposite in the site's own voice. Two live pages disagreeing about the site's own coverage. The replacement names the contradicting category rather than hedging. 'Full bill text - the actual enrolled bill' was true of 68 of 219 bills; the page now says which, says what the other 151 show, and discloses that stored text can lag the newest posted version because an already-analysed bill is not automatically re-fetched - re-fetching it without re-analysing would leave the prose describing a document the page is not showing. 'The two or three most significant things' (real range 1 to 9, and 'significant' is a word the drafting rules ban) and 'one to three sentences' (real range 1 to 14) are now the measured distributions. Three unsourced characterisations removed: that the manual research process is 'effectively inaccessible', that top lines are 'the facts journalists tend to underreport', and that political-strategy coverage is 'available from dozens of sources'. OPEN, FLAGGED FOR JAMES: the version lag itself. 69 of 151 non-enacted bills and 2 of 68 enacted ones are showing older text than Congress.gov now lists. That is the banked flag-version-drift hole, and closing it means re-fetching AND re-analysing those bills, not just re-fetching.\n\n2026-09-02 WRAP-UP DELTA. data/ref-text/record-lp-site-facts.txt was regenerated at the end of the article audit sweep, having been held deliberately stale through it (the corpus grew 219 -> 222 bills, the article-ledger count 17 -> 48, and the vote store gained a roll call). 5 receipt(s) on this ledger were repointed to the regenerated line, each new span verified present in the new sheet, and the prose was corrected in the same pass wherever a number moved. No claim was added or removed; nothing was softened."
 }

@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 7,
-  "proseSha": "404745b2705b2ecb",
+  "proseSha": "cddb3185effed891",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -726,12 +726,12 @@
     },
     {
       "field": "body",
-      "claim": "The threshold hides real crossings on 75 of the 232 roll calls that store a member list.",
+      "claim": "The threshold hides real crossings on 75 of the 233 roll calls that store a member list.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "so no crossovers were surfaced: 75 (measured over the 232 roll calls that store a member list).",
+      "sourceSpan": "so no crossovers were surfaced: 75 (measured over the 233 roll calls that store a member list).",
       "section": "Crossover Vote Detection",
       "status": "open",
       "verify": "CONFIRMED",
@@ -752,12 +752,12 @@
     },
     {
       "field": "body",
-      "claim": "Of the stored vote records, 208 are voice-vote or unanimous-consent passages with no tally at all, against 233 recorded roll calls, 232 of which store the full member list.",
+      "claim": "Of the stored vote records, 203 are voice-vote or unanimous-consent passages with no tally at all, against 234 recorded roll calls, 233 of which store the full member list.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Recorded roll-call entries: 233, of which 232 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 208.",
+      "sourceSpan": "Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 203.",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
       "verify": "CONFIRMED",
@@ -968,5 +968,5 @@
     "rejected": 0
   },
   "resolution": "CONVERGED: pass 7 returned PASS with zero errors and zero warnings, after zero-error passes at 4 and 6. Trust-page audit (Phase B), 2026-08-30/31, across two Opus sessions (the first was killed by a session limit; its draft survived in the gitignored drafts/ and hash-matched this ledger). Seven hostile Sonnet passes, every one adjudicated in the main Opus thread. THE SWEEP FINDINGS: the page said the database covers 552 people (it is 551), claimed a current-term-data field that does not exist in the schema, and claimed same-surname senators were resolved by additional disambiguation logic that had never been written. That last one was fixed in the CODE rather than the prose, and doing so uncovered a live data defect: five senators (Blunt Rochester, Cortez Masto, King, Lujan, Van Hollen) matched nothing on any Senate roll call and showed EMPTY voting records on their public profiles. FOUND DURING THIS AUDIT, ALSO LIVE: detectCrossovers treated an exactly-split party as having a Yea majority, which published Sanders in the Crossed the Aisle list 18 times. Both fixed and backfilled offline before this page was published, so the prose describes shipped behaviour. LATER PASSES: the meta description and index card generalised the House-only bioguide-ID match across both chambers, contradicting the body; the prose rounded 44.9% to 45% on a page about precision; the member-field enumeration read as exhaustive while omitting photo, portraitUrl and bioSource; a claim that two records carry a portrait override was half wrong, because nothing reads portraitUrl; the vote-history claim overstated DEFAULT visibility, since rep.js shows eight rows behind a show-more; and two sentences ranked outcomes rather than describing them - one of them lifted straight from a code comment, which is not an exemption.",
-  "notes": "THE CODEBASE IS THE SOURCE. Where a claim was false, the fix was chosen deliberately between correcting the prose and correcting the code: the disambiguation claim and the crossover tie were fixed in CODE (they were real defects with live consequences); the member count, the term-data field, the portrait fields, the default row count and the evaluative framing were fixed in PROSE. Nothing was softened. One receipt span had been typed with straight quotes against a stored roll-call file containing curly ones, so it did not resolve literally - repaired by slicing the span out of the file rather than retyping it, which is the general lesson for this ledger."
+  "notes": "THE CODEBASE IS THE SOURCE. Where a claim was false, the fix was chosen deliberately between correcting the prose and correcting the code: the disambiguation claim and the crossover tie were fixed in CODE (they were real defects with live consequences); the member count, the term-data field, the portrait fields, the default row count and the evaluative framing were fixed in PROSE. Nothing was softened. One receipt span had been typed with straight quotes against a stored roll-call file containing curly ones, so it did not resolve literally - repaired by slicing the span out of the file rather than retyping it, which is the general lesson for this ledger.\n\n2026-09-02 WRAP-UP DELTA. data/ref-text/record-lp-site-facts.txt was regenerated at the end of the article audit sweep, having been held deliberately stale through it (the corpus grew 219 -> 222 bills, the article-ledger count 17 -> 48, and the vote store gained a roll call). 2 receipt(s) on this ledger were repointed to the regenerated line, each new span verified present in the new sheet, and the prose was corrected in the same pass wherever a number moved. No claim was added or removed; nothing was softened."
 }

@@ -26,15 +26,15 @@ Senate roll-call match keys (lastName + state) in use: 103
 Senate roll-call match key collisions: 0
 
 ## Bill corpus (data/cache.json, data/analysis-skip.json)
-Analyzed bills in the database: 219
-Bills by stage: 122 house, 68 signed, 16 senate, 7 dead, 6 committee
-Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 219
+Analyzed bills in the database: 222
+Bills by stage: 122 house, 68 signed, 16 senate, 8 dead, 8 committee
+Bills signed into law (stage signed), and so eligible to show enrolled text: 68 of 222
 Bill-text panel label rendered by bill.js: "Full Bill Text"
 Enacted bills whose stored text is still the version as introduced: 2 (119-S-1003, 119-S-629)
-Non-enacted bills: 151; of those, 69 show the text as introduced.
-Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 151 non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.
-Top-line change counts per bill: range 1 to 9; 35 of 219 bills carry more than three.
-Plain-English summary length per bill: range 1 to 14 sentences; 25 of 219 bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations case-insensitively such as U.S., D.C., Pub. L. and sec., plus single-letter initials and decimal numbers.)
+Non-enacted bills: 154; of those, 70 show the text as introduced.
+Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 154 non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.
+Top-line change counts per bill: range 1 to 9; 37 of 222 bills carry more than three.
+Plain-English summary length per bill: range 1 to 14 sentences; 25 of 222 bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations case-insensitively such as U.S., D.C., Pub. L. and sec., plus single-letter initials and decimal numbers.)
 Bills deliberately excluded from analysis in data/analysis-skip.json: 107
 Excluded bills by category: 29 ceremonial, 28 deferred-minor, 27 procedural, 23 cra-disapproval
 The cra-disapproval category covers resolutions of disapproval, which reach the floor by design; they are excluded from analysis, so coverage is not "all legislation with floor action".
@@ -42,14 +42,14 @@ The cra-disapproval category covers resolutions of disapproval, which reach the 
 ## Congressional Record quotes (data/quotes.json, data/cache.json featured_quotes)
 Standalone floor quotes stored in data/quotes.json: 468
 Standalone floor quotes carrying a granuleId: 430 of 468
-Bill-attached quotes stored in cache.json featured_quotes: 417 across 219 bills
+Bill-attached quotes stored in cache.json featured_quotes: 417 across 222 bills
 Bill-attached quotes carrying a granuleId: 0 of 417
 Bill-attached quotes carrying a stored source string at all: 23 of 417; the stored values are "House Floor", "Senate Floor" — a chamber label with no date.
 Quote records carrying a session field, in either store: 0
-Bills with no Congressional Record quote at all: 40 of 219
+Bills with no Congressional Record quote at all: 43 of 222
 Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36
 Standalone floor quotes whose text also appears in that same bill's featured_quotes (case/punctuation-normalized): 21 of 432. The two stores are built by separate extractors and mostly do not overlap.
-Sources registered in data/ref-sources.json by kind: 41 statute, 30 record, 8 statement, 3 rule, 2 bill, 2 member-statement, 1 press-release
+Sources registered in data/ref-sources.json by kind: 123 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 press-release, 3 law
 Excerpt cap enforced by fetch_bill_cr.js bestExcerpt(): 550 characters
 Longest stored quote, standalone store: 550 characters; bill-attached store: 550 characters
 
@@ -70,34 +70,65 @@ Primary bill text is fetched from the Congress.gov API, not from GovInfo. GovInf
 Crossover votes are surfaced only when the yea-nay margin is within 30% of total yeas plus nays.
 
 ## Stored vote records (data/votes/)
-Recorded roll-call entries: 233, of which 232 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 208.
-Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: 75 (measured over the 232 roll calls that store a member list).
+Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 203.
+Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: 75 (measured over the 233 roll calls that store a member list).
 One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; 2 roll call(s) tie on crosser count): 119-HR-139, House 2026-07-14, "On Passage" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.
 
 ## Audit ledgers (data/qa-ledger/)
-Article claim ledgers: 17
-Article ledgers whose recorded auditing model is the same model that drafted the article: 6 of 17
-Article ledgers whose recorded auditing model differs from the drafting model: 11 of 17
+Article claim ledgers: 48
+Article ledgers whose recorded auditing model is the same model that drafted the article: 5 of 48
+Article ledgers whose recorded auditing model differs from the drafting model: 43 of 48
   119th-congress-tracker | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
+  appropriations-act-2026 | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  appropriations-process | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  bill-numbering | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  blm-land-withdrawal | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  budget-reconciliation | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  cloture-60-vote | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  congressional-oversight | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   congressional-review-act | drafter: opus-5 (in-conversation, pre-lane draft) | auditor: opus-5 (in-conversation) | verify: (none) | SAME MODEL
   continuing-resolution | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
+  discharge-petition | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  e15-ethanol-waiver | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  fisa-history | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  fisa-surveillance-tracker | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  government-shutdown | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  holocaust-art-recovery | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  house-rules-committee | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  how-a-bill-becomes-law | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  how-to-read-a-bill | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   how-we-source-quotes | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   how-we-track-voting | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
-  kids-online-safety-act | drafter: opus-5 (in-conversation, Phase 5 retrofit) | auditor: opus-5 (source-only, full article) | verify: sonnet | SAME MODEL
+  impoundment-rescission | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  joint-resolution | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  kids-online-safety-act | drafter: opus-5 (in-conversation, Phase 5 retrofit) | auditor: sonnet (hostile source-only verifier + supporter and opponent lenses, 2026-08-31 CDT delta and full both-sides section); opus-5 (source-only, full article, 2026-08-27) | verify: sonnet | different model
   legislationpatch-and-ai | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
+  legislative-stages | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   methodology | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
+  ndaa-fy2026 | drafter: opus-5 (in-conversation, Phase B audit-lane retrofit) | auditor: sonnet (hostile source-only verifier passes, full article) | verify: sonnet | different model
   ndaa-fy2027 | drafter: fable-5 (in-conversation) | auditor: sonnet (hostile full-claims, two passes) | verify: sonnet | different model
   no-editorial-spin | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
   omnibus-vs-minibus | drafter: opus-5 (in-conversation) | auditor: opus-5 (in-conversation, hostile fresh read) | verify: (none) | SAME MODEL
+  pocket-veto | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet (6 independent hostile passes; rounds 4, 5 and 6 run on the frozen file this session) | different model
+  presidential-veto | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  safe-drugs-act | drafter: opus-5 (in-conversation, Phase B audit-lane retrofit) | auditor: sonnet (hostile source-only verifier passes, full article) | verify: sonnet | different model
   save-america-act | drafter: opus-5 (in-conversation, delta refresh) | auditor: sonnet (hostile source-only, delta scope) | verify: sonnet | different model
+  senate-filibuster | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  signing-statements | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet (4 independent hostile passes; round 4 run on the frozen file this session) | different model
+  small-business-innovation-act | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   suspension-of-the-rules | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
   topic-congressional-procedure | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
   topic-government-spending | drafter: opus-5 (in-conversation) | auditor: opus | verify: (none) | SAME MODEL
+  unanimous-consent | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  voice-vote-vs-roll-call | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  what-is-a-committee | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
+  what-is-cbo | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
   what-is-congressional-record | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims) | verify: sonnet | different model
   what-is-legislationpatch | drafter: opus-5 (in-conversation, trust-page audit) | auditor: sonnet (hostile full-claims, code-as-source) | verify: sonnet | different model
+  women-lung-cancer-act | drafter: opus-5 (in-conversation) | auditor: sonnet (hostile source-only subagent passes, adjudicated in-thread) | verify: sonnet | different model
 Bill claim ledgers: 212
 Bill ledgers recording a drafting model at all: 0 of 212
 No bill ledger records a drafting model, so no bill ledger records that a different model audited what drafted it.
-Bill analyses carrying a claim ledger: 212 of 219.
-Analysed bills with NO claim ledger: 7 (119-HR-139, 119-HR-5269, 119-HR-6509, 119-HR-7296, 119-S-1748, 119-S-2296, 119-S-2976); analysed 2026-08-27.
+Bill analyses carrying a claim ledger: 212 of 222.
+Analysed bills with NO claim ledger: 10 (119-HR-139, 119-HR-5269, 119-HR-6509, 119-HR-7296, 119-HR-8035, 119-HR-9238, 119-S-1748, 119-S-2296, 119-S-2976, 119-S-3794); analysed 2026-08-27, 2026-09-01.
 
