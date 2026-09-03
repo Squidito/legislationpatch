@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T04:56:59.415Z",
+  "generated": "2026-09-03T00:56:33.050Z",
   "bills": [
     {
       "id": "119-S-5",
@@ -40433,7 +40433,17 @@
       "likelihood": 55,
       "likelihoodLabel": "Moderate",
       "likelihoodReason": "The sponsor is a Republican in the Republican-majority House, the bill has 55 cosponsors, and it passed the House. The year-round E15 change has support tied to ethanol production, while the provisions cutting small refining companies' renewable-fuel obligations by 75 percent and barring reallocation of those volumes may draw opposition from biofuel producers, and Senate passage would require 60 votes.",
-      "referencedSources": [],
+      "referencedSources": [
+        {
+          "id": "record-crec-2026-05-13-hr1346",
+          "kind": "record",
+          "label": "Congressional Record, May 13, 2026, H3421 — House debate on H.R. 1346",
+          "citation": "Congressional Record, Vol. 172, May 13, 2026, p. H3421",
+          "srcUrl": "https://www.govinfo.gov/content/pkg/CREC-2026-05-13/html/CREC-2026-05-13-pt1-PgH3421.htm",
+          "textFile": "data/ref-text/record-crec-2026-05-13-hr1346.txt",
+          "fetchedAt": "2026-09-02"
+        }
+      ],
       "summary": "This bill lets gasoline blended with 10 to 15 percent ethanol (E15) be sold year-round by extending the Clean Air Act's vapor-pressure waiver to those blends. It also cuts renewable-fuel compliance obligations for small refining companies and changes how their exemption petitions are handled.",
       "brief": "Allows year-round sale of 10 to 15 percent ethanol gasoline and reduces small refining companies' renewable-fuel obligations by 75 percent.",
       "top_lines": [
@@ -40547,7 +40557,7 @@
           "bioguideId": "H001096",
           "text": "I rise to express my strong opposition to H.R. 1346. This bill is disastrous for Wyoming refiners and independent petroleum producers, leading to a direct loss of at least 750 jobs in my home State. Just to correct the record, it isn't the farmers who produce ethanol or E15. It is the refiners, and this bill threatens to put them out of business. In fact, it is interesting that anyone who supports this bill has not yet mentioned the fact that it is the refiners that will be forced, mandated, to meet the E15 requirement.",
           "stance": "oppose",
-          "chamber": "House"
+          "source": "House Floor"
         },
         {
           "name": "Mr. Roy",
@@ -40556,7 +40566,7 @@
           "bioguideId": "R000614",
           "text": "I appreciate my colleagues on both sides of this debate and where they are coming from. I understand my friends who come from States that want support for farming. We all want to make sure that we are figuring that out. We worked through the farm bill. I just think we ought to be going about this a different way. If we need to do something to support farmers, let's have a direct conversation about it. Expanding E15 is just the wrong direction to go. It is going to harm refiners. It is going to drive up the cost of gas.",
           "stance": "oppose",
-          "chamber": "House"
+          "source": "House Floor"
         },
         {
           "name": "Ms. Budzinski",
@@ -40565,16 +40575,16 @@
           "bioguideId": "B001315",
           "text": "As a lead Democrat on this bill, I have been proud to work with Congressman Adrian Smith on this issue. We both understand, like many other Members, that year-round E15 is bigger than politics. This is about American farmers. It is about American consumers, and it is about American energy. E15 is truly one of those rare issues where everyone wins. Here is why: American farmers win because it creates strong and stable markets for homegrown corn. American consumers win because E15 helps to lower prices at the pump.",
           "stance": "support",
-          "chamber": "House"
+          "source": "House Floor"
         },
         {
           "name": "Mrs. Miller-Meeks",
           "party": "R",
           "state": "IA",
           "bioguideId": "M001215",
-          "text": "Every single year since 2011, the EPA has issued an emergency waiver to allow E15 to be sold during the Speaker, I yield 2 minutes to the gentlewoman from Iowa (Mrs. Miller-Meeks), a valued member of the Energy and Commerce Committee.",
-          "stance": "neutral",
-          "chamber": "House"
+          "text": "Mr. Speaker, I thank the chair of the Energy and Commerce Committee for allowing me time. I am proud to stand here--I know, I really am standing--in strong support of H.R. 1346, the Nationwide Consumer and Fuel Retailer Choice Act. Every single year since 2011, the EPA has issued an emergency waiver to allow E15 to be sold during the summer months. That means Washington already recognizes that this policy makes sense.",
+          "stance": "support",
+          "source": "House Floor"
         },
         {
           "name": "Mr. Finstad",
@@ -40582,8 +40592,8 @@
           "state": "MN",
           "bioguideId": "F000475",
           "text": "As a fourth-generation corn and soybean farmer from southern Minnesota raising that fifth generation and representing 21 counties in southern Minnesota, a very strong egg-producing district, I have had many conversations with my neighbor farmers. I know by hearing what they are telling me and firsthand in my own experience as a farmer that we are facing uncertainty in our input costs and uncertainty in the global markets. We need a new domestic opportunity for our corn. E15 delivers on that.",
-          "stance": "neutral",
-          "chamber": "House"
+          "stance": "support",
+          "source": "House Floor"
         }
       ],
       "changes": {
