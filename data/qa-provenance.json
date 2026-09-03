@@ -1993,7 +1993,7 @@
       "code-floor-js": "2b9372367936e62dc832260d64f2d880221632e09430da984f56d3eacc9fed02",
       "code-validate-batch": "71fa7385bdbdda32a3a5441d10945fa4757d0578d272b0b16860aba83d60a55f",
       "doc-qa-loop": "0a69ca220c4990c105967c99eab9210b16bc2893eebab6f4572a62fd60cd726b",
-      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2",
+      "record-lp-cache": "9c78156b5ed72165da034fa081343af2c622914d592c32566a97bfce87694756",
       "record-article-sbir": "db81dfcae457293ac868515f43793224e9eeb56ccdcae55bcce74d7b8be213c1"
     },
     "proseSha": "1f47c625174fe220",
@@ -2044,7 +2044,7 @@
       "doc-qa-ledger-readme": "0135b0168e1273154e93d31d074de5c9b510c55980424e97eb5be82d089fce43",
       "code-article-ledger": "0aa6f3bd2cd79ebc5fd82e95b8cedd4e105beed4d48cea1b8ae1b295b6e6b99d",
       "bill-119-s-4465": "ed9cf2a6ecb835842821c75316bec89322af4f248ea38447f13ebc910f4a460d",
-      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2",
+      "record-lp-cache": "9c78156b5ed72165da034fa081343af2c622914d592c32566a97bfce87694756",
       "usc-50-1881a": "5a4ed18a719601df2f74a358211cfc269f48b096a6aaa2221b3ef40021de60f2",
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
       "code-app-render": "8d85972afc2c4317b0d4a7568560e6db7a22e2347215759535e345df771c451f",
@@ -2426,7 +2426,7 @@
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-bill-js": "f2b61241af9140b958a1e7783075f48480bad8d9a327e30cc7661c7a3ecf699c",
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
-      "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2"
+      "record-lp-cache": "9c78156b5ed72165da034fa081343af2c622914d592c32566a97bfce87694756"
     },
     "proseSha": "0024fb0c0bd53a2e",
     "proseFile": "articles/what-is-legislationpatch.html",
@@ -2799,6 +2799,42 @@
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
     "genAt": "2026-09-02",
+    "stampedAt": "2026-09-03"
+  },
+  "article-fire-act-wildfire": {
+    "kind": "article",
+    "sourceShas": {
+      "bill-119-hr-6387-eh": "365ae02b02d8e4fb829fe865346470065635961958592aa038977ff6431cf9f5",
+      "bill-119-hr-6387": "2f8e82a4b2441d31cd1d4ae329f91f9c5519066b2d84b144ca1f48e4c5a58baf",
+      "usc-42-7619": "584ce07d65e4c2344622fc0bc0365053c932c5776db18d5dbcfef1e255fad1c0",
+      "cfr-40-50-14-exceptional-events": "0266b9ed804ff00721b6427c2a8bb9a381f7dae18cee2dd781a242082d134a0f",
+      "record-epa-naaqs-table": "0f0125ecc61c9065f71ecac208ab2cd70980516b4acf0733aa5bed290632a41a",
+      "record-congress-hr-6387-actions": "0977a13cc5a656a7c04a2e0ccaa59e8f5057fe7921a948f9d58fc410f6bed9ea",
+      "record-congress-hr-6387-status": "4cb2de0f01c3237a5500e270d66c3189f29842e9d582806ffd1047f2f71dd08e",
+      "record-epa-exceptional-events": "aa246692f8c96d57de3cf54a1954d5502f3ee6810225f0a3497f362b5305e4b4"
+    },
+    "proseSha": "88ac8a26a599fea4",
+    "proseFile": "drafts/fire-act-wildfire.html",
+    "promptVersion": "07b6a1640cc330cb",
+    "genModel": "sonnet (hostile source-only verifier subagents, full article)",
+    "genAt": "2026-09-03",
+    "stampedAt": "2026-09-03"
+  },
+  "article-plain-english-government": {
+    "kind": "article",
+    "sourceShas": {
+      "bill-119-hr-7148": "83200c08be862f9216b9d4c35698a6fb8402fff1c50e6233b6ce4d3e0ea05b58",
+      "bill-119-s-1884": "ded7b91ccdb2d0570629d99e64225376b5b05970a2477d3d7245cb3372174a33",
+      "record-plaw-111-274-plain-writing": "6f78f50f82120ff5d2a0e88eebd8d976876ac86da59d684c957eb98d0dff3e27",
+      "record-fr-1998-sec-plain-english": "fba0e401d85f1416cc711ff1588b0b14edfe95214b51bb408eea9ffc1631b26a",
+      "record-congressgov-coverage-dates": "f63f136f5646c299c3ee9be4dbc71c1951b451c38e953f1796d7a13473204de5",
+      "usc-5-105": "796ba92b0af5ce8aa97ab0466eb495aed9c5223aa66743e3bcdebe538cb44781"
+    },
+    "proseSha": "4c29a097bfe68cee",
+    "proseFile": "articles/plain-english-government.html",
+    "promptVersion": "07b6a1640cc330cb",
+    "genModel": "sonnet (hostile source-only verifier subagents, full article)",
+    "genAt": "2026-09-03",
     "stampedAt": "2026-09-03"
   }
 }

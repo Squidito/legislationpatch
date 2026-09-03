@@ -27,7 +27,7 @@
       "order": 3,
       "section": "ABOUT & METHODOLOGY",
       "label": "About LegislationPatch",
-      "showUpdated": false,
+      "showUpdated": true,
       "summary": "Federal legislation is publicly available — but functionally inaccessible. The gap between availability and accessibility has real political consequences."
     },
     "how-to-read-a-bill.html": {
@@ -153,8 +153,8 @@
       "order": 21,
       "section": "BILL ROUNDUPS",
       "label": "Bill Analysis · In Progress",
-      "showUpdated": false,
-      "summary": "H.R. 6387 would require EPA to revise its exceptional events regulations within 18 months and extend them to prescribed burns and similar State approved wildfire mitigation. Sponsors say it shields communities from air-quality penalties they attribute to wildfire smoke; opponents say it would weaken the NAAQS program."
+      "showUpdated": true,
+      "summary": "H.R. 6387 passed the House 220-198 on April 22, 2026 and now sits in the Senate Environment and Public Works Committee. It would give EPA 18 months to propose revisions to its Clean Air Act exceptional events regulations and would run a second category, actions to mitigate wildfire risk, alongside exceptional events throughout section 319(b)."
     },
     "119th-congress-tracker.html": {
       "order": 22,

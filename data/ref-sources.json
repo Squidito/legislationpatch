@@ -116,6 +116,17 @@
     "textFile": "data/bill-text/119-HR-4371.txt",
     "fetchedAt": "2026-09-01"
   },
+  "bill-119-hr-6387-eh": {
+    "id": "bill-119-hr-6387-eh",
+    "kind": "bill",
+    "org": "U.S. Government Publishing Office",
+    "date": "2026-04-22",
+    "label": "H.R. 6387 (119th Congress), FIRE Act - Engrossed in House, the text that passed the House 220-198",
+    "citation": "H.R. 6387, 119th Congress, Engrossed in House",
+    "srcUrl": "https://www.congress.gov/119/bills/hr6387/BILLS-119hr6387eh.htm",
+    "textFile": "data/ref-text/bill-119-hr-6387-eh.txt",
+    "fetchedAt": "2026-09-03"
+  },
   "bill-119-hr-7296": {
     "id": "bill-119-hr-7296",
     "kind": "bill",
@@ -160,6 +171,17 @@
     "srcUrl": "https://www.congress.gov/119/plaws/publ87/PLAW-119publ87.htm",
     "textFile": "data/bill-text/119-S-4465.txt",
     "fetchedAt": "2026-06-10"
+  },
+  "cfr-40-50-14-exceptional-events": {
+    "id": "cfr-40-50-14-exceptional-events",
+    "kind": "statute",
+    "org": "U.S. Environmental Protection Agency (eCFR)",
+    "date": "2026-01-01",
+    "label": "40 CFR 50.14 - Treatment of air quality monitoring data influenced by exceptional events",
+    "citation": "40 C.F.R. 50.14",
+    "srcUrl": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-50/section-50.14",
+    "textFile": "data/ref-text/cfr-40-50-14-exceptional-events.txt",
+    "fetchedAt": "2026-09-03"
   },
   "fr-2021-22958": {
     "id": "fr-2021-22958",
@@ -618,6 +640,28 @@
     "textFile": "data/ref-text/record-congress-hr-5949-112-actions.txt",
     "fetchedAt": "2026-09-01"
   },
+  "record-congress-hr-6387-actions": {
+    "id": "record-congress-hr-6387-actions",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-09-03",
+    "label": "Congress.gov API record - H.R. 6387 (119th Congress) full action history",
+    "citation": "Congress.gov API, bill/119/hr/6387/actions",
+    "srcUrl": "https://api.congress.gov/v3/bill/119/hr/6387/actions",
+    "textFile": "data/ref-text/record-congress-hr-6387-actions.txt",
+    "fetchedAt": "2026-09-03"
+  },
+  "record-congress-hr-6387-status": {
+    "id": "record-congress-hr-6387-status",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-09-03",
+    "label": "Congress.gov API record - H.R. 6387 (119th Congress) status",
+    "citation": "Congress.gov API, bill/119/hr/6387",
+    "srcUrl": "https://api.congress.gov/v3/bill/119/hr/6387",
+    "textFile": "data/ref-text/record-congress-hr-6387-status.txt",
+    "fetchedAt": "2026-09-03"
+  },
   "record-congress-hr-6938-actions": {
     "id": "record-congress-hr-6938-actions",
     "kind": "record",
@@ -831,6 +875,17 @@
     "textFile": "data/ref-text/record-congress-s-3971-status.txt",
     "fetchedAt": "2026-09-01"
   },
+  "record-congressgov-coverage-dates": {
+    "id": "record-congressgov-coverage-dates",
+    "kind": "record",
+    "org": "Congress.gov (Library of Congress)",
+    "date": "2026-09-03",
+    "label": "Coverage Dates for Congress.gov Collections — Help Center table of collections, formats, estimated update times and start years (excerpt)",
+    "citation": "Congress.gov Help Center, \"Coverage Dates for Congress.gov Collections\"",
+    "srcUrl": "https://www.congress.gov/help/coverage-dates",
+    "textFile": "data/ref-text/record-congressgov-coverage-dates.txt",
+    "fetchedAt": "2026-09-03"
+  },
   "record-constitution-amendments-11-27": {
     "id": "record-constitution-amendments-11-27",
     "kind": "record",
@@ -852,6 +907,17 @@
     "srcUrl": "https://www.archives.gov/founding-docs/constitution-transcript",
     "textFile": "data/ref-text/record-constitution-transcript.txt",
     "fetchedAt": "2026-08-31"
+  },
+  "record-crec-2026-04-21-22-hr6387": {
+    "id": "record-crec-2026-04-21-22-hr6387",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2026-04-22",
+    "label": "Congressional Record, Vol. 172 Nos. 70-71 (Apr. 21-22, 2026) - House floor consideration and votes on H.R. 6387",
+    "citation": "172 Cong. Rec. H3013-H3019, H3064-H3065 (Apr. 21-22, 2026)",
+    "srcUrl": "https://www.govinfo.gov/app/collection/CREC",
+    "textFile": "data/cr-cache/119-HR-6387.txt",
+    "fetchedAt": "2026-08-09"
   },
   "record-crec-2026-05-13-hr1346": {
     "id": "record-crec-2026-05-13-hr1346",
@@ -1320,6 +1386,17 @@
     "textFile": "data/ref-text/record-crs-rs22299-rule-xiv.txt",
     "fetchedAt": "2026-08-31"
   },
+  "record-epa-exceptional-events": {
+    "id": "record-epa-exceptional-events",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": "2026-09-03",
+    "label": "EPA - Treatment of Air Quality Monitoring Data Influenced by Exceptional Events (program overview)",
+    "citation": "EPA, Treatment of Air Quality Monitoring Data Influenced by Exceptional Events",
+    "srcUrl": "https://www.epa.gov/air-quality-analysis/treatment-air-quality-monitoring-data-influenced-exceptional-events",
+    "textFile": "data/ref-text/record-epa-exceptional-events.txt",
+    "fetchedAt": "2026-09-03"
+  },
   "record-epa-fuel-waivers": {
     "id": "record-epa-fuel-waivers",
     "kind": "record",
@@ -1341,6 +1418,28 @@
     "srcUrl": "https://www.epa.gov/gasoline-standards/gasoline-reid-vapor-pressure",
     "textFile": "data/ref-text/record-epa-gasoline-rvp.txt",
     "fetchedAt": "2026-09-01"
+  },
+  "record-epa-naaqs-table": {
+    "id": "record-epa-naaqs-table",
+    "kind": "record",
+    "org": "U.S. Environmental Protection Agency",
+    "date": "2026-09-03",
+    "label": "NAAQS Table - EPA, National Ambient Air Quality Standards for the six criteria pollutants",
+    "citation": "EPA, NAAQS Table",
+    "srcUrl": "https://www.epa.gov/criteria-air-pollutants/naaqs-table",
+    "textFile": "data/ref-text/record-epa-naaqs-table.txt",
+    "fetchedAt": "2026-09-03"
+  },
+  "record-fr-1998-sec-plain-english": {
+    "id": "record-fr-1998-sec-plain-english",
+    "kind": "record",
+    "org": "U.S. Securities and Exchange Commission",
+    "date": "1998-02-06",
+    "label": "Plain English Disclosure — SEC final rule, 63 FR 6370 (Feb. 6, 1998)",
+    "citation": "63 Fed. Reg. 6370 (Feb. 6, 1998)",
+    "srcUrl": "https://www.federalregister.gov/documents/full_text/text/1998/02/06/98-2889.txt",
+    "textFile": "data/ref-text/record-fr-1998-sec-plain-english.txt",
+    "fetchedAt": "2026-09-03"
   },
   "record-gao-budget-glossary": {
     "id": "record-gao-budget-glossary",
@@ -1458,6 +1557,17 @@
     "srcUrl": "https://www.whitehouse.gov/wp-content/uploads/2025/08/s124.pdf",
     "textFile": "data/ref-text/record-omb-a11-s124.txt",
     "fetchedAt": "2026-09-01"
+  },
+  "record-plaw-111-274-plain-writing": {
+    "id": "record-plaw-111-274-plain-writing",
+    "kind": "record",
+    "org": "U.S. Government Publishing Office",
+    "date": "2010-10-13",
+    "label": "Public Law 111-274 — Plain Writing Act of 2010 (enacted text)",
+    "citation": "Pub. L. No. 111-274",
+    "srcUrl": "https://www.govinfo.gov/content/pkg/PLAW-111publ274/html/PLAW-111publ274.htm",
+    "textFile": "data/ref-text/record-plaw-111-274-plain-writing.txt",
+    "fetchedAt": "2026-09-03"
   },
   "record-plaw-114-308-hear-act": {
     "id": "record-plaw-114-308-hear-act",
@@ -2168,6 +2278,24 @@
     "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapII-partA-sec7545/htm",
     "textFile": "data/ref-text/usc-42-7545.txt",
     "fetchedAt": "2026-09-01"
+  },
+  "usc-42-7619": {
+    "id": "usc-42-7619",
+    "kind": "statute",
+    "label": "42 U.S.C. 7619 (Clean Air Act section 319) - air quality monitoring, exceptional events",
+    "citation": "42 U.S.C. 7619",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title42/granules/USCODE-2024-title42-chap85-subchapIII-sec7619/htm",
+    "textFile": "data/ref-text/usc-42-7619.txt",
+    "fetchedAt": "2026-09-03"
+  },
+  "usc-5-105": {
+    "id": "usc-5-105",
+    "kind": "statute",
+    "label": "5 U.S.C. 105 — definition of Executive agency",
+    "citation": "5 U.S.C. 105",
+    "srcUrl": "https://api.govinfo.gov/packages/USCODE-2024-title5/granules/USCODE-2024-title5-partI-chap1-sec105/htm",
+    "textFile": "data/ref-text/usc-5-105.txt",
+    "fetchedAt": "2026-09-03"
   },
   "usc-5-403": {
     "id": "usc-5-403",

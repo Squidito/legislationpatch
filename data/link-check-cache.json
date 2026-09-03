@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "urls": {
     "https://www.congress.gov": {
       "verdict": "wall",
@@ -1740,6 +1740,82 @@
       "title": "1 USC 101: Enacting clause",
       "bytes": 140927,
       "checkedAt": "2026-09-02"
+    },
+    "https://www.congress.gov/119/bills/hr6387/BILLS-119hr6387eh.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 9506 bytes",
+      "status": 200,
+      "bytes": 9506,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.epa.gov/criteria-air-pollutants/naaqs-table": {
+      "verdict": "live",
+      "reason": "HTTP 200, 59718 bytes — \"NAAQS Table | US EPA\"",
+      "status": 200,
+      "title": "NAAQS Table | US EPA",
+      "bytes": 59718,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.federalregister.gov/documents/1998/02/06/98-2889/plain-english-disclosure": {
+      "verdict": "live",
+      "reason": "HTTP 200, 50912 bytes — \"Federal Register :: Plain English Disclosure\"",
+      "status": 200,
+      "title": "Federal Register :: Plain English Disclosure",
+      "bytes": 50912,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-C/part-50/section-50.14": {
+      "verdict": "live",
+      "reason": "HTTP 200, 120410 bytes — \"eCFR :: 40 CFR 50.14 -- Treatment of air quality monitoring data influ\"",
+      "status": 200,
+      "title": "eCFR :: 40 CFR 50.14 -- Treatment of air quality monitoring data influenced by exceptional events.",
+      "bytes": 120410,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.congress.gov/help/coverage-dates": {
+      "verdict": "wall",
+      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
+      "status": 403,
+      "title": "Just a moment...",
+      "bytes": 5848,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-111publ274/html/PLAW-111publ274.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 7657 bytes",
+      "status": 200,
+      "bytes": 7657,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-119publ82/html/PLAW-119publ82.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 7638 bytes",
+      "status": 200,
+      "bytes": 7638,
+      "checkedAt": "2026-09-03"
+    },
+    "https://www.govinfo.gov/content/pkg/PLAW-119publ75/html/PLAW-119publ75.htm": {
+      "verdict": "live",
+      "reason": "HTTP 200, 2015046 bytes",
+      "status": 200,
+      "bytes": 2015046,
+      "checkedAt": "2026-09-03"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section7619&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 152620 bytes — \"42 USC 7619: Air quality monitoring\"",
+      "status": 200,
+      "title": "42 USC 7619: Air quality monitoring",
+      "bytes": 152620,
+      "checkedAt": "2026-09-03"
+    },
+    "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section105&num=0&edition=prelim": {
+      "verdict": "live",
+      "reason": "HTTP 200, 141545 bytes — \"5 USC 105: Executive agency\"",
+      "status": 200,
+      "title": "5 USC 105: Executive agency",
+      "bytes": 141545,
+      "checkedAt": "2026-09-03"
     }
   }
 }
