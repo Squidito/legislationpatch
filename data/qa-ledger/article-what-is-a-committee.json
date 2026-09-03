@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
   "passes": 3,
-  "proseSha": "9502b02808e95244",
+  "proseSha": "abcc62de948eec44",
   "sources": [
     {
       "id": "record-crs-98-241-committee-types",
@@ -1655,5 +1655,5 @@
       "kind": "note"
     }
   ],
-  "notes": ""
+  "notes": "2026-09-02 WRAP-UP, LINK-ONLY EDIT. One navigational sentence added after the CRS oversight-responsibility quote, pointing at articles/congressional-oversight.html, which had ZERO inbound article links after the light batch published it (publish-article warned). No factual claim was added or changed and dateModified was deliberately NOT bumped - the presidential-veto -> signing-statements precedent from the veto cluster (2026-08-31). proseSha re-stamped and the qa-regression baseline re-stamped for this entry only, so the ledger still describes the file on disk."
 }
