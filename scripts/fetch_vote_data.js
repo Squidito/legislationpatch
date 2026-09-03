@@ -17,7 +17,7 @@ require('dotenv').config();
 const fs   = require('fs');
 const path = require('path');
 
-const { PASSAGE_CONTEXT } = require("./lib/patterns.js");
+const { PASSAGE_CONTEXT, PROCEDURAL_MOTION } = require("./lib/patterns.js");
 const congressApi = require('./lib/congress-api.js');
 
 const CONGRESS_API_KEY = process.env.CONGRESS_API_KEY;
@@ -252,6 +252,38 @@ function checkStageConsistency(bill, actions, cacheData) {
   console.warn(`      → stage corrected to "${target.stageLabel}". likelihood/likelihoodReason still need a human re-review.`);
 }
 
+/**
+ * Is this Congress.gov action text a VOICE-VOTE or UNANIMOUS-CONSENT PASSAGE of
+ * the measure — the thing that belongs in votes[] as
+ * { question: "On Passage", result: "Passed" }?
+ *
+ * Two tests, and the negative one is the point. The positive test alone
+ * ("passed" or "agreed to", plus "voice vote" / "unanimous consent" / "without
+ * objection") is satisfied by the pro-forma line
+ *
+ *     "Motion to reconsider laid on the table Agreed to without objection."
+ *
+ * which follows a passage rather than being one. That produced a phantom
+ * passage row; it stayed invisible only because the row came out byte-identical
+ * to the real passage row on the same date and the dedupe below swallowed it.
+ * A motion falling on a different date, or a roll-call passage with a voice-vote
+ * motion after it, and the phantom is live. So a procedural motion is rejected
+ * FIRST, whatever it says about being agreed to.
+ *
+ * Deliberately NOT rejected: "on motion to suspend the rules and pass ...",
+ * "on agreeing to the resolution ...", "motion to concur in the Senate
+ * amendment ..." — each of those disposes of the measure itself.
+ *
+ * Exported and pinned by scripts/test-vote-classify.js.
+ */
+function isVoiceOrUcPassage(text) {
+  const t = String(text || '').toLowerCase();
+  if (!t) return false;
+  if (PROCEDURAL_MOTION.test(t)) return false;
+  return (t.includes('passed') || t.includes('agreed to'))
+      && (t.includes('voice vote') || t.includes('unanimous consent') || t.includes('without objection'));
+}
+
 // ---- Process votes for one bill ----
 
 async function processVotesForBill(bill, cacheData) {
@@ -280,11 +312,7 @@ async function processVotesForBill(bill, cacheData) {
   const recordedActions = actions.filter(a => Array.isArray(a.recordedVotes) && a.recordedVotes.length > 0);
 
   if (recordedActions.length === 0) {
-    const voiceActions = actions.filter(a => {
-      const t = (a.text || '').toLowerCase();
-      return (t.includes('passed') || t.includes('agreed to'))
-          && (t.includes('voice vote') || t.includes('unanimous consent') || t.includes('without objection'));
-    });
+    const voiceActions = actions.filter(a => isVoiceOrUcPassage(a.text));
     if (voiceActions.length > 0) {
       // Dedupe identical voice/UC passages — the same action appears under both
       // the chamber source system and the Library of Congress mirror (no roll
@@ -634,4 +662,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { processVotesForBill };
+module.exports = { processVotesForBill, isVoiceOrUcPassage };
