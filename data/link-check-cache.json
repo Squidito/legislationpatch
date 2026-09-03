@@ -821,14 +821,6 @@
       "bytes": 327435,
       "checkedAt": "2026-09-01"
     },
-    "https://www.congress.gov/bill/111th-congress/house-bill/946": {
-      "verdict": "wall",
-      "reason": "HTTP 403 — bot wall, live for humans (not treated as dead)",
-      "status": 403,
-      "title": "Just a moment...",
-      "bytes": 5914,
-      "checkedAt": "2026-09-01"
-    },
     "https://www.ibtimes.co.uk/republican-revolt-sinks-voter-id-bill-defence-package-1806080": {
       "verdict": "live",
       "reason": "HTTP 200, 283685 bytes — \"Full List of 13 House Republicans Who Tanked Trump's Voter ID Defense \"",

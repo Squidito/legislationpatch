@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
   "verifyModel": "sonnet",
   "passes": 4,
-  "proseSha": "bcbda59d931dc8ef",
+  "proseSha": "64e37ecf8d4c9d81",
   "sources": [
     {
       "id": "usc-1-101",
@@ -1179,5 +1179,5 @@
       "kind": "note"
     }
   ],
-  "notes": ""
+  "notes": " LINK-ONLY EDIT 2026-09-03: one navigational sentence added, weaving in an article that had zero inbound links (publish-article warns on that, and a page nothing links to is invisible to crawl discovery). No factual claim was added, changed or removed, so dateModified is deliberately NOT bumped - the D4 rule is that a reader must be able to see what changed. proseSha re-stamped from bcbda59d931dc8ef to 64e37ecf8d4c9d81 so the ledger still describes the file on disk; without it the next publish of this article would fail closed on a hash it could not explain. Handled exactly as commit 1c6f40a1 handled what-is-a-committee -> congressional-oversight."
 }
