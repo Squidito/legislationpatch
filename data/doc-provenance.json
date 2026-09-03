@@ -195,7 +195,7 @@
       "The cross-model rule is stated ONLY where it is enforced. publish-article.js blocks an ARTICLE whose ledger names the same model family as drafter and auditor; bill ledgers record no drafting model, so the page must not claim it for bill analyses.",
       "A per-page audit ledger records every claim, its verdict, and its source line — and the page states how much of the corpus that actually covers (212 of 222 bill analyses as of 2026-09-02; the ten analysed 2026-08-27 and 2026-09-01 carry none, because the full-corpus sweep closed 2026-08-12 and nothing has bound a new batch to a ledger since). Re-derive with `node scripts/generate-site-facts.js --check` before trusting the figure.",
       "CRITICAL -- every analysis and article is reviewed by a human BEFORE publication. If the Dispatch lane ever auto-publishes with post-publish review, this page AND the disclosure line on every article become false and must be reworded first.",
-      "Quotations are never generated or paraphrased; verbatim from the Congressional Record with speaker attribution, or omitted. The page must NOT claim a date on every quote — only 23 of 417 bill-attached quotes store one (checked 2026-08-30).",
+      "Quotations are never generated or paraphrased; verbatim from the Congressional Record with speaker attribution, or omitted. The page must NOT claim a date on every quote — only 28 of 417 bill-attached quotes store one (checked 2026-09-02).",
       "Positions attributed to named organizations trace to a fetched primary source, or are omitted rather than softened.",
       "No AI-generated or AI-altered imagery is used."
     ],

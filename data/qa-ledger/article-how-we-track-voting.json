@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 7,
-  "proseSha": "cddb3185effed891",
+  "proseSha": "4914152ca8aee94a",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -752,16 +752,17 @@
     },
     {
       "field": "body",
-      "claim": "Of the stored vote records, 203 are voice-vote or unanimous-consent passages with no tally at all, against 234 recorded roll calls, 233 of which store the full member list.",
+      "claim": "Of the stored vote records, 200 are voice-vote or unanimous-consent passages with no tally at all, against 234 recorded roll calls, 233 of which store the full member list.",
       "verdict": "SUPPORTED",
       "type": "process",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 203.",
+      "sourceSpan": "Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 200.",
       "section": "Voice Votes and Unanimous Consent",
       "status": "open",
       "verify": "CONFIRMED",
-      "kind": "claim"
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up, second site-facts pass] The count moved 203 -> 200 in this same session: 119-HR-8322 carried five byte-identical voice-vote rows and was collapsed to two in e80ab879."
     },
     {
       "field": "body",

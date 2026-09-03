@@ -34,7 +34,7 @@ Enacted bills whose stored text is still the version as introduced: 2 (119-S-100
 Non-enacted bills: 154; of those, 70 show the text as introduced.
 Bills whose stored text is OLDER than the newest version their own versions[] lists as posted: 69 of 154 non-enacted bills. The pipeline prefers the newest applicable version at fetch time, but an already-cached bill that advances is not automatically re-fetched.
 Top-line change counts per bill: range 1 to 9; 37 of 222 bills carry more than three.
-Plain-English summary length per bill: range 1 to 14 sentences; 25 of 222 bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations case-insensitively such as U.S., D.C., Pub. L. and sec., plus single-letter initials and decimal numbers.)
+Plain-English summary length per bill: range 1 to 14 sentences; 28 of 222 bills run to more than three. (Sentence count = split on a terminator followed by whitespace and a capital, after masking common abbreviations case-insensitively such as U.S., D.C., Pub. L. and sec., plus single-letter initials and decimal numbers.)
 Bills deliberately excluded from analysis in data/analysis-skip.json: 107
 Excluded bills by category: 29 ceremonial, 28 deferred-minor, 27 procedural, 23 cra-disapproval
 The cra-disapproval category covers resolutions of disapproval, which reach the floor by design; they are excluded from analysis, so coverage is not "all legislation with floor action".
@@ -44,12 +44,12 @@ Standalone floor quotes stored in data/quotes.json: 468
 Standalone floor quotes carrying a granuleId: 430 of 468
 Bill-attached quotes stored in cache.json featured_quotes: 417 across 222 bills
 Bill-attached quotes carrying a granuleId: 0 of 417
-Bill-attached quotes carrying a stored source string at all: 23 of 417; the stored values are "House Floor", "Senate Floor" — a chamber label with no date.
+Bill-attached quotes carrying a stored source string at all: 28 of 417; the stored values are "House Floor", "Senate Floor" — a chamber label with no date.
 Quote records carrying a session field, in either store: 0
 Bills with no Congressional Record quote at all: 43 of 222
 Standalone floor quotes carrying a billId: 432 of 468; carrying none: 36
 Standalone floor quotes whose text also appears in that same bill's featured_quotes (case/punctuation-normalized): 21 of 432. The two stores are built by separate extractors and mostly do not overlap.
-Sources registered in data/ref-sources.json by kind: 123 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 press-release, 3 law
+Sources registered in data/ref-sources.json by kind: 124 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 law, 3 press-release
 Excerpt cap enforced by fetch_bill_cr.js bestExcerpt(): 550 characters
 Longest stored quote, standalone store: 550 characters; bill-attached store: 550 characters
 
@@ -70,7 +70,7 @@ Primary bill text is fetched from the Congress.gov API, not from GovInfo. GovInf
 Crossover votes are surfaced only when the yea-nay margin is within 30% of total yeas plus nays.
 
 ## Stored vote records (data/votes/)
-Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 203.
+Recorded roll-call entries: 234, of which 233 store the full member list and 1 store only the tally. Voice-vote or unanimous-consent entries, with no tally at all: 200.
 Roll calls where the margin exceeded the 30% threshold and members nonetheless voted against their party majority, so no crossovers were surfaced: 75 (measured over the 233 roll calls that store a member list).
 One such roll call (ordered by crosser count, then margin, then bill id — not a unique maximum; 2 roll call(s) tie on crosser count): 119-HR-139, House 2026-07-14, "On Passage" Passed 308-117 — margin 44.9% of yeas plus nays, 117 member(s) voted against their party majority, 0 surfaced as crossovers.
 

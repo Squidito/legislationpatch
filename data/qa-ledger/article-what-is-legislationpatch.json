@@ -13,7 +13,7 @@
   "auditModel": "sonnet (hostile full-claims, code-as-source)",
   "verifyModel": "sonnet",
   "passes": 2,
-  "proseSha": "0869a4c1bbec229a",
+  "proseSha": "0024fb0c0bd53a2e",
   "sources": [
     {
       "id": "record-lp-site-facts",
@@ -108,16 +108,17 @@
     },
     {
       "field": "body",
-      "claim": "Summaries mostly run one to three sentences; 25 of the 222 run longer.",
+      "claim": "Summaries mostly run one to three sentences; 28 of the 222 run longer.",
       "verdict": "SUPPORTED",
       "type": "figure",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Plain-English summary length per bill: range 1 to 14 sentences; 25 of 222 bills run to more than three.",
+      "sourceSpan": "Plain-English summary length per bill: range 1 to 14 sentences; 28 of 222 bills run to more than three.",
       "section": "What the Site Actually Shows You",
       "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up, second site-facts pass] The count moved 25 -> 28 in this same session: the re-audits of 119-HR-8322, 119-S-4465 and 119-S-1884 each replaced a summary with a longer, source-anchored one."
     },
     {
       "field": "body",

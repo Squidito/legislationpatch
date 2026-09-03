@@ -219,11 +219,12 @@
       "type": "fact",
       "severity": "ok",
       "sourceFile": "record-lp-site-facts",
-      "sourceSpan": "Sources registered in data/ref-sources.json by kind: 123 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 press-release, 3 law",
+      "sourceSpan": "Sources registered in data/ref-sources.json by kind: 124 record, 79 statute, 15 bill, 10 statement, 8 rule, 4 member-statement, 3 law, 3 press-release",
       "section": "Opening",
       "status": "open",
-      "verify": null,
-      "kind": "claim"
+      "verify": "CONFIRMED",
+      "kind": "claim",
+      "note": "[2026-09-02 wrap-up, second site-facts pass] The line moved twice over in this same session: the record count rose 123 -> 124 when the CREC granule behind the 119-HR-1346 quotes was fetched and registered (8238e67c), and the two three-count kinds swapped places because the sheet sorts ties by name. The claim itself is unaffected - press-release is still a registered kind."
     },
     {
       "field": "body",

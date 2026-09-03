@@ -1892,7 +1892,7 @@
   "article-how-we-source-quotes": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-extract-floor-quotes": "ac82bbffd36a3a7391c5da29275aea19f8be9458420f88f8700ba55bcbab3f34",
       "code-batch-processor": "fad77213f233849f791b86ea480cba958478ecb834679305188f90461f075657",
@@ -1916,7 +1916,7 @@
   "article-how-we-track-voting": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "code-senator-match": "625ae6c3a6addca73c6b36f38630ae51c791dd42f3f73032411d82b6810e6f98",
       "code-generate-reps": "4eba1de9be7216ebbe531ba58019d698240bf6daeba35f8675940f8449528df7",
@@ -1932,7 +1932,7 @@
       "code-rep-js": "9e30aeff3f99478b9ab8fe7f91e7ac1688d46a9c7eea3b2e4e666f990bb5c895",
       "doc-ui-architecture": "39e8d283f9518498524652014bf879838dfcaeeda7703aee77f70675e2548d13"
     },
-    "proseSha": "cddb3185effed891",
+    "proseSha": "4914152ca8aee94a",
     "proseFile": "articles/how-we-track-voting.html",
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -1981,7 +1981,7 @@
   "article-legislationpatch-and-ai": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-generate-bill-pages": "a26ef2c7c6a7b3ea83a97d6013825b958dc4910db2b29393fb540ee84e13f9d2",
       "code-entity-lib": "cd35f455484f2f547176bb6e14b2bf46e1b11c546bd2e60e6bed1c8ef6c1db7d",
       "record-lp-entity": "7b325d341d7b16a1c2198efc5522c74b659bb42be93290df53ac03e243e16ec2",
@@ -2030,7 +2030,7 @@
   "article-methodology": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
       "code-fetch-reference": "cc93a1bfc69765333bc1b4987cc8f351ebf17f88d71fb283bded922ef38f194a",
       "code-fetch-cr-data": "d07c3f7ef0e9f2648fd8cd954568e3391d426f2fcb5d22c1ccca84ddab39653b",
@@ -2403,7 +2403,7 @@
       "record-govinfo-crec-about": "7aa1c1613932df24edb10bd697e753fa7134646067f390489c942e8ab73b46fc",
       "record-crs-98-265-cr-users-guide": "94906c931f9a4830a72ac2c1f7c5dabda5dbe3a62554396082d997ac7a5b1828",
       "record-crs-r45153-statutory-interpretation": "0b0b9e124281c2d2e1b2715c9b27a23b5776056aec9e0ee50f11cf1e55338d2c",
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-extract-floor-quotes": "ac82bbffd36a3a7391c5da29275aea19f8be9458420f88f8700ba55bcbab3f34",
       "code-batch-processor": "fad77213f233849f791b86ea480cba958478ecb834679305188f90461f075657",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
@@ -2420,7 +2420,7 @@
   "article-what-is-legislationpatch": {
     "kind": "article",
     "sourceShas": {
-      "record-lp-site-facts": "b938434e11c918ee4254d71cc0de2eb0cd2b2836962cedfa07f726eccaa159f2",
+      "record-lp-site-facts": "15212213c54db00ff1e189f0ff0f308c68cff934172b86b9e9b81f50948dba20",
       "code-fetch-vote-data": "3351b73d537589f3dbf416a5b3ea3d26e5c6ca6d582374f0e3638b33b2d5521e",
       "code-fetch-bill-cr": "8a276372c0e9512ea4f615304e209e5962ba24a9372b0735b83aa62afea34023",
       "code-fetch-bills-data": "c452e2e6c0b8d289af67714a5674b8b1338bc1fda3aa79769920334d2fbc41c3",
@@ -2428,7 +2428,7 @@
       "code-prompts": "17be1136a995a22f6eab64af0986ace5fc569a0f77fd7597e1a318ace7081d31",
       "record-lp-cache": "3258ddf6dec2dc4bc9c20a9b083cee1769124a95afed59cc869424e01010b5b2"
     },
-    "proseSha": "0869a4c1bbec229a",
+    "proseSha": "0024fb0c0bd53a2e",
     "proseFile": "articles/what-is-legislationpatch.html",
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile full-claims, code-as-source)",
@@ -2794,7 +2794,7 @@
       "record-lp-corpus-119-snapshot": "0607f1c15fed3e4d62b6c70d7eb38063e1087296055dc20cc0ad24f57077fc73",
       "record-congress-119-overview": "ea876376a384ae6a30276b97f6153156e35d777380d27f209ba9df0d91c24452"
     },
-    "proseSha": "9502b02808e95244",
+    "proseSha": "abcc62de948eec44",
     "proseFile": "articles/what-is-a-committee.html",
     "promptVersion": "07b6a1640cc330cb",
     "genModel": "sonnet (hostile source-only subagent passes, adjudicated in-thread)",
