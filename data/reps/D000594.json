@@ -6,7 +6,22 @@
   "role": "Representative",
   "district": 15,
   "bio": "Mónica de la Cruz is an American politician and insurance agent from the state of Texas. She has represented Texas's 15th congressional district in the U.S. House of Representatives since 2023 as a Republican.",
-  "comments": [],
+  "comments": [
+    {
+      "billId": "119-HR-224",
+      "billTitle": "Disabled Veterans Housing Support Act",
+      "stance": "neutral",
+      "text": "Veterans, particularly disabled veterans, have made extraordinary sacrifices for our Nation, and it is simply unacceptable that those who selflessly defended our freedoms are met with bureaucratic red tape when they return home. Government overregulation should never stand in the way of veterans' ability to receive the help they need. That is what this legislation will fix.",
+      "date": "2026-01-20"
+    },
+    {
+      "billId": "119-HR-1329",
+      "billTitle": "Smithsonian American Women's History Museum Act",
+      "stance": "oppose",
+      "text": "I stand proudly to support H.R. 1329, the bipartisan Smithsonian American Women's History Museum Act, as an original cosponsor. For 30 years, lawmakers on both sides of the aisle have worked together to establish a space that carries on the legacy of the American women who fought tirelessly for our rights. It is absolutely unacceptable that any Member would oppose this bill because they want a biological male, a man, to be honored in the space designed for women, biological women.",
+      "date": "2025-02-13"
+    }
+  ],
   "voteHistory": [
     {
       "billId": "119-HR-8800",
