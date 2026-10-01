@@ -241,8 +241,10 @@ function renderProfile(rep, isStaticPage) {
   rep.comments.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   commentsContainer.innerHTML = rep.comments.map((c, idx) => {
-    const stanceCls   = c.stance === 'support' ? 'stance-support' : 'stance-oppose';
-    const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
+    // Same rule as bill pages (app-render.js): only an explicit support/oppose
+    // gets a badge; neutral or missing stance renders no badge at all.
+    const stanceCls   = c.stance === 'support' ? 'stance-support' : c.stance === 'oppose' ? 'stance-oppose' : '';
+    const stanceLabel = c.stance === 'support' ? 'SUPPORT' : c.stance === 'oppose' ? 'OPPOSE' : '';
     const chamberFallback = c.source?.includes('Senate') ? 'Senate Floor' : c.source?.includes('House') ? 'House Floor' : 'Floor Statement';
     const billLabel   = c.billTitle || formatBillId(c.billId) || chamberFallback;
     const billUrl     = c.billId
@@ -254,7 +256,7 @@ function renderProfile(rep, isStaticPage) {
     const hidden = idx >= FLOOR_DEFAULT ? ' style="display:none"' : '';
     return '<div class="rep-show-item" data-idx="' + idx + '"' + hidden + '>'
       + '<div class="quote-card rep-comment-card">'
-      + '<div class="rep-comment-title">' + titleEl + (c.stance ? '<span class="quote-stance ' + stanceCls + '">' + stanceLabel + '</span>' : '') + '</div>'
+      + '<div class="rep-comment-title">' + titleEl + (stanceLabel ? '<span class="quote-stance ' + stanceCls + '">' + stanceLabel + '</span>' : '') + '</div>'
       + '<div class="quote-text">&ldquo;' + escHtml(c.text) + '&rdquo;</div>'
       + '<div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">' + formatDate(c.date) + '</div>'
       + '</div>'

@@ -155,15 +155,17 @@ function commentsHtml(rep) {
   if (!comments.length) return '<div class="empty-state">No recorded floor statements.</div>';
   comments.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
   return comments.map((c, idx) => {
-    const stanceCls   = c.stance === 'support' ? 'stance-support' : 'stance-oppose';
-    const stanceLabel = c.stance === 'support' ? 'SUPPORT' : 'OPPOSE';
+    // Same rule as bill pages (app-render.js): only an explicit support/oppose
+    // gets a badge; neutral or missing stance renders no badge at all.
+    const stanceCls   = c.stance === 'support' ? 'stance-support' : c.stance === 'oppose' ? 'stance-oppose' : '';
+    const stanceLabel = c.stance === 'support' ? 'SUPPORT' : c.stance === 'oppose' ? 'OPPOSE' : '';
     const billLabel   = c.billTitle || formatBillId(c.billId) || 'Floor Statement';
     const titleEl     = c.billId
       ? `<a href="${escHtml(billHref(c.billId))}" class="rep-bill-link">${escHtml(billLabel)}</a>`
       : `<span class="rep-bill-link" style="cursor:default">${escHtml(billLabel)}</span>`;
     return `<div class="rep-show-item" data-idx="${idx}">`
       + '<div class="quote-card rep-comment-card">'
-      + `<div class="rep-comment-title">${titleEl}${c.stance ? `<span class="quote-stance ${stanceCls}">${stanceLabel}</span>` : ''}</div>`
+      + `<div class="rep-comment-title">${titleEl}${stanceLabel ? `<span class="quote-stance ${stanceCls}">${stanceLabel}</span>` : ''}</div>`
       + `<div class="quote-text">&ldquo;${escHtml(c.text || '')}&rdquo;</div>`
       + `<div style="font-size:0.7rem;color:var(--text-3);font-family:var(--font-mono);margin-top:10px">${escHtml(dateHuman(c.date))}</div>`
       + '</div>'
