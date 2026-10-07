@@ -266,6 +266,13 @@ function capAnswer(text, softMax) {
 // verbatim from cache fields; only the lead, ordering, and length bound are
 // templated. Never invents claims.
 const ANSWER_MAX_WORDS = 170;
+// Accuracy review label (QA plan ruling 34, 2026-10-06): same wording as util.js reviewNoticeHtml().
+function reviewNoticeStatic(bill) {
+  const n = bill && bill.reviewNotice;
+  if (!n || !n.label) return '';
+  return `<p class="review-notice" role="note"><strong>Under review (${escHtml(n.label)}):</strong> a figure or condition on this page is being re-checked against the bill text. <a href="/corrections.html">See Corrections</a>.</p>`;
+}
+
 function answerParagraph(bill) {
   const brief   = String(bill.brief || '').trim();
   const summary = String(bill.summary || '').trim();
@@ -414,7 +421,7 @@ function staticBody(bill) {
   return `<article class="bill-static" data-server-rendered="1">
     ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
     <h1 class="bp-title">${escHtml(bill.title || bill.code || bill.id)}</h1>
-    ${metaLine ? `<div class="bp-meta">${metaLine}</div>` : ''}
+    ${metaLine ? `<div class="bp-meta">${metaLine}</div>` : ''}${reviewNoticeStatic(bill)}
     ${answerHtml}
     ${statusHtml}
     ${topLinesHtml}

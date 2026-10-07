@@ -15,6 +15,14 @@
 
 // HTML-escape for safe innerHTML interpolation. Escapes all 5 sensitive chars
 // (including the apostrophe — needed for single-quoted attribute contexts).
+// Accuracy review label (QA plan ruling 34, 2026-10-06). A bill carries `reviewNotice: { label: 'October 2026' }` only while a
+// confirmed error on it is logged on /corrections.html and awaiting the next verified pass. The page text is NOT edited.
+function reviewNoticeHtml(bill) {
+  const n = bill && bill.reviewNotice;
+  if (!n || !n.label) return '';
+  return '<p class="review-notice" role="note"><strong>Under review (' + escHtml(n.label) + '):</strong> a figure or condition on this page is being re-checked against the bill text. <a href="/corrections.html">See Corrections</a>.</p>';
+}
+
 function escHtml(str) {
   if (!str) return '';
   return String(str)

@@ -188,6 +188,24 @@ a:hover { text-decoration: underline; }
 [data-theme="dark"] .trust-bar-badge {
   font-weight: 600;
 }
+/* Accuracy review label (QA plan ruling 34, 2026-10-06): shown only on pages with a confirmed, logged error. */
+.review-notice {
+  margin: 12px 0 16px;
+  padding: 10px 14px;
+  border: 1px solid #F9D9BF;
+  border-left: 4px solid var(--orange);
+  border-radius: 6px;
+  background: #FEF0E6;
+  color: var(--text-2);
+  font-size: var(--fs-sm, 0.92rem);
+  line-height: 1.45;
+}
+.review-notice a { color: var(--orange); font-weight: 600; }
+[data-theme="dark"] .review-notice {
+  background: var(--surface-2);
+  border-color: var(--border);
+  border-left-color: var(--orange);
+}
 .logo-mark {
   width: 32px;
   height: 32px;

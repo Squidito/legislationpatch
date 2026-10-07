@@ -303,7 +303,7 @@ function renderBillPage(bill) {
     ${codeLine ? `<div class="bp-code">${codeLine}</div>` : ''}
     <h1 class="bp-title">${escHtml(bill.title)}</h1>
     ${sponsorMeta ? `<div class="bp-meta">${escHtml(sponsorMeta)}</div>` : ''}
-  </div>`;
+  </div>${reviewNoticeHtml(bill)}`;
 
   // Each section is one `.bp-section` for uniform spacing; `label` adds a neutral eyebrow
   // for the sections that lack an internal title (the colored cards keep their own titles).
