@@ -384,12 +384,9 @@ function renderVotingHistory(rep) {
     var billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId);
     var billIdFmt = escHtml(formatBillId(v.billId) || '');
     var billUrl   = '/?scrollTo=' + encodeURIComponent(v.billId);
-    var rawVote   = (v.vote || '').toLowerCase();
-    var voteDisplay = rawVote.includes('yea') || rawVote.includes('yes') ? 'Yea'
-                    : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'
-                    : rawVote.includes('not')                            ? 'Not Voting'
-                    : (v.vote || '');
-    var badgeCls  = voteDisplay === 'Yea' ? 'rv-yea' : voteDisplay === 'Nay' ? 'rv-nay' : 'rv-nv';
+    var badge       = voteBadge(v.vote);   // exact mapping, shared with generate_rep_pages.js (util.js)
+    var voteDisplay = badge.label;
+    var badgeCls    = badge.cls;
     var hidden    = i >= VOTE_DEFAULT ? ' style="display:none"' : '';
     html += '<div class="rep-show-item" data-idx="' + i + '"' + hidden + '>'
       + '<div class="rep-vote-row">'

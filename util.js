@@ -281,10 +281,35 @@ function repSlug(rep) {
   return tail ? id + '-' + tail : id;
 }
 
+// Rep-page vote badge: EXACT match on the stored voteHistory[].vote value.
+// Shared by rep.js (client) and scripts/generate_rep_pages.js (static pages)
+// so the two can never drift. The old substring test checked includes('no')
+// before 'not', so every stored "Not Voting" rendered as a red "Nay" badge
+// (HOTFIX-REAL-PEOPLE-2, 2026-10-26). Every distinct stored value is locked by
+// scripts/test-vote-label.js; a value not in this table prints as stored with
+// the neutral style (never coerced to Yea/Nay).
+const VOTE_BADGES = {
+  'yea':        { label: 'Yea',        cls: 'rv-yea' },
+  'yes':        { label: 'Yea',        cls: 'rv-yea' },
+  'nay':        { label: 'Nay',        cls: 'rv-nay' },
+  'no':         { label: 'Nay',        cls: 'rv-nay' },
+  'not voting': { label: 'Not Voting', cls: 'rv-nv'  },
+  // Printed as stored with the neutral style — the pre-hotfix output, unchanged.
+  'aye':        { label: 'Aye',        cls: 'rv-nv'  },
+  'present':    { label: 'Present',    cls: 'rv-nv'  }
+};
+function voteBadge(rawVote) {
+  const raw = String(rawVote == null ? '' : rawVote).trim();
+  const hit = Object.prototype.hasOwnProperty.call(VOTE_BADGES, raw.toLowerCase())
+    ? VOTE_BADGES[raw.toLowerCase()] : null;
+  return hit ? { label: hit.label, cls: hit.cls } : { label: raw, cls: 'rv-nv' };
+}
+
 // Node interop for the parity checker (no-op in the browser, where `module` is undefined).
 if (typeof module !== 'undefined' && module.exports) {
   // Second line: web-only helpers deduped here 2026-07-06 — locked by
   // shared/parity-fixtures-web.json (web regression; NOT the mobile contract).
   module.exports = { escHtml, formatDateCompact, formatDate, quoteChamber, quoteDateCompact, quoteContext, quoteTagline, sponsorShort,
-                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, repProfileHref, slugifyTitle, billSlug, repSlug };
+                     partyColor, repLastName, parseSourceDate, portraitUrl, safeBioId, repProfileHref, slugifyTitle, billSlug, repSlug,
+                     voteBadge };
 }

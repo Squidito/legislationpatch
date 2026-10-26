@@ -32,7 +32,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const { escHtml, repSlug, portraitUrl, safeBioId } = require('../util.js');
+const { escHtml, repSlug, portraitUrl, safeBioId, voteBadge } = require('../util.js');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
@@ -179,12 +179,9 @@ function voteHistoryHtml(rep) {
   return history.map((v, i) => {
     const billLabel = v.billTitle ? escHtml(v.billTitle) : escHtml(formatBillId(v.billId) || v.billId || '');
     const billIdFmt = escHtml(formatBillId(v.billId));
-    const rawVote   = String(v.vote || '').toLowerCase();
-    const voteDisplay = rawVote.includes('yea') || rawVote.includes('yes') ? 'Yea'
-                      : rawVote.includes('nay') || rawVote.includes('no')  ? 'Nay'
-                      : rawVote.includes('not')                            ? 'Not Voting'
-                      : (v.vote || '');
-    const badgeCls = voteDisplay === 'Yea' ? 'rv-yea' : voteDisplay === 'Nay' ? 'rv-nay' : 'rv-nv';
+    const badge       = voteBadge(v.vote);   // exact mapping, shared with rep.js (util.js)
+    const voteDisplay = badge.label;
+    const badgeCls    = badge.cls;
     return `<div class="rep-show-item" data-idx="${i}">`
       + '<div class="rep-vote-row">'
       + '<div class="rep-vote-bill">'
@@ -781,4 +778,7 @@ function main() {
   console.log(`  reps.html static member directory: ${injected ? 'injected' : 'SKIPPED (markers missing)'}`);
 }
 
-main();
+// Run as a script; when required (scripts/test-vote-label.js) expose the row
+// renderer only — nothing is written.
+if (require.main === module) main();
+else module.exports = { voteHistoryHtml };
