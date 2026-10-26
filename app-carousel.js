@@ -225,14 +225,6 @@ function buildQuotePool() {
     });
   });
 
-  SHOCK_QUOTES.forEach(q => {
-    const key = (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
-    if (seen.has(key)) return;
-    seen.add(key);
-    const bill = q.billId ? allBills.find(b => b.id === q.billId) : null;
-    quotes.push({ ...q, billTitle: bill?.title || null, shockScore: computeShockScore(q) });
-  });
-
   standaloneQuotes.forEach(q => {
     const key = (q.bioguideId || q.name) + '|' + (q.text || '').slice(0, 25);
     if (seen.has(key)) return;

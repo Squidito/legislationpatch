@@ -32,29 +32,6 @@ try {
   endlessScrollOn = sessionStorage.getItem('lpEndless') === '1';
 } catch (e) {}
 
-// Placeholder shock quotes — replace with live Congressional Record feed when available
-const SHOCK_QUOTES = [
-  {
-    name: 'Rep. Marjorie Taylor Greene', party: 'R', state: 'GA', bioguideId: 'G000596',
-    text: 'This spending bill is socialism with a bow on it. We are looting our grandchildren to buy votes today.',
-    source: 'House Floor, Apr 22, 2026', billId: '119-HR-1'
-  },
-  {
-    name: 'Rep. Jasmine Crockett', party: 'D', state: 'TX', bioguideId: 'C001127',
-    text: 'They cut food stamps for hungry kids and then stood up and applauded themselves. I cannot do this job without screaming sometimes.',
-    source: 'House Floor, Apr 21, 2026', billId: '119-HR-1'
-  },
-  {
-    name: 'Sen. Tommy Tuberville', party: 'R', state: 'AL', bioguideId: 'T000278',
-    text: 'I do not think we need to be funding mental health programs for people who just do not want to work.',
-    source: 'Senate Floor, Apr 20, 2026', billId: '119-HR-1'
-  },
-  {
-    name: 'Rep. Rashida Tlaib', party: 'D', state: 'MI', bioguideId: 'T000481',
-    text: 'Every single one of them knew what was in Section 223 and every single one of them voted yes anyway. Remember their names.',
-    source: 'House Floor, Apr 23, 2026', billId: '119-HR-1'
-  }
-];
 
 const STORAGE_KEYS = {
   trackedState:   'lpTrackedState',
