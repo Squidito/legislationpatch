@@ -781,4 +781,4 @@ function main() {
 // Run as a script; when required (scripts/test-vote-label.js) expose the row
 // renderer only — nothing is written.
 if (require.main === module) main();
-else module.exports = { voteHistoryHtml };
+else module.exports = { voteHistoryHtml, commentsHtml };
