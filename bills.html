@@ -153,6 +153,10 @@
       <div class="loading-spinner"></div>
       <p>Loading bills&hellip;</p>
     </div>
+    <div class="error-state" id="errorState" style="display:none">
+      <p id="errorMsg">Something went wrong fetching bills.</p>
+      <button onclick="loadBills()">Try again</button>
+    </div>
     <div class="bill-list" id="billList"></div>
   </main>
 
