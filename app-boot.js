@@ -12,11 +12,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (window.FAVORITES_PAGE) {
     showLoading(true);
     try {
+      // A bills failure must not drop the saved floor statements (they load on their own).
+      let billsError = null;
       [allBills, standaloneQuotes, repSlugIndex] = await Promise.all([
-        fetchRecentBills(),
+        fetchRecentBills().catch(e => { billsError = e; return []; }),
         fetchStandaloneQuotes(),
         fetchRepSlugs()
       ]);
+      if (billsError) showError(true, billsError.message);
     } catch(e) {
       showError(true, e.message);
     } finally {

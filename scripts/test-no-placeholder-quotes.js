@@ -24,14 +24,11 @@ const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
-const SKIP_DIRS = new Set(['scripts', 'data', 'node_modules', '_worktrees', '.git', 'docs', 'shared']);
-const files = [];
-(function walk(dir, rel) {
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (e.isDirectory()) { if (!(rel === '' && SKIP_DIRS.has(e.name)) && e.name !== 'node_modules' && e.name !== '.git') walk(path.join(dir, e.name), rel + e.name + '/'); }
-    else if (/\.(js|mjs|html)$/.test(e.name)) files.push(rel + e.name);
-  }
-})(ROOT, '');
+// Tracked files only (git ls-files), so local untracked / ignored files cannot fail it.
+const { execFileSync } = require('child_process');
+const SKIP_TOP = /^(scripts|data|node_modules|_worktrees|docs|shared)\//;
+const files = execFileSync('git', ['ls-files', '-z'], { cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })
+  .split('\0').filter(f => f && /\.(js|mjs|html)$/.test(f) && !SKIP_TOP.test(f));
 
 const BANNED = [
   // 4 invented «shock quotes»

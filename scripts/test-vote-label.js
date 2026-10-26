@@ -11,8 +11,8 @@
 //   1. every DISTINCT stored vote value in data/votes/*.json (members[] and
 //      crossovers[]) and data/reps/*.json (voteHistory[]) has a reviewed
 //      expected badge below — a new value fails until someone decides it;
-//   2. no value outside Yea/Yes/Aye→Yea-side or Nay/No→Nay-side ever renders
-//      as "Yea" or "Nay";
+//   2. nothing but Yea/Yes ever renders as "Yea" and nothing but Nay/No as
+//      "Nay" (Aye / Present / unknown print as stored, neutral style);
 //   3. the static generator's row renderer uses the shared table;
 //   4. rep.js calls voteBadge and carries no substring vote matching;
 //   5. no committed rep/<slug>/index.html shows a "Nay" badge on a row whose

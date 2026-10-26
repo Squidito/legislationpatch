@@ -22,7 +22,14 @@
 #                            BLOCKS on errors. NO sanctioned bypass.
 #   2. test-security-helpers.js — hostile payloads through escHtml/portraitUrl/
 #                            safeBioId. BLOCKS on failure. NO sanctioned bypass.
-#   3. validate-batch      — data QA (figures, stages, formatting).
+#  2b. real-people guards  — test-vote-label (a vote shown = the vote stored),
+#                            test-no-placeholder-quotes (no invented / hard-coded
+#                            quotes attributed to members in client code),
+#                            test-real-people-records (sponsor portrait id names
+#                            the sponsor; no supporter under «Opposed»). ~2 s, $0
+#                            (HOTFIX-REAL-PEOPLE-2, 2026-10-26). BLOCKS on failure.
+#                            Bypass: SKIP_REAL_PEOPLE=1 git commit ...
+#   3. validate-batch     — data QA (figures, stages, formatting).
 #                            BLOCKS on errors. Sanctioned bypass for data-QA-only
 #                            situations:  SKIP_VALIDATE=1 git commit ...
 #   4. qa-regression       — replays every verified QA-ledger receipt vs current
@@ -74,6 +81,20 @@ if [ $? -ne 0 ]; then
   echo "[pre-commit] X a keystone sanitizer in util.js was weakened — commit BLOCKED."
   echo "[pre-commit]   No bypass. Restore escHtml/portraitUrl/safeBioId behavior."
   exit 1
+fi
+
+if [ "$SKIP_REAL_PEOPLE" = "1" ]; then
+  echo "[pre-commit] 2b/6 real-people guards SKIPPED (SKIP_REAL_PEOPLE=1)."
+else
+  echo "[pre-commit] 2b/6 real-people guards (vote labels, invented quotes, sponsor ids, stances)..."
+  node scripts/test-vote-label.js && node scripts/test-no-placeholder-quotes.js && node scripts/test-real-people-records.js
+  if [ $? -ne 0 ]; then
+    echo ""
+    echo "[pre-commit] X a page would state something false about a real member — commit BLOCKED."
+    echo "[pre-commit]   Fix the record or the renderer (see above). Deliberate exception only:"
+    echo "[pre-commit]     SKIP_REAL_PEOPLE=1 git commit ..."
+    exit 1
+  fi
 fi
 
 if [ "$SKIP_VALIDATE" = "1" ]; then
