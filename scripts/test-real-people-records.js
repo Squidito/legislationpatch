@@ -20,23 +20,11 @@ const DATA = path.join(ROOT, 'data');
 const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 
 let failures = 0;
-// KNOWN OPEN — found by this test 2026-10-26, NOT fixed in HOTFIX-REAL-PEOPLE-2 (outside its approved D3 list of three):
-// each is a speech of support filed under «Opposed — who and why» (and, where listed, stance "oppose" on the member
-// page). Left for oversight / James to approve. Remove a line when it is fixed — a stale line fails the test.
-const KNOWN_OPEN = new Set([
-  'crit|119-HR-7148|Mr. Calvert (R-CA)',
-  'crit|119-HR-2808|Mr. Sherman (D-CA)',
-  'crit|119-HR-7084|Mr. Strong (R-AL)',
-  'crit|119-HR-7084|Mr. Palmer (R-AL)',
-  'crit|119-HR-8312|Mr. Comer (R-KY)',
-  'crit|119-HR-8312|Mr. Sessions (R-TX)',
-  'crit|119-HR-3535|Mr. Fitzpatrick (R-PA)',
-  'comment|C001108|119-HR-8312',
-  'comment|S000250|119-HR-8312',
-  'comment|F000466|119-HR-3535',
-  'comment|P000609|119-HR-7084',
-  'comment|S001220|119-HR-7084',
-]);
+// KNOWN OPEN — a reviewed, not-yet-fixed case ('crit|<billId>|<who>' or 'comment|<bioguideId>|<billId>'); a stale
+// entry fails the test. EMPTY: the 7 further cases this test found on 2026-10-26 were fixed in the same hotfix
+// (James 10-26 «Add the 7 yes»). Root cause still open: fetch_bill_cr.js builds criticisms from stance data and
+// never clears stale entries.
+const KNOWN_OPEN = new Set([]);
 const openSeen = new Set();
 const fail = (m) => { failures++; console.error('  x ' + m); };
 const fold = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
